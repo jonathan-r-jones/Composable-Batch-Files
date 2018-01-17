@@ -881,7 +881,6 @@ goto exitb
 set fp=* Commit with timestamp description.
 
 echo %fp%
-echo.
 
 cd | find /i "C:\projects\netbeans\sencha">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
