@@ -1571,9 +1571,7 @@ rem fcd: May-19-2017
 
 echo %fp%
 
-cd c:\mercury\batch_files
-
-call start "my title" "Mercury Helper.pptx - Shortcut.lnk"
+call start "my title" "Composable Batch File Helper.pptx - Shortcut.lnk"
 
 goto exitb
 
