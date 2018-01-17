@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<servers>
+		<server>
+		<id>Maven-Dependencies</id>
+		<configuration>
+			<httpHeaders>
+				<property>
+					<name>Authorization</name>
+					<!-- Replace the xxx value below with one that you generate using Ikjae's "m gen_cred_proc" authorization process using your own credentials. -->
+					<value>Basic xxx</value>
+				</property>
+			</httpHeaders>
+		</configuration>
+		</server>
+	</servers>
+</settings>
