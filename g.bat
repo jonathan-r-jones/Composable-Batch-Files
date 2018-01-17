@@ -2000,6 +2000,8 @@ git status
 
 col
 
+echo end of rf_status
+
 goto exitb
 
 
