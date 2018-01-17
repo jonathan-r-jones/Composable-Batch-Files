@@ -845,7 +845,7 @@ call :commit_with_timestamp_description
 
 call :push
 
-call :rf_status
+call %0 rf_status
 rem qq-1
 
 goto exitb
@@ -1994,11 +1994,7 @@ echo.
 call git remote update
 echo.
 
-echo almost end of rf_status
-
 call git status
-
-echo end of rf_status
 
 col
 
