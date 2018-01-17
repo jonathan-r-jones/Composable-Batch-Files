@@ -845,7 +845,7 @@ call :commit_with_timestamp_description
 
 call :push
 
-call %0 rf_status
+call :rf_status
 rem qq-1
 
 goto exitb
