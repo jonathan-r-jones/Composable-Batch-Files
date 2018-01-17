@@ -1989,7 +1989,6 @@ goto exitb
 
 set fp=* Status, including remote information.
 
-echo.
 echo %fp%
 echo.
 
