@@ -2004,4 +2004,20 @@ goto exitb
 
 
 
+:_
+
+:sfgit
+
+set fp=* Surf to this repository in Git.
+
+rem lu: Jan-5-2018
+
+echo %fp%
+
+start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://github.com/jonathan-r-jones/composable_batch_files
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)
