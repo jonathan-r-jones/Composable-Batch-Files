@@ -538,31 +538,6 @@ goto exitb
 
 :_
 
-:rf_status
-
-:s
-
-:status
-
-set fp=* Status, including remote information.
-
-echo.
-echo %fp%
-echo.
-
-git remote update
-echo.
-
-git status
-
-col
-
-goto exitb
-
-
-
-:_
-
 :apf
 
 set fp=* Add particular file.
@@ -1998,6 +1973,31 @@ echo.
 git push --set-upstream origin master
 
 rem (!step)
+
+goto exitb
+
+
+
+:_
+
+:rf_status
+
+:s
+
+:status
+
+set fp=* Status, including remote information.
+
+echo.
+echo %fp%
+echo.
+
+git remote update
+echo.
+
+git status
+
+col
 
 goto exitb
 
