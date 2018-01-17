@@ -2898,7 +2898,7 @@ set fp=* Update timestamp.
 echo %fp%
 echo.
 
-set classpath=%dropbox%\it\composable_batch_files
+set classpath=%COMPOSABLE_BATCH_FILES%
 call java Get_Timestamp_With_No_Spaces>%tmp%\java_timestamp.txt
 
 rem cd
