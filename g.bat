@@ -1993,7 +1993,7 @@ set fp=* Status, including remote information.
 echo %fp%
 echo.
 
-git remote update
+call git remote update
 echo.
 
 call git status
