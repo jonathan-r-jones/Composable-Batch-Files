@@ -1996,7 +1996,7 @@ echo.
 git remote update
 echo.
 
-git status
+call git status
 
 col
 
