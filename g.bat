@@ -1853,7 +1853,7 @@ echo %fp%
 
 call td cbf
 
-call :acp
+call %0 acp
 
 goto exit
 
