@@ -897,7 +897,6 @@ rem qq-1
 set /p commit_description=<%tmp%\java_timestamp.txt
 
 call git commit -a -m %commit_description%
-echo.
 
 goto exitb
 
