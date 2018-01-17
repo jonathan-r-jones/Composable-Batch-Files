@@ -553,7 +553,7 @@ echo.
 git remote update
 echo.
 
-rem git status
+git status
 
 col
 
@@ -870,7 +870,7 @@ call :commit_with_timestamp_description
 
 call :push
 
-call :status
+call :rf_status
 rem qq-1
 
 goto exitb
