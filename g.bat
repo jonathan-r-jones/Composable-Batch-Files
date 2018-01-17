@@ -779,7 +779,7 @@ echo.
 echo %fp%
 echo.
 
-git push
+call git push
 
 goto exitb
 
