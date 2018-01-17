@@ -38,7 +38,7 @@ goto %1
 
 rem Metadata
 
-rem File Purpose: This Mercury (m) batch file is intended to be used for Mercury Project related tasks.
+rem File Purpose: This batch file is intended to be used for Mercury Project related tasks.
 
 rem Batch File Style: Parameter-Routing Driven
 

@@ -1471,62 +1471,6 @@ goto exitb
 
 
 
-:_+ Author
-
-
-
-::_
-
-:author_git
-
-set fp=* Configure GitHub author and email. Note: Please don't confuse this with the Bitbucket author signature.
-
-echo %fp%
-echo.
-
-@echo on
-git config --global user.name "Jonathan R. Jones"
-git config --global user.email "jonathan.r.jones.3@gmail.com"
-@echo off
-
-goto exitb
-
-
-
-::_
-
-:author_bit
-
-set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
-
-echo %fp%
-
-@echo on
-git config --global user.name "Jonathan17"
-git config --global user.email "jonathan.r.jones@nesassociates.com"
-@echo off
-
-goto exitb
-
-
-
-::_
-
-:author_devops
-
-set fp=* Configure BitBucket author and email.
-
-echo %fp%
-
-@echo on
-git config --global user.name "mercury_devops"
-git config --global user.email "nes.mercury@nesassociates.com"
-@echo off
-
-goto exitb
-
-
-
 :_+ Commit Flavors
 
 
@@ -1999,6 +1943,62 @@ call git status
 
 col
 
+
+goto exitb
+
+
+
+:_+ Author
+
+
+
+::_
+
+:author_git
+
+set fp=* Configure GitHub author and email. Note: Please don't confuse this with the Bitbucket author signature.
+
+echo %fp%
+echo.
+
+@echo on
+git config --global user.name "Jonathan R. Jones"
+git config --global user.email "jonathan.r.jones.3@gmail.com"
+@echo off
+
+goto exitb
+
+
+
+::_
+
+:author_bit
+
+set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
+
+echo %fp%
+
+@echo on
+git config --global user.name "Jonathan17"
+git config --global user.email "jonathan.r.jones@nesassociates.com"
+@echo off
+
+goto exitb
+
+
+
+::_
+
+:author_devops
+
+set fp=* Configure BitBucket author and email.
+
+echo %fp%
+
+@echo on
+git config --global user.name "mercury_devops"
+git config --global user.email "nes.mercury@nesassociates.com"
+@echo off
 
 goto exitb
 
