@@ -775,6 +775,7 @@ goto exitb
 
 set fp=* Push changes to the cloud.
 
+echo.
 echo %fp%
 echo.
 
