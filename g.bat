@@ -1948,6 +1948,22 @@ goto exitb
 
 ::_
 
+:pullm
+
+set fp=* Pull master
+
+rem lu: Jan-17-2018
+
+echo %fp%
+
+git pull origin master
+
+goto exitb
+
+
+
+::_
+
 :3
 
 :pull
@@ -1980,22 +1996,6 @@ echo.
 git push --set-upstream origin master
 
 rem (!step)
-
-goto exitb
-
-
-
-:_
-
-:pullm
-
-set fp=* Pull master
-
-rem lu: Jan-17-2018
-
-echo %fp%
-
-git pull origin master
 
 goto exitb
 
