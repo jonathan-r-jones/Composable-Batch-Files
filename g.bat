@@ -553,7 +553,7 @@ echo.
 git remote update
 echo.
 
-git status
+rem git status
 
 col
 
