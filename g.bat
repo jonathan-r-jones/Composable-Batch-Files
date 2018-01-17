@@ -1997,11 +1997,14 @@ echo.
 call git remote update
 echo.
 
+echo almost end of rf_status
+
 call git status
+
+echo end of rf_status
 
 col
 
-echo end of rf_status
 
 goto exitb
 
