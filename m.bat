@@ -2889,4 +2889,22 @@ goto exitb
 
 
 
+:_
+
+:update_java_timestamp
+
+set fp=* Update timestamp.
+
+echo %fp%
+
+set classpath=%dropbox%\it\composable_batch_files
+java Get_Timestamp_With_No_Spaces>%tmp%\java_timestamp.txt
+
+rem cd
+rem echo jt: %java_timestamp%
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

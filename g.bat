@@ -891,7 +891,8 @@ cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 goto exitb
 
-call update_java_timestamp.bat
+call m update_java_timestamp
+rem qq-1
 
 set /p commit_description=<%tmp%\java_timestamp.txt
 
