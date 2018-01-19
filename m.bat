@@ -2908,4 +2908,25 @@ goto exitb
 
 
 
+:_
+
+:vs
+
+set fp=* Run the solution in the current folder.
+
+rem lu: Jan-18-2018
+
+echo %fp%
+
+dir /b *.sln>%tmp%\filename.txt
+set /p filename=<%tmp%\filename.txt
+
+rem echo filename: %filename%
+
+start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

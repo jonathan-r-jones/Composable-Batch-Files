@@ -1208,4 +1208,20 @@ goto exitb
 
 
 
+:_
+
+:it
+
+set fp=* IT.
+
+rem lu: Jan-18-2018
+
+echo %fp%
+
+cd /d %dropbox%\it\
+rem qq-1
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

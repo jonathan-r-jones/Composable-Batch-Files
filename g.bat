@@ -847,7 +847,6 @@ call :commit_with_timestamp_description
 call :push
 
 call %0 rf_status
-rem qq-1
 
 goto exitb
 
@@ -892,7 +891,6 @@ if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 goto exitb
 
 call m update_java_timestamp
-rem qq-1
 
 set /p commit_description=<%tmp%\java_timestamp.txt
 
@@ -1774,6 +1772,7 @@ set fp=* Create a new repository on the command line.
 git init
 git commit -m "First commit."
 git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git
+rem qq-1
 git push -u origin master
 
 echo %fp%
@@ -2015,6 +2014,28 @@ rem lu: Jan-5-2018
 echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://github.com/jonathan-r-jones/composable_batch_files
+
+goto exitb
+
+
+
+:_
+
+:ignore
+
+set fp=* Write a function that creates a gitinore file to the current directory.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+if exist .gitignore echo.
+if exist .gitignore echo Error: File already there.
+if exist .gitignore goto exitb
+
+dir /b>.gitignore
+
+call npp .gitignore
 
 goto exitb
 

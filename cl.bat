@@ -458,24 +458,6 @@ goto exitb
 
 :_
 
-:pizza
-
-set fp=* Pizza code.
-
-rem lu: Jan-9-2018
-
-echo %fp%
-
-call td daa
-          
-git clone https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git .\pizza
-
-goto exitb
-
-
-
-:_
-
 :xam_sam
 
 set fp=* Xamarin Forms Samples.
@@ -487,6 +469,101 @@ echo %fp%
 call td daa
           
 git clone https://github.com/xamarin/xamarin-forms-samples.git .\xamarin_forms
+
+goto exitb
+
+
+
+:_
+
+:fresh_pizza
+
+set fp=* Fresh pizza code.
+
+rem lu: Jan-18-2018
+
+echo %fp%
+
+call td daa
+echo.
+          
+git clone https://github.com/alexsorokoletov/NovaCodeCamp.PizzaRatings.git .\fresh_pizza
+
+goto exitb
+
+
+
+:_
+
+:fresh_marvel
+
+set fp=* Fresh marvel code.
+
+rem lu: Jan-18-2018
+
+echo %fp%
+
+call td daa
+echo.
+          
+git clone https://github.com/edsnider/marvel-xfdemo.git .\fresh_marvel
+
+goto exitb
+
+
+
+:_
+
+:appcenter
+
+set fp=* AppCenter sample code.
+
+rem lu: Jan-18-2018
+
+echo %fp%
+
+call td daa
+echo.
+          
+git clone https://github.com/Microsoft/appcenter-sampleapp-android.git .\appcenter_sample
+
+goto exitb
+
+
+
+:_
+
+:pizza
+
+set fp=* Pizza code.
+
+rem lu: Jan-9-2018
+
+echo %fp%
+
+call td daa
+echo.
+          
+git clone https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git .\pizza
+
+goto exitb
+
+
+
+:_
+
+:tt
+
+set fp=* Tick tock menu maker.
+
+rem lu: Jan-18-2018
+
+echo %fp%
+
+call td it
+echo.
+          
+git clone https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git .\TickTockMenuMaker
 
 goto exitb
 
