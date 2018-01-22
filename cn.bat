@@ -682,4 +682,23 @@ goto exitb
 
 
 
+:_
+
+:cmddemo
+
+set fp=Cmddemo
+
+rem lu: Jan-18-2018
+
+call td aa
+echo.
+          
+set rn=https://github.com/BrendanPluralsight/cmd-demo.git
+
+git clone %rn%
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

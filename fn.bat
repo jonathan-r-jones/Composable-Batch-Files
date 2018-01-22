@@ -696,7 +696,7 @@ goto exitb
 
 :_
 
-:ig_sample
+:ig_sample_old
 
 set fp=* Git Ignore Sample File.
 
@@ -705,7 +705,23 @@ rem lu: Jan-19-2018
 echo %fp%
 
 set file_to_edit=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
-rem qq-1
+
+goto exitb
+
+
+
+:_
+
+:ig_sample
+
+set fp=* Git Ignore Sample File.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File - Visual Studio.txt
+
 goto exitb
 
 
@@ -721,7 +737,7 @@ rem lu: Jan-19-2018
 echo %fp%
 
 set file_to_edit=.gitignore
-rem qq-1
+
 goto exitb
 
 
