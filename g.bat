@@ -570,28 +570,6 @@ goto exitb
 
 :_
 
-:clone_tirem
-
-set fp=* Clone TIREM.
-
-echo %fp%
-  
-set branch_name=master
-
-set folder_name=tirem
-
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/tirem.git
-
-@echo on
-git clone %origin_url% --branch %branch_name% .\%folder_name%
-@echo off
-
-goto exitb
-
-
-
-:_
-
 set fp=* This code block was added from my machine named Buzz.
 
 rem fcd: Feb-28-2017
@@ -977,54 +955,6 @@ goto exit
 
 :_
 
-:clone_gt
-
-set fp=* Make a clone for git testing.
-
-rem fcd: May-15-2017
-
-echo %fp%
-
-git clone https://github.com/jonathan-r-jones/ForGitTesting.git --branch master .\git_testing
-
-goto exitb
-
-
-
-:_
-
-:clte
-
-set fp=* Clone templates repository.
-
-echo %fp%
-  
-rem 1. Repository URL.
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/templates.git
-
-rem 2. Folder location.
-set new_folder_path=c:\mercury
-
-rem 3. Folder name.
-set folder_name=templates
-
-rem 4. Branch name.
-set branch_name=master
-
-@echo on
-
-cd %new_folder_path%
-
-git clone %origin_url% --branch %branch_name% .\%folder_name%
-
-@echo off
-
-goto exitb
-
-
-
-:_
-
 :idb
 
 set fp=* 9b. Identify branch.
@@ -1062,25 +992,6 @@ echo %fp%
 echo.
 
 git describe --all --long
-
-goto exitb
-
-
-
-:_
-
-:clone_research
-
-set fp=* Clone research and development.
-
-rem fud: Aug-22-2017
-
-echo %fp%
-echo.
-
-rem 5. Research and development.
-rem How does this HomeBrew statement work?
-rem /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 goto exitb
 
@@ -1622,7 +1533,7 @@ goto exitb
 
 :_
 
-set fp=* Git command from Visual Studio Code.
+set fp=* Git commands from Visual Studio Code.
 
 rem lu: Nov-21-2017
 
@@ -1772,7 +1683,7 @@ set fp=* Create a new repository on the command line.
 git init
 git commit -m "First commit."
 git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git
-rem qq-1
+
 git push -u origin master
 
 echo %fp%

@@ -162,30 +162,6 @@ goto exitb
 
 :_
 
-:bu
-
-set fp=* Copy file to code backup folder.
-
-rem lu: Nov-9-2017
-
-echo.
-echo %fp%
-echo.
-
-set reformatted_string=%2
-
-set reformatted_string=%reformatted_string:/=\%
-
-xcopy "%reformatted_string%" "%Dropbox%\NES\Code Backup\"
-
-echo "%reformatted_string%"
-
-goto exitb
-
-
-
-:_
-
 :mc
 
 set fp=* Copy Mobility resources to the Cordova folder.
@@ -246,6 +222,32 @@ echo %fp%
 call td util
 
 xcopy /y "c:\mercury\mobility\NetConfig - for Testing1.js" "NetConfig.js"
+
+goto exitb
+
+
+
+:_
+
+:bu
+
+set fp=* Copy file to code backup folder.
+
+rem lu: Nov-9-2017
+
+rem skw: slash replace
+
+echo.
+echo %fp%
+echo.
+
+set reformatted_string=%2
+
+set reformatted_string=%reformatted_string:/=\%
+
+xcopy "%reformatted_string%" "%Dropbox%\NES\Code Backup\"
+
+echo "%reformatted_string%"
 
 goto exitb
 

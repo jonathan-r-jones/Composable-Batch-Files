@@ -458,6 +458,95 @@ goto exitb
 
 :_
 
+:clone_tirem
+
+set fp=* Clone TIREM.
+
+echo %fp%
+  
+set branch_name=master
+
+set folder_name=tirem
+
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/tirem.git
+
+@echo on
+git clone %origin_url% --branch %branch_name% .\%folder_name%
+@echo off
+
+goto exitb
+
+
+
+:_
+
+:templates
+
+set fp=* Clone templates repository.
+
+echo %fp%
+  
+rem 1. Repository URL.
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/templates.git
+
+rem 2. Folder location.
+set new_folder_path=c:\mercury
+
+rem 3. Folder name.
+set folder_name=templates
+
+rem 4. Branch name.
+set branch_name=master
+
+@echo on
+
+cd %new_folder_path%
+
+git clone %origin_url% --branch %branch_name% .\%folder_name%
+
+@echo off
+
+goto exitb
+
+
+
+:_
+
+:research
+
+set fp=* Clone research and development.
+
+rem fud: Aug-22-2017
+
+echo %fp%
+echo.
+
+rem 5. Research and development.
+rem How does this HomeBrew statement work?
+rem /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+goto exitb
+
+
+
+:_
+
+:gt
+
+set fp=* Make a clone for git testing.
+
+rem fcd: May-15-2017
+
+echo %fp%
+
+git clone https://github.com/jonathan-r-jones/ForGitTesting.git --branch master .\git_testing
+
+goto exitb
+
+
+
+:_
+
 :xam_sam
 
 set fp=* Xamarin Forms Samples.

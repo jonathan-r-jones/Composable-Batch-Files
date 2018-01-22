@@ -16,8 +16,6 @@ title = Composable Batch Files Helper
 
 set fp=* Add echo.
 
-echo.
-
 
 
 :_
@@ -38,7 +36,7 @@ goto %1
 
 rem Metadata
 
-rem File Purpose: This batch file is intended to be used for Mercury Project related tasks.
+rem File Purpose: This batch file is intended to be used for miscellaneous related tasks.
 
 rem Batch File Style: Parameter-Routing Driven
 
@@ -2341,7 +2339,7 @@ goto exitb
 
 :toc
 
-set fp=* Perform Project Mercury-related tasks.
+set fp=* Perform miscellaneous tasks.
 
 rem fcd: May-13-2017
 

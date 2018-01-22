@@ -6055,33 +6055,6 @@ goto exitb
 
 :_
 
-set fp=* String replacement is cool.
-
-rem lu: Nov-9-2017
-
-echo.
-echo %fp%
-
-rem This works!
-
-rem skw dos search and replace
-
-set str=teh cat in teh hat
-echo.%str%
-set str=%str:teh=the%
-echo.%str%
-
-set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
-echo.%str%
-set str=%str:/=\%
-echo.%str%
-
-goto exitb
-
-
-
-:_
-
 set fp=* Test if exist statement.
 
 rem lu: Nov-13-2017
@@ -6397,17 +6370,35 @@ goto exitb
 
 :_
 
-:code_execution_area
+:hi
 
-set fp=* Execution area. Code below here runs.
+:hello
 
-rem echo.
-rem echo %fp%
+set fp=* Hello world
 
-cls
+rem Function Creation Date: Mar-3-2017
+
 echo.
+echo %fp% from %0.bat file. I'm a real person not a computer. Ask me anything.
 
-rem (!rfcea, !rfsp) (mov4) **************************************
+goto exitb
+
+
+
+:_
+
+:st
+
+set fp=* Run the Snipping Tool.
+
+rem FCD: Mar-7-2017
+
+echo.
+echo %fp%
+
+%windir%\system32\SnippingTool.exe
+
+goto exitb
 
 
 
@@ -6428,8 +6419,50 @@ if %errorlevel% == 0 cd "%1"
 if %errorlevel% == 0 echo Exists.
 if %errorlevel% == 1 echo Does NOT exist.
 
-rem qq-1
 goto exitb
+
+
+
+:_
+
+set fp=* String replacement is cool.
+
+rem lu: Nov-9-2017
+
+echo.
+echo %fp%
+
+rem This works!
+
+rem skw dos search and replace
+
+set str=teh cat in teh hat
+echo.%str%
+set str=%str:teh=the%
+echo.%str%
+
+set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
+echo.%str%
+set str=%str:/=\%
+echo.%str%
+
+goto exitb
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+cls
+echo.
+
+rem (!rfcea, !rfsp) (mov4) **************************************
 
 
 
