@@ -1,6 +1,6 @@
 # Composable Batch Files
 
-. . .are batch files that can be built like legos, one piece at time or together to create a whole script.
+. . .are batch files that can be built like legos, one piece at time or together to create a whole Millennium Falcon script.
 
 ## Usage
 
