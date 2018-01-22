@@ -149,7 +149,7 @@ goto exitb
 
 :edit_file_with_name_lookup
 
-set fp=* Run Notepad++ to edit a looked up filename.
+set fp=* Run Notepad++ to edit "%file_to_edit%".
 
 rem lu: Nov-9-2017
 
@@ -166,7 +166,7 @@ goto exitb
 
 :edit_file_in_current_directory
 
-set fp=* Run Notepad++ to edit a current folder filename.
+set fp=* Run Notepad++ to edit "%1" in the current folder.
 
 rem lu: Nov-9-2017
 

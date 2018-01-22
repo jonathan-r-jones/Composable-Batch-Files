@@ -546,6 +546,8 @@ echo.
           
 git clone https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git .\pizza
 
+cd pizza
+
 goto exitb
 
 
@@ -564,6 +566,28 @@ call td it
 echo.
           
 git clone https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git .\TickTockMenuMaker
+
+goto exitb
+
+
+
+:_
+
+:xplug
+
+set fp=Xamarin_Plugins
+
+rem lu: Jan-18-2018
+
+echo %fp%
+set folder_name=%fp%
+
+call td aa
+echo.
+          
+set rn=https://github.com/jamesmontemagno/Xamarin.Plugins.git
+
+git clone %rn% .\%folder_name%
 
 goto exitb
 

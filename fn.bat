@@ -220,7 +220,7 @@ rem FCD: May-13-2017
 
 echo %fp%
 
-set file_to_edit=C:\mercury\batch_files\td.bat
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\td.bat
 
 goto exitb
 
@@ -264,7 +264,7 @@ rem FCD: Jun-1-2017
 
 echo %fp%
 
-set file_to_edit=C:\mercury\batch_files\g.bat
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\g.bat
 
 goto exitb
 
@@ -337,7 +337,7 @@ rem fcd: Jul-17-2017
 echo %fp%
 
 if not exist %tmp%\certutil_input.txt echo.
-if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "c:\mercury\batch_files\certutil_input.txt" "%tmp%"
+if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FILES%\certutil_input.txt" "%tmp%"
 
 set file_to_edit=%tmp%\certutil_input.txt
 
@@ -372,7 +372,7 @@ rem FCD: Jul-27-2017
 
 echo %fp%
 
-set file_to_edit=C:\mercury\batch_files\s.bat
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\s.bat
 
 goto exitb
 
@@ -557,7 +557,7 @@ rem lu: Nov-17-2017
 
 echo %fp%
 
-set file_to_edit=c:\mercury\batch_files\message from batch files.txt
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\message from batch files.txt
 
 goto exitb
 
@@ -573,7 +573,7 @@ rem lu: Nov-17-2017
 
 echo %fp%
 
-set file_to_edit=c:\mercury\batch_files\Mercury Development Environment.xlsx - Shortcut.lnk
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\Mercury Development Environment.xlsx - Shortcut.lnk
 
 goto exitb
 
@@ -672,7 +672,7 @@ rem FCD: Apr-10-2017
 
 echo %fp%
 
-set file_to_edit=C:\mercury\batch_files\m.bat
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\m.bat
 
 goto exitb
 
@@ -688,8 +688,40 @@ rem FCD: Jan-4-2018
 
 echo %fp%
 
-set file_to_edit=C:\mercury\batch_files\fn.bat
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\fn.bat
 
+goto exitb
+
+
+
+:_
+
+:ig_sample
+
+set fp=* Git Ignore Sample File.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+set file_to_edit=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
+rem qq-1
+goto exitb
+
+
+
+:_
+
+:ig
+
+set fp=* Git Ignore in the current folder.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+set file_to_edit=.gitignore
+rem qq-1
 goto exitb
 
 

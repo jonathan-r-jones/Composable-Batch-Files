@@ -2021,9 +2021,9 @@ goto exitb
 
 :_
 
-:ignore
+:ig
 
-set fp=* Write a function that creates a gitinore file to the current directory.
+set fp=* Create a gitinore file to the current directory.
 
 rem lu: Jan-19-2018
 
