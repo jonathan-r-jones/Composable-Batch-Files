@@ -1,0 +1,6436 @@
+:_
+
+@echo off
+
+
+
+:_
+
+rem Metadata
+
+rem File Purpose: This file is mainly used for testing. If you think about, what I've done 
+rem here is kind of created a REPL, right?
+
+rem Batch File Style: Code Execution Area.
+
+rem Test Batch File Code Keepers
+
+
+
+:_
+
+set fp=* Set title.
+
+echo.
+echo.
+echo %fp%
+
+title=Mr T.
+
+
+
+:_
+
+set fp=* Set color.
+
+echo.
+echo %fp%
+
+color 0e
+
+
+
+:_
+
+set fp=* Route execution.
+
+echo.
+echo %fp%
+echo.
+
+if "%1"=="/?" goto help
+goto code_execution_area
+
+
+
+:_
+
+rem Begin exit locker.
+ ___  ______  ______  ______  ______  ______  ______  ______  ______  ___
+  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)
+
+
+
+:_
+
+:exit
+
+set fp= * Exit.
+
+echo.
+rem echo %fp%
+
+exit
+
+
+
+:_
+
+:exitb
+
+set fp= * Exit batch file but not command window.
+
+rem echo.
+rem echo %fp%
+
+exit /b
+
+
+
+:_
+
+:exitp
+
+set fp= * Exit with pause.
+
+echo.
+rem echo %fp%
+
+pause
+
+exit
+
+
+
+:_
+
+:exitpb
+
+set fp= * Pause then exit batch file but not command window.
+
+rem echo.
+rem echo %fp%
+
+pause
+
+exit /b
+
+
+
+:_
+
+rem End exit locker.
+ ___  ______  ______  ______  ______  ______  ______  ______  ______  ___
+  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)
+
+
+
+:_
+
+rem Begin script body. (!sbody)
+ ___  ______  ______  ______  ______  ______  ______  ______  ______  ___
+  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)
+
+
+
+:_
+
+set fp=* Conditional route execution. If %1 is something then do that, else do cea.
+
+echo.
+echo %fp%
+
+if "%1" == "" goto code_execution_area
+
+goto %1
+
+
+
+:_
+ 
+set fp=* Set path.
+
+echo.
+echo %fp%
+
+call "c:\projects\netbeans\batch_files\set my path only.bat"
+
+
+
+:_
+
+set fp=* Set configuration.
+
+echo.
+echo %fp%
+echo.
+
+rem   _/) � � � _/) � � �_/)   Begin copy-and-paste menu of choices list.
+rem  ~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+rem Please copy-and-paste from the list only. Do not move items out of this list.
+
+set configuration=configuration_ad_hoc
+set configuration=configuration_class_path
+set configuration=configuration_environment_variable_paths
+set configuration=configuration_path_validation
+set configuration=configuration_run_me
+set configuration=configuration_testing_equality
+set configuration=configuration_run_hello_world
+
+rem   _/) � � � _/) � � �_/) (!refermc)
+rem  ~~~~~~~~~~~~~~~~~~~~~~~~  
+
+set configuration=configuration_run_me_2
+
+
+
+:_
+
+set fp=* Go to folder.
+
+echo.
+echo %fp%
+echo.
+
+cd\!!
+cd big faceless organization
+
+cd
+
+
+
+:_ Copy Code Blocks to Save Below Here ***************************************************
+
+goto exit
+
+
+
+:_
+
+:experiments_starting_point 2
+
+set fp=4. * This is the starting point for new code experiments 2. 
+
+echo.
+echo %fp%
+echo.
+
+cd %my documents%
+cd %my documents%\dropbox
+cd %my documents%\dropbox\latest mp3s
+
+
+
+:_
+
+set fp=* 13a. If branch executes.
+
+echo.
+echo %fp%
+echo.
+
+set message=Hello world.
+
+echo %message%
+
+if "%message%" == "Hello world." (
+  echo We said hello.
+) else (
+echo We did NOT say hello.)
+
+
+
+:_
+
+set fp=* 13b. Else branch executes.
+
+echo.
+echo %fp%
+echo.
+
+set message=Hello world not.
+
+echo %message%
+
+if "%message%" == "Hello world." (
+  echo We said hello.
+) else (
+echo We did NOT say hello.)
+
+
+
+:_
+
+set fp=* 13c. Testing inequality to using the "not" statement.
+
+echo.
+echo %fp%
+echo.
+
+set message=Hello.
+
+if not "%message%" == "Hello.x" echo It's not equal.
+
+
+
+:_
+
+set fp=5. * Getting inequality to work using else.
+
+echo.
+echo %fp%
+echo.
+
+set message=hello2
+
+if "%message%" == "hello" (echo equals hello) ELSE (echo does not equal hello)
+
+
+
+:_
+
+set fp=7a. * Getting the else statement to work.
+
+echo.
+echo %fp%
+echo.
+
+set test=hello
+
+echo %test%
+
+if "%test%" == "2hello" (goto if_portion)
+goto else_portion
+
+
+
+:_
+
+set fp= 8. * Test the set statement.
+
+echo.
+echo %fp%
+echo.
+
+rem The following 2 statements are equal.
+
+rem set fp=8. * Test the set statement.
+
+rem set fp= 8. * Test the set statement.
+
+goto exit
+
+
+
+:_
+
+set fp=3. * Router.
+
+echo.
+echo %fp%
+echo.
+
+goto experiments_starting_point
+
+
+
+:_
+
+set fp= 9. * Copy theme jpegs.
+
+echo.
+echo %fp%
+echo.
+
+cd \Users\jrj.GCITECH\AppData\Local\Microsoft\Windows\Themes
+rem xcopy /s *.jpg c:\!
+cd
+
+set podcast_folder=\Users\jrj.GCITECH\AppData\Local\Microsoft\Windows\Themes\
+set staging_area=\!\
+
+
+for /r "%podcast_folder%" %%f in ("*.jpg") do move "%%f" %staging_area%
+
+goto exit
+
+
+
+:_
+
+set fp=4. * Test block 2. Fall-through style.
+
+echo.
+echo %fp%
+echo.
+
+echo hey
+
+goto exit
+
+
+
+:_
+
+:test_block
+
+set fp=5. * Test block 1. Go-to style.
+
+echo.
+echo %fp%
+echo.
+
+echo hey
+
+goto exit
+
+
+
+:_
+
+set fp=7. * Make a copy of cc.asc.
+
+echo.
+echo %fp%
+echo.
+
+xcopy /d /h /r /y "%reach out%\cc.asc" "%reach out%\copy of cc.asc"
+rem xcopy /d /h /r /s /y "%reach out%\cc.asc" "copy of cc.asc"
+
+goto exit
+
+
+
+:_
+
+set fp=6. * Fix Dropbox.
+
+echo.
+echo %fp%
+echo.
+
+cd %my documents%
+cd dropbox
+
+cd
+
+attrib.exe -a -r -h -s /s run_management_studio.bat
+
+goto exit
+
+
+
+:_
+
+set fp=* Do the experiment at hand.
+
+echo.
+echo %fp%
+echo.
+
+%systemroot%\explorer.exe "C:\Tortoise\ApplicationUtilities\ConfigurationManagement\ChangeLog.xml
+
+goto exit
+
+
+
+:_
+
+set fp=10. Copy the links file to the dropbox location.
+
+echo.
+echo %fp%
+echo.
+
+xcopy /d /h /r /y "%reach out%\Jonathans_Links.htm" "%my documents%\Dropbox\Public"
+
+
+
+:_
+
+:if_portion
+
+set fp=* If portion.
+
+echo.
+echo %fp%
+echo.
+
+goto exit
+
+
+
+:_
+
+:else_portion
+
+set fp=* Else portion.
+
+echo.
+echo %fp%
+echo.
+
+goto exit
+
+
+
+:_
+
+set fp=5. * Testing for vaiable equality 2. Notice that the else doesn't work.
+
+echo.
+echo %fp%
+echo.
+
+set test=hello
+
+echo %test%
+
+if "%test%" == "hello" (echo hey)
+else (echo xxelse)
+
+goto exit
+
+
+
+:_
+
+set fp=5. * Testing for vaiable equality.
+
+echo.
+echo %fp%
+echo.
+
+set test=hello
+
+echo %test%
+
+if "%test%" == "hello" echo hey
+
+goto exit
+
+
+
+:_
+
+:program_file_variants
+
+set fp=4. * Here are some variants of the "Program File" environment variable.
+
+echo.
+echo %fp%
+echo.
+
+echo.
+echo A. - "programfiles"
+echo %programfiles%
+echo.
+echo B. - "ProgramFiles(notepad_installation_path)"
+echo %ProgramFiles(notepad_installation_path)%
+echo.
+echo C. - Proper Case "ProgramW6432"
+echo %ProgramW6432%
+echo.
+echo D. - Lower Case "programw6432"
+echo %programw6432%
+echo.
+
+goto exit
+
+Block Addendum - Program File Paths
+
+::Sett: ProgramFiles=C:\Program Files (notepad_installation_path)
+
+::Command Prompt: ProgramFiles=C:\Program Files
+
+
+
+:_
+
+set fp=* Copy newer files from my local drive to the export location.
+
+echo.
+echo %fp%
+echo.
+
+xcopy /d /h /r /s /y "%savannah%" "%thumb_drive%\!savannah"
+
+
+
+:_
+
+set fp=* Now do vice versa.
+
+echo.
+echo %fp%
+echo.
+
+xcopy /d /h /r /s /y "%thumb_drive%\!savannah" "%savannah%"
+
+
+
+:_
+
+set fp=* Execute main function.
+
+echo.
+echo %fp%
+echo.
+
+echo Hello world from the main function.
+
+
+
+:_
+
+:file_information
+
+This file was created on: Nov-3-2014
+
+
+
+:_
+
+:goto_demonstrated
+
+set fp=* This rubric shows how to use the go to statement to jump to another section.
+
+echo.
+echo %fp%
+echo.
+
+echo Hello world.
+
+goto exit
+
+
+
+:_
+
+set fp=* Perform main function, viz.
+
+echo.
+echo %fp%
+echo.
+
+echo Hello world.
+
+
+
+:_
+
+set fp=* Set initial folder.
+
+echo.
+echo %fp%
+echo.
+
+set initial_folder=%my documents%\!savannah\Chef of the Future\Templates\Templates
+
+cd\%initial_folder%
+
+cd
+
+
+
+:_
+
+set fp=* Set title.
+
+echo.
+echo %fp%
+echo.
+
+title File Purpose: The purpose of this file is to [blank].
+
+
+
+:_
+
+:configuration_batch_file
+
+set fp=* Batch file configuration.
+
+echo.
+echo %fp%
+echo.
+
+set file_type=*.bat
+
+echo File type: "%file_type%".
+
+set folder_to_search=%my documents%\!savannah\belfry
+
+echo Folder to search: "c:\%folder_to_search%".
+
+set sc=computer_alias
+
+echo Search criterion: "%sc%".
+
+goto search
+
+
+
+:_
+
+set fp=* Delete old search results file.
+
+echo.
+echo %fp%
+echo.
+
+del c:\a\search_results.txt
+
+
+
+:_
+
+set fp=* Go to computer alias.
+
+echo.
+echo %fp%
+echo.
+
+goto %computer_alias%
+goto exit
+
+
+
+:_
+
+:search
+
+set fp=* Search.
+
+echo.
+echo %fp%
+echo.
+
+c:
+
+cd\%folder_to_search%
+
+cd
+
+findstr /i /m /p /s /c:"%sc%" "%file_type%">"c:\a\search_results.txt"
+
+
+
+:_
+
+set fp=* Send search results to Multi-Edit.
+
+echo.
+echo %fp%
+echo.
+
+"C:\Program Files\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
+
+
+
+:_
+
+:set_configuration
+
+set fp=* Set configuration.
+
+echo.
+echo %fp%
+echo.
+
+set configuration=configuration_
+set configuration=configuration_
+
+goto %configuration%
+
+
+
+:_
+
+set fp=* Set initial folder.
+
+echo.
+echo %fp%
+echo.
+
+set initial_folder=%my documents%\!savannah\belfry
+
+cd\%initial_folder%
+
+cd
+
+echo initial folder is "c:\%initial_folder%".
+
+
+
+:_
+
+set fp=* Set search criterion.
+
+echo.
+echo %fp%
+echo.
+
+set sc=consecrate
+set sc="missing sources"
+set sc=greed
+set sc=Requirements Without Organizations
+
+echo Search criterion is "%sc%".
+
+
+
+:_
+
+set fp=* Set search file types.
+
+echo.
+echo %fp%
+echo.
+
+set search_file_type=*.txt
+set search_file_type=*.xml
+
+echo File types to search are "%search_file_type%".
+
+
+
+:_
+
+set fp=* Set search folder.
+
+echo.
+echo %fp%
+echo.
+
+set folder_to_search=!
+set folder_to_search=Tortoise
+
+echo Folder to search is "c:\%folder_to_search%".
+
+
+
+:_
+
+set fp=* Set title.
+
+echo.
+echo %fp%
+echo.
+
+title Place batch file title here.
+
+
+
+:_
+
+:set_path
+
+set fp=* Set path.
+
+echo.
+echo %fp%
+echo.
+
+call "%savannah%\belfry\set_my_path.bat"
+
+goto set_color
+
+
+
+:_
+
+:set_title
+
+set fp=* Set title.
+
+echo.
+echo %fp%
+echo.
+
+title This file is where I store WORKING batch file "method blocks" for use in copying-and-pasting.
+
+rem This file is an alphabetical list of those methods.
+
+goto set_path
+
+
+
+:_
+;Batch File Code Keepers (!bfba)
+
+
+
+;Batch File Code Keepers - Miscellany
+
+:Robocopy code that works:
+
+robocopy /s /ndl /njh /njs "%savannah%" "%my documents%\dropbox\!savannah"
+
+robocopy /s /ndl /njh /njs "%my documents%\dropbox\!savannah" "%savannah%"
+
+:Jun-12-2012: How to copy files in a Visual Studio Project
+
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(TargetDir)xml\"
+mkdir "$(TargetDir)xsl\"
+mkdir "$(TargetDir)docs\"
+
+xcopy "$(SolutionDir)ConfigFiles\docs" "$(TargetDir)docs\" /Y/K/V/E/D
+if errorlevel 1 GOTO BuildEventFailed
+
+xcopy "$(ProjectDir)..\NetworkInventoryControls\$(OutDir)xml" "$(TargetDir)xml\" /Y/K/V/E/D
+if errorlevel 1 GOTO BuildEventFailed
+
+xcopy "$(ProjectDir)..\NetworkInventoryControls\$(OutDir)xsl" "$(TargetDir)xsl\" /Y/K/V/E/D
+if errorlevel 1 GOTO BuildEventFailed
+
+GOTO BUILDOK
+
+:BuildEventFailed
+echo POSTBUILDSTEP for $(ProjectName) FAILED
+exit 1
+
+:put_dissonance_out_onto_dropbox_in_a_iphone_readable_form
+
+set fp=Put Dissonance onto Dropbox in a iPhone readable form.
+
+echo.
+echo %fp%
+echo.
+
+::call "%savannah%\belfry\back up dissonance.bat"
+
+:Aug-10-2011: How to pass parameters/filenames that might contain spaces.
+
+On the receiving end use 
+echo %~1
+echo %~2
+
+instead of say 
+echo %1
+echo %2
+
+::The variable "%~dp0" stands for the path from where the batch file was run.
+
+@set toolPath=%~dp0
+echo %toolPath%
+cd
+
+:Cool title code that puts the name of the batch file in the title bar of the command prompt.
+title %0.
+
+:What does this code do?
+
+@setlocal
+@setlocal enabledelayedexpansion
+
+FOR /F "tokens=2-4 delims=/ " %%a in ('echo %date%') do (set mydate=%%c-%%a-%%b)
+FOR /F "tokens=1-4 delims=.: " %%i in ('echo %time%') do (set mytime=%%i-%%j-%%k)
+set dateTime=%mydate%_%mytime%
+
+:This is cool code to experiment with and will probably be in future batch files.
+
+echo %errorlevel%
+
+:I thought this code should fix that one persistent "CD" drive problem, but after 
+experimenting with it, turns out I was wrong.
+
+if exist b:\nul echo b
+if exist c:\nul echo c
+if exist d:\nul echo d
+if exist e:\nul echo e
+if exist f:\nul echo f
+if exist g:\nul echo g
+if exist t:\nul echo t
+
+:How to do if exist (skw if exists)
+
+::if exist "filename.txt" call "filename.bat"
+
+::rem The following line is a cool idea.
+if exist "somefile.txt" pause
+
+::Testing If a Drive or Directory Exists from a Batch File:
+
+http://support.microsoft.com/kb/65994
+
+This article was previously published under Q65994
+
+You can use the IF EXIST statement to check for the presence of a directory. For example, to 
+test for C:\WIN and then change to C:\WIN if it exists, use the following batch file:
+
+C: IF NOT EXIST C:\WIN\NUL GOTO NOWINDIR CD \WIN :NOWINDIR
+
+MORE INFORMATION
+NUL always exists on a local MS-DOS FAT drive; therefore, if C:\WIN exists, C:\WIN\NUL exists.
+This technique can also be used to verify that a drive exists. For example: IF EXIST E:\NUL 
+GOTO USE_E
+
+If an unformatted disk is tested, or if the floppy disk drive is empty, an INT 24 error 
+(Abort, Retry, Fail?) occurs.
+
+if exist c:\! echo "!"
+if exist c:\a\nul echo "! nul"
+if exist c:\!! echo "!!"
+
+:How to do drag-and-drop with a batch file:
+
+"%savannah%\chef of the future\TrID - File Identifier\trid.exe" %1
+
+:How did SQLPlus disappear?!
+
+Answer: When you adjust an Envrionment Variable via Right clicking My Computer | Properties 
+| Advanced Tab | Envrionment Variables the Set command will not reflect the change until after 
+logogg and log back on. However, the cmd utilities like SQLPlus and VStudio 2008, I assume,
+use the newly modified values.
+
+:How to execute a shortcut from a batch file. Jan-7-2011
+
+cd %savannah%
+cd shortcuts
+savannah.lnk
+
+::Example 2:
+Strangely this code brings up event viewer:
+
+cd %my documents%
+services.lnk /s
+cd
+
+:How to wait in a batch file:
+
+echo waiting for 5 seconds for the setup project to finish compiling
+ping 127.0.0.1 -n 5 -w 60000 >NUL
+
+:Stuff that was removed from Immc.bat.
+
+::if exist "%reach out%\mz.asc" egress_batch_file_now_with_errors_2.bat "Unzipped Immanuel 
+exists."
+
+::%savannah%\belfry\egress_batch_file_now_with_errors_2.bat
+
+::
+rem They both exist, so delete the closed version.
+
+::if exist mz.asc (if exist mzcl.jpg del /ah /a /f mzcl.jpg)
+
+:How to run a CMAC macro from a batch file. - This worked.
+
+:"C:\Program Files\Multi-Edit 2008\Mew32.exe" "/RCompile"
+
+::This worked too!
+
+:"C:\Program Files\Multi-Edit 2008\Mew32.exe" "/R@load_clif"
+
+:How to put q+q on the same line as a code line. (skw comment)
+
+:goto egress :q+q
+
+:How to make lowercase the file extension "MP3":
+
+rename *.mp3 *.mp4
+rename *.mp4 *.mp3
+
+:How to run an MSI file in using a batch file: 
+msiexec /i "database deployment tool 6.msi"
+
+:This statement does hidden and non-hidden. Ridiculously, the ORDER of the switches matters.
+
+del /ah /a /f "%thumb_drive%:\!savannah\%file_to_delete%"
+
+:How to do "not equals".
+set test=truex
+if "%test%"=="true" echo Test is true.
+if not "%test%"=="true" echo Test is NOT true.
+
+:Assign 3 variables to autoexec.bat
+
+::savannah=%userprofile%\my documents\!savannah
+
+::my_documents=%userprofile%\my documents
+
+::computer_name=laptop or desktop
+
+:how to change the drive and folder together! Use the "d" switch: cd /d
+
+:The way to get a "universal" environment variable is to place a set command in 
+c:\autoexec.bat! Oct-17-2008
+
+:
+c:
+cd\!affinity\tegu
+cd
+
+set /p Counter=<Script_Runs.txt
+Incrementor %Counter% >Script_Runs.txt
+
+set script_file=show_data
+OSQL -n -S (local) -d ProjectX_Jun_27 -E -i %script_file%.sql -o 
+%savannah%\Tegu\Script_Log_Files\%counter%_%script_file%.log
+
+:This worked on Jul-11-2007 in Tegu.
+OSQL -S (local) -d ProjectX_Jun_27 -E -i %savannah%\Tegu\gather_statistics.sql -o 
+"%savannah%\Tegu\Script_Log_Files\gather_statistics.log"
+
+:See the file called "%savannah%\belfry\test_batch_file_proving_ground.bat" for working 
+samples.
+
+:How to do an "AND" statement in a batch file. lk#2
+
+ rem They both exist, so delete the closed version.
+if exist mz.asc (if exist mzcl.jpg del /f mzcl.jpg)
+
+:echo y | del c:\0\*.*
+
+:cmd /T:4e works.
+
+:sort < names.txt > list.txt use the file names.txt as input to sort - output from sort is 
+sent to the file list.txt.
+
+:dir | more: displays 1 page at a time
+
+:Put a "pause" statement at the end of a batch file if you want the window to stay open so you 
+can see what the hell is going on.
+
+:echo f | xcopy timestamp3.txt timestamp4.txt
+
+:Use cd mu* to change to the Multi-Edit folder, for example. This is much easier than typing
+out the whole folder name. lk#2
+
+:
+@if /I "%LANGPARAM%"=="ENG" (goto PROCESS
+)else if /I "%LANGPARAM%"=="FR"      (goto PROCESS
+)else if /I "%LANGPARAM%"=="PTG"     (goto PROCESS
+)else if /I "%LANGPARAM%"=="SPN"     (goto PROCESS
+)else if /I "%LANGPARAM%"=="ARAB"    (goto PROCESS)
+
+:ERROR
+@echo * * * * * * * * * * * * * * * * * * * *
+@echo Two input parameters are required:
+@echo IMPORT FILE: drive:\path\import_file
+@echo LANGUAGE:    eng, fr, spn, ptg or arab
+@echo * * * * * * * * * * * * * * * * * * * *
+@pause
+goto exit
+
+:PROCESS
+
+:if /i not "%computername%"=="JRJ4550" egress
+
+:if exist "%savannah%\mz.asc" egress_batch_file_now_with_errors_2.bat Immanuel_Exists
+
+:if exist ? goto error_exists
+
+:command line asynchronous
+
+:Learn how to run batch files that don't close their windows.
+
+::Drag changedball.bat into the run command, then precede that line with "cmd /k".
+
+:
+IF NOT EXIST ..\INSTALLATION\PREREQUISITES mkdir ..\INSTALLATION\PREREQUISITES
+
+:
+echo waiting for 5 seconds for resources to finish cleaning up
+ping 1.1.1.1 -n 5 -w 60000 >NUL
+
+:Searching for all files with the word proxy in them: *proxy*.*
+
+:[filename] where the filename contains a y to answer choice questions.
+
+:Use the start command to run a program within a batch file and then have the command prompt
+window close, while the program that you started may continue to run.
+
+:echo Milestone_Marker_88%local_drive%\!\-_log.txt
+
+:The BELL BEL character ASCII 007 can be had many ways including from the command line:
+
+from the command line using the character code 007 with the ALT key, ECHO ALT-007 without
+the quotes
+
+:%comspec% /k batch file name goes here
+
+:To copy only newer files from subfolder a to b: xcopy /r /y /d /s /v .\a .\b
+
+: | more: display one page at time
+
+:
+Note that the following line starts a new instance of Multi-Edit, which is usually
+not desirable.
+
+start "C:\Program Files\Multi-Edit 2008\Mew32.exe" c:\a\Copy_of_CMAC.log
+
+Instead use this line:
+
+"C:\Program Files\Multi-Edit 2008\Mew32.exe" c:\a\Copy_of_CMAC.log
+
+:
+goto _This_Is_How_You_Add_2_Numbers
+goto _Section_1
+goto _Section_2
+goto _Section_3
+goto _Section_4
+goto _Section_5
+
+:_This is how you send a string as a command line parameter.
+call %savannah%\belfry\Test2.bat "Hey brother!"
+
+:_This is hou you do a local variable. All set statements after this will be local to this 
+rem batch file.
+setlocal
+
+:_This is how you dynamically name a variable, thus making it a local variable.
+set time_snapshot=%time%
+set local_debug_mode_%time_snapshot%=50
+
+set filename=%0
+set local_debug_mode_%filename%=50
+set local_debug_mode_variable=local_debug_mode_%filename%
+title Batch file %0 is running.
+
+echo 11 %(local_debug_mode_%filename%)%
+echo 10 (%local_debug_mode_(%filename%)%)
+echo 9 %local_debug_mode_(%filename%)%
+echo 1 "%local_debug_mode_variable%"
+echo 2 %%local_debug_mode_variable%%
+echo 3 %local_debug_mode_variable%
+
+:These don't work.
+echo 4 %local_debug_mode_%filename%
+echo 5 %filename%
+echo 6 %local_debug_mode_"%filename%"%
+echo 7 %local_debug_mode_%0%
+echo 8 %local_debug_mode_%filename%%
+echo 18 %local_debug_mode_%%filename%
+echo 19 %%local_debug_mode_variable%
+
+echo 12 %%0
+echo %%0%
+echo %0
+echo %0%
+echo "%0"
+echo 17 %0_1
+
+:_Section_4
+echo.
+echo Section 4: More Experimentation
+echo ------------------------------------------------------------------------------
+
+echo This is how you do double if statements.
+set testmode=true
+c:
+cd\
+if not exist testfolder md testfolder
+if "%testmode%"=="true" if /i exist "c:\testfolder" echo true
+
+if "%1" == "" echo No command line parameter was passed.
+if not "%1" == "" echo %1 parameter was passed.
+
+:This works.
+
+::if "%testmode%"=="true" echo true
+
+goto _xit
+
+echo This is how you grab user input from the command line.
+type c:\a\remove_special_characters_instructions.txt
+
+set /P user_option=Press a key and hit enter to make your choice:
+
+echo.
+echo %user_option%
+
+
+echo This is how you enforce the passing of a parameter.
+if /i '%1' == '' echo You must enter a parameter.
+if /i '%1' == '' goto _xit
+
+echo This is how you write an if statement.
+if /i '%computername%'=='Jonathans_HP' goto I_am_working_on_my_laptop
+echo I am working on the server.
+goto leapfrog
+
+:I_am_working_on_my_laptop
+echo I am working on my laptop.
+
+:leapfrog
+
+goto _xit
+
+echo Here's how to count to ten.
+
+set Counter=0
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+:_Section_3 Notice that the comment on this line DOES NOT interfere with the label.
+echo.
+echo Section 3: Experimentation
+echo ------------------------------------------------------------------------------
+
+set computer_alias=_Laptop
+
+echo This is how you use the increment function, the brute force way.
+set Counter=10
+Incrementor %Counter% >%savannah%\belfry\batch_file_database\Incrementor.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Incrementor.txt
+echo %Counter%
+
+:_This_Is_How_You_Add_2_Numbers
+echo This is how you add 2 numbers in a batch file. (skw How to Add 2 Numbers)
+set /p Counter=<%savannah%\belfry\batch_file_database\Adder.txt
+echo Initial Counter: %Counter%
+set /a Counter=%counter%+1
+
+attrib -r %savannah%\belfry\batch_file_database\Adder.txt
+echo %Counter%>%savannah%\belfry\batch_file_database\Adder.txt
+echo Incremented Counter: %Counter%
+goto _xit
+
+:Now_Playing
+
+rem This is how you change the drive as well as the folder.
+cd /d
+
+echo Test
+echo %0
+
+:Non-Affinity File Flag
+goto _xit
+
+:This works.
+echo Test
+set a=1
+set /a a=%a%+1
+echo %a%
+
+goto _xit
+
+
+echo This is how you add 2 numbers, the brute force way.
+set Counter=1000
+Add_2_Numbers %Counter% 31 >%savannah%\belfry\batch_file_database\Adder.txt
+set /p Counter=<%savannah%\belfry\batch_file_database\Adder.txt
+echo %Counter%
+
+
+set goto_sensitive=GOTOSENSITIVE
+goto %goto_sensitive%
+echo Hey! Why don't I print?
+
+:gotosensitive
+echo Goto statements are case-insensitive.
+
+goto %computer_alias%
+echo Hey! Why don't I print?
+
+:_Laptop
+echo I print.
+
+
+
+echo This is how you set an environment variable from the contents of a file!
+set /p comp=<%savannah%\belfry\batch_file_database\hello_world.txt
+echo %comp%
+
+
+set part1=bull
+set part2=shit
+set concatenate=%part1%%part2%
+echo.
+echo This is how you do concatenation in batch files: %concatenate%.
+
+
+
+goto _xit
+
+Comments Regarding This Batch File
+----------------------------------
+
+
+
+:_
+
+:configuration_path_validation
+
+set fp=* Validate path.
+
+echo.
+echo %fp%
+echo.
+
+set target_folder=%my documents%\Dropbox\Savannah Backups\%Current_JDate%\reach out\
+set target_folder=%my documents%\Dropbox\Savannah Backups\%Current_JDate%\reach out\
+set target_folder=%my documents%\Dropbox\Savannah Backups
+set target_folder=!
+set target_folder=%my documents%
+set target_folder="%my documents%"
+set target_folder=%savannah%
+
+c:
+
+rem cd\%target_folder%
+
+echo %savannah%
+echo %my documents%
+echo %reach out%
+
+rem echo  My Documents: %my documents%
+rem echo Target Folder: %target_folder%
+
+cd
+
+goto exit
+
+
+
+:_
+
+:configuration_class_path
+
+rem Last Updated: Sep-20-2016
+
+set fp=* Validate class path.
+
+echo.
+echo %fp%
+echo.
+
+rem Last Updated: Sep-19-2016 mru
+
+set classpath=c:\Program Files (notepad_installation_path)\Java\jdk1.7.0_71\bin
+set classpath=c:\Program Files (notepad_installation_path)\Java\jdk1.7.0_71
+set OLDCLASSPATH=%CLASSPATH%
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+echo %oldclasspath%
+echo %classpath%
+
+goto exit
+
+
+
+:_
+
+:configuration_environment_variable_paths1
+
+set fp=* configuration_environment_variable_paths1
+
+echo.
+echo %fp%
+echo.
+
+set drive=c:
+set cpath=program files\java\jdk1.8.0_102\jre\lib
+set classpath=%drive%\%cpath%
+
+echo     Drive: %drive%
+echo     Cpath: %cpath%
+echo Classpath: %classpath%
+echo.
+
+cd\%cpath%
+cd
+
+goto configuration_run_me
+goto exit
+
+
+
+:_
+
+:configuration_environment_variable_paths2
+
+set fp=* configuration_environment_variable_paths2
+
+echo.
+echo %fp%
+echo.
+
+set drive=c:
+set cpath=program files\java\jdk1.8.0_102\bin
+set classpath=%drive%\%cpath%
+
+echo     Drive: %drive%
+echo     Cpath: %cpath%
+echo Classpath: %classpath%
+echo.
+
+cd\%cpath%
+cd
+
+goto configuration_run_me
+goto exit
+
+
+
+:_
+
+:configuration_testing_equality
+
+set fp=* configuration_testing_equality
+
+echo.
+echo %fp%
+echo.
+if %classpath%=="" echo 1
+if %classpath%=="c:\pcarss\web" echo 2
+if %classpath%=="c:\pcarss\web" echo 3
+if "%classpath%" == "c:\pcarss\web" echo 4
+if "%classpath%" == "C:\pcarss\Web" echo 5
+
+rem Gothca! Notice that is prints out 6 and not 4 or 5. Therefore it is case sensitive!
+if "%classpath%" == "C:\pcarss\web" echo 6
+if %classpath% == "C:\pcarss\web" echo 7
+if /i "%classpath%" == "c:\pcarss\web" echo 8
+
+echo %classpath%
+
+goto exit
+
+
+
+:_
+
+Metadata: Track Size (!tstt)
+
+    Date       Lines      Bytes    Funcs  Notes
+ -----------  ------  ---------  -------  ---------------------------------------------------
+
+:Sep-21-2016   2,228     39,414       92
+
+
+
+:_Section_1
+
+echo.
+echo Section_1: Ifs and Sets: Every line in section 1 prints and every line in section 2 
+doesn't. echo 
+--------------------------------------------------------------------------------------------
+
+if /i exist "c:\!affinity" echo I used to think that "if exist" works only on filenames, not 
+folders.
+
+set horse=Notice no space after the equals sign and no quotes around this string.
+echo %horse%
+
+set horse= Notice the space at the beginning of this string.
+echo %horse%
+
+if /i "%computer_alias%"=="Laptop" echo Double quotes work and are preferred to single quotes.
+
+if /i '%computer_alias%' == 'laptop' echo This is how you employ case-insensitivity.
+
+if /i not exist '%savannah%\worthwhile.some' echo Here's how you use "NOT EXIST".
+
+if /i exist "%savannah%\worthwhile.now" echo Case doesn't matter.
+
+if /i NOT '%computer_alias%' == 'Laptopxxxx' echo This is how you use The NOT EQAUL TO 
+operator.
+
+if /i '%computer_alias%' == 'Laptop' echo Spaces around the '==' DON'T matter.
+
+:Notice also that set statement employ single "=" sign, whereas comparison employ 2 "=" signs.
+
+if /i '%computer_alias%'=='Laptop' echo Single quotes work, but NOT with ALL constructs so 
+should be avoided.
+
+if /i '%computer_alias%'=='Laptop' echo This is case sensitive.
+
+goto exit
+
+
+
+:_Section_2
+
+echo.
+echo Section 2: Items below here DON'T PRINT. If you don't believe me, try running 
+echo this to see for yourself. What follows the echo statement is the reason the 
+echo syntax is incorrect.
+echo ------------------------------------------------------------------------------
+
+if /i not exist "c:\!affinity" echo I used to think that "if exist" works only on filenames, 
+not folders.
+
+if /i exist '%savannah%\Worthwhile.now' echo The file "worthwhile.asc" actually exists but you 
+surrounded it with single, instead of double quotes.
+
+::Notice that putting a space BEFORE the equals sign cause the variable to not be set.
+set horse2 = shit
+echo %horse2%
+
+if "%computer_alias%"=="LapTop" echo Improperly cased variable.
+if %computer_alias%=="Laptop" echo No quotes around the environment variable.
+set computer_alias_2="Laptop"
+if '%computer_alias%_2' == 'Laptop' echo Percent signs within the environment variable.
+
+goto _xit
+
+:del "file identifier report.txt"
+
+
+
+;Batch File Code Keepers - How To Do a For Loop (!for) (skw Batch File For Loop)
+
+:Findstr
+
+rem This works. findstr %sc% *.*
+
+rem for /r "%folder_to_search%" %%f in ("*.*") do findstr %sc%
+rem for /r "%folder_to_search%" %%f in ("*.*") do findstr "%%f" %sc%
+
+rem This works.
+rem for /r "%folder_to_search%" %%f in ("*.*") do findstr %sc% "%%f"
+
+:This worked on Sep-8-2013. This includes all subfolders. It seems that the way double quotes 
+are used in the for statement is inconsistent.
+
+::for /r "%podcast_folder%" %%f in ("*.mp3") do move "%%f" %staging_area%
+
+::This works as desired. Gotcha! If there are spaces in the path or filename, it will blow up.
+
+:FOR %%J IN (*.txt) DO type %%J >> "All Files Appended into one big file.txt"
+
+FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do type "%%J">>%output_file%
+
+set pgb=$Affinity
+
+:This works exactly as expected.
+
+::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do echo %%J
+
+::FOR /R "C:\!!\Plugin" %%J IN (*.cs) do copy %%J %output_file%
+
+::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do type %%J
+
+::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do echo %%J>>%output_file%
+
+::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) DO type %%J>>%output_file%
+
+:This works, but will only copy the last file.
+
+:This works. It lists all the files in the $Affinity folder.
+
+FOR %%J IN (%savannah%\*.*) do echo %%J
+
+:This works.
+
+FOR /R c:\!!\%pgb% %%J IN (*.com) do ren %%J *.comq
+
+:Where %%f equals a file and (*) means all files.
+
+::for %%f in (b*.*) do echo %%f>>c:\j.txt
+
+::for %%f in (*) do echo %%f
+
+::for %%f in (*.*) do echo %%f
+
+::for %%j in (*.*) do echo %%j
+
+:This can be used to rename files as well.
+
+::Cool syntax for copying stuff thanks to Project X.
+
+IF EXIST "c:\program files\common files\i2 Shared\Images 6\Basic\Screen\Icons" FOR %%f IN 
+(.\Analyst_Notebook_6_Icons\*.bmp) DO xcopy /R /Y /S %%f "c:\program files\common files\i2 
+Shared\Images 6\Basic\Screen\Icons"
+
+:This words.
+
+:FOR /R c:\!!\%pgb% %%J IN (*.com) do echo %%J
+
+:This words.
+
+:FOR /R c:\!!\!affinity %%J IN (*.com) do ren %%J *.comx
+
+:This works.
+
+:FOR /R c:\!affinity %%J IN (*.com) do echo %%J
+
+:echo f | FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do xcopy /y "%%J" 
+c:\!!\CS_Copies\%%j
+
+:echo f | FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do xcopy /y "%%J" 
+c:\!!\CS_Copies\%%j
+
+:for %%f in ("..\Different Types of Files\*.*") do trid.exe "%%f">>"file identifier 
+report.txt"
+
+"c:\Program Files\Multi-Edit 2008\Mew32.exe" "file identifier report.txt"
+
+goto exit
+
+
+
+:_
+
+:configuration_environment_variable_paths4
+
+set fp=* configuration_environment_variable_paths4
+
+echo.
+echo %fp%
+echo.
+
+set drive=c:
+set cpath=program files\java\jdk1.8.0_102\jre\lib\ext
+set classpath=%drive%\%cpath%
+
+echo     Drive: %drive%
+echo     Cpath: %cpath%
+echo Classpath: %classpath%
+echo.
+
+cd\%cpath%
+cd
+
+goto configuration_run_me
+goto exit
+
+
+
+:_
+
+:configuration_environment_variable_paths5
+
+set fp=* configuration_environment_variable_paths5
+
+echo.
+echo %fp%
+echo.
+
+set drive=c:
+set cpath=app\jonathan.r.jones\product\11.2.0\dbhome_3\jdbc\lib
+set classpath=%drive%\%cpath%
+
+echo     Drive: %drive%
+echo     Cpath: %cpath%
+echo Classpath: %classpath%
+echo.
+
+cd\%cpath%
+cd
+
+goto configuration_run_me
+goto exit
+
+
+
+:_
+
+:configuration_run_me
+
+set fp=* configuration_environment_run_me
+
+echo.
+echo %fp%
+echo.
+
+if /i "%classpath%" == "c:\pcarss\web" goto configuration_environment_variable_paths6
+if /i "%classpath%" == "c:\pcarss\web" goto configuration_environment_variable_paths1
+if /i "%classpath%" == "c:\pcarss\web" goto configuration_environment_variable_paths2
+if /i "%classpath%" == "c:\pcarss\web" goto configuration_environment_variable_paths3
+if /i "%classpath%" == "c:\pcarss\web" goto configuration_environment_variable_paths4
+if /i "%classpath%" == "c:\pcarss\web" goto configuration_environment_variable_paths5
+
+set OLDCLASSPATH=%CLASSPATH%
+set classpath=c:\!!\resources;%classpath%
+set classpath=
+
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+echo Classpath: %classpath%
+echo.
+
+cd\!!\bfo3\example
+
+echo.
+echo Current Folder:
+cd
+
+pause
+
+javac SampleApplication.java
+
+@ECHO Running SampleApplication
+java SampleApplication samples\HelloWorld.xml
+
+rem samples\HelloWorld-chinese.xml samples\HelloWorld-japanese.xml samples\HelloWorld-hindi.xml samples\Colors.xml samples\FormFill.xml samples\Giro.xml samples\Graphs.xml samples\Lists.xml samples\MetaData.xml samples\NestedTables.xml samples\PDFUserGuide.xml samples\userguide.xml samples\VectorGraphics.xml samples\HelloWorld-arabic.xml samples\pdfa-rgb.xml samples\pdfa-cmyk.xml
+
+goto exit
+
+
+
+:_
+
+:configuration_environment_variable_paths6
+
+set fp=* configuration_environment_variable_paths6
+
+echo.
+echo %fp%
+echo.
+
+set drive=c:
+set cpath=Users\jonathan.r.jones\Documents\Dropbox\NES\Eclipse Workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\pcarss\WEB-INF\lib\
+
+set classpath=%drive%\%cpath%
+
+echo     Drive: %drive%
+echo     Cpath: %cpath%
+echo Classpath: %classpath%
+echo.
+
+cd\%cpath%
+cd
+
+goto configuration_run_me
+goto exit
+
+
+
+:_
+
+:configuration_environment_variable_paths3
+
+set fp=* configuration_environment_variable_paths3
+
+echo.
+echo %fp%
+echo.
+
+set drive=c:
+set cpath=Development\server_runtimes\tomcat\apache-tomcat-7.0.63\lib
+
+set classpath=%drive%\%cpath%
+
+echo     Drive: %drive%
+echo     Cpath: %cpath%
+echo Classpath: %classpath%
+echo.
+
+cd\%cpath%
+cd
+
+goto configuration_run_me
+goto exit
+
+
+
+:_
+
+:configuration_environment_variable_paths7
+
+set fp=* configuration_environment_variable_paths7
+
+echo.
+echo %fp%
+echo.
+
+set drive=c:
+set cpath=!
+
+set classpath=%drive%\%cpath%
+
+echo     Drive: %drive%
+echo     Cpath: %cpath%
+echo Classpath: %classpath%
+echo.
+
+cd\%cpath%
+cd
+
+goto configuration_run_me_2
+goto exit
+
+
+
+:_
+
+set fp=* Compile HW5.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+
+echo 1.
+javac "HW5.java"
+echo 2.
+java -cp . HW5.class
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Compile HW5. Second try.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+set classpath=
+
+echo 1.
+javac "HW5.java"
+echo 2.
+java -cp . HW5.class
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Compile HW5. Second try.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+set classpath=
+
+echo 1.
+javac "HW5.java"
+echo 2.
+java -cp . HW5.class
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Compile. If the class file already exists, it refreshes, i. e. recompiles.
+
+rem The compiled class uses the class name instead of the filename.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+
+echo 1.
+javac "HW4.java"
+echo 2.
+javac HW4.java
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Run me 5. Removed classpath line. It's still working.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+java -cp . HelloWorldApp
+
+goto exit
+
+
+
+:_
+
+set fp=* Run me 4. This works. Notice that if take out the "cd", I get the same error message.
+rem that I do with my main problem.
+
+echo.
+echo %fp%
+echo.
+
+set classpath=
+cd\!
+java -cp . HelloWorldApp
+
+goto exit
+
+
+
+:_
+
+set fp=* Compile and run, the minimalist code version.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+javac HW4.java
+java -cp . HelloWorldApp
+
+goto exit
+
+
+
+:_
+
+set fp=* Compile and run runme. Does not compile.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+rem cd bfo3\example
+cd
+
+echo 1.
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+javac SampleApplication.java
+
+echo 2.
+rem java -cp . SampleApplication HelloWorld.xml
+
+rem java -cp . HW5
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Use other folder. Works fine. What about the other folder is helping me?
+
+echo.
+echo %fp%
+echo.
+
+cd\!!
+cd bfo3\example
+cd
+
+echo 1.
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+javac SampleApplication.java
+
+echo 2.
+rem java -cp . SampleApplication HelloWorld.xml
+
+rem java -cp . HW5
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Remove classpath and it won't compile.
+
+echo.
+echo %fp%
+echo.
+
+cd\!!
+cd bfo3\example
+cd
+
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+echo 1.
+
+javac SampleApplication.java
+
+echo 2.
+
+goto exit
+
+
+
+:_
+
+set fp=* bfo4! Start removing stuff until it breaks. The only thing it needs to compile is the 
+rem java file and the classpath. This is proof.
+
+echo.
+echo %fp%
+echo.
+
+cd\!!
+cd bfo4\example
+cd
+
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+echo 1.
+
+javac SampleApplication.java
+
+echo 2.
+
+goto exit
+
+
+
+:_
+
+set fp=* Compile and run 5. Notice no classpath.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+echo 1.
+javac HW5.java
+echo 2.
+java -cp . HW5
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Compile and run 6. Adding ".class" breaks the run.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+echo 1.
+javac HW5.java
+echo 2.
+java -cp . HW5.class
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Cp and dot experiment. With them it works.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+echo 1.
+javac HW5.java
+echo 2.
+java -cp . HW5
+echo 3.
+
+rem goto exit
+
+
+
+:_
+
+set fp=* Cp and dot experiment: without them, it won't work.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+echo 1.
+javac HW5.java
+echo 2.
+java HW5
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* This is the canonical BFO error with the verbose switch.
+
+echo.
+echo %fp%
+echo.
+
+cd\!!
+cd bfo3\example
+cd
+
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+echo 1.
+
+javac SampleApplication.java
+
+echo 2.
+
+java -verbose SampleApplication samples\HelloWorld.xml
+
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Copy text files.
+
+echo.
+echo %fp%
+echo.
+
+cd\!!
+
+cd
+
+dir/s *.txt
+
+for /r "c:\!!" %%f in ("*.txt") do copy "%%f" "c:\!!\Test Text Files"
+
+goto exit
+
+
+
+:_
+
+set fp=* Concatenate text files.
+
+echo.
+echo %fp%
+echo.
+
+cd\!!\Test Text Files
+
+cd
+
+type *.txt>c:\a\j
+
+goto exit
+
+
+
+:_
+
+set fp=* Copy java files.
+
+echo.
+echo %fp%
+echo.
+
+for /r "c:\pcarss" %%f in ("*.java") do copy "%%f" "c:\!!\Copied Java Files"
+
+goto exit
+
+
+
+:_
+
+set fp=* Concatenate java files.
+
+echo.
+echo %fp%
+echo.
+
+cd\!!\Copied Java Files
+
+cd
+
+type *.java>c:\a\j
+
+goto exit
+
+
+
+:_
+
+set fp=* h6.
+
+rem This works.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+javac h6.java
+java -cp . h6
+
+goto exit
+
+
+
+:_
+
+set fp=* Hyposthes: It's the SampleApp that has sauce that allows it to run without the cp and period.
+
+rem Does not work.
+
+echo.
+echo %fp%
+echo.
+
+cd\!
+cd
+
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+echo 1.
+
+javac SampleApplication.java
+
+echo 2.
+
+java SampleApplication samples\HelloWorld
+
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Remove classpath to see what happens.
+
+rem Outcome: Yes it broke it.
+
+echo.
+echo %fp%
+echo.
+
+cd\!!
+cd bfo3\example
+cd
+
+echo 1.
+
+javac SampleApplication.java
+
+echo 2.
+
+java SampleApplication samples\HelloWorld
+
+echo 3.
+
+goto exit
+
+
+
+:_
+
+set fp=* Here are the 3 ways that I figured out how to run a current folder java app.
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome: 
+
+cd\!
+
+echo.
+echo First Way: Use cp and period.
+
+javac h6.java
+java -cp . h6
+
+echo.
+echo Second Way: Set classpath to nothing and remove -cp and period.
+
+set classpath=
+javac h6.java
+java h6
+
+echo.
+echo Third Way: Set classpath to dot.
+
+set classpath=.
+javac h6.java
+java h6
+
+goto exit
+
+
+
+:_
+
+:configuration_run_me_2
+
+set fp=* configuration_environment_run_me_2
+
+echo.
+echo %fp%
+echo.
+
+if /i "%classpath%" == "c:\pcarss\web" goto configuration_environment_variable_paths7
+
+set OLDCLASSPATH=%CLASSPATH%
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+set classpath=
+
+echo Classpath: %classpath%
+echo.
+
+cd\!
+
+echo.
+echo Current Folder:
+cd
+
+rem javac "HW4.java"
+
+java -cp . HelloWorldApp
+
+rem java -cp . HelloWorldApp
+
+rem java -cp . greetings.HW3
+
+rem java -cp . greetings.HelloWorldApp
+
+goto exit
+
+
+
+:_
+
+set fp=* BFO7: Canonical error.
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome: Canonical error.
+echo.
+
+cd\!!\bfo7
+
+set classpath=.;.\bforeport.jar;%classpath%
+
+echo Step 1. Compile
+
+javac SampleApplication.java
+
+echo Step 2. Run
+
+java SampleApplication samples\Giro.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* Experimenting with the Path variable.
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome: 
+echo.
+
+echo Conclusion: 
+echo.
+
+set classpath=.;.\bforeport.jar;
+
+echo Classpath: %classpath%
+echo.
+
+set path=C:\Users\jonathan.r.jones\Documents\!savannah\belfry;
+
+rem set path=%path%;
+set path=%path%;C:\Program Files\Java\jdk1.8.0_102\bin;
+
+echo Path: %path%
+
+echo.
+
+cd\!!\bfo7
+
+echo.
+echo Current Folder:
+cd
+
+echo.
+echo Step 1. Comile
+
+javac SampleApplication.java
+
+pause
+exit
+
+echo.
+echo Step 2. Run
+
+java SampleApplication samples\Giro.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* CD var.
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome:
+echo.
+
+echo Conclusion:
+echo.
+
+echo %cd%
+
+goto exit
+
+
+
+:_
+
+set fp=* Runme.
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome:
+echo.
+
+echo Conclusion:
+echo.
+
+cd\!!\bfo8\example
+
+set OLDCLASSPATH=%CLASSPATH%
+set classpath=C:\Program Files\Java\jdk1.8.0_102\jre
+
+set CLASSPATH=.;..\bfopdf.jar;..\bfopdf-cmap.jar;..\bfopdf-qrcode.jar;..\bfopdf-stamp.jar
+
+echo Step 1. Compile
+javac Annotations.java BatchFormFill.java CharacterMap.java Colors.java Concatenate.java CreateBook.java Dump.java Fonts.java FormCreation.java FormFill.java FormProcess.java FormVoodoo.java HelloUnicodeWorld.java HelloWorld.java ImageToPDF.java Images.java Join2Up.java LayoutExample.java PDFToImage.java PathExample.java PrintPDF.java Sign.java Stamp.java Unicode.java ExtractText.java
+
+echo Step 2. Run
+@ECHO Running HelloWorld
+java HelloWorld
+
+goto exit
+@ECHO Running PathExample
+java PathExample
+@ECHO Running Images
+java Images
+@ECHO Running Fonts
+java Fonts
+@ECHO Running Colors
+java Colors
+@ECHO Running Concatenate
+java Concatenate HelloWorld.pdf PathExample.pdf Images.pdf Colors.pdf
+@ECHO Running Annotations
+java Annotations
+@ECHO Running LayoutExample
+java LayoutExample
+@ECHO Running ImageToPDF
+java ImageToPDF resources\demon.tif
+@ECHO Running CharacterMap for Times-Roman
+java CharacterMap Times-Roman
+@ECHO Running CreateBook
+java CreateBook
+@ECHO Running Stamp
+java Stamp CreateBook.pdf
+@ECHO Running Join2Up
+java Join2Up PathExample.pdf HelloWorld.pdf Annotations.pdf Fonts.pdf CharacterMap.pdf
+
+@ECHO Running FormCreation
+java FormCreation
+@ECHO Running FormFill FormCreation.pdf
+java FormFill FormCreation.pdf
+@ECHO Running FormProcess FormFill.pdf
+java FormProcess FormFill.pdf
+@ECHO Running FormVoodoo
+java FormVoodoo
+@ECHO Running BatchFormFill
+java BatchFormFill
+@ECHO Running PDFToImage FormFill.pdf
+java PDFToImage FormFill.pdf
+@ECHO Running ExtractText Fonts.pdf
+java ExtractText Fonts.pdf > Fonts.txt
+@ECHO Running HelloUnicodeWorld with %windir%\fonts\times.ttf
+java HelloUnicodeWorld %windir%\fonts\times.ttf
+@ECHO Running Unicode with %windir%\fonts\times.ttf
+java Unicode %windir%\fonts\times.ttf
+
+@ECHO Running Sign on Annotations.pdf
+keytool -genkeypair -keystore testkeystore.jks -dname "C=GB, O=Test Org, CN=Test Key" -storepass password -keypass password
+java Sign --keystore testkeystore.jks --password password Annotations.pdf
+
+@ECHO Running Dump on Annotations.pdf
+java Dump Sign.pdf
+
+set CLASSPATH=%OLDCLASSPATH%
+set OLDCLASSPATH=
+
+goto exit
+
+
+
+:_
+
+set fp=* Runme BFO 10
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome:
+echo.
+
+echo Conclusion:
+echo.
+
+cd\!!\bfo10\example
+
+set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
+
+javac SampleApplication.java
+
+@ECHO Running SampleApplication
+java SampleApplication samples\HelloWorld.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* Dotnet Core Version #
+
+echo.
+echo %fp%
+echo.
+
+"c:\program files\dotnet\dotnet" "-v"
+
+rem dotnet -v
+
+goto exit
+
+
+
+:_
+
+set fp=* Parser classpath testing.
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome: Setting classpath to nothing gets the canonical error, whereas setting
+echo classpath to the other values is producing different outcomes.
+echo 2 3 line JAXP statement about fallback values.
+echo.
+
+echo Conclusion: More googling(?) is necessary.
+echo.
+
+set classpath=C:\Development\devtools\database\oracle\oracle10g_10.2.0.1\client\oui\jlib\xmlparserv2.jar
+set classpath=C:\Development\devtools\scrapers\jacada\jacada_4.0\Jacada_Integrator_4.0\tomcat\common\endorsed\xmlParserAPIs.jar
+set classpath=C:\Development\ide\jdeveloper\JDev10g\lib\xmlparserv2.jar
+set classpath=C:\Development\ide\jdeveloper\JDev10g_1012\lib\xmlparserv2.jar
+set classpath=C:\Development\ide\jdeveloper\JDev9i\lib\xmlparserv2.jar
+set classpath=C:\Development\sqldeveloper\modules\oracle.xdk_11.1.0\xmlparserv2_sans_jaxp_services.jar
+set classpath=C:\Development\sqldeveloper\modules\oracle.xdk_11.1.0\xmlparserv2.jar
+
+rem 2. Canon
+set classpath=C:\!!\SAX 2 Jars\xmlParserAPIs-2.6.2.jar
+
+rem 3. Canon
+set classpath=C:\!!\SAX 2 Jars\sax-2.0.1.jar
+
+rem 4. Upgrade JAXP.
+set classpath=C:\Development\sqldeveloper\modules\oracle.xdk_11.1.0\xmlparserv2_jaxp_services.jar
+
+rem 5.
+set classpath=C:\Program Files\Java\jdk1.8.0_102\jre
+
+rem 1. Canon
+set classpath=
+
+set classpath=.;.\bforeport.jar;%classpath%;
+
+echo Classpath: %classpath%
+echo.
+
+cd\!!\bfo10\example
+
+echo Current Folder: %cd%
+
+echo.
+echo Step 1. Comile
+
+javac SampleApplication.java
+
+echo.
+echo Step 2. Run
+
+java -Djaxp.debug=1 SampleApplication samples\Giro.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* Using the debug statement.
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome: Canonical error albeit with more debugging information.
+echo.
+
+echo Conclusion: 
+echo.
+
+set classpath=.;.\bforeport.jar;
+
+echo Classpath: %classpath%
+echo.
+
+cd\!!\bfo7
+
+echo.
+echo Current Folder:
+cd
+
+echo.
+echo Step 1. Comile
+
+javac SampleApplication.java
+
+echo.
+echo Step 2. Run
+
+java -Djaxp.debug=1 SampleApplication samples\Giro.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* Identify Arguments
+
+echo.
+echo %fp%
+echo.
+
+call "identify arguments" "hi[blank]" "nuther"
+
+goto exit
+
+
+
+:_
+
+set fp=* Try calling an lnk file.
+
+echo.
+echo %fp%
+echo.
+
+rem cd\%savannah%\shortcuts
+
+echo Current Folder: %cd%
+
+rem c:\a\cmd.exe.lnk
+
+goto exit
+
+
+
+:_
+
+set fp=* Path issue.
+
+echo.
+echo %fp%
+echo.
+
+echo Path: %path%
+
+
+goto exit
+
+
+
+:_
+
+set fp=* Canonical @ BFO11
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome: Canonical Error
+
+cd\!!
+cd bfo11\example
+
+echo Current Folder: %cd%
+
+set classpath=
+set classpath=.;..\bforeport.jar;%classpath%
+
+echo 1. Compile
+
+javac SampleApplication.java
+
+echo 2. Run
+
+java -Djaxp.debug=1 SampleApplication samples\HelloWorld.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* Canonical @ BFO12
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome: Canonical Error
+
+cd\!!
+cd bfo12\example
+
+echo Current Folder: %cd%
+
+rem set classpath=
+rem set classpath=.;..\bforeport.jar;%classpath%
+
+echo 1. Compile
+
+javac -classpath ..\bforeport.jar;. SampleApplication.java
+
+echo 2. Run
+
+java -classpath ..\bforeport.jar;. SampleApplication samples\HelloWorld.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* Echo path.
+
+echo.
+echo %fp%
+echo.
+
+echo %path%
+
+goto exit
+
+
+
+:_
+
+set fp=* Canonical @ BFO13
+
+echo.
+echo %fp%
+echo.
+
+echo Outcome: Canonical Error
+
+cd\!!
+cd \!!\bfo13\bforeport-1.1.60\example
+
+echo Current Folder: %cd%
+
+rem set classpath=
+rem set classpath=.;..\bforeport.jar;%classpath%
+
+echo 1. Compile
+
+javac -classpath ..\bforeport.jar;. SampleApplication.java
+
+echo 2. Run
+
+java -classpath ..\bforeport.jar;. SampleApplication samples\HelloWorld.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* H.'s settings
+
+echo.
+echo %fp%
+echo.
+
+cd \!!\bfo12\example
+
+echo Current Folder: %cd%
+
+
+set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_92
+set PATH=%PATH%;%JAVA_HOME%\bin
+
+echo 1. Compile
+javac -classpath .;..\bforeport.jar SampleApplication.java
+
+pause
+
+
+echo 2. Run
+java -classpath .;..\bforeport.jar SampleApplication samples\HelloWorld.xml
+pause
+
+
+
+goto exit
+
+
+
+:_
+
+set fp=* H.'s settings 2
+
+echo.
+echo %fp%
+echo.
+
+cd \test\bforeport-1.1.60\example
+
+echo Current Folder: %cd%
+
+rem set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_92
+rem set PATH=%PATH%;%JAVA_HOME%\bin
+
+echo 1. Compile
+javac -classpath .;..\bforeport.jar SampleApplication.java
+ 
+echo 2. Run
+java -classpath .;..\bforeport.jar SampleApplication samples\HelloWorld.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* AA test.
+
+echo.
+echo %fp%
+echo.
+
+cd \aa\bforeport-1.1.60\example
+
+echo Current Folder: %cd%
+
+set classpath=.;..\bforeport.jar
+
+echo 1. Compile
+javac SampleApplication.java
+ 
+echo 2. Run
+java SampleApplication samples\HelloWorld.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* FormFill test.
+
+echo.
+echo %fp%
+echo.
+
+cd \aa\bforeport-1.1.60\example
+
+echo Current Folder: %cd%
+
+set classpath=.;..\bforeport.jar
+
+echo 1. Compile
+javac SampleApplication.java
+ 
+echo 2. Run
+java SampleApplication samples\FormFill.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* FormFill 2 test.
+
+echo.
+echo %fp%
+echo.
+
+cd \Users\jonathan.r.jones\Documents\Dropbox\NES\Java Support
+
+echo Current Folder: %cd%
+
+set classpath=.;..\bforeport.jar
+
+echo 1. Compile
+javac SampleApplication.java
+ 
+echo 2. Run
+java SampleApplication samples\FormFill2.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* Test all xmls.
+
+echo.
+echo %fp%
+echo.
+
+cd \aa\bforeport-1.1.60\example
+
+echo Current Folder: %cd%
+
+set classpath=.;..\bforeport.jar
+
+echo 1. Compile
+javac SampleApplication.java
+ 
+echo 2. Run
+java SampleApplication samples\pdfa-cmyk.xml
+
+goto exit
+
+
+
+:_
+
+set fp=* At Echo versus Echo
+
+echo.
+echo %fp%
+echo.
+
+echo hi (without at)
+@echo hi (using at)
+
+
+goto exit
+
+
+
+:_
+
+set fp=* The "ver" and find commands.
+
+echo.
+echo %fp%
+echo.
+
+echo 1.
+ver
+
+echo 2.
+ver | find /i "version 6.1."
+
+if %errorlevel%==0 echo Zero
+
+echo 3.
+ver | find /i "version 6.3."
+
+if %errorlevel%==0 echo 2
+
+echo 4.
+ver | find /i "version 10"
+
+if %errorlevel%==0 echo 3
+
+
+
+goto exit
+
+
+
+:_
+
+set fp=* Delete CVS files from PCARSS.
+
+echo.
+echo %fp%
+echo.
+
+del /f c:\pcarss\Documentation\CVS\Entries
+del /f c:\pcarss\Documentation\CVS\Repository
+del /f c:\pcarss\Documentation\CVS\Root
+del /f c:\pcarss\deploy\CVS\Entries
+del /f c:\pcarss\deploy\CVS\Repository
+del /f c:\pcarss\deploy\CVS\Root
+del /f c:\pcarss\src\CVS\Entries
+del /f c:\pcarss\src\CVS\Repository
+del /f c:\pcarss\src\CVS\Root
+del /f c:\pcarss\src\mil\CVS\Entries
+del /f c:\pcarss\src\mil\CVS\Repository
+del /f c:\pcarss\src\mil\CVS\Root
+del /f c:\pcarss\src\mil\dcma\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\access\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\access\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\access\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\bean\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\bean\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\bean\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\cache\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\cache\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\cache\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\convert\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\convert\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\convert\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\cronjobs\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\cronjobs\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\cronjobs\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\dao\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\dao\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\dao\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\dao\enums\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\dao\enums\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\dao\enums\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\dialect\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\dialect\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\dialect\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\model\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\model\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\model\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\parser\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\parser\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\parser\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\pdfgenerator\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\pdfgenerator\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\pdfgenerator\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\role\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\role\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\role\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\service\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\service\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\service\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\test\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\test\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\test\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\upload\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\upload\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\upload\CVS\Root
+del /f c:\pcarss\src\mil\dcma\pcarss\util\CVS\Entries
+del /f c:\pcarss\src\mil\dcma\pcarss\util\CVS\Repository
+del /f c:\pcarss\src\mil\dcma\pcarss\util\CVS\Root
+del /f c:\pcarss\web\CVS\Entries
+del /f c:\pcarss\web\CVS\Repository
+del /f c:\pcarss\web\CVS\Root
+del /f c:\pcarss\web\META-INF\CVS\Entries
+del /f c:\pcarss\web\META-INF\CVS\Repository
+del /f c:\pcarss\web\META-INF\CVS\Root
+del /f c:\pcarss\web\WEB-INF\CVS\Entries
+del /f c:\pcarss\web\WEB-INF\CVS\Repository
+del /f c:\pcarss\web\WEB-INF\CVS\Root
+del /f c:\pcarss\web\WEB-INF\jspf\CVS\Entries
+del /f c:\pcarss\web\WEB-INF\jspf\CVS\Repository
+del /f c:\pcarss\web\WEB-INF\jspf\CVS\Root
+del /f c:\pcarss\web\WEB-INF\lib\CVS\Entries
+del /f c:\pcarss\web\WEB-INF\lib\CVS\Repository
+del /f c:\pcarss\web\WEB-INF\lib\CVS\Root
+del /f c:\pcarss\web\cronjobs\CVS\Entries
+del /f c:\pcarss\web\cronjobs\CVS\Repository
+del /f c:\pcarss\web\cronjobs\CVS\Root
+del /f c:\pcarss\web\docs\CVS\Entries
+del /f c:\pcarss\web\docs\CVS\Repository
+del /f c:\pcarss\web\docs\CVS\Root
+del /f c:\pcarss\web\help\Administrator\CVS\Entries
+del /f c:\pcarss\web\help\Administrator\CVS\Repository
+del /f c:\pcarss\web\help\Administrator\CVS\Root
+del /f c:\pcarss\web\help\CVS\Entries
+del /f c:\pcarss\web\help\CVS\Repository
+del /f c:\pcarss\web\help\CVS\Root
+del /f c:\pcarss\web\help\Contractor\CVS\Entries
+del /f c:\pcarss\web\help\Contractor\CVS\Repository
+del /f c:\pcarss\web\help\Contractor\CVS\Root
+del /f c:\pcarss\web\help\Icons\CVS\Entries
+del /f c:\pcarss\web\help\Icons\CVS\Repository
+del /f c:\pcarss\web\help\Icons\CVS\Root
+del /f c:\pcarss\web\help\Overview\CVS\Entries
+del /f c:\pcarss\web\help\Overview\CVS\Repository
+del /f c:\pcarss\web\help\Overview\CVS\Root
+del /f c:\pcarss\web\help\PLCO\CVS\Entries
+del /f c:\pcarss\web\help\PLCO\CVS\Repository
+del /f c:\pcarss\web\help\PLCO\CVS\Root
+del /f c:\pcarss\web\help\QAR\CVS\Entries
+del /f c:\pcarss\web\help\QAR\CVS\Repository
+del /f c:\pcarss\web\help\QAR\CVS\Root
+del /f c:\pcarss\web\help\Screener\CVS\Entries
+del /f c:\pcarss\web\help\Screener\CVS\Repository
+del /f c:\pcarss\web\help\Screener\CVS\Root
+del /f c:\pcarss\web\help\Support_PLCO\CVS\Entries
+del /f c:\pcarss\web\help\Support_PLCO\CVS\Repository
+del /f c:\pcarss\web\help\Support_PLCO\CVS\Root
+del /f c:\pcarss\web\help_3_2\CVS\Entries
+del /f c:\pcarss\web\help_3_2\CVS\Repository
+del /f c:\pcarss\web\help_3_2\CVS\Root
+del /f c:\pcarss\web\help_3_2\administrator\CVS\Entries
+del /f c:\pcarss\web\help_3_2\administrator\CVS\Repository
+del /f c:\pcarss\web\help_3_2\administrator\CVS\Root
+del /f c:\pcarss\web\help_3_2\contractor\CVS\Entries
+del /f c:\pcarss\web\help_3_2\contractor\CVS\Repository
+del /f c:\pcarss\web\help_3_2\contractor\CVS\Root
+del /f c:\pcarss\web\help_3_2\icons\CVS\Entries
+del /f c:\pcarss\web\help_3_2\icons\CVS\Repository
+del /f c:\pcarss\web\help_3_2\icons\CVS\Root
+del /f c:\pcarss\web\help_3_2\overview\CVS\Entries
+del /f c:\pcarss\web\help_3_2\overview\CVS\Repository
+del /f c:\pcarss\web\help_3_2\overview\CVS\Root
+del /f c:\pcarss\web\help_3_2\plco\CVS\Entries
+del /f c:\pcarss\web\help_3_2\plco\CVS\Repository
+del /f c:\pcarss\web\help_3_2\plco\CVS\Root
+del /f c:\pcarss\web\help_3_2\qar\CVS\Entries
+del /f c:\pcarss\web\help_3_2\qar\CVS\Repository
+del /f c:\pcarss\web\help_3_2\qar\CVS\Root
+del /f c:\pcarss\web\help_3_2\resource\CVS\Entries
+del /f c:\pcarss\web\help_3_2\resource\CVS\Repository
+del /f c:\pcarss\web\help_3_2\resource\CVS\Root
+del /f c:\pcarss\web\help_3_2\screener\CVS\Entries
+del /f c:\pcarss\web\help_3_2\screener\CVS\Repository
+del /f c:\pcarss\web\help_3_2\screener\CVS\Root
+del /f c:\pcarss\web\help_3_2\support_plco\CVS\Entries
+del /f c:\pcarss\web\help_3_2\support_plco\CVS\Repository
+del /f c:\pcarss\web\help_3_2\support_plco\CVS\Root
+del /f c:\pcarss\web\help_3_2\whdata\CVS\Entries
+del /f c:\pcarss\web\help_3_2\whdata\CVS\Repository
+del /f c:\pcarss\web\help_3_2\whdata\CVS\Root
+del /f c:\pcarss\web\help_3_2\whgdata\CVS\Entries
+del /f c:\pcarss\web\help_3_2\whgdata\CVS\Repository
+del /f c:\pcarss\web\help_3_2\whgdata\CVS\Root
+del /f c:\pcarss\web\help_3_2\whxdata\CVS\Entries
+del /f c:\pcarss\web\help_3_2\whxdata\CVS\Repository
+del /f c:\pcarss\web\help_3_2\whxdata\CVS\Root
+del /f c:\pcarss\web\jsp\CVS\Entries
+del /f c:\pcarss\web\jsp\CVS\Repository
+del /f c:\pcarss\web\jsp\CVS\Root
+
+
+
+:_
+
+set fp=* Experiment with Timestamp
+
+echo.
+echo %fp%
+echo.
+
+rem fdate /Ff /Atoday /Omn
+rem datenum
+set time_snapshot=%time%
+echo %time_snapshot%
+set time2=<time /t
+echo Date: %date%
+echo Time2: %time2%
+echo Time3: %date% %time%
+
+goto exit
+
+
+
+:_
+
+:configuration_run_me_3
+
+set fp=* configuration_environment_run_me_3
+
+echo.
+echo %fp%
+echo.
+
+set classpath=
+java -cp . HelloWorld
+
+goto exitb
+
+
+
+:_
+
+set fp=* Delete the class file.
+
+rem Outcome: This works!
+
+echo.
+echo %fp%
+echo.
+
+set classpath=
+cd\a
+java -cp . HelloWorld
+
+goto exit
+
+
+
+:_
+
+set fp=* Get_Timestamp_With_No_Spaces
+
+rem Outcome: This works!
+
+echo.
+echo %fp%
+echo.
+
+cd\a
+javac Get_Timestamp_With_No_Spaces.java
+java -cp . Get_Timestamp_With_No_Spaces>c:\a\java_timestamp.txt
+set /p java_timestamp=<c:\a\java_timestamp.txt
+
+echo jt:%java_timestamp%
+
+goto exit
+
+
+
+:_
+
+set fp=* Get timestamp 2.
+
+echo.
+echo %fp%
+echo.
+
+set classpath=%dropbox%\it\java\
+cd %classpath%
+
+rem One-time action.
+rem javac Get_Timestamp_With_No_Spaces.java
+
+java -cp . Get_Timestamp_With_No_Spaces>c:\a\java_timestamp.txt
+
+set /p java_timestamp=<c:\a\java_timestamp.txt
+
+rem cd
+rem echo jt: %java_timestamp%
+
+goto exit
+
+
+
+:_
+
+set fp=* Hello World 3.
+
+rem Outcome: This works!
+
+echo.
+echo %fp%
+echo.
+
+cd\a
+java -cp . HelloWorld3
+
+goto exit
+
+
+
+:_
+
+set fp=* Running a class using the classpath.
+
+rem Outcome: This works!
+
+echo.
+echo %fp%
+echo.
+
+set classpath=c:\a
+java HelloWorld3
+
+goto exit
+
+
+
+:_
+
+set fp=* Write error handling for pushing development into master.
+
+echo.
+echo %fp%
+echo.
+
+cd | find /i "Development"
+
+if %errorlevel% == 0 echo This is the development folder.
+
+if not %errorlevel% == 0 echo This is NOT the development folder.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test find echo.
+
+cd | find /i "Development"
+
+echo.
+echo %fp%
+echo.
+
+cd | find /i "a">nul
+
+goto exitp
+
+
+
+:_
+
+set fp=* Folder test. Remember to include the "c:\".
+
+echo.
+echo %fp%
+echo.
+
+rem cd\
+rem cd pcarss
+
+set folder_to_search=%my documents%
+set folder_to_search=c:\pcarss
+
+rem cd\%folder_to_search%
+
+cd %folder_to_search%
+
+cd
+
+goto exitp
+
+
+
+:_
+
+set fp=* Find all empty folders in Dropbox.
+
+echo.
+echo %fp%
+echo.
+
+rem Outcome: This works!
+
+cd\aa
+dir | find /i "0 file">nul
+
+if %errorlevel% == 0 echo Found at %cd%
+if not %errorlevel% == 0 echo NOT found.
+
+rem dir
+
+goto exitp
+
+
+
+:_
+
+set fp=* Find all empty folders in Dropbox. Version 2. Do the recursion.
+
+echo.
+echo %fp%
+echo.
+
+rem Outcome: This works!
+
+cd\aa
+dir | find /i "0 file">nul
+
+set sc=0 file
+rem set sc=dir | find /i "0 file"
+
+set folder_to_search=c:\aa
+
+rem for /r "%folder_to_search%" %%f in ("*.*") do findstr %sc% "%%f"
+for /r "%folder_to_search%" %%f in ("*.txt") do dir | find /i "0 file" "%%f"
+
+if %errorlevel% == 0 echo Found at %cd%
+if not %errorlevel% == 0 echo NOT found.
+
+goto exitp
+
+
+
+:_
+
+:step1
+
+set fp=* Step 1
+
+echo.
+echo %fp%
+echo.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Look for empty folder.
+
+echo.
+echo %fp%
+echo.
+
+rem Outcome: This works!
+
+dir | find /i "0 file">nul
+
+if %errorlevel% == 0 echo Found.
+if not %errorlevel% == 0 echo NOT found.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Experimenting with the for loop.
+
+echo.
+echo %fp%
+echo.
+
+cd\aa
+
+for /r "c:\aa" %%j in (".") DO (call %savannah%\belfry\step1.bat)
+
+goto exitp
+
+
+
+:_
+
+set fp=* Find all empty subfolders.
+
+rem Outcome: This works!
+
+echo.
+echo %fp%
+echo.
+
+cd\aa
+for /r %%a in (.) do (dir /b "%%a" | find /v "NoTlIkElY" >nul && echo %%a NOT empty || >>FILES.TXT echo %%a empty)
+
+goto exitb
+
+
+
+:_
+
+set fp=* Find all empty subfolders.
+
+rem Outcome: This works!
+
+echo.
+echo %fp%
+echo.
+
+cd %dropbox%
+for /r %%a in (.) do (dir /b "%%a" | find /v "NoTlIkElY" >nul && echo %%a NOT empty || >>Empty_Dropbox_Folders.txt echo %%a Empty folder.)
+
+goto exitb
+
+
+
+:_
+
+set fp=* Experiment with the ampersand character.
+
+rem Outcome: The ampersand character allows you to multiple commands on single line.
+rem Think of it as a semicolon for batch files.
+
+rem Line continuation = "&".
+
+rem This works!
+
+echo.
+echo %fp%
+echo.
+
+echo hey & echo hey 2
+
+goto exitp
+
+
+
+:_
+
+set fp=* DP Zero in action.
+
+echo.
+echo %fp%
+echo.
+
+cd\a
+
+echo Current Folder: %cd%
+
+REM Change script directory to current directory. 
+cd /d %~dp0 
+
+echo Current Folder: %cd%
+echo.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Run Atom.
+
+echo.
+echo %fp%
+echo.
+
+C:\Users\jonathan.r.jones\AppData\Local\atom\Update.exe --processStart atom.exe
+
+goto exit
+
+
+
+:_
+
+set fp=* Test moved bat file.
+
+echo.
+echo %fp%
+echo.
+
+
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test homemade Jar file.
+
+echo.
+echo %fp%
+echo.
+
+rem java -cp "%my documents%\dropbox\nes\java\jars"
+java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore generalTests.TrackingServiceTests.TrackingServiceTests
+
+cd "%my documents%\dropbox\nes\java\jars"
+cd
+rem org.junit.runner.JUnitCore
+rem org.junit.runner.JUnitCore-4.12.jar;
+
+rem JUnit-4.12.jar /?
+rem JUnit-4.12.jar /help
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test homemade Jar file 2 - Cleaned up version.
+
+echo.
+echo %fp%
+echo.
+
+rem java -cp "%my documents%\dropbox\nes\java\jars"
+java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore generalTests.TrackingServiceTests.TrackingServiceTests
+
+cd "%my documents%\dropbox\nes\java\jars"
+cd
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test homemade Jar file 4 - General Tests
+
+echo.
+echo %fp%
+echo.
+
+rem     Creation Date: Oct-31-2016
+rem           Outcome:
+rem        Conclusion:
+
+rem java -cp "%my documents%\dropbox\nes\java\jars"
+java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore generalTests.GeneralTests
+
+cd "%my documents%\dropbox\nes\java\jars"
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test homemade Jar file 3 - 12 test version
+
+echo.
+echo %fp%
+echo.
+
+rem java -cp "%my documents%\dropbox\nes\java\jars"
+java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore generalTests.TrackingServiceTests
+
+cd "%my documents%\dropbox\nes\java\jars"
+cd
+
+goto exit
+
+
+
+:_
+
+set fp=* Test Apache Ant build file.
+
+rem      Creation Date: Oct-31-2016
+rem            Outcome:
+rem         Conclusion:
+
+echo.
+echo %fp%
+echo.
+
+
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test Apache Ant build.
+
+rem      Creation Date: Oct-31-2016
+rem            Outcome:
+rem         Conclusion:
+
+echo.
+echo %fp%
+echo.
+
+cd\aa
+cd apache-ant-1.9.7\bin\
+
+ant -buildfile "C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Eclipse Workspace\$UnderDevelopment\build.xml"
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test Apache Ant build. JunitReport Version
+
+rem      Creation Date: Oct-31-2016
+rem            Outcome:
+rem         Conclusion:
+
+echo.
+echo %fp%
+echo.
+
+cd\aa
+cd apache-ant-1.9.7\bin\
+
+ant -buildfile "C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Eclipse Workspace\$UnderDevelopment\build.xml" junitreport
+
+goto exitb
+
+
+
+:_
+
+set fp=* Folder authority.
+
+rem      Creation Date: Nov-3-2016
+
+echo.
+echo %fp%
+echo.
+
+rem cd\pcarss
+rem cd\pcarss development
+rem cd\pcarss development-Nov-1-2016
+rem cd %dropbox%
+rem cd %dropbox%\it
+rem cd c:\projects\netbeans\batch_files
+
+echo Current folder: %cd%
+
+goto exitp
+
+
+
+:_
+
+set fp=* Test eof.
+
+rem      Creation Date: Nov-17-2016
+rem            Outcome:
+rem         Conclusion:
+
+echo.
+echo %fp%
+echo.
+
+goto :eof
+
+
+
+:_
+
+set fp=* Check machine name.
+
+rem      Creation Date: Nov-17-2016
+rem            Outcome:
+rem         Conclusion:
+
+echo.
+echo %fp%
+echo.
+
+if %COMPUTERNAME% == NES-1KKHHC2 echo is
+if not %COMPUTERNAME% == NES-1KKHHC2 echo not
+
+goto :eof
+
+
+
+:_
+
+:forfiles
+
+set fp=* Forfiles help file. (!ff, !forf)
+
+rem      Creation Date: Nov-25-2016
+
+FORFILES [/P pathname] [/M searchmask] [/S]
+         [/C command] [/D [+ | -] {MM/dd/yyyy | dd}]
+
+Description:
+    Selects a file (or set of files) and executes a 
+    command on that file. This is helpful for batch jobs.
+
+Parameter List:
+    /P    pathname      Indicates the path to start searching.
+                        The default folder is the current working
+                        directory (.).
+
+    /M    searchmask    Searches files according to a searchmask.
+                        The default searchmask is '*' .
+
+    /S                  Instructs forfiles to recurse into
+                        subdirectories. Like "DIR /S".
+
+    /C    command       Indicates the command to execute for each file.
+                        Command strings should be wrapped in double
+                        quotes. 
+
+                        The default command is "cmd /c echo @file".
+
+                        The following variables can be used in the
+                        command string:
+                        @file    - returns the name of the file.
+                        @fname   - returns the file name without
+                                   extension.
+                        @ext     - returns only the extension of the
+                                   file.
+                        @path    - returns the full path of the file.
+                        @relpath - returns the relative path of the
+                                   file.
+                        @isdir   - returns "TRUE" if a file type is
+                                   a directory, and "FALSE" for files.
+                        @fsize   - returns the size of the file in
+                                   bytes.
+                        @fdate   - returns the last modified date of the
+                                   file.
+                        @ftime   - returns the last modified time of the
+                                   file.
+
+                        To include special characters in the command 
+                        line, use the hexadecimal code for the character
+                        in 0xHH format (ex. 0x09 for tab). Internal
+                        CMD.exe commands should be preceded with
+                        "cmd /c".
+
+    /D    date          Selects files with a last modified date greater
+                        than or equal to (+), or less than or equal to
+                        (-), the specified date using the
+                        "MM/dd/yyyy" format; or selects files with a
+                        last modified date greater than or equal to (+)
+                        the current date plus "dd" days, or less than or
+                        equal to (-) the current date minus "dd" days. A
+                        valid "dd" number of days can be any number in
+                        the range of 0 - 32768.
+                        "+" is taken as default sign if not specified.
+
+    /?                  Displays this help message.
+
+Examples:
+    FORFILES /?
+    FORFILES  
+    FORFILES /P C:\WINDOWS /S /M DNS*.* 
+    FORFILES /S /M *.txt /C "cmd /c type @file | more"
+    FORFILES /P C:\ /S /M *.bat
+    FORFILES /D -30 /M *.exe /C "cmd /c echo @path 0x09 was changed 30 days ago"
+    FORFILES /D 01/01/2001 /C "cmd /c echo @fname is new since Jan 1st 2001"
+    FORFILES /D +11/25/2016 /C "cmd /c echo @fname is new today"
+    FORFILES /M *.exe /D +1
+    FORFILES /S /M *.doc /C "cmd /c echo @fsize" 
+    FORFILES /M *.txt /C "cmd /c if @isdir==FALSE notepad.exe @file"
+
+goto exitb
+
+
+
+:_
+
+set fp=* Forfiles command experimentation.
+
+rem      Creation Date: Nov-25-2016
+
+echo.
+echo %fp%
+echo.
+
+cd\aa
+
+rem This worked.
+rem forfiles /m *.txt
+
+rem Find text files changed in the last day.
+rem forfiles /d +0 /m *.txt
+
+rem Find files changed in the last day.
+rem forfiles /d +0
+
+echo Find files (folders are assumed) changed in the last day.
+forfiles /d +0 /s /c "cmd /c if @isdir==FALSE echo @path" /m %sc%
+
+goto exitp
+
+
+
+:_
+
+:search_normally
+
+set fp2=* Search normally.
+
+echo %fp%>c:\a\search_results.txt
+
+echo.
+echo %fp2%
+echo %fp2%>>c:\a\search_results.txt
+
+echo.
+echo Current folder: "%cd%"
+echo Current folder: "%cd%">>c:\a\search_results.txt
+
+echo.
+echo Search Criterion: %sc%
+echo Search Criterion: %sc%>>c:\a\search_results.txt
+
+echo ****************************************************************>>c:\a\search_results.txt
+echo.>>c:\a\search_results.txt
+
+rem Files are sorted newest files first.
+dir /b /s /o-d *%sc%*>>c:\a\search_results.txt
+
+"%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
+
+goto exit
+
+
+
+:_
+
+:find_files_changed_in_the_last_day
+
+set fp2=* Find files (folders are assumed) changed in the last day.
+
+rem      Creation Date: Nov-25-2016
+
+echo.
+echo %fp%
+echo.
+
+echo %fp%>c:\a\search_results.txt
+
+echo.
+echo %fp2%
+echo %fp2%>>c:\a\search_results.txt
+
+echo.
+echo Current folder: "%cd%"
+echo Current folder: "%cd%">>c:\a\search_results.txt
+
+echo.
+echo Search Criterion: %sc%
+echo Search Criterion: %sc%>>c:\a\search_results.txt
+
+echo ****************************************************************>>c:\a\search_results.txt
+echo.>>c:\a\search_results.txt
+
+forfiles /d +0 /s /c "cmd /c if @isdir==FALSE echo @path">>c:\a\search_results.txt
+
+"%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
+
+goto exit
+
+
+
+:_
+
+:find_files_changed_in_the_last_week
+
+set fp2=* Find files (folders are assumed) changed in the last week.
+
+rem Creation Date: Dec-5-2016
+
+echo.
+echo %fp%
+echo.
+
+echo %fp%>c:\a\search_results.txt
+
+echo.
+echo %fp2%
+echo %fp2%>>c:\a\search_results.txt
+
+echo.
+echo Current folder: "%cd%"
+echo Current folder: "%cd%">>c:\a\search_results.txt
+
+echo.
+echo Search Criterion: %sc%
+echo Search Criterion: %sc%>>c:\a\search_results.txt
+
+echo ****************************************************************>>c:\a\search_results.txt
+echo.>>c:\a\search_results.txt
+
+forfiles /d -7 /s /c "cmd /c if @isdir==FALSE echo @path">>c:\a\search_results.txt
+
+"%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
+
+goto exit
+
+
+
+:_
+
+set fp=* Test2.
+
+rem      Creation Date: Nov-28-2016
+
+echo.
+echo %fp%
+echo.
+
+
+
+goto exitb
+
+
+
+:_
+
+set fp=* Find files changed in the last day.
+
+rem Creation Date: Dec-5-2016
+
+echo.
+echo %fp%
+
+cd\aa
+
+goto find_files_changed_in_the_last_day
+
+
+
+:_
+
+set fp=* Find files changed in the last week.
+
+rem Creation Date: Dec-5-2016
+
+echo.
+echo %fp%
+
+cd\aa
+
+goto find_files_changed_in_the_last_week
+
+
+
+:_
+
+set fp=* Test title.
+
+rem Function Creation Date: Dec-15-2016
+
+echo.
+echo %fp%
+
+
+
+goto exitp
+
+
+
+:_
+
+set fp=* Set dynamic server location.
+
+rem Function Creation Date: Dec-19-2016
+
+echo.
+echo %fp%
+
+cd\Mercury\Server\wildfly-9.0.2.Final\standalone\tmp\vfs\temp
+
+cd
+
+dir/b>c:\a\environment_variable_temporary_storage.txt
+
+set /p dynamic_server_location_part_1=<c:\a\environment_variable_temporary_storage.txt
+
+cd %dynamic_server_location_part_1%
+
+dir/b>c:\a\environment_variable_temporary_storage.txt
+
+set /p dynamic_server_location_part_2=<c:\a\environment_variable_temporary_storage.txt
+
+cd %dynamic_server_location_part_2%
+
+set dynamic_server_location=%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Set dynamic server location.
+
+rem Function Creation Date: Dec-19-2016
+
+echo.
+echo %fp%
+
+cd\Mercury\Server\wildfly-9.0.2.Final\standalone\tmp\vfs\temp
+
+cd
+
+dir/b>%temp%\environment_variable_temporary_storage.txt
+
+set /p dynamic_server_location_part_1=<%temp%\environment_variable_temporary_storage.txt
+
+cd %dynamic_server_location_part_1%
+
+dir/b>%temp%\environment_variable_temporary_storage.txt
+
+set /p dynamic_server_location_part_2=<%temp%\environment_variable_temporary_storage.txt
+
+cd %dynamic_server_location_part_2%
+
+set dynamic_server_location=%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Delete statle WildFly folders.
+
+rem Function Creation Date: Dec-20-2016
+
+echo.
+echo %fp%
+
+cd\Mercury\Server\wildfly-9.0.2.Final\standalone\tmp\vfs\temp
+
+cd
+
+dir/b>%temp%\environment_variable_temporary_storage.txt
+
+set /p dynamic_server_location_part_1=<%temp%\environment_variable_temporary_storage.txt
+
+if not "%dynamic_server_location_part_1%"=="" rd /q /s %dynamic_server_location_part_1%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Call 2 word.
+
+rem Function Creation Date: Dec-21-2016
+
+echo.
+echo %fp%
+
+call "2 word.bat" branch
+
+goto exitp
+
+
+
+:_
+
+set fp=* The syntax is different for when you use environment variables as opposed to not.
+
+rem Function Creation Date: Dec-22-2016
+
+rem Conclusion: Putting a space after the "cd" works in all cases.
+
+echo.
+echo %fp%
+
+echo.
+rem Notice that there's a space after the "cd".
+echo 1.
+cd %savannah%\belfry
+cd
+
+echo.
+echo 2. Notice that this syntax does not work.
+cd\%savannah%\belfry
+cd
+
+echo.
+echo 3.
+cd\Users\jonathan.r.jones\Documents\!Savannah\Belfry
+cd
+
+echo.
+echo 4. Notice that putting a space after the "cd" works in all cases.
+cd \Users\jonathan.r.jones\Documents\!Savannah\Belfry
+cd
+
+goto exitp
+
+
+
+:_
+
+set fp=* To call a batch file with spaces, wrap it in double quotes.
+
+rem Function Creation Date: Dec-22-2016
+
+echo.
+echo %fp%
+
+call "%savannah%\belfry\set my path 3.bat"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Put a space after cd from now on.
+
+rem Function Creation Date: Dec-22-2016
+
+echo.
+echo %fp%
+
+cd \aa
+
+cd
+
+goto exitp
+
+
+
+:_
+
+set fp=*
+
+rem Function Creation Date: Dec-22-2016
+
+echo.
+echo %fp%
+
+echo.
+echo 1
+echo %computer_alias%
+
+echo.
+rem set Multi-Edit_2008_Config_Files=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+echo 2
+echo "%Multi-Edit_2008_Config_Files%"
+
+echo.
+echo 3
+echo "%my documents%\dropbox\Multi-Edit_2008_Config_Files"
+
+goto exitb
+
+
+
+:_
+
+set fp=* Create database dump file.
+
+rem Function Creation Date: Jan-9-2017
+
+echo.
+echo %fp%
+
+cd \a
+
+mysqldump -u root -p mercdb > c:\a\test_5.dmp
+
+goto exitb
+
+
+
+:_
+
+set fp=* Connect to MySQL Monitor.
+
+rem Function Creation Date: Jan-10-2017
+
+echo.
+echo %fp%
+echo.
+
+mysql --user='mercweb' --password=MERCadmin mercdb
+
+goto exitb
+
+
+
+:_
+
+set fp=* Get date.
+
+rem Function Creation Date: Jan-10-2017
+
+echo.
+echo %fp%
+
+call "c:\projects\netbeans\batch_files\Update Java filename timestamp.bat"
+
+set /p timestamp_filename=<c:\a\java_timestamp.txt
+
+echo Timestamp Filename: %timestamp_filename%
+
+goto exitp
+
+
+
+:_
+
+set fp=* Transfer folder.
+
+rem Function Creation Date: Jan-10-2017
+
+echo.
+echo %fp%
+
+cd %my documents%\dropbox\transfer
+
+cd
+
+goto exitp
+
+
+
+:_
+
+set fp=* Restore database from dump file.
+
+rem Function Creation Date: Jan-10-2017
+
+echo.
+echo %fp%
+echo.
+
+mysql -uroot -p mercdb < "%my documents%\dropbox\transfer\From_Buzz_Jan-10-2017_4_27_PM.dmp"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Check that the path does not contain the ^% character which breaks the batch files.
+
+rem Function Creation Date: Jan-11-2017
+
+echo.
+echo %fp%
+echo.
+
+rem check that the path does not contain the ^% character which breaks
+rem the batch files.
+for %%i in (%~sf0) do set NON_ESCAPED=%%~dPsi..
+
+
+FOR /F "tokens=1-2* delims=%%" %%1 IN ("%NON_ESCAPED%") DO (
+if NOT "%%2" == "" goto invalidPath)
+
+for %%i in (%~sf0) do set DIR_HOME=%%~dPsi.
+
+set INSTALL_ROOT=%DIR_HOME%
+set INSTANCE_DIR=
+for /f "delims=" %%a in (%INSTALL_ROOT%\instance.loc) do (
+  set INSTANCE_DIR=%%a
+)
+set CUR_DIR=%~dp0
+cd /d %INSTALL_ROOT%
+cd /d %INSTANCE_DIR%
+set INSTANCE_ROOT=%CD%
+
+goto exitp
+
+
+
+:_
+
+set fp=* Check that the path does not contain the ^% character which breaks the batch files.
+
+rem Function Creation Date: Jan-11-2017
+
+echo.
+echo %fp%
+echo.
+
+echo Notice that the "space" character is denoted by ^%.
+
+goto exitp
+
+
+
+:_
+
+:set_folder_to_search
+
+set fp=* Set folder to search.
+
+echo.
+echo %fp%
+
+set fs=\mercury
+set fs=\software
+set fs=\a
+set fs=%savannah%
+
+cd %fs%
+
+cd
+
+goto exitb
+
+
+
+:_
+
+set fp=* Call label arguments.
+
+rem Function Creation Date: Jan-13-2017
+
+echo.
+echo %fp%
+echo.
+
+call :santa_claus hello_world
+
+goto exitp
+
+Calls one batch program from another.
+
+CALL [drive:][path]filename [batch-parameters]
+
+  batch-parameters   Specifies any command-line information required by the
+                     batch program.
+
+If Command Extensions are enabled CALL changes as follows:
+
+CALL command now accepts labels as the target of the CALL.  The syntax
+is:
+
+    CALL :label arguments
+
+A new batch file context is created with the specified arguments and
+control is passed to the statement after the label specified.  You must
+"exit" twice by reaching the end of the batch script file twice.  The
+first time you read the end, control will return to just after the CALL
+statement.  The second time will exit the batch script.  Type GOTO /?
+for a description of the GOTO :EOF extension that will allow you to
+"return" from a batch script.
+
+In addition, expansion of batch script argument references (%0, %1,
+etc.) have been changed as follows:
+
+
+    %* in a batch script refers to all the arguments (e.g. %1 %2 %3
+        %4 %5 ...)
+
+    Substitution of batch parameters (%n) has been enhanced.  You can
+    now use the following optional syntax:
+
+        %~1         - expands %1 removing any surrounding quotes (")
+        %~f1        - expands %1 to a fully qualified path name
+        %~d1        - expands %1 to a drive letter only
+        %~p1        - expands %1 to a path only
+        %~n1        - expands %1 to a file name only
+        %~x1        - expands %1 to a file extension only
+        %~s1        - expanded path contains short names only
+        %~a1        - expands %1 to file attributes
+        %~t1        - expands %1 to date/time of file
+        %~z1        - expands %1 to size of file
+        %~$PATH:1   - searches the directories listed in the PATH
+                       environment variable and expands %1 to the fully
+                       qualified name of the first one found.  If the
+                       environment variable name is not defined or the
+                       file is not found by the search, then this
+                       modifier expands to the empty string
+
+    The modifiers can be combined to get compound results:
+
+        %~dp1       - expands %1 to a drive letter and path only
+        %~nx1       - expands %1 to a file name and extension only
+        %~dp$PATH:1 - searches the directories listed in the PATH
+                       environment variable for %1 and expands to the
+                       drive letter and path of the first one found.
+        %~ftza1     - expands %1 to a DIR like output line
+
+    In the above examples %1 and PATH can be replaced by other
+    valid values.  The %~ syntax is terminated by a valid argument
+    number.  The %~ modifiers may not be used with %*
+
+
+
+:_
+
+:santa_claus
+
+set fp=* Clause
+
+rem Function Creation Date: Jan-13-2017
+
+echo.
+echo %fp%
+echo.
+
+echo 0: %0
+echo 1: %1
+
+goto exitp
+
+
+
+:_
+
+set fp=* What does "--" do as a batch file argument?
+
+rem Function Creation Date: Jan-30-2017
+
+echo.
+echo %fp%
+echo.
+
+call "c:\projects\netbeans\batch_files\echo arguments.bat" --hi second
+
+goto exitp
+
+
+
+:_
+ 
+set fp=* Set path as of Dec-22-2016.
+
+echo.
+echo %fp%
+
+echo hi
+
+rem call "c:\projects\netbeans\batch_files\set my path 4.bat"
+
+
+
+:_
+
+set fp=* Test locating the WildFly dynamic folder.
+
+rem Function Creation Date: Feb-9-2017
+
+echo.
+echo %fp%
+
+call c:\projects\netbeans\batch_files\m.bat set_wildfly_dynamic_folder
+
+cd %wildfly_dynamic_folder%
+
+goto exitb
+
+
+
+:_
+
+:delete_stale_ext_js
+
+set fp=* Delete stale Ext JS.
+
+echo.
+echo %fp%
+
+call c:\projects\netbeans\batch_files\m.bat set_wildfly_dynamic_folder
+
+rem rd /q /s classic
+
+rem rd /q /s modern
+
+rem rd /q /s resources
+
+del classic.json
+
+del classic.jsonp
+
+del index.html
+
+del microloader.jsp
+
+del modern.json
+
+del modern.jsonp
+
+goto exitb
+
+
+                                                                     1
+:_
+
+set fp=* Compile and refresh.
+
+echo.
+echo %fp%
+
+call "c:\projects\netbeans\batch_files\Sencha Command for App Build Testing.bat"
+
+echo Step 1 completed.
+
+call "c:\projects\netbeans\batch_files\Delete stale Ext JS files from WildFly.bat"
+
+echo Step 2 completed.
+
+call "c:\projects\netbeans\batch_files\Copy fresh Ext JS files to WildFly.bat"
+
+echo Step 3 completed.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test copy.
+
+rem Function Creation Date: Feb-9-2017
+
+echo.
+echo %fp%
+
+cd \aa\testcopy
+
+cd
+
+rem goto exitp
+
+xcopy /d /h /r /s /y c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury
+
+goto exitb
+
+
+
+:_
+
+set fp=* Testing percent 2 and not equals.
+
+rem Function Creation Date: Feb-13-2017
+
+echo.
+echo %fp%
+
+echo 1.
+echo %~1
+echo %~2
+
+echo 2.
+if "%~2" == "" echo No second command line parameter was passed.
+
+echo 3.
+if not "%~2" == "" echo %2 parameter was passed.
+
+
+echo Percent 1: %1
+
+echo Percent 2: %2
+
+goto exitb
+echo 2.
+if "%~1" == "" echo No command line parameter was passed.
+
+echo 3.
+if not "%~1" == "" echo %1 parameter was passed.
+
+
+
+:_
+
+set fp=* Reflection.
+
+rem FCD: Feb-14-2017
+
+echo.
+echo %fp%
+
+
+goto exitb
+
+
+
+:_
+
+set fp=* Exit versus no exit.
+
+rem FCD: Feb-14-2017
+
+echo.
+echo %fp%
+
+echo 1
+call c:\projects\netbeans\batch_files\m.bat test1
+echo 2
+call c:\projects\netbeans\batch_files\m.bat test2
+echo 3
+
+
+
+:_
+
+:current_folder
+
+:identify_current_folder
+
+set fp=* Identify current folder.
+
+echo.
+echo %fp%
+
+echo.
+echo Current Folder: %cd%
+
+goto exitb
+
+
+
+:_
+
+:delete_old
+
+:delete_stale_ext_js_old
+
+set fp=* Delete stale Ext JS. On Feb-10-2017, this rubric fixed enabled this to work.
+
+echo.
+echo %fp%
+
+echo.
+echo Current Folder: %cd%
+
+rem rd /q /s classic
+
+rem rd /q /s modern
+
+rem rd /q /s resources
+
+del classic.json
+
+del classic.jsonp
+
+del index.html
+
+del microloader.jsp
+
+del modern.json
+
+del modern.jsonp
+
+goto exitb
+
+
+
+:_
+
+set fp=* Check pub folder.
+
+rem FCD: Feb-15-2017
+
+echo.
+echo %fp%
+
+cd \projects\netbeans\sencha\html5application\public_html
+
+goto identify_current_folder
+
+goto exitb
+
+
+
+:_
+
+set fp=* Route callers, top method. (!referrouter)
+
+if not "%1" == "" goto %1
+
+goto status
+
+cd | find /i "Belfry">nul
+
+rem This is not the first run (set_my_path has already been called), so . . .
+if not %errorlevel% == 0 goto status
+
+
+
+:_
+
+set fp=* Choose your exit style.
+
+rem FCD: Feb-24-2017
+
+echo.
+echo %fp%
+
+goto exitp
+
+
+
+:_
+
+:computername
+
+set fp=* Switch to Catalina bin based on computer name.
+
+rem FCD: Feb-27-2017
+
+echo.
+echo %fp%
+
+if %computername% == NES-1KKHHC2 echo Work computer.
+rem if /i not "%computername%"=="NES-1KKHHC2" echo Work computer.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Run localhost.
+
+rem FCD: Feb-27-2017
+
+echo.
+echo %fp%
+
+rem start "c:\program files (notepad_installation_path)\google\chrome\application\chrome.exe" "http://localhost:8080"
+start "%programfiles%\mozilla firefox\firefox.exe" "http://localhost:8080"
+goto exitp
+
+
+
+:_
+
+set fp=* Find NES folder.
+
+rem FCD: Feb-27-2017
+
+echo.
+echo %fp%
+
+cd %dropbox%\nes
+
+goto exitp
+
+
+
+:_
+
+set fp=* Which Java version is running on this machine?
+
+rem FCD: Mar-2-2017
+
+rem echo.
+rem echo %fp%
+echo.
+
+call c:\projects\netbeans\batch_files\update_java_timestamp.bat
+
+set /p timestamp=<%tmp%\java_timestamp.txt
+
+echo Java Version on %computername% on %timestamp%:
+
+echo.
+
+java -version
+
+goto exitp
+
+
+
+:_
+
+set fp=* Test modification to this file.
+
+rem FCD: Mar-2-2017
+
+echo.
+echo %fp%
+
+goto exitp
+
+
+
+:_
+
+set fp=* Find new Eclipse Workspace.
+
+rem FCD: Mar-2-2017
+
+echo.
+echo %fp%
+
+cd \aaa\Eclipse Workspace on Buzz
+
+echo Current Folder: %cd%
+
+goto exitp
+
+
+
+:_
+
+set fp=* Current folder trick.
+
+rem FCD: Mar-2-2017
+
+echo.
+echo %fp%
+
+call %0 current_folder
+
+goto exitp
+
+
+
+:_
+
+set fp=* Run Jersey-Maven Archetype command.
+
+rem FCD: Feb-28-2017
+
+echo.
+echo %fp%
+
+cd \aaa\Eclipse Workspace on Buzz
+
+echo Current Folder: %cd%
+
+echo.
+echo If this folder is incorrect, you should abort this command.
+pause
+
+mvn archetype:generate -DarchetypeGroupId=org.glassfish.jersey.archetypes -DarchetypeArtifactId=jersey-quickstart-webapp -DarchetypeVersion=2.2
+
+rem groupId: exercise-services
+rem blah: 
+
+goto exitp
+
+
+
+:_
+
+set fp=* Test j.bat.
+
+rem FCD: Mar-3-2017
+
+echo.
+echo %fp%
+
+call j.bat hello
+goto exitp
+
+
+
+:_
+
+set fp=* Test percent 0.
+
+rem FCD: Mar-7-2017
+
+echo.
+echo %fp%
+
+goto exitp
+
+
+
+:_
+
+:recursive_test_1
+
+set fp=* Recursive test 1.
+
+rem FCD: Feb-22-2017
+
+echo.
+echo %fp%
+
+goto exit
+
+
+
+:_
+
+:recursive_test_2
+
+set fp=* Recursive test 2.
+
+rem FCD: Feb-22-2017
+
+echo.
+echo %fp%
+
+goto exit
+
+
+
+:_
+
+:recursive_test_3
+
+set fp=* Recursive test 3.
+
+rem This doesn't work.
+
+rem FCD: Feb-22-2017
+
+echo.
+echo %fp%
+
+%0 recursive_test_1
+
+%0 recursive_test_2
+
+goto exit
+
+
+
+:_
+
+:recursive_test_4
+
+set fp=* Recursive test 3.
+
+rem This works.
+
+rem FCD: Feb-22-2017
+
+echo.
+echo %fp%
+
+goto recursive_test_1
+
+%0 recursive_test_2
+
+goto exit
+
+
+
+:_
+
+set fp=* Test computer name.
+
+rem FCD: Mar-10-2017
+
+echo.
+echo %fp%
+
+if /i %computername% == NES-1KKHHC2 cd \Neighborhood\Eclipse Workspace\$UnderDevelopment
+if /i %computername% == NES-1KKHHC2 xcopy /d /h /r /s /y . "C:\Users\jonathan.r.jones\Documents\Dropbox\IT\Java\Workspaces\NES-1KKHHC2\"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Netbeans jdkhome issue.
+
+rem FCD: Mar-13-2017
+
+echo.
+echo %fp%
+
+cd "\Program Files (notepad_installation_path)\NetBeans 8.2\bin\"
+
+netbeans.exe --console new --jdkhome "C:\Program Files (notepad_installation_path)\Java\jdk1.8.0_121"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Validate UD home.
+
+rem FCD: Mar-16-2017
+
+echo.
+echo %fp%
+
+if /i %computername% == NES-1KKHHC2 cd \Neighborhood\Eclipse Workspace\$UnderDevelopment
+
+cd
+
+xcopy /d /h /r /s /y . C:\Users\jonathan.r.jones\Documents\Dropbox\IT\Java\Workspaces\NES-1KKHHC2
+rem xcopy /d /h /r /s /y . "C:\aa\test"
+goto exitb
+
+
+
+:_
+
+:cl
+
+:clone
+
+set fp=* Clone.
+
+echo.
+echo %fp%
+  
+
+set branch_name=clean6.2
+set branch_name=master
+
+set folder_name=WebWorldWind4
+set folder_name=tirem
+set folder_name=sencha
+set folder_name=bouillabaisse
+set folder_name=mercury6
+set folder_name=Batch_Files
+
+set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
+set origin_url=https://github.com/NASAWorldWind/WebWorldWind.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git
+set origin_url=https://github.com/jonathan-r-jones/java_bouillabaisse.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/batch_files.git
+
+set new_folder_path=\Users\Buzz\Documents\Dropbox\IT\Java
+set new_folder_path=c:\projects\netbeans
+
+@echo on
+cd %new_folder_path%
+cd
+git clone %origin_url% --branch %branch_name% .\%folder_name%
+@echo off
+
+goto exitb
+
+
+
+:_
+
+set fp=* Lines of code in pcarss.
+
+echo.
+echo %fp%
+echo.
+
+cd\pcarss
+
+cd
+
+type *.java
+
+goto exit
+
+
+
+:_
+
+set fp=* UP test.
+
+rem FCD: Mar-17-2017
+
+echo.
+echo %fp%
+
+if /i %computername% == NES-1KKHHC2 cd %userprofile%\Workspace
+
+cd
+
+goto exitp
+
+
+
+:_
+
+set fp=* Lines of code in pcarss.
+
+echo.
+echo %fp%
+echo.
+
+cd \a
+
+cd
+
+type *.txt>c:\a\size.log
+
+goto exitp
+
+
+
+:_
+
+set fp=* Copy files to examination location.
+
+rem FCD: Mar-21-2017
+
+echo.
+echo %fp%
+
+cd "\aa\Count Lines of Code in Mercury"
+
+cd
+
+rem type /s *.java "c:\aa\Count Lines of Code in Mercury\java in mercury.txt"
+
+for /r %%j in (*.txt) do type "%%j" >> "c:\a\all files appended into one big file.txt"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Count the number of lines of Java code.
+
+rem FCD: Mar-21-2017
+
+echo.
+echo %fp%
+
+cd "\projects"
+
+cd
+
+for /r %%j in (*.java) do type "%%j" >> "c:\a\all files appended into one big file.java"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Count the number of lines of JavaScript code.
+
+rem FCD: Mar-21-2017
+
+echo.
+echo %fp%
+
+cd "\projects"
+
+cd
+
+for /r %%j in (*.js) do type "%%j" >> "c:\a\All Mercury JavaScript Code in One File.js"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Count the number of JavaScript files.
+
+rem FCD: Mar-21-2017
+
+echo.
+echo %fp%
+
+cd "\projects"
+
+cd
+
+for /r %%j in (*.js) do echo "%%j" >> "c:\a\All Mercury JavaScript filenames in One File.txt"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Count the number of Java files.
+
+rem FCD: Mar-21-2017
+
+echo.
+echo %fp%
+
+cd "\projects"
+
+cd
+
+for /r %%j in (*.java) do echo "%%j" >> "c:\a\All Mercury Java Filenames in One file.txt"
+
+goto exitp
+
+
+
+:_
+
+set fp=* Count the number of lines of JavaScript code.
+
+rem FCD: Mar-21-2017
+
+echo.
+echo %fp%
+
+cd "%my documents%\gpodder\downloads"
+
+cd
+
+for /r %%j in (*.mp3) do move "%%j" c:\a
+
+goto exitp
+
+
+
+:_
+
+set fp=* 
+
+rem FCD: Mar-30-2017
+
+echo.
+echo %fp%
+
+call C:\Mercury\Server\wildfly-9.0.2.Final\bin\standalone.bat
+goto exitp
+
+
+
+:_
+
+set fp=* Test copy.
+
+rem FCD: Apr-4-2017
+
+echo.
+echo %fp%
+
+call m copy_fresh_ext_js_into_wildfly_dynamic_folder 
+goto exitp
+
+
+
+:_
+
+set fp=* test cd
+
+rem FCD: Apr-4-2017
+
+echo.
+echo %fp%
+
+cd C:\projects\netbeans\mercury6\Mercury-web\src\main\webapp
+goto exitb
+
+
+
+:_
+
+set fp=* Clear Chrom browsing data using the command line.
+
+rem FCD: Apr-6-2017
+
+echo.
+echo %fp%
+
+set chrome_data_folder=%localappdata%\google\chrome\user data\default
+set chrome_cache=%chrome_data_folder%\cache
+
+taskkill /f /im "chrome.exe"
+
+del /q /s /f "%chrome_cache%\*.*"
+del /q /f "%chrome_data_folder%\*cookies*.*"
+del /q /f "%chrome_data_folder%\*History*.*"
+
+rem I am repeating this command twice because doing it once doesn't seem to finish the job.
+taskkill /f /im "chrome.exe"
+
+del /q /s /f "%chrome_cache%\*.*"
+del /q /f "%chrome_data_folder%\*cookies*.*"
+del /q /f "%chrome_data_folder%\*History*.*"
+
+rem set chrome_data_folder=c:\users\%username%\local settings\application data\google\chrome\user data\default
+
+rem set chrome_cache=%chrome_data_folder%\Cache>nul 2>&1
+rem del /q /s /f "%chrome_cache%\*.*">nul 2>&1   
+rem del /q /f "%chrome_data_folder%\*Cookies*.*">nul 2>&1    
+rem del /q /f "%chrome_data_folder%\*History*.*">nul 2>&1    
+
+rem I don't know what nul 2>&1 does.
+rem set chrome_cache=%chrome_data_folder%\cache>nul 2>&1  
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test %0.
+
+rem FCD: Apr-6-2017
+
+echo.
+echo %fp%
+
+echo Percent 0: %0.
+
+goto exitp
+
+
+
+:_
+
+set fp=* Open target folder.
+
+rem FCD: Apr-7-2017
+
+echo.
+echo %fp%
+
+call c:\projects\netbeans\batch_files\m.bat open_target_foler_in_explorer
+
+goto exitb
+
+
+
+:_
+
+set fp=* Edit CW.
+
+rem FCD: Apr-7-2017
+
+echo.
+echo %fp%
+
+call c:\projects\netbeans\batch_files\m.bat edit_contacts_widget
+
+goto exitb
+
+
+
+:_
+
+set fp=* 
+
+rem FCD: Apr-7-2017
+
+echo.
+echo %fp%
+
+cd \Mercury\Server\wildfly-9.0.2.Final\standalone\tmp\vfs\temp
+
+goto exitb
+
+
+
+:_
+
+set fp=* Get_version.
+
+rem Outcome: This works!
+
+echo.
+echo %fp%
+echo.
+
+cd c:\projects\netbeans\batch_files
+
+javac generate_mercury_version_number.java
+
+java -cp . generate_mercury_version_number>c:\a\j3.txt
+
+set /p java_timestamp=<c:\a\j3.txt
+
+echo jt: %java_timestamp%
+
+goto exitp
+
+
+
+:_
+
+set fp=* Version with pause.
+
+rem fcd: Apr-10-2017
+
+echo.
+echo %fp%
+
+call c:\projects\netbeans\batch_files\m ver
+
+pause
+goto exitb
+
+
+
+:_
+
+set fp=* Restrict use in folder.
+
+rem fcd: Apr-13-2017
+
+echo.
+echo %fp%
+
+cd | find /i "C:\projects\netbeans\sencha">nul
+
+if %errorlevel% == 0 echo A commit message is required in this folder.
+if %errorlevel% == 0 goto exitb
+
+echo Errorlevel: %errorlevel%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Xcopy experiment.
+
+rem fcd: Apr-13-2017
+
+echo.
+echo %fp%
+
+cd c:\a
+
+xcopy /y j1.txt j2.txt
+
+goto exitb
+
+
+
+:_
+
+set fp=* Title experiments.
+
+rem fcd: Apr-14-2017
+
+echo.
+echo %fp%
+
+color 60
+
+echo 1
+echo %title%
+echo 2
+echo %title
+title = coming at you
+title = Mercury Helper - %fp%
+goto exitp
+
+
+
+:_
+
+set fp=* Color test.
+
+rem fcd: Apr-17-2017
+
+echo.
+echo %fp%
+
+color d0
+goto exitb
+
+
+
+:_
+
+set fp=* Percent 2 testing.
+
+rem fcd: Apr-18-2017
+
+echo.
+echo %fp%
+
+if "%~2" == "" echo A commit description is required.
+
+echo %2
+
+goto exitb
+
+
+
+:_
+
+set fp=* Title experiment.
+
+rem fcd: Apr-20-2017
+
+echo.
+echo %fp%
+
+title = Hi
+
+goto exitb
+
+
+
+:_
+
+:process_mercury_version_number
+
+set fp=* Generate a Mercury version number, set it to an environment variable and then echo it to the command line.
+
+rem fcd: May-3-2017
+
+echo.
+echo %fp%
+echo.
+
+cd c:\projects\netbeans\batch_files
+
+java -cp . generate_mercury_version_number>%tmp%\mercury_version_number.txt
+
+set /p mercury_version_number=<%tmp%\mercury_version_number.txt
+
+echo %mercury_version_number%
+
+goto exitb
+
+
+
+:_
+
+:help
+
+:/?
+
+set fp=* Help!
+
+rem fcd: May-14-2017
+
+echo.
+echo %fp%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Investigate /?
+
+rem fcd: May-14-2017
+
+echo.
+echo %fp%
+
+echo 0: %0
+echo 1: %1
+echo 2: %2
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test multi-notepad call.
+
+rem fcd: May-15-2017
+
+echo.
+echo %fp%
+
+call no edit_pom_root
+
+call no edit_pom_ear
+
+call no edit_pom_ejb
+
+call no edit_pom_web
+
+call no edit_system_widget
+
+goto exitb
+
+
+
+:_
+
+set fp=* Make a choice.
+
+rem fcd: May-16-2017
+
+rem echo %fp%
+
+echo.
+set /P user_option=Are you sure you wish to delete the database?! (y/n): 
+
+if not "%user_option%"=="y" echo Aborting.
+if not "%user_option%"=="y" goto exitb
+
+echo.
+echo You have chosen to continue.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Wildfly name/computer name feature.
+
+rem fcd: May-22-2017
+
+echo.
+echo %fp%
+
+if /i %computername% == JRJ4550 echo j
+if /i %computername% == nes-1kkhhc2 echo 4
+
+set wildfly_location=c:\mercury\server\wildfly-9.0.2.final
+if /i %computername%==nes-1kkhhc2 set wildfly_location=c:\mercury\server\wildfly-9.0.1.final
+
+echo %wildfly_location%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Error level experiments.
+
+rem fcd: May-25-2017
+
+echo.
+echo %fp%
+
+cd %1
+echo Error Level: %errorlevel%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Detect a filename in the first parameter.
+
+rem fcd: Jun-1-2017
+
+echo.
+echo %fp%
+
+echo.
+echo %1 | find /i ".">nul
+
+if %errorlevel% == 0 echo First parameter is a filename.
+if %errorlevel% == 0 goto exitb
+if %errorlevel% == 1 echo First parameter is NOT a filename.
+if %errorlevel% == 1 goto exitb
+
+goto exitb
+
+
+
+:_
+
+set fp=* Machine name testing.
+
+rem fcd: Jun-2-2017
+
+echo.
+echo %fp%
+
+if /i not "%computername%"=="WIN-8D6B7BCCM06" echo not
+if /i not "%computername%"=="WIN-8D6B7BCCM06" set password="MERCadmin"
+
+goto exitb
+
+
+
+:_
+
+set fp=* Xcopy testing.
+
+rem fcd: Jul-3-2017
+
+echo.
+echo %fp%
+
+cd C:\Users\jonathan.r.jones\Documents\DropBox\nes\macintosh\public_html
+
+cd
+
+xcopy /d /h /r /s /y C:\projects\netbeans\sencha\HTML5Application\public_html
+
+goto exitb
+
+
+
+:_
+
+set fp=* Machine name testing.
+
+rem fcd: Jul-7-2017
+
+echo.
+echo %fp%
+
+if /i not "%computername%"=="NES-1KKHHC2" echo is it
+
+goto exitb
+
+
+
+:_
+
+set fp=* New r3 command.
+
+rem fcd: Jul-28-2017
+
+echo.
+echo %fp%
+
+echo.
+set /P user_option=What's the name of dmp file (without the file extension) in the backups folder you wish to load? 
+
+if /i exist c:\mercury\backups\%user_option%.dmp echo exist
+
+if /i not exist c:\mercury\backups\%user_option%.dmp echo The filename you entered does not exist.
+
+goto exitb
+
+
+
+:_
+
+set fp=* How do you escape a percent sign in a batch file?
+
+rem Answer: 2 '%' signs equals one.
+
+rem fcd: Aug-2-2017
+
+echo.
+echo %fp%
+
+
+goto exitb
+
+
+
+:_
+
+set fp=* Experiment with type and find statements.
+
+rem fud: Aug-8-2017
+
+echo.
+echo %fp%
+echo.
+
+cd\a
+
+type j1.txt | find /i "daniel"
+
+goto exitb
+
+
+
+:_
+
+set fp=* Experiment with Assoc.
+
+rem fud: Aug-10-2017
+
+echo.
+echo %fp%
+
+assoc .txt="C:\Program Files\Sublime Text 3\sublime_text.exe"
+
+goto exitb
+
+
+
+:_
+
+set fp=* Drive query.
+
+rem fud: Aug-10-2017
+
+echo.
+echo %fp%
+
+driverquery -v
+
+goto exitb
+
+
+
+:_
+
+set fp=* Goto label error test.
+
+rem fud: Aug-31-2017
+
+echo.
+echo %fp%
+echo.
+
+goto xxx
+
+if %errorlevel% == 0 echo 0
+if %errorlevel% == 1 echo 1
+
+goto exitb
+
+
+
+:_
+
+set fp=* If folder exists.
+
+rem fud: Aug-29-2017
+
+echo.
+echo %fp%
+echo.
+
+cd\aa
+
+dir | find /i "ext">nul
+if %errorlevel% == 0 echo Folder EXISTS.
+if %errorlevel% == 1 echo Folder does NOT exist.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Create a folder if it doesn't exist.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set target_folder=aMercury
+dir | find /i "%target_folder%">nul
+if %errorlevel% == 1 md %target_folder%
+cd %navigate_target_folder%
+
+goto exitb
+
+
+
+:_
+
+set fp=* String replacement is cool.
+
+rem lu: Nov-9-2017
+
+echo.
+echo %fp%
+
+rem This works!
+
+rem skw dos search and replace
+
+set str=teh cat in teh hat
+echo.%str%
+set str=%str:teh=the%
+echo.%str%
+
+set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
+echo.%str%
+set str=%str:/=\%
+echo.%str%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test if exist statement.
+
+rem lu: Nov-13-2017
+
+echo.
+echo %fp%
+echo.
+
+if exist c:\a echo A exists.
+if not exist c:\a echo A does NOT exist.
+if exist c:\b echo B exists.
+if not exist c:\b echo B does NOT exist.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test echo removal.
+
+rem lu: Nov-14-2017
+
+echo %fp%
+
+goto exitb
+
+
+
+:_
+
+set fp=* Test if exist for folders.
+
+rem lu: Nov-15-2017
+
+echo %fp%
+echo.
+
+if exist C:\projects\netbeans\mercury6\Mercury-web\target echo Targ is there.
+if exist C:\projects\netbeans\mercury6\Mercury-web\target cd C:\a
+
+if not exist C:\projects\netbeans\mercury6\Mercury-web\target echo Targ is not there.
+if not exist C:\projects\netbeans\mercury6\Mercury-web\target cd C:\a
+
+goto exitb
+
+
+
+:_
+
+set fp=* Delete test.
+
+rem lu: Nov-15-2017
+
+echo %fp%
+
+del c:\a\filterbutton.js
+
+del c:\projects\netbeans\mercury6\Mercury-web\src\main\webapp\classic\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\mercury6\Mercury-web\src\main\webapp\modern\resources\images\lock-screen-background.large.jpg
+del c:\projects\netbeans\mercury6\Mercury-web\src\main\webapp\modern\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\mercury6\Mercury-web\src\main\webapp\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\development\Mercury\classic\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\development\Mercury\modern\resources\images\lock-screen-background.large.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\development\Mercury\modern\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\development\Mercury\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury\classic\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury\modern\resources\images\lock-screen-background.large.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury\modern\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury\classic\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury\modern\resources\images\lock-screen-background.large.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury\modern\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\classic\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\ext\build\examples\admin-dashboard\classic\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\ext\build\examples\admin-dashboard\modern\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\ext\build\examples\admin-dashboard\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\ext\templates\admin-dashboard\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\modern\resources\images\lock-screen-background.large.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\modern\resources\images\lock-screen-background.jpg
+del c:\projects\netbeans\sencha\HTML5Application\public_html\resources\images\lock-screen-background.jpg
+
+goto exitb
+
+
+
+:_
+
+set fp=* Verify existence of an installed program!
+
+rem lu: Nov-17-2017
+
+echo %fp%
+echo.
+
+path | find /i "sencha">null
+if %errorlevel% == 0 echo EXISTS.
+if %errorlevel% == 1 echo Does NOT exist.
+
+goto exitb
+
+
+
+:_
+
+set fp=* Executing a shortcut.
+
+rem lu: Nov-17-2017
+
+echo %fp%
+
+call "c:\mercury\batch_files\Mercury Development Environment.xlsx - Shortcut.lnk"
+
+goto exitb
+
+
+
+:_
+
+set fp=* How to call Snipping tool lnk.
+
+rem lu: Nov-20-2017
+
+rem Outcome: Oddly the Wordpad and Steps Recorder lnks both work but the snipping tool does not.
+
+echo %fp%
+
+cd "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\"
+
+rem call start "my title" "Snipping Tool.lnk"
+rem call start "my title" "Wordpad.lnk"
+call start "my title" "steps recorder.lnk"
+
+goto exitb
+
+
+
+:_
+
+set fp=* If-else statement!
+
+rem lu: Dec-13-2017
+
+echo %fp%
+
+echo.
+echo 1.
+rem This works.
+if /i %computername%==xps (echo XPS!
+) else (echo No!)
+
+echo.
+echo 2.
+rem This works.
+if /i %computername%==xpsc (echo XPS!
+) else (echo No!)
+
+echo.
+echo 3.
+rem This works.
+if /i %computername% == xps (echo XPS!
+) else (echo No!)
+
+echo.
+echo 4.
+rem This works and is my preferred format.
+if /i %computername% == xps (
+  echo XPS!
+) else (
+  echo No!
+)
+
+goto exitb
+
+
+
+:_
+
+:test_hello
+
+set fp=* Test hello.
+
+rem lu: Dec-18-2017
+
+echo %fp%
+
+goto exitb
+
+
+
+:_
+
+:test_call
+
+set fp=* Test new call statement style.
+
+rem lu: Dec-18-2017
+
+echo %fp%
+echo.
+
+rem Old way, which here causes an infinite loop. However, there may be scenarios where
+rem this may be the best way to make the method call.
+rem call %0 test_hello
+
+rem New way.
+call :test_hello
+
+goto exitb
+
+
+
+:_
+
+:set_notepad_installation_path
+
+set fp=* Set Notepad++ installation path.
+
+rem lu: Jan-3-2018
+
+rem echo %fp%
+
+set notepad_installation_path=
+
+if exist "c:\program files\notepad++\notepad++.exe" set notepad_installation_path="c:\program files\notepad++\notepad++.exe"
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set notepad_installation_path="c:\program files (x86)\notepad++\notepad++.exe"
+
+if %notepad_installation_path%=="" echo Notepad++ is not installed.
+
+echo %ndotepad_installation_path%
+
+goto exitb
+
+
+
+:_
+
+:
+
+set fp=* Open CNN in chrome.
+
+rem lu: Jan-5-2018
+
+echo %fp%
+
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://edition.cnn.com
+
+goto exitb
+
+
+
+:_
+
+:vs
+
+set fp=* Run the solution in the current folder.
+
+rem lu: Jan-18-2018
+
+echo %fp%
+echo.
+
+dir /b *.sln>%tmp%\filename.txt
+set /p filename=<%tmp%\filename.txt
+
+rem echo filename: %filename%
+
+start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
+
+goto exitb
+
+
+
+:_
+
+:ignore
+
+set fp=* Write a function that creates a gitinore file to the current directory.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+dir /b>.gitignore
+
+call npp .gitignore
+
+goto exitb
+
+
+
+:_
+
+:
+
+set fp=* Echo y plus the or operator. I couldn't figure this out.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+echo.
+
+rem set /p user_option=What's the name of?
+echo paul | green
+echo.
+
+rem echo user_option: %user_option%
+
+goto exitb
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+cls
+echo.
+
+rem (!rfcea, !rfsp) (mov4) **************************************
+
+
+
+:_
+
+:
+
+set fp=* Look at cd. The problem was that %1 works for Xamarin Class but breaks s6 sencha.
+
+rem lu: Jan-22-2018
+
+echo %fp%
+echo.
+
+dir | find /i "%1">nul
+if %errorlevel% == 0 cd "%1"
+
+if %errorlevel% == 0 echo Exists.
+if %errorlevel% == 1 echo Does NOT exist.
+
+rem qq-1
+goto exitb
+
+
+
+:_
