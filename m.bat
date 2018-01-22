@@ -1530,7 +1530,7 @@ rem fcd: May-12-2017
 echo  %fp%
 echo  -----------------------------------------------------------------------
 echo   c: Clear screen and reset color.
-echo  cl: Used for Git cloning tasks.
+echo  cn: Used for Git cloning tasks.
 echo  cy: Copy file(s).
 echo  fn: Filename lookup. Used as a resource by "no" and "npp" batch files.
 echo   g: Perform Git-related tasks.

@@ -14,7 +14,7 @@ If you want to run a composite script, put multiple calls inside a single label,
 
 call :step_1
 
-call :step_2
+call %0 step_2
 
 call m.bat step_3
 

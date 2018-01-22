@@ -37,7 +37,9 @@ echo.
 echo %fp%
 
 color 0e
+color 9f
 
+rem qq-1
 
 
 :_
