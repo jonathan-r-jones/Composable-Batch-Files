@@ -1,11 +1,12 @@
-# composable_batch_files
+# Composable Batch Files
 
-Batch files that can be built like legos, one piece at time or together to create a whole script.
+. . .are batch files that can be built like legos, one piece at time or together to create a whole script.
 
-Most of the batch files are run using a single parameter,
-for example:
+## Usage
 
-Usage: g [single parameter]
+Most of the batch files are run using a single parameter, for example:
+
+c:\>g [single parameter]
 
 If you want to run a composite script, put multiple calls inside a single label, for example:
 
