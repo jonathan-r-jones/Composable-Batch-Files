@@ -1953,4 +1953,64 @@ goto exitb
 
 
 
+:_+ Stash and Pop
+
+
+
+::_
+
+:stash
+
+set fp=* Stashing changes allows you to do a get-latest (or bring in someone's else's code) without losing your local changes.
+
+rem lu: Jan-22-2018
+
+echo %fp%
+echo.
+
+git stash
+
+goto exitb
+
+
+
+::_
+
+:pop
+
+set fp=* Pop takes stashed changes and reapplies them to the working directory.
+
+rem lu: Jan-22-2018
+
+echo %fp%
+echo.
+
+git stash pop
+
+goto exitb
+
+
+
+::_
+
+:snp
+
+set fp=* Pop takes stashed changes and reapplies them to the working directory.
+
+rem lu: Jan-22-2018
+
+echo %fp%
+
+call :stash
+
+call :pull
+
+call :pop
+
+rem The next step would be to fix the merge conflict and then run "g acp".
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)
