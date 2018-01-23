@@ -329,6 +329,7 @@ goto exitb
 set fp=* Add files generic action.
 
 echo %fp%
+echo.
 
 git add -A
 
@@ -750,7 +751,6 @@ goto exitb
 
 set fp=* Push changes to the cloud.
 
-echo.
 echo %fp%
 echo.
 
@@ -805,6 +805,7 @@ set fp=* Add, commit and push with timestamp commit description.
 rem fcd: Apr-13-2017
 
 echo %fp%
+echo.
 
 cd | find /i "C:\projects\netbeans\sencha">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
@@ -815,7 +816,6 @@ if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 goto exitb
 
 call :add
-echo.
 
 call :commit_with_timestamp_description
 
