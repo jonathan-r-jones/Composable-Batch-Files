@@ -72,9 +72,13 @@ File  Description
   c:  Clear screen and reset color.
 <br/>
  cn:  Used for Git cloning tasks.
+<br/>
  cy:  Copy file(s).
+<br/>
  fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
+<br/>
   g:  Perform Git-related tasks.
+<br  />
   h:  Perform Sencha-related tasks.
   m:  Perform miscellaneous tasks. (The main file.)
  me:  Execute Multi-Edit against either current folder file or a lookup.
