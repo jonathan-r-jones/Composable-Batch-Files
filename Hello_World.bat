@@ -6,7 +6,7 @@
 
 :_
 
-set fp=* Add echo.
+set fp=* Add some whitespace.
 
 echo.
 
@@ -196,7 +196,6 @@ rem lu: Jan-5-2018
 
 echo %fp%
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://jonathan-r-jones.github.io/Composable-Batch-Files/
-rem qq-1
 
 goto exitb
 

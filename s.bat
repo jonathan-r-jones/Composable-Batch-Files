@@ -8,7 +8,7 @@
 
 set fp=* Set password for non-production environments.
 
-if /i not "%computername%"=="WIN-8D6B7BCCM06" set password="x"
+if /i not "%computername%"=="WIN-8D6B7BCCM06" set password=""
 
 
 
@@ -649,23 +649,6 @@ echo %fp%
 echo.
 
 mysql -uroot -p%password% mercdb -e "select last_login, uid, position, revalidate_date from mercdb.mercury_users where last_login > '2017-04-04' order by revalidate_date;"
-
-goto exitb
-
-
-
-:_
-
-:sunes
-
-set fp=* Select users with NES emails.
-
-rem Function Creation Date: Aug-2-2017
-
-echo %fp%
-echo.
-
-mysql -uroot -p%password% mercdb -e "select last_login, uid, position, revalidate_date from mercdb.mercury_users where uid like '%%nesassoc%%';"
 
 goto exitb
 

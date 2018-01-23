@@ -54,3 +54,55 @@ Put some code here.
 * Step 3.
 
 Put some code here.
+
+
+
+To see list of the commonly used composed batch files type:
+
+d:\dropbox\it\composable_batch_files>m list
+
+ * List of common CBF Helper Batch files
+ -----------------------------------------------------------------------
+  c: Clear screen and reset color.
+ cn: Used for Git cloning tasks.
+ cy: Copy file(s).
+ fn: Filename lookup. Used as a resource by "no" and "npp" batch files.
+  g: Perform Git-related tasks.
+  h: Perform Sencha-related tasks.
+  m: Perform miscellaneous tasks. (The main file.)
+ me: Execute Multi-Edit against either a current folder file or a lookup.
+ no: Execute Notepad against either a current folder file or a lookup.
+npp: Execute Notepad++ against either a current folder file or a lookup.
+ of: Open Folder.
+  s: SQL/Database, including LDAP, related tasks.
+ td: Transform Directory.
+
+
+
+To see the help for a particular batch file type in the batch file name plus " /?" or in some 
+cases, just leave off the parameter. For example:
+
+d:\dropbox\it\composable_batch_files>g [or g /? g -help]
+
+* Perform Git-related tasks.
+
+Usage: g [single parameter]
+
+    Parameter  Description
+-------------  -----------------------------------------------------
+            a  Add changes.
+          asf  Add single file.
+            c  Commit changes for only those files that were staged.
+         pull  Get-latest.
+         push  Push changes.
+         rvfd  Revert folder.
+         rvfl  Revert file.
+          rvp  Revert persistent files.
+            s  Get status.
+           ss  Get super status.
+
+
+
+To see a brief PowerPoint Presentation on CBF, type:
+
+d:\dropbox\it\composable_batch_files>m ppt

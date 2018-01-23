@@ -1500,7 +1500,6 @@ echo           asf  Add single file.
 echo             c  Commit changes for only those files that were staged.
 echo          pull  Get-latest.
 echo          push  Push changes.
-echo         rvall  Revert all changes from m6 and s6. Use with caution.
 echo          rvfd  Revert folder.
 echo          rvfl  Revert file.
 echo           rvp  Revert persistent files.

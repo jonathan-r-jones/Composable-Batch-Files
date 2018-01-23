@@ -6,54 +6,44 @@
 
 :_
 
-rem Metadata
+set fp=* Add some whitespace.
 
-rem File Purpose: This Mercury (m) batch file is intended to be used for Mercury Project related tasks.
-
-rem Batch File Style: Parameter-Routing Driven
-
-rem To run a command, use a single command line parameter corresponding to its batch file 
-rem label, e.g. m run_sencha_app_build_testing would run the code block at that label.
-
-rem Usage Note: Do not make internal calls to a composite function because that could cause a 
-rem circular reference.
-
-rem Having a written version of your work allows you to learn and improve over time.
+echo.
 
 
 
 :_
 
-set fp=* Set title.
+set Function_Purpose=* Route callers.
 
-rem echo.
-rem echo %fp%
+if "%1" == "" goto help
 
-title = Mercury Helper
+if "%1" == "/?" goto help
 
+if "%1" == "help" goto help
 
-
-:_
-
-set fp=* Set color.
-
-rem echo.
-rem echo %fp%
-
-rem color 3f
-rem color 0b
-
-
-
-:_
-
-set fp=* Route to parameter 1.
-
-rem echo.
-rem echo %fp%
-
-if "%1"=="/?" goto help
 goto %1
+
+
+
+:_
+
+:help
+
+set fp=* This file is used to illustrate how Composable Batch Files work.
+
+rem Last Updated (lu): Jan-23-2018
+
+echo %fp%
+
+echo.
+echo Usage: hello_world.bat [single parameter]
+
+echo.
+echo     Parameter  Description
+echo -------------  -----------------------------------------------------
+
+goto exitb
 
 
 

@@ -14,8 +14,9 @@ title = Composable Batch Files Helper
 
 :_
 
-set fp=* Add echo.
+set fp=* Add whitespace.
 
+echo.
 
 
 :_
@@ -1523,7 +1524,7 @@ goto exitb
 
 :registry
 
-set fp=* List of Mercury Helper Batch files
+set fp=* List of common CBF Helper Batch files
 
 rem fcd: May-12-2017
 
@@ -1563,7 +1564,12 @@ goto exitb
 
 :_
 
+:ppt
+
+:pptx
+
 :power
+rem qq-1
 
 set fp=* Powerpoint Presentation on Mercury.
 
@@ -2371,7 +2377,7 @@ echo          mde1  Mercury Development Environment (MDE) validation.
 echo          mde2  MDE prerequisites - part 2.
 echo          mde3  MDE prerequisites - part 3.
 echo  [your label]  [your description] [Build your own.]
-echo         power  PowerPoint Presentation on Mercury Helper
+echo           ppt  PowerPoint Presentation on CBF.
 echo   prepare_mob  Prepare for mobile deployment.
 echo        pscrub  Partially scrub deployment environment.
 echo     run_tirem  Run tirem.

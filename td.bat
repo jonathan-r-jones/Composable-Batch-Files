@@ -1219,7 +1219,23 @@ rem lu: Jan-18-2018
 echo %fp%
 
 cd /d %dropbox%\it\
-rem qq-1
+
+goto exitb
+
+
+
+:_
+
+:temp
+
+set fp=* Temp.
+
+rem lu: Jan-23-2018
+
+echo %fp%
+
+cd /d %temp%
+
 goto exitb
 
 
