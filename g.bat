@@ -1913,22 +1913,6 @@ goto exitb
 
 :_
 
-:sfgit
-
-set fp=* Surf to this repository in Git.
-
-rem lu: Jan-5-2018
-
-echo %fp%
-
-start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://github.com/jonathan-r-jones/composable_batch_files
-
-goto exitb
-
-
-
-:_
-
 :ig
 
 set fp=* Create a gitinore file to the current directory.
@@ -2044,6 +2028,22 @@ echo.
 
 git mergetool --tool=codecompare
 rem git mergetool --tool=vimdiff3
+
+goto exitb
+
+
+
+:_
+
+:sfgit
+
+set fp=* Surf to this repository in Git.
+
+rem lu: Jan-5-2018
+
+echo %fp%
+
+start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://github.com/jonathan-r-jones/composable_batch_files
 
 goto exitb
 

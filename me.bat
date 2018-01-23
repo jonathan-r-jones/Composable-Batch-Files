@@ -6,14 +6,6 @@
 
 :_
 
-rem Metadata
-
-rem File Purpose: This batch file is used mostly as a wrapper around fn.bat.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%1" == "" goto help
@@ -86,7 +78,7 @@ exit
 
 
 
-:_+ 2 Flavors of Notepad++ editing models.
+:_+ 2 Flavors of editing models.
 
 
 
@@ -105,7 +97,7 @@ rem lu: Nov-9-2017
 echo.
 echo %fp%
 
-call start "my title" "c:\windows\system32\notepad.exe" %file_to_edit%
+call start "my title" "C:\Program Files (x86)\multi-edit 2008\mew32.exe" "%file_to_edit%"
 
 goto exitb
 
@@ -122,7 +114,7 @@ rem lu: Nov-9-2017
 echo.
 echo %fp%
 
-call start "my title" "c:\windows\system32\notepad.exe" %1
+call start "my title" "C:\Program Files (x86)\multi-edit 2008\mew32.exe" %1
 
 goto exitb
 
@@ -135,8 +127,6 @@ goto exitb
 set fp=* Help.
 
 rem fcd: May-13-2017
-
-call fn.bat shared_list
 
 goto exitb
 
