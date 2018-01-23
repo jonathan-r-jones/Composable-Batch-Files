@@ -77,6 +77,7 @@ d:\dropbox\it\composable_batch_files>m list
   npp:  Execute Notepad++ against either a current folder file or a lookup.
    of:  Open Folder.
     s:  SQL/Database, including LDAP, related tasks.
+   sm:  Execute Sublime against either a current folder file or a lookup.
    td:  Transform Directory.
 
 
