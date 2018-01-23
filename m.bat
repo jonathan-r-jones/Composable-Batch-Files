@@ -1529,20 +1529,22 @@ set fp=* List of common CBF Helper Batch files
 rem fcd: May-12-2017
 
 echo  %fp%
-echo  -----------------------------------------------------------------------
-echo   c: Clear screen and reset color.
-echo  cn: Used for Git cloning tasks.
-echo  cy: Copy file(s).
-echo  fn: Filename lookup. Used as a resource by "no" and "npp" batch files.
-echo   g: Perform Git-related tasks.
-echo   h: Perform Sencha-related tasks.
-echo   m: Perform miscellaneous tasks. (The main file.)
-echo  me: Execute Multi-Edit against either a current folder file or a lookup.
-echo  no: Execute Notepad against either a current folder file or a lookup.
-echo npp: Execute Notepad++ against either a current folder file or a lookup.
-echo  of: Open Folder.
-echo   s: SQL/Database, including LDAP, related tasks.
-echo  td: Transform Directory.
+
+File  Description
+----  -------------------------------------------------------------------
+  c:  Clear screen and reset color.
+ cn:  Used for Git cloning tasks.
+ cy:  Copy file(s).
+ fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
+  g:  Perform Git-related tasks.
+  h:  Perform Sencha-related tasks.
+  m:  Perform miscellaneous tasks. (The main file.)
+ me:  Execute Multi-Edit against either a current folder file or a lookup.
+ no:  Execute Notepad against either a current folder file or a lookup.
+npp:  Execute Notepad++ against either a current folder file or a lookup.
+ of:  Open Folder.
+  s:  SQL/Database, including LDAP, related tasks.
+ td:  Transform Directory.
 
 goto exitb
 

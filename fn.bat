@@ -742,4 +742,20 @@ goto exitb
 
 
 
+:_
+
+:re
+
+set fp=* Readme.md
+
+rem lu: Jan-23-2018
+
+echo %fp%
+
+set file_to_edit=Readme.md
+
+goto exitb
+
+
+
 :_ (!sp) (mov-9)
