@@ -63,7 +63,7 @@ To see list of the commonly used composed batch files type:
 
 d:\dropbox\it\composable_batch_files>m list
 
-* List of common CBF Helper Batch files.
+* List of common CBF Helper Batch files. (6:44)
 
 File  Description 
 <br/>
