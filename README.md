@@ -64,7 +64,7 @@ d:\dropbox\it\composable_batch_files>m list
 * List of common CBF Helper Batch files.
 
 * File  Description 
-* ----  -----------------------------------------------------------------
+* ----  ------------------------------------------------------------------
 *   c:  Clear screen and reset color.
 *  cn:  Used for Git cloning tasks.
 *  cy:  Copy file(s).
