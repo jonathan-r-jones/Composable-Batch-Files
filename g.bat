@@ -1803,12 +1803,11 @@ goto exitb
 
 :get_latest
 
-set fp=* Pull. (!step, !pull, !step3) (skw get-latest)
+set fp=* Pull. Do a get-latest from the default branch. (!step, !pull, !step3)
 
 echo %fp%
+echo.
   
-rem Note: The origin value is case-sensitive.
-
 git pull
 
 goto exitb
@@ -2009,6 +2008,45 @@ call :pop
 
 rem The next step would be to fix the merge conflict and then run "g acp".
 
+goto exitb
+
+
+
+:_+ Merge Tool
+
+
+
+::_
+
+:mth
+
+set fp=* Merge tool help.
+
+rem lu: Jan-22-2018
+
+echo %fp%
+echo.
+
+git mergetool --tool-help
+
+goto exitb
+
+
+
+::_
+
+:mts
+
+set fp=* Set default merge tool to use.
+
+rem lu: Jan-22-2018
+
+echo %fp%
+echo.
+
+git mergetool --tool=codecompare
+
+rem qq-1
 goto exitb
 
 
