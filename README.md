@@ -61,16 +61,12 @@ To see list of the commonly used composed batch files type:
 
 d:\dropbox\it\composable_batch_files>m list
 
-* List of common CBF Helper Batch files. 6:11
+* List of common CBF Helper Batch files. 6:13
 
-  File  Description
+  File  Description 
   ----  -----------------------------------------------------------------
     c:  Clear screen and reset color.
-
-
    cn:  Used for Git cloning tasks.
-
-
    cy:  Copy file(s).
    fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
     g:  Perform Git-related tasks.
