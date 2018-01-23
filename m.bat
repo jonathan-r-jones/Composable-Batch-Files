@@ -1571,7 +1571,7 @@ goto exitb
 :power
 rem qq-1
 
-set fp=* Powerpoint Presentation on Mercury.
+set fp=* CBF Powerpoint Presentation.
 
 rem fcd: May-19-2017
 
