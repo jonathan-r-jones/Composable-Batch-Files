@@ -8,7 +8,7 @@
 
 set fp=* Set password for non-production environments.
 
-if /i not "%computername%"=="WIN-8D6B7BCCM06" set password="MERCadmin"
+if /i not "%computername%"=="WIN-8D6B7BCCM06" set password="x"
 
 
 
