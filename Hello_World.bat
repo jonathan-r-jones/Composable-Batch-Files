@@ -188,6 +188,8 @@ goto exitb
 
 :_
 
+:gp
+
 :ghp
 
 set fp=* Surf to this repository's GitHub pages.
