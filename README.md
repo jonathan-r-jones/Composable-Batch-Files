@@ -61,24 +61,24 @@ To see list of the commonly used composed batch files type:
 
 d:\dropbox\it\composable_batch_files>m list
 
-* List of common CBF Helper Batch files. [6:15]
+* List of common CBF Helper Batch files.
 
-File  Description 
-----  -----------------------------------------------------------------
-  c:  Clear screen and reset color.
- cn:  Used for Git cloning tasks.
- cy:  Copy file(s).
- fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
-  g:  Perform Git-related tasks.
-  h:  Perform Sencha-related tasks.
-  m:  Perform miscellaneous tasks. (The main file.)
- me:  Execute Multi-Edit against either current folder file or a lookup.
- no:  Execute Notepad against either a current folder file or a lookup.
-npp:  Execute Notepad++ against either a current folder file or a lookup.
- of:  Open Folder.
-  s:  SQL/Database, including LDAP, related tasks.
- sm:  Execute Sublime against either a current folder file or a lookup.
- td:  Transform Directory.
+* File  Description 
+* ----  -----------------------------------------------------------------
+*   c:  Clear screen and reset color.
+*  cn:  Used for Git cloning tasks.
+*  cy:  Copy file(s).
+*  fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
+*   g:  Perform Git-related tasks.
+*   h:  Perform Sencha-related tasks.
+*   m:  Perform miscellaneous tasks. (The main file.)
+*  me:  Execute Multi-Edit against either current folder file or a lookup.
+*  no:  Execute Notepad against either a current folder file or a lookup.
+* npp:  Execute Notepad++ against either a current folder file or a lookup.
+*  of:  Open Folder.
+*   s:  SQL/Database, including LDAP, related tasks.
+*  sm:  Execute Sublime against either a current folder file or a lookup.
+*  td:  Transform Directory.
 
 
 
