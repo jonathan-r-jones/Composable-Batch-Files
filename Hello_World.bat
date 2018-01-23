@@ -86,6 +86,8 @@ echo -------------  -----------------------------------------------------
 echo        step_1  Function that does [blank].
 echo        step_2  Function that does [blank].
 echo        step_3  Function that does [blank].
+echo     all_steps  Function that runs all functions.
+echo    some_steps  Function that runs some functions.
 
 goto exitb
 
@@ -157,6 +159,24 @@ call %0 step_1
 call %0 step_2
 
 call %0 step_3
+
+goto exitb
+
+
+
+:_
+
+:some_steps
+
+set fp=* Some steps.
+
+rem lu: Jan-23-2018
+
+echo %fp%
+
+call %0 step_1
+
+call %0 step_2
 
 goto exitb
 
