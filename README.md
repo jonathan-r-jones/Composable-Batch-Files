@@ -11,7 +11,9 @@ For example, running Hello_World.bat in the following way will yield the followi
 
 d:\dropbox\it\composable_batch_files>hello_world step_1
 
+<em>
 * Step 1. A call to this batch file.
+</em>
 
 Put some code here.
 
@@ -63,22 +65,25 @@ d:\dropbox\it\composable_batch_files>m list
 
 * List of common CBF Helper Batch files.
 
-* File  Description 
-* ----  -----------------------------------------------------------------
-*   c:  Clear screen and reset color.
-*  cn:  Used for Git cloning tasks.
-*  cy:  Copy file(s).
-*  fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
-*   g:  Perform Git-related tasks.
-*   h:  Perform Sencha-related tasks.
-*   m:  Perform miscellaneous tasks. (The main file.)
-*  me:  Execute Multi-Edit against either current folder file or a lookup.
-*  no:  Execute Notepad against either a current folder file or a lookup.
-* npp:  Execute Notepad++ against either a current folder file or a lookup.
-*  of:  Open Folder.
-*   s:  SQL/Database, including LDAP, related tasks.
-*  sm:  Execute Sublime against either a current folder file or a lookup.
-*  td:  Transform Directory.
+File  Description 
+<br/>
+----  -----------------------------------------------------------------
+<br/>
+  c:  Clear screen and reset color.
+<br/>
+ cn:  Used for Git cloning tasks.
+ cy:  Copy file(s).
+ fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
+  g:  Perform Git-related tasks.
+  h:  Perform Sencha-related tasks.
+  m:  Perform miscellaneous tasks. (The main file.)
+ me:  Execute Multi-Edit against either current folder file or a lookup.
+ no:  Execute Notepad against either a current folder file or a lookup.
+npp:  Execute Notepad++ against either a current folder file or a lookup.
+ of:  Open Folder.
+  s:  SQL/Database, including LDAP, related tasks.
+ sm:  Execute Sublime against either a current folder file or a lookup.
+ td:  Transform Directory.
 
 
 
