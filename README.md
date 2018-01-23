@@ -4,19 +4,41 @@
 
 ## Usage
 
-Most of the batch files are run using a single parameter, for example:
+Most of the batch files are run using a single parameter.
 
-c:\>g [single parameter]
+For example, running Hello_World.bat Will yield the following output:
 
-If you want to run a composite script, put multiple calls inside a single label, for example:
 
-:start_here
+d:\dropbox\it\composable_batch_files>Hello_World step_1
 
-call :step_1
+* Step 1.
 
-call %0 step_2
+Put some code here.
 
-call m.bat step_3
+d:\dropbox\it\composable_batch_files>Hello_World step_2
 
-where in this case, the first 2 steps exist is the same batch file and the third step exists in an external batch file.
+* Step 2.
 
+Put some code here.
+
+d:\dropbox\it\composable_batch_files>Hello_World step_3
+
+* Step 3.
+
+Put some code here.
+
+d:\dropbox\it\composable_batch_files>Hello_World all_steps
+
+* All steps.
+
+* Step 1.
+
+Put some code here.
+
+* Step 2.
+
+Put some code here.
+
+* Step 3.
+
+Put some code here.
