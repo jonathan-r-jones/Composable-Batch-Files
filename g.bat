@@ -328,12 +328,9 @@ goto exitb
 
 set fp=* Add files generic action.
 
-echo.
 echo %fp%
 
-@echo on
 git add -A
-@echo off
 
 goto exitb
 
@@ -1999,6 +1996,7 @@ set fp=* Pop takes stashed changes and reapplies them to the working directory.
 rem lu: Jan-22-2018
 
 echo %fp%
+echo.
 
 call :stash
 
@@ -2045,8 +2043,8 @@ echo %fp%
 echo.
 
 git mergetool --tool=codecompare
+rem git mergetool --tool=vimdiff3
 
-rem qq-1
 goto exitb
 
 
