@@ -6,7 +6,7 @@
 
 Most of the batch files are run using a single parameter.
 
-For example, running Hello_World.bat Will yield the following output:
+For example, running Hello_World.bat will yield the following output:
 
 
 d:\dropbox\it\composable_batch_files>hello_world step_1
