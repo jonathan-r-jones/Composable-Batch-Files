@@ -1535,7 +1535,8 @@ echo  cy: Copy file(s).
 echo  fn: Filename lookup. Used as a resource by "no" and "npp" batch files.
 echo   g: Perform Git-related tasks.
 echo   h: Perform Sencha-related tasks.
-echo   m: Perform Mercury Project-related tasks. (The main file.)
+echo   m: Perform miscellaneous tasks. (The main file.)
+echo  me: Execute Multi-Edit against either a current folder file or a lookup.
 echo  no: Execute Notepad against either a current folder file or a lookup.
 echo npp: Execute Notepad++ against either a current folder file or a lookup.
 echo  of: Open Folder.
