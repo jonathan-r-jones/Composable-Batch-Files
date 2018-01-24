@@ -1538,14 +1538,15 @@ echo    cn:  Used for Git cloning tasks.
 echo    cy:  Copy file(s).
 echo     g:  Perform Git-related tasks.
 echo     h:  Perform Sencha-related tasks.
-echo     m:  Perform miscellaneous tasks. (The main file.)
-echo    me:  Execute Multi-Edit against either current folder file or a lookup.
-echo    no:  Execute Notepad against either a current folder file or a lookup.
-echo   npp:  Execute Notepad++ against either a current folder file or a lookup.
-echo    pm:  Filename and URL lookup. Used as a resource by executables.
+echo     m:  Perform miscellaneous tasks.
+echo    me:  Run Multi-Edit against either current folder file or a lookup.
+echo    no:  Run Notepad against either a current folder file or a lookup.
+echo   npp:  Run Notepad++ against either a current folder file or a lookup.
+echo    nn:  Nicknames is a filename and URL lookup. Used as a resource.
 echo    of:  Open Folder.
 echo     s:  SQL/Database, including LDAP, related tasks.
-echo    sm:  Execute Sublime (with parameter).
+echo    sf:  Surf to websites.
+echo    sm:  Run Sublime (with parameter).
 echo    td:  Transform Directory.
 
 goto exitb
