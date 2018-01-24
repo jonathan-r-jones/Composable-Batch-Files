@@ -14,18 +14,6 @@ rem File Purpose: Single source for applications that use a parameter.
 
 :_
 
-set fp=* Route help callers.
-
-if "%1" == "" goto help
-
-if "%1" == "/?" goto help
-
-if "%1" == "help" goto help
-
-
-
-:_
-
 set fp=* Detect a filename in the first parameter.
 
 rem lu: Nov-9-2017
@@ -85,11 +73,7 @@ exit
 
 
 
-:_+ 2 Flavors of editing.
-
-
-
-:_+ Edit Files Methods
+:_+ 2 Flavors of Running.
 
 
 
@@ -97,7 +81,7 @@ exit
 
 :run_application_with_looked_up_parameter
 
-set fp=* Run application with "%cbf_parameter%".
+set fp=* Run "%cbf_application%" with "%cbf_parameter%".
 
 rem lu: Nov-9-2017
 
@@ -114,7 +98,7 @@ goto exitb
 
 :run_application_with_current_folder_file
 
-set fp=* Run application with current directory file "%1".
+set fp=* Run "%cbf_application%" with current directory file "%1".
 
 rem lu: Nov-9-2017
 

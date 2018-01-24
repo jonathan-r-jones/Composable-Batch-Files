@@ -1536,15 +1536,16 @@ echo   ----  -----------------------------------------------------------------
 echo     c:  Clear screen and reset color.
 echo    cn:  Used for Git cloning tasks.
 echo    cy:  Copy file(s).
-echo    fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
 echo     g:  Perform Git-related tasks.
 echo     h:  Perform Sencha-related tasks.
 echo     m:  Perform miscellaneous tasks. (The main file.)
 echo    me:  Execute Multi-Edit against either current folder file or a lookup.
 echo    no:  Execute Notepad against either a current folder file or a lookup.
 echo   npp:  Execute Notepad++ against either a current folder file or a lookup.
+echo    pm:  Filename and URL lookup. Used as a resource by executables.
 echo    of:  Open Folder.
 echo     s:  SQL/Database, including LDAP, related tasks.
+echo    sm:  Execute Sublime (with parameter).
 echo    td:  Transform Directory.
 
 goto exitb
