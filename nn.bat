@@ -38,13 +38,36 @@ goto exitb
 
 :_
 
-rem Metadata
+Metadata
 
-rem File Purpose: To return the full context of a nickname.
+File Purpose: To return the full name corresponding to a given nickname.
 
-rem Parameter 1:
+Parameter 1:
 
-rem Parameter 2:
+Parameter 2:
+
+:+ Resource Registry Types (cbf_)
+
+::filename
+
+::url
+
+::executable (cbf_application)
+
+::parameter (cbf_parameter)
+
+::nicknames (cbf_nickname)
+
+
+
+:_
+
+Metadata: Track Size (!tsnn)
+
+     Date      Lines      Bytes  Functions  Notes
+ -----------  ------  ---------  ---------  -------------------------------------------------
+
+:Jan-24-2018     841     10,388         52
 
 
 

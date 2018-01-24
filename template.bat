@@ -22,17 +22,42 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
+goto %1
+
 
 
 :_
 
-rem Metadata
+Metadata
 
-rem File Purpose:
+File Purpose:
 
-rem Parameter 1:
+Parameter 1:
 
-rem Parameter 2:
+Parameter 2:
+
+
+
+:_
+
+:help
+
+set fp=* This file is used to 
+
+rem Last Updated (lu): Jan-23-2018
+
+echo %fp%
+
+echo.
+echo Usage: %0 [single parameter]
+
+echo.
+echo     Parameter  Description
+echo -------------  -----------------------------------------------------
+echo          
+echo.          
+
+goto exitb
 
 
 
@@ -80,29 +105,6 @@ exit
 ::_
 
 rem **************************** End Exit Functions.
-
-
-
-:_
-
-:help
-
-set fp=* This file is used to 
-
-rem Last Updated (lu): Jan-23-2018
-
-echo %fp%
-
-echo.
-echo Usage: %0 [single parameter]
-
-echo.
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
-echo          
-echo.          
-
-goto exitb
 
 
 
