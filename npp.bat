@@ -10,18 +10,16 @@ set fp=* Set Notepad++ installation path.
 
 rem lu: Jan-3-2018
 
-rem echo %fp%
-
 set npp_installation_path=
 
-if exist "c:\program files\notepad++\notepad++.exe" set npp_installation_path="c:\program files\notepad++\notepad++.exe"
+if exist "c:\program files\notepad++\notepad++.exe" set npp_installation_path=c:\program files\notepad++\notepad++.exe
 if exist "c:\program files (x86)\notepad++\notepad++.exe" set npp_installation_path="c:\program files (x86)\notepad++\notepad++.exe"
 
 if "%npp_installation_path%"=="" echo.
 if "%npp_installation_path%"=="" echo Notepad++ is not installed.
 if "%npp_installation_path%"=="" goto exitb
 
-echo %npp_installation_path%
+rem echo %npp_installation_path%
 
 
 
@@ -30,7 +28,7 @@ echo %npp_installation_path%
 
 set cbf_application=%npp_installation_path%
 
-run_application_with_parameter %1
+edit_file %1
 
 
 

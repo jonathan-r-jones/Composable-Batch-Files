@@ -850,4 +850,20 @@ goto exitb
 
 
 
+:_
+
+:nn
+
+set fp=* Nicknames.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\nn.bat
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)
