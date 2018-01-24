@@ -8,13 +8,13 @@
 
 rem Metadata
 
-rem File Purpose: This batch file is used mostly as a wrapper around fn.bat.
+rem File Purpose: Single source for applications that use a parameter.
 
 
 
 :_
 
-set fp=* Route callers.
+set fp=* Route help callers.
 
 if "%1" == "" goto help
 
@@ -34,44 +34,43 @@ echo %1 | find /i ".">nul
 
 rem if %errorlevel% == 0 echo.
 rem if %errorlevel% == 0 echo First parameter is a filename.
-if %errorlevel% == 0 goto edit_file_in_current_directory
+if %errorlevel% == 0 goto run_application_with_current_folder_file
 
 rem if %errorlevel% == 1 echo First parameter is NOT a filename so go get a filename.
 
-call fn %1
+call pm %1
 
-goto edit_file_with_name_lookup
+goto run_application_with_looked_up_parameter
 
 
 
-:_
+:_+ Exit Functions
+
+
+
+::_
 
 :exit
 
 set fp= * Exit.
 
-echo.
 rem echo %fp%
-
-(!exit)
 
 exit
 
 
 
-:_
+::_
 
 :exitb
 
 set fp= * Exit batch file but not command window.
 
-rem echo %fp%
-
 exit /b
 
 
 
-:_
+::_
 
 :exitp
 
@@ -86,7 +85,7 @@ exit
 
 
 
-:_+ 2 Flavors of Notepad++ editing models.
+:_+ 2 Flavors of editing.
 
 
 
@@ -96,16 +95,16 @@ exit
 
 ::_
 
-:edit_file_with_name_lookup
+:run_application_with_looked_up_parameter
 
-set fp=* Run Notepad to edit "%file_to_edit%".
+set fp=* Run application with "%cbf_parameter%".
 
 rem lu: Nov-9-2017
 
 echo.
 echo %fp%
 
-call start "my title" "c:\windows\system32\notepad.exe" %file_to_edit%
+call start "my title" "%cbf_application%" %cbf_parameter%
 
 goto exitb
 
@@ -113,30 +112,16 @@ goto exitb
 
 ::_
 
-:edit_file_in_current_directory
+:run_application_with_current_folder_file
 
-set fp=* Run Notepad to edit "%1".
+set fp=* Run application with current directory file "%1".
 
 rem lu: Nov-9-2017
 
 echo.
 echo %fp%
 
-call start "my title" "c:\windows\system32\notepad.exe" %1
-
-goto exitb
-
-
-
-:_
-
-:help
-
-set fp=* Help.
-
-rem fcd: May-13-2017
-
-call fn.bat shared_list
+call start "my title" "%cbf_application%" %1
 
 goto exitb
 

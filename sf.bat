@@ -24,6 +24,30 @@ if "%1" == "help" goto help
 
 
 
+:_
+
+set fp=* Set default browser.
+
+call fn kr
+
+
+
+:_
+
+set fp=* Set browser.
+
+if not "%2" == "" call fn %2
+
+
+
+:_
+
+set fp=* Set URL.
+
+call fn %2
+
+
+
 :_+ Exit Functions
 
 
@@ -62,12 +86,6 @@ rem echo %fp%
 pause
 
 exit
-
-
-
-::_
-
-rem **************************** End Exit Functions.
 
 
 

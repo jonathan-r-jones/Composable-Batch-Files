@@ -48,33 +48,33 @@ goto exitb
 
 
 
-:_
+:_+ Exit Functions
+
+
+
+::_
 
 :exit
 
 set fp= * Exit.
 
-rem echo.
 rem echo %fp%
 
 exit
 
 
 
-:_
+::_
 
 :exitb
 
 set fp= * Exit batch file but not command window.
 
-rem echo.
-rem echo %fp%
-
 exit /b
 
 
 
-:_
+::_
 
 :exitp
 
@@ -83,26 +83,15 @@ set fp= * Exit with pause.
 echo.
 rem echo %fp%
 
-title Done! - . . . paused . . . Press any key to continue
-
 pause
 
 exit
 
 
 
-:_
+::_
 
-:exitpb
-
-set fp= * Pause then exit the batch file but not the command window.
-
-rem echo.
-rem echo %fp%
-
-pause
-
-exit /b
+rem **************************** End Exit Functions.
 
 
 

@@ -149,14 +149,14 @@ goto exitb
 
 :edit_file_with_name_lookup
 
-set fp=* Run Notepad++ to edit "%file_to_edit%".
+set fp=* Run Notepad++ to edit "%cbf_parameter%".
 
 rem lu: Nov-9-2017
 
 echo.
 echo %fp%
 
-call start "my title" %npp_installation_path% %file_to_edit%
+call start "my title" %npp_installation_path% %cbf_parameter%
 
 goto exitb
 

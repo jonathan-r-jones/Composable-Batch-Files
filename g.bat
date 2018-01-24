@@ -36,7 +36,11 @@ rem Batch File Style: This is a parameter-routing driven style batch file.
 
 
 
-:_
+:_+ Exit Functions
+
+
+
+::_
 
 :exit
 
@@ -44,13 +48,11 @@ set fp= * Exit.
 
 rem echo %fp%
 
-(!exit)
-
 exit
 
 
 
-:_
+::_
 
 :exitb
 
@@ -60,7 +62,7 @@ exit /b
 
 
 
-:_
+::_
 
 :exitp
 
@@ -75,14 +77,9 @@ exit
 
 
 
-:_
+::_
 
-set fp=* Test parameter.
-
-echo %fp%
-echo.
-
-echo Percent 1: %1
+rem **************************** End Exit Functions.
 
 
 
@@ -1445,7 +1442,7 @@ goto exitb
 
 set fp=* Revert single file.
 
-rem Creation Date: May-1-2017
+rem lu: Jan-23-2018
 
 rem revert single file: skw
 
