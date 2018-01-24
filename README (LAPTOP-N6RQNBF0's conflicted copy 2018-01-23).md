@@ -11,9 +11,7 @@ For example, running Hello_World.bat in the following way will yield the followi
 
 d:\dropbox\it\composable_batch_files>hello_world step_1
 
-<em>
 * Step 1. A call to this batch file.
-</em>
 
 Put some code here.
 
@@ -63,33 +61,6 @@ To see list of the commonly used composed batch files type:
 
 d:\dropbox\it\composable_batch_files>m list
 
-<<<<<<< HEAD
-* List of common CBF Helper Batch files. (6:44)
-
-File  Description 
-<br/>
-----  -----------------------------------------------------------------
-<br/>
-  c:  Clear screen and reset color.
-<br/>
- cn:  Used for Git cloning tasks.
-<br/>
- cy:  Copy file(s).
-<br/>
- fn:  Filename lookup. Used as a resource by "no" and "npp" batch files.
-<br/>
-  g:  Perform Git-related tasks.
-<br  />
-  h:  Perform Sencha-related tasks.
-  m:  Perform miscellaneous tasks. (The main file.)
- me:  Execute Multi-Edit against either current folder file or a lookup.
- no:  Execute Notepad against either a current folder file or a lookup.
-npp:  Execute Notepad++ against either a current folder file or a lookup.
- of:  Open Folder.
-  s:  SQL/Database, including LDAP, related tasks.
- sm:  Execute Sublime against either a current folder file or a lookup.
- td:  Transform Directory.
-=======
 * List of common CBF Helper Batch files.
 
  File  Description 
@@ -108,7 +79,6 @@ npp:  Execute Notepad++ against either a current folder file or a lookup.
 *   s:  SQL/Database, including LDAP, related tasks.
 *  sm:  Execute Sublime against either a current folder file or a lookup.
 *  td:  Transform Directory.
->>>>>>> aca893314f331c1f25a95adee23ed49f7aacc87f
 
 
 
