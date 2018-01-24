@@ -22,19 +22,7 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
-goto %1
-
-
-
-:_
-
-Metadata
-
-File Purpose:
-
-Parameter 1:
-
-Parameter 2:
+goto code_execution_area
 
 
 
@@ -42,16 +30,20 @@ Parameter 2:
 
 :help
 
-set fp=* This file is used to 
+set fp=Be used as a template for new batch files.
 
-rem Last Updated (lu): Jan-23-2018
-
-echo %fp%
-
+echo This file purpose (fp) is to: %fp%
 echo.
+
+echo The filename stands for: Template.
+echo.
+
+echo Last Updated (lu): Jan-24-2018
+echo.
+
 echo Usage: %0 [single parameter]
-
 echo.
+
 echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 echo          
@@ -105,6 +97,14 @@ exit
 ::_
 
 rem **************************** End Exit Functions.
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
 
 
 

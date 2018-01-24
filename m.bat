@@ -1534,6 +1534,7 @@ echo.
 echo   File  Description
 echo   ----  -----------------------------------------------------------------
 echo     c:  Clear screen and reset color.
+echo   cbf:  Show the state of CBF environment variables.
 echo    cn:  Used for Git cloning tasks.
 echo    cy:  Copy file(s).
 echo     g:  Perform Git-related tasks.
@@ -1574,7 +1575,6 @@ goto exitb
 :pptx
 
 :power
-rem qq-1
 
 set fp=* CBF Powerpoint Presentation.
 

@@ -24,9 +24,32 @@ rem Metadata
 
 rem File Purpose: This file is used for surfing the internet.
 
-rem Parameter 1: URL Nickname 
 
-rem Parameter 2: Browser, which is not the default.
+
+:_
+
+:help
+
+set fp=* This file is used to 
+
+rem Last Updated (lu): Jan-23-2018
+
+echo %fp%
+
+echo.
+echo Usage: %0
+
+echo Parameter 1: URL Nickname 
+
+echo Parameter 2: Browser, which is not the default.
+
+echo.
+echo     Parameter  Description
+echo -------------  -----------------------------------------------------
+echo          
+echo.          
+
+goto exitb
 
 
 
@@ -73,29 +96,6 @@ exit
 
 :_
 
-:help
-
-set fp=* This file is used to 
-
-rem Last Updated (lu): Jan-23-2018
-
-echo %fp%
-
-echo.
-echo Usage: %0 [single parameter]
-
-echo.
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
-echo          
-echo.          
-
-goto exitb
-
-
-
-:_
-
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -108,7 +108,7 @@ rem (!rfcea, !rfsp) (mov4) **************************************
 
 set fp=* Set default browser.
 
-call nn kr
+call an kr
 
 
 
@@ -117,9 +117,7 @@ call nn kr
 set fp=* Set browser.
 
 if not "%2" == "" cls
-if not "%2" == "" call nn %2
-
-set cbf_application=%cbf_nickname%
+if not "%2" == "" call an %2
 
 
 
@@ -127,9 +125,9 @@ set cbf_application=%cbf_nickname%
 
 set fp=* Set URL.
 
-call nn %1
+call un %1
 
-set cbf_parameter=%cbf_nickname%
+set cbf_parameter=%cbf_url%
 
 
 
@@ -139,7 +137,7 @@ set fp=* Surf.
 
 rem lu: Jan-24-2018
 
-call rawp
+call r
 
 goto exitb
 

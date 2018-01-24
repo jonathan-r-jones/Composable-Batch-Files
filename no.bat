@@ -1,3 +1,3 @@
 @echo off
-set cbf_application=c:\windows\system32\notepad.exe
+call an no
 edit_file %1

@@ -25,10 +25,13 @@ rem echo %npp_installation_path%
 
 :_
 
+set fp=* Set application.
 
 set cbf_application=%npp_installation_path%
 
-edit_file %1
+call ef %1
+
+goto exitb
 
 
 

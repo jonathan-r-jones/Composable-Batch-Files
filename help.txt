@@ -1,0 +1,14 @@
+
+:+ Resource Registry Types (cbf_)
+
+::filename (cbf_filename, fnn)
+
+::url (cbf_url, unn)
+
+::path (cbf_path, pnn)
+
+::executable (cbf_application, ann)
+
+::nicknames (cbf_nickname)
+
+::parameter (cbf_parameter)

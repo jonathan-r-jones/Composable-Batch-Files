@@ -6,9 +6,13 @@
 
 :_
 
-rem Metadata
+set fp=* Route help callers.
 
-rem File Purpose: Single source for applications that use a parameter.
+if "%1" == "" goto help
+
+if "%1" == "/?" goto help
+
+if "%1" == "help" goto help
 
 
 
@@ -26,9 +30,34 @@ if %errorlevel% == 0 goto edit_file_with_current_folder_file
 
 rem if %errorlevel% == 1 echo First parameter is NOT a filename so go get a filename.
 
-call nn %1
+call fn %1
 
 goto edit_file_with_looked_up_parameter
+
+
+
+:_
+
+:help
+
+set fp=Be used to edit files.
+
+echo This file purpose (fp) is to: %fp%
+echo.
+
+echo The filename stands for: Edit File.
+echo.
+
+echo Last Updated (lu): Jan-24-2018
+echo.
+
+echo Usage: This is called by specific editors.
+rem qq-1
+echo.
+
+echo [filename verb, e.g. no (for Notepad) or npp (for Notepad++)] [first parameter = filename lookup code]
+
+goto exitb
 
 
 
@@ -81,14 +110,14 @@ exit
 
 :edit_file_with_looked_up_parameter
 
-set fp=* Run "%cbf_application%" with "%cbf_nickname%".
+set fp=* Run "%cbf_application%" with "%cbf_filename%".
 
 rem lu: Nov-9-2017
 
 echo.
 echo %fp%
 
-call start "my title" "%cbf_application%" %cbf_nickname%
+call start "my title" "%cbf_application%" %cbf_filename%
 
 goto exitb
 
