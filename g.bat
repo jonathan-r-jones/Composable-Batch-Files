@@ -816,7 +816,7 @@ call :add
 
 call :commit_with_timestamp_description
 
-call :push
+call %0 push
 
 call %0 rf_status
 
