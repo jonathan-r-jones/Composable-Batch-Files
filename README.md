@@ -20,10 +20,8 @@ To see list of the commonly used composed batch files type:
 
 
 
-To see the help for a particular batch file type in the batch file name plus " /?" or in some 
-cases, just leave off the parameter. For example:
-
-d:\dropbox\it\composable_batch_files>g [or g /? g -help]
+To see the help for a particular batch file type in the batch file name without a 
+parameter or add "/?" or a " -help". For example:
 
 ![](git.png)
 
@@ -31,4 +29,4 @@ d:\dropbox\it\composable_batch_files>g [or g /? g -help]
 
 To see a brief PowerPoint Presentation on CBF, type:
 
-d:\dropbox\it\composable_batch_files>m ppt
+c:\m ppt
