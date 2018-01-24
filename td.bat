@@ -16,13 +16,13 @@ echo.
 
 set fp=* Route callers.
 
-if %1 == "" goto help
+if "%1" == "" goto help
 
-if %1 == "/?" goto help
+if "%1" == "/?" goto help
 
-if %1 == "help" goto help
+if "%1" == "help" goto help
 
-if %1 == "shared_list" goto %1
+if "%1" == "shared_list" goto %1
 
 echo ** Transform directory to . . .
 echo.
