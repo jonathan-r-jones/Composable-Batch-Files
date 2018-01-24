@@ -123,7 +123,6 @@ set fp=* Main function.
 
 call start "my title" "%cbf_application%" "%cbf_parameter%"
 
-rem qq-1
 goto exitb
 
 

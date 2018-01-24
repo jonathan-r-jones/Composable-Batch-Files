@@ -773,7 +773,7 @@ rem lu: Jan-24-2018
 
 echo %fp%
 
-set cbf_nicname=https://jonathan-r-jones.github.io/Composable-Batch-Files/
+set cbf_nickname=https://jonathan-r-jones.github.io/Composable-Batch-Files/
 
 goto exitb
 
@@ -789,7 +789,7 @@ rem lu: Jan-24-2018
 
 echo %fp%
 
-set cbf_nicname=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+set cbf_nickname=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 
 goto exitb
 
