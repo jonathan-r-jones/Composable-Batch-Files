@@ -37,7 +37,7 @@ echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 echo.
 if %errorlevel% == 0 echo First parameter is a filename.
-if %errorlevel% == 0 set cbf_parameter=%1
+if %errorlevel% == 0 set cbf_nickname=%1
 if %errorlevel% == 0 goto exitb
 
 rem if %errorlevel% == 1 echo First parameter is NOT a filename.
@@ -48,33 +48,33 @@ goto exitb
 
 
 
-:_
+:_+ Exit Functions
+
+
+
+::_
 
 :exit
 
 set fp= * Exit.
 
-rem echo.
 rem echo %fp%
 
 exit
 
 
 
-:_
+::_
 
 :exitb
 
 set fp= * Exit batch file but not command window.
 
-rem echo.
-rem echo %fp%
-
 exit /b
 
 
 
-:_
+::_
 
 :exitp
 
@@ -83,26 +83,15 @@ set fp= * Exit with pause.
 echo.
 rem echo %fp%
 
-title Done! - . . . paused . . . Press any key to continue
-
 pause
 
 exit
 
 
 
-:_
+::_
 
-:exitpb
-
-set fp= * Pause then exit the batch file but not the command window.
-
-rem echo.
-rem echo %fp%
-
-pause
-
-exit /b
+rem **************************** End Exit Functions.
 
 
 
@@ -120,7 +109,7 @@ echo %fp%
 
 rem call m set_wildfly_location
 
-set cbf_parameter=%wildfly_location%\standalone\log\server.log
+set cbf_nickname=%wildfly_location%\standalone\log\server.log
 
 goto exitb
 
@@ -140,7 +129,7 @@ rem FCD: Apr-7-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\SystemWidget.js
+set cbf_nickname=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\SystemWidget.js
 
 goto exitb
 
@@ -156,7 +145,7 @@ rem FCD: Apr-10-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\mercury6\pom.xml
+set cbf_nickname=C:\projects\netbeans\mercury6\pom.xml
 
 goto exitb
 
@@ -172,7 +161,7 @@ rem FCD: Apr-10-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
+set cbf_nickname=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
 
 goto exitb
 
@@ -188,7 +177,7 @@ rem FCD: Apr-10-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
+set cbf_nickname=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
 
 goto exitb
 
@@ -204,7 +193,7 @@ rem FCD: Apr-10-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
+set cbf_nickname=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
 
 goto exitb
 
@@ -220,7 +209,7 @@ rem FCD: May-13-2017
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\td.bat
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\td.bat
 
 goto exitb
 
@@ -264,7 +253,7 @@ rem FCD: Jun-1-2017
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\g.bat
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\g.bat
 
 goto exitb
 
@@ -280,11 +269,11 @@ rem FCD: Jun-1-2017
 
 echo %fp%
 
-set cbf_parameter=%2
+set cbf_nickname=%2
 
-echo %cbf_parameter%
+echo %cbf_nickname%
 
-rem if "%2"=="p" call start "my title" "C:\Program Files\Notepad++\notepad++.exe" %cbf_parameter%
+rem if "%2"=="p" call start "my title" "C:\Program Files\Notepad++\notepad++.exe" %cbf_nickname%
 
 goto exitb
 
@@ -300,11 +289,11 @@ rem FCD: Jun-1-2017
 
 echo %fp%
 
-set cbf_parameter=%2
+set cbf_nickname=%2
 
-echo %cbf_parameter%
+echo %cbf_nickname%
 
-rem if "%2"=="p" call start "my title" "C:\Program Files\Notepad++\notepad++.exe" %cbf_parameter%
+rem if "%2"=="p" call start "my title" "C:\Program Files\Notepad++\notepad++.exe" %cbf_nickname%
 
 goto exitb
 
@@ -320,7 +309,7 @@ rem fcd: Jul-7-2017
 
 echo %fp%
 
-set cbf_parameter=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
+set cbf_nickname=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
 
 goto exitb
 
@@ -339,7 +328,7 @@ echo %fp%
 if not exist %tmp%\certutil_input.txt echo.
 if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FILES%\certutil_input.txt" "%tmp%"
 
-set cbf_parameter=%tmp%\certutil_input.txt
+set cbf_nickname=%tmp%\certutil_input.txt
 
 goto exitb
 
@@ -356,7 +345,7 @@ rem lu: Nov-21-2017
 echo %fp%
 echo.
 
-set cbf_parameter=%userprofile%\.m2\settings.xml
+set cbf_nickname=%userprofile%\.m2\settings.xml
 
 goto exitb
 
@@ -372,7 +361,7 @@ rem FCD: Jul-27-2017
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\s.bat
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\s.bat
 
 goto exitb
 
@@ -392,7 +381,7 @@ rem FCD: Apr-7-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
+set cbf_nickname=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
 
 goto exitb
 
@@ -410,7 +399,7 @@ rem FCD: Sep-25-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
+set cbf_nickname=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
 
 goto exitb
 
@@ -428,7 +417,7 @@ rem fud: Aug-4-2017
 
 echo %fp%
 
-set cbf_parameter=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
+set cbf_nickname=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
 
 goto exitb
 
@@ -477,7 +466,7 @@ rem     xtype: 'login',
 rem     // CLOSE mobile login.
 rem     //xtype:'loginDisabled',
 
-set cbf_parameter=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\login.js
+set cbf_nickname=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\login.js
 
 goto exitb
 
@@ -500,7 +489,7 @@ rem     xtype:'loginDisabled',
 rem     // CLOSE mobile login.
 rem     //xtype: 'login',
 
-set cbf_parameter=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\WIPPage.js
+set cbf_nickname=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\WIPPage.js
 
 goto exitb
 
@@ -557,7 +546,7 @@ rem lu: Nov-17-2017
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\message from batch files.txt
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\message from batch files.txt
 
 goto exitb
 
@@ -573,7 +562,7 @@ rem lu: Nov-17-2017
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\Mercury Development Environment.xlsx - Shortcut.lnk
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\Mercury Development Environment.xlsx - Shortcut.lnk
 
 goto exitb
 
@@ -589,7 +578,7 @@ rem lu: Dec-4-2017
 
 echo %fp%
 
-set cbf_parameter=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
+set cbf_nickname=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
 
 goto exitb
 
@@ -605,7 +594,7 @@ rem lu: Dec-4-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
+set cbf_nickname=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
 
 goto exitb
 
@@ -621,7 +610,7 @@ rem lu: Dec-6-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
+set cbf_nickname=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
 
 goto exitb
 
@@ -639,7 +628,7 @@ rem FCD: Sep-25-2017
 
 echo %fp%
 
-set cbf_parameter=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
+set cbf_nickname=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
 
 goto exitb
 
@@ -656,7 +645,7 @@ rem fcd: Jul-17-2017
 echo %fp%
 echo.
 
-set cbf_parameter=%tmp%\certutil_output.txt
+set cbf_nickname=%tmp%\certutil_output.txt
 
 goto exitb
 
@@ -672,7 +661,7 @@ rem FCD: Apr-10-2017
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\m.bat
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\m.bat
 
 goto exitb
 
@@ -688,7 +677,7 @@ rem FCD: Jan-4-2018
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\fn.bat
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\fn.bat
 
 goto exitb
 
@@ -704,7 +693,7 @@ rem lu: Jan-19-2018
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
 
 goto exitb
 
@@ -720,7 +709,7 @@ rem lu: Jan-19-2018
 
 echo %fp%
 
-set cbf_parameter=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File - Visual Studio.txt
+set cbf_nickname=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File - Visual Studio.txt
 
 goto exitb
 
@@ -736,7 +725,7 @@ rem lu: Jan-19-2018
 
 echo %fp%
 
-set cbf_parameter=.gitignore
+set cbf_nickname=.gitignore
 
 goto exitb
 
@@ -752,10 +741,10 @@ rem lu: Jan-23-2018
 
 echo %fp%
 
-set cbf_parameter=Readme.md
+set cbf_nickname=Readme.md
 
 goto exitb
 
 
 
-:_ (!sp) (mov-9)
+:_ (!rfsp) (mov-9)

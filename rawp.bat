@@ -6,29 +6,19 @@
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
-set fp=* Route help callers.
-
-if "%1" == "" goto help
+set fp=* Route callers.
 
 if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
+goto code_execution_area
 
 
-:_
 
 rem Metadata
 
-rem File Purpose:
+rem File Purpose: Run application with parameter
 
 rem Parameter 1:
 
@@ -102,6 +92,38 @@ echo -------------  -----------------------------------------------------
 echo          
 echo.          
 
+goto exitb
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+echo.
+
+rem (!rfcea, !rfsp) (mov4) **************************************
+
+
+
+:_
+
+set fp=* Check status for parameters.
+
+
+
+:_
+
+set fp=* Main function.
+
+call start "my title" "%cbf_application%" "%cbf_parameter%"
+
+rem qq-1
 goto exitb
 
 

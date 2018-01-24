@@ -6,15 +6,7 @@
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%1" == "" goto help
 
@@ -22,29 +14,19 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
-
-
-:_
-
-set fp=* Set default browser.
-
-call fn kr
+goto code_execution_area
 
 
 
 :_
 
-set fp=* Set browser.
+rem Metadata
 
-if not "%2" == "" call fn %2
+rem File Purpose: This file is used for surfing the internet.
 
+rem Parameter 1: URL Nickname 
 
-
-:_
-
-set fp=* Set URL.
-
-call fn %2
+rem Parameter 2: Browser, which is not the default.
 
 
 
@@ -107,6 +89,61 @@ echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 echo          
 echo.          
+
+goto exitb
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+echo.
+
+rem (!rfcea, !rfsp) (mov4) **************************************
+
+
+
+:_
+
+set fp=* Set default browser.
+
+call nn kr
+
+
+
+:_
+
+set fp=* Set browser.
+
+if not "%2" == "" call nn %2
+
+set cbf_application=%cbf_nickname%
+
+
+
+:_
+
+set fp=* Set URL.
+
+call nn %1
+
+set cbf_parameter=%cbf_nickname%
+
+
+
+:_
+
+set fp=* Surf.
+
+rem lu: Jan-24-2018
+
+call rawp
 
 goto exitb
 
