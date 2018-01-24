@@ -795,4 +795,36 @@ goto exitb
 
 
 
+:_
+
+:cbf
+
+set fp=* CBF on GitHub.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_nickname=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+goto exitb
+
+
+
+:_
+
+:fx
+
+set fp=* Firefox.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_nickname=c:\program files\mozilla firefox\firefox.exe
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

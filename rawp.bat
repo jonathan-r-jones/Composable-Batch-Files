@@ -102,11 +102,6 @@ goto exitb
 
 set fp=* Execution area. Code below here runs.
 
-rem echo.
-rem echo %fp%
-
-echo.
-
 rem (!rfcea, !rfsp) (mov4) **************************************
 
 

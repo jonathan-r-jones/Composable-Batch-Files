@@ -100,11 +100,6 @@ goto exitb
 
 set fp=* Execution area. Code below here runs.
 
-rem echo.
-rem echo %fp%
-
-echo.
-
 rem (!rfcea, !rfsp) (mov4) **************************************
 
 
@@ -121,6 +116,7 @@ call nn kr
 
 set fp=* Set browser.
 
+if not "%2" == "" cls
 if not "%2" == "" call nn %2
 
 set cbf_application=%cbf_nickname%
