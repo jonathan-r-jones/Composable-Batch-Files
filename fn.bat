@@ -599,54 +599,6 @@ goto exitb
 
 :_
 
-:ig_sample_old
-
-set fp=* Git Ignore Sample File.
-
-rem lu: Jan-19-2018
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
-
-goto exitb
-
-
-
-:_
-
-:ig_sample
-
-set fp=* Git Ignore Sample File.
-
-rem lu: Jan-19-2018
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File - Visual Studio.txt
-
-goto exitb
-
-
-
-:_
-
-:ig
-
-set fp=* Git Ignore in the current folder.
-
-rem lu: Jan-19-2018
-
-echo %fp%
-
-set cbf_filename=.gitignore
-
-goto exitb
-
-
-
-:_
-
 :re
 
 set fp=* Readme.md.
@@ -672,6 +624,62 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\fn.bat
+
+goto exitb
+
+
+
+:_+ Git Ignore
+
+
+
+::_
+
+:ig
+
+set fp=* Git Ignore in the current folder.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+set cbf_filename=.gitignore
+
+goto exitb
+
+
+
+::_
+
+:vs_ig
+
+:ig_vs
+
+:ig_sample
+
+set fp=* Git Ignore Sample File.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File - Visual Studio.txt
+
+goto exitb
+
+
+
+::_
+
+:ig_sample_old
+
+set fp=* Git Ignore Sample File.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
 
 goto exitb
 

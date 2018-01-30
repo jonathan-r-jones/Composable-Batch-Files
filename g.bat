@@ -533,22 +533,6 @@ goto exitb
 
 :_
 
-:apf
-
-set fp=* Add particular file.
-
-rem fcd: Feb-16-2017
-
-echo %fp%
-
-git add .gitignore
-
-goto exitb
-
-
-
-:_
-
 :rpf
 
 set fp=* Remove an individual file.
@@ -1906,28 +1890,6 @@ goto exitb
 
 
 
-:_
-
-:ig
-
-set fp=* Create a gitinore file to the current directory.
-
-rem lu: Jan-19-2018
-
-echo %fp%
-
-if exist .gitignore echo.
-if exist .gitignore echo Error: File already there.
-if exist .gitignore goto exitb
-
-dir /b>.gitignore
-
-call npp .gitignore
-
-goto exitb
-
-
-
 :_+ Stash and Pop
 
 
@@ -2039,6 +2001,44 @@ rem lu: Jan-5-2018
 echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://github.com/jonathan-r-jones/composable_batch_files
+
+goto exitb
+
+
+
+:_
+
+:ig
+
+set fp=* Create a gitinore file to the current directory.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+if exist .gitignore echo.
+if exist .gitignore echo Error: File already there.
+if exist .gitignore goto exitb
+
+dir /b>.gitignore
+
+call npp .gitignore
+
+goto exitb
+
+
+
+:_
+
+:apf
+
+set fp=* Add particular file.
+
+rem fcd: Feb-16-2017
+
+echo %fp%
+
+git add .gitignore
 
 goto exitb
 

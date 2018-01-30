@@ -52,7 +52,6 @@ echo Last Updated (lu): Jan-24-2018
 echo.
 
 echo Usage: This is called by specific editors.
-rem qq-1
 echo.
 
 echo [filename verb, e.g. no (for Notepad) or npp (for Notepad++)] [first parameter = filename lookup code]
@@ -117,7 +116,7 @@ rem lu: Nov-9-2017
 echo.
 echo %fp%
 
-call start "my title" "%cbf_application%" %cbf_filename%
+call start "my title" "%cbf_application%" "%cbf_filename%"
 
 goto exitb
 
@@ -134,7 +133,7 @@ rem lu: Nov-9-2017
 echo.
 echo %fp%
 
-call start "my title" "%cbf_application%" %1
+call start "my title" "%cbf_application%" "%1"
 
 goto exitb
 
