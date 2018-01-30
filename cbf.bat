@@ -115,15 +115,14 @@ echo CBF_Application: %cbf_application%
 echo.
 echo CBF_Filename: %cbf_filename%
 echo.
-echo CBF_Nickname: %cbf_nickname%
-echo.
-echo CBF_Parameter: %cbf_parameter%
-echo.
+rem echo CBF_Nickname: %cbf_nickname%
+rem echo.
+rem echo CBF_Parameter: %cbf_parameter%
+rem echo.
 echo CBF_Path: %cbf_path%
 echo.
 echo CBF_URL: %cbf_url%
 
-rem qq-1
 goto exitb
 
 

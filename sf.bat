@@ -30,24 +30,21 @@ rem File Purpose: This file is used for surfing the internet.
 
 :help
 
-set fp=* This file is used to 
+set fp=* This file is used to surf the web.
 
 rem Last Updated (lu): Jan-23-2018
 
+echo.
 echo %fp%
 
 echo.
 echo Usage: %0
+echo.
 
 echo Parameter 1: URL Nickname 
-
-echo Parameter 2: Browser, which is not the default.
-
 echo.
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
-echo          
-echo.          
+
+echo Parameter 2: Browser (Application Nickname), which is not the default.
 
 goto exitb
 
