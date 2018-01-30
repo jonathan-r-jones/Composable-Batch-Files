@@ -653,11 +653,7 @@ goto exitb
 
 :vs_ig
 
-:ig_vs
-
-:ig_sample
-
-set fp=* Git Ignore Sample File.
+set fp=* Git Ignore Visual Studio Sample File.
 
 rem lu: Jan-19-2018
 

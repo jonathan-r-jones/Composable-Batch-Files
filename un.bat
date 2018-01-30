@@ -147,4 +147,21 @@ goto exitb
 
 
 
+:_
+
+:vs_ig
+
+set fp=* Latest Visual Studio Git Ignore.
+
+rem lu: Jan-30-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+rem qq-1
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)
