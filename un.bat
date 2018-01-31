@@ -133,22 +133,6 @@ goto exitb
 
 :_
 
-:cbf
-
-set fp=* CBF on GitHub.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
-
-goto exitb
-
-
-
-:_
-
 :vs_ig
 
 set fp=* Latest Visual Studio Git Ignore.
@@ -206,6 +190,42 @@ rem lu: Jan-31-2018
 echo %fp%
 
 set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
+
+goto exitb
+
+
+
+:_+ CBF-related links.
+
+
+
+::_
+
+:cbf
+
+set fp=* CBF on GitHub.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+goto exitb
+
+
+
+::_
+
+:gpcbf
+
+set fp=* CBF on GitHub Pages.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
 
 goto exitb
 
