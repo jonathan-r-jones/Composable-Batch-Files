@@ -179,4 +179,20 @@ goto exitb
 
 
 
+:_
+
+:vs
+
+set fp=* Visual Studio.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

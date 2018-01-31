@@ -195,4 +195,20 @@ goto exitb
 
 
 
+:_
+
+:batt
+
+set fp=* James Montemagno Battery Plugin.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

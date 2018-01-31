@@ -65,6 +65,22 @@ goto exitb
 
 
 
+:_
+
+:footer
+
+set fp=* Footer function.
+
+rem lu: Jan-31-2018
+
+rem echo %fp%
+
+set cbf_parameter=%cbf_filename%
+
+goto exitb
+
+
+
 :_+ Exit Functions
 
 
@@ -108,7 +124,7 @@ exit
 
 ::_
 
-rem **************************** End Exit Functions.
+rem ******** End Exit Functions.
 
 
 
@@ -128,7 +144,7 @@ rem call m set_wildfly_location
 
 set cbf_filename=%wildfly_location%\standalone\log\server.log
 
-goto exitb
+goto footer
 
 
 
@@ -148,7 +164,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\SystemWidget.js
 
-goto exitb
+goto footer
 
 
 
@@ -164,7 +180,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\pom.xml
 
-goto exitb
+goto footer
 
 
 
@@ -180,7 +196,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
 
-goto exitb
+goto footer
 
 
 
@@ -196,7 +212,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
 
-goto exitb
+goto footer
 
 
 
@@ -212,7 +228,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
 
-goto exitb
+goto footer
 
 
 
@@ -228,7 +244,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\td.bat
 
-goto exitb
+goto footer
 
 
 
@@ -256,7 +272,7 @@ call %0 pom_web %2
 
 call %0 system_widget %2
 
-goto exitb
+goto footer
 
 
 
@@ -272,7 +288,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\g.bat
 
-goto exitb
+goto footer
 
 
 
@@ -288,7 +304,7 @@ echo %fp%
 
 set cbf_filename=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
 
-goto exitb
+goto footer
 
 
 
@@ -307,7 +323,7 @@ if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FI
 
 set cbf_filename=%tmp%\certutil_input.txt
 
-goto exitb
+goto footer
 
 
 
@@ -324,7 +340,7 @@ echo.
 
 set cbf_filename=%userprofile%\.m2\settings.xml
 
-goto exitb
+goto footer
 
 
 
@@ -340,7 +356,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\s.bat
 
-goto exitb
+goto footer
 
 
 
@@ -360,7 +376,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
 
-goto exitb
+goto footer
 
 
 
@@ -378,7 +394,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
 
-goto exitb
+goto footer
 
 
 
@@ -396,7 +412,7 @@ echo %fp%
 
 set cbf_filename=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
 
-goto exitb
+goto footer
 
 
 
@@ -423,7 +439,7 @@ rem     //xtype:'loginDisabled',
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\login.js
 
-goto exitb
+goto footer
 
 
 
@@ -446,7 +462,7 @@ rem     //xtype: 'login',
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\WIPPage.js
 
-goto exitb
+goto footer
 
 
 
@@ -462,7 +478,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\message from batch files.txt
 
-goto exitb
+goto footer
 
 
 
@@ -478,7 +494,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\Mercury Development Environment.xlsx - Shortcut.lnk
 
-goto exitb
+goto footer
 
 
 
@@ -494,7 +510,7 @@ echo %fp%
 
 set cbf_filename=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
 
-goto exitb
+goto footer
 
 
 
@@ -510,7 +526,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
 
-goto exitb
+goto footer
 
 
 
@@ -526,7 +542,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
 
-goto exitb
+goto footer
 
 
 
@@ -544,7 +560,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
 
-goto exitb
+goto footer
 
 
 
@@ -561,7 +577,7 @@ echo.
 
 set cbf_filename=%tmp%\certutil_output.txt
 
-goto exitb
+goto footer
 
 
 
@@ -577,23 +593,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\m.bat
 
-goto exitb
-
-
-
-:_
-
-:fn
-
-set fp=* Fn.bat.
-
-rem FCD: Jan-4-2018
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\fn.bat
-
-goto exitb
+goto footer
 
 
 
@@ -609,7 +609,7 @@ echo %fp%
 
 set cbf_filename=Readme.md
 
-goto exitb
+goto footer
 
 
 
@@ -625,7 +625,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\fn.bat
 
-goto exitb
+goto footer
 
 
 
@@ -645,7 +645,7 @@ echo %fp%
 
 set cbf_filename=.gitignore
 
-goto exitb
+goto footer
 
 
 
@@ -661,7 +661,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File - Visual Studio.txt
 
-goto exitb
+goto footer
 
 
 
@@ -677,7 +677,55 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
 
-goto exitb
+goto footer
+
+
+
+:_
+
+:tt
+
+set fp=* TT VS solution.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\ticktockmenu\TickTockMenu.sln
+
+goto footer
+
+
+
+:_
+
+:cbf
+
+set fp=* CBF file.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
+
+goto footer
+
+
+
+:_
+
+:batt
+
+set fp=* Battery solution.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_filename=d:\aa\james_montemagno_battery_plugin\src\Battery.sln
+
+goto footer
 
 
 

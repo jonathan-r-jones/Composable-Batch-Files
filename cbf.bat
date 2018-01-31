@@ -109,17 +109,22 @@ set fp=* Show the state of the CBF environment variables.
 rem lu: Jan-24-2018
 
 echo %fp%
-echo.
 
+echo.
 echo CBF_Application: %cbf_application%
+
 echo.
 echo CBF_Filename: %cbf_filename%
-echo.
+
+rem echo.
 rem echo CBF_Nickname: %cbf_nickname%
-rem echo.
-rem echo CBF_Parameter: %cbf_parameter%
-rem echo.
+
+echo.
+echo CBF_Parameter: %cbf_parameter%
+
+echo.
 echo CBF_Path: %cbf_path%
+
 echo.
 echo CBF_URL: %cbf_url%
 

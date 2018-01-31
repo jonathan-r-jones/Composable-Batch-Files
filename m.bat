@@ -2385,6 +2385,7 @@ echo  [your label]  [your description] [Build your own.]
 echo           ppt  PowerPoint Presentation on CBF.
 echo   prepare_mob  Prepare for mobile deployment.
 echo        pscrub  Partially scrub deployment environment.
+echo            rd  Remove directory.
 echo     run_tirem  Run tirem.
 echo         scrub  When deploying new War file, this prepares env.
 echo    s6_deleted  Rerun these commands if sencha folder was deleted.

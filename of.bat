@@ -119,7 +119,7 @@ goto exitb
 
 :open_folder_in_windows_explorer_at_current_directory
 
-set fp=* Open folder in Windows Explorer at current directory.
+set fp=* Open folder in Windows Explorer at the current directory.
 
 rem fcd: May-25-2017
 

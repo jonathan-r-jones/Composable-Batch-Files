@@ -6,7 +6,7 @@
 
 :_
 
-set fp=* Add echo.
+set fp=* Add some whitespace.
 
 echo.
 
@@ -707,7 +707,7 @@ goto exitb
 
 set fp=James_Montemagno_Xamarin_Plugins
 
-rem lu: 
+rem lu: Jan-31-2018
 
 echo * %fp%
 
@@ -716,6 +716,30 @@ set folder_name=%fp%
 call td aa
 
 call un %1
+
+git clone %cbf_url% .\%folder_name%
+
+goto exitb
+
+
+
+:_
+
+:batt
+
+set fp=James_Montemagno_Battery_Plugin
+
+rem lu: Jan-31-2018
+
+echo * %fp%
+
+set folder_name=%fp%
+
+call td aa
+
+call un %1
+
+echo.
 
 git clone %cbf_url% .\%folder_name%
 
