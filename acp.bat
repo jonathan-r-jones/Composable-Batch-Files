@@ -121,6 +121,7 @@ set fp=* Call ACP.
 
 rem lu: Jan-31-2018
 
+echo.
 echo %fp%
 
 call g acp
