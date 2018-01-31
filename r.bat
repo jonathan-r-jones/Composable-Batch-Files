@@ -108,12 +108,6 @@ rem (!rfcea, !rfsp) (mov4) **************************************
 
 :_
 
-set fp=* Check status for parameters.
-
-
-
-:_
-
 set fp=* Main function.
 
 call start "my title" "%cbf_application%" "%cbf_parameter%"

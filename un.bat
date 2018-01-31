@@ -158,6 +158,42 @@ rem lu: Jan-30-2018
 echo %fp%
 
 set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+
+goto exitb
+
+
+
+:_
+
+:xplug
+
+set fp=* Xamarin Plugins.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/Xamarin/Plugins.git
+
+rem qq-1
+
+goto exitb
+
+
+
+:_
+
+:jmplug
+
+set fp=* James Montemagno Xamarin Plugins.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
+rem qq-1
+
 rem qq-1
 
 goto exitb

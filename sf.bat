@@ -8,7 +8,7 @@
 
 set fp=* Route callers.
 
-if "%1" == "" goto help
+if "%1" == "" goto use_current_cbf_url
 
 if "%1" == "/?" goto help
 
@@ -41,10 +41,13 @@ echo.
 echo Usage: %0
 echo.
 
+echo If no parameter is used, surf to the current CBF_URL.
+echo.
+
 echo Parameter 1: URL Nickname 
 echo.
 
-echo Parameter 2: Browser (Application Nickname), which is not the default.
+echo Parameter 2: Browser (Application Nickname), which is not necessary if you wish to use the the default browser.
 
 goto exitb
 
@@ -103,6 +106,29 @@ rem (!rfcea, !rfsp) (mov4) **************************************
 
 :_
 
+set fp=* Set URL.
+
+call un %1
+
+set cbf_parameter=%cbf_url%
+
+
+
+:_
+
+:use_current_cbf_url
+
+set fp=* Use current CBF_URL.
+
+echo.
+echo %fp%
+
+set cbf_parameter=%cbf_url%
+
+
+
+:_
+
 set fp=* Set default browser.
 
 call an kr
@@ -115,16 +141,6 @@ set fp=* Set browser.
 
 if not "%2" == "" cls
 if not "%2" == "" call an %2
-
-
-
-:_
-
-set fp=* Set URL.
-
-call un %1
-
-set cbf_parameter=%cbf_url%
 
 
 

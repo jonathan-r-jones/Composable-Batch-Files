@@ -645,7 +645,7 @@ goto exitb
 
 :tt
 
-set fp=* Tick tock menu maker.
+set fp=* Tick tock menu.
 
 rem lu: Jan-18-2018
 
@@ -655,28 +655,6 @@ call td it
 echo.
           
 git clone https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git .\TickTockMenuMaker
-
-goto exitb
-
-
-
-:_
-
-:xplug
-
-set fp=Xamarin_Plugins
-
-rem lu: Jan-18-2018
-
-echo %fp%
-set folder_name=%fp%
-
-call td aa
-echo.
-          
-set rn=https://github.com/jamesmontemagno/Xamarin.Plugins.git
-
-git clone %rn% .\%folder_name%
 
 goto exitb
 
@@ -696,6 +674,30 @@ echo.
 set rn=https://github.com/BrendanPluralsight/cmd-demo.git
 
 git clone %rn%
+
+goto exitb
+
+
+
+:_
+
+:xplug
+
+set fp=Xamarin_Plugins
+
+rem lu: Jan-18-2018
+
+echo %fp%
+set folder_name=%fp%
+
+call td aa
+echo.
+
+rem qq-1
+
+call un %1
+
+git clone %cbf_url% .\%folder_name%
 
 goto exitb
 

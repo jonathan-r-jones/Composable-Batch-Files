@@ -1129,7 +1129,7 @@ rem lu: Jan-15-2018
 
 echo %fp%
 
-set cbf_path=%dropbox%\it\ticktockmenumaker
+set cbf_path=%dropbox%\it\ticktockmenu
 
 goto exitb
 
