@@ -14,6 +14,16 @@ echo.
 
 :_
 
+set fp=* Add, commit and push.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%1" == "/?" goto help
@@ -107,33 +117,14 @@ set fp=* Code below here runs.
 
 :_
 
-:
-
-set fp=* 
+set fp=* Call ACP.
 
 rem lu: Jan-31-2018
 
 echo %fp%
 
-g acp
+call g acp
 
-rem qq-1
-goto exitb
-
-
-
-:_
-
-:
-
-set fp=* 
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-
-rem qq-1
 goto exitb
 
 
