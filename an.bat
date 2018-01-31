@@ -30,7 +30,7 @@ goto %1
 
 :help
 
-set fp=To return the full application name corresponding to a given nickname.
+set fp=To return the full application name corresponding to a given unique nickname in this dictionary.
 
 echo This file purpose (fp) is to: %fp%
 echo.
