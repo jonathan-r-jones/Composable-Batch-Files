@@ -14,7 +14,7 @@ echo.
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%1" == "" goto help
 
@@ -30,9 +30,14 @@ goto code_execution_area
 
 :help
 
-set fp=Be used as a template for new batch files.
+set fp=* Help has not yet been implemented.
 
-echo This file purpose (fp) is to: %fp%
+echo %fp%
+goto exitb
+
+set fp=* Be used as a template for new batch files.
+
+echo This file's purpose (fp) is to: %fp%
 echo.
 
 echo The filename stands for: Template.
@@ -96,7 +101,7 @@ exit
 
 ::_
 
-rem **************************** End Exit Functions.
+rem ******* End Exit Functions.
 
 
 

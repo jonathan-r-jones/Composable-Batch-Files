@@ -6,6 +6,19 @@
 
 :_
 
+:
+
+set fp=* Surf to . . .
+
+rem lu: Jan-31-2018
+
+echo.
+echo %fp%
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%1" == "" goto use_current_cbf_url
@@ -112,6 +125,8 @@ call un %1
 
 set cbf_parameter=%cbf_url%
 
+goto set_default_browser
+
 
 
 :_
@@ -129,6 +144,8 @@ set cbf_parameter=%cbf_url%
 
 :_
 
+:set_default_browser
+
 set fp=* Set default browser.
 
 call an kr
@@ -137,9 +154,10 @@ call an kr
 
 :_
 
-set fp=* Set browser.
+set fp=* Set override browser.
 
 if not "%2" == "" cls
+if not "%2" == "" echo %fp%
 if not "%2" == "" call an %2
 
 
@@ -148,7 +166,7 @@ if not "%2" == "" call an %2
 
 set fp=* Surf.
 
-rem lu: Jan-24-2018
+rem lu: Jan-31-2018
 
 call r
 

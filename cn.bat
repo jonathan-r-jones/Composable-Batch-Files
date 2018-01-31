@@ -693,7 +693,27 @@ set folder_name=%fp%
 call td aa
 echo.
 
-rem qq-1
+call un %1
+
+git clone %cbf_url% .\%folder_name%
+
+goto exitb
+
+
+
+:_
+
+:jmplug
+
+set fp=James_Montemagno_Xamarin_Plugins
+
+rem lu: 
+
+echo * %fp%
+
+set folder_name=%fp%
+
+call td aa
 
 call un %1
 

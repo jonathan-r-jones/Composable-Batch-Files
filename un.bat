@@ -175,8 +175,6 @@ echo %fp%
 
 set cbf_url=https://github.com/Xamarin/Plugins.git
 
-rem qq-1
-
 goto exitb
 
 
@@ -192,9 +190,6 @@ rem lu: Jan-31-2018
 echo %fp%
 
 set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
-rem qq-1
-
-rem qq-1
 
 goto exitb
 
