@@ -154,9 +154,9 @@ call an kr
 
 :_
 
-set fp=* Set override browser.
+set fp=* Override default browser.
 
-if not "%2" == "" cls
+if not "%2" == "" echo.
 if not "%2" == "" echo %fp%
 if not "%2" == "" call an %2
 

@@ -46,18 +46,18 @@ echo.
 echo Last Updated (lu): Jan-31-2018
 echo.
 
-echo Usage: %0 [Optional Parameter 1] [Optional Parameter 2]
+echo Usage: %0 [Parameter 1] [Parameter 2]
 echo.
 
-echo Parameter 1 (Optional): Application Nickname. If not present, the current CBF_Application variable is used.
+echo Parameter 1 (Optional): Application Nickname.
 
 echo.          
-echo Parameter 2 (Optional): Parameter. If not present, the current CBF_Parameter variable is useed.
+echo Parameter 2 (Optional): Parameter nickname. The default is a fn: Filename nickname. 
 
 echo.          
-echo Parameter 3 (Optional): Parameter. Parameter type. 
-echo                         The default is a fn: Filename nickname. 
-echo                             Other types are:
+echo Parameter 3 (Optional): Parameter type. 
+echo                         
+echo                                   Types are:
 echo                                          un:  URL nickname.
 echo                                          pn:  Path nickname
 
