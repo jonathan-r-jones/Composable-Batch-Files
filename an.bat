@@ -204,4 +204,29 @@ goto exitb
 
 
 
+:_
+
+:npp
+
+set fp=* Notepad++.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+rem Determine installation path.
+
+if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_installation_path=c:\program files\notepad++\notepad++.exe
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_installation_path="c:\program files (x86)\notepad++\notepad++.exe"
+
+if "%cbf_application_installation_path%"=="" echo.
+if "%cbf_application_installation_path%"=="" echo Notepad++ is not installed.
+if "%cbf_application_installation_path%"=="" goto exitb
+
+set cbf_application=%cbf_application_installation_path%
+rem qq-1
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

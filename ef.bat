@@ -55,6 +55,7 @@ goto edit_file_with_looked_up_parameter
 
 set fp=* Execute file.
 
+echo.
 echo File purpose (fp): %fp%
 
 echo.

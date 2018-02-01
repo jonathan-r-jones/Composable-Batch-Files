@@ -114,12 +114,13 @@ echo.
 echo CBF_Application: %cbf_application%
 
 echo.
-echo CBF_Filename: %cbf_filename%
-
-rem echo.
-rem echo CBF_Nickname: %cbf_nickname%
+echo CBF_Application_Installation_Path: %cbf_application_installation_path%
 
 echo.
+echo CBF_Filename: %cbf_filename%
+
+echo.
+rem qq-1
 echo CBF_Parameter: %cbf_parameter%
 
 echo.
