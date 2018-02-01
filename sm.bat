@@ -1,3 +1,2 @@
 @echo off
-call an sm
-ef %1
+ef %1 sm

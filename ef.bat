@@ -6,13 +6,25 @@
 
 :_
 
-set fp=* Route help callers.
+set fp=* Execute file . . .
+
+echo.
+echo %fp%
+echo.
+
+
+
+:_
+
+set fp=* Route callers.
 
 if "%1" == "" goto help
 
 if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
+
+if not "%2" == "" call an %2
 
 
 
@@ -28,7 +40,7 @@ rem if %errorlevel% == 0 echo.
 rem if %errorlevel% == 0 echo First parameter is a filename.
 if %errorlevel% == 0 goto edit_file_with_current_folder_file
 
-rem if %errorlevel% == 1 echo First parameter is NOT a filename so go get a filename.
+rem if %errorlevel% == 1 echo First parameter is NOT a filename so look up the filename.
 
 call fn %1
 
@@ -40,21 +52,27 @@ goto edit_file_with_looked_up_parameter
 
 :help
 
-set fp=Be used to edit files.
+set fp=* Execute file.
 
-echo This file purpose (fp) is to: %fp%
+echo File purpose (fp): %fp%
+
 echo.
+echo Filename stands for: Execute File.
 
-echo The filename stands for: Edit File.
 echo.
+echo Last Updated (lu): Feb-1-2018
 
-echo Last Updated (lu): Jan-24-2018
 echo.
+echo Usage: ef [Parameter 1] [Parameter 2]
 
-echo Usage: This is called by specific editors.
 echo.
+echo Parameter 1: The filename nickname of the file to execute or filename of a file in the current folder.
 
-echo [filename verb, e.g. no (for Notepad) or npp (for Notepad++)] [first parameter = filename lookup code]
+echo.
+echo Parameter 2: The application nickname of the application used to execute the file.
+
+echo.
+echo Notes: The main feature provided by this batch file is to detect a period in the filename of a file in the current folder.
 
 goto exitb
 

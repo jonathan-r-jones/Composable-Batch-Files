@@ -1,3 +1,2 @@
 @echo off
-set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
-ef %1
+ef %1 me

@@ -1,3 +1,2 @@
 @echo off
-call an no
-edit_file %1
+ef %1 no

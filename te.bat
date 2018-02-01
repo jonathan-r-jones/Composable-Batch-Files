@@ -33,26 +33,27 @@ goto code_execution_area
 set fp=* Help has not yet been implemented.
 
 echo %fp%
+
 goto exitb
 
-set fp=* Be used as a template for new batch files.
+set fp=* Use as a template for new batch files.
 
-echo This file's purpose (fp) is to: %fp%
 echo.
+echo File Purpose (fp): %fp%
 
-echo The filename stands for: Template.
 echo.
+echo Filename stands for: Template.
 
+echo.
 echo Last Updated (lu): Jan-24-2018
-echo.
 
+echo.
 echo Usage: %0 [single parameter]
-echo.
 
+echo.          
 echo     Parameter  Description
 echo -------------  -----------------------------------------------------
-echo          
-echo.          
+echo.
 
 goto exitb
 

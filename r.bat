@@ -10,6 +10,7 @@ set fp=* Run application . . .
 
 echo.
 echo %fp%
+echo.
 
 
 
@@ -35,31 +36,34 @@ goto code_execution_area
 
 :help
 
-set fp=* Run applications with or without a parameter.
+set fp=* Run application with or without a parameter.
 
-echo This file's purpose (fp) is to: %fp%
+echo File purpose (fp): %fp%
+
 echo.
+echo Filename stands for: Run application.
 
-echo The filename stands for: Run application.
 echo.
-
 echo Last Updated (lu): Jan-31-2018
-echo.
 
+echo.
 echo Usage: %0 [Parameter 1] [Parameter 2]
-echo.
 
-echo Parameter 1 (Optional): Application Nickname.
+echo.
+echo Parameter 1 (Optional): Application nickname.
 
 echo.          
-echo Parameter 2 (Optional): Parameter nickname. The default is a fn: Filename nickname. 
+echo Parameter 2 (Optional): Parameter nickname.
 
 echo.          
 echo Parameter 3 (Optional): Parameter type. 
-echo                         
-echo                                   Types are:
-echo                                          un:  URL nickname.
-echo                                          pn:  Path nickname
+echo.
+echo               Types are:  fn:  Filename nickname. (the default)
+echo                           un:  URL nickname.
+echo                           pn:  Path nickname
+
+echo.
+echo Notes: If no parameters are passed, the currently set CBF_Application and CBF_Parameter are used.
 
 goto exitb
 

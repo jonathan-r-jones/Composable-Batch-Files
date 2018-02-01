@@ -729,4 +729,36 @@ goto footer
 
 
 
+:_
+
+:j1
+
+set fp=* J1.txt.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+set cbf_filename=c:\a\j1.txt
+
+goto footer
+
+
+
+:_
+
+:j2
+
+set fp=* J1.txt.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+set cbf_filename=c:\a\j2.txt
+
+goto footer
+
+
+
 :_ (!rfsp) (mov-9)
