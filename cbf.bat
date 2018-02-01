@@ -120,7 +120,6 @@ echo.
 echo CBF_Filename: %cbf_filename%
 
 echo.
-rem qq-1
 echo CBF_Parameter: %cbf_parameter%
 
 echo.

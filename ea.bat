@@ -6,18 +6,10 @@
 
 :_
 
-set fp=* .
+set fp=* Execute application.
 
 echo.
 echo %fp%
-
-
-
-:_
-
-set fp=* Add some whitespace.
-
-echo.
 
 
 
@@ -31,7 +23,24 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
-goto code_execution_area
+
+
+:_
+
+set fp=* Detect a period in the first parameter and run.
+
+rem lu: Feb-1-2018
+
+echo %1 | find /i ".">nul
+
+if %errorlevel% == 0 set cbf_application=%1
+if %errorlevel% == 1 call an %1
+
+set cbf_parameter=
+
+call r
+
+goto exitb
 
 
 
@@ -39,30 +48,23 @@ goto code_execution_area
 
 :help
 
-set fp=* Help has not yet been implemented.
+set fp=* Execute application.
 
-echo %fp%
-
-goto exitb
-
-set fp=* Use as a template for new batch files.
-
-echo.
 echo File Purpose (fp): %fp%
 
 echo.
-echo Filename stands for: Template.
+echo Filename stands for: Execute application.
 
 echo.
-echo Last Updated (lu): Jan-24-2018
+echo Last Updated (lu): Feb-1-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
+rem qq-1
 
-echo.          
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
 echo.
+echo Parameter 1: Application nickname.
+rem qq-1
 
 goto exitb
 

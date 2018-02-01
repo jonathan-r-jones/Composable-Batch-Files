@@ -27,7 +27,7 @@ if "%1" == "help" goto help
 
 :_
 
-set fp=* Detect a filename in the first parameter and run.
+set fp=* Detect a period in the first parameter and run.
 
 rem lu: Nov-9-2017
 
@@ -40,7 +40,6 @@ set cbf_parameter=%cbf_filename%
 
 if not "%2" == "" call an %2
 
-rem qq-1
 call r
 
 goto exitb

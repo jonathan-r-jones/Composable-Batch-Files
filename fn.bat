@@ -692,22 +692,6 @@ goto exitb
 
 :_
 
-:tt
-
-set fp=* TT VS solution.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_filename=%dropbox%\it\ticktockmenu\TickTockMenu.sln
-
-goto exitb
-
-
-
-:_
-
 :cbf
 
 set fp=* CBF file.
@@ -765,6 +749,22 @@ rem lu: Feb-1-2018
 echo %fp%
 
 set cbf_filename=c:\a\j2.txt
+
+goto exitb
+
+
+
+:_
+
+:tt
+
+set fp=* TT VS solution.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\ticktockmenu\TickTockMenu.sln
 
 goto exitb
 

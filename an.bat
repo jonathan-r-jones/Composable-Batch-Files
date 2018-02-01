@@ -224,7 +224,7 @@ if "%cbf_application_installation_path%"=="" echo Notepad++ is not installed.
 if "%cbf_application_installation_path%"=="" goto exitb
 
 set cbf_application=%cbf_application_installation_path%
-rem qq-1
+
 goto exitb
 
 
