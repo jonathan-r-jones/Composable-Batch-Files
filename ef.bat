@@ -17,35 +17,33 @@ echo %fp%
 
 set fp=* Route callers.
 
-if "%1" == "" goto help
-
 if "%1" == "?" goto help
 
 if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
-if not "%2" == "" call an %2
-
 
 
 :_
 
-set fp=* Detect a filename in the first parameter.
+set fp=* Detect a filename in the first parameter and run.
 
 rem lu: Nov-9-2017
 
 echo %1 | find /i ".">nul
 
-rem if %errorlevel% == 0 echo.
-rem if %errorlevel% == 0 echo First parameter is a filename.
-if %errorlevel% == 0 goto edit_file_with_current_folder_file
+if %errorlevel% == 0 set cbf_filename=%1
+if %errorlevel% == 1 call fn %1
 
-rem if %errorlevel% == 1 echo First parameter is NOT a filename so look up the filename.
+set cbf_parameter=%cbf_filename%
 
-call fn %1
+if not "%2" == "" call an %2
 
-goto edit_file_with_looked_up_parameter
+rem qq-1
+call r
+
+goto exitb
 
 
 
@@ -71,7 +69,7 @@ echo.
 echo Parameter 1: The filename nickname of the file to execute or filename of a file in the current folder.
 
 echo.
-echo Parameter 2: The application nickname of the application used to execute the file.
+echo Parameter 2 (Optional): The application nickname of the application used to execute the file. If left blank, a simulated double click of the file will occur.
 
 echo.
 echo Notes: The main feature provided by this batch file is to detect a period in the filename of a file in the current folder.
@@ -118,44 +116,6 @@ rem echo %fp%
 pause
 
 exit
-
-
-
-:_+ 2 Flavors of Running.
-
-
-
-::_
-
-:edit_file_with_looked_up_parameter
-
-set fp=* Run "%cbf_application%" with "%cbf_filename%".
-
-rem lu: Nov-9-2017
-
-echo.
-echo %fp%
-
-call start "my title" "%cbf_application%" "%cbf_filename%"
-
-goto exitb
-
-
-
-::_
-
-:edit_file_with_current_folder_file
-
-set fp=* Run "%cbf_application%" with current directory file "%1".
-
-rem lu: Nov-9-2017
-
-echo.
-echo %fp%
-
-call start "my title" "%cbf_application%" "%1"
-
-goto exitb
 
 
 

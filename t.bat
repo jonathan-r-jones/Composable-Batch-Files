@@ -6469,7 +6469,7 @@ rem (!rfcea, !rfsp) (mov4) **************************************
 
 :_
 
-set fp=* Simulate a double click in cbf.
+set fp=* Simulate a double click in CBF.
 
 rem lu: Feb-1-2018
 
@@ -6477,6 +6477,10 @@ echo %fp%
 
 call td ba
 
+set cbf_application=%1" - Shortcut.lnk"
+set cbf_parameter=""
+
+call r
 
 rem qq-1
 goto exitb

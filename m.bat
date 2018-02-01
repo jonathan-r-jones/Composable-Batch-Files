@@ -1547,7 +1547,6 @@ echo     m:  Perform miscellaneous tasks.
 echo    me:  Run Multi-Edit.
 echo    no:  Run Notepad.
 echo   npp:  Run Notepad++.
-echo    nn:  Nicknames is a filename and URL lookup. Used as a resource.
 echo    of:  Open Folder.
 echo    pn:  Look up path nickname.
 echo     s:  SQL/Database, including LDAP, related tasks.
@@ -2361,7 +2360,6 @@ set fp=* Perform miscellaneous tasks.
 
 rem fcd: May-13-2017
 
-echo.
 echo %fp%
 
 echo.
