@@ -30,10 +30,10 @@ goto code_execution_area
 
 set fp=Show the state of CBF environment variables.
 
-echo This file purpose (fp) is to: %fp%
+echo File purpose (fp) is to: %fp%
 echo.
 
-echo The filename stands for: Composed Batch Files
+echo Filename stands for: Composed Batch Files
 echo.
 
 echo Last Updated (lu): Jan-24-2018

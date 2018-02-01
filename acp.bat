@@ -42,19 +42,20 @@ goto code_execution_area
 
 set fp=* Add, commit and push changes.
 
-echo This file's purpose (fp) is to: %fp%
 echo.
+echo File purpose (fp): %fp%
 
-echo The filename stands for: Add/Commit/Push.
 echo.
+echo Filename stands for: Add/Commit/Push.
 
-echo Last Updated (lu): Jan-31-2018
 echo.
+echo Last Updated (lu): Feb-1-2018
 
-echo Usage: %0 [optional single parameter]
 echo.
+echo Usage: %0 [Parameter 1]
 
-echo Parameter 1: The folder you wish to switch to. If blank, the current folder is used.
+echo.
+echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current folder is used.
 
 goto exitb
 

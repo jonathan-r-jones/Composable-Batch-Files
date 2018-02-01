@@ -10,8 +10,6 @@
 
 set fp=* Surf to . . .
 
-rem lu: Jan-31-2018
-
 echo.
 echo %fp%
 
@@ -45,7 +43,7 @@ rem File Purpose: This file is used for surfing the internet.
 
 set fp=* This file is used to surf the web.
 
-rem Last Updated (lu): Jan-23-2018
+rem Last Updated (lu): Feb-1-2018
 
 echo.
 echo %fp%

@@ -6,6 +6,15 @@
 
 :_
 
+set fp=* .
+
+echo %fp%
+echo.
+
+
+
+:_
+
 set fp=* Add some whitespace.
 
 echo.

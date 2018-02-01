@@ -10,7 +10,6 @@ set fp=* Run application . . .
 
 echo.
 echo %fp%
-echo.
 
 
 

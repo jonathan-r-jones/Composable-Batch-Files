@@ -6,6 +6,15 @@
 
 :_
 
+set fp=* Look up application.
+
+echo.
+echo %fp%
+
+
+
+:_
+
 set fp=* Add some whitespace.
 
 echo.

@@ -6,6 +6,14 @@
 
 :_
 
+set fp=* Look up path.
+
+echo %fp%
+
+
+
+:_
+
 set fp=* Add some whitespace.
 
 echo.
