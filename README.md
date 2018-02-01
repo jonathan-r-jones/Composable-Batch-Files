@@ -14,7 +14,7 @@ For example, running Hello_World.bat in the following way will yield the followi
 
 
 
-To see list of the commonly used composed batch files type qq:
+To see list of the commonly used composed batch files type:
 
 ![](mlist.png)
 
