@@ -39,30 +39,33 @@ goto %1
 
 :help
 
-set fp=* Help has not yet been implemented.
+set fp=* Dir: an easier to type version.
 
-echo %fp%
-
-goto exitb
-
-set fp=* Use as a template for new batch files.
-
-echo.
 echo File Purpose (fp): %fp%
 
 echo.
-echo Filename stands for: Template.
+echo Filename stands for: dir
 
 echo.
-echo Last Updated (lu): Jan-24-2018
+echo Last Updated (lu): Feb-1-2018
 
 echo.
-echo Usage: %0 [single parameter]
+echo Usage: %0 [Parameter 1]
+
+echo.
+echo Parameter 1 (Optional): Sorting style.
+
+echo.
+echo Parameter 2 (Optional): File type.
 
 echo.          
 echo     Parameter  Description
 echo -------------  -----------------------------------------------------
-echo.
+echo             d  Date, newest first.
+echo            d2  Date, smallest first.
+echo             s  Size, biggest first.
+echo            s2  Size, smallest first.
+echo             t  File type.
 
 goto exitb
 
