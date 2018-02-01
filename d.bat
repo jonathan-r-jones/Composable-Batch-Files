@@ -1,75 +1,223 @@
+:_
+
 @echo off
+
+
+
+:_
+
+set fp=* Directory listing.
+
+echo.
+echo %fp%
+
+
+
+:_
+
+set fp=* Add some whitespace.
 
 echo.
 
-::Directory listing
 
-if "%1"=="" goto default
 
-if exist *.%1 goto ext
+:_
+
+set fp=* Route callers.
+
+if "%1" == "" goto alphabetical
+
+if "%1" == "/?" goto help
+
+if "%1" == "help" goto help
 
 goto %1
 
-:do Directories Only
-dir/p/ad/o/w
-goto bye
 
-:default
-goto o
-goto bye
 
-:df Directory Freedom
-if "%2"=="" goto df_hop
-df.com /D *.%2
-goto bye
-:df_hop
-df.com /D
-goto bye
+:_
 
-:ext for by EXTension , by
-dir/p/o-d *.%1
-goto bye
+:help
 
-:fo Files Only
-dir/a-d/p/o
-goto bye
+set fp=* Help has not yet been implemented.
 
-:nm NuMber of files in the directory
-set math=
-for %%f in (*.*) do batcmd ad %%f
+echo %fp%
+
+goto exitb
+
+set fp=* Use as a template for new batch files.
+
 echo.
-echo                 %math% files present in this directory.
+echo File Purpose (fp): %fp%
+
 echo.
-set math=
-goto bye
+echo Filename stands for: Template.
 
-:o for Orderly, i.e. alphabetical by filename
-dir/p/o
-goto bye
+echo.
+echo Last Updated (lu): Jan-24-2018
 
-:of for Orderly, i.e. alphabetical by filename, directory Freedom
-df.com /N %2
-goto bye
+echo.
+echo Usage: %0 [single parameter]
 
-:s Size
-dir/p/o-s/a-d *.*
-goto bye
+echo.          
+echo     Parameter  Description
+echo -------------  -----------------------------------------------------
+echo.
 
-:sy system files
-dir/as
-goto bye
+goto exitb
 
-:sf for Size in, directory Freedom
-df.com /S %2
-goto bye
 
-:t Time, latest first
-dir/p/o-d
-goto bye
 
-:w for Wide format
-dir/o/w
-goto bye
+:_+ Exit Functions
 
-::The following line should be the last line in this file.
-:bye
+
+
+::_
+
+:exit
+
+set fp= * Exit.
+
+rem echo %fp%
+
+exit
+
+
+
+::_
+
+:exitb
+
+set fp= * Exit batch file but not command window.
+
+exit /b
+
+
+
+::_
+
+:exitp
+
+set fp= * Exit with pause.
+
+echo.
+rem echo %fp%
+
+pause
+
+exit
+
+
+
+::_
+
+rem ******* End Exit Functions.
+
+
+
+:_
+
+:alphabetical
+
+set fp=* Alphabetical by filename.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+echo.
+
+dir
+
+goto exitb
+
+
+
+:_
+
+:t
+
+:file_type
+
+set fp=* File type.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+echo.
+
+dir *.%2
+
+goto exitb
+
+
+
+:_
+
+:s
+
+set fp=* Size, biggest first.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+echo.
+
+dir /o-s
+
+goto exitb
+
+
+
+:_
+
+:s2
+
+set fp=* Size, smallest first.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+echo.
+
+dir /os
+
+goto exitb
+
+
+
+:_
+
+:d
+
+set fp=* Date, newest first.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+echo.
+
+dir /o-d
+
+goto exitb
+
+
+
+:_
+
+:d2
+
+set fp=* Date, oldest first.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+echo.
+
+dir /od
+
+goto exitb
+
+
+
+:_ (!rfsp) (mov-9)
+ 
