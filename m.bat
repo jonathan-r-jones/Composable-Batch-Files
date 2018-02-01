@@ -1533,22 +1533,28 @@ echo.
 
 echo   File  Description
 echo   ----  -----------------------------------------------------------------
+echo    an:  Look up application nickname.
 echo     c:  Clear screen and reset color.
 echo   cbf:  Show the state of CBF environment variables.
 echo    cn:  Used for Git cloning tasks.
 echo    cy:  Copy file(s).
+echo     e:  Exit command window.
+echo    ef:  Execute filename.
+echo    fn:  Look up filename nickname.
 echo     g:  Perform Git-related tasks.
 echo     h:  Perform Sencha-related tasks.
 echo     m:  Perform miscellaneous tasks.
-echo    me:  Run Multi-Edit against either current folder file or a lookup.
-echo    no:  Run Notepad against either a current folder file or a lookup.
-echo   npp:  Run Notepad++ against either a current folder file or a lookup.
+echo    me:  Run Multi-Edit.
+echo    no:  Run Notepad.
+echo   npp:  Run Notepad++.
 echo    nn:  Nicknames is a filename and URL lookup. Used as a resource.
 echo    of:  Open Folder.
+echo    pn:  Look up path nickname.
 echo     s:  SQL/Database, including LDAP, related tasks.
 echo    sf:  Surf to websites.
-echo    sm:  Run Sublime (with parameter).
+echo    sm:  Run Sublime.
 echo    td:  Transform Directory.
+echo    un:  Look up URL nickname.
 
 goto exitb
 

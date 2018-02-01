@@ -30,14 +30,17 @@ goto %1
 
 :help
 
-set fp=* This file is used to illustrate how Composable Batch Files work.
+set fp=* Copy files.
 
 rem Last Updated (lu): Jan-23-2018
 
-echo %fp%
+echo File purpose (fp): %fp%
 
 echo.
-echo Usage: hello_world.bat [single parameter]
+echo Usage: cy [Parameter 1]
+
+echo.
+echo Parameter 1: Macro to run.
 
 echo.
 echo     Parameter  Description

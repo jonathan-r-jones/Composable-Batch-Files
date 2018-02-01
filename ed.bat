@@ -1,1 +1,0 @@
-notepad.exe %1
