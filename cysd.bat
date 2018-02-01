@@ -6,7 +6,7 @@
 
 :_
 
-set fp=* Execute file . . .
+set fp=* Copy file file from source to destination.
 
 echo.
 echo %fp%
@@ -17,7 +17,9 @@ echo %fp%
 
 set fp=* Route callers.
 
-if "%1" == "?" goto help
+if "%1" == "" goto help
+
+if "%2" == "" goto help
 
 if "%1" == "/?" goto help
 
@@ -34,12 +36,9 @@ echo %1 | find /i ".">nul
 if %errorlevel% == 0 set cbf_filename=%1
 if %errorlevel% == 1 call fn %1
 
-set cbf_parameter=%cbf_filename%
+call pn %2
 
-if "%2" == "" call an dc
-if not "%2" == "" call an %2
-
-call r
+xcopy %cbf_filename% %cbf_path%
 
 goto exitb
 
@@ -49,28 +48,24 @@ goto exitb
 
 :help
 
-set fp=* Execute file.
+set fp=* Copy file from source to destination.
+
+echo File Purpose (fp): %fp%
 
 echo.
-echo File purpose (fp): %fp%
-
-echo.
-echo Filename stands for: Execute File.
+echo Filename stands for: CopY file from Source to Destination.
 
 echo.
 echo Last Updated (lu): Feb-1-2018
 
 echo.
-echo Usage: ef [Parameter 1] [Parameter 2]
+echo Usage: %0 [Parameter 1] [Parameter 2]
 
 echo.
 echo Parameter 1: The filename nickname of the file to execute or filename of a file in the current folder.
 
 echo.
-echo Parameter 2 (Optional): The application nickname of the application used to execute the file. If left blank, a simulated double click of the file will occur.
-
-echo.
-echo Notes: The main feature provided by this batch file is to detect a period in the filename of a file in the current folder.
+echo Parameter 2: Destination path nickname.
 
 goto exitb
 
@@ -117,4 +112,10 @@ exit
 
 
 
-:_ (!sp) (mov-9)
+::_
+
+rem ******* End Exit Functions.
+
+
+
+:_ (!rfsp) (mov-9)

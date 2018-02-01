@@ -31,11 +31,23 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
-goto code_execution_area
-
 
 
 :_
+
+set fp=* 
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+
+rem qq-1
+goto exitb
+
+
+
+:_ (!rfsp)
 
 :help
 
@@ -116,11 +128,3 @@ rem ******* End Exit Functions.
 
 
 :_
-
-:code_execution_area
-
-set fp=* Code below here runs.
-
-
-
-:_ (!rfsp) (mov-9)

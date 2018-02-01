@@ -1229,4 +1229,20 @@ goto exitb
 
 
 
+:_
+
+:cbf
+
+set fp=* Composable batch files.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+set cbf_path=%composable_batch_files%
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

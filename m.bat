@@ -1538,6 +1538,8 @@ echo     c:  Clear screen and reset color.
 echo   cbf:  Show the state of CBF environment variables.
 echo    cn:  Used for Git cloning tasks.
 echo    cy:  Copy file(s).
+echo  cysd:  Copy file file from source to destination.
+echo     d:  Easier-to-type and remember version of dir.
 echo     e:  Exit command window.
 echo    ea:  Execute application.
 echo    ed:  Edit filename.
