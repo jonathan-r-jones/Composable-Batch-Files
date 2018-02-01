@@ -52,42 +52,33 @@ rem Having a written version of your work allows you to learn and improve over t
 
 
 
-:_
-
-rem Begin exit locker.
- ___  ______  ______  ______  ______  ______  ______  ______  ______  ___
-  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
- (______)(______)(______)(______)(______)(______)(______)(______)(______)
+:_+ Exit Functions
 
 
 
-:_
+::_
 
 :exit
 
 set fp= * Exit.
 
-rem echo.
 rem echo %fp%
 
 exit
 
 
 
-:_
+::_
 
 :exitb
 
 set fp= * Exit batch file but not command window.
 
-rem echo.
-rem echo %fp%
-
 exit /b
 
 
 
-:_
+::_
 
 :exitp
 
@@ -96,35 +87,15 @@ set fp= * Exit with pause.
 echo.
 rem echo %fp%
 
-title Done! - . . . paused . . . Press any key to continue
-
 pause
 
 exit
 
 
 
-:_
+::_
 
-:exitpb
-
-set fp= * Pause then exit the batch file but not the command window.
-
-rem echo.
-rem echo %fp%
-
-pause
-
-exit /b
-
-
-
-:_
-
-rem Begin script body. (!sbody)
- ___  ______  ______  ______  ______  ______  ______  ______  ______  ___
-  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
- (______)(______)(______)(______)(______)(______)(______)(______)(______)
+rem ******* End Exit Functions.
 
 
 
@@ -1413,7 +1384,6 @@ echo           off  Turn mail host off.
 echo            on  Turn mail host on.
 echo          reqs  Select latest requests.
 echo            st  Show tables.
-echo         sunes  Select users with 'NESASSOC' email addresses.
 echo           suv  Select users, order by validation date.
 echo           sql  Connect to SQL monitor.
 echo         users  Select users, active by recent login.
