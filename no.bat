@@ -1,2 +1,2 @@
 @echo off
-ef %1 no
+ed %1 no

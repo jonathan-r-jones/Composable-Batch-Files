@@ -1,2 +1,2 @@
 @echo off
-ef %1 me
+ed %1 me

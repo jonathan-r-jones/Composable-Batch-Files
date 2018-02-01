@@ -1,2 +1,2 @@
 @echo off
-ef %1 sm
+ed %1 sm

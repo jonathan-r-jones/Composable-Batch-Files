@@ -1,2 +1,2 @@
 @echo off
-ef %1 npp
+ed %1 npp

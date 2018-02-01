@@ -1539,6 +1539,8 @@ echo   cbf:  Show the state of CBF environment variables.
 echo    cn:  Used for Git cloning tasks.
 echo    cy:  Copy file(s).
 echo     e:  Exit command window.
+echo    ea:  Execute application.
+echo    ed:  Edit filename.
 echo    ef:  Execute filename.
 echo    fn:  Look up filename nickname.
 echo     g:  Perform Git-related tasks.

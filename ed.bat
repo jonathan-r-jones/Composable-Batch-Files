@@ -6,7 +6,7 @@
 
 :_
 
-set fp=* Execute application.
+set fp=* Edit file.
 
 echo.
 echo %fp%
@@ -55,6 +55,7 @@ goto exitb
 
 set fp=* Edit file.
 
+echo.
 echo File Purpose (fp): %fp%
 
 echo.
@@ -68,7 +69,9 @@ echo Usage: %0 [Parameter 1]
 
 echo.
 echo Parameter 1: The filename nickname of the file to execute or filename of a file in the current folder.
-rem qq-1
+
+echo.
+echo Parameter 2 (Optional): The Application nickname to use to edit the file.
 
 goto exitb
 
@@ -118,14 +121,6 @@ exit
 ::_
 
 rem ******* End Exit Functions.
-
-
-
-:_
-
-:code_execution_area
-
-set fp=* Code below here runs.
 
 
 
