@@ -1,5 +1,7 @@
 @echo off
 
+echo.
+
 ::Directory listing
 
 if "%1"=="" goto default

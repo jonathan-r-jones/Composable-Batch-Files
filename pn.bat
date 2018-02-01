@@ -8,6 +8,7 @@
 
 set fp=* Look up path.
 
+echo.
 echo %fp%
 
 
@@ -38,23 +39,26 @@ goto %1
 
 :help
 
-set fp=To return the full website name corresponding to a given unique nickname in this dictionary.
+set fp=* Return the full website name corresponding to a given unique nickname in this dictionary.
 
-echo This file purpose (fp) is to: %fp%
+echo File purpose (fp) is to: %fp%
+
 echo.
+echo Filename stands for: Filename Nicknames.
 
-echo The filename stands for: Filename Nicknames.
 echo.
+echo Last Updated (lu): Feb-1-2018
 
-echo Last Updated (lu): Jan-24-2018
 echo.
+echo Usage: %0 [Parameter 1]
 
-echo Usage: %0 [single parameter]
 echo.
+echo Parameter 1: Path nickname.
 
+echo.
 echo Parm/Nickname  Target
 echo -------------  -----------------------------------------------------------
-echo           cnn  CNN
+echo           cnn  CNN.com
 
 goto exitb
 

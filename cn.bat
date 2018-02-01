@@ -6,9 +6,10 @@
 
 :_
 
-set fp=* Add some whitespace.
+set fp=* Clone a repository . . .
 
 echo.
+echo %fp%                         
 
 
 
@@ -18,79 +19,17 @@ set fp=* Route callers.
 
 if "%1" == "" goto help
 
+if "%1" == "?" goto help
+
 if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
-goto %1
+if not "%1" == "" call un %1
 
+if not "%2" == "" call td %2
 
-
-:_
-
-rem Metadata
-
-rem File Purpose: This batch file is intended to be used for cloning git repos.
-
-rem fcd: Jan-17-2018
-
-
-
-:_
-
-:exit
-
-set fp= * Exit.
-
-rem echo.
-rem echo %fp%
-
-exit
-
-
-
-:_
-
-:exitb
-
-rem set fp= * Exit batch file but not command window.
-
-rem echo.
-rem echo %fp%
-
-exit /b
-
-
-
-:_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-title Done! - . . . paused . . . Press any key to continue
-
-pause
-
-exit
-
-
-
-:_
-
-:exitpb
-
-set fp= * Pause then exit the batch file but not the command window.
-
-rem echo.
-rem echo %fp%
-
-pause
-
-exit /b
+goto code_execution_area
 
 
 
@@ -102,10 +41,16 @@ set fp=* Perform Git Clone-related tasks.
 
 rem fcd: Jan-17-2018
 
-echo %fp%
+echo File purpose (fp): %fp%
 
 echo.
-echo Usage: cl [single parameter]
+echo Usage: cn [Parameter 1] [Parameter 2]
+
+echo.
+echo Parameter 1: URL nickname of the repository location.
+
+echo.
+echo Parameter 2 (Optional): Path nickname. If if left blank, the repository will be installed into a subfolder of the current folder.
 
 echo.
 echo     Parameter  Description
@@ -113,6 +58,53 @@ echo -------------  -----------------------------------------------------
 echo       xam_sam  Xamarin Forms Samples.
 
 goto exitb
+
+
+
+:_+ Exit Functions
+
+
+
+::_
+
+:exit
+
+set fp= * Exit.
+
+rem echo %fp%
+
+exit
+
+
+
+::_
+
+:exitb
+
+set fp= * Exit batch file but not command window.
+
+exit /b
+
+
+
+::_
+
+:exitp
+
+set fp= * Exit with pause.
+
+echo.
+rem echo %fp%
+
+pause
+
+exit
+
+
+
+::_
+
+rem ******* End Exit Functions.
 
 
 
@@ -742,6 +734,29 @@ call un %1
 echo.
 
 git clone %cbf_url% .\%folder_name%
+
+goto exitb
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+
+
+:_
+
+set fp=* Clone repository
+
+rem lu: Feb-1-2018
+
+echo %fp% from %cbf_url%.
+
+echo.
+git clone %cbf_url%
 
 goto exitb
 

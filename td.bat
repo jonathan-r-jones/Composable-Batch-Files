@@ -44,12 +44,12 @@ goto exitb
 
 :help
 
-set fp=To change your directory.
+set fp=To transform/change your directory.
 
-echo This file purpose is to: %fp%
+echo File purpose (fp): %fp%
 echo.
 
-echo The filename stands for: Transform Directory.
+echo Filename stands for: Transform Directory.
 echo.
 
 echo Last Updated (lu): Jan-24-2018
@@ -105,7 +105,7 @@ exit
 
 ::_
 
-rem **************************** End Exit Functions.
+rem ******* End Exit Functions.
 
 
 
