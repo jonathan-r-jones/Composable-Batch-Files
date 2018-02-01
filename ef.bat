@@ -38,6 +38,7 @@ if %errorlevel% == 1 call fn %1
 
 set cbf_parameter=%cbf_filename%
 
+if "%2" == "" call an dc
 if not "%2" == "" call an %2
 
 call r
