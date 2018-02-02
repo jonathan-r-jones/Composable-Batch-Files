@@ -146,22 +146,6 @@ goto exitb
 
 :_
 
-:vs_ig
-
-set fp=* Latest Visual Studio Git Ignore.
-
-rem lu: Jan-30-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
-
-goto exitb
-
-
-
-:_
-
 :xplug
 
 set fp=* Xamarin Plugins.
@@ -273,6 +257,24 @@ rem lu: Feb-2-2018
 echo %fp%
           
 set cbf_url=https://github.com
+
+goto exitb
+
+
+
+:_
+
+:ig
+
+:vs_ig
+
+set fp=* Latest Visual Studio Git Ignore.
+
+rem lu: Jan-30-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 goto exitb
 

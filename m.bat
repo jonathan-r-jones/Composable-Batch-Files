@@ -1541,7 +1541,6 @@ echo    cy:  Copy file(s).
 echo  cysd:  Copy file file from source to destination.
 echo     d:  Easier-to-type and remember version of dir.
 echo     e:  Exit command window.
-echo    ea:  Execute application.
 echo    ea:  Application-centric way of running an app with opt. file param.
 echo    ed:  Filename-centric way of editing a file with optional app. param.
 echo    ef:  Double-click equivalent way of exec. a file with opt. app. param.

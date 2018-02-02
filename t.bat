@@ -6453,6 +6453,26 @@ goto exitb
 
 :_
 
+set fp=* Simulate a double click in CBF.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+call td ba
+
+set cbf_application=%1" - Shortcut.lnk"
+set cbf_parameter=""
+
+call r
+
+rem qq-1
+goto exitb
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -6469,18 +6489,23 @@ rem (!rfcea, !rfsp) (mov4) **************************************
 
 :_
 
-set fp=* Simulate a double click in CBF.
+:
 
-rem lu: Feb-1-2018
+set fp=* Ping pong folder test. This worked!
+
+rem lu: Feb-2-2018
 
 echo %fp%
 
-call td ba
+set original_folder=%cd%
 
-set cbf_application=%1" - Shortcut.lnk"
-set cbf_parameter=""
+call td a
 
-call r
+cd
+
+pause
+
+call cd /d %original_folder%
 
 rem qq-1
 goto exitb
