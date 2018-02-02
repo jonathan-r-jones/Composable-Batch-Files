@@ -1247,4 +1247,20 @@ goto exitb
 
 
 
+:_
+
+:dr
+
+set fp=* Composable batch files.
+
+rem lu: Feb-2-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

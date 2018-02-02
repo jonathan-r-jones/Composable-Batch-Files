@@ -1129,7 +1129,6 @@ cd \projects\netbeans\sencha\HTML5Application\public_html
 color 4f
 
 sencha app build production
-rem qq-1
 
 if %errorlevel% == 0 echo %f% Compile succeeded.>%temp%\compile_results.txt
 if not %errorlevel% == 0 echo %f% Compile failed.>%temp%\compile_results.txt

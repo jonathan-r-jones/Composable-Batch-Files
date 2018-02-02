@@ -858,28 +858,6 @@ goto exitb
 
 :_
 
-:rv_local
-
-set fp=* If you don't care about any local changes and just want a copy from the repository.
-
-rem Function Creation Date: Jan-30-2017
-
-echo %fp%
-echo.
-
-rem This didn't seem to work on Jan-31-2017.
-
-git reset --hard HEAD
-echo.
-git clean -f
-git pull
-
-goto exitb
-
-
-
-:_
-
 Metadata: Track Size (!tsg)
 
      Date      Lines      Bytes  Functions  Notes
@@ -1066,31 +1044,6 @@ goto exitb
 
 :_
 
-:roll_back_repo
-
-:roll_back_server
-
-set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
-
-rem Creation Date: Aug-3-2017
-
-rem How do you roll back in git?
-
-rem This worked on David's machine on Aug-3-2017.
-
-echo %fp%
-echo.
-  
-@echo on
-git push -f
-@echo off
-
-goto exitb
-
-
-
-:_
-
 :myst
 
 :del_myst
@@ -1170,116 +1123,6 @@ del Dish_Expired_TR.png
 del Dish_Generic_R.png
 del Dish_Generic_T.png
 del Dish_Generic_TR.png
-
-goto exitb
-
-
-
-:_
-
-:rvall
-
-set fp=* Revert all changes from m6 and s6. Note: This is a powerfull command so exercise CAUTION!
-
-rem Creation Date: May-5-2017
-
-echo %fp%
-echo.
-
-call %0 delete_pngs
-
-call %0 delete_pngs_2
-
-cd c:\projects\netbeans\mercury6
-
-call %0 rvfd
-
-call %0 clean
-
-cd c:\projects\netbeans\sencha
-
-call %0 rvfd
-
-call %0 clean
-
-goto exitb
-
-
-
-:_
-
-:rvallp
-
-set fp=* Revert all PERSISTENT changes from m6 and s6.
-
-rem Creation Date: Aug-30-2017
-
-echo %fp%
-  
-call %0 delete_pngs
-
-call %0 delete_pngs_2
-
-call %0 rvp
-
-goto exitb
-
-
-
-:_
-
-:rvp
-
-set fp=* Revert persistent files. Revert files in need of constant reversion.
-
-rem lu: Aug-31-2017
-
-echo %fp%
-  
-cd \projects\netbeans\sencha\html5application\public_html
-
-git checkout bootstrap.css
-git checkout bootstrap.js
-git checkout classic.json
-git checkout classic.jsonp
-git checkout modern.json
-git checkout modern.jsonp
-git checkout sass/example/bootstrap.js
-git checkout sass/example/bootstrap.json
-git checkout sass/example/bootstrap.jsonp
-git checkout sass/example/example.css
-
-cd c:\projects\netbeans\sencha
-
-git checkout HTML5Application/nbproject/private/private.xml
-git checkout HTML5Application/public_html/classic/src/view/dashboard/ContactsWidget.js
-
-git checkout HTML5Application/public_html/modern/src/utils/NetConfig.js
-git checkout HTML5Application/public_html/classic/src/utils/NetConfig.js
-
-goto exitb
-
-
-
-:_
-
-:b
-
-:base
-
-set fp=* Return to baseline configuration after a build. Exercise caution as this will destroy some local changes.
-
-rem lu: Aug-31-2017
-
-echo %fp%
-
-call %0 rvall
-
-call %0 acp
-
-cls
-
-call %0 ss
 
 goto exitb
 
@@ -1402,44 +1245,6 @@ goto exitb
 
 :_
 
-:rvfd
-
-set fp=* Revert folder. Revert all changes from this folder only.
-
-rem specific folder: skw
-
-rem Creation Date: May-5-2017
-
-echo %fp%
- 
-git checkout *.*
-
-goto exitb
-
-
-
-:_
-
-:rsf
-
-:rvsf
-
-set fp=* Revert single file.
-
-rem lu: Jan-23-2018
-
-rem revert single file: skw
-
-echo %fp%
-  
-git checkout %2
-
-goto exitb
-
-
-
-:_
-
 :rut
 
 :clean
@@ -1480,8 +1285,8 @@ echo           asf  Add single file.
 echo             c  Commit changes for only those files that were staged.
 echo          pull  Get-latest.
 echo          push  Push changes.
+echo           rsf  Revert file.
 echo          rvfd  Revert folder.
-echo          rvfl  Revert file.
 echo           rvp  Revert persistent files.
 echo             s  Get status.
 echo            ss  Get super status.
@@ -2039,6 +1844,207 @@ rem fcd: Feb-16-2017
 echo %fp%
 
 git add .gitignore
+
+goto exitb
+
+
+
+:_+ Revert Functions
+
+
+
+::_
+
+:rv_local
+
+set fp=* If you don't care about any local changes and just want a copy from the repository.
+
+rem Function Creation Date: Jan-30-2017
+
+echo %fp%
+echo.
+
+rem This didn't seem to work on Jan-31-2017.
+
+git reset --hard HEAD
+echo.
+git clean -f
+git pull
+
+goto exitb
+
+
+
+::_
+
+:roll_back_repo
+
+:roll_back_server
+
+set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
+
+rem Creation Date: Aug-3-2017
+
+rem How do you roll back in git?
+
+rem This worked on David's machine on Aug-3-2017.
+
+echo %fp%
+echo.
+  
+@echo on
+git push -f
+@echo off
+
+goto exitb
+
+
+
+::_
+
+:rvall
+
+set fp=* Revert all changes from m6 and s6. Note: This is a powerfull command so exercise CAUTION!
+
+rem Creation Date: May-5-2017
+
+echo %fp%
+echo.
+
+call %0 delete_pngs
+
+call %0 delete_pngs_2
+
+cd c:\projects\netbeans\mercury6
+
+call %0 rvfd
+
+call %0 clean
+
+cd c:\projects\netbeans\sencha
+
+call %0 rvfd
+
+call %0 clean
+
+goto exitb
+
+
+
+::_
+
+:rvallp
+
+set fp=* Revert all PERSISTENT changes from m6 and s6.
+
+rem Creation Date: Aug-30-2017
+
+echo %fp%
+  
+call %0 delete_pngs
+
+call %0 delete_pngs_2
+
+call %0 rvp
+
+goto exitb
+
+
+
+::_
+
+:rvp
+
+set fp=* Revert persistent files. Revert files in need of constant reversion.
+
+rem lu: Aug-31-2017
+
+echo %fp%
+  
+cd \projects\netbeans\sencha\html5application\public_html
+
+git checkout bootstrap.css
+git checkout bootstrap.js
+git checkout classic.json
+git checkout classic.jsonp
+git checkout modern.json
+git checkout modern.jsonp
+git checkout sass/example/bootstrap.js
+git checkout sass/example/bootstrap.json
+git checkout sass/example/bootstrap.jsonp
+git checkout sass/example/example.css
+
+cd c:\projects\netbeans\sencha
+
+git checkout HTML5Application/nbproject/private/private.xml
+git checkout HTML5Application/public_html/classic/src/view/dashboard/ContactsWidget.js
+
+git checkout HTML5Application/public_html/modern/src/utils/NetConfig.js
+git checkout HTML5Application/public_html/classic/src/utils/NetConfig.js
+
+goto exitb
+
+
+
+::_
+
+:b
+
+:base
+
+set fp=* Return to baseline configuration after a build. Exercise caution as this will destroy some local changes.
+
+rem lu: Aug-31-2017
+
+echo %fp%
+
+call %0 rvall
+
+call %0 acp
+
+cls
+
+call %0 ss
+
+goto exitb
+
+
+
+::_
+
+:rsf
+
+:rvsf
+
+set fp=* Revert single file.
+
+rem lu: Jan-23-2018
+
+rem revert single file: skw
+
+echo %fp%
+  
+git checkout %2
+
+goto exitb
+
+
+
+::_
+
+:rv
+
+:rvfd
+
+set fp=* Revert folder. Revert all changes from this folder only.
+
+rem specific folder: skw
+
+rem Creation Date: May-5-2017
+
+echo %fp%
+ 
+git checkout *.*
 
 goto exitb
 
