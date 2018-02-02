@@ -770,4 +770,20 @@ goto exitb
 
 
 
+:_
+
+:pizza
+
+set fp=* Pizza VS solution.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_filename=d:\aa\NovaCodeCamp.PizzaRatings\pizza.sln
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)
