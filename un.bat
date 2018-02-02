@@ -39,12 +39,12 @@ goto %1
 
 :help
 
-set fp=To return the full website name corresponding to a given unique nickname in this dictionary.
+set fp=URL nickname dictionary that sets the full URL name corresponding to a given unique nickname parameter.
 
-echo This file purpose (fp) is to: %fp%
+echo File purpose (fp): %fp%
 echo.
 
-echo The filename stands for: Filename Nicknames.
+echo Filename stands for: Filename Nicknames.
 echo.
 
 echo Last Updated (lu): Jan-24-2018
