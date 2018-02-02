@@ -139,7 +139,8 @@ set fp=* Main function.
 
 rem echo %fp%
 
-call start "my title" "%cbf_application%" "%cbf_parameter%"
+if "%cbf_parameter%" == "" call start "my title" "%cbf_application%"
+if not "%cbf_parameter%" == "" call start "my title" "%cbf_application%" "%cbf_parameter%"
 
 goto exitb
 

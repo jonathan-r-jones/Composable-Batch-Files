@@ -49,7 +49,7 @@ goto exitb
 
 :help
 
-set fp=* Execute file.
+set fp=* A filename-centric way executing files with or without an application parameter.
 
 echo.
 echo File purpose (fp): %fp%

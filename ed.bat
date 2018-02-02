@@ -35,11 +35,12 @@ echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 set cbf_filename=%1
 if %errorlevel% == 1 call fn %1
-rem qq-1
 
 set cbf_parameter=%cbf_filename%
 
+rem Set Default application.
 if "%2" == "" call an me
+
 if not "%2" == "" call an %2
 
 call r
@@ -53,7 +54,7 @@ goto exitb
 
 :help
 
-set fp=* Edit file.
+set fp=* A filename-centric way of editing a file.
 
 echo.
 echo File Purpose (fp): %fp%

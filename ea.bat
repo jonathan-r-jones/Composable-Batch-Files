@@ -36,7 +36,9 @@ echo %1 | find /i ".">nul
 if %errorlevel% == 0 set cbf_application=%1
 if %errorlevel% == 1 call an %1
 
-set cbf_parameter=
+if "%2" == "" set cbf_parameter=
+if not "%2" == "" call fn %2
+if not "%2" == "" set cbf_parameter=%cbf_filename%
 
 call r
 
@@ -48,8 +50,9 @@ goto exitb
 
 :help
 
-set fp=* Execute application.
+set fp=* Application-centric way of running an application with an optional filename parameter.
 
+echo.
 echo File Purpose (fp): %fp%
 
 echo.
@@ -60,11 +63,12 @@ echo Last Updated (lu): Feb-1-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
-rem qq-1
 
 echo.
 echo Parameter 1: Application nickname.
-rem qq-1
+
+echo.
+echo Parameter 2 (Optional): Filename nickname.
 
 goto exitb
 
@@ -114,14 +118,6 @@ exit
 ::_
 
 rem ******* End Exit Functions.
-
-
-
-:_
-
-:code_execution_area
-
-set fp=* Code below here runs.
 
 
 

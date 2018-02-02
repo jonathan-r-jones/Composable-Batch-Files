@@ -20,8 +20,8 @@ To see list of the commonly used composed batch files type:
 
 
 
-To see the help for a particular batch file type in the batch file name without a 
-parameter or add "/?" or a " -help". For example:
+To see the help for a particular batch file, type in the batch file name and "/?" or "-help". 
+For example:
 
 ![](git.png)
 

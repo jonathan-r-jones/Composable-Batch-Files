@@ -1532,8 +1532,8 @@ echo  %fp%
 echo.
 
 echo   File  Description
-echo   ----  -----------------------------------------------------------------
-echo    an:  Look up application nickname.
+echo   ----  ------------------------------------------------------------------
+echo    an:  Application nickname dictionary.
 echo     c:  Clear screen and reset color.
 echo   cbf:  Show the state of CBF environment variables.
 echo    cn:  Used for Git cloning tasks.
@@ -1542,9 +1542,10 @@ echo  cysd:  Copy file file from source to destination.
 echo     d:  Easier-to-type and remember version of dir.
 echo     e:  Exit command window.
 echo    ea:  Execute application.
-echo    ed:  Edit filename.
-echo    ef:  Execute filename.
-echo    fn:  Look up filename nickname.
+echo    ea:  Application-centric way of running an app with opt. file param.
+echo    ef:  Filename-centric way of editing a file with optional app. param.
+echo    ef:  Filename-centric way of executing a file with optional app. param.
+echo    fn:  Filename nickname dictionary.
 echo     g:  Perform Git-related tasks.
 echo     h:  Perform Sencha-related tasks.
 echo     m:  Perform miscellaneous tasks.
@@ -1552,12 +1553,12 @@ echo    me:  Run Multi-Edit.
 echo    no:  Run Notepad.
 echo   npp:  Run Notepad++.
 echo    of:  Open Folder.
-echo    pn:  Look up path nickname.
+echo    pn:  Path nickname dictionary.
 echo     s:  SQL/Database, including LDAP, related tasks.
 echo    sf:  Surf to websites.
 echo    sm:  Run Sublime.
 echo    td:  Transform Directory.
-echo    un:  Look up URL nickname.
+echo    un:  URL nickname dictionary.
 
 goto exitb
 

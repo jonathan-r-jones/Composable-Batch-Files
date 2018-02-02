@@ -39,9 +39,9 @@ goto %1
 
 :help
 
-set fp=To return the full application name corresponding to a given unique nickname in this dictionary.
+set fp=Application nickname dictionary that sets the full application name corresponding to a given unique nickname parameter.
 
-echo This file purpose (fp) is to: %fp%
+echo File purpose (fp): %fp%
 echo.
 
 echo The filename stands for: Filename Nicknames.
@@ -55,6 +55,7 @@ echo.
 
 echo Parm/Nickname  Target
 echo -------------  -----------------------------------------------------------
+echo            fx  Firefox
 echo            kr  Chrome
 
 goto exitb
@@ -105,38 +106,6 @@ exit
 ::_
 
 rem **************************** End Exit Functions.
-
-
-
-:_
-
-:kr
-
-set fp=* Chrome.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
-
-goto exitb
-
-
-
-:_
-
-:fx
-
-set fp=* Firefox.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\mozilla firefox\firefox.exe
-
-goto exitb
 
 
 
@@ -244,6 +213,42 @@ rem set cbf_application="%cbf_filename% - Shortcut.lnk"
 
 set cbf_application=%cbf_filename%
 set cbf_parameter=
+
+goto exitb
+
+
+
+:_+ Browsers
+
+
+
+::_
+
+:kr
+
+set fp=* Chrome.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+goto exitb
+
+
+
+::_
+
+:fx
+
+set fp=* Firefox.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\mozilla firefox\firefox.exe
 
 goto exitb
 
