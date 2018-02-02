@@ -49,13 +49,13 @@ goto exitb
 
 :help
 
-set fp=* Double-click equivalent way of executing a file with optional application nickname parameter.
+set fp=* Double-click equivalent way to execute a file with optional application nickname parameter.
 
 echo.
 echo File purpose (fp): %fp%
 
 echo.
-echo Filename stands for: Execute File.
+echo Filename stands for: eXecute file.
 
 echo.
 echo Last Updated (lu): Feb-1-2018

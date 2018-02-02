@@ -1543,7 +1543,6 @@ echo     d:  Easier-to-type and remember version of dir.
 echo     e:  Exit command window.
 echo    ea:  Application-centric way of running an app with opt. file param.
 echo    ed:  Filename-centric way of editing a file with optional app. param.
-echo    ef:  Double-click equivalent way of exec. a file with opt. app. param.
 echo    fn:  Filename nickname dictionary.
 echo     g:  Perform Git-related tasks.
 echo     h:  Perform Sencha-related tasks.
@@ -1558,6 +1557,7 @@ echo    sf:  Surf to websites.
 echo    sm:  Run Sublime.
 echo    td:  Transform Directory.
 echo    un:  URL nickname dictionary.
+echo     x:  Double-click equivalent way to exec. a file with opt. app. param.
 
 goto exitb
 
@@ -2385,7 +2385,7 @@ echo   fix_buttons  Fix button warnings by Mike Stonkey.
 echo      fix_menu  Fix menu warnings by Mike Stonkey.
 echo gen_cred_proc  Run generate encrypted Maven credentials process.
 echo       gen_ver  Generate new timestamp-based Mercury version #.
-echo          list  List of Mercury Helper batch files.
+echo          list  List of Common Composable Batch files.
 echo          mde1  Mercury Development Environment (MDE) validation.
 echo          mde2  MDE prerequisites - part 2.
 echo          mde3  MDE prerequisites - part 3.
