@@ -55,7 +55,11 @@ echo.
 
 echo Parm/Nickname  Target
 echo -------------  -----------------------------------------------------------
+echo           cbf  Composable Batch Files on GitHub
 echo           cnn  CNN
+echo            gh  GitHub
+echo           git  GitHub
+echo         gpcbf  Google Pages for Composable Batch Files on GitHub
 
 goto exitb
 
@@ -249,9 +253,26 @@ set fp=* Alex's pizza code.
 rem lu: Feb-1-2018
 
 echo %fp%
-echo.
           
 set cbf_url=https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git
+
+goto exitb
+
+
+
+:_
+
+:gh
+
+:git
+
+set fp=* GitHub.
+
+rem lu: Feb-2-2018
+
+echo %fp%
+          
+set cbf_url=https://github.com
 
 goto exitb
 
