@@ -285,7 +285,6 @@ goto exitb
 :pc
 
 set fp=* Gpodder podcaster.
-rem qq-1
 
 rem lu: Feb-2-2018
 
@@ -1900,22 +1899,6 @@ goto exitb
 
 :_
 
-:aa
-
-set fp=* Aa.
-
-rem lu: Jan-15-2018
-
-echo %fp%
-
-set cbf_path=%aa%
-
-goto exitb
-
-
-
-:_
-
 :hw
 
 set fp=* Hello World.
@@ -2084,7 +2067,6 @@ set fp=* Alex's pizza code.
 
 rem lu: Feb-2-2018
 
-rem qq-1
 echo %fp%
 
 set cbf_filename=d:\aa\NovaCodeCamp.PizzaRatings\pizza.sln
@@ -2188,6 +2170,24 @@ set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
 set cbf_path=%composable_batch_files%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+goto exitb
+
+
+
+:_
+
+:aa
+
+set fp=* Aa.
+
+rem lu: Jan-15-2018
+
+echo %fp%
+
+set cbf_path=c:\aa
+
+if %COMPUTERNAME%==XPS set cbf_path=d:\aa
 
 goto exitb
 
