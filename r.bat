@@ -129,7 +129,7 @@ set fp=* Use nondefault execution area.
 
 set fp=* Execution area. Code below here runs.
 
-rem (!rfcea, !rfsp) (mov4) **************************************
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

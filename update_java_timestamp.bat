@@ -23,7 +23,7 @@ set fp=* Router.
 rem echo %fp%
 rem echo.
 
-goto dog_park
+goto code_execution_area
 
 goto %configuration%
 
@@ -65,16 +65,17 @@ exit /b
 
 :_
 
-:dog_park
+:code_execution_area
 
-set fp=* dog_park - A place where dogs run. :)
+set fp=* Execution area. Code below here runs.
 
 rem echo.
 rem echo %fp%
 
-rem cls
+cls
+echo.
 
-rem QJQ (!ttdp, !dp, !referdp, !sp) (mov4) **************************************
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

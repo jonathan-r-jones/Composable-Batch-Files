@@ -22,24 +22,6 @@ echo.
 
 :_
 
-set fp=* Initialize CBF Envrionment variables.
-
-set CBF_Application=
-
-set CBF_Application_Installation_Path=
-
-set CBF_Filename=
-
-set CBF_Parameter=
-
-set CBF_Path=
-
-set CBF_URL=
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%1" == "" goto help
@@ -76,29 +58,44 @@ echo.
 echo Parm/Nickname  Target
 echo -------------  -----------------------------------------------------------
 echo             a  a.
+echo            ba  c:\mercury\batch_files
+echo            bu  c:\mercury\backups
 echo           cbf  Composable Batch Files.
+echo            cd  (Current Directory)
 echo           cnn  CNN.com
 echo           cwp  ContactsWidget for Phone
 echo           cwt  ContactsWidget for Tablet
+echo          depl  [wildfly_location]\standalone\deployments
 echo            fx  Firefox
 echo             g  %COMPOSABLE_BATCH_FILES%\g.bat
 echo            gh  GitHub.com
 echo           git  GitHub.com
 echo         gpcbf  Google Pages for Composable Batch Files on GitHub
+echo       heatmap  \standalone\tmp\vfs\temp\[dynamically generated]
+echo           hex  \standalone\tmp\vfs\temp\[dynamically generated]
+echo      hex_root  [wildfly_location]\standalone\tmp\vfs\temp
 echo            kr  Chrome
 echo           log  %wildfly_location%\standalone\log\server.log
 echo             m  %COMPOSABLE_BATCH_FILES%\m.bat
+echo            m2  %userprofile%\.m2
+echo            m6  c:\projects\netbeans\mercury6
+echo   nb [or] prj  c:\projects\netbeans
 echo       pom_ear  \projects\netbeans\mercury6\Mercury-ear\pom.xml
 echo       pom_ejb  \projects\netbeans\mercury6\Mercury-ejb\pom.xml
 echo      pom_root  \projects\netbeans\mercury6\pom.xml
 echo       pom_web  \projects\netbeans\mercury6\Mercury-web\pom.xml
 echo     port_3306  Used to close open port 3306.
+echo            pu  c:\netbeans\sencha\HTML5Application\public_html
 echo             s  %COMPOSABLE_BATCH_FILES%\s.bat
+echo            s6  c:\projects\netbeans\sencha
+echo            sr  [wildfly_location]
+echo          stan  [wildfly_location]\standalone\configuration
 echo          stan  Standalone.xml, WildFly config file.
 echo            sw  \classic\src\view\dashboard\SystemWidget.js
+echo          targ  \projects\netbeans\mercury6\Mercury-web\target
 echo            td  %COMPOSABLE_BATCH_FILES%\td.bat
 echo          temp  User's temp.
-
+echo            ti  \projects\netbeans\mercury6\mercury-tirem
 
 
 
@@ -149,7 +146,7 @@ exit
 
 ::_
 
-rem **************************** End Exit Functions.
+rem ******* End Exit Functions.
 
 
 
@@ -196,22 +193,6 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_application=c:\windows\system32\notepad.exe
-
-goto exitb
-
-
-
-:_
-
-:vs
-
-set fp=* Visual Studio.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
 
 goto exitb
 
@@ -309,26 +290,6 @@ rem lu: Feb-2-2018
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\gPodder\gpodder.exe
-
-goto exitb
-
-
-
-:_
-
-:log
-
-:slog
-
-set fp=* Server log.
-
-rem fcd: May-10-2017
-
-echo %fp%
-
-rem call m set_wildfly_location
-
-set cbf_filename=%wildfly_location%\standalone\log\server.log
 
 goto exitb
 
@@ -480,41 +441,6 @@ goto exitb
 
 :_
 
-:stan
-
-set fp=* Standalone.xml.
-
-rem fcd: Jul-7-2017
-
-echo %fp%
-
-set cbf_filename=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
-
-goto exitb
-
-
-
-:_
-
-:gencred_input
-
-set fp=* Credential generator input file. The format is: username:password.
-
-rem fcd: Jul-17-2017
-
-echo %fp%
-
-if not exist %tmp%\certutil_input.txt echo.
-if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FILES%\certutil_input.txt" "%tmp%"
-
-set cbf_filename=%tmp%\certutil_input.txt
-
-goto exitb
-
-
-
-:_
-
 :settings_xml
 
 set fp=* M2's settings.xml file.
@@ -579,24 +505,6 @@ rem FCD: Sep-25-2017
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
-
-goto exitb
-
-
-
-:_
-
-:mysql
-
-:port_3306
-
-set fp=* MySql configuration file in order to close open port at 3306.
-
-rem fud: Aug-4-2017
-
-echo %fp%
-
-set cbf_filename=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
 
 goto exitb
 
@@ -752,23 +660,6 @@ goto exitb
 
 :_
 
-:gencred_output
-
-set fp=* Credential generator output file. Copy this into you m2's settings.xml file.
-
-rem fcd: Jul-17-2017
-
-echo %fp%
-echo.
-
-set cbf_filename=%tmp%\certutil_output.txt
-
-goto exitb
-
-
-
-:_
-
 :m
 
 set fp=* M.bat.
@@ -865,22 +756,6 @@ goto exitb
 
 :_
 
-:tt
-
-set fp=* TT VS solution.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_filename=%dropbox%\it\ticktockmenu\TickTockMenu.sln
-
-goto exitb
-
-
-
-:_
-
 :start
 
 set fp=* Windows Startup.
@@ -889,7 +764,7 @@ rem fcd: May-9-2017
 
 echo %fp%
 
-set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
+set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
 
 goto exitb
 
@@ -906,6 +781,8 @@ rem fcd: May-9-2017
 echo %fp%
 
 call m set_wildfly_location
+
+set cbf_filename=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
 
 set cbf_path=%wildfly_location%\standalone\configuration
 
@@ -1078,24 +955,6 @@ goto exitb
 
 :_
 
-:hex_root
-
-set fp=* Hex root.
-
-rem FCD: Apr-5-2017
-
-echo %fp%
-
-call m set_wildfly_location
-
-set cbf_path=%wildfly_location%\standalone\tmp\vfs\temp
-
-goto exitb
-
-
-
-:_
-
 :hex
 
 :open_hex_folder
@@ -1125,6 +984,24 @@ set /p dynamic_server_location_part_2=<%temp%\environment_variable_temporary_sto
 set cbf_path=%dynamic_server_location_part_2%
 
 set wildfly_dynamic_folder=%wildfly_location%\standalone\tmp\vfs\temp\%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
+
+goto exitb
+
+
+
+:_
+
+:hex_root
+
+set fp=* Hex root.
+
+rem FCD: Apr-5-2017
+
+echo %fp%
+
+call m set_wildfly_location
+
+set cbf_path=%wildfly_location%\standalone\tmp\vfs\temp
 
 goto exitb
 
@@ -1176,13 +1053,15 @@ goto exitb
 
 :log
 
-set fp=* Log.
+set fp=* Wildfly server Log.
 
 rem fcd: May-22-2017
 
 echo %fp%
 
 call m set_wildfly_location
+
+set cbf_filename=%wildfly_location%\standalone\log\server.log
 
 set cbf_path=%wildfly_location%\standalone\log
 
@@ -1248,11 +1127,13 @@ goto exitb
 
 :mysql
 
-set fp=* MySql ProgramData.
+set fp=* MySql configuration file in order to close open port at 3306.
 
 rem fcd: Jun-26-2017
 
 echo %fp%
+
+set cbf_filename=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
 
 set cbf_path=C:\ProgramData\MySQL\MySQL Server 5.7
 
@@ -1792,49 +1673,6 @@ goto exitb
 
 
 
-:_+
-
-:help
-
-set fp=* Transform directory.
-
-rem fcd: May-13-2017
-
-echo %fp%
-
-echo.
-echo Usage: td [single parameter]
-
-
-
-::_
-
-:shared_list
-
-echo.
-echo     Parameter  Target
-echo -------------  --------------------------------------------------
-echo            ba  c:\mercury\batch_files
-echo            cd  (Current Directory)
-echo            bu  c:\mercury\backups
-echo          depl  [wildfly_location]\standalone\deployments
-echo       heatmap  \standalone\tmp\vfs\temp\[dynamically generated]
-echo           hex  \standalone\tmp\vfs\temp\[dynamically generated]
-echo      hex_root  [wildfly_location]\standalone\tmp\vfs\temp
-echo            m2  %userprofile%\.m2
-echo            m6  c:\projects\netbeans\mercury6
-echo   nb [or] prj  c:\projects\netbeans
-echo            pu  c:\netbeans\sencha\HTML5Application\public_html
-echo            s6  c:\projects\netbeans\sencha
-echo            sr  [wildfly_location]
-echo          stan  [wildfly_location]\standalone\configuration
-echo          targ  \projects\netbeans\mercury6\Mercury-web\target
-echo            ti  \projects\netbeans\mercury6\mercury-tirem
-
-goto exitb
-
-
-
 :_
 
 :psc
@@ -1853,22 +1691,6 @@ goto exitb
 
 :_
 
-:mecf
-
-set fp=* Multi-Edit Config Files Dated Backups.
-
-rem lu: Jan-3-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
-
-goto exitb
-
-
-
-:_
-
 :a
 
 set fp=* A folder.
@@ -1878,38 +1700,6 @@ rem lu: Dec-12-2017
 echo %fp%
 
 set cbf_path=c:\a
-
-goto exitb
-
-
-
-:_
-
-:daa
-
-set fp=* AA folder on d:.
-
-rem lu: Dec-12-2017
-
-echo %fp%
-
-set cbf_path=d:\aa
-
-goto exitb
-
-
-
-:_
-
-:tt
-
-set fp=* Tick Tock Menu Maker.
-
-rem lu: Jan-15-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\ticktockmenu
 
 goto exitb
 
@@ -1990,22 +1780,6 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_url=http://www.cnn.com
-
-goto exitb
-
-
-
-:_
-
-:gp
-
-set fp=* CBF GitHub pages.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
 
 goto exitb
 
@@ -2157,6 +1931,8 @@ goto exitb
 
 ::_
 
+:gp
+
 :gpcbf
 
 set fp=* CBF on GitHub Pages.
@@ -2224,6 +2000,80 @@ echo %fp%
 set cbf_path=c:\aa
 
 set cbf_application=C:\Program Files (x86)\gPodder\gpodder.exe
+
+goto exitb
+
+
+
+:_
+
+:vs
+
+set fp=* Visual Studio.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
+
+goto exitb
+
+
+
+:_
+
+:tt
+
+set fp=* TT VS solution.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\ticktockmenu\TickTockMenu.sln
+
+set cbf_path=%dropbox%\it\ticktockmenu
+
+goto exitb
+
+
+
+:_+ Gencred Files
+
+
+
+::_
+
+:gencred_input
+
+set fp=* Credential generator input file. The format is: username:password.
+
+rem fcd: Jul-17-2017
+
+echo %fp%
+
+if not exist %tmp%\certutil_input.txt echo.
+if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FILES%\certutil_input.txt" "%tmp%"
+
+set cbf_filename=%tmp%\certutil_input.txt
+
+goto exitb
+
+
+
+::_
+
+:gencred_output
+
+set fp=* Credential generator output file. Copy this into you m2's settings.xml file.
+
+rem fcd: Jul-17-2017
+
+echo %fp%
+echo.
+
+set cbf_filename=%tmp%\certutil_output.txt
 
 goto exitb
 

@@ -111,7 +111,7 @@ exit
 
 set fp=* Execution area. Code below here runs.
 
-rem (!rfcea, !rfsp) (mov4) **************************************
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

@@ -6,22 +6,8 @@
 
 :_
 
-rem Metadata
-
-rem File Purpose: This file is mainly used for testing. If you think about, what I've done 
-rem here is kind of created a REPL, right?
-
-rem Batch File Style: Code Execution Area.
-
-rem Test Batch File Code Keepers
-
-
-
-:_
-
 set fp=* Set title.
 
-echo.
 echo.
 echo %fp%
 
@@ -36,60 +22,76 @@ set fp=* Set color.
 echo.
 echo %fp%
 
-color 0e
 color 9f
+color 0e
 
 
 
 :_
 
-set fp=* Route execution.
+set fp=* Route callers.
 
-echo.
-echo %fp%
-echo.
+if "%1" == "/?" goto help
 
-if "%1"=="/?" goto help
+if "%1" == "help" goto help
+
 goto code_execution_area
 
 
 
-:_
+:_ (!rfsp)
 
-rem Begin exit locker.
- ___  ______  ______  ______  ______  ______  ______  ______  ______  ___
-  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
- (______)(______)(______)(______)(______)(______)(______)(______)(______)
+:help
+
+set fp=* This file is mainly used for testing. If you think about, what I've done here is kind of created a REPL, right?
+
+echo.
+echo File Purpose (fp): %fp%
+
+echo.
+echo Filename stands for: Testing.
+
+echo.
+echo Last Updated (lu): Feb-5-2018
+
+echo.
+echo Usage: %0
+
+rem Batch File Style: Code Execution Area.
+
+rem Test Batch File Code Keepers
+
+goto exitb
 
 
 
-:_
+:_+ Exit Functions
+
+
+
+::_
 
 :exit
 
 set fp= * Exit.
 
-echo.
 rem echo %fp%
 
 exit
 
 
 
-:_
+::_
 
 :exitb
 
 set fp= * Exit batch file but not command window.
 
-rem echo.
-rem echo %fp%
-
 exit /b
 
 
 
-:_
+::_
 
 :exitp
 
@@ -104,27 +106,9 @@ exit
 
 
 
-:_
+::_
 
-:exitpb
-
-set fp= * Pause then exit batch file but not command window.
-
-rem echo.
-rem echo %fp%
-
-pause
-
-exit /b
-
-
-
-:_
-
-rem End exit locker.
- ___  ______  ______  ______  ______  ______  ______  ______  ______  ___
-  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
- (______)(______)(______)(______)(______)(______)(______)(______)(______)
+rem ******* End Exit Functions.
 
 
 
@@ -204,7 +188,7 @@ cd
 
 
 
-:_ Copy Code Blocks to Save Below Here ***************************************************
+:_ Copy Code Blocks to Save Below Here ********
 
 goto exit
 
@@ -6466,7 +6450,6 @@ set cbf_parameter=""
 
 call r
 
-rem qq-1
 goto exitb
 
 
@@ -6483,7 +6466,7 @@ rem echo %fp%
 cls
 echo.
 
-rem (!rfcea, !rfsp) (mov4) **************************************
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
@@ -6507,7 +6490,6 @@ pause
 
 call cd /d %original_folder%
 
-rem qq-1
 goto exitb
 
 
