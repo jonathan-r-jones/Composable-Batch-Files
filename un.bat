@@ -31,7 +31,7 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
-call nn %1
+call n %1
 
 goto exitb
 

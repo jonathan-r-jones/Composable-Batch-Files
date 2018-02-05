@@ -2079,4 +2079,20 @@ goto exitb
 
 
 
+:_
+
+:c
+
+set fp=* Root of C Drive.
+
+rem lu: Feb-5-2018
+
+echo %fp%
+
+set cbf_path=c:\
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)

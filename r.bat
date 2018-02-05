@@ -8,8 +8,8 @@
 
 set fp=* Run application . . .
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 
 
