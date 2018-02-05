@@ -22,6 +22,24 @@ echo.
 
 :_
 
+set fp=* Initialize CBF Envrionment variables.
+
+set CBF_Application=
+
+set CBF_Application_Installation_Path=
+
+set CBF_Filename=
+
+set CBF_Parameter=
+
+set CBF_Path=
+
+set CBF_URL=
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%1" == "" goto help
@@ -2188,6 +2206,24 @@ echo %fp%
 set cbf_path=c:\aa
 
 if %COMPUTERNAME%==XPS set cbf_path=d:\aa
+
+goto exitb
+
+
+
+:_
+
+:pc
+
+set fp=* Gpodder podcaster.
+
+rem lu: Jan-15-2018
+
+echo %fp%
+
+set cbf_path=c:\aa
+
+set cbf_application=C:\Program Files (x86)\gPodder\gpodder.exe
 
 goto exitb
 

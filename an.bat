@@ -102,7 +102,7 @@ exit
 
 ::_
 
-rem **************************** End Exit Functions.
+rem ******* End Exit Functions.
 
 
 
