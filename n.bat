@@ -6,23 +6,23 @@
 
 :_
 
-set fp=* Look up nickname.
+set fp=Look up nickname.
 
-echo %fp%
-
-
-
-:_
-
-set fp=* Add some whitespace.
-
-echo.
+rem echo %fp%
 
 
 
 :_
 
-set fp=* Route callers.
+set fp=Add some whitespace.
+
+rem echo.
+
+
+
+:_
+
+set fp=Route callers.
 
 if "%1" == "" goto help
 
@@ -154,7 +154,7 @@ rem ******* End Exit Functions.
 
 :me
 
-set fp=* Multi-Edit.
+set fp=Multi-Edit.
 
 rem lu: Jan-24-2018
 
@@ -170,7 +170,7 @@ goto exitb
 
 :sm
 
-set fp=* Sublime.
+set fp=Sublime.
 
 rem lu: Jan-24-2018
 
@@ -186,7 +186,7 @@ goto exitb
 
 :no
 
-set fp=* Notepad.
+set fp=Notepad.
 
 rem lu: Jan-24-2018
 
@@ -202,7 +202,7 @@ goto exitb
 
 :npp
 
-set fp=* Notepad++.
+set fp=Notepad++.
 
 rem lu: Feb-1-2018
 
@@ -227,7 +227,7 @@ goto exitb
 
 :dc
 
-set fp=* Simulate a double click in CBF.
+set fp=Simulate a double click in CBF.
 
 rem lu: Feb-1-2018
 
@@ -251,7 +251,7 @@ goto exitb
 
 :kr
 
-set fp=* Chrome.
+set fp=Chrome.
 
 rem lu: Jan-24-2018
 
@@ -267,7 +267,7 @@ goto exitb
 
 :fx
 
-set fp=* Firefox.
+set fp=Firefox.
 
 rem lu: Jan-24-2018
 
@@ -283,7 +283,7 @@ goto exitb
 
 :pc
 
-set fp=* Gpodder podcaster.
+set fp=Gpodder podcaster.
 
 rem lu: Feb-2-2018
 
@@ -303,7 +303,7 @@ goto exitb
 
 :system_widget
 
-set fp=* SystemWidget.js.
+set fp=SystemWidget.js.
 
 rem FCD: Apr-7-2017
 
@@ -319,7 +319,7 @@ goto exitb
 
 :pom_root
 
-set fp=* Pom root.
+set fp=Pom root.
 
 rem FCD: Apr-10-2017
 
@@ -335,7 +335,7 @@ goto exitb
 
 :pom_ear
 
-set fp=* Pom Ear.
+set fp=Pom Ear.
 
 rem FCD: Apr-10-2017
 
@@ -351,7 +351,7 @@ goto exitb
 
 :pom_ejb
 
-set fp=* Pom Ejb.
+set fp=Pom Ejb.
 
 rem FCD: Apr-10-2017
 
@@ -367,7 +367,7 @@ goto exitb
 
 :pom_web
 
-set fp=* Pom Web.
+set fp=Pom Web.
 
 rem FCD: Apr-10-2017
 
@@ -383,7 +383,7 @@ goto exitb
 
 :td
 
-set fp=* td.bat.
+set fp=td.bat.
 
 rem FCD: May-13-2017
 
@@ -401,7 +401,7 @@ goto exitb
 
 :update_tags
 
-set fp=* Update tag files.
+set fp=Update tag files.
 
 rem Tag 6.2017.5.6.1200 for successful production deployment
 
@@ -427,7 +427,7 @@ goto exitb
 
 :g
 
-set fp=* G.bat.
+set fp=G.bat.
 
 rem FCD: Jun-1-2017
 
@@ -443,7 +443,7 @@ goto exitb
 
 :settings_xml
 
-set fp=* M2's settings.xml file.
+set fp=M2's settings.xml file.
 
 rem lu: Nov-21-2017
 
@@ -460,7 +460,7 @@ goto exitb
 
 :s
 
-set fp=* S.bat.
+set fp=S.bat.
 
 rem FCD: Jul-27-2017
 
@@ -480,7 +480,7 @@ goto exitb
 
 :edit_contacts_widget
 
-set fp=* ContactsWidget.js.
+set fp=ContactsWidget.js.
 
 rem FCD: Apr-7-2017
 
@@ -498,7 +498,7 @@ goto exitb
 
 :contacts_widget_for_tablet
 
-set fp=* ContactsWidget.js for tablet.
+set fp=ContactsWidget.js for tablet.
 
 rem FCD: Sep-25-2017
 
@@ -520,7 +520,7 @@ goto exitb
 
 :edit_mobile_blocker_1
 
-set fp=* Mobile blocker 1.
+set fp=Mobile blocker 1.
 
 rem FCD: Sep-25-2017
 
@@ -543,7 +543,7 @@ goto exitb
 
 :edit_mobile_blocker_2
 
-set fp=* Mobile blocker 2.
+set fp=Mobile blocker 2.
 
 rem FCD: Sep-25-2017
 
@@ -564,7 +564,7 @@ goto exitb
 
 :msg
 
-set fp=* Message from batch files.
+set fp=Message from batch files.
 
 rem lu: Nov-17-2017
 
@@ -580,7 +580,7 @@ goto exitb
 
 :mde
 
-set fp=* Mercury devevelopment environment.
+set fp=Mercury devevelopment environment.
 
 rem lu: Nov-17-2017
 
@@ -596,7 +596,7 @@ goto exitb
 
 :mac
 
-set fp=* Mobile log.
+set fp=Mobile log.
 
 rem lu: Dec-4-2017
 
@@ -612,7 +612,7 @@ goto exitb
 
 :aj
 
-set fp=* App.json.
+set fp=App.json.
 
 rem lu: Dec-4-2017
 
@@ -628,7 +628,7 @@ goto exitb
 
 :nc
 
-set fp=* Netconfig.
+set fp=Netconfig.
 
 rem lu: Dec-6-2017
 
@@ -646,7 +646,7 @@ goto exitb
 
 :contacts_widget_for_phone
 
-set fp=* ContactsWidget.js for phone.
+set fp=ContactsWidget.js for phone.
 
 rem FCD: Sep-25-2017
 
@@ -662,7 +662,7 @@ goto exitb
 
 :m
 
-set fp=* M.bat.
+set fp=M.bat.
 
 rem FCD: Apr-10-2017
 
@@ -678,7 +678,7 @@ goto exitb
 
 :re
 
-set fp=* Readme.md.
+set fp=Readme.md.
 
 rem lu: Jan-23-2018
 
@@ -694,7 +694,7 @@ goto exitb
 
 :fn
 
-set fp=* Filename nicknames.
+set fp=Filename nicknames.
 
 rem lu: Jan-24-2018
 
@@ -710,7 +710,7 @@ goto exitb
 
 :batt
 
-set fp=* Battery solution.
+set fp=Battery solution.
 
 rem lu: Jan-31-2018
 
@@ -726,7 +726,7 @@ goto exitb
 
 :j1
 
-set fp=* J1.txt.
+set fp=J1.txt.
 
 rem lu: Feb-1-2018
 
@@ -742,7 +742,7 @@ goto exitb
 
 :j2
 
-set fp=* J1.txt.
+set fp=J1.txt.
 
 rem lu: Feb-1-2018
 
@@ -758,7 +758,7 @@ goto exitb
 
 :start
 
-set fp=* Windows Startup.
+set fp=Windows Startup.
 
 rem fcd: May-9-2017
 
@@ -774,7 +774,7 @@ goto exitb
 
 :stan
 
-set fp=* Open folder standalone.
+set fp=Open folder standalone.
 
 rem fcd: May-9-2017
 
@@ -794,7 +794,7 @@ goto exitb
 
 :sr
 
-set fp=* Open folder server.
+set fp=Open folder server.
 
 rem FCD: Apr-5-2017
 
@@ -812,7 +812,7 @@ goto exitb
 
 :ti
 
-set fp=* Tirem.
+set fp=Tirem.
 
 rem FCD: Mar-6-2017
 
@@ -828,7 +828,7 @@ goto exitb
 
 :m6
 
-set fp=* Mercury 6.
+set fp=Mercury 6.
 
 rem FCD: Mar-15-2017
 
@@ -844,7 +844,7 @@ goto exitb
 
 :depl
 
-set fp=* Deployment.
+set fp=Deployment.
 
 rem FCD: Apr-5-2017
 
@@ -862,7 +862,7 @@ goto exitb
 
 :targ
 
-set fp=* Target. (WAR file creation location)
+set fp=Target. (WAR file creation location)
 
 rem FCD: Apr-7-2017
 
@@ -878,7 +878,7 @@ goto exitb
 
 :pu
 
-set fp=* Public.
+set fp=Public.
 
 rem FCD: Apr-14-2017
 
@@ -896,7 +896,7 @@ goto exitb
 
 :bu
 
-set fp=* Mercury backups.
+set fp=Mercury backups.
 
 rem fcd: May-12-2017
 
@@ -916,7 +916,7 @@ goto exitb
 
 :sencha
 
-set fp=* Sencha.
+set fp=Sencha.
 
 rem FCD: Mar-22-2017
 
@@ -940,7 +940,7 @@ goto exitb
 
 :x
 
-set fp=* Current directory.
+set fp=Current directory.
 
 rem fcd: May-9-2017
 
@@ -961,7 +961,7 @@ goto exitb
 
 :set_wildfly_dynamic_folder
 
-set fp=* Set WildFly dynamic temporary folder location.
+set fp=Set WildFly dynamic temporary folder location.
 
 rem Function Creation Date: Feb-9-2017
 
@@ -993,7 +993,7 @@ goto exitb
 
 :hex_root
 
-set fp=* Hex root.
+set fp=Hex root.
 
 rem FCD: Apr-5-2017
 
@@ -1011,7 +1011,7 @@ goto exitb
 
 :heatmap
 
-set fp=* Heatmap. Where TIREM puts its image files.
+set fp=Heatmap. Where TIREM puts its image files.
 
 rem skw: Heatmap image generation location.
 
@@ -1037,7 +1037,7 @@ goto exitb
 
 :projects
 
-set fp=* Mercury projects.
+set fp=Mercury projects.
 
 rem fcd: May-12-2017
 
@@ -1053,7 +1053,7 @@ goto exitb
 
 :log
 
-set fp=* Wildfly server Log.
+set fp=Wildfly server Log.
 
 rem fcd: May-22-2017
 
@@ -1077,7 +1077,7 @@ goto exitb
 
 :docs
 
-set fp=* Documentation.
+set fp=Documentation.
 
 rem fcd: May-25-2017
 
@@ -1093,7 +1093,7 @@ goto exitb
 
 :wildr
 
-set fp=* WildFly resources folder.
+set fp=WildFly resources folder.
 
 rem fcd: Jun-2-2017
 
@@ -1111,7 +1111,7 @@ goto exitb
 
 :mac
 
-set fp=* MacOS dropbox folder.
+set fp=MacOS dropbox folder.
 
 rem fcd: Jun-22-2017
 
@@ -1127,7 +1127,7 @@ goto exitb
 
 :mysql
 
-set fp=* MySql configuration file in order to close open port at 3306.
+set fp=MySql configuration file in order to close open port at 3306.
 
 rem fcd: Jun-26-2017
 
@@ -1145,7 +1145,7 @@ goto exitb
 
 :ldap
 
-set fp=* Ldap.
+set fp=Ldap.
 
 rem fcd: Jul-5-2017
 
@@ -1161,7 +1161,7 @@ goto exitb
 
 :jh
 
-set fp=* Java Home.
+set fp=Java Home.
 
 rem fcd: Jul-6-2017
 
@@ -1180,7 +1180,7 @@ goto exitb
 
 :mh
 
-set fp=* Maven Home.
+set fp=Maven Home.
 
 rem fcd: Jul-7-2017
 
@@ -1199,7 +1199,7 @@ goto exitb
 
 :ojh
 
-set fp=* Opends Java Home.
+set fp=Opends Java Home.
 
 rem fcd: Jul-6-2017
 
@@ -1218,7 +1218,7 @@ goto exitb
 
 :usr
 
-set fp=* User profile.
+set fp=User profile.
 
 rem fcd: Jul-7-2017
 
@@ -1234,7 +1234,7 @@ goto exitb
 
 :ext
 
-set fp=* Ext.
+set fp=Ext.
 
 rem fcd: Jul-7-2017
 
@@ -1252,7 +1252,7 @@ goto exitb
 
 :merc
 
-set fp=* Mercury.
+set fp=Mercury.
 
 rem fcd: Jul-7-2017
 
@@ -1268,7 +1268,7 @@ goto exitb
 
 :m2
 
-set fp=* M2.
+set fp=M2.
 
 rem fcd: Jul-7-2017
 
@@ -1284,7 +1284,7 @@ goto exitb
 
 :m2h
 
-set fp=* M2 Home.
+set fp=M2 Home.
 
 rem fcd: Jul-7-2017
 
@@ -1300,7 +1300,7 @@ goto exitb
 
 :stdr
 
-set fp=* Sencha class folder on Dropbox.
+set fp=Sencha class folder on Dropbox.
 
 rem fud: Aug-4-2017
 
@@ -1316,7 +1316,7 @@ goto exitb
 
 :st
 
-set fp=* Sencha class folder.
+set fp=Sencha class folder.
 
 rem fud: Aug-4-2017
 
@@ -1332,7 +1332,7 @@ goto exitb
 
 :war
 
-set fp=* In the future please use "targ" instead of "war" for this folder.
+set fp=In the future please use "targ" instead of "war" for this folder.
 
 rem fud: Aug-7-2017
 
@@ -1348,7 +1348,7 @@ goto exitb
 
 :labs
 
-set fp=* Sencha training labs.
+set fp=Sencha training labs.
 
 rem fud: Aug-8-2017
 
@@ -1364,7 +1364,7 @@ goto exitb
 
 :sdk
 
-set fp=* Android SDK.
+set fp=Android SDK.
 
 rem fud: Aug-8-2017
 
@@ -1380,7 +1380,7 @@ goto exitb
 
 :y
 
-set fp=* Yelp Extplorer.
+set fp=Yelp Extplorer.
 
 rem fud: Aug-15-2017
 
@@ -1398,7 +1398,7 @@ goto exitb
 
 :pudr
 
-set fp=* Public @ Dropbox.
+set fp=Public @ Dropbox.
 
 rem fud: Aug-15-2017
 
@@ -1416,7 +1416,7 @@ goto exitb
 
 :drs6
 
-set fp=* S6 @ Dropbox.
+set fp=S6 @ Dropbox.
 
 rem fud: Aug-15-2017
 
@@ -1437,7 +1437,7 @@ goto exitb
 
 :utilr
 
-set fp=* Utils relative path.
+set fp=Utils relative path.
 
 rem fud: Aug-17-2017
 
@@ -1453,7 +1453,7 @@ goto exitb
 
 :fgt
 
-set fp=* ForGitTesting.
+set fp=ForGitTesting.
 
 rem lu: Sep-6-2017
 
@@ -1469,7 +1469,7 @@ goto exitb
 
 :cutils
 
-set fp=* Classic utils.
+set fp=Classic utils.
 
 rem lu: Sep-6-2017
 
@@ -1486,7 +1486,7 @@ goto exitb
 
 :mutils
 
-set fp=* Modern utils.
+set fp=Modern utils.
 
 rem fud: Aug-17-2017
 
@@ -1507,7 +1507,7 @@ goto exitb
 
 :agi
 
-set fp=* AGI Licenses.
+set fp=AGI Licenses.
 
 rem lu: Nov-9-2017
 
@@ -1523,7 +1523,7 @@ goto exitb
 
 :agi_ejb
 
-set fp=* AGI License file on development machine.
+set fp=AGI License file on development machine.
 
 rem lu: Sep-26-2017
 
@@ -1539,7 +1539,7 @@ goto exitb
 
 :agis
 
-set fp=* AGI License file on the server.
+set fp=AGI License file on the server.
 
 rem lu: Sep-26-2017
 
@@ -1555,7 +1555,7 @@ goto exitb
 
 :mob
 
-set fp=* Mobility.
+set fp=Mobility.
 
 rem lu: Oct-23-2017
 
@@ -1573,7 +1573,7 @@ goto exitb
 
 :lwf
 
-set fp=* Latest WAR File.
+set fp=Latest WAR File.
 
 rem lu: Oct-24-2017
 
@@ -1589,7 +1589,7 @@ goto exitb
 
 :ql
 
-set fp=* Quickla.
+set fp=Quickla.
 
 rem lu: Oct-30-2017
 
@@ -1605,7 +1605,7 @@ goto exitb
 
 :wir1
 
-set fp=* Wildfly Image Resource 1.
+set fp=Wildfly Image Resource 1.
 
 rem lu: Nov-1-2017
 
@@ -1623,7 +1623,7 @@ goto exitb
 
 :wir2
 
-set fp=* Wildfly Image Resource 2 - classic.
+set fp=Wildfly Image Resource 2 - classic.
 
 rem lu: Nov-1-2017
 
@@ -1641,7 +1641,7 @@ goto exitb
 
 :wir3
 
-set fp=* Wildfly Image Resource 3 - modern.
+set fp=Wildfly Image Resource 3 - modern.
 
 rem lu: Nov-1-2017
 
@@ -1659,7 +1659,7 @@ goto exitb
 
 :netcon_sr
 
-set fp=* Netconfig on server.
+set fp=Netconfig on server.
 
 rem lu: Nov-14-2017
 
@@ -1677,7 +1677,7 @@ goto exitb
 
 :psc
 
-set fp=* Paul Sheriff Course.
+set fp=Paul Sheriff Course.
 
 rem lu: Dec-18-2017
 
@@ -1693,7 +1693,7 @@ goto exitb
 
 :a
 
-set fp=* A folder.
+set fp=A folder.
 
 rem lu: Dec-12-2017
 
@@ -1709,7 +1709,7 @@ goto exitb
 
 :hw
 
-set fp=* Hello World.
+set fp=Hello World.
 
 rem lu: Jan-16-2018
 
@@ -1725,7 +1725,7 @@ goto exitb
 
 :it
 
-set fp=* IT.
+set fp=IT.
 
 rem lu: Jan-18-2018
 
@@ -1741,7 +1741,7 @@ goto exitb
 
 :temp
 
-set fp=* Temp.
+set fp=Temp.
 
 rem lu: Jan-23-2018
 
@@ -1757,7 +1757,7 @@ goto exitb
 
 :dr
 
-set fp=* Composable batch files.
+set fp=Composable batch files.
 
 rem lu: Feb-2-2018
 
@@ -1773,7 +1773,7 @@ goto exitb
 
 :cnn
 
-set fp=* Cnn.
+set fp=Cnn.
 
 rem lu: Jan-24-2018
 
@@ -1789,7 +1789,7 @@ goto exitb
 
 :xplug
 
-set fp=* Xamarin Plugins.
+set fp=Xamarin Plugins.
 
 rem lu: Jan-31-2018
 
@@ -1805,7 +1805,7 @@ goto exitb
 
 :jmplug
 
-set fp=* James Montemagno Xamarin Plugins.
+set fp=James Montemagno Xamarin Plugins.
 
 rem lu: Jan-31-2018
 
@@ -1821,7 +1821,7 @@ goto exitb
 
 :batt
 
-set fp=* James Montemagno Battery Plugin.
+set fp=James Montemagno Battery Plugin.
 
 rem lu: Jan-31-2018
 
@@ -1839,7 +1839,7 @@ goto exitb
 
 :git
 
-set fp=* GitHub.
+set fp=GitHub.
 
 rem lu: Feb-2-2018
 
@@ -1855,7 +1855,7 @@ goto exitb
 
 :pizza
 
-set fp=* Alex's pizza code.
+set fp=Alex's pizza code.
 
 rem lu: Feb-2-2018
 
@@ -1879,7 +1879,7 @@ goto exitb
 
 :ig
 
-set fp=* Git Ignore in the current folder.
+set fp=Git Ignore in the current folder.
 
 rem lu: Jan-19-2018
 
@@ -1895,7 +1895,7 @@ goto exitb
 
 :vs_ig
 
-set fp=* Git Ignore Visual Studio Sample File.
+set fp=Git Ignore Visual Studio Sample File.
 
 rem lu: Jan-19-2018
 
@@ -1913,7 +1913,7 @@ goto exitb
 
 :ig_sample_old
 
-set fp=* Git Ignore Sample File.
+set fp=Git Ignore Sample File.
 
 rem lu: Jan-19-2018
 
@@ -1935,7 +1935,7 @@ goto exitb
 
 :gpcbf
 
-set fp=* CBF on GitHub Pages.
+set fp=CBF on GitHub Pages.
 
 rem lu: Jan-31-2018
 
@@ -1953,7 +1953,7 @@ goto exitb
 
 :cbf
 
-set fp=* CBF on GitHub.
+set fp=CBF on GitHub.
 
 rem lu: Jan-24-2018
 
@@ -1973,7 +1973,7 @@ goto exitb
 
 :aa
 
-set fp=* Aa.
+set fp=Aa.
 
 rem lu: Jan-15-2018
 
@@ -1991,7 +1991,7 @@ goto exitb
 
 :pc
 
-set fp=* Gpodder podcaster.
+set fp=Gpodder podcaster.
 
 rem lu: Jan-15-2018
 
@@ -2009,7 +2009,7 @@ goto exitb
 
 :vs
 
-set fp=* Visual Studio.
+set fp=Visual Studio.
 
 rem lu: Jan-31-2018
 
@@ -2025,7 +2025,7 @@ goto exitb
 
 :tt
 
-set fp=* TT VS solution.
+set fp=TT VS solution.
 
 rem lu: Jan-31-2018
 
@@ -2047,7 +2047,7 @@ goto exitb
 
 :gencred_input
 
-set fp=* Credential generator input file. The format is: username:password.
+set fp=Credential generator input file. The format is: username:password.
 
 rem fcd: Jul-17-2017
 
@@ -2066,7 +2066,7 @@ goto exitb
 
 :gencred_output
 
-set fp=* Credential generator output file. Copy this into you m2's settings.xml file.
+set fp=Credential generator output file. Copy this into you m2's settings.xml file.
 
 rem fcd: Jul-17-2017
 
@@ -2083,13 +2083,29 @@ goto exitb
 
 :c
 
-set fp=* Root of C Drive.
+set fp=Root of the C Drive.
 
 rem lu: Feb-5-2018
 
 echo %fp%
 
 set cbf_path=c:\
+
+goto exitb
+
+
+
+:_
+
+:d
+
+set fp=Root of the D Drive.
+
+rem lu: Feb-5-2018
+
+echo %fp%
+
+set cbf_path=d:\
 
 goto exitb
 
