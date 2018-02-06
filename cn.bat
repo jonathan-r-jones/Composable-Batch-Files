@@ -50,7 +50,7 @@ echo.
 echo Parameter 1: URL nickname of the repository location.
 
 echo.
-echo Parameter 2 (Optional): Path nickname. If if left blank, the repository will be installed into a subfolder of the current folder.
+echo Parameter 2 (Optional): Path nickname. If left blank, the repository will be installed into a subfolder of the current folder.
 
 echo.
 echo     Parameter  Description
@@ -753,6 +753,7 @@ set fp=* Clone repository
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp% from %cbf_url%.
 
 echo.
