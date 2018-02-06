@@ -6,10 +6,18 @@
 
 :_
 
-set fp=* Execute application.
+set filep=* Application-centric way of running an application with an optional filename parameter.
 
 echo.
-echo %fp%
+echo %filep%
+
+
+
+:_
+
+set fp=* Add some whitespace.
+
+echo.
 
 
 
@@ -46,23 +54,21 @@ goto exitb
 
 
 
-:_
+:_ (!rfsp)
+
+:h
 
 :help
 
 set fp=* Application-centric way of running an application with an optional filename parameter.
 
-echo.
-echo File Purpose (fp): %fp%
-
-echo.
 echo Filename stands for: Execute application.
 
 echo.
-echo Last Updated (lu): Feb-1-2018
+echo Last Updated: Feb-6-2018
 
 echo.
-echo Usage: %0 [Parameter 1]
+echo Usage: %0 [Parameter 1] [Parameter 1]
 
 echo.
 echo Parameter 1: Application nickname.
@@ -121,4 +127,4 @@ rem ******* End Exit Functions.
 
 
 
-:_ (!rfsp) (mov-9)
+:_

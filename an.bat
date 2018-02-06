@@ -6,10 +6,10 @@
 
 :_
 
-set fp=* Look up application.
+set filep=* Application nickname dictionary that sets the full application name corresponding to a given unique nickname parameter.
 
-echo.
-echo %fp%
+rem echo.
+rem echo %filep%
 
 
 
@@ -43,19 +43,16 @@ goto exitb
 
 :help
 
-set fp=Application nickname dictionary that sets the full application name corresponding to a given unique nickname parameter.
+echo %filep%
 
-echo File purpose (fp): %fp%
 echo.
-
 echo The filename stands for: Filename Nicknames.
-echo.
 
-echo Last Updated (lu): Jan-24-2018
 echo.
+echo Last Updated: Jan-24-2018
 
+echo.
 echo Usage: %0 [single parameter]
-echo.
 
 goto exitb
 

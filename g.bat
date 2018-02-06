@@ -1,6 +1,15 @@
-:_ (!bfg)
+:_
 
 @echo off
+
+
+
+:_
+
+set filep=* Perform Git-related tasks.
+
+echo.
+echo %filep%
 
 
 
@@ -34,11 +43,10 @@ goto %1
 
 :help
 
-set fp=* Perform Git-related tasks.
+echo Filename stands for: Git-related tasks.
 
-rem fcd: May-15-2017
-
-echo %fp%
+echo.
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: g [Parameter 1] [Parameter 2]

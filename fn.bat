@@ -6,10 +6,10 @@
 
 :_
 
-set fp=* Look up filename.
+set filep=* Filename nickname dictionary that sets the full filename name corresponding to a given unique nickname parameter.
 
-echo.
-echo %fp%                         
+rem echo.
+rem echo %filep%                         
 
 
 
@@ -39,21 +39,20 @@ goto exitb
 
 :_
 
+:h
+
 :help
 
-set fp=Filename nickname dictionary that sets the full filename name corresponding to a given unique nickname parameter.
+echo %filep%                         
 
-echo File purpose (fp): %fp%
 echo.
+echo The filename stands for: Filename Nicknames.
 
-echo The filename stands for: Filename nicknames.
 echo.
+echo Last Updated: Jan-24-2018
 
-echo Last Updated (lu): Jan-24-2018
 echo.
-
 echo Usage: %0 [single parameter]
-echo.
 
 goto exitb
 

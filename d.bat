@@ -6,10 +6,10 @@
 
 :_
 
-set fp=* Directory listing.
+set filep=* Directory listing: an easier to type version.
 
 echo.
-echo %fp%
+echo %filep%
 
 
 
@@ -37,17 +37,16 @@ goto %1
 
 :_
 
+:h
+
 :help
 
 set fp=* Dir: an easier to type version.
 
-echo File Purpose (fp): %fp%
+echo Filename stands for: Dir.
 
 echo.
-echo Filename stands for: dir
-
-echo.
-echo Last Updated (lu): Feb-1-2018
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -56,7 +55,7 @@ echo.
 echo Parameter 1 (Optional): Sorting style.
 
 echo.
-echo Parameter 2 (Optional): File type.
+echo Parameter 2 (Optional): File type, e.g "txt".
 
 echo.          
 echo     Parameter  Description

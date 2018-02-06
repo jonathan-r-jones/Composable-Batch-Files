@@ -6,10 +6,9 @@
 
 :_
 
-set fp=* Edit file.
+set filep=* A filename-centric way of editing a file.
 
-echo.
-echo %fp%
+echo %filep%
 
 
 
@@ -52,18 +51,15 @@ goto exitb
 
 :_
 
+:h
+
 :help
 
-set fp=* A filename-centric way of editing a file.
+echo.
+echo Filename stands for: Edit File.
 
 echo.
-echo File Purpose (fp): %fp%
-
-echo.
-echo Filename stands for: EDit file.
-
-echo.
-echo Last Updated (lu): Feb-1-2018
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
