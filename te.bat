@@ -54,7 +54,13 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: 
+echo Usage: %0 [space separated parameter(s)]
+
+echo.
+echo Parameter 1 (Optional):
+
+echo.
+echo Parameter 2 (Optional):
 
 goto exitb
 

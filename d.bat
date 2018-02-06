@@ -49,7 +49,7 @@ echo.
 echo Last Updated: Feb-6-2018
 
 echo.
-echo Usage: %0 [Parameter 1]
+echo Usage: %0 [space separated parameter(s)]
 
 echo.
 echo Parameter 1 (Optional): Sorting style.
@@ -64,7 +64,6 @@ echo             d  Date, newest first.
 echo            d2  Date, smallest first.
 echo             s  Size, biggest first.
 echo            s2  Size, smallest first.
-echo             t  File type.
 
 goto exitb
 
@@ -136,25 +135,6 @@ goto exitb
 
 :_
 
-:t
-
-:file_type
-
-set fp=* File type.
-
-rem lu: Feb-1-2018
-
-echo %fp%
-echo.
-
-dir *.%2
-
-goto exitb
-
-
-
-:_
-
 :s
 
 set fp=* Size, biggest first.
@@ -164,7 +144,7 @@ rem lu: Feb-1-2018
 echo %fp%
 echo.
 
-dir /o-s
+dir /o-s %2
 
 goto exitb
 
@@ -181,7 +161,7 @@ rem lu: Feb-1-2018
 echo %fp%
 echo.
 
-dir /os
+dir /os %2
 
 goto exitb
 
@@ -198,7 +178,7 @@ rem lu: Feb-1-2018
 echo %fp%
 echo.
 
-dir /o-d
+dir /o-d %2
 
 goto exitb
 
@@ -215,11 +195,11 @@ rem lu: Feb-1-2018
 echo %fp%
 echo.
 
-dir /od
+dir /od %2
 
 goto exitb
 
 
 
-:_ (!rfsp) (mov-9)
+:_ (!rfsp) (mov-6)
  
