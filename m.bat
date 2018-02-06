@@ -35,49 +35,97 @@ goto %1
 
 :_
 
-rem Metadata
+:h
 
-rem File Purpose: This batch file is intended to be used for miscellaneous related tasks.
+:help
 
-rem Batch File Style: Parameter-Routing Driven
+set fp=* Perform miscellaneous tasks.
 
-rem To run a command, use a single command line parameter corresponding to its batch file 
-rem label, e.g. m run_sencha_app_build_testing would run the code block at that label.
+rem fcd: Feb-6-2018
+
+echo %fp%
+
+echo.
+echo Usage: m [single parameter]
 
 rem Usage Note: Do not make internal calls to a composite function because that could cause a 
 rem circular reference.
 
 rem Having a written version of your work allows you to learn and improve over time.
 
+echo.
+echo     Parameter  Description
+echo ---------------------------------------------------------------
+echo  build_applet  Build the applet.
+echo     build_ejb  Build EJB WAR file.
+echo       compile  Run sencha app build testing.
+echo      compilep  Run sencha app build production.
+echo      copy_ext  Copy ext folder contents to the right place.
+echo       del_hex  Delete WildFly Dynamic Folder.
+echo          depl  Deploy a new WAR file.
+echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
+echo            f5  Compile and refresh Ext JS code in existing hex.
+echo   fix_buttons  Fix button warnings by Mike Stonkey.
+echo      fix_menu  Fix menu warnings by Mike Stonkey.
+echo gen_cred_proc  Run generate encrypted Maven credentials process.
+echo       gen_ver  Generate new timestamp-based Mercury version #.
+echo          list  List of Common Composable Batch files.
+echo          mde1  Mercury Development Environment (MDE) validation.
+echo          mde2  MDE prerequisites - part 2.
+echo          mde3  MDE prerequisites - part 3.
+echo  [your label]  [your description] [Build your own.]
+echo           ppt  PowerPoint Presentation on CBF.
+echo   prepare_mob  Prepare for mobile deployment.
+echo        pscrub  Partially scrub deployment environment.
+echo            rd  Remove directory.
+echo     run_tirem  Run tirem.
+echo         scrub  When deploying new War file, this prepares env.
+echo    s6_deleted  Rerun these commands if sencha folder was deleted.
+echo start_wildfly  Start WildFly. Refresh the environment.
+echo  stop_wildfly  Stop WildFly.
+echo           svc  Start Windows Services viewer.
+echo  tirem_preq_1  One-time copy necessary to set up target folder.
+echo  tirem_preq_2  Tirem prerequisite 2: One-time setup requirement.
+echo  tirem_preq_3  Tirem prerequisite 3: One-time setup requirement.
+echo    update_pub  In preparation for mobile deploy., update public.
+echo   update_tags  Update tag files.
+echo      wild_svc  Install WildFly as a service.
+echo        wiz_lh  Run wizard that builds a WAR file for localhost.
+echo        wiz_jv  Run wizard that builds only Java changes for localhost.
+echo      wiz_prod  Run wizard that builds a WAR file for production.
+echo      wiz_stag  Run wizard that builds a WAR file for staging.
+
+goto exitb
 
 
-:_
+
+:_+ Exit Functions
+
+
+
+::_
 
 :exit
 
 set fp= * Exit.
 
-rem echo.
 rem echo %fp%
 
 exit
 
 
 
-:_
+::_
 
 :exitb
 
-rem set fp= * Exit batch file but not command window.
-
-rem echo.
-rem echo %fp%
+set fp= * Exit batch file but not command window.
 
 exit /b
 
 
 
-:_
+::_
 
 :exitp
 
@@ -86,26 +134,15 @@ set fp= * Exit with pause.
 echo.
 rem echo %fp%
 
-title Done! - . . . paused . . . Press any key to continue
-
 pause
 
 exit
 
 
 
-:_
+::_
 
-:exitpb
-
-set fp= * Pause then exit the batch file but not the command window.
-
-rem echo.
-rem echo %fp%
-
-pause
-
-exit /b
+rem ******* End Exit Functions.
 
 
 
@@ -2349,67 +2386,6 @@ copy AGI.Foundation_User1_170915.lic AGI.Foundation.lic
 call td agi_ejb
 
 xcopy /y "c:\mercury\agi licenses\AGI.Foundation.lic"
-
-goto exitb
-
-
-
-:_
-
-:help
-
-:toc
-
-set fp=* Perform miscellaneous tasks.
-
-rem fcd: May-13-2017
-
-echo %fp%
-
-echo.
-echo Usage: m [single parameter]
-
-echo.
-echo     Parameter  Description
-echo ---------------------------------------------------------------
-echo  build_applet  Build the applet.
-echo     build_ejb  Build EJB WAR file.
-echo       compile  Run sencha app build testing.
-echo      compilep  Run sencha app build production.
-echo      copy_ext  Copy ext folder contents to the right place.
-echo       del_hex  Delete WildFly Dynamic Folder.
-echo          depl  Deploy a new WAR file.
-echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
-echo            f5  Compile and refresh Ext JS code in existing hex.
-echo   fix_buttons  Fix button warnings by Mike Stonkey.
-echo      fix_menu  Fix menu warnings by Mike Stonkey.
-echo gen_cred_proc  Run generate encrypted Maven credentials process.
-echo       gen_ver  Generate new timestamp-based Mercury version #.
-echo          list  List of Common Composable Batch files.
-echo          mde1  Mercury Development Environment (MDE) validation.
-echo          mde2  MDE prerequisites - part 2.
-echo          mde3  MDE prerequisites - part 3.
-echo  [your label]  [your description] [Build your own.]
-echo           ppt  PowerPoint Presentation on CBF.
-echo   prepare_mob  Prepare for mobile deployment.
-echo        pscrub  Partially scrub deployment environment.
-echo            rd  Remove directory.
-echo     run_tirem  Run tirem.
-echo         scrub  When deploying new War file, this prepares env.
-echo    s6_deleted  Rerun these commands if sencha folder was deleted.
-echo start_wildfly  Start WildFly. Refresh the environment.
-echo  stop_wildfly  Stop WildFly.
-echo           svc  Start Windows Services viewer.
-echo  tirem_preq_1  One-time copy necessary to set up target folder.
-echo  tirem_preq_2  Tirem prerequisite 2: One-time setup requirement.
-echo  tirem_preq_3  Tirem prerequisite 3: One-time setup requirement.
-echo    update_pub  In preparation for mobile deploy., update public.
-echo   update_tags  Update tag files.
-echo      wild_svc  Install WildFly as a service.
-echo        wiz_lh  Run wizard that builds a WAR file for localhost.
-echo        wiz_jv  Run wizard that builds only Java changes for localhost.
-echo      wiz_prod  Run wizard that builds a WAR file for production.
-echo      wiz_stag  Run wizard that builds a WAR file for staging.
 
 goto exitb
 

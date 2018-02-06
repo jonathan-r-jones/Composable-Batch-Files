@@ -69,9 +69,6 @@ echo Parameter 1: The filename nickname of the file to execute or filename of a 
 echo.
 echo Parameter 2 (Optional): The application nickname of the application used to execute the file. If left blank, a simulated double click of the file will occur.
 
-echo.
-echo Notes: The main feature provided by this batch file is to detect a period in the filename of a file in the current folder.
-
 goto exitb
 
 

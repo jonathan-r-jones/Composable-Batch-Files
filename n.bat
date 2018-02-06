@@ -1587,22 +1587,6 @@ goto exitb
 
 :_
 
-:ql
-
-set fp=Quickla.
-
-rem lu: Oct-30-2017
-
-echo %fp%
-
-set cbf_path=%savannah%\cmac\source code
-
-goto exitb
-
-
-
-:_
-
 :wir1
 
 set fp=Wildfly Image Resource 1.
@@ -2122,6 +2106,24 @@ rem lu: Feb-6-2018
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/Bowling-Score-Calculator.git
+
+goto exitb
+
+
+
+:_
+
+:ql
+
+set fp=Quickla.
+
+rem lu: Oct-30-2017
+
+echo %fp%
+
+set cbf_path=%savannah%\cmac\source code
+
+set cbf_url=https://github.com/jonathan-r-jones/quickla.git
 
 goto exitb
 

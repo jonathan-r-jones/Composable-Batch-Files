@@ -47,6 +47,8 @@ goto exitb
 
 :_ (!rfsp)
 
+:h
+
 :help
 
 set fp=* Help has not yet been implemented.
