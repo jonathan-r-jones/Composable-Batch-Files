@@ -6,10 +6,10 @@
 
 :_
 
-set fp=* Clone a repository . . .
+set filep=* Clone a repository . . .
 
 echo.
-echo %fp%                         
+echo %filep%                         
 
 
 
@@ -35,13 +35,29 @@ goto code_execution_area
 
 :_
 
+echo.
+echo %filep% from %cbf_url%.
+
+echo.
+git clone %cbf_url%
+
+goto exitb
+
+
+
+:_
+
+:h
+
 :help
 
-set fp=* Perform Git Clone-related tasks.
+rem qq-1
 
-rem fcd: Jan-17-2018
+rem echo.
+rem echo File Purpose: %filep%
 
-echo File purpose (fp): %fp%
+echo.
+echo Filename stands for: CloNe repository.
 
 echo.
 echo Usage: cn [Parameter 1] [Parameter 2]
@@ -734,30 +750,6 @@ call un %1
 echo.
 
 git clone %cbf_url% .\%folder_name%
-
-goto exitb
-
-
-
-:_
-
-:code_execution_area
-
-set fp=* Code below here runs.
-
-
-
-:_
-
-set fp=* Clone repository
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp% from %cbf_url%.
-
-echo.
-git clone %cbf_url%
 
 goto exitb
 

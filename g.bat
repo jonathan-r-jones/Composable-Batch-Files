@@ -22,17 +22,48 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
+if not "%2" == "" call td %2
+
 goto %1
 
 
 
 :_
 
-rem Metadata
+:h
 
-rem File Purpose: This file is used for GitHub/BitBucket-related operations.
+:help
 
-rem Batch File Style: This is a parameter-routing driven style batch file.
+set fp=* Perform Git-related tasks.
+
+rem fcd: May-15-2017
+
+echo %fp%
+
+echo.
+echo Usage: g [Parameter 1] [Parameter 2]
+
+echo.
+echo Parameter 1: Macro/Function to execute.
+
+echo.
+echo Parameter 2 (Optional): Path to walk prior to running Parameter 1.
+
+echo.
+echo     Parameter  Description
+echo -------------  -----------------------------------------------------
+echo             a  Add changes.
+echo           asf  Add single file.
+echo             c  Commit changes for only those files that were staged.
+echo          pull  Get-latest.
+echo          push  Push changes.
+echo           rsf  Revert file.
+echo          rvfd  Revert folder.
+echo           rvp  Revert persistent files.
+echo             s  Get status.
+echo            ss  Get super status.
+
+goto exitb
 
 
 
@@ -1259,37 +1290,6 @@ echo %fp%
 echo.
 
 git clean -f
-
-goto exitb
-
-
-
-:_
-
-:help
-
-set fp=* Perform Git-related tasks.
-
-rem fcd: May-15-2017
-
-echo %fp%
-
-echo.
-echo Usage: g [single parameter]
-
-echo.
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
-echo             a  Add changes.
-echo           asf  Add single file.
-echo             c  Commit changes for only those files that were staged.
-echo          pull  Get-latest.
-echo          push  Push changes.
-echo           rsf  Revert file.
-echo          rvfd  Revert folder.
-echo           rvp  Revert persistent files.
-echo             s  Get status.
-echo            ss  Get super status.
 
 goto exitb
 

@@ -6,18 +6,10 @@
 
 :_
 
-set filep=* .
+set filep=* Use Multi-Edit to edit a batch file in the CBF folder.
 
 echo.
 echo %filep%
-
-
-
-:_
-
-set fp=* Add some whitespace.
-
-echo.
 
 
 
@@ -33,12 +25,7 @@ if "%1" == "help" goto help
 
 :_
 
-set fp=* 
-
-rem lu: Feb-1-2018
-
-echo %fp%
-
+call me %composable_batch_files%\%1.bat
 
 goto exitb
 
@@ -50,28 +37,16 @@ goto exitb
 
 :help
 
-set fp=* Help has not yet been implemented.
-
-echo %fp%
-
-goto exitb
+echo Filename stands for: Multi-Edit (x) file.
 
 echo.
-echo File Purpose: %filep%
-
-echo.
-echo Filename stands for: .
-
-echo.
-echo Last Updated: 
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
 
-echo.          
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
 echo.
+echo Parameter 1: Filename without the "bat" extension.
 
 goto exitb
 

@@ -6,6 +6,15 @@
 
 :_
 
+set filep=* Copy file(s).
+
+echo.
+echo %filep%
+
+
+
+:_
+
 set fp=* Add some whitespace.
 
 echo.
@@ -28,13 +37,14 @@ goto %1
 
 :_
 
+:h
+
 :help
 
-set fp=* Copy files.
+echo Filename stands for: CopY file(s).
 
-rem Last Updated (lu): Jan-23-2018
-
-echo File purpose (fp): %fp%
+echo.
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: cy [Parameter 1]

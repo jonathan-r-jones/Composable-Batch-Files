@@ -6,10 +6,10 @@
 
 :_
 
-set fp=* Copy file file from source to destination.
+set filep=* Copy file file from source to destination.
 
 echo.
-echo %fp%
+echo %filep%
 
 
 
@@ -46,17 +46,19 @@ goto exitb
 
 :_
 
+:h
+
 :help
 
 set fp=* Copy file from source to destination.
 
-echo File Purpose (fp): %fp%
+rem echo File Purpose (fp): %fp%
 
 echo.
 echo Filename stands for: CopY file from Source to Destination.
 
 echo.
-echo Last Updated (lu): Feb-1-2018
+echo Last Updated: Feb-1-2018
 
 echo.
 echo Usage: %0 [Parameter 1] [Parameter 2]

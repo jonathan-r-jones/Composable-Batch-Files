@@ -39,6 +39,8 @@ goto exitb
 
 :_
 
+:h
+
 :help
 
 set fp=Application nickname dictionary that sets the full application name corresponding to a given unique nickname parameter.

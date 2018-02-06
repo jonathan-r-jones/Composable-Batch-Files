@@ -38,6 +38,8 @@ goto code_execution_area
 
 :_
 
+:h
+
 :help
 
 set fp=* Add, commit and push Git changes with timestamp commit message.

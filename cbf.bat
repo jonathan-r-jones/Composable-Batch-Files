@@ -6,6 +6,15 @@
 
 :_
 
+set filep=* Show the state of the CBF environment variables.
+
+echo.
+echo %filep%
+
+
+
+:_
+
 set fp=* Add some whitespace.
 
 echo.
@@ -20,23 +29,41 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
-goto code_execution_area
+
+
+:_
+
+echo CBF_Application: %cbf_application%
+
+echo.
+echo CBF_Application_Installation_Path: %cbf_application_installation_path%
+
+echo.
+echo CBF_Filename: %cbf_filename%
+
+echo.
+echo CBF_Parameter: %cbf_parameter%
+
+echo.
+echo CBF_Path: %cbf_path%
+
+echo.
+echo CBF_URL: %cbf_url%
+
+goto exitb
 
 
 
 :_
 
+:h
+
 :help
-
-set fp=Show the state of CBF environment variables.
-
-echo File purpose (fp) is to: %fp%
-echo.
 
 echo Filename stands for: Composed Batch Files
 echo.
 
-echo Last Updated (lu): Jan-24-2018
+echo Last Updated (lu): Feb-6-2018
 echo.
 
 echo Usage: %0
@@ -89,46 +116,6 @@ exit
 ::_
 
 rem ******* End Exit Functions.
-
-
-
-:_
-
-:code_execution_area
-
-set fp=* Code below here runs.
-
-
-
-:_
-
-:
-
-set fp=* Show the state of the CBF environment variables.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-echo.
-echo CBF_Application: %cbf_application%
-
-echo.
-echo CBF_Application_Installation_Path: %cbf_application_installation_path%
-
-echo.
-echo CBF_Filename: %cbf_filename%
-
-echo.
-echo CBF_Parameter: %cbf_parameter%
-
-echo.
-echo CBF_Path: %cbf_path%
-
-echo.
-echo CBF_URL: %cbf_url%
-
-goto exitb
 
 
 

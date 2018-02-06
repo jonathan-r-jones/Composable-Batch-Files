@@ -2105,6 +2105,8 @@ rem lu: Feb-6-2018
 
 echo %fp%
 
+set cbf_path=%dropbox%\it
+
 set cbf_url=https://github.com/jonathan-r-jones/Bowling-Score-Calculator.git
 
 goto exitb
