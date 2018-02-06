@@ -6,9 +6,10 @@
 
 :_
 
-set fp=* Set title.
+set filep=* Perform miscellaneous tasks.
 
-title = Composable Batch Files Helper
+echo.
+echo %filep%
 
 
 
@@ -39,19 +40,20 @@ goto %1
 
 :help
 
-set fp=* Perform miscellaneous tasks.
+echo Filename stands for: Miscellaneous tasks.
 
-rem fcd: Feb-6-2018
-
-echo %fp%
+echo.
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: m [single parameter]
 
-rem Usage Note: Do not make internal calls to a composite function because that could cause a 
-rem circular reference.
+echo.
+echo Usage Note: Do not make internal calls to a composite function because that could cause a 
+echo circular reference.
 
-rem Having a written version of your work allows you to learn and improve over time.
+echo.
+echo Notes: Having a written version of your work is self-documenting and allows you to learn and improve over time.
 
 echo.
 echo     Parameter  Description

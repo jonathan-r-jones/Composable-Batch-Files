@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* .
+set filep=* 
 
 echo.
 echo %filep%
@@ -33,11 +33,6 @@ if "%1" == "help" goto help
 
 :_
 
-set fp=* 
-
-rem lu: Feb-1-2018
-
-echo %fp%
 
 
 goto exitb
@@ -50,28 +45,16 @@ goto exitb
 
 :help
 
-set fp=* Help has not yet been implemented.
-
-echo %fp%
-
-goto exitb
-
-echo.
-echo File Purpose: %filep%
-
-echo.
 echo Filename stands for: .
 
 echo.
-echo Last Updated: 
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
 
-echo.          
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
 echo.
+echo Parameter 1: 
 
 goto exitb
 

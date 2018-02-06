@@ -6,12 +6,10 @@
 
 :_
 
-:
-
-set fp=* Surf to . . .
+set filep=* Surf the internet.
 
 echo.
-echo %fp%
+echo %filep%
 
 
 
@@ -31,33 +29,23 @@ goto code_execution_area
 
 :_
 
-rem Metadata
-
-rem File Purpose: This file is used for surfing the internet.
-
-
-
-:_
+:h
 
 :help
 
-set fp=* This file is used to surf the web.
-
-rem Last Updated (lu): Feb-1-2018
+echo.
+echo Last Updated: Feb-6-2018
 
 echo.
-echo %fp%
+echo Filename stands for: SurF.
 
 echo.
 echo Usage: %0
-echo.
 
-echo If no parameter is used, surf to the current CBF_URL.
 echo.
+echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.
 
-echo Parameter 1: URL Nickname 
 echo.
-
 echo Parameter 2: Browser (Application Nickname), which is not necessary if you wish to use the the default browser.
 
 goto exitb

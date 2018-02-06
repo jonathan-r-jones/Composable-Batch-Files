@@ -6,9 +6,10 @@
 
 :_
 
-set fp=* Set password for non-production environments.
+set filep=* SQL batch file intended to be used for database-related tasks.
 
-if /i not "%computername%"=="WIN-8D6B7BCCM06" set password=""
+echo.
+echo %filep%
 
 
 
@@ -36,19 +37,40 @@ goto %1
 
 :_
 
-rem Metadata
+:h
 
-rem File Purpose: This SQL (s) batch file is intended to be used for Mercury database related tasks.
+:help
 
-rem Batch File Style: Parameter-Routing Driven
+set fp=* Perform SQL-Mercury-related tasks.
 
-rem To run a command, use a single command line parameter corresponding to its batch file 
-rem label, e.g. m run_sencha_app_build_testing would run the code block at that label.
+echo. Last Updated: Feb-6-2018
 
-rem Usage Note: Do not make internal calls to a composite function because that could cause a 
-rem circular reference.
+echo.
+echo Usage: s [Parameter 1]
 
-rem Having a written version of your work allows you to learn and improve over time.
+echo.
+echo Parameter 1: Function you wish to execute.
+
+echo.
+echo     Parameter  Description
+echo -------------  --------------------------------------------------
+echo            bu  Back up the database.
+echo           cnu  Count new users.
+echo        config  Show configuration table.
+echo         cuact  Count users, active.
+echo         cuall  Count users, all.
+echo          copa  Start LDAP control panel.
+echo            ld  Run LDAP service.
+echo      ldap_svc  Install LDAP as a service.
+echo           off  Turn mail host off.
+echo            on  Turn mail host on.
+echo          reqs  Select latest requests.
+echo            st  Show tables.
+echo           suv  Select users, order by validation date.
+echo           sql  Connect to SQL monitor.
+echo         users  Select users, active by recent login.
+
+goto exitb
 
 
 
@@ -1356,42 +1378,6 @@ goto exitb
 
 
 
-:_
-
-:help
-
-set fp=* Perform SQL-Mercury-related tasks.
-
-rem fcd: May-16-2017
-
-echo %fp%
-
-echo.
-echo Usage: s [single parameter]
-
-echo.
-echo     Parameter  Description
-echo -------------  --------------------------------------------------
-echo            bu  Back up the database.
-echo           cnu  Count new users.
-echo        config  Show configuration table.
-echo         cuact  Count users, active.
-echo         cuall  Count users, all.
-echo          copa  Start LDAP control panel.
-echo            ld  Run LDAP service.
-echo      ldap_svc  Install LDAP as a service.
-echo           off  Turn mail host off.
-echo            on  Turn mail host on.
-echo          reqs  Select latest requests.
-echo            st  Show tables.
-echo           suv  Select users, order by validation date.
-echo           sql  Connect to SQL monitor.
-echo         users  Select users, active by recent login.
-
-goto exitb
-
-
-
 :_+ Operations Scripts
 
 
@@ -1704,6 +1690,14 @@ Metadata: Track Size (!tss)
  -----------  ------  ---------  ---------  -------------------------------------------------
 
 : Jan-4-2018   1,757     53,334       79
+
+
+
+:_
+
+set fp=* Set password for non-production environments.
+
+if /i not "%computername%"=="WIN-8D6B7BCCM06" set password=""
 
 
 

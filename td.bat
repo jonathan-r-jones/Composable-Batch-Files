@@ -6,9 +6,10 @@
 
 :_
 
-set fp=* Add some whitespace.
+set filep=* Transform/change directory.
 
 echo.
+echo %filep%
 
 
 
@@ -28,10 +29,6 @@ if "%1" == "shared_list" goto %1
 
 :_
 
-set fp=** Transform directory to . . .
-
-echo %fp%
-
 call pn %1
 
 cd /d %cbf_path%
@@ -42,21 +39,21 @@ goto exitb
 
 :_
 
+:h
+
 :help
 
-set fp=To transform/change your directory.
-
-echo File purpose (fp): %fp%
 echo.
-
 echo Filename stands for: Transform Directory.
-echo.
 
-echo Last Updated (lu): Jan-24-2018
 echo.
+echo Last Updated: Jan-24-2018
 
-echo Usage: %0 [single parameter of a folder nickname]
 echo.
+echo Usage: %0 [Parameter 1]
+
+echo.
+echo Parameter 1: Path nickname.
 
 goto exitb
 

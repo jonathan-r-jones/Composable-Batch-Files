@@ -6,10 +6,10 @@
 
 :_
 
-set fp=* Execute file . . .
+set filep=* Double-click equivalent way to execute a file with optional application nickname parameter.
 
 echo.
-echo %fp%
+echo %filep%
 
 
 
@@ -47,21 +47,18 @@ goto exitb
 
 :_
 
+:h
+
 :help
-
-set fp=* Double-click equivalent way to execute a file with optional application nickname parameter.
-
-echo.
-echo File purpose (fp): %fp%
 
 echo.
 echo Filename stands for: eXecute file.
 
 echo.
-echo Last Updated (lu): Feb-1-2018
+echo Last Updated: Feb-6-2018
 
 echo.
-echo Usage: ef [Parameter 1] [Parameter 2]
+echo Usage: ef [Parameter] [Parameter 2]
 
 echo.
 echo Parameter 1: The filename nickname of the file to execute or filename of a file in the current folder.

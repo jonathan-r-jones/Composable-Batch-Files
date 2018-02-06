@@ -6,10 +6,7 @@
 
 :_
 
-set fp=* Look up path.
-
-echo.
-echo %fp%
+set filep=* Path nickname dictionary that sets the full path corresponding to a given unique nickname parameter.
 
 
 
@@ -39,17 +36,19 @@ goto exitb
 
 :_
 
+:h
+
 :help
 
 set fp=* Path nickname dictionary that sets the full path corresponding to a given unique nickname parameter.
 
-echo File purpose (fp) is to: %fp%
+echo %filep%
 
 echo.
 echo Filename stands for: Path Nicknames.
 
 echo.
-echo Last Updated (lu): Feb-2-2018
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: %0 [Parameter 1]

@@ -6,18 +6,7 @@
 
 :_
 
-set fp=* Look up URL.
-
-echo.
-echo %fp%                         
-
-
-
-:_
-
-set fp=* Add some whitespace.
-
-echo.
+set filep=* URL nickname dictionary that sets the full URL name corresponding to a given unique nickname parameter.
 
 
 
@@ -37,23 +26,26 @@ goto exitb
 
 
 
-:_
+:_ (!rfsp)
+
+:h
 
 :help
 
-set fp=URL nickname dictionary that sets the full URL name corresponding to a given unique nickname parameter.
-
-echo File purpose (fp): %fp%
 echo.
+echo %filep%
 
-echo Filename stands for: Filename Nicknames.
 echo.
+echo Filename stands for: URL Nicknames.
 
-echo Last Updated (lu): Jan-24-2018
 echo.
+echo Last Updated: Feb-6-2018
 
-echo Usage: %0 [single parameter]
 echo.
+echo Usage: %0 [Parameter 1]
+
+echo.
+echo Parameter 1: URL Nickname contained in the Nickname Source file, viz. n.bat.
 
 goto exitb
 
@@ -106,4 +98,4 @@ rem ******* End Exit Functions.
 
 
 
-:_ (!rfsp) (mov-9)
+:_

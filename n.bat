@@ -6,9 +6,9 @@
 
 :_
 
-set fp=Look up nickname.
+set filep=* Nickname dictionary that sets the envrionment variables corresponding to a given unique nickname parameter.
 
-rem echo %fp%
+rem echo %filep%
 
 
 
@@ -38,23 +38,23 @@ goto %1
 
 :help
 
-set fp=Nickname dictionary that sets the envrionment variables corresponding to a given unique nickname parameter.
-
-rem I kept the facade dictionaries because they help make clear the author's intent when 
-rem calling which variable is being set.
-
-echo File purpose (fp): %fp%
 echo.
+echo %filep%
 
-echo The filename stands for: NickNames.
 echo.
+echo The filename stands for: Nicknames.
 
-echo Last Updated (lu): Feb-2-2018
 echo.
+echo I kept the facade dictionaries because they help make clear the author's intent 
+echo when calling which variable is being set.
 
+echo.
+echo Last Updated: Feb-6-2018
+
+echo.
 echo Usage: %0 [single parameter]
-echo.
 
+echo.
 echo Parm/Nickname  Target
 echo -------------  -----------------------------------------------------------
 echo             a  a.

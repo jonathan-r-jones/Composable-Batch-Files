@@ -6,19 +6,10 @@
 
 :_
 
-set fp=* Add some whitespace.
+set filep=* Add, commit and push Git changes with timestamp commit message.
 
 echo.
-
-
-
-:_
-
-set fp=* Add, commit and push.
-
-rem lu: Jan-31-2018
-
-echo %fp%
+echo %filep%
 
 
 
@@ -32,26 +23,34 @@ if "%1" == "help" goto help
 
 if not "%1" == "" call td %1
 
-goto code_execution_area
-
 
 
 :_
+
+set fp=* Call ACP.
+
+rem lu: Jan-31-2018
+
+echo.
+echo %fp%
+
+call g acp
+
+goto exitb
+
+
+
+:_ (!rfsp) (mov-9)
 
 :h
 
 :help
 
-set fp=* Add, commit and push Git changes with timestamp commit message.
-
-echo.
-echo File purpose (fp): %fp%
-
 echo.
 echo Filename stands for: Add/Commit/Push.
 
 echo.
-echo Last Updated (lu): Feb-6-2018
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -111,26 +110,3 @@ rem ******* End Exit Functions.
 
 
 :_
-
-:code_execution_area
-
-set fp=* Code below here runs.
-
-
-
-:_
-
-set fp=* Call ACP.
-
-rem lu: Jan-31-2018
-
-echo.
-echo %fp%
-
-call g acp
-
-goto exitb
-
-
-
-:_ (!rfsp) (mov-9)

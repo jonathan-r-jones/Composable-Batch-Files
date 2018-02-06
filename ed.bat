@@ -8,8 +8,6 @@
 
 set filep=* A filename-centric way of editing a file.
 
-echo %filep%
-
 
 
 :_
@@ -54,6 +52,9 @@ goto exitb
 :h
 
 :help
+
+echo.
+echo %filep%
 
 echo.
 echo Filename stands for: Edit File.
@@ -121,4 +122,4 @@ rem ******* End Exit Functions.
 
 
 
-:_ (!rfsp) (mov-9)
+:_

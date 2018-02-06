@@ -39,7 +39,7 @@ goto code_execution_area
 
 
 
-:_ (!rfsp)
+:_
 
 :help
 
@@ -6456,22 +6456,6 @@ goto exitb
 
 :_
 
-:code_execution_area
-
-set fp=* Execution area. Code below here runs.
-
-rem echo.
-rem echo %fp%
-
-cls
-echo.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Ping pong folder test. This worked!
@@ -6495,3 +6479,36 @@ goto exitb
 
 
 :_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+cls
+echo.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Title changes. Doesn't work.
+
+rem lu: Feb-6-2018
+
+echo %fp%
+
+echo Title: %title
+echo Title: %title%
+rem qq-1
+goto exitb
+
+
+
+:_ (!rfsp) (mov-9)

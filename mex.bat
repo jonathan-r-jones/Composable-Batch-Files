@@ -15,14 +15,6 @@ echo %filep%
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%1" == "/?" goto help
@@ -54,7 +46,7 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: Filename without the "bat" extension.
+echo Parameter 1: Filename in the CBF folder without the "bat" extension.
 
 goto exitb
 

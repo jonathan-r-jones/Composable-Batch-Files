@@ -6,6 +6,15 @@
 
 :_
 
+set filep=* Perform Sencha-related tasks.
+
+echo.
+echo %filep%
+
+
+
+:_
+
 set fp=* Add echo.
 
 echo.
@@ -28,13 +37,14 @@ goto %1
 
 :_
 
+:h
+
 :help
 
-set fp=* Perform Sencha related tasks.
+echo Filename stands for: sencHa-related tasks.
 
-rem fud: Aug-15-2017
-
-echo %fp%
+echo.
+echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: m [single parameter]
