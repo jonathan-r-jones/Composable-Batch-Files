@@ -2129,4 +2129,20 @@ goto exitb
 
 
 
+:_
+
+:karl
+
+set fp=Karl.
+
+rem lu: Feb-6-2018
+
+echo %fp%
+
+set cbf_filename=%savannah%\karl\karl.sln
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-9)
