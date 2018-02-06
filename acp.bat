@@ -40,7 +40,7 @@ goto code_execution_area
 
 :help
 
-set fp=* Add, commit and push changes.
+set fp=* Add, commit and push Git changes with timestamp commit message.
 
 echo.
 echo File purpose (fp): %fp%
@@ -49,7 +49,7 @@ echo.
 echo Filename stands for: Add/Commit/Push.
 
 echo.
-echo Last Updated (lu): Feb-1-2018
+echo Last Updated (lu): Feb-6-2018
 
 echo.
 echo Usage: %0 [Parameter 1]

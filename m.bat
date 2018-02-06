@@ -1522,8 +1522,6 @@ goto exitb
 
 :list
 
-:registry
-
 set fp=* List of common CBF Helper Batch files
 
 rem fcd: May-12-2017
@@ -1533,6 +1531,7 @@ echo.
 
 echo   File  Description
 echo   ----  ------------------------------------------------------------------
+echo   acp:  Add, commit and push Git changes with timestamp commit message.
 echo    an:  Application nickname facade dictionary.
 echo     c:  Clear screen and reset color.
 echo   cbf:  Show the state of CBF environment variables.
