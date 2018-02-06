@@ -12,6 +12,14 @@ set filep=* Application-centric way of running an application with an optional f
 
 :_
 
+set fp=* Add some whitespace.
+
+echo.
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%1" == "" goto help
@@ -49,7 +57,6 @@ goto exitb
 
 :help
 
-echo.
 echo %filep%
 
 echo.
