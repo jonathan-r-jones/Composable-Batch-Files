@@ -15,14 +15,6 @@ rem echo %filep%
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%1" == "" goto help
@@ -46,7 +38,7 @@ goto exitb
 echo %filep%
 
 echo.
-echo The filename stands for: Filename Nicknames.
+echo The filename stands for: Applicatioon Nicknames.
 
 echo.
 echo Last Updated: Jan-24-2018

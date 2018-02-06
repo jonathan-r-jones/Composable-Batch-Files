@@ -15,9 +15,15 @@ echo %filep%
 
 :_
 
-set fp=* Route callers.
+set fp=* Add some whitespace.
 
-if "%1" == "" goto help
+echo.
+
+
+
+:_
+
+set fp=* Route help callers.
 
 if "%1" == "/?" goto help
 
@@ -27,7 +33,8 @@ if "%1" == "help" goto help
 
 :_
 
-call ed %1 me
+if "%1" == "" call ea me
+if not "%1" == "" call ed %1 me
 
 goto exitb
 

@@ -8,17 +8,6 @@
 
 set filep=* Application-centric way of running an application with an optional filename parameter.
 
-echo.
-echo %filep%
-
-
-
-:_
-
-set fp=* Add some whitespace.
-
-echo.
-
 
 
 :_
@@ -60,15 +49,17 @@ goto exitb
 
 :help
 
-set fp=* Application-centric way of running an application with an optional filename parameter.
+echo.
+echo %filep%
 
+echo.
 echo Filename stands for: Execute application.
 
 echo.
 echo Last Updated: Feb-6-2018
 
 echo.
-echo Usage: %0 [Parameter 1] [Parameter 1]
+echo Usage: %0 [space separated parameters]
 
 echo.
 echo Parameter 1: Application nickname.

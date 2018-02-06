@@ -23,7 +23,7 @@ echo.
 
 :_
 
-set fp=* Route callers.
+set fp=* Route help callers.
 
 if "%1" == "/?" goto help
 

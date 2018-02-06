@@ -23,9 +23,7 @@ echo.
 
 :_
 
-set fp=* Route callers.
-
-if "%1" == "" goto help
+set fp=* Route help callers.
 
 if "%1" == "/?" goto help
 
@@ -35,7 +33,8 @@ if "%1" == "help" goto help
 
 :_
 
-call ed %1 npp
+if "%1" == "" call ea npp
+if not "%1" == "" call ed %1 npp
 
 goto exitb
 

@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Edit file with NotePad.
+set filep=* Run NotePad.
 
 echo.
 echo %filep%
@@ -23,9 +23,7 @@ echo.
 
 :_
 
-set fp=* Route callers.
-
-if "%1" == "" goto help
+set fp=* Route help callers.
 
 if "%1" == "/?" goto help
 
@@ -35,7 +33,8 @@ if "%1" == "help" goto help
 
 :_
 
-call ed %1 no
+if "%1" == "" call ea no
+if not "%1" == "" call ed %1 no
 
 goto exitb
 
@@ -47,6 +46,7 @@ goto exitb
 
 :help
 
+echo.
 echo Filename stands for: NOtepad.
 
 echo.
