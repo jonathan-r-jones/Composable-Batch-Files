@@ -39,7 +39,7 @@ goto exitb
 
 
 
-:_ (!rfsp)
+:_ (!rfsp) (mov-6)
 
 :h
 

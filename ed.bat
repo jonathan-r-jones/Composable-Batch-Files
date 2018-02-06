@@ -42,12 +42,11 @@ if not "%2" == "" call an %2
 
 call r
 
-
 goto exitb
 
 
 
-:_
+:_ (!rfsp) (mov-6)
 
 :h
 

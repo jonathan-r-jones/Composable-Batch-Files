@@ -33,7 +33,7 @@ goto open_folder_in_windows_explorer
 
 
 
-:_ (!rfsp)
+:_ (!rfsp) (mov-6)
 
 :h
 

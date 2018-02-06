@@ -1527,6 +1527,25 @@ goto exitb
 
 
 
+:_
+
+Metadata: Track Size (!tss)
+
+     Date      Lines      Bytes  Functions  Notes
+ -----------  ------  ---------  ---------  -------------------------------------------------
+
+: Jan-4-2018   1,757     53,334       79
+
+
+
+:_
+
+set fp=* Set password for non-production environments.
+
+if /i not "%computername%"=="WIN-8D6B7BCCM06" set password=""
+
+
+
 :_ + Database Restore Steps for Remote Server
 
 
@@ -1682,23 +1701,4 @@ goto exitb
 
 
 
-:_
-
-Metadata: Track Size (!tss)
-
-     Date      Lines      Bytes  Functions  Notes
- -----------  ------  ---------  ---------  -------------------------------------------------
-
-: Jan-4-2018   1,757     53,334       79
-
-
-
-:_
-
-set fp=* Set password for non-production environments.
-
-if /i not "%computername%"=="WIN-8D6B7BCCM06" set password=""
-
-
-
-:_ (!sp) (mov-9)
+:_ (!rfsp) (mov-6)

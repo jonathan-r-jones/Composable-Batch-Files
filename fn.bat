@@ -31,13 +31,17 @@ if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
 
+
+
+:_
+
 call n %1
 
 goto exitb
 
 
 
-:_
+:_ (!rfsp) (mov-6)
 
 :h
 
@@ -105,4 +109,4 @@ rem ******* End Exit Functions.
 
 
 
-:_ (!rfsp) (mov-9)
+:_

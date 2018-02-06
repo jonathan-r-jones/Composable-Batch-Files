@@ -36,14 +36,13 @@ if "%1" == "help" goto help
 set filep=* Clear screen and reset color.
 
 cls
-rem qq-1
 color
 
 goto exitb
 
 
 
-:_ (!rfsp)
+:_ (!rfsp) (mov-6)
 
 :h
 

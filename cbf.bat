@@ -54,7 +54,7 @@ goto exitb
 
 
 
-:_
+:_ (!rfsp) (mov-9)
 
 :h
 
@@ -119,4 +119,4 @@ rem ******* End Exit Functions.
 
 
 
-:_ (!rfsp) (mov-9)
+:_

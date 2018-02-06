@@ -45,7 +45,7 @@ goto exitb
 
 
 
-:_
+:_ (!rfsp) (mov-9)
 
 :h
 
@@ -755,4 +755,4 @@ goto exitb
 
 
 
-:_ (!rfsp) (mov-9)
+:_
