@@ -64,6 +64,7 @@ echo             d  Date, newest first.
 echo            d2  Date, smallest first.
 echo             s  Size, biggest first.
 echo            s2  Size, smallest first.
+echo             t  Files and folders changed today.
 
 goto exitb
 
@@ -196,6 +197,38 @@ echo %fp%
 echo.
 
 dir /od %2
+
+goto exitb
+
+
+
+:_
+
+:ta
+
+set fp=* Files and folders changed today.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+forfiles /d +0 /c "cmd /c echo @file @ftime @fsize"
+
+goto exitb
+
+
+
+:_
+
+:t
+
+set fp=* Files changed today.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+forfiles /d +0 /c "cmd /c if @isdir==FALSE echo @file @ftime @fsize"
 
 goto exitb
 

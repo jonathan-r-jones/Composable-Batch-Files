@@ -6480,6 +6480,38 @@ goto exitb
 
 :_
 
+:
+
+set fp=* Title changes. Doesn't work.
+
+rem lu: Feb-6-2018
+
+echo %fp%
+
+echo Title: %title
+echo Title: %title%
+goto exitb
+
+
+
+:_
+
+set fp=* Find files changed in the past day.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+rem forfiles /d +0
+rem forfiles /d +0 /c @isdir=FALSE
+forfiles /d +2/7/2018 /c "cmd /c echo @fname is new today."
+
+goto exitb
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -6496,17 +6528,14 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-:
+set fp=* Find files changed in the past day. This works.
 
-set fp=* Title changes. Doesn't work.
-
-rem lu: Feb-6-2018
+rem lu: Feb-7-2018
 
 echo %fp%
 
-echo Title: %title
-echo Title: %title%
-rem qq-1
+forfiles /d +0 /c "cmd /c echo @fname is new today."
+
 goto exitb
 
 

@@ -1071,26 +1071,6 @@ goto exitb
 
 :_
 
-:do
-
-:doc
-
-:docs
-
-set fp=Documentation.
-
-rem fcd: May-25-2017
-
-echo %fp%
-
-set cbf_path=c:\mercury\documentation
-
-goto exitb
-
-
-
-:_
-
 :wildr
 
 set fp=WildFly resources folder.
@@ -2142,6 +2122,40 @@ rem lu: Feb-6-2018
 echo %fp%
 
 set cbf_filename=%savannah%\karl\karl.sln
+
+goto exitb
+
+
+
+:_
+
+:doc
+
+:docs
+
+set fp=Documentation.
+
+rem fcd: May-25-2017
+
+echo %fp%
+
+set cbf_path=c:\mercury\documentation
+
+goto exitb
+
+
+
+:_
+
+:do
+
+set fp=* Download folder.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\downloads
 
 goto exitb
 
