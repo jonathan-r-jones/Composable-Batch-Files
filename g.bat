@@ -772,8 +772,8 @@ goto exitb
 set fp=* Push changes to the cloud.
 
 echo %fp%
-echo.
 
+echo.
 call git push
 
 goto exitb
