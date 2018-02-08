@@ -2149,13 +2149,29 @@ goto exitb
 
 :do
 
-set fp=* Download folder.
+set fp=Download folder.
 
 rem lu: Feb-7-2018
 
 echo %fp%
 
 set cbf_path=%userprofile%\downloads
+
+goto exitb
+
+
+
+:_
+
+:etc
+
+set fp=European Testing Conference.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+set cbf_url=http://europeantestingconference.eu/2018/location/
 
 goto exitb
 
