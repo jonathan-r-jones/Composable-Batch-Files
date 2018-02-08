@@ -16,7 +16,7 @@ rem echo %filep%
 
 set fp=Add some whitespace.
 
-rem echo.
+echo.
 
 
 
