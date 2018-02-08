@@ -1561,9 +1561,7 @@ goto exitb
 
 :list
 
-set fp=* List of common CBF Helper Batch files
-
-rem fcd: May-12-2017
+set fp=* List of common CBF Helper Batch files updated on Feb-8-2018.
 
 echo  %fp%
 echo.
