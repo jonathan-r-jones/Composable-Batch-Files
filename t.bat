@@ -1523,10 +1523,12 @@ goto exit
 
 :_
 
-Metadata: Track Size (!tstt)
+Metadata: Track Size (!tst)
 
     Date       Lines      Bytes    Funcs  Notes
  -----------  ------  ---------  -------  ---------------------------------------------------
+
+: Feb-9-2018   6,576    111,212      289
 
 :Sep-21-2016   2,228     39,414       92
 
@@ -6512,6 +6514,36 @@ goto exitb
 
 :_
 
+set fp=* Find files changed in the past day. This works.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+forfiles /d +0 /c "cmd /c echo @fname is new today."
+
+goto exitb
+
+
+
+:_
+
+:
+
+set fp=* Experiments with dir.
+
+rem lu: Feb-9-2018
+
+echo %fp%
+
+dir /d /ad|findstr /bvc:" "
+rem qq-1
+goto exitb
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -6528,14 +6560,16 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-set fp=* Find files changed in the past day. This works.
+:
 
-rem lu: Feb-7-2018
+set fp=* Experiments with dir 2. Files only
+
+rem lu: Feb-9-2018
 
 echo %fp%
 
-forfiles /d +0 /c "cmd /c echo @fname is new today."
-
+dir /d /a-d | findstr /bvc:" "
+rem qq-1
 goto exitb
 
 

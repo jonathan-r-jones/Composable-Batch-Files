@@ -224,6 +224,8 @@ goto exitb
 
 set fp=* Files changed today.
 
+rem findstr /bvc:" " removes header and summary
+
 rem lu: Feb-1-2018
 
 echo %fp%
