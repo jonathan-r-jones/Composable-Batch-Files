@@ -29,14 +29,11 @@ if not "%1" == "" call un %1
 
 if not "%2" == "" call td %2
 
-goto code_execution_area
-
 
 
 :_
 
-echo.
-echo %filep% from %cbf_url%.
+set fp=* Main function.
 
 echo.
 git clone %cbf_url%
@@ -50,8 +47,6 @@ goto exitb
 :h
 
 :help
-
-rem qq-1
 
 rem echo.
 rem echo File Purpose: %filep%

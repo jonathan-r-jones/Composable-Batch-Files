@@ -1721,7 +1721,7 @@ goto exitb
 
 :dr
 
-set fp=Composable batch files.
+set fp=Dropbox.
 
 rem lu: Feb-2-2018
 
@@ -2172,6 +2172,24 @@ rem lu: Feb-7-2018
 echo %fp%
 
 set cbf_url=http://europeantestingconference.eu/2018/location/
+
+goto exitb
+
+
+
+:_
+
+:res
+
+set fp=Resume.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\resume
+
+set cbf_url=https://bitbucket.org/Jonathan17/resume
 
 goto exitb
 

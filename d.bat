@@ -8,9 +8,6 @@
 
 set filep=* Directory listing: an easier to type version.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -62,6 +59,7 @@ echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 echo             d  Date, newest first.
 echo            d2  Date, smallest first.
+echo           hid  Hidden files and folders.
 echo             s  Size, biggest first.
 echo            s2  Size, smallest first.
 echo             t  Files and folders changed today.
@@ -236,5 +234,21 @@ goto exitb
 
 
 
-:_ (!rfsp) (mov-6)
- 
+:_
+
+:hid
+
+set fp=* Look for the hidden files and folders.
+
+rem Creation Date: Feb-7-2017
+
+echo %fp%
+
+echo.
+dir /ah
+
+goto exitb
+
+
+
+:_ (!rfsp) (mov-6) 

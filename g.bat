@@ -8,9 +8,6 @@
 
 set filep=* Perform Git-related tasks.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -30,8 +27,6 @@ if "%1" == "" goto help
 if "%1" == "/?" goto help
 
 if "%1" == "help" goto help
-
-if not "%2" == "" call td %2
 
 goto %1
 
@@ -365,7 +360,6 @@ goto exitb
 set fp=* Add files generic action.
 
 echo %fp%
-echo.
 
 git add -A
 
@@ -453,46 +447,6 @@ rem git fetch && git checkout clean6.2
 @echo on
 git fetch
 @echo off
-
-goto exitb
-
-
-
-:_
-
-:lfh
-
-:look_for_hidden_folder
-
-set fp=* Look for the hidden git folder including in all subdirectories.
-
-rem Creation Date: Feb-7-2017
-
-echo %fp%
-
-dir /ah /s
-
-goto exitb
-
-
-
-:_
-
-:delete_git_folder
-
-:delg
-
-:dgit
-
-set fp=* Delete the hidden git folder and start over.
-
-rem Creation Date: Jan-23-2017
-
-rem remove: skw
-
-echo %fp%
-
-rd /q /s .git
 
 goto exitb
 
@@ -1524,8 +1478,8 @@ set fp=* Step 1. Initialize Git in the current folder. This is a one-time generi
 rem (!step)
 
 echo %fp%
-echo.
 
+echo.
 git init
 
 goto exitb
@@ -1561,10 +1515,11 @@ git remote add origin https://github.com/jonathan-r-jones/ForGitTesting.git
 git remote add origin https://Jonathan17@bitbucket.org/nesmercuryteam/tirem.git
 git remote add origin https://github.com/jonathan-r-jones/java_bouillabaisse.git 
 git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git
+git remote add origin https://github.com/jonathan-r-jones/composable_batch_files.git 
 
 :grao
 
-git remote add origin https://github.com/jonathan-r-jones/composable_batch_files.git 
+git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/resume.git
 
 goto exitb
 
@@ -2054,6 +2009,28 @@ echo %fp%
 git config --global user.name "mercury_devops"
 git config --global user.email "nes.mercury@nesassociates.com"
 @echo off
+
+goto exitb
+
+
+
+:_
+
+:delete_git_folder
+
+:delg
+
+:dgit
+
+set fp=* Delete the hidden git folder and start over.
+
+rem Creation Date: Jan-23-2017
+
+rem remove: skw
+
+echo %fp%
+
+rd /q /s .git
 
 goto exitb
 
