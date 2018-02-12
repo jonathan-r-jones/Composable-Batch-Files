@@ -1586,7 +1586,7 @@ echo     g:  Perform Git-related tasks.
 echo     h:  Perform Sencha-related tasks.
 echo     m:  Perform miscellaneous tasks.
 echo    me:  Run Multi-Edit.
-echo   mex:  Use Multi-Edit to edit a batch file in the CBF folder.
+echo    mx:  Use Multi-Edit to edit a batch file in the CBF folder.
 echo     n:  Nicknames source dictionary.
 echo    no:  Run Notepad.
 echo   npp:  Run Notepad++.
