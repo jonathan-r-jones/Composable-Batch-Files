@@ -2227,4 +2227,36 @@ goto exitb
 
 
 
+:_
+
+:op
+
+set fp=Opera.
+
+rem lu: Feb-13-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\opera\launcher.exe
+
+goto exitb
+
+
+
+:_
+
+:so
+
+set fp=Stack Overflow
+
+rem lu: Feb-13-2018
+
+echo %fp%
+
+set cbf_url=http://stackoverflow.com/
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-6)
