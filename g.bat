@@ -791,7 +791,7 @@ if %errorlevel% == 0 goto exitb
 
 call :add
 
-call :commit_with_timestamp_description
+call %0 commit_with_timestamp_description
 
 call %0 push
 
