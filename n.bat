@@ -2195,4 +2195,36 @@ goto exitb
 
 
 
+:_
+
+:ed
+
+set fp=Microsoft Edge.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+set cbf_application=microsoft-edge
+
+goto exitb
+
+
+
+:_
+
+:gm
+
+set fp=Gmail.
+
+rem lu: Feb-13-2018
+
+echo %fp%
+
+set cbf_url=https://mail.google.com
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-6)

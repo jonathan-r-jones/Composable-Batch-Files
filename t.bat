@@ -6537,7 +6537,23 @@ rem lu: Feb-9-2018
 echo %fp%
 
 dir /d /ad|findstr /bvc:" "
-rem qq-1
+
+goto exitb
+
+
+
+:_
+
+:
+
+set fp=* Experiments with dir 2. Files only
+
+rem lu: Feb-9-2018
+
+echo %fp%
+
+dir /d /a-d | findstr /bvc:" "
+
 goto exitb
 
 
@@ -6562,14 +6578,14 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Experiments with dir 2. Files only
+set fp=* Microsoft Edge experimentation.
 
-rem lu: Feb-9-2018
+rem lu: Feb-13-2018
 
 echo %fp%
 
-dir /d /a-d | findstr /bvc:" "
-rem qq-1
+start microsoft-edge:
+
 goto exitb
 
 

@@ -137,10 +137,26 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* Main function.
 
-rem echo %fp%
+if "%cbf_application%" == "microsoft-edge" goto micorosoft_edge_special_case
 
 if "%cbf_parameter%" == "" call start "my title" "%cbf_application%"
+if "%cbf_parameter%" == "" goto exitb
+
 if not "%cbf_parameter%" == "" call start "my title" "%cbf_application%" "%cbf_parameter%"
+if not "%cbf_parameter%" == "" goto exitb
+
+
+
+:_
+
+set fp=* Use special syntax for Microsoft Edge.
+
+:micorosoft_edge_special_case
+
+if "%cbf_parameter%" == "" call start "my title" "%cbf_application%:"
+if "%cbf_parameter%" == "" goto exitb
+
+if not "%cbf_parameter%" == "" call start "my title" "%cbf_application%:""%cbf_parameter%"
 
 goto exitb
 

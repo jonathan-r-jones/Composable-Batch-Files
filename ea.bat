@@ -49,6 +49,7 @@ goto exitb
 
 :help
 
+echo.
 echo %filep%
 
 echo.
