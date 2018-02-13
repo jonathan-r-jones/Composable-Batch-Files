@@ -5,7 +5,7 @@ function or be strung together like legos to create a whole Millennium Falcon sc
 
 ## Usage
 
-Add %COMPOSABLE_BATCH_FILES% as an environment variable or at a minimum add it to your path.
+Add %COMPOSABLE_BATCH_FILES% as an environment variable or, at least, add it to your path.
 
 Most of the batch files are run using a single parameter.
 
