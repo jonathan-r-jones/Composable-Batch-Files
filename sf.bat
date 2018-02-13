@@ -134,21 +134,29 @@ set cbf_parameter=%cbf_url%
 
 set fp=* Set default browser.
 
+if not "%2" == "" goto override_default_browser
+
 call an kr
+
+goto surf
 
 
 
 :_
+
+:override_default_browser
 
 set fp=* Override default browser.
 
-if not "%2" == "" echo.
-if not "%2" == "" echo %fp%
-if not "%2" == "" call an %2
+echo.
+echo %fp%
+call an %2
 
 
 
 :_
+
+:surf
 
 set fp=* Surf.
 

@@ -5,6 +5,8 @@ function or be strung together like legos to create a whole Millennium Falcon sc
 
 ## Usage
 
+Add %COMPOSABLE_BATCH_FILES% as an environment variable or at a minimum add it to your path.
+
 Most of the batch files are run using a single parameter.
 
 For example, running Hello_World.bat in the following way will yield the following output:
