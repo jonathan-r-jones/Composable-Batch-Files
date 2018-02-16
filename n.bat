@@ -1851,6 +1851,8 @@ echo %fp%
 
 set cbf_filename=.gitignore
 
+set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+
 goto exitb
 
 
@@ -2254,6 +2256,40 @@ rem lu: Feb-15-2018
 echo %fp%
 
 set cbf_url=http://stackoverflow.com/
+
+goto exitb
+
+
+
+:_
+
+:pash
+
+set fp=Paul Sherriff's Unit Testing Course from Pluralsight.
+
+rem lu: Feb-16-2018
+
+echo %fp%
+
+set cbf_filename=D:\Dropbox\IT\Paul Sheriff Unit Testing Course\PaulSheriffUnitTestingCourse.sln
+
+goto exitb
+
+
+
+:_
+
+:k2
+
+set fp=Karl 2 Testing Solution.
+
+rem lu: Feb-16-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\IT\Karl-2-C-Sharp-Testing
+
+set cbf_filename=%dropbox%\IT\Karl-2-C-Sharp-Testing\karl 2.sln
 
 goto exitb
 

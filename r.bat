@@ -37,6 +37,7 @@ goto code_execution_area
 
 set fp=* Run application with or without a parameter.
 
+echo.
 echo File purpose (fp): %fp%
 
 echo.

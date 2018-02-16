@@ -6560,6 +6560,22 @@ goto exitb
 
 :_
 
+:
+
+set fp=* Microsoft Edge experimentation.
+
+rem lu: Feb-13-2018
+
+echo %fp%
+
+start microsoft-edge:
+
+goto exitb
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -6578,14 +6594,14 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Microsoft Edge experimentation.
+set fp=* Testing echo.
 
-rem lu: Feb-13-2018
+rem lu: Feb-16-2018
 
 echo %fp%
 
-start microsoft-edge:
-
+echo %1 | find /i ".">nul
+rem qq-1
 goto exitb
 
 

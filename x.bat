@@ -30,6 +30,7 @@ if "%1" == "help" goto help
 set fp=* Detect a period in the first parameter and run.
 
 echo %1 | find /i ".">nul
+rem qq-1
 
 if %errorlevel% == 0 set cbf_filename=%1
 if %errorlevel% == 1 call fn %1
@@ -58,7 +59,7 @@ echo.
 echo Last Updated: Feb-6-2018
 
 echo.
-echo Usage: ef [Parameter] [Parameter 2]
+echo Usage: ef [Parameter 1] [Parameter 2]
 
 echo.
 echo Parameter 1: The filename nickname of the file to execute or filename of a file in the current folder.
@@ -108,6 +109,12 @@ rem echo %fp%
 pause
 
 exit
+
+
+
+::_
+
+rem ******* End Exit Functions.
 
 
 
