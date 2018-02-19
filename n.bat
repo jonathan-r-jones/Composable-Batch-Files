@@ -2189,6 +2189,8 @@ rem lu: Feb-7-2018
 
 echo %fp%
 
+set cbf_filename=%dropbox%\resume\jonathan jones' resume.doc
+
 set cbf_path=%dropbox%\resume
 
 set cbf_url=https://bitbucket.org/Jonathan17/resume
