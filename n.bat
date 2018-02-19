@@ -36,23 +36,29 @@ goto %1
 
 :_
 
+:h
+
 :help
 
 echo.
 echo %filep%
 
 echo.
+echo Last Updated: Feb-19-2018
+
+echo.
 echo The filename stands for: Nicknames.
 
 echo.
-echo I kept the facade dictionaries because they help make clear the author's intent 
-echo when calling which variable is being set.
-
-echo.
-echo Last Updated: Feb-6-2018
+echo I kept the facade dictionaries because they help make clear the author's 
+echo. intent when calling which variable is being set.
 
 echo.
 echo Usage: %0 [single parameter]
+
+echo.
+echo In the function block corresponding to the label, you can set any or all 
+echo of the CBF environment variables.
 
 echo.
 echo Parm/Nickname  Target

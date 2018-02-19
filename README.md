@@ -7,7 +7,9 @@ function or be strung together like legos to create a whole Millennium Falcon sc
 
 Add %COMPOSABLE_BATCH_FILES% as an environment variable or, at least, add it to your path.
 
-Most of the batch files are run using a single parameter.
+Most of the batch files are run using a single parameter, which usually maps to a batch file
+label, which should be unique. Multiple labels can of course be used for a particular code
+block.
 
 For example, running Hello_World.bat in the following way will yield the following output:
 
