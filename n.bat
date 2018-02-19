@@ -2295,4 +2295,24 @@ goto exitb
 
 
 
+:_
+
+:etc
+
+set fp=Karl 2 Testing Solution.
+
+rem lu: Feb-16-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_filename=
+
+set cbf_url=http://europeantestingconference.eu/2018
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-6)
