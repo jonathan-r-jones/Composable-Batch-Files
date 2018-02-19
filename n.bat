@@ -2317,4 +2317,36 @@ goto exitb
 
 
 
+:_
+
+:dock
+
+set fp=Docker workshop.
+
+rem lu: Feb-16-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/AlinaIo/etc2018.git
+
+goto exitb
+
+
+
+:_
+
+:dhub
+
+set fp=Docker hub.
+
+rem lu: Feb-16-2018
+
+echo %fp%
+
+set cbf_url=https://hub.docker.com
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-6)
