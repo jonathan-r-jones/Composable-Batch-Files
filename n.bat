@@ -2209,6 +2209,8 @@ goto exitb
 
 :ed
 
+:edge
+
 set fp=Microsoft Edge.
 
 rem lu: Feb-7-2018
@@ -2350,6 +2352,22 @@ rem lu: Feb-16-2018
 echo %fp%
 
 set cbf_url=https://hub.docker.com
+
+goto exitb
+
+
+
+:_
+
+:yt
+
+set fp=YouTube.
+
+rem lu: Feb-25-2018
+
+echo %fp%
+
+set cbf_url=https://www.youtube.com
 
 goto exitb
 
