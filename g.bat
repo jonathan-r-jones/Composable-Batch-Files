@@ -1982,6 +1982,20 @@ goto exitb
 
 ::_
 
+:store
+
+set fp=* How do you get git to stop asking for username after each push?
+
+echo %fp%
+
+git config credential.helper store
+
+goto exitb
+
+
+
+::_
+
 :author_bit
 
 set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
