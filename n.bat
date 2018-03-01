@@ -2373,4 +2373,36 @@ goto exitb
 
 
 
+:_
+
+:desk
+
+set fp=Show desktop.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
+
+goto exitb
+
+
+
+:_
+
+:win
+
+set fp=Show open windows.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-6)
