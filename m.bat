@@ -49,8 +49,8 @@ echo.
 echo Usage: m [single parameter]
 
 echo.
-echo Usage Note: Do not make internal calls to a composite function because that could cause a 
-echo circular reference.
+echo Usage Note: Do not make internal calls to a composite function because 
+echo that could cause a circular reference.
 
 echo.
 echo Notes: Having a written version of your work is self-documenting and allows you to learn and improve over time.
@@ -2938,6 +2938,70 @@ rem lu: Jan-31-2018
 echo %fp%
 
 rd /q /s %2
+
+goto exitb
+
+
+
+:_+ NPM
+
+
+
+::_
+
+:npm
+
+set fp=* NPM install command for Windows.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+echo.
+
+npm install -g %2
+
+rem Examples:
+rem npm install -g cordova
+rem npm install -g ionic
+rem npm install -g jspm
+rem npm install -g taco-cli
+rem npm install -g typings
+
+rem The equivalent command for Mac would be: sudo npm -install -g %2
+
+goto exitb
+
+
+
+::_
+
+:npmh
+
+set fp=* NPM install command for Sencha on Windows.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+echo.
+
+npm install -g sencha
+
+goto exitb
+
+
+
+::_
+
+:npmc
+
+set fp=* NPM install command for Sencha on Windows.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+echo.
+
+npm install -g sencha-cmd
 
 goto exitb
 
