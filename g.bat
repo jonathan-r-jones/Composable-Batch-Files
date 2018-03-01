@@ -1984,7 +1984,7 @@ goto exitb
 
 :store
 
-set fp=* How do you get git to stop asking for username after each push?
+set fp=* This gets Git to stop asking for username after each push.
 
 echo %fp%
 
