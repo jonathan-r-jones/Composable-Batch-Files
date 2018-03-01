@@ -2391,6 +2391,8 @@ goto exitb
 
 :_
 
+:w
+
 :win
 
 set fp=Show open windows.

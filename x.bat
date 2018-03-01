@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Double-click equivalent way to execute a file with optional application nickname parameter.
+set filep=* Execute the nickname based on what type of nickname it is.
 
 echo.
 echo %filep%
@@ -15,9 +15,9 @@ echo %filep%
 
 :_
 
-set fp=* Route callers.
+set fp=* Route help callers.
 
-if "%1" == "?" goto help
+if "%1" == "" goto help
 
 if "%1" == "/?" goto help
 
@@ -27,45 +27,49 @@ if "%1" == "help" goto help
 
 :_
 
-set fp=* Detect a period in the first parameter and run.
+set fp=* Main function.
 
-echo %1 | find /i ".">nul
-rem qq-1
+set cbf_application=
 
-if %errorlevel% == 0 set cbf_filename=%1
-if %errorlevel% == 1 call fn %1
+set cbf_application_installation_path=
 
-set cbf_parameter=%cbf_filename%
+set cbf_filename=
 
-if "%2" == "" call an dc
-if not "%2" == "" call an %2
+set cbf_parameter=
 
-call r
+set cbf_path=
+
+set cbf_url=
+
+call n %1
+
+if not "%cbf_filename%"=="" call k %1
+if not "%cbf_filename%"=="" goto exitb
+
+if not "%cbf_url%"=="" call sf %1
+if not "%cbf_url%"=="" goto exitb
 
 goto exitb
 
 
 
-:_ (!sp) (mov-6)
+:_ (!rfsp) (mov-6)
 
 :h
 
 :help
 
 echo.
-echo Filename stands for: eXecute file.
+echo Filename stands for: eXecute nickname.
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: Mar-1-2018
 
 echo.
-echo Usage: ef [Parameter 1] [Parameter 2]
+echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: The filename nickname of the file to execute or filename of a file in the current folder.
-
-echo.
-echo Parameter 2 (Optional): The application nickname of the application used to execute the file. If left blank, a simulated double click of the file will occur.
+echo Parameter 1: Nickname to execute.
 
 goto exitb
 

@@ -1584,6 +1584,7 @@ echo    ed:  Filename-centric way of editing a file with optional app. param.
 echo    fn:  Filename nickname facade dictionary.
 echo     g:  Perform Git-related tasks.
 echo     h:  Perform Sencha-related tasks.
+echo     k:  Double-click equivalent way to exec. a file with opt. app. param.
 echo     m:  Perform miscellaneous tasks.
 echo    me:  Run Multi-Edit.
 echo    mx:  Use Multi-Edit to edit a batch file in the CBF folder.
@@ -1597,7 +1598,7 @@ echo    sf:  Surf to websites.
 echo    sm:  Run Sublime.
 echo    td:  Transform Directory.
 echo    un:  URL nickname facade dictionary.
-echo     x:  Double-click equivalent way to exec. a file with opt. app. param.
+echo     x:  Execute the nickname based on what type of nickname it is.
 
 goto exitb
 

@@ -6,7 +6,8 @@
 
 :_
 
-set filep=* 
+set filep=* Execute the nickname based on what type of nickname it is.
+rem qq-1
 
 echo.
 echo %filep%
@@ -32,6 +33,8 @@ if "%1" == "help" goto help
 
 
 :_
+
+set fp=* Main function.
 
 
 
