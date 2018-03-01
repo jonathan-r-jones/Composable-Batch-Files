@@ -33,6 +33,7 @@ echo %1 | find /i ".">nul
 if %errorlevel% == 0 set cbf_filename=%1
 if %errorlevel% == 1 call fn %1
 
+rem qq-1
 set cbf_parameter=%cbf_filename%
 
 rem Set Default application.

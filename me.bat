@@ -26,7 +26,7 @@ if "%1" == "help" goto help
 :_
 
 if "%1" == "" call ea me
-if not "%1" == "" call ed %1 me
+if not "%1" == "" call ed "%1" me
 
 goto exitb
 

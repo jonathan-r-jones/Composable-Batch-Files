@@ -2445,6 +2445,24 @@ echo %fp%
 
 set cbf_path=%aa%\forgittesting
 
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+goto exitb
+
+
+
+:_
+
+:mrdoc
+
+set fp=* Mercury documentation.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
+
 goto exitb
 
 
