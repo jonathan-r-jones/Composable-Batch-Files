@@ -50,15 +50,18 @@ echo.
 echo The filename stands for: Nicknames.
 
 echo.
-echo I kept the facade dictionaries because they help make clear the author's 
-echo. intent when calling which variable is being set.
-
-echo.
 echo Usage: %0 [single parameter]
 
 echo.
 echo In the function block corresponding to the label, you can set any or all 
-echo of the CBF environment variables.
+echo of the CBF environment variables. Typically this batch file would be 
+echo called by echo a different batch file looking to set a particular CBF 
+echo envrionment variable. However, if you call it yourself from the command 
+echo line, it will set the variable plus it will describe itself.
+
+echo.
+echo Notes: I kept the facade dictionaries because they help make clear the 
+echo author's intent when calling which variable is being set.
 
 echo.
 echo Parm/Nickname  Target
@@ -1422,22 +1425,6 @@ goto exitb
 
 :_
 
-:fgt
-
-set fp=ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo %fp%
-
-set cbf_path=%aa%\forgittesting
-
-goto exitb
-
-
-
-:_
-
 :cutils
 
 set fp=Classic utils.
@@ -1877,50 +1864,6 @@ rem lu: Jan-19-2018
 echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
-
-goto exitb
-
-
-
-:_+ CBF-related links.
-
-
-
-::_
-
-:gp
-
-:gpcbf
-
-set fp=CBF on GitHub Pages.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
-
-goto exitb
-
-
-
-::_
-
-:ba
-
-:cbf
-
-set fp=CBF on GitHub.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
-
-set cbf_path=%composable_batch_files%
-
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
 
 goto exitb
 
@@ -2403,6 +2346,104 @@ rem lu: Mar-1-2018
 echo %fp%
 
 set cbf_filename=Readme.md
+
+goto exitb
+
+
+
+:_+ CBF-related links.
+
+
+
+::_
+
+:gp
+
+:gpcbf
+
+set fp=CBF on GitHub Pages.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
+
+goto exitb
+
+
+
+::_
+
+:ba
+
+:cbf
+
+set fp=CBF on GitHub.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
+
+set cbf_path=%composable_batch_files%
+
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+goto exitb
+
+
+
+:_
+
+:all
+
+:allstar
+
+:fcc
+
+set fp=* GitHub all-star.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_path=%aa%\freecodecamp
+
+set cbf_url=https://github.com/freeCodeCamp/freeCodeCamp.git
+
+goto exitb
+
+
+
+:_
+
+:xam_sam
+
+set fp=* Xamarin Forms Samples.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
+
+goto exitb
+
+
+
+:_
+
+:fgt
+
+set fp=ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo %fp%
+
+set cbf_path=%aa%\forgittesting
 
 goto exitb
 

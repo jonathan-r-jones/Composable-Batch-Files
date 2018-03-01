@@ -63,11 +63,6 @@ echo Parameter 1: URL nickname of the repository location.
 echo.
 echo Parameter 2 (Optional): Path nickname. If left blank, the repository will be installed into a subfolder of the current folder.
 
-echo.
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
-echo       xam_sam  Xamarin Forms Samples.
-
 goto exitb
 
 
@@ -543,24 +538,6 @@ rem fcd: May-15-2017
 echo %fp%
 
 git clone https://github.com/jonathan-r-jones/ForGitTesting.git --branch master .\git_testing
-
-goto exitb
-
-
-
-:_
-
-:xam_sam
-
-set fp=* Xamarin Forms Samples.
-
-rem lu: Jan-9-2018
-
-echo %fp%
-
-call td daa
-          
-git clone https://github.com/xamarin/xamarin-forms-samples.git .\xamarin_forms
 
 goto exitb
 
