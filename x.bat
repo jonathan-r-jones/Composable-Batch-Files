@@ -43,11 +43,16 @@ set cbf_url=
 
 call n %1
 
-if not "%cbf_filename%"=="" call k %1
-if not "%cbf_filename%"=="" goto exitb
+rem qq-1
+if not "%cbf_filename%" == "" (
+  call k %1
+  goto exitb
+)
 
-if not "%cbf_url%"=="" call sf %1
-if not "%cbf_url%"=="" goto exitb
+if not "%cbf_url%" == "" (
+  call sf %1
+  goto exitb
+)
 
 goto exitb
 

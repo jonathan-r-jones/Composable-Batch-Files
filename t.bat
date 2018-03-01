@@ -6576,6 +6576,38 @@ goto exitb
 
 :_
 
+set fp=* Testing echo.
+
+rem lu: Feb-16-2018
+
+echo %fp%
+
+echo %1 | find /i ".">nul
+
+goto exitb
+
+
+
+:_
+
+:
+
+set fp=* Test echo.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+echo. man to make manual pages
+echo man to make manual pages
+echo        man to make manual pages
+
+goto exitb
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -6594,14 +6626,22 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Testing echo.
+set fp=* New style of parentheses.
 
-rem lu: Feb-16-2018
+rem lu: Mar-1-2018
 
 echo %fp%
 
-echo %1 | find /i ".">nul
-rem qq-1
+if not "%cbf_filename%" == "" (
+  call k %1
+  goto exitb
+)
+
+if not "%cbf_url%" == "" (
+  call sf %1
+  goto exitb
+)
+
 goto exitb
 
 

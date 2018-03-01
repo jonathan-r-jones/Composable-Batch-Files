@@ -92,6 +92,7 @@ echo      pom_root  \projects\netbeans\mercury6\pom.xml
 echo       pom_web  \projects\netbeans\mercury6\Mercury-web\pom.xml
 echo     port_3306  Used to close open port 3306.
 echo            pu  c:\netbeans\sencha\HTML5Application\public_html
+echo            rm  GitHub Readme.md file.
 echo             s  %COMPOSABLE_BATCH_FILES%\s.bat
 echo            s6  c:\projects\netbeans\sencha
 echo            sr  [wildfly_location]
@@ -675,22 +676,6 @@ rem FCD: Apr-10-2017
 echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\m.bat
-
-goto exitb
-
-
-
-:_
-
-:re
-
-set fp=Readme.md.
-
-rem lu: Jan-23-2018
-
-echo %fp%
-
-set cbf_filename=Readme.md
 
 goto exitb
 
@@ -2402,6 +2387,22 @@ rem lu: Mar-1-2018
 echo %fp%
 
 set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
+
+goto exitb
+
+
+
+:_
+
+:rm
+
+set fp=Readme.md.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_filename=Readme.md
 
 goto exitb
 
