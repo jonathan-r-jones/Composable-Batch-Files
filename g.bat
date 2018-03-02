@@ -2052,4 +2052,20 @@ goto exitb
 
 
 
+:_
+
+:
+
+set fp=* 
+
+rem lu: Mar-2-2018
+
+echo %fp%
+
+
+rem qq-1
+goto exitb
+
+
+
 :_ (!rfsp) (mov-6)
