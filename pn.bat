@@ -14,11 +14,11 @@ set filep=* Path nickname dictionary that sets the full path corresponding to a 
 
 set fp=* Route callers.
 
-if "%1" == "" goto help
+if "%~1" == "" goto help
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 
 

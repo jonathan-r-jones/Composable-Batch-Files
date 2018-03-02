@@ -16,11 +16,11 @@ echo.
 
 set Function_Purpose=* Route callers.
 
-if "%1" == "" goto help
+if "%~1" == "" goto help
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 goto %1
 

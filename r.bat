@@ -17,15 +17,15 @@ rem echo %fp%
 
 set fp=* Route callers.
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
-if not "%3" == "" goto use_nondefault_exection
+if not %%3 == "" goto use_nondefault_exection
 
-if not "%1" == "" call an %1
+if not "%~1" == "" call an %1
 
-if not "%2" == "" call fn %2
+if not "%~2" == "" call fn %2
 
 goto code_execution_area
 

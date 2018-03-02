@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Run NotePad.
+set filep=* Test parameters.
 
 echo.
 echo %filep%
@@ -15,18 +15,35 @@ echo %filep%
 
 :_
 
-set fp=* Route help callers.
+set fp=* Add some whitespace.
 
-if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
+echo.
 
 
 
 :_
 
-if "%~1" == "" call ea no
-if not "%~1" == "" call ed "%~1" no
+set fp=* Route help callers.
+
+echo.
+echo 1: %~1
+
+echo.
+echo 2: "%~1"
+
+rem if "%~1" == "/?" goto help
+
+rem if "/?" == %1 goto help
+
+rem if "%~1" == "help" goto help
+
+
+
+:_
+
+set fp=* Main function.
+
+
 
 goto exitb
 
@@ -38,8 +55,7 @@ goto exitb
 
 :help
 
-echo.
-echo Filename stands for: NOtepad.
+echo Filename stands for: .
 
 echo.
 echo Last Updated: Feb-6-2018
@@ -48,7 +64,13 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1 (Optional): The filename nickname of the file to execute or filename of a file in the current folder.
+echo Usage: %0 [space separated parameter(s)]
+
+echo.
+echo Parameter 1 (Optional):
+
+echo.
+echo Parameter 2 (Optional):
 
 goto exitb
 

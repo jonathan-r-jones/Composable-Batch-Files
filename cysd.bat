@@ -17,13 +17,13 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%1" == "" goto help
+if "%~1" == "" goto help
 
-if "%2" == "" goto help
+if "%~2" == "" goto help
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 
 

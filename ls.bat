@@ -2,7 +2,7 @@
 
 ::Directory listing
 
-if "%1"=="" goto default
+if "%~1"=="" goto default
 
 if exist *.%1 goto ext
 
@@ -17,7 +17,7 @@ goto o
 goto bye
 
 :df Directory Freedom
-if "%2"=="" goto df_hop
+if "%~2"=="" goto df_hop
 df.com /D *.%2
 goto bye
 :df_hop

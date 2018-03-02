@@ -17,9 +17,9 @@ echo %filep%
 
 set fp=* Route help callers.
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 
 
@@ -27,7 +27,7 @@ if "%1" == "help" goto help
 
 set fp=* Route other callers.
 
-if "%1"=="" goto open_folder_in_windows_explorer_at_current_directory
+if "%~1"=="" goto open_folder_in_windows_explorer_at_current_directory
 
 goto open_folder_in_windows_explorer
 

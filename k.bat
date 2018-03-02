@@ -17,11 +17,11 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%1" == "?" goto help
+if "%~1" == "?" goto help
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 
 
@@ -37,8 +37,8 @@ if %errorlevel% == 1 call fn %1
 
 set cbf_parameter=%cbf_filename%
 
-if "%2" == "" call an dc
-if not "%2" == "" call an %2
+if "%~2" == "" call an dc
+if not "%~2" == "" call an %2
 
 call r
 

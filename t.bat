@@ -31,9 +31,9 @@ color 0e
 
 set fp=* Route callers.
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 goto code_execution_area
 
@@ -128,7 +128,7 @@ set fp=* Conditional route execution. If %1 is something then do that, else do c
 echo.
 echo %fp%
 
-if "%1" == "" goto code_execution_area
+if "%~1" == "" goto code_execution_area
 
 goto %1
 
@@ -893,22 +893,6 @@ echo.
 
 ::call "%savannah%\belfry\back up dissonance.bat"
 
-:Aug-10-2011: How to pass parameters/filenames that might contain spaces.
-
-On the receiving end use 
-echo %~1
-echo %~2
-
-instead of say 
-echo %1
-echo %2
-
-::The variable "%~dp0" stands for the path from where the batch file was run.
-
-@set toolPath=%~dp0
-echo %toolPath%
-cd
-
 :Cool title code that puts the name of the batch file in the title bar of the command prompt.
 title %0.
 
@@ -1216,8 +1200,8 @@ cd\
 if not exist testfolder md testfolder
 if "%testmode%"=="true" if /i exist "c:\testfolder" echo true
 
-if "%1" == "" echo No command line parameter was passed.
-if not "%1" == "" echo %1 parameter was passed.
+if "%~1" == "" echo No command line parameter was passed.
+if not "%~1" == "" echo %1 parameter was passed.
 
 :This works.
 
@@ -4459,8 +4443,8 @@ rem the batch files.
 for %%i in (%~sf0) do set NON_ESCAPED=%%~dPsi..
 
 
-FOR /F "tokens=1-2* delims=%%" %%1 IN ("%NON_ESCAPED%") DO (
-if NOT "%%2" == "" goto invalidPath)
+FOR /F "tokens=1-2* delims=%%" "%~1" IN ("%NON_ESCAPED%") DO (
+if NOT "%~2" == "" goto invalidPath)
 
 for %%i in (%~sf0) do set DIR_HOME=%%~dPsi.
 
@@ -4875,7 +4859,7 @@ goto exitb
 
 set fp=* Route callers, top method. (!referrouter)
 
-if not "%1" == "" goto %1
+if not "%~1" == "" goto %1
 
 goto status
 
@@ -6400,8 +6384,8 @@ rem lu: Jan-22-2018
 echo %fp%
 echo.
 
-dir | find /i "%1">nul
-if %errorlevel% == 0 cd "%1"
+dir | find /i "%~1">nul
+if %errorlevel% == 0 cd "%~1"
 
 if %errorlevel% == 0 echo Exists.
 if %errorlevel% == 1 echo Does NOT exist.
@@ -6608,22 +6592,6 @@ goto exitb
 
 :_
 
-:code_execution_area
-
-set fp=* Execution area. Code below here runs.
-
-rem echo.
-rem echo %fp%
-
-cls
-echo.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* New style of parentheses.
@@ -6641,6 +6609,58 @@ if not "%cbf_url%" == "" (
   call sf %1
   goto exitb
 )
+
+goto exitb
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+cls
+echo.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+set fp=* The new way to validate against percent 1.
+
+rem In batch files how do evaluate an empty parameter?
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+:Aug-10-2011: How to pass parameters/filenames that might contain spaces.
+
+rem On the receiving end use 
+rem echo %~1
+rem echo %~2
+
+rem instead of say 
+rem echo %1
+rem echo %2
+
+::The variable "%~dp0" stands for the path from where the batch file was run.
+
+rem @set toolPath=%~dp0
+rem echo %toolPath%
+rem cd
+
+echo.
+echo 1. %~1
+
+echo.
+if "%~1" == "" echo nothing
 
 goto exitb
 

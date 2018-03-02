@@ -17,11 +17,11 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%1" == "" goto use_current_cbf_url
+if "%~1" == "" goto use_current_cbf_url
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 goto code_execution_area
 
@@ -134,7 +134,7 @@ set cbf_parameter=%cbf_url%
 
 set fp=* Set default browser.
 
-if not "%2" == "" goto override_default_browser
+if not "%~2" == "" goto override_default_browser
 
 call an kr
 

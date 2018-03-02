@@ -24,11 +24,11 @@ echo.
 
 set fp=Route callers.
 
-if "%1" == "" goto help
+if "%~1" == "" goto help
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 goto %1
 
@@ -162,22 +162,6 @@ rem ******* End Exit Functions.
 
 :_
 
-:me
-
-set fp=Multi-Edit.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
-
-goto exitb
-
-
-
-:_
-
 :sm
 
 set fp=Sublime.
@@ -187,22 +171,6 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_application=C:\Program Files\Sublime Text 3\sublime_text.exe
-
-goto exitb
-
-
-
-:_
-
-:no
-
-set fp=Notepad.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=c:\windows\system32\notepad.exe
 
 goto exitb
 
@@ -2443,7 +2411,9 @@ rem lu: Sep-6-2017
 
 echo %fp%
 
-set cbf_path=%aa%\forgittesting
+call n aa
+
+set cbf_path=%cbf_path%\for-git-testing
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
@@ -2462,6 +2432,38 @@ rem lu: Mar-1-2018
 echo %fp%
 
 set cbf_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
+
+goto exitb
+
+
+
+:_
+
+:me
+
+set fp=Multi-Edit.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
+
+goto exitb
+
+
+
+:_
+
+:no
+
+set fp=Notepad.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\windows\system32\notepad.exe
 
 goto exitb
 

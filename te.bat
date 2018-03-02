@@ -7,7 +7,6 @@
 :_
 
 set filep=* Execute the nickname based on what type of nickname it is.
-rem qq-1
 
 echo.
 echo %filep%
@@ -26,9 +25,9 @@ echo.
 
 set fp=* Route help callers.
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 
 

@@ -14,11 +14,11 @@ set filep=* URL nickname dictionary that sets the full URL name corresponding to
 
 set fp=* Route callers.
 
-if "%1" == "" goto help
+if "%~1" == "" goto help
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 
 

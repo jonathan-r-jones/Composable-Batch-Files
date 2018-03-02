@@ -17,13 +17,17 @@ rem echo %filep%
 
 set fp=* Route callers.
 
-if "%1" == "" goto help
+if "%~1" == "" goto help
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
-call n %1
+rem echo Caller 1: an.bat, Percent 1: %~1
+
+call n %~1
+
+rem echo Caller 2: an.bat, Percent 1: %~1
 
 goto exitb
 

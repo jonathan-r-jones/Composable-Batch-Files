@@ -25,16 +25,16 @@ echo.
 
 set fp=* Route help callers.
 
-if "%1" == "/?" goto help
+if "%~1" == "/?" goto help
 
-if "%1" == "help" goto help
+if "%~1" == "help" goto help
 
 
 
 :_
 
-if "%1" == "" call ea sm
-if not "%1" == "" call ed %1 sm
+if "%~1" == "" call ea sm
+if not "%~1" == "" call ed %1 sm
 
 goto exitb
 
