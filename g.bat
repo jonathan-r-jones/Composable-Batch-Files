@@ -1982,9 +1982,11 @@ goto exitb
 
 ::_
 
+:st
+
 :store
 
-set fp=* This gets Git to stop asking for username after each push.
+set fp=* Store credentials so that Git stops asking for credentials after each push.
 
 rem lu: Mar-1-2018
 
