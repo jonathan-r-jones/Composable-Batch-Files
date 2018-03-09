@@ -178,31 +178,6 @@ goto exitb
 
 :_
 
-:npp
-
-set fp=Notepad++.
-
-rem lu: Feb-1-2018
-
-echo %fp%
-
-rem Determine installation path.
-
-if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_installation_path=c:\program files\notepad++\notepad++.exe
-if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_installation_path="c:\program files (x86)\notepad++\notepad++.exe"
-
-if "%cbf_application_installation_path%"=="" echo.
-if "%cbf_application_installation_path%"=="" echo Notepad++ is not installed.
-if "%cbf_application_installation_path%"=="" goto exitb
-
-set cbf_application=%cbf_application_installation_path%
-
-goto exitb
-
-
-
-:_
-
 :dc
 
 set fp=Simulate a double click in CBF.
@@ -2464,6 +2439,109 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_application=c:\windows\system32\notepad.exe
+
+goto exitb
+
+
+
+:_
+
+:npp
+
+set fp=Notepad++.
+
+rem lu: Mar-9-2018
+
+echo %fp%
+
+rem Determine installation path.
+
+if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_installation_path=c:\program files\notepad++\notepad++.exe
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_installation_path="c:\program files (x86)\notepad++\notepad++.exe"
+
+if "%cbf_application_installation_path%" == "" (
+  echo.
+  echo Notepad++ is not installed.
+  goto exitb
+)
+
+set cbf_application=%cbf_application_installation_path%
+
+goto exitb
+
+
+
+:_+ CBF Wizardry
+
+
+
+::_
+
+:cbfa
+
+set fp=* CBF Application.
+
+rem lu: Mar-9-2018
+
+echo %fp%
+
+call :transform_cbf_variable "%cbf_application%"
+
+goto exitb
+
+
+
+::_
+
+:cbfaip
+
+set fp=* CBF Application Installation Path.
+
+rem lu: Mar-9-2018
+
+echo %fp%
+
+call :transform_cbf_variable "%cbf_application_installation_path%"
+
+goto exitb
+
+
+
+::_
+
+:cbff
+
+set fp=* CBF Filename.
+
+rem lu: Mar-9-2018
+
+echo %fp%
+
+call :transform_cbf_variable "%cbf_filename%"
+
+goto exitb
+
+
+
+::_
+
+:transform_cbf_variable
+
+set fp=* Transform CBF variable.
+
+rem lu: Mar-9-2018
+
+echo.
+echo %fp%
+
+if "%~1" == "" (
+  echo.
+  echo The CBF variable in question is not set.
+  set cbf_path=%cd%
+  goto exitb
+)
+
+set cbf_path=%~p1
 
 goto exitb
 

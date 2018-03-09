@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Transform/change directory.
+set filep=* Verify a nickname command's settings.
 
 echo.
 echo %filep%
@@ -15,21 +15,29 @@ echo %filep%
 
 :_
 
-set fp=* Route callers.
+set fp=* Add some whitespace.
 
-if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
-
-if "%~1" == "shared_list" goto %1
+echo.
 
 
 
 :_
 
-if not "%~1" == "" call pn %1
+set fp=* Route help callers.
 
-cd /d %cbf_path%
+if "%~1" == "" goto help
+
+if "%~1" == "/?" goto help
+
+if "%~1" == "help" goto help
+
+
+
+:_
+
+set fp=* Main function.
+
+
 
 goto exitb
 
@@ -41,17 +49,16 @@ goto exitb
 
 :help
 
-echo.
-echo Filename stands for: Transform Directory.
+echo Filename stands for: Verify a nickname command's settings.
 
 echo.
-echo Last Updated: Jan-24-2018
+echo Last Updated: Mar-9-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: Path nickname.
+echo Parameter 1: Nickname you wish to verify.
 
 goto exitb
 
