@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Execute the nickname based on what type of nickname it is.
+set filep=* This template file can be used as a "Save As" to create a new composable batch file.
 
 echo.
 echo %filep%
@@ -47,7 +47,7 @@ goto exitb
 
 :help
 
-echo Filename stands for: .
+echo Filename stands for: Composable Batch File Template.
 
 echo.
 echo Last Updated: Feb-6-2018
