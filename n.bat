@@ -47,7 +47,7 @@ echo.
 echo Last Updated: Feb-19-2018
 
 echo.
-echo The filename stands for: Nicknames.
+echo The filename stands for: Nickname dictionary.
 
 echo.
 echo Usage: %0 [single parameter]
