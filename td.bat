@@ -27,7 +27,15 @@ if "%~1" == "shared_list" goto %1
 
 :_
 
+set fp=* Main function.
+
 if not "%~1" == "" call pn %1
+
+if "%cbf_path%" == "" (
+  echo.
+  echo Input Error: There is no cbf_path defined for '%~1'. 
+  goto exitb
+)
 
 cd /d %cbf_path%
 

@@ -29,11 +29,16 @@ color 0e
 
 :_
 
+cls
+echo.
+
 set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
+
+if not "%~1" == "" goto %1
 
 goto code_execution_area
 
@@ -6616,22 +6621,6 @@ goto exitb
 
 :_
 
-:code_execution_area
-
-set fp=* Execution area. Code below here runs.
-
-rem echo.
-rem echo %fp%
-
-cls
-echo.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 set fp=* The new way to validate against percent 1.
 
 rem In batch files how do evaluate an empty parameter?
@@ -6661,6 +6650,74 @@ echo 1. %~1
 
 echo.
 if "%~1" == "" echo nothing
+
+goto exitb
+
+
+
+:_
+
+:percent_1
+
+set fp=* Testing goto %1.
+
+rem lu: Mar-23-2018
+
+echo %fp%
+
+
+rem qq-1
+goto exitb
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:ht_env
+
+set fp=* How to set and test against an environment variable.
+
+rem lu: Mar-23-2018
+
+echo %fp%
+
+
+set test1=""
+
+echo.
+echo Test1: %test1%
+
+
+set test2 = ""
+
+echo.
+echo Test2: %test2%
+
+
+set test3=
+
+echo.
+echo Test3: %test3%
+
+
+set test4 =
+
+echo.
+echo Test4: %test4%
+
 
 goto exitb
 

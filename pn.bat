@@ -24,6 +24,10 @@ if "%~1" == "help" goto help
 
 :_
 
+set fp=* Main function.
+
+set cbf_path=
+
 call n %1
 
 goto exitb
