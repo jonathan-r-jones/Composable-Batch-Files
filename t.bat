@@ -5993,26 +5993,6 @@ goto exitb
 
 :_
 
-set fp=* If folder exists.
-
-rem fud: Aug-29-2017
-
-echo.
-echo %fp%
-echo.
-
-cd\aa
-
-dir | find /i "ext">nul
-if %errorlevel% == 0 echo Folder EXISTS.
-if %errorlevel% == 1 echo Folder does NOT exist.
-
-goto exitb
-
-
-
-:_
-
 set fp=* Create a folder if it doesn't exist.
 
 rem lu: Sep-6-2017
@@ -6665,8 +6645,29 @@ rem lu: Mar-23-2018
 
 echo %fp%
 
+goto exitb
 
-rem qq-1
+
+
+:_
+
+:fe
+
+set fp=* Testing whether a folder exists.
+
+rem lu: Mar-26-2018
+
+echo.
+echo %fp%
+echo.
+
+cd /d %dropbox%
+
+dir | find /i "Savannah Backups">nul
+
+if %errorlevel% == 0 echo Folder EXISTS.
+if %errorlevel% == 1 echo Folder does NOT exist.
+
 goto exitb
 
 
