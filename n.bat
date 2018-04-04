@@ -2549,7 +2549,7 @@ goto exitb
 
 :_
 
-:mecf
+:mecfig
 
 set fp=* Multi-Edit Config Files Dated Backups.
 
