@@ -2547,4 +2547,20 @@ goto exitb
 
 
 
+:_
+
+:mecf
+
+set fp=* Multi-Edit Config Files Dated Backups.
+
+rem lu: Jan-3-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
+
+goto exitb
+
+
+
 :_ (!rfsp) (mov-6)
