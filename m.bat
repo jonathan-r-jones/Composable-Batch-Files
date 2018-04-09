@@ -71,7 +71,7 @@ echo   fix_buttons  Fix button warnings by Mike Stonkey.
 echo      fix_menu  Fix menu warnings by Mike Stonkey.
 echo gen_cred_proc  Run generate encrypted Maven credentials process.
 echo       gen_ver  Generate new timestamp-based Mercury version #.
-echo          list  List of Common Composable Batch files.
+echo          list  List of Composable Batch files.
 echo          mde1  Mercury Development Environment (MDE) validation.
 echo          mde2  MDE prerequisites - part 2.
 echo          mde3  MDE prerequisites - part 3.
@@ -1563,7 +1563,7 @@ goto exitb
 
 :list
 
-set fp=* List of common CBF Helper Batch files updated on Feb-8-2018.
+set fp=* List of CBF Helper Batch files updated on Apr-9-2018.
 
 echo  %fp%
 echo.
@@ -1593,6 +1593,8 @@ echo    no:  Run Notepad.
 echo   npp:  Run Notepad++.
 echo    of:  Open Folder.
 echo    pn:  Path nickname facade dictionary.
+echo    rf:  Remove folder corresponding to specified CBF path nickname. 
+rem qq-1
 echo     s:  SQL/Database, including LDAP, related tasks.
 echo    sf:  Surf to websites.
 echo    sm:  Run Sublime.

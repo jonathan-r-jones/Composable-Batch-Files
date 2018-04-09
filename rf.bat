@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Remove folder of the specified path nickname. WARNING: Powerful batch file. Exercise caution.
+set filep=* Remove folder of the specified CBF path nickname. WARNING: Powerful batch file. Exercise caution.
 
 echo.
 echo %filep%
