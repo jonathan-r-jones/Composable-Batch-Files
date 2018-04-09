@@ -37,11 +37,13 @@ set fp=* Main function.
 
 
 
+rem (!rfsp) (mov-2)
+
 goto exitb
 
 
 
-:_ (!rfsp) (mov-6)
+:_
 
 :h
 
