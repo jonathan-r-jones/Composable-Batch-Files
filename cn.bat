@@ -38,11 +38,13 @@ set fp=* Main function.
 echo.
 git clone %cbf_url%
 
+rem (!rfsp) (mov-2)
+
 goto exitb
 
 
 
-:_ (!rfsp) (mov-9)
+:_
 
 :h
 

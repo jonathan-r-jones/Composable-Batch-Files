@@ -2294,50 +2294,6 @@ goto exitb
 
 
 
-:_+ CBF-related links.
-
-
-
-::_
-
-:gp
-
-:gpcbf
-
-set fp=CBF on GitHub Pages.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
-
-goto exitb
-
-
-
-::_
-
-:ba
-
-:cbf
-
-set fp=CBF on GitHub.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
-
-set cbf_path=%composable_batch_files%
-
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
-
-goto exitb
-
-
-
 :_
 
 :all
@@ -2558,6 +2514,52 @@ rem lu: Jan-3-2018
 echo %fp%
 
 set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
+
+goto exitb
+
+
+
+:_+ CBF-related links.
+
+
+
+::_
+
+:gp
+
+:gpcbf
+
+set fp=CBF on GitHub Pages.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
+
+goto exitb
+
+
+
+::_
+
+:ba
+
+:cbf
+
+set fp=CBF on GitHub.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
+
+set cbf_path=%composable_batch_files%
+
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+rem qq-2
 
 goto exitb
 
