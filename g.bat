@@ -906,27 +906,6 @@ goto exit
 
 :_
 
-:idb
-
-set fp=* 9b. Identify branch.
-
-rem skw: identify_branch
-
-echo %fp%
-echo.
-
-rem These didn't work. Jan-30-2017
-rem git branch master
-rem git branch Branch2
-
-git branch clean6.2
-
-goto exitb
-
-
-
-:_
-
 :bv
 
 :label
@@ -1490,8 +1469,6 @@ goto exitb
 
 :2
 
-:aro
-
 :origin
 
 set fp=* Step 2. Add remote origin. This is a one-time origin-specific action. (!step2, !aro)
@@ -1520,6 +1497,22 @@ git remote add origin https://github.com/jonathan-r-jones/composable_batch_files
 :grao
 
 git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/resume.git
+
+goto exitb
+
+
+
+::_
+
+:aro
+
+set fp=* Add remote origin for CBF URL.
+
+echo %fp%
+
+call n %2
+
+git remote add origin %cbf_url%
 
 goto exitb
 
@@ -2049,6 +2042,27 @@ rem remove: skw
 echo %fp%
 
 rd /q /s .git
+
+goto exitb
+
+
+
+:_
+
+:idb
+
+set fp=* 9b. Identify branch.
+
+rem skw: identify_branch
+
+echo %fp%
+echo.
+
+rem These didn't work. Jan-30-2017
+rem git branch master
+rem git branch Branch2
+
+git branch clean6.2
 
 goto exitb
 

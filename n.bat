@@ -1984,7 +1984,8 @@ echo %fp%
 
 set cbf_path=%savannah%\cmac\source code
 
-set cbf_url=https://github.com/jonathan-r-jones/quickla.git
+set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+rem qq-1
 
 goto exitb
 
@@ -2334,26 +2335,6 @@ goto exitb
 
 :_
 
-:fgt
-
-set fp=ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo %fp%
-
-call n aa
-
-set cbf_path=%cbf_path%\for-git-testing
-
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
-
-goto exitb
-
-
-
-:_
-
 :mrdoc
 
 set fp=* Mercury documentation.
@@ -2558,6 +2539,24 @@ set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
 set cbf_path=%composable_batch_files%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+goto exitb
+
+
+
+:_
+
+:fgt
+
+set fp=ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo %fp%
+
+set cbf_path=%aa%\for-git-testing
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing
 
 goto exitb
 
