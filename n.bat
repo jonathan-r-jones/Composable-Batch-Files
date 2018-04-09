@@ -2559,8 +2559,6 @@ set cbf_path=%composable_batch_files%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
 
-rem qq-2
-
 goto exitb
 
 
