@@ -25,13 +25,32 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-if not "%~1" == "" call un %1
+if not "%~1" == "" call n %1
 
-if not "%~2" == "" call td %2
+if "%~2" == "c" goto main_function
 
 
 
 :_
+
+set fp=* Use the CBF nickname to determine where to install the repository.
+
+if exist %cbf_path% (
+  echo.
+  echo "%cbf_path%" already exists.
+  goto exitb
+)
+
+call m set_parent_fd "%cbf_path%\.." parent_folder
+
+rem echo.
+rem echo Parent_Folder: %parent_folder%
+
+
+
+:_
+
+:main_function
 
 set fp=* Main function.
 
@@ -60,10 +79,14 @@ echo.
 echo Usage: cn [Parameter 1] [Parameter 2]
 
 echo.
-echo Parameter 1: URL nickname of the repository location.
+echo Parameter 1: URL nickname of the repository.
 
 echo.
-echo Parameter 2 (Optional): Path nickname. If left blank, the repository will be installed into a subfolder of the current folder.
+echo Parameter 2 (Optional): Path nickname or current folder ("c"). 
+
+echo If left blank, the repository will be installed into the specified CBF Path, assuming its not already there.
+
+echo If left set to "c", the repository will be installed into a subfolder of the current folder.
 
 goto exitb
 

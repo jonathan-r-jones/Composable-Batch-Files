@@ -1985,7 +1985,6 @@ echo %fp%
 set cbf_path=%savannah%\cmac\source code
 
 set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
-rem qq-1
 
 goto exitb
 
@@ -2557,6 +2556,16 @@ echo %fp%
 set cbf_path=%aa%\for-git-testing
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing
+
+goto exitb
+
+
+
+:_
+
+:set_parent_folder
+
+set %2=%~f1 
 
 goto exitb
 

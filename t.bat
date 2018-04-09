@@ -3625,7 +3625,9 @@ goto exitp
 
 :_
 
-set fp=* DP Zero in action.
+:dpz
+
+set fp=* DP Zero is the folder where the script is executing from. DP Zero in action.
 
 echo.
 echo %fp%
@@ -6674,14 +6676,20 @@ goto exitb
 
 :_
 
-:code_execution_area
+:folder_exists
 
-set fp=* Execution area. Code below here runs.
+set fp=* Testing whether a folder exists 2.
 
-rem echo.
-rem echo %fp%
+rem lu: Apr-9-2018
 
-rem ******* (!rfcea, !rfsp) (mov4)
+echo.
+echo %fp%
+echo.
+
+if exist %cbf_path% echo It exists.
+if not exist %cbf_path% echo It does NOT exist.
+
+goto exitb
 
 
 
@@ -6721,6 +6729,134 @@ echo Test4: %test4%
 
 
 goto exitb
+
+
+
+:_
+
+:
+
+set fp=* Can I go to a folder's parent?
+
+rem lu: Apr-9-2018
+
+echo %fp%
+
+call td fgt
+
+cd..
+
+goto exitb
+
+
+
+:_
+
+:RESOLVE
+
+SET %2=%~f1 
+
+GOTO :EOF
+
+
+
+:_
+
+:set_parent_fd
+
+set %2=%~f1 
+
+goto exitb
+
+
+
+:_
+
+set fp=* Find parent folder without using cd command.
+
+rem lu: Apr-9-2018
+
+echo %fp%
+
+call n fgt
+
+rem CALL :RESOLVE "%cbf_path%\.." PARENT_ROOT
+
+call :set_parent_fd "%cbf_path%\.." parent_folder
+
+echo.
+echo cbf: %cbf_path%
+
+rem echo.
+rem echo Parent_Root: %parent_root%
+
+echo.
+echo Parent_Folder: %parent_folder%
+echo.
+
+rem echo.
+rem echo %%2: %2
+
+rem echo F1: %~f1 
+
+
+rem Original
+rem @echo off&setlocal
+rem for %%i in ("%cbf_path%") do cd..
+rem for %%i in ("%cbf_path%.bat") do set "folder=%%~fi"
+rem echo Folder: %folder%
+
+rem Original
+rem @echo off&setlocal
+rem for %%i in ("%~dp0..") do set "folder=%%~fi"
+rem echo %folder%
+
+rem echo.
+rem echo ~dp0 = %~dp0
+
+rem echo.
+rem echo ~dp0. = %~dp0.
+
+rem echo.
+rem echo ~dp0.. = %~dp0..
+
+rem for %%i in ("%~dp0..") do set "folder=%%~fi"
+rem echo %folder%
+
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+set fp=* Find parent folder without using cd command distilled version.
+
+rem lu: Apr-9-2018
+
+echo %fp%
+
+call n fgt
+
+call :set_parent_fd "%cbf_path%\.." parent_folder
+
+echo.
+echo cbf: %cbf_path%
+
+echo.
+echo Parent_Folder: %parent_folder%
+echo.
 
 
 

@@ -15,13 +15,6 @@ echo %filep%
 
 :_
 
-set fp=* Add whitespace.
-
-echo.
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -79,9 +72,10 @@ echo  [your label]  [your description] [Build your own.]
 echo           ppt  PowerPoint Presentation on CBF.
 echo   prepare_mob  Prepare for mobile deployment.
 echo        pscrub  Partially scrub deployment environment.
-echo            rd  Remove directory.
+echo            rf  Remove folder.
 echo     run_tirem  Run tirem.
 echo         scrub  When deploying new War file, this prepares env.
+echo set_parent_fd  Set parent folder.
 echo    s6_deleted  Rerun these commands if sencha folder was deleted.
 echo start_wildfly  Start WildFly. Refresh the environment.
 echo  stop_wildfly  Stop WildFly.
@@ -1594,7 +1588,6 @@ echo   npp:  Run Notepad++.
 echo    of:  Open Folder.
 echo    pn:  Path nickname facade dictionary.
 echo    rf:  Remove folder corresponding to specified CBF path nickname. 
-rem qq-1
 echo     s:  SQL/Database, including LDAP, related tasks.
 echo    sf:  Surf to websites.
 echo    sm:  Run Sublime.
@@ -2896,8 +2889,8 @@ goto exitb
 
 set fp=* Update timestamp.
 
-echo %fp%
 echo.
+echo %fp%
 
 set classpath=%COMPOSABLE_BATCH_FILES%
 call java Get_Timestamp_With_No_Spaces>%tmp%\java_timestamp.txt
@@ -3001,10 +2994,29 @@ set fp=* NPM install command for Sencha on Windows.
 
 rem lu: Mar-1-2018
 
-echo %fp%
 echo.
+echo %fp%
 
 npm install -g sencha-cmd
+
+goto exitb
+
+
+
+:_
+
+:set_parent_fd
+
+set fp=* Set parent folder.
+
+rem batch file path parsing parent folder, cd.., 
+
+rem lu: Apr-9-2018
+
+echo.
+echo %fp%
+
+set %3=%~f2
 
 goto exitb
 
