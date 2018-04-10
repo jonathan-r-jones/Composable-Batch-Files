@@ -12,14 +12,6 @@ set filep=* Perform Git-related tasks.
 
 :_
 
-set fp=* Add echo.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto help
