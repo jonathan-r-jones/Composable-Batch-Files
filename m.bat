@@ -8,8 +8,8 @@
 
 set filep=* Perform miscellaneous tasks.
 
-echo.
-echo %filep%
+rem echo.
+rem echo %filep%
 
 
 

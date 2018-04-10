@@ -6762,11 +6762,30 @@ GOTO :EOF
 
 :_
 
-:set_parent_fd
+:set_parent_fd_original
 
 set %2=%~f1 
 
 goto exitb
+
+
+
+:_
+
+:set_parent_fd
+
+set fp=* Set parent folder.
+
+rem batch file path parsing parent folder, cd.., 
+
+rem lu: Apr-9-2018
+
+echo.
+echo %fp%
+
+set %2=%~f1
+
+m exitb
 
 
 
@@ -6828,14 +6847,15 @@ rem echo %folder%
 
 :_
 
-:code_execution_area
+set fp=* Call parent folder.
 
-set fp=* Execution area. Code below here runs.
+rem lu: Apr-10-2018
 
-rem echo.
-rem echo %fp%
+echo %fp%
 
-rem ******* (!rfcea, !rfsp) (mov4)
+cd /d %parent_folder%
+
+goto exitb
 
 
 
@@ -6850,13 +6870,43 @@ echo %fp%
 call n fgt
 
 call :set_parent_fd "%cbf_path%\.." parent_folder
+rem qq-1
 
 echo.
 echo cbf: %cbf_path%
 
 echo.
 echo Parent_Folder: %parent_folder%
+
 echo.
+cd /d %parent_folder%
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+set fp=* Experimenting with exit.
+
+rem lu: Apr-10-2018
+
+echo %fp%
+
+m exitp
+m exitb
+m exit
 
 
 

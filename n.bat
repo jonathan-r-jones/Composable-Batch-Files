@@ -2563,9 +2563,17 @@ goto exitb
 
 :_
 
-:set_parent_folder
+:fgt2
 
-set %2=%~f1 
+set fp=ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo %fp%
+
+set cbf_path=%aa%\for-git-testing2
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing
 
 goto exitb
 

@@ -37,6 +37,11 @@ if "%cbf_path%" == "" (
   goto exitb
 )
 
+echo.
+set /P user_option=Are you sure you wish to remove "%cbf_path%"?(y/n): 
+
+if not "%user_option%"=="y" goto exitb
+
 rd /q /s %cbf_path%
 
 rem (!rfsp) (mov-2)

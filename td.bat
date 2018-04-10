@@ -17,6 +17,8 @@ echo %filep%
 
 set fp=* Route callers.
 
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
@@ -37,9 +39,29 @@ if "%cbf_path%" == "" (
   goto exitb
 )
 
+if "%2" == "p" goto find_parent_folder
+
+if not exist "%cbf_path%" (
+  echo.
+  echo Folder does not exist at '%cbf_path%'. 
+  goto exitb
+)
+
 cd /d %cbf_path%
 
-goto exitb
+m exitb
+
+
+
+:_
+
+:find_parent_folder
+
+call m set_parent_fd "%cbf_path%\.." parent_folder
+rem echo Parent Folder: %parent_folder%
+cd /d %parent_folder%
+
+m exitb
 
 
 
@@ -61,54 +83,10 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1: Path nickname.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
 echo.
-rem echo %fp%
+echo Parameter 2 (Optional): If "p" is specified, go to the parent folder of parameter 1.
 
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 

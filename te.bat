@@ -39,7 +39,7 @@ set fp=* Main function.
 
 rem (!rfsp) (mov-2)
 
-goto exitb
+m exitb
 
 
 
@@ -66,54 +66,7 @@ echo Parameter 1 (Optional):
 echo.
 echo Parameter 2 (Optional):
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 
