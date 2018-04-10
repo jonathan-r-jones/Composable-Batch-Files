@@ -302,8 +302,8 @@ m exitb
 
 :add
 
+echo.
 set fp=* Add files generic action.
-rem qq-1
 
 echo %fp%
 
@@ -775,6 +775,7 @@ m exitb
 
 set fp=* Commit with timestamp description.
 
+echo.
 echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
