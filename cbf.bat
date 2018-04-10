@@ -6,18 +6,7 @@
 
 :_
 
-set filep=* Show the state of the CBF environment variables.
-
-echo.
-echo %filep%
-
-
-
-:_
-
-set fp=* Add some whitespace.
-
-echo.
+set filep=* List of CBF Helper Batch files updated on Apr-9-2018.
 
 
 
@@ -25,32 +14,11 @@ echo.
 
 set fp=* Route callers.
 
+if "%~1" == "" goto l
+
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
-
-
-
-:_
-
-echo CBF_Application: %cbf_application%
-
-echo.
-echo CBF_Application_Installation_Path: %cbf_application_installation_path%
-
-echo.
-echo CBF_Filename: %cbf_filename%
-
-echo.
-echo CBF_Parameter: %cbf_parameter%
-
-echo.
-echo CBF_Path: %cbf_path%
-
-echo.
-echo CBF_URL: %cbf_url%
-
-goto exitb
 
 
 
@@ -60,62 +28,64 @@ goto exitb
 
 :help
 
+echo.
+echo %filep%
+
+echo.
 echo Filename stands for: Composed Batch Files
-echo.
 
-echo Last Updated (lu): Feb-6-2018
 echo.
+echo Last Updated (lu): Apr-10-2018
 
+echo.
 echo Usage: %0
 
-goto exitb
+m exitb
 
 
 
-:_+ Exit Functions
+:_
 
+:l
 
+:list
 
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
+set fp=* List of CBF Helper Batch files updated on Apr-9-2018.
 
 echo.
-rem echo %fp%
+echo  %fp%
+echo.
 
-pause
+echo   File  Description
+echo   ----  ------------------------------------------------------------------
+echo   acp:  Add, commit and push Git changes with timestamp commit message.
+echo     c:  Clear screen and reset color.
+echo   cbf:  Show the state of CBF environment variables.
+echo    cn:  Used for Git cloning tasks.
+echo    cy:  Copy file(s).
+echo  cysd:  Copy file file from source to destination.
+echo     d:  Easier-to-type and remember version of "dir".
+echo     e:  Exit command window.
+echo    ea:  Application-centric way of running an app with opt. file param.
+echo    ed:  Filename-centric way of editing a file with optional app. param.
+echo     g:  Perform Git-related tasks.
+echo     h:  Perform Sencha-related tasks.
+echo     k:  Double-click equivalent way to exec. a file with opt. app. param.
+echo     m:  Perform miscellaneous tasks.
+echo    me:  Run Multi-Edit.
+echo    mx:  Use Multi-Edit to edit a batch file in the CBF folder.
+echo     n:  Nicknames source dictionary.
+echo    no:  Run Notepad.
+echo   npp:  Run Notepad++.
+echo    of:  Open Folder.
+echo    rf:  Remove folder corresponding to specified CBF path nickname. 
+echo     s:  SQL/Database, including LDAP, related tasks.
+echo    sf:  Surf to websites.
+echo    sm:  Run Sublime.
+echo    td:  Transform Directory.
+echo     x:  Execute the nickname based on what type of nickname it is.
 
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 

@@ -51,7 +51,7 @@ echo Last Updated: Feb-6-2018
 echo.
 echo Usage: %0 [Parameter 1]
 
-goto exitb
+m exitb
 
 
 

@@ -52,48 +52,7 @@ echo    some_steps  Function that runs some functions.
 echo     all_steps  Function that runs all functions.
 echo           ghp  Surf to this repository's GitHub pages site.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
+m exitb
 
 
 
@@ -110,7 +69,7 @@ echo.
 
 echo Put some code here.
 
-goto exitb
+m exitb
 
 
 
@@ -127,7 +86,7 @@ echo.
 
 echo Put some code here.
 
-goto exitb
+m exitb
 
 
 
@@ -147,7 +106,7 @@ call hello_world_2 step_2
 
 call %0 step_3
 
-goto exitb
+m exitb
 
 
 
@@ -165,7 +124,7 @@ call %0 step_1
 
 call hello_world_2 step_2
 
-goto exitb
+m exitb
 
 
 
@@ -185,7 +144,7 @@ call hello_world_2 step_2
 
 call :step_3
 
-goto exitb
+m exitb
 
 
 
@@ -202,7 +161,7 @@ rem lu: Jan-5-2018
 echo %fp%
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://jonathan-r-jones.github.io/Composable-Batch-Files/
 
-goto exitb
+m exitb
 
 
 

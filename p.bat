@@ -114,7 +114,7 @@ echo     Parameter  Description
 echo -------------  ------------------------------------------------
 echo           ver  PowerShell version
 
-goto exitb
+m exitb
 
 
 
@@ -134,7 +134,7 @@ echo %fp%
 
 $PSVersionTable.PSVersion
 
-goto exitb
+m exitb
 
 
 

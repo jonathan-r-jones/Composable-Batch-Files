@@ -64,54 +64,7 @@ echo             s  Size, biggest first.
 echo            s2  Size, smallest first.
 echo             t  Files and folders changed today.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 
@@ -128,7 +81,7 @@ echo.
 
 dir
 
-goto exitb
+m exitb
 
 
 
@@ -145,7 +98,7 @@ echo.
 
 dir /o-s %2
 
-goto exitb
+m exitb
 
 
 
@@ -162,7 +115,7 @@ echo.
 
 dir /os %2
 
-goto exitb
+m exitb
 
 
 
@@ -179,7 +132,7 @@ echo.
 
 dir /o-d %2
 
-goto exitb
+m exitb
 
 
 
@@ -196,7 +149,7 @@ echo.
 
 dir /od %2
 
-goto exitb
+m exitb
 
 
 
@@ -212,7 +165,7 @@ echo %fp%
 
 forfiles /d +0 /c "cmd /c echo @file @ftime @fsize"
 
-goto exitb
+m exitb
 
 
 
@@ -230,7 +183,7 @@ echo %fp%
 
 forfiles /d +0 /c "cmd /c if @isdir==FALSE echo @file @ftime @fsize"
 
-goto exitb
+m exitb
 
 
 
@@ -247,7 +200,7 @@ echo %fp%
 echo.
 dir /ah
 
-goto exitb
+m exitb
 
 
 

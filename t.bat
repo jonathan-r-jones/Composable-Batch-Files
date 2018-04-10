@@ -66,54 +66,7 @@ rem Batch File Style: Code Execution Area.
 
 rem Test Batch File Code Keepers
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 
@@ -195,7 +148,7 @@ cd
 
 :_ Copy Code Blocks to Save Below Here ********
 
-goto exit
+m exit
 
 
 
@@ -312,7 +265,7 @@ rem set fp=8. * Test the set statement.
 
 rem set fp= 8. * Test the set statement.
 
-goto exit
+m exit
 
 
 
@@ -346,7 +299,7 @@ set staging_area=\!\
 
 for /r "%podcast_folder%" %%f in ("*.jpg") do move "%%f" %staging_area%
 
-goto exit
+m exit
 
 
 
@@ -360,7 +313,7 @@ echo.
 
 echo hey
 
-goto exit
+m exit
 
 
 
@@ -376,7 +329,7 @@ echo.
 
 echo hey
 
-goto exit
+m exit
 
 
 
@@ -391,7 +344,7 @@ echo.
 xcopy /d /h /r /y "%reach out%\cc.asc" "%reach out%\copy of cc.asc"
 rem xcopy /d /h /r /s /y "%reach out%\cc.asc" "copy of cc.asc"
 
-goto exit
+m exit
 
 
 
@@ -410,7 +363,7 @@ cd
 
 attrib.exe -a -r -h -s /s run_management_studio.bat
 
-goto exit
+m exit
 
 
 
@@ -424,7 +377,7 @@ echo.
 
 %systemroot%\explorer.exe "C:\Tortoise\ApplicationUtilities\ConfigurationManagement\ChangeLog.xml
 
-goto exit
+m exit
 
 
 
@@ -450,7 +403,7 @@ echo.
 echo %fp%
 echo.
 
-goto exit
+m exit
 
 
 
@@ -464,7 +417,7 @@ echo.
 echo %fp%
 echo.
 
-goto exit
+m exit
 
 
 
@@ -483,7 +436,7 @@ echo %test%
 if "%test%" == "hello" (echo hey)
 else (echo xxelse)
 
-goto exit
+m exit
 
 
 
@@ -501,7 +454,7 @@ echo %test%
 
 if "%test%" == "hello" echo hey
 
-goto exit
+m exit
 
 
 
@@ -529,7 +482,7 @@ echo D. - Lower Case "programw6432"
 echo %programw6432%
 echo.
 
-goto exit
+m exit
 
 Block Addendum - Program File Paths
 
@@ -595,7 +548,7 @@ echo.
 
 echo Hello world.
 
-goto exit
+m exit
 
 
 
@@ -686,7 +639,7 @@ echo %fp%
 echo.
 
 goto %computer_alias%
-goto exit
+m exit
 
 
 
@@ -1093,7 +1046,7 @@ out the whole folder name. lk#2
 @echo LANGUAGE:    eng, fr, spn, ptg or arab
 @echo * * * * * * * * * * * * * * * * * * * *
 @pause
-goto exit
+m exit
 
 :PROCESS
 
@@ -1400,7 +1353,7 @@ rem echo Target Folder: %target_folder%
 
 cd
 
-goto exit
+m exit
 
 
 
@@ -1426,7 +1379,7 @@ set CLASSPATH=.;..\bforeport.jar;%CLASSPATH%
 echo %oldclasspath%
 echo %classpath%
 
-goto exit
+m exit
 
 
 
@@ -1453,7 +1406,7 @@ cd\%cpath%
 cd
 
 goto configuration_run_me
-goto exit
+m exit
 
 
 
@@ -1480,7 +1433,7 @@ cd\%cpath%
 cd
 
 goto configuration_run_me
-goto exit
+m exit
 
 
 
@@ -1506,7 +1459,7 @@ if /i "%classpath%" == "c:\pcarss\web" echo 8
 
 echo %classpath%
 
-goto exit
+m exit
 
 
 
@@ -1559,7 +1512,7 @@ should be avoided.
 
 if /i '%computer_alias%'=='Laptop' echo This is case sensitive.
 
-goto exit
+m exit
 
 
 
@@ -1680,7 +1633,7 @@ report.txt"
 
 "c:\Program Files\Multi-Edit 2008\Mew32.exe" "file identifier report.txt"
 
-goto exit
+m exit
 
 
 
@@ -1707,7 +1660,7 @@ cd\%cpath%
 cd
 
 goto configuration_run_me
-goto exit
+m exit
 
 
 
@@ -1734,7 +1687,7 @@ cd\%cpath%
 cd
 
 goto configuration_run_me
-goto exit
+m exit
 
 
 
@@ -1779,7 +1732,7 @@ java SampleApplication samples\HelloWorld.xml
 
 rem samples\HelloWorld-chinese.xml samples\HelloWorld-japanese.xml samples\HelloWorld-hindi.xml samples\Colors.xml samples\FormFill.xml samples\Giro.xml samples\Graphs.xml samples\Lists.xml samples\MetaData.xml samples\NestedTables.xml samples\PDFUserGuide.xml samples\userguide.xml samples\VectorGraphics.xml samples\HelloWorld-arabic.xml samples\pdfa-rgb.xml samples\pdfa-cmyk.xml
 
-goto exit
+m exit
 
 
 
@@ -1807,7 +1760,7 @@ cd\%cpath%
 cd
 
 goto configuration_run_me
-goto exit
+m exit
 
 
 
@@ -1835,7 +1788,7 @@ cd\%cpath%
 cd
 
 goto configuration_run_me
-goto exit
+m exit
 
 
 
@@ -1863,7 +1816,7 @@ cd\%cpath%
 cd
 
 goto configuration_run_me_2
-goto exit
+m exit
 
 
 
@@ -1883,7 +1836,7 @@ echo 2.
 java -cp . HW5.class
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -1904,7 +1857,7 @@ echo 2.
 java -cp . HW5.class
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -1925,7 +1878,7 @@ echo 2.
 java -cp . HW5.class
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -1947,7 +1900,7 @@ echo 2.
 javac HW4.java
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -1962,7 +1915,7 @@ echo.
 cd\!
 java -cp . HelloWorldApp
 
-goto exit
+m exit
 
 
 
@@ -1979,7 +1932,7 @@ set classpath=
 cd\!
 java -cp . HelloWorldApp
 
-goto exit
+m exit
 
 
 
@@ -1995,7 +1948,7 @@ cd\!
 javac HW4.java
 java -cp . HelloWorldApp
 
-goto exit
+m exit
 
 
 
@@ -2022,7 +1975,7 @@ rem java -cp . SampleApplication HelloWorld.xml
 rem java -cp . HW5
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -2049,7 +2002,7 @@ rem java -cp . SampleApplication HelloWorld.xml
 rem java -cp . HW5
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -2073,7 +2026,7 @@ javac SampleApplication.java
 
 echo 2.
 
-goto exit
+m exit
 
 
 
@@ -2098,7 +2051,7 @@ javac SampleApplication.java
 
 echo 2.
 
-goto exit
+m exit
 
 
 
@@ -2117,7 +2070,7 @@ echo 2.
 java -cp . HW5
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -2136,7 +2089,7 @@ echo 2.
 java -cp . HW5.class
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -2155,7 +2108,7 @@ echo 2.
 java -cp . HW5
 echo 3.
 
-rem goto exit
+rem m exit
 
 
 
@@ -2174,7 +2127,7 @@ echo 2.
 java HW5
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -2202,7 +2155,7 @@ java -verbose SampleApplication samples\HelloWorld.xml
 
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -2222,7 +2175,7 @@ dir/s *.txt
 
 for /r "c:\!!" %%f in ("*.txt") do copy "%%f" "c:\!!\Test Text Files"
 
-goto exit
+m exit
 
 
 
@@ -2240,7 +2193,7 @@ cd
 
 type *.txt>c:\a\j
 
-goto exit
+m exit
 
 
 
@@ -2254,7 +2207,7 @@ echo.
 
 for /r "c:\pcarss" %%f in ("*.java") do copy "%%f" "c:\!!\Copied Java Files"
 
-goto exit
+m exit
 
 
 
@@ -2272,7 +2225,7 @@ cd
 
 type *.java>c:\a\j
 
-goto exit
+m exit
 
 
 
@@ -2290,7 +2243,7 @@ cd\!
 javac h6.java
 java -cp . h6
 
-goto exit
+m exit
 
 
 
@@ -2319,7 +2272,7 @@ java SampleApplication samples\HelloWorld
 
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -2347,7 +2300,7 @@ java SampleApplication samples\HelloWorld
 
 echo 3.
 
-goto exit
+m exit
 
 
 
@@ -2383,7 +2336,7 @@ set classpath=.
 javac h6.java
 java h6
 
-goto exit
+m exit
 
 
 
@@ -2423,7 +2376,7 @@ rem java -cp . greetings.HW3
 
 rem java -cp . greetings.HelloWorldApp
 
-goto exit
+m exit
 
 
 
@@ -2450,7 +2403,7 @@ echo Step 2. Run
 
 java SampleApplication samples\Giro.xml
 
-goto exit
+m exit
 
 
 
@@ -2501,7 +2454,7 @@ echo Step 2. Run
 
 java SampleApplication samples\Giro.xml
 
-goto exit
+m exit
 
 
 
@@ -2521,7 +2474,7 @@ echo.
 
 echo %cd%
 
-goto exit
+m exit
 
 
 
@@ -2553,7 +2506,7 @@ echo Step 2. Run
 @ECHO Running HelloWorld
 java HelloWorld
 
-goto exit
+m exit
 @ECHO Running PathExample
 java PathExample
 @ECHO Running Images
@@ -2608,7 +2561,7 @@ java Dump Sign.pdf
 set CLASSPATH=%OLDCLASSPATH%
 set OLDCLASSPATH=
 
-goto exit
+m exit
 
 
 
@@ -2635,7 +2588,7 @@ javac SampleApplication.java
 @ECHO Running SampleApplication
 java SampleApplication samples\HelloWorld.xml
 
-goto exit
+m exit
 
 
 
@@ -2651,7 +2604,7 @@ echo.
 
 rem dotnet -v
 
-goto exit
+m exit
 
 
 
@@ -2713,7 +2666,7 @@ echo Step 2. Run
 
 java -Djaxp.debug=1 SampleApplication samples\Giro.xml
 
-goto exit
+m exit
 
 
 
@@ -2752,7 +2705,7 @@ echo Step 2. Run
 
 java -Djaxp.debug=1 SampleApplication samples\Giro.xml
 
-goto exit
+m exit
 
 
 
@@ -2766,7 +2719,7 @@ echo.
 
 call "identify arguments" "hi[blank]" "nuther"
 
-goto exit
+m exit
 
 
 
@@ -2784,7 +2737,7 @@ echo Current Folder: %cd%
 
 rem c:\a\cmd.exe.lnk
 
-goto exit
+m exit
 
 
 
@@ -2799,7 +2752,7 @@ echo.
 echo Path: %path%
 
 
-goto exit
+m exit
 
 
 
@@ -2829,7 +2782,7 @@ echo 2. Run
 
 java -Djaxp.debug=1 SampleApplication samples\HelloWorld.xml
 
-goto exit
+m exit
 
 
 
@@ -2859,7 +2812,7 @@ echo 2. Run
 
 java -classpath ..\bforeport.jar;. SampleApplication samples\HelloWorld.xml
 
-goto exit
+m exit
 
 
 
@@ -2873,7 +2826,7 @@ echo.
 
 echo %path%
 
-goto exit
+m exit
 
 
 
@@ -2903,7 +2856,7 @@ echo 2. Run
 
 java -classpath ..\bforeport.jar;. SampleApplication samples\HelloWorld.xml
 
-goto exit
+m exit
 
 
 
@@ -2935,7 +2888,7 @@ pause
 
 
 
-goto exit
+m exit
 
 
 
@@ -2960,7 +2913,7 @@ javac -classpath .;..\bforeport.jar SampleApplication.java
 echo 2. Run
 java -classpath .;..\bforeport.jar SampleApplication samples\HelloWorld.xml
 
-goto exit
+m exit
 
 
 
@@ -2984,7 +2937,7 @@ javac SampleApplication.java
 echo 2. Run
 java SampleApplication samples\HelloWorld.xml
 
-goto exit
+m exit
 
 
 
@@ -3008,7 +2961,7 @@ javac SampleApplication.java
 echo 2. Run
 java SampleApplication samples\FormFill.xml
 
-goto exit
+m exit
 
 
 
@@ -3032,7 +2985,7 @@ javac SampleApplication.java
 echo 2. Run
 java SampleApplication samples\FormFill2.xml
 
-goto exit
+m exit
 
 
 
@@ -3056,7 +3009,7 @@ javac SampleApplication.java
 echo 2. Run
 java SampleApplication samples\pdfa-cmyk.xml
 
-goto exit
+m exit
 
 
 
@@ -3072,7 +3025,7 @@ echo hi (without at)
 @echo hi (using at)
 
 
-goto exit
+m exit
 
 
 
@@ -3104,7 +3057,7 @@ if %errorlevel%==0 echo 3
 
 
 
-goto exit
+m exit
 
 
 
@@ -3292,7 +3245,7 @@ echo Date: %date%
 echo Time2: %time2%
 echo Time3: %date% %time%
 
-goto exit
+m exit
 
 
 
@@ -3309,7 +3262,7 @@ echo.
 set classpath=
 java -cp . HelloWorld
 
-goto exitb
+m exitb
 
 
 
@@ -3327,7 +3280,7 @@ set classpath=
 cd\a
 java -cp . HelloWorld
 
-goto exit
+m exit
 
 
 
@@ -3348,7 +3301,7 @@ set /p java_timestamp=<c:\a\java_timestamp.txt
 
 echo jt:%java_timestamp%
 
-goto exit
+m exit
 
 
 
@@ -3373,7 +3326,7 @@ set /p java_timestamp=<c:\a\java_timestamp.txt
 rem cd
 rem echo jt: %java_timestamp%
 
-goto exit
+m exit
 
 
 
@@ -3390,7 +3343,7 @@ echo.
 cd\a
 java -cp . HelloWorld3
 
-goto exit
+m exit
 
 
 
@@ -3407,7 +3360,7 @@ echo.
 set classpath=c:\a
 java HelloWorld3
 
-goto exit
+m exit
 
 
 
@@ -3425,7 +3378,7 @@ if %errorlevel% == 0 echo This is the development folder.
 
 if not %errorlevel% == 0 echo This is NOT the development folder.
 
-goto exitb
+m exitb
 
 
 
@@ -3441,7 +3394,7 @@ echo.
 
 cd | find /i "a">nul
 
-goto exitp
+m exitp
 
 
 
@@ -3465,7 +3418,7 @@ cd %folder_to_search%
 
 cd
 
-goto exitp
+m exitp
 
 
 
@@ -3487,7 +3440,7 @@ if not %errorlevel% == 0 echo NOT found.
 
 rem dir
 
-goto exitp
+m exitp
 
 
 
@@ -3515,7 +3468,7 @@ for /r "%folder_to_search%" %%f in ("*.txt") do dir | find /i "0 file" "%%f"
 if %errorlevel% == 0 echo Found at %cd%
 if not %errorlevel% == 0 echo NOT found.
 
-goto exitp
+m exitp
 
 
 
@@ -3529,7 +3482,7 @@ echo.
 echo %fp%
 echo.
 
-goto exitb
+m exitb
 
 
 
@@ -3548,7 +3501,7 @@ dir | find /i "0 file">nul
 if %errorlevel% == 0 echo Found.
 if not %errorlevel% == 0 echo NOT found.
 
-goto exitb
+m exitb
 
 
 
@@ -3564,7 +3517,7 @@ cd\aa
 
 for /r "c:\aa" %%j in (".") DO (call %savannah%\belfry\step1.bat)
 
-goto exitp
+m exitp
 
 
 
@@ -3581,7 +3534,7 @@ echo.
 cd\aa
 for /r %%a in (.) do (dir /b "%%a" | find /v "NoTlIkElY" >nul && echo %%a NOT empty || >>FILES.TXT echo %%a empty)
 
-goto exitb
+m exitb
 
 
 
@@ -3598,7 +3551,7 @@ echo.
 cd %dropbox%
 for /r %%a in (.) do (dir /b "%%a" | find /v "NoTlIkElY" >nul && echo %%a NOT empty || >>Empty_Dropbox_Folders.txt echo %%a Empty folder.)
 
-goto exitb
+m exitb
 
 
 
@@ -3619,7 +3572,7 @@ echo.
 
 echo hey & echo hey 2
 
-goto exitp
+m exitp
 
 
 
@@ -3643,7 +3596,7 @@ cd /d %~dp0
 echo Current Folder: %cd%
 echo.
 
-goto exitb
+m exitb
 
 
 
@@ -3657,7 +3610,7 @@ echo.
 
 C:\Users\jonathan.r.jones\AppData\Local\atom\Update.exe --processStart atom.exe
 
-goto exit
+m exit
 
 
 
@@ -3671,7 +3624,7 @@ echo.
 
 
 
-goto exitb
+m exitb
 
 
 
@@ -3694,7 +3647,7 @@ rem org.junit.runner.JUnitCore-4.12.jar;
 rem JUnit-4.12.jar /?
 rem JUnit-4.12.jar /help
 
-goto exitb
+m exitb
 
 
 
@@ -3712,7 +3665,7 @@ java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore gen
 cd "%my documents%\dropbox\nes\java\jars"
 cd
 
-goto exitb
+m exitb
 
 
 
@@ -3733,7 +3686,7 @@ java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore gen
 
 cd "%my documents%\dropbox\nes\java\jars"
 
-goto exitb
+m exitb
 
 
 
@@ -3751,7 +3704,7 @@ java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore gen
 cd "%my documents%\dropbox\nes\java\jars"
 cd
 
-goto exit
+m exit
 
 
 
@@ -3769,7 +3722,7 @@ echo.
 
 
 
-goto exitb
+m exitb
 
 
 
@@ -3790,7 +3743,7 @@ cd apache-ant-1.9.7\bin\
 
 ant -buildfile "C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Eclipse Workspace\$UnderDevelopment\build.xml"
 
-goto exitb
+m exitb
 
 
 
@@ -3811,7 +3764,7 @@ cd apache-ant-1.9.7\bin\
 
 ant -buildfile "C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Eclipse Workspace\$UnderDevelopment\build.xml" junitreport
 
-goto exitb
+m exitb
 
 
 
@@ -3834,7 +3787,7 @@ rem cd c:\projects\netbeans\batch_files
 
 echo Current folder: %cd%
 
-goto exitp
+m exitp
 
 
 
@@ -3956,7 +3909,7 @@ Examples:
     FORFILES /S /M *.doc /C "cmd /c echo @fsize" 
     FORFILES /M *.txt /C "cmd /c if @isdir==FALSE notepad.exe @file"
 
-goto exitb
+m exitb
 
 
 
@@ -3984,7 +3937,7 @@ rem forfiles /d +0
 echo Find files (folders are assumed) changed in the last day.
 forfiles /d +0 /s /c "cmd /c if @isdir==FALSE echo @path" /m %sc%
 
-goto exitp
+m exitp
 
 
 
@@ -4016,7 +3969,7 @@ dir /b /s /o-d *%sc%*>>c:\a\search_results.txt
 
 "%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
 
-goto exit
+m exit
 
 
 
@@ -4053,7 +4006,7 @@ forfiles /d +0 /s /c "cmd /c if @isdir==FALSE echo @path">>c:\a\search_results.t
 
 "%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
 
-goto exit
+m exit
 
 
 
@@ -4090,7 +4043,7 @@ forfiles /d -7 /s /c "cmd /c if @isdir==FALSE echo @path">>c:\a\search_results.t
 
 "%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
 
-goto exit
+m exit
 
 
 
@@ -4106,7 +4059,7 @@ echo.
 
 
 
-goto exitb
+m exitb
 
 
 
@@ -4151,7 +4104,7 @@ echo %fp%
 
 
 
-goto exitp
+m exitp
 
 
 
@@ -4182,7 +4135,7 @@ cd %dynamic_server_location_part_2%
 
 set dynamic_server_location=%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
 
-goto exitb
+m exitb
 
 
 
@@ -4213,7 +4166,7 @@ cd %dynamic_server_location_part_2%
 
 set dynamic_server_location=%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
 
-goto exitb
+m exitb
 
 
 
@@ -4236,7 +4189,7 @@ set /p dynamic_server_location_part_1=<%temp%\environment_variable_temporary_sto
 
 if not "%dynamic_server_location_part_1%"=="" rd /q /s %dynamic_server_location_part_1%
 
-goto exitb
+m exitb
 
 
 
@@ -4251,7 +4204,7 @@ echo %fp%
 
 call "2 word.bat" branch
 
-goto exitp
+m exitp
 
 
 
@@ -4287,7 +4240,7 @@ echo 4. Notice that putting a space after the "cd" works in all cases.
 cd \Users\jonathan.r.jones\Documents\!Savannah\Belfry
 cd
 
-goto exitp
+m exitp
 
 
 
@@ -4302,7 +4255,7 @@ echo %fp%
 
 call "%savannah%\belfry\set my path 3.bat"
 
-goto exitp
+m exitp
 
 
 
@@ -4319,7 +4272,7 @@ cd \aa
 
 cd
 
-goto exitp
+m exitp
 
 
 
@@ -4346,7 +4299,7 @@ echo.
 echo 3
 echo "%my documents%\dropbox\Multi-Edit_2008_Config_Files"
 
-goto exitb
+m exitb
 
 
 
@@ -4363,7 +4316,7 @@ cd \a
 
 mysqldump -u root -p mercdb > c:\a\test_5.dmp
 
-goto exitb
+m exitb
 
 
 
@@ -4379,7 +4332,7 @@ echo.
 
 mysql --user='mercweb' --password=MERCadmin mercdb
 
-goto exitb
+m exitb
 
 
 
@@ -4398,7 +4351,7 @@ set /p timestamp_filename=<c:\a\java_timestamp.txt
 
 echo Timestamp Filename: %timestamp_filename%
 
-goto exitp
+m exitp
 
 
 
@@ -4415,7 +4368,7 @@ cd %my documents%\dropbox\transfer
 
 cd
 
-goto exitp
+m exitp
 
 
 
@@ -4431,7 +4384,7 @@ echo.
 
 mysql -uroot -p mercdb < "%my documents%\dropbox\transfer\From_Buzz_Jan-10-2017_4_27_PM.dmp"
 
-goto exitp
+m exitp
 
 
 
@@ -4465,7 +4418,7 @@ cd /d %INSTALL_ROOT%
 cd /d %INSTANCE_DIR%
 set INSTANCE_ROOT=%CD%
 
-goto exitp
+m exitp
 
 
 
@@ -4481,7 +4434,7 @@ echo.
 
 echo Notice that the "space" character is denoted by ^%.
 
-goto exitp
+m exitp
 
 
 
@@ -4503,7 +4456,7 @@ cd %fs%
 
 cd
 
-goto exitb
+m exitb
 
 
 
@@ -4519,7 +4472,7 @@ echo.
 
 call :santa_claus hello_world
 
-goto exitp
+m exitp
 
 Calls one batch program from another.
 
@@ -4600,7 +4553,7 @@ echo.
 echo 0: %0
 echo 1: %1
 
-goto exitp
+m exitp
 
 
 
@@ -4616,7 +4569,7 @@ echo.
 
 call "c:\projects\netbeans\batch_files\echo arguments.bat" --hi second
 
-goto exitp
+m exitp
 
 
 
@@ -4646,7 +4599,7 @@ call c:\projects\netbeans\batch_files\m.bat set_wildfly_dynamic_folder
 
 cd %wildfly_dynamic_folder%
 
-goto exitb
+m exitb
 
 
 
@@ -4679,7 +4632,7 @@ del modern.json
 
 del modern.jsonp
 
-goto exitb
+m exitb
 
 
                                                                      1
@@ -4702,7 +4655,7 @@ call "c:\projects\netbeans\batch_files\Copy fresh Ext JS files to WildFly.bat"
 
 echo Step 3 completed.
 
-goto exitb
+m exitb
 
 
 
@@ -4719,11 +4672,11 @@ cd \aa\testcopy
 
 cd
 
-rem goto exitp
+rem m exitp
 
 xcopy /d /h /r /s /y c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury
 
-goto exitb
+m exitb
 
 
 
@@ -4751,7 +4704,7 @@ echo Percent 1: %1
 
 echo Percent 2: %2
 
-goto exitb
+m exitb
 echo 2.
 if "%~1" == "" echo No command line parameter was passed.
 
@@ -4770,7 +4723,7 @@ echo.
 echo %fp%
 
 
-goto exitb
+m exitb
 
 
 
@@ -4805,7 +4758,7 @@ echo %fp%
 echo.
 echo Current Folder: %cd%
 
-goto exitb
+m exitb
 
 
 
@@ -4841,7 +4794,7 @@ del modern.json
 
 del modern.jsonp
 
-goto exitb
+m exitb
 
 
 
@@ -4858,7 +4811,7 @@ cd \projects\netbeans\sencha\html5application\public_html
 
 goto identify_current_folder
 
-goto exitb
+m exitb
 
 
 
@@ -4886,7 +4839,7 @@ rem FCD: Feb-24-2017
 echo.
 echo %fp%
 
-goto exitp
+m exitp
 
 
 
@@ -4904,7 +4857,7 @@ echo %fp%
 if %computername% == NES-1KKHHC2 echo Work computer.
 rem if /i not "%computername%"=="NES-1KKHHC2" echo Work computer.
 
-goto exitb
+m exitb
 
 
 
@@ -4919,7 +4872,7 @@ echo %fp%
 
 rem start "c:\program files (notepad_installation_path)\google\chrome\application\chrome.exe" "http://localhost:8080"
 start "%programfiles%\mozilla firefox\firefox.exe" "http://localhost:8080"
-goto exitp
+m exitp
 
 
 
@@ -4934,7 +4887,7 @@ echo %fp%
 
 cd %dropbox%\nes
 
-goto exitp
+m exitp
 
 
 
@@ -4958,7 +4911,7 @@ echo.
 
 java -version
 
-goto exitp
+m exitp
 
 
 
@@ -4971,7 +4924,7 @@ rem FCD: Mar-2-2017
 echo.
 echo %fp%
 
-goto exitp
+m exitp
 
 
 
@@ -4988,7 +4941,7 @@ cd \aaa\Eclipse Workspace on Buzz
 
 echo Current Folder: %cd%
 
-goto exitp
+m exitp
 
 
 
@@ -5003,7 +4956,7 @@ echo %fp%
 
 call %0 current_folder
 
-goto exitp
+m exitp
 
 
 
@@ -5029,7 +4982,7 @@ mvn archetype:generate -DarchetypeGroupId=org.glassfish.jersey.archetypes -Darch
 rem groupId: exercise-services
 rem blah: 
 
-goto exitp
+m exitp
 
 
 
@@ -5043,7 +4996,7 @@ echo.
 echo %fp%
 
 call j.bat hello
-goto exitp
+m exitp
 
 
 
@@ -5056,7 +5009,7 @@ rem FCD: Mar-7-2017
 echo.
 echo %fp%
 
-goto exitp
+m exitp
 
 
 
@@ -5071,7 +5024,7 @@ rem FCD: Feb-22-2017
 echo.
 echo %fp%
 
-goto exit
+m exit
 
 
 
@@ -5086,7 +5039,7 @@ rem FCD: Feb-22-2017
 echo.
 echo %fp%
 
-goto exit
+m exit
 
 
 
@@ -5107,7 +5060,7 @@ echo %fp%
 
 %0 recursive_test_2
 
-goto exit
+m exit
 
 
 
@@ -5128,7 +5081,7 @@ goto recursive_test_1
 
 %0 recursive_test_2
 
-goto exit
+m exit
 
 
 
@@ -5144,7 +5097,7 @@ echo %fp%
 if /i %computername% == NES-1KKHHC2 cd \Neighborhood\Eclipse Workspace\$UnderDevelopment
 if /i %computername% == NES-1KKHHC2 xcopy /d /h /r /s /y . "C:\Users\jonathan.r.jones\Documents\Dropbox\IT\Java\Workspaces\NES-1KKHHC2\"
 
-goto exitp
+m exitp
 
 
 
@@ -5161,7 +5114,7 @@ cd "\Program Files (notepad_installation_path)\NetBeans 8.2\bin\"
 
 netbeans.exe --console new --jdkhome "C:\Program Files (notepad_installation_path)\Java\jdk1.8.0_121"
 
-goto exitp
+m exitp
 
 
 
@@ -5180,7 +5133,7 @@ cd
 
 xcopy /d /h /r /s /y . C:\Users\jonathan.r.jones\Documents\Dropbox\IT\Java\Workspaces\NES-1KKHHC2
 rem xcopy /d /h /r /s /y . "C:\aa\test"
-goto exitb
+m exitb
 
 
 
@@ -5222,7 +5175,7 @@ cd
 git clone %origin_url% --branch %branch_name% .\%folder_name%
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -5240,7 +5193,7 @@ cd
 
 type *.java
 
-goto exit
+m exit
 
 
 
@@ -5257,7 +5210,7 @@ if /i %computername% == NES-1KKHHC2 cd %userprofile%\Workspace
 
 cd
 
-goto exitp
+m exitp
 
 
 
@@ -5275,7 +5228,7 @@ cd
 
 type *.txt>c:\a\size.log
 
-goto exitp
+m exitp
 
 
 
@@ -5296,7 +5249,7 @@ rem type /s *.java "c:\aa\Count Lines of Code in Mercury\java in mercury.txt"
 
 for /r %%j in (*.txt) do type "%%j" >> "c:\a\all files appended into one big file.txt"
 
-goto exitp
+m exitp
 
 
 
@@ -5315,7 +5268,7 @@ cd
 
 for /r %%j in (*.java) do type "%%j" >> "c:\a\all files appended into one big file.java"
 
-goto exitp
+m exitp
 
 
 
@@ -5334,7 +5287,7 @@ cd
 
 for /r %%j in (*.js) do type "%%j" >> "c:\a\All Mercury JavaScript Code in One File.js"
 
-goto exitp
+m exitp
 
 
 
@@ -5353,7 +5306,7 @@ cd
 
 for /r %%j in (*.js) do echo "%%j" >> "c:\a\All Mercury JavaScript filenames in One File.txt"
 
-goto exitp
+m exitp
 
 
 
@@ -5372,7 +5325,7 @@ cd
 
 for /r %%j in (*.java) do echo "%%j" >> "c:\a\All Mercury Java Filenames in One file.txt"
 
-goto exitp
+m exitp
 
 
 
@@ -5391,7 +5344,7 @@ cd
 
 for /r %%j in (*.mp3) do move "%%j" c:\a
 
-goto exitp
+m exitp
 
 
 
@@ -5405,7 +5358,7 @@ echo.
 echo %fp%
 
 call C:\Mercury\Server\wildfly-9.0.2.Final\bin\standalone.bat
-goto exitp
+m exitp
 
 
 
@@ -5419,7 +5372,7 @@ echo.
 echo %fp%
 
 call m copy_fresh_ext_js_into_wildfly_dynamic_folder 
-goto exitp
+m exitp
 
 
 
@@ -5433,7 +5386,7 @@ echo.
 echo %fp%
 
 cd C:\projects\netbeans\mercury6\Mercury-web\src\main\webapp
-goto exitb
+m exitb
 
 
 
@@ -5472,7 +5425,7 @@ rem del /q /f "%chrome_data_folder%\*History*.*">nul 2>&1
 rem I don't know what nul 2>&1 does.
 rem set chrome_cache=%chrome_data_folder%\cache>nul 2>&1  
 
-goto exitb
+m exitb
 
 
 
@@ -5487,7 +5440,7 @@ echo %fp%
 
 echo Percent 0: %0.
 
-goto exitp
+m exitp
 
 
 
@@ -5502,7 +5455,7 @@ echo %fp%
 
 call c:\projects\netbeans\batch_files\m.bat open_target_foler_in_explorer
 
-goto exitb
+m exitb
 
 
 
@@ -5517,7 +5470,7 @@ echo %fp%
 
 call c:\projects\netbeans\batch_files\m.bat edit_contacts_widget
 
-goto exitb
+m exitb
 
 
 
@@ -5532,7 +5485,7 @@ echo %fp%
 
 cd \Mercury\Server\wildfly-9.0.2.Final\standalone\tmp\vfs\temp
 
-goto exitb
+m exitb
 
 
 
@@ -5556,7 +5509,7 @@ set /p java_timestamp=<c:\a\j3.txt
 
 echo jt: %java_timestamp%
 
-goto exitp
+m exitp
 
 
 
@@ -5572,7 +5525,7 @@ echo %fp%
 call c:\projects\netbeans\batch_files\m ver
 
 pause
-goto exitb
+m exitb
 
 
 
@@ -5588,11 +5541,11 @@ echo %fp%
 cd | find /i "C:\projects\netbeans\sencha">nul
 
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 goto exitb
+if %errorlevel% == 0 m exitb
 
 echo Errorlevel: %errorlevel%
 
-goto exitb
+m exitb
 
 
 
@@ -5609,7 +5562,7 @@ cd c:\a
 
 xcopy /y j1.txt j2.txt
 
-goto exitb
+m exitb
 
 
 
@@ -5630,7 +5583,7 @@ echo 2
 echo %title
 title = coming at you
 title = Mercury Helper - %fp%
-goto exitp
+m exitp
 
 
 
@@ -5644,7 +5597,7 @@ echo.
 echo %fp%
 
 color d0
-goto exitb
+m exitb
 
 
 
@@ -5661,7 +5614,7 @@ if "%~2" == "" echo A commit description is required.
 
 echo %2
 
-goto exitb
+m exitb
 
 
 
@@ -5676,7 +5629,7 @@ echo %fp%
 
 title = Hi
 
-goto exitb
+m exitb
 
 
 
@@ -5700,7 +5653,7 @@ set /p mercury_version_number=<%tmp%\mercury_version_number.txt
 
 echo %mercury_version_number%
 
-goto exitb
+m exitb
 
 
 
@@ -5717,7 +5670,7 @@ rem fcd: May-14-2017
 echo.
 echo %fp%
 
-goto exitb
+m exitb
 
 
 
@@ -5734,7 +5687,7 @@ echo 0: %0
 echo 1: %1
 echo 2: %2
 
-goto exitb
+m exitb
 
 
 
@@ -5757,7 +5710,7 @@ call no edit_pom_web
 
 call no edit_system_widget
 
-goto exitb
+m exitb
 
 
 
@@ -5773,12 +5726,12 @@ echo.
 set /P user_option=Are you sure you wish to delete the database?! (y/n): 
 
 if not "%user_option%"=="y" echo Aborting.
-if not "%user_option%"=="y" goto exitb
+if not "%user_option%"=="y" m exitb
 
 echo.
 echo You have chosen to continue.
 
-goto exitb
+m exitb
 
 
 
@@ -5799,7 +5752,7 @@ if /i %computername%==nes-1kkhhc2 set wildfly_location=c:\mercury\server\wildfly
 
 echo %wildfly_location%
 
-goto exitb
+m exitb
 
 
 
@@ -5815,7 +5768,7 @@ echo %fp%
 cd %1
 echo Error Level: %errorlevel%
 
-goto exitb
+m exitb
 
 
 
@@ -5832,11 +5785,11 @@ echo.
 echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 echo First parameter is a filename.
-if %errorlevel% == 0 goto exitb
+if %errorlevel% == 0 m exitb
 if %errorlevel% == 1 echo First parameter is NOT a filename.
-if %errorlevel% == 1 goto exitb
+if %errorlevel% == 1 m exitb
 
-goto exitb
+m exitb
 
 
 
@@ -5852,7 +5805,7 @@ echo %fp%
 if /i not "%computername%"=="WIN-8D6B7BCCM06" echo not
 if /i not "%computername%"=="WIN-8D6B7BCCM06" set password="MERCadmin"
 
-goto exitb
+m exitb
 
 
 
@@ -5871,7 +5824,7 @@ cd
 
 xcopy /d /h /r /s /y C:\projects\netbeans\sencha\HTML5Application\public_html
 
-goto exitb
+m exitb
 
 
 
@@ -5886,7 +5839,7 @@ echo %fp%
 
 if /i not "%computername%"=="NES-1KKHHC2" echo is it
 
-goto exitb
+m exitb
 
 
 
@@ -5906,7 +5859,7 @@ if /i exist c:\mercury\backups\%user_option%.dmp echo exist
 
 if /i not exist c:\mercury\backups\%user_option%.dmp echo The filename you entered does not exist.
 
-goto exitb
+m exitb
 
 
 
@@ -5922,7 +5875,7 @@ echo.
 echo %fp%
 
 
-goto exitb
+m exitb
 
 
 
@@ -5940,7 +5893,7 @@ cd\a
 
 type j1.txt | find /i "daniel"
 
-goto exitb
+m exitb
 
 
 
@@ -5955,7 +5908,7 @@ echo %fp%
 
 assoc .txt="C:\Program Files\Sublime Text 3\sublime_text.exe"
 
-goto exitb
+m exitb
 
 
 
@@ -5970,7 +5923,7 @@ echo %fp%
 
 driverquery -v
 
-goto exitb
+m exitb
 
 
 
@@ -5989,7 +5942,7 @@ goto xxx
 if %errorlevel% == 0 echo 0
 if %errorlevel% == 1 echo 1
 
-goto exitb
+m exitb
 
 
 
@@ -6007,7 +5960,7 @@ dir | find /i "%target_folder%">nul
 if %errorlevel% == 1 md %target_folder%
 cd %navigate_target_folder%
 
-goto exitb
+m exitb
 
 
 
@@ -6026,7 +5979,7 @@ if not exist c:\a echo A does NOT exist.
 if exist c:\b echo B exists.
 if not exist c:\b echo B does NOT exist.
 
-goto exitb
+m exitb
 
 
 
@@ -6038,7 +5991,7 @@ rem lu: Nov-14-2017
 
 echo %fp%
 
-goto exitb
+m exitb
 
 
 
@@ -6057,7 +6010,7 @@ if exist C:\projects\netbeans\mercury6\Mercury-web\target cd C:\a
 if not exist C:\projects\netbeans\mercury6\Mercury-web\target echo Targ is not there.
 if not exist C:\projects\netbeans\mercury6\Mercury-web\target cd C:\a
 
-goto exitb
+m exitb
 
 
 
@@ -6096,7 +6049,7 @@ del c:\projects\netbeans\sencha\HTML5Application\public_html\modern\resources\im
 del c:\projects\netbeans\sencha\HTML5Application\public_html\modern\resources\images\lock-screen-background.jpg
 del c:\projects\netbeans\sencha\HTML5Application\public_html\resources\images\lock-screen-background.jpg
 
-goto exitb
+m exitb
 
 
 
@@ -6113,7 +6066,7 @@ path | find /i "sencha">null
 if %errorlevel% == 0 echo EXISTS.
 if %errorlevel% == 1 echo Does NOT exist.
 
-goto exitb
+m exitb
 
 
 
@@ -6127,7 +6080,7 @@ echo %fp%
 
 call "c:\mercury\batch_files\Mercury Development Environment.xlsx - Shortcut.lnk"
 
-goto exitb
+m exitb
 
 
 
@@ -6147,7 +6100,7 @@ rem call start "my title" "Snipping Tool.lnk"
 rem call start "my title" "Wordpad.lnk"
 call start "my title" "steps recorder.lnk"
 
-goto exitb
+m exitb
 
 
 
@@ -6186,7 +6139,7 @@ if /i %computername% == xps (
   echo No!
 )
 
-goto exitb
+m exitb
 
 
 
@@ -6200,7 +6153,7 @@ rem lu: Dec-18-2017
 
 echo %fp%
 
-goto exitb
+m exitb
 
 
 
@@ -6222,7 +6175,7 @@ rem call %0 test_hello
 rem New way.
 call :test_hello
 
-goto exitb
+m exitb
 
 
 
@@ -6245,7 +6198,7 @@ if %notepad_installation_path%=="" echo Notepad++ is not installed.
 
 echo %ndotepad_installation_path%
 
-goto exitb
+m exitb
 
 
 
@@ -6261,7 +6214,7 @@ echo %fp%
 
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://edition.cnn.com
 
-goto exitb
+m exitb
 
 
 
@@ -6283,7 +6236,7 @@ rem echo filename: %filename%
 
 start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
 
-goto exitb
+m exitb
 
 
 
@@ -6301,7 +6254,7 @@ dir /b>.gitignore
 
 call npp .gitignore
 
-goto exitb
+m exitb
 
 
 
@@ -6322,7 +6275,7 @@ echo.
 
 rem echo user_option: %user_option%
 
-goto exitb
+m exitb
 
 
 
@@ -6339,7 +6292,7 @@ rem Function Creation Date: Mar-3-2017
 echo.
 echo %fp% from %0.bat file. I'm a real person not a computer. Ask me anything.
 
-goto exitb
+m exitb
 
 
 
@@ -6356,7 +6309,7 @@ echo %fp%
 
 %windir%\system32\SnippingTool.exe
 
-goto exitb
+m exitb
 
 
 
@@ -6377,7 +6330,7 @@ if %errorlevel% == 0 cd "%~1"
 if %errorlevel% == 0 echo Exists.
 if %errorlevel% == 1 echo Does NOT exist.
 
-goto exitb
+m exitb
 
 
 
@@ -6404,7 +6357,7 @@ echo.%str%
 set str=%str:/=\%
 echo.%str%
 
-goto exitb
+m exitb
 
 
 
@@ -6423,7 +6376,7 @@ set cbf_parameter=""
 
 call r
 
-goto exitb
+m exitb
 
 
 
@@ -6447,7 +6400,7 @@ pause
 
 call cd /d %original_folder%
 
-goto exitb
+m exitb
 
 
 
@@ -6463,7 +6416,7 @@ echo %fp%
 
 echo Title: %title
 echo Title: %title%
-goto exitb
+m exitb
 
 
 
@@ -6479,7 +6432,7 @@ rem forfiles /d +0
 rem forfiles /d +0 /c @isdir=FALSE
 forfiles /d +2/7/2018 /c "cmd /c echo @fname is new today."
 
-goto exitb
+m exitb
 
 
 
@@ -6493,7 +6446,7 @@ echo %fp%
 
 forfiles /d +0 /c "cmd /c echo @fname is new today."
 
-goto exitb
+m exitb
 
 
 
@@ -6509,7 +6462,7 @@ echo %fp%
 
 dir /d /ad|findstr /bvc:" "
 
-goto exitb
+m exitb
 
 
 
@@ -6525,7 +6478,7 @@ echo %fp%
 
 dir /d /a-d | findstr /bvc:" "
 
-goto exitb
+m exitb
 
 
 
@@ -6541,7 +6494,7 @@ echo %fp%
 
 start microsoft-edge:
 
-goto exitb
+m exitb
 
 
 
@@ -6555,7 +6508,7 @@ echo %fp%
 
 echo %1 | find /i ".">nul
 
-goto exitb
+m exitb
 
 
 
@@ -6573,7 +6526,7 @@ echo. man to make manual pages
 echo man to make manual pages
 echo        man to make manual pages
 
-goto exitb
+m exitb
 
 
 
@@ -6589,15 +6542,15 @@ echo %fp%
 
 if not "%cbf_filename%" == "" (
   call k %1
-  goto exitb
+  m exitb
 )
 
 if not "%cbf_url%" == "" (
   call sf %1
-  goto exitb
+  m exitb
 )
 
-goto exitb
+m exitb
 
 
 
@@ -6633,7 +6586,7 @@ echo 1. %~1
 echo.
 if "%~1" == "" echo nothing
 
-goto exitb
+m exitb
 
 
 
@@ -6647,7 +6600,7 @@ rem lu: Mar-23-2018
 
 echo %fp%
 
-goto exitb
+m exitb
 
 
 
@@ -6670,7 +6623,7 @@ dir | find /i "Savannah Backups">nul
 if %errorlevel% == 0 echo Folder EXISTS.
 if %errorlevel% == 1 echo Folder does NOT exist.
 
-goto exitb
+m exitb
 
 
 
@@ -6689,7 +6642,7 @@ echo.
 if exist %cbf_path% echo It exists.
 if not exist %cbf_path% echo It does NOT exist.
 
-goto exitb
+m exitb
 
 
 
@@ -6728,7 +6681,7 @@ echo.
 echo Test4: %test4%
 
 
-goto exitb
+m exitb
 
 
 
@@ -6746,7 +6699,7 @@ call td fgt
 
 cd..
 
-goto exitb
+m exitb
 
 
 
@@ -6766,7 +6719,7 @@ GOTO :EOF
 
 set %2=%~f1 
 
-goto exitb
+m exitb
 
 
 
@@ -6855,7 +6808,7 @@ echo %fp%
 
 cd /d %parent_folder%
 
-goto exitb
+m exitb
 
 
 

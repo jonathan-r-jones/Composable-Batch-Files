@@ -27,7 +27,7 @@ goto code_execution_area
 
 goto %configuration%
 
-goto exit
+m exit
 
 
 
@@ -92,7 +92,7 @@ java Get_Timestamp_With_No_Spaces>%tmp%\java_timestamp.txt
 rem cd
 rem echo jt: %java_timestamp%
 
-goto exitb
+m exitb
 
 
 

@@ -36,7 +36,7 @@ if not "%~1" == "" call pn %1
 if "%cbf_path%" == "" (
   echo.
   echo Input Error: There is no cbf_path defined for '%~1'. 
-  goto exitb
+  m exitb
 )
 
 if "%2" == "p" goto find_parent_folder
@@ -44,7 +44,7 @@ if "%2" == "p" goto find_parent_folder
 if not exist "%cbf_path%" (
   echo.
   echo Folder does not exist at '%cbf_path%'. 
-  goto exitb
+  m exitb
 )
 
 cd /d %cbf_path%

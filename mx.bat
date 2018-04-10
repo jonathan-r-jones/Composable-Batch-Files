@@ -29,7 +29,7 @@ if "%~1" == "help" goto help
 
 call me %composable_batch_files%\%~1.bat
 
-goto exitb
+m exitb
 
 
 
@@ -55,54 +55,7 @@ echo.
 echo For example, typing "mx m" would edit the m.bat file in the Composable
 echo. Batch Files folder.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 

@@ -29,7 +29,7 @@ if "%~1" == "" call ea me
 
 if not "%~1" == "" call ed "%~1" me
 
-goto exitb
+m exitb
 
 
 
@@ -51,54 +51,7 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1 (Optional): The filename nickname of the file to execute or filename of a file in the current folder.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 

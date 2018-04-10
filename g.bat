@@ -66,54 +66,7 @@ echo           rvp  Revert persistent files.
 echo             s  Get status.
 echo            ss  Get super status.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 
@@ -130,11 +83,11 @@ echo.
 
 cd | find /i "Development">nul
 if not %errorlevel% == 0 echo Error: This is the master, not the development, folder so exiting.
-if not %errorlevel% == 0 echo goto exitb
+if not %errorlevel% == 0 echo m exitb
 
 git push -u origin HEAD:development
 
-goto exitb
+m exitb
 
 
 
@@ -149,7 +102,7 @@ echo.
 
 git remote add origin https://github.com/jonathan-r-jones/for_git_testing_and_learning.git
 
-goto exitb
+m exitb
 
 
 
@@ -164,7 +117,7 @@ echo.
 
 git remote add origin https://github.com/jonathan-r-jones/for_git_testing_and_learning.git
 
-goto exitb
+m exitb
 
 
 
@@ -179,7 +132,7 @@ echo.
 
 git remote add origin https://github.com/jonathan-r-jones/test-eclipse-project.git
 
-goto exitb
+m exitb
 
 
 
@@ -194,7 +147,7 @@ echo.
 
 git remote add origin https://github.com/jonathan-r-jones/quickla.git
 
-goto exitb
+m exitb
 
 
 
@@ -209,7 +162,7 @@ echo.
 
 git remote add origin https://github.com/jonathan-r-jones/batch-files.git
 
-goto exitb
+m exitb
 
 
 
@@ -228,7 +181,7 @@ git log>"c:\a\git_log.txt"
 "%ProgramFiles(x86)%\Multi-Edit 2008\Mew32.exe" "c:\a\git_log.txt"
 
 
-goto exitb
+m exitb
 
 
 
@@ -245,7 +198,7 @@ git --help>"c:\a\git_help.txt"
 "%ProgramFiles(x86)%\Multi-Edit 2008\Mew32.exe" "c:\a\git_help.txt"
 
 
-goto exitb
+m exitb
 
 
 
@@ -260,7 +213,7 @@ echo.
 
 git diff HEAD
 
-goto exitb
+m exitb
 
 
 
@@ -283,7 +236,7 @@ rem This works. Nov-28-2016
 rem git push origin --delete %2
 git push origin --delete development-Nov-16-2016
 
-goto exitb
+m exitb
 
 
 
@@ -298,7 +251,7 @@ echo.
 
 git checkout -b master
 
-goto exitb
+m exitb
 
 
 
@@ -313,7 +266,7 @@ echo.
 
 git branch --unset -upstream
 
-goto exitb
+m exitb
 
 
 
@@ -328,7 +281,7 @@ echo.
 
 git push -u origin HEAD:development-Nov-1-2016
 
-goto exitb
+m exitb
 
 
 
@@ -347,7 +300,7 @@ echo.
 
 git push -u origin HEAD:dev-Dec-5-2016
 
-goto exitb
+m exitb
 
 
 
@@ -363,7 +316,7 @@ echo %fp%
 
 git add -A
 
-goto exitb
+m exitb
 
 
 
@@ -377,7 +330,7 @@ echo %fp%
 
 git add *.*
 
-goto exitb
+m exitb
 
 
 
@@ -391,7 +344,7 @@ echo %fp%
 
 git add .
 
-goto exitb
+m exitb
 
 
 
@@ -409,7 +362,7 @@ echo %fp%
 
 git config core.longpaths true
 
-goto exit
+m exit
 
 
 
@@ -424,7 +377,7 @@ echo.
   
 git pull clean6.2
 
-goto exitb
+m exitb
 
 
 
@@ -448,7 +401,7 @@ rem git fetch && git checkout clean6.2
 git fetch
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -464,7 +417,7 @@ echo %fp%
 git pull origin original
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -483,7 +436,7 @@ rem This worked. Jan-30-2017
 git checkout -b Branch2
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -502,7 +455,7 @@ echo.
   
 git branch --set-upstream-to=master
 
-goto exitb
+m exitb
 
 
 
@@ -520,7 +473,7 @@ echo.
 
 git status
 
-goto exitb
+m exitb
 
 
 
@@ -536,7 +489,7 @@ echo %fp%
 
 git rm -f %2
 
-goto exitb
+m exitb
 
 
 
@@ -549,7 +502,7 @@ rem fcd: Feb-28-2017
 echo %fp%
 
 
-goto exitp
+m exitp
 
 
 
@@ -567,7 +520,7 @@ cd c:\projects\netbeans\sencha
 git remote update
 git status
 
-goto exitb
+m exitb
 
 
 
@@ -585,7 +538,7 @@ cd c:\projects\netbeans\mercury6
 git remote update
 git status
 
-goto exitb
+m exitb
 
 
 
@@ -605,7 +558,7 @@ cd c:\mercury\batch_files
 git remote update
 git status
 
-goto exitb
+m exitb
 
 
 
@@ -623,7 +576,7 @@ cd C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha
 git remote update
 git status
 
-goto exitb
+m exitb
 
 
 
@@ -654,7 +607,7 @@ echo.
 
 col
 
-goto exitb
+m exitb
 
 
 
@@ -671,7 +624,7 @@ echo.
 
 echo The help content is under construction.
 
-goto exitb
+m exitb
 
 
 
@@ -689,7 +642,7 @@ cd c:\projects\netbeans\sencha
 git remote update
 git status>c:\a\j1.txt
 
-goto exitb
+m exitb
 
 
 
@@ -707,7 +660,7 @@ cd c:\projects\netbeans\mercury6
 git remote update
 git status>c:\a\j3.txt
 
-goto exitb
+m exitb
 
 
 
@@ -730,7 +683,7 @@ echo %fp%
 echo.
 call git push
 
-goto exitb
+m exitb
 
 
 
@@ -747,7 +700,7 @@ echo.
 
 git push -u origin master
 
-goto exitb
+m exitb
 
 
 
@@ -766,7 +719,7 @@ call %0 csf Mercury-ear/pom.xml "Update version number."
 call %0 csf Mercury-ejb/pom.xml "Update version number."
 call %0 csf Mercury-web/pom.xml "Update version number."
 
-goto exitb
+m exitb
 
 
 
@@ -783,11 +736,11 @@ echo.
 
 cd | find /i "C:\projects\netbeans\sencha">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 goto exitb
+if %errorlevel% == 0 m exitb
 
 cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 goto exitb
+if %errorlevel% == 0 m exitb
 
 call :add
 
@@ -797,7 +750,7 @@ call %0 push
 
 call %0 rf_status
 
-goto exitb
+m exitb
 
 
 
@@ -815,7 +768,7 @@ cd c:\mercury\mobility
 
 call %0 acp
 
-goto exitb
+m exitb
 
 
 
@@ -833,11 +786,11 @@ echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 goto exitb
+if %errorlevel% == 0 m exitb
 
 cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 goto exitb
+if %errorlevel% == 0 m exitb
 
 call m update_java_timestamp
 
@@ -846,7 +799,7 @@ set /p commit_description=<%tmp%\java_timestamp.txt
 
 call git commit -a -m %commit_description%
 
-goto exitb
+m exitb
 
 
 
@@ -881,7 +834,7 @@ call %0 asf Mercury-web/pom.xml
 
 call %0 asf pom.xml
 
-goto exitb
+m exitb
 
 
 
@@ -901,7 +854,7 @@ cd c:\mercury\documentation
 
 call %0 acp
 
-goto exit
+m exit
 
 
 
@@ -924,7 +877,7 @@ echo.
 
 git describe --all --long
 
-goto exitb
+m exitb
 
 
 
@@ -944,7 +897,7 @@ rem git reset --hard "HEAD"
 git reset --hard "HEAD~2"
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -963,7 +916,7 @@ echo.
   
 git reset --hard "HEAD~1"
 
-goto exitb
+m exitb
 
 
 
@@ -994,7 +947,7 @@ rem git checkout 959308e
 rem S6 @ Aug-28-2017
 git checkout b3444ed
 
-goto exitb
+m exitb
 
 
 
@@ -1013,7 +966,7 @@ echo %fp%
 rem git checkout clean6.2
 git checkout master
 
-goto exitb
+m exitb
 
 
 
@@ -1036,7 +989,7 @@ del Mercury-web\src\main\webapp\classic\resources\images\font-awesome_4-7-0_rss_
 del Mercury-web\src\main\webapp\resources\WorldWind\images\pushpins\4-Null-Reciever.png
 del Mercury-web\src\main\webapp\resources\WorldWind\images\pushpins\4-Null-Transmitter.png
 
-goto exitb
+m exitb
 
 
 
@@ -1060,7 +1013,7 @@ echo Current folder: %cd%
 
 del font-awesome*.png
 
-goto exitb
+m exitb
 
 
 
@@ -1099,7 +1052,7 @@ del Dish_Generic_R.png
 del Dish_Generic_T.png
 del Dish_Generic_TR.png
 
-goto exitb
+m exitb
 
 
 
@@ -1116,7 +1069,7 @@ echo.
 
 git clean -n
 
-goto exitb
+m exitb
 
 
 
@@ -1131,7 +1084,7 @@ echo.
 
 git remote update
 
-goto exitb
+m exitb
 
 
 
@@ -1149,7 +1102,7 @@ echo %fp%
 
 git add %2
 
-goto exitb
+m exitb
 
 
 
@@ -1166,13 +1119,13 @@ echo %fp%
 echo.
 
 if "%~3" == "" echo Error: A commit description is required.
-if "%~3" == "" goto exitb
+if "%~3" == "" m exitb
 
 set commit_description=%3
 
 git commit %2 -m %commit_description%
 
-goto exitb
+m exitb
 
 
 
@@ -1190,11 +1143,11 @@ echo %fp%
 echo.
 
 if "%~2" == "" echo Error: A commit description is required.
-if "%~2" == "" goto exitb
+if "%~2" == "" m exitb
 
 git commit -a -m %2
 
-goto exitb
+m exitb
 
 
 
@@ -1210,11 +1163,11 @@ echo %fp%
 echo.
 
 if "%~2" == "" echo Error: A commit description is required.
-if "%~2" == "" goto exitb
+if "%~2" == "" m exitb
 
 git commit -m %2
 
-goto exitb
+m exitb
 
 
 
@@ -1235,7 +1188,7 @@ echo.
 
 git clean -f
 
-goto exitb
+m exitb
 
 
 
@@ -1253,7 +1206,7 @@ call td ba
 
 call g pull
 
-goto exitb
+m exitb
 
 
 
@@ -1313,7 +1266,7 @@ echo %fp%
 // - git.unstageAll
 // - git.unstageSelectedRanges
 
-goto exitb
+m exitb
 
 
 
@@ -1329,7 +1282,7 @@ echo %fp%
 
 git reset HEAD %2
 
-goto exitb
+m exitb
 
 
 
@@ -1351,7 +1304,7 @@ call td mob
 
 call %0 s
 
-goto exitb
+m exitb
 
 
 
@@ -1376,7 +1329,7 @@ git commit -m "first commit"
 git remote add origin https://github.com/jonathan-r-jones/bowling.git
 git push -u origin master
 
-goto exitb
+m exitb
 
 
 
@@ -1396,7 +1349,7 @@ git push -u origin master
 echo %fp%
 echo.
 
-goto exitb
+m exitb
 
 
 
@@ -1415,7 +1368,7 @@ git push -u origin master
 echo %fp%
 echo.
 
-goto exitb
+m exitb
 
 
 
@@ -1435,7 +1388,7 @@ call td cbf
 
 call %0 acp
 
-goto exit
+m exit
 
 
 
@@ -1462,7 +1415,7 @@ echo %fp%
 echo.
 git init
 
-goto exitb
+m exitb
 
 
 
@@ -1499,7 +1452,7 @@ git remote add origin https://github.com/jonathan-r-jones/composable_batch_files
 
 git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/resume.git
 
-goto exitb
+m exitb
 
 
 
@@ -1515,7 +1468,7 @@ call n %2
 
 git remote add origin %cbf_url%
 
-goto exitb
+m exitb
 
 
 
@@ -1531,7 +1484,7 @@ echo %fp%
 
 git pull origin master
 
-goto exitb
+m exitb
 
 
 
@@ -1550,7 +1503,7 @@ echo.
   
 git pull
 
-goto exitb
+m exitb
 
 
 
@@ -1569,7 +1522,7 @@ git push --set-upstream origin master
 
 rem (!step)
 
-goto exitb
+m exitb
 
 
 
@@ -1594,7 +1547,7 @@ call git status
 col
 
 
-goto exitb
+m exitb
 
 
 
@@ -1615,7 +1568,7 @@ echo.
 
 git stash
 
-goto exitb
+m exitb
 
 
 
@@ -1632,7 +1585,7 @@ echo.
 
 git stash pop
 
-goto exitb
+m exitb
 
 
 
@@ -1655,7 +1608,7 @@ call :pop
 
 rem The next step would be to fix the merge conflict and then run "g acp".
 
-goto exitb
+m exitb
 
 
 
@@ -1676,7 +1629,7 @@ echo.
 
 git mergetool --tool-help
 
-goto exitb
+m exitb
 
 
 
@@ -1694,7 +1647,7 @@ echo.
 git mergetool --tool=codecompare
 rem git mergetool --tool=vimdiff3
 
-goto exitb
+m exitb
 
 
 
@@ -1710,7 +1663,7 @@ echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://github.com/jonathan-r-jones/composable_batch_files
 
-goto exitb
+m exitb
 
 
 
@@ -1726,13 +1679,13 @@ echo %fp%
 
 if exist .gitignore echo.
 if exist .gitignore echo Error: File already there.
-if exist .gitignore goto exitb
+if exist .gitignore m exitb
 
 dir /b>.gitignore
 
 call npp .gitignore
 
-goto exitb
+m exitb
 
 
 
@@ -1748,7 +1701,7 @@ echo %fp%
 
 git add .gitignore
 
-goto exitb
+m exitb
 
 
 
@@ -1774,7 +1727,7 @@ echo.
 git clean -f
 git pull
 
-goto exitb
+m exitb
 
 
 
@@ -1799,7 +1752,7 @@ echo.
 git push -f
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -1830,7 +1783,7 @@ call %0 rvfd
 
 call %0 clean
 
-goto exitb
+m exitb
 
 
 
@@ -1850,7 +1803,7 @@ call %0 delete_pngs_2
 
 call %0 rvp
 
-goto exitb
+m exitb
 
 
 
@@ -1885,7 +1838,7 @@ git checkout HTML5Application/public_html/classic/src/view/dashboard/ContactsWid
 git checkout HTML5Application/public_html/modern/src/utils/NetConfig.js
 git checkout HTML5Application/public_html/classic/src/utils/NetConfig.js
 
-goto exitb
+m exitb
 
 
 
@@ -1909,7 +1862,7 @@ cls
 
 call %0 ss
 
-goto exitb
+m exitb
 
 
 
@@ -1929,7 +1882,7 @@ echo %fp%
   
 git checkout %2
 
-goto exitb
+m exitb
 
 
 
@@ -1949,7 +1902,7 @@ echo %fp%
  
 git checkout *.*
 
-goto exitb
+m exitb
 
 
 
@@ -1970,7 +1923,7 @@ echo %fp%
 git config --global user.name "Jonathan R. Jones"
 git config --global user.email "jonathan.r.jones.3@gmail.com"
 
-goto exitb
+m exitb
 
 
 
@@ -1988,7 +1941,7 @@ echo %fp%
 
 git config credential.helper store
 
-goto exitb
+m exitb
 
 
 
@@ -2005,7 +1958,7 @@ git config --global user.name "Jonathan17"
 git config --global user.email "jonathan.r.jones@nesassociates.com"
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -2022,7 +1975,7 @@ git config --global user.name "mercury_devops"
 git config --global user.email "nes.mercury@nesassociates.com"
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -2044,7 +1997,7 @@ echo %fp%
 
 rd /q /s .git
 
-goto exitb
+m exitb
 
 
 
@@ -2065,7 +2018,7 @@ rem git branch Branch2
 
 git branch clean6.2
 
-goto exitb
+m exitb
 
 
 

@@ -38,7 +38,7 @@ set fp=* Use the CBF nickname to determine where to install the repository.
 if exist %cbf_path% (
   echo.
   echo "%cbf_path%" already exists.
-  goto exitb
+  m exitb
 )
 
 call m set_parent_fd "%cbf_path%\.." parent_folder
@@ -61,7 +61,7 @@ git clone %cbf_url%
 
 rem (!rfsp) (mov-2)
 
-goto exitb
+m exitb
 
 
 
@@ -89,54 +89,7 @@ echo Parameter 2 (Optional): If "c" is specified, the repository will be install
 echo.
 echo If left blank, the repository will be installed into the specified CBF Path, assuming its not already there.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 
@@ -201,7 +154,7 @@ cd /d %new_folder_path%
 
 git clone %origin_url% --branch %branch_name% .\%folder_name%
 
-goto exitb
+m exitb
 
 
 
@@ -220,7 +173,7 @@ cd c:\projects\netbeans\
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git --branch clean6.2 .\sencha
 
-goto exitb
+m exitb
 
 
 
@@ -239,7 +192,7 @@ cd c:\projects\netbeans\
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git --branch master .\mercury6
 
-goto exitb
+m exitb
 
 
 
@@ -261,7 +214,7 @@ pause
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/batch_files.git --branch master .\batch_files
 
-goto exitb
+m exitb
 
 
 
@@ -280,7 +233,7 @@ cd c:\mercury
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/mobility.git --branch master .\mobility
 
-goto exitb
+m exitb
 
 
 
@@ -300,7 +253,7 @@ call td merc
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/latest-war-file.git ".\Latest War File"
 
-goto exitb
+m exitb
 
 
 
@@ -323,7 +276,7 @@ cd\Mercury
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/backups.git .\Backups
 
-goto exitb
+m exitb
 
 
 
@@ -340,7 +293,7 @@ echo.
 
 echo git clone https://Jonathan17@bitbucket.org/nesmercuryteam/backups.git --branch master .\Backups
 
-goto exitb
+m exitb
 
 
 
@@ -366,7 +319,7 @@ rem git commit -m "Initial commit."
 
 rem git push -u origin master
 
-goto exitb
+m exitb
 
 
 
@@ -386,7 +339,7 @@ git clone https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git .\do
 
 call of mr
 
-goto exitb
+m exitb
 
 
 
@@ -404,7 +357,7 @@ call td m2
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/maven-dependencies.git .\repository
 
-goto exitb
+m exitb
 
 
 
@@ -422,7 +375,7 @@ call td m2
           
 git clone https://mercury_devops@bitbucket.org/nesmercuryteam/maven-dependencies.git .\repository
 
-goto exitb
+m exitb
 
 
 
@@ -440,7 +393,7 @@ call td daa
           
 git clone https://github.com/ardwalker/bowling-for-csharp.git .\bowling_in_cs
 
-goto exitb
+m exitb
 
 
 
@@ -458,7 +411,7 @@ call td daa
           
 git clone https://github.com/atuggle/BowlingGameKataCSharp.git .\bowl2
 
-goto exitb
+m exitb
 
 
 
@@ -476,7 +429,7 @@ call td daa
           
 git clone https://github.com/xamarin/dev-days-labs.git .\xamarin_dev_days
 
-goto exitb
+m exitb
 
 
 
@@ -498,7 +451,7 @@ set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/tirem.git
 git clone %origin_url% --branch %branch_name% .\%folder_name%
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -530,7 +483,7 @@ git clone %origin_url% --branch %branch_name% .\%folder_name%
 
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -549,7 +502,7 @@ rem 5. Research and development.
 rem How does this HomeBrew statement work?
 rem /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-goto exitb
+m exitb
 
 
 
@@ -565,7 +518,7 @@ echo %fp%
 
 git clone https://github.com/jonathan-r-jones/ForGitTesting.git --branch master .\git_testing
 
-goto exitb
+m exitb
 
 
 
@@ -584,7 +537,7 @@ echo.
           
 git clone https://github.com/alexsorokoletov/NovaCodeCamp.PizzaRatings.git .\fresh_pizza
 
-goto exitb
+m exitb
 
 
 
@@ -603,7 +556,7 @@ echo.
           
 git clone https://github.com/edsnider/marvel-xfdemo.git .\fresh_marvel
 
-goto exitb
+m exitb
 
 
 
@@ -622,7 +575,7 @@ echo.
           
 git clone https://github.com/Microsoft/appcenter-sampleapp-android.git .\appcenter_sample
 
-goto exitb
+m exitb
 
 
 
@@ -643,7 +596,7 @@ git clone https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git .\pi
 
 cd pizza
 
-goto exitb
+m exitb
 
 
 
@@ -662,7 +615,7 @@ echo.
           
 git clone https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git .\TickTockMenuMaker
 
-goto exitb
+m exitb
 
 
 
@@ -681,7 +634,7 @@ set rn=https://github.com/BrendanPluralsight/cmd-demo.git
 
 git clone %rn%
 
-goto exitb
+m exitb
 
 
 
@@ -703,7 +656,7 @@ call un %1
 
 git clone %cbf_url% .\%folder_name%
 
-goto exitb
+m exitb
 
 
 
@@ -725,7 +678,7 @@ call un %1
 
 git clone %cbf_url% .\%folder_name%
 
-goto exitb
+m exitb
 
 
 
@@ -749,7 +702,7 @@ echo.
 
 git clone %cbf_url% .\%folder_name%
 
-goto exitb
+m exitb
 
 
 

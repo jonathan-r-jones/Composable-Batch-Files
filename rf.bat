@@ -34,19 +34,19 @@ if not "%~1" == "" call pn %1
 if "%cbf_path%" == "" (
   echo.
   echo Input Error: There is no cbf_path defined for '%~1'. 
-  goto exitb
+  m exitb
 )
 
 rem echo.
 rem set /P user_option=Are you sure you wish to remove "%cbf_path%"?(y/n): 
 
-rem if not "%user_option%"=="y" goto exitb
+rem if not "%user_option%"=="y" m exitb
 
 rd /q /s %cbf_path%
 
 rem (!rfsp) (mov-2)
 
-goto exitb
+m exitb
 
 
 
@@ -73,54 +73,7 @@ echo Parameter 1: Path nickname.
 echo.
 echo Example: "rf fgt" would remove the For-Git-Testing folder at the current "%%CBF_Path%%" location.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 

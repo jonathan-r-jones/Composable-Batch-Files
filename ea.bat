@@ -39,7 +39,7 @@ if not "%~2" == "" set cbf_parameter=%cbf_filename%
 
 call r
 
-goto exitb
+m exitb
 
 
 
@@ -67,54 +67,7 @@ echo Parameter 1: Application nickname.
 echo.
 echo Parameter 2 (Optional): Filename nickname.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 

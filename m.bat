@@ -59,12 +59,15 @@ echo      copy_ext  Copy ext folder contents to the right place.
 echo       del_hex  Delete WildFly Dynamic Folder.
 echo          depl  Deploy a new WAR file.
 echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
+echo           env  List CBF environment variables.
+echo          exit  Exit batch file.
+echo         exitb  Exit batch file but not command window.
+echo         exitp  Exit batch file with pause.
 echo            f5  Compile and refresh Ext JS code in existing hex.
 echo   fix_buttons  Fix button warnings by Mike Stonkey.
 echo      fix_menu  Fix menu warnings by Mike Stonkey.
 echo gen_cred_proc  Run generate encrypted Maven credentials process.
 echo       gen_ver  Generate new timestamp-based Mercury version #.
-echo          list  List of Composable Batch files.
 echo          mde1  Mercury Development Environment (MDE) validation.
 echo          mde2  MDE prerequisites - part 2.
 echo          mde3  MDE prerequisites - part 3.
@@ -72,7 +75,7 @@ echo  [your label]  [your description] [Build your own.]
 echo           ppt  PowerPoint Presentation on CBF.
 echo   prepare_mob  Prepare for mobile deployment.
 echo        pscrub  Partially scrub deployment environment.
-echo            rf  Remove folder.
+echo            rd  Remove folder at current location.
 echo     run_tirem  Run tirem.
 echo         scrub  When deploying new War file, this prepares env.
 echo set_parent_fd  Set parent folder.
@@ -1553,54 +1556,6 @@ goto exitb
 
 :_
 
-:l
-
-:list
-
-set fp=* List of CBF Helper Batch files updated on Apr-9-2018.
-
-echo  %fp%
-echo.
-
-echo   File  Description
-echo   ----  ------------------------------------------------------------------
-echo   acp:  Add, commit and push Git changes with timestamp commit message.
-echo    an:  Application nickname facade dictionary.
-echo     c:  Clear screen and reset color.
-echo   cbf:  Show the state of CBF environment variables.
-echo    cn:  Used for Git cloning tasks.
-echo    cy:  Copy file(s).
-echo  cysd:  Copy file file from source to destination.
-echo     d:  Easier-to-type and remember version of dir.
-echo     e:  Exit command window.
-echo    ea:  Application-centric way of running an app with opt. file param.
-echo    ed:  Filename-centric way of editing a file with optional app. param.
-echo    fn:  Filename nickname facade dictionary.
-echo     g:  Perform Git-related tasks.
-echo     h:  Perform Sencha-related tasks.
-echo     k:  Double-click equivalent way to exec. a file with opt. app. param.
-echo     m:  Perform miscellaneous tasks.
-echo    me:  Run Multi-Edit.
-echo    mx:  Use Multi-Edit to edit a batch file in the CBF folder.
-echo     n:  Nicknames source dictionary.
-echo    no:  Run Notepad.
-echo   npp:  Run Notepad++.
-echo    of:  Open Folder.
-echo    pn:  Path nickname facade dictionary.
-echo    rf:  Remove folder corresponding to specified CBF path nickname. 
-echo     s:  SQL/Database, including LDAP, related tasks.
-echo    sf:  Surf to websites.
-echo    sm:  Run Sublime.
-echo    td:  Transform Directory.
-echo    un:  URL nickname facade dictionary.
-echo     x:  Execute the nickname based on what type of nickname it is.
-
-goto exitb
-
-
-
-:_
-
 :lu
 
 set fp=* Last updated.
@@ -3020,6 +2975,39 @@ echo %fp%
 set %3=%~f2
 
 goto exitb
+
+
+
+:_
+
+:env
+
+:cbf
+
+set filep=* Show the state of the CBF environment variables.
+
+echo.
+echo %filep%
+
+echo.
+echo CBF_Application: %cbf_application%
+
+echo.
+echo CBF_Application_Installation_Path: %cbf_application_installation_path%
+
+echo.
+echo CBF_Filename: %cbf_filename%
+
+echo.
+echo CBF_Parameter: %cbf_parameter%
+
+echo.
+echo CBF_Path: %cbf_path%
+
+echo.
+echo CBF_URL: %cbf_url%
+
+m exitb
 
 
 

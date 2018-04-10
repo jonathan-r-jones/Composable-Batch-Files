@@ -38,7 +38,7 @@ set filep=* Clear screen and reset color.
 cls
 color
 
-goto exitb
+m exitb
 
 
 
@@ -61,54 +61,7 @@ echo Last Updated (lu): Feb-6-2018
 echo.
 echo Usage: %0
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 

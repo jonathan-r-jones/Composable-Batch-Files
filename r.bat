@@ -65,54 +65,7 @@ echo                           pn:  Path nickname
 echo.
 echo Notes: If no parameters are passed, the currently set CBF_Application and CBF_Parameter are used.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 
@@ -141,10 +94,10 @@ set fp=* Main function.
 if "%cbf_application%" == "microsoft-edge" goto micorosoft_edge_special_case
 
 if "%cbf_parameter%" == "" call start "my title" "%cbf_application%"
-if "%cbf_parameter%" == "" goto exitb
+if "%cbf_parameter%" == "" m exitb
 
 if not "%cbf_parameter%" == "" call start "my title" "%cbf_application%" "%cbf_parameter%"
-if not "%cbf_parameter%" == "" goto exitb
+if not "%cbf_parameter%" == "" m exitb
 
 
 
@@ -155,11 +108,11 @@ set fp=* Use special syntax for Microsoft Edge.
 :micorosoft_edge_special_case
 
 if "%cbf_parameter%" == "" call start "my title" "%cbf_application%:"
-if "%cbf_parameter%" == "" goto exitb
+if "%cbf_parameter%" == "" m exitb
 
 if not "%cbf_parameter%" == "" call start "my title" "%cbf_application%:""%cbf_parameter%"
 
-goto exitb
+m exitb
 
 
 

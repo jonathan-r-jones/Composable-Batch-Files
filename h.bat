@@ -57,7 +57,7 @@ echo             au  App upgrade.
 echo             aw  App Watch Modern.
 echo            awh  Display help for Sencha App Watch.
 
-goto exitb
+m exitb
 
 
 
@@ -131,7 +131,7 @@ echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://localhost:1841
 
-goto exitb
+m exitb
 
 
 
@@ -151,7 +151,7 @@ call %0 1841
 
 call %0 ws
 
-goto exitb
+m exitb
 
 
 
@@ -170,7 +170,7 @@ sencha cordova init com.mcipsca.%2 Mercury
 
 cd cordova
 
-goto exitb
+m exitb
 
 
 
@@ -193,7 +193,7 @@ title = Jetty
 
 sencha web start
 
-goto exitb
+m exitb
 
 
 
@@ -209,7 +209,7 @@ echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://localhost:1841/labs/tunes
 
-goto exitb
+m exitb
 
 
 
@@ -227,7 +227,7 @@ call %0 1841
 
 call %0 sws
 
-goto exitb
+m exitb
 
 
 
@@ -247,7 +247,7 @@ echo.
 
 sencha which
 
-goto exitb
+m exitb
 
 
 
@@ -264,7 +264,7 @@ echo.
 
 sencha app build development
 
-goto exitb
+m exitb
 
 
 
@@ -280,7 +280,7 @@ echo %fp%
 
 sencha app build production
 
-goto exitb
+m exitb
 
 
 
@@ -296,7 +296,7 @@ echo %fp%
 
 sencha app build testing
 
-goto exitb
+m exitb
 
 
 
@@ -312,7 +312,7 @@ echo %fp%
 
 cordova requirements
 
-goto exitb
+m exitb
 
 
 
@@ -330,7 +330,7 @@ cd C:\SenchaTraining\ext-6
 
 sencha generate workspace ..\workspace
 
-goto exitb
+m exitb
 
 
 
@@ -346,7 +346,7 @@ cd C:\SenchaTraining\ext-6
 
 sencha generate app -classic MyClassic ../workspace/myclassic
 
-goto exitb
+m exitb
 
 
 
@@ -364,7 +364,7 @@ cd C:\SenchaTraining\ext-6
 
 sencha generate app -modern MyModern ../workspace/mymodern
 
-goto exitb
+m exitb
 
 
 
@@ -382,7 +382,7 @@ cd C:\SenchaTraining\ext-6
 
 sencha generate app MyUniversal ../workspace/myuniversal
 
-goto exitb
+m exitb
 
 
 
@@ -400,7 +400,7 @@ cd c:\SenchaTraining\ext-6
 
 sencha generate app -classic -starter=false Earthquakes ../labs/earthquakes
 
-goto exitb
+m exitb
 
 
 
@@ -418,7 +418,7 @@ sencha -sdk %userprofile%\Documents\DropBox\nes\macintosh\public_html\ext genera
 
 cd c:\aa\%2
 
-goto exitb
+m exitb
 
 
 
@@ -436,7 +436,7 @@ cd c:\senchatraining\ext-6
 
 sencha generate app -starter=false Tunes ../labs/tunes
 
-goto exitb
+m exitb
 
 
 
@@ -460,7 +460,7 @@ sencha generate view -classic main.Main
 
 sencha generate view -modern -base Ext.Container main.Main
 
-goto exitb
+m exitb
 
 
 
@@ -476,7 +476,7 @@ echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://localhost:1841/labs/tunes/?modern
 
-goto exitb
+m exitb
 
 
 
@@ -492,7 +492,7 @@ echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://localhost:1841/labs/tunes/?modern
 
-goto exitb
+m exitb
 
 
 
@@ -509,7 +509,7 @@ echo.
 
 sencha app build -development -clean androidbuild
 
-goto exitb
+m exitb
 
 
 
@@ -526,7 +526,7 @@ echo.
 
 sencha app run -development -clean androidbuild
 
-goto exitb
+m exitb
 
 
 
@@ -543,7 +543,7 @@ echo.
 
 sencha app run -production -clean androidbuild
 
-goto exitb
+m exitb
 
 
 
@@ -560,7 +560,7 @@ echo.
 
 sencha app run -production -clean androidbuild
 
-goto exitb
+m exitb
 
 
 
@@ -577,7 +577,7 @@ echo.
 
 sencha app build -production androidbuild
 
-goto exitb
+m exitb
 
 
 
@@ -594,7 +594,7 @@ echo.
 
 sencha app run -production androidbuild
 
-goto exitb
+m exitb
 
 
 
@@ -611,7 +611,7 @@ echo.
 
 sencha app build -development androidb
 
-goto exitb
+m exitb
 
 
 
@@ -628,7 +628,7 @@ echo.
 
 cd c:\senchatraining\labs
 
-goto exitb
+m exitb
 
 
 
@@ -650,7 +650,7 @@ if %errorlevel% == 0 cd..
 
 sencha app build modern
 
-goto exitb
+m exitb
 
 
 
@@ -667,7 +667,7 @@ echo.
 
 sencha app run modern
 
-goto exitb
+m exitb
 
 
 
@@ -688,7 +688,7 @@ cordova platform add android
 
 cd..
 
-goto exitb
+m exitb
 
 
 
@@ -715,7 +715,7 @@ dir | find /i "ext">nul
 if %errorlevel% == 0 echo Wait a second. Folder EXISTS. We cannot go on like this.
 if %errorlevel% == 0 echo.
 if %errorlevel% == 0 pause
-if %errorlevel% == 0 goto exitb
+if %errorlevel% == 0 m exitb
 
 if %errorlevel% == 1 echo Folder does NOT exist. So let's create it.
 
@@ -724,7 +724,7 @@ cd ext
 
 xcopy /d /h /r /s /y "C:\Users\jonathan.r.jones\Documents\Dropbox\Software\Mercury\ext 6.2.1.33"
 
-goto exitb
+m exitb
 
 
 
@@ -741,7 +741,7 @@ echo.
 
 sencha app refresh
 
-goto exitb
+m exitb
 
 
 
@@ -763,7 +763,7 @@ call td pu
 echo.
 sencha app refresh
 
-goto exitb
+m exitb
 
 
 
@@ -784,7 +784,7 @@ cd \projects\netbeans\sencha\HTML5Application\public_html
 rem sencha app upgrade c:\mercury\ext-6.2.1.6.2.1.33
 sencha app upgrade
 
-goto exitb
+m exitb
 
 
 
@@ -801,7 +801,7 @@ echo.
 
 sencha app upgrade
 
-goto exitb
+m exitb
 
 
 
@@ -824,7 +824,7 @@ call td pu
 echo.
 sencha app upgrade
 
-goto exitb
+m exitb
 
 
 
@@ -849,7 +849,7 @@ color 0e
 echo.
 sencha app watch
 
-goto exitb
+m exitb
 
 
 
@@ -868,7 +868,7 @@ title = App Watch - Current Folder
 echo.
 sencha app watch
 
-goto exitb
+m exitb
 
 
 
@@ -890,7 +890,7 @@ rem Doesn't work.
 rem start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir http://localhost:1841/#nav/dashboard
 rem call start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir http://localhost:1841/#nav/dashboard
 
-goto exitb
+m exitb
 
 
 
@@ -920,7 +920,7 @@ sencha app build -modern testing
 rem if %errorlevel% == 0 echo Compile succeeded.>%temp%\compile_results.txt
 rem if not %errorlevel% == 0 echo Compile failed.>%temp%\compile_results.txt
 
-goto exitb
+m exitb
 
 
 
@@ -950,7 +950,7 @@ sencha app build -development -clean modern
 rem if %errorlevel% == 0 echo Compile succeeded.>%temp%\compile_results.txt
 rem if not %errorlevel% == 0 echo Compile failed.>%temp%\compile_results.txt
 
-goto exitb
+m exitb
 
 
 
@@ -980,7 +980,7 @@ sencha app build -testing -clean modern
 rem if %errorlevel% == 0 echo Compile succeeded.>%temp%\compile_results.txt
 rem if not %errorlevel% == 0 echo Compile failed.>%temp%\compile_results.txt
 
-goto exitb
+m exitb
 
 
 
@@ -1010,7 +1010,7 @@ sencha app build -testing modern
 rem if %errorlevel% == 0 echo Compile succeeded.>%temp%\compile_results.txt
 rem if not %errorlevel% == 0 echo Compile failed.>%temp%\compile_results.txt
 
-goto exitb
+m exitb
 
 
 
@@ -1028,7 +1028,7 @@ echo %fp%
 sencha help app watch
 @echo off
 
-goto exitb
+m exitb
 
 
 
@@ -1052,7 +1052,7 @@ pause
 
 sencha app watch -fashion classic
 
-goto exitb
+m exitb
 
 
 
@@ -1083,7 +1083,7 @@ color 0e
 echo.
 sencha app watch modern
 
-goto exitb
+m exitb
 
 
 
@@ -1115,7 +1115,7 @@ color 0e
 echo.
 sencha app watch modern
 
-goto exitb
+m exitb
 
 
 
@@ -1143,7 +1143,7 @@ sencha app build production
 if %errorlevel% == 0 echo %f% Compile succeeded.>%temp%\compile_results.txt
 if not %errorlevel% == 0 echo %f% Compile failed.>%temp%\compile_results.txt
 
-goto exitb
+m exitb
 
 
 

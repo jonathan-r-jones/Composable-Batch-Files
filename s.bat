@@ -70,54 +70,7 @@ echo           suv  Select users, order by validation date.
 echo           sql  Connect to SQL monitor.
 echo         users  Select users, active by recent login.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 
@@ -134,7 +87,7 @@ echo.
 
 mysql -uroot -p%password% mercdb
 
-goto exitb
+m exitb
 
 
 
@@ -153,7 +106,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "show tables;"
 
-goto exitb
+m exitb
 
 
 
@@ -169,7 +122,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "update mercury_configuration set value='true' where item='active_mailhost';"
 
-goto exitb
+m exitb
 
 
 
@@ -189,7 +142,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "update mercury_configuration set value='%user_option%' where item='ldap_hash';"
 
-goto exitb
+m exitb
 
 
 
@@ -212,7 +165,7 @@ set /P user_option=Did you remember to update the admin basic profile field on t
 echo.
 
 if not "%user_option%"=="y" echo Aborting.
-if not "%user_option%"=="y" goto exitb
+if not "%user_option%"=="y" m exitb
 
 cd c:\mercury\batch_files
 
@@ -226,7 +179,7 @@ mysqldump -uroot -p mercdb > c:\mercury\backups\%m_filename%
 if %errorlevel% == 0 echo.
 if %errorlevel% == 0 echo Backup complete.
 
-goto exitb
+m exitb
 
 
 
@@ -242,7 +195,7 @@ echo %fp%
 
 call c:\Mercury\LDAP\OpenDS-2.2.1\bat\control-panel.bat
 
-goto exitb
+m exitb
 
 
 
@@ -269,7 +222,7 @@ echo.
 
 call c:\Mercury\LDAP\OpenDS-2.2.1\bat\start-ds.bat
 
-goto exitb
+m exitb
 
 
 
@@ -291,7 +244,7 @@ cd C:\Mercury\LDAP\OpenDS-2.2.1\bat
 windows-service.bat -e
 echo.
 
-goto exitb
+m exitb
 
 
 
@@ -526,7 +479,7 @@ default-auth                      (No default value)
 binary-mode                       FALSE
 connect-expired-password          FALSE
 
-goto exitb
+m exitb
 
 
 
@@ -545,7 +498,7 @@ mysql -uroot -p%password% -h 34.227.127.100 -p3306 mercdb
 
 rem mysql -u USERNAME -pPASSWORD -h REMOTE_SERVER_IP DB_NAME 
 
-goto exitb
+m exitb
 
 
 
@@ -561,7 +514,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "update mercdb.mercury_configuration set value='https://testing1.mcipsca.com' where item='mercury_url';"
 
-goto exitb
+m exitb
 
 
 
@@ -577,7 +530,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "update mercdb.mercury_contacts set contact_name='Reginald Fessenden' where contact_id='1';"
 
-goto exitb
+m exitb
 
 
 
@@ -593,7 +546,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "update mercdb.mercury_contacts set contact_phone='(410) 555-1212' where contact_id='1';"
 
-goto exitb
+m exitb
 
 
 
@@ -609,7 +562,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "update mercdb.mercury_contacts set contact_email='spectrum.manager1@gmail.com' where contact_id='1';"
 
-goto exitb
+m exitb
 
 
 
@@ -626,7 +579,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select * from mercury_contacts;"
 
-goto exitb
+m exitb
 
 
 
@@ -643,7 +596,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select last_login, uid, position, revalidate_date from mercdb.mercury_users where last_login > '2017-04-04' order by revalidate_date;"
 
-goto exitb
+m exitb
 
 
 
@@ -659,7 +612,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "update mercdb.mercury_users set revalidate_date='2016-08-03' where uid='DAVID.LYON@NESASSOCIATES.COM';"
 
-goto exitb
+m exitb
 
 
 
@@ -675,7 +628,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "update mercdb.mercury_users set revalidate_date='2016-08-03' where uid='SANJIVINI.KHEMANI@NESASSOCIATES.COM';"
 
-goto exitb
+m exitb
 
 
 
@@ -691,7 +644,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "update mercdb.mercury_users set revalidate_date='2016-08-03' where uid='JONATHAN.R.JONES.3@GMAIL.COM';"
 
-goto exitb
+m exitb
 
 
 
@@ -709,7 +662,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select count(*) from mercdb.mercury_users;"
 
-goto exitb
+m exitb
 
 
 
@@ -728,7 +681,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select last_login, uid, position, revalidate_date from mercdb.mercury_users order by last_login desc;"
 
-goto exitb
+m exitb
 
 
 
@@ -746,7 +699,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select count(*) from mercdb.mercury_users where status = 'A';"
 
-goto exitb
+m exitb
 
 
 
@@ -765,7 +718,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select last_login, uid, position, revalidate_date from mercdb.mercury_users where status = 'A' order by last_login desc;"
 
-goto exitb
+m exitb
 
 
 
@@ -782,7 +735,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select email from mercdb.mercury_users where status = 'A' order by last_login desc;"
 
-goto exitb
+m exitb
 
 
 
@@ -798,7 +751,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select count(*) from mercury_requests where z_creat_date >= '2016-09-01' and z_creat_date <= '2017-07-31';"
 
-goto exitb
+m exitb
 
 
 
@@ -814,7 +767,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select count(*) from mercury_assignments where z_approve_date >= '2016-09-01' and z_approve_date <= '2017-07-31';"
 
-goto exitb
+m exitb
 
 
 
@@ -839,7 +792,7 @@ mysql -uroot -p%password% mercdb -e "update aocountries set country_title='Yemen
 mysql -uroot -p%password% mercdb -e "update aocountries set country_title='Zambia' where country_code='zmb';"
 mysql -uroot -p%password% mercdb -e "update aocountries set country_title='Zimbabwe' where country_code='zwe';"
 
-goto exitb
+m exitb
 
 
 
@@ -865,7 +818,7 @@ mysql -uroot -p%password% mercdb -e "update aocountries set country_title='Yemen
 mysql -uroot -p%password% mercdb -e "update aocountries set country_title='Zambia' where country_code='zmb';"
 mysql -uroot -p%password% mercdb -e "update aocountries set country_title='Zimbabwe' where country_code='zwe';"
 
-goto exitb
+m exitb
 
 
 
@@ -1029,7 +982,7 @@ mysql -uroot -p%password% mercdb -e "update ancountries set country_title='Zimba
 mysql -uroot -p%password% mercdb -e "update ancountries set country_title='Saudi Arabia' where country_code='ars';"
 mysql -uroot -p%password% mercdb -e "update ancountries set country_title='Wallis and Futuna' where country_code='wal';"
 
-goto exitb
+m exitb
 
 
 
@@ -1054,20 +1007,20 @@ set /P user_option=Are you sure you wish to delete the database?! (y/n):
 echo.
 
 if not "%user_option%"=="y" echo Aborting.
-if not "%user_option%"=="y" goto exitb
+if not "%user_option%"=="y" m exitb
 
 set /P user_option=Have you stopped WildFly? (y/n): 
 echo.
 
 if not "%user_option%"=="y" echo Aborting.
-if not "%user_option%"=="y" goto exitb
+if not "%user_option%"=="y" m exitb
 
 echo You have chosen to continue. Hold on to your hat.
 echo.
 
 mysql -uroot -p%password% mercdb -e "drop database if exists `mercdb`;"
 
-goto exitb
+m exitb
 
 
 
@@ -1086,7 +1039,7 @@ echo.
 
 mysql -uroot -p%password% -e "create database if not exists `mercdb` default character set=utf8;"
 
-goto exitb
+m exitb
 
 
 
@@ -1114,7 +1067,7 @@ if /i exist c:\mercury\backups\%user_option%.dmp mysql -uroot -p%password% mercd
 rem Old way.
 rem mysql -uroot -p%password% mercdb < c:\mercury\backups\NES-1KKHHC2_May-15-2017_2_44_PM.dmp
 
-goto exitb
+m exitb
 
 
 
@@ -1135,7 +1088,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "update mercury_configuration set value='false' where item='active_mailhost';"
 
-goto exitb
+m exitb
 
 
 
@@ -1158,7 +1111,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "update mercury_configuration set value='%password%' where item='ldap_hash';"
 
-goto exitb
+m exitb
 
 
 
@@ -1183,7 +1136,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select * from mercury_configuration;"
 
-goto exitb
+m exitb
 
 
 
@@ -1202,7 +1155,7 @@ echo On Nov-20-2017, I had the following error when trying to import an LDIF whi
 echo.
 echo From XPS: Equivalent command line: C:\Mercury\LDAP\OpenDS-2.2.1\bat\import-ldif.bat "--ldifFile" "C:\Mercury\Backups\EC2AMAZ-F3EA4DJ_Nov-20-2017_8_01_PM.ldif" "--backendID" "userRoot" "--clearBackend" "--hostname" "XPS" "--port" "4444" "--bindDN" "cn=Directory Manager" "--bindPassword" "********" "--trustAll" "--noPropertiesFile"
 
-goto exitb
+m exitb
 
 
 
@@ -1218,7 +1171,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select SERIALNUMBER, power, RADIO_POWER, TX_RADIO_POWER from mercury_requests where SERIALNUMBER LIKE 'USA%%' order by SERIALNUMBER;"
 
-goto exitb
+m exitb
 
 
 
@@ -1234,7 +1187,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select SERIALNUMBER, power, RADIO_POWER, TX_RADIO_POWER from mercury_assignments where SERIALNUMBER LIKE 'USA2017%%' order by SERIALNUMBER;"
 
-goto exitb
+m exitb
 
 
 
@@ -1255,7 +1208,7 @@ echo.
 
 mysql -uroot -p
 
-goto exitb
+m exitb
 
 
 
@@ -1272,7 +1225,7 @@ echo.
 
 mysql -uroot -p mercdb
 
-goto exitb
+m exitb
 
 
 
@@ -1288,7 +1241,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select count(*) from mercury_users where z_approved_date >= '2016-09-01' and z_approved_date <= '2017-07-31';"
 
-goto exitb
+m exitb
 
 
 
@@ -1304,7 +1257,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select count(*) from mercury_users where z_approved_date >= '2017-08-01' and z_approved_date <= '2017-10-31';"
 
-goto exitb
+m exitb
 
 
 
@@ -1321,7 +1274,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select operation_id, operation_name, OPERATION_COUNTRY, Z_MOD_DATE, Z_MOD_USER from mercury_operation where operation_name like 'op rma' order by operation_id;"
 
-goto exitb
+m exitb
 
 
 
@@ -1339,7 +1292,7 @@ set sql="select uid, status, revalidate_date from mercury_users order by z_mod_d
 
 call %0 run_sql
 
-goto exitb
+m exitb
 
 
 
@@ -1357,7 +1310,7 @@ set sql="update mercury_users set status = 'A', revalidate_date = '2030-01-01' w
 
 call %0 run_sql
 
-goto exitb
+m exitb
 
 
 
@@ -1374,7 +1327,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e %sql%
 
-goto exitb
+m exitb
 
 
 
@@ -1395,7 +1348,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "update mercury_operation set operation_name = '(Not Set)', OPERATION_CONTACT = 'NES.mercury@nesassociates.com', Z_MOD_USER = 'NES.mercury@nesassociates.com' where operation_id = '0';"
 
-goto exitb
+m exitb
 
 
 
@@ -1414,7 +1367,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select operation_id, operation_name, operation_contact, OPERATION_COUNTRY, Z_MOD_DATE, Z_MOD_USER from mercury_operation order by operation_id;"
 
-goto exitb
+m exitb
 
 
 
@@ -1430,7 +1383,7 @@ echo %fp%
 
 mysql -uroot -p%password% mercdb -e "select count(*) from mercury_users;"
 
-goto exitb
+m exitb
 
 
 
@@ -1449,7 +1402,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select last_login, uid, position from mercdb.mercury_users where last_login > '2017-01-01' order by last_login desc limit 45;"
 
-goto exitb
+m exitb
 
 
 
@@ -1472,7 +1425,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select z_mod_date, OPERATION_ID, sm_uid, start_date, SERIALNUMBER, su_uid, request_user from mercury_requests order by z_mod_date desc limit 40;"
 
-goto exitb
+m exitb
 
 
 
@@ -1490,7 +1443,7 @@ set sql="update mercury_requests set OPERATION_ID = '34' where request_id = '220
 
 call %0 run_sql
 
-goto exitb
+m exitb
 
 
 
@@ -1507,7 +1460,7 @@ echo.
 
 mysql -uroot -p%password% mercdb -e "select * from mercury_configuration;" -h127.0.0.1
 
-goto exitb
+m exitb
 
 
 
@@ -1523,7 +1476,7 @@ echo %fp%
 
 mysql -?
 
-goto exitb
+m exitb
 
 
 
@@ -1569,20 +1522,20 @@ set /P user_option=Are you sure you wish to delete the database?! (y/n):
 echo.
 
 if not "%user_option%"=="y" echo Aborting.
-if not "%user_option%"=="y" goto exitb
+if not "%user_option%"=="y" m exitb
 
 set /P user_option=Have you stopped WildFly? (y/n): 
 echo.
 
 if not "%user_option%"=="y" echo Aborting.
-if not "%user_option%"=="y" goto exitb
+if not "%user_option%"=="y" m exitb
 
 echo You have chosen to continue. Hold on to your hat.
 echo.
 
 mysql -productiondb -pZMx2NhGG mercdb_test -e "drop database if exists `mercdb_test`;" -hmercuryproductiondb-a.cidbsfzscs2l.us-east-1.rds.amazonaws.com
 
-goto exitb
+m exitb
 
 
 
@@ -1601,7 +1554,7 @@ echo.
 
 mysql -productiondb -pZMx2NhGG -e "create database if not exists `mercdb_test` default character set=utf8;" -hmercuryproductiondb-a.cidbsfzscs2l.us-east-1.rds.amazonaws.com
 
-goto exitb
+m exitb
 
 
 
@@ -1625,7 +1578,7 @@ if /i not exist c:\mercury\backups\%user_option%.dmp echo The filename you enter
 
 if /i exist c:\mercury\backups\%user_option%.dmp mysql -productiondb -pZMx2NhGG mercdb_test < c:\mercury\backups\%user_option%.dmp -hmercuryproductiondb-a.cidbsfzscs2l.us-east-1.rds.amazonaws.com
 
-goto exitb
+m exitb
 
 
 
@@ -1644,7 +1597,7 @@ echo.
 
 mysql -productiondb -pZMx2NhGG mercdb_test -e "update mercury_configuration set value='false' where item='active_mailhost';" -hmercuryproductiondb-a.cidbsfzscs2l.us-east-1.rds.amazonaws.com
 
-goto exitb
+m exitb
 
 
 
@@ -1663,7 +1616,7 @@ echo.
 
 mysql -productiondb -pZMx2NhGG mercdb_test -e "update mercury_configuration set value='%password%' where item='ldap_hash';" -hmercuryproductiondb-a.cidbsfzscs2l.us-east-1.rds.amazonaws.com
 
-goto exitb
+m exitb
 
 
 
@@ -1680,7 +1633,7 @@ echo.
 
 mysql -uproductiondb -pZMx2NhGG mercdb_test -e "select * from mercury_configuration;" -hmercuryproductiondb-a.cidbsfzscs2l.us-east-1.rds.amazonaws.com
 
-goto exitb
+m exitb
 
 
 
@@ -1699,7 +1652,7 @@ echo On Nov-20-2017, I had the following error when trying to import an LDIF whi
 echo.
 echo From XPS: Equivalent command line: C:\Mercury\LDAP\OpenDS-2.2.1\bat\import-ldif.bat "--ldifFile" "C:\Mercury\Backups\EC2AMAZ-F3EA4DJ_Nov-20-2017_8_01_PM.ldif" "--backendID" "userRoot" "--clearBackend" "--hostname" "XPS" "--port" "4444" "--bindDN" "cn=Directory Manager" "--bindPassword" "********" "--trustAll" "--noPropertiesFile"
 
-goto exitb
+m exitb
 
 
 
