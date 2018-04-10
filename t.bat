@@ -4682,39 +4682,6 @@ m exitb
 
 :_
 
-set fp=* Testing percent 2 and not equals.
-
-rem Function Creation Date: Feb-13-2017
-
-echo.
-echo %fp%
-
-echo 1.
-echo %~1
-echo %~2
-
-echo 2.
-if "%~2" == "" echo No second command line parameter was passed.
-
-echo 3.
-if not "%~2" == "" echo %2 parameter was passed.
-
-
-echo Percent 1: %1
-
-echo Percent 2: %2
-
-m exitb
-echo 2.
-if "%~1" == "" echo No command line parameter was passed.
-
-echo 3.
-if not "%~1" == "" echo %1 parameter was passed.
-
-
-
-:_
-
 set fp=* Reflection.
 
 rem FCD: Feb-14-2017
@@ -6629,25 +6596,6 @@ m exitb
 
 :_
 
-:folder_exists
-
-set fp=* Testing whether a folder exists 2.
-
-rem lu: Apr-9-2018
-
-echo.
-echo %fp%
-echo.
-
-if exist %cbf_path% echo It exists.
-if not exist %cbf_path% echo It does NOT exist.
-
-m exitb
-
-
-
-:_
-
 :ht_env
 
 set fp=* How to set and test against an environment variable.
@@ -6823,7 +6771,6 @@ echo %fp%
 call n fgt
 
 call :set_parent_fd "%cbf_path%\.." parent_folder
-rem qq-1
 
 echo.
 echo cbf: %cbf_path%
@@ -6833,6 +6780,86 @@ echo Parent_Folder: %parent_folder%
 
 echo.
 cd /d %parent_folder%
+
+
+
+:_
+
+set fp=* Experimenting with exit.
+
+rem lu: Apr-10-2018
+
+echo %fp%
+
+m exitp
+m exitb
+m exit
+
+
+
+:_
+
+:percent
+
+set fp=* Testing percent 2 and not equals.
+
+rem Function Creation Date: Feb-13-2017
+
+echo.
+echo %fp%
+
+set test_var=Rain in Spain.
+
+echo.
+echo 1.
+echo %~1
+echo %~2
+echo %~3
+echo %test_var%
+
+echo.
+echo 2.
+if "%~2" == "" echo No second command line parameter was passed.
+
+echo.
+echo 3.
+if not "%~2" == "" echo %2 parameter was passed.
+
+echo.
+echo Percent 1: %1
+echo Percent 2: %2
+echo Percent 3: %3
+echo Percent test_var: %test_var%
+
+m exitb
+echo 2.
+if "%~1" == "" echo No command line parameter was passed.
+
+echo 3.
+if not "%~1" == "" echo %1 parameter was passed.
+
+
+
+:_
+
+:folder_exists
+
+set fp=* Testing whether a folder exists 2.
+
+rem lu: Apr-9-2018
+
+echo.
+echo %fp%
+echo.
+
+if exist "%cbf_path%" (
+  echo.
+  echo It exists.
+)
+
+if not exist "%cbf_path%" echo It does NOT exist.
+
+m exitb
 
 
 
@@ -6851,15 +6878,16 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-set fp=* Experimenting with exit.
+:
+
+set fp=* Test partial path.
 
 rem lu: Apr-10-2018
 
 echo %fp%
 
-m exitp
+cd /d \Program Files (x86)\Multi-Edit 2008\
 m exitb
-m exit
 
 
 

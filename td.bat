@@ -31,7 +31,7 @@ if "%~1" == "shared_list" goto %1
 
 set fp=* Main function.
 
-if not "%~1" == "" call pn %1
+if not "%~1" == "" call n %1
 
 if "%cbf_path%" == "" (
   echo.
@@ -39,15 +39,14 @@ if "%cbf_path%" == "" (
   m exitb
 )
 
-if "%2" == "p" goto find_parent_folder
+if "%~2" == "p" goto find_parent_folder
 
 if not exist "%cbf_path%" (
-  echo.
-  echo Folder does not exist at '%cbf_path%'. 
+  echo Folder does not exist at "%cbf_path%". 
   m exitb
 )
 
-cd /d %cbf_path%
+cd /d "%cbf_path%"
 
 m exitb
 

@@ -14,7 +14,7 @@ rem echo %filep%
 
 :_
 
-set fp=Add some whitespace.
+set fp=* Add some whitespace.
 
 echo.
 
@@ -1535,6 +1535,7 @@ set fp=A folder.
 
 rem lu: Dec-12-2017
 
+echo.
 echo %fp%
 
 set cbf_path=c:\a
@@ -2317,109 +2318,6 @@ m exitb
 
 :_
 
-:npp
-
-set fp=Notepad++.
-
-rem lu: Mar-9-2018
-
-echo %fp%
-
-rem Determine installation path.
-
-if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_installation_path=c:\program files\notepad++\notepad++.exe
-if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_installation_path="c:\program files (x86)\notepad++\notepad++.exe"
-
-if "%cbf_application_installation_path%" == "" (
-  echo.
-  echo Notepad++ is not installed.
-  m exitb
-)
-
-set cbf_application=%cbf_application_installation_path%
-
-m exitb
-
-
-
-:_+ CBF Wizardry
-
-
-
-::_
-
-:cbfa
-
-set fp=* CBF Application.
-
-rem lu: Mar-9-2018
-
-echo %fp%
-
-call :transform_cbf_variable "%cbf_application%"
-
-m exitb
-
-
-
-::_
-
-:cbfaip
-
-set fp=* CBF Application Installation Path.
-
-rem lu: Mar-9-2018
-
-echo %fp%
-
-call :transform_cbf_variable "%cbf_application_installation_path%"
-
-m exitb
-
-
-
-::_
-
-:cbff
-
-set fp=* CBF Filename.
-
-rem lu: Mar-9-2018
-
-echo %fp%
-
-call :transform_cbf_variable "%cbf_filename%"
-
-m exitb
-
-
-
-::_
-
-:transform_cbf_variable
-
-set fp=* Transform CBF variable.
-
-rem lu: Mar-14-2018
-
-echo.
-echo %fp%
-
-if "%~1" == "" (
-  echo.
-  echo The CBF variable in question is not set.
-  set cbf_path=%cd%
-  m exitb
-)
-
-set cbf_path=%~p1
-
-m exitb
-
-
-
-:_
-
 :mecfig
 
 set fp=* Multi-Edit Config Files Dated Backups.
@@ -2480,6 +2378,51 @@ m exitb
 
 :_
 
+:ql
+
+set fp=Quickla.
+
+rem lu: Apr-10-2018
+
+echo %fp%
+
+set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
+
+set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+
+m exitb
+
+
+
+:_
+
+:npp
+
+set fp=Notepad++.
+
+rem lu: Mar-9-2018
+
+echo %fp%
+
+rem Determine installation path.
+
+if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_installation_path=c:\program files\notepad++\notepad++.exe
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_installation_path="c:\program files (x86)\notepad++\notepad++.exe"
+
+if "%cbf_application_installation_path%" == "" (
+  echo.
+  echo Notepad++ is not installed.
+  m exitb
+)
+
+set cbf_application=%cbf_application_installation_path%
+
+m exitb
+
+
+
+:_
+
 :fgt
 
 set fp=ForGitTesting.
@@ -2496,19 +2439,53 @@ m exitb
 
 
 
-:_
+:_+ CBF Path Automation
 
-:ql
 
-set fp=Quickla.
 
-rem lu: Apr-10-2018
+::_
+
+:cbfp
+
+set fp=* CBF Path. Set CBF_Path based on the currently set CBF_Path.
+
+rem lu: Mar-9-2018
 
 echo %fp%
 
-set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
+rem Don't need to set it because it's already set.
 
-set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+m exitb
+
+
+
+::_
+
+:cbfa
+
+set fp=* CBF Application. Set CBF_Path based on the currently set CBF_Application.
+
+rem lu: Mar-9-2018
+
+echo %fp%
+
+call m transform_cbf_application "%cbf_application%"
+
+m exitb
+
+
+
+::_
+
+:cbff
+
+set fp=* CBF Filename.
+
+rem lu: Mar-9-2018
+
+echo %fp%
+
+call m transform_cbf_application "%cbf_filename%"
 
 m exitb
 

@@ -33,6 +33,10 @@ goto %1
 
 :help
 
+echo.
+echo %filep%
+
+echo.
 echo Filename stands for: Miscellaneous tasks.
 
 echo.
@@ -44,9 +48,6 @@ echo Usage: m [single parameter]
 echo.
 echo Usage Note: Do not make internal calls to a composite function because 
 echo that could cause a circular reference.
-
-echo.
-echo Notes: Having a written version of your work is self-documenting and allows you to learn and improve over time.
 
 echo.
 echo     Parameter  Description
@@ -2980,32 +2981,44 @@ goto exitb
 
 :_
 
-:env
+:l
 
-:cbf
+:list
 
-set filep=* Show the state of the CBF environment variables.
-
-echo.
-echo %filep%
+set fp=* List of CBF Helper Batch files updated on Apr-9-2018.
 
 echo.
-echo CBF_Application: %cbf_application%
-
+echo  %fp%
 echo.
-echo CBF_Application_Installation_Path: %cbf_application_installation_path%
 
-echo.
-echo CBF_Filename: %cbf_filename%
-
-echo.
-echo CBF_Parameter: %cbf_parameter%
-
-echo.
-echo CBF_Path: %cbf_path%
-
-echo.
-echo CBF_URL: %cbf_url%
+echo   File  Description
+echo   ----  ------------------------------------------------------------------
+echo   acp:  Add, commit and push Git changes with timestamp commit message.
+echo     c:  Clear screen and reset color.
+echo   cbf:  Show the state of CBF environment variables.
+echo    cn:  Used for Git cloning tasks.
+echo    cy:  Copy file(s).
+echo  cysd:  Copy file file from source to destination.
+echo     d:  Easier-to-type and remember version of "dir".
+echo     e:  Exit command window.
+echo    ea:  Application-centric way of running an app with opt. file param.
+echo    ed:  Filename-centric way of editing a file with optional app. param.
+echo     g:  Perform Git-related tasks.
+echo     h:  Perform Sencha-related tasks.
+echo     k:  Double-click equivalent way to exec. a file with opt. app. param.
+echo     m:  Perform miscellaneous tasks.
+echo    me:  Run Multi-Edit.
+echo    mx:  Use Multi-Edit to edit a batch file in the CBF folder.
+echo     n:  Nicknames source dictionary.
+echo    no:  Run Notepad.
+echo   npp:  Run Notepad++.
+echo    of:  Open Folder.
+echo    rf:  Remove folder corresponding to specified CBF path nickname. 
+echo     s:  SQL/Database, including LDAP, related tasks.
+echo    sf:  Surf to websites.
+echo    sm:  Run Sublime.
+echo    td:  Transform Directory.
+echo     x:  Execute the nickname based on what type of nickname it is.
 
 goto exitb
 
@@ -3013,15 +3026,55 @@ goto exitb
 
 :_
 
-:l
+:e
 
-:list
+:ev
 
-set fp=* List CBF files.
+:env
 
-rem lu: Apr-10-2018
+:cbf
 
-cbf
+set filep=* Show the state of the CBF environment variables.
+
+cls
+
+echo.
+echo %filep%
+
+echo.
+echo                   Application: %cbf_application%
+
+echo.
+echo Application_Installation_Path: %cbf_application_installation_path%
+
+echo.
+echo                      Filename: %cbf_filename%
+
+echo.
+echo                     Parameter: %cbf_parameter%
+
+echo.
+echo                          Path: %cbf_path%
+
+echo.
+echo                           URL: %cbf_url%
+
+goto exitb
+
+
+
+:_
+
+:transform_cbf_application
+
+set fp=* Transform CBF variable.
+
+rem lu: Mar-14-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%~p2
 
 goto exitb
 
