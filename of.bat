@@ -39,8 +39,6 @@ goto open_folder_in_windows_explorer
 
 :help
 
-rem qq-1
-
 echo.
 echo Filename stands for: Open Folder.
 
@@ -56,54 +54,7 @@ echo Parameter 1 (Optional): Path to walk before opening Windows Explorer. If le
 echo.
 echo Notes: This is a wrapper around td.bat and n.bat.
 
-goto exitb
-
-
-
-:_+ Exit Functions
-
-
-
-::_
-
-:exit
-
-set fp= * Exit.
-
-rem echo %fp%
-
-exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit /b
-
-
-
-::_
-
-:exitp
-
-set fp= * Exit with pause.
-
-echo.
-rem echo %fp%
-
-pause
-
-exit
-
-
-
-::_
-
-rem ******* End Exit Functions.
+m exitb
 
 
 
@@ -115,13 +66,13 @@ set fp=* Open folder in Windows Explorer.
 
 rem fcd: May-9-2017
 
-call td %1
+call td %1 %2
 
 rem echo Errorlevel: %errorlevel%
 
 if "%errorlevel%"=="0" explorer %cd%
 
-goto exitb
+m exitb
 
 
 
@@ -138,7 +89,7 @@ echo %fp%
 
 explorer %cd%
 
-goto exitb
+m exitb
 
 
 

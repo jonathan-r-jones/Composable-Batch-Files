@@ -43,8 +43,10 @@ if exist %cbf_path% (
 
 call m set_parent_fd "%cbf_path%\.." parent_folder
 
-rem echo.
-rem echo Parent_Folder: %parent_folder%
+cd /d %parent_folder%
+
+echo.
+cd
 
 
 
@@ -82,11 +84,10 @@ echo.
 echo Parameter 1: URL nickname of the repository.
 
 echo.
-echo Parameter 2 (Optional): Path nickname or current folder ("c"). 
+echo Parameter 2 (Optional): If "c" is specified, the repository will be installed into a subfolder of the current folder.
 
+echo.
 echo If left blank, the repository will be installed into the specified CBF Path, assuming its not already there.
-
-echo If left set to "c", the repository will be installed into a subfolder of the current folder.
 
 goto exitb
 
