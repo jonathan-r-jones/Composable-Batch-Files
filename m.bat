@@ -3007,7 +3007,23 @@ echo CBF_Path: %cbf_path%
 echo.
 echo CBF_URL: %cbf_url%
 
-m exitb
+goto exitb
+
+
+
+:_
+
+:l
+
+:list
+
+set fp=* List CBF files.
+
+rem lu: Apr-10-2018
+
+cbf
+
+goto exitb
 
 
 

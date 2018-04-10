@@ -15,6 +15,17 @@ rem echo %filep%
 
 :_
 
+set fp=* Set title.
+
+echo.
+echo %fp%
+
+title=Composable Batch Files
+
+
+
+:_
+
 set fp=* Add some whitespace.
 
 echo.

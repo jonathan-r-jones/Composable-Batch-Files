@@ -20,14 +20,14 @@ For example, running Hello_World.bat in the following way will yield the followi
 
 To see list of the commonly used composed batch files type:
 
-![](mlist.png)
+![](cbf.png)
 
 
 
 To see the help for a particular batch file, type in the batch file name and "/?" or "-help". 
 For example:
 
-![](git.png)
+![](help.png)
 
 
 
