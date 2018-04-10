@@ -311,6 +311,7 @@ m exitb
 :add
 
 set fp=* Add files generic action.
+rem qq-1
 
 echo %fp%
 
@@ -731,8 +732,8 @@ set fp=* Add, commit and push with timestamp commit description.
 
 rem fcd: Apr-13-2017
 
-echo %fp%
 echo.
+echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
@@ -742,7 +743,7 @@ cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 m exitb
 
-call :add
+call %0 add
 
 call %0 commit_with_timestamp_description
 
