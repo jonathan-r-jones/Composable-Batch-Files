@@ -671,6 +671,7 @@ m exitb
 
 set fp=* Push changes to the cloud.
 
+echo.
 echo %fp%
 
 echo.
@@ -1530,11 +1531,11 @@ m exitb
 
 set fp=* Status, including remote information.
 
+echo.
 echo %fp%
-echo.
 
-call git remote update
 echo.
+call git remote update
 
 call git status
 
