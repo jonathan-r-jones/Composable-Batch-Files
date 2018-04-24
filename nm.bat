@@ -577,3 +577,19 @@ m exitb
 
 
 :_
+
+:repo
+
+set fp=* Go to the GitHub repository for a given package.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+npm repo %2
+
+m exitb
+
+
+
+:_
