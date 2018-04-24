@@ -8,8 +8,6 @@
 
 set filep=* Perform NPM-related tasks.
 
-echo %filep%
-
 
 
 :_
@@ -183,6 +181,56 @@ echo %fp%
 
 echo.
 npm init
+
+m exitb
+
+
+
+:_
+
+:initd
+
+set fp=* Automated wizard that walks you through creating a package.json file with defaults.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm init -y
+
+m exitb
+
+
+
+:_
+
+:lic
+
+set fp=* Set default license to MIT.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+npm set init-license 'MIT'
+
+m exitb
+
+
+
+:_
+
+:licg
+
+set fp=* Get default license setting.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm get init-license
 
 m exitb
 

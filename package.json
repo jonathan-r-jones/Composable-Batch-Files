@@ -11,9 +11,10 @@
     "url": "git+https://github.com/jonathan-r-jones/Composable-Batch-Files.git"
   },
   "author": "Jonathan Jones",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jonathan-r-jones/Composable-Batch-Files/issues"
   },
-  "homepage": "https://github.com/jonathan-r-jones/Composable-Batch-Files#readme"
+  "homepage": "https://github.com/jonathan-r-jones/Composable-Batch-Files#readme",
+  "keywords": []
 }
