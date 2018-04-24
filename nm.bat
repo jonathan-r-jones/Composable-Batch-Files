@@ -234,60 +234,11 @@ m exitb
 
 
 
-:_
-
-:i
-
-:inst
-
-set fp=* Install third party package.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm install %2
-
-m exitb
+:_+ Listing
 
 
 
-:_
-
-:instd
-
-set fp=* Install third party package and save setting in the package.json file.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm install %2 --save
-
-m exitb
-
-
-
-:_
-
-:instd
-
-set fp=* Install package and save setting in the development section of the package.json file.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm install %2 --save--dev
-
-m exitb
-
-
-
-:_
+::_
 
 :list
 
@@ -304,7 +255,7 @@ m exitb
 
 
 
-:_
+::_
 
 :my_list
 
@@ -337,9 +288,9 @@ m exitb
 
 
 
-:_
+::_
 
-:glist
+:list_g
 
 set fp=* Verbose list of my globally installed packages.
 
@@ -353,7 +304,7 @@ m exitb
 
 
 
-:_
+::_
 
 :my_g_json_list
 
@@ -370,7 +321,7 @@ m exitb
 
 
 
-:_
+::_
 
 :my_g_json_dlist
 
@@ -387,9 +338,85 @@ m exitb
 
 
 
-:_
+:_+ Installing
 
-:ginst
+
+
+::_
+
+:i
+
+:inst
+
+set fp=* Install third party package.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm install %2
+
+m exitb
+
+
+
+::_
+
+:inst_gh
+
+set fp=* Install a package using its GitHub URL.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+call n %2
+
+echo.
+npm i %cbf_url%
+
+m exitb
+
+
+
+::_
+
+:inst_d
+
+set fp=* Install third party package and save setting in the package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm install %2 --save
+
+m exitb
+
+
+
+_:_
+
+:inst_ds
+
+set fp=* Install package and save setting in the development section of the package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm install %2 --save--dev
+
+m exitb
+
+
+
+::_
+
+::inst_g
 
 set fp=* Globally install a package so that it works everywhere on the command line.
 
@@ -404,26 +431,103 @@ m exitb
 
 
 
-:_
+::_
 
-:unin
+:inst_sv
 
-set fp=* Uninstall "%2" global package.
+set fp=* Install a specific version of a package. Given this example, this will install the latest 1.8 version.
 
 rem lu: Apr-24-2018
 
 echo %fp%
 
 echo.
-npm uninstall %2 -g
+rem npm i underscore@1.7 --save
+npm i %2 --save
 
 m exitb
 
 
 
-:_
+::_
 
-:unind
+:inst_svh
+
+set fp=* Install a specific version of a package and HOLD at this version. NPM will not upgrade automically in this case.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i underscore@1.8.2 --save --save-exact
+
+m exitb
+
+
+
+:_+ Updating
+
+
+
+::_
+
+:update
+
+set fp=* Update all dependencies to the latest version.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm update --save
+
+m exitb
+
+
+
+::_
+
+:update_sp
+
+set fp=* Update a single package dependency, in this case "%2".
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm update %2
+
+m exitb
+
+
+
+:_+ Uninstalling
+
+
+
+::_
+
+:unin_s
+
+set fp=* Uninstall "%2" local package and remove dependency section in the package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm uninstall %2 --save
+
+m exitb
+
+
+
+::_
+
+:unin_gd
 
 set fp=* Uninstall "%2" global package and remove dependency section in the package.json file.
 
@@ -438,35 +542,18 @@ m exitb
 
 
 
-:_
+::_
 
-:instsv
+:unin_g
 
-set fp=* Install a specific version of a package. Given this example, this will install the latest 1.8 version.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm i underscore@1.8 --save
-
-m exitb
-
-
-
-:_
-
-:instsvp
-
-set fp=* Install a specific version of a package and HOLD at this version. NPM will not upgrade automically in this case.
+set fp=* Uninstall "%2" global package.
 
 rem lu: Apr-24-2018
 
 echo %fp%
 
 echo.
-npm i underscore@1.8.2 --save --save-exact
+npm uninstall %2 -g
 
 m exitb
 
