@@ -2559,7 +2559,7 @@ m exitb
 
 :_
 
-:npm
+:npm_s
 
 set fp=* NPM shortcuts.
 

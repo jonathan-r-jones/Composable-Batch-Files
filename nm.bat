@@ -560,3 +560,20 @@ m exitb
 
 
 :_
+
+:prun
+
+set fp=* Prune extraneous packages, that is, those that are not in the package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm prune
+
+m exitb
+
+
+
+:_
