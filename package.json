@@ -16,5 +16,8 @@
     "url": "https://github.com/jonathan-r-jones/Composable-Batch-Files/issues"
   },
   "homepage": "https://github.com/jonathan-r-jones/Composable-Batch-Files#readme",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "underscore": "1.8.2"
+  }
 }

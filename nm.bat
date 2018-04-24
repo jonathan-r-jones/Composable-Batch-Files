@@ -298,7 +298,7 @@ rem lu: Apr-24-2018
 echo %fp%
 
 echo.
-npm list
+npm list --long true
 
 m exitb
 
@@ -323,7 +323,7 @@ m exitb
 
 :_
 
-:g_list
+:all_glist
 
 set fp=* List of globally installed packages.
 
@@ -331,7 +331,6 @@ rem lu: Apr-24-2018
 
 echo %fp%
 
-echo.
 npm list --global true
 
 m exitb
@@ -340,7 +339,7 @@ m exitb
 
 :_
 
-:my_g_list
+:glist
 
 set fp=* Verbose list of my globally installed packages.
 
@@ -348,8 +347,126 @@ rem lu: Apr-24-2018
 
 echo %fp%
 
+npm list -g --depth 0 --long true
+
+m exitb
+
+
+
+:_
+
+:my_g_json_list
+
+set fp=* Verbose list of my globally installed packages in JSON format.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
 echo.
-npm list --global true --depth 0 --long true
+npm list --global true --depth 0 --long true --json true
+
+m exitb
+
+
+
+:_
+
+:my_g_json_dlist
+
+set fp=* Verbose list of my globally installed packages in JSON format for dev dependencies only.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm list --global true --depth 0 --long true --dev true
+
+m exitb
+
+
+
+:_
+
+:ginst
+
+set fp=* Globally install a package so that it works everywhere on the command line.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i gulp -g
+
+m exitb
+
+
+
+:_
+
+:unin
+
+set fp=* Uninstall "%2" global package.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm uninstall %2 -g
+
+m exitb
+
+
+
+:_
+
+:unind
+
+set fp=* Uninstall "%2" global package and remove dependency section in the package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm uninstall %2 -g --save
+
+m exitb
+
+
+
+:_
+
+:instsv
+
+set fp=* Install a specific version of a package. Given this example, this will install the latest 1.8 version.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i underscore@1.8 --save
+
+m exitb
+
+
+
+:_
+
+:instsvp
+
+set fp=* Install a specific version of a package and HOLD at this version. NPM will not upgrade automically in this case.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i underscore@1.8.2 --save --save-exact
 
 m exitb
 
