@@ -172,3 +172,20 @@ m exitb
 
 
 :_
+
+:init
+
+set fp=* Automated wizard that walks you through creating a package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm init
+
+m exitb
+
+
+
+:_
