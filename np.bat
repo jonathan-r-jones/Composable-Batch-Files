@@ -8,7 +8,6 @@
 
 set filep=* Perform NPM-related tasks.
 
-echo.
 echo %filep%
 
 
@@ -150,6 +149,23 @@ rem lu: Apr-24-2018
 echo %fp%
 
 npm help %2
+
+m exitb
+
+
+
+:_
+
+:nhss
+
+set fp=* NPM help-search for a specific command.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm help-search %2
 
 m exitb
 

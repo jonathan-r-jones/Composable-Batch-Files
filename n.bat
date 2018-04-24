@@ -2527,7 +2527,7 @@ m exitb
 
 :_
 
-:npm
+:npc
 
 set fp=* NPM Playbook Course.
 
@@ -2536,6 +2536,22 @@ rem lu: Apr-24-2018
 echo %fp%
 
 set cbf_url=https://github.com/joeeames/NPMPlaybookCourse
+
+m exitb
+
+
+
+:_
+
+:npm
+
+set fp=* NPM shortcuts.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+set cbf_url=https://docs.npmjs.com/misc/config
 
 m exitb
 
