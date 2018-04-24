@@ -107,3 +107,20 @@ m exitb
 
 
 :_
+
+:test
+
+set fp=* Run tests.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+echo.
+
+npm test
+
+m exitb
+
+
+
+:_
