@@ -8,9 +8,6 @@
 
 set filep=* Edit file with Multi-Edit.
 
-echo.
-echo %filep%
-
 
 
 :_

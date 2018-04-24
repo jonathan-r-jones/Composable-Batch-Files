@@ -156,9 +156,25 @@ m exitb
 
 ::_
 
+:ie
+
+set fp=* Internet Explorer.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\internet explorer\iexplore.exe
+
+m exitb
+
+
+
+::_
+
 :kr
 
-set fp=Chrome.
+set fp=* Chrome.
 
 rem lu: Jan-24-2018
 
@@ -2288,7 +2304,7 @@ m exitb
 
 :me
 
-set fp=Multi-Edit.
+set fp=* Multi-Edit.
 
 rem lu: Jan-24-2018
 
@@ -2304,7 +2320,7 @@ m exitb
 
 :no
 
-set fp=Notepad.
+set fp=* Notepad.
 
 rem lu: Jan-24-2018
 
@@ -2342,7 +2358,7 @@ m exitb
 
 :gpcbf
 
-set fp=CBF on GitHub Pages.
+set fp=* CBF on GitHub Pages.
 
 rem lu: Jan-31-2018
 
@@ -2360,7 +2376,7 @@ m exitb
 
 :cbf
 
-set fp=CBF on GitHub.
+set fp=* CBF on GitHub.
 
 rem lu: Jan-24-2018
 
@@ -2380,7 +2396,7 @@ m exitb
 
 :ql
 
-set fp=Quickla.
+set fp=* Quickla.
 
 rem lu: Apr-10-2018
 
@@ -2398,7 +2414,7 @@ m exitb
 
 :npp
 
-set fp=Notepad++.
+set fp=* Notepad++.
 
 rem lu: Mar-9-2018
 

@@ -3009,10 +3009,10 @@ echo     k  Double-click equivalent way to execute a file.
 echo     m  Perform miscellaneous tasks.
 echo    me  Run Multi-Edit.
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
-echo     n  Nicknames source dictionary.
-echo    np  Perform NPM-related tasks.
+echo     n  Nicknames dictionary.
+echo    nm  Perform NPM-related tasks.
 echo    no  Run Notepad.
-echo   npp  Run Notepad++.
+echo    np  Run Notepad++.
 echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
 echo    of  Open Folder.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 

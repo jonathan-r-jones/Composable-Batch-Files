@@ -8,9 +8,6 @@
 
 set filep=* Edit file with Sublime.
 
-echo.
-echo %filep%
-
 
 
 :_
