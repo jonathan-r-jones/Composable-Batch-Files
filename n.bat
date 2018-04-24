@@ -2421,24 +2421,6 @@ m exitb
 
 
 
-:_
-
-:fgt
-
-set fp=ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo %fp%
-
-set cbf_path=%aa%\for-git-testing
-
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing
-
-m exitb
-
-
-
 :_+ CBF Path Automation
 
 
@@ -2509,22 +2491,6 @@ m exitb
 
 :_
 
-:npm
-
-set fp=* NPM Playbook Course.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/joeeames/NPMPlaybookCourse
-
-m exitb
-
-
-
-:_
-
 :pajs
 
 :pack
@@ -2536,7 +2502,41 @@ rem lu: Apr-24-2018
 echo %fp%
 
 set cbf_filename=package.json
-rem qq-1
+
+m exitb
+
+
+
+:_
+
+:fgt
+
+set fp=ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo %fp%
+
+set cbf_path=%aa%\for-git-testing
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing
+
+m exitb
+
+
+
+:_
+
+:npm
+
+set fp=* NPM Playbook Course.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/joeeames/NPMPlaybookCourse
+
 m exitb
 
 

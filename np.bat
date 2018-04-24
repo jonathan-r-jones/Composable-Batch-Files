@@ -62,7 +62,7 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: Nickname command you wish to execute.
+echo Parameter 1: Nickname of command you wish to execute.
 
 m exitb
 
@@ -118,6 +118,38 @@ echo %fp%
 echo.
 
 npm test
+
+m exitb
+
+
+
+:_
+
+:npmhelp
+
+set fp=* Run tests.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+npm -h
+
+m exitb
+
+
+
+:_
+
+:nhs
+
+set fp=* NPM help for a specific command.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+npm help %2
 
 m exitb
 
