@@ -198,4 +198,23 @@ m exitb
 
 
 
+:_
+
+:cbf
+
+set fp=* CBF.png file to cbf folder.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+call td cbf
+
+echo.
+xcopy /y c:\a\cbf.png
+
+m exitb
+
+
+
 :_ (!rfsp) (mov-9)

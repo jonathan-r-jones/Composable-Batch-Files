@@ -3000,6 +3000,7 @@ echo    cn  Used for Git cloning tasks.
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
 echo    ea  Application-centric way of running an app with opt. file param.
+echo   env  Show the state of the CBF envrionment variables.
 echo    cy  Copy file(s).
 echo    ed  Filename-centric way of editing a file with optional app. param.
 echo     g  Perform Git-related tasks.
