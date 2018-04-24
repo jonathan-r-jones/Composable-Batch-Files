@@ -2997,12 +2997,12 @@ echo   acp  Add, commit and push Git changes with timestamp commit message.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
 echo    cn  Used for Git cloning tasks.
+echo    cy  Copy file(s).
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
 echo    ea  Application-centric way of running an app with opt. file param.
-echo   env  Show the state of the CBF envrionment variables.
-echo    cy  Copy file(s).
 echo    ed  Filename-centric way of editing a file with optional app. param.
+echo   env  Show the state of the CBF envrionment variables.
 echo     g  Perform Git-related tasks.
 echo     h  Perform Sencha-related tasks.
 echo     k  Double-click equivalent way to execute a file.
