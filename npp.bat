@@ -25,8 +25,13 @@ if "%~1" == "help" goto help
 
 :_
 
-if "%~1" == "" call ea npp
-if not "%~1" == "" call ed "%~1" npp
+set fp=* Main function.
+
+if "%~1" == "" (
+  call ea npp
+) else (
+  call ed %~1 npp
+)
 
 m exitb
 

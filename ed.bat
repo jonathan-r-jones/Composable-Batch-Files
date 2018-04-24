@@ -39,9 +39,9 @@ set cbf_parameter=%cbf_filename%
 rem Set Default application.
 
 
-if "%~2" == "" call an me
+if "%~2" == "" call n me
 
-if not "%~2" == "" call an %2
+if not "%~2" == "" call n %2
 
 call r
 

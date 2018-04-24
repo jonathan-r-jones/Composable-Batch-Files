@@ -633,7 +633,7 @@ m exitb
 
 :j2
 
-set fp=J1.txt.
+set fp=J2.txt.
 
 rem lu: Feb-1-2018
 
@@ -2503,6 +2503,40 @@ echo %fp%
 
 set cbf_path=c:\program files
 
+m exitb
+
+
+
+:_
+
+:npm
+
+set fp=* NPM Playbook Course.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/joeeames/NPMPlaybookCourse
+
+m exitb
+
+
+
+:_
+
+:pajs
+
+:pack
+
+set fp=* Package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+set cbf_filename=package.json
+rem qq-1
 m exitb
 
 

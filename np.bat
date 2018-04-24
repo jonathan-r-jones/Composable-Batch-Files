@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* This template file can be used as a "Save As" to create a new composable batch file.
+set filep=* Perform NPM-related tasks.
 
 echo.
 echo %filep%
@@ -25,6 +25,8 @@ echo.
 
 set fp=* Route help callers.
 
+if "%~1" == "" goto install
+
 if "%~1" == "/?" goto help
 
 if "%~1" == "-h" goto help
@@ -37,7 +39,7 @@ if "%~1" == "help" goto help
 
 set fp=* Main function.
 
-
+goto %1
 
 rem (!rfsp) (mov-2)
 
@@ -51,7 +53,7 @@ m exitb
 
 :help
 
-echo Filename stands for: Composable Batch File Template.
+echo Filename stands for: NPM stuff.
 
 echo.
 echo Last Updated: Feb-6-2018
@@ -60,13 +62,45 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Usage: %0 [space separated parameter(s)]
+echo Parameter 1: Nickname command you wish to execute.
 
-echo.
-echo Parameter 1 (Optional):
+m exitb
 
+
+
+:_
+
+:insta
+
+:install
+
+set fp=* Install.
+
+rem lu: Apr-24-2018
+
+echo %fp%
 echo.
-echo Parameter 2 (Optional):
+
+npm install
+
+m exitb
+
+
+
+:_
+
+:star
+
+:start
+
+set fp=* Run start script.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+echo.
+
+npm start
 
 m exitb
 

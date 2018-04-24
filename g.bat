@@ -50,6 +50,8 @@ echo -------------  -----------------------------------------------------
 echo             a  Add changes.
 echo           asf  Add single file.
 echo             c  Commit changes for only those files that were staged.
+echo           ghg  Git help git.
+echo           ghs  Git help for specific git command.
 echo          pull  Get-latest.
 echo          push  Push changes.
 echo           rsf  Revert file.
@@ -2013,6 +2015,40 @@ rem git branch master
 rem git branch Branch2
 
 git branch clean6.2
+
+m exitb
+
+
+
+:_
+
+:ghg
+
+set fp=* Git help git.
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+git help git
+
+m exitb
+
+
+
+:_
+
+:ghs
+
+set fp=* Git help for a specific git command.
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+git help %2
 
 m exitb
 
