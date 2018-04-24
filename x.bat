@@ -6,7 +6,8 @@
 
 :_
 
-set filep=* Execute the nickname based on what type of nickname it is.
+set filep=* Filename-centric way to execute a file with optional application parameter.
+rem qq-1
 
 echo.
 echo %filep%
@@ -31,7 +32,7 @@ set fp=* Main function.
 
 set cbf_application=
 
-set cbf_application_installation_path=
+set cbf_App_Location=
 
 set cbf_filename=
 
@@ -44,7 +45,9 @@ set cbf_url=
 call n %1
 
 if not "%cbf_filename%" == "" (
-  call k %1
+  r %1
+rem   call k %1
+rem qq-1
   m exitb
 )
 

@@ -40,7 +40,6 @@ goto %1
 
 :help
 
-echo.
 echo %filep%
 
 echo.
@@ -70,7 +69,6 @@ echo             a  a.
 echo            ba  c:\mercury\batch_files
 echo            bu  c:\mercury\backups
 echo           cbf  Composable Batch Files.
-echo            cd  (Current Directory)
 echo           cnn  CNN.com
 echo           cwp  ContactsWidget for Phone
 echo           cwt  ContactsWidget for Tablet
@@ -83,12 +81,15 @@ echo         gpcbf  Google Pages for Composable Batch Files on GitHub
 echo       heatmap  \standalone\tmp\vfs\temp\[dynamically generated]
 echo           hex  \standalone\tmp\vfs\temp\[dynamically generated]
 echo      hex_root  [wildfly_location]\standalone\tmp\vfs\temp
+echo            j1  c:\a\j1.txt
+echo            j2  c:\a\j2.txt
 echo            kr  Chrome
 echo           log  %wildfly_location%\standalone\log\server.log
 echo             m  %COMPOSABLE_BATCH_FILES%\m.bat
 echo            m2  %userprofile%\.m2
 echo            m6  c:\projects\netbeans\mercury6
 echo   nb [or] prj  c:\projects\netbeans
+echo            pf  c:\program files
 echo       pom_ear  \projects\netbeans\mercury6\Mercury-ear\pom.xml
 echo       pom_ejb  \projects\netbeans\mercury6\Mercury-ejb\pom.xml
 echo      pom_root  \projects\netbeans\mercury6\pom.xml
@@ -1535,7 +1536,6 @@ set fp=A folder.
 
 rem lu: Dec-12-2017
 
-echo.
 echo %fp%
 
 set cbf_path=c:\a
@@ -2406,16 +2406,16 @@ echo %fp%
 
 rem Determine installation path.
 
-if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_installation_path=c:\program files\notepad++\notepad++.exe
-if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_installation_path="c:\program files (x86)\notepad++\notepad++.exe"
+if exist "c:\program files\notepad++\notepad++.exe" set cbf_App_Location=c:\program files\notepad++\notepad++.exe
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_App_Location="c:\program files (x86)\notepad++\notepad++.exe"
 
-if "%cbf_application_installation_path%" == "" (
+if "%cbf_App_Location%" == "" (
   echo.
   echo Notepad++ is not installed.
   m exitb
 )
 
-set cbf_application=%cbf_application_installation_path%
+set cbf_application=%cbf_App_Location%
 
 m exitb
 
@@ -2486,6 +2486,22 @@ rem lu: Mar-9-2018
 echo %fp%
 
 call m transform_cbf_application "%cbf_filename%"
+
+m exitb
+
+
+
+:_
+
+:pf
+
+set fp=Program files.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+set cbf_path=c:\program files
 
 m exitb
 

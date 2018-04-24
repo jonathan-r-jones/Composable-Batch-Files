@@ -37,10 +37,10 @@ if "%cbf_path%" == "" (
   m exitb
 )
 
-rem echo.
-rem set /P user_option=Are you sure you wish to remove "%cbf_path%"?(y/n): 
+echo.
+set /P user_option=Are you sure you wish to remove "%cbf_path%"? (y/n): 
 
-rem if not "%user_option%"=="y" m exitb
+if not "%user_option%"=="y" m exitb
 
 rd /q /s %cbf_path%
 

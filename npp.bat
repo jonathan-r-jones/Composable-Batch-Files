@@ -38,7 +38,7 @@ m exitb
 
 :help
 
-echo Filename stands for: NotePad++(P).
+echo Filename stands for: NotePad++.
 
 echo.
 echo Last Updated: Feb-6-2018

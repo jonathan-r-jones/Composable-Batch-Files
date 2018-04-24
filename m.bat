@@ -2979,46 +2979,45 @@ goto exitb
 
 
 
-:_
+_
 
 :l
 
 :list
 
-set fp=* List of CBF Helper Batch files updated on Apr-9-2018.
+set fp=* List of CBF Helper Batch files updated on Apr-24-2018.
 
 echo.
 echo  %fp%
 echo.
 
-echo   File  Description
-echo   ----  ------------------------------------------------------------------
-echo   acp:  Add, commit and push Git changes with timestamp commit message.
-echo     c:  Clear screen and reset color.
-echo   cbf:  Show the state of CBF environment variables.
-echo    cn:  Used for Git cloning tasks.
-echo    cy:  Copy file(s).
-echo  cysd:  Copy file file from source to destination.
-echo     d:  Easier-to-type and remember version of "dir".
-echo     e:  Exit command window.
-echo    ea:  Application-centric way of running an app with opt. file param.
-echo    ed:  Filename-centric way of editing a file with optional app. param.
-echo     g:  Perform Git-related tasks.
-echo     h:  Perform Sencha-related tasks.
-echo     k:  Double-click equivalent way to exec. a file with opt. app. param.
-echo     m:  Perform miscellaneous tasks.
-echo    me:  Run Multi-Edit.
-echo    mx:  Use Multi-Edit to edit a batch file in the CBF folder.
-echo     n:  Nicknames source dictionary.
-echo    no:  Run Notepad.
-echo   npp:  Run Notepad++.
-echo    of:  Open Folder.
-echo    rf:  Remove folder corresponding to specified CBF path nickname. 
-echo     s:  SQL/Database, including LDAP, related tasks.
-echo    sf:  Surf to websites.
-echo    sm:  Run Sublime.
-echo    td:  Transform Directory.
-echo     x:  Execute the nickname based on what type of nickname it is.
+echo  File  Description
+echo  ----  ------------------------------------------------------------------
+echo   acp  Add, commit and push Git changes with timestamp commit message.
+echo     c  Clear screen and reset color.
+echo   cbf  Show this list of CBF Helper batch files.
+echo    cn  Used for Git cloning tasks.
+echo     d  Easier-to-type and remember version of "dir".
+echo     e  Exit command window.
+echo    ea  Application-centric way of running an app with opt. file param.
+echo    cy  Copy file(s).
+echo    ed  Filename-centric way of editing a file with optional app. param.
+echo     g  Perform Git-related tasks.
+echo     h  Perform Sencha-related tasks.
+echo     k  Double-click equivalent way to execute a file.
+echo     m  Perform miscellaneous tasks.
+echo    me  Run Multi-Edit.
+echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
+echo     n  Nicknames source dictionary.
+echo    no  Run Notepad.
+echo   npp  Run Notepad++.
+echo    of  Open Folder.
+echo    rf  Remove folder corresponding to specified CBF path nickname. 
+echo     s  SQL/Database, including LDAP, related tasks.
+echo    sf  Surf to websites.
+echo    sm  Run Sublime.
+echo    td  Transform Directory.
+echo     x  Filename-centric way to exec. a file with opt. app. param.
 
 goto exitb
 
@@ -3042,22 +3041,22 @@ echo.
 echo %filep%
 
 echo.
-echo                   Application: %cbf_application%
+echo  Application: %cbf_application%
 
 echo.
-echo Application_Installation_Path: %cbf_application_installation_path%
+echo App_Location: %cbf_App_Location%
 
 echo.
-echo                      Filename: %cbf_filename%
+echo     Filename: %cbf_filename%
 
 echo.
-echo                     Parameter: %cbf_parameter%
+echo    Parameter: %cbf_parameter%
 
 echo.
-echo                          Path: %cbf_path%
+echo         Path: %cbf_path%
 
 echo.
-echo                           URL: %cbf_url%
+echo          URL: %cbf_url%
 
 goto exitb
 

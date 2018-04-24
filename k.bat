@@ -6,7 +6,8 @@
 
 :_
 
-set filep=* Double-click equivalent way to execute a file with optional application nickname parameter.
+set filep=* Double-click equivalent way to execute a file.
+rem qq-1
 
 echo.
 echo %filep%
@@ -30,7 +31,6 @@ if "%~1" == "help" goto help
 set fp=* Detect a period in the first parameter and run.
 
 echo %1 | find /i ".">nul
-rem qq-1
 
 if %errorlevel% == 0 set cbf_filename=%1
 if %errorlevel% == 1 call fn %1
@@ -53,10 +53,10 @@ m exitb
 :help
 
 echo.
-echo Filename stands for: eXecute file.
+echo Filename stands for: Double-click file.
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: Apr-24-2018
 
 echo.
 echo Usage: ef [Parameter 1] [Parameter 2]

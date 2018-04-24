@@ -1932,6 +1932,7 @@ set fp=* Store credentials so that Git stops asking for credentials after each p
 
 rem lu: Mar-1-2018
 
+echo.
 echo %fp%
 
 git config credential.helper store
