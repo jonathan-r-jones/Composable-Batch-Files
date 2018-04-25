@@ -83,7 +83,7 @@ m exitb
 
 
 
-:_ Begin body. (!bb) qq
+:_ Begin body. (!bb)
 
 
 
@@ -660,6 +660,23 @@ rem lu: Apr-24-2018
 echo %fp%
 
 npm repo %2
+
+m exitb
+
+
+
+:_
+
+:add
+
+set fp=* Add user.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+echo.
+npm adduser
 
 m exitb
 
