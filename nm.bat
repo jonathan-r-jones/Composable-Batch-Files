@@ -745,7 +745,7 @@ rem lu: Apr-25-2018
 
 echo %fp%
 
-npm version minor
+npm version major
 
 m exitb
 
