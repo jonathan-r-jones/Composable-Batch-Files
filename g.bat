@@ -2061,7 +2061,7 @@ m exitb
 
 ::_
 
-:tag
+:set_tag
 
 set fp=* Set the tag version number.
 
@@ -2070,6 +2070,22 @@ rem lu: Apr-25-2018
 echo %fp%
 
 git tag %2
+
+m exitb
+
+
+
+::_
+
+:get_tag
+
+set fp=* Get the tag version numbers.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+git tag
 
 m exitb
 
