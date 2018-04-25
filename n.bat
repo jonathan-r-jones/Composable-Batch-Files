@@ -118,7 +118,7 @@ m exitb
 
 :sm
 
-set fp=Sublime.
+set fp=* Sublime.
 
 rem lu: Jan-24-2018
 
@@ -134,7 +134,7 @@ m exitb
 
 :dc
 
-set fp=Simulate a double click in CBF.
+set fp=* Simulate a double click in CBF.
 
 rem lu: Feb-1-2018
 
@@ -190,7 +190,7 @@ m exitb
 
 :fx
 
-set fp=Firefox.
+set fp=* Firefox.
 
 rem lu: Jan-24-2018
 
@@ -206,7 +206,7 @@ m exitb
 
 :pc
 
-set fp=Gpodder podcaster.
+set fp=* Gpodder podcaster.
 
 rem lu: Feb-2-2018
 
@@ -2510,6 +2510,8 @@ m exitb
 :pajs
 
 :pack
+
+:pj
 
 set fp=* Package.json file.
 

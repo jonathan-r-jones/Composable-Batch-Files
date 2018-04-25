@@ -144,6 +144,23 @@ m exitb
 
 ::_
 
+:npm
+
+set fp=* Install latest stable version of NPM. Be sure to run as ADMINISTRATOR.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i npm@latest -g
+
+m exitb
+
+
+
+::_
+
 ::inst_g
 
 set fp=* Globally install a package so that it works everywhere on the command line.
@@ -180,9 +197,9 @@ m exitb
 
 ::_
 
-:insta_d
+:insta_pj
 
-set fp=* Install default package.
+set fp=* Install any dependencies list in pacagage.json.
 
 rem lu: Apr-24-2018
 
@@ -643,23 +660,6 @@ rem lu: Apr-24-2018
 echo %fp%
 
 npm repo %2
-
-m exitb
-
-
-
-:_
-
-:npm
-
-set fp=* Install latest stable version of NPM. Be sure to run as ADMINISTRATOR.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm i npm@latest -g
 
 m exitb
 

@@ -2985,7 +2985,7 @@ goto exitb
 
 :list
 
-set fp=* List of CBF Helper Batch files updated on Apr-24-2018.
+set fp=* List of CBF Helper Batch files.
 
 echo.
 echo  %fp%
@@ -3020,6 +3020,7 @@ echo     s  SQL/Database, including LDAP, related tasks.
 echo    sf  Surf to websites.
 echo    sm  Run Sublime.
 echo    td  Transform Directory.
+echo    te  Batch file template used for creating new batch files.
 echo     x  Filename-centric way to exec. a file with opt. app. param.
 
 goto exitb

@@ -6,14 +6,6 @@
 
 :_
 
-set fp=* Add echo.
-
-echo.
-
-
-
-:_
-
 set Function_Purpose=* Route callers.
 
 if "%~1" == "" goto help
@@ -56,10 +48,11 @@ set fp=* Step 2. A call to another batch file.
 
 rem lu: Jan-23-2018
 
-echo %fp%
 echo.
+echo %fp%
 
-echo Put some code here.
+echo.
+echo Batch File 2. Put some code here.
 
 m exitb
 

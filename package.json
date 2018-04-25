@@ -1,6 +1,6 @@
 {
   "name": "composable-batch-files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": ". . .are scalable, convention-based and self-documenting batch files that can execute a single \r function or be strung together like legos to create a whole Millennium Falcon script.",
   "main": "index.js",
   "scripts": {

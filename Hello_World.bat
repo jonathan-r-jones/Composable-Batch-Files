@@ -8,9 +8,6 @@
 
 set filep=* Hello World batch file that demonstrates the basic structure concept behind Composable Batch Files.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -33,8 +30,10 @@ goto %1
 
 :help
 
+echo %filep%
+
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: Apr-25-2018
 
 echo.
 echo Usage: hello_world.bat [Parameter 1]
@@ -56,6 +55,10 @@ m exitb
 
 
 
+:_ Begin body. (!bb)
+
+
+
 :_
 
 :step_1
@@ -64,10 +67,25 @@ set fp=* Step 1. A call to this batch file.
 
 rem lu: Jan-23-2018
 
-echo %fp%
 echo.
+echo %fp%
 
+echo.
 echo Put some code here.
+
+m exitb
+
+
+
+:_
+
+:step_2
+
+set fp=* Step 2. A call to this batch file.
+
+rem lu: Jan-23-2018
+
+call hello_world_2 step_2
 
 m exitb
 
@@ -81,9 +99,10 @@ set fp=* Step 3.
 
 rem lu: Jan-23-2018
 
-echo %fp%
 echo.
+echo %fp%
 
+echo.
 echo Put some code here.
 
 m exitb
@@ -98,6 +117,7 @@ set fp=* All steps.
 
 rem lu: Jan-23-2018
 
+echo.
 echo %fp%
 
 call %0 step_1
@@ -118,6 +138,7 @@ set fp=* Some steps.
 
 rem lu: Jan-23-2018
 
+echo.
 echo %fp%
 
 call %0 step_1
