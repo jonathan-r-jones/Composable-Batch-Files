@@ -6865,6 +6865,21 @@ m exitb
 
 :_
 
+:
+
+set fp=* Test partial path.
+
+rem lu: Apr-10-2018
+
+echo %fp%
+
+cd /d \Program Files (x86)\Multi-Edit 2008\
+m exitb
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -6878,15 +6893,15 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-:
+:long_string
 
-set fp=* Test partial path.
+set fp=* Test what happens if I wrap a long string.
+set fp=%fp% blah blah
 
-rem lu: Apr-10-2018
+rem lu: Apr-25-2018
 
 echo %fp%
 
-cd /d \Program Files (x86)\Multi-Edit 2008\
 m exitb
 
 

@@ -61,13 +61,126 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1: Nickname of command you wish to execute.
 
+echo.
+echo     Parameter  Description
+echo -------------  -----------------------------------------------------
+echo          init  Wizard that creates a package.json file.
+echo        init_d  Wizard that creates package.json file with defaults.
+echo       set_lic  Set default license to MIT.
+echo       get_lic  Get default license setting.
+echo        list_g  Verbose list of my globally installed packages.
+echo           nhn  npm help npm. Involved help.
+echo           nhs  NPM help for a specific command.
+echo          nhss  NPM help-search for a specific command.
+echo           npm  Install latest stable version of NPM. Run as ADMIN.
+echo          prun  Prune extraneous packages.
+echo          repo  Go to the GitHub repository for a given package.
+echo       unin_gd  Uninstall global package and remove dependency note.
+echo        update  Update all dependencies to the latest version.
+echo          vers  Check NPM's version.
+
 m exitb
+
+
+
+:_ Begin body. (!bb) qq
 
 
 
 :_
 
-:installd
+:vers
+
+set fp=* Check NPM's version.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm version
+
+m exitb
+
+
+
+:_+ Installing
+
+
+
+::_
+
+:inst_s
+
+set fp=* Install third party package and save setting in the package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm install %2 --save
+
+m exitb
+
+
+
+_:_
+
+:inst_sd
+
+set fp=* Install package and save setting in the development section of the package.json file.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm install %2 --save--dev
+
+m exitb
+
+
+
+::_
+
+::inst_g
+
+set fp=* Globally install a package so that it works everywhere on the command line.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i %2 -g
+
+m exitb
+
+
+
+::_
+
+:i
+
+:inst
+
+set fp=* Install third party package.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm install %2
+
+m exitb
+
+
+
+::_
+
+:insta_d
 
 set fp=* Install default package.
 
@@ -77,6 +190,66 @@ echo %fp%
 echo.
 
 npm install
+
+m exitb
+
+
+
+::_
+
+:inst_gh
+
+set fp=* Install a package using its GitHub URL.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+call n %2
+
+echo.
+npm i %cbf_url%
+
+m exitb
+
+
+
+::_
+
+:inst_svh
+
+set fp=* Install a specific version of a package and HOLD at this version.
+
+set fp=%fp% NPM will not upgrade automically in this case.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i underscore@1.8.2 --save --save-exact
+
+m exitb
+
+
+
+::_
+
+:inst_sv
+
+set fp=* Install a specific version of a package.
+
+set fp=%fp% Given this example, this will install the latest 1.8 version.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+
+rem For example: npm i underscore@1.7 --save
+
+npm i %2 --save
 
 m exitb
 
@@ -110,7 +283,6 @@ set fp=* Run tests.
 rem lu: Apr-24-2018
 
 echo %fp%
-echo.
 
 npm test
 
@@ -118,23 +290,27 @@ m exitb
 
 
 
-:_
+:_+ NPM Help
 
-:npmhelp
 
-set fp=* Run tests.
+
+::_
+
+:nhn
+
+set fp=* Involved help.
 
 rem lu: Apr-24-2018
 
 echo %fp%
 
-npm -h
+npm help npm
 
 m exitb
 
 
 
-:_
+::_
 
 :nhs
 
@@ -150,7 +326,7 @@ m exitb
 
 
 
-:_
+::_
 
 :nhss
 
@@ -167,7 +343,11 @@ m exitb
 
 
 
-:_
+:_+ Inits
+
+
+
+::_
 
 :init
 
@@ -184,9 +364,9 @@ m exitb
 
 
 
-:_
+::_
 
-:initd
+:init_d
 
 set fp=* Automated wizard that walks you through creating a package.json file with defaults.
 
@@ -201,9 +381,13 @@ m exitb
 
 
 
-:_
+:_+ Settings
 
-:lic
+
+
+::_
+
+:set_lic
 
 set fp=* Set default license to MIT.
 
@@ -217,9 +401,9 @@ m exitb
 
 
 
-:_
+::_
 
-:licg
+:get_lic
 
 set fp=* Get default license setting.
 
@@ -235,6 +419,22 @@ m exitb
 
 
 :_+ Listing
+
+
+
+::_
+
+:list_g
+
+set fp=* Verbose list of my globally installed packages.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+npm list -g --depth 0 --long true
+
+m exitb
 
 
 
@@ -257,7 +457,7 @@ m exitb
 
 ::_
 
-:my_list
+:list_my
 
 set fp=* List of installed packages that only I have installed. As opposed to the hierarchy of what those packages have installed.
 
@@ -272,9 +472,9 @@ m exitb
 
 
 
-:_
+::_
 
-:all_glist
+:list_all
 
 set fp=* List of globally installed packages.
 
@@ -283,22 +483,6 @@ rem lu: Apr-24-2018
 echo %fp%
 
 npm list --global true
-
-m exitb
-
-
-
-::_
-
-:list_g
-
-set fp=* Verbose list of my globally installed packages.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-npm list -g --depth 0 --long true
 
 m exitb
 
@@ -333,134 +517,6 @@ echo %fp%
 
 echo.
 npm list --global true --depth 0 --long true --dev true
-
-m exitb
-
-
-
-:_+ Installing
-
-
-
-::_
-
-:i
-
-:inst
-
-set fp=* Install third party package.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm install %2
-
-m exitb
-
-
-
-::_
-
-:inst_gh
-
-set fp=* Install a package using its GitHub URL.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-call n %2
-
-echo.
-npm i %cbf_url%
-
-m exitb
-
-
-
-::_
-
-:inst_d
-
-set fp=* Install third party package and save setting in the package.json file.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm install %2 --save
-
-m exitb
-
-
-
-_:_
-
-:inst_ds
-
-set fp=* Install package and save setting in the development section of the package.json file.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm install %2 --save--dev
-
-m exitb
-
-
-
-::_
-
-::inst_g
-
-set fp=* Globally install a package so that it works everywhere on the command line.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm i gulp -g
-
-m exitb
-
-
-
-::_
-
-:inst_sv
-
-set fp=* Install a specific version of a package. Given this example, this will install the latest 1.8 version.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-rem npm i underscore@1.7 --save
-npm i %2 --save
-
-m exitb
-
-
-
-::_
-
-:inst_svh
-
-set fp=* Install a specific version of a package and HOLD at this version. NPM will not upgrade automically in this case.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm i underscore@1.8.2 --save --save-exact
 
 m exitb
 
@@ -587,6 +643,23 @@ rem lu: Apr-24-2018
 echo %fp%
 
 npm repo %2
+
+m exitb
+
+
+
+:_
+
+:npm
+
+set fp=* Install latest stable version of NPM. Be sure to run as ADMINISTRATOR.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i npm@latest -g
 
 m exitb
 
