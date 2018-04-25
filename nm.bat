@@ -652,7 +652,7 @@ m exitb
 
 :add
 
-set fp=* Add user.
+set fp=* Add user which is similar to Git's author stuff.
 
 rem lu: Apr-25-2018
 
@@ -660,23 +660,6 @@ echo %fp%
 
 echo.
 npm adduser
-
-m exitb
-
-
-
-:_
-
-:pub
-
-set fp=* Publish project to NPM.
-
-rem lu: Apr-25-2018
-
-echo %fp%
-
-echo.
-npm publish
 
 m exitb
 
@@ -746,6 +729,80 @@ rem lu: Apr-25-2018
 echo %fp%
 
 npm version major
+
+m exitb
+
+
+
+:_+ Publishing
+
+
+
+::_
+
+:pub
+
+set fp=* Publish project to NPM.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+echo.
+npm publish
+
+m exitb
+
+
+
+::_
+
+:pub_beta
+
+set fp=* Publish project to NPM in a beta release.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+echo.
+npm publish --tag beta
+
+m exitb
+
+
+
+:_+ Infos
+
+
+
+::_
+
+:info
+
+set fp=* Information about the current repository.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+npm info
+
+m exitb
+
+
+
+::_
+
+:info_n
+
+set fp=* Information about a named repository.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+npm info %2
 
 m exitb
 

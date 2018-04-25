@@ -308,50 +308,6 @@ m exitb
 
 :_
 
-:a
-
-:add
-
-set fp=* Add files generic action.
-
-echo %fp%
-
-git add -A
-
-m exitb
-
-
-
-:_
-
-:add2
-
-set fp=* Add files. (!step4)
-
-echo %fp%
-
-git add *.*
-
-m exitb
-
-
-
-:_
-
-:add_dot
-
-set fp=* Add files.
-
-echo %fp%
-
-git add .
-
-m exitb
-
-
-
-:_
-
 :too_long
 
 set fp=* Account for long filenames in a folder.
@@ -2104,6 +2060,54 @@ echo %fp%
 
 echo.
 git push --tags
+
+m exitb
+
+
+
+:_+ Adding
+
+
+
+::_
+
+:a
+
+:add
+
+set fp=* Add files generic action.
+
+echo %fp%
+
+git add -A
+
+m exitb
+
+
+
+::_
+
+:add_dot
+
+set fp=* Add files.
+
+echo %fp%
+
+git add .
+
+m exitb
+
+
+
+::_
+
+:add2
+
+set fp=* Add files. (!step4)
+
+echo %fp%
+
+git add *.*
 
 m exitb
 

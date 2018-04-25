@@ -2997,6 +2997,7 @@ echo   acp  Add, commit and push Git changes with timestamp commit message.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
 echo    cn  Used for Git cloning tasks.
+echo   col  Reset the dos window color.
 echo    cy  Copy file(s).
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
