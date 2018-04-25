@@ -2085,6 +2085,7 @@ rem lu: Apr-25-2018
 
 echo %fp%
 
+echo.
 git tag
 
 m exitb
