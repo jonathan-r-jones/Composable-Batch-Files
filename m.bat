@@ -3094,24 +3094,24 @@ rem lu: Apr-25-2018
 echo %fp%
 
 echo.
+echo Update the NPM version number.
+call nm patch
+
+echo.
+echo Tag the release in git with same version number you just used in NPM, thus linking the two.
+call g tag %2
+
+echo.
 echo Check in your code.
 call acp cbf
 
 echo.
-echo Update the version number.
-call nm init
+echo Push your tags to Git.
+call g puta
 
 echo.
 echo Publish to NPM.
 call nm pub
-
-echo.
-echo Tag the release in git.
-call g tag %2
-
-echo.
-echo Push your tags to Git.
-call g puta
 
 m exitb
 
