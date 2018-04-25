@@ -81,12 +81,12 @@ m exitb
 set fp=* 3a. Push changes into development branch.
 
 echo %fp%
-echo.
 
 cd | find /i "Development">nul
 if not %errorlevel% == 0 echo Error: This is the master, not the development, folder so exiting.
 if not %errorlevel% == 0 echo m exitb
 
+echo.
 git push -u origin HEAD:development
 
 m exitb
@@ -100,8 +100,8 @@ m exitb
 set fp=* 5a. Add remote origin for testing. This is a one-time action. (!arot)
 
 echo %fp%
-echo.
 
+echo.
 git remote add origin https://github.com/jonathan-r-jones/for_git_testing_and_learning.git
 
 m exitb
@@ -115,8 +115,8 @@ m exitb
 set fp=* 5a. Add remote origin for testing. This is a one-time action. (!arot)
 
 echo %fp%
-echo.
 
+echo.
 git remote add origin https://github.com/jonathan-r-jones/for_git_testing_and_learning.git
 
 m exitb
@@ -130,8 +130,8 @@ m exitb
 set fp=* 5b. Add remote origin for testing. This is a one-time action.
 
 echo %fp%
-echo.
 
+echo.
 git remote add origin https://github.com/jonathan-r-jones/test-eclipse-project.git
 
 m exitb
@@ -145,8 +145,8 @@ m exitb
 set fp=* 5d. Add remote origin for Quickla. This is a one-time action.
 
 echo %fp%
-echo.
 
+echo.
 git remote add origin https://github.com/jonathan-r-jones/quickla.git
 
 m exitb
@@ -160,8 +160,8 @@ m exitb
 set fp=* 5e. Add remote origin for Batch Files. This is a one-time action.
 
 echo %fp%
-echo.
 
+echo.
 git remote add origin https://github.com/jonathan-r-jones/batch-files.git
 
 m exitb
@@ -211,8 +211,8 @@ m exitb
 set fp=* 10. Diff head.
 
 echo %fp%
-echo.
 
+echo.
 git diff HEAD
 
 m exitb
@@ -232,10 +232,10 @@ rem Outcome: This worked! Oct-13-2016
 rem Note: You must have already initialized the repository.
 
 echo %fp%
-echo.
 
 rem This works. Nov-28-2016
 rem git push origin --delete %2
+echo.
 git push origin --delete development-Nov-16-2016
 
 m exitb
@@ -249,8 +249,8 @@ m exitb
 set fp=* 9b. Check out master.
 
 echo %fp%
-echo.
 
+echo.
 git checkout -b master
 
 m exitb
@@ -264,8 +264,8 @@ m exitb
 set fp=* 14. Fix branch.
 
 echo %fp%
-echo.
 
+echo.
 git branch --unset -upstream
 
 m exitb
@@ -279,8 +279,8 @@ m exitb
 set fp=* 3a. Push changes into Nov-1 development branch.
 
 echo %fp%
-echo.
 
+echo.
 git push -u origin HEAD:development-Nov-1-2016
 
 m exitb
@@ -298,8 +298,8 @@ m exitb
 set fp=* pushnv
 
 echo %fp%
-echo.
 
+echo.
 git push -u origin HEAD:dev-Dec-5-2016
 
 m exitb
@@ -312,7 +312,6 @@ m exitb
 
 :add
 
-echo.
 set fp=* Add files generic action.
 
 echo %fp%
@@ -376,8 +375,8 @@ m exit
 set fp=* Pull Clean 62.
 
 echo %fp%
-echo.
   
+echo.
 git pull clean6.2
 
 m exitb
@@ -431,11 +430,11 @@ m exitb
 set fp=* 9c. Check out branch.
 
 echo %fp%
-echo.
 
 rem This worked. Jan-30-2017
 
 @echo on
+echo.
 git checkout -b Branch2
 @echo off
 
@@ -454,8 +453,8 @@ rem This didn't work properly.
 rem Creation Date: Jan-31-2017
 
 echo %fp%
-echo.
   
+echo.
 git branch --set-upstream-to=master
 
 m exitb
@@ -472,8 +471,8 @@ rem What local status means is merely that you haven't changed any files on your
 rem It doesn't mean that you have the latest files.
 
 echo %fp%
-echo.
 
+echo.
 git status
 
 m exitb
@@ -516,8 +515,8 @@ m exitp
 set fp=* Sencha status.
 
 echo %fp%
-echo.
 
+echo.
 cd c:\projects\netbeans\sencha
 
 git remote update
@@ -534,8 +533,8 @@ m exitb
 set fp=* Mercury 6 status.
 
 echo %fp%
-echo.
 
+echo.
 cd c:\projects\netbeans\mercury6
 
 git remote update
@@ -552,12 +551,12 @@ m exitb
 set fp=* Batch files status.
 
 echo %fp%
-echo.
 
 c:
 
 cd c:\mercury\batch_files
 
+echo.
 git remote update
 git status
 
@@ -681,7 +680,6 @@ m exitb
 
 set fp=* Push changes to the cloud.
 
-echo.
 echo %fp%
 
 echo.
@@ -735,7 +733,6 @@ set fp=* Add, commit and push with timestamp commit description.
 
 rem fcd: Apr-13-2017
 
-echo.
 echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
@@ -786,7 +783,6 @@ m exitb
 
 set fp=* Commit with timestamp description.
 
-echo.
 echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
@@ -1541,7 +1537,6 @@ m exitb
 
 set fp=* Status, including remote information.
 
-echo.
 echo %fp%
 
 echo.
@@ -2036,7 +2031,6 @@ set fp=* Git help git.
 
 rem lu: Apr-24-2018
 
-echo.
 echo %fp%
 
 git help git
@@ -2053,7 +2047,6 @@ set fp=* Git help for a specific git command.
 
 rem lu: Apr-24-2018
 
-echo.
 echo %fp%
 
 git help %2
