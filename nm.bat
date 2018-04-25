@@ -87,23 +87,6 @@ m exitb
 
 
 
-:_
-
-:vers
-
-set fp=* Check NPM's version.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm version
-
-m exitb
-
-
-
 :_+ Installing
 
 
@@ -695,6 +678,43 @@ echo %fp%
 echo.
 npm publish
 
+m exitb
+
+
+
+:_+ Versioning
+
+
+
+::_
+
+:vers
+
+set fp=* Check NPM's version.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm version
+
+m exitb
+
+
+
+::_
+
+:patch
+
+set fp=* Automatically increment the patch version number.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+npm version patch
+rem qq-1
 m exitb
 
 
