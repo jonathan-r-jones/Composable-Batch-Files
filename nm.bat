@@ -714,7 +714,39 @@ rem lu: Apr-25-2018
 echo %fp%
 
 npm version patch
-rem qq-1
+
+m exitb
+
+
+
+::_
+
+:minor
+
+set fp=* Automatically increment the minor version number.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+npm version minor
+
+m exitb
+
+
+
+::_
+
+:major
+
+set fp=* Automatically increment the major version number.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+npm version minor
+
 m exitb
 
 
