@@ -12,6 +12,14 @@ set filep=* Perform Git-related tasks.
 
 :_
 
+set fp=* Add some whitespace.
+
+echo.
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -2049,6 +2057,43 @@ echo.
 echo %fp%
 
 git help %2
+
+m exitb
+
+
+
+:_+ Tagging
+
+
+
+::_
+
+:tag
+
+set fp=* Set the tag version number.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+git tag %2
+
+m exitb
+
+
+
+::_
+
+:puta
+
+set fp=* Push tags.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+echo.
+git push --tags
 
 m exitb
 

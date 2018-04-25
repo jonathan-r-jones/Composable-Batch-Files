@@ -3107,11 +3107,11 @@ call nm pub
 
 echo.
 echo Tag the release in git.
-call nm pub
+call g tag %2
 
 echo.
 echo Push your tags to Git.
-call git push --tags
+call g puta
 
 m exitb
 

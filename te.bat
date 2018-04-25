@@ -8,9 +8,6 @@
 
 set filep=* This template file can be used as a "Save As" to create a new composable batch file.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -51,6 +48,9 @@ m exitb
 
 :help
 
+echo %filep%
+
+echo.
 echo Filename stands for: Composable Batch File Template.
 
 echo.
