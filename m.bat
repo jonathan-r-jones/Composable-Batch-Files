@@ -8,9 +8,6 @@
 
 set filep=* Perform miscellaneous tasks.
 
-rem echo.
-rem echo %filep%
-
 
 
 :_
@@ -1581,9 +1578,13 @@ set fp=* CBF Powerpoint Presentation.
 
 rem fcd: May-19-2017
 
+echo.
+rem qq-1
 echo %fp%
 
-call start "my title" "Composable Batch File Helper.pptx - Shortcut.lnk"
+call start "my title" "Composable Batch File Helper.pptx"
+
+rem call start "my title" "Composable Batch File Helper.pptx - Shortcut.lnk"
 
 goto exitb
 
@@ -1591,7 +1592,7 @@ goto exitb
 
 :_
 
-:ppt
+:old_ppt
 
 set fp=* Powerpoint Presentation on Mercury.
 

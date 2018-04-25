@@ -683,3 +683,20 @@ m exitb
 
 
 :_
+
+:pub
+
+set fp=* Publish project to NPM.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+echo.
+npm publish
+
+m exitb
+
+
+
+:_
