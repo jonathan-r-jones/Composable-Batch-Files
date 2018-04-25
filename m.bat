@@ -1579,7 +1579,6 @@ set fp=* CBF Powerpoint Presentation.
 rem fcd: May-19-2017
 
 echo.
-rem qq-1
 echo %fp%
 
 call start "my title" "Composable Batch File Helper.pptx"

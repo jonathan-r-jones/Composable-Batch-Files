@@ -1612,7 +1612,7 @@ m exitb
 
 :dr
 
-set fp=Dropbox.
+set fp=* Dropbox.
 
 rem lu: Feb-2-2018
 
@@ -1628,7 +1628,7 @@ m exitb
 
 :cnn
 
-set fp=Cnn.
+set fp=* Cnn.
 
 rem lu: Jan-24-2018
 
@@ -2586,6 +2586,22 @@ rem lu: Apr-24-2018
 echo %fp%
 
 set cbf_url=https://github.com/strongloop/express
+
+m exitb
+
+
+
+:_
+
+:cbf_on_npm
+
+set fp=* CBF on MPM.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+set cbf_url=npm.im/composable-batch-files
 
 m exitb
 

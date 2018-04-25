@@ -8,9 +8,6 @@
 
 set filep=* Surf the internet.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -34,7 +31,10 @@ goto code_execution_area
 :help
 
 echo.
-echo Last Updated: Feb-6-2018
+echo %filep%
+
+echo.
+echo Last Updated: Apr-25-2018
 
 echo.
 echo Filename stands for: SurF.
