@@ -3083,4 +3083,38 @@ goto exitb
 
 
 
+:_
+
+:publish
+
+set fp=* The steps to publish a new version.
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+echo.
+echo Check in your code.
+call acp cbf
+
+echo.
+echo Update the version number.
+call nm init
+
+echo.
+echo Publish to NPM.
+call nm pub
+
+echo.
+echo Tag the release in git.
+call nm pub
+
+echo.
+echo Push your tags to Git.
+call git push --tags
+
+m exitb
+
+
+
 :_ (!rfsp) (mov-6)
