@@ -44,7 +44,8 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1 (Optional): The filename nickname of the file to execute or filename of a file in the current folder.
+echo Parameter 1 (Optional): The filename nickname of the file to execute or filename of a file 
+echo in the current folder. If left blank, Sublime is opened.
 
 m exitb
 
