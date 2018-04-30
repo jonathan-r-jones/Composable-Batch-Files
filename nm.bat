@@ -812,3 +812,19 @@ m exitb
 
 
 :_
+
+:
+
+set fp=* 
+
+rem lu: Apr-29-2018
+
+echo %fp%
+
+
+rem qq-1
+m exitb
+
+
+
+:_
