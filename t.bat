@@ -6,10 +6,21 @@
 
 :_
 
-set fp=* Set title.
+set filep=* This file is used for testing, experimenting and developing new batch file functions.
+
+
+
+:_
+
+set fp=* Add some whitespace.
 
 echo.
-echo %fp%
+
+
+
+:_
+
+set fp=* Set title.
 
 title=Mr T.
 
@@ -19,18 +30,11 @@ title=Mr T.
 
 set fp=* Set color.
 
-echo.
-echo %fp%
-
-color 9f
 color 0e
 
 
 
 :_
-
-cls
-echo.
 
 set fp=* Route callers.
 
@@ -48,23 +52,21 @@ goto code_execution_area
 
 :help
 
-set fp=* This file is mainly used for testing. If you think about, what I've done here is kind of created a REPL, right?
-
-echo.
-echo File Purpose (fp): %fp%
+echo File Purpose: %filep%
 
 echo.
 echo Filename stands for: Testing.
 
 echo.
-echo Last Updated (lu): Feb-5-2018
+echo Last Updated (lu): Apr-30-2018
 
 echo.
-echo Usage: %0
+echo Usage: %0 (optional parameter 1)
 
-rem Batch File Style: Code Execution Area.
-
-rem Test Batch File Code Keepers
+echo.
+echo Parameter 1: Batch file label you wish to execute. echo If left blank, 
+echo the last code block in this file, a. k. a. the code execution area, will 
+echo be executed.
 
 m exitb
 
