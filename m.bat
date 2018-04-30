@@ -3020,6 +3020,7 @@ echo    rf  Remove folder corresponding to specified CBF path nickname.
 echo     s  SQL/Database, including LDAP, related tasks.
 echo    sf  Surf to websites.
 echo    sm  Run Sublime.
+echo     t  Testing, experimenting and developing new batch file functions.
 echo    td  Transform Directory.
 echo    te  Batch file template used for creating new batch files.
 echo     x  Filename-centric way to exec. a file with opt. app. param.
