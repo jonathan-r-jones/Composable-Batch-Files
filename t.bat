@@ -64,7 +64,7 @@ echo.
 echo Usage: %0 (optional parameter 1)
 
 echo.
-echo Parameter 1: Batch file label you wish to execute. echo If left blank, 
+echo Parameter 1: Batch file label you wish to execute. If left blank, 
 echo the last code block in this file, a. k. a. the code execution area, will 
 echo be executed.
 
