@@ -1562,22 +1562,6 @@ m exitb
 
 :_
 
-:hw
-
-set fp=Hello World.
-
-rem lu: Jan-16-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
-
-m exitb
-
-
-
-:_
-
 :it
 
 set fp=IT.
@@ -1635,38 +1619,6 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_url=http://www.cnn.com
-
-m exitb
-
-
-
-:_
-
-:xplug
-
-set fp=Xamarin Plugins.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/Xamarin/Plugins.git
-
-m exitb
-
-
-
-:_
-
-:jmplug
-
-set fp=James Montemagno Xamarin Plugins.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
 
 m exitb
 
@@ -2270,22 +2222,6 @@ m exitb
 
 :_
 
-:xam_sam
-
-set fp=* Xamarin Forms Samples.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
-
-m exitb
-
-
-
-:_
-
 :mrdoc
 
 set fp=* Mercury documentation.
@@ -2602,6 +2538,74 @@ rem lu: Apr-25-2018
 echo %fp%
 
 set cbf_url=npm.im/composable-batch-files
+
+m exitb
+
+
+
+:_+ Xamarin
+
+
+
+::_
+
+:hw
+
+set fp=Hello World.
+
+rem lu: Jan-16-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
+
+m exitb
+
+
+
+::_
+
+:xplug
+
+set fp=Xamarin Plugins.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/Xamarin/Plugins.git
+
+m exitb
+
+
+
+::_
+
+:jmplug
+
+set fp=James Montemagno Xamarin Plugins.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
+
+m exitb
+
+
+
+::_
+
+:xam_sam
+
+set fp=* Xamarin Forms Samples.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
 
 m exitb
 
