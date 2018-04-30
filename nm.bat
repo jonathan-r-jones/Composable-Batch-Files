@@ -796,7 +796,6 @@ m exitb
 ::_
 
 :update_sp
-rem qq-1
 
 set fp=* Update a single package dependency, in this case "%2".
 
@@ -807,22 +806,6 @@ echo %fp%
 echo.
 npm update %2
 
-m exitb
-
-
-
-:_
-
-:
-
-set fp=* 
-
-rem lu: Apr-29-2018
-
-echo %fp%
-
-
-rem qq-1
 m exitb
 
 
