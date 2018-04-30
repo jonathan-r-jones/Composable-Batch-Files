@@ -53,7 +53,7 @@ m exitb
 echo Filename stands for: NPM stuff.
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: Apr-29-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -88,6 +88,23 @@ m exitb
 
 
 :_+ Installing
+
+
+
+::_
+
+:inst_g
+
+set fp=* Globally install a package so that it works everywhere on the command line.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i %2 -g
+
+m exitb
 
 
 
@@ -144,23 +161,6 @@ m exitb
 
 ::_
 
-::inst_g
-
-set fp=* Globally install a package so that it works everywhere on the command line.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm i %2 -g
-
-m exitb
-
-
-
-::_
-
 :i
 
 :inst
@@ -181,6 +181,8 @@ m exitb
 ::_
 
 :insta_pj
+
+:install
 
 set fp=* Install any dependencies list in pacagage.json.
 
@@ -522,44 +524,6 @@ m exitb
 
 
 
-:_+ Updating
-
-
-
-::_
-
-:update
-
-set fp=* Update all dependencies to the latest version.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm update --save
-
-m exitb
-
-
-
-::_
-
-:update_sp
-
-set fp=* Update a single package dependency, in this case "%2".
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm update %2
-
-m exitb
-
-
-
 :_+ Uninstalling
 
 
@@ -803,6 +767,44 @@ rem lu: Apr-25-2018
 echo %fp%
 
 npm info %2
+
+m exitb
+
+
+
+:_+ Updating (skw upgrading, upgrade)
+
+
+
+::_
+
+:update
+
+set fp=* Update all dependencies to the latest version.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm update --save
+
+m exitb
+
+
+
+::_
+
+:update_sp
+
+set fp=* Update a single package dependency, in this case "%2".
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm update %2
 
 m exitb
 
