@@ -2627,4 +2627,20 @@ m exitb
 
 
 
+::_
+
+:book_code
+
+set fp=* Xamarin book sample code.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
+
+m exitb
+
+
+
 :_ (!rfsp) (mov-6)
