@@ -2543,6 +2543,22 @@ m exitb
 
 
 
+:_
+
+:glpj
+
+set fp=* Global package.json file.
+
+rem lu: May-4-2018
+
+echo %fp%
+
+set cbf_filename=C:\Program Files\nodejs\node_modules\npm\package.json
+
+m exitb
+
+
+
 :_+ Xamarin
 
 
@@ -2567,7 +2583,7 @@ m exitb
 
 :xplug
 
-set fp=Xamarin Plugins.
+set fp=Plugins. Open Source Components for Xamarin.
 
 rem lu: Jan-31-2018
 
@@ -2607,22 +2623,6 @@ echo %fp%
 
 set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
 
-m exitb
-
-
-
-:_
-
-:
-
-set fp=* 
-
-rem lu: May-4-2018
-
-echo %fp%
-
-
-rem qq-1
 m exitb
 
 

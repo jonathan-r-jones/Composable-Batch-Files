@@ -93,6 +93,8 @@ m exitb
 
 ::_
 
+:i
+
 :inst_g
 
 set fp=* Globally install a package so that it works everywhere on the command line.
@@ -160,8 +162,6 @@ m exitb
 
 
 ::_
-
-:i
 
 :inst
 

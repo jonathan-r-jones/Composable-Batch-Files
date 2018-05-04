@@ -2113,4 +2113,23 @@ m exitb
 
 
 
+:_
+
+:vers
+
+:version
+
+set fp=* Get the git version.
+
+rem lu: May-4-2018
+
+echo %fp%
+
+echo.
+git version
+
+m exitb
+
+
+
 :_ (!rfsp) (mov-6)
