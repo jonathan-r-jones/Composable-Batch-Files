@@ -2611,4 +2611,20 @@ m exitb
 
 
 
+:_
+
+:
+
+set fp=* 
+
+rem lu: May-4-2018
+
+echo %fp%
+
+
+rem qq-1
+m exitb
+
+
+
 :_ (!rfsp) (mov-6)
