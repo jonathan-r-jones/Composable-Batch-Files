@@ -2629,6 +2629,8 @@ m exitb
 
 ::_
 
+:book
+
 :book_code
 
 set fp=* Xamarin book sample code.
@@ -2636,6 +2638,8 @@ set fp=* Xamarin book sample code.
 rem lu: Mar-1-2018
 
 echo %fp%
+
+set cbf_path=D:\aa\Mastering-Xamarin.Forms-Second-Edition
 
 set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
 
