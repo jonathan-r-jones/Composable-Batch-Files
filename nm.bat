@@ -320,6 +320,7 @@ set fp=* NPM help for a specific command.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 npm help %2
