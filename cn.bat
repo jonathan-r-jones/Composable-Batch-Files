@@ -27,7 +27,7 @@ if "%~1" == "help" goto help
 
 if not "%~1" == "" call n %1
 
-if "%~2" == "c" goto main_function
+if "%~2" == "" goto main_function
 
 
 
@@ -84,10 +84,12 @@ echo.
 echo Parameter 1: URL nickname of the repository.
 
 echo.
-echo Parameter 2 (Optional): If "c" is specified, the repository will be installed into a subfolder of the current folder.
+echo Parameter 2 (Optional): If left blank, the repository will be installed 
+echo into a subfolder of the current folder.
 
 echo.
-echo If left blank, the repository will be installed into the specified CBF Path, assuming its not already there.
+echo If "p" is specified, the repository will be installed into the specified 
+echo CBF Path, assuming its not already installed there.
 
 m exitb
 
