@@ -48,7 +48,7 @@ echo that could cause a circular reference.
 
 echo.
 echo     Parameter  Description
-echo ---------------------------------------------------------------
+echo -------------  --------------------------------------------------
 echo  build_applet  Build the applet.
 echo     build_ejb  Build EJB WAR file.
 echo       compile  Run sencha app build testing.

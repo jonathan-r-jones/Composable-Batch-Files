@@ -2559,7 +2559,7 @@ m exitb
 
 
 
-:_+ Xamarin
+:_+ Xamarin-Related
 
 
 
@@ -2599,7 +2599,7 @@ m exitb
 
 :jmplug
 
-set fp=James Montemagno Xamarin Plugins.
+set fp=James Montemagno's Xamarin Plugins.
 
 rem lu: Jan-31-2018
 
@@ -2633,7 +2633,7 @@ m exitb
 
 :book_code
 
-set fp=* Xamarin book sample code.
+set fp=* Ed Snider's Xamarin book sample code.
 
 rem lu: Mar-1-2018
 
@@ -2658,6 +2658,22 @@ rem lu: Mar-1-2018
 echo %fp%
 
 set cbf_path=D:\aa\xamarin
+
+m exitb
+
+
+
+::_
+
+:jl
+
+set fp=* Jesse Liberty's Xamarin Pluralsight course.
+
+rem lu: May-8-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
 
 m exitb
 

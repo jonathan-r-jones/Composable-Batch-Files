@@ -54,7 +54,7 @@ echo.
 echo Filename stands for: Composable Batch File Template.
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: 
 
 echo.
 echo Usage: %0 [Parameter 1]
