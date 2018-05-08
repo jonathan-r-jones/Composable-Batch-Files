@@ -8,8 +8,6 @@
 
 set filep=* Nickname dictionary that sets the envrionment variables corresponding to a given unique nickname parameter.
 
-rem echo %filep%
-
 
 
 :_
@@ -43,7 +41,7 @@ goto %1
 echo %filep%
 
 echo.
-echo Last Updated: Feb-19-2018
+echo Last Updated: May-8-2018
 
 echo.
 echo The filename stands for: Nickname dictionary.
@@ -108,9 +106,11 @@ echo            td  %COMPOSABLE_BATCH_FILES%\td.bat
 echo          temp  User's temp.
 echo            ti  \projects\netbeans\mercury6\mercury-tirem
 
-
-
 m exitb
+
+
+
+:_ Begin body. (!bb)
 
 
 
@@ -2639,9 +2639,25 @@ rem lu: Mar-1-2018
 
 echo %fp%
 
-set cbf_path=D:\aa\Mastering-Xamarin.Forms-Second-Edition
+set cbf_path=D:\aa\xamarin\Mastering-Xamarin.Forms-Second-Edition
 
 set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
+
+m exitb
+
+
+
+::_
+
+:xa
+
+set fp=* Xamarin folder.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_path=D:\aa\xamarin
 
 m exitb
 
