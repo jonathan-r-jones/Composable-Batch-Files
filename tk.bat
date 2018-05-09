@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* A batch file wrapper around the taskkill and tasklist commands that helps you
+set filep=* A batch file wrapper around the taskkill commands that helps you
 set filep=%filep% reuse and remember your commonly used commands.
 
 
@@ -44,7 +44,7 @@ goto %1
 echo %filep%
 
 echo.
-echo Filename stands for: Process.
+echo Filename stands for: Taskkill.
 
 echo.
 echo Last Updated: May-8-2018
@@ -56,7 +56,7 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo     Parameter  Description
 echo -------------  --------------------------------------------------
-echo        devenv  Kill all Visual Studio development environments.
+echo           dev  Kill all Visual Studio development environments.
 
 m exitb
 
@@ -124,48 +124,14 @@ m exitb
 
 :_
 
-:lex
+:exp
 
-set fp=* List running ex images.
-
-echo %fp%
-echo.
-
-tasklist /v /fi "imagename eq ex*"
-
-m exitb
-
-
-
-:_
-
-:l
-
-set fp=* List running images.
+set fp=* Taskkill Explorer windows.
 
 echo %fp%
 echo.
 
-tasklist /fo table
-
-m exitb
-
-
-
-:x
-
-set fp=* Tasklist examples.
-
-TASKLIST
-rem TASKLIST /M
-rem TASKLIST /V /FO CSV
-rem TASKLIST /SVC /FO LIST
-rem TASKLIST /APPS /FI "STATUS eq RUNNING"
-rem TASKLIST /M wbem*
-rem TASKLIST /S system /FO LIST
-rem TASKLIST /S system /U domain\username /FO CSV /NH
-rem TASKLIST /S system /U username /P password /FO TABLE /NH
-rem TASKLIST /FI "USERNAME ne NT AUTHORITY\SYSTEM" /FI "STATUS eq running"
+taskkill /f /im explorer.exe
 
 m exitb
 
