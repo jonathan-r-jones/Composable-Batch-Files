@@ -2665,7 +2665,7 @@ m exitb
 
 ::_
 
-:fma
+:fma1
 
 set fp=* Jesse Liberty's Xamarin Pluralsight course.
 
@@ -2673,9 +2673,31 @@ rem lu: May-8-2018
 
 echo %fp%
 
-set cbf_path=d:\aa\xamarin\first-mobile-app
+set cbf_path=d:\aa\xamarin\first-mobile-app-Jesse
 
 set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
+
+m exitb
+
+
+
+::_
+
+:fma
+
+:fma2
+
+:fmajrj
+
+set fp=* My implementation of Jesse Liberty's Xamarin Pluralsight course.
+
+rem lu: May-8-2018
+
+echo %fp%
+
+set cbf_path=d:\aa\xamarin\first-mobile-app-Jonathan
+
+set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
 
 m exitb
 

@@ -2962,25 +2962,6 @@ goto exitb
 
 :_
 
-:set_parent_fd
-
-set fp=* Set parent folder.
-
-rem batch file path parsing parent folder, cd.., 
-
-rem lu: Apr-9-2018
-
-echo.
-echo %fp%
-
-set %3=%~f2
-
-goto exitb
-
-
-
-:_
-
 :l
 
 :list
@@ -3116,6 +3097,25 @@ echo Publish to NPM.
 call nm pub
 
 m exitb
+
+
+
+:_
+
+:set_parent_fd
+
+set fp=* Set parent folder.
+
+rem batch file path parsing parent folder, cd.., 
+
+rem lu: Apr-9-2018
+
+echo.
+echo %fp%
+
+set %3=%~f2
+
+goto exitb
 
 
 
