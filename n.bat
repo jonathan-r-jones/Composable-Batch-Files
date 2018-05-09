@@ -2465,7 +2465,7 @@ m exitb
 
 :fgt
 
-set fp=ForGitTesting.
+set fp=* ForGitTesting.
 
 rem lu: Sep-6-2017
 
@@ -2665,13 +2665,15 @@ m exitb
 
 ::_
 
-:jl
+:fma
 
 set fp=* Jesse Liberty's Xamarin Pluralsight course.
 
 rem lu: May-8-2018
 
 echo %fp%
+
+set cbf_path=d:\aa\xamarin\first-mobile-app
 
 set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
 

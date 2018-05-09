@@ -2132,4 +2132,24 @@ m exitb
 
 
 
+:_
+
+:sour
+
+:source
+
+set fp=* Identify source repository.
+rem qq-1
+
+rem lu: May-9-2018
+
+echo %fp%
+
+echo.
+git remote -v
+
+m exitb
+
+
+
 :_ (!rfsp) (mov-6)
