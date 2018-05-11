@@ -84,9 +84,11 @@ echo            j2  c:\a\j2.txt
 echo            kr  Chrome
 echo           log  %wildfly_location%\standalone\log\server.log
 echo             m  %COMPOSABLE_BATCH_FILES%\m.bat
+echo            me  Multi-Edit
 echo            m2  %userprofile%\.m2
 echo            m6  c:\projects\netbeans\mercury6
 echo   nb [or] prj  c:\projects\netbeans
+echo           npp  Notepad++
 echo            pf  c:\program files
 echo       pom_ear  \projects\netbeans\mercury6\Mercury-ear\pom.xml
 echo       pom_ejb  \projects\netbeans\mercury6\Mercury-ejb\pom.xml
@@ -97,6 +99,7 @@ echo            pu  c:\netbeans\sencha\HTML5Application\public_html
 echo            rm  GitHub Readme.md file.
 echo             s  %COMPOSABLE_BATCH_FILES%\s.bat
 echo            s6  c:\projects\netbeans\sencha
+echo            sm  Suplime
 echo            sr  [wildfly_location]
 echo          stan  [wildfly_location]\standalone\configuration
 echo          stan  Standalone.xml, WildFly config file.
@@ -105,6 +108,7 @@ echo          targ  \projects\netbeans\mercury6\Mercury-web\target
 echo            td  %COMPOSABLE_BATCH_FILES%\td.bat
 echo          temp  User's temp.
 echo            ti  \projects\netbeans\mercury6\mercury-tirem
+echo            vs  Visual Studio.
 
 m exitb
 
