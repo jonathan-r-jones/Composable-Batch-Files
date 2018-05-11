@@ -2563,23 +2563,23 @@ m exitb
 
 
 
-:_+ Xamarin-Related
+:_
 
+:jjgit
 
+set fp=* My Git website.
 
-::_
-
-:hw
-
-set fp=Hello World.
-
-rem lu: Jan-16-2018
+rem lu: May-9-2018
 
 echo %fp%
 
-set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
+set cbf_url=https://github.com/jonathan-r-jones
 
 m exitb
+
+
+
+:_+ Xamarin-Related
 
 
 
@@ -2587,13 +2587,31 @@ m exitb
 
 :xplug
 
-set fp=Plugins. Open Source Components for Xamarin.
+set fp=Plugins. Open Source Components for Xamarin. This is an active repository.
 
 rem lu: Jan-31-2018
 
 echo %fp%
 
 set cbf_url=https://github.com/Xamarin/Plugins.git
+
+m exitb
+
+
+
+::_
+
+:xam_sam
+
+set fp=* Xamarin Forms Samples.
+
+rem Active repo.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
 
 m exitb
 
@@ -2617,22 +2635,6 @@ m exitb
 
 ::_
 
-:xam_sam
-
-set fp=* Xamarin Forms Samples.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
-
-m exitb
-
-
-
-::_
-
 :book
 
 :book_code
@@ -2646,6 +2648,22 @@ echo %fp%
 set cbf_path=D:\aa\xamarin\Mastering-Xamarin.Forms-Second-Edition
 
 set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
+
+m exitb
+
+
+
+::_
+
+:hw
+
+set fp=Hello World.
+
+rem lu: Jan-16-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
 
 m exitb
 
@@ -2702,22 +2720,6 @@ echo %fp%
 set cbf_path=d:\aa\xamarin\first-mobile-app-Jonathan
 
 set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
-
-m exitb
-
-
-
-:_
-
-:jjgit
-
-set fp=* My Git website.
-
-rem lu: May-9-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/jonathan-r-jones
 
 m exitb
 
