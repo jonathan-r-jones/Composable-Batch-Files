@@ -2703,4 +2703,20 @@ m exitb
 
 
 
+:_
+
+:jjgit
+
+set fp=* My Git website.
+
+rem lu: May-9-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones
+
+m exitb
+
+
+
 :_ (!rfsp) (mov-6)
