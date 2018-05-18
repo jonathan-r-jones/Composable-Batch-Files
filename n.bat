@@ -2741,4 +2741,20 @@ m exitb
 
 
 
+:_
+
+:moca
+
+set fp=* Monkey cache.
+
+rem lu: May-18-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jamesmontemagno/monkey-cache.git
+
+m exitb
+
+
+
 :_ (!rfsp) (mov-6)
