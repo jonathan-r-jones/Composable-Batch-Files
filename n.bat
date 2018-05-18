@@ -2717,9 +2717,25 @@ rem lu: May-8-2018
 
 echo %fp%
 
-set cbf_path=d:\aa\xamarin\first-mobile-app-Jonathan
+set cbf_path=%aa%\xamarin\first-mobile-app-Jonathan
 
 set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
+
+m exitb
+
+
+
+:_
+
+:mad
+
+set fp=* Mobile App Development requirements.
+
+rem lu: May-18-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/mobile-app.git
 
 m exitb
 
