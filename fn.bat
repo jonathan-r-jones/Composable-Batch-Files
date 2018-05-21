@@ -8,9 +8,6 @@
 
 set filep=* Filename nickname dictionary that sets the full filename name corresponding to a given unique nickname parameter.
 
-rem echo.
-rem echo %filep%                         
-
 
 
 :_

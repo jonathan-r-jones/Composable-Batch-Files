@@ -2352,7 +2352,7 @@ m exitb
 
 :_
 
-:npp
+:np
 
 set fp=* Notepad++.
 
