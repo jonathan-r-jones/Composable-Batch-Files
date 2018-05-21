@@ -1,7 +1,8 @@
 # Composable Batch Files
 
-. . .are scalable, convention-based and self-documenting batch files that can execute a single 
-function or be snapped together like legos to create a whole Millennium Falcon script.
+. . . is a productivity tool which is collection of batch files that are scalable, 
+convention-based and self-documenting batch files that can execute a single function or be 
+snapped together like legos to create a whole Millennium Falcon script.
 
 ## Usage
 
