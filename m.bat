@@ -2853,7 +2853,6 @@ goto exitb
 
 set fp=* Update timestamp.
 
-echo.
 echo %fp%
 
 set classpath=%COMPOSABLE_BATCH_FILES%
