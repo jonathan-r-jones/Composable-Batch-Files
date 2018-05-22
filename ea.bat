@@ -39,7 +39,7 @@ if not "%~2" == "" set cbf_parameter=%cbf_filename%
 
 call r
 
-m exitb
+exit /b
 
 
 
@@ -67,7 +67,7 @@ echo Parameter 1: Application nickname.
 echo.
 echo Parameter 2 (Optional): Filename nickname.
 
-m exitb
+exit /b
 
 
 

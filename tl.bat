@@ -61,7 +61,7 @@ echo     Parameter  Description
 echo -------------  --------------------------------------------------
 echo          sort  Pipe running images to a sortable text file.
 
-m exitb
+exit /b
 
 
 
@@ -80,7 +80,7 @@ echo.
 
 tasklist /v /fi "imagename eq ex*"
 
-m exitb
+exit /b
 
 
 
@@ -94,7 +94,7 @@ echo %fp%
 
 tasklist /fo table
 
-m exitb
+exit /b
 
 
 
@@ -108,7 +108,7 @@ echo %fp%
 
 tasklist /fo list
 
-m exitb
+exit /b
 
 
 
@@ -129,7 +129,7 @@ rem TASKLIST /S system /U domain\username /FO CSV /NH
 rem TASKLIST /S system /U username /P password /FO TABLE /NH
 rem TASKLIST /FI "USERNAME ne NT AUTHORITY\SYSTEM" /FI "STATUS eq running"
 
-m exitb
+exit /b
 
 
 
@@ -145,7 +145,7 @@ tasklist /fo table>c:\a\j1.txt
 
 call ea me j1
 
-m exitb
+exit /b
 
 
 

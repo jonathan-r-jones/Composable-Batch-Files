@@ -25,7 +25,7 @@ if "%~1" == "help" goto help
 if "%~1" == "" call ea sm
 if not "%~1" == "" call ed %1 sm
 
-m exitb
+exit /b
 
 
 
@@ -47,7 +47,7 @@ echo.
 echo Parameter 1 (Optional): The filename nickname of the file to execute or filename of a file 
 echo in the current folder. If left blank, Sublime is opened.
 
-m exitb
+exit /b
 
 
 

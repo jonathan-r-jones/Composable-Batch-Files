@@ -26,7 +26,7 @@ if "%~1" == "help" goto help
 
 call n %1
 
-m exitb
+exit /b
 
 
 
@@ -51,7 +51,7 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1: URL Nickname contained in the Nickname Source file, viz. n.bat.
 
-m exitb
+exit /b
 
 
 

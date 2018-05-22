@@ -45,7 +45,7 @@ if not "%~2" == "" call n %2
 
 call r
 
-m exitb
+exit /b
 
 
 
@@ -73,7 +73,7 @@ echo Parameter 1: The filename nickname of the file to execute or filename of a 
 echo.
 echo Parameter 2 (Optional): The Application nickname to use to edit the file.
 
-m exitb
+exit /b
 
 
 

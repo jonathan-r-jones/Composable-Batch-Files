@@ -20,13 +20,19 @@ echo.
 
 :_
 
-set fp=Route callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
+
+
+
+:_
+
+set fp=* Go to parameter 1.
 
 goto %1
 
@@ -67,6 +73,7 @@ echo             a  c:\a
 echo            ba  c:\mercury\batch_files
 echo            bu  c:\mercury\backups
 echo           cbf  Composable Batch Files.
+echo         cbfgp  Composable Batch Files via GitHub pages.
 echo           cnn  CNN.com
 echo           cwp  ContactsWidget for Phone
 echo           cwt  ContactsWidget for Tablet
@@ -109,7 +116,7 @@ echo          temp  User's temp.
 echo            ti  \projects\netbeans\mercury6\mercury-tirem
 echo            vs  Visual Studio.
 
-m exitb
+exit /b
 
 
 
@@ -129,13 +136,15 @@ echo %fp%
 
 set cbf_application=C:\Program Files\Sublime Text 3\sublime_text.exe
 
-m exitb
+exit /b
 
 
 
 :_
 
 :dc
+
+:double_click
 
 set fp=* Simulate a double click in CBF.
 
@@ -149,7 +158,7 @@ rem set cbf_application="%cbf_filename% - Shortcut.lnk"
 set cbf_application=%cbf_filename%
 set cbf_parameter=
 
-m exitb
+exit /b
 
 
 
@@ -169,7 +178,7 @@ echo %fp%
 
 set cbf_application=c:\program files\internet explorer\iexplore.exe
 
-m exitb
+exit /b
 
 
 
@@ -185,7 +194,7 @@ echo %fp%
 
 set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 
-m exitb
+exit /b
 
 
 
@@ -201,7 +210,7 @@ echo %fp%
 
 set cbf_application=c:\program files\mozilla firefox\firefox.exe
 
-m exitb
+exit /b
 
 
 
@@ -217,7 +226,7 @@ echo %fp%
 
 set cbf_application=C:\Program Files (x86)\gPodder\gpodder.exe
 
-m exitb
+exit /b
 
 
 
@@ -237,7 +246,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\SystemWidget.js
 
-m exitb
+exit /b
 
 
 
@@ -253,7 +262,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\pom.xml
 
-m exitb
+exit /b
 
 
 
@@ -269,7 +278,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
 
-m exitb
+exit /b
 
 
 
@@ -285,7 +294,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
 
-m exitb
+exit /b
 
 
 
@@ -301,7 +310,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
 
-m exitb
+exit /b
 
 
 
@@ -317,7 +326,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\td.bat
 
-m exitb
+exit /b
 
 
 
@@ -345,7 +354,7 @@ call %0 pom_web %2
 
 call %0 system_widget %2
 
-m exitb
+exit /b
 
 
 
@@ -361,7 +370,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\g.bat
 
-m exitb
+exit /b
 
 
 
@@ -378,7 +387,7 @@ echo.
 
 set cbf_filename=%userprofile%\.m2\settings.xml
 
-m exitb
+exit /b
 
 
 
@@ -394,7 +403,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\s.bat
 
-m exitb
+exit /b
 
 
 
@@ -414,7 +423,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
 
-m exitb
+exit /b
 
 
 
@@ -432,7 +441,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
 
-m exitb
+exit /b
 
 
 
@@ -459,7 +468,7 @@ rem     //xtype:'loginDisabled',
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\login.js
 
-m exitb
+exit /b
 
 
 
@@ -482,7 +491,7 @@ rem     //xtype: 'login',
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\WIPPage.js
 
-m exitb
+exit /b
 
 
 
@@ -498,7 +507,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\message from batch files.txt
 
-m exitb
+exit /b
 
 
 
@@ -514,7 +523,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\Mercury Development Environment.xlsx - Shortcut.lnk
 
-m exitb
+exit /b
 
 
 
@@ -530,7 +539,7 @@ echo %fp%
 
 set cbf_filename=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
 
-m exitb
+exit /b
 
 
 
@@ -546,7 +555,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
 
-m exitb
+exit /b
 
 
 
@@ -562,7 +571,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
 
-m exitb
+exit /b
 
 
 
@@ -580,7 +589,7 @@ echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
 
-m exitb
+exit /b
 
 
 
@@ -596,7 +605,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\m.bat
 
-m exitb
+exit /b
 
 
 
@@ -612,7 +621,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\fn.bat
 
-m exitb
+exit /b
 
 
 
@@ -628,7 +637,7 @@ echo %fp%
 
 set cbf_filename=d:\aa\james_montemagno_battery_plugin\src\Battery.sln
 
-m exitb
+exit /b
 
 
 
@@ -644,7 +653,7 @@ echo %fp%
 
 set cbf_filename=c:\a\j1.txt
 
-m exitb
+exit /b
 
 
 
@@ -660,7 +669,7 @@ echo %fp%
 
 set cbf_filename=c:\a\j2.txt
 
-m exitb
+exit /b
 
 
 
@@ -676,7 +685,7 @@ echo %fp%
 
 set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
 
-m exitb
+exit /b
 
 
 
@@ -696,7 +705,7 @@ set cbf_filename=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\
 
 set cbf_path=%wildfly_location%\standalone\configuration
 
-m exitb
+exit /b
 
 
 
@@ -714,7 +723,7 @@ call m set_wildfly_location
 
 set cbf_path=%wildfly_location%
 
-m exitb
+exit /b
 
 
 
@@ -730,7 +739,7 @@ echo %fp%
 
 set cbf_path=c:\projects\netbeans\mercury6\mercury-tirem
 
-m exitb
+exit /b
 
 
 
@@ -746,7 +755,7 @@ echo %fp%
 
 set cbf_path=c:\projects\netbeans\mercury6
 
-m exitb
+exit /b
 
 
 
@@ -764,7 +773,7 @@ call m set_wildfly_location
 
 set cbf_path=%wildfly_location%\standalone\deployments
 
-m exitb
+exit /b
 
 
 
@@ -780,7 +789,7 @@ echo %fp%
 
 set cbf_path=C:\projects\netbeans\mercury6\Mercury-web\target
 
-m exitb
+exit /b
 
 
 
@@ -796,25 +805,7 @@ echo %fp%
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html
 
-m exitb
-
-
-
-:_
-
-:bk
-
-:bu
-
-set fp=Mercury backups.
-
-rem fcd: May-12-2017
-
-echo %fp%
-
-set cbf_path=c:\mercury\backups
-
-m exitb
+exit /b
 
 
 
@@ -834,7 +825,7 @@ echo %fp%
 
 set cbf_path=c:\projects\netbeans\sencha
 
-m exitb
+exit /b
 
 
 
@@ -859,7 +850,7 @@ echo %fp%
 echo.
 cd
 
-m exitb
+exit /b
 
 
 
@@ -895,7 +886,7 @@ set cbf_path=%dynamic_server_location_part_2%
 
 set wildfly_dynamic_folder=%wildfly_location%\standalone\tmp\vfs\temp\%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
 
-m exitb
+exit /b
 
 
 
@@ -913,7 +904,7 @@ call m set_wildfly_location
 
 set cbf_path=%wildfly_location%\standalone\tmp\vfs\temp
 
-m exitb
+exit /b
 
 
 
@@ -933,7 +924,7 @@ call %0 hex
 echo.
 set cbf_path=.\resources\WorldWind\images
 
-m exitb
+exit /b
 
 
 
@@ -955,7 +946,7 @@ echo %fp%
 
 set cbf_path=c:\projects\netbeans
 
-m exitb
+exit /b
 
 
 
@@ -975,7 +966,7 @@ set cbf_filename=%wildfly_location%\standalone\log\server.log
 
 set cbf_path=%wildfly_location%\standalone\log
 
-m exitb
+exit /b
 
 
 
@@ -993,7 +984,7 @@ call td hex
 
 set cbf_path=resources
 
-m exitb
+exit /b
 
 
 
@@ -1009,7 +1000,7 @@ echo %fp%
 
 set cbf_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
 
-m exitb
+exit /b
 
 
 
@@ -1027,7 +1018,7 @@ set cbf_filename=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
 
 set cbf_path=C:\ProgramData\MySQL\MySQL Server 5.7
 
-m exitb
+exit /b
 
 
 
@@ -1043,7 +1034,7 @@ echo %fp%
 
 set cbf_path=C:\Mercury\LDAP\OpenDS-2.2.1
 
-m exitb
+exit /b
 
 
 
@@ -1062,7 +1053,7 @@ echo.
 
 set cbf_path=%java_home%
 
-m exitb
+exit /b
 
 
 
@@ -1081,7 +1072,7 @@ echo.
 
 set cbf_path=%maven_home%
 
-m exitb
+exit /b
 
 
 
@@ -1100,7 +1091,7 @@ echo.
 
 set cbf_path=%opends_java_home%
 
-m exitb
+exit /b
 
 
 
@@ -1116,7 +1107,7 @@ echo %fp%
 
 set cbf_path=%userprofile%
 
-m exitb
+exit /b
 
 
 
@@ -1132,7 +1123,7 @@ echo %fp%
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\ext
 
-m exitb
+exit /b
 
 
 
@@ -1150,7 +1141,7 @@ echo %fp%
 
 set cbf_path=C:\mercury
 
-m exitb
+exit /b
 
 
 
@@ -1166,7 +1157,7 @@ echo %fp%
 
 set cbf_path=%userprofile%\.m2
 
-m exitb
+exit /b
 
 
 
@@ -1182,7 +1173,7 @@ echo %fp%
 
 set cbf_path=%m2_home%
 
-m exitb
+exit /b
 
 
 
@@ -1198,7 +1189,7 @@ echo %fp%
 
 set cbf_path=C:\Users\jonathan.r.jones\Documents\dropbox\IT\Sencha Class on Aug-7-2017
 
-m exitb
+exit /b
 
 
 
@@ -1214,7 +1205,7 @@ echo %fp%
 
 set cbf_path=C:\SenchaTraining
 
-m exitb
+exit /b
 
 
 
@@ -1230,7 +1221,7 @@ echo %fp%
 
 call %0 targ
 
-m exitb
+exit /b
 
 
 
@@ -1246,7 +1237,7 @@ echo %fp%
 
 set cbf_path=c:\senchatraining\labs
 
-m exitb
+exit /b
 
 
 
@@ -1262,7 +1253,7 @@ echo %fp%
 
 set cbf_path=C:\Users\jonathan.r.jones\AppData\Local\Android\sdk
 
-m exitb
+exit /b
 
 
 
@@ -1278,7 +1269,7 @@ echo %fp%
 
 set cbf_path=c:\senchatraining\labs\yelpextplorer
 
-m exitb
+exit /b
 
 
 
@@ -1296,7 +1287,7 @@ echo %fp%
 
 set cbf_path=C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha\HTML5Application\public_html
 
-m exitb
+exit /b
 
 
 
@@ -1315,7 +1306,7 @@ echo.
 
 set cbf_path=C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha
 
-m exitb
+exit /b
 
 
 
@@ -1335,7 +1326,7 @@ echo %fp%
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils
 
-m exitb
+exit /b
 
 
 
@@ -1352,7 +1343,7 @@ echo.
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
 
-m exitb
+exit /b
 
 
 
@@ -1369,7 +1360,7 @@ echo.
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils
 
-m exitb
+exit /b
 
 
 
@@ -1389,7 +1380,7 @@ echo %fp%
 
 set cbf_path=C:\mercury\agi licenses
 
-m exitb
+exit /b
 
 
 
@@ -1405,7 +1396,7 @@ echo %fp%
 
 set cbf_path=C:\projects\netbeans\mercury6\Mercury-ejb\src\main\resources
 
-m exitb
+exit /b
 
 
 
@@ -1421,7 +1412,7 @@ echo %fp%
 
 set cbf_path=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\lib
 
-m exitb
+exit /b
 
 
 
@@ -1437,7 +1428,7 @@ echo %fp%
 
 set cbf_path=C:\Mercury\Mobility
 
-m exitb
+exit /b
 
 
 
@@ -1455,7 +1446,7 @@ echo %fp%
 
 set cbf_path=C:\Mercury\Latest WAR File
 
-m exitb
+exit /b
 
 
 
@@ -1473,7 +1464,7 @@ call %0 hex
 
 set cbf_path=resources\images
 
-m exitb
+exit /b
 
 
 
@@ -1491,7 +1482,7 @@ call %0 hex
 
 set cbf_path=classic\resources\images
 
-m exitb
+exit /b
 
 
 
@@ -1509,7 +1500,7 @@ call %0 hex
 
 set cbf_path=modern\resources\images
 
-m exitb
+exit /b
 
 
 
@@ -1527,7 +1518,7 @@ call %0 hex
 
 set cbf_path=modern\resources\images
 
-m exitb
+exit /b
 
 
 
@@ -1543,7 +1534,7 @@ echo %fp%
 
 set cbf_path=%dropbox%\it\Paul Sheriff Unit Testing Course\UnitTestProject4\bin\debug
 
-m exitb
+exit /b
 
 
 
@@ -1559,7 +1550,7 @@ echo %fp%
 
 set cbf_path=c:\a
 
-m exitb
+exit /b
 
 
 
@@ -1575,7 +1566,7 @@ echo %fp%
 
 set cbf_path=%dropbox%\it\
 
-m exitb
+exit /b
 
 
 
@@ -1591,7 +1582,7 @@ echo %fp%
 
 set cbf_path=%temp%
 
-m exitb
+exit /b
 
 
 
@@ -1607,7 +1598,7 @@ echo %fp%
 
 set cbf_path=%dropbox%
 
-m exitb
+exit /b
 
 
 
@@ -1623,7 +1614,7 @@ echo %fp%
 
 set cbf_url=http://www.cnn.com
 
-m exitb
+exit /b
 
 
 
@@ -1639,7 +1630,7 @@ echo %fp%
 
 set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
 
-m exitb
+exit /b
 
 
 
@@ -1657,7 +1648,7 @@ echo %fp%
           
 set cbf_url=https://github.com
 
-m exitb
+exit /b
 
 
 
@@ -1677,7 +1668,7 @@ set cbf_path=d:\aa\NovaCodeCamp.PizzaRatings
 
 set cbf_url=https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git
 
-m exitb
+exit /b
 
 
 
@@ -1699,7 +1690,7 @@ set cbf_filename=.gitignore
 
 set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-m exitb
+exit /b
 
 
 
@@ -1717,7 +1708,7 @@ set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File - Visual Studio
 
 set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-m exitb
+exit /b
 
 
 
@@ -1733,7 +1724,7 @@ echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
 
-m exitb
+exit /b
 
 
 
@@ -1751,7 +1742,7 @@ set cbf_path=c:\aa
 
 if %COMPUTERNAME%==XPS set cbf_path=d:\aa
 
-m exitb
+exit /b
 
 
 
@@ -1769,7 +1760,7 @@ set cbf_path=c:\aa
 
 set cbf_application=C:\Program Files (x86)\gPodder\gpodder.exe
 
-m exitb
+exit /b
 
 
 
@@ -1777,7 +1768,7 @@ m exitb
 
 :vs
 
-set fp=Visual Studio.
+set fp=* Visual Studio.
 
 rem lu: Jan-31-2018
 
@@ -1785,7 +1776,7 @@ echo %fp%
 
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
 
-m exitb
+exit /b
 
 
 
@@ -1803,7 +1794,7 @@ set cbf_filename=%dropbox%\it\ticktockmenu\TickTockMenu.sln
 
 set cbf_path=%dropbox%\it\ticktockmenu
 
-m exitb
+exit /b
 
 
 
@@ -1826,7 +1817,7 @@ if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FI
 
 set cbf_filename=%tmp%\certutil_input.txt
 
-m exitb
+exit /b
 
 
 
@@ -1843,7 +1834,7 @@ echo.
 
 set cbf_filename=%tmp%\certutil_output.txt
 
-m exitb
+exit /b
 
 
 
@@ -1859,7 +1850,7 @@ echo %fp%
 
 set cbf_path=c:\
 
-m exitb
+exit /b
 
 
 
@@ -1875,7 +1866,7 @@ echo %fp%
 
 set cbf_path=d:\
 
-m exitb
+exit /b
 
 
 
@@ -1893,7 +1884,7 @@ set cbf_path=%dropbox%\it
 
 set cbf_url=https://github.com/jonathan-r-jones/Bowling-Score-Calculator.git
 
-m exitb
+exit /b
 
 
 
@@ -1909,7 +1900,7 @@ echo %fp%
 
 set cbf_filename=%savannah%\karl\karl.sln
 
-m exitb
+exit /b
 
 
 
@@ -1927,7 +1918,7 @@ echo %fp%
 
 set cbf_path=c:\mercury\documentation
 
-m exitb
+exit /b
 
 
 
@@ -1943,7 +1934,7 @@ echo %fp%
 
 set cbf_path=%userprofile%\downloads
 
-m exitb
+exit /b
 
 
 
@@ -1959,7 +1950,7 @@ echo %fp%
 
 set cbf_url=http://europeantestingconference.eu/2018/location/
 
-m exitb
+exit /b
 
 
 
@@ -1979,7 +1970,7 @@ set cbf_path=%dropbox%\resume
 
 set cbf_url=https://bitbucket.org/Jonathan17/resume
 
-m exitb
+exit /b
 
 
 
@@ -1997,7 +1988,7 @@ echo %fp%
 
 set cbf_application=microsoft-edge
 
-m exitb
+exit /b
 
 
 
@@ -2013,7 +2004,7 @@ echo %fp%
 
 set cbf_url=https://mail.google.com
 
-m exitb
+exit /b
 
 
 
@@ -2029,7 +2020,7 @@ echo %fp%
 
 set cbf_application=c:\program files\opera\launcher.exe
 
-m exitb
+exit /b
 
 
 
@@ -2045,7 +2036,7 @@ echo %fp%
 
 set cbf_url=http://stackoverflow.com/
 
-m exitb
+exit /b
 
 
 
@@ -2061,7 +2052,7 @@ echo %fp%
 
 set cbf_filename=D:\Dropbox\IT\Paul Sheriff Unit Testing Course\PaulSheriffUnitTestingCourse.sln
 
-m exitb
+exit /b
 
 
 
@@ -2079,7 +2070,7 @@ set cbf_path=%dropbox%\IT\Karl-2-C-Sharp-Testing
 
 set cbf_filename=%dropbox%\IT\Karl-2-C-Sharp-Testing\karl 2.sln
 
-m exitb
+exit /b
 
 
 
@@ -2099,7 +2090,7 @@ set cbf_filename=
 
 set cbf_url=http://europeantestingconference.eu/2018
 
-m exitb
+exit /b
 
 
 
@@ -2115,7 +2106,7 @@ echo %fp%
 
 set cbf_url=https://github.com/AlinaIo/etc2018.git
 
-m exitb
+exit /b
 
 
 
@@ -2131,7 +2122,7 @@ echo %fp%
 
 set cbf_url=https://hub.docker.com
 
-m exitb
+exit /b
 
 
 
@@ -2147,7 +2138,7 @@ echo %fp%
 
 set cbf_url=https://www.youtube.com
 
-m exitb
+exit /b
 
 
 
@@ -2163,7 +2154,7 @@ echo %fp%
 
 set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
 
-m exitb
+exit /b
 
 
 
@@ -2181,7 +2172,7 @@ echo %fp%
 
 set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
 
-m exitb
+exit /b
 
 
 
@@ -2197,7 +2188,7 @@ echo %fp%
 
 set cbf_filename=Readme.md
 
-m exitb
+exit /b
 
 
 
@@ -2219,7 +2210,7 @@ set cbf_path=%aa%\freecodecamp
 
 set cbf_url=https://github.com/freeCodeCamp/freeCodeCamp.git
 
-m exitb
+exit /b
 
 
 
@@ -2235,7 +2226,7 @@ echo %fp%
 
 set cbf_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
 
-m exitb
+exit /b
 
 
 
@@ -2251,7 +2242,7 @@ echo %fp%
 
 set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
 
-m exitb
+exit /b
 
 
 
@@ -2267,7 +2258,7 @@ echo %fp%
 
 set cbf_application=c:\windows\system32\notepad.exe
 
-m exitb
+exit /b
 
 
 
@@ -2283,7 +2274,7 @@ echo %fp%
 
 set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
 
-m exitb
+exit /b
 
 
 
@@ -2292,26 +2283,6 @@ m exitb
 
 
 ::_
-
-:gp
-
-:gpcbf
-
-set fp=* CBF on GitHub Pages.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
-
-m exitb
-
-
-
-::_
-
-:ba
 
 :cbf
 
@@ -2327,7 +2298,23 @@ set cbf_path=%composable_batch_files%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
 
-m exitb
+exit /b
+
+
+
+::_
+
+:cbfgp
+
+set fp=* CBF on GitHub Pages.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
+
+exit /b
 
 
 
@@ -2345,7 +2332,7 @@ set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
 
 set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
-m exitb
+exit /b
 
 
 
@@ -2367,12 +2354,12 @@ if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_App_Location="
 if "%cbf_App_Location%" == "" (
   echo.
   echo Notepad++ is not installed.
-  m exitb
+  exit /b
 )
 
 set cbf_application=%cbf_App_Location%
 
-m exitb
+exit /b
 
 
 
@@ -2392,7 +2379,7 @@ echo %fp%
 
 rem Don't need to set it because it's already set.
 
-m exitb
+exit /b
 
 
 
@@ -2408,7 +2395,7 @@ echo %fp%
 
 call m transform_cbf_application "%cbf_application%"
 
-m exitb
+exit /b
 
 
 
@@ -2424,7 +2411,7 @@ echo %fp%
 
 call m transform_cbf_application "%cbf_filename%"
 
-m exitb
+exit /b
 
 
 
@@ -2440,7 +2427,7 @@ echo %fp%
 
 set cbf_path=c:\program files
 
-m exitb
+exit /b
 
 
 
@@ -2460,7 +2447,7 @@ echo %fp%
 
 set cbf_filename=package.json
 
-m exitb
+exit /b
 
 
 
@@ -2478,7 +2465,7 @@ set cbf_path=%aa%\for-git-testing
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing
 
-m exitb
+exit /b
 
 
 
@@ -2494,7 +2481,7 @@ echo %fp%
 
 set cbf_url=https://github.com/joeeames/NPMPlaybookCourse
 
-m exitb
+exit /b
 
 
 
@@ -2510,7 +2497,7 @@ echo %fp%
 
 set cbf_url=https://docs.npmjs.com/misc/config
 
-m exitb
+exit /b
 
 
 
@@ -2526,7 +2513,7 @@ echo %fp%
 
 set cbf_url=https://github.com/strongloop/express
 
-m exitb
+exit /b
 
 
 
@@ -2542,7 +2529,7 @@ echo %fp%
 
 set cbf_url=npm.im/composable-batch-files
 
-m exitb
+exit /b
 
 
 
@@ -2558,7 +2545,7 @@ echo %fp%
 
 set cbf_filename=C:\Program Files\nodejs\node_modules\npm\package.json
 
-m exitb
+exit /b
 
 
 
@@ -2574,7 +2561,7 @@ echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones
 
-m exitb
+exit /b
 
 
 
@@ -2594,7 +2581,7 @@ echo %fp%
 
 set cbf_url=https://github.com/Xamarin/Plugins.git
 
-m exitb
+exit /b
 
 
 
@@ -2612,7 +2599,7 @@ echo %fp%
 
 set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
 
-m exitb
+exit /b
 
 
 
@@ -2628,15 +2615,15 @@ echo %fp%
 
 set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
 
-m exitb
+exit /b
 
 
 
 ::_
 
-:book
+:bk
 
-:book_code
+:book
 
 set fp=* Ed Snider's Xamarin book sample code.
 
@@ -2644,11 +2631,11 @@ rem lu: Mar-1-2018
 
 echo %fp%
 
-set cbf_path=D:\aa\xamarin\Mastering-Xamarin.Forms-Second-Edition
+set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-Second-Edition
 
 set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
 
-m exitb
+exit /b
 
 
 
@@ -2664,7 +2651,7 @@ echo %fp%
 
 set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
 
-m exitb
+exit /b
 
 
 
@@ -2680,7 +2667,7 @@ echo %fp%
 
 set cbf_path=D:\aa\xamarin
 
-m exitb
+exit /b
 
 
 
@@ -2698,7 +2685,7 @@ set cbf_path=d:\aa\xamarin\first-mobile-app-Jesse
 
 set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
 
-m exitb
+exit /b
 
 
 
@@ -2720,7 +2707,7 @@ set cbf_path=%aa%\xamarin\first-mobile-app-Jonathan
 
 set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
 
-m exitb
+exit /b
 
 
 
@@ -2736,7 +2723,7 @@ echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/mobile-app.git
 
-m exitb
+exit /b
 
 
 
@@ -2752,7 +2739,7 @@ echo %fp%
 
 set cbf_url=https://github.com/jamesmontemagno/monkey-cache.git
 
-m exitb
+exit /b
 
 
 
@@ -2768,7 +2755,7 @@ echo %fp%
 
 set cbf_url=https://github.com/lprichar/CakeSample
 
-m exitb
+exit /b
 
 
 

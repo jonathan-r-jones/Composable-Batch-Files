@@ -33,11 +33,13 @@ echo %1 | find /i ".">nul
 
 rem There is a period in the first parameter.
 if %errorlevel% == 0 (
-  call n double_click
+  set cbf_filename=%1
   r
+rem qq-1
 )
 
-exit /b
+rem No period found.
+if %errorlevel% == 1 exit /b
 
 
 
@@ -48,7 +50,7 @@ exit /b
 :help
 
 echo.
-echo Filename stands for: X marks the spot. An easy to type batch file.
+echo Filename stands for: J, an easy to type batch file.
 
 echo.
 echo Last Updated: May-22-2018

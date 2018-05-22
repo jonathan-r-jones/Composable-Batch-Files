@@ -40,7 +40,7 @@ goto %1
 
 rem (!rfsp) (mov-2)
 
-m exitb
+exit /b
 
 
 
@@ -79,7 +79,7 @@ echo       unin_gd  Uninstall global package and remove dependency note.
 echo        update  Update all dependencies to the latest version.
 echo          vers  Check NPM's version.
 
-m exitb
+exit /b
 
 
 
@@ -106,7 +106,7 @@ echo %fp%
 echo.
 npm i %2 -g
 
-m exitb
+exit /b
 
 
 
@@ -123,7 +123,7 @@ echo %fp%
 echo.
 npm install %2 --save
 
-m exitb
+exit /b
 
 
 
@@ -140,7 +140,7 @@ echo %fp%
 echo.
 npm install %2 --save--dev
 
-m exitb
+exit /b
 
 
 
@@ -157,7 +157,7 @@ echo %fp%
 echo.
 npm i npm@latest -g
 
-m exitb
+exit /b
 
 
 
@@ -174,7 +174,7 @@ echo %fp%
 echo.
 npm install %2
 
-m exitb
+exit /b
 
 
 
@@ -193,7 +193,7 @@ echo.
 
 npm install
 
-m exitb
+exit /b
 
 
 
@@ -212,7 +212,7 @@ call n %2
 echo.
 npm i %cbf_url%
 
-m exitb
+exit /b
 
 
 
@@ -231,7 +231,7 @@ echo %fp%
 echo.
 npm i underscore@1.8.2 --save --save-exact
 
-m exitb
+exit /b
 
 
 
@@ -253,7 +253,7 @@ rem For example: npm i underscore@1.7 --save
 
 npm i %2 --save
 
-m exitb
+exit /b
 
 
 
@@ -272,7 +272,7 @@ echo.
 
 npm start
 
-m exitb
+exit /b
 
 
 
@@ -288,7 +288,7 @@ echo %fp%
 
 npm test
 
-m exitb
+exit /b
 
 
 
@@ -308,7 +308,7 @@ echo %fp%
 
 npm help npm
 
-m exitb
+exit /b
 
 
 
@@ -325,7 +325,7 @@ echo %fp%
 
 npm help %2
 
-m exitb
+exit /b
 
 
 
@@ -342,7 +342,7 @@ echo %fp%
 echo.
 npm help-search %2
 
-m exitb
+exit /b
 
 
 
@@ -363,7 +363,7 @@ echo %fp%
 echo.
 npm init
 
-m exitb
+exit /b
 
 
 
@@ -380,7 +380,7 @@ echo %fp%
 echo.
 npm init -y
 
-m exitb
+exit /b
 
 
 
@@ -400,7 +400,7 @@ echo %fp%
 
 npm set init-license 'MIT'
 
-m exitb
+exit /b
 
 
 
@@ -417,7 +417,7 @@ echo %fp%
 echo.
 npm get init-license
 
-m exitb
+exit /b
 
 
 
@@ -437,7 +437,7 @@ echo %fp%
 
 npm list -g --depth 0 --long true
 
-m exitb
+exit /b
 
 
 
@@ -454,7 +454,7 @@ echo %fp%
 echo.
 npm list --long true
 
-m exitb
+exit /b
 
 
 
@@ -471,7 +471,7 @@ echo %fp%
 echo.
 npm list --depth 0
 
-m exitb
+exit /b
 
 
 
@@ -487,7 +487,7 @@ echo %fp%
 
 npm list --global true
 
-m exitb
+exit /b
 
 
 
@@ -504,7 +504,7 @@ echo %fp%
 echo.
 npm list --global true --depth 0 --long true --json true
 
-m exitb
+exit /b
 
 
 
@@ -521,7 +521,7 @@ echo %fp%
 echo.
 npm list --global true --depth 0 --long true --dev true
 
-m exitb
+exit /b
 
 
 
@@ -542,7 +542,7 @@ echo %fp%
 echo.
 npm uninstall %2 --save
 
-m exitb
+exit /b
 
 
 
@@ -559,7 +559,7 @@ echo %fp%
 echo.
 npm uninstall %2 -g --save
 
-m exitb
+exit /b
 
 
 
@@ -576,7 +576,7 @@ echo %fp%
 echo.
 npm uninstall %2 -g
 
-m exitb
+exit /b
 
 
 
@@ -593,7 +593,7 @@ echo %fp%
 echo.
 npm prune
 
-m exitb
+exit /b
 
 
 
@@ -609,7 +609,7 @@ echo %fp%
 
 npm repo %2
 
-m exitb
+exit /b
 
 
 
@@ -626,7 +626,7 @@ echo %fp%
 echo.
 npm adduser
 
-m exitb
+exit /b
 
 
 
@@ -647,7 +647,7 @@ echo %fp%
 echo.
 npm version
 
-m exitb
+exit /b
 
 
 
@@ -663,7 +663,7 @@ echo %fp%
 
 npm version patch
 
-m exitb
+exit /b
 
 
 
@@ -679,7 +679,7 @@ echo %fp%
 
 npm version minor
 
-m exitb
+exit /b
 
 
 
@@ -695,7 +695,7 @@ echo %fp%
 
 npm version major
 
-m exitb
+exit /b
 
 
 
@@ -716,7 +716,7 @@ echo %fp%
 echo.
 npm publish
 
-m exitb
+exit /b
 
 
 
@@ -733,7 +733,7 @@ echo %fp%
 echo.
 npm publish --tag beta
 
-m exitb
+exit /b
 
 
 
@@ -753,7 +753,7 @@ echo %fp%
 
 npm info
 
-m exitb
+exit /b
 
 
 
@@ -769,7 +769,7 @@ echo %fp%
 
 npm info %2
 
-m exitb
+exit /b
 
 
 
@@ -790,7 +790,7 @@ echo %fp%
 echo.
 npm update --save
 
-m exitb
+exit /b
 
 
 
@@ -807,7 +807,7 @@ echo %fp%
 echo.
 npm update %2
 
-m exitb
+exit /b
 
 
 

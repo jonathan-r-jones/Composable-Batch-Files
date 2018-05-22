@@ -39,7 +39,7 @@ set fp=* Main function.
 
 
 
-m exitb
+exit /b
 
 
 
@@ -60,7 +60,7 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1: Nickname you wish to verify.
 
-m exitb
+exit /b
 
 
 

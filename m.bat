@@ -12,6 +12,14 @@ set filep=* Perform miscellaneous tasks.
 
 :_
 
+set fp=* Add some whitespace.
+
+echo.
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -30,7 +38,6 @@ goto %1
 
 :help
 
-echo.
 echo %filep%
 
 echo.
@@ -74,6 +81,7 @@ echo           ppt  PowerPoint Presentation on CBF.
 echo   prepare_mob  Prepare for mobile deployment.
 echo        pscrub  Partially scrub deployment environment.
 echo            rd  Remove folder at current location.
+echo         reset  Reset CBF environment variables.
 echo     run_tirem  Run tirem.
 echo         scrub  When deploying new War file, this prepares env.
 echo set_parent_fd  Set parent folder.
@@ -2968,7 +2976,6 @@ goto exitb
 
 set fp=* List of CBF Helper Batch files.
 
-echo.
 echo  %fp%
 echo.
 
@@ -2982,12 +2989,10 @@ echo   col  Reset the dos window color.
 echo    cy  Copy file(s).
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
-echo    ea  Application-centric way of running an app with opt. file param.
 echo    ed  Filename-centric way of editing a file with optional app. param.
 echo   env  Show the state of the CBF envrionment variables.
 echo     g  Perform Git-related tasks.
 echo     h  Perform Sencha-related tasks.
-echo     k  Double-click equivalent way to execute a file.
 echo     m  Perform miscellaneous tasks.
 echo    me  Run Multi-Edit.
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
@@ -2997,6 +3002,7 @@ echo    no  Run Notepad.
 echo    np  Run Notepad++.
 echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
 echo    of  Open Folder.
+echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
 echo     s  SQL/Database, including LDAP, related tasks.
 echo    sf  Surf to websites.
@@ -3006,7 +3012,7 @@ echo    tk  Wrapper around taskkill command.
 echo    tl  Wrapper around tasklist command.
 echo    td  Transform Directory.
 echo    te  Batch file template used for creating new batch files.
-echo     x  Filename-centric way to exec. a file with opt. app. param.
+echo     x  Double-click equivalent way to run a file that contains a period.
 
 goto exitb
 
@@ -3098,7 +3104,7 @@ echo.
 echo Publish to NPM.
 call nm pub
 
-m exitb
+exit /b
 
 
 
@@ -3116,6 +3122,30 @@ echo.
 echo %fp%
 
 set %3=%~f2
+
+goto exitb
+
+
+
+:_
+
+:reset
+
+set fp=* Reset CBF variables.
+
+echo %fp%
+
+set cbf_application=
+
+set cbf_app_location=
+
+set cbf_filename=
+
+set cbf_parameter=
+
+set cbf_path=
+
+set cbf_url=
 
 goto exitb
 

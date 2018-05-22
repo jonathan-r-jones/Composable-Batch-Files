@@ -38,7 +38,7 @@ set fp=* Main function.
 
 rem (!rfsp) (mov-2)
 
-m exitb
+exit /b
 
 
 
@@ -68,7 +68,7 @@ echo Parameter 1 (Optional):
 echo.
 echo Parameter 2 (Optional):
 
-m exitb
+exit /b
 
 
 

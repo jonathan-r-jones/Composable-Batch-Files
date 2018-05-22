@@ -29,7 +29,7 @@ call n %~1
 
 rem echo Caller 2: an.bat, Percent 1: %~1
 
-m exitb
+exit /b
 
 
 
@@ -57,7 +57,7 @@ echo has more clarity of intent.
 echo.
 echo Usage: %0 [single parameter]
 
-m exitb
+exit /b
 
 
 

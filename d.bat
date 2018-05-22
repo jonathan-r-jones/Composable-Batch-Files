@@ -64,7 +64,7 @@ echo             s  Size, biggest first.
 echo            s2  Size, smallest first.
 echo             t  Files and folders changed today.
 
-m exitb
+exit /b
 
 
 
@@ -81,7 +81,7 @@ echo.
 
 dir
 
-m exitb
+exit /b
 
 
 
@@ -98,7 +98,7 @@ echo.
 
 dir /o-s %2
 
-m exitb
+exit /b
 
 
 
@@ -115,7 +115,7 @@ echo.
 
 dir /os %2
 
-m exitb
+exit /b
 
 
 
@@ -132,7 +132,7 @@ echo.
 
 dir /o-d %2
 
-m exitb
+exit /b
 
 
 
@@ -149,7 +149,7 @@ echo.
 
 dir /od %2
 
-m exitb
+exit /b
 
 
 
@@ -165,7 +165,7 @@ echo %fp%
 
 forfiles /d +0 /c "cmd /c echo @file @ftime @fsize"
 
-m exitb
+exit /b
 
 
 
@@ -183,7 +183,7 @@ echo %fp%
 
 forfiles /d +0 /c "cmd /c if @isdir==FALSE echo @file @ftime @fsize"
 
-m exitb
+exit /b
 
 
 
@@ -200,7 +200,7 @@ echo %fp%
 echo.
 dir /ah
 
-m exitb
+exit /b
 
 
 

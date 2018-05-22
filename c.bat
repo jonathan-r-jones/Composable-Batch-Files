@@ -8,9 +8,6 @@
 
 set filep=* Clear screen and reset color.
 
-rem echo.
-rem echo %filep%
-
 
 
 :_
@@ -49,7 +46,7 @@ set filep=* Clear screen and reset color.
 cls
 color
 
-m exitb
+exit /b
 
 
 
@@ -72,7 +69,7 @@ echo Last Updated (lu): Feb-6-2018
 echo.
 echo Usage: %0
 
-m exitb
+exit /b
 
 
 

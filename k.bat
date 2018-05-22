@@ -36,13 +36,14 @@ if %errorlevel% == 0 set cbf_filename=%1
 if %errorlevel% == 1 call fn %1
 
 set cbf_parameter=%cbf_filename%
+rem qq-1
 
 if "%~2" == "" call an dc
 if not "%~2" == "" call an %2
 
 call r
 
-m exitb
+exit /b
 
 
 
@@ -67,7 +68,7 @@ echo Parameter 1: The filename nickname of the file to execute or filename of a 
 echo.
 echo Parameter 2 (Optional): The application nickname of the application used to execute the file. If left blank, a simulated double click of the file will occur.
 
-m exitb
+exit /b
 
 
 

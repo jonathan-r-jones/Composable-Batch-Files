@@ -29,7 +29,7 @@ if "%~1" == "help" goto help
 
 call npp %composable_batch_files%\%~1.bat
 
-m exitb
+exit /b
 
 
 
@@ -55,7 +55,7 @@ echo.
 echo For example, typing "mx m" would edit the m.bat file in the Composable
 echo. Batch Files folder.
 
-m exitb
+exit /b
 
 
 

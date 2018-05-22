@@ -48,7 +48,7 @@ echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.
 echo.
 echo Parameter 2: Browser (Application Nickname), which is not necessary if you wish to use the the default browser.
 
-m exitb
+exit /b
 
 
 
@@ -123,7 +123,7 @@ rem lu: Jan-31-2018
 
 call r
 
-m exitb
+exit /b
 
 
 

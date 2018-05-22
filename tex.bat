@@ -45,7 +45,7 @@ set fp=* Main function.
 
 
 
-m exitb
+exit /b
 
 
 
@@ -72,7 +72,7 @@ echo Parameter 1 (Optional):
 echo.
 echo Parameter 2 (Optional):
 
-m exitb
+exit /b
 
 
 

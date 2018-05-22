@@ -92,7 +92,7 @@ java Get_Timestamp_With_No_Spaces>%tmp%\java_timestamp.txt
 rem cd
 rem echo jt: %java_timestamp%
 
-m exitb
+exit /b
 
 
 

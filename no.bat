@@ -28,7 +28,7 @@ if "%~1" == "help" goto help
 if "%~1" == "" call ea no
 if not "%~1" == "" call ed "%~1" no
 
-m exitb
+exit /b
 
 
 
@@ -50,7 +50,7 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1 (Optional): The filename nickname of the file to execute or filename of a file in the current folder.
 
-m exitb
+exit /b
 
 
 
