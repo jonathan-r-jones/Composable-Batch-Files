@@ -63,7 +63,7 @@ echo author's intent when calling which variable is being set.
 echo.
 echo Parm/Nickname  Target
 echo -------------  -----------------------------------------------------------
-echo             a  a.
+echo             a  c:\a
 echo            ba  c:\mercury\batch_files
 echo            bu  c:\mercury\backups
 echo           cbf  Composable Batch Files.
@@ -101,8 +101,7 @@ echo             s  %COMPOSABLE_BATCH_FILES%\s.bat
 echo            s6  c:\projects\netbeans\sencha
 echo            sm  Suplime
 echo            sr  [wildfly_location]
-echo          stan  [wildfly_location]\standalone\configuration
-echo          stan  Standalone.xml, WildFly config file.
+echo          stan  Standalone.xml, which is a WildFly config file.
 echo            sw  \classic\src\view\dashboard\SystemWidget.js
 echo          targ  \projects\netbeans\mercury6\Mercury-web\target
 echo            td  %COMPOSABLE_BATCH_FILES%\td.bat
@@ -2752,6 +2751,22 @@ rem lu: May-18-2018
 echo %fp%
 
 set cbf_url=https://github.com/jamesmontemagno/monkey-cache.git
+
+m exitb
+
+
+
+:_
+
+:cake
+
+set fp=* Cake sample.
+
+rem lu: May-21-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/lprichar/CakeSample
 
 m exitb
 
