@@ -23,7 +23,7 @@ echo.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto kill
 
 if "%~1" == "/?" goto help
 
@@ -52,6 +52,10 @@ echo Last Updated: May-8-2018
 echo.
 rem qq-1
 echo Usage: %0 [Parameter 1]
+rem qq-1
+
+echo.
+echo Parameter 1 (Optional): Function to execute. If left blank, the default task kill list is killed.
 
 echo.
 echo     Parameter  Description
