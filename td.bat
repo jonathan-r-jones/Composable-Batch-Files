@@ -105,7 +105,7 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: Path nickname.
+echo Parameter 1: Path nickname, the name of a child folder or ".." which emulates the cd command.
 
 echo.
 echo Parameter 2 (Optional): If "p" is specified, go to the parent folder of parameter 1.
