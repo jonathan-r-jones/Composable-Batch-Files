@@ -15,7 +15,7 @@ echo %filep%
 
 :_
 
-set fp=* Route callers.
+set fp=* Route help callers.
 
 if "%~1" == "" goto help
 
@@ -23,7 +23,31 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-if "%~1" == "shared_list" goto %1
+
+
+:_
+
+set fp=* Emulate cd and go to the parent folder.
+
+if "%~1" == ".." (
+  echo.
+  echo %fp%
+  cd %1
+  exit /b
+)
+
+
+
+:_
+
+set fp=* Detect an existing folder in the first parameter.
+
+if exist "%1" (
+  echo.
+  echo Existing child folder.
+  cd %1
+  exit /b
+)
 
 
 

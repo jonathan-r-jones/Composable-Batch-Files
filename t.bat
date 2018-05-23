@@ -36,6 +36,14 @@ color 0e
 
 :_
 
+set fp=* Override and just go to execution area.
+
+goto code_execution_area
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%~1" == "/?" goto help
@@ -6575,29 +6583,6 @@ exit /b
 
 :_
 
-:fe
-
-set fp=* Testing whether a folder exists.
-
-rem lu: Mar-26-2018
-
-echo.
-echo %fp%
-echo.
-
-cd /d %dropbox%
-
-dir | find /i "Savannah Backups">nul
-
-if %errorlevel% == 0 echo Folder EXISTS.
-if %errorlevel% == 1 echo Folder does NOT exist.
-
-exit /b
-
-
-
-:_
-
 :ht_env
 
 set fp=* How to set and test against an environment variable.
@@ -6801,6 +6786,58 @@ m exit
 
 :_
 
+:
+
+set fp=* Test partial path.
+
+rem lu: Apr-10-2018
+
+echo %fp%
+
+cd /d \Program Files (x86)\Multi-Edit 2008\
+exit /b
+
+
+
+:_
+
+:long_string
+
+set fp=* Test what happens if I wrap a long string.
+set fp=%fp% blah blah
+
+rem lu: Apr-25-2018
+
+echo %fp%
+
+exit /b
+
+
+
+:_
+
+:fe
+
+set fp=* Testing whether a folder exists.
+
+rem lu: Mar-26-2018
+
+echo %fp%
+echo.
+
+cd /d %dropbox%
+
+dir | find /i "Savannah Backups">nul
+
+if %errorlevel% == 0 echo Folder EXISTS.
+if %errorlevel% == 1 echo Folder does NOT exist.
+
+exit /b
+
+
+
+:_
+
 :percent
 
 set fp=* Testing percent 2 and not equals.
@@ -6844,6 +6881,28 @@ if not "%~1" == "" echo %1 parameter was passed.
 
 :_
 
+:fe2
+
+set fp=* Testing whether a folder exists 2.
+
+rem lu: May-23-2018
+
+echo %fp%
+echo.
+
+cd /d %dropbox%
+
+dir | find /i "%1">nul
+
+if %errorlevel% == 0 echo Folder EXISTS.
+if %errorlevel% == 1 echo Folder does NOT exist.
+
+exit /b
+
+
+
+:_
+
 :folder_exists
 
 set fp=* Testing whether a folder exists 2.
@@ -6867,21 +6926,6 @@ exit /b
 
 :_
 
-:
-
-set fp=* Test partial path.
-
-rem lu: Apr-10-2018
-
-echo %fp%
-
-cd /d \Program Files (x86)\Multi-Edit 2008\
-exit /b
-
-
-
-:_
-
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -6895,14 +6939,20 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-:long_string
+:folder_exists_2
 
-set fp=* Test what happens if I wrap a long string.
-set fp=%fp% blah blah
+set fp=* Testing whether a folder exists 2.
 
-rem lu: Apr-25-2018
+rem lu: May-23-2018
 
 echo %fp%
+
+if exist "%1" (
+  echo.
+  echo It exists.
+)
+
+if not exist "%1" echo It does NOT exist.
 
 exit /b
 

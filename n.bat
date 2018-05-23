@@ -2571,9 +2571,11 @@ exit /b
 
 ::_
 
+:plug
+
 :xplug
 
-set fp=Plugins. Open Source Components for Xamarin. This is an active repository.
+set fp=* Plugins. Open Source Components for Xamarin. This is an active repository.
 
 rem lu: Jan-31-2018
 
@@ -2665,7 +2667,7 @@ rem lu: Mar-1-2018
 
 echo %fp%
 
-set cbf_path=D:\aa\xamarin
+set cbf_path=%aa%\xamarin
 
 exit /b
 
