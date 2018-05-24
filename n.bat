@@ -140,28 +140,6 @@ exit /b
 
 
 
-:_
-
-:dc
-
-:double_click
-
-set fp=* Simulate a double click in CBF.
-
-rem lu: Feb-1-2018
-
-echo %fp%
-
-rem Strangely, this also works. Feb-1-2018
-rem set cbf_application="%cbf_filename% - Shortcut.lnk"
-
-set cbf_application=%cbf_filename%
-set cbf_parameter=
-
-exit /b
-
-
-
 :_+ Browsers
 
 
@@ -2756,6 +2734,29 @@ rem lu: May-21-2018
 echo %fp%
 
 set cbf_url=https://github.com/lprichar/CakeSample
+
+exit /b
+
+
+
+:_
+
+:dc
+
+:double_click
+
+set fp=* Simulate a double click in CBF.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+rem Strangely, this also works. Feb-1-2018
+rem set cbf_application="%cbf_filename% - Shortcut.lnk"
+
+set cbf_application=%cbf_filename%
+
+set cbf_parameter=
 
 exit /b
 

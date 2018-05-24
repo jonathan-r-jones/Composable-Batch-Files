@@ -33,6 +33,7 @@ echo %1 | find /i ".">nul
 
 rem There is a period in the first parameter.
 if %errorlevel% == 0 (
+  set cbf_filename=%~1
   call n double_click
   r
 )
