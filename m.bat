@@ -20,13 +20,19 @@ echo.
 
 :_
 
-set fp=* Route callers.
+set fp=* Route help callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
+
+
+
+:_
+
+set fp=* Go to percent 1.
 
 goto %1
 
@@ -61,6 +67,7 @@ echo     build_ejb  Build EJB WAR file.
 echo       compile  Run sencha app build testing.
 echo      compilep  Run sencha app build production.
 echo      copy_ext  Copy ext folder contents to the right place.
+echo  double_click  Perform command-line equivalent of a double click.
 echo       del_hex  Delete WildFly Dynamic Folder.
 echo          depl  Deploy a new WAR file.
 echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
@@ -3147,6 +3154,30 @@ set cbf_path=
 set cbf_url=
 
 goto exitb
+
+
+
+:_
+
+:dc
+
+:double_click
+
+set fp=* Simulate a double click in CBF.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+rem Strangely, this also works. Feb-1-2018
+rem set cbf_application="%cbf_filename% - Shortcut.lnk"
+
+rem qq-1
+set cbf_application=%cbf_filename%
+
+set cbf_parameter=
+
+exit /b
 
 
 

@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Double-click equivalent way to run a file that contains a period.
+set filep=* Double-click equivalent way to run a file.
 
 echo.
 echo %filep%
@@ -34,8 +34,13 @@ echo %1 | find /i ".">nul
 rem There is a period in the first parameter.
 if %errorlevel% == 0 (
   set cbf_filename=%~1
-  call n double_click
+  call m double_click
   r
+)
+else
+(
+  // Do a remote double click.
+rem qq-1
 )
 
 exit /b
@@ -58,7 +63,9 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: Filename that contains a period.
+echo Parameter 1: If parameter 1 contains a period, then it will simulate the double-click on 
+echo that file which is in the current folder. Or else, it will do a remote double click on
+echo on the filename specified by the nickname.
 
 exit /b
 
