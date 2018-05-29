@@ -36,21 +36,26 @@ color 0e
 
 :_
 
-set fp=* Override and just go to execution area.
-
-goto code_execution_area
-
-
-
-:_
-
-set fp=* Route callers.
+set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
+
+
+
+:_
+
+set fp=* If percent is not blank, then to percent 1.
+
 if not "%~1" == "" goto %1
+
+
+
+:_
+
+set fp=* Go to execution area.
 
 goto code_execution_area
 
@@ -213,34 +218,6 @@ if "%message%" == "Hello world." (
   echo We said hello.
 ) else (
 echo We did NOT say hello.)
-
-
-
-:_
-
-set fp=* 13c. Testing inequality to using the "not" statement.
-
-echo.
-echo %fp%
-echo.
-
-set message=Hello.
-
-if not "%message%" == "Hello.x" echo It's not equal.
-
-
-
-:_
-
-set fp=5. * Getting inequality to work using else.
-
-echo.
-echo %fp%
-echo.
-
-set message=hello2
-
-if "%message%" == "hello" (echo equals hello) ELSE (echo does not equal hello)
 
 
 
@@ -6926,6 +6903,27 @@ exit /b
 
 :_
 
+set fp=* Detect a period in the first parameter.
+
+echo %1 | find /i ".">nul
+
+rem There is a period in the first parameter.
+if %errorlevel% == 0 (
+  set cbf_filename=%~1
+  call m double_click
+  r
+)
+else
+(
+  // Do a remote double click.
+)
+
+exit /b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.
@@ -6953,6 +6951,59 @@ if exist "%1" (
 )
 
 if not exist "%1" echo It does NOT exist.
+
+exit /b
+
+
+
+:_+ Testing Inequality (imprimatur)
+
+
+
+::_
+
+:not
+
+:ineq
+
+:inequality
+
+set fp=* Testing inequality using the an if/else statement.
+
+rem Imprimatur (!else, !elseba)
+
+echo %fp%
+echo.
+
+set message=Hellos
+
+if "%message%" == "Hello" (
+  echo It's equal.
+) else (
+  echo It's NOT equal.
+)
+
+exit /b
+
+
+
+::_
+
+:not
+
+set fp=* Testing inequality using the not statement.
+
+rem Imprimatur (!not, !notba)
+
+echo %fp%
+
+set message=hello
+
+if not "%message%" == "Hello" (
+  rem Notice that the comparion is CASE SENSITIVE.
+  echo.
+  echo It's NOT equal.
+)
 
 exit /b
 

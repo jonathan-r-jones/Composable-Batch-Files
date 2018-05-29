@@ -28,17 +28,7 @@ if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-
-
-:_
-
-set fp=* Main function.
-
-
-
-rem (!rfsp) (mov-2)
-
-exit /b
+goto main_function
 
 
 
@@ -73,6 +63,20 @@ exit /b
 
 
 :_ Begin body. (!bb)
+
+
+
+:_
+
+:main_function
+
+set fp=* Main function.
+
+
+
+rem (!rfsp) (mov-2)
+
+exit /b
 
 
 

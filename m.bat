@@ -3018,7 +3018,7 @@ echo    tk  Wrapper around taskkill command.
 echo    tl  Wrapper around tasklist command.
 echo    td  Transform Directory.
 echo    te  Batch file template used for creating new batch files.
-echo     x  Double-click equivalent way to run a file that contains a period.
+echo     x  Remote double-click equivalent way to run a file.
 
 goto exitb
 
@@ -3163,7 +3163,7 @@ goto exitb
 
 :double_click
 
-set fp=* Simulate a double click in CBF.
+set fp=* Simulate a remote double click.
 
 rem lu: Feb-1-2018
 
@@ -3172,8 +3172,9 @@ echo %fp%
 rem Strangely, this also works. Feb-1-2018
 rem set cbf_application="%cbf_filename% - Shortcut.lnk"
 
-rem qq-1
-set cbf_application=%cbf_filename%
+if not "%cbf_filename%" == "" (
+  set cbf_application=%cbf_filename%
+)
 
 set cbf_parameter=
 

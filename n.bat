@@ -475,38 +475,6 @@ exit /b
 
 :_
 
-:msg
-
-set fp=Message from batch files.
-
-rem lu: Nov-17-2017
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\message from batch files.txt
-
-exit /b
-
-
-
-:_
-
-:mde
-
-set fp=Mercury devevelopment environment.
-
-rem lu: Nov-17-2017
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\Mercury Development Environment.xlsx - Shortcut.lnk
-
-exit /b
-
-
-
-:_
-
 :mac
 
 set fp=Mobile log.
@@ -623,7 +591,7 @@ exit /b
 
 :j1
 
-set fp=J1.txt.
+set fp=* J1.txt.
 
 rem lu: Feb-1-2018
 
@@ -639,7 +607,7 @@ exit /b
 
 :j2
 
-set fp=J2.txt.
+set fp=* J2.txt.
 
 rem lu: Feb-1-2018
 
