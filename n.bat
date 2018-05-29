@@ -2511,6 +2511,54 @@ exit /b
 
 
 
+:_
+
+:mad
+
+set fp=* Mobile App Development requirements.
+
+rem lu: May-18-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/mobile-app.git
+
+exit /b
+
+
+
+:_
+
+:moca
+
+set fp=* Monkey cache.
+
+rem lu: May-18-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jamesmontemagno/monkey-cache.git
+
+exit /b
+
+
+
+:_
+
+:cake
+
+set fp=* Cake sample.
+
+rem lu: May-21-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/lprichar/CakeSample
+
+exit /b
+
+
+
 :_+ Xamarin-Related
 
 
@@ -2629,7 +2677,7 @@ rem lu: May-8-2018
 
 echo %fp%
 
-set cbf_path=d:\aa\xamarin\first-mobile-app-Jesse
+set cbf_path=%aa%\xamarin\first-mobile-app-Jesse
 
 set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
 
@@ -2654,54 +2702,6 @@ echo %fp%
 set cbf_path=%aa%\xamarin\first-mobile-app-Jonathan
 
 set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
-
-exit /b
-
-
-
-:_
-
-:mad
-
-set fp=* Mobile App Development requirements.
-
-rem lu: May-18-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/jonathan-r-jones/mobile-app.git
-
-exit /b
-
-
-
-:_
-
-:moca
-
-set fp=* Monkey cache.
-
-rem lu: May-18-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/jamesmontemagno/monkey-cache.git
-
-exit /b
-
-
-
-:_
-
-:cake
-
-set fp=* Cake sample.
-
-rem lu: May-21-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/lprichar/CakeSample
 
 exit /b
 
