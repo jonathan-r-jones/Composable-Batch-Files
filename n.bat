@@ -97,7 +97,6 @@ echo            m6  c:\projects\netbeans\mercury6
 echo   nb [or] prj  c:\projects\netbeans
 echo            no  Notepad
 echo           npp  Notepad++
-rem qq-1
 echo            pf  c:\program files
 echo       pom_ear  \projects\netbeans\mercury6\Mercury-ear\pom.xml
 echo       pom_ejb  \projects\netbeans\mercury6\Mercury-ejb\pom.xml
@@ -2583,15 +2582,21 @@ exit /b
 
 ::_
 
+:bug
+
 :xam_sam
 
 set fp=* Xamarin Forms Samples.
 
 rem Active repo.
 
+rem Bugsweeper
+
 rem lu: Mar-1-2018
 
 echo %fp%
+
+set cbf_path=%aa%\Xamarin\xamarin-forms-samples
 
 set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
 
@@ -2704,6 +2709,24 @@ echo %fp%
 set cbf_path=%aa%\xamarin\first-mobile-app-Jonathan
 
 set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
+
+exit /b
+
+
+
+::_
+
+:hwp
+
+set fp=* Hello world prototype.
+
+rem lu: May-30-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\xaml_prototype
+
+set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
 
 exit /b
 

@@ -44,7 +44,7 @@ set fp=* Detect an existing folder in the first parameter.
 
 if exist "%1" (
   echo.
-  echo Existing child folder.
+  echo * Existing child folder.
   cd %1
   exit /b
 )
