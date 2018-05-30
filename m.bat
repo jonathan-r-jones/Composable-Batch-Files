@@ -2995,7 +2995,7 @@ echo   col  Reset the dos window color.
 echo    cy  Copy file(s).
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
-echo    ed  Filename-centric way of editing a file with optional app. param.
+echo    ed  Edit a file. Works similar to Surf (sf).
 echo   env  Show the state of the CBF envrionment variables.
 echo     g  Perform Git-related tasks.
 echo     h  Perform Sencha-related tasks.
