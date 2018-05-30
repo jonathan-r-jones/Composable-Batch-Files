@@ -25,9 +25,9 @@ if "%~1" == "help" goto help
 set fp=* Main function.
 
 if "%~1" == "" (
-  call ea np
+  call ea npp
 ) else (
-  call ed %~1 np
+  call ed %~1 npp
 )
 
 exit /b
