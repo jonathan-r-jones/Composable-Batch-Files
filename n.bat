@@ -1922,11 +1922,9 @@ exit /b
 
 :_
 
-:ed
-
 :edge
 
-set fp=Microsoft Edge.
+set fp=* Microsoft Edge.
 
 rem lu: Feb-7-2018
 
@@ -2616,6 +2614,8 @@ exit /b
 
 
 ::_
+
+:ed
 
 :bk
 

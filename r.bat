@@ -65,11 +65,13 @@ set fp=* Main function.
 
 if "%cbf_application%" == "microsoft-edge" goto micorosoft_edge_special_case
 
-if "%cbf_parameter%" == "" call start "my title" "%cbf_application%"
-if "%cbf_parameter%" == "" exit /b
+if "%cbf_parameter%" == "" (
+  call start "my title" "%cbf_application%"
+  exit /b
+)
 
-if not "%cbf_parameter%" == "" call start "my title" "%cbf_application%" "%cbf_parameter%"
-if not "%cbf_parameter%" == "" exit /b
+call start "my title" "%cbf_application%" "%cbf_parameter%"
+exit /b
 
 
 
@@ -79,10 +81,12 @@ set fp=* Use special syntax for Microsoft Edge.
 
 :micorosoft_edge_special_case
 
-if "%cbf_parameter%" == "" call start "my title" "%cbf_application%:"
-if "%cbf_parameter%" == "" exit /b
+if "%cbf_parameter%" == "" (
+  call start "my title" "%cbf_application%:"
+  exit /b
+)
 
-if not "%cbf_parameter%" == "" call start "my title" "%cbf_application%:""%cbf_parameter%"
+call start "my title" "%cbf_application%:""%cbf_parameter%"
 
 exit /b
 
