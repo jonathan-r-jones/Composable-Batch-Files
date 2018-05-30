@@ -2974,7 +2974,7 @@ echo   col  Reset the dos window color.
 echo    cy  Copy file(s).
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
-echo    ed  Edit a file. Works similar to Surf (sf).
+echo    ed  Edit a file. Emulated Surf (sf).
 echo   env  Show the state of the CBF envrionment variables.
 echo     g  Perform Git-related tasks.
 echo     h  Perform Sencha-related tasks.
@@ -2991,6 +2991,8 @@ echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
 echo     s  SQL/Database, including LDAP, related tasks.
 echo    sf  Surf to websites.
+echo   sln  Open a Visual Studio solution. Emulated ACP.
+rem qq-1
 echo    sm  Run Sublime.
 echo     t  Testing, experimenting and developing new batch file functions.
 echo    tk  Wrapper around taskkill command.
