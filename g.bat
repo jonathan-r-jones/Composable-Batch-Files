@@ -841,76 +841,6 @@ exit /b
 
 :_
 
-:roll_back_2
-
-set fp=* Roll back changes by 1 id number version.
-
-rem Creation Date: Feb-13-2017
-
-echo %fp%
-echo.
-  
-rem git reset --hard "HEAD"
-@echo on
-git reset --hard "HEAD~2"
-@echo off
-
-exit /b
-
-
-
-:_
-
-:uncommit
-
-:uncommit_local
-
-set fp=* Uncommit local changes.
-
-rem Creation Date: May-3-2017
-
-echo %fp%
-echo.
-  
-git reset --hard "HEAD~1"
-
-exit /b
-
-
-
-:_
-
-:roll_back
-
-set fp=* Roll back to a specific version. Detached head means you are no longer on a branch, you have checked out a single commit in the history.
-
-rem fud: Aug-15-2017 (skw label, tag, roll back to a particular version)
-
-rem Note: Running this will detach your head. To reattach head, run reattach_head.
-
-rem I validated that this works on ForGitTesting on Aug-17-2017.
-
-echo %fp%
-
-rem git checkout a18e821
-rem git checkout 2691f3b
-
-rem S6 @ Jul-17-2017
-rem git checkout a703855
-rem git checkout a18e821
-
-rem S6 @ Jul-10-2017
-rem git checkout 959308e 
-
-rem S6 @ Aug-28-2017
-git checkout b3444ed
-
-exit /b
-
-
-
-:_
-
 :reattach
 
 :reattach_head
@@ -1016,23 +946,6 @@ exit /b
 
 :_
 
-:clean_report
-
-set fp=* Report on untracked files.
-
-rem lu: Sep-14-2017
-
-echo %fp%
-echo.
-
-git clean -n
-
-exit /b
-
-
-
-:_
-
 :sr
 
 set fp=* Check remote status.
@@ -1124,27 +1037,6 @@ if "%~2" == "" echo Error: A commit description is required.
 if "%~2" == "" exit /b
 
 git commit -m %2
-
-exit /b
-
-
-
-:_
-
-:rut
-
-:clean
-
-set fp=* Remove untracked files. Use with caution.
-
-rem How do you tell git to delete untracked files?: skw
-
-rem lu: Sep-14-2017
-
-echo %fp%
-echo.
-
-git clean -f
 
 exit /b
 
@@ -1662,207 +1554,6 @@ exit /b
 
 
 
-:_+ Revert Functions
-
-
-
-::_
-
-:rv_local
-
-set fp=* If you don't care about any local changes and just want a copy from the repository.
-
-rem Function Creation Date: Jan-30-2017
-
-echo %fp%
-echo.
-
-rem This didn't seem to work on Jan-31-2017.
-
-git reset --hard HEAD
-echo.
-git clean -f
-git pull
-
-exit /b
-
-
-
-::_
-
-:roll_back_repo
-
-:roll_back_server
-
-set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
-
-rem Creation Date: Aug-3-2017
-
-rem How do you roll back in git?
-
-rem This worked on David's machine on Aug-3-2017.
-
-echo %fp%
-echo.
-  
-@echo on
-git push -f
-@echo off
-
-exit /b
-
-
-
-::_
-
-:rvall
-
-set fp=* Revert all changes from m6 and s6. Note: This is a powerfull command so exercise CAUTION!
-
-rem Creation Date: May-5-2017
-
-echo %fp%
-echo.
-
-call %0 delete_pngs
-
-call %0 delete_pngs_2
-
-cd c:\projects\netbeans\mercury6
-
-call %0 rvfd
-
-call %0 clean
-
-cd c:\projects\netbeans\sencha
-
-call %0 rvfd
-
-call %0 clean
-
-exit /b
-
-
-
-::_
-
-:rvallp
-
-set fp=* Revert all PERSISTENT changes from m6 and s6.
-
-rem Creation Date: Aug-30-2017
-
-echo %fp%
-  
-call %0 delete_pngs
-
-call %0 delete_pngs_2
-
-call %0 rvp
-
-exit /b
-
-
-
-::_
-
-:rvp
-
-set fp=* Revert persistent files. Revert files in need of constant reversion.
-
-rem lu: Aug-31-2017
-
-echo %fp%
-  
-cd \projects\netbeans\sencha\html5application\public_html
-
-git checkout bootstrap.css
-git checkout bootstrap.js
-git checkout classic.json
-git checkout classic.jsonp
-git checkout modern.json
-git checkout modern.jsonp
-git checkout sass/example/bootstrap.js
-git checkout sass/example/bootstrap.json
-git checkout sass/example/bootstrap.jsonp
-git checkout sass/example/example.css
-
-cd c:\projects\netbeans\sencha
-
-git checkout HTML5Application/nbproject/private/private.xml
-git checkout HTML5Application/public_html/classic/src/view/dashboard/ContactsWidget.js
-
-git checkout HTML5Application/public_html/modern/src/utils/NetConfig.js
-git checkout HTML5Application/public_html/classic/src/utils/NetConfig.js
-
-exit /b
-
-
-
-::_
-
-:b
-
-:base
-
-set fp=* Return to baseline configuration after a build. Exercise caution as this will destroy some local changes.
-
-rem lu: Aug-31-2017
-
-echo %fp%
-
-call %0 rvall
-
-call %0 acp
-
-cls
-
-call %0 ss
-
-exit /b
-
-
-
-::_
-
-:rsf
-
-:rvsf
-
-set fp=* Revert single file.
-
-rem lu: Jan-23-2018
-
-rem revert single file: skw
-
-echo %fp%
-  
-git checkout %2
-
-exit /b
-
-
-
-::_
-
-:rv
-
-:rvfd
-
-set fp=* Revert folder. Revert all changes from this folder only.
-
-rem specific folder: skw
-
-rem Creation Date: May-5-2017
-
-echo %fp%
- 
-git checkout *.*
-
-exit /b
-
-
-
 :_+ Author
 
 
@@ -2148,6 +1839,331 @@ echo %fp%
 
 echo.
 git remote -v
+
+exit /b
+
+
+
+:_+ Roll Back and Revert Functions
+
+
+
+::_
+
+:roll_back_2
+
+set fp=* Roll back changes by 1 id number version.
+
+rem Creation Date: Feb-13-2017
+
+echo %fp%
+echo.
+  
+rem git reset --hard "HEAD"
+@echo on
+git reset --hard "HEAD~2"
+@echo off
+
+exit /b
+
+
+
+::_
+
+:uncommit
+
+:uncommit_local
+
+set fp=* Uncommit local changes.
+
+rem Creation Date: May-3-2017
+
+echo %fp%
+echo.
+  
+git reset --hard "HEAD~1"
+
+exit /b
+
+
+
+::_
+
+:roll_back
+
+set fp=* Roll back to a specific version. Detached head means you are no longer on a branch, you have checked out a single commit in the history.
+
+rem fud: Aug-15-2017 (skw label, tag, roll back to a particular version)
+
+rem Note: Running this will detach your head. To reattach head, run reattach_head.
+
+rem I validated that this works on ForGitTesting on Aug-17-2017.
+
+echo %fp%
+
+rem git checkout a18e821
+rem git checkout 2691f3b
+
+rem S6 @ Jul-17-2017
+rem git checkout a703855
+rem git checkout a18e821
+
+rem S6 @ Jul-10-2017
+rem git checkout 959308e 
+
+rem S6 @ Aug-28-2017
+git checkout b3444ed
+
+exit /b
+
+
+
+::_
+
+:rv_local
+
+set fp=* If you don't care about any local changes and just want a copy from the repository.
+
+rem Function Creation Date: Jan-30-2017
+
+echo %fp%
+echo.
+
+rem This didn't seem to work on Jan-31-2017.
+
+git reset --hard HEAD
+echo.
+git clean -f
+git pull
+
+exit /b
+
+
+
+::_
+
+:roll_back_repo
+
+:roll_back_server
+
+set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
+
+rem Creation Date: Aug-3-2017
+
+rem How do you roll back in git?
+
+rem This worked on David's machine on Aug-3-2017.
+
+echo %fp%
+echo.
+  
+@echo on
+git push -f
+@echo off
+
+exit /b
+
+
+
+::_
+
+:rvall
+
+set fp=* Revert all changes from m6 and s6. Note: This is a powerfull command so exercise CAUTION!
+
+rem Creation Date: May-5-2017
+
+echo %fp%
+echo.
+
+call %0 delete_pngs
+
+call %0 delete_pngs_2
+
+cd c:\projects\netbeans\mercury6
+
+call %0 rvfd
+
+call %0 clean
+
+cd c:\projects\netbeans\sencha
+
+call %0 rvfd
+
+call %0 clean
+
+exit /b
+
+
+
+::_
+
+:rvallp
+
+set fp=* Revert all PERSISTENT changes from m6 and s6.
+
+rem Creation Date: Aug-30-2017
+
+echo %fp%
+  
+call %0 delete_pngs
+
+call %0 delete_pngs_2
+
+call %0 rvp
+
+exit /b
+
+
+
+::_
+
+:rvp
+
+set fp=* Revert persistent files. Revert files in need of constant reversion.
+
+rem lu: Aug-31-2017
+
+echo %fp%
+  
+cd \projects\netbeans\sencha\html5application\public_html
+
+git checkout bootstrap.css
+git checkout bootstrap.js
+git checkout classic.json
+git checkout classic.jsonp
+git checkout modern.json
+git checkout modern.jsonp
+git checkout sass/example/bootstrap.js
+git checkout sass/example/bootstrap.json
+git checkout sass/example/bootstrap.jsonp
+git checkout sass/example/example.css
+
+cd c:\projects\netbeans\sencha
+
+git checkout HTML5Application/nbproject/private/private.xml
+git checkout HTML5Application/public_html/classic/src/view/dashboard/ContactsWidget.js
+
+git checkout HTML5Application/public_html/modern/src/utils/NetConfig.js
+git checkout HTML5Application/public_html/classic/src/utils/NetConfig.js
+
+exit /b
+
+
+
+::_
+
+:b
+
+:base
+
+set fp=* Return to baseline configuration after a build. Exercise caution as this will destroy some local changes.
+
+rem lu: Aug-31-2017
+
+echo %fp%
+
+call %0 rvall
+
+call %0 acp
+
+cls
+
+call %0 ss
+
+exit /b
+
+
+
+::_
+
+:rsf
+
+:rvsf
+
+set fp=* Revert single file.
+
+rem lu: Jan-23-2018
+
+rem revert single file: skw
+
+echo %fp%
+  
+git checkout %2
+
+exit /b
+
+
+
+::_
+
+:clean_report
+
+set fp=* Report on untracked files.
+
+rem lu: Sep-14-2017
+
+echo %fp%
+
+git clean -n
+
+exit /b
+
+
+
+::_
+
+:rv
+
+:rvfd
+
+set fp=* Revert folder. Revert all changes from this folder only.
+
+rem blow away local changes, specific folder: skw
+
+rem Last successful run date: May-30-2018
+
+rem Last Updated: May-30-2018
+
+echo %fp%
+ 
+git checkout *.*
+
+exit /b
+
+
+
+::_
+
+:rut
+
+:clean
+
+set fp=* Remove untracked folders and files. Use with caution.
+
+rem lu: May-30-2018
+
+echo %fp%
+
+git clean -d -f
+
+exit /b
+
+
+
+::_
+
+:ba
+
+set fp=* Blow away local changes. Use with caution.
+
+rem lu: May-30-2018
+
+echo %fp%
+
+call %0 rv
+
+call %0 rut
 
 exit /b
 
