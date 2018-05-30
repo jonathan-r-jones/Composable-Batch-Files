@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* A filename-centric way of editing a file.
+set filep=* Edit a file.
 
 
 
@@ -59,10 +59,10 @@ echo.
 echo %filep%
 
 echo.
-echo Filename stands for: Edit File.
+echo Filename stands for: Edit a file.
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: May-30-2018
 
 echo.
 echo Usage: %0 [Parameter 1]

@@ -34,7 +34,7 @@ echo.
 echo %filep%
 
 echo.
-echo Last Updated: Apr-25-2018
+echo Last Updated: May-30-2018
 
 echo.
 echo Filename stands for: SurF.
@@ -46,7 +46,7 @@ echo.
 echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.
 
 echo.
-echo Parameter 2: Browser (Application Nickname), which is not necessary if you wish to use the the default browser.
+echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
 
 exit /b
 
