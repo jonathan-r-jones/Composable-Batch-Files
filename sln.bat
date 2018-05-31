@@ -48,10 +48,10 @@ goto main_function
 :help
 
 echo.
-echo Filename stands for: Add/Commit/Push.
+echo Filename stands for: Run SoLutioN.
 
 echo.
-echo Last Updated: May-30-2018
+echo Last Updated: May-31-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -67,7 +67,7 @@ exit /b
 
 :main_function
 
-set fp=* %filep%
+set fp=%filep%
 
 echo %fp%
 

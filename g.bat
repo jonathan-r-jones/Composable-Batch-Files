@@ -171,25 +171,6 @@ exit /b
 
 :_
 
-:l
-
-:log
-
-set fp=* 7. Read log.
-
-echo %fp%
-
-git log>"c:\a\git_log.txt"
-
-"%ProgramFiles(x86)%\Multi-Edit 2008\Mew32.exe" "c:\a\git_log.txt"
-
-
-exit /b
-
-
-
-:_
-
 :git_help
 
 set fp=* 8. Read help.
@@ -2164,6 +2145,25 @@ echo %fp%
 call %0 rv
 
 call %0 rut
+
+exit /b
+
+
+
+:_
+
+:l
+
+:log
+
+set fp=* 7. Read log.
+
+echo %fp%
+
+git log>"c:\a\git_log.txt"
+
+"%ProgramFiles(x86)%\Multi-Edit 2008\Mew32.exe" "c:\a\git_log.txt"
+
 
 exit /b
 

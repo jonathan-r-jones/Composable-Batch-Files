@@ -2644,6 +2644,24 @@ exit /b
 
 ::_
 
+:ed2
+
+set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt github page.
+
+rem lu: May-31-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book
+
+set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+
+exit /b
+
+
+
+::_
+
 :hw
 
 set fp=Hello World.
