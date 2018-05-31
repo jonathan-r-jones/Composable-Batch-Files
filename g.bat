@@ -1804,27 +1804,6 @@ exit /b
 
 
 
-:_
-
-:src
-
-:sour
-
-:source
-
-set fp=* Identify source repository of your current folder.
-
-rem lu: May-9-2018
-
-echo %fp%
-
-echo.
-git remote -v
-
-exit /b
-
-
-
 :_+ Roll Back and Revert Functions
 
 
@@ -2150,13 +2129,17 @@ exit /b
 
 
 
-:_
+:_+ Metadata
+
+
+
+::_
 
 :l
 
 :log
 
-set fp=* 7. Read log.
+set fp=* 7. Read log. Among other things, you can use this to see when a GitHub repo was last updated.
 
 echo %fp%
 
@@ -2164,6 +2147,27 @@ git log>"c:\a\git_log.txt"
 
 "%ProgramFiles(x86)%\Multi-Edit 2008\Mew32.exe" "c:\a\git_log.txt"
 
+
+exit /b
+
+
+
+::_
+
+:src
+
+:sour
+
+:source
+
+set fp=* Identify source repository of your current folder.
+
+rem lu: May-9-2018
+
+echo %fp%
+
+echo.
+git remote -v
 
 exit /b
 

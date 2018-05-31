@@ -2624,6 +2624,24 @@ exit /b
 
 :ed
 
+set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt github page.
+
+rem lu: May-31-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book
+
+set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+
+exit /b
+
+
+
+::_
+
+:ed2
+
 :bk
 
 :book
@@ -2637,24 +2655,6 @@ echo %fp%
 set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-Second-Edition
 
 set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
-
-exit /b
-
-
-
-::_
-
-:ed2
-
-set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt github page.
-
-rem lu: May-31-2018
-
-echo %fp%
-
-set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book
-
-set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
 
 exit /b
 
