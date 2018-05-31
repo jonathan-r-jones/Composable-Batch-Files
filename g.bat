@@ -290,24 +290,6 @@ exit /b
 
 :_
 
-:too_long
-
-set fp=* Account for long filenames in a folder.
-
-rem Creation Date: Dec-9-2016
-
-rem skw filename too long github
-
-echo %fp%
-
-git config core.longpaths true
-
-m exit
-
-
-
-:_
-
 :pull62
 
 set fp=* Pull Clean 62.
@@ -441,8 +423,7 @@ rem fcd: Feb-28-2017
 
 echo %fp%
 
-
-m exitp
+exit /b
 
 
 
@@ -793,7 +774,7 @@ cd c:\mercury\documentation
 
 call %0 acp
 
-m exit
+exit /b
 
 
 
@@ -1219,7 +1200,7 @@ call td cbf
 
 call %0 acp
 
-m exit
+exit /b
 
 
 
@@ -1530,79 +1511,6 @@ rem fcd: Feb-16-2017
 echo %fp%
 
 git add .gitignore
-
-exit /b
-
-
-
-:_+ Author
-
-
-
-::_
-
-:au
-
-:author_git
-
-set fp=* Configure GitHub author and email. Note: Please don't confuse this with the Bitbucket author signature.
-
-echo %fp%
-
-git config --global user.name "Jonathan R. Jones"
-git config --global user.email "jonathan.r.jones.3@gmail.com"
-
-exit /b
-
-
-
-::_
-
-:st
-
-:store
-
-set fp=* Store credentials so that Git stops asking for credentials after each push.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-
-git config credential.helper store
-
-exit /b
-
-
-
-::_
-
-:author_bit
-
-set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
-
-echo %fp%
-
-@echo on
-git config --global user.name "Jonathan17"
-git config --global user.email "jonathan.r.jones@nesassociates.com"
-@echo off
-
-exit /b
-
-
-
-::_
-
-:author_devops
-
-set fp=* Configure BitBucket author and email.
-
-echo %fp%
-
-@echo on
-git config --global user.name "mercury_devops"
-git config --global user.email "nes.mercury@nesassociates.com"
-@echo off
 
 exit /b
 
@@ -2168,6 +2076,119 @@ echo %fp%
 
 echo.
 git remote -v
+
+exit /b
+
+
+
+:_+ Author
+
+
+
+::_
+
+:au
+
+:author_git
+
+set fp=* Configure GitHub author and email. Note: Please don't confuse this with the Bitbucket author signature.
+
+echo %fp%
+
+git config --global user.name "Jonathan R. Jones"
+git config --global user.email "jonathan.r.jones.3@gmail.com"
+
+exit /b
+
+
+
+::_
+
+:st
+
+:store
+
+set fp=* Store credentials so that Git stops asking for credentials after each push.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+git config credential.helper store
+
+exit /b
+
+
+
+::_
+
+:author_bit
+
+set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
+
+echo %fp%
+
+@echo on
+git config --global user.name "Jonathan17"
+git config --global user.email "jonathan.r.jones@nesassociates.com"
+@echo off
+
+exit /b
+
+
+
+::_
+
+:author_devops
+
+set fp=* Configure BitBucket author and email.
+
+echo %fp%
+
+@echo on
+git config --global user.name "mercury_devops"
+git config --global user.email "nes.mercury@nesassociates.com"
+@echo off
+
+exit /b
+
+
+
+:_+ Configuration Settings
+
+
+
+::_
+
+:too_long
+
+set fp=* Account for long filenames in a folder.
+
+rem Creation Date: Dec-9-2016
+
+rem skw filename too long github
+
+echo %fp%
+
+git config core.longpaths true
+
+exit /b
+
+
+
+::_
+
+:crlf
+
+set fp=* When it comes to line endings, emulate what RestSharp has adopted.
+
+rem See: https://github.com/restsharp/RestSharp/blob/develop/CONTRIBUTING.md
+
+rem lu: May-31-2018
+
+echo %fp%
+
+git config --global core.autocrlf true
 
 exit /b
 
