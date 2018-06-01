@@ -574,22 +574,6 @@ exit /b
 
 :_
 
-:batt
-
-set fp=Battery solution.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_filename=d:\aa\james_montemagno_battery_plugin\src\Battery.sln
-
-exit /b
-
-
-
-:_
-
 :j1
 
 set fp=* J1.txt.
@@ -1560,22 +1544,6 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_url=http://www.cnn.com
-
-exit /b
-
-
-
-:_
-
-:batt
-
-set fp=James Montemagno Battery Plugin.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
 
 exit /b
 
@@ -2564,6 +2532,22 @@ exit /b
 
 ::_
 
+:jmplug
+
+set fp=James Montemagno's Xamarin Plugins.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
+
+exit /b
+
+
+
+::_
+
 :plug
 
 :xplug
@@ -2599,22 +2583,6 @@ echo %fp%
 set cbf_path=%aa%\Xamarin\xamarin-forms-samples
 
 set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
-
-exit /b
-
-
-
-::_
-
-:jmplug
-
-set fp=James Montemagno's Xamarin Plugins.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
 
 exit /b
 
@@ -2745,6 +2713,38 @@ echo %fp%
 set cbf_path=%aa%\Xamarin\xaml_prototype
 
 set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
+
+exit /b
+
+
+
+::_
+
+:bat1
+
+set fp=Battery solution.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_filename=d:\aa\james_montemagno_battery_plugin\src\Battery.sln
+
+exit /b
+
+
+
+::_
+
+:bat2
+
+set fp=James Montemagno Battery Plugin.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
 
 exit /b
 

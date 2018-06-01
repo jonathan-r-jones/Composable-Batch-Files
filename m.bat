@@ -2872,23 +2872,6 @@ goto exitb
 
 
 
-:_
-
-:rd
-
-set fp=* Remove directory %2.
-
-rem lu: Jan-31-2018
-
-echo.
-echo %fp%
-
-rd /q /s %2
-
-goto exitb
-
-
-
 :_+ NPM
 
 
@@ -3179,6 +3162,22 @@ set /p filename=<%tmp%\filename.txt
 rem echo filename: %filename%
 
 start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
+
+goto exitb
+
+
+
+:_
+
+:rd
+
+set fp=* Remove directory %2.
+
+rem lu: Jun-1-2018
+
+echo %fp%
+
+rd /q /s %2
 
 goto exitb
 
