@@ -2528,19 +2528,30 @@ exit /b
 
 :_+ Xamarin-Related
 
+rem (!xaba, !baxa)
+
 
 
 ::_
 
-:jmplug
+:xs
 
-set fp=James Montemagno's Xamarin Plugins.
+:xam_sam
 
-rem lu: Jan-31-2018
+set fp=* Xamarin Forms Samples.
+
+rem Repository Data
+rem   last updated: May-31-2018
+rem       watchers:  524
+rem           star:  2,267
+
+rem lu: Jun-1-2018
 
 echo %fp%
 
-set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
+set cbf_path=%aa%\Xamarin\xamarin-forms-samples
+
+set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
 
 exit /b
 
@@ -2556,6 +2567,11 @@ set fp=* Plugins. Open Source Components for Xamarin. This is an active reposito
 
 rem lu: Jan-31-2018
 
+rem Repository Data
+rem   last updated:  Jun-1-2018
+rem       watchers:  312
+rem           star:  1,241
+
 echo %fp%
 
 set cbf_url=https://github.com/Xamarin/Plugins.git
@@ -2566,23 +2582,56 @@ exit /b
 
 ::_
 
-:bug
+:jmplug
 
-:xam_sam
+set fp=James Montemagno's Xamarin Plugins.
 
-set fp=* Xamarin Forms Samples.
+rem lu: Jun-1-2018
 
-rem Active repo.
+rem Repository Data
+rem   last updated:  Jan-10-2018
+rem       watchers:  139
+rem           star:  905
 
-rem Bugsweeper
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\Xamarin.Plugins
+
+set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
+
+exit /b
+
+
+
+::_
+
+:hwp
+
+set fp=* Hello world prototype.
+
+rem lu: May-30-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\xaml_prototype
+
+set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
+
+exit /b
+
+
+
+::_
+
+:xa
+
+set fp=* Xamarin folder.
 
 rem lu: Mar-1-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\xamarin-forms-samples
-
-set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
+set cbf_path=%aa%\xamarin
 
 exit /b
 
@@ -2630,38 +2679,6 @@ exit /b
 
 ::_
 
-:hw
-
-set fp=Hello World.
-
-rem lu: Jan-16-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
-
-exit /b
-
-
-
-::_
-
-:xa
-
-set fp=* Xamarin folder.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-
-set cbf_path=%aa%\xamarin
-
-exit /b
-
-
-
-::_
-
 :fma1
 
 set fp=* Jesse Liberty's Xamarin Pluralsight course.
@@ -2702,24 +2719,6 @@ exit /b
 
 ::_
 
-:hwp
-
-set fp=* Hello world prototype.
-
-rem lu: May-30-2018
-
-echo %fp%
-
-set cbf_path=%aa%\Xamarin\xaml_prototype
-
-set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
-
-exit /b
-
-
-
-::_
-
 :bat1
 
 set fp=Battery solution.
@@ -2745,6 +2744,40 @@ rem lu: Jan-31-2018
 echo %fp%
 
 set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
+
+exit /b
+
+
+
+::_
+
+:hw
+
+set fp=Hello World.
+
+rem lu: Jan-16-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
+
+exit /b
+
+
+
+::_
+
+:bugs
+
+set fp=* Bugsweeper.
+
+rem Bugsweeper (!bugs)
+
+rem lu: Jun-1-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\xamarin-forms-samples\bugsweeper
 
 exit /b
 
