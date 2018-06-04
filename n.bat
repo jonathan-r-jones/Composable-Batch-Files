@@ -2719,29 +2719,15 @@ exit /b
 
 ::_
 
-:bat1
+:batt
 
-set fp=Battery solution.
+set fp=* James' Battery solution.
 
 rem lu: Jan-31-2018
 
 echo %fp%
 
 set cbf_filename=d:\aa\james_montemagno_battery_plugin\src\Battery.sln
-
-exit /b
-
-
-
-::_
-
-:bat2
-
-set fp=James Montemagno Battery Plugin.
-
-rem lu: Jan-31-2018
-
-echo %fp%
 
 set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
 
