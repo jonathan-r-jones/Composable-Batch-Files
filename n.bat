@@ -2719,24 +2719,6 @@ exit /b
 
 ::_
 
-:batt
-
-set fp=* James' Battery solution.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_filename=d:\aa\james_montemagno_battery_plugin\src\Battery.sln
-
-set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
-
-exit /b
-
-
-
-::_
-
 :hw
 
 set fp=Hello World.
@@ -2764,6 +2746,72 @@ rem lu: Jun-1-2018
 echo %fp%
 
 set cbf_path=%aa%\Xamarin\xamarin-forms-samples\bugsweeper
+
+exit /b
+
+
+
+::_
+
+:batt
+
+set fp=* James' Battery solution.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\BatteryPlugin
+
+set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
+
+exit /b
+
+
+
+::_
+
+:media
+
+set fp=* James' Media plugin.
+
+rem lu: Jun-4-2018
+
+echo %fp%
+
+set cbf_url=http://github.com/jamesmontemagno/MediaPlugin
+
+exit /b
+
+
+
+:_
+
+:saru
+
+set fp=* Alex' sort and remove usings.
+
+rem lu: Jun-4-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/alexsorokoletov/VisualStudioMac.SortRemoveUsings
+
+exit /b
+
+
+
+:_
+
+:caro
+
+set fp=* Cool carousel.
+
+rem lu: Jun-4-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\xamarin-forms-samples\Navigation\CarouselPage
 
 exit /b
 

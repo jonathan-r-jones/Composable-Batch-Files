@@ -2975,7 +2975,6 @@ echo    rf  Remove folder corresponding to specified CBF path nickname.
 echo     s  SQL/Database, including LDAP, related tasks.
 echo    sf  Surf to websites.
 echo   sln  Open a Visual Studio solution. Emulated ACP.
-rem qq-1
 echo    sm  Run Sublime.
 echo     t  Testing, experimenting and developing new batch file functions.
 echo    tk  Wrapper around taskkill command.

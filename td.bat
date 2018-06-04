@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Transform/change directory.
+set filep=* Transform directory.
 
 echo.
 echo %filep%

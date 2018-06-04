@@ -8,13 +8,8 @@
 
 set filep=* Open a Visual Studio solution.
 
-
-
-:_
-
-set fp=* Add some whitespace.
-
 echo.
+echo %filep%
 
 
 
