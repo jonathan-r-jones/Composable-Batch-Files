@@ -515,18 +515,14 @@ rem This function is because it uses recursive calls into its own file but DOESN
 rem a single goto statement, which is an anti-pattern.
 
 echo %fp%
-echo.
 
-call %0 sba
-echo.
+call td cbf
 
-call %0 sm6
-echo.
+call g s
 
-call %0 ss6
-echo.
+call td ql
 
-col
+call g s
 
 exit /b
 
