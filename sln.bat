@@ -62,10 +62,6 @@ exit /b
 
 :main_function
 
-set fp=%filep%
-
-echo %fp%
-
 rem (!rfsp) (mov2)
 
 call m sln

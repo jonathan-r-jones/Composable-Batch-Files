@@ -2817,4 +2817,36 @@ exit /b
 
 
 
+:_
+
+:xask
+
+set fp=* Xamarin Forms starter kit.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/NowBI/Xamarin-Forms-Mobile-Template
+
+exit /b
+
+
+
+:_
+
+:wa
+
+set fp=* WindowsApps.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_path=%localappdata%\Microsoft\WindowsApps
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
