@@ -1,5 +1,51 @@
 :_
 
+:jmplug
+
+set fp=James_Montemagno_Xamarin_Plugins
+
+rem lu: Jan-31-2018
+
+echo * %fp%
+
+set folder_name=%fp%
+
+call td aa
+
+call un %1
+
+git clone %cbf_url% .\%folder_name%
+
+exit /b
+
+
+
+:_
+
+:batt
+
+set fp=James_Montemagno_Battery_Plugin
+
+rem lu: Jan-31-2018
+
+echo * %fp%
+
+set folder_name=%fp%
+
+call td aa
+
+call un %1
+
+echo.
+
+git clone %cbf_url% .\%folder_name%
+
+exit /b
+
+
+
+:_
+
 @echo off
 
 
@@ -47,21 +93,6 @@ cd /d %parent_folder%
 
 echo.
 cd
-
-
-
-:_
-
-:main_function
-
-set fp=* Main function.
-
-echo.
-git clone %cbf_url%
-
-rem (!rfsp) (mov-2)
-
-exit /b
 
 
 
@@ -623,86 +654,15 @@ exit /b
 
 :_
 
-:cmddemo
+:main_function
 
-set fp=Cmddemo
-
-rem lu: Jan-18-2018
-
-call td aa
-echo.
-          
-set rn=https://github.com/BrendanPluralsight/cmd-demo.git
-
-git clone %rn%
-
-exit /b
-
-
-
-:_
-
-:xplug
-
-set fp=Xamarin_Plugins
-
-rem lu: Jan-18-2018
-
-echo %fp%
-set folder_name=%fp%
-
-call td aa
-echo.
-
-call un %1
-
-git clone %cbf_url% .\%folder_name%
-
-exit /b
-
-
-
-:_
-
-:jmplug
-
-set fp=James_Montemagno_Xamarin_Plugins
-
-rem lu: Jan-31-2018
-
-echo * %fp%
-
-set folder_name=%fp%
-
-call td aa
-
-call un %1
-
-git clone %cbf_url% .\%folder_name%
-
-exit /b
-
-
-
-:_
-
-:batt
-
-set fp=James_Montemagno_Battery_Plugin
-
-rem lu: Jan-31-2018
-
-echo * %fp%
-
-set folder_name=%fp%
-
-call td aa
-
-call un %1
+set fp=* Main function.
+rem qq-1
 
 echo.
+git clone %cbf_url%
 
-git clone %cbf_url% .\%folder_name%
+rem (!rfsp) (mov-2)
 
 exit /b
 

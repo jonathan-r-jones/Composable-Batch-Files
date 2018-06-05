@@ -1,0 +1,39 @@
+:_
+
+:cmddemo
+
+set fp=Cmddemo
+
+rem lu: Jan-18-2018
+
+call td aa
+echo.
+          
+set rn=https://github.com/BrendanPluralsight/cmd-demo.git
+
+git clone %rn%
+
+exit /b
+
+
+
+:_
+
+:xplug
+
+set fp=Xamarin_Plugins
+
+rem lu: Jan-18-2018
+
+echo %fp%
+set folder_name=%fp%
+
+call td aa
+echo.
+
+call un %1
+
+git clone %cbf_url% .\%folder_name%
+
+exit /b
+
