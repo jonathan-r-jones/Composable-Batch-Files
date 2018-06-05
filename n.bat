@@ -2819,7 +2819,7 @@ exit /b
 
 :_
 
-:xask
+:xsk
 
 set fp=* Xamarin Forms starter kit.
 
@@ -2844,6 +2844,38 @@ rem lu: Jun-5-2018
 echo %fp%
 
 set cbf_path=%localappdata%\Microsoft\WindowsApps
+
+exit /b
+
+
+
+:_
+
+:xu
+
+set fp=* Xamarin University.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/XamarinUniversity
+
+exit /b
+
+
+
+:_
+
+:xul1
+
+set fp=* BUILD 2018 Workshops by Xamarin University.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/XamarinUniversity/build2018-labs.git
 
 exit /b
 
