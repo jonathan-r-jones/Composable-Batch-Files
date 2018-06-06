@@ -2866,7 +2866,6 @@ echo %fp%
 set cbf_path=%aa%\xamarin\xamarin_university
 
 set cbf_url=https://github.com/XamarinUniversity
-rem qq-1
 
 exit /b
 
@@ -2883,7 +2882,6 @@ rem lu: Jun-5-2018
 echo %fp%
 
 set cbf_url=https://university.xamarin.com/lightninglectures
-rem qq-1
 
 exit /b
 
@@ -2909,7 +2907,7 @@ exit /b
 
 :xu_all
 
-set fp=* BUILD 2018 Workshops by Xamarin University.
+set fp=* XU all exercises.
 
 rem lu: Jun-5-2018
 
@@ -2948,6 +2946,22 @@ rem lu: Jun-5-2018
 echo %fp%
 
 set cbf_url=https://github.com/Krumelur/XamBlob
+
+exit /b
+
+
+
+::_
+
+:xu_205
+
+set fp=* XU Course 205.
+
+rem lu: Jun-6-2018
+
+echo %fp%
+
+set cbf_path=C:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS205
 
 exit /b
 

@@ -3149,16 +3149,14 @@ exit /b
 
 :sln
 
-set fp=* Run the solution in the current folder.
+set fp=* Run the Visual Studio solution in the current folder.
 
-rem lu: May-30-2018
+rem lu: Jun-6-2018
 
 echo %fp%
 
 dir /b *.sln>%tmp%\filename.txt
 set /p filename=<%tmp%\filename.txt
-
-rem echo filename: %filename%
 
 start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
 

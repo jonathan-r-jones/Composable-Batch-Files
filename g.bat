@@ -58,6 +58,7 @@ echo -------------  -----------------------------------------------------
 echo             a  Add changes.
 echo           asf  Add single file.
 echo             c  Commit changes for only those files that were staged.
+echo         cu_cn  Custom clone. For basic cloning, use cn.bat.
 echo           ghg  Git help git.
 echo           ghs  Git help for specific git command.
 echo          pull  Get-latest.
