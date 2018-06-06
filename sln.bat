@@ -29,7 +29,6 @@ set fp=* If it is provided, go to percent 1.
 
 if not "%~1" == "" (
   call td %~1
-  echo.
 )
 
 goto main_function
