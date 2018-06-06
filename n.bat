@@ -2873,6 +2873,23 @@ exit /b
 
 ::_
 
+:xul
+
+set fp=* Xamarin lightning talks.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://university.xamarin.com/lightninglectures
+rem qq-1
+
+exit /b
+
+
+
+::_
+
 :xul1
 
 set fp=* BUILD 2018 Workshops by Xamarin University.
@@ -2921,22 +2938,6 @@ exit /b
 
 ::_
 
-:xl_flex
-
-set fp=* Xamarin.Forms 3.0 Flex Layout
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
 :xl_af
 
 set fp=* Azure functions.
@@ -2946,166 +2947,6 @@ rem lu: Jun-5-2018
 echo %fp%
 
 set cbf_url=https://github.com/Krumelur/XamBlob
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
-
-exit /b
-
-
-
-::_
-
-:xl_
-
-set fp=* 
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=
 
 exit /b
 
