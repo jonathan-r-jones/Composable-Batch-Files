@@ -2866,6 +2866,7 @@ echo %fp%
 set cbf_path=%aa%\xamarin\xamarin_university
 
 set cbf_url=https://github.com/XamarinUniversity
+rem qq-1
 
 exit /b
 
