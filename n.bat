@@ -2849,7 +2849,11 @@ exit /b
 
 
 
-:_
+:_+ Xamarin University
+
+
+
+::_
 
 :xu
 
@@ -2859,13 +2863,15 @@ rem lu: Jun-5-2018
 
 echo %fp%
 
+set cbf_path=%aa%\xamarin\xamarin_university
+
 set cbf_url=https://github.com/XamarinUniversity
 
 exit /b
 
 
 
-:_
+::_
 
 :xul1
 
@@ -2876,6 +2882,230 @@ rem lu: Jun-5-2018
 echo %fp%
 
 set cbf_url=https://github.com/XamarinUniversity/build2018-labs.git
+
+exit /b
+
+
+
+::_
+
+:xu_all
+
+set fp=* BUILD 2018 Workshops by Xamarin University.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/XamarinUniversity/AllCourseExercises.git
+
+exit /b
+
+
+
+::_
+
+:xl_css
+
+set fp=* Xamarin.Forms 3.0 CSS
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jamcneil/XamarinFormsCSS
+
+exit /b
+
+
+
+::_
+
+:xl_flex
+
+set fp=* Xamarin.Forms 3.0 Flex Layout
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_af
+
+set fp=* Azure functions.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/Krumelur/XamBlob
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
+
+exit /b
+
+
+
+::_
+
+:xl_
+
+set fp=* 
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=
 
 exit /b
 

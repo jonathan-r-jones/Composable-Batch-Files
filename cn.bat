@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Clone a Git repository.
+set filep=* Clone a Git repository - basic version.
 
 echo.
 echo %filep%                         
