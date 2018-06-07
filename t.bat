@@ -6924,19 +6924,6 @@ exit /b
 
 :_
 
-:code_execution_area
-
-set fp=* Execution area. Code below here runs.
-
-rem echo.
-rem echo %fp%
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :folder_exists_2
 
 set fp=* Testing whether a folder exists 2.
@@ -6956,7 +6943,31 @@ exit /b
 
 
 
-:_+ Testing Inequality (imprimatur)
+:_+ Imprimaturs (!imprs)
+
+
+
+::_
+
+:ml
+
+:multiline
+
+set fp=* Ho to do multiline echo statements.
+
+rem lu: Jun-7-2018 (!multiline)
+
+echo %fp%
+
+set filep=* Chicken Blah blah blahblah Blah blah blahblahBlah blah blahblahBlah blah
+set filep=%filep% 2 222 22 22 22 22 2 2 2 22  22 blah 222 22 2 to boldly go where
+set filep=%filep% 3 3333 asdfasdfasdfasdf2 to boldly go where
+set filep=%filep% no bald man has gone before
+
+echo.
+echo %filep%
+
+exit /b
 
 
 
@@ -6965,7 +6976,6 @@ exit /b
 :else
 
 set fp=* The else and errorlevel statements in action.
-rem qq-1
 
 rem Imprimatur (!else, !elseba, !erro)
 
@@ -6982,30 +6992,7 @@ exit /b
 
 
 
-::_
-
-:not
-
-:ineq
-
-:inequality
-
-set fp=* Testing inequality using the an if/else statement.
-
-rem Imprimatur (!else, !elseba)
-
-echo %fp%
-echo.
-
-set message=Hellos
-
-if "%message%" == "Hello" (
-  echo It's equal.
-) else (
-  echo It's NOT equal.
-)
-
-exit /b
+:_+ Testing Inequality (imprimatur)
 
 
 
@@ -7028,6 +7015,19 @@ if not "%message%" == "Hello" (
 )
 
 exit /b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Execution area. Code below here runs.
+
+rem echo.
+rem echo %fp%
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

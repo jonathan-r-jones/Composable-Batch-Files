@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* This template file can be used as a "Save As" to create a new composable batch file.
+set Filename_stands_for=* Template batch file.
 
 
 
@@ -38,10 +38,14 @@ goto main_function
 
 :help
 
-echo %filep%
+echo.
+echo Filename stands for: %filename_stands_for%
+
+set filep=File purpose: This template file can be used as a "Save As" to create a new 
+set filep=%filep% composable batch file.
 
 echo.
-echo Filename stands for: Composable Batch File Template.
+echo %filep%
 
 echo.
 echo Last Updated: 
@@ -52,11 +56,17 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-echo.
-echo Parameter 1 (Optional):
+set parameter_1=Parameter 1 (Optional): 
+set parameter_1=%parameter_1% 
 
 echo.
-echo Parameter 2 (Optional):
+echo %parameter_1%
+
+set parameter_2=Parameter 2 (Optional): 
+set parameter_2=%parameter_2% 
+
+echo.
+echo %parameter_2%
 
 exit /b
 
