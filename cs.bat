@@ -109,6 +109,10 @@ findstr /i /n /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
 
 rem (!rfsp) (mov-2)
 
+if "%cbf_default_text_editor%" == "" (
+  call m sde no
+)
+
 if %errorlevel% == 0 (
   start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_cs.txt"
 ) else (
