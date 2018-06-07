@@ -66,9 +66,15 @@ exit /b
 :main_function
 
 echo %filep% Search for filenames containing "%~1".
+echo %filep% Search for filenames containing "%~1".>%temp%\search_results_fs.txt
+echo.>>%temp%\search_results_cs.txt
+echo   Current folder: %cd%>>%temp%\search_results_fs.txt
+
+echo ************************************************************************>>%temp%\search_results_fs.txt
+echo.>>%temp%\search_results_fs.txt
 
 rem Files are sorted newest files first.
-dir /b /s /o-d "*%~1*">%temp%\search_results_fs.txt
+dir /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 
 rem (!rfsp) (mov-2)
 
