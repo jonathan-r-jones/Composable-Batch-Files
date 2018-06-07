@@ -38,10 +38,17 @@ set cbf_parameter=%cbf_filename%
 
 rem Set Default application.
 
+if "%cbf_default_text_editor%" == "" (
+  call m sde no
+)
 
-if "%~2" == "" call n me
+if "%~2" == "" (
+  set cbf_application=%cbf_default_text_editor%
+) else (
+  call n %2
+)
 
-if not "%~2" == "" call n %2
+rem qq-1
 
 call r
 
