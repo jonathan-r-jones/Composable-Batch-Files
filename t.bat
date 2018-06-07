@@ -6962,6 +6962,28 @@ exit /b
 
 ::_
 
+:else
+
+set fp=* The else and errorlevel statements in action.
+rem qq-1
+
+rem Imprimatur (!else, !elseba, !erro)
+
+echo %fp%
+echo.
+
+if %errorlevel% == 0 (
+  echo 0
+) else (
+  echo 1
+)
+
+exit /b
+
+
+
+::_
+
 :not
 
 :ineq

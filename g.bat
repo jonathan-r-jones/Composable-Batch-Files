@@ -777,29 +777,6 @@ exit /b
 
 :_
 
-:bv
-
-:label
-
-:num
-
-:ver
-
-set fp=* Get build version number.
-
-rem Function Creation Date: Jan-30-2017
-
-echo %fp%
-echo.
-
-git describe --all --long
-
-exit /b
-
-
-
-:_
-
 :reattach
 
 :reattach_head
@@ -1690,25 +1667,6 @@ exit /b
 
 
 
-:_
-
-:vers
-
-:version
-
-set fp=* Get the git version.
-
-rem lu: May-4-2018
-
-echo %fp%
-
-echo.
-git version
-
-exit /b
-
-
-
 :_+ Roll Back and Revert Functions
 
 
@@ -2277,6 +2235,54 @@ cd AllCourseExercises
 git submodule init
 
 git submodule update
+
+exit /b
+
+
+
+:_+ Get Version Number
+
+
+
+::_
+
+:bv
+
+:label
+
+:num
+
+:ver
+
+set fp=* Get build version number.
+
+rem Function Creation Date: Jan-30-2017
+
+echo %fp%
+
+echo.
+git describe --all --long
+
+exit /b
+
+
+
+::_
+
+:gver
+
+:vers
+
+:version
+
+set fp=* Get the git version number.
+
+rem lu: Jun-7-2018
+
+echo %fp%
+
+echo.
+git version
 
 exit /b
 

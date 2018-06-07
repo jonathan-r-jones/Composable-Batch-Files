@@ -90,6 +90,7 @@ echo        pscrub  Partially scrub deployment environment.
 echo            rd  Remove folder at current location.
 echo         reset  Reset CBF environment variables.
 echo     run_tirem  Run tirem.
+echo           sde  Set default text editor.
 echo         scrub  When deploying new War file, this prepares env.
 echo set_parent_fd  Set parent folder.
 echo    s6_deleted  Rerun these commands if sencha folder was deleted.
@@ -2954,11 +2955,13 @@ echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
 echo    cn  Used for Git cloning tasks.
 echo   col  Reset the dos window color.
+echo    cs  File contents search.
 echo    cy  Copy file(s).
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
 echo    ed  Edit a file. Emulated Surf (sf).
 echo   env  Show the state of the CBF envrionment variables.
+echo    fs  Filenames search.
 echo     g  Perform Git-related tasks.
 echo     h  Perform Sencha-related tasks.
 echo     m  Perform miscellaneous tasks.
@@ -3005,22 +3008,25 @@ echo.
 echo %filep%
 
 echo.
-echo  Application: %cbf_application%
+echo          Application: %cbf_application%
 
 echo.
-echo App_Location: %cbf_App_Location%
+echo Application Location: %cbf_app_location%
 
 echo.
-echo     Filename: %cbf_filename%
+echo  Default Text Editor: %cbf_default_text_editor%
 
 echo.
-echo    Parameter: %cbf_parameter%
+echo             Filename: %cbf_filename%
 
 echo.
-echo         Path: %cbf_path%
+echo            Parameter: %cbf_parameter%
 
 echo.
-echo          URL: %cbf_url%
+echo                 Path: %cbf_path%
+
+echo.
+echo                  URL: %cbf_url%
 
 goto exitb
 
@@ -3177,6 +3183,24 @@ echo %fp%
 rd /q /s %2
 
 goto exitb
+
+
+
+:_
+
+:sde
+
+set fp=* Set default text editor.
+
+rem lu: Jun-7-2018
+
+echo %fp%
+
+if not "%~2" == "" call n %2
+
+set cbf_default_text_editor=%cbf_application%
+
+exit /b
 
 
 

@@ -2967,4 +2967,36 @@ exit /b
 
 
 
+:_
+
+:spdr
+
+set fp=* SPDR.
+
+rem lu: Jun-7-2018
+
+echo %fp%
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%20LOB/_git/Csam.Normalization.Service
+
+exit /b
+
+
+
+:_
+
+:dn
+
+set fp=* Downloads folder.
+
+rem lu: Jun-7-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\downloads
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
