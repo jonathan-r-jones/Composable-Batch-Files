@@ -72,10 +72,6 @@ exit /b
 
 
 
-:_ Begin body. (!bb)
-
-
-
 :_
 
 :main_function

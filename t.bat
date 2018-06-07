@@ -57,7 +57,7 @@ if not "%~1" == "" goto %1
 
 set fp=* Go to execution area.
 
-goto code_execution_area
+goto main_function
 
 
 
@@ -78,7 +78,7 @@ echo Usage: %0 (optional parameter 1)
 
 echo.
 echo Parameter 1: Batch file label you wish to execute. If left blank, 
-echo the last code block in this file, a. k. a. the code execution area, will 
+echo the code below the last code block in this file, a. k. a. the main function, will 
 echo be executed.
 
 exit /b
@@ -7020,12 +7020,9 @@ exit /b
 
 :_
 
-:code_execution_area
+:main_function
 
-set fp=* Execution area. Code below here runs.
-
-rem echo.
-rem echo %fp%
+set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
 

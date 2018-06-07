@@ -40,7 +40,7 @@ goto main_function
 
 :help
 
-echo Searches the current folder for filenames match the given search criterion, then pipes the results into a temporary file.
+echo Searches the current folder and all its subfolders for filenames match the given search criterion, then pipes the results into a temporary file.
 
 echo.
 echo Filename stands for: Filenames search.
@@ -58,10 +58,6 @@ echo.
 echo Parameter 2 (Optional): File type to search. For example, "txt" (without quotes) would search only txt type files.
 
 exit /b
-
-
-
-:_ Begin body. (!bb)
 
 
 
