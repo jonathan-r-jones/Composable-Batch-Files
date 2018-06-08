@@ -6,7 +6,15 @@
 
 :_
 
-set Filename_stands_for=* Edit a file using NotePad.
+set filename_stands_for=* Open Notepad.
+
+
+
+:_
+
+set fp=* Add some whitespace.
+
+echo.
 
 
 
@@ -15,6 +23,8 @@ set Filename_stands_for=* Edit a file using NotePad.
 set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
+
+if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
@@ -28,11 +38,10 @@ goto main_function
 
 :help
 
-echo.
 echo Filename stands for: %filename_stands_for%
 
-set filep=File purpose: This template file can be used as a "Save As" to create a new 
-set filep=%filep% composable batch file.
+set filep=File purpose: Edit files in an editor.
+set filep=%filep%
 
 echo.
 echo %filep%
@@ -43,33 +52,14 @@ echo Last Updated: Jun-8-2018
 echo.
 echo Usage: %0 [Parameter 1]
 
-set parameter_1=Parameter 1 (Optional): The filename nickname of the file to execute
-set parameter_1=%parameter_1% or filename of a file in the current folder.
+echo.
+echo Usage: %0 [space separated parameter(s)]
+
+set parameter_1=Parameter 1 (Optional): Nickname of the file you wish to edit.
+set parameter_1=%parameter_1% If left blank, the application is simply started.
 
 echo.
 echo %parameter_1%
-
-exit /b
-
-
-
-:_ (!rfsp) (mov-6)
-
-:h
-
-:help
-
-echo.
-echo Filename stands for: NOtepad.
-
-echo.
-echo Last Updated: Feb-6-2018
-
-echo.
-echo Usage: %0 [Parameter 1]
-
-echo.
-echo Parameter 1 (Optional): The filename nickname of the file to execute or filename of a file in the current folder.
 
 exit /b
 
@@ -81,16 +71,26 @@ exit /b
 
 set fp=* Main function.
 
+echo %filename_stands_for%
+
+call n %0
 if "%~1" == "" (
-  echo Percent 1 nothing.
-  call ea no
-rem qq-1
-) else (
-  echo Percent 1 is something.
-  call ed "%~1" %0
+  m open_application_without_a_parameter
 )
 
+rem If a period is detected in the first parameter, then edit that file. Else, use the
+rem nickname dictionary to determine the filename.
+echo %1 | find /i ".">nul
 
+if %errorlevel% == 0 (
+  set cbf_filename=%~1
+) else (
+  call n %1
+)
+
+set cbf_parameter=%cbf_filename%
+
+call r
 
 rem (!rfsp) (mov-2)
 
