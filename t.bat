@@ -6879,7 +6879,11 @@ exit /b
 
 
 
-:_
+:_+ Imprimaturs (!is, !imprs)
+
+
+
+::_
 
 :folder_exists_2
 
@@ -6897,10 +6901,6 @@ if exist "%1" (
 if not exist "%1" echo It does NOT exist.
 
 exit /b
-
-
-
-:_+ Imprimaturs (!is, !imprs)
 
 
 

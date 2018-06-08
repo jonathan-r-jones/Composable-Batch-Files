@@ -3098,6 +3098,14 @@ echo %fp%
 dir /b *.sln>%tmp%\filename.txt
 set /p filename=<%tmp%\filename.txt
 
+if not exist "%filename%" (
+  echo.
+  echo * No solution file was found.
+  exit /b
+)
+
+rem echo Filename: %filename%
+
 start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
 
 goto exitb
