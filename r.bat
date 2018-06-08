@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Run application . . .
+set filep=* Run application.
 
 
 
@@ -71,6 +71,7 @@ if "%cbf_parameter%" == "" (
 )
 
 call start "my title" "%cbf_application%" "%cbf_parameter%"
+
 exit /b
 
 

@@ -2145,22 +2145,6 @@ exit /b
 
 :_
 
-:me
-
-set fp=* Multi-Edit.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
-
-exit /b
-
-
-
-:_
-
 :no
 
 set fp=* Notepad.
@@ -2994,6 +2978,70 @@ rem lu: Jun-7-2018
 echo %fp%
 
 set cbf_path=%userprofile%\downloads
+
+exit /b
+
+
+
+:_
+
+:vft
+
+set fp=* Various file types.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\various file types
+
+exit /b
+
+
+
+:_
+
+:fws
+
+set fp=* Filename with spaces.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\various file types\filename with spaces.txt
+
+exit /b
+
+
+
+:_
+
+:205
+
+set fp=* XU Xam 205.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\xam205
+
+exit /b
+
+
+
+:_
+
+:me
+
+set fp=* Multi-Edit.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
 
 exit /b
 

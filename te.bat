@@ -6,7 +6,7 @@
 
 :_
 
-set Filename_stands_for=* Template batch file.
+set filename_stands_for=* Template batch file.
 
 
 

@@ -6,7 +6,15 @@
 
 :_
 
-set filep=* Edit a file.
+set filename_stands_for=* Edit a file.
+
+
+
+:_
+
+set fp=* Add some whitespace.
+
+echo.
 
 
 
@@ -14,67 +22,77 @@ set filep=* Edit a file.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto help
-
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
+
+goto main_function
 
 
 
 :_
 
-set fp=* Detect a period in the first parameter and run.
-
-rem lu: Jun-8-2018
-
-echo %1 | find /i ".">nul
-
-rem qq-1
-
-if %errorlevel% == 0 (
-  set cbf_filename=%~1
-) else (
-  call fn %1
-)
-
-set cbf_parameter=%cbf_filename%
-
-if "%cbf_default_text_editor%" == "" (
-  call m set_default_application no
-)
-
-set cbf_application=%cbf_default_text_editor%
-
-call r
-
-exit /b
-
-
-
-:_ (!rfsp) (mov-6)
-
 :h
 
 :help
+
+echo Filename stands for: %filename_stands_for%
+
+set filep=File purpose: Edit files.
 
 echo.
 echo %filep%
 
 echo.
-echo Filename stands for: Edit a file.
+echo Last Updated: Jun-8-2018
 
 echo.
-echo Last Updated: May-30-2018
+echo Usage: %0 [space separated parameter(s)]
+
+set parameter_1=Parameter 1 (Optional): The filename nickname of the file to execute
+set parameter_1=%parameter_1% or filename of a file in the current folder.
 
 echo.
-echo Usage: %0 [Parameter 1]
+echo %parameter_1%
+
+set parameter_2=Parameter 2 (Optional): The Application nickname to use to edit the file.
+set parameter_2=%parameter_2% If left blank, the default text editor is used.
 
 echo.
-echo Parameter 1: The filename nickname of the file to execute or filename of a file in the current folder.
+echo %parameter_2%
 
-echo.
-echo Parameter 2 (Optional): The Application nickname to use to edit the file.
+exit /b
+
+
+
+:_
+
+:main_function
+
+echo %filename_stands_for%
+
+rem If a period is detected in the first parameter, then edit that file. Else, use the
+rem nickname dictionary to determine the filename.
+echo %1 | find /i ".">nul
+
+if %errorlevel% == 0 (
+  set cbf_filename=%~1
+) else (
+  call n %1
+)
+
+if "%~2" == "" (
+  rem Set statements aren't allowed inside if blocks, so this is the workaround.
+  call m set_cbf_application
+) else (
+  call n %2
+)
+
+set cbf_parameter=%cbf_filename%
+
+call r
+
+rem (!rfsp) (mov-2)
 
 exit /b
 

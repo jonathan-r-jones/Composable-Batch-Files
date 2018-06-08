@@ -6,10 +6,15 @@
 
 :_
 
-set filep=* Use Multi-Edit to edit a batch file in the CBF folder.
+set fsf=* Multi-Edit (x) file.
+
+
+
+:_
+
+set fp=* Add some whitespace.
 
 echo.
-echo %filep%
 
 
 
@@ -23,15 +28,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-
-
-:_
-
-set fp=* Main function.
-
-call me %composable_batch_files%\%~1.bat
-
-exit /b
+goto main_function
 
 
 
@@ -42,10 +39,10 @@ exit /b
 :help
 
 echo.
-echo Filename stands for: Multi-Edit (x) file.
+echo File purpose: Use Multi-Edit to edit a batch file in the CBF folder.
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: Jun-8-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -56,6 +53,26 @@ echo Parameter 1: Filename in the CBF folder without the "bat" extension.
 echo.
 echo For example, typing "mx m" would edit the m.bat file in the Composable
 echo. Batch Files folder.
+
+exit /b
+
+
+
+:_
+
+:main_function
+
+set fp=* Main function.
+
+echo %fsf%
+
+call n me
+
+set cbf_filename=%composable_batch_files%\%~1.bat
+
+set cbf_parameter=%cbf_filename%
+
+call r
 
 exit /b
 

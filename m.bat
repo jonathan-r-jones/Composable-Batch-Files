@@ -1431,9 +1431,9 @@ goto exitb
 
 :ise
 
-set fp=* Initialize server environment.
+set fp=* Initialize environment.
 
-rem fcd: May-8-2017
+rem fcd: Jun-8-2018
 
 echo %fp%
 
@@ -1445,7 +1445,7 @@ rem call :set_server_title
 
 rem call :set_wildfly_location
 
-rem cd c:\mercury\batch_files
+if "%default_text_editor" == "" call m set_default_text_editor no
 
 cls
 
@@ -2992,48 +2992,6 @@ goto exitb
 
 :_
 
-:e
-
-:ev
-
-:env
-
-:cbf
-
-set filep=* Show the state of the CBF environment variables.
-
-cls
-
-echo.
-echo %filep%
-
-echo.
-echo          Application: %cbf_application%
-
-echo.
-echo Application Location: %cbf_app_location%
-
-echo.
-echo  Default Text Editor: %cbf_default_text_editor%
-
-echo.
-echo             Filename: %cbf_filename%
-
-echo.
-echo            Parameter: %cbf_parameter%
-
-echo.
-echo                 Path: %cbf_path%
-
-echo.
-echo                  URL: %cbf_url%
-
-goto exitb
-
-
-
-:_
-
 :transform_cbf_application
 
 set fp=* Transform CBF variable.
@@ -3104,30 +3062,6 @@ goto exitb
 
 :_
 
-:reset
-
-set fp=* Reset CBF variables.
-
-echo %fp%
-
-set cbf_application=
-
-set cbf_app_location=
-
-set cbf_filename=
-
-set cbf_parameter=
-
-set cbf_path=
-
-set cbf_url=
-
-goto exitb
-
-
-
-:_
-
 :dc
 
 :double_click
@@ -3190,7 +3124,9 @@ goto exitb
 
 :sde
 
-:set_default_application
+:sdte
+
+:set_default_text_editor
 
 set fp=* Set default text editor.
 
@@ -3201,6 +3137,110 @@ echo %fp%
 if not "%~2" == "" call n %2
 
 set cbf_default_text_editor=%cbf_application%
+
+exit /b
+
+
+
+:_+ CBF Variables
+
+
+
+::_
+
+:reset
+
+set fp=* Reset CBF variables.
+
+echo %fp%
+
+set cbf_application=
+
+set cbf_app_location=
+
+set cbf_filename=
+
+set cbf_parameter=
+
+set cbf_path=
+
+set cbf_url=
+
+goto exitb
+
+
+
+::_
+
+:e
+
+:ev
+
+:env
+
+:cbf
+
+set filep=* Show the state of the CBF environment variables.
+
+cls
+
+echo.
+echo %filep%
+
+echo.
+echo          Application: %cbf_application%
+
+echo.
+echo Application Location: %cbf_app_location%
+
+echo.
+echo  Default Text Editor: %cbf_default_text_editor%
+
+echo.
+echo             Filename: %cbf_filename%
+
+echo.
+echo            Parameter: %cbf_parameter%
+
+echo.
+echo                 Path: %cbf_path%
+
+echo.
+echo                  URL: %cbf_url%
+
+goto exitb
+
+
+
+:_
+
+:set_cbf_application
+
+set fp=* Set cbf_application.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_application=%cbf_default_text_editor%
+
+exit /b
+
+
+
+:_
+
+:open_application_without_a_parameter
+
+set fp=* Open application without a parameter.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_parameter=
+
+call r
 
 exit /b
 

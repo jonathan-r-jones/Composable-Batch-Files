@@ -1517,7 +1517,7 @@ not folders.
 if /i exist '%savannah%\Worthwhile.now' echo The file "worthwhile.asc" actually exists but you 
 surrounded it with single, instead of double quotes.
 
-::Notice that putting a space BEFORE the equals sign cause the variable to not be set.
+::Notice that putting a space BEFORE the equals sign causes the variable to not be set.
 set horse2 = shit
 echo %horse2%
 
@@ -6815,49 +6815,6 @@ exit /b
 
 :_
 
-:percent
-
-set fp=* Testing percent 2 and not equals.
-
-rem Function Creation Date: Feb-13-2017
-
-echo.
-echo %fp%
-
-set test_var=Rain in Spain.
-
-echo.
-echo 1.
-echo %~1
-echo %~2
-echo %~3
-echo %test_var%
-
-echo.
-echo 2.
-if "%~2" == "" echo No second command line parameter was passed.
-
-echo.
-echo 3.
-if not "%~2" == "" echo %2 parameter was passed.
-
-echo.
-echo Percent 1: %1
-echo Percent 2: %2
-echo Percent 3: %3
-echo Percent test_var: %test_var%
-
-exit /b
-echo 2.
-if "%~1" == "" echo No command line parameter was passed.
-
-echo 3.
-if not "%~1" == "" echo %1 parameter was passed.
-
-
-
-:_
-
 :fe2
 
 set fp=* Testing whether a folder exists 2.
@@ -6943,7 +6900,117 @@ exit /b
 
 
 
-:_+ Imprimaturs (!imprs)
+:_+ Imprimaturs (!is, !imprs)
+
+
+
+::_
+
+:var_com
+
+set fp=* Variable comparisons.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+
+set variable_1=
+set variable_2=
+set variable_3=
+set variable_4=
+
+set variable_1=Test Text.
+set variable_2=Test Teqxt.
+set variable_3 =Test Text.
+set variable_4=%variable_2%
+
+echo.
+echo Variable 1: %variable_1%
+
+echo.
+echo Variable 2: %variable_2%
+
+echo.
+echo Notice that putting a space BEFORE the equals sign causes the variable to not be set!
+echo Variable 3: %variable_3%
+
+echo.
+echo Variable 4: %variable_4%
+
+echo.
+if "%variable_1%" == "%variable_2%" (
+  echo They are equal.
+) else (
+  echo They are not.
+)
+
+rem Set statements inside an if block don't work!
+rem https://stackoverflow.com/questions/9102422/windows-batch-set-inside-if-not-working
+
+exit /b
+
+
+
+::_
+
+:percent
+
+set fp=* Testing percent 2 and not equals.
+
+rem Function Creation Date: Jun-8-2018
+
+echo.
+echo %fp%
+
+set test_var=Rain in Spain.
+
+echo.
+echo 2.
+echo %~1
+echo %~2
+echo %~3
+echo %test_var%
+
+echo.
+echo 2.
+if "%~2" == "" echo No second command line parameter was passed.
+
+echo.
+echo 3.
+if not "%~2" == "" echo The parameter "%~2" was passed in position 2.
+
+echo.
+echo Percent 1: %1
+echo Percent 2: %2
+echo Percent 3: %3
+echo Percent test_var: %test_var%
+
+echo.
+echo 4.
+if "%~1" == "" echo No command line parameter was passed.
+
+echo.
+echo 5.
+if not "%~1" == "" echo %1 parameter was passed.
+
+echo.
+echo 6.
+if "%~1" == "" (
+  echo Percent 1 nothing.
+) else (
+  echo Percent 1 is something.
+)
+
+echo.
+echo 7. (!perc)
+if "%~2" == "" (
+  echo Percent 2 nothing.
+) else (
+  echo Percent 2 is something.
+)
+
+exit /b
 
 
 
@@ -6988,6 +7055,12 @@ if %errorlevel% == 0 (
   echo 1
 )
 
+if "%~1" == "" (
+  echo Percent 1 nothing.
+) else (
+  echo Percent 1 is something.
+)
+
 exit /b
 
 
@@ -7028,4 +7101,20 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
-:_ (!rfsp) (mov-9)
+:_
+
+:
+
+set fp=* Setting application variable.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_application=%cbf_default_text_editor%
+
+exit /b
+
+
+
+:_
