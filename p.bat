@@ -99,7 +99,6 @@ exit /b
 :toc
 
 set fp=* Perform PowerShell-related tasks.
-rem qq-1
 
 rem fcd: Dec-12-2017
 
