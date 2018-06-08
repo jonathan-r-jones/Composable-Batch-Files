@@ -3190,6 +3190,8 @@ goto exitb
 
 :sde
 
+:set_default_application
+
 set fp=* Set default text editor.
 
 rem lu: Jun-7-2018

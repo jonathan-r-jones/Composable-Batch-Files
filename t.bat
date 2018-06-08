@@ -6977,10 +6977,10 @@ exit /b
 
 set fp=* The else and errorlevel statements in action.
 
-rem Imprimatur (!else, !elseba, !erro)
-
 echo %fp%
 echo.
+
+rem Imprimatur (!else, !elseba, !erro)
 
 if %errorlevel% == 0 (
   echo 0

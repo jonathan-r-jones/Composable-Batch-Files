@@ -26,29 +26,25 @@ if "%~1" == "help" goto help
 
 set fp=* Detect a period in the first parameter and run.
 
-rem lu: Feb-1-2018
+rem lu: Jun-8-2018
 
 echo %1 | find /i ".">nul
 
-if %errorlevel% == 0 set cbf_filename=%~1
+rem qq-1
 
-if %errorlevel% == 1 call fn %1
+if %errorlevel% == 0 (
+  set cbf_filename=%~1
+) else (
+  call fn %1
+)
 
 set cbf_parameter=%cbf_filename%
 
-rem Set Default application.
-
 if "%cbf_default_text_editor%" == "" (
-  call m sde no
+  call m set_default_application no
 )
 
-if "%~2" == "" (
-  set cbf_application=%cbf_default_text_editor%
-) else (
-  call n %2
-)
-
-rem qq-1
+set cbf_application=%cbf_default_text_editor%
 
 call r
 
