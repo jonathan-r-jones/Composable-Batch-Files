@@ -3254,4 +3254,33 @@ exit /b
 
 
 
+:_
+
+:editor_help
+
+echo Filename stands for: %filename_stands_for%
+
+set filep=File purpose: Edit files in an editor.
+set filep=%filep%
+
+echo.
+echo %filep%
+
+echo.
+echo Last Updated: Jun-8-2018
+
+echo.
+echo Usage: %0 [Parameter 1]
+
+set parameter_1=Parameter 1 (Optional): Nickname of the file you wish to edit.
+set parameter_1=%parameter_1% or the name of a filename in the current folder.
+set parameter_1=%parameter_1% If left blank, the application is simply started.
+
+echo.
+echo %parameter_1%
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)

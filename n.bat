@@ -3047,4 +3047,20 @@ exit /b
 
 
 
+:_
+
+:xfcss
+
+set fp=* Xamarin forms css.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jamcneil/XamarinFormsCSS.git
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)

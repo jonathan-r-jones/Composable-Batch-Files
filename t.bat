@@ -7093,6 +7093,20 @@ exit /b
 
 :_
 
+set fp=* Setting application variable.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_application=%cbf_default_text_editor%
+
+exit /b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -7103,16 +7117,14 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-:
+set fp=* Blank echo.
 
-set fp=* Setting application variable.
-
-rem lu: Jun-8-2018
+rem lu: Jun-10-2018
 
 echo %fp%
 
-set cbf_application=%cbf_default_text_editor%
-
+echo %1
+rem qq-1
 exit /b
 
 

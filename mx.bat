@@ -6,7 +6,7 @@
 
 :_
 
-set fsf=* Multi-Edit (x) file.
+set filename_stands_for=* Multi-Edit (x) file.
 
 
 
@@ -38,6 +38,8 @@ goto main_function
 
 :help
 
+echo Filename stands for: %filename_stands_for%
+
 echo.
 echo File purpose: Use Multi-Edit to edit a batch file in the CBF folder.
 
@@ -64,7 +66,7 @@ exit /b
 
 set fp=* Main function.
 
-echo %fsf%
+echo %filename_stands_for%
 
 call n me
 
