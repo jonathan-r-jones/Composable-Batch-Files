@@ -3107,6 +3107,8 @@ rem lu: Jun-10-2018
 
 echo %fp%
 
+set cbf_path=%aa%\xamarin\
+
 set cbf_url=https://github.com/almirvuk/Master-Detail_Navigation_Xamarin.Forms.git
 
 exit /b
