@@ -3079,4 +3079,60 @@ exit /b
 
 
 
+:_
+
+:hamb
+
+:hamburger
+
+set fp=* Hamburger menu xamarin forms.
+
+rem lu: Jun-10-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/twolfprogrammer/Xamarin.Forms-Hamburger-Menu-Example.git
+
+exit /b
+
+
+
+:_
+
+:made
+
+set fp=* Master detail.
+
+rem lu: Jun-10-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/almirvuk/Master-Detail_Navigation_Xamarin.Forms.git
+
+exit /b
+
+
+
+:_
+
+:ham
+
+:hams
+
+:hamster
+
+set fp=* Hamster
+
+rem lu: Jun-10-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin\hamster
+
+set cbf_url=https://github.com/jonathan-r-jones/hamster.git
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
