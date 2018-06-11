@@ -55,11 +55,13 @@ if exist "%1" (
 
 set fp=* Main function.
 
+set cbf_path=
+
 if not "%~1" == "" call n %1
 
 if "%cbf_path%" == "" (
   echo.
-  echo Input Error: There is no cbf_path defined for '%~1'. 
+  echo * Nickname Error: There is no cbf_path defined for '%~1'. 
   exit /b
 )
 
