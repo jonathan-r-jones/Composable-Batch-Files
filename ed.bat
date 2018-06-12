@@ -61,6 +61,12 @@ set parameter_2=%parameter_2% If left blank, the default text editor is used.
 echo.
 echo %parameter_2%
 
+set parameter_3=Parameter 3 (Optional): If "x", parameter 1 is assumed to be an
+set parameter_3=%parameter_3% extensionless filename rather than a nickname.
+
+echo.
+echo %parameter_3%
+
 exit /b
 
 
@@ -70,6 +76,11 @@ exit /b
 :main_function
 
 echo %filename_stands_for%
+
+if "%~3" == "x" (
+  set cbf_filename=%~1
+  goto final_phase
+)
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
 rem nickname dictionary to determine the filename.
@@ -87,6 +98,10 @@ if "%~2" == "" (
 ) else (
   call n %2
 )
+
+
+
+:final_phase
 
 set cbf_parameter=%cbf_filename%
 

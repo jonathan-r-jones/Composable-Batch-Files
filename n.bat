@@ -3137,4 +3137,22 @@ exit /b
 
 
 
+:_
+
+:xapp
+
+set fp=* Xamarin Forms Simple App, Simple Xapp, Simple Jack.
+
+rem lu: Jun-12-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin\SimpleXapp
+
+set cbf_url=https://github.com/jonathan-r-jones/SimpleXapp.git
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
