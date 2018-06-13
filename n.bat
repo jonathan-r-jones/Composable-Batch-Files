@@ -2057,43 +2057,9 @@ exit /b
 
 :_
 
-:desk
-
-set fp=Show desktop.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-
-set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
-
-exit /b
-
-
-
-:_
-
-:w
-
-:win
-
-set fp=Show open windows.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-
-set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
-
-exit /b
-
-
-
-:_
-
 :rm
 
-set fp=Readme.md.
+set fp=* Readme.md.
 
 rem lu: Mar-1-2018
 
@@ -3238,6 +3204,46 @@ rem lu: Jun-13-2018
 echo %fp%
 
 set cbf_path=%dropbox%\Image Manipulation
+
+exit /b
+
+
+
+:_+ Remote Double Click Candidates, a.k.a. lnk type files.
+
+
+
+::_
+
+:desk
+
+set fp=* Show desktop.
+
+rem lu: Jun-13-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\desktop
+
+set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
+
+exit /b
+
+
+
+::_
+
+:w
+
+:win
+
+set fp=* Show open windows.
+
+rem lu: Jun-13-2018
+
+echo %fp%
+
+set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
 
 exit /b
 
