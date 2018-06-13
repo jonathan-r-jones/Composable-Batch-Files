@@ -49,7 +49,6 @@ echo        step_2  Function that does [blank].
 echo        step_3  Function that does [blank].
 echo    some_steps  Function that runs some functions.
 echo     all_steps  Function that runs all functions.
-echo           ghp  Surf to this repository's GitHub pages site.
 
 exit /b
 
@@ -164,23 +163,6 @@ call :step_1
 call hello_world_2 step_2
 
 call :step_3
-
-exit /b
-
-
-
-:_
-
-:gp
-
-:ghp
-
-set fp=* Surf to this repository's GitHub pages.
-
-rem lu: Jan-5-2018
-
-echo %fp%
-start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://jonathan-r-jones.github.io/Composable-Batch-Files/
 
 exit /b
 
