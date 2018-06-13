@@ -66,7 +66,7 @@ echo          push  Push changes.
 echo           rsf  Revert file.
 echo          rvfd  Revert folder.
 echo           rvp  Revert persistent files.
-echo             s  Get status.
+echo             s  Get status, including remote information.
 echo           src  Identify source repository of your current folder.
 echo            ss  Get super status.
 
