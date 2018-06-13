@@ -50,7 +50,7 @@ echo.
 echo Usage: cy [Parameter 1]
 
 echo.
-echo Parameter 1: Macro to run.
+echo Parameter 1: Label method to run.
 
 echo.
 echo     Parameter  Description

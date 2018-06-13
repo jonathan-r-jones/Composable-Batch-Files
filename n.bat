@@ -3155,4 +3155,58 @@ exit /b
 
 
 
+:_
+
+:marvel
+
+set fp=* Marvel.
+
+rem lu: Jun-12-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://github.com/edsnider/marvel-xfdemo.git
+
+exit /b
+
+
+
+:_
+
+:og
+
+set fp=* Open governance.
+
+rem lu: Jun-12-2018
+
+echo %fp%
+
+set cbf_path=%aa%\open-governance
+
+set cbf_url=https://github.com/techtalkdc/Open-Governance.git
+
+exit /b
+
+
+
+:_
+
+:ogf
+
+set fp=* Open governance fork.
+
+rem lu: Jun-12-2018
+
+echo %fp%
+
+set cbf_path=%aa%\open-governance-fork
+
+set cbf_url=https://github.com/jonathan-r-jones/Open-Governance.git
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
