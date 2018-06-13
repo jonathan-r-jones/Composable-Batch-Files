@@ -2957,6 +2957,7 @@ echo    cn  Used for Git cloning tasks.
 echo   col  Reset the dos window color.
 echo    cs  File contents search.
 echo    cy  Copy file(s).
+echo   cyn  Copies file in the current directory to nickname-specified path.
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
 echo    ed  Edit a file. Emulated Surf (sf).
