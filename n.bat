@@ -3221,7 +3221,8 @@ rem lu: Jun-12-2018
 
 echo %fp%
 
-set cbf_url=https://github.com/jonathan-r-jones/jj3d.png
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/jj%203d.png
+rem set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/blob/master/jj%203d.png
 
 exit /b
 
