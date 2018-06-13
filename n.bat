@@ -3209,4 +3209,22 @@ exit /b
 
 
 
+:_
+
+:jj3d
+
+:clcr
+
+set fp=* Closing credits.
+
+rem lu: Jun-12-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/jj3d.png
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
