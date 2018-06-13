@@ -3222,8 +3222,22 @@ rem lu: Jun-12-2018
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/blob/master/jj3d.png
-rem https://github.com/jonathan-r-jones/Composable-Batch-Files/jj3d.png
-rem set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/blob/master/jj%203d.png
+
+exit /b
+
+
+
+:_
+
+:im
+
+set fp=* Image Manipualtion.
+
+rem lu: Jun-13-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\Image Manipulation
 
 exit /b
 
