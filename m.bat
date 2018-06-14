@@ -56,6 +56,9 @@ echo.
 echo Usage: m [single parameter]
 
 echo.
+echo Parameter 1: Function to execute.
+
+echo.
 echo Usage Note: Do not make internal calls to a composite function because 
 echo that could cause a circular reference.
 

@@ -56,6 +56,9 @@ echo.
 echo Usage: %0 [single parameter]
 
 echo.
+echo Parameter 1: Function to execute.
+
+echo.
 echo In the function block corresponding to the label, you can set any or all 
 echo of the CBF environment variables. Typically this batch file would be 
 echo called by echo a different batch file looking to set a particular CBF 

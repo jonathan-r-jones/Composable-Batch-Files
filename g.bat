@@ -47,7 +47,7 @@ echo.
 echo Usage: g [Parameter 1] [Parameter 2]
 
 echo.
-echo Parameter 1: Macro/Function to execute.
+echo Parameter 1: Function to execute.
 
 echo.
 echo Parameter 2 (Optional): Path to walk prior to running Parameter 1.

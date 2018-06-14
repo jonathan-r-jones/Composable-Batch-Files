@@ -7107,6 +7107,20 @@ exit /b
 
 :_
 
+set fp=* Blank echo.
+
+rem lu: Jun-10-2018
+
+echo %fp%
+
+echo %1
+rem qq-1
+exit /b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -7117,15 +7131,15 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-set fp=* Blank echo.
+:
 
-rem lu: Jun-10-2018
+set fp=* Is exit /b the same as goto eof? Yes.
+
+rem lu: Jun-14-2018
 
 echo %fp%
 
-echo %1
-rem qq-1
-exit /b
+goto :eof
 
 
 
