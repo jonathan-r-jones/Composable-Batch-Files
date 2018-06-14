@@ -24,7 +24,7 @@ if "%~1" == "help" m editor_help
 
 :main_function
 
-if "%~1" == "" call ea sm
+if "%~1" == "" call r sm
 
 if not "%~1" == "" call ed %1 sm
 

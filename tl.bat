@@ -141,9 +141,9 @@ set fp=* Pipe running images to a sortable text file.
 
 echo %fp%
 
-tasklist /fo table>c:\a\j1.txt
+tasklist /fo table>%temp%\search_results.txt
 
-call ea me j1
+call me sr
 
 exit /b
 

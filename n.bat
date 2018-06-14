@@ -645,7 +645,7 @@ exit /b
 
 :_
 
-:sr
+:folder_server
 
 set fp=Open folder server.
 
@@ -3276,6 +3276,22 @@ rem lu: Jun-14-2018
 echo %fp%
 
 set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
+
+exit /b
+
+
+
+:_
+
+:sr
+
+set fp=* Temporary search results.
+
+rem lu: Jun-14-2018
+
+echo %fp%
+
+set cbf_filename=%temp%\search_results.txt
 
 exit /b
 
