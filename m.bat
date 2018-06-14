@@ -74,7 +74,6 @@ echo  double_click  Perform command-line equivalent of a double click.
 echo       del_hex  Delete WildFly Dynamic Folder.
 echo          depl  Deploy a new WAR file.
 echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
-echo            ea  Application-centric way to run an application.
 echo           env  List CBF environment variables.
 echo          exit  Exit batch file.
 echo         exitb  Exit batch file but not command window.
@@ -91,6 +90,7 @@ echo  [your label]  [your description] [Build your own.]
 echo           ppt  PowerPoint Presentation on CBF.
 echo   prepare_mob  Prepare for mobile deployment.
 echo        pscrub  Partially scrub deployment environment.
+echo             r  Run application.
 echo            rd  Remove folder at current location.
 echo         reset  Reset CBF environment variables.
 echo     run_tirem  Run tirem.

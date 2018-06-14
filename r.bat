@@ -39,7 +39,7 @@ echo.
 echo Filename stands for: Run application.
 
 echo.
-echo Last Updated (lu): May-22-2018
+echo Last Updated (lu): Jun-14-2018
 
 echo.
 echo Usage: %0 [Parameter 1] [Parameter 2]
