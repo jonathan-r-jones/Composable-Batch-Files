@@ -28,12 +28,6 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-
-
-:_
-
-set fp=* Go to parameter 1.
-
 goto %1
 
 
@@ -2816,7 +2810,7 @@ rem lu: Jun-5-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\xamarin_university
+set cbf_path=%aa%\xamarin\xamarin_university\AllCourseExercises
 
 set cbf_url=https://github.com/XamarinUniversity
 
@@ -3092,7 +3086,7 @@ exit /b
 
 :hamster
 
-set fp=* Hamster
+set fp=* Hamster.
 
 rem lu: Jun-10-2018
 

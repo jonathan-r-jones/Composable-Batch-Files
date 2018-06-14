@@ -20,19 +20,13 @@ echo.
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
-
-
-
-:_
-
-set fp=* Go to percent 1.
 
 goto %1
 
