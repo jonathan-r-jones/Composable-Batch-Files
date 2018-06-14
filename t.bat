@@ -7047,11 +7047,13 @@ set fp=* The else and errorlevel statements in action.
 echo %fp%
 echo.
 
-rem Imprimatur (!else, !elseba, !erro)
+rem Imprimatur (!error, !else, !elseba, !erro)
 
 if %errorlevel% == 0 (
+  echo.
   echo 0
 ) else (
+  echo.
   echo 1
 )
 
@@ -7062,10 +7064,6 @@ if "%~1" == "" (
 )
 
 exit /b
-
-
-
-:_+ Testing Inequality (imprimatur)
 
 
 
@@ -7114,8 +7112,22 @@ rem lu: Jun-10-2018
 echo %fp%
 
 echo %1
-rem qq-1
+
 exit /b
+
+
+
+:_
+
+:
+
+set fp=* Is exit /b the same as goto eof? Yes.
+
+rem lu: Jun-14-2018
+
+echo %fp%
+
+goto :eof
 
 
 
@@ -7133,13 +7145,26 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Is exit /b the same as goto eof? Yes.
+set fp=* Try to run PostMan with its strange command line syntax.
 
 rem lu: Jun-14-2018
 
 echo %fp%
 
-goto :eof
+set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe
+set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
+
+echo %cbf_application% | find /i "--">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * CBF_Application contains a double dash.
+) else (
+  echo.
+  echo 1
+)
+
+exit /b
 
 
 

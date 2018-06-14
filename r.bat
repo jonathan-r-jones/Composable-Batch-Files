@@ -4,7 +4,7 @@
 
 
 
-:_
+
 
 set filep=* Run application.
 
@@ -59,18 +59,13 @@ exit /b
 
 :_
 
-:main_function
+:run_application_in_raw_format
 
-set fp=* Main function.
+set fp=* CBF_Application contains a double dash. Run it raw.
 
-if "%cbf_application%" == "microsoft-edge" goto micorosoft_edge_special_case
+echo %fp%
 
-if "%cbf_parameter%" == "" (
-  call start "my title" "%cbf_application%"
-  exit /b
-)
-
-call start "my title" "%cbf_application%" "%cbf_parameter%"
+%cbf_application%
 
 exit /b
 
@@ -80,7 +75,7 @@ exit /b
 
 set fp=* Use special syntax for Microsoft Edge.
 
-:micorosoft_edge_special_case
+:microsoft_edge_special_case
 
 if "%cbf_parameter%" == "" (
   call start "my title" "%cbf_application%:"
@@ -88,6 +83,37 @@ if "%cbf_parameter%" == "" (
 )
 
 call start "my title" "%cbf_application%:""%cbf_parameter%"
+
+exit /b
+
+
+
+:_
+
+:main_function
+
+set fp=* Main function.
+
+if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_special_case
+
+echo %cbf_application% | find /i "--">nul
+
+if %errorlevel% == 0 (
+  echo.
+  goto run_application_in_raw_format
+)
+
+if "%cbf_parameter%" == "" (
+  echo.
+  echo * No parameter was passed.
+  call start "my title" "%cbf_application%"
+  exit /b
+)
+
+echo.
+echo * Parameter was passed.
+
+call start "my title" "%cbf_application%" "%cbf_parameter%"
 
 exit /b
 

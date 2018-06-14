@@ -3263,4 +3263,22 @@ Metadata: Track Size (!tsn)
 
 
 
+:_
+
+:pm
+
+:post
+
+set fp=* Postman.
+
+rem lu: Jun-14-2018
+
+echo %fp%
+
+set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)

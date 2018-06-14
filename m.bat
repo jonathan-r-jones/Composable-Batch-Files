@@ -74,6 +74,7 @@ echo  double_click  Perform command-line equivalent of a double click.
 echo       del_hex  Delete WildFly Dynamic Folder.
 echo          depl  Deploy a new WAR file.
 echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
+echo            ea  Application-centric way to run an application.
 echo           env  List CBF environment variables.
 echo          exit  Exit batch file.
 echo         exitb  Exit batch file but not command window.
