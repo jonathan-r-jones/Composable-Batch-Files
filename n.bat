@@ -2914,7 +2914,7 @@ rem lu: Jun-6-2018
 
 echo %fp%
 
-set cbf_path=C:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS205
+set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS205
 
 exit /b
 
@@ -2994,7 +2994,7 @@ rem lu: Jun-8-2018
 
 echo %fp%
 
-set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\xam205
+set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\xam205
 
 exit /b
 
@@ -3281,7 +3281,11 @@ exit /b
 
 
 
-:_
+:_+ Search Results
+
+
+
+::_
 
 :sr
 
@@ -3292,6 +3296,38 @@ rem lu: Jun-14-2018
 echo %fp%
 
 set cbf_filename=%temp%\search_results.txt
+
+exit /b
+
+
+
+::_
+
+:sr_fs
+
+set fp=* Temporary search results for fs.
+
+rem lu: Jun-14-2018
+
+echo %fp%
+
+set cbf_filename=%temp%\search_results_fs.txt
+
+exit /b
+
+
+
+::_
+
+:sr_cs
+
+set fp=* Temporary search results for cs.
+
+rem lu: Jun-14-2018
+
+echo %fp%
+
+set cbf_filename=%temp%\search_results_cs.txt
 
 exit /b
 

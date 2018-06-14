@@ -414,7 +414,7 @@ rem fud: Aug-10-2017
 
 echo %fp%
 
-sencha -sdk %userprofile%\Documents\DropBox\nes\macintosh\public_html\ext generate app %2 c:\aa\%2
+sencha -sdk %userprofile%\Documents\DropBox\nes\macintosh\public_html\ext generate app %2 %aa%\%2
 
 cd c:\aa\%2
 
