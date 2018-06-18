@@ -3174,6 +3174,8 @@ set cbf_path=
 
 set cbf_url=
 
+env
+
 goto exitb
 
 
