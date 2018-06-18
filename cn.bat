@@ -45,8 +45,7 @@ call m set_parent_fd "%cbf_path%\.." parent_folder
 
 cd /d %parent_folder%
 
-echo.
-cd
+goto main_function
 
 
 

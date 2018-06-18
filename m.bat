@@ -3052,7 +3052,6 @@ rem batch file path parsing parent folder, cd..,
 
 rem lu: Apr-9-2018
 
-echo.
 echo %fp%
 
 set %3=%~f2

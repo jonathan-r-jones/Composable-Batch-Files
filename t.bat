@@ -5819,22 +5819,6 @@ exit /b
 
 :_
 
-set fp=* How do you escape a percent sign in a batch file?
-
-rem Answer: 2 '%' signs equals one.
-
-rem fcd: Aug-2-2017
-
-echo.
-echo %fp%
-
-
-exit /b
-
-
-
-:_
-
 set fp=* Experiment with type and find statements.
 
 rem fud: Aug-8-2017
@@ -6885,6 +6869,31 @@ exit /b
 
 ::_
 
+:percent_20
+
+set fp=* How do you escape a percent sign in a batch file?
+
+rem Answer: 2 '%' signs equals one.
+
+rem double percent sign: skw
+
+rem percent 20 issue in environment variables. skw
+
+rem fcd: Aug-2-2017
+
+echo %fp%
+
+set cbf_url='https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile'
+
+echo.
+echo cbf_url: %cbf_url%
+
+exit /b
+
+
+
+::_
+
 :folder_exists_2
 
 set fp=* Testing whether a folder exists 2.
@@ -7133,16 +7142,6 @@ goto :eof
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Try to run PostMan with its strange command line syntax.
@@ -7165,6 +7164,35 @@ if %errorlevel% == 0 (
 )
 
 exit /b
+
+
+
+:_
+
+:
+
+set fp=* Set addition!
+
+rem lu: Jun-18-2018
+
+echo %fp%
+
+set /a cbf_url=1+1
+
+echo.
+echo cbf_url
+
+exit /b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

@@ -110,8 +110,8 @@ if "%cbf_parameter%" == "" (
   exit /b
 )
 
-echo.
-echo * Parameter was passed.
+rem echo.
+rem echo * Parameter was passed.
 
 call start "my title" "%cbf_application%" "%cbf_parameter%"
 
