@@ -3327,4 +3327,20 @@ exit /b
 
 
 
+:_
+
+:xam_ess
+
+set fp=* Xamarin Essentials Demo.
+
+rem lu: Jun-18-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/marcofolio/XamSMS
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
