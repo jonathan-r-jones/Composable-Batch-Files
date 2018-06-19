@@ -1590,9 +1590,11 @@ exit /b
 
 ::_
 
+:giig
+
 :ig
 
-set fp=Git Ignore in the current folder.
+set fp=* Git Ignore in the current folder.
 
 rem lu: Jan-19-2018
 
