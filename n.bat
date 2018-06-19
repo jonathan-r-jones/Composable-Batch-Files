@@ -3319,8 +3319,7 @@ echo %fp%
 
 set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
 
-set cbf_url=
-rem qq-1
+set cbf_url=https://university.xamarin.com/classes/track/all#publishing-an-ios-app-ios220
 
 exit /b
 
