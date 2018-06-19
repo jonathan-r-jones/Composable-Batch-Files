@@ -64,7 +64,7 @@ echo           ghs  Git help for specific git command.
 echo          pull  Get-latest.
 echo          push  Push changes.
 echo           rsf  Revert file.
-echo          rvfd  Revert folder.
+echo          rvfd  Revert all changes from this folder.
 echo           rvp  Revert persistent files.
 echo             s  Get status, including remote information.
 echo           src  Identify source repository of your current folder.
@@ -998,66 +998,6 @@ exit /b
 
 :_
 
-set fp=* Git commands from Visual Studio Code.
-
-rem lu: Nov-21-2017
-
-echo %fp%
-
-// - git._syncAll
-// - git.branch
-// - git.checkout
-// - git.clean
-// - git.cleanAll
-// - git.clone
-// - git.close
-// - git.commit
-// - git.commitAll
-// - git.commitAllAmend
-// - git.commitAllSigned
-// - git.commitStaged
-// - git.commitStagedAmend
-// - git.commitStagedSigned
-// - git.commitWithInput
-// - git.createTag
-// - git.deleteBranch
-// - git.ignore
-// - git.init
-// - git.merge
-// - git.openChange
-// - git.openFile
-// - git.openHEADFile
-// - git.openResource
-// - git.publish
-// - git.pull
-// - git.pullFrom
-// - git.pullRebase
-// - git.push
-// - git.pushTo
-// - git.pushWithTags
-// - git.refresh
-// - git.revertChange
-// - git.revertSelectedRanges
-// - git.showOutput
-// - git.stage
-// - git.stageAll
-// - git.stageChange
-// - git.stageSelectedRanges
-// - git.stash
-// - git.stashPop
-// - git.stashPopLatest
-// - git.sync
-// - git.undoCommit
-// - git.unstage
-// - git.unstageAll
-// - git.unstageSelectedRanges
-
-exit /b
-
-
-
-:_
-
 :un
 
 set fp=* Unstage for commit. If %2 is blank, all files will be unstaged.
@@ -1940,9 +1880,10 @@ exit /b
 
 :rvfd
 
-set fp=* Revert folder. Revert all changes from this folder only.
+set fp=* Revert folder. Revert all changes from this folder. Revert all local changes.
 
 rem blow away local changes, specific folder: skw
+rem qq-1
 
 rem Last successful run date: May-30-2018
 
@@ -2283,6 +2224,66 @@ echo %fp%
 
 echo.
 git version
+
+exit /b
+
+
+
+:_
+
+set fp=* Git commands from Visual Studio Code.
+
+rem lu: Nov-21-2017
+
+echo %fp%
+
+// - git._syncAll
+// - git.branch
+// - git.checkout
+// - git.clean
+// - git.cleanAll
+// - git.clone
+// - git.close
+// - git.commit
+// - git.commitAll
+// - git.commitAllAmend
+// - git.commitAllSigned
+// - git.commitStaged
+// - git.commitStagedAmend
+// - git.commitStagedSigned
+// - git.commitWithInput
+// - git.createTag
+// - git.deleteBranch
+// - git.ignore
+// - git.init
+// - git.merge
+// - git.openChange
+// - git.openFile
+// - git.openHEADFile
+// - git.openResource
+// - git.publish
+// - git.pull
+// - git.pullFrom
+// - git.pullRebase
+// - git.push
+// - git.pushTo
+// - git.pushWithTags
+// - git.refresh
+// - git.revertChange
+// - git.revertSelectedRanges
+// - git.showOutput
+// - git.stage
+// - git.stageAll
+// - git.stageChange
+// - git.stageSelectedRanges
+// - git.stash
+// - git.stashPop
+// - git.stashPopLatest
+// - git.sync
+// - git.undoCommit
+// - git.unstage
+// - git.unstageAll
+// - git.unstageSelectedRanges
 
 exit /b
 
