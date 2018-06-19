@@ -3363,4 +3363,43 @@ exit /b
 
 
 
+:_
+
+:220
+
+:ios220
+
+set fp=* Publishing an iOS App.
+
+rem lu: Jun-19-2018
+
+echo %fp%
+
+set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
+
+set cbf_url=
+rem qq-1
+
+exit /b
+
+
+
+:_
+
+:csamaa
+
+set fp=* CSAM Asset Data
+
+rem lu: Jun-19-2018
+
+echo %fp%
+
+set cbf_path=%aa%\csamaa
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Asset.Data
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
