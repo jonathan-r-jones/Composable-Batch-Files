@@ -3307,26 +3307,6 @@ exit /b
 
 :_
 
-:220
-
-:ios220
-
-set fp=* Publishing an iOS App.
-
-rem lu: Jun-19-2018
-
-echo %fp%
-
-set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
-
-set cbf_url=https://university.xamarin.com/classes/track/all#publishing-an-ios-app-ios220
-
-exit /b
-
-
-
-:_
-
 :csamaa
 
 set fp=* CSAM Asset Data
@@ -3396,6 +3376,26 @@ echo %fp%
 set cbf_path=%dropbox%\it\Mobile
 
 set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
+
+exit /b
+
+
+
+:_
+
+:220
+
+:ios220
+
+set fp=* Publishing an iOS App.
+
+rem lu: Jun-19-2018
+
+echo %fp%
+
+set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
+
+set cbf_url=https://university.xamarin.com/classes/track/all#publishing-an-ios-app-ios220
 
 exit /b
 
