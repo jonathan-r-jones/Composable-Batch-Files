@@ -2138,46 +2138,6 @@ exit /b
 
 
 
-:_+ CBF-related links.
-
-
-
-::_
-
-:cbf
-
-set fp=* CBF on GitHub.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
-
-set cbf_path=%composable_batch_files%
-
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
-
-exit /b
-
-
-
-::_
-
-:cbfgp
-
-set fp=* CBF on GitHub Pages.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
-
-exit /b
-
-
-
 :_
 
 :ql
@@ -3347,24 +3307,6 @@ exit /b
 
 :_
 
-:ma
-
-set fp=* Mobile App.
-
-rem lu: Jun-18-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\Mobile
-
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
-
-exit /b
-
-
-
-:_
-
 :220
 
 :ios220
@@ -3397,6 +3339,64 @@ echo %fp%
 set cbf_path=%aa%\csamaa
 
 set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Asset.Data
+
+exit /b
+
+
+
+:_+ CBF-related links.
+
+
+
+::_
+
+:cbfgp
+
+set fp=* CBF on GitHub Pages.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
+
+exit /b
+
+
+
+::_
+
+:cbf
+
+set fp=* CBF on GitHub.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
+
+set cbf_path=%composable_batch_files%
+
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+exit /b
+
+
+
+:_
+
+:ma
+
+set fp=* Mobile App.
+
+rem lu: Jun-18-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\Mobile
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
 
 exit /b
 
