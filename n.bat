@@ -83,8 +83,8 @@ echo         gpcbf  Google Pages for Composable Batch Files on GitHub
 echo       heatmap  \standalone\tmp\vfs\temp\[dynamically generated]
 echo           hex  \standalone\tmp\vfs\temp\[dynamically generated]
 echo      hex_root  [wildfly_location]\standalone\tmp\vfs\temp
-echo            j1  c:\a\j1.txt
-echo            j2  c:\a\j2.txt
+echo            j1  %temp%\j1.txt
+echo            j2  %temp%\j2.txt
 echo            kr  Chrome
 echo           log  %wildfly_location%\standalone\log\server.log
 echo             m  %COMPOSABLE_BATCH_FILES%\m.bat
@@ -579,7 +579,7 @@ rem lu: Feb-1-2018
 
 echo %fp%
 
-set cbf_filename=c:\a\j1.txt
+set cbf_filename=%temp%\j1.txt
 
 exit /b
 
@@ -595,7 +595,7 @@ rem lu: Feb-1-2018
 
 echo %fp%
 
-set cbf_filename=c:\a\j2.txt
+set cbf_filename=%temp%\j2.txt
 
 exit /b
 
@@ -1468,22 +1468,6 @@ exit /b
 
 :_
 
-:a
-
-set fp=* A folder.
-
-rem lu: Dec-12-2017
-
-echo %fp%
-
-set cbf_path=c:\a
-
-exit /b
-
-
-
-:_
-
 :it
 
 set fp=* IT.
@@ -1644,24 +1628,6 @@ exit /b
 
 :_
 
-:aa
-
-set fp=* Aa.
-
-rem lu: Jan-15-2018
-
-echo %fp%
-
-set cbf_path=c:\aa
-
-if %COMPUTERNAME%==XPS set cbf_path=d:\aa
-
-exit /b
-
-
-
-:_
-
 :pc
 
 set fp=Gpodder podcaster.
@@ -1670,7 +1636,7 @@ rem lu: Jan-15-2018
 
 echo %fp%
 
-set cbf_path=c:\aa
+set cbf_path=%aa%
 
 set cbf_application=C:\Program Files (x86)\gPodder\gpodder.exe
 
@@ -3395,7 +3361,7 @@ rem lu: Jun-20-2018
 
 echo %fp%
 
-set cbf_path=c:\aa\Xamarin\AppCenterDemo.BikeSearch
+set cbf_path=%aa%\Xamarin\AppCenterDemo.BikeSearch
 
 set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
 
@@ -3425,6 +3391,24 @@ exit /b
 
 
 
+:_
+
+:ac
+
+set fp=* AppCenter.
+
+rem lu: Jun-21-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://appcenter.ms/apps
+
+exit /b
+
+
+
 ::_
 
 :fr
@@ -3447,17 +3431,33 @@ exit /b
 
 :_
 
-:ac
+:a
 
-set fp=* AppCenter.
+set fp=* A folder.
 
-rem lu: Jun-21-2018
+rem lu: Dec-12-2017
 
 echo %fp%
 
-set cbf_path=
+set cbf_path=c:\a
 
-set cbf_url=https://appcenter.ms/apps
+exit /b
+
+
+
+:_
+
+:aa
+
+set fp=* Aa.
+
+rem lu: Jan-15-2018
+
+echo %fp%
+
+set cbf_path=c:\aa
+
+if %COMPUTERNAME%==XPS set cbf_path=d:\aa
 
 exit /b
 

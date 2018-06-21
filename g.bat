@@ -179,9 +179,9 @@ set fp=* 8. Read help.
 
 echo %fp%
 
-git --help>"c:\a\git_help.txt"
+git --help>"%temp%\git_help.txt"
 
-"%ProgramFiles(x86)%\Multi-Edit 2008\Mew32.exe" "c:\a\git_help.txt"
+"%cbf_default_text_editor%" "%temp%\git_help.txt"
 
 
 exit /b
@@ -1930,13 +1930,13 @@ exit /b
 
 :log
 
-set fp=* 7. Read log. Among other things, you can use this to see when a GitHub repo was last updated.
+set fp=* Read the log. Among other things, you can use this to see when a GitHub repo was last updated.
 
 echo %fp%
 
-git log>"c:\a\git_log.txt"
+git log>"%temp%\git_log.txt"
 
-"%ProgramFiles(x86)%\Multi-Edit 2008\Mew32.exe" "c:\a\git_log.txt"
+"%cbf_default_text_editor%" "%temp%\git_log.txt"
 
 
 exit /b
