@@ -1470,7 +1470,7 @@ exit /b
 
 :a
 
-set fp=A folder.
+set fp=* A folder.
 
 rem lu: Dec-12-2017
 
@@ -1486,7 +1486,7 @@ exit /b
 
 :it
 
-set fp=IT.
+set fp=* IT.
 
 rem lu: Jan-18-2018
 
@@ -1502,7 +1502,7 @@ exit /b
 
 :temp
 
-set fp=Temp.
+set fp=* Temp.
 
 rem lu: Jan-23-2018
 
@@ -1646,7 +1646,7 @@ exit /b
 
 :aa
 
-set fp=Aa.
+set fp=* Aa.
 
 rem lu: Jan-15-2018
 
@@ -3367,24 +3367,6 @@ exit /b
 
 :_
 
-:ma
-
-set fp=* Mobile App.
-
-rem lu: Jun-18-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\Mobile
-
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
-
-exit /b
-
-
-
-:_
-
 :220
 
 :ios220
@@ -3398,6 +3380,84 @@ echo %fp%
 set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
 
 set cbf_url=https://university.xamarin.com/classes/track/all#publishing-an-ios-app-ios220
+
+exit /b
+
+
+
+:_
+
+:bike
+
+set fp=* Bike search.
+
+rem lu: Jun-20-2018
+
+echo %fp%
+
+set cbf_path=c:\aa\Xamarin\AppCenterDemo.BikeSearch
+
+set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
+
+exit /b
+
+
+
+:_+ Mobile Apps
+
+
+
+::_
+
+:ma
+
+set fp=* Mobile App Prototype that Brian saw.
+
+rem lu: Jun-18-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\Mobile
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
+
+exit /b
+
+
+
+::_
+
+:fr
+
+:fres
+
+set fp=* Fresnel Mobile App.
+
+rem lu: Jun-21-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel
+
+set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+
+exit /b
+
+
+
+:_
+
+:ac
+
+set fp=* AppCenter.
+
+rem lu: Jun-21-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://appcenter.ms/apps
 
 exit /b
 
