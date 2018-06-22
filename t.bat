@@ -7197,3 +7197,22 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Try find a buried folder.
+
+rem lu: Jun-22-2018
+
+echo %fp%
+
+set cbf_path=
+rem qq-1
+set cbf_url=
+
+
+exit /b
+
+
+
+:_

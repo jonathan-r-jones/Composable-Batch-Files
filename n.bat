@@ -2522,7 +2522,7 @@ rem lu: May-31-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book
+set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
 
 set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
 
@@ -3255,42 +3255,6 @@ exit /b
 
 
 
-:_
-
-:spdr
-
-set fp=* SPDR.
-
-rem lu: Jun-18-2018
-
-echo %fp%
-
-set cbf_path=
-
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Normalization.Service
-
-exit /b
-
-
-
-:_
-
-:csamaa
-
-set fp=* CSAM Asset Data
-
-rem lu: Jun-19-2018
-
-echo %fp%
-
-set cbf_path=%aa%\csamaa
-
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Asset.Data
-
-exit /b
-
-
-
 :_+ CBF-related links.
 
 
@@ -3369,31 +3333,9 @@ exit /b
 
 
 
-:_+ Mobile Apps
-
-
-
-::_
-
-:ma
-
-set fp=* Mobile App Prototype that Brian saw.
-
-rem lu: Jun-18-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\Mobile
-
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
-
-exit /b
-
-
-
 :_
 
-:ac
+:ctr
 
 set fp=* AppCenter.
 
@@ -3404,26 +3346,6 @@ echo %fp%
 set cbf_path=
 
 set cbf_url=https://appcenter.ms/apps
-
-exit /b
-
-
-
-::_
-
-:fr
-
-:fres
-
-set fp=* Fresnel Mobile App.
-
-rem lu: Jun-21-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\fresnel
-
-set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
 
 exit /b
 
@@ -3458,6 +3380,100 @@ echo %fp%
 set cbf_path=c:\aa
 
 if %COMPUTERNAME%==XPS set cbf_path=d:\aa
+
+exit /b
+
+
+
+:_
+
+:csamaa
+
+set fp=* CSAM Asset Data
+
+rem lu: Jun-19-2018
+
+echo %fp%
+
+set cbf_path=%aa%\csamaa
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Asset.Data
+
+exit /b
+
+
+
+:_
+
+:spdr
+
+set fp=* SPDR.
+
+rem lu: Jun-18-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Normalization.Service
+
+exit /b
+
+
+
+:_
+
+:draw
+
+set fp=* Drawable folder.
+
+rem lu: Jun-22-2018
+
+echo %fp%
+
+set cbf_path=.\NavigationMasterDetail\NavigationMasterDetail.Droid\Resources\Drawable
+
+exit /b
+
+
+
+:_+ Mobile Apps
+
+
+
+::_
+
+:ma
+
+set fp=* Mobile App Prototype that Brian saw.
+
+rem lu: Jun-18-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\Mobile
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
+
+exit /b
+
+
+
+::_
+
+:fr
+
+:fres
+
+set fp=* Fresnel Mobile App.
+
+rem lu: Jun-21-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel
+
+set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
 
 exit /b
 
