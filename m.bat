@@ -3114,22 +3114,6 @@ goto exitb
 
 :_
 
-:rd
-
-set fp=* Remove directory %2.
-
-rem lu: Jun-1-2018
-
-echo %fp%
-
-rd /q /s %2
-
-goto exitb
-
-
-
-:_
-
 :sde
 
 :sdte
@@ -3280,6 +3264,48 @@ set parameter_1=%parameter_1% If left blank, the application is simply started.
 
 echo.
 echo %parameter_1%
+
+exit /b
+
+
+
+:_
+
+:rd
+
+set fp=* Remove directory %2.
+
+rem lu: Jun-1-2018
+
+echo %fp%
+
+rd /q /s %2
+
+goto exitb
+
+
+
+:_
+
+:fr_dob
+
+set fp=* Delete obj and bin folders.
+
+rem lu: Jun-25-2018
+
+echo %fp%
+
+call td fr
+
+rem Delete obj folders.
+rd /q /s .\Fresnel\obj
+rd /q /s .\Fresnel.Android\obj
+rd /q /s .\Fresnel.iOS\obj
+
+rem Delete bin folders.
+rd /q /s .\Fresnel\bin
+rd /q /s .\Fresnel.Android\bin
+rd /q /s .\Fresnel.iOS\bin
 
 exit /b
 
