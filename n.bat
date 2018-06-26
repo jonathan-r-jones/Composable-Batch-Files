@@ -3392,7 +3392,6 @@ rem lu: Jun-26-2018
 echo %fp%
 
 set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page1.xaml
-rem qq-1
 
 exit /b
 
