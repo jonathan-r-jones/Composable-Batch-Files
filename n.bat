@@ -2842,6 +2842,25 @@ exit /b
 
 
 
+::_
+
+:103
+
+:xu_103
+rem qq-1
+
+set fp=* XU Course 103. Make your Images Look Great on all Devices [IOS103] by Judy McNeil
+
+rem lu: Jun-26-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS103
+
+exit /b
+
+
+
 :_
 
 :dn
@@ -3476,6 +3495,8 @@ echo %fp%
 set cbf_path=%dropbox%\it\fresnel
 
 set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+
+set cbf_url=https://github.com/XamarinUniversity/IOS103.git
 
 exit /b
 
