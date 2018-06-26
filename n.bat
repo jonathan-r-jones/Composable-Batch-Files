@@ -2724,143 +2724,6 @@ exit /b
 
 
 
-:_+ Xamarin University
-
-
-
-::_
-
-:xu
-
-set fp=* Xamarin University.
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_path=%aa%\xamarin\xamarin_university\AllCourseExercises
-
-set cbf_url=https://github.com/XamarinUniversity
-
-exit /b
-
-
-
-::_
-
-:xul
-
-set fp=* Xamarin lightning talks.
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=https://university.xamarin.com/lightninglectures
-
-exit /b
-
-
-
-::_
-
-:xul1
-
-set fp=* BUILD 2018 Workshops by Xamarin University.
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/XamarinUniversity/build2018-labs.git
-
-exit /b
-
-
-
-::_
-
-:xu_all
-
-set fp=* XU all exercises.
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/XamarinUniversity/AllCourseExercises.git
-
-exit /b
-
-
-
-::_
-
-:xl_css
-
-set fp=* Xamarin.Forms 3.0 CSS
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/jamcneil/XamarinFormsCSS
-
-exit /b
-
-
-
-::_
-
-:xl_af
-
-set fp=* Azure functions.
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/Krumelur/XamBlob
-
-exit /b
-
-
-
-::_
-
-:xu_205
-
-set fp=* XU Course 205.
-
-rem lu: Jun-6-2018
-
-echo %fp%
-
-set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS205
-
-exit /b
-
-
-
-::_
-
-:103
-
-:xu_103
-rem qq-1
-
-set fp=* XU Course 103. Make your Images Look Great on all Devices [IOS103] by Judy McNeil
-
-rem lu: Jun-26-2018
-
-echo %fp%
-
-set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS103
-
-exit /b
-
-
-
 :_
 
 :dn
@@ -3496,7 +3359,176 @@ set cbf_path=%dropbox%\it\fresnel
 
 set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
 
-set cbf_url=https://github.com/XamarinUniversity/IOS103.git
+exit /b
+
+
+
+:_
+
+:splunk
+
+set fp=* MVC Splunk REST API.
+
+rem lu: Jun-26-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://github.com/lopezunwired/MVC_Splunk_REST_API.git
+
+exit /b
+
+
+
+:_
+
+:p1
+
+set fp=* Page 1.
+
+rem lu: Jun-26-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page1.xaml
+rem qq-1
+
+exit /b
+
+
+
+:_+ Xamarin University
+
+
+
+::_
+
+:xu
+
+set fp=* Xamarin University.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin\xamarin_university\AllCourseExercises
+
+set cbf_url=https://github.com/XamarinUniversity
+
+exit /b
+
+
+
+::_
+
+:xul
+
+set fp=* Xamarin lightning talks.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://university.xamarin.com/lightninglectures
+
+exit /b
+
+
+
+::_
+
+:xul1
+
+set fp=* BUILD 2018 Workshops by Xamarin University.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/XamarinUniversity/build2018-labs.git
+
+exit /b
+
+
+
+::_
+
+:xu_all
+
+set fp=* XU all exercises.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/XamarinUniversity/AllCourseExercises.git
+
+exit /b
+
+
+
+::_
+
+:xl_css
+
+set fp=* Xamarin.Forms 3.0 CSS
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jamcneil/XamarinFormsCSS
+
+exit /b
+
+
+
+::_
+
+:xl_af
+
+set fp=* Azure functions.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/Krumelur/XamBlob
+
+exit /b
+
+
+
+::_
+
+:xu_205
+
+set fp=* XU Course 205.
+
+rem lu: Jun-6-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS205
+
+exit /b
+
+
+
+::_
+
+:103
+
+:xu_103
+
+set fp=* XU Course 103. Make your Images Look Great on all Devices [IOS103] by Judy McNeil
+
+rem lu: Jun-26-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS103
 
 exit /b
 
