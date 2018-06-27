@@ -3381,22 +3381,6 @@ exit /b
 
 
 
-:_
-
-:p1
-
-set fp=* Page 1.
-
-rem lu: Jun-26-2018
-
-echo %fp%
-
-set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page1.xaml
-
-exit /b
-
-
-
 :_+ Xamarin University
 
 
@@ -3528,6 +3512,60 @@ rem lu: Jun-26-2018
 echo %fp%
 
 set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS103
+
+exit /b
+
+
+
+:_
+
+:p1
+
+set fp=* Page 1.
+
+rem lu: Jun-26-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page1.xaml
+
+exit /b
+
+
+
+:_
+
+:p8
+
+set fp=* Page 8.
+
+rem lu: Jun-26-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel\fresnel\Views
+
+set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page8.xaml
+
+exit /b
+
+
+
+:_
+
+:10
+
+:p10
+
+set fp=* Page 10.
+
+rem lu: Jun-27-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel\fresnel\Views
+
+set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page10.xaml
 
 exit /b
 
