@@ -3487,7 +3487,7 @@ exit /b
 
 :xu_205
 
-set fp=* XU Course 205.
+set fp=* XU Course 205 - Astronomy Solution.
 
 rem lu: Jun-6-2018
 
