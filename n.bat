@@ -3571,4 +3571,40 @@ exit /b
 
 
 
+:_
+
+:calc
+
+set fp=* Lee Richardardson's Xamarin Forms calculator.
+
+rem lu: Jun-28-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin\mobile-calc-forms
+
+set cbf_url=https://github.com/lprichar/mobile-calc-forms.git
+
+exit /b
+
+
+
+:_
+
+:whiskey
+
+:clcr
+
+set fp=* Closing credits.
+
+rem lu: Jun-12-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/for-git-testing/blob/master/whiskey.png
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)
