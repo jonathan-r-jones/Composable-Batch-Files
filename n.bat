@@ -138,58 +138,6 @@ exit /b
 
 
 
-:_+ Browsers
-
-
-
-::_
-
-:ie
-
-set fp=* Internet Explorer.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\internet explorer\iexplore.exe
-
-exit /b
-
-
-
-::_
-
-:kr
-
-set fp=* Chrome.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
-
-exit /b
-
-
-
-::_
-
-:fx
-
-set fp=* Firefox.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\mozilla firefox\firefox.exe
-
-exit /b
-
-
-
 :_
 
 :pc
@@ -1856,22 +1804,6 @@ exit /b
 
 :_
 
-:edge
-
-set fp=* Microsoft Edge.
-
-rem lu: Feb-7-2018
-
-echo %fp%
-
-set cbf_application=microsoft-edge
-
-exit /b
-
-
-
-:_
-
 :gm
 
 set fp=Gmail.
@@ -1881,22 +1813,6 @@ rem lu: Feb-13-2018
 echo %fp%
 
 set cbf_url=https://mail.google.com
-
-exit /b
-
-
-
-:_
-
-:op
-
-set fp=Opera.
-
-rem lu: Feb-13-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\opera\launcher.exe
 
 exit /b
 
@@ -3255,6 +3171,8 @@ exit /b
 
 :aa
 
+:r
+
 set fp=* Aa.
 
 rem lu: Jan-15-2018
@@ -3602,6 +3520,145 @@ rem lu: Jun-12-2018
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/for-git-testing/blob/master/whiskey.png
+
+exit /b
+
+
+
+:_
+
+:webapi
+
+set fp=* Call a Web API From a .NET Client (C#).
+
+rem lu: Jul-3-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://github.com/aspnet/Docs.git
+
+exit /b
+
+
+
+:_
+
+:dalsoft
+
+set fp=* DalSoft Rest client.
+
+rem lu: Jul-3-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://github.com/DalSoft/DalSoft.RestClient.git
+
+exit /b
+
+
+
+:_
+
+:monkeys
+
+set fp=* Monkeys.
+
+rem lu: Jul-3-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=http://montemagno.com/monkeys.json
+rem       qq-1
+
+exit /b
+
+
+
+:_+ Browsers
+
+
+
+::_
+
+:ie
+
+set fp=* Internet Explorer.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\internet explorer\iexplore.exe
+
+exit /b
+
+
+
+::_
+
+:kr
+
+set fp=* Chrome.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+exit /b
+
+
+
+::_
+
+:fx
+
+set fp=* Firefox.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\mozilla firefox\firefox.exe
+
+exit /b
+
+
+
+::_
+
+:op
+
+set fp=* Opera.
+
+rem lu: Feb-13-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\opera\launcher.exe
+
+exit /b
+
+
+
+::_
+
+:edge
+
+set fp=* Microsoft Edge.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+set cbf_application=microsoft-edge
 
 exit /b
 
