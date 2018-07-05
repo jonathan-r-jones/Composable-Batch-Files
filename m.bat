@@ -2976,10 +2976,10 @@ echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
 echo    of  Open Folder.
 echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
-echo     s  SQL/Database, including LDAP, related tasks.
+echo     s  Open a Visual Studio solution. Emulated ACP.
 echo    sf  Surf to websites.
-echo   sln  Open a Visual Studio solution. Emulated ACP.
 echo    sm  Run Sublime.
+echo   sql  SQL/Database, including LDAP, related tasks.
 echo     t  Testing, experimenting and developing new batch file functions.
 echo    tk  Wrapper around taskkill command.
 echo    tl  Wrapper around tasklist command.

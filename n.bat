@@ -2438,6 +2438,24 @@ rem lu: May-31-2018
 
 echo %fp%
 
+set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book
+
+set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+
+exit /b
+
+
+
+::_
+
+:ed_c
+
+set fp=* Ed Snider's Xamarin book complete sample code.
+
+rem lu: May-31-2018
+
+echo %fp%
+
 set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
 
 set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
@@ -2448,19 +2466,69 @@ exit /b
 
 ::_
 
-:ed2
+:ed_6
 
-:bk
+set fp=* Ed Snider's Xamarin book sample code from Chapter 6, where he implements BaseHTTPService.
 
-:book
+rem lu: Jul-3-2018
 
-set fp=* Ed Snider's Xamarin book sample code.
+echo %fp%
+
+set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter6
+
+set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+
+exit /b
+
+
+
+::_
+
+:ed_2
+
+set fp=* Ed Snider's Chapter 2.
+
+rem lu: Jul-5-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter2
+
+set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+
+exit /b
+
+
+
+::_
+
+:ed_3
+
+set fp=* Ed Snider's Chapter 2.
+
+rem lu: Jul-5-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter2
+
+set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+
+exit /b
+
+
+
+::_
+
+:ed_p
+
+set fp=* Ed Snider's book, the Packt Publishing version.
 
 rem lu: Mar-1-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-Second-Edition
+set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-Second-Edition
 
 set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
 
@@ -3171,8 +3239,6 @@ exit /b
 
 :aa
 
-:r
-
 set fp=* Aa.
 
 rem lu: Jan-15-2018
@@ -3527,24 +3593,6 @@ exit /b
 
 :_
 
-:webapi
-
-set fp=* Call a Web API From a .NET Client (C#).
-
-rem lu: Jul-3-2018
-
-echo %fp%
-
-set cbf_path=
-
-set cbf_url=https://github.com/aspnet/Docs.git
-
-exit /b
-
-
-
-:_
-
 :dalsoft
 
 set fp=* DalSoft Rest client.
@@ -3574,7 +3622,6 @@ echo %fp%
 set cbf_path=
 
 set cbf_url=http://montemagno.com/monkeys.json
-rem       qq-1
 
 exit /b
 
@@ -3659,6 +3706,58 @@ rem lu: Feb-7-2018
 echo %fp%
 
 set cbf_application=microsoft-edge
+
+exit /b
+
+
+
+:_
+
+:webapi
+
+set fp=* Call a Web API From a .NET Client (C#).
+
+rem lu: Jul-3-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://github.com/aspnet/Docs.git
+
+exit /b
+
+
+
+:_
+
+:hcc
+
+set fp=* My HTTP Client Console App.
+
+rem lu: Jul-3-2018
+
+echo %fp%
+
+set cbf_path=%aa%\HTTPClientConsoleApp
+
+set cbf_url=
+
+exit /b
+
+
+
+:_
+
+:r
+
+set fp=* Repos.
+
+rem lu: Jul-5-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories
 
 exit /b
 
