@@ -2434,33 +2434,19 @@ exit/b
 
 set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt github page.
 
-rem lu: May-31-2018
+rem lu: Jul-5-2018
 
 echo %fp%
 
 set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book
 
-set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
-
-exit/b
-
-
-
-::_
-
-:edc
-
-set fp=* Ed Snider's Xamarin book, chapter %2.
-
-rem lu: Jul-5-2018
-
-echo %fp%
-
 if "%~2" == "c" (
   set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
-) else (
+) else if not "%~2" == "" (
   set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter%2
 )
+
+set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
 
 exit/b
 

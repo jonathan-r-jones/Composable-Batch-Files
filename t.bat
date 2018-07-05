@@ -6869,6 +6869,41 @@ exit/b
 
 ::_
 
+:else
+
+set fp=* The else and errorlevel statements in action.
+
+echo %fp%
+echo.
+
+rem Imprimatur (!error, !else, !elseba, !erro)
+
+if %errorlevel% == 0 (
+  echo.
+  echo 0
+) else (
+  echo.
+  echo 1
+)
+
+if "%~1" == "" (
+  echo Percent 1 nothing.
+) else (
+  echo Percent 1 is something.
+)
+
+if "%~2" == "c" (
+  set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
+) else if not "%~2" == "" (
+  set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter%2
+)
+
+exit/b
+
+
+
+::_
+
 :percent
 
 set fp=* Testing percent 2 and not equals.
@@ -7049,35 +7084,6 @@ set filep=%filep% no bald man has gone before
 
 echo.
 echo %filep%
-
-exit/b
-
-
-
-::_
-
-:else
-
-set fp=* The else and errorlevel statements in action.
-
-echo %fp%
-echo.
-
-rem Imprimatur (!error, !else, !elseba, !erro)
-
-if %errorlevel% == 0 (
-  echo.
-  echo 0
-) else (
-  echo.
-  echo 1
-)
-
-if "%~1" == "" (
-  echo Percent 1 nothing.
-) else (
-  echo Percent 1 is something.
-)
 
 exit/b
 
