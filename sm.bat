@@ -28,7 +28,7 @@ if "%~1" == "" call r sm
 
 if not "%~1" == "" call ed %1 sm
 
-exit /b
+exit/b
 
 
 

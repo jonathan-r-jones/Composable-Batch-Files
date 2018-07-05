@@ -47,7 +47,7 @@ echo Parameter 1: If parameter 1 contains a period, then it will simulate the do
 echo that file which is in the current folder. Or else, it will do a remote double click on
 echo on the filename specified by the nickname.
 
-exit /b
+exit/b
 
 
 
@@ -65,7 +65,7 @@ call r
 
 rem (!rfsp) (mov-2)
 
-exit /b
+exit/b
 
 
 

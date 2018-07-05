@@ -60,7 +60,7 @@ echo     Parameter  Description
 echo -------------  --------------------------------------------------
 echo           dev  Kill all Visual Studio development environments.
 
-exit /b
+exit/b
 
 
 
@@ -105,7 +105,7 @@ rem taskkill /f /im sansaupdater.exe
 rem taskkill /f /im SCNotification.exe
 rem taskkill /f /im taskeng.exe
 
-exit /b
+exit/b
 
 
 
@@ -120,7 +120,7 @@ echo.
 
 taskkill /f /im devenv.exe
 
-exit /b
+exit/b
 
 
 
@@ -135,7 +135,7 @@ echo.
 
 taskkill /f /im explorer.exe
 
-exit /b
+exit/b
 
 
 

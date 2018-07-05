@@ -38,7 +38,7 @@ set fp=* Use the CBF nickname to determine where to install the repository.
 if exist %cbf_path% (
   echo.
   echo "%cbf_path%" already exists.
-  exit /b
+  exit/b
 )
 
 call m set_parent_fd "%cbf_path%\.." parent_folder
@@ -75,7 +75,7 @@ echo.
 echo If "p" is specified, the repository will be installed into the specified 
 echo CBF Path, assuming its not already installed there.
 
-exit /b
+exit/b
 
 
 
@@ -90,7 +90,7 @@ git clone %cbf_url%
 
 rem (!rfsp) (mov-2)
 
-exit /b
+exit/b
 
 
 

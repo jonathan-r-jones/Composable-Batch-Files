@@ -57,7 +57,7 @@ echo Parameter 1: Search criterion. Double quotes are necessary only if spaces a
 echo.
 echo Parameter 2 (Optional): File type to search. For example, "txt" (without quotes) would search only txt type files.
 
-exit /b
+exit/b
 
 
 
@@ -86,7 +86,7 @@ if %errorlevel% == 0 (
   start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_fs.txt"
 )
 
-exit /b
+exit/b
 
 
 

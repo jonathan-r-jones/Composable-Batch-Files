@@ -34,19 +34,19 @@ if not "%~1" == "" call pn %1
 if "%cbf_path%" == "" (
   echo.
   echo Input Error: There is no cbf_path defined for '%~1'. 
-  exit /b
+  exit/b
 )
 
 echo.
 set /P user_option=Are you sure you wish to remove "%cbf_path%"? (y/n): 
 
-if not "%user_option%"=="y" exit /b
+if not "%user_option%"=="y" exit/b
 
 rd /q /s %cbf_path%
 
 rem (!rfsp) (mov-2)
 
-exit /b
+exit/b
 
 
 
@@ -73,7 +73,7 @@ echo Parameter 1: Path nickname.
 echo.
 echo Example: "rf fgt" would remove the For-Git-Testing folder at the current "%%CBF_Path%%" location.
 
-exit /b
+exit/b
 
 
 

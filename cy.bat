@@ -56,7 +56,7 @@ echo.
 echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 
-exit /b
+exit/b
 
 
 
@@ -83,7 +83,7 @@ call td wir3
 
 xcopy /y "c:\mercury\batch_files\Wave_4_invert.png"
 
-exit /b
+exit/b
 
 
 
@@ -101,7 +101,7 @@ call td m2
 
 xcopy c:\mercury\batch_files\settings.xml
 
-exit /b
+exit/b
 
 
 
@@ -120,7 +120,7 @@ call td pu
 
 if not exist cordova echo.
 if not exist cordova echo The Cordova folder isn't there, therefore abort.
-if not exist cordova exit /b
+if not exist cordova exit/b
 
 cd cordova
 
@@ -130,7 +130,7 @@ cd resources
 
 xcopy /s c:\mercury\mobility\resources
 
-exit /b
+exit/b
 
 
 
@@ -149,7 +149,7 @@ call td pu
 
 xcopy /y "c:\mercury\mobility\androidspecific\app.json" "app.json"
 
-exit /b
+exit/b
 
 
 
@@ -168,7 +168,7 @@ call td util
 
 xcopy /y "c:\mercury\mobility\NetConfig - for Testing1.js" "NetConfig.js"
 
-exit /b
+exit/b
 
 
 
@@ -194,7 +194,7 @@ xcopy "%reformatted_string%" "%Dropbox%\NES\Code Backup\"
 
 echo "%reformatted_string%"
 
-exit /b
+exit/b
 
 
 
@@ -213,7 +213,7 @@ call td cbf
 echo.
 xcopy /y c:\a\cbf.png
 
-exit /b
+exit/b
 
 
 

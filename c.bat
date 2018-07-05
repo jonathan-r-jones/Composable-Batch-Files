@@ -46,7 +46,7 @@ set filep=* Clear screen and reset color.
 cls
 color
 
-exit /b
+exit/b
 
 
 
@@ -69,7 +69,7 @@ echo Last Updated (lu): Feb-6-2018
 echo.
 echo Usage: %0
 
-exit /b
+exit/b
 
 
 

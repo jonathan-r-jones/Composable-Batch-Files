@@ -56,7 +56,7 @@ echo.
 echo For example, typing "mx m" would edit the m.bat file in the Composable
 echo. Batch Files folder.
 
-exit /b
+exit/b
 
 
 
@@ -76,7 +76,7 @@ set cbf_parameter=%cbf_filename%
 
 call r
 
-exit /b
+exit/b
 
 
 

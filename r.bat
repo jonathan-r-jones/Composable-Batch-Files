@@ -53,7 +53,7 @@ echo Parameter 2 (Optional): Parameter nickname.
 echo.
 echo Notes: If no parameters are passed, the currently set CBF_Application and CBF_Parameter are used.
 
-exit /b
+exit/b
 
 
 
@@ -67,7 +67,7 @@ echo %fp%
 
 %cbf_application%
 
-exit /b
+exit/b
 
 
 
@@ -79,12 +79,12 @@ set fp=* Use special syntax for Microsoft Edge.
 
 if "%cbf_parameter%" == "" (
   call start "my title" "%cbf_application%:"
-  exit /b
+  exit/b
 )
 
 call start "my title" "%cbf_application%:""%cbf_parameter%"
 
-exit /b
+exit/b
 
 
 
@@ -107,12 +107,12 @@ if "%cbf_parameter%" == "" (
   echo.
   echo * No parameter was passed.
   call start "my title" "%cbf_application%"
-  exit /b
+  exit/b
 )
 
 start "my title" "%cbf_application%" "%cbf_parameter%"
 
-exit /b
+exit/b
 
 
 

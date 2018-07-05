@@ -81,7 +81,7 @@ echo Parameter 1: Batch file label you wish to execute. If left blank,
 echo the code below the last code block in this file, a. k. a. the main function, will 
 echo be executed.
 
-exit /b
+exit/b
 
 
 
@@ -3249,7 +3249,7 @@ echo.
 set classpath=
 java -cp . HelloWorld
 
-exit /b
+exit/b
 
 
 
@@ -3365,7 +3365,7 @@ if %errorlevel% == 0 echo This is the development folder.
 
 if not %errorlevel% == 0 echo This is NOT the development folder.
 
-exit /b
+exit/b
 
 
 
@@ -3469,7 +3469,7 @@ echo.
 echo %fp%
 echo.
 
-exit /b
+exit/b
 
 
 
@@ -3488,7 +3488,7 @@ dir | find /i "0 file">nul
 if %errorlevel% == 0 echo Found.
 if not %errorlevel% == 0 echo NOT found.
 
-exit /b
+exit/b
 
 
 
@@ -3521,7 +3521,7 @@ echo.
 cd\aa
 for /r %%a in (.) do (dir /b "%%a" | find /v "NoTlIkElY" >nul && echo %%a NOT empty || >>FILES.TXT echo %%a empty)
 
-exit /b
+exit/b
 
 
 
@@ -3538,7 +3538,7 @@ echo.
 cd %dropbox%
 for /r %%a in (.) do (dir /b "%%a" | find /v "NoTlIkElY" >nul && echo %%a NOT empty || >>Empty_Dropbox_Folders.txt echo %%a Empty folder.)
 
-exit /b
+exit/b
 
 
 
@@ -3583,7 +3583,7 @@ cd /d %~dp0
 echo Current Folder: %cd%
 echo.
 
-exit /b
+exit/b
 
 
 
@@ -3611,7 +3611,7 @@ echo.
 
 
 
-exit /b
+exit/b
 
 
 
@@ -3634,7 +3634,7 @@ rem org.junit.runner.JUnitCore-4.12.jar;
 rem JUnit-4.12.jar /?
 rem JUnit-4.12.jar /help
 
-exit /b
+exit/b
 
 
 
@@ -3652,7 +3652,7 @@ java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore gen
 cd "%my documents%\dropbox\nes\java\jars"
 cd
 
-exit /b
+exit/b
 
 
 
@@ -3673,7 +3673,7 @@ java -cp "%my documents%\dropbox\nes\java\jars\*" org.junit.runner.JUnitCore gen
 
 cd "%my documents%\dropbox\nes\java\jars"
 
-exit /b
+exit/b
 
 
 
@@ -3709,7 +3709,7 @@ echo.
 
 
 
-exit /b
+exit/b
 
 
 
@@ -3730,7 +3730,7 @@ cd apache-ant-1.9.7\bin\
 
 ant -buildfile "C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Eclipse Workspace\$UnderDevelopment\build.xml"
 
-exit /b
+exit/b
 
 
 
@@ -3751,7 +3751,7 @@ cd apache-ant-1.9.7\bin\
 
 ant -buildfile "C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Eclipse Workspace\$UnderDevelopment\build.xml" junitreport
 
-exit /b
+exit/b
 
 
 
@@ -3896,7 +3896,7 @@ Examples:
     FORFILES /S /M *.doc /C "cmd /c echo @fsize" 
     FORFILES /M *.txt /C "cmd /c if @isdir==FALSE notepad.exe @file"
 
-exit /b
+exit/b
 
 
 
@@ -4046,7 +4046,7 @@ echo.
 
 
 
-exit /b
+exit/b
 
 
 
@@ -4122,7 +4122,7 @@ cd %dynamic_server_location_part_2%
 
 set dynamic_server_location=%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
 
-exit /b
+exit/b
 
 
 
@@ -4153,7 +4153,7 @@ cd %dynamic_server_location_part_2%
 
 set dynamic_server_location=%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
 
-exit /b
+exit/b
 
 
 
@@ -4176,7 +4176,7 @@ set /p dynamic_server_location_part_1=<%temp%\environment_variable_temporary_sto
 
 if not "%dynamic_server_location_part_1%"=="" rd /q /s %dynamic_server_location_part_1%
 
-exit /b
+exit/b
 
 
 
@@ -4286,7 +4286,7 @@ echo.
 echo 3
 echo "%my documents%\dropbox\Multi-Edit_2008_Config_Files"
 
-exit /b
+exit/b
 
 
 
@@ -4303,7 +4303,7 @@ cd \a
 
 mysqldump -u root -p mercdb > c:\a\test_5.dmp
 
-exit /b
+exit/b
 
 
 
@@ -4319,7 +4319,7 @@ echo.
 
 mysql --user='mercweb' --password=MERCadmin mercdb
 
-exit /b
+exit/b
 
 
 
@@ -4443,7 +4443,7 @@ cd %fs%
 
 cd
 
-exit /b
+exit/b
 
 
 
@@ -4586,7 +4586,7 @@ call c:\projects\netbeans\batch_files\m.bat set_wildfly_dynamic_folder
 
 cd %wildfly_dynamic_folder%
 
-exit /b
+exit/b
 
 
 
@@ -4619,7 +4619,7 @@ del modern.json
 
 del modern.jsonp
 
-exit /b
+exit/b
 
 
                                                                      1
@@ -4642,7 +4642,7 @@ call "c:\projects\netbeans\batch_files\Copy fresh Ext JS files to WildFly.bat"
 
 echo Step 3 completed.
 
-exit /b
+exit/b
 
 
 
@@ -4663,7 +4663,7 @@ rem m exitp
 
 xcopy /d /h /r /s /y c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury
 
-exit /b
+exit/b
 
 
 
@@ -4677,7 +4677,7 @@ echo.
 echo %fp%
 
 
-exit /b
+exit/b
 
 
 
@@ -4712,7 +4712,7 @@ echo %fp%
 echo.
 echo Current Folder: %cd%
 
-exit /b
+exit/b
 
 
 
@@ -4748,7 +4748,7 @@ del modern.json
 
 del modern.jsonp
 
-exit /b
+exit/b
 
 
 
@@ -4765,7 +4765,7 @@ cd \projects\netbeans\sencha\html5application\public_html
 
 goto identify_current_folder
 
-exit /b
+exit/b
 
 
 
@@ -4811,7 +4811,7 @@ echo %fp%
 if %computername% == NES-1KKHHC2 echo Work computer.
 rem if /i not "%computername%"=="NES-1KKHHC2" echo Work computer.
 
-exit /b
+exit/b
 
 
 
@@ -5087,7 +5087,7 @@ cd
 
 xcopy /d /h /r /s /y . C:\Users\jonathan.r.jones\Documents\Dropbox\IT\Java\Workspaces\NES-1KKHHC2
 rem xcopy /d /h /r /s /y . "C:\aa\test"
-exit /b
+exit/b
 
 
 
@@ -5129,7 +5129,7 @@ cd
 git clone %origin_url% --branch %branch_name% .\%folder_name%
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -5340,7 +5340,7 @@ echo.
 echo %fp%
 
 cd C:\projects\netbeans\mercury6\Mercury-web\src\main\webapp
-exit /b
+exit/b
 
 
 
@@ -5379,7 +5379,7 @@ rem del /q /f "%chrome_data_folder%\*History*.*">nul 2>&1
 rem I don't know what nul 2>&1 does.
 rem set chrome_cache=%chrome_data_folder%\cache>nul 2>&1  
 
-exit /b
+exit/b
 
 
 
@@ -5409,7 +5409,7 @@ echo %fp%
 
 call c:\projects\netbeans\batch_files\m.bat open_target_foler_in_explorer
 
-exit /b
+exit/b
 
 
 
@@ -5424,7 +5424,7 @@ echo %fp%
 
 call c:\projects\netbeans\batch_files\m.bat edit_contacts_widget
 
-exit /b
+exit/b
 
 
 
@@ -5439,7 +5439,7 @@ echo %fp%
 
 cd \Mercury\Server\wildfly-9.0.2.Final\standalone\tmp\vfs\temp
 
-exit /b
+exit/b
 
 
 
@@ -5479,7 +5479,7 @@ echo %fp%
 call c:\projects\netbeans\batch_files\m ver
 
 pause
-exit /b
+exit/b
 
 
 
@@ -5495,11 +5495,11 @@ echo %fp%
 cd | find /i "C:\projects\netbeans\sencha">nul
 
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit /b
+if %errorlevel% == 0 exit/b
 
 echo Errorlevel: %errorlevel%
 
-exit /b
+exit/b
 
 
 
@@ -5516,7 +5516,7 @@ cd c:\a
 
 xcopy /y j1.txt j2.txt
 
-exit /b
+exit/b
 
 
 
@@ -5551,7 +5551,7 @@ echo.
 echo %fp%
 
 color d0
-exit /b
+exit/b
 
 
 
@@ -5568,7 +5568,7 @@ if "%~2" == "" echo A commit description is required.
 
 echo %2
 
-exit /b
+exit/b
 
 
 
@@ -5583,7 +5583,7 @@ echo %fp%
 
 title = Hi
 
-exit /b
+exit/b
 
 
 
@@ -5607,7 +5607,7 @@ set /p mercury_version_number=<%tmp%\mercury_version_number.txt
 
 echo %mercury_version_number%
 
-exit /b
+exit/b
 
 
 
@@ -5624,7 +5624,7 @@ rem fcd: May-14-2017
 echo.
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -5641,7 +5641,7 @@ echo 0: %0
 echo 1: %1
 echo 2: %2
 
-exit /b
+exit/b
 
 
 
@@ -5664,7 +5664,7 @@ call no edit_pom_web
 
 call no edit_system_widget
 
-exit /b
+exit/b
 
 
 
@@ -5680,12 +5680,12 @@ echo.
 set /P user_option=Are you sure you wish to delete the database?! (y/n): 
 
 if not "%user_option%"=="y" echo Aborting.
-if not "%user_option%"=="y" exit /b
+if not "%user_option%"=="y" exit/b
 
 echo.
 echo You have chosen to continue.
 
-exit /b
+exit/b
 
 
 
@@ -5706,7 +5706,7 @@ if /i %computername%==nes-1kkhhc2 set wildfly_location=c:\mercury\server\wildfly
 
 echo %wildfly_location%
 
-exit /b
+exit/b
 
 
 
@@ -5722,7 +5722,7 @@ echo %fp%
 cd %1
 echo Error Level: %errorlevel%
 
-exit /b
+exit/b
 
 
 
@@ -5739,11 +5739,11 @@ echo.
 echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 echo First parameter is a filename.
-if %errorlevel% == 0 exit /b
+if %errorlevel% == 0 exit/b
 if %errorlevel% == 1 echo First parameter is NOT a filename.
-if %errorlevel% == 1 exit /b
+if %errorlevel% == 1 exit/b
 
-exit /b
+exit/b
 
 
 
@@ -5759,7 +5759,7 @@ echo %fp%
 if /i not "%computername%"=="WIN-8D6B7BCCM06" echo not
 if /i not "%computername%"=="WIN-8D6B7BCCM06" set password="MERCadmin"
 
-exit /b
+exit/b
 
 
 
@@ -5778,7 +5778,7 @@ cd
 
 xcopy /d /h /r /s /y C:\projects\netbeans\sencha\HTML5Application\public_html
 
-exit /b
+exit/b
 
 
 
@@ -5793,7 +5793,7 @@ echo %fp%
 
 if /i not "%computername%"=="NES-1KKHHC2" echo is it
 
-exit /b
+exit/b
 
 
 
@@ -5813,7 +5813,7 @@ if /i exist c:\mercury\backups\%user_option%.dmp echo exist
 
 if /i not exist c:\mercury\backups\%user_option%.dmp echo The filename you entered does not exist.
 
-exit /b
+exit/b
 
 
 
@@ -5831,7 +5831,7 @@ cd\a
 
 type j1.txt | find /i "daniel"
 
-exit /b
+exit/b
 
 
 
@@ -5846,7 +5846,7 @@ echo %fp%
 
 assoc .txt="C:\Program Files\Sublime Text 3\sublime_text.exe"
 
-exit /b
+exit/b
 
 
 
@@ -5861,7 +5861,7 @@ echo %fp%
 
 driverquery -v
 
-exit /b
+exit/b
 
 
 
@@ -5880,7 +5880,7 @@ goto xxx
 if %errorlevel% == 0 echo 0
 if %errorlevel% == 1 echo 1
 
-exit /b
+exit/b
 
 
 
@@ -5898,7 +5898,7 @@ dir | find /i "%target_folder%">nul
 if %errorlevel% == 1 md %target_folder%
 cd %navigate_target_folder%
 
-exit /b
+exit/b
 
 
 
@@ -5917,7 +5917,7 @@ if not exist c:\a echo A does NOT exist.
 if exist c:\b echo B exists.
 if not exist c:\b echo B does NOT exist.
 
-exit /b
+exit/b
 
 
 
@@ -5929,7 +5929,7 @@ rem lu: Nov-14-2017
 
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -5948,7 +5948,7 @@ if exist C:\projects\netbeans\mercury6\Mercury-web\target cd C:\a
 if not exist C:\projects\netbeans\mercury6\Mercury-web\target echo Targ is not there.
 if not exist C:\projects\netbeans\mercury6\Mercury-web\target cd C:\a
 
-exit /b
+exit/b
 
 
 
@@ -5987,7 +5987,7 @@ del c:\projects\netbeans\sencha\HTML5Application\public_html\modern\resources\im
 del c:\projects\netbeans\sencha\HTML5Application\public_html\modern\resources\images\lock-screen-background.jpg
 del c:\projects\netbeans\sencha\HTML5Application\public_html\resources\images\lock-screen-background.jpg
 
-exit /b
+exit/b
 
 
 
@@ -6004,7 +6004,7 @@ path | find /i "sencha">null
 if %errorlevel% == 0 echo EXISTS.
 if %errorlevel% == 1 echo Does NOT exist.
 
-exit /b
+exit/b
 
 
 
@@ -6018,7 +6018,7 @@ echo %fp%
 
 call "c:\mercury\batch_files\Mercury Development Environment.xlsx - Shortcut.lnk"
 
-exit /b
+exit/b
 
 
 
@@ -6038,7 +6038,7 @@ rem call start "my title" "Snipping Tool.lnk"
 rem call start "my title" "Wordpad.lnk"
 call start "my title" "steps recorder.lnk"
 
-exit /b
+exit/b
 
 
 
@@ -6077,7 +6077,7 @@ if /i %computername% == xps (
   echo No!
 )
 
-exit /b
+exit/b
 
 
 
@@ -6091,7 +6091,7 @@ rem lu: Dec-18-2017
 
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -6113,7 +6113,7 @@ rem call %0 test_hello
 rem New way.
 call :test_hello
 
-exit /b
+exit/b
 
 
 
@@ -6136,7 +6136,7 @@ if %notepad_installation_path%=="" echo Notepad++ is not installed.
 
 echo %ndotepad_installation_path%
 
-exit /b
+exit/b
 
 
 
@@ -6152,7 +6152,7 @@ echo %fp%
 
 "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" http://edition.cnn.com
 
-exit /b
+exit/b
 
 
 
@@ -6174,7 +6174,7 @@ rem echo filename: %filename%
 
 start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
 
-exit /b
+exit/b
 
 
 
@@ -6192,7 +6192,7 @@ dir /b>.gitignore
 
 call npp .gitignore
 
-exit /b
+exit/b
 
 
 
@@ -6213,7 +6213,7 @@ echo.
 
 rem echo user_option: %user_option%
 
-exit /b
+exit/b
 
 
 
@@ -6230,7 +6230,7 @@ rem Function Creation Date: Mar-3-2017
 echo.
 echo %fp% from %0.bat file. I'm a real person not a computer. Ask me anything.
 
-exit /b
+exit/b
 
 
 
@@ -6247,7 +6247,7 @@ echo %fp%
 
 %windir%\system32\SnippingTool.exe
 
-exit /b
+exit/b
 
 
 
@@ -6268,7 +6268,7 @@ if %errorlevel% == 0 cd "%~1"
 if %errorlevel% == 0 echo Exists.
 if %errorlevel% == 1 echo Does NOT exist.
 
-exit /b
+exit/b
 
 
 
@@ -6295,7 +6295,7 @@ echo.%str%
 set str=%str:/=\%
 echo.%str%
 
-exit /b
+exit/b
 
 
 
@@ -6314,7 +6314,7 @@ set cbf_parameter=""
 
 call r
 
-exit /b
+exit/b
 
 
 
@@ -6338,7 +6338,7 @@ pause
 
 call cd /d %original_folder%
 
-exit /b
+exit/b
 
 
 
@@ -6354,7 +6354,7 @@ echo %fp%
 
 echo Title: %title
 echo Title: %title%
-exit /b
+exit/b
 
 
 
@@ -6370,7 +6370,7 @@ rem forfiles /d +0
 rem forfiles /d +0 /c @isdir=FALSE
 forfiles /d +2/7/2018 /c "cmd /c echo @fname is new today."
 
-exit /b
+exit/b
 
 
 
@@ -6384,7 +6384,7 @@ echo %fp%
 
 forfiles /d +0 /c "cmd /c echo @fname is new today."
 
-exit /b
+exit/b
 
 
 
@@ -6400,7 +6400,7 @@ echo %fp%
 
 dir /d /ad|findstr /bvc:" "
 
-exit /b
+exit/b
 
 
 
@@ -6416,7 +6416,7 @@ echo %fp%
 
 dir /d /a-d | findstr /bvc:" "
 
-exit /b
+exit/b
 
 
 
@@ -6432,7 +6432,7 @@ echo %fp%
 
 start microsoft-edge:
 
-exit /b
+exit/b
 
 
 
@@ -6446,7 +6446,7 @@ echo %fp%
 
 echo %1 | find /i ".">nul
 
-exit /b
+exit/b
 
 
 
@@ -6464,7 +6464,7 @@ echo. man to make manual pages
 echo man to make manual pages
 echo        man to make manual pages
 
-exit /b
+exit/b
 
 
 
@@ -6480,15 +6480,15 @@ echo %fp%
 
 if not "%cbf_filename%" == "" (
   call k %1
-  exit /b
+  exit/b
 )
 
 if not "%cbf_url%" == "" (
   call sf %1
-  exit /b
+  exit/b
 )
 
-exit /b
+exit/b
 
 
 
@@ -6524,7 +6524,7 @@ echo 1. %~1
 echo.
 if "%~1" == "" echo nothing
 
-exit /b
+exit/b
 
 
 
@@ -6538,7 +6538,7 @@ rem lu: Mar-23-2018
 
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -6577,7 +6577,7 @@ echo.
 echo Test4: %test4%
 
 
-exit /b
+exit/b
 
 
 
@@ -6595,7 +6595,7 @@ call td fgt
 
 cd..
 
-exit /b
+exit/b
 
 
 
@@ -6615,7 +6615,7 @@ GOTO :EOF
 
 set %2=%~f1 
 
-exit /b
+exit/b
 
 
 
@@ -6634,7 +6634,7 @@ echo %fp%
 
 set %2=%~f1
 
-exit /b
+exit/b
 
 
 
@@ -6704,7 +6704,7 @@ echo %fp%
 
 cd /d %parent_folder%
 
-exit /b
+exit/b
 
 
 
@@ -6740,7 +6740,7 @@ rem lu: Apr-10-2018
 echo %fp%
 
 m exitp
-exit /b
+exit/b
 m exit
 
 
@@ -6756,7 +6756,7 @@ rem lu: Apr-10-2018
 echo %fp%
 
 cd /d \Program Files (x86)\Multi-Edit 2008\
-exit /b
+exit/b
 
 
 
@@ -6771,7 +6771,7 @@ rem lu: Apr-25-2018
 
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -6793,7 +6793,7 @@ dir | find /i "Savannah Backups">nul
 if %errorlevel% == 0 echo Folder EXISTS.
 if %errorlevel% == 1 echo Folder does NOT exist.
 
-exit /b
+exit/b
 
 
 
@@ -6815,7 +6815,7 @@ dir | find /i "%1">nul
 if %errorlevel% == 0 echo Folder EXISTS.
 if %errorlevel% == 1 echo Folder does NOT exist.
 
-exit /b
+exit/b
 
 
 
@@ -6838,7 +6838,7 @@ if exist "%cbf_path%" (
 
 if not exist "%cbf_path%" echo It does NOT exist.
 
-exit /b
+exit/b
 
 
 
@@ -6859,7 +6859,7 @@ else
   // Do a remote double click.
 )
 
-exit /b
+exit/b
 
 
 
@@ -6888,7 +6888,7 @@ set cbf_url='https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile'
 echo.
 echo cbf_url: %cbf_url%
 
-exit /b
+exit/b
 
 
 
@@ -6909,7 +6909,7 @@ if exist "%1" (
 
 if not exist "%1" echo It does NOT exist.
 
-exit /b
+exit/b
 
 
 
@@ -6957,7 +6957,7 @@ if "%variable_1%" == "%variable_2%" (
 rem Set statements inside an if block don't work!
 rem https://stackoverflow.com/questions/9102422/windows-batch-set-inside-if-not-working
 
-exit /b
+exit/b
 
 
 
@@ -6996,6 +6996,13 @@ echo Percent 3: %3
 echo Percent test_var: %test_var%
 
 echo.
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 cannot be nothing.
+  exit/b
+)
+
+echo.
 echo 4.
 if "%~1" == "" echo No command line parameter was passed.
 
@@ -7019,7 +7026,7 @@ if "%~2" == "" (
   echo Percent 2 is something.
 )
 
-exit /b
+exit/b
 
 
 
@@ -7043,7 +7050,7 @@ set filep=%filep% no bald man has gone before
 echo.
 echo %filep%
 
-exit /b
+exit/b
 
 
 
@@ -7072,7 +7079,7 @@ if "%~1" == "" (
   echo Percent 1 is something.
 )
 
-exit /b
+exit/b
 
 
 
@@ -7094,7 +7101,7 @@ if not "%message%" == "Hello" (
   echo It's NOT equal.
 )
 
-exit /b
+exit/b
 
 
 
@@ -7108,7 +7115,7 @@ echo %fp%
 
 set cbf_application=%cbf_default_text_editor%
 
-exit /b
+exit/b
 
 
 
@@ -7122,7 +7129,7 @@ echo %fp%
 
 echo %1
 
-exit /b
+exit/b
 
 
 
@@ -7130,7 +7137,7 @@ exit /b
 
 :
 
-set fp=* Is exit /b the same as goto eof? Yes.
+set fp=* Is exit/b the same as goto eof? Yes.
 
 rem lu: Jun-14-2018
 
@@ -7163,7 +7170,7 @@ if %errorlevel% == 0 (
   echo 1
 )
 
-exit /b
+exit/b
 
 
 
@@ -7182,7 +7189,7 @@ set /a cbf_url=1+1
 echo.
 echo cbf_url
 
-exit /b
+exit/b
 
 
 

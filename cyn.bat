@@ -38,7 +38,7 @@ set fp=* Data validation.
 
 if "%~2" == "" (
   echo * Destination path nickname is required.
-  exit /b
+  exit/b
 )
   
 goto main_function
@@ -76,7 +76,7 @@ set parameter_2=%parameter_2%
 echo.
 echo %parameter_2%
 
-exit /b
+exit/b
 
 
 
@@ -93,7 +93,7 @@ xcopy %~1 %cbf_path%
 
 rem (!rfsp) (mov-2)
 
-exit /b
+exit/b
 
 
 

@@ -26,7 +26,7 @@ if "%~1" == "help" goto help
 
 call n %1
 
-exit /b
+exit/b
 
 
 
@@ -47,7 +47,7 @@ echo Last Updated: Jan-24-2018
 echo.
 echo Usage: %0 [single parameter]
 
-exit /b
+exit/b
 
 
 

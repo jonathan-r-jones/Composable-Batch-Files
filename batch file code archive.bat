@@ -13,7 +13,7 @@ cd c:\projects\netbeans\
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git --branch clean6.2 .\sencha
 
-exit /b
+exit/b
 
 
 
@@ -32,7 +32,7 @@ cd c:\projects\netbeans\
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git --branch master .\mercury6
 
-exit /b
+exit/b
 
 
 
@@ -54,7 +54,7 @@ pause
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/batch_files.git --branch master .\batch_files
 
-exit /b
+exit/b
 
 
 
@@ -73,7 +73,7 @@ cd c:\mercury
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/mobility.git --branch master .\mobility
 
-exit /b
+exit/b
 
 
 
@@ -93,7 +93,7 @@ call td merc
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/latest-war-file.git ".\Latest War File"
 
-exit /b
+exit/b
 
 
 
@@ -116,7 +116,7 @@ cd\Mercury
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/backups.git .\Backups
 
-exit /b
+exit/b
 
 
 
@@ -133,7 +133,7 @@ echo.
 
 echo git clone https://Jonathan17@bitbucket.org/nesmercuryteam/backups.git --branch master .\Backups
 
-exit /b
+exit/b
 
 
 
@@ -159,7 +159,7 @@ rem git commit -m "Initial commit."
 
 rem git push -u origin master
 
-exit /b
+exit/b
 
 
 
@@ -179,7 +179,7 @@ git clone https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git .\do
 
 call of mr
 
-exit /b
+exit/b
 
 
 
@@ -197,7 +197,7 @@ call td m2
 
 git clone https://Jonathan17@bitbucket.org/nesmercuryteam/maven-dependencies.git .\repository
 
-exit /b
+exit/b
 
 
 
@@ -215,7 +215,7 @@ call td m2
           
 git clone https://mercury_devops@bitbucket.org/nesmercuryteam/maven-dependencies.git .\repository
 
-exit /b
+exit/b
 
 
 
@@ -233,7 +233,7 @@ call td daa
           
 git clone https://github.com/ardwalker/bowling-for-csharp.git .\bowling_in_cs
 
-exit /b
+exit/b
 
 
 
@@ -251,7 +251,7 @@ call td daa
           
 git clone https://github.com/atuggle/BowlingGameKataCSharp.git .\bowl2
 
-exit /b
+exit/b
 
 
 
@@ -269,7 +269,7 @@ call td daa
           
 git clone https://github.com/xamarin/dev-days-labs.git .\xamarin_dev_days
 
-exit /b
+exit/b
 
 
 
@@ -291,7 +291,7 @@ set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/tirem.git
 git clone %origin_url% --branch %branch_name% .\%folder_name%
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -323,7 +323,7 @@ git clone %origin_url% --branch %branch_name% .\%folder_name%
 
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -342,7 +342,7 @@ rem 5. Research and development.
 rem How does this HomeBrew statement work?
 rem /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-exit /b
+exit/b
 
 
 
@@ -358,7 +358,7 @@ echo %fp%
 
 git clone https://github.com/jonathan-r-jones/ForGitTesting.git --branch master .\git_testing
 
-exit /b
+exit/b
 
 
 
@@ -377,7 +377,7 @@ echo.
           
 git clone https://github.com/alexsorokoletov/NovaCodeCamp.PizzaRatings.git .\fresh_pizza
 
-exit /b
+exit/b
 
 
 
@@ -396,7 +396,7 @@ echo.
           
 git clone https://github.com/edsnider/marvel-xfdemo.git .\fresh_marvel
 
-exit /b
+exit/b
 
 
 
@@ -415,7 +415,7 @@ echo.
           
 git clone https://github.com/Microsoft/appcenter-sampleapp-android.git .\appcenter_sample
 
-exit /b
+exit/b
 
 
 
@@ -436,7 +436,7 @@ git clone https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git .\pi
 
 cd pizza
 
-exit /b
+exit/b
 
 
 
@@ -455,7 +455,7 @@ echo.
           
 git clone https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git .\TickTockMenuMaker
 
-exit /b
+exit/b
 
 
 
@@ -474,7 +474,7 @@ set rn=https://github.com/BrendanPluralsight/cmd-demo.git
 
 git clone %rn%
 
-exit /b
+exit/b
 
 
 
@@ -496,7 +496,7 @@ call un %1
 
 git clone %cbf_url% .\%folder_name%
 
-exit /b
+exit/b
 
 
 :_
@@ -517,7 +517,7 @@ call un %1
 
 git clone %cbf_url% .\%folder_name%
 
-exit /b
+exit/b
 
 
 
@@ -541,4 +541,4 @@ echo.
 
 git clone %cbf_url% .\%folder_name%
 
-exit /b
+exit/b

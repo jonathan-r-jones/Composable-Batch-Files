@@ -66,7 +66,7 @@ set parameter_2=%parameter_2% all file types will be searched.
 echo.
 echo %parameter_2%
 
-exit /b
+exit/b
 
 
 
@@ -116,7 +116,7 @@ if %errorlevel% == 0 (
   echo No results found Hoss.
 )
 
-exit /b
+exit/b
 
 
 

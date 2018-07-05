@@ -50,7 +50,7 @@ echo        step_3  Function that does [blank].
 echo    some_steps  Function that runs some functions.
 echo     all_steps  Function that runs all functions.
 
-exit /b
+exit/b
 
 
 
@@ -72,7 +72,7 @@ echo %fp%
 echo.
 echo Put some code here.
 
-exit /b
+exit/b
 
 
 
@@ -86,7 +86,7 @@ rem lu: Jan-23-2018
 
 call hello_world_2 step_2
 
-exit /b
+exit/b
 
 
 
@@ -104,7 +104,7 @@ echo %fp%
 echo.
 echo Put some code here.
 
-exit /b
+exit/b
 
 
 
@@ -125,7 +125,7 @@ call hello_world_2 step_2
 
 call %0 step_3
 
-exit /b
+exit/b
 
 
 
@@ -144,7 +144,7 @@ call %0 step_1
 
 call hello_world_2 step_2
 
-exit /b
+exit/b
 
 
 
@@ -164,7 +164,7 @@ call hello_world_2 step_2
 
 call :step_3
 
-exit /b
+exit/b
 
 
 

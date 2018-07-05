@@ -36,7 +36,7 @@ echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 echo        step_2  Function that does [blank].
 
-exit /b
+exit/b
 
 
 
@@ -54,7 +54,7 @@ echo %fp%
 echo.
 echo Batch File 2. Put some code here.
 
-exit /b
+exit/b
 
 
 

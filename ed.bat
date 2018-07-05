@@ -67,7 +67,7 @@ set parameter_3=%parameter_3% extensionless filename rather than a nickname.
 echo.
 echo %parameter_3%
 
-exit /b
+exit/b
 
 
 
@@ -109,7 +109,7 @@ call r
 
 rem (!rfsp) (mov-2)
 
-exit /b
+exit/b
 
 
 

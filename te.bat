@@ -67,7 +67,7 @@ set parameter_2=%parameter_2%
 echo.
 echo %parameter_2%
 
-exit /b
+exit/b
 
 
 
@@ -81,7 +81,7 @@ echo %filename_stands_for%
 
 rem (!rfsp) (mov-2)
 
-exit /b
+exit/b
 
 
 

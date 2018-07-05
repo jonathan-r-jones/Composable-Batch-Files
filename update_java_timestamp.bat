@@ -59,7 +59,7 @@ rem echo.
 rem echo %fp%
 
 rem (!xb)
-exit /b
+exit/b
 
 
 
@@ -92,7 +92,7 @@ java Get_Timestamp_With_No_Spaces>%tmp%\java_timestamp.txt
 rem cd
 rem echo jt: %java_timestamp%
 
-exit /b
+exit/b
 
 
 

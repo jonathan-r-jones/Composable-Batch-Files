@@ -71,7 +71,7 @@ echo             s  Get status, including remote information.
 echo           src  Identify source repository of your current folder.
 echo            ss  Get super status.
 
-exit /b
+exit/b
 
 
 
@@ -87,12 +87,12 @@ echo %fp%
 
 cd | find /i "Development">nul
 if not %errorlevel% == 0 echo Error: This is the master, not the development, folder so exiting.
-if not %errorlevel% == 0 echo exit /b
+if not %errorlevel% == 0 echo exit/b
 
 echo.
 git push -u origin HEAD:development
 
-exit /b
+exit/b
 
 
 
@@ -107,7 +107,7 @@ echo %fp%
 echo.
 git remote add origin https://github.com/jonathan-r-jones/for_git_testing_and_learning.git
 
-exit /b
+exit/b
 
 
 
@@ -122,7 +122,7 @@ echo %fp%
 echo.
 git remote add origin https://github.com/jonathan-r-jones/for_git_testing_and_learning.git
 
-exit /b
+exit/b
 
 
 
@@ -137,7 +137,7 @@ echo %fp%
 echo.
 git remote add origin https://github.com/jonathan-r-jones/test-eclipse-project.git
 
-exit /b
+exit/b
 
 
 
@@ -152,7 +152,7 @@ echo %fp%
 echo.
 git remote add origin https://github.com/jonathan-r-jones/quickla.git
 
-exit /b
+exit/b
 
 
 
@@ -167,7 +167,7 @@ echo %fp%
 echo.
 git remote add origin https://github.com/jonathan-r-jones/batch-files.git
 
-exit /b
+exit/b
 
 
 
@@ -184,7 +184,7 @@ git --help>"%temp%\git_help.txt"
 "%cbf_default_text_editor%" "%temp%\git_help.txt"
 
 
-exit /b
+exit/b
 
 
 
@@ -199,7 +199,7 @@ echo %fp%
 echo.
 git diff HEAD
 
-exit /b
+exit/b
 
 
 
@@ -222,7 +222,7 @@ rem git push origin --delete %2
 echo.
 git push origin --delete development-Nov-16-2016
 
-exit /b
+exit/b
 
 
 
@@ -237,7 +237,7 @@ echo %fp%
 echo.
 git checkout -b master
 
-exit /b
+exit/b
 
 
 
@@ -252,7 +252,7 @@ echo %fp%
 echo.
 git branch --unset -upstream
 
-exit /b
+exit/b
 
 
 
@@ -267,7 +267,7 @@ echo %fp%
 echo.
 git push -u origin HEAD:development-Nov-1-2016
 
-exit /b
+exit/b
 
 
 
@@ -286,7 +286,7 @@ echo %fp%
 echo.
 git push -u origin HEAD:dev-Dec-5-2016
 
-exit /b
+exit/b
 
 
 
@@ -301,7 +301,7 @@ echo %fp%
 echo.
 git pull clean6.2
 
-exit /b
+exit/b
 
 
 
@@ -325,7 +325,7 @@ rem git fetch && git checkout clean6.2
 git fetch
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -341,7 +341,7 @@ echo %fp%
 git pull origin original
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -360,7 +360,7 @@ echo.
 git checkout -b Branch2
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -379,7 +379,7 @@ echo %fp%
 echo.
 git branch --set-upstream-to=master
 
-exit /b
+exit/b
 
 
 
@@ -397,7 +397,7 @@ echo %fp%
 echo.
 git status
 
-exit /b
+exit/b
 
 
 
@@ -413,7 +413,7 @@ echo %fp%
 
 git rm -f %2
 
-exit /b
+exit/b
 
 
 
@@ -425,7 +425,7 @@ rem fcd: Feb-28-2017
 
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -443,7 +443,7 @@ cd c:\projects\netbeans\sencha
 git remote update
 git status
 
-exit /b
+exit/b
 
 
 
@@ -461,7 +461,7 @@ cd c:\projects\netbeans\mercury6
 git remote update
 git status
 
-exit /b
+exit/b
 
 
 
@@ -481,7 +481,7 @@ echo.
 git remote update
 git status
 
-exit /b
+exit/b
 
 
 
@@ -499,7 +499,7 @@ cd C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha
 git remote update
 git status
 
-exit /b
+exit/b
 
 
 
@@ -526,7 +526,7 @@ call td ql
 
 call g s
 
-exit /b
+exit/b
 
 
 
@@ -543,7 +543,7 @@ echo.
 
 echo The help content is under construction.
 
-exit /b
+exit/b
 
 
 
@@ -561,7 +561,7 @@ cd c:\projects\netbeans\sencha
 git remote update
 git status>c:\a\j1.txt
 
-exit /b
+exit/b
 
 
 
@@ -579,7 +579,7 @@ cd c:\projects\netbeans\mercury6
 git remote update
 git status>c:\a\j3.txt
 
-exit /b
+exit/b
 
 
 
@@ -602,7 +602,7 @@ echo %fp%
 echo.
 call git push
 
-exit /b
+exit/b
 
 
 
@@ -619,7 +619,7 @@ echo.
 
 git push -u origin master
 
-exit /b
+exit/b
 
 
 
@@ -638,7 +638,7 @@ call %0 csf Mercury-ear/pom.xml "Update version number."
 call %0 csf Mercury-ejb/pom.xml "Update version number."
 call %0 csf Mercury-web/pom.xml "Update version number."
 
-exit /b
+exit/b
 
 
 
@@ -654,11 +654,11 @@ echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit /b
+if %errorlevel% == 0 exit/b
 
 cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit /b
+if %errorlevel% == 0 exit/b
 
 call %0 add
 
@@ -668,7 +668,7 @@ call %0 push
 
 call %0 rf_status
 
-exit /b
+exit/b
 
 
 
@@ -686,7 +686,7 @@ cd c:\mercury\mobility
 
 call %0 acp
 
-exit /b
+exit/b
 
 
 
@@ -704,11 +704,11 @@ echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit /b
+if %errorlevel% == 0 exit/b
 
 cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit /b
+if %errorlevel% == 0 exit/b
 
 call m update_java_timestamp
 
@@ -717,7 +717,7 @@ set /p commit_description=<%tmp%\java_timestamp.txt
 
 call git commit -a -m %commit_description%
 
-exit /b
+exit/b
 
 
 
@@ -752,7 +752,7 @@ call %0 asf Mercury-web/pom.xml
 
 call %0 asf pom.xml
 
-exit /b
+exit/b
 
 
 
@@ -772,7 +772,7 @@ cd c:\mercury\documentation
 
 call %0 acp
 
-exit /b
+exit/b
 
 
 
@@ -791,7 +791,7 @@ echo %fp%
 rem git checkout clean6.2
 git checkout master
 
-exit /b
+exit/b
 
 
 
@@ -814,7 +814,7 @@ del Mercury-web\src\main\webapp\classic\resources\images\font-awesome_4-7-0_rss_
 del Mercury-web\src\main\webapp\resources\WorldWind\images\pushpins\4-Null-Reciever.png
 del Mercury-web\src\main\webapp\resources\WorldWind\images\pushpins\4-Null-Transmitter.png
 
-exit /b
+exit/b
 
 
 
@@ -838,7 +838,7 @@ echo Current folder: %cd%
 
 del font-awesome*.png
 
-exit /b
+exit/b
 
 
 
@@ -877,7 +877,7 @@ del Dish_Generic_R.png
 del Dish_Generic_T.png
 del Dish_Generic_TR.png
 
-exit /b
+exit/b
 
 
 
@@ -892,7 +892,7 @@ echo.
 
 git remote update
 
-exit /b
+exit/b
 
 
 
@@ -910,7 +910,7 @@ echo %fp%
 
 git add %2
 
-exit /b
+exit/b
 
 
 
@@ -927,13 +927,13 @@ echo %fp%
 echo.
 
 if "%~3" == "" echo Error: A commit description is required.
-if "%~3" == "" exit /b
+if "%~3" == "" exit/b
 
 set commit_description=%3
 
 git commit %2 -m %commit_description%
 
-exit /b
+exit/b
 
 
 
@@ -951,11 +951,11 @@ echo %fp%
 echo.
 
 if "%~2" == "" echo Error: A commit description is required.
-if "%~2" == "" exit /b
+if "%~2" == "" exit/b
 
 git commit -a -m %2
 
-exit /b
+exit/b
 
 
 
@@ -971,11 +971,11 @@ echo %fp%
 echo.
 
 if "%~2" == "" echo Error: A commit description is required.
-if "%~2" == "" exit /b
+if "%~2" == "" exit/b
 
 git commit -m %2
 
-exit /b
+exit/b
 
 
 
@@ -993,7 +993,7 @@ call td ba
 
 call g pull
 
-exit /b
+exit/b
 
 
 
@@ -1009,7 +1009,7 @@ echo %fp%
 
 git reset HEAD %2
 
-exit /b
+exit/b
 
 
 
@@ -1031,7 +1031,7 @@ call td mob
 
 call %0 s
 
-exit /b
+exit/b
 
 
 
@@ -1056,7 +1056,7 @@ git commit -m "first commit"
 git remote add origin https://github.com/jonathan-r-jones/bowling.git
 git push -u origin master
 
-exit /b
+exit/b
 
 
 
@@ -1076,7 +1076,7 @@ git push -u origin master
 echo %fp%
 echo.
 
-exit /b
+exit/b
 
 
 
@@ -1095,7 +1095,7 @@ git push -u origin master
 echo %fp%
 echo.
 
-exit /b
+exit/b
 
 
 
@@ -1115,7 +1115,7 @@ call td cbf
 
 call %0 acp
 
-exit /b
+exit/b
 
 
 
@@ -1142,7 +1142,7 @@ echo %fp%
 echo.
 git init
 
-exit /b
+exit/b
 
 
 
@@ -1179,7 +1179,7 @@ git remote add origin https://github.com/jonathan-r-jones/composable_batch_files
 
 git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/resume.git
 
-exit /b
+exit/b
 
 
 
@@ -1195,7 +1195,7 @@ call n %2
 
 git remote add origin %cbf_url%
 
-exit /b
+exit/b
 
 
 
@@ -1211,7 +1211,7 @@ echo %fp%
 
 git pull origin master
 
-exit /b
+exit/b
 
 
 
@@ -1230,7 +1230,7 @@ echo.
   
 git pull
 
-exit /b
+exit/b
 
 
 
@@ -1249,7 +1249,7 @@ git push --set-upstream origin master
 
 rem (!step)
 
-exit /b
+exit/b
 
 
 
@@ -1273,7 +1273,7 @@ call git status
 col
 
 
-exit /b
+exit/b
 
 
 
@@ -1294,7 +1294,7 @@ echo.
 
 git stash
 
-exit /b
+exit/b
 
 
 
@@ -1311,7 +1311,7 @@ echo.
 
 git stash pop
 
-exit /b
+exit/b
 
 
 
@@ -1334,7 +1334,7 @@ call :pop
 
 rem The next step would be to fix the merge conflict and then run "g acp".
 
-exit /b
+exit/b
 
 
 
@@ -1355,7 +1355,7 @@ echo.
 
 git mergetool --tool-help
 
-exit /b
+exit/b
 
 
 
@@ -1373,7 +1373,7 @@ echo.
 git mergetool --tool=codecompare
 rem git mergetool --tool=vimdiff3
 
-exit /b
+exit/b
 
 
 
@@ -1389,7 +1389,7 @@ echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://github.com/jonathan-r-jones/composable_batch_files
 
-exit /b
+exit/b
 
 
 
@@ -1405,13 +1405,13 @@ echo %fp%
 
 if exist .gitignore echo.
 if exist .gitignore echo Error: File already there.
-if exist .gitignore exit /b
+if exist .gitignore exit/b
 
 dir /b>.gitignore
 
 call npp .gitignore
 
-exit /b
+exit/b
 
 
 
@@ -1427,7 +1427,7 @@ echo %fp%
 
 git add .gitignore
 
-exit /b
+exit/b
 
 
 
@@ -1449,7 +1449,7 @@ echo %fp%
 
 rd /q /s .git
 
-exit /b
+exit/b
 
 
 
@@ -1470,7 +1470,7 @@ rem git branch Branch2
 
 git branch clean6.2
 
-exit /b
+exit/b
 
 
 
@@ -1486,7 +1486,7 @@ echo %fp%
 
 git help git
 
-exit /b
+exit/b
 
 
 
@@ -1502,7 +1502,7 @@ echo %fp%
 
 git help %2
 
-exit /b
+exit/b
 
 
 
@@ -1522,7 +1522,7 @@ echo %fp%
 
 git tag %2
 
-exit /b
+exit/b
 
 
 
@@ -1539,7 +1539,7 @@ echo %fp%
 echo.
 git tag
 
-exit /b
+exit/b
 
 
 
@@ -1556,7 +1556,7 @@ echo %fp%
 echo.
 git push --tags
 
-exit /b
+exit/b
 
 
 
@@ -1576,7 +1576,7 @@ echo %fp%
 
 git add -A
 
-exit /b
+exit/b
 
 
 
@@ -1590,7 +1590,7 @@ echo %fp%
 
 git add .
 
-exit /b
+exit/b
 
 
 
@@ -1604,7 +1604,7 @@ echo %fp%
 
 git add *.*
 
-exit /b
+exit/b
 
 
 
@@ -1625,7 +1625,7 @@ echo %fp%
 git config --global user.name "Jonathan R. Jones"
 git config --global user.email "jonathan.r.jones.3@gmail.com"
 
-exit /b
+exit/b
 
 
 
@@ -1643,7 +1643,7 @@ echo %fp%
 
 git config credential.helper store
 
-exit /b
+exit/b
 
 
 
@@ -1660,7 +1660,7 @@ git config --global user.name "Jonathan17"
 git config --global user.email "jonathan.r.jones@nesassociates.com"
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -1677,7 +1677,7 @@ git config --global user.name "mercury_devops"
 git config --global user.email "nes.mercury@nesassociates.com"
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -1699,7 +1699,7 @@ echo %fp%
 
 git config core.longpaths true
 
-exit /b
+exit/b
 
 
 
@@ -1717,7 +1717,7 @@ echo %fp%
 
 git config --global core.autocrlf true
 
-exit /b
+exit/b
 
 
 
@@ -1784,7 +1784,7 @@ cd /d %new_folder_path%
 
 git clone %origin_url% --branch %branch_name% .\%folder_name%
 
-exit /b
+exit/b
 
 
 
@@ -1808,7 +1808,7 @@ git submodule init
 
 git submodule update
 
-exit /b
+exit/b
 
 
 
@@ -1835,7 +1835,7 @@ echo %fp%
 echo.
 git describe --all --long
 
-exit /b
+exit/b
 
 
 
@@ -1856,7 +1856,7 @@ echo %fp%
 echo.
 git version
 
-exit /b
+exit/b
 
 
 
@@ -1916,7 +1916,7 @@ echo %fp%
 // - git.unstageAll
 // - git.unstageSelectedRanges
 
-exit /b
+exit/b
 
 
 
@@ -1939,7 +1939,7 @@ git log>"%temp%\git_log.txt"
 "%cbf_default_text_editor%" "%temp%\git_log.txt"
 
 
-exit /b
+exit/b
 
 
 
@@ -1960,7 +1960,7 @@ echo %fp%
 echo.
 git remote -v
 
-exit /b
+exit/b
 
 
 
@@ -1986,7 +1986,7 @@ rem git reset --hard "HEAD"
 git reset --hard "HEAD~2"
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -2005,7 +2005,7 @@ echo.
   
 git reset --hard "HEAD~1"
 
-exit /b
+exit/b
 
 
 
@@ -2036,7 +2036,7 @@ rem git checkout 959308e
 rem S6 @ Aug-28-2017
 git checkout b3444ed
 
-exit /b
+exit/b
 
 
 
@@ -2061,7 +2061,7 @@ echo.
 git push -f
 @echo off
 
-exit /b
+exit/b
 
 
 
@@ -2092,7 +2092,7 @@ call %0 rvfd
 
 call %0 clean
 
-exit /b
+exit/b
 
 
 
@@ -2112,7 +2112,7 @@ call %0 delete_pngs_2
 
 call %0 rvp
 
-exit /b
+exit/b
 
 
 
@@ -2136,7 +2136,7 @@ cls
 
 call %0 ss
 
-exit /b
+exit/b
 
 
 
@@ -2152,7 +2152,7 @@ echo %fp%
 
 git clean -n
 
-exit /b
+exit/b
 
 
 
@@ -2170,7 +2170,7 @@ echo %fp%
 
 git clean -d -f
 
-exit /b
+exit/b
 
 
 
@@ -2188,7 +2188,7 @@ call %0 rv
 
 call %0 rut
 
-exit /b
+exit/b
 
 
 
@@ -2206,7 +2206,7 @@ echo %fp%
  
 git checkout *.*
 
-exit /b
+exit/b
 
 
 
@@ -2224,7 +2224,7 @@ echo %fp%
   
 git checkout %2
 
-exit /b
+exit/b
 
 
 
@@ -2259,7 +2259,7 @@ git checkout HTML5Application/public_html/classic/src/view/dashboard/ContactsWid
 git checkout HTML5Application/public_html/modern/src/utils/NetConfig.js
 git checkout HTML5Application/public_html/classic/src/utils/NetConfig.js
 
-exit /b
+exit/b
 
 
 
@@ -2288,7 +2288,7 @@ git reset --hard HEAD
 git clean -f
 git pull
 
-exit /b
+exit/b
 
 
 

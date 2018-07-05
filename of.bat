@@ -54,7 +54,7 @@ echo Parameter 1 (Optional): Path to walk before opening Windows Explorer. If le
 echo.
 echo Notes: This is a wrapper around td.bat and n.bat.
 
-exit /b
+exit/b
 
 
 
@@ -72,7 +72,7 @@ rem echo Errorlevel: %errorlevel%
 
 if "%errorlevel%"=="0" explorer %cd%
 
-exit /b
+exit/b
 
 
 
@@ -89,7 +89,7 @@ echo %fp%
 
 explorer %cd%
 
-exit /b
+exit/b
 
 
 

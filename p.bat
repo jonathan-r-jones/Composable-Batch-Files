@@ -56,7 +56,7 @@ rem set fp= * Exit batch file but not command window.
 rem echo.
 rem echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -88,7 +88,7 @@ rem echo %fp%
 
 pause
 
-exit /b
+exit/b
 
 
 
@@ -113,7 +113,7 @@ echo     Parameter  Description
 echo -------------  ------------------------------------------------
 echo           ver  PowerShell version
 
-exit /b
+exit/b
 
 
 
@@ -133,7 +133,7 @@ echo %fp%
 
 $PSVersionTable.PSVersion
 
-exit /b
+exit/b
 
 
 

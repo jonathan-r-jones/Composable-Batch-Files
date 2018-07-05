@@ -33,7 +33,7 @@ if "%~1" == ".." (
   echo.
   echo %fp%
   cd %1
-  exit /b
+  exit/b
 )
 
 
@@ -46,7 +46,7 @@ if exist "%1" (
   echo.
   echo * Existing child folder.
   cd %1
-  exit /b
+  exit/b
 )
 
 
@@ -62,7 +62,7 @@ if not "%~1" == "" call n %1
 if "%cbf_path%" == "" (
   echo.
   echo * Nickname Error: There is no cbf_path defined for '%~1'. 
-  exit /b
+  exit/b
 )
 
 if "%~2" == "p" goto find_parent_folder
@@ -70,12 +70,12 @@ if "%~2" == "p" goto find_parent_folder
 if not exist "%cbf_path%" (
   echo.
   echo * Error: Folder does not exist at "%cbf_path%". 
-  exit /b
+  exit/b
 )
 
 cd /d "%cbf_path%"
 
-exit /b
+exit/b
 
 
 
@@ -87,7 +87,7 @@ call m set_parent_fd "%cbf_path%\.." parent_folder
 rem echo Parent Folder: %parent_folder%
 cd /d %parent_folder%
 
-exit /b
+exit/b
 
 
 
@@ -112,7 +112,7 @@ echo Parameter 1: Path nickname, the name of a child folder or ".." which emulat
 echo.
 echo Parameter 2 (Optional): If "p" is specified, go to the parent folder of parameter 1.
 
-exit /b
+exit/b
 
 
 

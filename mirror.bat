@@ -54,7 +54,7 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1: Function to execute.
 
-exit /b
+exit/b
 
 
 
@@ -66,7 +66,7 @@ set fp=* Say Monday.
 
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -78,7 +78,7 @@ set fp=* Say Tuesday.
 
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -90,7 +90,7 @@ set fp=* Say Wednesday.
 
 echo %fp%
 
-exit /b
+exit/b
 
 
 
@@ -108,7 +108,7 @@ call %0 tuesday
 
 call %0 wednesday
 
-exit /b
+exit/b
 
 
 

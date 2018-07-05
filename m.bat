@@ -132,7 +132,7 @@ exit
 
 set fp= * Exit batch file but not command window.
 
-exit /b
+exit/b
 
 
 
@@ -3038,7 +3038,7 @@ echo.
 echo Publish to NPM.
 call nm pub
 
-exit /b
+exit/b
 
 
 
@@ -3081,7 +3081,7 @@ if not "%cbf_filename%" == "" (
 
 set cbf_parameter=
 
-exit /b
+exit/b
 
 
 
@@ -3101,7 +3101,7 @@ set /p filename=<%tmp%\filename.txt
 if not exist "%filename%" (
   echo.
   echo * No solution file was found.
-  exit /b
+  exit/b
 )
 
 rem echo Filename: %filename%
@@ -3130,7 +3130,7 @@ if not "%~2" == "" call n %2
 
 set cbf_default_text_editor=%cbf_application%
 
-exit /b
+exit/b
 
 
 
@@ -3218,7 +3218,7 @@ echo %fp%
 
 set cbf_application=%cbf_default_text_editor%
 
-exit /b
+exit/b
 
 
 
@@ -3236,7 +3236,7 @@ set cbf_parameter=
 
 call r
 
-exit /b
+exit/b
 
 
 
@@ -3265,7 +3265,7 @@ set parameter_1=%parameter_1% If left blank, the application is simply started.
 echo.
 echo %parameter_1%
 
-exit /b
+exit/b
 
 
 
@@ -3285,7 +3285,43 @@ goto exitb
 
 
 
-:_
+:_+ Delete obj and bin folders.
+
+
+
+::_
+
+:dob
+
+set fp=* Delete obj and bin folders.
+
+rem lu: Jul-5-2018
+
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 cannot be nothing.
+  exit/b
+)
+
+rem Delete obj folders.
+rd /q /s .\%2\obj
+rd /q /s .\%2.Android\obj
+rd /q /s .\%2.iOS\obj
+
+rem Delete bin folders.
+rd /q /s .\%2\bin
+rd /q /s .\%2.Android\bin
+rd /q /s .\%2.iOS\bin
+
+exit/b
+
+
+
+::_
+
+:dob_fr
 
 :fr_dob
 
@@ -3307,7 +3343,7 @@ rd /q /s .\Fresnel\bin
 rd /q /s .\Fresnel.Android\bin
 rd /q /s .\Fresnel.iOS\bin
 
-exit /b
+exit/b
 
 
 

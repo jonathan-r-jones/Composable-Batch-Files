@@ -30,7 +30,7 @@ set cbf_path=
 
 call n %1
 
-exit /b
+exit/b
 
 
 
@@ -56,7 +56,7 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1: Path nickname.
 
-exit /b
+exit/b
 
 
 

@@ -57,7 +57,7 @@ call r
 
 rem (!rfsp) (mov-2)
 
-exit /b
+exit/b
 
 
 
