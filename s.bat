@@ -28,7 +28,7 @@ if "%~1" == "help" goto help
 set fp=* If it is provided, go to percent 1.
 
 if not "%~1" == "" (
-  call td %~1
+  call td %~1 %2
 )
 
 goto main_function

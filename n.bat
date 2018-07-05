@@ -2448,71 +2448,19 @@ exit/b
 
 ::_
 
-:ed_c
+:edc
 
-set fp=* Ed Snider's Xamarin book complete sample code.
-
-rem lu: May-31-2018
-
-echo %fp%
-
-set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
-
-set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
-
-exit/b
-
-
-
-::_
-
-:ed_6
-
-set fp=* Ed Snider's Xamarin book sample code from Chapter 6, where he implements BaseHTTPService.
-
-rem lu: Jul-3-2018
-
-echo %fp%
-
-set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter6
-
-set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
-
-exit/b
-
-
-
-::_
-
-:ed_2
-
-set fp=* Ed Snider's Chapter 2.
+set fp=* Ed Snider's Xamarin book, chapter %2.
 
 rem lu: Jul-5-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter2
-
-set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
-
-exit/b
-
-
-
-::_
-
-:ed_3
-
-set fp=* Ed Snider's Chapter 2.
-
-rem lu: Jul-5-2018
-
-echo %fp%
-
-set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter2
-
-set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+if "%~2" == "c" (
+  set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
+) else (
+  set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter%2
+)
 
 exit/b
 
@@ -3158,6 +3106,22 @@ set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
 set cbf_path=%composable_batch_files%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+exit/b
+
+
+
+::_
+
+:cbf_p
+
+set fp=* CBF Pulse on GitHub.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/pulse
 
 exit/b
 

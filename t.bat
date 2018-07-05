@@ -6869,6 +6869,75 @@ exit/b
 
 ::_
 
+:percent
+
+set fp=* Testing percent 2 and not equals.
+
+rem Function Creation Date: Jun-8-2018
+
+echo.
+echo %fp%
+
+set test_var=Rain in Spain.
+
+echo.
+echo 2.
+echo %~1
+echo %~2
+echo %~3
+echo %test_var%
+
+echo.
+echo 2.
+if "%~2" == "" echo No second command line parameter was passed.
+
+echo.
+echo 3.
+if not "%~2" == "" echo The parameter "%~2" was passed in position 2.
+
+echo.
+echo Percent 1: %1
+echo Percent 2: %2
+echo Percent 3: %3
+echo Percent test_var: %test_var%
+
+echo.
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 cannot be nothing.
+  exit/b
+)
+
+echo.
+echo 4.
+if "%~1" == "" echo No command line parameter was passed.
+
+echo.
+echo 5.
+if not "%~1" == "" echo %1 parameter was passed.
+
+echo.
+echo 6.
+if "%~1" == "" (
+  echo Percent 1 nothing.
+) else (
+  echo Percent 1 is something.
+)
+
+echo.
+echo 7. (!perc)
+if "%~2" == "" (
+  echo Percent 2 nothing.
+) else (
+  echo Percent 2 is something.
+)
+
+exit/b
+
+
+
+::_
+
 :percent_20
 
 set fp=* How do you escape a percent sign in a batch file?
@@ -6956,75 +7025,6 @@ if "%variable_1%" == "%variable_2%" (
 
 rem Set statements inside an if block don't work!
 rem https://stackoverflow.com/questions/9102422/windows-batch-set-inside-if-not-working
-
-exit/b
-
-
-
-::_
-
-:percent
-
-set fp=* Testing percent 2 and not equals.
-
-rem Function Creation Date: Jun-8-2018
-
-echo.
-echo %fp%
-
-set test_var=Rain in Spain.
-
-echo.
-echo 2.
-echo %~1
-echo %~2
-echo %~3
-echo %test_var%
-
-echo.
-echo 2.
-if "%~2" == "" echo No second command line parameter was passed.
-
-echo.
-echo 3.
-if not "%~2" == "" echo The parameter "%~2" was passed in position 2.
-
-echo.
-echo Percent 1: %1
-echo Percent 2: %2
-echo Percent 3: %3
-echo Percent test_var: %test_var%
-
-echo.
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 cannot be nothing.
-  exit/b
-)
-
-echo.
-echo 4.
-if "%~1" == "" echo No command line parameter was passed.
-
-echo.
-echo 5.
-if not "%~1" == "" echo %1 parameter was passed.
-
-echo.
-echo 6.
-if "%~1" == "" (
-  echo Percent 1 nothing.
-) else (
-  echo Percent 1 is something.
-)
-
-echo.
-echo 7. (!perc)
-if "%~2" == "" (
-  echo Percent 2 nothing.
-) else (
-  echo Percent 2 is something.
-)
 
 exit/b
 
