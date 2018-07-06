@@ -7182,18 +7182,35 @@ exit/b
 
 :_
 
-:
+:math
 
-set fp=* Set addition!
+set fp=* Set math!
 
-rem lu: Jun-18-2018
+rem lu: Jul-6-2018
+
+rem skw addition
 
 echo %fp%
 
-set /a cbf_url=1+1
+set /a addition=15+12
 
 echo.
-echo cbf_url
+echo %addition%
+
+set /a subtraction=1008-10
+
+echo.
+echo %subtraction%
+
+set /a multiplication=52*3
+
+echo.
+echo %multiplication%
+
+set /a division=39/3
+
+echo.
+echo %division%
 
 exit/b
 
