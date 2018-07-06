@@ -30,6 +30,8 @@ if "%~2" == "*" goto multiplication
 
 if "%~2" == "/" goto division
 
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
 if "%~1" == "-h" goto help
@@ -48,8 +50,7 @@ goto main_function
 
 echo Filename stands for: %filename_stands_for%
 
-set filep=File purpose: This template file can be used as a "Save As" to create a new 
-set filep=%filep% composable batch file.
+set filep=File purpose: Performs 4 basic math functions.
 
 echo.
 echo %filep%
@@ -63,17 +64,21 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
+set parameter_1=Parameter 1: First number
 set parameter_1=%parameter_1% 
 
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2 (Optional): 
-set parameter_2=%parameter_2% 
+set parameter_2=Parameter 2: Operator (+, -, * or /)
 
 echo.
 echo %parameter_2%
+
+set parameter_3=Parameter 3: Second number
+
+echo.
+echo %parameter_3%
 
 exit/b
 

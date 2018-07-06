@@ -3713,4 +3713,22 @@ exit/b
 
 
 
+:_
+
+:p
+
+set fp=* Playpark
+
+rem lu: Jul-6-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\playpark
+
+set cbf_url=https://github.com/jonathan-r-jones/playpark.git
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-6)

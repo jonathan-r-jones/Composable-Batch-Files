@@ -2951,6 +2951,7 @@ echo.
 echo  File  Description
 echo  ----  ------------------------------------------------------------------
 echo   acp  Add, commit and push Git changes with timestamp commit message.
+echo  calc  Simple calculator.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
 echo    cn  Used for Git cloning tasks.

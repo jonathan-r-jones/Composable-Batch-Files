@@ -53,8 +53,10 @@ echo.
 echo Parameter 1: Label method to run.
 
 echo.
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
+echo Parameter  Description
+echo ---------  --------------------------------------------------------------
+echo     vs_ig  Copy Visual Studio Git Ignore file from Fresnel to the current
+echo            location.
 
 exit/b
 
@@ -214,6 +216,24 @@ echo.
 xcopy /y c:\a\cbf.png
 
 exit/b
+
+
+
+:_
+
+:vs_ig
+
+set fp=* Copy Visual Studio Git Ignore file from Fresnel to the current location.
+
+rem lu: Jul-6-2018
+
+echo %fp%
+
+call n fr
+
+xcopy %cbf_path%\.gitignore
+
+exit /b
 
 
 
