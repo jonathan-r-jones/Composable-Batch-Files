@@ -2986,6 +2986,7 @@ echo    tk  Wrapper around taskkill command.
 echo    tl  Wrapper around tasklist command.
 echo    td  Transform Directory.
 echo    te  Batch file template used for creating new batch files.
+echo     v  Vetted functions.
 echo     x  Remote double-click equivalent way to run a file.
 
 goto exitb
