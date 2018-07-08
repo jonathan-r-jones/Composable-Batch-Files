@@ -237,4 +237,25 @@ exit /b
 
 
 
+:_
+
+:sacj
+
+set fp=* Copy stage area podcasts to the Clipjam folder.
+
+rem lu: Jul-8-2018
+
+echo %fp%
+
+call td cj
+
+call n sa
+
+echo.
+move "%cbf_path%\*.*"
+
+exit /b
+
+
+
 :_ (!rfsp) (mov-9)

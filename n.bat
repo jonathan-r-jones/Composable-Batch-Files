@@ -3727,7 +3727,39 @@ set cbf_path=%dropbox%\it\playpark
 
 set cbf_url=https://github.com/jonathan-r-jones/playpark.git
 
-exit /b
+exit/b
+
+
+
+:_
+
+:sa
+
+set fp=* Staging area.
+
+rem lu: Jul-8-2018
+
+echo %fp%
+
+set cbf_path=%my documents%\mp3 content staging area\files ready For Transfer
+
+exit/b
+
+
+
+:_
+
+:cj
+
+set fp=* Clipjam.
+
+rem lu: Jul-8-2018
+
+echo %fp%
+
+set cbf_path=g:\podcasts
+
+exit/b
 
 
 

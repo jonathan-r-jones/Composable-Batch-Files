@@ -22,6 +22,26 @@ echo.
 
 set fp=* Route help callers.
 
+if "%~1" == "" goto help
+
+if "%~2" == "" (
+  echo Missing second parameter.
+  echo.
+  goto help
+)
+
+if "%~3" == "" (
+  echo Missing third parameter.
+  echo.
+  goto help
+)
+
+if "%~1" == "/?" goto help
+
+if "%~1" == "-h" goto help
+
+if "%~1" == "help" goto help
+
 if "%~2" == "+" goto addition
 
 if "%~2" == "-" goto subtraction
@@ -29,14 +49,6 @@ if "%~2" == "-" goto subtraction
 if "%~2" == "*" goto multiplication
 
 if "%~2" == "/" goto division
-
-if "%~1" == "" goto help
-
-if "%~1" == "/?" goto help
-
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
 
 goto main_function
 
