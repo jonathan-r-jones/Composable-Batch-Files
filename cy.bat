@@ -233,7 +233,7 @@ call n fr
 
 xcopy %cbf_path%\.gitignore
 
-exit /b
+exit/b
 
 
 
@@ -254,7 +254,7 @@ call n sa
 echo.
 move "%cbf_path%\*.*"
 
-exit /b
+exit/b
 
 
 
