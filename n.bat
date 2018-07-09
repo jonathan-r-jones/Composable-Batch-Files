@@ -2322,7 +2322,7 @@ rem lu: Jun-1-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\xamarin-forms-samples
+set cbf_path=%aa%\repositories\xamarin-forms-samples
 
 set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
 
@@ -2368,7 +2368,7 @@ rem           star:  905
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\Xamarin.Plugins
+set cbf_path=%aa%\repositories\Xamarin.Plugins
 
 set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
 
@@ -2386,7 +2386,7 @@ rem lu: May-30-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\xaml_prototype
+set cbf_path=%aa%\repositories\xaml_prototype
 
 set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
 
@@ -2420,12 +2420,12 @@ rem lu: Jul-5-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book
+set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book
 
 if "%~2" == "c" (
-  set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
+  set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book\Complete
 ) else if not "%~2" == "" (
-  set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter%2
+  set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book\Chapter%2
 )
 
 set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
@@ -2462,7 +2462,7 @@ rem lu: May-8-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\first-mobile-app-Jesse
+set cbf_path=%aa%\repositories\first-mobile-app-Jesse
 
 set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
 
@@ -2484,7 +2484,7 @@ rem lu: May-8-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\first-mobile-app-Jonathan
+set cbf_path=%aa%\repositories\first-mobile-app-Jonathan
 
 set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
 
@@ -2520,7 +2520,7 @@ rem lu: Jun-1-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\xamarin-forms-samples\bugsweeper
+set cbf_path=%aa%\repositories\xamarin-forms-samples\bugsweeper
 
 exit/b
 
@@ -2536,7 +2536,7 @@ rem lu: Jan-31-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\BatteryPlugin
+set cbf_path=%aa%\repositories\BatteryPlugin
 
 set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
 
@@ -2586,7 +2586,7 @@ rem lu: Jun-4-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\xamarin-forms-samples\Navigation\CarouselPage
+set cbf_path=%aa%\repositories\xamarin-forms-samples\Navigation\CarouselPage
 
 exit/b
 
@@ -2682,7 +2682,7 @@ rem lu: Jun-8-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\xam205
+set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\xam205
 
 exit/b
 
@@ -2766,7 +2766,7 @@ rem lu: Jun-10-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\Master-Detail_Navigation_Xamarin.Forms
+set cbf_path=%aa%\repositories\Master-Detail_Navigation_Xamarin.Forms
 
 set cbf_url=https://github.com/almirvuk/Master-Detail_Navigation_Xamarin.Forms.git
 
@@ -2788,7 +2788,7 @@ rem lu: Jun-10-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\hamster
+set cbf_path=%aa%\repositories\hamster
 
 set cbf_url=https://github.com/jonathan-r-jones/hamster.git
 
@@ -2806,7 +2806,7 @@ rem lu: Jun-12-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\SimpleXapp
+set cbf_path=%aa%\repositories\SimpleXapp
 
 set cbf_url=https://github.com/jonathan-r-jones/SimpleXapp.git
 
@@ -3125,7 +3125,7 @@ rem lu: Jun-20-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\AppCenterDemo.BikeSearch
+set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
 
 set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
 
@@ -3311,7 +3311,7 @@ rem lu: Jun-5-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\xamarin_university\AllCourseExercises
+set cbf_path=%aa%\repositories\xamarin_university\AllCourseExercises
 
 set cbf_url=https://github.com/XamarinUniversity
 
@@ -3409,7 +3409,7 @@ rem lu: Jun-6-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS205
+set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS205
 
 exit/b
 
@@ -3427,7 +3427,7 @@ rem lu: Jun-26-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Xamarin\Xamarin_University\AllCourseExercises\IOS103
+set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS103
 
 exit/b
 
@@ -3497,7 +3497,7 @@ rem lu: Jun-28-2018
 
 echo %fp%
 
-set cbf_path=%aa%\xamarin\mobile-calc-forms
+set cbf_path=%aa%\repositories\mobile-calc-forms
 
 set cbf_url=https://github.com/lprichar/mobile-calc-forms.git
 
@@ -3779,24 +3779,6 @@ exit/b
 
 :_
 
-:stmo
-
-set fp=* Starter mobile.
-
-rem lu: Jul-9-2018
-
-echo %fp%
-
-set cbf_path=
-
-set cbf_url=https://github.com/jamilgeor/starter-mobile.git
-
-exit/b
-
-
-
-:_
-
 :fotu
 
 set fp=* Forms tutor.
@@ -3815,8 +3797,7 @@ set cbf_url=https://github.com/jamilgeor/FormsTutor
 
 rem Lesson 1: Getting Started with Xamarin.Forms
 rem Lesson 2: Xamarin.Forms - ListView
-rem Lesson 3: Setting up a ReactiveUI ViewModel
-rem qq-1
+rem Lesson 3: Setting up a ReactiveUI ViewModel (Doesn't run in LivePlayer - Log manager is null.)
 rem Lesson 4: Refreshing a ListView with ReactiveCommand
 rem Lesson 5: ListView ItemTemplate with ReactiveUI ViewModel
 rem Lesson 6: Using Akavache and HttpClient with REST services
@@ -3825,6 +3806,43 @@ rem Lesson 8: ViewModel Routing with ReactiveUI and Xamarin.Forms
 rem Lesson 9: Binding a Xamarin.Forms WebView to ReactiveUI View Model using Custom Type Converters
 
 rem https://raw.githubusercontent.com/jamilgeor/FormsTutor/master/Lesson09/Data/
+
+exit/b
+
+
+
+:_
+
+:stmo
+
+set fp=* Starter mobile.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://github.com/jamilgeor/starter-mobile.git
+
+exit/b
+
+
+
+:_
+
+:xam150
+
+set fp=* XAM 150: Consuming REST-based Web Services
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=
+rem       qq-1
 
 exit/b
 
