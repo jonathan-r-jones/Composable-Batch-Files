@@ -3777,4 +3777,54 @@ exit/b
 
 
 
+:_
+
+:stmo
+
+set fp=* Starter mobile.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://github.com/jamilgeor/starter-mobile.git
+
+exit/b
+
+
+
+:_
+
+:fotu
+
+set fp=* Forms tutor.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\FormsTutor
+
+if not "%~2" == "" (
+  set cbf_path=%aa%\repositories\FormsTutor\Lesson0%2
+) else if not "%~2" == "" (
+
+set cbf_url=https://github.com/jamilgeor/FormsTutor
+
+rem Lesson 1: Getting Started with Xamarin.Forms
+rem Lesson 2: Xamarin.Forms - ListView
+rem Lesson 3: Setting up a ReactiveUI ViewModel
+rem Lesson 4: Refreshing a ListView with ReactiveCommand
+rem Lesson 5: ListView ItemTemplate with ReactiveUI ViewModel
+rem Lesson 6: Using Akavache and HttpClient with REST services
+rem Lesson 7: Handling Errors with Xamarin.Forms and ReactiveU
+rem Lesson 8: ViewModel Routing with ReactiveUI and Xamarin.Forms
+rem Lesson 9: Binding a Xamarin.Forms WebView to ReactiveUI View Model using Custom Type Converters
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

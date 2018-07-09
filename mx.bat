@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Multi-Edit (x) file.
+set filename_stands_for=* Use Multi-Edit to edit a batch file in the CBF folder.
 
 
 
