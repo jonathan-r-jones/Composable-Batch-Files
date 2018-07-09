@@ -1734,24 +1734,6 @@ exit/b
 
 :_
 
-:doc
-
-:docs
-
-set fp=Documentation.
-
-rem fcd: May-25-2017
-
-echo %fp%
-
-set cbf_path=c:\mercury\documentation
-
-exit/b
-
-
-
-:_
-
 :do
 
 set fp=Download folder.
@@ -3758,6 +3740,22 @@ rem lu: Jul-8-2018
 echo %fp%
 
 set cbf_path=g:\podcasts
+
+exit/b
+
+
+
+:_
+
+:docs
+
+set fp=* Documents folder.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\documents
 
 exit/b
 
