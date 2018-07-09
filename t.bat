@@ -6934,11 +6934,56 @@ exit/b
 
 :_
 
+:test77
+
+set fp=* Test 77.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test goto with no label found.
+
+rem Is there a way to test if a label exists in a batch file before calling the goto statemnt?
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+rem goto nonexistinglabel
+
+rem set "label=sub"
+REM next line to reset errorlevel to zero:
+call
+rem call :test7x7 2>nul
+
+rem This strange syntax in the following line of code "eats" the error message, although 
+rem I don't know why you'd want to do so.
+goto nonexistinglabel 2>nul
+
+echo hey
+
+echo Errorlevel: %errorlevel%
+
+exit/b
 
 
 

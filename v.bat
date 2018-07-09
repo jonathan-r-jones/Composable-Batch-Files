@@ -87,22 +87,39 @@ exit/b
 
 :_
 
-:else
+:errorlevel
 
-set fp=* The else and errorlevel statements in action.
+set fp=* The errorlevel statement.
 
 echo %fp%
 echo.
 
-rem Imprimatur (!error, !else, !elseba, !erro)
+rem Imprimatur (!error, !erro)
+
+echo Errorlevel: %errorlevel%
 
 if %errorlevel% == 0 (
   echo.
-  echo 0
+  echo Error level equals 0.
 ) else (
   echo.
-  echo 1
+  echo Error level equals 1.
 )
+
+exit/b
+
+
+
+:_
+
+:else
+
+set fp=* The else statement.
+
+echo %fp%
+echo.
+
+rem (!else)
 
 if "%~1" == "" (
   echo Percent 1 nothing.

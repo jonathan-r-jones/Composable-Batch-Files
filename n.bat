@@ -3565,22 +3565,6 @@ exit/b
 
 ::_
 
-:ie
-
-set fp=* Internet Explorer.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\internet explorer\iexplore.exe
-
-exit/b
-
-
-
-::_
-
 :kr
 
 set fp=* Chrome.
@@ -3613,22 +3597,6 @@ exit/b
 
 ::_
 
-:op
-
-set fp=* Opera.
-
-rem lu: Feb-13-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\opera\launcher.exe
-
-exit/b
-
-
-
-::_
-
 :edge
 
 set fp=* Microsoft Edge.
@@ -3638,6 +3606,38 @@ rem lu: Feb-7-2018
 echo %fp%
 
 set cbf_application=microsoft-edge
+
+exit/b
+
+
+
+::_
+
+:ie
+
+set fp=* Internet Explorer.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\internet explorer\iexplore.exe
+
+exit/b
+
+
+
+::_
+
+:op
+
+set fp=* Opera.
+
+rem lu: Feb-13-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\opera\launcher.exe
 
 exit/b
 
@@ -3699,7 +3699,7 @@ exit/b
 
 :p
 
-set fp=* Playpark
+set fp=* Playpark.
 
 rem lu: Jul-6-2018
 
@@ -3756,6 +3756,22 @@ rem lu: Jul-9-2018
 echo %fp%
 
 set cbf_path=%userprofile%\documents
+
+exit/b
+
+
+
+:_
+
+:ju
+
+set fp=* JSON users.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_url=http://jsonplaceholder.typicode.com/users
 
 exit/b
 
