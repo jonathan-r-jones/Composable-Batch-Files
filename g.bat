@@ -12,6 +12,14 @@ set filep=* Perform Git-related tasks.
 
 :_
 
+set fp = * Path to walk prior to running Parameter 1.
+
+if not "%~2" == "" call td %2
+
+
+
+:_
+
 set fp=* Add some whitespace.
 
 echo.
@@ -22,7 +30,7 @@ echo.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto help s
 
 if "%~1" == "/?" goto help
 
@@ -41,7 +49,7 @@ goto %1
 echo Filename stands for: Git-related tasks.
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: Jul-9-2018
 
 echo.
 echo Usage: g [Parameter 1] [Parameter 2]
