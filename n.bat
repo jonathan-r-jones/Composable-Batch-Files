@@ -158,8 +158,6 @@ exit/b
 
 :edsw
 
-:sw
-
 :system_widget
 
 set fp=SystemWidget.js.
@@ -2034,16 +2032,16 @@ echo %fp%
 
 rem Determine installation path.
 
-if exist "c:\program files\notepad++\notepad++.exe" set cbf_App_Location=c:\program files\notepad++\notepad++.exe
-if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_App_Location="c:\program files (x86)\notepad++\notepad++.exe"
+if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_location=c:\program files\notepad++\notepad++.exe
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_location="c:\program files (x86)\notepad++\notepad++.exe"
 
-if "%cbf_App_Location%" == "" (
+if "%cbf_application_location%" == "" (
   echo.
   echo Notepad++ is not installed.
   exit/b
 )
 
-set cbf_application=%cbf_App_Location%
+set cbf_application=%cbf_application_location%
 
 exit/b
 
@@ -3791,7 +3789,7 @@ set cbf_path=%aa%\repositories\FormsTutor
 
 if not "%~2" == "" (
   set cbf_path=%aa%\repositories\FormsTutor\Lesson0%2
-) else if not "%~2" == "" (
+)
 
 set cbf_url=https://github.com/jamilgeor/FormsTutor
 
@@ -3831,6 +3829,8 @@ exit/b
 
 :_
 
+:150
+
 :xam150
 
 set fp=* XAM 150: Consuming REST-based Web Services
@@ -3839,10 +3839,45 @@ rem lu: Jul-9-2018
 
 echo %fp%
 
+set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150
+
+if not "%~2" == "" (
+  set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150\Exercise %2\Completed
+)
+
+exit/b
+
+
+
+:_
+
+:sw
+
+set fp=* SolarWinds OnionSDK.
+
+rem lu: Jul-10-2018
+
+echo %fp%
+
 set cbf_path=
 
-set cbf_url=
-rem       qq-1
+set cbf_url=https://github.com/solarwinds/OrionSDK.git
+
+exit/b
+
+
+
+:_
+
+:repository_folder
+
+set fp=* Default repository folder.
+
+rem lu: Jul-10-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%
 
 exit/b
 

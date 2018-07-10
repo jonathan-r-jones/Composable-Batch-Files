@@ -1433,7 +1433,7 @@ goto exitb
 
 set fp=* Initialize environment.
 
-rem fcd: Jun-8-2018
+rem fcd: Jul-10-2018
 
 echo %fp%
 
@@ -1445,7 +1445,9 @@ rem call :set_server_title
 
 rem call :set_wildfly_location
 
-if "%default_text_editor" == "" call m set_default_text_editor no
+if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
+
+if "%cbf_default_repository_folder%" == "" call m set_default_repository_folder temp
 
 cls
 
@@ -3114,28 +3116,6 @@ goto exitb
 
 
 
-:_
-
-:sde
-
-:sdte
-
-:set_default_text_editor
-
-set fp=* Set default text editor.
-
-rem lu: Jun-7-2018
-
-echo %fp%
-
-if not "%~2" == "" call n %2
-
-set cbf_default_text_editor=%cbf_application%
-
-exit/b
-
-
-
 :_+ CBF Variables
 
 
@@ -3150,7 +3130,7 @@ echo %fp%
 
 set cbf_application=
 
-set cbf_app_location=
+set cbf_application_location=
 
 set cbf_filename=
 
@@ -3184,25 +3164,28 @@ echo.
 echo %filep%
 
 echo.
-echo          Application: %cbf_application%
+echo Application: %cbf_application%
 
 echo.
-echo Application Location: %cbf_app_location%
+echo Application Location: %cbf_application_location%
 
 echo.
-echo  Default Text Editor: %cbf_default_text_editor%
+echo Default Text Editor: %cbf_default_text_editor%
 
 echo.
-echo             Filename: %cbf_filename%
+echo Default Repository Folder: %cbf_default_repository_folder%
 
 echo.
-echo            Parameter: %cbf_parameter%
+echo Filename: %cbf_filename%
 
 echo.
-echo                 Path: %cbf_path%
+echo Parameter: %cbf_parameter%
 
 echo.
-echo                  URL: %cbf_url%
+echo Path: %cbf_path%
+
+echo.
+echo URL: %cbf_url%
 
 goto exitb
 
@@ -3310,7 +3293,7 @@ if "%~2" == "" (
 rem Delete obj folders.
 rd /q /s .\%2\obj
 rd /q /s .\%2.Android\obj
-rd /q /s .\%2.iOS\obj
+if exist %2.iOS\obj rd /q /s .\%2.iOS\obj
 
 rem Delete bin folders.
 rd /q /s .\%2\bin
@@ -3344,6 +3327,46 @@ rem Delete bin folders.
 rd /q /s .\Fresnel\bin
 rd /q /s .\Fresnel.Android\bin
 rd /q /s .\Fresnel.iOS\bin
+
+exit/b
+
+
+
+:_+ Set default environment variables.
+
+
+
+::_
+
+:set_default_repository_folder
+
+set fp=* Set default repository folder.
+
+rem lu: Jul-10-2018
+
+echo %fp%
+
+if not "%~2" == "" call n %2
+
+set cbf_default_repository_folder=%cbf_path%
+
+exit/b
+
+
+
+::_
+
+:set_default_text_editor
+
+set fp=* Set default text editor.
+
+rem lu: Jun-7-2018
+
+echo %fp%
+
+if not "%~2" == "" call n %2
+
+set cbf_default_text_editor=%cbf_application%
 
 exit/b
 

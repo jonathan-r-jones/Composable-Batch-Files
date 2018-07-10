@@ -78,10 +78,6 @@ dir /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 
 rem (!rfsp) (mov-2)
 
-if "%cbf_default_text_editor%" == "" (
-  call m sde no
-)
-
 if %errorlevel% == 0 (
   start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_fs.txt"
 )

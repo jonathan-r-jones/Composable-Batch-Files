@@ -6948,16 +6948,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test goto with no label found.
@@ -6982,6 +6972,50 @@ goto nonexistinglabel 2>nul
 echo hey
 
 echo Errorlevel: %errorlevel%
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Use if exist for obj folder.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+call td 150 3
+
+if exist BookClient.Droid\obj rd /q /s .\BookClient.Droid\obj
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Set repository folder.
+
+rem lu: Jul-10-2018
+
+echo %fp%
+
+call m set_default_repository_folder temp
 
 exit/b
 
