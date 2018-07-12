@@ -12,14 +12,6 @@ set filep=* Perform Git-related tasks.
 
 :_
 
-set fp = * Path to walk prior to running Parameter 1.
-
-if not "%~2" == "" call td %2
-
-
-
-:_
-
 set fp=* Add some whitespace.
 
 echo.

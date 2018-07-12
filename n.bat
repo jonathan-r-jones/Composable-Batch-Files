@@ -3479,7 +3479,7 @@ echo %fp%
 
 set cbf_path=%dropbox%\it\fresnel\fresnel\Views
 
-set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page10.xaml
+set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\AboutPage.xaml
 
 exit/b
 
@@ -3829,28 +3829,6 @@ exit/b
 
 :_
 
-:150
-
-:xam150
-
-set fp=* XAM 150: Consuming REST-based Web Services
-
-rem lu: Jul-9-2018
-
-echo %fp%
-
-set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150
-
-if not "%~2" == "" (
-  set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150\Exercise %2\Completed
-)
-
-exit/b
-
-
-
-:_
-
 :sw
 
 set fp=* SolarWinds OnionSDK.
@@ -3878,6 +3856,28 @@ rem lu: Jul-10-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%
+
+exit/b
+
+
+
+:_
+
+:150
+
+:xam150
+
+set fp=* XAM 150: Consuming REST-based Web Services
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150
+
+if not "%~2" == "" (
+  set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150\Exercise %2\Completed
+)
 
 exit/b
 
