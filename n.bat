@@ -3301,9 +3301,25 @@ exit/b
 
 ::_
 
+:xu_r
+
+set fp=* Xamarin University root folder. Necessary for the clone to work.
+
+rem lu: Jul-12-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\xamarin_university
+
+exit/b
+
+
+
+::_
+
 :xu
 
-set fp=* Xamarin University.
+set fp=* Xamarin University. To clone this special repo, use g cn_xu
 
 rem lu: Jun-5-2018
 
@@ -3344,22 +3360,6 @@ rem lu: Jun-5-2018
 echo %fp%
 
 set cbf_url=https://github.com/XamarinUniversity/build2018-labs.git
-
-exit/b
-
-
-
-::_
-
-:xu_all
-
-set fp=* XU all exercises.
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/XamarinUniversity/AllCourseExercises.git
 
 exit/b
 
@@ -3878,6 +3878,9 @@ set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150
 if not "%~2" == "" (
   set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150\Exercise %2\Completed
 )
+
+set cbf_url=
+rem qq-1
 
 exit/b
 

@@ -1727,6 +1727,30 @@ exit/b
 
 ::_
 
+:cn_xu
+
+set fp=* Clone all Xamarin University repos.
+
+rem lu: Jun-5-2018
+
+echo %fp%
+
+call td xu_r
+
+git clone https://github.com/XamarinUniversity/AllCourseExercises.git
+
+cd AllCourseExercises
+
+git submodule init
+
+git submodule update
+
+exit/b
+
+
+
+::_
+
 :cu_cn
 
 set fp=* Custome clone.
@@ -1783,30 +1807,6 @@ rem 5. Execute.
 cd /d %new_folder_path%
 
 git clone %origin_url% --branch %branch_name% .\%folder_name%
-
-exit/b
-
-
-
-::_
-
-:xu
-
-set fp=* Clone all Xamarin University repos.
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-call td xu
-
-git clone https://github.com/XamarinUniversity/AllCourseExercises.git
-
-cd AllCourseExercises
-
-git submodule init
-
-git submodule update
 
 exit/b
 
@@ -2067,37 +2067,6 @@ exit/b
 
 ::_
 
-:rvall
-
-set fp=* Revert all changes from m6 and s6. Note: This is a powerfull command so exercise CAUTION!
-
-rem Creation Date: May-5-2017
-
-echo %fp%
-echo.
-
-call %0 delete_pngs
-
-call %0 delete_pngs_2
-
-cd c:\projects\netbeans\mercury6
-
-call %0 rvfd
-
-call %0 clean
-
-cd c:\projects\netbeans\sencha
-
-call %0 rvfd
-
-call %0 clean
-
-exit/b
-
-
-
-::_
-
 :rvallp
 
 set fp=* Revert all PERSISTENT changes from m6 and s6.
@@ -2151,42 +2120,6 @@ rem lu: Sep-14-2017
 echo %fp%
 
 git clean -n
-
-exit/b
-
-
-
-::_
-
-:rut
-
-:clean
-
-set fp=* Remove untracked folders and files. Use with caution.
-
-rem lu: May-30-2018
-
-echo %fp%
-
-git clean -d -f
-
-exit/b
-
-
-
-::_
-
-:ba
-
-set fp=* Blow away local changes. Use with caution.
-
-rem lu: May-30-2018
-
-echo %fp%
-
-call %0 rv
-
-call %0 rut
 
 exit/b
 
@@ -2287,6 +2220,24 @@ echo.
 git reset --hard HEAD
 git clean -f
 git pull
+
+exit/b
+
+
+
+::_
+
+:rut
+
+:clean
+
+set fp=* Remove untracked folders and files. Use with caution.
+
+rem lu: May-30-2018
+
+echo %fp%
+
+git clean -d -f
 
 exit/b
 
