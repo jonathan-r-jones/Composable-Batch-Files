@@ -2888,7 +2888,7 @@ exit/b
 
 :im
 
-set fp=* Image Manipualtion.
+set fp=* Image Manipulation.
 
 rem lu: Jun-13-2018
 
@@ -3880,7 +3880,74 @@ if not "%~2" == "" (
 )
 
 set cbf_url=
-rem qq-1
+
+exit/b
+
+
+
+:_+ Fresnel Images
+
+
+
+::_
+
+:fr_ra
+
+set fp=* Fresnel resources for Android.
+
+rem lu: Jul-13-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel\Fresnel.Android\Resources\drawable
+
+exit/b
+
+
+
+::_
+
+:fr_ri
+
+set fp=* Fresnel resources for iOS.
+
+rem lu: Jul-13-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel\Fresnel.iOS\Resources
+
+exit/b
+
+
+
+::_
+                                                   
+:fr_rs
+
+set fp=* Image Manipulation - Fresnel Images source.
+
+rem lu: Jun-13-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\Image Manipulation\fresnel
+
+exit/b
+
+
+
+::_
+
+:fr_rd
+
+set fp=* Diamond Paint.NET file.
+
+rem lu: Jul-13-2018
+
+echo %fp%
+
+set cbf_filename=%Dropbox%\image manipulation\menu 4 square diamond icon.pdn
 
 exit/b
 

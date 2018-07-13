@@ -258,4 +258,30 @@ exit/b
 
 
 
+:_
+
+:fr_r
+
+set fp=* Copy Fresnel images to their respective Android and iOS folders.
+
+rem lu: Jul-13-2018
+
+echo %fp%
+
+call td fr_ra
+
+call n fr_rs
+
+xcopy /d /y "%cbf_path%\*.*"
+
+call td fr_ri
+
+call n fr_rs
+
+xcopy /d /y "%cbf_path%\*.*"
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-9)
