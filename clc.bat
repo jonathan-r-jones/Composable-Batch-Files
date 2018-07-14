@@ -68,7 +68,7 @@ echo.
 echo %filep%
 
 echo.
-echo Last Updated: 
+echo Last Updated: Jul-13-2018
 
 echo.
 echo Usage: %0 [Parameter 1]

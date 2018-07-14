@@ -3831,7 +3831,7 @@ exit/b
 
 :sw
 
-set fp=* SolarWinds OnionSDK.
+set fp=* SolarWinds Orion SDK.
 
 rem lu: Jul-10-2018
 
@@ -3938,6 +3938,8 @@ exit/b
 
 
 ::_
+
+:fr_r
 
 :fr_rd
 
