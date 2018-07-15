@@ -3955,4 +3955,36 @@ exit/b
 
 
 
+:_
+
+:cj_au
+
+set fp=* ClipJam audiobooks folder.
+
+rem lu: Jul-15-2018
+
+echo %fp%
+
+set cbf_path=g:\audiobooks
+
+exit/b
+
+
+
+:_
+
+:cj_pc
+
+set fp=* ClipJam podcasts folder.
+
+rem lu: Jul-15-2018
+
+echo %fp%
+
+set cbf_path=g:\podcasts
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

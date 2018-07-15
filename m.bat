@@ -3270,6 +3270,46 @@ goto exitb
 
 
 
+:_+ Set default environment variables.
+
+
+
+::_
+
+:set_default_repository_folder
+
+set fp=* Set default repository folder.
+
+rem lu: Jul-10-2018
+
+echo %fp%
+
+if not "%~2" == "" call n %2
+
+set cbf_default_repository_folder=%cbf_path%
+
+exit/b
+
+
+
+::_
+
+:set_default_text_editor
+
+set fp=* Set default text editor.
+
+rem lu: Jun-7-2018
+
+echo %fp%
+
+if not "%~2" == "" call n %2
+
+set cbf_default_text_editor=%cbf_application%
+
+exit/b
+
+
+
 :_+ Delete obj and bin folders.
 
 
@@ -3332,41 +3372,17 @@ exit/b
 
 
 
-:_+ Set default environment variables.
+:_
 
+:remove_hidden_attributes
 
+set fp=* Remove hidden attributes.
 
-::_
-
-:set_default_repository_folder
-
-set fp=* Set default repository folder.
-
-rem lu: Jul-10-2018
+rem lu: Jul-15-2018
 
 echo %fp%
 
-if not "%~2" == "" call n %2
-
-set cbf_default_repository_folder=%cbf_path%
-
-exit/b
-
-
-
-::_
-
-:set_default_text_editor
-
-set fp=* Set default text editor.
-
-rem lu: Jun-7-2018
-
-echo %fp%
-
-if not "%~2" == "" call n %2
-
-set cbf_default_text_editor=%cbf_application%
+attrib -h *.*
 
 exit/b
 

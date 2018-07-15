@@ -239,27 +239,6 @@ exit/b
 
 :_
 
-:sacj
-
-set fp=* Copy stage area podcasts to the Clipjam folder.
-
-rem lu: Jul-8-2018
-
-echo %fp%
-
-call td cj
-
-call n sa
-
-echo.
-move "%cbf_path%\*.*"
-
-exit/b
-
-
-
-:_
-
 :fr_r
 
 set fp=* Copy Fresnel images to their respective Android and iOS folders.
@@ -279,6 +258,74 @@ call td fr_ri
 call n fr_rs
 
 xcopy /d /y "%cbf_path%\*.*"
+
+exit/b
+
+
+
+:_+ PC Operations
+
+
+
+::_
+
+:mvpc2
+
+set fp=* Overaching podcast mover.
+
+rem lu: Jul-15-2018
+
+echo %fp%
+
+call m remove_hidden_attributes
+
+call %0 move_old_clipjam
+
+call %0 copy_sa_to_cj
+
+exit/b
+
+
+
+::_
+
+:move_old_clipjam
+
+set fp=* Move old ClipJam files from the Podcasts to Audiobooks folder.
+
+rem This ensures that the podcasts folder has the new material.
+
+rem lu: Jul-15-2018
+
+echo %fp%
+
+call td cj_au
+
+call n cj_pc
+
+echo.
+move "%cbf_path%\*.*"
+
+exit/b
+
+
+
+::_
+
+:copy_sa_to_cj
+
+set fp=* Copy staging area podcasts to the Clipjam folder.
+
+rem lu: Jul-8-2018
+
+echo %fp%
+
+call td cj
+
+call n sa
+
+echo.
+move "%cbf_path%\*.*"
 
 exit/b
 
