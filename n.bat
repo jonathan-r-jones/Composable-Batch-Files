@@ -2145,7 +2145,7 @@ rem lu: Sep-6-2017
 
 echo %fp%
 
-set cbf_path=%aa%\for-git-testing
+set cbf_path=%aa%\repositories\for-git-testing
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing
 
@@ -3319,7 +3319,9 @@ exit/b
 
 :xu
 
-set fp=* Xamarin University. To clone this special repo, use g cn_xu
+set fp=* Xamarin University.
+
+rem To clone this special repo, use "g cn_xu".
 
 rem lu: Jun-5-2018
 

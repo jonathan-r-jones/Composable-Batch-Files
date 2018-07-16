@@ -6,7 +6,15 @@
 
 :_
 
-set filename_stands_for=* Trandform folder to parent folder.
+set filename_stands_for=* Delete folder.
+
+
+
+:_
+
+set fp=* Add some whitespace.
+
+echo.
 
 
 
@@ -30,7 +38,6 @@ goto main_function
 
 :help
 
-echo.
 echo Filename stands for: %filename_stands_for%
 
 echo.
@@ -39,8 +46,8 @@ echo Last Updated: Jul-16-2018
 echo.
 echo Usage: %0 [Parameter 1]
 
-set parameter_1=Parameter 1: Path parameter.
-set parameter_1=%parameter_1% 
+set parameter_1=Parameter 1: Path parameter of folder to delete. USE WITH CAUTION as the 
+set parameter_1=%parameter_1%folder will be deleted!
 
 echo.
 echo %parameter_1%
@@ -53,18 +60,16 @@ exit/b
 
 :main_function
 
-call td %1
+echo %filename_stands_for%
 
-set fp=* Trandform folder to parent folder.
+call tdp %1
+
+if %errorlevel% == 1 (
+  exit/b
+)
 
 echo.
-echo %fp%
-
-if %errorlevel% == 0 (
-  cd..
-) else (
-  exit/b 1
-)
+rd /s %cbf_path%
 
 rem (!rfsp) (mov-2)
 

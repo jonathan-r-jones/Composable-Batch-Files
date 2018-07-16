@@ -2962,6 +2962,7 @@ echo    cs  File contents search.
 echo    cy  Copy file(s).
 echo   cyn  Copies file in the current directory to nickname-specified path.
 echo     d  Easier-to-type and remember version of "dir".
+echo  defd  Delete folder at specified path parameter. Use with caution.
 echo     e  Exit command window.
 echo    ed  Edit a file. Emulated Surf (sf).
 echo   env  Show the state of the CBF envrionment variables.
@@ -3385,6 +3386,23 @@ rem lu: Jul-15-2018
 echo %fp%
 
 attrib -h *.*
+
+exit/b
+
+
+
+:_
+
+:ece
+
+set fp=* Echo current errorlevel.
+
+rem lu: Jul-16-2018
+
+echo %fp%
+
+echo.
+echo Errorlevel: %errorlevel%
 
 exit/b
 

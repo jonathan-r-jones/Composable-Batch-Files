@@ -80,15 +80,32 @@ echo Usage: cn [Parameter 1] [Parameter 2]
 echo.
 echo Parameter 1: URL nickname of the repository.
 
-set parameter_2=Parameter 2 (Optional): If left blank, the repository will be installed into
-set parameter_2=%parameter_2%the default repository folder.
-set parameter_2=%parameter_2%If "c" is specified, the repository will be installed into a subfolder 
-set parameter_2=%parameter_2%of the current folder.
-set parameter_2=%parameter_2%If "p" is specified, the repository will be installed into the specified CBF Path, 
-set parameter_2=%parameter_2%assuming it's not already installed there.
+set parameter_2=Parameter 2 (Optional): If left blank, the repository will be installed
 
 echo.
 echo %parameter_2%
+
+set parameter_2a=into the default repository folder. 
+
+echo %parameter_2a%
+
+set parameter_2b=If "c" is specified, the repository will be installed into a subfolder 
+
+echo.
+echo %parameter_2b%
+
+set parameter_2c=of the current folder.
+
+echo %parameter_2c%
+
+set parameter_2d=If "p" is specified, the repository will be installed into the specified 
+
+echo.
+echo %parameter_2d%
+
+set parameter_2e=CBF Path, assuming it's not already there.
+
+echo %parameter_2e%
 
 exit/b
 
