@@ -2980,6 +2980,7 @@ echo    of  Open Folder.
 echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
 echo     s  Open a Visual Studio solution. Emulated ACP.
+echo    st  Run git status remotely. Emulated ACP.
 echo    sf  Surf to websites.
 echo    sm  Run Sublime.
 echo   sql  SQL/Database, including LDAP, related tasks.
@@ -2987,6 +2988,7 @@ echo     t  Testing, experimenting and developing new batch file functions.
 echo    tk  Wrapper around taskkill command.
 echo    tl  Wrapper around tasklist command.
 echo    td  Transform Directory.
+echo   tdp  Transform Directory to parent folder.
 echo    te  Batch file template used for creating new batch files.
 echo     v  Vetted functions.
 echo     x  Remote double-click equivalent way to run a file.

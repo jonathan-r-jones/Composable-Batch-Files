@@ -6,15 +6,17 @@
 
 :_
 
-set filep=* Add, commit and push Git changes with timestamp commit message.
+set filename_stands_for=* STatus batch file.
 
 
 
 :_
 
-set fp=* Route callers.
+set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
+
+if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
@@ -43,8 +45,12 @@ exit/b
 
 :help
 
+echo Filename stands for: %filename_stands_for%
+
+set filep=File purpose: Goes to a path, then call the status function.
+
 echo.
-echo Filename stands for: Add/Commit/Push.
+echo %filep%
 
 echo.
 echo Last Updated: Jul-16-2018
@@ -52,8 +58,11 @@ echo Last Updated: Jul-16-2018
 echo.
 echo Usage: %0 [Parameter 1]
 
+set parameter_1=Parameter 1: Path parameter.
+set parameter_1=%parameter_1% 
+
 echo.
-echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current folder is used.
+echo %parameter_1%
 
 exit/b
 
@@ -66,7 +75,7 @@ exit/b
 echo.
 echo %filename_stands_for%
 
-call g acp
+call g s
 
 rem (!rfsp) (mov-2)
 
