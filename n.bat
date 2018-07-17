@@ -2731,7 +2731,7 @@ rem lu: Jun-12-2018
 
 echo %fp%
 
-set cbf_path=
+set cbf_path=c:\aa\repositories\marvel-xfdemo\src
 
 set cbf_url=https://github.com/edsnider/marvel-xfdemo.git
 
@@ -3017,24 +3017,6 @@ echo %fp%
 set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
 
 set cbf_url=https://university.xamarin.com/classes/track/all#publishing-an-ios-app-ios220
-
-exit/b
-
-
-
-:_
-
-:bike
-
-set fp=* Bike search.
-
-rem lu: Jun-20-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
-
-set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
 
 exit/b
 
@@ -4053,6 +4035,80 @@ rem lu: Jul-17-2018
 echo %fp%
 
 set cbf_application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
+
+exit/b
+
+
+
+:_
+
+:bike
+
+set fp=* Bike search.
+
+rem lu: Jun-20-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
+
+set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
+
+exit/b
+
+
+
+:_
+
+:feed
+
+set fp=* Feed reader sample.
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+set cbf_path=%default_repository_folder%feedreader
+
+set cbf_url=https://github.com/codehollow/FeedReader.git
+
+exit/b
+
+
+
+:_
+
+:jp
+
+set fp=* Json Placeholder.
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+set cbf_path=%default_repository_folder%jsonplaceholder
+
+set cbf_url=https://github.com/typicode/jsonplaceholder.git
+rem       qq-1
+
+exit/b
+
+
+
+:_
+
+:madm
+
+set fp=* Madison Monkeys.
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+set cbf_path=%default_repository_folder%madisonmonkeys
+
+set cbf_url=https://github.com/psberres/MadisonMonkeys.git
+rem       qq-1
 
 exit/b
 
