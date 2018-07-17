@@ -124,22 +124,6 @@ exit/b
 
 :_
 
-:sm
-
-set fp=* Sublime.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files\Sublime Text 3\sublime_text.exe
-
-exit/b
-
-
-
-:_
-
 :pc
 
 set fp=* Gpodder podcaster.
@@ -510,22 +494,6 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\fn.bat
-
-exit/b
-
-
-
-:_
-
-:j1
-
-set fp=* J1.txt.
-
-rem lu: Feb-1-2018
-
-echo %fp%
-
-set cbf_filename=%temp%\j1.txt
 
 exit/b
 
@@ -1972,22 +1940,6 @@ exit/b
 
 :_
 
-:no
-
-set fp=* Notepad.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=c:\windows\system32\notepad.exe
-
-exit/b
-
-
-
-:_
-
 :mecfig
 
 set fp=* Multi-Edit Config Files Dated Backups.
@@ -2015,33 +1967,6 @@ echo %fp%
 set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
 
 set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
-
-exit/b
-
-
-
-:_
-
-:npp
-
-set fp=* Notepad++.
-
-rem lu: Mar-9-2018
-
-echo %fp%
-
-rem Determine installation path.
-
-if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_location=c:\program files\notepad++\notepad++.exe
-if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_location="c:\program files (x86)\notepad++\notepad++.exe"
-
-if "%cbf_application_location%" == "" (
-  echo.
-  echo Notepad++ is not installed.
-  exit/b
-)
-
-set cbf_application=%cbf_application_location%
 
 exit/b
 
@@ -2681,22 +2606,6 @@ rem lu: Jun-8-2018
 echo %fp%
 
 set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\xam205
-
-exit/b
-
-
-
-:_
-
-:me
-
-set fp=* Multi-Edit.
-
-rem lu: Jun-8-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
 
 exit/b
 
@@ -3559,90 +3468,6 @@ exit/b
 
 
 
-:_+ Browsers
-
-
-
-::_
-
-:kr
-
-set fp=* Chrome.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
-
-exit/b
-
-
-
-::_
-
-:fx
-
-set fp=* Firefox.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\mozilla firefox\firefox.exe
-
-exit/b
-
-
-
-::_
-
-:edge
-
-set fp=* Microsoft Edge.
-
-rem lu: Feb-7-2018
-
-echo %fp%
-
-set cbf_application=microsoft-edge
-
-exit/b
-
-
-
-::_
-
-:ie
-
-set fp=* Internet Explorer.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\internet explorer\iexplore.exe
-
-exit/b
-
-
-
-::_
-
-:op
-
-set fp=* Opera.
-
-rem lu: Feb-13-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\opera\launcher.exe
-
-exit/b
-
-
-
 :_
 
 :webapi
@@ -3984,6 +3809,250 @@ rem lu: Jul-15-2018
 echo %fp%
 
 set cbf_path=g:\podcasts
+
+exit/b
+
+
+
+:_
+
+:j1
+
+set fp=* J1.txt.
+
+rem lu: Feb-1-2018
+
+echo %fp%
+
+set cbf_filename=%temp%\j1.txt
+
+exit/b
+
+
+
+:_+ Browser file reading comparison.
+
+
+
+::_
+
+:sks
+
+set fp=* Skeptics.txt short form
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+rem Works with: Chrome, IE, OP, VI.
+
+rem Doesn't works with: Firefox, Edge.
+
+set cbf_filename=C:\a\skeptics.txt
+            
+set cbf_url=C:/a/skeptics.txt
+
+exit/b
+
+
+
+::_
+
+:skl
+
+set fp=* Skeptics.txt longer form.
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+rem Works with: Chrome, IE, OP, VI.
+
+rem Doesn't works with: Edge, Firefox, even though Fx converts the filename to exactly the cbf_url 
+rem here.
+
+set cbf_filename=C:\a\skeptics.txt
+
+set cbf_url=file:///C:/a/skeptics.txt
+
+exit/b
+
+
+
+:_+ Browsers (!brows)
+
+
+
+::_
+
+:kr
+
+set fp=* Chrome.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+exit/b
+
+
+
+::_
+
+:fx
+
+set fp=* Firefox.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\mozilla firefox\firefox.exe
+
+exit/b
+
+
+
+::_
+
+:edge
+
+set fp=* Microsoft Edge.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+set cbf_application=microsoft-edge
+
+exit/b
+
+
+
+::_
+
+:ie
+
+set fp=* Internet Explorer.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\internet explorer\iexplore.exe
+
+exit/b
+
+
+
+::_
+
+:op
+
+set fp=* Opera.
+
+rem lu: Feb-13-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\opera\launcher.exe
+
+exit/b
+
+
+
+:_+ Editors
+
+
+
+::_
+
+:no
+
+set fp=* Notepad.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=c:\windows\system32\notepad.exe
+
+exit/b
+
+
+
+::_
+
+:npp
+
+set fp=* Notepad++.
+
+rem lu: Mar-9-2018
+
+echo %fp%
+
+rem Determine installation path.
+
+if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_location=c:\program files\notepad++\notepad++.exe
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_location="c:\program files (x86)\notepad++\notepad++.exe"
+
+if "%cbf_application_location%" == "" (
+  echo.
+  echo Notepad++ is not installed.
+  exit/b
+)
+
+set cbf_application=%cbf_application_location%
+
+exit/b
+
+
+
+::_
+
+:me
+
+set fp=* Multi-Edit.
+
+rem lu: Jun-8-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
+
+exit/b
+
+
+
+::_
+
+:sm
+
+set fp=* Sublime.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files\Sublime Text 3\sublime_text.exe
+
+exit/b
+
+
+
+::_
+
+:vi
+
+set fp=* Vivaldi.
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+set cbf_application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
 
 exit/b
 
