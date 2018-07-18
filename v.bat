@@ -389,6 +389,32 @@ exit/b
 
 :_
 
+:
+
+set fp=* Test return codes for "n" calls. How do you reset errorlevel?
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+call n bullshit
+
+echo.
+echo Errorlevel: %errorlevel%
+
+ver>nul
+
+call n cnn
+
+echo.
+echo Errorlevel: %errorlevel%
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.

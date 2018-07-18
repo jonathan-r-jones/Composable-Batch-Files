@@ -3700,6 +3700,8 @@ exit/b
 
 ::_
 
+:and_res
+
 :fr_ra
 
 set fp=* Fresnel resources for Android.
@@ -3716,6 +3718,8 @@ exit/b
 
 ::_
 
+:ios_res
+
 :fr_ri
 
 set fp=* Fresnel resources for iOS.
@@ -3731,7 +3735,9 @@ exit/b
 
 
 ::_
-                                                   
+        
+:fr_res
+                                           
 :fr_rs
 
 set fp=* Image Manipulation - Fresnel Images source.

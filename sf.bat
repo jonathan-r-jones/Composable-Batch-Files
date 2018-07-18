@@ -66,7 +66,11 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* Set URL.
 
-call un %1
+call n %1
+
+if %errorlevel% == 1 (
+  exit/b
+)
 
 set cbf_parameter=%cbf_url%
 
