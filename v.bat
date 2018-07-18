@@ -98,6 +98,11 @@ rem Imprimatur (!error, !erro)
 
 echo Errorlevel: %errorlevel%
 
+if %errorlevel% == 1 (
+  echo.
+  echo Error: 
+)
+
 if %errorlevel% == 0 (
   echo.
   echo Error level equals 0.

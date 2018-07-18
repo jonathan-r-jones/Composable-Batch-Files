@@ -29,6 +29,10 @@ set fp=* If it is provided, go to percent 1.
 
 if not "%~1" == "" (
   call td %~1 %2
+
+  if %errorlevel% == 1 (
+    exit/b
+  )
 )
 
 goto main_function
@@ -64,7 +68,6 @@ exit/b
 rem (!rfsp) (mov2)
 
 call m sln
-rem qq-1
 
 exit/b
 

@@ -4068,7 +4068,7 @@ rem lu: Jul-17-2018
 
 echo %fp%
 
-set cbf_path=%default_repository_folder%feedreader
+set cbf_path=%cbf_default_repository_folder%\feedreader
 
 set cbf_url=https://github.com/codehollow/FeedReader.git
 
@@ -4086,10 +4086,9 @@ rem lu: Jul-17-2018
 
 echo %fp%
 
-set cbf_path=%default_repository_folder%jsonplaceholder
+set cbf_path=%cbf_default_repository_folder%\jsonplaceholder
 
 set cbf_url=https://github.com/typicode/jsonplaceholder.git
-rem       qq-1
 
 exit/b
 
@@ -4097,7 +4096,7 @@ exit/b
 
 :_
 
-:madm
+:mamo
 
 set fp=* Madison Monkeys.
 
@@ -4105,10 +4104,9 @@ rem lu: Jul-17-2018
 
 echo %fp%
 
-set cbf_path=%default_repository_folder%madisonmonkeys
+set cbf_path=%cbf_default_repository_folder%\madisonmonkeys
 
 set cbf_url=https://github.com/psberres/MadisonMonkeys.git
-rem       qq-1
 
 exit/b
 

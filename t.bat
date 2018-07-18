@@ -6999,13 +6999,21 @@ exit/b
 
 :
 
-set fp=* Set repository folder.
+set fp=* Test error level when looking for folders.
 
-rem lu: Jul-10-2018
+rem lu: Jul-16-2018
 
 echo %fp%
 
-call m set_default_repository_folder temp
+call td fr
+
+if %errorlevel% == 0 (
+  echo.
+  echo Error level equals 0.
+) else (
+  echo.
+  echo Error level equals 1.
+)
 
 exit/b
 
@@ -7025,21 +7033,16 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Test error level when looking for folders.
+set fp=* Set repository folder.
 
-rem lu: Jul-16-2018
+rem lu: Jul-10-2018
 
 echo %fp%
 
-call td fr
+call n fr
+call n mamo
 
-if %errorlevel% == 0 (
-  echo.
-  echo Error level equals 0.
-) else (
-  echo.
-  echo Error level equals 1.
-)
+call env
 
 exit/b
 
