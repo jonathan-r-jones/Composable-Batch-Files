@@ -4118,4 +4118,132 @@ exit/b
 
 
 
+:_
+
+:lee
+
+:leegit
+
+:lrgit
+
+set fp=* Lee Richardardson on GitHub.
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/lprichar
+
+exit/b
+
+
+
+:_
+
+:easy
+
+set fp=* Easy layout.
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\EasyLayout.Forms
+
+set cbf_url=https://github.com/lprichar/EasyLayout.Forms.git
+
+exit/b
+
+
+
+:_
+
+:momo
+
+set fp=* Montegmagno monkeys.
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\Xamarin.Forms-Monkeys\Monkeys-CarouselView
+
+set cbf_url=https://github.com/jamesmontemagno/Xamarin.Forms-Monkeys.git
+
+exit/b
+
+
+
+:_
+
+:caro
+
+set fp=* Carousel.
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\CarouselView
+
+set cbf_url=https://github.com/alexrainman/CarouselView.git
+
+exit/b
+
+
+
+:_
+
+:hans
+
+set fp=* Hanselman forms.
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\Hanselman.Forms
+
+set cbf_url=https://github.com/jamesmontemagno/Hanselman.Forms.git
+
+exit/b
+
+
+
+:_
+
+:conf
+
+set fp=* JM Conference app.
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\app-conference\src
+
+set cbf_url=https://github.com/xamarinhq/app-conference.git
+
+exit/b
+
+
+
+:_
+
+:navd
+
+set fp=* JM NavDrawer.
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+rem set cbf_path=%cbf_default_repository_folder%\Xam.NavDrawer
+
+set cbf_url=https://github.com/jamesmontemagno/Xam.NavDrawer.git
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
