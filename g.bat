@@ -1284,7 +1284,6 @@ exit/b
 ::_
 
 :stash
-rem qq-1
 
 set fp=* Stashing changes allows you to do a get-latest (or bring in someone's else's code) without losing your local changes.
 
@@ -1973,11 +1972,76 @@ exit/b
 
 ::_
 
-:roll_back_2
+:step_back_1
+
+set fp=* Step back 1 version.
+
+rem lu: Jul-19-2018
+
+echo %fp%
+
+call :reset_head
+
+call :roll_back_repo
+
+exit/b
+
+
+
+::_
+
+:reset_head
 
 set fp=* Roll back changes by 1 id number version.
 
+rem Creation Date: Jul-19-2018
+
+rem Step back 1 version.
+rem qq-1
+
+rem Test on FGT.
+
+echo %fp%
+
+echo.
+git reset --hard "HEAD~1"
+
+exit/b
+
+
+
+::_
+
+:roll_back_repo
+
+:roll_back_server
+
+set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
+
+rem Creation Date: Aug-3-2017
+
+rem How do you roll back in git?
+
+rem This worked on David's machine on Aug-3-2017.
+
+echo %fp%
+
+echo.
+git push -f
+
+exit/b
+
+
+
+::_
+
+:roll_back_2
+
+set fp=* Roll back changes by 2 id number versions.
+
 rem Creation Date: Feb-13-2017
+
+rem Test on FGT.
 
 echo %fp%
 echo.
@@ -2036,31 +2100,6 @@ rem git checkout 959308e
 
 rem S6 @ Aug-28-2017
 git checkout b3444ed
-
-exit/b
-
-
-
-::_
-
-:roll_back_repo
-
-:roll_back_server
-
-set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
-
-rem Creation Date: Aug-3-2017
-
-rem How do you roll back in git?
-
-rem This worked on David's machine on Aug-3-2017.
-
-echo %fp%
-echo.
-  
-@echo on
-git push -f
-@echo off
 
 exit/b
 

@@ -3319,9 +3319,9 @@ exit/b
 
 ::_
 
-:dob
+:de_bin
 
-set fp=* Delete obj and bin folders.
+set fp=* Delete bin and obj folders.
 
 rem lu: Jul-5-2018
 
@@ -3349,11 +3349,9 @@ exit/b
 
 ::_
 
-:dob_fr
+:de_bin_fr
 
-:fr_dob
-
-set fp=* Delete obj and bin folders.
+set fp=* Delete bin and obj folders for Fresnel.
 
 rem lu: Jun-25-2018
 
