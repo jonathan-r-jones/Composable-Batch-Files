@@ -1972,69 +1972,6 @@ exit/b
 
 ::_
 
-:step_back_1
-
-set fp=* Step back 1 version.
-
-rem lu: Jul-19-2018
-
-echo %fp%
-
-call :reset_head
-
-call :roll_back_repo
-
-exit/b
-
-
-
-::_
-
-:reset_head
-
-set fp=* Roll back changes by 1 id number version.
-
-rem Creation Date: Jul-19-2018
-
-rem Step back 1 version.
-rem qq-1
-
-rem Test on FGT.
-
-echo %fp%
-
-echo.
-git reset --hard "HEAD~1"
-
-exit/b
-
-
-
-::_
-
-:roll_back_repo
-
-:roll_back_server
-
-set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
-
-rem Creation Date: Aug-3-2017
-
-rem How do you roll back in git?
-
-rem This worked on David's machine on Aug-3-2017.
-
-echo %fp%
-
-echo.
-git push -f
-
-exit/b
-
-
-
-::_
-
 :roll_back_2
 
 set fp=* Roll back changes by 2 id number versions.
@@ -2278,6 +2215,69 @@ rem lu: May-30-2018
 echo %fp%
 
 git clean -d -f
+
+exit/b
+
+
+
+::_
+
+:step_back_1
+
+set fp=* Step back 1 version.
+
+rem lu: Jul-19-2018
+
+echo %fp%
+
+call :reset_head
+
+call :roll_back_repo
+
+exit/b
+
+
+
+::_
+
+:reset_head
+
+set fp=* Roll back changes by 1 id number version.
+
+rrem lu: Jul-19-2018
+
+rem Step back 1 version.
+rem qq-1
+
+rem Test on FGT.
+
+echo %fp%
+
+echo.
+git reset --hard "HEAD~1"
+
+exit/b
+
+
+
+::_
+
+:roll_back_repo
+
+:roll_back_server
+
+set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
+
+rem lu: Jul-19-2018
+
+rem How do you roll back in git?
+
+rem This worked on David's machine on Aug-3-2017.
+
+echo %fp%
+
+echo.
+git push -f
 
 exit/b
 
