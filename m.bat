@@ -3127,6 +3127,8 @@ goto exitb
 
 :reset
 
+:reset_cbf_variables
+
 set fp=* Reset CBF variables.
 
 echo %fp%
@@ -3313,37 +3315,40 @@ exit/b
 
 
 
-:_+ Delete obj and bin folders.
+:_
 
+:remove_hidden_attributes
 
+set fp=* Remove hidden attributes.
 
-::_
-
-:de_bin
-
-set fp=* Delete bin and obj folders.
-
-rem lu: Jul-5-2018
+rem lu: Jul-15-2018
 
 echo %fp%
 
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 cannot be nothing.
-  exit/b
-)
-
-rem Delete obj folders.
-rd /q /s .\%2\obj
-rd /q /s .\%2.Android\obj
-if exist %2.iOS\obj rd /q /s .\%2.iOS\obj
-
-rem Delete bin folders.
-rd /q /s .\%2\bin
-rd /q /s .\%2.Android\bin
-rd /q /s .\%2.iOS\bin
+attrib -h *.*
 
 exit/b
+
+
+
+:_
+
+:ece
+
+set fp=* Echo current errorlevel.
+
+rem lu: Jul-16-2018
+
+echo %fp%
+
+echo.
+echo Errorlevel: %errorlevel%
+
+exit/b
+
+
+
+:_+ Delete obj and bin folders.
 
 
 
@@ -3373,34 +3378,31 @@ exit/b
 
 
 
-:_
+::_
 
-:remove_hidden_attributes
+:de_bin
 
-set fp=* Remove hidden attributes.
+set fp=* Delete bin and obj folders.
 
-rem lu: Jul-15-2018
-
-echo %fp%
-
-attrib -h *.*
-
-exit/b
-
-
-
-:_
-
-:ece
-
-set fp=* Echo current errorlevel.
-
-rem lu: Jul-16-2018
+rem lu: Jul-5-2018
 
 echo %fp%
 
-echo.
-echo Errorlevel: %errorlevel%
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 cannot be nothing.
+  exit/b
+)
+
+rem Delete obj folders.
+rd /q /s .\%2\obj
+rd /q /s .\%2.Android\obj
+if exist %2.iOS\obj rd /q /s .\%2.iOS\obj
+
+rem Delete bin folders.
+rd /q /s .\%2\bin
+rd /q /s .\%2.Android\bin
+rd /q /s .\%2.iOS\bin
 
 exit/b
 

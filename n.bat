@@ -20,6 +20,18 @@ echo.
 
 :_
 
+set fp=* In order to promote freshness, clear the environment variables and reset the error level.
+
+set cbf_path=
+
+set cbf_url=
+
+ver>nul
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -3168,6 +3180,24 @@ exit/b
 
 
 
+::_
+
+:fr_bu
+
+set fp=* Fresnel Mobile App, local backup version.
+
+rem lu: Jul-19-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\fresnel_local_backup
+
+set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+
+exit/b
+
+
+
 :_
 
 :splunk
@@ -3427,24 +3457,6 @@ echo %fp%
 set cbf_path=
 
 set cbf_url=https://github.com/DalSoft/DalSoft.RestClient.git
-
-exit/b
-
-
-
-:_
-
-:monkeys
-
-set fp=* Monkeys.
-
-rem lu: Jul-3-2018
-
-echo %fp%
-
-set cbf_path=
-
-set cbf_url=http://montemagno.com/monkeys.json
 
 exit/b
 
@@ -4158,24 +4170,6 @@ exit/b
 
 :_
 
-:momo
-
-set fp=* Montegmagno monkeys.
-
-rem lu: Jul-18-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\Xamarin.Forms-Monkeys\Monkeys-CarouselView
-
-set cbf_url=https://github.com/jamesmontemagno/Xamarin.Forms-Monkeys.git
-
-exit/b
-
-
-
-:_
-
 :caro
 
 set fp=* Carousel.
@@ -4241,6 +4235,186 @@ echo %fp%
 rem set cbf_path=%cbf_default_repository_folder%\Xam.NavDrawer
 
 set cbf_url=https://github.com/jamesmontemagno/Xam.NavDrawer.git
+
+exit/b
+
+
+
+:_
+
+:awrestapi
+
+set fp=* AWRestAPI.
+
+rem lu: Jul-20-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\AWRestAPI
+
+set cbf_url=https://github.com/scotcurry/AWRestAPI.git
+
+exit/b
+
+
+
+:_
+
+:awsam
+
+set fp=* AirWatch Samples.
+
+rem lu: Jul-20-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\AirWatch-samples
+
+set cbf_url=https://github.com/vmwaresamples/AirWatch-samples.git
+
+exit/b
+
+
+
+:_
+
+:beyo
+
+set fp=* Beyond basics.
+
+rem Radio button. skw
+
+rem lu: Jul-23-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\Beyond-Basics
+
+set cbf_url=
+
+exit/b
+
+c:\aa\Repositories\Beyond-Basics\1-xamarin-forms-moving-beyond-basics-m1-exercise-files\demos\1-tableview\Foodie.sln
+c:\aa\Repositories\Beyond-Basics\1-xamarin-forms-moving-beyond-basics-m1-exercise-files\demos\2-custom-cells\Foodie.sln
+c:\aa\Repositories\Beyond-Basics\1-xamarin-forms-moving-beyond-basics-m1-exercise-files\demos\3-behaviors\Foodie.sln
+c:\aa\Repositories\Beyond-Basics\1-xamarin-forms-moving-beyond-basics-m1-exercise-files\demos\4-triggers\Foodie.sln
+c:\aa\Repositories\Beyond-Basics\2-xamarin-forms-moving-beyond-basics-m2-exercise-files\1-listview-grouping\Foodie.sln
+
+
+:c:\aa\Repositories\Beyond-Basics\2-xamarin-forms-moving-beyond-basics-m2-exercise-files\2-grid-views\Foodie.sln
+
+:c:\aa\Repositories\Beyond-Basics\2-xamarin-forms-moving-beyond-basics-m2-exercise-files\3-value-converters\Foodie.sln
+
+:c:\aa\Repositories\Beyond-Basics\2-xamarin-forms-moving-beyond-basics-m2-exercise-files\4-template-selectors\Foodie.sln
+
+:c:\aa\Repositories\Beyond-Basics\3-xamarin-forms-moving-beyond-basics-m3-exercise-files\demos\1-styles\Foodie.sln
+
+:c:\aa\Repositories\Beyond-Basics\3-xamarin-forms-moving-beyond-basics-m3-exercise-files\demos\2-style-hierarchy\Foodie.sln
+
+:c:\aa\Repositories\Beyond-Basics\3-xamarin-forms-moving-beyond-basics-m3-exercise-files\demos\3-dynamic-styles\Foodie.sln
+
+:c:\aa\Repositories\Beyond-Basics\4-xamarin-forms-moving-beyond-basics-m4-exercise-files\demos\1-app-wide-colors\Foodie.sln
+
+:c:\aa\Repositories\Beyond-Basics\4-xamarin-forms-moving-beyond-basics-m4-exercise-files\demos\2-effects\Foodie.sln
+
+:c:\aa\Repositories\Beyond-Basics\4-xamarin-forms-moving-beyond-basics-m4-exercise-files\demos\3-native-binding\Foodie.sln
+
+exit/b
+
+
+
+:_
+
+:monkeys
+
+set fp=* Monkeys.
+
+rem lu: Jul-3-2018
+
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=http://montemagno.com/monkeys.json
+
+exit/b
+
+
+
+:_
+
+:xfm
+
+set fp=* JM Xamarin.Forms-Monkeys.
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\Xamarin.Forms-Monkeys\Monkeys-CarouselView
+
+set cbf_url=https://github.com/jamesmontemagno/Xamarin.Forms-Monkeys.git
+
+exit/b
+c:\aa\Repositories\Xamarin.Forms-Monkeys\Archive\Monkeys-Code-UI\Monkeys.sln
+c:\aa\Repositories\Xamarin.Forms-Monkeys\Archive\Monkeys-Simple\Monkeys.sln
+c:\aa\Repositories\Xamarin.Forms-Monkeys\Archive\Monkeys-XAML-UI\Monkeys.sln
+c:\aa\Repositories\Xamarin.Forms-Monkeys\Monkeys\Monkeys.sln
+c:\aa\Repositories\Xamarin.Forms-Monkeys\Monkeys-CarouselView\Monkeys.sln
+
+exit/b
+
+
+
+:_
+
+:apmo
+
+set fp=* App monkeys.
+
+rem lu: Jul-23-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\app-monkeys
+
+set cbf_url=https://github.com/jamesmontemagno/app-monkeys.git
+
+exit/b
+
+
+
+:_
+
+:ij
+
+:inc
+
+set fp=* Incidents JSON.
+
+rem lu: Jul-23-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\fresnel\incidents.json
+
+exit/b
+
+
+
+:_
+
+:weca
+
+set fp=* Welcome carousel.
+
+rem lu: Jul-24-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\WelcomeCarousel
+
+set cbf_url=https://github.com/leroygumede/WelcomeCarousel.git
 
 exit/b
 

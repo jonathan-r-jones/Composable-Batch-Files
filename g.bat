@@ -2224,7 +2224,11 @@ exit/b
 
 :step_back_1
 
-set fp=* Step back 1 version.
+set fp=* Step back 1 version. You feel like your last check-in broke the build,
+
+set fp=%fp% so move the whole repo back a single check-in version.
+
+rem This worked on FGT and Fresnel on Jul-19-2018.
 
 rem lu: Jul-19-2018
 
@@ -2247,7 +2251,6 @@ set fp=* Roll back changes by 1 id number version.
 rrem lu: Jul-19-2018
 
 rem Step back 1 version.
-rem qq-1
 
 rem Test on FGT.
 

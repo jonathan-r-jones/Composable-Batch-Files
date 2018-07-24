@@ -68,7 +68,15 @@ set fp=* Set URL.
 
 call n %1
 
+if "%cbf_url%" == "" (
+  echo.
+  echo * Nickname Error: There is no cbf_url defined for '%~1'. 
+  exit/b
+)
+
 if %errorlevel% == 1 (
+  echo.
+  echo * Error: There was an error after the dictionary call was made. 
   exit/b
 )
 

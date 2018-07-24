@@ -55,8 +55,6 @@ if exist "%1" (
 
 set fp=* Main function.
 
-set cbf_path=
-
 if not "%~1" == "" call n %1 %2
 
 if "%cbf_path%" == "" (

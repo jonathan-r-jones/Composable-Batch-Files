@@ -15,6 +15,14 @@ echo %filep%
 
 :_
 
+set fp=* Reset CBF variables.
+
+call m reset_cbf_variables
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -119,6 +127,12 @@ set fp=* Main function.
 
 echo.
 git clone %cbf_url%
+
+if "%~2" == "" (
+  if not %cbf_path% == "" (
+    call td %1
+  )
+)
 
 rem (!rfsp) (mov-2)
 

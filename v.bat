@@ -389,7 +389,7 @@ exit/b
 
 :_
 
-:
+:reset_error_level
 
 set fp=* Test return codes for "n" calls. How do you reset errorlevel?
 
