@@ -251,13 +251,13 @@ call td fr_ra
 
 call n fr_rs
 
-xcopy /d /y "%cbf_path%\*.*"
+xcopy /d /h /r /y "%cbf_path%\*.png"
 
 call td fr_ri
 
 call n fr_rs
 
-xcopy /d /y "%cbf_path%\*.*"
+xcopy /d /h /r /y "%cbf_path%\*.png"
 
 exit/b
 
