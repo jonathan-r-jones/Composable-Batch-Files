@@ -50,21 +50,6 @@ exit
 
 :_
 
-:exitb
-
-set fp= * Exit.
-
-rem echo.
-rem echo.
-rem echo %fp%
-
-rem (!xb)
-exit/b
-
-
-
-:_
-
 :code_execution_area
 
 set fp=* Execution area. Code below here runs.

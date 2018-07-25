@@ -1,0 +1,39 @@
+::_
+
+:exitb
+
+set fp= * Exit batch file but not command window.
+
+exit/b
+
+
+
+:_
+
+:exitb
+
+set fp= * Exit batch file but not command window.
+
+rem echo.
+rem echo %fp%
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* test
+
+rem lu: Jul-25-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+set cbf_url=
+rem       qq-1
+
+exit/b

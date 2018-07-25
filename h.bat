@@ -76,19 +76,6 @@ exit
 
 :_
 
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-rem echo.
-rem echo %fp%
-
-exit/b
-
-
-
-:_
-
 :exitp
 
 set fp= * Exit with pause.

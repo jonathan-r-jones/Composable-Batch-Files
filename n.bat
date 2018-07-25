@@ -483,7 +483,7 @@ exit/b
 
 :m
 
-set fp=M.bat.
+set fp=* M.bat.
 
 rem FCD: Apr-10-2017
 
@@ -499,7 +499,7 @@ exit/b
 
 :fn
 
-set fp=Filename nicknames.
+set fp=* Filename nicknames.
 
 rem lu: Jan-24-2018
 

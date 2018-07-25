@@ -7049,3 +7049,26 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Test nickname error.
+
+rem lu: Jul-25-2018
+
+echo %fp%
+
+rem call td axx xxx
+
+echo.
+rem dir /b *.xtxt> nul 2
+dir *.txxt > %temp%\j1.txt
+
+echo.
+echo Errorlevel: %errorlevel%
+
+exit/b
+
+
+
+:_

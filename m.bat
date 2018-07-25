@@ -70,7 +70,6 @@ echo          depl  Deploy a new WAR file.
 echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
 echo           env  List CBF environment variables.
 echo          exit  Exit batch file.
-echo         exitb  Exit batch file but not command window.
 echo         exitp  Exit batch file with pause.
 echo            f5  Compile and refresh Ext JS code in existing hex.
 echo   fix_buttons  Fix button warnings by Mike Stonkey.
@@ -106,7 +105,7 @@ echo        wiz_jv  Run wizard that builds only Java changes for localhost.
 echo      wiz_prod  Run wizard that builds a WAR file for production.
 echo      wiz_stag  Run wizard that builds a WAR file for staging.
 
-goto exitb
+exit/b
 
 
 
@@ -123,16 +122,6 @@ set fp= * Exit.
 rem echo %fp%
 
 exit
-
-
-
-::_
-
-:exitb
-
-set fp= * Exit batch file but not command window.
-
-exit/b
 
 
 
@@ -189,7 +178,7 @@ del modern.json
 
 del modern.jsonp
 
-goto exitb
+exit/b
 
 
 
@@ -203,7 +192,7 @@ echo %fp%
 echo.
 
 if not exist c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury echo Testing folder's not there.
-if not exist c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury goto exitb
+if not exist c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury exit/b
 
 cd \projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury
 
@@ -228,7 +217,7 @@ del modern.json
 
 del modern.jsonp
 
-goto exitb
+exit/b
 
 
 
@@ -264,7 +253,7 @@ del modern.json
 
 del modern.jsonp
 
-goto exitb
+exit/b
 
 
 
@@ -284,7 +273,7 @@ cls
 
 type "How to Build a War File.txt"
 
-goto exitb
+exit/b
 
 
 
@@ -312,7 +301,7 @@ echo.
 tirem.bat --debug --pcs c:\projects\netbeans\mercury6\mercury-tirem\tirem7184397588571818164.pcs
 @echo off
 
-goto exitb
+exit/b
 
 
 
@@ -331,7 +320,7 @@ cd \projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercu
 if exist index.html ren index.html mercury.html
 if not exist index.html Echo index.html does not exist.
 
-goto exitb
+exit/b
 
 
 
@@ -350,7 +339,7 @@ cd \projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury
 if exist index.html ren index.html mercury.html
 if not exist index.html Echo index.html does not exist.
 
-goto exitb
+exit/b
 
 
 
@@ -373,7 +362,7 @@ mvn clean install
 rem I was only able to successfully do this after I copied David's .m2 folder 
 rem into my %homedrive%%homepath% folder.
 
-goto exitb
+exit/b
 
 
 
@@ -392,7 +381,7 @@ cd \projects\netbeans\mercury6\mercury-ejb
 rem May need Ikjae's -Pserver command.
 mvn clean install
 
-goto exitb
+exit/b
 
 
 
@@ -412,7 +401,7 @@ cd C:\projects\netbeans\mercury6\Mercury-web
 
 rd /q /s target
 
-goto exitb
+exit/b
 
 
 
@@ -432,7 +421,7 @@ echo.
 
 xcopy /d /h /r /s /y c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury
 
-goto exitb
+exit/b
 
 
 
@@ -458,7 +447,7 @@ call :set_wildfly_location
 
 call %wildfly_location%\bin\standalone.bat
 
-goto exitb
+exit/b
 
 
 
@@ -511,7 +500,7 @@ call :set_wildfly_location
 rem echo Sep-19-2017.3
 
 if not exist %wildfly_location%\standalone\tmp\vfs\temp Echo vfs\temp folder missing so there was no hex folder to remove.
-if not exist %wildfly_location%\standalone\tmp\vfs\temp goto exitb
+if not exist %wildfly_location%\standalone\tmp\vfs\temp exit/b
 rem echo Sep-19-2017.4
 
 cd %wildfly_location%\standalone\tmp\vfs\temp
@@ -530,7 +519,7 @@ echo Sep-19-2017.8
 rem If you are having issues, it might make sense to run the following comand:
 rem call :delete_standalone_folders
 
-goto exitb
+exit/b
 
 
 
@@ -554,7 +543,7 @@ md request
 md system
 md tirem
 
-goto exitb
+exit/b
 
 
 
@@ -575,7 +564,7 @@ cd c:\mercury\tirem
 
 xcopy /d /h /r /s /y "c:\projects\netbeans\mercury6\mercury-tirem"
 
-goto exitb
+exit/b
 
 
 
@@ -603,7 +592,7 @@ pause
 
 xcopy /d /h /r /s /y "C:\projects\netbeans\mercury6\Mercury-tirem\prerequisite jars"
 
-goto exitb
+exit/b
 
 
 
@@ -623,7 +612,7 @@ cd c:\mercury\batch_files
 xcopy /y "standalone (from Virginia).xml" c:\a\j1.txt
 xcopy /y "standalone (from NES-1KKHHC2).xml" c:\a\j2.txt
 
-goto exitb
+exit/b
 
 
 
@@ -645,7 +634,7 @@ cd c:\mercury\batch_files
 
 call java -cp . generate_mercury_version_number
 
-goto exitb
+exit/b
 
 
 
@@ -666,7 +655,7 @@ cd C:\projects\netbeans\mercury6\Mercury-web\src\main\webapp\resources\applet
 
 xcopy /r /y MercuryRequestApplet.jp.jnlp MercuryRequestApplet.jnlp
 
-goto exitb
+exit/b
 
 
 
@@ -687,7 +676,7 @@ cd C:\projects\netbeans\mercury6\Mercury-web\src\main\webapp\resources\applet
 
 xcopy /r /y MercuryRequestApplet.proto.jnlp MercuryRequestApplet.jnlp
 
-goto exitb
+exit/b
 
 
 
@@ -707,7 +696,7 @@ cd C:\projects\netbeans\mercury6\Mercury-web\src\main\webapp\resources\applet
 
 xcopy /y MercuryRequestApplet.va.jnlp MercuryRequestApplet.jnlp
 
-goto exitb
+exit/b
 
 
 
@@ -722,7 +711,7 @@ echo.
 
 if not exist c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury echo Production folder's not there.
 if not exist c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury echo.
-if not exist c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury goto exitb
+if not exist c:\projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury exit/b
 
 cd \projects\netbeans\sencha\HTML5Application\public_html\build\production\Mercury
 
@@ -747,7 +736,7 @@ del modern.json
 
 del modern.jsonp
 
-goto exitb
+exit/b
 
 
 
@@ -767,7 +756,7 @@ echo.
 
 xcopy /d /h /r /s /y c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury
 
-goto exitb
+exit/b
 
 
 
@@ -814,7 +803,7 @@ cd c:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\das
 
 xcopy /y c:\mercury\batch_files\*.js
 
-goto exitb
+exit/b
 
 
 
@@ -883,7 +872,7 @@ rem (221 services are lazy, passive or on-demand).
 
 rem If you see a number less than 692, you most likely have a problem.
 
-goto exitb
+exit/b
 
 
 
@@ -968,7 +957,7 @@ set /P user_option=Did you remember to do a get-latest? (y/n):
 
 if not "%user_option%"=="y" echo.
 if not "%user_option%"=="y" echo Abort.
-if not "%user_option%"=="y" goto exitb
+if not "%user_option%"=="y" exit/b
 
 echo.
 set /P user_option=Would you like to update the version number?(y/n): 
@@ -1030,11 +1019,11 @@ if exist C:\projects\netbeans\mercury6\Mercury-web\target call td targ
 echo.
 if exist *.war echo WAR file has been created.
 if not exist *.war echo Error: WAR file has NOT been created!
-if not exist *.war goto exitb
+if not exist *.war exit/b
 
 if exist C:\projects\netbeans\mercury6\Mercury-web\target call of targ
 
-if "%is_hosted_on_server%" == "true" goto exitb
+if "%is_hosted_on_server%" == "true" exit/b
 
 rem echo.
 rem set /P user_option=Would you like to run scowl? (y/n): 
@@ -1043,7 +1032,7 @@ rem echo.
 rem if "%user_option%"=="y" call :scowl
 call :scowl
 
-goto exitb
+exit/b
 
 
 
@@ -1063,7 +1052,7 @@ taskkill /f /fi "windowtitle eq wildfly"
 rem I don't know why I need to call this twice, but it doesn't work if I don't.
 taskkill /f /fi "windowtitle eq wildfly"
 
-goto exitb
+exit/b
 
 
 
@@ -1267,7 +1256,7 @@ copy default-toolbar-small-s-arrow.png soft-purple-toolbar-small-s-arrow.png
 copy default-toolbar-small-s-arrow.png soft-red-toolbar-small-s-arrow.png
 copy default-toolbar-small-s-arrow.png soft-yellow-toolbar-small-s-arrow.png
 
-goto exitb
+exit/b
 
 
 
@@ -1309,7 +1298,7 @@ copy default-menu-parent-left.png default-menubar-menu-parent-left.png
 copy default-scroll-top.png default-menubar-scroll-top.png
 copy default-scroll-bottom.png default-menubar-scroll-bottom.png
 
-goto exitb
+exit/b
 
 
 
@@ -1356,7 +1345,7 @@ cd classic\resources\images
 
 xcopy /y C:\Users\jonathan.r.jones\Documents\DropBox\nes\documents\%1lock-screen-background.jpg lock-screen-background.jpg
 
-goto exitb
+exit/b
 
 
 
@@ -1379,7 +1368,7 @@ set /p mercury_version_number=<%tmp%\mercury_version_number.txt
 
 echo %mercury_version_number%
 
-goto exitb
+exit/b
 
 
 
@@ -1403,7 +1392,7 @@ if /i not "%computername%"=="NES-1KKHHC2" goto exit be.
 
 xcopy /y *.war "C:\Users\jonathan.r.jones\Documents\DropBox\nes\Mercury Virginia WAR Files"
 
-goto exitb
+exit/b
 
 
 
@@ -1423,7 +1412,7 @@ set /p mercury_version_number=<%tmp%\mercury_version_number.txt
 
 ren *.war "Mercury Development - %mercury_version_number%.war"
 
-goto exitb
+exit/b
 
 
 
@@ -1451,7 +1440,7 @@ if "%cbf_default_repository_folder%" == "" call m set_default_repository_folder 
 
 cls
 
-goto exitb
+exit/b
 
 
 
@@ -1486,7 +1475,7 @@ color
 
 cls
 
-goto exitb
+exit/b
 
 
 
@@ -1504,7 +1493,7 @@ rem set path=C:\Program Files\MySQL\MySQL Server 5.7\bin;%path%
 rem set path=C:\Program Files\MySQL\MySQL Utilities 1.6;%path%
 rem set path=c:\mercury\batch_files;%path%
 
-goto exitb
+exit/b
 
 
 
@@ -1524,7 +1513,7 @@ cd %wildfly_location%\bin\service
 
 service.bat install
 
-goto exitb
+exit/b
 
 
 
@@ -1540,7 +1529,7 @@ echo %fp%
 
 start c:\windows\system32\services.msc /s
 
-goto exitb
+exit/b
 
 
 
@@ -1566,7 +1555,7 @@ set /p date_as_filename=<%tmp%\mercury_date_as_filename.txt
 
 echo %date_as_filename%
 
-goto exitb
+exit/b
 
 
 
@@ -1580,7 +1569,7 @@ rem fcd: May-17-2017
 
 echo Last Updated: May-17-2017 3:38 PM
 
-goto exitb
+exit/b
 
 
 
@@ -1603,7 +1592,7 @@ call start "my title" "Composable Batch File Helper.pptx"
 
 rem call start "my title" "Composable Batch File Helper.pptx - Shortcut.lnk"
 
-goto exitb
+exit/b
 
 
 
@@ -1623,7 +1612,7 @@ cd c:\mercury\batch_files
 
 call start "my title" "Mercury Helper.pptx"
 
-goto exitb
+exit/b
 
 
 
@@ -1642,7 +1631,7 @@ set wildfly_location=c:\mercury\server\wildfly-9.0.2.final
 rem WIN-NRFUV3XWUWI is Japan.
 rem if /i %computername%==WIN-NRFUV3XWUWI set wildfly_location=c:\mercury\server\wildfly-9.0.1.final
 
-goto exitb
+exit/b
 
 
 
@@ -1685,7 +1674,7 @@ rem echo.
 rem echo Delete log folder.
 rem rd /q /s log
 
-goto exitb
+exit/b
 
 
 
@@ -1727,7 +1716,7 @@ rd /q /s data
 echo Delete tmp folder.
 rd /q /s tmp
 
-goto exitb
+exit/b
 
 
 
@@ -1764,7 +1753,7 @@ call mcd app
 
 xcopy /s C:\projects\netbeans\sencha\HTML5Application\public_html\app
 
-goto exitb
+exit/b
 
 
 
@@ -1789,7 +1778,7 @@ netstat -a -n>%dt_filename%
 
 call no %dt_filename%
 
-goto exitb
+exit/b
 
 
 
@@ -1808,7 +1797,7 @@ rem mysql -uroot -p -h 52.200.230.253
 rem mysql -uroot -p -h 174.129.253.68:21624
 mysql -uroot -p -h 174.129.253.68
 
-goto exitb
+exit/b
 
 
 
@@ -1827,7 +1816,7 @@ cd C:\Users\jonathan.r.jones\Documents\DropBox\nes\macintosh\public_html
 
 xcopy /d /h /r /s /y C:\projects\netbeans\sencha\HTML5Application\public_html
 
-goto exitb
+exit/b
 
 
 
@@ -1860,7 +1849,7 @@ rem call of targ
 rem echo.
 rem echo You are in the target folder where you should see your freshly built War file.
 
-goto exitb
+exit/b
 
 
 
@@ -1879,7 +1868,7 @@ cd \projects\netbeans\mercury6
 
 call mvn clean install -Plocal
 
-goto exitb
+exit/b
 
 
 
@@ -1895,7 +1884,7 @@ echo %fp%
 
 tracert smtp.gmail.com
 
-goto exitb
+exit/b
 
 
 
@@ -1911,7 +1900,7 @@ echo %fp%
 
 tracert email-smtp.us-east-1.amazonaws.com
 
-goto exitb
+exit/b
 
 
 
@@ -1927,7 +1916,7 @@ echo %fp%
 
 tracert 52.20.54.201
 
-goto exitb
+exit/b
 
 
 
@@ -1943,7 +1932,7 @@ echo %fp%
 
 tracert 34.227.127.100
 
-goto exitb
+exit/b
 
 
 
@@ -1959,7 +1948,7 @@ echo %fp%
 
 tracert 34.202.193.143
 
-goto exitb
+exit/b
 
 
 
@@ -1975,7 +1964,7 @@ echo %fp%
 
 tracert 174.129.253.68
 
-goto exitb
+exit/b
 
   
 
@@ -1991,7 +1980,7 @@ echo %fp%
 
 start "Test Title" "C:\Program Files\MySQL\MySQL Workbench 6.3 CE\MySQLWorkbench.exe"
 
-goto exitb
+exit/b
 
 
 
@@ -2010,7 +1999,7 @@ cd C:\projects\netbeans\sencha\HTML5Application\public_html
 
 xcopy /y "app - for mobile build.json" "app.json"
 
-goto exitb
+exit/b
 
 
 
@@ -2030,7 +2019,7 @@ call :fix_menu
 
 rem call :sencha_app_upgrade
 
-goto exitb
+exit/b
 
 
 
@@ -2052,7 +2041,7 @@ echo.
 
 xcopy /d /h /r /s /y c:\projects\netbeans\sencha\HTML5Application\public_html\build\development\Mercury
 
-goto exitb
+exit/b
 
 
 
@@ -2079,7 +2068,7 @@ cd C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
 
 xcopy /y "c:\mercury\batch_files\NetConfig.js"
 
-goto exitb
+exit/b
 
 
 
@@ -2102,7 +2091,7 @@ cd C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
 
 xcopy /y "c:\mercury\mobility\NetConfig - for production.js" "NetConfig.js"
 
-goto exitb
+exit/b
 
 
 
@@ -2125,7 +2114,7 @@ cd C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
 
 xcopy /y "c:\mercury\mobility\NetConfig - for Localhost.js" "NetConfig.js"
 
-goto exitb
+exit/b
 
 
 
@@ -2148,7 +2137,7 @@ cd C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
 
 xcopy /y "c:\mercury\mobility\NetConfig - for staging.js" "NetConfig.js"
 
-goto exitb
+exit/b
 
 
 
@@ -2171,7 +2160,7 @@ call td mutils
 
 xcopy /y "c:\mercury\mobility\NetConfig - for Sencha App Watch.js" "NetConfig.js"
 
-goto exitb
+exit/b
 
 
 
@@ -2191,13 +2180,13 @@ call td depl
 cd | find /i "c:\Mercury\Server\wildfly-9.0.2.Final\standalone\deployments">nul
 if %errorlevel% == 1 echo.
 if %errorlevel% == 1 echo Error: Deployment folder not found.
-if %errorlevel% == 1 goto exitb
+if %errorlevel% == 1 exit/b
 
 rem Ensure that the path here is equal to where the WAR file was copied to on the S3 bucket.
 
 xcopy "c:\mercury\latest war file\*.war"
 
-goto exitb
+exit/b
 
 
 
@@ -2220,7 +2209,7 @@ call :set_wildfly_location
 
 xcopy *.war %wildfly_location%\standalone\deployments
 
-goto exitb
+exit/b
 
 
 
@@ -2246,7 +2235,7 @@ call :copy_war
 
 call :start_wildfly
 
-goto exitb
+exit/b
 
 
 
@@ -2272,7 +2261,7 @@ call :copy_war_for_s3
 
 call :start_wildfly
 
-goto exitb
+exit/b
 
 
 
@@ -2290,7 +2279,7 @@ mcd c:\mercury
 
 md tmp
 
-goto exitb
+exit/b
 
 
 
@@ -2310,7 +2299,7 @@ call :copy_war
 
 call :wild
 
-goto exitb
+exit/b
 
 
 
@@ -2335,7 +2324,7 @@ call td agi_ejb
 
 xcopy /y "c:\mercury\agi licenses\AGI.Foundation.lic"
 
-goto exitb
+exit/b
 
 
 
@@ -2360,7 +2349,7 @@ call td agi_ejb
 
 xcopy /y "c:\mercury\agi licenses\AGI.Foundation.lic"
 
-goto exitb
+exit/b
 
 
 
@@ -2436,7 +2425,7 @@ if exist C:\Mercury\server\wildfly-9.0.2.Final set wild=yes
 if %wild%==yes                                                     echo    WildFly Folder: C:\Mercury\server\wildfly-9.0.2.Final
 if %wild%==no                                                      echo    Wildfly Folder: [Missing]
 
-goto exitb
+exit/b
 
 
 
@@ -2454,7 +2443,7 @@ call td ba
 
 type "Nestle MDE report.txt"
 
-goto exitb
+exit/b
 
 
 
@@ -2476,7 +2465,7 @@ if "%user_option%"=="y" call h au
 
 set /P user_option=Would you like to add the the MySql security setting? (y/n): 
 
-if "%user_option%"=="n" goto exitb
+if "%user_option%"=="n" exit/b
 
 echo.
 echo Search for this line: "port=3306". Then add this on the following line. 
@@ -2487,7 +2476,7 @@ echo Then you need to reboot or restart MySQL.
 
 call npp mysql
 
-goto exitb
+exit/b
 
 
 
@@ -2506,7 +2495,7 @@ echo %fp%
 call start "my title" "Mercury Development Environment.xlsx - Shortcut.lnk"
 rem call start "my title" "c:\mercury\batch_files\Mercury Development Environment.xlsx - Shortcut.lnk"
 
-goto exitb
+exit/b
 
 
 
@@ -2543,7 +2532,7 @@ sencha app build testing
 if %errorlevel% == 0 echo Compile succeeded.>%temp%\compile_results.txt
 if not %errorlevel% == 0 echo Compile failed.>%temp%\compile_results.txt
 
-goto exitb
+exit/b
 
 
 
@@ -2574,7 +2563,7 @@ call npp cwp
 
 call npp cwt
 
-goto exitb
+exit/b
 
 
 
@@ -2591,7 +2580,7 @@ echo.
 
 call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat"
 
-goto exitb
+exit/b
 
 
 
@@ -2614,7 +2603,7 @@ vstest.console.exe unittestproject4.dll
 
 col
 
-goto exitb
+exit/b
 
 
 
@@ -2630,7 +2619,7 @@ echo %fp%
 
 vstest.console.exe /ListLoggers
 
-goto exitb
+exit/b
 
 
 
@@ -2647,7 +2636,7 @@ echo.
 
 vstest.console.exe unittestproject4.dll /Logger:trx
 
-goto exitb
+exit/b
 
 
 
@@ -2664,7 +2653,7 @@ echo.
 
 vstest.console.exe unittestproject4.dll /TestCaseFilter:Name=AreCollectionEquivalentTest
 
-goto exitb
+exit/b
 
 
 
@@ -2681,7 +2670,7 @@ echo.
 
 vstest.console.exe unittestproject4.dll /TestCaseFilter:Name=AreCollectionEquivalentTest
 
-goto exitb
+exit/b
 
 
 
@@ -2698,7 +2687,7 @@ echo.
 
 vstest.console.exe unittestproject4.dll /Tests:FileName
 
-goto exitb
+exit/b
 
 
 
@@ -2715,7 +2704,7 @@ echo.
 
 vstest.console.exe unittestproject4.dll /Tests:Exist
 
-goto exitb
+exit/b
 
 
 
@@ -2732,7 +2721,7 @@ echo.
 
 vstest.console.exe unittestproject4.dll /Tests:Exist,LowerCase
 
-goto exitb
+exit/b
 
 
 
@@ -2749,7 +2738,7 @@ echo.
 
 vstest.console.exe unittestproject4.dll /TestCaseFilter:"Priority=1"
 
-goto exitb
+exit/b
 
 
 
@@ -2766,7 +2755,7 @@ echo.
 
 vstest.console.exe unittestproject4.dll /TestCaseFilter:"TestCategory=NoException"
 
-goto exitb
+exit/b
 
 
 
@@ -2795,7 +2784,7 @@ rem call g clone_mdg
 
 call m gen_cred_proc
 
-goto exitb
+exit/b
 
 
 
@@ -2831,7 +2820,7 @@ pause
 
 call m build_ejb
 
-goto exitb
+exit/b
 
 
 
@@ -2853,7 +2842,7 @@ certutil -encode %tmp%\certutil_input.txt %tmp%\certutil_output.txt
 if exist %tmp%\certutil_input.txt del %tmp%\certutil_input.txt
 echo.
 
-goto exitb
+exit/b
 
 
 
@@ -2871,7 +2860,7 @@ call java Get_Timestamp_With_No_Spaces>%tmp%\java_timestamp.txt
 rem cd
 rem echo jt: %java_timestamp%
 
-goto exitb
+exit/b
 
 
 
@@ -2901,7 +2890,7 @@ rem npm install -g typings
 
 rem The equivalent command for Mac would be: sudo npm -install -g %2
 
-goto exitb
+exit/b
 
 
 
@@ -2918,7 +2907,7 @@ echo.
 
 npm install -g sencha
 
-goto exitb
+exit/b
 
 
 
@@ -2935,7 +2924,7 @@ echo %fp%
 
 npm install -g sencha-cmd
 
-goto exitb
+exit/b
 
 
 
@@ -2994,7 +2983,7 @@ echo    te  Batch file template used for creating new batch files.
 echo     v  Vetted functions.
 echo     x  Remote double-click equivalent way to run a file.
 
-goto exitb
+exit/b
 
 
 
@@ -3011,7 +3000,7 @@ echo %fp%
 
 set cbf_path=%~p2
 
-goto exitb
+exit/b
 
 
 
@@ -3063,7 +3052,7 @@ echo %fp%
 
 set %3=%~f2
 
-goto exitb
+exit/b
 
 
 
@@ -3089,33 +3078,6 @@ if not "%cbf_filename%" == "" (
 set cbf_parameter=
 
 exit/b
-
-
-
-:_
-
-:sln
-
-set fp=* Run the Visual Studio solution in the current folder.
-
-rem lu: Jun-6-2018
-
-echo %fp%
-
-dir /b *.sln>%tmp%\filename.txt
-set /p filename=<%tmp%\filename.txt
-
-if not exist "%filename%" (
-  echo.
-  echo * No solution file was found.
-  exit/b
-)
-
-rem echo Filename: %filename%
-
-start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
-
-goto exitb
 
 
 
@@ -3147,7 +3109,7 @@ set cbf_url=
 
 env
 
-goto exitb
+exit/b
 
 
 
@@ -3192,7 +3154,7 @@ echo Path: %cbf_path%
 echo.
 echo URL: %cbf_url%
 
-goto exitb
+exit/b
 
 
 
@@ -3271,7 +3233,7 @@ echo %fp%
 
 rd /q /s %2
 
-goto exitb
+exit/b
 
 
 

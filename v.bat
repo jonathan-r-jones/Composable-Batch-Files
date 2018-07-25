@@ -92,10 +92,10 @@ exit/b
 set fp=* The errorlevel statement.
 
 echo %fp%
+
+rem Imprimatur (!el, !erle)
+
 echo.
-
-rem Imprimatur (!error, !erro)
-
 echo Errorlevel: %errorlevel%
 
 if %errorlevel% == 1 (

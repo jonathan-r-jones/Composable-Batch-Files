@@ -15,6 +15,14 @@ echo %filep%
 
 :_
 
+set fp=* In order to promote freshness, reset the error level.
+
+ver>nul
+
+
+
+:_
+
 set fp=* Route help callers.
 
 if "%~1" == "" goto help

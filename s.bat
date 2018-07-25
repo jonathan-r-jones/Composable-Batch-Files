@@ -31,6 +31,8 @@ if not "%~1" == "" (
   call td %~1 %2
 
   if %errorlevel% == 1 (
+    echo Error level is at 1.
+    rem No error message needed as "td" will report the error.
     exit/b
   )
 )
@@ -49,7 +51,7 @@ echo.
 echo Filename stands for: Run SoLutioN.
 
 echo.
-echo Last Updated: May-31-2018
+echo Last Updated: Jul-25-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -65,9 +67,26 @@ exit/b
 
 :main_function
 
+set fp=* Run the Visual Studio solution in the current folder.
+
 rem (!rfsp) (mov2)
 
-call m sln
+echo.
+echo %fp%
+
+echo.
+dir /b *.sln>%tmp%\filename.txt
+
+if %errorlevel% == 1 (
+  echo.
+  echo * No solution file was found in the current folder.
+  ver>nul
+  exit/b
+)
+
+set /p filename=<%tmp%\filename.txt
+
+start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
 
 exit/b
 
