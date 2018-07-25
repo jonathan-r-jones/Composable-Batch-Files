@@ -237,32 +237,6 @@ exit/b
 
 
 
-:_
-
-:fr_r
-
-set fp=* Copy Fresnel images to their respective Android and iOS folders.
-
-rem lu: Jul-13-2018
-
-echo %fp%
-
-call td fr_ra
-
-call n fr_rs
-
-xcopy /d /h /r /y "%cbf_path%\*.png"
-
-call td fr_ri
-
-call n fr_rs
-
-xcopy /d /h /r /y "%cbf_path%\*.png"
-
-exit/b
-
-
-
 :_+ PC Operations
 
 
@@ -326,6 +300,34 @@ call n sa
 
 echo.
 move "%cbf_path%\*.*"
+
+exit/b
+
+
+
+:_
+
+:fr_r
+
+:res
+
+set fp=* Copy Fresnel images to their respective Android and iOS folders.
+
+rem lu: Jul-13-2018
+
+echo %fp%
+
+call td fr_ra
+
+call n fr_rs
+
+xcopy /d /h /r /y "%cbf_path%\*.png"
+
+call td fr_ri
+
+call n fr_rs
+
+xcopy /d /h /r /y "%cbf_path%\*.png"
 
 exit/b
 
