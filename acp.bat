@@ -26,9 +26,6 @@ set fp=* Call preliminary function.
 
 rem lu: Jul-16-2018
 
-echo.
-echo %fp%
-
 if not "%~1" == "" call td %~1
 
 goto main_function
