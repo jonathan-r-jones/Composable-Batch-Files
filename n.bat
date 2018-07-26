@@ -1744,26 +1744,6 @@ exit/b
 
 :_
 
-:res
-
-set fp=Resume.
-
-rem lu: Feb-7-2018
-
-echo %fp%
-
-set cbf_filename=%dropbox%\resume\jonathan jones' resume.doc
-
-set cbf_path=%dropbox%\resume
-
-set cbf_url=https://bitbucket.org/Jonathan17/resume
-
-exit/b
-
-
-
-:_
-
 :gm
 
 set fp=Gmail.
@@ -3356,40 +3336,6 @@ exit/b
 
 :_
 
-:p1
-
-set fp=* Page 1.
-
-rem lu: Jun-26-2018
-
-echo %fp%
-
-set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page1.xaml
-
-exit/b
-
-
-
-:_
-
-:p8
-
-set fp=* Page 8.
-
-rem lu: Jun-26-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\fresnel\fresnel\Views
-
-set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\Page8.xaml
-
-exit/b
-
-
-
-:_
-
 :10
 
 :p10
@@ -3747,7 +3693,9 @@ exit/b
 
 
 ::_
-        
+ 
+:res
+       
 :fr_res
                                            
 :fr_rs
@@ -4420,4 +4368,21 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-6)
+:_
+
+:resu
+
+set fp=Resume.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\resume\jonathan jones' resume.doc
+
+set cbf_path=%dropbox%\resume
+
+set cbf_url=https://bitbucket.org/Jonathan17/resume
+
+exit/b
+

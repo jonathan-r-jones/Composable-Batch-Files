@@ -74,7 +74,6 @@ rem (!rfsp) (mov2)
 echo.
 echo %fp%
 
-echo.
 dir /b *.sln>%tmp%\filename.txt
 
 if %errorlevel% == 1 (
