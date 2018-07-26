@@ -3318,6 +3318,8 @@ exit/b
 
 :de_bin_fr
 
+:de_obj_fr
+
 set fp=* Delete bin and obj folders for Fresnel.
 
 rem lu: Jun-25-2018
@@ -3341,6 +3343,8 @@ exit/b
 
 
 ::_
+
+:de_obj
 
 :de_bin
 

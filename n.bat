@@ -22,6 +22,8 @@ echo.
 
 set fp=* In order to promote freshness, clear the environment variables and reset the error level.
 
+set cbf_filename=
+
 set cbf_path=
 
 set cbf_url=
@@ -3826,54 +3828,7 @@ echo %fp%
 
 set cbf_filename=%temp%\j1.txt
 
-exit/b
-
-
-
-:_+ Browser file reading comparison.
-
-
-
-::_
-
-:sks
-
-set fp=* Skeptics.txt short form
-
-rem lu: Jul-17-2018
-
-echo %fp%
-
-rem Works with: Chrome, IE, OP, VI.
-
-rem Doesn't works with: Firefox, Edge.
-
-set cbf_filename=C:\a\skeptics.txt
-            
-set cbf_url=C:/a/skeptics.txt
-
-exit/b
-
-
-
-::_
-
-:skl
-
-set fp=* Skeptics.txt longer form.
-
-rem lu: Jul-17-2018
-
-echo %fp%
-
-rem Works with: Chrome, IE, OP, VI.
-
-rem Doesn't works with: Edge, Firefox, even though Fx converts the filename to exactly the cbf_url 
-rem here.
-
-set cbf_filename=C:\a\skeptics.txt
-
-set cbf_url=file:///C:/a/skeptics.txt
+set cbf_url=%cbf_filename%
 
 exit/b
 
@@ -4404,6 +4359,8 @@ exit/b
 
 :_
 
+:caro
+
 :weca
 
 set fp=* Welcome carousel.
@@ -4435,6 +4392,122 @@ set cbf_filename=%dropbox%\resume\jonathan jones' resume.doc
 set cbf_path=%dropbox%\resume
 
 set cbf_url=https://bitbucket.org/Jonathan17/resume
+
+exit/b
+
+
+
+:_
+
+:anma
+
+:mani
+
+set fp=* Android Manifest in a subfolder of the current folder.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set current_folder=%cd%
+
+cd *.android
+
+if %errorlevel% == 1 (
+  echo.
+  echo * There is no Android folder located under the curent folder.
+  exit/b
+)
+
+cd properties
+
+set cbf_filename=%cd%\AndroidManifest.xml
+
+cd %current_folder%
+
+exit/b
+
+
+
+:_
+
+:wo
+
+set fp=* Microsoft Word.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\microsoft office\root\office16\winword.exe
+
+exit/b
+
+
+
+:_+ Browser file reading comparison.
+
+
+
+::_
+
+:sks
+
+set fp=* Skeptics.txt short form
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+rem Works with: Chrome, IE, OP, VI.
+rem qq-1
+
+rem Doesn't works with: Firefox, Edge.
+
+set cbf_filename=C:\a\skeptics.txt
+            
+set cbf_url=C:/a/skeptics.txt
+
+exit/b
+
+
+
+::_
+
+:skl
+
+set fp=* Skeptics.txt longer form.
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+rem Works with: Chrome, IE, OP, VI.
+
+rem Doesn't works with: Edge, Firefox, even though Fx converts the filename to exactly the cbf_url 
+rem here.
+
+set cbf_filename=C:\a\skeptics.txt
+
+set cbf_url=file:///C:/a/skeptics.txt
+
+exit/b
+
+
+
+:_
+
+:wd
+
+set fp=* Work documents file.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\work\wk\documents
+
+set cbf_filename=%dropbox%\work\wk\documents\blank.txt
 
 exit/b
 

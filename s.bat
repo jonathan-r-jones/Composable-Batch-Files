@@ -31,7 +31,8 @@ if not "%~1" == "" (
   call td %~1 %2
 
   if %errorlevel% == 1 (
-    echo Error level is at 1.
+    echo.
+    echo * Error level is at 1.
     rem No error message needed as "td" will report the error.
     exit/b
   )
