@@ -24,7 +24,7 @@ if "%~1" == "help" goto help
 
 :_
 
-set fp=* Call preliminary function.
+set fp=* Preprocessing.
 
 rem lu: Jul-16-2018
 

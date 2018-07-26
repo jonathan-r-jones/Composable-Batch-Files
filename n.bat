@@ -2962,7 +2962,7 @@ exit/b
 
 :cbf
 
-set fp=* CBF on GitHub.
+set fp=* Composable batch files.
 
 rem lu: Jan-24-2018
 
@@ -3166,13 +3166,65 @@ exit/b
 
 set fp=* Fresnel Mobile App, local backup version.
 
-rem lu: Jul-19-2018
+rem lu: Jul-26-2018
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\fresnel_local_backup
+set cbf_path=%cbf_default_repository_folder%\backups\fresnel
 
 set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+
+exit/b
+
+
+
+::_
+
+:ql_bu
+
+set fp=* Quick Launcher, local backup version.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\backups\Quickla-for-Multi-Edit
+
+set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+
+exit/b
+
+
+
+::_
+
+:cbf_bu
+
+set fp=* CBF, local backup version.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\backups\Composable-Batch-Files
+
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+exit/b
+
+
+
+::_
+
+:bu
+
+set fp=* Backups folder.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\backups
 
 exit/b
 
@@ -4386,3 +4438,6 @@ set cbf_url=https://bitbucket.org/Jonathan17/resume
 
 exit/b
 
+
+
+:_

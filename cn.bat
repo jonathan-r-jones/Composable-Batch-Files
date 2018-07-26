@@ -15,15 +15,7 @@ echo %filep%
 
 :_
 
-set fp=* Reset CBF variables.
-
-call m reset_cbf_variables
-
-
-
-:_
-
-set fp=* Route callers.
+set fp=* Route help callers.
 
 if "%~1" == "" goto help
 
@@ -32,6 +24,12 @@ if "%~1" == "?" goto help
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
+
+
+
+:_
+
+set fp=* Preprocessing.
 
 if not "%~1" == "" call n %1
 
