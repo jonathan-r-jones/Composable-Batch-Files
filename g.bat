@@ -778,25 +778,6 @@ exit/b
 
 :_
 
-:reattach
-
-:reattach_head
-
-set fp=* Reattach a detached head.
-
-rem fcd: May-2-2017 (skw how to reattach head)
-
-echo %fp%
-
-rem git checkout clean6.2
-git checkout master
-
-exit/b
-
-
-
-:_
-
 :myst
 
 :del_myst
@@ -1772,6 +1753,7 @@ set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git
 set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git
 set origin_url=https://github.com/edsnider/marvel-xfdemo.git
 set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
+set origin_url=https://github.com/jonathan-r-jones/fresnel.git
 
 rem 2. New folder path.
 set new_folder_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
@@ -1779,6 +1761,7 @@ set new_folder_path=c:\aa
 set new_folder_path=c:\mercury
 set new_folder_path=c:\projects\netbeans
 set new_folder_path=%aa%
+set new_folder_path=%aa%\repositories
 
 rem 3. Folder name.
 set folder_name=tirem
@@ -1797,6 +1780,7 @@ set folder_name=sencha
 set folder_name=mercury6
 set folder_name=Xamarin_Marvel_Demo
 set folder_name=ForGitTesting
+set folder_name=BusterFromFresnel
 
 rem 4. Branch name.
 set branch_name=clean6.2
@@ -1972,28 +1956,6 @@ exit/b
 
 ::_
 
-:roll_back_2
-
-set fp=* Roll back changes by 2 id number versions.
-
-rem Creation Date: Feb-13-2017
-
-rem Test on FGT.
-
-echo %fp%
-echo.
-  
-rem git reset --hard "HEAD"
-@echo on
-git reset --hard "HEAD~2"
-@echo off
-
-exit/b
-
-
-
-::_
-
 :uncommit
 
 :uncommit_local
@@ -2027,16 +1989,36 @@ echo %fp%
 
 rem git checkout a18e821
 rem git checkout 2691f3b
-
-rem S6 @ Jul-17-2017
 rem git checkout a703855
 rem git checkout a18e821
 
 rem S6 @ Jul-10-2017
 rem git checkout 959308e 
 
-rem S6 @ Aug-28-2017
-git checkout b3444ed
+rem S6 @ Aug-28-2017 (Fresnel from c. Jun-26-2018)
+rem git checkout b3444ed
+
+rem BusterFromFresnel @ Jul-27-2018
+git checkout c1ceb68e87e438a79f2455b7b6f7860b94e01683
+
+exit/b
+
+
+
+::_
+
+:reattach
+
+:reattach_head
+
+set fp=* Reattach a detached head.
+
+rem fcd: May-2-2017 (skw how to reattach head)
+
+echo %fp%
+
+rem git checkout clean6.2
+git checkout master
 
 exit/b
 
@@ -2236,7 +2218,7 @@ rem lu: Jul-19-2018
 
 echo %fp%
 
-call :reset_head
+call :reset_head_1
 
 call :roll_back_repo
 
@@ -2246,9 +2228,9 @@ exit/b
 
 ::_
 
-:reset_head
+:reset_head_1
 
-set fp=* Roll back changes by 1 id number version.
+set fp=* Reset head by 1 id number version.
 
 rrem lu: Jul-19-2018
 

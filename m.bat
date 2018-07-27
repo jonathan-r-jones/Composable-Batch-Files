@@ -1822,8 +1822,6 @@ exit/b
 
 :_
 
-:bs
-
 :build_s
 
 :build_war_file_for_server
@@ -3325,8 +3323,6 @@ set fp=* Delete bin and obj folders for Fresnel.
 rem lu: Jun-25-2018
 
 echo %fp%
-
-call td fr
 
 rem Delete obj folders.
 rd /q /s .\Fresnel\obj

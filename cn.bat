@@ -31,19 +31,19 @@ if "%~1" == "help" goto help
 
 set fp=* Preprocessing.
 
-if not "%~1" == "" call n %1
-
 if "%~2" == "" (
   call td repository_folder
+  call n %1
   goto main_function
 )
-
-if "%~2" == "c" (
-  goto main_function
-)
-
-if "%~2" == "p" (
-  goto p_function
+else (
+  call n %1
+  if "%~2" == "c" (
+    goto main_function
+  )
+  if "%~2" == "p" (
+    goto p_function
+  )
 )
 
 
@@ -124,6 +124,7 @@ exit/b
 set fp=* Main function.
 
 echo.
+echo CBF URL: %cbf_url%
 git clone %cbf_url%
 
 if "%~2" == "" (

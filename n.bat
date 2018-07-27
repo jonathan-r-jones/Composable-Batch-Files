@@ -2066,7 +2066,7 @@ echo %fp%
 
 set cbf_path=%aa%\repositories\for-git-testing
 
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
 exit/b
 
@@ -4507,6 +4507,27 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\AirWatch-samples
 
 set cbf_url=https://github.com/vmwaresamples/AirWatch-samples.git
+
+exit/b
+
+
+
+:_
+
+:bs
+
+:bust
+
+set fp=* Buster.
+
+rem lu: Jul-27-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\buster
+
+set cbf_url=https://github.com/jonathan-r-jones/Buster.git
+rem       qq-1
 
 exit/b
 
