@@ -8,6 +8,9 @@
 
 set filep=* Add, commit and push Git changes with timestamp commit message.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -59,9 +62,6 @@ exit/b
 :_
 
 :main_function
-
-echo.
-echo %filep%
 
 call g acp
 
