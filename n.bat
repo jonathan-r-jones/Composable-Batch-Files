@@ -4215,24 +4215,6 @@ exit/b
 
 :_
 
-:awsam
-
-set fp=* AirWatch Samples.
-
-rem lu: Jul-20-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\AirWatch-samples
-
-set cbf_url=https://github.com/vmwaresamples/AirWatch-samples.git
-
-exit/b
-
-
-
-:_
-
 :beyo
 
 set fp=* Beyond basics.
@@ -4460,7 +4442,6 @@ rem lu: Jul-17-2018
 echo %fp%
 
 rem Works with: Chrome, IE, OP, VI.
-rem qq-1
 
 rem Doesn't works with: Firefox, Edge.
 
@@ -4508,6 +4489,24 @@ echo %fp%
 set cbf_path=%dropbox%\work\wk\documents
 
 set cbf_filename=%dropbox%\work\wk\documents\blank.txt
+
+exit/b
+
+
+
+:_
+
+:awsam
+
+set fp=* AirWatch Samples.
+
+rem lu: Jul-20-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\AirWatch-samples
+
+set cbf_url=https://github.com/vmwaresamples/AirWatch-samples.git
 
 exit/b
 
