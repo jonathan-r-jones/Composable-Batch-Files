@@ -2274,7 +2274,7 @@ exit/b
 
 :jmplug
 
-set fp=James Montemagno's Xamarin Plugins.
+set fp=* James Montemagno's Xamarin Plugins.
 
 rem lu: Jun-1-2018
 
@@ -4527,6 +4527,42 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\buster
 
 set cbf_url=https://github.com/jonathan-r-jones/Buster.git
+
+exit/b
+
+
+
+:_
+
+:mgr
+
+set fp=* Meetup Manager.
+
+rem lu: Jul-30-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\MeetupManager
+
+set cbf_url=https://github.com/jamesmontemagno/MeetupManager.git
+
+exit/b
+
+
+
+:_
+
+:bsfr
+
+set fp=* Buster from Fresnel.
+
+rem lu: Jul-30-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\busterfromfresnel
+
+set cbf_url=
 rem       qq-1
 
 exit/b
