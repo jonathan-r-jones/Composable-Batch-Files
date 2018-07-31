@@ -55,7 +55,7 @@ echo Parameter 1: Label method to run.
 echo.
 echo Parameter  Description
 echo ---------  --------------------------------------------------------------
-echo     vs_ig  Copy Visual Studio Git Ignore file from Fresnel to the current
+echo        ig  Copy Visual Studio Git Ignore file from Fresnel to the current
 echo            location.
 
 exit/b
@@ -220,6 +220,8 @@ exit/b
 
 
 :_
+
+:ig
 
 :vs_ig
 

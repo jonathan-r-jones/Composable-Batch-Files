@@ -35,14 +35,13 @@ if "%~2" == "" (
   call td repository_folder
   call n %1
   goto main_function
-)
-else (
+) else (
   call n %1
   if "%~2" == "c" (
     goto main_function
   )
   if "%~2" == "p" (
-    goto p_function
+    goto nickname_path_driven
   )
 )
 
@@ -50,9 +49,9 @@ else (
 
 :_
 
-:p_function
+:nickname_path_driven
 
-set fp=* Use the CBF nickname to determine where to install the repository.
+set fp=* Use the CBF nickname path to determine where to install the repository.
 
 if exist %cbf_path% (
   echo.

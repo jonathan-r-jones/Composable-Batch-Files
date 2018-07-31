@@ -4514,26 +4514,6 @@ exit/b
 
 :_
 
-:bs
-
-:bust
-
-set fp=* Buster.
-
-rem lu: Jul-27-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\buster
-
-set cbf_url=https://github.com/jonathan-r-jones/Buster.git
-
-exit/b
-
-
-
-:_
-
 :mgr
 
 set fp=* Meetup Manager.
@@ -4560,13 +4540,32 @@ rem lu: Jul-30-2018
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\busterfromfresnel
+set cbf_path=%cbf_default_repository_folder%\buster-from-fresnel
 
-set cbf_url=
-rem       qq-1
+set cbf_url=https://github.com/jonathan-r-jones/buster-from-fresnel
 
 exit/b
 
 
 
 :_
+
+:bs
+
+:bust
+
+set fp=* Buster.
+
+rem lu: Jul-27-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\buster
+
+set cbf_url=https://github.com/jonathan-r-jones/Buster.git
+
+exit/b
+
+
+
+:_ (!rfsp) (mov-6)
