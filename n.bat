@@ -4568,4 +4568,20 @@ exit/b
 
 
 
+:_
+
+:gg
+
+set fp=* Git gui.
+
+rem lu: Aug-1-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files\Git\cmd\git-gui.exe
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
