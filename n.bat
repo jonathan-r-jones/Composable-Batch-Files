@@ -118,7 +118,7 @@ echo            pu  c:\netbeans\sencha\HTML5Application\public_html
 echo            rm  GitHub Readme.md file.
 echo             s  %COMPOSABLE_BATCH_FILES%\s.bat
 echo            s6  c:\projects\netbeans\sencha
-echo            sm  Suplime
+echo            sm  Sublime
 echo            sr  [wildfly_location]
 echo          stan  Standalone.xml, which is a WildFly config file.
 echo            sw  \classic\src\view\dashboard\SystemWidget.js
