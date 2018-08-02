@@ -70,7 +70,7 @@ echo.
 echo %fp%
 
 echo.
-echo Put some code here.
+echo * Put some code here.
 
 exit/b
 
@@ -102,7 +102,7 @@ echo.
 echo %fp%
 
 echo.
-echo Put some code here.
+echo * Put some code here.
 
 exit/b
 
@@ -124,6 +124,9 @@ call %0 step_1
 call hello_world_2 step_2
 
 call %0 step_3
+
+echo.
+echo * This was as easy as 1-2-3.
 
 exit/b
 

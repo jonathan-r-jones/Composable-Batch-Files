@@ -4584,4 +4584,22 @@ exit/b
 
 
 
+:_
+
+:petz
+
+set fp=* Petzold.
+
+rem lu: Aug-2-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\xamarin-forms-book-samples
+
+set cbf_url=https://github.com/xamarin/xamarin-forms-book-samples.git
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

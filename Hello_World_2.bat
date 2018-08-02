@@ -52,7 +52,7 @@ echo.
 echo %fp%
 
 echo.
-echo Batch File 2. Put some code here.
+echo * From %0.bat. Put some code here.
 
 exit/b
 
