@@ -1274,7 +1274,7 @@ exit/b
 
 :_
 
-:mob
+:mobility
 
 set fp=Mobility.
 
@@ -3767,6 +3767,22 @@ exit/b
 
 
 ::_
+ 
+:fr_dr
+                                           
+set fp=* Fresnel drawable images source.
+
+rem lu: Jun-13-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel\fresnel.android\resources\drawable
+
+exit/b
+
+
+
+::_
 
 :fr_r
 
@@ -4629,6 +4645,40 @@ rem lu: Aug-3-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\xamarin-forms-samples\WorkingWithGestures\PinchGesture
+
+exit/b
+
+
+
+:_
+
+:mob
+
+set fp=* Mobility samples.
+
+rem lu: Aug-3-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\mobile-samples
+
+set cbf_url=https://github.com/xamarin/mobile-samples.git
+
+exit/b
+
+
+
+:_
+
+:lp
+
+set fp=* Live player samples!
+
+rem lu: Aug-3-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\mobile-samples\liveplayer
 
 exit/b
 
