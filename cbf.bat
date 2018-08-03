@@ -1,1 +1,117 @@
-m list
+:_
+
+@echo off
+
+
+
+:_
+
+set filename_stands_for=* Composable batch files menu.
+
+
+
+:_
+
+set fp=* Add some whitespace.
+
+echo.
+
+
+
+:_
+
+set fp=* Route help callers.
+
+if "%~1" == "/?" goto help
+
+if "%~1" == "-h" goto help
+
+if "%~1" == "help" goto help
+
+goto main_function
+
+
+
+:_
+
+:h
+
+:help
+
+echo Filename stands for: %filename_stands_for%
+
+set filep=File purpose: This file shows a list of available CBF files.
+
+echo.
+echo %filep%
+
+echo.
+echo Last Updated: 
+
+echo.
+echo Usage: %0
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* List of CBF Helper Batch files.
+
+echo  %fp%
+echo.
+
+echo  File  Description
+echo  ----  ------------------------------------------------------------------
+echo   clc  Simple calculator.
+echo     c  Clear screen and reset color.
+echo   cbf  Show this list of CBF Helper batch files.
+echo    cn  Used for Git cloning tasks.
+echo   col  Reset the dos window color.
+echo    cs  File contents search.
+echo    cy  Copy file(s).
+echo   cyn  Copies file in the current directory to nickname-specified path.
+echo     d  Easier-to-type and remember version of "dir".
+echo  defd  Delete folder at specified path parameter. Use with caution.
+echo     e  Exit command window.
+echo    ed  Edit a file. Emulated Surf (sf).
+echo   env  Show the state of the CBF envrionment variables.
+echo    fs  Filenames search.
+echo     g  Perform Git-related tasks.
+echo    gg  Git Gui helper. Has TD parameter.
+echo     h  Perform Sencha-related tasks.
+echo     m  Perform miscellaneous tasks.
+echo    me  Run Multi-Edit.
+echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
+rem (!rfsp) (mov-2)
+echo     n  Nicknames dictionary.
+echo    nm  Perform NPM-related tasks.
+echo    no  Run Notepad.
+echo   npp  Run Notepad++.
+echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
+echo    of  Open Folder. Has TD parameter.
+echo     p  Add, commit and push Git changes. Has TD parameter.
+echo     r  Run application using CBF variables.
+echo    rf  Remove folder corresponding to specified CBF path nickname. 
+echo     s  Open a Visual Studio solution. Has TD parameter.
+echo    sf  Surf to websites.
+echo    sm  Run Sublime.
+echo   sql  SQL/Database, including LDAP, related tasks.
+echo    st  Run git status remotely. Has TD parameter.
+echo     t  Testing, experimenting and developing new batch file functions.
+echo    tk  Wrapper around taskkill command.
+echo    tl  Wrapper around tasklist command.
+echo    td  Transform Directory.
+echo   tdp  Transform Directory to parent folder.
+echo    te  Batch file template used for creating new batch files.
+echo     v  Vetted functions.
+echo     x  Remote double-click equivalent way to run a file.
+
+exit/b
+
+
+
+:_

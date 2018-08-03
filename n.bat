@@ -4602,4 +4602,39 @@ exit/b
 
 
 
+:_
+
+:vp
+
+set fp=* Vetted Pictures.
+
+rem lu: Aug-2-2018
+
+echo %fp%
+
+set cbf_path=C:\Users\jonat\Documents\Dropbox\vetted pictures
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Pinch gesture.
+
+rem lu: Aug-3-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+set cbf_url=
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

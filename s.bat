@@ -30,9 +30,9 @@ set fp=* If it is provided, go to percent 1.
 if not "%~1" == "" (
   call td %~1 %2
 
-  if %errorlevel% == 1 (
+  if not %errorlevel% == 0 (
     echo.
-    echo * Error level is at 1.
+    echo * Error level is non-zero.
     rem No error message needed as "td" will report the error.
     exit/b
   )
