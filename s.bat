@@ -27,12 +27,15 @@ if "%~1" == "help" goto help
 
 set fp=* If it is provided, go to percent 1.
 
+echo.
+echo * Outside of the if statement, the error level is %errorlevel%.
+
 if not "%~1" == "" (
   call td %~1 %2
 
   if not %errorlevel% == 0 (
     echo.
-    echo * Error level is non-zero.
+    echo * Inside of the if statement, error level is %errorlevel%.
     rem No error message needed as "td" will report the error.
     exit/b
   )

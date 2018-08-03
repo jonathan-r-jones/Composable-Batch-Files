@@ -123,7 +123,9 @@ exit/b
 set fp=* Main function.
 
 echo.
-echo CBF URL: %cbf_url%
+echo * CBF URL: %cbf_url%
+
+echo.
 git clone %cbf_url%
 
 if "%~2" == "" (

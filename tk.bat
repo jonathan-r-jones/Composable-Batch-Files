@@ -70,9 +70,31 @@ exit/b
 
 :_
 
-:k
-
 :kill
+
+set fp=* Taskkill all nonessential processes. My current essential process are ME and CBF window.
+
+echo %fp%
+echo.
+
+taskkill /f /im chrome.exe
+taskkill /f /im devenv.exe
+taskkill /f /im iexplore.exe
+
+rem Kills all Explorers except the main system one.
+taskkill /fi "imagename eq explorer.exe" /fi "windowtitle ne N/A" /fi "windowtitle ne Tortoise" 
+
+taskkill /f /im firefox.exe
+taskkill /f /im notepad.exe
+taskkill /f /im opera.exe
+
+exit/b
+
+
+
+:_
+
+:kill_old
 
 set fp=* Taskkill all nonessential processes. My current essential process are ME, Visual Studio and TMT.
 

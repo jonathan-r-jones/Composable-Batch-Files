@@ -80,6 +80,8 @@ rem (!rfsp) (mov-2)
 
 if %errorlevel% == 0 (
   start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_fs.txt"
+) else (
+  call m clear_errorlevel
 )
 
 exit/b

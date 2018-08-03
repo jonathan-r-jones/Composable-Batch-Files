@@ -3369,6 +3369,8 @@ exit/b
 
 :clear_el
 
+:clear_errorlevel
+
 set fp=* Clear ErrorLevel.
 
 rem lu: Aug-3-2018
