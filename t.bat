@@ -2947,7 +2947,6 @@ javac SampleApplication.java
  
 echo 2. Run
 java SampleApplication samples\FormFill.xml
-rem qq-1
 
 m exit
 
@@ -7064,6 +7063,24 @@ exit/b
 
 :_
 
+:
+
+set fp=* Set cbf_path equal to the current folder.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%cd%
+
+echo CBF Path: %cbf_path%
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -7076,15 +7093,15 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Set cbf_path equal to the current folder.
+set fp=* Debug the issue where running application is causing an error.
 
-rem lu: Jul-26-2018
+rem lu: Aug-6-2018
 
 echo %fp%
 
-set cbf_path=%cd%
+call n me
 
-echo CBF Path: %cbf_path%
+start "my title" "%cbf_application%" "%cbf_parameter%"
 rem       qq-1
 
 exit/b

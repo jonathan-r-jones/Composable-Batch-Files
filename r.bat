@@ -101,6 +101,8 @@ echo %cbf_application% | find /i "--">nul
 if %errorlevel% == 0 (
   echo.
   goto run_application_in_raw_format
+) else (
+  call m clear_errorlevel
 )
 
 if "%cbf_parameter%" == "" (
@@ -109,6 +111,9 @@ if "%cbf_parameter%" == "" (
   call start "my title" "%cbf_application%"
   exit/b
 )
+
+echo.
+echo %filep%
 
 start "my title" "%cbf_application%" "%cbf_parameter%"
 
