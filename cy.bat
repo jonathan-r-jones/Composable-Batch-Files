@@ -245,28 +245,6 @@ exit/b
 
 ::_
 
-:pc
-
-:mvpc2
-
-set fp=* Overaching podcast mover.
-
-rem lu: Jul-15-2018
-
-echo %fp%
-
-call m remove_hidden_attributes
-
-call %0 move_old_clipjam
-
-call %0 copy_sa_to_cj
-
-exit/b
-
-
-
-::_
-
 :move_old_clipjam
 
 set fp=* Move old ClipJam files from the Podcasts to Audiobooks folder.
@@ -304,6 +282,28 @@ call n sa
 
 echo.
 move "%cbf_path%\*.*"
+
+exit/b
+
+
+
+::_
+
+:pc
+
+:mvpc2
+
+set fp=* Overaching podcast mover.
+
+rem lu: Jul-15-2018
+
+echo %fp%
+
+call m remove_hidden_attributes
+
+call %0 move_old_clipjam
+
+call %0 copy_sa_to_cj
 
 exit/b
 

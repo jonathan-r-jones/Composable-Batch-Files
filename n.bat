@@ -4684,4 +4684,20 @@ exit/b
 
 
 
+:_
+
+:pan
+
+set fp=* Pan gesture.
+
+rem lu: Aug-3-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\xamarin-forms-samples\WorkingWithGestures\PanGesture
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
