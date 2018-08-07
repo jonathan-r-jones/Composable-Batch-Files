@@ -2216,267 +2216,6 @@ exit/b
 
 
 
-:_+ Xamarin-Related
-
-rem (!xaba, !baxa)
-
-
-
-::_
-
-:xs
-
-:xam_sam
-
-set fp=* Xamarin Forms Samples.
-
-rem Repository Data
-rem   last updated: May-31-2018
-rem       watchers:  524
-rem           star:  2,267
-
-rem lu: Jun-1-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\xamarin-forms-samples
-
-set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
-
-exit/b
-
-
-
-::_
-
-:plug
-
-:xplug
-
-set fp=* Plugins. Open Source Components for Xamarin. This is an active repository.
-
-rem lu: Jan-31-2018
-
-rem Repository Data
-rem   last updated:  Jun-1-2018
-rem       watchers:  312
-rem           star:  1,241
-
-echo %fp%
-
-set cbf_url=https://github.com/Xamarin/Plugins.git
-
-exit/b
-
-
-
-::_
-
-:jmplug
-
-set fp=* James Montemagno's Xamarin Plugins.
-
-rem lu: Jun-1-2018
-
-rem Repository Data
-rem   last updated:  Jan-10-2018
-rem       watchers:  139
-rem           star:  905
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\Xamarin.Plugins
-
-set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
-
-exit/b
-
-
-
-::_
-
-:hwp
-
-set fp=* Hello world prototype.
-
-rem lu: May-30-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\xaml_prototype
-
-set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
-
-exit/b
-
-
-
-::_
-
-:xa
-
-set fp=* Xamarin folder.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-
-set cbf_path=%aa%\xamarin
-
-exit/b
-
-
-
-::_
-
-:ed
-
-set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt github page.
-
-rem lu: Jul-5-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book
-
-if "%~2" == "c" (
-  set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book\Complete
-) else if not "%~2" == "" (
-  set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book\Chapter%2
-)
-
-set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
-
-exit/b
-
-
-
-::_
-
-:ed_p
-
-set fp=* Ed Snider's book, the Packt Publishing version.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-Second-Edition
-
-set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
-
-exit/b
-
-
-
-::_
-
-:fma1
-
-set fp=* Jesse Liberty's Xamarin Pluralsight course.
-
-rem lu: May-8-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\first-mobile-app-Jesse
-
-set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
-
-exit/b
-
-
-
-::_
-
-:fma
-
-:fma2
-
-:fmajrj
-
-set fp=* My implementation of Jesse Liberty's Xamarin Pluralsight course.
-
-rem lu: May-8-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\first-mobile-app-Jonathan
-
-set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
-
-exit/b
-
-
-
-::_
-
-:hw
-
-set fp=Hello World.
-
-rem lu: Jan-16-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
-
-exit/b
-
-
-
-::_
-
-:bugs
-
-set fp=* Bugsweeper.
-
-rem Bugsweeper (!bugs)
-
-rem lu: Jun-1-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\xamarin-forms-samples\bugsweeper
-
-exit/b
-
-
-
-::_
-
-:batt
-
-set fp=* James' Battery solution.
-
-rem lu: Jan-31-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\BatteryPlugin
-
-set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
-
-exit/b
-
-
-
-::_
-
-:media
-
-set fp=* James' Media plugin.
-
-rem lu: Jun-4-2018
-
-echo %fp%
-
-set cbf_url=http://github.com/jamesmontemagno/MediaPlugin
-
-exit/b
-
-
-
 :_
 
 :saru
@@ -4695,6 +4434,285 @@ rem lu: Aug-3-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\xamarin-forms-samples\WorkingWithGestures\PanGesture
+
+exit/b
+
+
+
+:_+ Xamarin-Related
+
+rem (!xaba, !baxa)
+
+
+
+::_
+
+:xs
+
+:xam_sam
+
+set fp=* Xamarin Forms Samples.
+
+rem Repository Data
+rem   last updated: May-31-2018
+rem       watchers:  524
+rem           star:  2,267
+
+rem lu: Jun-1-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\xamarin-forms-samples
+
+set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
+
+exit/b
+
+
+
+::_
+
+:plug
+
+:xplug
+
+set fp=* Plugins. Open Source Components for Xamarin. This is an active repository.
+
+rem lu: Jan-31-2018
+
+rem Repository Data
+rem   last updated:  Jun-1-2018
+rem       watchers:  312
+rem           star:  1,241
+
+echo %fp%
+
+set cbf_url=https://github.com/Xamarin/Plugins.git
+
+exit/b
+
+
+
+::_
+
+:jmplug
+
+set fp=* James Montemagno's Xamarin Plugins.
+
+rem lu: Jun-1-2018
+
+rem Repository Data
+rem   last updated:  Jan-10-2018
+rem       watchers:  139
+rem           star:  905
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\Xamarin.Plugins
+
+set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
+
+exit/b
+
+
+
+::_
+
+:hwp
+
+set fp=* Hello world prototype.
+
+rem lu: May-30-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\xaml_prototype
+
+set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
+
+exit/b
+
+
+
+::_
+
+:xa
+
+set fp=* Xamarin folder.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_path=%aa%\xamarin
+
+exit/b
+
+
+
+::_
+
+:ed
+
+set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt github page.
+
+rem lu: Jul-5-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book
+
+if "%~2" == "c" (
+  set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book\Complete
+) else if not "%~2" == "" (
+  set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book\Chapter%2
+)
+
+set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+
+exit/b
+
+
+
+::_
+
+:ed_p
+
+set fp=* Ed Snider's book, the Packt Publishing version.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-Second-Edition
+
+set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
+
+exit/b
+
+
+
+::_
+
+:fma1
+
+set fp=* Jesse Liberty's Xamarin Pluralsight course.
+
+rem lu: May-8-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\first-mobile-app-Jesse
+
+set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
+
+exit/b
+
+
+
+::_
+
+:fma
+
+:fma2
+
+:fmajrj
+
+set fp=* My implementation of Jesse Liberty's Xamarin Pluralsight course.
+
+rem lu: May-8-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\first-mobile-app-Jonathan
+
+set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
+
+exit/b
+
+
+
+::_
+
+:hw
+
+set fp=Hello World.
+
+rem lu: Jan-16-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
+
+exit/b
+
+
+
+::_
+
+:bugs
+
+set fp=* Bugsweeper.
+
+rem Bugsweeper (!bugs)
+
+rem lu: Jun-1-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\xamarin-forms-samples\bugsweeper
+
+exit/b
+
+
+
+::_
+
+:batt
+
+set fp=* James' Battery solution.
+
+rem lu: Jan-31-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\BatteryPlugin
+
+set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
+
+exit/b
+
+
+
+::_
+
+:media
+
+set fp=* James' Media plugin.
+
+rem lu: Jun-4-2018
+
+echo %fp%
+
+set cbf_url=http://github.com/jamesmontemagno/MediaPlugin
+
+exit/b
+
+
+
+::_
+
+:wwi
+
+set fp=* Xamarin Forms Samples - Working with images..
+
+rem lu: Aug-7-2018
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\xamarin-forms-samples\workingwithimages
+
+set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
 
 exit/b
 

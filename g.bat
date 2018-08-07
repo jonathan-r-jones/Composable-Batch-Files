@@ -2179,28 +2179,6 @@ exit/b
 
 ::_
 
-:step_back_1
-
-set fp=* Step back 1 version. You feel like your last check-in broke the build,
-
-set fp=%fp% so move the whole repo back a single check-in version.
-
-rem This worked on FGT and Fresnel on Jul-19-2018.
-
-rem lu: Jul-19-2018
-
-echo %fp%
-
-call :reset_head_1
-
-call :roll_back_repo
-
-exit/b
-
-
-
-::_
-
 :reset_head_1
 
 set fp=* Reset head by 1 id number version.
@@ -2292,6 +2270,31 @@ echo.
 git reset --hard HEAD
 git clean -f
 git pull
+
+exit/b
+
+
+
+::_
+
+:step_back_1
+
+set fp=* Step back 1 version. You feel like your last check-in broke the build.
+
+rem One reason I like this command is that it moves back slowly so will help you be
+rem careful not to rollback to fr.
+
+set fp=%fp% so move the whole repo back a single check-in version.
+
+rem This worked on FGT and Fresnel on Jul-19-2018.
+
+rem lu: Jul-19-2018
+
+echo %fp%
+
+call :reset_head_1
+
+call :roll_back_repo
 
 exit/b
 
