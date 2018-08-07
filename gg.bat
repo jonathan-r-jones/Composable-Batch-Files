@@ -61,6 +61,8 @@ exit/b
 
 :main_function
 
+set cbf_parameter=
+
 r gg
 
 rem (!rfsp) (mov-2)

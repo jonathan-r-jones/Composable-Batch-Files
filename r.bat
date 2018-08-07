@@ -104,11 +104,9 @@ if %errorlevel% == 0 (
   goto run_application_in_raw_format
 ) else (
   call m clear_errorlevel_silently
-rem qq-1
 )
 
 if "%cbf_parameter%" == "" (
-  echo.
   echo * No parameter was passed.
   call start "my title" "%cbf_application%"
   exit/b
