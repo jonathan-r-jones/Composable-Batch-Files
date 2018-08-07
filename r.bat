@@ -92,7 +92,8 @@ exit/b
 
 :main_function
 
-set fp=* Main function.
+set fp=* Run application - main function.
+rem qq-1
 
 if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_special_case
 
@@ -102,7 +103,8 @@ if %errorlevel% == 0 (
   echo.
   goto run_application_in_raw_format
 ) else (
-  call m clear_errorlevel
+  call m clear_errorlevel_silently
+rem qq-1
 )
 
 if "%cbf_parameter%" == "" (
@@ -112,8 +114,7 @@ if "%cbf_parameter%" == "" (
   exit/b
 )
 
-echo.
-echo %filep%
+echo * Run application in the most common way.
 
 start "my title" "%cbf_application%" "%cbf_parameter%"
 

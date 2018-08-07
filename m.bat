@@ -3389,4 +3389,18 @@ exit/b
 
 
 
+::_
+
+:clear_errorlevel_silently
+
+set fp=* Clear ErrorLevel silently.
+
+rem lu: Aug-7-2018
+
+ver>nul
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

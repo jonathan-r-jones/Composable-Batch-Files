@@ -109,7 +109,7 @@ if %errorlevel% == 0 (
   start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_cs.txt"
 ) else (
   echo.
-  echo No results found Hoss.
+  echo * No results found.
 )
 
 exit/b
