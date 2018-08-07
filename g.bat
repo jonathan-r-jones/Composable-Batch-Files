@@ -2161,37 +2161,6 @@ exit/b
 
 ::_
 
-:rv
-
-:rv_lo
-
-:rv_local
-
-set fp=* Revert local.
-
-rem If you don't care about any local changes and just want a copy from the repository.
-
-rem Revert all changes from this folder. Revert all local changes.
-
-rem blow away local changes, specific folder: skw
-
-rem This didn't seem to work on Jan-31-2017.
-
-rem Function Creation Date: Jan-30-2017
-
-echo %fp%
-echo.
-
-git reset --hard HEAD
-git clean -f
-git pull
-
-exit/b
-
-
-
-::_
-
 :rut
 
 :clean
@@ -2269,6 +2238,60 @@ echo %fp%
 
 echo.
 git push -f
+
+exit/b
+
+
+
+::_
+
+:reset_head_2
+
+set fp=* Reset head by 2 id number versions. This enabled not to have to merge.
+
+rrem lu: Aug-7-2018
+
+rem Step back 2 versions.
+
+rem reverse 2: skw
+
+echo %fp%
+
+echo.
+git reset --hard "HEAD~2"
+
+exit/b
+
+
+
+::_
+
+:rv
+
+:rv_lo
+
+:rv_local
+
+set fp=* Revert local.
+
+rrem lu: Aug-7-2018
+
+rem If you don't care about any local changes and just want a copy from the repository.
+
+rem Revert all changes from this folder. Revert all local changes.
+
+rem blow away local changes, specific folder: skw
+
+rem This didn't seem to work on Jan-31-2017.
+
+rem Function Creation Date: Jan-30-2017
+
+echo %fp%
+echo.
+
+git reset --hard HEAD
+git clean -f
+git pull
 
 exit/b
 
