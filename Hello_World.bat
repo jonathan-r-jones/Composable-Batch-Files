@@ -149,13 +149,13 @@ exit/b
 
 :all_functions_style_2
 
-set fp=* All steps calling style 2.
+set fp=* All steps calling style 2. Notice the white space is missing because you 
 
 echo %fp%
 
 call :function_1
 
-call hello_world_2 function_2
+call hello_world_2 function_3
 
 call :function_3
 
