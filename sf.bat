@@ -85,7 +85,7 @@ if %errorlevel% == 1 (
 
 set cbf_parameter=%cbf_url%
 
-goto set_default_browser
+goto set_browser
 
 
 
@@ -104,13 +104,11 @@ set cbf_parameter=%cbf_url%
 
 :_
 
-:set_default_browser
+:set_browser
 
-set fp=* Set default browser.
+set fp=* Set browser.
 
 if not "%~2" == "" goto override_default_browser
-
-call an kr
 
 goto surf
 

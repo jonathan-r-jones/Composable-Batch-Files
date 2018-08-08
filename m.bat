@@ -1422,7 +1422,7 @@ exit/b
 
 set fp=* Initialize environment.
 
-rem fcd: Jul-10-2018
+rem fcd: Aug-8-2018
 
 echo %fp%
 
@@ -1434,9 +1434,11 @@ rem call :set_server_title
 
 rem call :set_wildfly_location
 
-if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
+if "%cbf_default_browser%" == "" call m set_default_browser kr
 
 if "%cbf_default_repository_folder%" == "" call m set_default_repository_folder temp
+
+if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
 
 cls
 
@@ -3076,6 +3078,9 @@ echo.
 echo Application Location: %cbf_application_location%
 
 echo.
+echo Default Browser: %cbf_default_browser%
+
+echo.
 echo Default Text Editor: %cbf_default_text_editor%
 
 echo.
@@ -3177,6 +3182,24 @@ exit/b
 
 
 :_+ Set default environment variables.
+
+
+
+::_
+
+:set_default_browser
+
+set fp=* Set default browser.
+
+rem lu: Aug-8-2018
+
+echo %fp%
+
+if not "%~2" == "" call n %2
+
+set cbf_default_browser=%cbf_application%
+
+exit/b
 
 
 

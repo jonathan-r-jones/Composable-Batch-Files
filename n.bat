@@ -1444,22 +1444,6 @@ exit/b
 
 :_
 
-:cnn
-
-set fp=* Cnn.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_url=http://www.cnn.com
-
-exit/b
-
-
-
-:_
-
 :gh
 
 :git
@@ -4745,6 +4729,38 @@ rem lu: Aug-8-2018
 echo %fp%
 
 set cbf_path=%dropbox%\mp3\Jun-5-2018
+
+exit/b
+
+
+
+:_
+
+:ttdc
+
+set fp=* Tech Talk DC.
+
+rem lu: Aug-8-2018
+
+echo %fp%
+
+set cbf_url=https://www.meetup.com/TechTalkDC/
+
+exit/b
+
+
+
+:_
+
+:cnn
+
+set fp=* Cnn.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_url=http://www.cnn.com
 
 exit/b
 
