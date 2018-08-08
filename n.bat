@@ -2490,24 +2490,6 @@ exit/b
 
 :_
 
-:jj3d
-
-:clcr
-
-set fp=* Closing credits.
-
-rem lu: Jun-12-2018
-
-echo %fp%
-
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/blob/master/jj3d.png
-
-exit/b
-
-
-
-:_
-
 :im
 
 set fp=* Image Manipulation.
@@ -4706,7 +4688,7 @@ exit/b
 
 :_
 
-:htm
+:mod
 
 set fp=* How to modularize a batch file.
 
@@ -4763,6 +4745,22 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_url=http://www.cnn.com
+
+exit/b
+
+
+
+:_
+
+:png
+
+set fp=* CBF png file.
+
+rem lu: Aug-8-2018
+
+echo %fp%
+
+set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/composable-batch-files/master/jj3d.png
 
 exit/b
 
