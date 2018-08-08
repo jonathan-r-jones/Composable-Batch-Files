@@ -717,7 +717,6 @@ if %errorlevel% == 0 exit/b
 
 call m update_java_timestamp
 
-echo.
 set /p commit_description=<%tmp%\java_timestamp.txt
 
 call git commit -a -m %commit_description%
