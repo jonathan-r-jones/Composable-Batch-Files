@@ -57,6 +57,7 @@ echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 echo             a  Add changes.
 echo           asf  Add single file.
+echo          back  The git equivalent of the back button.
 echo             c  Commit changes for only those files that were staged.
 echo         cu_cn  Custom clone. For basic cloning, use cn.bat.
 echo           ghg  Git help git.
@@ -1960,25 +1961,6 @@ exit/b
 
 ::_
 
-:uncommit
-
-:uncommit_local
-
-set fp=* Uncommit local changes.
-
-rem Creation Date: May-3-2017
-
-echo %fp%
-echo.
-  
-git reset --hard "HEAD~1"
-
-exit/b
-
-
-
-::_
-
 :roll_back
 
 set fp=* Roll back to a specific version. Detached head means you are no longer on a branch, you have checked out a single commit in the history.
@@ -2179,27 +2161,6 @@ exit/b
 
 ::_
 
-:reset_head_1
-
-set fp=* Reset head by 1 id number version.
-
-rrem lu: Jul-19-2018
-
-rem Step back 1 version.
-
-rem Test on FGT.
-
-echo %fp%
-
-echo.
-git reset --hard "HEAD~1"
-
-exit/b
-
-
-
-::_
-
 :roll_back_repo
 
 :roll_back_server
@@ -2227,7 +2188,7 @@ exit/b
 
 set fp=* Reset head by 2 id number versions. This enabled not to have to merge.
 
-rrem lu: Aug-7-2018
+rem lu: Aug-7-2018
 
 rem Step back 2 versions.
 
@@ -2252,7 +2213,7 @@ exit/b
 
 set fp=* Revert local.
 
-rrem lu: Aug-7-2018
+rem lu: Aug-7-2018
 
 rem If you don't care about any local changes and just want a copy from the repository.
 
@@ -2295,6 +2256,31 @@ echo %fp%
 call :reset_head_1
 
 call :roll_back_repo
+
+exit/b
+
+
+
+::_
+
+:back
+
+:reset_head_1
+
+:uncommit
+
+set fp=* The git equivalent of the back button. Reset head by 1 id number version.
+
+rem lu: Aug-7-2018
+
+rem Step back 1 version.
+
+rem Test on FGT.
+
+echo %fp%
+
+echo.
+git reset --hard "HEAD~1"
 
 exit/b
 

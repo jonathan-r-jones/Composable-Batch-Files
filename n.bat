@@ -4423,22 +4423,6 @@ exit/b
 
 
 
-:_
-
-:pan
-
-set fp=* Pan gesture.
-
-rem lu: Aug-3-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\xamarin-forms-samples\WorkingWithGestures\PanGesture
-
-exit/b
-
-
-
 :_+ Xamarin-Related
 
 rem (!xaba, !baxa)
@@ -4704,7 +4688,7 @@ exit/b
 
 :wwi
 
-set fp=* Xamarin Forms Samples - Working with images..
+set fp=* Xamarin Forms Samples - Working with images.
 
 rem lu: Aug-7-2018
 
@@ -4713,6 +4697,22 @@ echo %fp%
 set cbf_path=%aa%\repositories\xamarin-forms-samples\workingwithimages
 
 set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
+
+exit/b
+
+
+
+:_
+
+:pan
+
+set fp=* Pan gesture.
+
+rem lu: Aug-3-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\xamarin-forms-samples\WorkingWithGestures\PanGesture
 
 exit/b
 
