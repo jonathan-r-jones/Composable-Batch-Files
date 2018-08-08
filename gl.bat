@@ -67,8 +67,9 @@ echo -------------  ------------------------------------------------------------
 echo           cbf  composable batch files
 echo            fp  Function purpose
 echo  td parameter  Transform Directory passed in as a parameter, meaning to 
-echo                  change folders before running the batch file.
-
+echo                  change folders before running the batch file. For example,
+echo                  running "p cbf" switches to the CBF folder assigned in the
+echo                  nicknames folder before running the batch file p.bat.
 
 rem (!rfsp) (mov-2)
 
