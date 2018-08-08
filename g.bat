@@ -719,6 +719,7 @@ call m update_java_timestamp
 
 set /p commit_description=<%tmp%\java_timestamp.txt
 
+echo.
 call git commit -a -m %commit_description%
 
 exit/b
