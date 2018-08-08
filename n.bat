@@ -4734,4 +4734,20 @@ exit/b
 
 
 
+:_
+
+:mc
+
+set fp=* Latest Music.
+
+rem lu: Aug-8-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\mp3\Jun-5-2018
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
