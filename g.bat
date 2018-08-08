@@ -717,6 +717,7 @@ if %errorlevel% == 0 exit/b
 
 call m update_java_timestamp
 
+rem qq-1
 set /p commit_description=<%tmp%\java_timestamp.txt
 
 echo.
@@ -1563,6 +1564,7 @@ set fp=* Add files generic action.
 echo %fp%
 
 echo.
+rem qq-1
 git add -A
 
 exit/b
