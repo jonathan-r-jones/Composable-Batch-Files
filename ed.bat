@@ -79,7 +79,7 @@ echo %filename_stands_for%
 
 if "%~3" == "x" (
   set cbf_filename=%~1
-  goto final_phase
+  goto final_step
 )
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
@@ -87,23 +87,24 @@ rem nickname dictionary to determine the filename.
 echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 (
+  echo If called.
   set cbf_filename=%~1
 ) else (
-  call n %1
+  rem echo Else called with Percent 1: %1.
+  call fn %1
+  set cbf_parameter=%cbf_filename%
 )
 
 if "%~2" == "" (
   rem Set statements aren't allowed inside if blocks, so this is the workaround.
   call m set_cbf_application
 ) else (
-  call n %2
+  call an %2
 )
 
 
 
-:final_phase
-
-set cbf_parameter=%cbf_filename%
+:final_step
 
 call r
 

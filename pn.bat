@@ -24,6 +24,14 @@ if "%~1" == "help" goto help
 
 :_
 
+set fp=* In order to promote freshness, clear the environment variable.
+
+set cbf_path=
+
+
+
+:_
+
 set fp=* Main function.
 
 set cbf_path=

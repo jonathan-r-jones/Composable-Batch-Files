@@ -24,6 +24,14 @@ if "%~1" == "help" goto help
 
 :_
 
+set fp=* In order to promote freshness, clear the environment variable.
+
+set cbf_url=
+
+
+
+:_
+
 call n %1
 
 exit/b

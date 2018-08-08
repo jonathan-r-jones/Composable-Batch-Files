@@ -1420,21 +1420,13 @@ exit/b
 
 :ise
 
-set fp=* Initialize environment.
+set fp=* Initialize environment. The idea is to create a pit of success for the user.
 
 rem fcd: Aug-8-2018
 
 echo %fp%
 
-rem call :set_server_path
-
-rem call :clear_color_setting
-
-rem call :set_server_title
-
-rem call :set_wildfly_location
-
-if "%cbf_default_browser%" == "" call m set_default_browser kr
+if "%cbf_default_browser%" == "" call m set_default_browser ie
 
 if "%cbf_default_repository_folder%" == "" call m set_default_repository_folder temp
 

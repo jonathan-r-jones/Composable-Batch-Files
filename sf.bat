@@ -110,6 +110,8 @@ set fp=* Set browser.
 
 if not "%~2" == "" goto override_default_browser
 
+set cbf_application=%cbf_default_browser%
+
 goto surf
 
 

@@ -20,13 +20,7 @@ echo.
 
 :_
 
-set fp=* In order to promote freshness, clear the environment variables and reset the error level.
-
-set cbf_filename=
-
-set cbf_path=
-
-set cbf_url=
+set fp=* In order to promote freshness, reset the error level.
 
 ver>nul
 
@@ -133,6 +127,24 @@ exit/b
 
 
 :_ Begin body. (!bb)
+
+
+
+:_
+
+:temp
+
+set fp=* Temp.
+
+rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.
+
+rem lu: Jan-23-2018
+
+echo %fp%
+
+set cbf_path=%temp%
+
+exit/b
 
 
 
@@ -1405,22 +1417,6 @@ rem lu: Jan-18-2018
 echo %fp%
 
 set cbf_path=%dropbox%\it\
-
-exit/b
-
-
-
-:_
-
-:temp
-
-set fp=* Temp.
-
-rem lu: Jan-23-2018
-
-echo %fp%
-
-set cbf_path=%temp%
 
 exit/b
 
@@ -3225,6 +3221,8 @@ exit/b
 
 :r
 
+:repos
+
 set fp=* Repos.
 
 rem lu: Jul-5-2018
@@ -3631,6 +3629,8 @@ exit/b
 
 set fp=* Internet Explorer.
 
+rem This is used as the system default browser, if none is set. Please DO NOT DELETE.
+
 rem lu: Jan-24-2018
 
 echo %fp%
@@ -3666,6 +3666,8 @@ exit/b
 :no
 
 set fp=* Notepad.
+
+rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.
 
 rem lu: Jan-24-2018
 
