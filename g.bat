@@ -666,7 +666,6 @@ if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 exit/b
 
 call %0 add_files_generic_action
-rem qq-1
 
 call %0 commit_with_timestamp_description
 
