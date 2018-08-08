@@ -1,1 +1,0 @@
-hello_world.bat %1

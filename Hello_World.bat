@@ -12,6 +12,14 @@ set filep=* Hello World batch file that demonstrates the basic structure concept
 
 :_
 
+set fp=* Add some whitespace.
+
+echo.
+
+
+
+:_
+
 set Function_Purpose=* Route callers.
 
 if "%~1" == "" goto help
@@ -21,6 +29,8 @@ if "%~1" == "/?" goto help
 if "%~1" == "help" goto help
 
 goto %1
+
+exit/b
 
 
 
@@ -33,7 +43,7 @@ goto %1
 echo %filep%
 
 echo.
-echo Last Updated: Apr-25-2018
+echo Last Updated: Aug-8-2018
 
 echo.
 echo Usage: hello_world.bat [Parameter 1]
@@ -42,13 +52,13 @@ echo.
 echo Parameter 1: Function you wish to execute.
 
 echo.
-echo     Parameter  Description
-echo -------------  -----------------------------------------------------
-echo        step_1  Function that does [blank].
-echo        step_2  Function that does [blank].
-echo        step_3  Function that does [blank].
-echo    some_steps  Function that runs some functions.
-echo     all_steps  Function that runs all functions.
+echo       Parameter  Description
+echo ---------------  -----------------------------------------------------
+echo      function_1  Function that does [blank].
+echo      function_2  Function that does [blank].
+echo      function_3  Function in ANOTHER batch file that does [blank].
+echo  some_functions  Function that runs some functions.
+echo   all_functions  Function that runs all functions.
 
 exit/b
 
@@ -60,17 +70,13 @@ exit/b
 
 :_
 
-:step_1
+:function_1
 
-set fp=* Step 1. A call to this batch file.
+set fp=* Function 1. A call to this batch file.
 
-rem lu: Jan-23-2018
-
-echo.
 echo %fp%
 
-echo.
-echo * Put some code here.
+rem echo * Put some code here.
 
 exit/b
 
@@ -78,31 +84,13 @@ exit/b
 
 :_
 
-:step_2
+:function_2
 
-set fp=* Step 2. A call to this batch file.
+set fp=* Function 2. Another call to this baatch file.
 
-rem lu: Jan-23-2018
-
-call hello_world_2 step_2
-
-exit/b
-
-
-
-:_
-
-:step_3
-
-set fp=* Step 3.
-
-rem lu: Jan-23-2018
-
-echo.
 echo %fp%
 
-echo.
-echo * Put some code here.
+rem echo * Put some code here.
 
 exit/b
 
@@ -110,20 +98,29 @@ exit/b
 
 :_
 
-:all_steps
+:function_3
+
+set fp=* Function 3. A call to another batch file.
+
+call hello_world_2 function_3
+
+exit/b
+
+
+
+:_
+
+:all_functions
 
 set fp=* All steps.
 
-rem lu: Jan-23-2018
-
-echo.
 echo %fp%
 
-call %0 step_1
+call %0 function_1
 
-call hello_world_2 step_2
+call %0 function_2
 
-call %0 step_3
+call hello_world_2 function_3
 
 echo.
 echo * This was as easy as 1-2-3.
@@ -134,18 +131,15 @@ exit/b
 
 :_
 
-:some_steps
+:some_functions
 
 set fp=* Some steps.
 
-rem lu: Jan-23-2018
-
-echo.
 echo %fp%
 
-call %0 step_1
+call %0 function_1
 
-call hello_world_2 step_2
+call hello_world_2 function_3
 
 exit/b
 
@@ -153,19 +147,17 @@ exit/b
 
 :_
 
-:all_steps_style_2
+:all_functions_style_2
 
 set fp=* All steps calling style 2.
 
-rem lu: Jan-23-2018
-
 echo %fp%
 
-call :step_1
+call :function_1
 
-call hello_world_2 step_2
+call hello_world_2 function_2
 
-call :step_3
+call :function_3
 
 exit/b
 

@@ -66,6 +66,7 @@ echo  Term/Abbrev.  Definition/Description
 echo -------------  ------------------------------------------------------------
 echo           cbf  composable batch files
 echo            fp  Function purpose
+echo            lu  Last updated. The last time the file was updated.
 echo  td parameter  Transform Directory passed in as a parameter, meaning to 
 echo                  change folders before running the batch file. For example,
 echo                  running "p cbf" switches to the CBF folder assigned in the
