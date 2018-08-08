@@ -4766,4 +4766,23 @@ exit/b
 
 
 
+:_
+
+:
+
+set fp=* 
+
+rem lu: Aug-8-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+set cbf_url=
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
