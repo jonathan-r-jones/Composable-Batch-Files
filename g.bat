@@ -665,7 +665,8 @@ cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 exit/b
 
-call %0 add
+call %0 add_files_generic_action
+rem qq-1
 
 call %0 commit_with_timestamp_description
 
@@ -1556,11 +1557,12 @@ exit/b
 
 :add
 
+:add_files_generic_action
+
 set fp=* Add files generic action.
 
 echo %fp%
 
-echo.
 git add -A
 
 exit/b
