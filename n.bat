@@ -4718,4 +4718,20 @@ exit/b
 
 
 
+:_
+
+:htm
+
+set fp=* How to modularize a batch file.
+
+rem lu: Aug-7-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\composable-batch-files\how to modularize a batch file.asc
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

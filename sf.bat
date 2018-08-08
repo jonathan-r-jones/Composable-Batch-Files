@@ -71,10 +71,13 @@ call n %1
 if "%cbf_url%" == "" (
   echo.
   echo * Nickname Error: There is no cbf_url defined for '%~1'. 
+  rem echo Errorlevel: %errorlevel%.
+  call m clear_errorlevel_silently
   exit/b
 )
 
 if %errorlevel% == 1 (
+  rem This may never be called.
   echo.
   echo * Error: There was an error after the dictionary call was made. 
   exit/b

@@ -3329,7 +3329,6 @@ echo %fp%
 
 echo.
 echo * ErrorLevel: %errorlevel%
-rem       qq-1
 
 exit/b
 

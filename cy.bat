@@ -255,6 +255,10 @@ rem lu: Jul-15-2018
 
 echo %fp%
 
+call td cj_pc
+
+call m remove_hidden_attributes
+
 call td cj_au
 
 call n cj_pc
