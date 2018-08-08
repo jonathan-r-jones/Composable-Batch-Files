@@ -34,4 +34,4 @@ For example:
 
 To see a brief PowerPoint Presentation on CBF, type:
 
-c:\m ppt
+c:\x ppt
