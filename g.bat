@@ -1562,6 +1562,7 @@ set fp=* Add files generic action.
 
 echo %fp%
 
+echo.
 git add -A
 
 exit/b
