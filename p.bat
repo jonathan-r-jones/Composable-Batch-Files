@@ -8,8 +8,8 @@
 
 set filep=* Add, commit and push Git changes with timestamp commit message.
 
-echo.
-echo %filep%
+rem echo.
+rem echo %filep%
 
 
 
