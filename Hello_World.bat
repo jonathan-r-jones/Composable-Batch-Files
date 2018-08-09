@@ -55,47 +55,6 @@ exit/b
 
 
 
-:_
-
-:function_1
-
-set fp=* Function 1. A call to this batch file.
-
-echo.
-echo %fp%
-
-rem echo * Put some code here.
-
-exit/b
-
-
-
-:_
-
-:function_2
-
-set fp=* Function 2. Another call to this baatch file.
-
-echo.
-echo %fp%
-
-rem echo * Put some code here.
-
-exit/b
-
-
-
-:_
-
-:function_3
-
-set fp=* Function 3. A call to another batch file.
-
-call hello_world_2 function_3
-
-exit/b
-
-
 
 :_
 
@@ -118,7 +77,7 @@ exit/b
 
 :all_functions
 
-set fp=* All functions calling style 2. Notice the white space is missing.
+set fp=* All functions.
 
 echo.
 echo %fp%
@@ -131,6 +90,47 @@ call hello_world_2 function_3
 
 exit/b
 
+
+
+:_
+
+:function_1
+
+set fp=* Function 1. A call to this batch file.
+
+echo.
+echo %fp%
+
+rem echo * Put some code here.
+
+exit/b
+
+
+
+:_
+
+:function_2
+
+set fp=* Function 2. Another call to this batch file.
+
+echo.
+echo %fp%
+
+rem echo * Put some code here.
+
+exit/b
+
+
+
+:_
+
+:function_3
+
+set fp=* Function 3. A call to another batch file.
+
+call hello_world_2 function_3
+
+exit/b
 
 
 :_

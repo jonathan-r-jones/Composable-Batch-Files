@@ -7,8 +7,8 @@ Falcon script.
 ## Most Batch Files Are A Mess
 
 Many batch files I've seen in the wild are pretty messy. They are often quite long and not 
-well structured. I know this partly because I've written hundreds like them. I wrote batch 
-files for years that were a mess. I like to think I'm a little better now.
+well structured. I know this partly because I've written hundreds of them. I wrote batch files 
+for years that were a mess. I like to think I'm a little better now.
 
 For Example, I googled "typical batch file" and this was the first hit:
 
@@ -40,20 +40,14 @@ or code blocks.
 ::exit/b - end of function. The lack of exit/b is the most common culprit. Without ending 
 functions, you have spaghetti code.
 
-::Example of a structured, functionalized approach:
 
-:(!qq)
 
-:main_function
+##A More Structured and Functionalized Approach
 
-call :function_1
-call :function_2
-call :function_3
+Building the batch file around the a set of functions can turn a normally disorganized 
+environment into a structured and organized one.
 
-exit/b
-
-:Using this simple structure can turn a batch file into a structured environment.
-
+![](functionalized.png)
 
 
 
@@ -62,7 +56,6 @@ qq-1
 
 To see list of the commonly used composed batch files type:
 
-![](cbf.png)
 
 
 
