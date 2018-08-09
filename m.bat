@@ -1578,7 +1578,6 @@ exit/b
 set fp=* CBF Powerpoint Presentation.
 
 rem fcd: May-19-2017
-rem qq-1
 
 echo.
 echo %fp%

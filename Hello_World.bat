@@ -20,9 +20,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-call :%1
-
-exit/b
+goto function_2
 
 
 
@@ -32,6 +30,7 @@ exit/b
 
 :help
 
+echo.
 echo %filep%
 
 echo.
