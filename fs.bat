@@ -54,9 +54,6 @@ echo Usage: %0 [parameters]
 echo.
 echo Parameter 1: Search criterion. Double quotes are necessary only if spaces are used.
 
-echo.
-echo Parameter 2 (Optional): File type to search. For example, "txt" (without quotes) would search only txt type files.
-
 exit/b
 
 

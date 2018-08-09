@@ -59,7 +59,7 @@ set parameter_1=%parameter_1% only if spaces are used.
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2 (Optional): File type to search. For example, "txt" (without quotes)
+set parameter_2=Parameter 2 (Optional): File type to search. For example, "*.txt" (without quotes)
 set parameter_2=%parameter_2% would search only txt type files. If left blank, then
 set parameter_2=%parameter_2% all file types will be searched.
 
