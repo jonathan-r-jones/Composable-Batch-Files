@@ -4,18 +4,10 @@
 scalable, convention-based and self-documenting batch files that can execute a single function 
 or be snapped together like legos to create a whole Millennium Falcon script.
 
-## Usage
+## Most Batch Files Are a Mess
 
-Add %COMPOSABLE_BATCH_FILES% as an environment variable or, at least, add it to your path.
 
-Most of the batch files are run using a single parameter, which usually maps to a batch file
-label, which should be unique. Multiple labels can of course be used for a particular code
-block.
-
-For example, running Hello_World.bat in the following way will yield the following output:
-
-![](hw.png)
-
+qq-1
 
 
 

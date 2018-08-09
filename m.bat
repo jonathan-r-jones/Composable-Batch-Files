@@ -3093,7 +3093,7 @@ exit/b
 
 :_
 
-:set_cbf_application
+:set_cbf_application_to_dte
 
 set fp=* Set cbf_application.
 

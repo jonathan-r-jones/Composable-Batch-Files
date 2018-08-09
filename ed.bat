@@ -90,17 +90,20 @@ if %errorlevel% == 0 (
   echo If called.
   set cbf_filename=%~1
 ) else (
-  rem echo Else called with Percent 1: %1.
   call fn %1
-  set cbf_parameter=%cbf_filename%
 )
 
 if "%~2" == "" (
   rem Set statements aren't allowed inside if blocks, so this is the workaround.
-  call m set_cbf_application
+  call m set_cbf_application_to_dte
 ) else (
   call an %2
 )
+
+set cbf_parameter=%cbf_filename%
+
+rem echo.
+rem echo CBF_Parameter: %cbf_parameter%
 
 
 

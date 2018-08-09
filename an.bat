@@ -15,6 +15,14 @@ rem echo %filep%
 
 :_
 
+set fp=* In order to promote freshness, clear the environment variable.
+
+set cbf_application=
+
+
+
+:_
+
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -23,13 +31,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-rem echo Caller 1: an.bat, Percent 1: %~1
-
-call n %~1
-
-rem echo Caller 2: an.bat, Percent 1: %~1
-
-exit/b
+goto main_function
 
 
 
@@ -56,6 +58,19 @@ echo has more clarity of intent.
 
 echo.
 echo Usage: %0 [single parameter]
+
+exit/b
+
+
+:_
+
+:main_function
+
+rem echo Caller 1: an.bat, Percent 1: %~1
+
+call n %~1
+
+rem echo Caller 2: an.bat, Percent 1: %~1
 
 exit/b
 

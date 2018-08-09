@@ -45,10 +45,10 @@ echo.
 echo Usage: %0 [Parameter 1] [Parameter 2]
 
 echo.
-echo Parameter 1 (Optional): Application nickname.
+echo Parameter 1 (Optional): Fully qualified application name, not a nickname.
 
 echo.          
-echo Parameter 2 (Optional): Parameter nickname.
+echo Parameter 2 (Optional): Fully qualified parameter name, not a nickname.
 
 echo.
 echo Notes: If no parameters are passed, the currently set CBF_Application and CBF_Parameter are used.
@@ -73,29 +73,12 @@ exit/b
 
 :_
 
-set fp=* Use special syntax for Microsoft Edge.
-
-:microsoft_edge_special_case
-
-if "%cbf_parameter%" == "" (
-  call start "my title" "%cbf_application%:"
-  exit/b
-)
-
-call start "my title" "%cbf_application%:""%cbf_parameter%"
-
-exit/b
-
-
-
-:_
-
 :main_function
 
 set fp=* Run application - main function.
 rem qq-1
 
-if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_special_case
+if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_edge_case
 
 echo %cbf_application% | find /i "--">nul
 
@@ -115,6 +98,23 @@ if "%cbf_parameter%" == "" (
 echo * Run application in the most common way.
 
 start "my title" "%cbf_application%" "%cbf_parameter%"
+
+exit/b
+
+
+
+:_
+
+set fp=* Use special syntax for Microsoft Edge.
+
+:microsoft_edge_edge_case
+
+if "%cbf_parameter%" == "" (
+  call start "my title" "%cbf_application%:"
+  exit/b
+)
+
+call start "my title" "%cbf_application%:""%cbf_parameter%"
 
 exit/b
 
