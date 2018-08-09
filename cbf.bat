@@ -75,7 +75,6 @@ echo    cs  File contents search.
 echo    cy  Copy file(s).
 echo   cyn  Copies file in the current directory to nickname-specified path.
 echo     d  Easier-to-type and remember version of "dir".
-echo  defd  Delete folder at specified path parameter. Use with caution.
 echo     e  Exit command window.
 echo    ed  Edit a file. Emulated Surf (sf).
 echo   env  Show the state of the CBF envrionment variables.
