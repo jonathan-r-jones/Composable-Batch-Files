@@ -18,7 +18,7 @@ https://www.instructables.com/id/5-Cool-Batch-Files/
 I don't know about you, but trying to figure out gives me a small headache. And it's not even 
 that bad compared many I've seen.
 
-![](19_gotos.png)
+![](19_gotos.PNG)
 
 
 
