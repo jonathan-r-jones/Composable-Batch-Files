@@ -21,7 +21,7 @@ has 19 goto statements! And it's not even that bad compared many I've seen.
 
 
 
-##How to Modularize
+## How to Modularize?
 
 :So let's impose some structure. In most programming languages there's a concept of a 
 function.
@@ -42,7 +42,7 @@ functions, you have spaghetti code.
 
 
 
-##A More Structured and Functionalized Approach
+## A More Structured and Functionalized Approach
 
 Building the batch file around the a set of functions can turn a normally disorganized 
 environment into a structured and organized one.
