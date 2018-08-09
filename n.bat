@@ -4782,4 +4782,20 @@ exit/b
 
 
 
+:_
+
+:wopa
+
+set fp=* WordPad.
+
+rem lu: Aug-9-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

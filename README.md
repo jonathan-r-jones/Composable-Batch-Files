@@ -6,8 +6,19 @@ or be snapped together like legos to create a whole Millennium Falcon script.
 
 ## Most Batch Files Are a Mess
 
+Many batch files I've seen in the wild are pretty messy. They are often quite long and not 
+well structured. I know this partly because I've written hundreds like them. I wrote batch 
+files for years that were a mess. I like to think I'm a little better now.
 
 qq-1
+For Example, I googled "typical batch file" and this was the first hit:
+
+https://www.instructables.com/id/5-Cool-Batch-Files/
+
+I don't know about you, but trying to figure out gives me a small headache. And it's not even 
+that bad compared many I've seen.
+
+![](19_gotos.png)
 
 
 
