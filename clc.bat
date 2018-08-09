@@ -71,9 +71,6 @@ echo.
 echo Last Updated: Jul-13-2018
 
 echo.
-echo Usage: %0 [Parameter 1]
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: First number

@@ -2006,7 +2006,7 @@ set fp=Program files.
 
 rem lu: Apr-24-2018
 
-echo %fp%
+echo * %fp%
 
 set cbf_path=c:\program files
 
@@ -2375,8 +2375,6 @@ exit/b
 
 
 :_
-
-:md
 
 :made
 
@@ -3262,22 +3260,6 @@ rem lu: Jul-8-2018
 echo %fp%
 
 set cbf_path=g:\podcasts
-
-exit/b
-
-
-
-:_
-
-:docs
-
-set fp=* Documents folder.
-
-rem lu: Jul-9-2018
-
-echo %fp%
-
-set cbf_path=%userprofile%\documents
 
 exit/b
 
@@ -4777,6 +4759,24 @@ rem lu: Aug-8-2018
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\Composable Batch File Helper.pptx
+
+exit/b
+
+
+
+:_
+
+:md
+
+:docs
+
+set fp=* Documents folder.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\documents
 
 exit/b
 
