@@ -29,7 +29,7 @@ function.
 At the heart of Composable Batch Files is the enforcing the use of traditional functions
 or code blocks.
 
-:Anatomy of a function. Here are the basic structural elements:
+### Anatomy of a function. Here are the basic structural elements:
 
 [label] = function name (which must be unique)
 
@@ -37,7 +37,7 @@ call :[label] = function call to another function in this batch file.
 
 goto [label] = also a function call, which does not return to the caller
 
-### exit/b - end of function. The lack of exit/b is the most common culprit. Without ending 
+**exit/b** - end of function. The lack of exit/b is the most common culprit. Without ending 
 functions, you have spaghetti code.
 
 
