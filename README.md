@@ -37,7 +37,7 @@ call :[label] = function call to another function in this batch file.
 
 goto [label] = also a function call, which does not return to the caller
 
-###exit/b - end of function. The lack of exit/b is the most common culprit. Without ending 
+### exit/b - end of function. The lack of exit/b is the most common culprit. Without ending 
 functions, you have spaghetti code.
 
 
