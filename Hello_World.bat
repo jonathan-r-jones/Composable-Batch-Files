@@ -12,14 +12,6 @@ set filep=* Hello World batch file that demonstrates the basic structure concept
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set Function_Purpose=* Route callers.
 
 if "%~1" == "" goto help
@@ -28,7 +20,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-goto %1
+call :%1
 
 exit/b
 
@@ -64,16 +56,13 @@ exit/b
 
 
 
-:_ Begin body. (!bb)
-
-
-
 :_
 
 :function_1
 
 set fp=* Function 1. A call to this batch file.
 
+echo.
 echo %fp%
 
 rem echo * Put some code here.
@@ -88,6 +77,7 @@ exit/b
 
 set fp=* Function 2. Another call to this baatch file.
 
+echo.
 echo %fp%
 
 rem echo * Put some code here.
@@ -110,54 +100,35 @@ exit/b
 
 :_
 
-:all_functions
-
-set fp=* All steps.
-
-echo %fp%
-
-call %0 function_1
-
-call %0 function_2
-
-call hello_world_2 function_3
-
-echo.
-echo * This was as easy as 1-2-3.
-
-exit/b
-
-
-
-:_
-
 :some_functions
 
-set fp=* Some steps.
+set fp=* Some functions.
 
-echo %fp%
-
-call %0 function_1
-
-call hello_world_2 function_3
-
-exit/b
-
-
-
-:_
-
-:all_functions_style_2
-
-set fp=* All steps calling style 2. Notice the white space is missing because you 
-
+echo.
 echo %fp%
 
 call :function_1
 
 call hello_world_2 function_3
 
-call :function_3
+exit/b
+
+
+
+:_
+
+:all_functions
+
+set fp=* All functions calling style 2. Notice the white space is missing.
+
+echo.
+echo %fp%
+
+call :function_1
+
+call :function_2
+
+call hello_world_2 function_3
 
 exit/b
 
