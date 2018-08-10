@@ -76,7 +76,6 @@ exit/b
 :main_function
 
 set fp=* Run application - main function.
-rem qq-1
 
 if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_edge_case
 
@@ -90,12 +89,12 @@ if %errorlevel% == 0 (
 )
 
 if "%cbf_parameter%" == "" (
-  echo * No parameter was passed.
+  echo * Run application with no parameter.
   call start "my title" "%cbf_application%"
   exit/b
 )
 
-echo * Run application in the most common way.
+echo * Run application with parameter.
 
 start "my title" "%cbf_application%" "%cbf_parameter%"
 
