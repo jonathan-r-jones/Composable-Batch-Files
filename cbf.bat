@@ -107,7 +107,7 @@ echo    tl  Wrapper around tasklist command.
 echo    td  Transform Directory.
 echo   tdp  Transform Directory to parent folder.
 echo    te  Batch file template used for creating new batch files.
-echo     v  Vetted functions.
+echo     v  Vetted functions (Useful for copying-and-pasting).
 echo     x  Remote double-click equivalent way to run a file.
 
 exit/b

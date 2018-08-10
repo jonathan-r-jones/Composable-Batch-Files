@@ -54,4 +54,22 @@ environment into a structured and organized one.
 
 
 
+## Setup Instructions
+
+Add %COMPOSABLE_BATCH_FILES% as an environment variable or, at least, add it to your path to 
+where you installed the repository.
+
+If you so choose, also add these environment variables for the following:
+
+  %CBF_DEFAULT_BROWSER%
+
+  %CBF_DEFAULT_TEXT_EDITOR%
+
+  %CBF_DEFAULT_REPOSITORY_FOLDER%
+
+Double click the shortcut titled "Composable Batch Files Helper" to open up a blue command 
+prompt.
+
+
+
 qq-1
