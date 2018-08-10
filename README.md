@@ -99,4 +99,18 @@ example:
 
 
 
+## Some Examples
+
+TD.bat: TD stands for transform directory. Navigate the file system like a boss. CBF 
+leverages a few environment variables that allows for user customization. TD uses an 
+environment variable called cbf_path. There is a CBF file called n.bat, which stands for 
+nicknames dictionary, and this is the sole source for all environment variables that CBF uses. 
+If you create a new function with a unique name, you can enable to navigate there. For 
+example, this could be useful if you have place on your hard drive you visit frequently. Here 
+are some examples of td in action.
+
+![](td.png)
+
+
+
 qq-1

@@ -132,24 +132,6 @@ exit/b
 
 :_
 
-:temp
-
-set fp=* Temp.
-
-rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.
-
-rem lu: Jan-23-2018
-
-echo %fp%
-
-set cbf_path=%temp%
-
-exit/b
-
-
-
-:_
-
 :pc
 
 set fp=* Gpodder podcaster.
@@ -1210,6 +1192,7 @@ echo %fp%
 echo.
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
+rem qq-1
 
 exit/b
 
@@ -4766,24 +4749,6 @@ exit/b
 
 :_
 
-:md
-
-:docs
-
-set fp=* Documents folder.
-
-rem lu: Jul-9-2018
-
-echo %fp%
-
-set cbf_path=%userprofile%\documents
-
-exit/b
-
-
-
-:_
-
 :wopa
 
 set fp=* WordPad.
@@ -4825,6 +4790,56 @@ rem lu: Aug-10-2018
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\hello_world.bat
+
+exit/b
+
+
+
+:_
+
+:temp
+
+set fp=* Temp.
+
+rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.
+
+rem lu: Jan-23-2018
+
+echo %fp%
+
+set cbf_path=%temp%
+
+exit/b
+
+
+
+:_
+
+:docs
+
+set fp=* Documents folder.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\documents
+
+exit/b
+
+
+
+:_
+
+:foo
+
+set fp=* Foo takes you to the bar folder. Of course it does.
+
+rem lu: Aug-10-2018
+
+echo %fp%
+
+set cbf_path=C:\Program Files\MSBuild\Microsoft\Windows Workflow Foundation\bar
 
 exit/b
 
