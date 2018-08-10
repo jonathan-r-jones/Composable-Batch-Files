@@ -40,7 +40,7 @@ echo.
 echo Filename stands for: SurF.
 
 echo.
-echo Usage: %0
+echo Usage: %0 [space separated parameter(s)]
 
 echo.
 echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.

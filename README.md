@@ -81,4 +81,22 @@ command prompt will do.
 
 
 
+## Menu
+
+All of the batch files in CBF use a functionalized, modular approach. To see a menu of all the 
+available CBFs type "menu" or "cbf" at the prompt.
+
+![](menu.png)
+
+
+
+## Getting Help
+
+To get help with a particular batch file, at the prompt type "[batch file name]/?". For 
+example:
+
+![](surf.png)
+
+
+
 qq-1
