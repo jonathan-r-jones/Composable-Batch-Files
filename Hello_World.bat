@@ -126,9 +126,9 @@ exit/b
 
 :_
 
-:functions_1_and_2
+:composer_function
 
-set fp=* Functions 1 and 2.
+set fp=* Composing encourages modularity, which is a software best practice.
 
 echo.
 echo %fp%
