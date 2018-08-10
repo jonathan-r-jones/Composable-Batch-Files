@@ -66,6 +66,12 @@ If you so choose, also add these environment variables for the following:
 
 * %CBF_DEFAULT_REPOSITORY_FOLDER%
 
+For example, here's an example of some CBF envrionment variables:
+
+![](env_sample.png)
+
+
+
 Double click the shortcut titled "Composable Batch Files Helper" to open up a blue command 
 prompt.
 
