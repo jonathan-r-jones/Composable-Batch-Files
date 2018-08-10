@@ -126,6 +126,23 @@ exit/b
 
 :_
 
+:functions_1_and_2
+
+set fp=* Functions 1 and 2.
+
+echo.
+echo %fp%
+
+call :function_1
+
+call :function_2
+
+exit/b
+
+
+
+:_
+
 :function_3
 
 set fp=* Function 3. A call to another batch file.

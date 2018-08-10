@@ -100,6 +100,12 @@ if "%~2" == "" (
   call an %2
 )
 
+if "%cbf_filename%" == "" (
+  echo.
+  echo * Error: CBF_Filename equals nothing.
+  exit/b
+)
+
 set cbf_parameter=%cbf_filename%
 
 rem echo.

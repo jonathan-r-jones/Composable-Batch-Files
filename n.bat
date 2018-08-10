@@ -4568,7 +4568,7 @@ exit/b
 
 ::_
 
-:hw
+:hwx
 
 set fp=Hello World.
 
@@ -4809,6 +4809,22 @@ rem lu: Aug-10-2018
 echo %fp%
 
 set cbf_path=c:\
+
+exit/b
+
+
+
+:_
+
+:hw
+
+set fp=* Hello world batch file.
+
+rem lu: Aug-10-2018
+
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\hello_world.bat
 
 exit/b
 
