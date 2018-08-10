@@ -60,11 +60,11 @@ where you installed the repository.
 
 If you so choose, also add these environment variables for the following:
 
-  %CBF_DEFAULT_BROWSER%
+* %CBF_DEFAULT_BROWSER%
 
-  %CBF_DEFAULT_TEXT_EDITOR%
+* %CBF_DEFAULT_TEXT_EDITOR%
 
-  %CBF_DEFAULT_REPOSITORY_FOLDER%
+* %CBF_DEFAULT_REPOSITORY_FOLDER%
 
 Double click the shortcut titled "Composable Batch Files Helper" to open up a blue command 
 prompt.
