@@ -66,7 +66,7 @@ If you so choose, also add these environment variables for the following:
 
 * %CBF_DEFAULT_REPOSITORY_FOLDER%
 
-For example, here's an example of some CBF envrionment variables:
+For example, here's an example of some CBF environment variables:
 
 ![](env_sample.png)
 
