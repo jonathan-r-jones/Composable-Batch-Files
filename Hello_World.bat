@@ -20,7 +20,9 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-goto function_2
+call :%1
+
+exit/b
 
 
 
