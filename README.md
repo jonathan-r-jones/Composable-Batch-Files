@@ -70,10 +70,8 @@ For example, here's an example of some CBF environment variables:
 
 ![](env_sample.png)
 
-
-
-Double click the shortcut titled "Composable Batch Files Helper" to open up a blue command 
-prompt.
+After you have cloned or downloaded the CBF repository, double click the shortcut titled 
+"Composable Batch Files Helper" to open up a blue command prompt.
 
 
 
