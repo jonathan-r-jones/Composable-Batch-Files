@@ -6,9 +6,9 @@ Falcon script.
 
 ## Most Batch Files Are A Mess
 
-Many batch files I've seen in the wild are pretty messy. They are often quite long and not 
+Most batch files I've seen in the wild are pretty messy. They are often quite long and not 
 well structured. I know this partly because I've written hundreds of them. For years I wrote 
-batch files that were a big balls of mud. I like to think I'm a little better now.
+batch files that were big balls of mud. I like to think I'm a little better now.
 
 For Example, I googled "typical batch file" and this was the first hit:
 
@@ -16,8 +16,9 @@ https://www.instructables.com/id/5-Cool-Batch-Files/
 
 ![](19_gotos.PNG)
 
-I don't know about you, but trying to figure out gives me a small headache. This small file 
-has 19 goto statements! And it's not even that bad compared many I've seen.
+I don't know about you, but trying to figure out the control flow of this file gives me a 
+headache. This small file has 19 goto statements! And it's not even that bad compared many 
+I've seen.
 
 
 
@@ -29,7 +30,9 @@ function.
 At the heart of Composable Batch Files is the enforcing the use of traditional functions
 or code blocks.
 
-#### Anatomy of a function. Here are the basic structural elements:
+#### Anatomy of a function.
+
+Here are the basic structural elements:
 
 **_[label]_** = function name (which must be unique)
 
@@ -52,4 +55,3 @@ environment into a structured and organized one.
 
 
 qq-1
-
