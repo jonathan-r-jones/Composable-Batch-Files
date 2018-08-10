@@ -16,9 +16,8 @@ https://www.instructables.com/id/5-Cool-Batch-Files/
 
 ![](19_gotos.PNG)
 
-I don't know about you, but trying to figure out the control flow of this file gives me a 
-headache. This small file has 19 goto statements! And it's not even that bad compared many 
-I've seen.
+I don't know about you, but trying to figure out this control flow gives me a headache. This 
+small file has 19 goto statements! And it's not even that bad compared to many I've seen.
 
 
 
@@ -27,8 +26,8 @@ I've seen.
 So let's impose some structure. In most programming languages there's a concept of a 
 function.
 
-At the heart of Composable Batch Files is the enforcing the use of traditional functions
-or code blocks.
+At the heart of Composable Batch Files is enforcing the use of traditional functions or code 
+blocks.
 
 #### Anatomy of a function.
 
