@@ -49,7 +49,11 @@ functions, you have spaghetti code.
 Building the batch file around the a set of functions can turn a normally disorganized 
 environment into a structured and organized one.
 
-![](functionalized.png)
+
+
+## Hello World - Functionalized
+
+![](hw_results.png)
 
 
 
@@ -76,9 +80,5 @@ variables set, there is no need to use the blue command prompt, unless you want 
 command prompt will do.
 
 
-
-## Hello World
-
-![](hw_results.png)
 
 qq-1
