@@ -43,6 +43,8 @@ if "%~1" == "help" goto help
 
 set filep=* Clear screen and reset color.
 
+call td o
+
 cls
 color
 

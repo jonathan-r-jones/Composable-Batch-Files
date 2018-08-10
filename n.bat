@@ -4798,4 +4798,20 @@ exit/b
 
 
 
+:_
+
+:o
+
+set fp=* Root
+
+rem lu: Aug-10-2018
+
+echo %fp%
+
+set cbf_path=c:\
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
