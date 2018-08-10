@@ -1432,6 +1432,8 @@ if "%cbf_default_repository_folder%" == "" call m set_default_repository_folder 
 
 if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
 
+if "%computername%" == "ASUS" call m set_default_text_editor no
+
 cls
 
 exit/b
