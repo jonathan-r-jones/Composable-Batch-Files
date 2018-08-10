@@ -38,7 +38,7 @@ Here are the basic structural elements:
 
 **_call :[label]_** = function call to another function in this batch file.
 
-**_goto [label]_** = also a function call, which does not return to the caller
+**_goto [label]_** = also a function call, which does not return to the caller.
 
 **_exit/b_** - end of function. The lack of exit/b is the most common culprit. Without ending 
 functions, you have spaghetti code.
