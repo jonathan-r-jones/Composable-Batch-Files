@@ -280,9 +280,9 @@ rem lu: Jul-8-2018
 
 echo %fp%
 
-call td cj
+call td clipjam_podcasts
 
-call n sa
+call n staging_area
 
 echo.
 move "%cbf_path%\*.*"

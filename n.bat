@@ -1192,7 +1192,6 @@ echo %fp%
 echo.
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
-rem qq-1
 
 exit/b
 
@@ -3220,6 +3219,8 @@ exit/b
 
 :sa
 
+:staging_area
+
 set fp=* Staging area.
 
 rem lu: Jul-8-2018
@@ -3227,22 +3228,6 @@ rem lu: Jul-8-2018
 echo %fp%
 
 set cbf_path=%my documents%\mp3 content staging area\files ready For Transfer
-
-exit/b
-
-
-
-:_
-
-:cj
-
-set fp=* Clipjam.
-
-rem lu: Jul-8-2018
-
-echo %fp%
-
-set cbf_path=g:\podcasts
 
 exit/b
 
@@ -3479,22 +3464,6 @@ rem lu: Jul-15-2018
 echo %fp%
 
 set cbf_path=g:\audiobooks
-
-exit/b
-
-
-
-:_
-
-:cj_pc
-
-set fp=* ClipJam podcasts folder.
-
-rem lu: Jul-15-2018
-
-echo %fp%
-
-set cbf_path=g:\podcasts
 
 exit/b
 
@@ -4840,6 +4809,26 @@ rem lu: Aug-10-2018
 echo %fp%
 
 set cbf_path=C:\Program Files\MSBuild\Microsoft\Windows Workflow Foundation\bar
+
+exit/b
+
+
+
+:_
+
+:cj
+
+:cj_pc
+
+:clipjam_podcasts
+
+set fp=* ClipJam podcasts folder.
+
+rem lu: Jul-15-2018
+
+echo %fp%
+
+set cbf_path=g:\podcasts
 
 exit/b
 
