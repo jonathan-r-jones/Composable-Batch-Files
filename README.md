@@ -99,7 +99,7 @@ example:
 
 
 
-##Leveraging Environment Variables
+## Leveraging Environment Variables
 
 Besides functionalization, another feature CBF promotes is leveraging environment variables. 
 This is achieved by **_mapping_** nicknames to environment variables. There is a CBF file 
@@ -110,6 +110,7 @@ this mapping, typing "td docs" would navigate to the documents folder.
 
 ![](td.png)
 
+
 A couple more examples.
 
 Since of.bat (Open Folder) also leverages the "cbf_path" environment variable, typing "of 
@@ -117,15 +118,18 @@ docs" would open the documents folder in Windows Explorer.
 
 ![](of.png)
 
+
 Sf.bat (Surf) leverages the "cbf_url" environment variable. So typing "sf cnn" would surf to 
 the cnn website.
 
 ![](sf.png)
 
+
 No.bat (Notepad) leverages the "cbf_filename" environment variable. So typing "no gett" would 
 open the file with the nickname, "gett", which is the Gettysburg Address.
 
 ![](no.png)
+
 
 qq-1
 
