@@ -4,7 +4,7 @@
 execute a single function or be snapped together like legos to create a whole Millennium 
 Falcon script.
 
-## Most Batch Files Are A Mess
+## Part I of III - The Problem? Most Batch Files Are A Mess
 
 Most batch files I've seen in the wild are pretty messy. They are often quite long and not 
 well structured. I know this partly because I've written hundreds of them. For years I wrote 
@@ -21,7 +21,7 @@ small file has 19 goto statements! And it's not even that bad compared to many I
 
 
 
-## How to Modularize?
+## Part II of III - Solution is to How to Modularize? Functionalization.
 
 So let's impose some structure. In most programming languages there's a concept of a 
 function.
@@ -99,7 +99,7 @@ example:
 
 
 
-## Customize CBF by Leveraging Environment Variables
+## Part III of III - Customize CBF by Leveraging Environment Variables
 
 Besides functionalization, another feature CBF promotes is leveraging environment variables in 
 order to personalize your CBF user experience. This is achieved by **_mapping_** 
@@ -144,4 +144,3 @@ folders, websites and filenames you often use to be very easily accessible.
 ### Now run them all together with "m compose".
 
 ![](compose.png)
-
