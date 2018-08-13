@@ -141,7 +141,7 @@ folders, websites and filenames you often use to be very easily accessible.
 
 
 
-#### Now run them all together with "m compose".
+### Now run them all together with "m compose".
 
 ![](compose.png)
 
