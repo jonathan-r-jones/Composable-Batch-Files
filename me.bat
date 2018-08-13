@@ -50,7 +50,7 @@ Multi-Edit should open with the file filename with spaces.txt.
 
 :main_function
 
-echo %filename_stands_for%
+rem echo %filename_stands_for%
 
 call n %0
 if "%~1" == "" (

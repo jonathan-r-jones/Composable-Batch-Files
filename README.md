@@ -99,7 +99,7 @@ example:
 
 
 
-## Leveraging Environment Variables to Personalize CBF
+## Customize CBF by Leveraging Environment Variables
 
 Besides functionalization, another feature CBF promotes is leveraging environment variables in 
 order to personalize your CBF user experience. This is achieved by **_mapping_** 
@@ -113,7 +113,7 @@ makes use of this mapping, typing "td docs" would navigate to the documents fold
 
 
 
-#### A few more examples of leveraging environment variables.
+#### A few more customization examples.
 
 Since of.bat (Open Folder) also leverages the "cbf_path" environment variable, typing "of 
 docs" would open the documents folder in Windows Explorer.
