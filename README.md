@@ -112,7 +112,7 @@ mapping, typing "td docs" would navigate to the documents folder.
 
 
 
-A couple more examples.
+#### A couple more examples.
 
 Since of.bat (Open Folder) also leverages the "cbf_path" environment variable, typing "of 
 docs" would open the documents folder in Windows Explorer.
