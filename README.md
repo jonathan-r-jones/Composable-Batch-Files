@@ -95,7 +95,7 @@ available CBFs type "menu" or "cbf" at the prompt.
 To get help with a particular batch file, at the prompt type "[batch file name]/?". For 
 example:
 
-![](surf.png)
+![](help.png)
 
 
 

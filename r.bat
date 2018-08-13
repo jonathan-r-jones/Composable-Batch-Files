@@ -89,7 +89,7 @@ if %errorlevel% == 0 (
 )
 
 if "%cbf_parameter%" == "" (
-  echo * Run application with no parameter.
+  rem echo * Run application with no parameter.
   call start "my title" "%cbf_application%"
   exit/b
 )
