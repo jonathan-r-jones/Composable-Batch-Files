@@ -20,9 +20,9 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-call :%1
+goto %1
 
-exit/b
+rem Could've also used call :%1 followed by exit/b.
 
 
 

@@ -3411,4 +3411,29 @@ exit/b
 
 
 
+:_
+
+:compose
+
+set fp=* Tech Talk DC composer function demos aggregation of calls that can be run separately.
+
+rem lu: Aug-13-2018
+
+echo.
+echo %fp%
+
+call c
+
+call td foo
+
+call of foo
+
+call sf ttdc
+
+call no gett
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
