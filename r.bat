@@ -4,7 +4,7 @@
 
 
 
-
+:_
 
 set filep=* Run application.
 
@@ -94,7 +94,7 @@ if "%cbf_parameter%" == "" (
   exit/b
 )
 
-echo * Run application with parameter.
+rem echo * Run application with parameter.
 
 start "my title" "%cbf_application%" "%cbf_parameter%"
 

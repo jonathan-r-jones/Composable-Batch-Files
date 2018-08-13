@@ -117,13 +117,17 @@ docs" would open the documents folder in Windows Explorer.
 
 ![](of.png)
 
-Sf.bat (Surf) leverages the "cbf_url" environment variable, typing "sf cnn" would surf to the 
-cnn website.
+Sf.bat (Surf) leverages the "cbf_url" environment variable. So typing "sf cnn" would surf to 
+the cnn website.
+
+![](sf.png)
+
+No.bat (Notepad) leverages the "cbf_filename" environment variable. So typing "no gett" would 
+open the file with the nickname, "gett", which is the Gettysburg Address.
+
+![](no.png)
 
 qq-1
-
-
-![](of.png)
 
 
 

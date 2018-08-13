@@ -22,14 +22,6 @@ if "%~1" == "help" m editor_help
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Go to main function.
 
 goto main_function

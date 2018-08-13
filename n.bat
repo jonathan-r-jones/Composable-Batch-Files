@@ -300,6 +300,7 @@ echo %fp%
 echo.
 
 set cbf_filename=%userprofile%\.m2\settings.xml
+rem qq-1
 
 exit/b
 
@@ -4829,6 +4830,22 @@ rem lu: Jan-24-2018
 echo %fp%
 
 set cbf_url=http://www.cnn.com
+
+exit/b
+
+
+
+:_
+
+:gett
+
+set fp=* Gettysburg Address.
+
+rem lu: Aug-13-2018
+
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\Gettysburg_Address.txt
 
 exit/b
 
