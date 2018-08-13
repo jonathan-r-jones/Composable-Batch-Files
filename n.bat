@@ -4821,22 +4821,6 @@ exit/b
 
 :_
 
-:cnn
-
-set fp=* Cnn.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_url=http://www.cnn.com
-
-exit/b
-
-
-
-:_
-
 :gett
 
 set fp=* Gettysburg Address.
@@ -4846,6 +4830,22 @@ rem lu: Aug-13-2018
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\Gettysburg_Address.txt
+
+exit/b
+
+
+
+:_
+
+:cnn
+
+set fp=* Cnn.
+
+rem lu: Jan-24-2018
+
+echo %fp%
+
+set cbf_url=http://www.cnn.com
 
 exit/b
 

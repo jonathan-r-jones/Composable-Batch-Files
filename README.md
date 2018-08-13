@@ -103,10 +103,10 @@ example:
 
 Besides functionalization, another feature CBF promotes is leveraging environment variables. 
 This is achieved by **_mapping_** nicknames to environment variables. There is a CBF file 
-named n.bat whose sole purpose is to do this mapping. For example, in n.bat (Nicknames 
-Dictionary), you could add a function with the name/nickname of "docs" which maps Documents 
-folder to cbf_path. Then because another batch file td.bat (Transform Directory) makes use of 
-this mapping, typing "td docs" would navigate to the documents folder.
+named n.bat (Nicknames Dictionary) whose sole purpose is to do this mapping. For example, in 
+n.bat, you could add a function with the name/nickname of "docs" which maps Documents folder 
+to cbf_path. Then because another batch file td.bat (Transform Directory) makes use of this 
+mapping, typing "td docs" would navigate to the documents folder.
 
 ![](td.png)
 

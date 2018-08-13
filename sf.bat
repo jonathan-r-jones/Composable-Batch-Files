@@ -112,7 +112,7 @@ if not "%~2" == "" goto override_default_browser
 
 set cbf_application=%cbf_default_browser%
 
-goto surf
+goto main_function
 
 
 
@@ -130,9 +130,12 @@ call an %2
 
 :_
 
-:surf
+:main_function
 
-set fp=* Surf.
+set fp=* Surf the internet.
+
+echo.
+echo %fp%
 
 rem lu: Jan-31-2018
 
