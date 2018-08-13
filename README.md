@@ -138,3 +138,10 @@ open the file with the nickname, "gett", which is the Gettysburg Address.
 
 So by adding new nickname functions to n.bat, you could customize your environment to make 
 folders, websites and filenames you often use to be very easily accessible.
+
+
+
+#### Now run them all together with "m compose".
+
+![](compose.png)
+
