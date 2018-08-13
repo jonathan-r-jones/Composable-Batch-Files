@@ -4670,22 +4670,6 @@ exit/b
 
 :_
 
-:cnn
-
-set fp=* Cnn.
-
-rem lu: Jan-24-2018
-
-echo %fp%
-
-set cbf_url=http://www.cnn.com
-
-exit/b
-
-
-
-:_
-
 :png
 
 set fp=* CBF png file.
@@ -4766,6 +4750,42 @@ exit/b
 
 :_
 
+:foo
+
+set fp=* Foo takes you to the bar folder. Of course it does.
+
+rem lu: Aug-10-2018
+
+echo %fp%
+
+set cbf_path=C:\Program Files\MSBuild\Microsoft\Windows Workflow Foundation\bar
+
+exit/b
+
+
+
+:_
+
+:cj
+
+:cj_pc
+
+:clipjam_podcasts
+
+set fp=* ClipJam podcasts folder.
+
+rem lu: Jul-15-2018
+
+echo %fp%
+
+set cbf_path=g:\podcasts
+
+exit/b
+
+
+
+:_
+
 :temp
 
 set fp=* Temp.
@@ -4800,35 +4820,15 @@ exit/b
 
 :_
 
-:foo
+:cnn
 
-set fp=* Foo takes you to the bar folder. Of course it does.
+set fp=* Cnn.
 
-rem lu: Aug-10-2018
-
-echo %fp%
-
-set cbf_path=C:\Program Files\MSBuild\Microsoft\Windows Workflow Foundation\bar
-
-exit/b
-
-
-
-:_
-
-:cj
-
-:cj_pc
-
-:clipjam_podcasts
-
-set fp=* ClipJam podcasts folder.
-
-rem lu: Jul-15-2018
+rem lu: Jan-24-2018
 
 echo %fp%
 
-set cbf_path=g:\podcasts
+set cbf_url=http://www.cnn.com
 
 exit/b
 

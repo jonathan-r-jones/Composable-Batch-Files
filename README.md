@@ -99,24 +99,32 @@ example:
 
 
 
-## Personalization - Nicknames
+##Leveraging Environment Variables
 
-CBF leverages a few environment variables that allows for user customization. There is a CBF 
-file called n.bat, which stands for nicknames dictionary, and this is the sole source for all 
-environment variables that CBF uses. If you create a new function with a unique name, you can 
-enable to can navigate there. For example, this could be useful if you have place on your hard 
-drive you visit frequently. Here are some examples of td in action.
-
-
-## Some Examples
-
-TD.bat: TD stands for transform directory. Navigate the file system like a boss. 
-
-TD uses an 
-environment variable called cbf_path. 
+Besides functionalization, another feature CBF promotes is leveraging environment variables. 
+This is achieved by **_mapping_** nicknames to environment variables. There is a CBF file 
+named n.bat whose sole purpose is to do this mapping. For example, in n.bat (Nicknames 
+Dictionary), you could add a function with the name/nickname of "docs" which maps Documents 
+folder to cbf_path. Then because another batch file td.bat (Transform Directory) makes use of 
+this mapping, typing "td docs" would navigate to the documents folder.
 
 ![](td.png)
 
+A couple more examples.
 
+Since of.bat (Open Folder) also leverages the "cbf_path" environment variable, typing "of 
+docs" would open the documents folder in Windows Explorer.
+
+![](of.png)
+
+Sf.bat (Surf) leverages the "cbf_url" environment variable, typing "sf cnn" would surf to the 
+cnn website.
 
 qq-1
+
+
+![](of.png)
+
+
+
+

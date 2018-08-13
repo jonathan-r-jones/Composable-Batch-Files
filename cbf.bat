@@ -97,6 +97,7 @@ echo     p  Add, commit and push Git changes. Has TD parameter.
 echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
 echo     s  Open a Visual Studio solution. Has TD parameter.
+echo    sx  Use Sublime to edit a batch file in the CBF folder.
 echo    sf  Surf to websites.
 echo    sm  Run Sublime.
 echo   sql  SQL/Database, including LDAP, related tasks.
