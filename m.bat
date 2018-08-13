@@ -2838,6 +2838,7 @@ exit/b
 
 set fp=* Update Java timestamp.
 
+echo.
 echo %fp%
 
 set classpath=%COMPOSABLE_BATCH_FILES%
