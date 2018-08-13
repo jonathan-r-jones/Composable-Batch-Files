@@ -133,3 +133,8 @@ No.bat (Notepad) leverages the "cbf_filename" environment variable. So typing "n
 open the file with the nickname, "gett", which is the Gettysburg Address.
 
 ![](no.png)
+
+
+
+So by adding new nickname functions to n.bat, you could customize your environment to make 
+folders, websites and filenames you often use to be very easily accessible.
