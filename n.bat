@@ -300,7 +300,6 @@ echo %fp%
 echo.
 
 set cbf_filename=%userprofile%\.m2\settings.xml
-rem qq-1
 
 exit/b
 
@@ -4712,6 +4711,22 @@ rem lu: Aug-9-2018
 echo %fp%
 
 set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
+
+exit/b
+
+
+
+:_
+
+:nx
+
+set fp=* VP folder.
+
+rem lu: Aug-14-2018
+
+echo %fp%
+
+set cbf_path=d:\dropbox\vetted pictures\new and exciting
 
 exit/b
 

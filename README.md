@@ -79,6 +79,10 @@ After you have cloned or downloaded the CBF repository, double click the shortcu
 variables set, there is no need to use the blue command prompt, unless you want to. Any 
 command prompt will do.
 
+![](cbf_link.png)
+
+![](cbf_cmd.png)
+
 
 
 ## Menu
