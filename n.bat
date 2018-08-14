@@ -4662,7 +4662,7 @@ rem lu: Aug-8-2018
 
 echo %fp%
 
-set cbf_url=https://www.meetup.com/TechTalkDC/
+set cbf_url=https://www.meetup.com/techtalkdc/
 
 exit/b
 
