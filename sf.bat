@@ -66,7 +66,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* Set URL.
 
-call n %1
+call un %1
 
 if "%cbf_url%" == "" (
   echo.
