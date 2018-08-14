@@ -2991,7 +2991,6 @@ exit/b
 :double_click
 
 set fp=* Simulate a remote double click.
-rem qq-1
 
 rem lu: Feb-1-2018
 
