@@ -122,7 +122,7 @@ folders, websites and filenames you often use to be very easily accessible.
 
 
 
-## Part IV - Setup Instructions
+## Part IV - Repository Setup Instructions
 
 Add %COMPOSABLE_BATCH_FILES% as an environment variable or, at least, add it to your path to 
 where you installed the repository.
