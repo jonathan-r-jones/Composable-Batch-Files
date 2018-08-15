@@ -4,7 +4,21 @@
 execute a single function or be snapped together like legos to create a whole Millennium 
 Falcon script.
 
-## Part I of III - The Problem? Most Batch Files Are A Mess
+
+
+## Table of Contents
+
+Part I - The Problem: Many batch files have spaghetti code.
+
+Part II - The Answer in my opinion is functionalization.
+
+Part III - How customization can increase your productivity.
+
+Part IV - Setting Up the Repository.
+
+
+
+## Part I - The Problem? Most Batch Files Are A Mess
 
 Most batch files I've seen in the wild are pretty messy. They are often quite long and not 
 well structured. I know this partly because I've written hundreds of them. For years I wrote 
@@ -21,7 +35,7 @@ small file has 19 goto statements! And it's not even that bad compared to many I
 
 
 
-## Part II of III - Solution is to How to Modularize? Functionalization.
+## Part II - Solution is to How to Modularize? Functionalization.
 
 So let's impose some structure. In most programming languages there's a concept of a 
 function.
@@ -57,53 +71,7 @@ environment into a structured and organized one.
 
 
 
-## Setup Instructions
-
-Add %COMPOSABLE_BATCH_FILES% as an environment variable or, at least, add it to your path to 
-where you installed the repository.
-
-If you so choose, also add these environment variables for the following:
-
-* %CBF_DEFAULT_BROWSER%
-
-* %CBF_DEFAULT_TEXT_EDITOR%
-
-* %CBF_DEFAULT_REPOSITORY_FOLDER%
-
-For example, here's an example of some CBF environment variables:
-
-![](env_sample.png)
-
-After you have cloned or downloaded the CBF repository, double click the shortcut titled 
-"Composable Batch Files Helper" to open up a blue command prompt. If you have the environment 
-variables set, there is no need to use the blue command prompt, unless you want to. Any 
-command prompt will do.
-
-![](cbf_link.png)
-
-![](cbf_cmd.png)
-
-
-
-## Menu
-
-All of the batch files in CBF use a functionalized, modular approach. To see a menu of all the 
-available CBFs type "menu" or "cbf" at the prompt.
-
-![](menu.png)
-
-
-
-## Getting Help
-
-To get help with a particular batch file, at the prompt type "[batch file name]/?". For 
-example:
-
-![](help.png)
-
-
-
-## Part III of III - Customize CBF by Leveraging Environment Variables
+## Part III - Customize CBF by Leveraging Environment Variables
 
 Besides functionalization, another feature CBF promotes is leveraging environment variables in 
 order to personalize your CBF user experience. This is achieved by **_mapping_** 
@@ -151,3 +119,53 @@ folders, websites and filenames you often use to be very easily accessible.
 ### Now run them all together with "m compose".
 
 ![](compose.png)
+
+
+
+## Part IV - Setup Instructions
+
+Add %COMPOSABLE_BATCH_FILES% as an environment variable or, at least, add it to your path to 
+where you installed the repository.
+
+If you so choose, also add these environment variables for the following:
+
+* %CBF_DEFAULT_BROWSER%
+
+* %CBF_DEFAULT_TEXT_EDITOR%
+
+* %CBF_DEFAULT_REPOSITORY_FOLDER%
+
+For example, here's an example of some CBF environment variables:
+
+![](env_sample.png)
+
+After you have cloned or downloaded the CBF repository, double click the shortcut titled 
+"Composable Batch Files Helper" to open up a blue command prompt. If you have the environment 
+variables set, there is no need to use the blue command prompt, unless you want to. Any 
+command prompt will do.
+
+![](cbf_link.png)
+
+![](cbf_cmd.png)
+
+
+
+## Menu
+
+All of the batch files in CBF use a functionalized, modular approach. To see a menu of all the 
+available CBFs type "menu" or "cbf" at the prompt.
+
+![](menu.png)
+
+
+
+## Getting Help
+
+To get help with a particular batch file, at the prompt type "[batch file name]/?". For 
+example:
+
+![](help.png)
+
+
+There is also a PowerPoint presentation for this reposotory located in this repository at 
+CBF.pptx.
