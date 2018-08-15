@@ -4694,7 +4694,7 @@ rem lu: Aug-8-2018
 
 echo %fp%
 
-set cbf_filename=%composable_batch_files%\Composable Batch File Helper.pptx
+set cbf_filename=%composable_batch_files%\CBF.pptx
 
 exit/b
 
