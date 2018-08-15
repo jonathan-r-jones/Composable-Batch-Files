@@ -53,6 +53,8 @@ Here are the basic structural elements:
 
 **_goto [label]_** = also a function call, which does not return to the caller.
 
+**_call [batch2] [label]_** = call to another batch file function.
+
 **_exit/b_** - end of function. The lack of exit/b is the most common culprit. Without ending 
 functions, you have spaghetti code.
 
@@ -167,5 +169,5 @@ example:
 ![](help.png)
 
 
-There is also a PowerPoint presentation for this reposotory located in this repository at 
-CBF.pptx.
+There is also a PowerPoint presentation, which similar too this Readme file, for this 
+reposotory located in this repository at CBF.pptx.
