@@ -4866,4 +4866,22 @@ exit/b
 
 
 
+:_
+
+:covi
+
+set fp=* Conference Vision.
+
+rem lu: Aug-15-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\ConferenceVision
+
+set cbf_url=https://github.com/Microsoft/ConferenceVision.git
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

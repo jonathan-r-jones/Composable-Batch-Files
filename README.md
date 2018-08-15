@@ -170,4 +170,4 @@ example:
 
 
 There is also a PowerPoint presentation, which similar too this Readme file, for this 
-reposotory located in this repository at CBF.pptx.
+repository located in this repository at CBF.pptx.
