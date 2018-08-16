@@ -7081,6 +7081,46 @@ exit/b
 
 :_
 
+:
+
+set fp=* Debug the issue where running application is causing an error.
+
+rem lu: Aug-6-2018
+
+echo %fp%
+
+call n me
+
+start "my title" "%cbf_application%" "%cbf_parameter%"
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Test Choice keyword.
+
+rem lu: Aug-16-2018
+
+echo %fp%
+
+set random=
+echo Input your choice
+set input=
+set /p input= Choice:
+echo You chose: %input%
+echo Your password is %random%
+
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -7093,16 +7133,14 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Debug the issue where running application is causing an error.
+set fp=* Test random.
 
-rem lu: Aug-6-2018
+rem lu: Aug-16-2018
 
 echo %fp%
 
-call n me
-
-start "my title" "%cbf_application%" "%cbf_parameter%"
-rem       qq-1
+set random=
+echo Random: %random%
 
 exit/b
 
