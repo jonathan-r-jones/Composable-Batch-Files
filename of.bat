@@ -66,11 +66,14 @@ set fp=* Open folder in Windows Explorer.
 
 rem fcd: May-9-2017
 
+set cbf_path=
+
 call td %1 %2
 
-rem echo Errorlevel: %errorlevel%
+rem echo Errorlevel from OF: %errorlevel%
 
 if "%errorlevel%"=="0" explorer %cd%
+rem qq-1
 
 exit/b
 

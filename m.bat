@@ -3436,4 +3436,31 @@ exit/b
 
 
 
+:_
+
+:bufr
+
+:frbu
+
+set fp=* Perform a fresnel dated backup.
+
+rem lu: Aug-16-2018
+
+echo.
+echo %fp%
+
+Get_JDate>%tmp%\JDate.txt
+set /p JDate=<%tmp%\JDate.txt
+set Current_JDate=Fresnel %JDate%
+
+call td bufr
+
+if /i not exist "%Current_JDate%" md "%Current_JDate%"
+
+cd /d %Current_JDate%
+
+call cn fr c
+
+
+
 :_ (!rfsp) (mov-6)

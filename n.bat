@@ -413,7 +413,7 @@ exit/b
 
 :mac
 
-set fp=Mobile log.
+set fp=* Mobile log.
 
 rem lu: Dec-4-2017
 
@@ -429,7 +429,7 @@ exit/b
 
 :aj
 
-set fp=App.json.
+set fp=* App.json.
 
 rem lu: Dec-4-2017
 
@@ -4879,6 +4879,40 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\ConferenceVision
 
 set cbf_url=https://github.com/Microsoft/ConferenceVision.git
+
+exit/b
+
+
+
+:_
+
+:bufr
+
+set fp=* Fresnel dated backup.
+
+rem lu: Aug-16-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\Fresnel Dated Backups
+
+exit/b
+
+
+
+:_
+
+:airwatch
+
+set fp=* VMware AirWatch SDK.
+
+rem lu: Aug-16-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\Xamarin-AWSDK
+
+set cbf_url=https://github.com/vmwareairwatchsdk/Xamarin-AWSDK.git
 
 exit/b
 

@@ -68,7 +68,7 @@ if not "%~1" == "" call n %1 %2
 if "%cbf_path%" == "" (
   echo.
   echo * Nickname Error: There is no cbf_path defined for '%~1'. 
-  exit/b
+  exit/b 1
 )
 
 if "%~2" == "p" goto find_parent_folder

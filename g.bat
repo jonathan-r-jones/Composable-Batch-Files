@@ -1798,6 +1798,7 @@ rem 5. Execute.
 cd /d %new_folder_path%
 
 git clone %origin_url% --branch %branch_name% .\%folder_name%
+rem qq-1
 
 exit/b
 
@@ -2207,39 +2208,6 @@ exit/b
 
 ::_
 
-:rv
-
-:rv_lo
-
-:rv_local
-
-set fp=* Revert local.
-
-rem lu: Aug-7-2018
-
-rem If you don't care about any local changes and just want a copy from the repository.
-
-rem Revert all changes from this folder. Revert all local changes.
-
-rem blow away local changes, specific folder: skw
-
-rem This didn't seem to work on Jan-31-2017.
-
-rem Function Creation Date: Jan-30-2017
-
-echo %fp%
-echo.
-
-git reset --hard HEAD
-git clean -f
-git pull
-
-exit/b
-
-
-
-::_
-
 :step_back_1
 
 set fp=* Step back 1 version. You feel like your last check-in broke the build.
@@ -2283,6 +2251,39 @@ echo %fp%
 
 echo.
 git reset --hard "HEAD~1"
+
+exit/b
+
+
+
+::_
+
+:rv
+
+:rv_lo
+
+:rv_local
+
+set fp=* Revert local.
+
+rem lu: Aug-7-2018
+
+rem If you don't care about any local changes and just want a copy from the repository.
+
+rem Revert all changes from this folder. Revert all local changes.
+
+rem blow away local changes, specific folder: skw
+
+rem This didn't seem to work on Jan-31-2017.
+
+rem Function Creation Date: Jan-30-2017
+
+echo %fp%
+echo.
+
+git reset --hard HEAD
+git clean -f
+git pull
 
 exit/b
 
