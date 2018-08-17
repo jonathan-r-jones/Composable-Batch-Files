@@ -2146,17 +2146,20 @@ exit/b
 
 ::_
 
-:rut
+:reset_head_2
 
-:clean
+set fp=* Reset head by 2 id number versions. This enabled not to have to merge.
 
-set fp=* Remove untracked folders and files. Use with caution.
+rem lu: Aug-7-2018
 
-rem lu: May-30-2018
+rem Step back 2 versions.
+
+rem reverse 2: skw
 
 echo %fp%
 
-git clean -d -f
+echo.
+git reset --hard "HEAD~2"
 
 exit/b
 
@@ -2187,30 +2190,11 @@ exit/b
 
 ::_
 
-:reset_head_2
+:roll_back_repo_1
 
-set fp=* Reset head by 2 id number versions. This enabled not to have to merge.
+set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
 
-rem lu: Aug-7-2018
-
-rem Step back 2 versions.
-
-rem reverse 2: skw
-
-echo %fp%
-
-echo.
-git reset --hard "HEAD~2"
-
-exit/b
-
-
-
-::_
-
-:step_back_1
-
-set fp=* Step back 1 version. You feel like your last check-in broke the build.
+rem Composer function.
 
 rem One reason I like this command is that it moves back slowly so will help you be
 rem careful not to rollback to fr.
@@ -2284,6 +2268,25 @@ echo.
 git reset --hard HEAD
 git clean -f
 git pull
+
+exit/b
+
+
+
+::_
+
+:ruf
+
+:clean
+
+set fp=* Remove untracked folders and files. Use with caution.
+
+rem lu: May-30-2018
+
+echo %fp%
+
+echo.
+git clean -d -f
 
 exit/b
 
