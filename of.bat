@@ -72,8 +72,11 @@ call td %1 %2
 
 rem echo Errorlevel from OF: %errorlevel%
 
-if "%errorlevel%"=="0" explorer %cd%
-rem qq-1
+if "%errorlevel%"=="0" (
+  explorer %cd%
+) else (
+  call m clear_errorlevel
+)
 
 exit/b
 

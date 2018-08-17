@@ -4902,6 +4902,8 @@ exit/b
 
 :_
 
+:aw
+
 :airwatch
 
 set fp=* VMware AirWatch SDK.
@@ -4910,7 +4912,7 @@ rem lu: Aug-16-2018
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\Xamarin-AWSDK
+set cbf_path=%cbf_default_repository_folder%\Xamarin-AWSDK\samples\xamariniossampleapp
 
 set cbf_url=https://github.com/vmwareairwatchsdk/Xamarin-AWSDK.git
 
