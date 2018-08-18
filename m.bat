@@ -3235,6 +3235,7 @@ set fp=* Remove hidden attributes.
 
 rem lu: Jul-15-2018
 
+echo.
 echo %fp%
 
 attrib -h *.*

@@ -649,36 +649,6 @@ exit/b
 
 :_
 
-:acp
-
-set fp=* Add, commit and push with timestamp commit description.
-
-rem fcd: Apr-13-2017
-
-echo %fp%
-
-cd | find /i "C:\projects\netbeans\sencha">nul
-if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit/b
-
-cd | find /i "C:\projects\netbeans\mercury6">nul
-if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit/b
-
-call %0 add_files_generic_action
-
-call %0 commit_with_timestamp_description
-
-call %0 push
-
-call %0 rf_status
-
-exit/b
-
-
-
-:_
-
 :acpmob
 
 set fp=* Add, commit and push for batch file changes for mobility.
@@ -950,6 +920,8 @@ exit/b
 :c
 
 :c_only
+
+:commit
 
 set fp=* Commit ONLY those files that were staged for commit.
 
@@ -1546,56 +1518,6 @@ exit/b
 
 
 
-:_+ Adding
-
-
-
-::_
-
-:a
-
-:add
-
-:add_files_generic_action
-
-set fp=* Add files generic action.
-
-echo %fp%
-
-git add -A
-
-exit/b
-
-
-
-::_
-
-:add_dot
-
-set fp=* Add files.
-
-echo %fp%
-
-git add .
-
-exit/b
-
-
-
-::_
-
-:add2
-
-set fp=* Add files. (!step4)
-
-echo %fp%
-
-git add *.*
-
-exit/b
-
-
-
 :_+ Author
 
 
@@ -1798,7 +1720,6 @@ rem 5. Execute.
 cd /d %new_folder_path%
 
 git clone %origin_url% --branch %branch_name% .\%folder_name%
-rem qq-1
 
 exit/b
 
@@ -2281,12 +2202,114 @@ exit/b
 
 set fp=* Remove untracked folders and files. Use with caution.
 
-rem lu: May-30-2018
+rem lu: Aug-17-2018
 
 echo %fp%
 
 echo.
 git clean -d -f
+
+exit/b
+
+
+
+:_+ Adding
+
+
+
+::_
+
+:a
+
+:add
+
+:add_files_generic_action
+
+set fp=* Add files generic action.
+
+echo %fp%
+
+git add -A
+
+exit/b
+
+
+
+::_
+
+:add_dot
+
+set fp=* Add files.
+
+echo %fp%
+
+git add .
+
+exit/b
+
+
+
+::_
+
+:add2
+
+set fp=* Add files. (!step4)
+
+echo %fp%
+
+git add *.*
+
+exit/b
+
+
+
+:_+ ACP Commands
+
+
+
+::_
+
+:acp
+
+set fp=* Add, commit and push with timestamp commit description.
+
+rem fcd: Apr-13-2017
+
+echo %fp%
+
+cd | find /i "C:\projects\netbeans\sencha">nul
+if %errorlevel% == 0 echo A commit message is required in this folder.
+if %errorlevel% == 0 exit/b
+
+cd | find /i "C:\projects\netbeans\mercury6">nul
+if %errorlevel% == 0 echo A commit message is required in this folder.
+if %errorlevel% == 0 exit/b
+
+call %0 add_files_generic_action
+
+call %0 commit_with_timestamp_description
+
+call %0 push
+
+call %0 rf_status
+
+exit/b
+
+
+
+::_
+
+:mac
+
+set fp=* ACP commands for the mac.
+
+echo %fp%
+
+git add -A
+
+git push
+
+git commit -m ""
 
 exit/b
 
