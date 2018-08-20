@@ -2801,118 +2801,6 @@ exit/b
 
 
 
-:_+ Mobile Apps
-
-
-
-::_
-
-:ma
-
-set fp=* Mobile App Prototype that Brian saw.
-
-rem lu: Jun-18-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\Mobile
-
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
-
-exit/b
-
-
-
-::_
-
-:fr
-
-:fres
-
-set fp=* Fresnel Mobile App.
-
-rem lu: Jun-21-2018
-
-echo %fp%
-
-set cbf_path=%dropbox%\it\fresnel
-
-set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
-
-exit/b
-
-
-
-::_
-
-:fr_bu
-
-set fp=* Fresnel Mobile App, local backup version.
-
-rem lu: Jul-26-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\backups\fresnel
-
-set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
-
-exit/b
-
-
-
-::_
-
-:ql_bu
-
-set fp=* Quick Launcher, local backup version.
-
-rem lu: Jul-26-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\backups\Quickla-for-Multi-Edit
-
-set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
-
-exit/b
-
-
-
-::_
-
-:cbf_bu
-
-set fp=* CBF, local backup version.
-
-rem lu: Jul-26-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\backups\Composable-Batch-Files
-
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
-
-exit/b
-
-
-
-::_
-
-:bu
-
-set fp=* Backups folder.
-
-rem lu: Jul-26-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\backups
-
-exit/b
-
-
-
 :_
 
 :splunk
@@ -4915,6 +4803,120 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\Xamarin-AWSDK\samples\xamariniossampleapp
 
 set cbf_url=https://github.com/vmwareairwatchsdk/Xamarin-AWSDK.git
+
+exit/b
+
+
+
+:_+ Mobile Apps
+
+
+
+::_
+
+:ma
+
+:otzi
+
+set fp=* Test the use of an enterprise profile on VSTS. Formerly the mobile app prototype that Brian saw.
+
+rem lu: Aug-20-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\Mobile
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
+
+exit/b
+
+
+
+::_
+
+:fr
+
+:fres
+
+set fp=* Fresnel Mobile App.
+
+rem lu: Jun-21-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel
+
+set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+
+exit/b
+
+
+
+::_
+
+:fr_bu
+
+set fp=* Fresnel Mobile App, local backup version.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\backups\fresnel
+
+set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+
+exit/b
+
+
+
+::_
+
+:ql_bu
+
+set fp=* Quick Launcher, local backup version.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\backups\Quickla-for-Multi-Edit
+
+set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+
+exit/b
+
+
+
+::_
+
+:cbf_bu
+
+set fp=* CBF, local backup version.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\backups\Composable-Batch-Files
+
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+exit/b
+
+
+
+::_
+
+:bu
+
+set fp=* Backups folder.
+
+rem lu: Jul-26-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\backups
 
 exit/b
 
