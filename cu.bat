@@ -32,6 +32,7 @@ goto main_function
 
 :help
 
+echo.
 echo Filename stands for: %filename_stands_for%
 
 set filep=File purpose: This file is used to hook up Curl with n.bat entries.
@@ -62,7 +63,7 @@ echo %filename_stands_for%
 call n %1
 
 echo.
-call c:\aa\curl-7.61.0-win64-mingw\bin\curl %cbf_url%
+call curl %cbf_url%
 
 rem (!rfsp) (mov-2)
 
