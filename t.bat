@@ -7121,6 +7121,40 @@ exit/b
 
 :_
 
+:
+
+set fp=* Test random.
+
+rem lu: Aug-16-2018
+
+echo %fp%
+
+set random=
+echo Random: %random%
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Test percent zero again.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+@echo on
+call n %0
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -7133,14 +7167,14 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Test random.
+set fp=* Test percent zero.
 
-rem lu: Aug-16-2018
+rem lu: Aug-23-2018
 
 echo %fp%
 
-set random=
-echo Random: %random%
+echo.
+echo %0
 
 exit/b
 

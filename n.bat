@@ -1612,7 +1612,7 @@ exit/b
 
 :c
 
-set fp=Root of the C Drive.
+set fp=* Root of the C Drive.
 
 rem lu: Feb-5-2018
 
@@ -3868,24 +3868,6 @@ exit/b
 
 :_
 
-:ij
-
-:inc
-
-set fp=* Incidents JSON.
-
-rem lu: Jul-23-2018
-
-echo %fp%
-
-set cbf_filename=%dropbox%\it\fresnel\incidents.json
-
-exit/b
-
-
-
-:_
-
 :caro
 
 :weca
@@ -4917,6 +4899,58 @@ rem lu: Jul-26-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\backups
+
+exit/b
+
+
+
+:_
+
+:curl
+
+set fp=* Curl.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set cbf_path=c:\aa\curl-7.61.0-win64-mingw\bin
+
+exit/b
+
+
+
+:_
+
+:t
+
+set fp=* Test t from n.bat.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+exit/b
+
+
+
+:_
+
+:ij
+
+:inc
+
+:injs
+
+set fp=* Incidents JSON.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\fresnel\incidents.json
+
+set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/Fresnel/master/incidents.json
 
 exit/b
 

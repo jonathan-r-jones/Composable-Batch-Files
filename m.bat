@@ -3114,6 +3114,7 @@ set fp=* Open application without a parameter.
 
 rem lu: Jun-8-2018
 
+echo.
 echo %fp%
 
 set cbf_parameter=
@@ -3386,6 +3387,7 @@ set fp=* Clear ErrorLevel.
 
 rem lu: Aug-3-2018
 
+echo.
 echo %fp%
 
 echo.
