@@ -6227,8 +6227,25 @@ set fp=* Hello world
 
 rem Function Creation Date: Mar-3-2017
 
+echo %fp% from %0.bat file.
+
+exit/b
+
+
+
+:_
+
+:hi2
+
+set fp=* Hello world
+
+rem Function Creation Date: Aug-23-2018
+
 echo.
-echo %fp% from %0.bat file. I'm a real person not a computer. Ask me anything.
+echo %fp% from %0.
+
+echo.
+echo %1
 
 exit/b
 
@@ -7172,16 +7189,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 set fp=* String replacement is cool.
 rem skw dos search and replace
 
@@ -7207,6 +7214,481 @@ echo.%str%
 set str=%str:https://www.=%
 set str=%str:http://www.=%
 echo.%str%
+
+exit/b
+
+
+
+:_
+
+:getFunctions
+
+:: ret -- returns a comma separated list of all functions
+
+set fp=* Get functions
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+:$created 20060101 :$changed 20080219
+:$source https://www.dostips.com
+SETLOCAL
+set ret=
+for /f %%a in ('"findstr "^^:[a-z].*--" "%~f0" "') do call set ret=%%ret%%%%a,
+( ENDLOCAL & REM RETURN VALUES
+    IF "%~1" NEQ "" (SET %~1=%ret%) ELSE ECHO.%ret%
+)
+
+exit/b
+
+
+
+:_
+
+:getDriveInfo
+rem  var -- returns array of fsutil drive information
+::             -- var [out] - return variable, as array
+:$created 20060101 :$changed 20091115 :$categories DriveInfo,Array
+:$source https://www.dostips.com
+if "%~1" NEQ "" for /f "delims==" %%A in ('set %~1[ 2^>NUL') do @set "%%A="
+SETLOCAL ENABLEDELAYEDEXPANSION
+set "data="
+set /a n=-1
+for /f "tokens=1 delims=" %%A in ('fsutil fsinfo drives^|find "\"') do (
+    set "dr=%%~A"
+    set "dr=!dr:~-3,-1!"
+    set /a n+=1
+    set "data=!data!&set %~1[!n!].Drive=!dr!"
+    for /f "tokens=1,* delims=- " %%a in ('"fsutil fsinfo drivetype !dr!"') do set "data=!data!&set %~1[!n!].DriveType=%%b"
+    for /f "tokens=1,* delims=:" %%a in ('"fsutil volume diskfree !dr!"') do (
+        set "v= %%a"
+        set "v=!v: =!"
+        set "d= %%b"
+        set "d=!d:~2!"
+        set "data=!data!&set %~1[!n!].!v!=!d!"
+    )
+)
+
+set "data=rem.%data:)=^)%"
+( ENDLOCAL & REM RETURN VALUES
+    %data%
+    SET "%~1[#]=%n%"
+)
+
+EXIT /b
+
+
+
+:_
+
+:
+
+set fp=* Test colon.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+echo.
+call:hi var
+
+exit/b
+
+
+
+:_
+
+:doProgress -- displays the next progress tick
+:$created 20060101 :$changed 20080327 :$categories Progress
+:$source https://www.dostips.com
+set /a "ProgressCnt+=1"
+SETLOCAL ENABLEDELAYEDEXPANSION
+set /a "per100=100*ProgressCnt/ProgressMax"
+set /a "per10=per100/10"
+set /a "per10m=10-per100/10-1"
+set "P=%per100%%%"
+set "PP="
+for /l %%N in (0,1,%per10%) do call set "PP=%%PP%%*"
+for /l %%N in (%per10%,1,9) do call set "PP=%%PP%% "
+set "PPP="
+for /l %%N in (0,1,%per10m%) do call set "PPP=%%PPP%%*"
+set "ProgressFormat=%ProgressFormat:[P]=!P!%"
+set "ProgressFormat=%ProgressFormat:[PP]=!PP!%"
+set "ProgressFormat=%ProgressFormat:[PPP]=!PPP!%"
+title %ProgressFormat%
+EXIT /b
+
+
+
+:_
+
+:doProgress2 -- displays the next progress tick
+EXIT /b
+
+
+
+:_
+
+:ExtractFunction func -- extracts a function by label
+::                    -- func [in] - name of the function to be extracted
+:$created 20060101 :$changed 20080219
+:$source https://www.dostips.com
+SETLOCAL ENABLEDELAYEDEXPANSION
+set func=%~f0
+set /a b=2000000000
+set /a e=2000000000
+for /f "tokens=1,* delims=:" %%a in ('"findstr /n /b /c:"%~1 " "%func%""') do set /a b=%%a
+for /f "tokens=1,* delims=:" %%a in ('"findstr /n /b /c:"EXIT /b" "%func%""') do (
+    if /i %b% LSS %%a if /i %%a LSS !e! set /a e=%%a
+)
+SETLOCAL DISABLEDELAYEDEXPANSION&  rem --disabling preserves excamation marks in %%b
+for /f "tokens=1,* delims=[]" %%a in ('"find /n /v "" "%func%""') do (
+    if /i %b% LEQ %%a if /i %%a LEQ %e% echo.%%b
+)
+EXIT /b
+
+
+
+:_
+
+:
+
+set fp=* Do progress
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+call :doprogress
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Call a function with a param.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+call :hi2 xx
+
+exit/b
+
+
+
+:_
+
+:myGetFunc
+
+:- passing a variable by reference
+
+echo.
+echo Percent 1a: %~1
+
+echo.
+echo Percent 1b: "%~1"
+
+echo.
+echo Percent 1c: %1
+
+set "%~1=DosTips"
+
+exit/b
+
+
+
+:_
+
+:pbr
+
+set fp=* Passing by reference.
+
+rem This works.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set var1=CmdTips
+
+echo.
+echo var1 before: %var1%
+
+rem Notice the lack of percent signs around var1!
+
+call :myGetFunc var1
+
+echo.
+echo var1 after: %var1%
+
+exit/b
+
+
+
+:_
+
+set fp=* Get functions.
+
+rem This works a little!
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+call :getfunctions
+
+exit/b
+
+
+
+:getHostName
+
+::ip ret -- resolves IP address to computer name
+::         -- ip  [in,opt]  - ip, default is THIS computer's IP
+::         -- ret [out,opt] - computer name
+:$created 20060101 :$changed 20080219 :$categories Network
+:$source https://www.dostips.com
+SETLOCAL
+set ip=%~1
+if "%ip%"=="" call:getIP "" ip
+set name=
+for /f "tokens=2" %%a in ('"ping /a /n 1 %ip%|find "Pinging" 2>NUL"') do set name=%%a
+ENDLOCAL & IF "%~2" NEQ "" (SET %~2=%name%) ELSE (echo.%name%)
+EXIT /b
+
+
+
+:_
+
+:
+
+set fp=* Get drive info.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set var1=c:
+
+call :getDriveInfo %var1%
+
+echo.
+echo %data%
+
+echo.
+echo %var1%
+
+echo.
+echo %n%
+
+echo.
+echo %var%
+
+echo.
+echo %ret%
+
+exit/b
+
+
+
+:_
+
+:getIP
+
+::host ret -- return THIS computers IP address
+::              -- host [in,opt]  - host name, default is THIS computer
+::              -- ret  [out,opt] - IP
+:$created 20060101 :$changed 20080219 :$categories Network
+:$source https://www.dostips.com
+SETLOCAL
+set host=%~1
+set ip=
+if "%host%"=="" ( for /f "tokens=2,* delims=:. " %%a in ('"ipconfig|find "IP Address""') do set ip=%%b
+) ELSE ( for /f "tokens=2 delims=[]" %%a in ('"ping /a /n 1 %host%|find "Pinging" 2>NUL"') do set ip=%%a)
+ENDLOCAL & IF "%~2" NEQ "" (SET %~2=%ip%) ELSE (echo.%ip%)
+EXIT /b
+
+
+
+:_
+
+:
+
+set fp=* Get host.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+rem call :gethostname 127.0.0.0 var1
+call :gethostname
+
+echo.
+echo Var1: %var1%
+
+exit/b
+
+
+
+:_
+
+:getIPConfig
+::arr -- return IPCONFIG /ALL data in array variable
+::               -- arr [out] - target array variable for IPCONFIG data
+:$created 20091111 :$changed 20091111 :$categories Network,Array
+:$source https://www.dostips.com
+if "%~1" NEQ "" for /f "delims==" %%A in ('set %~1[ 2^>NUL') do @set "%%A="
+SETLOCAL ENABLEDELAYEDEXPANSION
+set "data="
+set /a n=0
+for /f "tokens=1,* delims=:" %%A in ('ipconfig /all^|find ":"') do (
+    set "v=%%~A "
+    if "!v:~0,8!" NEQ "        " (
+        rem it's a new section
+        set /a n+=1
+        set "data=!data!&set %~1[!n!].DisplayName=%%A"
+    ) ELSE (
+        set "v=!v:~8!"
+        set "v=!v:.=!"
+        set "v=!v: =!"
+        set "x=%%~B"
+        set "data=!data!&set %~1[!n!].!v!=!x:~1!"
+    )
+)
+set "data=rem.%data:)=^)%"
+( ENDLOCAL & REM RETURN VALUES
+    %data%
+    SET "%~1[#]=%n%"
+)
+EXIT /b
+
+
+
+:_
+
+:getRandomColor
+::ret -- returns a random color
+::                  -- ret [out,opt] - return variable to return color code in
+:$created 20060101 :$changed 20080219 :$categories Color
+:$source https://www.dostips.com
+set "%~1=hell4"
+SETLOCAL
+set HEX=0123456789ABCDEF
+set /a r1=%random% %% 16
+set "%~1=hell3"
+rem qq-1
+set /a r2=%random% %% 16
+call set rndcolor=%%HEX:~%r1%,1%%%%HEX:~%r2%,1%%
+echo Step 2.
+echo Percent 1: %~1
+rem qq-1
+echo Rndcolor: %rndcolor%
+
+set  %~1=%rndcolor%
+set "%~1=%rndcolor%"
+set "%~1=hell"
+set "%~1=hell6"
+ENDLOCAL
+set  %~1=%rndcolor%
+set "%~1=hell7"
+echo Step 3.
+EXIT /b
+
+
+
+:_
+
+:
+
+set fp=* Get ip config.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set var_1=
+
+call :getipconfig %var_1%
+
+echo.
+echo %var_1%
+
+exit/b
+
+
+
+:_
+
+:substitute
+
+::OldStr NewStr File -- substitutes a string in a text file
+::                             -- OldStr [in] - string to be replaced
+::                             -- NewStr [in] - string to replace with
+::                             -- File   [in] - file to be parsed
+:$created 20060101 :$changed 20101122 :$categories FileManipulation
+:$source https://www.dostips.com
+SETLOCAL DISABLEDELAYEDEXPANSION
+for /f "tokens=1,* delims=]" %%A in ('"type %3|find /n /v """') do (
+    set "line=%%B"
+    if defined line (
+        call set "line=echo.%%line:%~1=%~2%%"
+        for /f "delims=" %%X in ('"echo."%%line%%""') do %%~X
+    ) ELSE echo.
+)
+EXIT /b
+
+
+
+:_
+
+:myFunctionName
+:    -- function description here
+::   -- %~1: argument description here
+SETLOCAL
+REM.--function body here
+set LocalVar1=...
+set LocalVar2=...
+(ENDLOCAL & REM -- RETURN VALUES
+    IF "%~1" NEQ "" SET %~1=%LocalVar1%
+    IF "%~2" NEQ "" SET %~2=%LocalVar2%
+)
+GOTO:EOF
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Get random color.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set var1=test3
+
+call:getrandomcolor var1
+rem       qq-1
+
+echo.
+echo Var1: %var1%
 
 exit/b
 
