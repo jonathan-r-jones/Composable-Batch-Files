@@ -5020,4 +5020,20 @@ exit/b
 
 
 
+:_
+
+:gas
+
+set fp=* Git API status.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set cbf_url=https://status.github.com/api/status.json
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

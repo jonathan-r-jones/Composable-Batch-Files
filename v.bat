@@ -416,6 +416,7 @@ exit/b
 :_
 
 set fp=* String replacement is cool.
+
 rem skw dos search and replace
 
 rem lu: Aug-23-2018

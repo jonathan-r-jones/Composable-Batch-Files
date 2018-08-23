@@ -7625,7 +7625,9 @@ exit/b
 
 :_
 
-:substitute
+:f_and_r_for_file
+
+set fp=* Find and replace a string in a text file.
 
 ::OldStr NewStr File -- substitutes a string in a text file
 ::                             -- OldStr [in] - string to be replaced
@@ -7641,7 +7643,7 @@ for /f "tokens=1,* delims=]" %%A in ('"type %3|find /n /v """') do (
         for /f "delims=" %%X in ('"echo."%%line%%""') do %%~X
     ) ELSE echo.
 )
-EXIT /b
+exit /b
 
 
 
@@ -7664,18 +7666,6 @@ GOTO:EOF
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
-:
-
 set fp=* Get random color.
 
 rem lu: Aug-23-2018
@@ -7685,12 +7675,21 @@ echo %fp%
 set var1=test3
 
 call:getrandomcolor var1
-rem       qq-1
 
 echo.
 echo Var1: %var1%
 
 exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
