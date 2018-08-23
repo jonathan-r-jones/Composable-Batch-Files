@@ -44,10 +44,19 @@ echo.
 echo Last Updated: Aug-23-2018
 
 echo.
-echo Usage: %0 [Parameter 1]
+echo Usage: %0 [space separated parameters]
 
-set parameter_1=Parameter 1: URL you wish to evaluate.
+set parameter_1=Parameter 1: URL nickname you wish to evaluate.
 set parameter_1=%parameter_1% 
+
+echo.
+echo %parameter_1%
+
+set parameter_2=Parameter 2: Curl switches, e.g. '-v'.
+set parameter_2=%parameter_2% 
+
+echo.
+echo %parameter_2%
 
 exit/b
 
@@ -63,7 +72,8 @@ echo %filename_stands_for%
 call n %1
 
 echo.
-call curl %cbf_url%
+call curl %2 %cbf_url%
+echo.
 
 rem (!rfsp) (mov-2)
 

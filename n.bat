@@ -4730,7 +4730,7 @@ rem lu: Jan-24-2018
 
 echo %fp%
 
-set cbf_url=http://www.cnn.com
+set cbf_url=https://www.cnn.com
 
 exit/b
 
@@ -4951,6 +4951,74 @@ echo %fp%
 set cbf_filename=%dropbox%\it\fresnel\incidents.json
 
 set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/Fresnel/master/incidents.json
+
+exit/b
+
+
+
+:_
+
+:ques
+
+set fp=* Apiary questions.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set cbf_url=http://private-64c770-fresnelapi.apiary-mock.com/fresnelapi/questions
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:503
+
+set fp=* 503 Badapi.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set cbf_url=503.badapi.net
+rem       qq-1
+
+exit/b
+
+
+
+:_
+
+:404
+
+set fp=* 404 badapi.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set cbf_url=http://badapi.net/notfound
+rem       qq-1
+
+exit/b
+
+
+
+:_
+
+:p404
+
+set fp=* Proxy endpoint 404 badapi.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set cbf_url=GET http://404.badapi.net
+rem       qq-1
 
 exit/b
 
