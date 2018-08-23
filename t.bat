@@ -6274,33 +6274,6 @@ exit/b
 
 :_
 
-set fp=* String replacement is cool.
-
-rem lu: Nov-9-2017
-
-echo.
-echo %fp%
-
-rem This works!
-
-rem skw dos search and replace
-
-set str=teh cat in teh hat
-echo.%str%
-set str=%str:teh=the%
-echo.%str%
-
-set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
-echo.%str%
-set str=%str:/=\%
-echo.%str%
-
-exit/b
-
-
-
-:_
-
 set fp=* Simulate a double click in CBF.
 
 rem lu: Feb-1-2018
@@ -7155,16 +7128,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test percent zero.
@@ -7175,6 +7138,75 @@ echo %fp%
 
 echo.
 echo %0
+
+exit/b
+
+
+
+:_
+
+set fp=* String replacement is cool (older).
+
+rem lu: Nov-9-2017
+
+echo.
+echo %fp%
+
+rem This works!
+
+rem skw dos search and replace
+
+set str=teh cat in teh hat
+echo.%str%
+set str=%str:teh=the%
+echo.%str%
+
+set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
+echo.%str%
+set str=%str:/=\%
+echo.%str%
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+set fp=* String replacement is cool.
+rem skw dos search and replace
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+echo.
+set str=teh cat in teh hat
+echo.%str%
+set str=%str:teh=the%
+echo.%str%
+
+echo.
+set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
+echo.%str%
+set str=%str:/=\%
+echo.%str%
+
+echo.
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:https://www.=%
+set str=%str:http://www.=%
+echo.%str%
 
 exit/b
 

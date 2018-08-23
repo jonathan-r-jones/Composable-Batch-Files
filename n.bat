@@ -1426,7 +1426,7 @@ exit/b
 
 :git
 
-set fp=GitHub.
+set fp=* GitHub.
 
 rem lu: Feb-2-2018
 
@@ -2655,7 +2655,7 @@ set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
 
 set cbf_path=%composable_batch_files%
 
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
 
 exit/b
 
@@ -4967,7 +4967,6 @@ rem lu: Aug-23-2018
 echo %fp%
 
 set cbf_url=http://private-64c770-fresnelapi.apiary-mock.com/fresnelapi/questions
-rem qq-1
 
 exit/b
 
@@ -4984,7 +4983,6 @@ rem lu: Aug-23-2018
 echo %fp%
 
 set cbf_url=503.badapi.net
-rem       qq-1
 
 exit/b
 
@@ -5001,7 +4999,6 @@ rem lu: Aug-23-2018
 echo %fp%
 
 set cbf_url=http://badapi.net/notfound
-rem       qq-1
 
 exit/b
 
@@ -5018,7 +5015,6 @@ rem lu: Aug-23-2018
 echo %fp%
 
 set cbf_url=GET http://404.badapi.net
-rem       qq-1
 
 exit/b
 
