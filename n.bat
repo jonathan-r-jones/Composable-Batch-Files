@@ -126,6 +126,19 @@ exit/b
 
 
 
+:_
+
+Metadata: Track Size (!tsn)
+
+     Date      Lines      Bytes  Functions  Notes
+ -----------  ------  ---------  ---------  -------------------------------------------------
+
+:Aug-24-2018   5,148     60,394      300
+
+:Jun-13-2018   3,261     36,243      194
+
+
+
 :_ Begin body. (!bb)
 
 
@@ -2521,17 +2534,6 @@ echo %fp%
 set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
 
 exit/b
-
-
-
-:_
-
-Metadata: Track Size (!tsn)
-
-     Date      Lines      Bytes  Functions  Notes
- -----------  ------  ---------  ---------  -------------------------------------------------
-
-:Jun-13-2018   3,261     36,243      194
 
 
 
