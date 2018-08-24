@@ -72,7 +72,7 @@ echo %filename_stands_for%
 call n %1
 
 echo.
-call curl %2 %cbf_url%
+call curl %2 %3 %4 %5 %cbf_url%
 echo.
 
 rem (!rfsp) (mov-2)

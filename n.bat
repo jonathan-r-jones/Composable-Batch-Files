@@ -3596,24 +3596,6 @@ exit/b
 
 :_
 
-:jp
-
-set fp=* Json Placeholder.
-
-rem lu: Jul-17-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\jsonplaceholder
-
-set cbf_url=https://github.com/typicode/jsonplaceholder.git
-
-exit/b
-
-
-
-:_
-
 :mamo
 
 set fp=* Madison Monkeys.
@@ -4936,28 +4918,6 @@ exit/b
 
 :_
 
-:ij
-
-:inc
-
-:injs
-
-set fp=* Incidents JSON.
-
-rem lu: Aug-23-2018
-
-echo %fp%
-
-set cbf_filename=%dropbox%\it\fresnel\incidents.json
-
-set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/Fresnel/master/incidents.json
-
-exit/b
-
-
-
-:_
-
 :ques
 
 set fp=* Apiary questions.
@@ -5031,6 +4991,103 @@ rem lu: Aug-23-2018
 echo %fp%
 
 set cbf_url=https://status.github.com/api/status.json
+
+exit/b
+
+
+
+:_
+
+:swpe
+
+:swapi
+
+set fp=* Star Wars Api people.
+
+rem lu: Aug-24-2018
+
+echo %fp%
+
+set cbf_url=https://swapi.co/api/people
+
+exit/b
+
+
+
+:_+ APIs
+
+
+
+::_
+
+:ij
+
+:inc
+
+:injs
+
+:lr
+
+set fp=* Incidents JSON, a. k. a. logical razors.
+
+rem lu: Aug-23-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\fresnel\incidents.json
+
+set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/Fresnel/master/incidents.json
+
+exit/b
+
+
+
+::_
+
+:dmm
+
+set fp=* Metro map.
+
+rem lu: Aug-24-2018
+
+echo %fp%
+
+set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/For-Git-Testing/master/Art/dc_metro_map.jpg
+rem       qq-1
+
+exit/b
+
+
+
+::_
+
+:jpgh
+
+set fp=* Json Placeholder on GitHub.
+
+rem lu: Jul-17-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\jsonplaceholder
+
+set cbf_url=https://github.com/typicode/jsonplaceholder.git
+
+exit/b
+
+
+
+::_
+
+:jp
+
+set fp=* Json Placeholder.
+
+rem lu: Aug-24-2018
+
+echo %fp%
+
+set cbf_url=https://jsonplaceholder.typicode.com/users
 
 exit/b
 
