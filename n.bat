@@ -4950,6 +4950,22 @@ exit/b
 
 :_
 
+:bel
+
+set fp=* Belfy.
+
+rem lu: Aug-24-2018
+
+echo %fp%
+
+set cbf_path=%savannah%\belfry
+
+exit/b
+
+
+
+:_
+
 :404
 
 set fp=* 404 badapi.
@@ -5053,7 +5069,6 @@ rem lu: Aug-24-2018
 echo %fp%
 
 set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/For-Git-Testing/master/Art/dc_metro_map.jpg
-rem       qq-1
 
 exit/b
 
@@ -5093,17 +5108,38 @@ exit/b
 
 
 
-:_
+::_
 
-:bel
+:az
 
-set fp=* Belfy.
+set fp=* Custom Azure Data.
 
 rem lu: Aug-24-2018
 
 echo %fp%
 
-set cbf_path=%savannah%\belfry
+set cbf_header=zumo-api-version: 2.0.0
+
+set cbf_url=https://hamster7.azurewebsites.net/tables/Open_Incidents
+
+exit/b
+
+This is what is returned from Curl:
+
+< HTTP/1.1 200 OK
+< Cache-Control: no-cache
+< Pragma: no-cache
+< Content-Length: 2433
+< Content-Type: application/json; charset=utf-8
+< Expires: 0
+< ETag: W/"981-eiF699jjOyemXoG3NbLAcg"
+< Server: Microsoft-IIS/10.0
+< X-Powered-By: Express
+< X-Powered-By: ASP.NET
+< Set-Cookie: ARRAffinity=0a3517ba6ed8bb14ffe517099672a3eb4ea3c4b710ad8c6e0edaa70c2d244335;Path=/;HttpOnly;Domain=hamster7.azurewebsites.net
+< Date: Fri, 24 Aug 2018 19:58:49 GMT            
+
+<Then message payload>
 
 exit/b
 

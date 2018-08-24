@@ -3078,6 +3078,9 @@ echo.
 echo Filename: %cbf_filename%
 
 echo.
+echo Header: %cbf_header%
+
+echo.
 echo Parameter: %cbf_parameter%
 
 echo.

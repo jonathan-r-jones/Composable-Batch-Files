@@ -72,8 +72,12 @@ echo %filename_stands_for%
 call n %1
 
 echo.
-call curl %2 %3 %4 %5 %cbf_url%
-echo.
+
+if "%cbf_header%" == "" (
+  call curl %2 %3 %4 %5 %cbf_url%
+) else (
+  call curl %2 %3 %4 %5 %cbf_url% -H "%cbf_header%"
+)
 
 rem (!rfsp) (mov-2)
 
