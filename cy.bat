@@ -263,8 +263,18 @@ call td cj_au
 
 call n cj_pc
 
+echo Aug-24-2018.1
+
+echo CBF_Path: %cbf_path%
+
+echo CD: %cd%
+
 echo.
 move "%cbf_path%\*.*"
+
+echo I think this is the bad command. Aug-24-2018 qq
+
+echo Aug-24-2018.2
 
 exit/b
 
@@ -272,9 +282,9 @@ exit/b
 
 ::_
 
-:copy_sa_to_cj
+:move_sa_to_cj
 
-set fp=* Copy staging area podcasts to the Clipjam folder.
+set fp=* Move staging area podcasts to the Clipjam folder.
 
 rem lu: Jul-8-2018
 
@@ -295,19 +305,15 @@ exit/b
 
 :pc
 
-:mvpc2
-
 set fp=* Overaching podcast mover.
 
-rem lu: Jul-15-2018
+rem lu: Aug-24-2018
 
 echo %fp%
 
-call m remove_hidden_attributes
-
 call %0 move_old_clipjam
 
-call %0 copy_sa_to_cj
+call %0 move_sa_to_cj
 
 exit/b
 
