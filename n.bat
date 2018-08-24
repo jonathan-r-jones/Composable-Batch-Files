@@ -5093,4 +5093,20 @@ exit/b
 
 
 
+:_
+
+:bel
+
+set fp=* Belfy.
+
+rem lu: Aug-24-2018
+
+echo %fp%
+
+set cbf_path=%savannah%\belfry
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

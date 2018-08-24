@@ -14,6 +14,8 @@ set filename_stands_for=* Trandform folder to parent folder.
 
 set fp=* Route help callers.
 
+if "%~1" == "" goto emulate_cd
+
 if "%~1" == "/?" goto help
 
 if "%~1" == "-h" goto help
@@ -44,6 +46,21 @@ set parameter_1=%parameter_1%
 
 echo.
 echo %parameter_1%
+
+exit/b
+
+
+
+:_
+
+:emulate_cd
+
+set fp=* Emulate cd..
+
+echo.
+echo %fp%
+
+cd..
 
 exit/b
 
