@@ -7694,3 +7694,20 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:loop
+
+set fp=* An endless loop the pauses for 2 seconds before each call.
+
+rem lu: Aug-27-2018
+
+echo.
+echo %fp%
+
+timeout /t 2
+
+goto loop
+
+
+
+:_

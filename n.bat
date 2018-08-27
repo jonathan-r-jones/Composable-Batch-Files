@@ -1753,22 +1753,6 @@ exit/b
 
 :_
 
-:pash
-
-set fp=Paul Sherriff's Unit Testing Course from Pluralsight.
-
-rem lu: Feb-16-2018
-
-echo %fp%
-
-set cbf_filename=D:\Dropbox\IT\Paul Sheriff Unit Testing Course\PaulSheriffUnitTestingCourse.sln
-
-exit/b
-
-
-
-:_
-
 :k2
 
 set fp=Karl 2 Testing Solution.
@@ -4580,7 +4564,7 @@ rem lu: Aug-14-2018
 
 echo %fp%
 
-set cbf_path=d:\dropbox\vetted pictures\new and exciting
+set cbf_path=%dropbox%\vetted pictures\new and exciting
 
 exit/b
 

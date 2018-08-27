@@ -8,17 +8,6 @@
 
 set filep=* Copy file(s).
 
-echo.
-echo %filep%
-
-
-
-:_
-
-set fp=* Add some whitespace.
-
-echo.
-
 
 
 :_
@@ -41,6 +30,7 @@ goto %1
 
 :help
 
+echo.
 echo Filename stands for: CopY file(s).
 
 echo.
@@ -229,6 +219,7 @@ set fp=* Copy Visual Studio Git Ignore file from Fresnel to the current location
 
 rem lu: Jul-6-2018
 
+echo.
 echo %fp%
 
 call n fr
@@ -253,6 +244,7 @@ rem This ensures that the podcasts folder has the new material.
 
 rem lu: Jul-15-2018
 
+echo.
 echo %fp%
 
 call td cj_pc
@@ -263,17 +255,22 @@ call td cj_au
 
 call n cj_pc
 
+echo.
 echo Aug-24-2018.1
 
+echo.
 echo CBF_Path: %cbf_path%
 
+echo.
 echo CD: %cd%
+
+echo.
+echo I think the next command is the bad command. Aug-24-2018
 
 echo.
 move "%cbf_path%\*.*"
 
-echo I think this is the bad command. Aug-24-2018 qq
-
+echo.
 echo Aug-24-2018.2
 
 exit/b
@@ -288,6 +285,7 @@ set fp=* Move staging area podcasts to the Clipjam folder.
 
 rem lu: Jul-8-2018
 
+echo.
 echo %fp%
 
 call td clipjam_podcasts
@@ -309,6 +307,7 @@ set fp=* Overaching podcast mover.
 
 rem lu: Aug-24-2018
 
+echo.
 echo %fp%
 
 call %0 move_old_clipjam
@@ -329,6 +328,7 @@ set fp=* Copy Fresnel images to their respective Android and iOS folders.
 
 rem lu: Jul-13-2018
 
+echo.
 echo %fp%
 
 call td fr_ra
