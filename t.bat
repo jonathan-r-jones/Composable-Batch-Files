@@ -7697,14 +7697,15 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :loop
 
-set fp=* An endless loop the pauses for 2 seconds before each call.
+set fp=* An endless loop the pauses for 10 seconds (unless you press any key) before each call.
 
 rem lu: Aug-27-2018
 
-echo.
 echo %fp%
 
-timeout /t 2
+timeout /t 10
+
+echo.
 
 goto loop
 
