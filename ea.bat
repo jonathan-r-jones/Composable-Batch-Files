@@ -56,7 +56,7 @@ echo.
 echo Filename stands for: Execute application.
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: Aug-28-2018
 
 echo.
 echo Usage: %0 [space separated parameters]

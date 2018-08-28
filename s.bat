@@ -52,7 +52,7 @@ goto main_function
 :help
 
 echo.
-echo Filename stands for: Run SoLutioN.
+echo Filename stands for: Run SoLution.
 
 echo.
 echo Last Updated: Jul-25-2018

@@ -77,6 +77,7 @@ echo    cy  Copy file(s).
 echo   cyn  Copies file in the current directory to nickname-specified path.
 echo     d  Easier-to-type and remember version of "dir".
 echo     e  Exit command window.
+echo    ea  Application-centric way to run an application.
 echo    ed  Edit a file. Emulated Surf.
 echo   env  Show the state of the CBF environment variables.
 echo    fs  Filenames search.
