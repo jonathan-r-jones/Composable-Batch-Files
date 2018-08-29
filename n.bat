@@ -5131,4 +5131,22 @@ exit/b
 
 
 
+:_
+
+:van
+
+set fp=* Van's Azure Functions.
+
+rem lu: Aug-29-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\Nova2018CodeCamp2
+
+set cbf_url=https://github.com/lvanlowe/Nova2018CodeCamp2
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
