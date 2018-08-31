@@ -14,7 +14,7 @@ set filename_stands_for=* Perform .NET Core functions.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto run
 
 if "%~1" == "/?" goto help
 
@@ -22,7 +22,7 @@ if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-goto main_function
+goto %1
 
 
 
@@ -47,16 +47,19 @@ exit/b
 
 :_
 
-:main_function
+:run
+
+set fp=* Run.
 
 echo.
-echo %filename_stands_for%
+echo %fp%
 
-
+dotnet run
 
 rem (!rfsp) (mov-2)
 
 exit/b
+
 
 
 

@@ -5167,4 +5167,36 @@ exit/b
 
 
 
+:_
+
+:dnc
+
+set fp=* Dot Net core HelloWorld.
+
+rem lu: Aug-31-2018
+
+echo %fp%
+
+set cbf_path=%aa%\HelloWorld
+
+exit/b
+
+
+
+:_
+
+:mya
+
+set fp=* Dot Net core myApp.
+
+rem lu: Aug-31-2018
+
+echo %fp%
+
+set cbf_path=%aa%\myApp
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
