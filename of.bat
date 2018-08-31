@@ -75,7 +75,7 @@ rem echo Errorlevel from OF: %errorlevel%
 if "%errorlevel%"=="0" (
   explorer %cd%
 ) else (
-  call m clear_errorlevel
+  call m clear_errorlevel_silently
 )
 
 exit/b

@@ -5149,4 +5149,22 @@ exit/b
 
 
 
+:_
+
+:pt
+
+set fp=* Custom Azure Data - Port Types.
+
+rem lu: Aug-29-2018
+
+echo %fp%
+
+set cbf_header=zumo-api-version: 2.0.0
+
+set cbf_url=https://hamster7.azurewebsites.net/tables/PortTypes
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
