@@ -54,9 +54,46 @@ set fp=* Run.
 echo.
 echo %fp%
 
+echo.
 dotnet run
 
 rem (!rfsp) (mov-2)
+
+exit/b
+
+
+
+
+:_
+
+:rest
+
+set fp=* Restore Nuget packages.
+
+echo.
+echo %fp%
+
+echo.
+dotnet restore
+
+exit/b
+
+
+
+
+:_
+
+:b
+
+:build
+
+set fp=* Build.
+
+echo.
+echo %fp%
+
+echo.
+dotnet build
 
 exit/b
 
