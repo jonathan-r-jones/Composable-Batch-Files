@@ -14,6 +14,8 @@ set filename_stands_for=* Template batch file.
 
 set fp=* Route help callers.
 
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
 if "%~1" == "-h" goto help

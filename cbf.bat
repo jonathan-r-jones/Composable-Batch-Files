@@ -87,6 +87,7 @@ echo    gl  Glossary of terms used in CBF.
 echo    gg  Git Gui helper. Has TD parameter.
 echo     h  Perform Sencha-related tasks.
 echo     m  Perform miscellaneous tasks.
+echo   mcd  Make and navigate (cd) to a folder.
 echo    me  Run Multi-Edit.
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
 rem (!rfsp) (mov-2)
