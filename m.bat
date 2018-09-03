@@ -3341,6 +3341,7 @@ set fp=* Get ErrorLevel.
 
 rem lu: Aug-3-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -3360,6 +3361,7 @@ set fp=* Set ErrorLevel.
 
 rem lu: Aug-3-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -3466,6 +3468,34 @@ if /i not exist "%Current_JDate%" md "%Current_JDate%"
 cd /d %Current_JDate%
 
 call cn fr c
+
+
+
+:_
+
+:folder_is_empy
+
+set fp=* Empty folder check.
+
+rem lu: Sep-2-2018
+
+set folder_to_check=%2
+
+echo.
+for /f %%i in ('dir /b %folder_to_check%\*.*') do (
+   echo * Folder is not empty.
+   goto :folder_is_not_empty
+)
+
+echo * Folder is empty.
+
+exit/b 1
+
+:folder_is_not_empty
+
+exit/b 0
+
+exit/b
 
 
 

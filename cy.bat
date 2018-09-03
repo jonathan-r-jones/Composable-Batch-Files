@@ -251,27 +251,14 @@ call td cj_pc
 
 call m remove_hidden_attributes
 
-call td cj_au
+call td cj_pc
 
-call n cj_pc
-
-echo.
-echo Aug-24-2018.1
+call n cj_au
 
 echo.
-echo CBF_Path: %cbf_path%
+echo * Note: the move command complains if there are no files present to move. Sep-2-2018
 
-echo.
-echo CD: %cd%
-
-echo.
-echo I think the next command is the bad command. Aug-24-2018
-
-echo.
-move "%cbf_path%\*.*"
-
-echo.
-echo Aug-24-2018.2
+move *.* %cbf_path%
 
 exit/b
 

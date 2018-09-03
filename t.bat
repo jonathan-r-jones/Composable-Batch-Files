@@ -5120,11 +5120,11 @@ set origin_url=https://github.com/jonathan-r-jones/java_bouillabaisse.git
 set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git
 set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/batch_files.git
 
-set new_folder_path=\Users\Buzz\Documents\Dropbox\IT\Java
-set new_folder_path=c:\projects\netbeans
+set new_folder_to_check=\Users\Buzz\Documents\Dropbox\IT\Java
+set new_folder_to_check=c:\projects\netbeans
 
 @echo on
-cd %new_folder_path%
+cd %new_folder_to_check%
 cd
 git clone %origin_url% --branch %branch_name% .\%folder_name%
 @echo off
@@ -7582,12 +7582,10 @@ SETLOCAL
 set HEX=0123456789ABCDEF
 set /a r1=%random% %% 16
 set "%~1=hell3"
-rem qq-1
 set /a r2=%random% %% 16
 call set rndcolor=%%HEX:~%r1%,1%%%%HEX:~%r2%,1%%
 echo Step 2.
 echo Percent 1: %~1
-rem qq-1
 echo Rndcolor: %rndcolor%
 
 set  %~1=%rndcolor%
@@ -7685,16 +7683,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :loop
 
 set fp=* An endless loop the pauses for 10 seconds (unless you press any key) before each call.
@@ -7708,6 +7696,147 @@ timeout /t 10
 echo.
 
 goto loop
+
+
+
+:_
+
+:
+
+set fp=* Cy error.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+rem cd %cbf_path%
+
+echo.
+echo CBF_Path: %cbf_path%
+
+echo.
+move "%cbf_path%\*.*"
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Empty folder checking.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+if exist . echo Exists.
+if not exist . echo Not exists.
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Empty folder check.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+set cbf_path=d:\aa\test2
+
+set folder_to_check=%cbf_path%
+
+echo.
+for /f %%i in ('dir /b %folder_to_check%\*.*') do (
+   echo * Folder is not empty.
+   goto :folder_is_not_empty
+)
+
+echo * Folder is empty.
+
+exit/b 0
+
+:folder_is_not_empty
+
+exit/b 1
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Test folder_has_files.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+call m folder_has_files d:\aa\test1
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Move files.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+td test2
+
+call n test1
+
+move *.* %cbf_path%
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test mvoe.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+call td test2
+
+call n test1
+
+echo on
+move d:\aa\test2\*.* d:\aa\test1\*.*
+rem       qq-1
+
+exit/b
 
 
 

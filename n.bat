@@ -5199,4 +5199,36 @@ exit/b
 
 
 
+:_
+
+:test1
+
+set fp=* Test 1 path.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+set cbf_path=%aa%\test1
+
+exit/b
+
+
+
+:_
+
+:test2
+
+set fp=* Test 2 path.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+set cbf_path=%aa%\test2
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
