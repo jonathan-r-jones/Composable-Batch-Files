@@ -3411,7 +3411,7 @@ exit/b
 
 :clear_errorlevel_silently
 
-set fp=* Clear ErrorLevel silently.
+set fp=* Clear/reset errorLevel silently.
 
 rem lu: Aug-7-2018
 
@@ -3473,7 +3473,7 @@ call cn fr c
 
 :_
 
-:folder_is_empy
+:folder_is_empty
 
 set fp=* Empty folder check.
 
@@ -3483,19 +3483,13 @@ set folder_to_check=%2
 
 echo.
 for /f %%i in ('dir /b %folder_to_check%\*.*') do (
-   echo * Folder is not empty.
-   goto :folder_is_not_empty
+   rem echo * Folder is not empty.
+   exit/b 0
 )
 
 echo * Folder is empty.
 
 exit/b 1
-
-:folder_is_not_empty
-
-exit/b 0
-
-exit/b
 
 
 

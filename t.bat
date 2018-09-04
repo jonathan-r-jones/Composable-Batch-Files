@@ -7810,33 +7810,104 @@ exit/b
 
 :_
 
-:main_function
+:tm_cy
 
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
-:
-
-set fp=* Test mvoe.
+set fp=* Test Mvoe Series - Copy files from Test3 to Test1.
 
 rem lu: Sep-2-2018
 
 echo %fp%
 
-call td test2
+call td test3
 
 call n test1
 
-echo on
-move d:\aa\test2\*.* d:\aa\test1\*.*
-rem       qq-1
+echo.
+xcopy /y *.* %cbf_path%
 
 exit/b
+
+
+
+:_
+
+:tm_m13
+
+set fp=* Test Mvoe Series - Move from test1 to test3.
+
+rem lu: Sep-4-2018
+
+echo %fp%
+
+call %0 tm_cy
+
+exit/b
+
+
+
+:_+ Test for empty folder.
+
+
+
+::_
+
+:
+
+set fp=* Test for empty folder.
+
+rem lu: Sep-4-2018
+
+rem How can you tell if a folder is empty using a batch file?
+
+echo %fp%
+
+for /f %%i in ('dir /b "%cd%\*.*"') do (
+   rem echo Folder is not empty.
+   goto :folder_is_not_empty
+)
+
+echo.
+echo * Currenmt folder has no files to move.
+
+:folder_is_not_empty
+
+exit/b
+
+
+
+::_
+
+:tc
+
+set fp=* Move to cbf path.
+
+for /f %%i in ('dir /b "%cd%\*.*"') do (
+   rem echo Folder is not empty.
+   goto :folder_is_not_empty
+)
+
+echo.
+echo * Currenmt folder has no files to move.
+
+exit/b
+
+:folder_is_not_empty
+      
+move *.* %cbf_path%
+
+rem (!rfsp) (mov-2)
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

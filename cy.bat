@@ -258,7 +258,7 @@ call n cj_au
 echo.
 echo * Note: the move command complains if there are no files present to move. Sep-2-2018
 
-move *.* %cbf_path%
+call mv move_all_files_in_current_folder_to_cbf_path
 
 exit/b
 
@@ -275,12 +275,11 @@ rem lu: Jul-8-2018
 echo.
 echo %fp%
 
-call td clipjam_podcasts
+call td staging_area 
 
-call n staging_area
+call n clipjam_podcasts
 
-echo.
-move "%cbf_path%\*.*"
+call mv move_all_files_in_current_folder_to_cbf_path
 
 exit/b
 
@@ -329,6 +328,41 @@ call td fr_ri
 call n fr_rs
 
 xcopy /d /h /r /y "%cbf_path%\*.png"
+
+exit/b
+
+
+
+:_
+
+:test3
+
+set fp=* Move test3 files to test1.
+
+rem lu: Sep-3-2018
+
+echo.
+echo %fp%
+
+xcopy %aa%\test3 %aa%\test1
+
+exit/b
+
+
+
+:_
+
+:fc
+
+set fp=* Copy from CBF_Path.
+
+rem lu: Sep-4-2018
+
+echo.
+echo %fp%
+
+echo.
+xcopy %cbf_path%
 
 exit/b
 

@@ -5231,4 +5231,20 @@ exit/b
 
 
 
+:_
+
+:test3
+
+set fp=* Test 3 path.
+
+rem lu: Sep-4-2018
+
+echo %fp%
+
+set cbf_path=%aa%\test3
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
