@@ -5249,4 +5249,40 @@ exit/b
 
 
 
+:_
+
+:mcc_sw
+
+:mcc_wild
+
+:code_camp
+
+set fp=* My code camp by Shawn W.
+
+rem lu: Sep-4-2018
+
+echo %fp%
+
+set cbf_path=C:\aa\MyCodeCampCompletedExercises
+
+exit/b
+
+
+
+:_
+
+:mcc
+
+set fp=* My code camp.
+
+rem lu: Sep-4-2018
+
+echo %fp%
+
+set cbf_path=%aa%\MyCodeCamp
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
