@@ -5171,6 +5171,8 @@ exit/b
 
 :dnc
 
+:hwc
+
 set fp=* Dot Net core HelloWorld.
 
 rem lu: Aug-31-2018
