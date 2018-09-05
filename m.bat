@@ -3165,6 +3165,7 @@ set fp=* Remove directory %2.
 
 rem lu: Jun-1-2018
 
+echo.
 echo %fp%
 
 rd /q /s %2

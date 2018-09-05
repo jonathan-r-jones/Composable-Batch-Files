@@ -5249,7 +5249,11 @@ exit/b
 
 
 
-:_
+:_+ Sean W.'s API Course
+
+
+
+::_
 
 :mcc_sw
 
@@ -5269,17 +5273,19 @@ exit/b
 
 
 
-:_
+::_
 
-:mcc
+:mb
 
-set fp=* My code camp.
+set fp=* Mobile back-end.
 
 rem lu: Sep-4-2018
 
 echo %fp%
 
-set cbf_path=%aa%\MyCodeCamp
+set cbf_path=%dropbox%\it\Mobile-Back-end
+
+set cbf_url=https://github.com/jonathan-r-jones/Mobile-Back-end.git
 
 exit/b
 
