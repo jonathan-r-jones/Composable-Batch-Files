@@ -1074,7 +1074,7 @@ exit/b
 
 :_
 
-:war
+:war_old
 
 set fp=In the future please use "targ" instead of "war" for this folder.
 
@@ -5255,13 +5255,13 @@ exit/b
 
 ::_
 
-:mcc_sw
+:mcc
 
 :mcc_wild
 
 :code_camp
 
-set fp=* My code camp by Shawn W.
+set fp=* My code camp completed exercises by Shawn W.
 
 rem lu: Sep-4-2018
 
@@ -5283,9 +5283,28 @@ rem lu: Sep-4-2018
 
 echo %fp%
 
-set cbf_path=%dropbox%\it\Mobile-Back-end
+set cbf_path=%dropbox%\it\MobileBackend
 
-set cbf_url=https://github.com/jonathan-r-jones/Mobile-Back-end.git
+set cbf_url=https://github.com/jonathan-r-jones/MobileBackend.git
+
+exit/b
+
+
+
+:_
+
+:war
+
+set fp=* Web api resources.
+
+rem lu: Sep-5-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+set cbf_url=https://github.com/shawnwildermuth/webapicoreresources
+rem       qq-1
 
 exit/b
 

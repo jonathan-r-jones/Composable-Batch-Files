@@ -224,6 +224,7 @@ echo %fp%
 
 call n fr
 
+echo.
 xcopy %cbf_path%\.gitignore
 
 exit/b
