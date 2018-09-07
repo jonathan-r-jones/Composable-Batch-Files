@@ -5255,6 +5255,24 @@ exit/b
 
 ::_
 
+:war
+
+set fp=* Web api core resources for Shawn W.'s course.
+
+rem lu: Sep-5-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\webapicoreresources\data
+
+set cbf_url=https://github.com/shawnwildermuth/webapicoreresources
+
+exit/b
+
+
+
+::_
+
 :mcc
 
 :mcc_wild
@@ -5293,18 +5311,35 @@ exit/b
 
 :_
 
-:war
+:odx
 
-set fp=* Web api resources.
+set fp=* Original Kevin Dockx Restful API course.
 
-rem lu: Sep-5-2018
+rem lu: Sep-7-2018
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\
+set cbf_path=%cbf_default_repository_folder%\RESTfulAPIAspNetCore_Course
 
-set cbf_url=https://github.com/shawnwildermuth/webapicoreresources
-rem       qq-1
+set cbf_url=https://github.com/KevinDockx/RESTfulAPIAspNetCore_Course.git
+
+exit/b
+
+
+
+:_
+
+:dx
+
+set fp=* Restful API Asp Net Core Course by Kevin Dockx - My modifications.
+
+rem lu: Sep-7-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\dx
+
+set cbf_url=https://github.com/jonathan-r-jones/dx.git
 
 exit/b
 

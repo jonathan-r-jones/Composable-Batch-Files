@@ -75,6 +75,7 @@ echo    cs  File contents search.
 echo    cu  Curl batch file hooked up to the nicknames dictionary.
 echo    cy  Copy file(s).
 echo   cyn  Copies file in the current directory to nickname-specified path.
+echo   cys  Copies files from a cbf_path nickname.
 echo     d  Easier-to-type and remember version of "dir".
 echo    dn  Perform Dot Net core functions.
 echo     e  Exit command window.
