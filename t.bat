@@ -7901,6 +7901,50 @@ exit/b
 
 
 
+:_+ Passing Spaces in Parameters
+
+
+
+:_
+
+:passing_spaces
+
+set fp=* Passing spaces in parameters.
+
+rem lu: Sep-9-2018
+
+echo %fp%
+
+echo.
+echo Percent 2: %2
+
+echo.
+echo Percent Squiggle 2: %~2
+rem       qq-1
+
+exit/b
+
+
+
+:_
+
+:pass_spaces
+
+set fp=* The lesson learned is that you should put double quotes around parameters that may contain spaces.
+
+rem lu: Sep-9-2018
+
+echo %fp%
+
+call n sa
+
+call %0 passing_spaces "%cbf_path%"
+rem       qq-1
+
+exit/b
+
+
+
 :_
 
 :main_function
