@@ -5173,7 +5173,7 @@ exit/b
 
 :hwc
 
-set fp=* Dot Net core HelloWorld.
+set fp=* Dot Net core HelloWorld conole application.
 
 rem lu: Aug-31-2018
 
@@ -5189,7 +5189,7 @@ exit/b
 
 :mya
 
-set fp=* Dot Net core myApp.
+set fp=* Dot Net core myApp console application.
 
 rem lu: Aug-31-2018
 
@@ -5309,7 +5309,11 @@ exit/b
 
 
 
-:_
+:_+ DX Family
+
+
+
+::_
 
 :odx
 
@@ -5327,7 +5331,7 @@ exit/b
 
 
 
-:_
+::_
 
 :dx
 
