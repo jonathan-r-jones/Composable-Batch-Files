@@ -230,8 +230,6 @@ call td rf_ig
 
 call g pull
 
-call n rf_ig
-
 cd %current_location%
 
 echo.

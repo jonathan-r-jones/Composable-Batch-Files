@@ -2591,6 +2591,22 @@ exit/b
 
 ::_
 
+:jj
+
+set fp=* Jonathan's Github page.
+
+rem lu: Sep-11-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones
+
+exit/b
+
+
+
+::_
+
 :cbf_p
 
 set fp=* CBF Pulse on GitHub.
@@ -5364,6 +5380,26 @@ echo %fp%
 set cbf_filename=.gitignore
 
 set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+
+exit/b
+
+
+
+:_
+
+:dt
+
+:dutr
+
+set fp=* DutchTreat by Shawn Wildermuth.
+
+rem lu: Sep-11-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\DutchTreat
+
+set cbf_url=https://github.com/jonathan-r-jones/DutchTreat.git
 
 exit/b
 

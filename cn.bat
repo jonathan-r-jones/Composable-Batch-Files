@@ -59,6 +59,7 @@ if exist %cbf_path% (
   exit/b
 )
 
+echo.
 call m set_parent_fd "%cbf_path%\.." parent_folder
 
 cd /d %parent_folder%
