@@ -5349,4 +5349,20 @@ exit/b
 
 
 
+:_
+
+:vsi
+
+set fp=* Visual Studio Installer.
+
+rem lu: Sep-11-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
