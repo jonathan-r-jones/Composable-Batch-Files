@@ -5321,8 +5321,6 @@ set cbf_path=%dropbox%\it\BigProject
 
 set cbf_url=https://github.com/jonathan-r-jones/BigProject.git
 
-rem       qq-1
-
 exit/b
 
 
@@ -5366,7 +5364,6 @@ echo %fp%
 set cbf_filename=.gitignore
 
 set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
-rem qq-1
 
 exit/b
 

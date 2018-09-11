@@ -215,14 +215,24 @@ exit/b
 
 :vs_ig
 
-set fp=* Copy Visual Studio Git Ignore file from Fresnel to the current location.
+set fp=* Make sure your master Gitignore is up-to-date, then copy it to the current location.
 
 rem lu: Sep-11-2018
 
 echo.
 echo %fp%
 
+set current_location=%cd%
+
+if exist .gitignore del .gitignore
+
+call td rf_ig
+
+call g pull
+
 call n rf_ig
+
+cd %current_location%
 
 echo.
 xcopy %cbf_filename%

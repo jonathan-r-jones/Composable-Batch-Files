@@ -7895,8 +7895,6 @@ exit/b
       
 move *.* %cbf_path%
 
-rem (!rfsp) (mov-2)
-
 exit/b
 
 
@@ -7920,7 +7918,6 @@ echo Percent 2: %2
 
 echo.
 echo Percent Squiggle 2: %~2
-rem       qq-1
 
 exit/b
 
@@ -7939,7 +7936,6 @@ echo %fp%
 call n sa
 
 call %0 passing_spaces "%cbf_path%"
-rem       qq-1
 
 exit/b
 
@@ -7952,6 +7948,31 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Remember your location.
+
+rem lu: Sep-11-2018
+
+echo %fp%
+
+call td start
+
+echo.
+echo Current location: %cd%
+
+set current_location=%cd%
+
+call td aa
+
+cd %current_location%
+
+exit/b
 
 
 
