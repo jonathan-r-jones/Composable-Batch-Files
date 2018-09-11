@@ -367,25 +367,6 @@ exit/b
 
 :_
 
-:track_info
-
-set fp=* Set tracking information for this branch.
-
-rem This didn't work properly.
-
-rem Creation Date: Jan-31-2017
-
-echo %fp%
-  
-echo.
-git branch --set-upstream-to=master
-
-exit/b
-
-
-
-:_
-
 :local_status
 
 set fp=* Local status.
@@ -1132,10 +1113,11 @@ git remote add origin https://Jonathan17@bitbucket.org/nesmercuryteam/tirem.git
 git remote add origin https://github.com/jonathan-r-jones/java_bouillabaisse.git 
 git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenumaker.git
 git remote add origin https://github.com/jonathan-r-jones/composable_batch_files.git 
+git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/resume.git
 
 :grao
 
-git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/resume.git
+git remote add origin https://github.com/jonathan-r-jones/BigProject.git 
 
 exit/b
 
@@ -1204,6 +1186,7 @@ echo %fp%
 echo.
 
 git push --set-upstream origin master
+rem qq-1
 
 rem (!step)
 
@@ -2310,6 +2293,26 @@ git add -A
 git push
 
 git commit -m ""
+
+exit/b
+
+
+
+:_
+
+:track_info
+
+set fp=* Set tracking information for this branch.
+
+rem This didn't work properly.
+
+rem Creation Date: Jan-31-2017
+
+echo %fp%
+  
+echo.
+git branch --set-upstream-to=master
+rem qq-1
 
 exit/b
 

@@ -217,15 +217,17 @@ exit/b
 
 set fp=* Copy Visual Studio Git Ignore file from Fresnel to the current location.
 
-rem lu: Jul-6-2018
+rem lu: Sep-11-2018
 
 echo.
 echo %fp%
 
-call n fr
+call n rf_ig
 
 echo.
-xcopy %cbf_path%\.gitignore
+xcopy %cbf_filename%
+
+ren VisualStudio.gitignore .gitignore
 
 exit/b
 

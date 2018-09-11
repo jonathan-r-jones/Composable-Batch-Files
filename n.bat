@@ -1471,64 +1471,6 @@ exit/b
 
 
 
-:_+ Git Ignore
-
-
-
-::_
-
-:giig
-
-:ig
-
-set fp=* Git Ignore in the current folder.
-
-rem lu: Jan-19-2018
-
-echo %fp%
-
-set cbf_filename=.gitignore
-
-set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
-
-exit/b
-
-
-
-::_
-
-:vs_ig
-
-set fp=Git Ignore Visual Studio Sample File.
-
-rem lu: Jan-19-2018
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File - Visual Studio.txt
-
-set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
-
-exit/b
-
-
-
-::_
-
-:ig_sample_old
-
-set fp=Git Ignore Sample File.
-
-rem lu: Jan-19-2018
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\Git Ignore Sample File.txt
-
-exit/b
-
-
-
 :_
 
 :pc
@@ -5360,6 +5302,71 @@ rem lu: Sep-11-2018
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe
+
+exit/b
+
+
+
+:_
+
+:bp
+
+set fp=* Big project by Shawn Wildermuth.
+
+rem lu: Sep-11-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\BigProject
+
+set cbf_url=https://github.com/jonathan-r-jones/BigProject.git
+
+rem       qq-1
+
+exit/b
+
+
+
+:_+ Git Ignore
+
+
+
+::_
+
+:rf_ig
+
+set fp=* Code referenced Visual Studio Git Ignore.
+
+rem lu: Sep-11-2018
+
+echo %fp%
+
+set cbf_filename=%dropbox%\it\gitignore\VisualStudio.gitignore
+
+set cbf_path=%dropbox%\it\gitignore
+
+set cbf_url=https://github.com/github/gitignore.git
+
+exit/b
+
+
+
+::_
+
+:ig
+
+:vs_ig
+
+set fp=* Visual Studio Git Ignore.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+set cbf_filename=.gitignore
+
+set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+rem qq-1
 
 exit/b
 
