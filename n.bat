@@ -5385,7 +5385,11 @@ exit/b
 
 
 
-:_
+:_+ Dutch Treat
+
+
+
+::_
 
 :dt
 
@@ -5400,6 +5404,25 @@ echo %fp%
 set cbf_path=%dropbox%\it\DutchTreat
 
 set cbf_url=https://github.com/jonathan-r-jones/DutchTreat.git
+
+exit/b
+
+
+
+::_
+
+:ce
+
+set fp=* Shawn Wildermuth's Completed Exercises.
+
+rem lu: Sep-12-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\BuildingASPNETCore2
+
+set cbf_url=https://github.com/psauthor/BuildingASPNETCore2
+rem       qq-1
 
 exit/b
 

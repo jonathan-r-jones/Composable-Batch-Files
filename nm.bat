@@ -636,11 +636,34 @@ exit/b
 
 ::_
 
+:ver
+
 :vers
 
 set fp=* Check NPM's version.
 
-rem lu: Apr-24-2018
+rem lu: Sep-12-2018
+
+echo %fp%
+
+echo.
+npm --version
+
+exit/b
+
+
+
+::_
+
+:lver
+
+:lvers
+
+:lovg_ver
+
+set fp=* Check NPM's long version.
+
+rem lu: Sep-12-2018
 
 echo %fp%
 
@@ -806,6 +829,36 @@ echo %fp%
 
 echo.
 npm update %2
+
+exit/b
+
+
+
+:_
+
+:up_npm
+
+set fp=* Update NPM itself.
+
+rem lu: Sep-12-2018
+
+echo %fp%
+
+echo.
+echo * Before the update version number.
+
+call %0 ver
+
+echo.
+call npm install -g npm
+
+echo.
+echo * After the update version number.
+
+call %0 ver
+
+echo.
+echo * If the version numbers are the same, no update was actually done right?
 
 exit/b
 
