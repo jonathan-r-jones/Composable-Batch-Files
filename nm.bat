@@ -94,6 +94,31 @@ exit/b
 
 ::_
 
+:inst
+
+:install
+
+set fp=* Install third party package and save setting in the package.json file.
+
+rem lu: Sep-12-2018
+
+echo %fp%
+
+if not exist package.json (
+  echo.
+  echo * Error: The file package.json does not exist in the current folder.
+  exit/b
+)
+
+echo.
+npm install %2
+
+exit/b
+
+
+
+::_
+
 :i
 
 :inst_g
@@ -113,31 +138,6 @@ exit/b
 
 ::_
 
-:install
-
-:inst_s
-
-set fp=* Install third party package and save setting in the package.json file.
-
-rem lu: Sep-12-2018
-
-echo %fp%
-
-if not exist package.json (
-  echo.
-  echo * Error: The file package.json does not exist in the current folder.
-  exit/b
-)
-
-echo.
-npm install %2 --save
-
-exit/b
-
-
-
-_:_
-
 :inst_sd
 
 set fp=* Install package and save setting in the development section of the package.json file.
@@ -148,23 +148,6 @@ echo %fp%
 
 echo.
 npm install %2 --save--dev
-
-exit/b
-
-
-
-::_
-
-:inst
-
-set fp=* Install third party package.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm install %2
 
 exit/b
 
