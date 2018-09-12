@@ -72,7 +72,8 @@ echo        list_g  Verbose list of my globally installed packages.
 echo           nhn  npm help npm. Involved help.
 echo           nhs  NPM help for a specific command.
 echo          nhss  NPM help-search for a specific command.
-echo           npm  Install latest stable version of NPM. Run as ADMIN.
+echo      up_npm_1  Install latest stable version of NPM. Run as ADMIN.
+echo      up_npm_2  Update NPM.
 echo          prun  Prune extraneous packages.
 echo          repo  Go to the GitHub repository for a given package.
 echo       unin_gd  Uninstall global package and remove dependency note.
@@ -112,13 +113,21 @@ exit/b
 
 ::_
 
+:install
+
 :inst_s
 
 set fp=* Install third party package and save setting in the package.json file.
 
-rem lu: Apr-24-2018
+rem lu: Sep-12-2018
 
 echo %fp%
+
+if not exist package.json (
+  echo.
+  echo * Error: The file package.json does not exist in the current folder.
+  exit/b
+)
 
 echo.
 npm install %2 --save
@@ -146,23 +155,6 @@ exit/b
 
 ::_
 
-:npm
-
-set fp=* Install latest stable version of NPM. Be sure to run as ADMINISTRATOR.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-echo.
-npm i npm@latest -g
-
-exit/b
-
-
-
-::_
-
 :inst
 
 set fp=* Install third party package.
@@ -180,11 +172,9 @@ exit/b
 
 ::_
 
-:insta_pj
+:install_pj
 
-:install
-
-set fp=* Install any dependencies list in pacagage.json.
+set fp=* Install any dependencies listed in pacagage.json.
 
 rem lu: Apr-24-2018
 
@@ -834,9 +824,30 @@ exit/b
 
 
 
-:_
+:_+ Updating NPM.
 
-:up_npm
+
+
+::_
+
+:up_npm_1
+
+set fp=* Install latest stable version of NPM. Be sure to run as ADMINISTRATOR.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+echo.
+npm i npm@latest -g
+
+exit/b
+
+
+
+::_
+
+:up_npm_2
 
 set fp=* Update NPM itself.
 

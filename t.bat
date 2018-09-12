@@ -7943,16 +7943,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Remember your location.
@@ -7971,6 +7961,38 @@ set current_location=%cd%
 call td aa
 
 cd %current_location%
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* File exist.
+
+rem lu: Sep-12-2018
+
+echo %fp%
+
+if not exist package.json (
+  echo.
+  echo * The file package.json does not exist in the current folder.
+  exit/b
+)
+
+rem       qq-1
 
 exit/b
 
