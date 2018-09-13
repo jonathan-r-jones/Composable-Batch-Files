@@ -3243,7 +3243,6 @@ rem lu: Jul-15-2018
 echo.
 echo %fp%
 
-echo.
 attrib -h *.*
 
 exit/b
