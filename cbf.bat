@@ -59,7 +59,7 @@ exit/b
 
 :main_function
 
-set fp=* List of CBF Helper Batch files.
+set fp=* List of CBF Helper Batch (.bat) files.
 
 echo  %fp%
 echo.
@@ -94,6 +94,7 @@ echo    mv  Move files wrapper.
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary.
+echo n_emp  Empty Nicknames dictionary. Useful for restarting.
 echo    nm  Perform NPM-related tasks.
 echo    no  Run Notepad.
 echo   npp  Run Notepad++.

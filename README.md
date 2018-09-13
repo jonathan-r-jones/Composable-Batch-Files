@@ -152,7 +152,19 @@ command prompt will do.
 
 
 
-## Menu
+### Starting with a Fresh Dictionary
+
+If you wish to start with a fresh dictionary file, do the following:
+
+* Rename n.bat to something else.
+
+* Rename n_emp.bat to n.bat.
+
+Presto. You now have a new a fresh dictionary.
+
+
+
+### Menu
 
 All of the batch files in CBF use a functionalized, modular approach. To see a menu of all the 
 available CBFs type "menu" or "cbf" at the prompt.
@@ -161,7 +173,7 @@ available CBFs type "menu" or "cbf" at the prompt.
 
 
 
-## Getting Help
+### Getting Help
 
 To get help with a particular batch file, at the prompt type "[batch file name]/?". For 
 example:
