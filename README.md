@@ -160,7 +160,7 @@ If you wish to start with a fresh dictionary file, do the following:
 
 * Rename n_emp.bat to n.bat.
 
-Presto. You now have a new a fresh dictionary.
+Presto. You now have an empty dictionary.
 
 
 
