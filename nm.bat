@@ -22,7 +22,7 @@ echo.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto install
+if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
@@ -66,17 +66,18 @@ echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 echo          init  Wizard that creates a package.json file.
 echo        init_d  Wizard that creates package.json file with defaults.
-echo       set_lic  Set default license to MIT.
 echo       get_lic  Get default license setting.
+echo          inst  Install a package and save it to package.json.
 echo        list_g  Verbose list of my globally installed packages.
 echo           nhn  npm help npm. Involved help.
 echo           nhs  NPM help for a specific command.
 echo          nhss  NPM help-search for a specific command.
-echo      up_npm_1  Install latest stable version of NPM. Run as ADMIN.
-echo      up_npm_2  Update NPM.
 echo          prun  Prune extraneous packages.
 echo          repo  Go to the GitHub repository for a given package.
+echo       set_lic  Set default license to MIT.
 echo       unin_gd  Uninstall global package and remove dependency note.
+echo      up_npm_1  Install latest stable version of NPM. Run as ADMIN.
+echo      up_npm_2  Update NPM.
 echo        update  Update all dependencies to the latest version.
 echo          vers  Check NPM's version.
 
