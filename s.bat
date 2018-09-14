@@ -8,8 +8,8 @@
 
 set filep=* Open a Visual Studio solution.
 
-echo.
-echo %filep%
+rem echo.
+rem echo %filep%
 
 
 
