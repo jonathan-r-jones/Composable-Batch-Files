@@ -30,6 +30,8 @@ set fp=* If it is provided, go to percent 1.
 rem echo.
 rem echo * Outside of the if statement, the error level is %errorlevel%.
 
+call m clear_errorlevel_silently
+
 if not "%~1" == "" (
   call td %~1 %2
 
