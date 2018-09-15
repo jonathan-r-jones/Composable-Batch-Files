@@ -5428,4 +5428,20 @@ exit/b
 
 
 
+:_
+
+:ro
+
+set fp=* Reach out.
+
+rem lu: Sep-15-2018
+
+echo %fp%
+
+set cbf_path=%reach out%
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

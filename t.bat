@@ -7968,16 +7968,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* File exist.
@@ -7992,7 +7982,31 @@ if not exist package.json (
   exit/b
 )
 
-rem       qq-1
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Close immanuel.
+
+rem lu: Sep-15-2018
+
+echo %fp%
+
+call "%savannah%\belfry\immc.bat"
 
 exit/b
 

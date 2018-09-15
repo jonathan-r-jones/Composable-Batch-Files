@@ -23,18 +23,6 @@ ver>nul
 
 :_
 
-set fp=* Route help callers.
-
-if "%~1" == "" goto help
-
-if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
-
-
-
-:_
-
 set fp=* Emulate cd and go to the parent folder.
 
 if "%~1" == ".." (
@@ -61,40 +49,15 @@ if exist "%1" (
 
 :_
 
-set fp=* Main function.
+set fp=* Route help callers.
 
-if not "%~1" == "" call n %1 %2
+if "%~1" == "" goto help
 
-if "%cbf_path%" == "" (
-  echo.
-  echo * Nickname Error: There is no cbf_path defined for '%~1'. 
-  exit/b 1
-)
+if "%~1" == "/?" goto help
 
-if "%~2" == "p" goto find_parent_folder
+if "%~1" == "help" goto help
 
-if not exist "%cbf_path%" (
-  echo.
-  echo * Error: Folder does not exist at "%cbf_path%". 
-  exit/b 1
-)
-
-cd /d "%cbf_path%"
-
-exit/b
-
-
-
-:_
-
-:find_parent_folder
-
-call m set_parent_fd "%cbf_path%\.." parent_folder
-rem echo Parent Folder: %parent_folder%
-cd /d %parent_folder%
-
-exit/b
-
+goto main_function
 
 
 :_ (!rfsp) (mov-6)
@@ -117,6 +80,46 @@ echo Parameter 1: Path nickname, the name of a child folder or ".." which emulat
 
 echo.
 echo Parameter 2 (Optional): If "p" is specified, go to the parent folder of parameter 1.
+
+exit/b
+
+
+
+:_
+
+:find_parent_folder
+
+call m set_parent_fd "%cbf_path%\.." parent_folder
+rem echo Parent Folder: %parent_folder%
+cd /d %parent_folder%
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Main function.
+
+if not "%~1" == "" call n %1 %2
+
+if "%cbf_path%" == "" (
+  echo.
+  echo * Nickname Error: There is no cbf_path defined for '%~1'. 
+  exit/b 1
+)
+
+if "%~2" == "p" goto find_parent_folder
+
+if not exist "%cbf_path%" (
+  echo.
+  echo * Error: Folder does not exist at "%cbf_path%". 
+  exit/b 1
+)
+
+cd /d "%cbf_path%"
 
 exit/b
 
