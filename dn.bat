@@ -101,3 +101,22 @@ exit/b
 
 
 :_
+
+:db_up
+
+set fp=* Create a database based on the current project's DbContext.
+
+rem lu: Sep-17-2018
+
+echo.
+echo %fp%
+
+echo.
+dotnet ef database update
+rem       qq-1
+
+exit/b
+
+
+
+:_

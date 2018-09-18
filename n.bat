@@ -5385,6 +5385,22 @@ exit/b
 
 
 
+:_
+
+:ro
+
+set fp=* Reach out.
+
+rem lu: Sep-15-2018
+
+echo %fp%
+
+set cbf_path=%reach out%
+
+exit/b
+
+
+
 :_+ Dutch Treat
 
 
@@ -5422,23 +5438,6 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\BuildingASPNETCore2
 
 set cbf_url=https://github.com/psauthor/BuildingASPNETCore2
-rem       qq-1
-
-exit/b
-
-
-
-:_
-
-:ro
-
-set fp=* Reach out.
-
-rem lu: Sep-15-2018
-
-echo %fp%
-
-set cbf_path=%reach out%
 
 exit/b
 
