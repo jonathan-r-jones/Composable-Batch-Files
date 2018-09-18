@@ -5457,7 +5457,7 @@ rem lu: Sep-18-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Shawns Course\06\demos\after\DutchTreat
+set cbf_path=%aa%\Shawns Course\07\demos\after\DutchTreat
 
 exit/b
 
