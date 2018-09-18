@@ -860,3 +860,23 @@ exit/b
 
 
 :_
+
+:bi
+
+set fp=* Batch install DutchTreat packages.
+
+rem lu: Sep-18-2018
+
+echo %fp%
+
+call %0 inst bootstrap
+call %0 inst jquery
+call %0 inst jquery-validation
+call %0 inst jquery-validation-unobtrusive
+call %0 inst font-awesome
+
+exit/b
+
+
+
+:_

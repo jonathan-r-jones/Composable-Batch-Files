@@ -245,7 +245,7 @@ exit/b
 
 :td
 
-set fp=td.bat.
+set fp=* td.bat.
 
 rem FCD: May-13-2017
 
@@ -289,7 +289,7 @@ exit/b
 
 :g
 
-set fp=G.bat.
+set fp=* G.bat.
 
 rem FCD: Jun-1-2017
 
@@ -305,7 +305,7 @@ exit/b
 
 :settings_xml
 
-set fp=M2's settings.xml file.
+set fp=* M2's settings.xml file.
 
 rem lu: Nov-21-2017
 
@@ -962,7 +962,7 @@ exit/b
 
 :usr
 
-set fp=User profile.
+set fp=* User profile.
 
 rem fcd: Jul-7-2017
 
@@ -1499,6 +1499,8 @@ rem lu: Jan-31-2018
 
 echo %fp%
 
+set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
+
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
 
 exit/b
@@ -1923,11 +1925,11 @@ exit/b
 
 :pf
 
-set fp=Program files.
+set fp=* Program files.
 
 rem lu: Apr-24-2018
 
-echo * %fp%
+echo %fp%
 
 set cbf_path=c:\program files
 
@@ -5427,9 +5429,9 @@ exit/b
 
 ::_
 
-:ce
+:dt_res
 
-set fp=* Shawn Wildermuth's Completed Exercises.
+set fp=* Shawn Wildermuth's Resources.
 
 rem lu: Sep-12-2018
 
@@ -5438,6 +5440,24 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\BuildingASPNETCore2
 
 set cbf_url=https://github.com/psauthor/BuildingASPNETCore2
+
+exit/b
+
+
+
+::_
+
+:ce
+
+:dt_ce
+
+set fp=* Shawn's Completed exercises.
+
+rem lu: Sep-18-2018
+
+echo %fp%
+
+set cbf_path=%aa%\Shawns Course\06\demos\after\DutchTreat
 
 exit/b
 
