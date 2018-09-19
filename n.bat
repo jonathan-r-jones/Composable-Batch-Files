@@ -5413,13 +5413,22 @@ exit/b
 
 :dutr
 
-set fp=* DutchTreat by Shawn Wildermuth.
+set fp=* DutchTreat by Shawn Wildermuth and me.
 
 rem lu: Sep-11-2018
 
 echo %fp%
 
-set cbf_path=%dropbox%\it\DutchTreat
+if "%~2" == "" (
+  rem Set the default chapter here.
+  set chapter=07
+) else (
+  set chapter=%2
+)
+
+set cbf_path=%dropbox%\it\DutchTreat\%chapter%\demos\after\DutchTreat
+
+rem set cbf_path=%aa%\Shawns Course\%chapter%\demos\after\DutchTreat
 
 set cbf_url=https://github.com/jonathan-r-jones/DutchTreat.git
 
@@ -5457,7 +5466,14 @@ rem lu: Sep-18-2018
 
 echo %fp%
 
-set cbf_path=%aa%\Shawns Course\07\demos\after\DutchTreat
+if "%~2" == "" (
+  rem Set the default chapter here.
+  set chapter=08
+) else (
+  set chapter=%2
+)
+
+set cbf_path=%aa%\Shawns Course\%chapter%\demos\after\DutchTreat
 
 exit/b
 

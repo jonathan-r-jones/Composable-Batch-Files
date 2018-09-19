@@ -157,3 +157,20 @@ exit/b
 
 
 :_
+
+:dev
+
+set fp=* Set environment to development. This is helpful to see debugging messages when running at the command line.
+
+rem lu: Sep-19-2018
+
+echo.
+echo %fp%
+
+set ASPNETCORE_ENVIRONMENT=Development
+
+exit/b
+
+
+
+:_
