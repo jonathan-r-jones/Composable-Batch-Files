@@ -71,7 +71,19 @@ echo ************************************************************************>>%
 echo.>>%temp%\search_results_fs.txt
 
 rem Files are sorted newest files first.
-dir /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
+
+rem Shows files and folders.
+dir /a /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
+
+rem (!rfsp) (mov-3)
+
+rem Folder only.
+rem dir /a:d /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
+
+rem 3 Files only.
+rem dir /a-h /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
+rem dir /a-d /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
+rem dir /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 
 rem (!rfsp) (mov-2)
 
