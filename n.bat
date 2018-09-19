@@ -5438,6 +5438,22 @@ exit/b
 
 ::_
 
+:dtr
+
+set fp=* DutchTreat root.
+
+rem lu: Sep-19-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\DutchTreat
+
+exit/b
+
+
+
+::_
+
 :dt_res
 
 set fp=* Shawn Wildermuth's Resources.
