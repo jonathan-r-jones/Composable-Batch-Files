@@ -5058,7 +5058,7 @@ exit/b
 
 :az
 
-set fp=* Custom Azure Data.
+set fp=* Custom Azure Data. If data is returned you will see a wall of ascii.
 
 rem lu: Aug-24-2018
 
@@ -5421,7 +5421,7 @@ echo %fp%
 
 if "%~2" == "" (
   rem Set the default chapter here.
-  set chapter=07
+  set chapter=08
 ) else (
   set chapter=%2
 )

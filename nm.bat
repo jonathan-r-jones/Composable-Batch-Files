@@ -34,11 +34,9 @@ if "%~1" == "help" goto help
 
 :_
 
-set fp=* Main function.
+set fp=* Route callers.
 
 goto %1
-
-rem (!rfsp) (mov-2)
 
 exit/b
 
@@ -879,4 +877,4 @@ exit/b
 
 
 
-:_
+:_ (!rfsp) (mov-6)

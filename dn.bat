@@ -49,15 +49,13 @@ exit/b
 
 :run
 
-set fp=* Run.
+set fp=* Run DotNetCore web server.
 
 echo.
 echo %fp%
 
 echo.
 dotnet run
-
-rem (!rfsp) (mov-2)
 
 exit/b
 
@@ -173,4 +171,4 @@ exit/b
 
 
 
-:_
+:_ (!rfsp) (mov-6)
