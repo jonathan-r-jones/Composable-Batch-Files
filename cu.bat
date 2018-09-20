@@ -79,6 +79,8 @@ if "%cbf_header%" == "" (
   call curl %2 %3 %4 %5 %cbf_url% -H "%cbf_header%"
 )
 
+echo.
+
 rem (!rfsp) (mov-2)
 
 exit/b
