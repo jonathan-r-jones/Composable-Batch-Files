@@ -1617,22 +1617,6 @@ exit/b
 
 :_
 
-:karl
-
-set fp=Karl.
-
-rem lu: Feb-6-2018
-
-echo %fp%
-
-set cbf_filename=%savannah%\karl\karl.sln
-
-exit/b
-
-
-
-:_
-
 :do
 
 set fp=Download folder.
@@ -5413,6 +5397,8 @@ exit/b
 
 :dutr
 
+:dutch_treat
+
 set fp=* DutchTreat by Shawn Wildermuth and me.
 
 rem lu: Sep-11-2018
@@ -5490,6 +5476,22 @@ if "%~2" == "" (
 )
 
 set cbf_path=%aa%\Shawns Course\%chapter%\demos\after\DutchTreat
+
+exit/b
+
+
+
+:_
+
+:karl
+
+set fp=* Karl.
+
+rem lu: Sep-24-2018
+
+echo %fp%
+
+set cbf_path=%savannah%\karl
 
 exit/b
 
