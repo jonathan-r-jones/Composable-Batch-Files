@@ -102,6 +102,7 @@ echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
 echo    of  Open Folder. Has TD parameter.
 echo     p  Add, commit and push Git changes. Has TD parameter.
 echo    pg  Ping batch file hooked up to the nicknames dictionary.
+echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
 echo     s  Open a Visual Studio solution. Has TD parameter.
