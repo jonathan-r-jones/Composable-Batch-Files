@@ -5497,4 +5497,20 @@ exit/b
 
 
 
+:_
+
+:poun
+
+set fp=* Pounders.
+
+rem lu: Sep-27-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\Software\Tools
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

@@ -3497,4 +3497,28 @@ exit/b 1
 
 
 
+:_
+
+:nsl
+
+set fp=* Nslookup IPV4 versus IPV6.
+
+rem lu: Oct-3-2018
+
+echo.
+echo %fp%
+echo.
+
+nslookup nytimes.com
+
+nslookup cnn.com
+
+nslookup washingtonpost.com
+
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
