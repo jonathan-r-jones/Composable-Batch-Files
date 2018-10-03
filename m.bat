@@ -3515,7 +3515,8 @@ nslookup cnn.com
 
 nslookup washingtonpost.com
 
-rem       qq-1
+rem Eric said that I need to find the setting that allows me to set my IP Adress to IPV4.
+rem We had this problem in Stuttgart on Oct-3-2018.
 
 exit/b
 
