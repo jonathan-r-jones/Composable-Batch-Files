@@ -66,9 +66,9 @@ echo.
 
 echo  File  Description
 echo  ----  ------------------------------------------------------------------
-echo   clc  Simple calculator.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
+echo   clc  Simple calculator.
 echo    cn  Used for Git cloning tasks.
 echo   col  Reset the dos window color.
 echo    cs  File contents search.
