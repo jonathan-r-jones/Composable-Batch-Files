@@ -3919,7 +3919,7 @@ exit/b
 
 :wd
 
-set fp=* Work documents file.
+set fp=* Work documents file and folder.
 
 rem lu: Jul-26-2018
 

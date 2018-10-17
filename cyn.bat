@@ -89,7 +89,7 @@ echo %filename_stands_for%
 call n %2
 
 echo.
-xcopy %~1 %cbf_path%
+xcopy "%~1" %cbf_path%
 
 rem (!rfsp) (mov-2)
 
