@@ -305,4 +305,21 @@ exit/b
 
 
 
+:_
+
+:copy_cart_cs_files_to_a_temp_folder
+
+set fp=* Copy cart cs files to a temp folder.
+
+rem lu: Oct-17-2018
+
+echo.
+echo %fp%
+
+xcopy *.cs %temp%\cart_cs /s
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-9)

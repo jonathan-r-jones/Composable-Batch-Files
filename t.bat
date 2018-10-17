@@ -5170,24 +5170,6 @@ m exitp
 
 :_
 
-set fp=* Lines of code in pcarss.
-
-echo.
-echo %fp%
-echo.
-
-cd \a
-
-cd
-
-type *.txt>c:\a\size.log
-
-m exitp
-
-
-
-:_
-
 set fp=* Copy files to examination location.
 
 rem FCD: Mar-21-2017
@@ -7988,16 +7970,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Close immanuel.
@@ -8009,6 +7981,34 @@ echo %fp%
 call "%savannah%\belfry\immc.bat"
 
 exit/b
+
+
+
+:_
+
+set fp=* Lines of code in pcarss.
+
+echo.
+echo %fp%
+echo.
+
+cd \a
+
+cd
+
+type *.txt>c:\a\size.log
+
+m exitp
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

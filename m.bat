@@ -3216,12 +3216,17 @@ exit/b
 
 ::_
 
+:sde
+
+:sdte
+
 :set_default_text_editor
 
 set fp=* Set default text editor.
 
 rem lu: Jun-7-2018
 
+echo.
 echo %fp%
 
 if not "%~2" == "" call n %2
@@ -3517,6 +3522,33 @@ nslookup washingtonpost.com
 
 rem Eric said that I need to find the setting that allows me to set my IP Adress to IPV4.
 rem We had this problem in Stuttgart on Oct-3-2018.
+
+exit/b
+
+
+
+:_
+
+:cart
+
+set fp=* Count lines of code in Cart.
+
+rem lu: Oct-17-2018
+
+echo.
+echo %fp%
+
+del %temp%\j1.txt
+
+rem call td cart
+
+rem call cy copy_cart_cs_files_to_a_temp_folder
+
+cd /d %temp%\cart_cs
+
+for /r %%j in (*.cs) do type "%%j">>"%temp%\j1.txt"
+
+call me j1
 
 exit/b
 
