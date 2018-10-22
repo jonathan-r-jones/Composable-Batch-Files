@@ -1186,7 +1186,6 @@ echo %fp%
 echo.
 
 git push --set-upstream origin master
-rem qq-1
 
 rem (!step)
 
@@ -2274,7 +2273,6 @@ echo %fp%
   
 echo.
 git branch --set-upstream-to=master
-rem qq-1
 
 exit/b
 
