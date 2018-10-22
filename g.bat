@@ -1336,44 +1336,6 @@ exit/b
 
 :_
 
-:ig
-
-set fp=* Create a gitinore file to the current directory.
-
-rem lu: Jan-19-2018
-
-echo %fp%
-
-if exist .gitignore echo.
-if exist .gitignore echo Error: File already there.
-if exist .gitignore exit/b
-
-dir /b>.gitignore
-
-call npp .gitignore
-
-exit/b
-
-
-
-:_
-
-:apf
-
-set fp=* Add particular file.
-
-rem fcd: Feb-16-2017
-
-echo %fp%
-
-git add .gitignore
-
-exit/b
-
-
-
-:_
-
 :delete_git_folder
 
 :delg
@@ -2313,6 +2275,80 @@ echo %fp%
 echo.
 git branch --set-upstream-to=master
 rem qq-1
+
+exit/b
+
+
+
+:_+ Gitignore
+
+
+
+::_
+
+:a_ig
+
+set fp=* Add particular file.
+
+rem fcd: Feb-16-2017
+
+echo %fp%
+
+git add .gitignore
+
+exit/b
+
+
+
+::_
+
+:c_ig
+
+set fp=* Create a gitinore file to the current directory.
+
+rem lu: Jan-19-2018
+
+echo %fp%
+
+if exist .gitignore echo.
+if exist .gitignore echo Error: File already there.
+if exist .gitignore exit/b
+
+dir /b>.gitignore
+
+call npp .gitignore
+
+exit/b
+
+
+
+::_
+
+:ig
+
+:vs_ig
+
+set fp=* Make sure your master Gitignore is up-to-date, then copy it to the current location.
+
+rem lu: Sep-11-2018
+
+echo.
+echo %fp%
+
+set current_location=%cd%
+
+if exist .gitignore del .gitignore
+
+call td rf_ig
+
+call g pull
+
+cd %current_location%
+
+echo.
+xcopy %cbf_filename%
+
+ren VisualStudio.gitignore .gitignore
 
 exit/b
 

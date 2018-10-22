@@ -3488,7 +3488,7 @@ rem lu: Sep-2-2018
 set folder_to_check=%2
 
 echo.
-echo Folder to check: %folder_to_check%
+echo * Folder to check for emptiness: %folder_to_check%
 
 echo.
 for /f %%i in ('dir /b %folder_to_check%\*.*') do (
