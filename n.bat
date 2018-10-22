@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Nickname dictionary that sets the envrionment variables corresponding to a given unique nickname parameter.
+set filep=* Nickname dictionary that sets the environment variables corresponding to a given unique nickname parameter.
 
 
 
@@ -64,7 +64,7 @@ echo.
 echo In the function block corresponding to the label, you can set any or all 
 echo of the CBF environment variables. Typically this batch file would be 
 echo called by echo a different batch file looking to set a particular CBF 
-echo envrionment variable. However, if you call it yourself from the command 
+echo environment variable. However, if you call it yourself from the command 
 echo line, it will set the variable plus it will describe itself.
 
 echo.
@@ -5512,7 +5512,6 @@ rem lu: Jul-10-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%
-rem qq-1
 
 exit/b
 
