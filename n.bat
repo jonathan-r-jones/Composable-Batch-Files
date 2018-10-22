@@ -1943,24 +1943,6 @@ exit/b
 
 :_
 
-:fgt
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo %fp%
-
-set cbf_path=%aa%\repositories\for-git-testing
-
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
-
-exit/b
-
-
-
-:_
-
 :npc
 
 set fp=* NPM Playbook Course.
@@ -5481,6 +5463,26 @@ exit/b
 
 :_
 
+:r
+
+:repos
+
+:repository_folder
+
+set fp=* Default repository folder.
+
+rem lu: Jul-10-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%
+
+exit/b
+
+
+
+:_
+
 :cart
 
 set fp=* iCart.
@@ -5499,19 +5501,35 @@ exit/b
 
 :_
 
-:r
+:wg
 
-:repos
+set fp=* DevOps Working Group.
 
-:repository_folder
-
-set fp=* Default repository folder.
-
-rem lu: Jul-10-2018
+rem lu: Oct-22-2018
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%
+set cbf_path=%cbf_default_repository_folder%\DevOps-WG
+
+set cbf_url=https://github.com/DevTechnology/DevOps-WG
+
+exit/b
+
+
+
+:_
+
+:fgt
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo %fp%
+
+set cbf_path=%aa%\repositories\For-Git-Testing
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
 exit/b
 
