@@ -94,7 +94,7 @@ echo    mv  Move files wrapper.
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary.
-echo n_emp  Empty Nicknames dictionary. Useful for restarting.
+echo  n_ey  Empty Nicknames dictionary. Useful for restarting.
 echo    nm  Perform NPM-related tasks.
 echo    no  Run Notepad.
 echo   npp  Run Notepad++.

@@ -2999,24 +2999,6 @@ exit/b
 
 :_
 
-:r
-
-:repos
-
-set fp=* Repos.
-
-rem lu: Jul-5-2018
-
-echo %fp%
-
-set cbf_path=%aa%\repositories
-
-exit/b
-
-
-
-:_
-
 :p
 
 set fp=* Playpark.
@@ -3132,22 +3114,6 @@ echo %fp%
 set cbf_path=
 
 set cbf_url=https://github.com/solarwinds/OrionSDK.git
-
-exit/b
-
-
-
-:_
-
-:repository_folder
-
-set fp=* Default repository folder.
-
-rem lu: Jul-10-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%
 
 exit/b
 
@@ -5526,6 +5492,27 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\iCart-apc
 
 set cbf_url=https://github.com/DevTechnology/iCart-apc
+
+exit/b
+
+
+
+:_
+
+:r
+
+:repos
+
+:repository_folder
+
+set fp=* Default repository folder.
+
+rem lu: Jul-10-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%
+rem qq-1
 
 exit/b
 

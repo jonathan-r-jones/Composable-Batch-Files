@@ -7770,28 +7770,6 @@ exit/b
 
 :_
 
-:
-
-set fp=* Move files.
-
-rem lu: Sep-2-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\
-
-td test2
-
-call n test1
-
-move *.* %cbf_path%
-
-exit/b
-
-
-
-:_
-
 :tm_cy
 
 set fp=* Test Mvoe Series - Copy files from Test3 to Test1.
@@ -8009,6 +7987,28 @@ m exitp
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Move files.
+
+rem lu: Sep-2-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+td test2
+
+call n test1
+
+move *.* %cbf_path%
+
+exit/b
 
 
 
