@@ -5483,24 +5483,6 @@ exit/b
 
 :_
 
-:cart
-
-set fp=* iCart.
-
-rem lu: Oct-17-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\iCart-apc\apc
-
-set cbf_url=https://github.com/DevTechnology/iCart-apc
-
-exit/b
-
-
-
-:_
-
 :wg
 
 set fp=* DevOps Working Group.
@@ -5530,6 +5512,110 @@ echo %fp%
 set cbf_path=%aa%\repositories\For-Git-Testing
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+exit/b
+
+
+
+:_
+
+:arm
+
+set fp=* ARM templates.
+
+rem lu: Oct-23-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+set cbf_url=https://github.com/Azure/azure-quickstart-templates
+
+exit/b
+
+
+
+:_
+
+:wiki
+
+set fp=* WG Wiki.
+
+rem lu: Oct-24-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+set cbf_url=https://github.com/DevTechnology/DevOps-WG/wiki
+
+exit/b
+
+
+
+:_
+
+:dev
+
+set fp=* Dev Technology.
+
+rem lu: Oct-22-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/DevTechnology
+
+exit/b
+
+
+
+:_
+
+:c_apc
+
+set fp=* iCart.
+
+rem lu: Oct-17-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\iCart-apc\apc
+
+set cbf_url=https://github.com/DevTechnology/iCart-apc
+
+exit/b
+
+
+
+:_
+
+:cart
+
+set fp=* CART root folder.
+
+rem lu: Oct-17-2018
+
+echo %fp%
+
+set cbf_path=c:\cart
+
+exit/b
+
+
+
+:_
+
+:c_docs
+
+set fp=* Cart Documents.
+
+rem lu: Oct-24-2018
+
+echo %fp%
+
+set cbf_path=c:\cart\iCart-Doco
+
+set cbf_url=https://github.com/DevTechnology/iCart-Doco.git
 
 exit/b
 
