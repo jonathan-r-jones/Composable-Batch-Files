@@ -1419,7 +1419,10 @@ rem fcd: Aug-8-2018
 echo %fp%
 
 if "%computername%" == "ASUS" call m set_default_browser kr
+
 if "%computername%" == "BUZZ" call m set_default_browser kr
+if "%computername%" == "BUZZ" call m set_default_repository_folder aa
+
 if "%computername%" == "XPS" call m set_default_browser kr
 
 if "%cbf_default_browser%" == "" call m set_default_browser ie

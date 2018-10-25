@@ -64,7 +64,6 @@ echo           ghg  Git help git.
 echo           ghs  Git help for specific git command.
 echo          pull  Get-latest.
 echo          push  Push changes.
-rem qq-1
 echo         rv_sf  Revert file.
 echo         rv_fd  Revert folder.
 echo         rv_lo  Revert local.
