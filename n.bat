@@ -5633,7 +5633,14 @@ rem lu: Oct-29-2018
 
 echo %fp%
 
-set cbf_path=%dropbox%\it\Terraform - Getting Started - Pluralsight Class
+if "%~2" == "" (
+  rem Set the default chapter here.
+  set chapter=02
+) else (
+  set chapter=0%2
+)
+
+set cbf_path=%dropbox%\it\Terraform - Getting Started - Pluralsight Class\%chapter%
 
 set cbf_url=https://www.terraform.io/
 

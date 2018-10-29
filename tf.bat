@@ -85,3 +85,88 @@ exit/b
 
 
 :_
+
+:plan_experimental
+
+set fp=* Check Terraform plan status.
+
+rem lu: Oct-29-2018
+
+echo %fp%
+
+echo.
+terraform plan
+
+exit/b
+
+
+
+:_
+
+:init
+
+set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. Hashicorp.
+
+rem lu: Oct-29-2018
+
+echo %fp%
+
+echo.
+terraform init
+
+exit/b
+
+
+
+:_
+
+:plan
+
+set fp=* This execution plan can be reviewed prior to running apply to get a sense for what Terraform will do.
+
+rem lu: Oct-29-2018
+
+echo %fp%
+
+echo.
+terraform plan -var-file="..\terraform.tfvars"
+
+exit/b
+
+
+
+:_
+
+:apply
+
+set fp=* Execution a plan.
+
+rem lu: Oct-29-2018
+
+echo %fp%
+
+echo.
+terraform apply -var-file="..\terraform.tfvars"
+
+exit/b
+
+
+
+:_
+
+:destroy
+
+set fp=* Destroy a plan.
+
+rem lu: Oct-29-2018
+
+echo %fp%
+
+echo.
+terraform destroy -var-file="..\terraform.tfvars"
+
+exit/b
+
+
+
+:_

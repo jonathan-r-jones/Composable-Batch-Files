@@ -112,6 +112,7 @@ echo    sm  Run Sublime.
 echo   sql  SQL/Database, including LDAP, related tasks.
 echo    st  Run git status remotely. Has TD parameter.
 echo     t  Testing, experimenting and developing new batch file functions.
+echo    tf  Perform Terraform-related tasks.
 echo    tk  Wrapper around taskkill command.
 echo    tl  Wrapper around tasklist command.
 echo    td  Transform Directory.
