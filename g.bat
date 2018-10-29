@@ -880,24 +880,6 @@ exit/b
 
 ::_
 
-:commit_all
-
-set fp=* Commit all added files.
-
-echo %fp%
-echo.
-
-if "%~2" == "" echo Error: A commit description is required.
-if "%~2" == "" exit/b
-
-git commit -a -m %2
-
-exit/b
-
-
-
-::_
-
 :c
 
 :c_only
@@ -913,6 +895,24 @@ if "%~2" == "" echo Error: A commit description is required.
 if "%~2" == "" exit/b
 
 git commit -m %2
+
+exit/b
+
+
+
+::_
+
+:commit_all
+
+set fp=* Commit all added files.
+
+echo %fp%
+echo.
+
+if "%~2" == "" echo Error: A commit description is required.
+if "%~2" == "" exit/b
+
+git commit -a -m %2
 
 exit/b
 
@@ -1150,25 +1150,6 @@ rem lu: Jan-17-2018
 echo %fp%
 
 git pull origin master
-
-exit/b
-
-
-
-::_
-
-:3
-
-:pull
-
-:get_latest
-
-set fp=* Pull. Do a get-latest from the default branch. (!step, !pull, !step3)
-
-echo %fp%
-echo.
-  
-git pull
 
 exit/b
 
@@ -2157,110 +2138,6 @@ exit/b
 
 
 
-:_+ Adding
-
-
-
-::_
-
-:a
-
-:add
-
-:add_files_generic_action
-
-set fp=* Add files generic action.
-
-echo %fp%
-
-git add -A
-
-exit/b
-
-
-
-::_
-
-:add_dot
-
-set fp=* Add files.
-
-echo %fp%
-
-git add .
-
-exit/b
-
-
-
-::_
-
-:add2
-
-set fp=* Add files. (!step4)
-
-echo %fp%
-
-git add *.*
-
-exit/b
-
-
-
-:_+ ACP Commands
-
-
-
-::_
-
-:acp
-
-:update
-
-set fp=* Add, commit and push with timestamp commit description.
-
-rem fcd: Apr-13-2017
-
-echo %fp%
-
-cd | find /i "C:\projects\netbeans\sencha">nul
-if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit/b
-
-cd | find /i "C:\projects\netbeans\mercury6">nul
-if %errorlevel% == 0 echo A commit message is required in this folder.
-if %errorlevel% == 0 exit/b
-
-call %0 add_files_generic_action
-
-call %0 commit_with_timestamp_description
-
-call %0 push
-
-call %0 rf_status
-
-exit/b
-
-
-
-::_
-
-:mac
-
-set fp=* ACP commands for the mac.
-
-echo %fp%
-
-git add -A
-
-git push
-
-git commit -m ""
-
-exit/b
-
-
-
 :_
 
 :track_info
@@ -2349,6 +2226,129 @@ echo.
 xcopy %cbf_filename%
 
 ren VisualStudio.gitignore .gitignore
+
+exit/b
+
+
+
+:_+ Common GitHub Commands
+
+
+
+::_
+
+:pull
+
+set fp=* Pull. Do a get-latest from the default branch. (!step, !pull, !step3)
+
+echo %fp%
+echo.
+  
+git pull
+
+exit/b
+
+
+
+:_+ ACP Commands
+
+
+
+::_
+
+:acp
+
+:update
+
+set fp=* Add, commit and push with timestamp commit description.
+
+rem fcd: Apr-13-2017
+
+echo %fp%
+
+cd | find /i "C:\projects\netbeans\sencha">nul
+if %errorlevel% == 0 echo A commit message is required in this folder.
+if %errorlevel% == 0 exit/b
+
+cd | find /i "C:\projects\netbeans\mercury6">nul
+if %errorlevel% == 0 echo A commit message is required in this folder.
+if %errorlevel% == 0 exit/b
+
+call %0 add_files_generic_action
+
+call %0 commit_with_timestamp_description
+
+call %0 push
+
+call %0 rf_status
+
+exit/b
+
+
+
+::_
+
+:mac
+
+set fp=* ACP commands for the mac.
+
+echo %fp%
+
+git add -A
+
+git push
+
+git commit -m ""
+
+exit/b
+
+
+
+:_+ Adding
+
+
+
+::_
+
+:a
+
+:add
+
+:add_files_generic_action
+
+set fp=* Add files generic action.
+
+echo %fp%
+
+git add -A
+
+exit/b
+
+
+
+::_
+
+:add_dot
+
+set fp=* Add files.
+
+echo %fp%
+
+git add .
+
+exit/b
+
+
+
+::_
+
+:add2
+
+set fp=* Add files. (!step4)
+
+echo %fp%
+
+git add *.*
 
 exit/b
 
