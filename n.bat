@@ -5621,4 +5621,24 @@ exit/b
 
 
 
+:_
+
+:tf
+
+:terr
+
+set fp=* Terraform class.
+
+rem lu: Oct-29-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\it\Terraform - Getting Started - Pluralsight Class
+
+set cbf_url=https://www.terraform.io/
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
