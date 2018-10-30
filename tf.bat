@@ -212,7 +212,7 @@ exit/b
 
 :apply
 
-set fp=* Execute.
+set fp=* Apply.
 
 rem lu: Oct-30-2018
 
