@@ -5640,7 +5640,7 @@ if "%~2" == "" (
   set chapter=0%2
 )
 
-set cbf_path=%dropbox%\it\Terraform - Getting Started - Pluralsight Class\%chapter%
+set cbf_path=%dropbox%\it\Terraform - Getting Started - Pluralsight Class\%chapter%\demos
 
 set cbf_url=https://www.terraform.io/
 

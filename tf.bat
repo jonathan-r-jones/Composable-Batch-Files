@@ -112,7 +112,7 @@ rem lu: Oct-29-2018
 echo %fp%
 
 echo.
-terraform init
+terraform init -no-color
 
 exit/b
 
@@ -129,24 +129,10 @@ rem lu: Oct-29-2018
 echo %fp%
 
 echo.
-terraform plan -var-file="..\terraform.tfvars"
+terraform plan -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color
 
-exit/b
-
-
-
-:_
-
-:apply
-
-set fp=* Execution a plan.
-
-rem lu: Oct-29-2018
-
-echo %fp%
-
-echo.
-terraform apply -var-file="..\terraform.tfvars"
+rem Old Way
+rem terraform plan -var-file="..\terraform.tfvars" -no-color
 
 exit/b
 
@@ -163,7 +149,43 @@ rem lu: Oct-29-2018
 echo %fp%
 
 echo.
-terraform destroy -var-file="..\terraform.tfvars"
+terraform destroy -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
+
+rem Old Way
+rem terraform destroy -var-file="..\terraform.tfvars" -no-color -auto-approve
+
+exit/b
+
+
+
+:_
+
+:apply
+
+set fp=* Execute a plan!
+
+rem lu: Oct-29-2018
+
+echo %fp%
+
+echo.
+terraform apply -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
+
+exit/b
+
+
+
+:_
+
+:shared_function
+
+set fp=* Shared function.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+echo.
 
 exit/b
 
