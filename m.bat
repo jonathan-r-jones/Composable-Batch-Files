@@ -30,10 +30,8 @@ goto %1
 
 :help
 
-echo %filep%
-
 echo.
-echo Filename stands for: Miscellaneous tasks.
+echo Filename stands for: Perform miscellaneous tasks.
 
 echo.
 echo Last Updated: Feb-6-2018

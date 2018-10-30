@@ -105,7 +105,7 @@ exit/b
 
 :init
 
-set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. Hashicorp.
+set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from Hashicorp.
 
 rem lu: Oct-29-2018
 
@@ -120,7 +120,7 @@ exit/b
 
 :_
 
-:plan
+:plan_chapter_2
 
 set fp=* This execution plan can be reviewed prior to running apply to get a sense for what Terraform will do.
 
@@ -140,7 +140,7 @@ exit/b
 
 :_
 
-:destroy
+:destroy_chapter_2
 
 set fp=* Destroy a plan.
 
@@ -160,7 +160,7 @@ exit/b
 
 :_
 
-:apply
+:apply_chapter_2
 
 set fp=* Execute a plan!
 
@@ -186,6 +186,57 @@ rem lu: Oct-30-2018
 echo %fp%
 
 echo.
+
+exit/b
+
+
+
+:_
+
+:plan
+
+set fp=* Plan.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+echo.
+terraform plan -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color
+
+exit/b
+
+
+
+:_
+
+:apply
+
+set fp=* Execute.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+echo.
+terraform apply -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
+
+exit/b
+
+
+
+:_
+
+:destroy
+
+set fp=* Destroy.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+echo.
+terraform destroy -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
 
 exit/b
 

@@ -5635,7 +5635,7 @@ echo %fp%
 
 if "%~2" == "" (
   rem Set the default chapter here.
-  set chapter=02
+  set chapter=03
 ) else (
   set chapter=0%2
 )
