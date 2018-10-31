@@ -256,6 +256,8 @@ exit/b
 
 ::_
 
+:p
+
 :plan
 
 set fp=* Plan.
@@ -275,6 +277,10 @@ exit/b
 
 ::_
 
+:a
+
+:appl
+
 :apply
 
 set fp=* Apply.
@@ -293,6 +299,10 @@ exit/b
 
 
 ::_
+
+:d
+
+:dest
 
 :destroy
 
