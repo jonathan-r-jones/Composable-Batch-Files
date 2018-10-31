@@ -5637,7 +5637,7 @@ if "%~2" == "" (
   rem Set the default chapter here.
   set chapter=03
 ) else (
-  set chapter=0%2
+  set chapter=%2
 )
 
 set cbf_path=%dropbox%\it\Terraform - Getting Started - Pluralsight Class\%chapter%\demos

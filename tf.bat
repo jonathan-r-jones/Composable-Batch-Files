@@ -191,7 +191,11 @@ exit/b
 
 
 
-:_
+:_+ Main Parts
+
+
+
+::_
 
 :plan
 
@@ -208,7 +212,7 @@ exit/b
 
 
 
-:_
+::_
 
 :apply
 
@@ -225,7 +229,7 @@ exit/b
 
 
 
-:_
+::_
 
 :destroy
 
@@ -237,6 +241,65 @@ echo %fp%
 
 echo.
 terraform destroy -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
+
+exit/b
+
+
+
+:_+ Main Parts 12
+
+rem The purpose of folder 12 was to try and do some the of the same Terrraform work I had been
+rem doing on my personal AWS account on my AWS work account. I don't think I can achieve
+rem this currently because my AWS work account does not have programmatic access, which
+rem comes with the AWS access and secret keys, which I need for Terraform.
+
+
+::_
+
+:plan12
+
+set fp=* Plan.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+echo.
+terraform plan -var-file="%keys%\Terraform\terraform12.tfvars" -var "private_key_path=%keys%\Terraform\Cart_Test.pem" -no-color
+
+exit/b
+
+
+
+::_
+
+:apply12
+
+set fp=* Apply.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+echo.
+terraform apply -var-file="%keys%\Terraform\terraform12.tfvars" -var "private_key_path=%keys%\Terraform\Cart_Test.pem" -no-color -auto-approve
+
+exit/b
+
+
+
+::_
+
+:destroy12
+
+set fp=* Destroy.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+echo.
+terraform destroy -var-file="%keys%\Terraform\terraform12.tfvars" -var "private_key_path=%keys%\Terraform\Cart_Test.pem" -no-color -auto-approve
 
 exit/b
 
