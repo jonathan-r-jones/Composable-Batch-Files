@@ -129,7 +129,7 @@ rem lu: Oct-29-2018
 echo %fp%
 
 echo.
-terraform plan -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color
+terraform plan -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color
 
 rem Old Way
 rem terraform plan -var-file="..\terraform.tfvars" -no-color
@@ -149,7 +149,7 @@ rem lu: Oct-29-2018
 echo %fp%
 
 echo.
-terraform destroy -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
+terraform destroy -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
 
 rem Old Way
 rem terraform destroy -var-file="..\terraform.tfvars" -no-color -auto-approve
@@ -169,7 +169,7 @@ rem lu: Oct-29-2018
 echo %fp%
 
 echo.
-terraform apply -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
+terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
 
 exit/b
 
@@ -191,65 +191,10 @@ exit/b
 
 
 
-:_+ Main Parts
-
-
-
-::_
-
-:plan
-
-set fp=* Plan.
-
-rem lu: Oct-30-2018
-
-echo %fp%
-
-echo.
-terraform plan -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color
-
-exit/b
-
-
-
-::_
-
-:apply
-
-set fp=* Apply.
-
-rem lu: Oct-30-2018
-
-echo %fp%
-
-echo.
-terraform apply -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
-
-exit/b
-
-
-
-::_
-
-:destroy
-
-set fp=* Destroy.
-
-rem lu: Oct-30-2018
-
-echo %fp%
-
-echo.
-terraform destroy -var-file="%keys%\Terraform\terraform.tfvars" -var "private_key_path=%keys%\Terraform\TerraformTest2.pem" -no-color -auto-approve
-
-exit/b
-
-
-
 :_+ Main Parts 12
 
 rem The purpose of folder 12 was to try and do some the of the same Terrraform work I had been
-rem doing on my personal AWS account on my AWS work account. I don't think I can achieve
+rem doing on my personal AWS account but now do it on my AWS work account. I don't think I can achieve
 rem this currently because my AWS work account does not have programmatic access, which
 rem comes with the AWS access and secret keys, which I need for Terraform.
 
@@ -265,7 +210,7 @@ rem lu: Oct-30-2018
 echo %fp%
 
 echo.
-terraform plan -var-file="%keys%\Terraform\terraform12.tfvars" -var "private_key_path=%keys%\Terraform\Cart_Test.pem" -no-color
+terraform plan -var-file="%tfkeys%\terraform12.tfvars" -var "private_key_path=%tfkeys%\Cart_Test.pem" -no-color
 
 exit/b
 
@@ -282,7 +227,7 @@ rem lu: Oct-30-2018
 echo %fp%
 
 echo.
-terraform apply -var-file="%keys%\Terraform\terraform12.tfvars" -var "private_key_path=%keys%\Terraform\Cart_Test.pem" -no-color -auto-approve
+terraform apply -var-file="%tfkeys%\terraform12.tfvars" -var "private_key_path=%tfkeys%\Cart_Test.pem" -no-color -auto-approve
 
 exit/b
 
@@ -299,10 +244,91 @@ rem lu: Oct-30-2018
 echo %fp%
 
 echo.
-terraform destroy -var-file="%keys%\Terraform\terraform12.tfvars" -var "private_key_path=%keys%\Terraform\Cart_Test.pem" -no-color -auto-approve
+terraform destroy -var-file="%tfkeys%\terraform12.tfvars" -var "private_key_path=%tfkeys%\Cart_Test.pem" -no-color -auto-approve
+
+exit/b
+
+
+
+:_+ Main Parts
+
+
+
+::_
+
+:plan
+
+set fp=* Plan.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+call %0 check_tf_existence
+
+echo.
+terraform plan -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color
+
+exit/b
+
+
+
+::_
+
+:apply
+
+set fp=* Apply.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+call %0 check_tf_existence
+
+echo.
+terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
+
+exit/b
+
+
+
+::_
+
+:destroy
+
+set fp=* Destroy.
+
+rem lu: Oct-30-2018
+
+echo %fp%
+
+call %0 check_tf_existence
+
+echo.
+terraform destroy -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
 
 exit/b
 
 
 
 :_
+
+:check_tf_existence
+
+set fp=* Check Terraform file(s) existence.
+
+rem lu: Oct-31-2018
+
+echo %fp%
+
+if not exist *.tf (
+  echo.
+  echo * Error: No Terraform files exist in the current folder. ************
+  exit/b
+)
+
+exit/b
+
+
+
+:_ (!rfsp) (mov-6)

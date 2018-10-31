@@ -73,10 +73,8 @@ echo %filename_stands_for%
 
 
 
-rem (!rfsp) (mov-2)
-
 exit/b
 
 
 
-:_
+:_ (!rfsp) (mov-6)
