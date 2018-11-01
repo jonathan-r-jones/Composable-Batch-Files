@@ -361,7 +361,7 @@ exit/b 0
 
 :mod2
 
-set fp=* Go to and plan module 3. Website says?
+set fp=* Go to and plan module 3. Website says "Teal/Green" alternating websites.
 
 rem lu: Nov-1-2018
 
@@ -381,7 +381,7 @@ exit/b
 
 :mod3
 
-set fp=* Go to and plan module 3. Website says "Yeah!".
+set fp=* Go to and plan module 3. Website shows Globomantics logo and says "Yeah!" if the logo has not loaded yet.
 
 rem The "dev" tags control the "Name" field of the instance.
 
