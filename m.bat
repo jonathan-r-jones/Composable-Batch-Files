@@ -3570,4 +3570,23 @@ exit/b
 
 
 
+:_
+
+:aws_cli
+
+set fp=* Install AWS CLI.
+
+rem lu: Nov-1-2018
+
+echo.
+echo %fp%
+
+echo.
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
