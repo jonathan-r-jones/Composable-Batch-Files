@@ -55,7 +55,7 @@ exit/b
 
 :emulate_cd
 
-set fp=* Emulate cd..
+set fp=* Emulate "cd..".
 
 echo.
 echo %fp%
