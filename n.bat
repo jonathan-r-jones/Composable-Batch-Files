@@ -5680,6 +5680,8 @@ set fp=* Module 3. Website shows Globomantics logo and says "Yeah!" if the logo 
 
 rem The "dev" tags control the "Name" field of the instance.
 
+rem The Terraform output is the AWS Elastic Load Balancer Public DNS.
+
 rem lu: Nov-1-2018
 
 echo %fp%
@@ -5698,9 +5700,7 @@ exit/b
 
 :mod4
 
-set fp=* Module 3. Website shows Globomantics logo and says "Yeah!" if the logo has not loaded yet.
-
-rem The "dev" tags control the "Name" field of the instance.
+set fp=* Module 4. I didn't complete this module because it required some Azure setup, which I didn't want to do at the current time.
 
 rem lu: Nov-1-2018
 

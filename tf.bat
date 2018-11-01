@@ -380,4 +380,73 @@ exit/b
 
 
 
+:_
+
+:fmt
+
+set fp=* Format tf file.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+terraform fmt
+
+exit/b
+
+
+
+:_
+
+:refresh
+
+set fp=* Refresh state file.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+terraform refresh
+
+exit/b
+
+
+
+:_
+
+:taint
+
+set fp=* Manually mark a resource for recreation.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+terraform taint
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
