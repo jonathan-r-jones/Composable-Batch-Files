@@ -22,7 +22,7 @@ if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-goto main_function
+goto %1
 
 
 
@@ -49,18 +49,6 @@ set parameter_1=%parameter_1%
 
 echo.
 echo %parameter_1%
-
-exit/b
-
-
-
-:_
-
-:main_function
-
-echo %filename_stands_for%
-
-
 
 exit/b
 
