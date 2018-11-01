@@ -5648,4 +5648,72 @@ exit/b
 
 
 
+:_+ My Terraform Plaralsight Training Modules
+
+
+
+::_
+
+:mod2
+
+set fp=* Module 3. Website says "Teal/Green" alternating/load-balanced websites.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call td tf 03
+
+cd moduletwo
+
+set cbf_path=%cd%
+
+exit/b
+
+
+
+::_
+
+:mod3
+
+set fp=* Module 3. Website shows Globomantics logo and says "Yeah!" if the logo has not loaded yet.
+
+rem The "dev" tags control the "Name" field of the instance.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call td tf 04
+
+cd modulethree
+
+set cbf_path=%cd%
+
+exit/b
+
+
+
+::_
+
+:mod4
+
+set fp=* Module 3. Website shows Globomantics logo and says "Yeah!" if the logo has not loaded yet.
+
+rem The "dev" tags control the "Name" field of the instance.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call td tf 05
+
+cd modulefour
+
+set cbf_path=%cd%
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
