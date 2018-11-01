@@ -8004,46 +8004,11 @@ exit/b
 
 :_
 
-:guard_clause
-
-set fp=* Guard clause.
-
-rem lu: Nov-1-2018
-
-echo %fp%
-
-rem       qq-1
-
-exit/b
-
-
-
-:_
-
 :main_function
 
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
-:
-
-set fp=* Guard clause test.
-
-rem lu: Nov-1-2018
-
-echo %fp%
-
-call %0 guard_clause
-
-echo end of gct
-rem       qq-1
-
-exit/b
 
 
 

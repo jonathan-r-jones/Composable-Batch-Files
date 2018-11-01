@@ -58,6 +58,10 @@ echo  double_click  Perform command-line equivalent of a double click.
 echo       del_hex  Delete WildFly Dynamic Folder.
 echo          depl  Deploy a new WAR file.
 echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
+echo          el_c  Error level - clear.
+echo         el_cs  Error level - clear silently.
+echo          el_g  Error level - get.
+echo          el_s  Error level - set.
 echo           env  List CBF environment variables.
 echo          exit  Exit batch file.
 echo         exitp  Exit batch file with pause.
@@ -3337,100 +3341,6 @@ exit/b
 
 
 
-:_+ Error Level
-
-
-
-::_
-
-:ge
-
-:get_el
-
-set fp=* Get ErrorLevel.
-
-rem lu: Aug-3-2018
-
-echo.
-echo %fp%
-
-echo.
-echo * ErrorLevel: %errorlevel%
-
-exit/b
-
-
-
-::_
-
-:se
-
-:set_el
-
-set fp=* Set ErrorLevel.
-
-rem lu: Aug-3-2018
-
-echo.
-echo %fp%
-
-echo.
-echo * Current ErrorLevel: %errorlevel%
-echo.
-
-rem call td %~1 %2
-
-rem The following line sets the errorlevel to 9009.
-xxx
-
-echo.
-echo * New ErrorLevel: %errorlevel%
-
-exit/b
-
-
-
-::_
-
-:ce
-
-:clear_el
-
-:clear_errorlevel
-
-set fp=* Clear ErrorLevel.
-
-rem lu: Aug-3-2018
-
-echo.
-echo %fp%
-
-echo.
-echo * Current ErrorLevel: %errorlevel%
-
-ver>nul
-
-echo.
-echo * New ErrorLevel: %errorlevel%
-
-exit/b
-
-
-
-::_
-
-:clear_errorlevel_silently
-
-set fp=* Clear/reset errorLevel silently.
-
-rem lu: Aug-7-2018
-
-ver>nul
-
-exit/b
-
-
-
 :_
 
 :compose
@@ -3553,6 +3463,108 @@ cd /d %temp%\cart_cs
 for /r %%j in (*.cs) do type "%%j">>"%temp%\j1.txt"
 
 call me j1
+
+exit/b
+
+
+
+:_+ Error Level
+
+
+
+::_
+
+:el_c
+
+:ce
+
+:clear_el
+
+:clear_errorlevel
+
+set fp=* Clear ErrorLevel.
+
+rem lu: Aug-3-2018
+
+echo.
+echo %fp%
+
+echo.
+echo * Current ErrorLevel: %errorlevel%
+
+ver>nul
+
+echo.
+echo * New ErrorLevel: %errorlevel%
+
+exit/b
+
+
+
+::_
+
+:el_cs
+
+:clear_errorlevel_silently
+
+set fp=* Clear/reset errorLevel silently.
+
+rem lu: Aug-7-2018
+
+ver>nul
+
+exit/b
+
+
+
+::_
+
+:el_g
+
+:ge
+
+:get_el
+
+set fp=* Get ErrorLevel.
+
+rem lu: Aug-3-2018
+
+echo.
+echo %fp%
+
+echo.
+echo * ErrorLevel: %errorlevel%
+
+exit/b
+
+
+
+::_
+
+:el_s
+
+:se
+
+:set_el
+
+set fp=* Set ErrorLevel.
+
+rem lu: Aug-3-2018
+
+echo.
+echo %fp%
+
+echo.
+echo * Current ErrorLevel: %errorlevel%
+echo.
+
+rem call td %~1 %2
+
+rem The following line sets the errorlevel to 9009.
+xxx
+
+echo.
+echo * New ErrorLevel: %errorlevel%
 
 exit/b
 

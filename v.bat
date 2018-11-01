@@ -93,7 +93,7 @@ set fp=* The errorlevel statement.
 
 echo %fp%
 
-rem Imprimatur (!el, !erle)
+rem Imprimatur (!erro, !el, !erle)
 
 echo.
 echo Errorlevel: %errorlevel%
@@ -448,6 +448,57 @@ set cbf_url=%cbf_url:https://=%
 set cbf_url=%cbf_url:www.=%
 
 exit/b
+
+
+
+:_+ Guard Clause
+
+
+
+::_
+
+:guard_clause_caller
+
+set fp=* Guard clause caller.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call %0 guard_clause
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Guard clause failed.
+  exit/b
+)
+
+call m el_g
+
+echo.
+echo * Guard claused passed.
+
+exit/b
+
+
+
+::_
+
+:guard_clause
+
+set fp=* Guard clause.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+if not exist *.tf (
+  echo.
+  echo * Error: No Terraform files exist in the current folder. ************
+  exit/b 1
+)
+
+exit/b 0
 
 
 

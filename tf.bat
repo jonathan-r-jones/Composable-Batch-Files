@@ -268,6 +268,10 @@ echo %fp%
 
 call %0 check_tf_existence
 
+if %errorlevel% == 1 (
+  exit/b
+)
+
 echo.
 terraform plan -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color
 
@@ -290,6 +294,10 @@ rem lu: Oct-30-2018
 echo %fp%
 
 call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
 
 echo.
 terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
@@ -314,6 +322,10 @@ echo %fp%
 
 call %0 check_tf_existence
 
+if %errorlevel% == 1 (
+  exit/b
+)
+
 echo.
 terraform destroy -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
 
@@ -334,10 +346,10 @@ echo %fp%
 if not exist *.tf (
   echo.
   echo * Error: No Terraform files exist in the current folder. ************
-  exit/b
+  exit/b 1
 )
 
-exit/b
+exit/b 0
 
 
 
