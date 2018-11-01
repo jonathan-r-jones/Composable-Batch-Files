@@ -84,8 +84,8 @@ echo    ed  Edit a file. Emulated Surf.
 echo   env  Show the state of the CBF environment variables.
 echo    fs  Filenames search.
 echo     g  Perform Git-related tasks.
-echo    gl  Glossary of terms used in CBF.
 echo    gg  Git Gui helper. Has TD parameter.
+echo    gl  Glossary of terms used in CBF.
 echo     h  Perform Sencha-related tasks.
 echo     m  Perform miscellaneous tasks.
 echo   mcd  Make and navigate (cd) to a folder.
