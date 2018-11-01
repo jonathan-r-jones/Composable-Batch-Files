@@ -337,7 +337,7 @@ exit/b
 
 :check_tf_existence
 
-set fp=* Check Terraform file(s) existence.
+set fp=* Check the current folder for the presence of Terraform file(s).
 
 rem lu: Oct-31-2018
 
@@ -345,11 +345,57 @@ echo %fp%
 
 if not exist *.tf (
   echo.
-  echo * Error: No Terraform files exist in the current folder. ************
+  echo * Error: No Terraform files exist in the current folder.
   exit/b 1
 )
 
 exit/b 0
+
+
+
+:_+ My Terraform Plaralsight Training Modules
+
+
+
+::_
+
+:mod2
+
+set fp=* Go to and plan module 3. Website says?
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call td tf 03
+
+cd moduletwo
+
+call tf p
+
+exit/b
+
+
+
+::_
+
+:mod3
+
+set fp=* Go to and plan module 3. Website says "Yeah!".
+
+rem The "dev" tags control the "Name" field of the instance.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call td tf 04
+
+cd modulethree
+
+call tf p
+
+exit/b
 
 
 
