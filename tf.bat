@@ -353,4 +353,31 @@ exit/b 0
 
 
 
+:_
+
+:cons
+
+:console
+
+:repl
+
+set fp=* Terraform console.
+
+rem lu: Nov-1-2018
+
+echo %fp%
+
+call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+terraform console
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

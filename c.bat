@@ -37,18 +37,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-
-
-:_
-
-set filep=* Clear screen and reset color.
-
-call td o
-
-cls
-color
-
-exit/b
+goto main_function
 
 
 
@@ -70,6 +59,21 @@ echo Last Updated (lu): Feb-6-2018
 
 echo.
 echo Usage: %0
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set filep=* Clear screen and reset color.
+
+call td o
+
+cls
+color
 
 exit/b
 

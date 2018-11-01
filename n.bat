@@ -5627,7 +5627,7 @@ exit/b
 
 :terr
 
-set fp=* Terraform class.
+set fp=* Pluralsight's Terraform class.
 
 rem lu: Oct-29-2018
 
