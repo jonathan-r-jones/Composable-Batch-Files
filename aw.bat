@@ -54,4 +54,23 @@ exit/b
 
 
 
+:_
+
+:vers
+
+set fp=* Version
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws --version
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

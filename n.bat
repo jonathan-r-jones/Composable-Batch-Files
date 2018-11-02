@@ -1907,22 +1907,6 @@ exit/b
 
 :_
 
-:pf
-
-set fp=* Program files.
-
-rem lu: Apr-24-2018
-
-echo %fp%
-
-set cbf_path=c:\program files
-
-exit/b
-
-
-
-:_
-
 :pajs
 
 :pack
@@ -2647,15 +2631,13 @@ exit/b
 
 :aa
 
-set fp=* Aa.
+set fp=* Aa, a.k.a. permanent folders for Jonathan.
 
-rem lu: Jan-15-2018
+rem lu: Nov-2-2018
 
 echo %fp%
 
-set cbf_path=c:\aa
-
-if %COMPUTERNAME%==XPS set cbf_path=d:\aa
+set cbf_path=%aa%
 
 exit/b
 
@@ -5743,6 +5725,38 @@ rem lu: Nov-2-2018
 echo %fp%
 
 set cbf_path=c:\aa\repositories
+
+exit/b
+
+
+
+:_
+
+:pf
+
+set fp=* Program files.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+set cbf_path=c:\program files
+
+exit/b
+
+
+
+:_
+
+:pf86
+
+set fp=* Program files x86.
+
+rem lu: Apr-24-2018
+
+echo %fp%
+
+set cbf_path=c:\program files (x86)
 
 exit/b
 
