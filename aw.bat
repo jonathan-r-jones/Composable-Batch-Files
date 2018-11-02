@@ -551,6 +551,24 @@ exit/b
 
 :_
 
+:rwb
+
+set fp=* Remove web bucket.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 rb --force s3://mysite548123.com
+
+exit/b
+
+
+
+:_
+
 :asp
 
 set fp=* Adjust site permissions.
@@ -598,7 +616,6 @@ echo %fp%
 
 echo.
 aws s3 website s3://mysite548123.com/ --index-document index.html --error-document error.html
-rem qq-1
 
 exit/b
 
@@ -617,6 +634,217 @@ echo %fp%
 
 echo.
 aws s3api get-bucket-website --bucket mysite548123.com
+
+exit/b
+
+
+
+:_+ Full web parts process according to AWS CLI instructor.
+
+
+
+::_
+
+:csg
+
+set fp=* Create security group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name EC2SecurityGroup ^
+  --description "Security Group for EC2 instances to allow ports 22, 88 and 443"
+
+exit/b
+
+
+
+::_
+
+:auth
+
+set fp=* Authorize secrurity group ingress.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+  --port 22 --cidr 172.54.125.8/32
+
+exit/b
+
+
+
+::_
+
+:auth2
+
+set fp=* Authorize secrurity group ingress.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+  --port 80 --cidr 172.54.125.8/32
+
+exit/b
+
+
+
+::_
+
+:auth3
+
+set fp=* Authorize secrurity group ingress - 3rd port.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+  --port 443 --cidr 172.54.125.8/32
+
+exit/b
+
+
+
+::_
+
+:dsc
+
+set fp=* Describe security group
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups --group-names EC2SecurityGroup
+
+exit/b
+
+
+
+::_
+
+:deim
+
+set fp=* Describe images.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws --output table ec2 describe-images --filters "Name=description,Values=*Amazon Linux 2*" ^
+  "Name=owner-alias,Values=amazon"
+
+exit/b
+
+
+
+::_
+
+:deim2
+
+set fp=* Describe images with PostgreSQL.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws --output table ec2 describe-images --filters "Name=description,Values=*Postgre*" ^
+  "Name=owner-alias,Values=amazon"
+
+exit/b
+
+
+
+::_
+
+:desu
+
+set fp=* Describe subnets.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-subnets
+
+exit/b
+
+
+
+::_
+
+:ruin
+
+set fp=* Run instance.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 run-instances --image-id ami-00b94673edfccb7ca --count 1 ^
+  --instance-type t2.micro --key-name TerraformTest2 ^
+  --security-group-ids sg-0e67f09ea592e68ff ^
+  --subnet-id subnet-8e0b7181 ^
+  --user-data file://my_script.sh 
+  --tag-specifications ^
+  'ResourceType=instance,Tags=[{Key=webserver,Value=production}]'
+
+rem qq-1
+exit/b
+aws ec2 run-instances --image-id ami-00b94673edfccb7ca --count 1 ^
+  --instance-type t2.micro --key-name newcluster ^
+  --security-group-ids sg-06366129d8a9b8a59*** ^
+  --subnet-id subnet-52d6117c ^
+  --user-data file://my_script.sh ^
+  --tag-specifications ^
+  'ResourceType=instance,Tags=[{Key=webserver,Value=production}]'
+
+exit/b
+
+
+
+::_
+
+:create_db
+
+set fp=* Create database
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance --db-instance-identifier sg-cli-test ^
+  --allocated-storage 20 ^
+  --db-instance-class db.m1.small ^
+  --engine mysql ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
 rem qq-1
 
 exit/b

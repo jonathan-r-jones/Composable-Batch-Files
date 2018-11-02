@@ -5814,4 +5814,20 @@ exit/b
 
 
 
+:_
+
+:tfkeys
+
+set fp=* TF Keys.
+
+rem lu: Nov-2-2018
+
+echo %fp%
+
+set cbf_path=%tfkeys% 
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
