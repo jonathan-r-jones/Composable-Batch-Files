@@ -579,6 +579,27 @@ exit/b
 
 :_
 
+:
+
+set fp=* Line continuation.
+
+rem How do you continue a batch file line onto a second line?
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+echo Four score and seven years ago our fathers brought forth on this continent a new nation, ^
+conceived in liberty and dedicated to the proposition that all men are created equal.
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.

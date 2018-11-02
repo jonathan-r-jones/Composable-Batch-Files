@@ -5762,4 +5762,43 @@ exit/b
 
 
 
+:_+ AWS CLI
+
+
+
+::_
+
+:cli_s
+
+set fp=* AWS CLI sample code.
+
+rem lu: Nov-2-2018
+
+echo %fp%
+
+set cbf_url=https://bootstrap-it.com/awscli/#intro
+
+exit/b
+
+
+
+:_
+
+:cli_r
+
+:cli_ref
+
+set fp=* AWS CLI Reference.
+
+rem lu: Nov-2-2018
+
+echo %fp%
+
+set cbf_url=https://docs.aws.amazon.com/cli/latest/reference/index.html
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
