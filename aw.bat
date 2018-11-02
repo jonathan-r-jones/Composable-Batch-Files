@@ -67,7 +67,24 @@ echo %fp%
 
 echo.
 aws --version
-rem       qq-1
+
+exit/b
+
+
+
+:_
+
+:conf
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
 
 exit/b
 
