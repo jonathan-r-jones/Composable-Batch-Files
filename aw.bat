@@ -350,4 +350,277 @@ exit/b
 
 
 
+:_
+
+:cu
+
+set fp=* Create user
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-user --user-name mike
+
+exit/b
+
+
+
+:_
+
+:gu
+
+set fp=* Get user information.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name mike
+
+exit/b
+
+
+
+:_
+
+:gu2
+
+set fp=* Get user information.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name terraform_user
+
+exit/b
+
+
+
+:_
+
+:lak
+
+set fp=* List access keys.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name terraform_user
+
+exit/b
+
+
+
+:_
+
+:lam
+
+set fp=* List access keys for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name mike
+
+exit/b
+
+
+
+:_
+
+:cak
+
+set fp=* Create access key for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-access-key --user-name mike
+
+exit/b
+
+
+
+:_
+
+:crgr
+
+set fp=* Create group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-group --group-name admins
+
+exit/b
+
+
+
+:_
+
+:lgp
+
+set fp=* List group policies.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-policies
+
+exit/b
+
+
+
+:_
+
+:agp
+
+set fp=* Attach policy.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
+  --group-name admins
+
+exit/b
+
+
+
+:_
+
+:autg
+
+set fp=* Add user to group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam add-user-to-group --group-name admins --user-name mike
+
+exit/b
+
+
+
+:_
+
+:mwb
+
+set fp=* Make web bucket.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 mb s3://mysite548123.com
+
+exit/b
+
+
+
+:_
+
+:asp
+
+set fp=* Adjust site permissions.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3api put-bucket-acl --bucket mysite548123.com --acl public-read
+
+exit/b
+
+
+
+:_
+
+:sync
+
+set fp=* Sync bucket.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 sync . s3://mysite548123.com --acl public-read
+
+exit/b
+
+
+
+:_
+
+:error
+
+set fp=* Define error website.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 website s3://mysite548123.com/ --index-document index.html --error-document error.html
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:confirm
+
+set fp=* Confirm website.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3api get-bucket-website --bucket mysite548123.com
+rem qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

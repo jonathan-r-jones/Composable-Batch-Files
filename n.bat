@@ -5782,7 +5782,7 @@ exit/b
 
 
 
-:_
+::_
 
 :cli_r
 
@@ -5795,6 +5795,20 @@ rem lu: Nov-2-2018
 echo %fp%
 
 set cbf_url=https://docs.aws.amazon.com/cli/latest/reference/index.html
+
+exit/b
+
+
+
+::_
+
+:cli_web
+
+set fp=* My aws cli website.
+
+rem lu: Nov-2-2018
+
+set cbf_url=http://mysite548123.com.s3-website-us-east-1.amazonaws.com/
 
 exit/b
 
