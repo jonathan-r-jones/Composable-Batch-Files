@@ -5463,26 +5463,6 @@ exit/b
 
 :_
 
-:r
-
-:repos
-
-:repository_folder
-
-set fp=* Default repository folder.
-
-rem lu: Jul-10-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%
-
-exit/b
-
-
-
-:_
-
 :wg
 
 set fp=* DevOps Working Group.
@@ -5711,6 +5691,58 @@ call td tf 05
 cd modulefour
 
 set cbf_path=%cd%
+
+exit/b
+
+
+
+:_
+
+:r
+
+:repos
+
+:repository_folder
+
+set fp=* Default repository folder.
+
+rem lu: Jul-10-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%
+
+exit/b
+
+
+
+:_
+
+:d_aa_repos
+
+set fp=* D aa repositories.
+
+rem lu: Nov-2-2018
+
+echo %fp%
+
+set cbf_path=d:\aa\repositories
+
+exit/b
+
+
+
+:_
+
+:c_aa_repos
+
+set fp=* C aa repositories.
+
+rem lu: Nov-2-2018
+
+echo %fp%
+
+set cbf_path=c:\aa\repositories
 
 exit/b
 

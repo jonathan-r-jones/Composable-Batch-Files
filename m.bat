@@ -1410,7 +1410,11 @@ exit/b
 
 
 
-:_
+:_+ Initizialization Family
+
+
+
+::_
 
 :ise
 
@@ -1418,26 +1422,75 @@ set fp=* Initialize environment. The idea is to create a pit of success for the 
 
 rem fcd: Aug-8-2018
 
+echo.
 echo %fp%
 
-if "%computername%" == "ASUS" call m set_default_browser kr
+call %0 initialize_default_browser
 
-if "%computername%" == "BUZZ" call m set_default_browser kr
-if "%computername%" == "BUZZ" call m set_default_repository_folder aa
+call %0 initialize_default_repository_folder
 
-if "%computername%" == "XPS" call m set_default_browser kr
-
-if "%cbf_default_browser%" == "" call m set_default_browser ie
-
-if "%cbf_default_repository_folder%" == "" call m set_default_repository_folder temp
-
-if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
-
-if "%computername%" == "ASUS" call m set_default_text_editor no
-
-if "%computername%" == "XPS" call m set_default_text_editor npp
+call %0 initialize_default_text_editor
 
 cls
+
+exit/b
+
+
+
+::_
+
+:initialize_default_browser
+
+set fp=* Initialize default browser.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+if /i "%computername%" == "asus" call m set_default_browser kr
+if /i "%computername%" == "buzz" call m set_default_browser kr
+if /i "%computername%" == "xps" call m set_default_browser kr
+if "%cbf_default_browser%" == "" call m set_default_browser ie
+
+exit/b
+
+
+
+::_
+
+:initialize_default_repository_folder
+
+set fp=* Initialize default repository folder.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
+if "%cbf_default_repository_folder%" == "" call %0 set_default_repository_folder temp
+
+exit/b
+
+
+
+::_
+
+:initialize_default_text_editor
+
+set fp=* Initialize default text editor.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+if /i "%computername%" == "asus" call m set_default_text_editor no
+if /i "%computername%" == "xps" call m set_default_text_editor npp
+if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
 
 exit/b
 
@@ -3194,6 +3247,7 @@ set fp=* Set default browser.
 
 rem lu: Aug-8-2018
 
+echo.
 echo %fp%
 
 if not "%~2" == "" call n %2
@@ -3212,6 +3266,7 @@ set fp=* Set default repository folder.
 
 rem lu: Jul-10-2018
 
+echo.
 echo %fp%
 
 if not "%~2" == "" call n %2

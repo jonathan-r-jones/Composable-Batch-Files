@@ -504,6 +504,81 @@ exit/b 0
 
 :_
 
+:section_1
+
+echo.
+echo Section_1: Ifs and Sets: Every line in section 1 prints and every line in section 2 
+doesn't. echo 
+--------------------------------------------------------------------------------------------
+
+if /i exist "c:\!affinity" echo I used to think that "if exist" works only on filenames, not 
+folders.
+
+set horse=Notice no space after the equals sign and no quotes around this string.
+echo %horse%
+
+set horse= Notice the space at the beginning of this string.
+echo %horse%
+
+if /i "%computer_alias%"=="Laptop" echo Double quotes work and are preferred to single quotes.
+
+if /i '%computer_alias%' == 'laptop' echo This is how you employ case-insensitivity.
+
+if /i not exist '%savannah%\worthwhile.some' echo Here's how you use "NOT EXIST".
+
+if /i exist "%savannah%\worthwhile.now" echo Case doesn't matter.
+
+if /i NOT '%computer_alias%' == 'Laptopxxxx' echo This is how you use The NOT EQAUL TO 
+operator.
+
+if /i '%computer_alias%' == 'Laptop' echo Spaces around the '==' DON'T matter.
+
+:Notice also that set statement employ single "=" sign, whereas comparison employ 2 "=" signs.
+
+if /i '%computer_alias%'=='Laptop' echo Single quotes work, but NOT with ALL constructs so 
+should be avoided.
+
+if /i '%computer_alias%'=='Laptop' echo This is case sensitive.
+
+exit/b
+
+
+
+:_
+
+:section_2
+
+echo.
+echo Section 2: Items below here DON'T PRINT. If you don't believe me, try running 
+echo this to see for yourself. What follows the echo statement is the reason the 
+echo syntax is incorrect.
+echo ------------------------------------------------------------------------------
+
+if /i not exist "c:\!affinity" echo I used to think that "if exist" works only on filenames, 
+not folders.
+
+if /i exist '%savannah%\Worthwhile.now' echo The file "worthwhile.asc" actually exists but you 
+surrounded it with single, instead of double quotes.
+
+::Notice that putting a space BEFORE the equals sign causes the variable to not be set.
+set horse2 = shit
+echo %horse2%
+
+if "%computer_alias%"=="LapTop" echo Improperly cased variable.
+if %computer_alias%=="Laptop" echo No quotes around the environment variable.
+set computer_alias_2="Laptop"
+if '%computer_alias%_2' == 'Laptop' echo Percent signs within the environment variable.
+
+goto _xit
+
+:del "file identifier report.txt"
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
