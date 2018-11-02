@@ -92,23 +92,6 @@ exit/b
 
 :_
 
-:s3
-
-set fp=* List all s3 buckets.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws s3 ls
-
-exit/b
-
-
-
-:_
-
 :add_account
 
 set fp=* Add account.
@@ -237,25 +220,6 @@ exit/b
 
 :_
 
-:hs3
-
-set fp=* Help for S3
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 help
-rem qq-1
-
-exit/b
-
-
-
-:_
-
 :wh
 
 set fp=* Website help.
@@ -267,7 +231,120 @@ echo %fp%
 
 echo.
 aws s3 website help
-rem qq-1
+
+exit/b
+
+
+
+:_+ Buckets
+
+
+
+::_
+
+:s3_mb
+
+set fp=* Make a bucket.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 mb s3://test4444test4444
+
+exit/b
+
+
+
+::_
+
+:s3_rb
+
+set fp=* Remove a bucket.
+
+rem Note: The force parameter seems to placed exactly after the rb command in order to work.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 rb --force s3://test4444test4444
+
+exit/b
+
+
+
+::_
+
+:s3_ls
+
+set fp=* List all s3 buckets.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 ls
+
+exit/b
+
+
+
+::_
+
+:s3_h
+
+set fp=* Help for S3
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 help
+
+exit/b
+
+
+
+:_
+
+:s3_ctp
+
+set fp=* Copy stuff to bucket.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 cp --recursive test1/ s3://test4444test4444
+
+exit/b
+
+
+
+:_
+
+:s3_lbc
+
+set fp=* List bucket contents.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 ls s3://test4444test4444
 
 exit/b
 

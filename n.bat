@@ -5795,7 +5795,6 @@ rem lu: Nov-2-2018
 echo %fp%
 
 set cbf_url=https://docs.aws.amazon.com/cli/latest/reference/index.html
-rem       qq-1
 
 exit/b
 
