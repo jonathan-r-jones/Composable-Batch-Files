@@ -911,6 +911,8 @@ call %0 make_bucket_publicly_readable
 echo.
 pause
 
+call n cas
+
 call check_index_existence
 
 if %errorlevel% == 1 (

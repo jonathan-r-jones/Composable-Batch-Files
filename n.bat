@@ -5804,13 +5804,19 @@ exit/b
 
 ::_
 
+:cas
+
 :cli_web
 
-set fp=* My aws cli website.
+set fp=* My AWS CLI CART Admin website.
 
 rem lu: Nov-2-2018
 
+echo %fp%
+
 set cbf_url=http://cartsite2018.com.s3-website-us-east-1.amazonaws.com/
+
+set cbf_path=%dropbox%\it\CART Admin Site
 
 exit/b
 
