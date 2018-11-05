@@ -74,25 +74,6 @@ exit/b
 
 :_
 
-:voa
-
-set fp=* View other account.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-
-aws --profile account2 s3 ls
-
-exit/b
-
-
-
-:_
-
 :sc
 
 set fp=* Look up sample code.
@@ -176,7 +157,7 @@ echo.
 echo %fp%
 
 echo.
-aws --help
+aws help
 
 exit/b
 
@@ -195,84 +176,6 @@ echo %fp%
 
 echo.
 aws s3 website help
-
-exit/b
-
-
-
-:_+ Buckets
-
-
-
-::_
-
-:s3_mb
-
-set fp=* Make a bucket.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 mb s3://test4444test4444
-
-exit/b
-
-
-
-::_
-
-:s3_rb
-
-set fp=* Remove a bucket.
-
-rem Note: The force parameter seems to placed exactly after the rb command in order to work.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 rb --force s3://test4444test4444
-
-exit/b
-
-
-
-::_
-
-:s3_ls
-
-set fp=* List all s3 buckets.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 ls
-
-exit/b
-
-
-
-::_
-
-:s3_h
-
-set fp=* Help for S3
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 help
 
 exit/b
 
@@ -309,42 +212,6 @@ echo %fp%
 
 echo.
 aws s3 ls s3://test4444test4444
-
-exit/b
-
-
-
-:_
-
-:mwb
-
-set fp=* Make web bucket.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 mb s3://mysite548123.com
-
-exit/b
-
-
-
-:_
-
-:rwb
-
-set fp=* Remove web bucket.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 rb --force s3://mysite548123.com
 
 exit/b
 
@@ -789,9 +656,9 @@ exit/b
 
 ::_
 
-:lak
+:lak_tu
 
-set fp=* List access keys.
+set fp=* List access keys for tu.
 
 rem lu: Nov-2-2018
 
@@ -958,7 +825,7 @@ exit/b
 
 
 
-:_
+::_
 
 :cfg_h
 
@@ -971,6 +838,207 @@ echo %fp%
 
 echo.
 aws configure help
+
+exit/b
+
+
+
+::_
+
+:cfg_voa
+
+set fp=* View other account.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+
+aws --profile account2 s3 ls
+
+exit/b
+
+
+
+::_
+
+:lak_pc
+
+set fp=* List access keys for pc.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name procon_user
+
+exit/b
+
+
+
+:_+ Buckets
+
+
+
+::_
+
+:s3_mb
+
+set fp=* Make a bucket.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 mb s3://test4444test4444
+
+exit/b
+
+
+
+::_
+
+:s3_rb
+
+set fp=* Remove a bucket.
+
+rem Note: The force parameter seems to placed exactly after the rb command in order to work.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 rb --force s3://test4444test4444
+
+exit/b
+
+
+
+::_
+
+:s3_ls
+
+set fp=* List all s3 buckets.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 ls
+
+exit/b
+
+
+
+::_
+
+:s3_h
+
+set fp=* Help for S3
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 help
+
+exit/b
+
+
+
+:_+ Create scripts with pauses that creates and DESTROYS the entire environment.
+
+
+
+::_
+
+:e1_c
+
+set fp=* Create Envrionment 1.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+call %0 create_web_bucket
+
+pause
+
+rem qq-1
+
+exit/b
+
+
+
+::_
+
+:e1_d
+
+set fp=* Delete Envrionment 1.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+call %0 delete_web_bucket
+
+pause
+
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:create_web_bucket
+
+:cwb
+
+set fp=* Create web bucket.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 mb s3://cart-admin-site.com
+
+exit/b
+
+
+
+:_
+
+:dwb
+
+:delete_web_bucket
+
+set fp=* Delete web bucket.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 rb --force s3://cart-admin-site.com
 
 exit/b
 
