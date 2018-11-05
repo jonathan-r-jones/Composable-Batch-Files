@@ -911,9 +911,9 @@ call %0 make_bucket_publicly_readable
 echo.
 pause
 
-call n cas
+call td cas
 
-call check_index_existence
+call %0 check_index_existence
 
 if %errorlevel% == 1 (
   exit/b
@@ -930,6 +930,11 @@ echo.
 pause
 
 call %0 confirm
+
+echo.
+pause
+
+call sf cas
 
 rem qq-1
 
@@ -949,8 +954,6 @@ echo.
 echo %fp%
 
 call %0 delete_web_bucket
-
-pause
 
 exit/b
 
@@ -1043,11 +1046,12 @@ set fp=* Check the current folder for the presence of an index.htm file(s).
 
 rem lu: Oct-31-2018
 
+echo.
 echo %fp%
 
-if not exist index.htm (
+if not exist index.html (
   echo.
-  echo * Error: No index.htm file exist in the current folder.
+  echo * Error: No index.html file exist in the current folder.
   exit/b 1
 )
 
