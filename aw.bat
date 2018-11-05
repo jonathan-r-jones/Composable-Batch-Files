@@ -217,78 +217,6 @@ exit/b
 
 
 
-:_
-
-:asp
-
-set fp=* Adjust site permissions.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3api put-bucket-acl --bucket mysite548123.com --acl public-read
-
-exit/b
-
-
-
-:_
-
-:sync
-
-set fp=* Sync bucket.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 sync . s3://mysite548123.com --acl public-read
-
-exit/b
-
-
-
-:_
-
-:error
-
-set fp=* Define error website.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 website s3://mysite548123.com/ --index-document index.html --error-document error.html
-
-exit/b
-
-
-
-:_
-
-:confirm
-
-set fp=* Confirm website.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3api get-bucket-website --bucket mysite548123.com
-
-exit/b
-
-
-
 :_+ Full web parts process according to AWS CLI instructor.
 
 
@@ -964,7 +892,7 @@ exit/b
 
 ::_
 
-:e1_c
+:env1_c
 
 set fp=* Create Envrionment 1.
 
@@ -975,7 +903,31 @@ echo %fp%
 
 call %0 create_web_bucket
 
+echo.
 pause
+
+call %0 make_bucket_publicly_readable
+
+echo.
+pause
+
+call check_index_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call %0 copy_files_to_bucket
+
+echo.
+pause
+
+call %0 define_website
+
+echo.
+pause
+
+call %0 confirm
 
 rem qq-1
 
@@ -985,7 +937,7 @@ exit/b
 
 ::_
 
-:e1_d
+:env1_d
 
 set fp=* Delete Envrionment 1.
 
@@ -997,8 +949,6 @@ echo %fp%
 call %0 delete_web_bucket
 
 pause
-
-rem qq-1
 
 exit/b
 
@@ -1018,7 +968,7 @@ echo.
 echo %fp%
 
 echo.
-aws s3 mb s3://cart-admin-site.com
+aws s3 mb s3://cartsite2018.com
 
 exit/b
 
@@ -1038,7 +988,101 @@ echo.
 echo %fp%
 
 echo.
-aws s3 rb --force s3://cart-admin-site.com
+aws s3 rb --force s3://cartsite2018.com
+
+exit/b
+
+
+
+:_
+
+:mbpr
+
+:make_bucket_publicly_readable
+
+set fp=* S3 bucket should be publicly readable.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws s3api put-bucket-acl --bucket cartsite2018.com --acl public-read
+
+exit/b
+
+
+
+:_
+
+:sync
+
+:copy_files_to_bucket
+
+set fp=* Move files in current folder to bucket, a.k.a. sync.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 sync . s3://cartsite2018.com --acl public-read
+
+exit/b
+
+
+
+:_
+
+:check_index_existence
+
+set fp=* Check the current folder for the presence of an index.htm file(s).
+
+rem lu: Oct-31-2018
+
+echo %fp%
+
+if not exist index.htm (
+  echo.
+  echo * Error: No index.htm file exist in the current folder.
+  exit/b 1
+)
+
+exit/b 0
+
+
+
+:_
+
+:define_website
+
+set fp=* Define website.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws s3 website s3://cartsite2018.com/ --index-document index.html --error-document error.html
+
+exit/b
+
+
+
+:_
+
+:confirm
+
+set fp=* Confirm website.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3api get-bucket-website --bucket cartsite2018.com
 
 exit/b
 

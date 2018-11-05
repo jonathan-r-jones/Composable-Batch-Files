@@ -5810,7 +5810,7 @@ set fp=* My aws cli website.
 
 rem lu: Nov-2-2018
 
-set cbf_url=http://mysite548123.com.s3-website-us-east-1.amazonaws.com/
+set cbf_url=http://cartsite2018.com.s3-website-us-east-1.amazonaws.com/
 
 exit/b
 
