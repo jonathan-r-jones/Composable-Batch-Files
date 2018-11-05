@@ -3317,6 +3317,8 @@ echo %fp%
 
 set cbf_application=c:\program files\opera\launcher.exe
 
+set cbf_path=C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+
 exit/b
 
 

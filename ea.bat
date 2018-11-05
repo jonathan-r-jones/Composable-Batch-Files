@@ -30,7 +30,8 @@ rem lu: Feb-1-2018
 
 echo %1 | find /i ".">nul
 
-if %errorlevel% == 0 set cbf_application=%1
+if %errorlevel% == 0 set cbf_application=%~1
+
 if %errorlevel% == 1 call an %1
 
 if "%~2" == "" set cbf_parameter=

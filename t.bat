@@ -7946,3 +7946,22 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Testing the value of cbf_path.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+call n c
+
+call td sm
+
+exit/b
+
+
+
+:_

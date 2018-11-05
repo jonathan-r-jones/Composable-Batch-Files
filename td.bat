@@ -103,6 +103,9 @@ exit/b
 
 set fp=* Main function.
 
+rem Clear CBF path.
+set cbf_path=
+
 if not "%~1" == "" call n %1 %2
 
 if "%cbf_path%" == "" (
