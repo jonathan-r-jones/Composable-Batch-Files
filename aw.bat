@@ -74,42 +74,6 @@ exit/b
 
 :_
 
-:conf
-
-set fp=* Configure
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-exit/b
-
-
-
-:_
-
-:add_account
-
-set fp=* Add account.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile account2
-
-exit/b
-
-
-
-:_
-
 :voa
 
 set fp=* View other account.
@@ -345,187 +309,6 @@ echo %fp%
 
 echo.
 aws s3 ls s3://test4444test4444
-
-exit/b
-
-
-
-:_
-
-:cu
-
-set fp=* Create user
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-user --user-name mike
-
-exit/b
-
-
-
-:_
-
-:gu
-
-set fp=* Get user information.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam get-user --user-name mike
-
-exit/b
-
-
-
-:_
-
-:gu2
-
-set fp=* Get user information.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam get-user --user-name terraform_user
-
-exit/b
-
-
-
-:_
-
-:lak
-
-set fp=* List access keys.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name terraform_user
-
-exit/b
-
-
-
-:_
-
-:lam
-
-set fp=* List access keys for Mike.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name mike
-
-exit/b
-
-
-
-:_
-
-:cak
-
-set fp=* Create access key for Mike.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-access-key --user-name mike
-
-exit/b
-
-
-
-:_
-
-:crgr
-
-set fp=* Create group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-group --group-name admins
-
-exit/b
-
-
-
-:_
-
-:lgp
-
-set fp=* List group policies.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-policies
-
-exit/b
-
-
-
-:_
-
-:agp
-
-set fp=* Attach policy.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
-  --group-name admins
-
-exit/b
-
-
-
-:_
-
-:autg
-
-set fp=* Add user to group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam add-user-to-group --group-name admins --user-name mike
 
 exit/b
 
@@ -813,7 +596,6 @@ aws ec2 run-instances --image-id ami-00b94673edfccb7ca --count 1 ^
   --tag-specifications ^
   'ResourceType=instance,Tags=[{Key=webserver,Value=production}]'
 
-rem qq-1
 exit/b
 aws ec2 run-instances --image-id ami-00b94673edfccb7ca --count 1 ^
   --instance-type t2.micro --key-name newcluster ^
@@ -845,7 +627,350 @@ aws rds create-db-instance --db-instance-identifier sg-cli-test ^
   --engine mysql ^
   --master-username myawsuser ^
   --master-user-password mypassword
-rem qq-1
+
+exit/b
+
+
+
+:_
+
+:sg_help_d
+
+set fp=* Security group help.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+
+aws ec2 delete-security-group help
+
+exit/b
+
+
+
+:_
+
+:sg_help
+
+set fp=* Security group help.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+
+aws ec2 security-group help
+
+exit/b
+
+
+
+:_
+
+:sg_ref
+
+set fp=* Describe sg refs.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+
+aws ec2 describe-security-group-references --group-id sg-0e67f09ea592e68ff
+
+exit/b
+
+
+
+:_
+
+:sg_ref_help
+
+set fp=* Describe sg refs.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+
+aws ec2 describe-security-group-references help
+
+exit/b
+
+
+
+:_
+
+:sg_delete
+
+set fp=* Delete security group.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+
+aws ec2 delete-security-group --group-name EC2SecurityGroup
+
+exit/b
+
+
+
+:_+ IAM Commands
+
+
+
+::_
+
+:iam
+
+:cu
+
+set fp=* Create user
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-user --user-name mike
+
+exit/b
+
+
+
+::_
+
+:gu
+
+set fp=* Get user information.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name mike
+
+exit/b
+
+
+
+::_
+
+:gu2
+
+set fp=* Get user information.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name terraform_user
+
+exit/b
+
+
+
+::_
+
+:lak
+
+set fp=* List access keys.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name terraform_user
+
+exit/b
+
+
+
+::_
+
+:lam
+
+set fp=* List access keys for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name mike
+
+exit/b
+
+
+
+::_
+
+:cak
+
+set fp=* Create access key for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-access-key --user-name mike
+
+exit/b
+
+
+
+::_
+
+:crgr
+
+set fp=* Create group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-group --group-name admins
+
+exit/b
+
+
+
+::_
+
+:lgp
+
+set fp=* List group policies.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-policies
+
+exit/b
+
+
+
+::_
+
+:agp
+
+set fp=* Attach policy.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
+  --group-name admins
+
+exit/b
+
+
+
+::_
+
+:autg
+
+set fp=* Add user to group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam add-user-to-group --group-name admins --user-name mike
+
+exit/b
+
+
+
+:_+ Configure Family
+
+
+
+::_
+
+:cfg
+
+:conf
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
+
+exit/b
+
+
+
+::_
+
+:add_account
+
+:cfg_a
+
+set fp=* Add account.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile account2
+
+exit/b
+
+
+
+:_
+
+:cfg_h
+
+set fp=* Cfg help.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure help
 
 exit/b
 
