@@ -369,32 +369,81 @@ exit/b
 
 ::_
 
-:run_in
+:run_in_linux
 
-set fp=* Run instance.
+set fp=* Run Linux instance.
 
 rem lu: Nov-2-2018
 
 echo.
 echo %fp%
 
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
 echo.
 aws ec2 run-instances --image-id ami-00b94673edfccb7ca --count 1 ^
   --instance-type t2.micro --key-name TerraformTest2 ^
-  --security-group-ids sg-0e67f09ea592e68ff ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
   --subnet-id subnet-8e0b7181 ^
   --user-data file://my_script.sh 
   --tag-specifications ^
   'ResourceType=instance,Tags=[{Key=webserver,Value=production}]'
 
 exit/b
+
+
+
+::_
+
+:run
+
+set fp=* Run Windows instance with tag.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
 aws ec2 run-instances --image-id ami-00b94673edfccb7ca --count 1 ^
-  --instance-type t2.micro --key-name newcluster ^
-  --security-group-ids sg-06366129d8a9b8a59*** ^
-  --subnet-id subnet-52d6117c ^
+  --instance-type t2.micro --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
   --user-data file://my_script.sh ^
-  --tag-specifications ^
-  'ResourceType=instance,Tags=[{Key=webserver,Value=production}]'
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Windows_Instance}]"
+rem qq-1
+
+exit/b
+
+
+
+::_
+
+:delete_instance
+
+set fp=* Terminate instance. (delete instance skw)
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 terminate-instances --instance-ids i-056508e5569ebfb4d
 
 exit/b
 
@@ -894,6 +943,27 @@ exit/b 0
 
 :_
 
+:check_pem_existence
+
+set fp=* Check the current folder for the presence of an *.pem file(s).
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+if not exist *.pem (
+  echo.
+  echo * Error: No pem file exist in the current folder.
+  exit/b 1
+)
+
+exit/b 0
+
+
+
+:_
+
 :define_website
 
 set fp=* Define website.
@@ -1337,6 +1407,8 @@ call %0 attach_policy_ec2
 
 call %0 attach_policy_s3
 
+call %0 add_user_to_group
+
 call %0 create_security_group
 
 call %0 auth1
@@ -1345,7 +1417,6 @@ call %0 auth2
 
 call %0 auth3
 
-call %0 add_user_to_group
 
 exit/b
 
