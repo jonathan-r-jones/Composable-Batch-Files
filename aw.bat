@@ -199,24 +199,6 @@ exit/b
 
 
 
-:_
-
-:s3_lbc
-
-set fp=* List bucket contents.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 ls s3://test4444test4444
-
-exit/b
-
-
-
 :_+ Full web parts process according to AWS CLI instructor.
 
 
@@ -939,13 +921,7 @@ echo %fp%
 
 call %0 create_web_bucket
 
-echo.
-pause
-
 call %0 make_bucket_publicly_readable
-
-echo.
-pause
 
 call td cas
 
@@ -957,18 +933,9 @@ if %errorlevel% == 1 (
 
 call %0 copy_files_to_bucket
 
-echo.
-pause
-
 call %0 define_website
 
-echo.
-pause
-
 call %0 confirm
-
-echo.
-pause
 
 call sf cas
 
@@ -1019,7 +986,7 @@ exit/b
 
 ::_
 
-:cfg_pu
+:cfg_p
 
 set fp=* Set profile to procon_user.
 
@@ -1030,13 +997,15 @@ echo %fp%
 
 set AWS_PROFILE=proconn_user
 
+call %0 cfg_scp
+
 exit/b
 
 
 
 ::_
 
-:cfg_tu
+:cfg_t
 
 set fp=* Set profile to terraform_user.
 
@@ -1046,6 +1015,8 @@ echo.
 echo %fp%
 
 set AWS_PROFILE=terraform_user
+
+call %0 cfg_scp
 
 exit/b
 
@@ -1074,7 +1045,6 @@ exit/b
 :cfg_pp
 
 set fp=* Show proconn_user profile
-rem qq-1
 
 rem lu: Nov-6-2018
 
@@ -1155,6 +1125,42 @@ echo %fp%
 
 echo.
 aws iam list-access-keys --user-name procon_user
+
+exit/b
+
+
+
+:_
+
+:s3_lbc
+
+set fp=* List bucket contents.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 ls s3://test4444test4444
+
+exit/b
+
+
+
+:_
+
+:lb
+
+set fp=* List buckets.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3 ls
 
 exit/b
 
