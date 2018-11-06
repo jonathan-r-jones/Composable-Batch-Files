@@ -463,13 +463,14 @@ exit/b
 
 set fp=* Create database
 
-rem lu: Nov-2-2018
+rem lu: Nov-6-2018
 
 echo.
 echo %fp%
 
 echo.
-aws rds create-db-instance --db-instance-identifier sg-cli-test ^
+aws rds create-db-instance ^
+  --db-instance-identifier sg-cli-test ^
   --allocated-storage 20 ^
   --db-instance-class db.m1.small ^
   --engine mysql ^
