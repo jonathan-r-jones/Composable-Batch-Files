@@ -205,6 +205,8 @@ exit/b
 
 ::_
 
+:create_security_group
+
 :csg
 
 set fp=* Create security group.
@@ -224,7 +226,28 @@ exit/b
 
 ::_
 
-:auth
+:delete_security_group
+
+:sg_delete
+
+set fp=* Delete security group.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+
+aws ec2 delete-security-group --group-name EC2SecurityGroup
+
+exit/b
+
+
+
+::_
+
+:auth1
 
 set fp=* Authorize secrurity group ingress.
 
@@ -233,7 +256,6 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-echo.
 aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
   --port 22 --cidr 172.54.125.8/32
 
@@ -245,16 +267,15 @@ exit/b
 
 :auth2
 
-set fp=* Authorize secrurity group ingress.
+set fp=* Authorize secrurity group ingress. - 2nd port
 
 rem lu: Nov-2-2018
 
 echo.
 echo %fp%
 
-echo.
 aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
-  --port 80 --cidr 172.54.125.8/32
+  --port 80 --cidr 0.0.0.0/0
 
 exit/b
 
@@ -264,16 +285,15 @@ exit/b
 
 :auth3
 
-set fp=* Authorize secrurity group ingress - 3rd port.
+set fp=* Authorize secrurity group ingress. - 3rd port.
 
 rem lu: Nov-2-2018
 
 echo.
 echo %fp%
 
-echo.
 aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
-  --port 443 --cidr 172.54.125.8/32
+  --port 443 --cidr 0.0.0.0/0
 
 exit/b
 
@@ -281,9 +301,9 @@ exit/b
 
 ::_
 
-:dsc
+:dsg
 
-set fp=* Describe security group
+set fp=* Describe security group.
 
 rem lu: Nov-2-2018
 
@@ -485,26 +505,103 @@ exit/b
 
 
 
-:_
+:_+ IAM Commands - User Information
 
-:sg_delete
 
-set fp=* Delete security group.
 
-rem lu: Nov-5-2018
+::_
+
+:cu
+
+:create_user
+
+set fp=* Create user.
+
+rem lu: Nov-6-2018
 
 echo.
 echo %fp%
 
 echo.
-
-aws ec2 delete-security-group --group-name EC2SecurityGroup
+rem aws iam create-user --user-name mike
+aws iam create-user --user-name cli_user
 
 exit/b
 
 
 
-:_+ IAM Commands - User Information
+::_
+
+:delete_user
+
+set fp=* Delete user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+rem aws iam create-user --user-name mike
+aws iam delete-user --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:lak_c
+
+set fp=* List access keys for cli_user.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:cak
+
+set fp=* Create access key for cli_user.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-access-key --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:create_group
+
+:crgr
+
+set fp=* Create group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-group --group-name admins
+
+exit/b
 
 
 
@@ -528,11 +625,11 @@ exit/b
 
 ::_
 
-:iam
+:agp
 
-:cu
+:attach_policy_ec2
 
-set fp=* Create user
+set fp=* Attach policy.
 
 rem lu: Nov-2-2018
 
@@ -540,7 +637,30 @@ echo.
 echo %fp%
 
 echo.
-aws iam create-user --user-name mike
+aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
+  --group-name admins
+
+exit/b
+
+
+
+::_
+
+:agp2
+
+:attach_policy_s3
+
+set fp=* Attach S3 policy.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+rem qq-1
+aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess ^
+  --group-name admins
 
 exit/b
 
@@ -602,79 +722,6 @@ exit/b
 
 ::_
 
-:lam
-
-set fp=* List access keys for Mike.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name mike
-
-exit/b
-
-
-
-::_
-
-:cak
-
-set fp=* Create access key for Mike.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-access-key --user-name mike
-
-exit/b
-
-
-
-::_
-
-:crgr
-
-set fp=* Create group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-group --group-name admins
-
-exit/b
-
-
-
-::_
-
-:agp
-
-set fp=* Attach policy.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
-  --group-name admins
-
-exit/b
-
-
-
-::_
-
 :autg
 
 set fp=* Add user to group.
@@ -685,7 +732,7 @@ echo.
 echo %fp%
 
 echo.
-aws iam add-user-to-group --group-name admins --user-name mike
+aws iam add-user-to-group --group-name admins --user-name cli_user
 
 exit/b
 
@@ -811,25 +858,6 @@ exit/b
 
 :_
 
-:mbpr
-
-:make_bucket_publicly_readable
-
-set fp=* S3 bucket should be publicly readable.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws s3api put-bucket-acl --bucket cartsite2018.com --acl public-read
-
-exit/b
-
-
-
-:_
-
 :sync
 
 :copy_files_to_bucket
@@ -881,24 +909,6 @@ echo.
 echo %fp%
 
 aws s3 website s3://cartsite2018.com/ --index-document index.html --error-document error.html
-
-exit/b
-
-
-
-:_
-
-:confirm
-
-set fp=* Confirm website.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3api get-bucket-website --bucket cartsite2018.com
 
 exit/b
 
@@ -966,6 +976,26 @@ exit/b
 
 ::_
 
+:scp
+
+:sh
+
+set fp=* Show current user profile.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list
+
+exit/b
+
+
+
+::_
+
 :cfg
 
 :conf
@@ -988,7 +1018,13 @@ exit/b
 
 :cfg_p
 
-set fp=* Set profile to procon_user.
+:su
+
+:sp_p
+
+:su_p
+
+set fp=* Switch profile to procon_user.
 
 rem lu: Nov-6-2018
 
@@ -997,7 +1033,30 @@ echo %fp%
 
 set AWS_PROFILE=proconn_user
 
-call %0 cfg_scp
+call %0 scp
+
+exit/b
+
+
+
+::_
+
+:cfg_c
+
+:sp_c
+
+:su_c
+
+set fp=* Switch profile to cli_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=cli_user
+
+call %0 scp
 
 exit/b
 
@@ -1007,7 +1066,11 @@ exit/b
 
 :cfg_t
 
-set fp=* Set profile to terraform_user.
+:sp_t
+
+:su_t
+
+set fp=* Switch profile to terraform_user.
 
 rem lu: Nov-6-2018
 
@@ -1016,25 +1079,7 @@ echo %fp%
 
 set AWS_PROFILE=terraform_user
 
-call %0 cfg_scp
-
-exit/b
-
-
-
-::_
-
-:cfg_scp
-
-set fp=* Show current profile.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure list
+call %0 scp
 
 exit/b
 
@@ -1053,6 +1098,24 @@ echo %fp%
 
 echo.
 aws configure list --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_apc
+
+set fp=* Add terraform_user profile. (create profile, add profile skw)
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile cli_user
 
 exit/b
 
@@ -1150,7 +1213,68 @@ exit/b
 
 :_
 
+:mbpr
+
+:make_bucket_publicly_readable
+
+set fp=* S3 bucket should be publicly readable.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws s3api put-bucket-acl --bucket cartsite2018.com --acl public-read
+
+exit/b
+
+
+
+:_
+
+:confirm
+
+set fp=* Confirm website.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3api get-bucket-website --bucket cartsite2018.com
+
+exit/b
+
+
+
+:_+ Comparison between an S3API and an S3 command.
+
+
+
+::_
+
 :lb
+
+:lbapi
+
+set fp=* List buckets using s3api.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws s3api list-buckets
+
+exit/b
+
+
+
+::_
+
+:lbs3
 
 set fp=* List buckets.
 
@@ -1161,6 +1285,59 @@ echo %fp%
 
 echo.
 aws s3 ls
+
+exit/b
+
+
+
+:_
+
+:e_d2
+
+set fp=* Delete environment, part 2.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+
+call %0 delete_security_group
+
+exit/b
+
+
+
+:_
+
+:e_c2
+
+set fp=* Create environment, part 2.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+
+call %0 create_user
+
+rem admins
+call %0 create_group
+
+call %0 attach_policy_ec2
+
+call %0 attach_policy_s3
+
+call %0 create_security_group
+
+call %0 auth1
+
+call %0 auth2
+
+call %0 auth3
 
 exit/b
 
