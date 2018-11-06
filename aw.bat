@@ -715,6 +715,8 @@ exit/b
 
 ::_
 
+:add_user_to_group
+
 :autg
 
 set fp=* Add user to group.
@@ -1304,6 +1306,17 @@ exit/b
 
 :_
 
+Metadata: Track Size (!tsaw)
+
+     Date      Lines      Bytes  Functions  Notes
+ -----------  ------  ---------  ---------  -------------------------------------------------
+
+: Nov-6-2018   1,352     13,665       75
+
+
+
+:_
+
 :e_c2
 
 set fp=* Create environment, part 2.
@@ -1331,6 +1344,8 @@ call %0 auth1
 call %0 auth2
 
 call %0 auth3
+
+call %0 add_user_to_group
 
 exit/b
 
