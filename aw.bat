@@ -886,79 +886,6 @@ exit/b
 
 
 
-:_+ Create scripts with pauses that creates and DESTROYS the entire environment.
-
-
-
-::_
-
-:env1_c
-
-set fp=* Create Envrionment 1.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-call %0 create_web_bucket
-
-echo.
-pause
-
-call %0 make_bucket_publicly_readable
-
-echo.
-pause
-
-call td cas
-
-call %0 check_index_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-call %0 copy_files_to_bucket
-
-echo.
-pause
-
-call %0 define_website
-
-echo.
-pause
-
-call %0 confirm
-
-echo.
-pause
-
-call sf cas
-
-rem qq-1
-
-exit/b
-
-
-
-::_
-
-:env1_d
-
-set fp=* Delete Envrionment 1.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-call %0 delete_web_bucket
-
-exit/b
-
-
-
 :_
 
 :create_web_bucket
@@ -1089,6 +1016,77 @@ echo %fp%
 
 echo.
 aws s3api get-bucket-website --bucket cartsite2018.com
+
+exit/b
+
+
+
+:_+ Create scripts with pauses that creates and DESTROYS the entire environment.
+
+
+
+::_
+
+:env1_c
+
+set fp=* Create Envrionment 1.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+call %0 create_web_bucket
+
+echo.
+pause
+
+call %0 make_bucket_publicly_readable
+
+echo.
+pause
+
+call td cas
+
+call %0 check_index_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call %0 copy_files_to_bucket
+
+echo.
+pause
+
+call %0 define_website
+
+echo.
+pause
+
+call %0 confirm
+
+echo.
+pause
+
+call sf cas
+
+exit/b
+
+
+
+::_
+
+:env1_d
+
+set fp=* Delete Envrionment 1.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+call %0 delete_web_bucket
 
 exit/b
 
