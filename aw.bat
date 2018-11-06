@@ -987,62 +987,6 @@ exit/b
 
 
 
-:_+ Create scripts with pauses that creates and DESTROYS the entire environment.
-
-
-
-::_
-
-:e_c
-
-set fp=* Create Envrionment 1.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-call %0 create_web_bucket
-
-call %0 make_bucket_publicly_readable
-
-call td cas
-
-call %0 check_index_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-call %0 copy_files_to_bucket
-
-call %0 define_website
-
-call %0 confirm
-
-call sf cas
-
-exit/b
-
-
-
-::_
-
-:e_d
-
-set fp=* Delete Envrionment 1.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-call %0 delete_web_bucket
-
-exit/b
-
-
-
 :_+ Configure Family
 
 
@@ -1365,25 +1309,6 @@ exit/b
 
 :_
 
-:e_d2
-
-set fp=* Delete environment, part 2.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-
-call %0 delete_security_group
-
-exit/b
-
-
-
-:_
-
 Metadata: Track Size (!tsaw)
 
      Date      Lines      Bytes  Functions  Notes
@@ -1393,7 +1318,63 @@ Metadata: Track Size (!tsaw)
 
 
 
-:_
+:_+ Create scripts with pauses that creates and DESTROYS the entire environment.
+
+
+
+::_
+
+:e_c
+
+set fp=* Create Envrionment 1.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+call %0 create_web_bucket
+
+call %0 make_bucket_publicly_readable
+
+call td cas
+
+call %0 check_index_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call %0 copy_files_to_bucket
+
+call %0 define_website
+
+call %0 confirm
+
+call sf cas
+
+exit/b
+
+
+
+::_
+
+:e_d
+
+set fp=* Delete Envrionment 1.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+call %0 delete_web_bucket
+
+exit/b
+
+
+
+::_
 
 :e_c2
 
@@ -1424,6 +1405,25 @@ call %0 auth1
 call %0 auth2
 
 call %0 auth3
+
+exit/b
+
+
+
+::_
+
+:e_d2
+
+set fp=* Delete environment, part 2.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+
+call %0 delete_security_group
 
 exit/b
 
