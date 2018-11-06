@@ -95,7 +95,7 @@ echo.
 echo %fp%
 
 echo.
-aws --output table ec2 describe-images --filters "Name=description, Values=*CentOS*" "Name=owner-alias,Values=amazon"
+aws ec2 describe-images --filters "Name=description, Values=*CentOS*" "Name=owner-alias,Values=amazon"
 
 exit/b
 
@@ -107,15 +107,16 @@ exit/b
 
 :wind
 
-set fp=* List EC@ AMI Windows images.
+set fp=* List EC2 Windows images.
 
-rem lu: Nov-2-2018
+rem lu: Nov-6-2018
 
 echo.
 echo %fp%
 
 echo.
-aws --output table ec2 describe-images --filters "Name=description, Values=*Wind*" "Name=owner-alias,Values=amazon"
+aws ec2 describe-images --filters "Name=description, Values=*2016-*" "Name=owner-alias,Values=amazon"
+rem aws ec2 describe-images --owners amazon --filters "Name=platform,Values=windows"
 
 exit/b
 
@@ -194,6 +195,45 @@ exit/b
 
 
 :_+ Full web parts process according to AWS CLI instructor.
+
+
+
+::_
+
+:run
+
+set fp=* Run Windows instance with tag.
+
+rem Microsoft Windows Server 2016 Base - ami-050202fb72f001b47
+rem Microsoft Windows 2016 Datacenter edition. [English]
+rem Root device type: ebs Virtualization type: hvm ENA Enabled: Yes
+rem Available on free tier
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-050202fb72f001b47 ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Windows_2016}]"
+  --user-data file://my_script.sh
+
+exit/b
 
 
 
@@ -394,38 +434,6 @@ aws ec2 run-instances --image-id ami-00b94673edfccb7ca --count 1 ^
   --user-data file://my_script.sh 
   --tag-specifications ^
   'ResourceType=instance,Tags=[{Key=webserver,Value=production}]'
-
-exit/b
-
-
-
-::_
-
-:run
-
-set fp=* Run Windows instance with tag.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-call td tfkeys
-
-call %0 check_pem_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-echo.
-aws ec2 run-instances --image-id ami-00b94673edfccb7ca --count 1 ^
-  --instance-type t2.micro --key-name TerraformTest2 ^
-  --security-group-ids sg-06fbc60e67d4aebbe ^
-  --subnet-id subnet-8e0b7181 ^
-  --user-data file://my_script.sh ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Windows_Instance}]"
-rem qq-1
 
 exit/b
 
@@ -1416,7 +1424,6 @@ call %0 auth1
 call %0 auth2
 
 call %0 auth3
-
 
 exit/b
 
