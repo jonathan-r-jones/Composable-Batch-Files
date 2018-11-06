@@ -373,7 +373,7 @@ exit/b
 
 ::_
 
-:ruin
+:run_in
 
 set fp=* Run instance.
 
@@ -522,7 +522,25 @@ exit/b
 
 
 
-:_+ IAM Commands
+:_+ IAM Commands - User Information
+
+
+
+::_
+
+:lgp
+
+set fp=* List group policies.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-policies
+
+exit/b
 
 
 
@@ -566,7 +584,7 @@ exit/b
 
 ::_
 
-:gu2
+:gui_t
 
 set fp=* Get user information.
 
@@ -584,7 +602,7 @@ exit/b
 
 ::_
 
-:lak_tu
+:gu_t
 
 set fp=* List access keys for tu.
 
@@ -656,24 +674,6 @@ exit/b
 
 ::_
 
-:lgp
-
-set fp=* List group policies.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-policies
-
-exit/b
-
-
-
-::_
-
 :agp
 
 set fp=* Attach policy.
@@ -704,105 +704,6 @@ echo %fp%
 
 echo.
 aws iam add-user-to-group --group-name admins --user-name mike
-
-exit/b
-
-
-
-:_+ Configure Family
-
-
-
-::_
-
-:cfg
-
-:conf
-
-set fp=* Configure
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-exit/b
-
-
-
-::_
-
-:add_account
-
-:cfg_a
-
-set fp=* Add account.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile account2
-
-exit/b
-
-
-
-::_
-
-:cfg_h
-
-set fp=* Cfg help.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure help
-
-exit/b
-
-
-
-::_
-
-:cfg_voa
-
-set fp=* View other account.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-
-aws --profile account2 s3 ls
-
-exit/b
-
-
-
-::_
-
-:lak_pc
-
-set fp=* List access keys for pc.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name procon_user
 
 exit/b
 
@@ -1027,7 +928,7 @@ exit/b
 
 ::_
 
-:env1_c
+:e_c
 
 set fp=* Create Envrionment 1.
 
@@ -1077,7 +978,7 @@ exit/b
 
 ::_
 
-:env1_d
+:e_d
 
 set fp=* Delete Envrionment 1.
 
@@ -1087,6 +988,173 @@ echo.
 echo %fp%
 
 call %0 delete_web_bucket
+
+exit/b
+
+
+
+:_+ Configure Family
+
+
+
+::_
+
+:cfg
+
+:conf
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
+
+exit/b
+
+
+
+::_
+
+:cfg_pu
+
+set fp=* Set profile to procon_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=proconn_user
+
+exit/b
+
+
+
+::_
+
+:cfg_tu
+
+set fp=* Set profile to terraform_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=terraform_user
+
+exit/b
+
+
+
+::_
+
+:cfg_scp
+
+set fp=* Show current profile.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list
+
+exit/b
+
+
+
+::_
+
+:cfg_pp
+
+set fp=* Show proconn_user profile
+rem qq-1
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_ap
+
+set fp=* Add terraform_user profile.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile terraform_user
+
+exit/b
+
+
+
+::_
+
+:cfg_a2
+
+set fp=* Add proconn_user profile.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_h
+
+set fp=* Cfg help.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure help
+
+exit/b
+
+
+
+::_
+
+:lak_pc
+
+set fp=* List access keys for pc.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name procon_user
 
 exit/b
 

@@ -5838,4 +5838,20 @@ exit/b
 
 
 
+:_
+
+:aws_cfg
+
+set fp=* AWS configuration.
+
+rem lu: Nov-6-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\.aws
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
