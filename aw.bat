@@ -42,13 +42,7 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Usage: %0 [space separated parameter(s)]
-
-set parameter_1=Parameter 1 (Optional): 
-set parameter_1=%parameter_1% 
-
-echo.
-echo %parameter_1%
+echo Parameter 1: Function to execute.
 
 exit/b
 
@@ -658,7 +652,6 @@ echo.
 echo %fp%
 
 echo.
-rem qq-1
 aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess ^
   --group-name admins
 
