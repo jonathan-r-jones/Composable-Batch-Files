@@ -1321,7 +1321,7 @@ Metadata: Track Size (!tsaw)
 
 
 
-:_+ Create scripts with pauses that creates and DESTROYS the entire environment.
+:_+ Create scripts with pauses that creates and destroys the entire environment.
 
 
 
