@@ -1753,7 +1753,7 @@ exit/b
 
 :yt
 
-set fp=YouTube.
+set fp=* YouTube.
 
 rem lu: Feb-25-2018
 
