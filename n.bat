@@ -3273,6 +3273,8 @@ exit/b
 
 ::_
 
+:ed
+
 :edge
 
 set fp=* Microsoft Edge.
@@ -4152,7 +4154,7 @@ exit/b
 
 ::_
 
-:ed
+:edsn
 
 set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt github page.
 
