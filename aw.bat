@@ -85,24 +85,6 @@ exit/b
 
 :_
 
-:cent
-
-set fp=* List EC@ AMI CentOS images.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-images --filters "Name=description, Values=*CentOS*" "Name=owner-alias,Values=amazon"
-
-exit/b
-
-
-
-:_
-
 :win
 
 :wind
@@ -1427,6 +1409,24 @@ echo %fp%
 echo.
 
 call %0 delete_security_group
+
+exit/b
+
+
+
+:_
+
+:cent
+
+set fp=* List EC@ AMI CentOS images.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-images --filters "Name=description, Values=*CentOS*" "Name=owner-alias,Values=amazon"
 
 exit/b
 
