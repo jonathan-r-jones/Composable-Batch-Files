@@ -391,7 +391,7 @@ exit/b
 
 ::_
 
-:run_in_linux
+:run_linux
 
 set fp=* Run Linux instance.
 
@@ -1427,6 +1427,74 @@ echo %fp%
 
 echo.
 aws ec2 describe-images --filters "Name=description, Values=*CentOS*" "Name=owner-alias,Values=amazon"
+
+exit/b
+
+
+
+:_
+
+:run_linux_2
+
+set fp=* Run CentOS instance with tag.
+
+rem lu: Nov-15-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-00b94673edfccb7ca ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Amazon Linux 2}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:run_cent
+
+set fp=* Run EC2 CentOS instance 5.5 GPU (Community AMI) with tag.
+
+rem lu: Nov-15-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-42a2532b ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CentOS 5.5 GPU - Community AMI}]"
+  --user-data file://my_script.sh
 
 exit/b
 
