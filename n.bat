@@ -5854,22 +5854,6 @@ exit/b
 
 :_
 
-:aws_cfg
-
-set fp=* AWS configuration.
-
-rem lu: Nov-6-2018
-
-echo %fp%
-
-set cbf_path=%userprofile%\.aws
-
-exit/b
-
-
-
-:_
-
 :md
 
 set fp=* My documents.
@@ -5879,6 +5863,46 @@ rem lu: Nov-19-2018
 echo %fp%
 
 set cbf_path=%homedrive%%homepath%\documents
+
+exit/b
+
+
+
+:_ + AWS Configuration
+
+
+
+::_
+
+:aws_cfg
+
+set fp=* AWS configuration.
+
+rem lu: Nov-6-2018
+
+echo %fp%
+
+set cbf_filename=%userprofile%\.aws\config
+
+set cbf_path=%userprofile%\.aws
+
+exit/b
+
+
+
+::_
+
+:aws_creds
+
+set fp=* AWS configuration credentials.
+
+rem lu: Nov-19-2018
+
+echo %fp%
+
+set cbf_filename=%userprofile%\.aws\credentials
+
+set cbf_path=%userprofile%\.aws
 
 exit/b
 

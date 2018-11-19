@@ -539,240 +539,6 @@ exit/b
 
 
 
-:_+ IAM Commands - User Information
-
-
-
-::_
-
-:cu
-
-:create_user
-
-set fp=* Create user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-rem aws iam create-user --user-name mike
-aws iam create-user --user-name cli_user
-
-exit/b
-
-
-
-::_
-
-:delete_user
-
-set fp=* Delete user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-rem aws iam create-user --user-name mike
-aws iam delete-user --user-name cli_user
-
-exit/b
-
-
-
-::_
-
-:lak_c
-
-set fp=* List access keys for cli_user.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name cli_user
-
-exit/b
-
-
-
-::_
-
-:cak
-
-set fp=* Create access key for cli_user.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-access-key --user-name cli_user
-
-exit/b
-
-
-
-::_
-
-:create_group
-
-:crgr
-
-set fp=* Create group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-group --group-name admins
-
-exit/b
-
-
-
-::_
-
-:lgp
-
-set fp=* List group policies.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-policies
-
-exit/b
-
-
-
-::_
-
-:agp
-
-:attach_policy_ec2
-
-set fp=* Attach policy.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
-  --group-name admins
-
-exit/b
-
-
-
-::_
-
-:agp2
-
-:attach_policy_s3
-
-set fp=* Attach S3 policy.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess ^
-  --group-name admins
-
-exit/b
-
-
-
-::_
-
-:gu
-
-set fp=* Get user information.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam get-user --user-name mike
-
-exit/b
-
-
-
-::_
-
-:gui_t
-
-set fp=* Get user information.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam get-user --user-name terraform_user
-
-exit/b
-
-
-
-::_
-
-:gu_t
-
-set fp=* List access keys for tu.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name terraform_user
-
-exit/b
-
-
-
-::_
-
-:add_user_to_group
-
-:autg
-
-set fp=* Add user to group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam add-user-to-group --group-name admins --user-name cli_user
-
-exit/b
-
-
-
 :_+ Buckets
 
 
@@ -970,229 +736,6 @@ exit/b
 
 
 
-:_+ Configure Family
-
-
-
-::_
-
-:scp
-
-:sh
-
-set fp=* Show current user profile.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure list
-
-exit/b
-
-
-
-::_
-
-:cfg
-
-:conf
-
-set fp=* Configure
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-exit/b
-
-
-
-::_
-
-:cfg_p
-
-:su
-
-:sp_p
-
-:su_p
-
-set fp=* Switch profile to procon_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=proconn_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_c
-
-:sp_c
-
-:su_c
-
-set fp=* Switch profile to cli_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=cli_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_t
-
-:sp_t
-
-:su_t
-
-set fp=* Switch profile to terraform_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=terraform_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_pp
-
-set fp=* Show proconn_user profile
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure list --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:cfg_apc
-
-set fp=* Add terraform_user profile. (create profile, add profile skw)
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile cli_user
-
-exit/b
-
-
-
-::_
-
-:cfg_ap
-
-set fp=* Add terraform_user profile.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile terraform_user
-
-exit/b
-
-
-
-::_
-
-:cfg_a2
-
-set fp=* Add proconn_user profile.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:cfg_h
-
-set fp=* Cfg help.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure help
-
-exit/b
-
-
-
-::_
-
-:lak_pc
-
-set fp=* List access keys for pc.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name procon_user
-
-exit/b
-
-
-
 :_
 
 :s3_lbc
@@ -1232,7 +775,7 @@ exit/b
 
 :_
 
-:confirm
+:confirm_website
 
 set fp=* Confirm website.
 
@@ -1334,7 +877,7 @@ call %0 copy_files_to_bucket
 
 call %0 define_website
 
-call %0 confirm
+call %0 confirm_website
 
 call sf cas
 
@@ -1372,7 +915,7 @@ echo %fp%
 
 echo.
 
-call %0 create_user
+call %0 create_user_mike
 
 rem admins
 call %0 create_group
@@ -1495,6 +1038,581 @@ aws ec2 run-instances ^
   --subnet-id subnet-8e0b7181 ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CentOS 5.5 GPU - Community AMI}]"
   --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_+ Configure Family
+
+
+
+::_
+
+:scp
+
+:sh
+
+set fp=* Show current user profile.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list
+
+exit/b
+
+
+
+::_
+
+:cfg
+
+:conf
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
+
+exit/b
+
+
+
+::_
+
+:cfg_p
+
+:su
+
+:sp_p
+
+:su_p
+
+set fp=* Switch profile to procon_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=proconn_user
+
+call %0 scp
+
+exit/b
+
+
+
+::_
+
+:cfg_cp
+
+set fp=* Clear profile setting.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=
+
+call %0 scp
+
+exit/b
+
+
+
+::_
+
+:cfg_c
+
+:sp_c
+
+:su_c
+
+set fp=* Switch profile to cli_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=cli_user
+
+call %0 scp
+
+exit/b
+
+
+
+::_
+
+:cfg_t
+
+:sp_t
+
+:su_t
+
+set fp=* Switch profile to terraform_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=terraform_user
+
+call %0 scp
+
+exit/b
+
+
+
+::_
+
+:cfg_pp
+
+set fp=* Show proconn_user profile
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_apc
+
+set fp=* Add terraform_user profile. (create profile, add profile skw)
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile cli_user
+
+exit/b
+
+
+
+::_
+
+:cfg_ap
+
+set fp=* Add terraform_user profile.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile terraform_user
+
+exit/b
+
+
+
+::_
+
+:cfg_apup
+
+set fp=* Add proconn_user profile.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_h
+
+set fp=* Cfg help.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure help
+
+exit/b
+
+
+
+:_+ IAM Commands - User Information
+
+
+
+::_
+
+:lak_tu
+
+set fp=* List access keys for tu.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name terraform_user
+
+exit/b
+
+
+
+::_
+
+:lak_pc
+
+set fp=* List access keys for pc.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name procon_user
+
+exit/b
+
+
+
+::_
+
+:lak_cli
+
+set fp=* List access keys for cli_user.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:delete_user
+
+set fp=* Delete user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam delete-user --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:cak_cli
+
+set fp=* Create access key for cli_user.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-access-key --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:create_group
+
+:crgr
+
+set fp=* Create group. Note: This is an IAM group, and not a security group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-group --group-name admins
+
+exit/b
+
+
+
+::_
+
+:lgp
+
+set fp=* List group policies.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-policies
+
+exit/b
+
+
+
+::_
+
+:agp
+
+:attach_policy_ec2
+
+set fp=* Attach policy.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
+  --group-name admins
+
+exit/b
+
+
+
+::_
+
+:agp2
+
+:attach_policy_s3
+
+set fp=* Attach S3 policy.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess ^
+  --group-name admins
+
+exit/b
+
+
+
+::_
+
+:gu_pc
+
+set fp=* Get user information for PC.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name procon_user
+
+exit/b
+
+
+
+::_
+
+:gui_t
+
+set fp=* Get user information.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name terraform_user
+
+exit/b
+
+
+
+::_
+
+:gu_t
+
+set fp=* List access keys for tu.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name terraform_user
+
+exit/b
+
+
+
+::_
+
+:add_user_to_group
+
+:autg
+
+set fp=* Add user to group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam add-user-to-group --group-name admins --user-name cli_user
+
+exit/b
+
+
+
+:_+ User Mike Commands
+
+
+
+::_
+
+:create_user_mike
+
+set fp=* Create user Mike commands.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+call %0 cu_mike
+
+call %0 gu_mike
+
+call %0 lak_mike
+
+rem Be sure to store the access key because it won't be shown again!
+rem Find a way to communicate this secret key. Email is not secure.
+call %0 cak_mike
+
+exit/b
+
+
+
+::_
+
+:cu
+
+:cu_mike
+
+set fp=* Create user Mike.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-user --user-name mike
+
+exit/b
+
+
+
+::_
+
+:gu_mike
+
+set fp=* Get user information for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name mike
+
+exit/b
+
+
+
+::_
+
+:lak_mike
+
+set fp=* List access keys for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name mike
+
+exit/b
+
+
+
+::_
+
+:cak_mike
+
+set fp=* Create access key for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-access-key --user-name mike
 
 exit/b
 
