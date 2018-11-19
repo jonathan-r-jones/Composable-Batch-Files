@@ -913,7 +913,7 @@ exit/b
 
 :_
 
-:check_index_existence
+:check_index_file_existence
 
 set fp=* Check the current folder for the presence of an index.htm file(s).
 
@@ -1324,7 +1324,7 @@ call %0 make_bucket_publicly_readable
 
 call td cas
 
-call %0 check_index_existence
+call %0 check_index_file_existence
 
 if %errorlevel% == 1 (
   exit/b

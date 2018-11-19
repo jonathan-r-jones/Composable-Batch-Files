@@ -12,14 +12,6 @@ set filep=* This file is used for testing, experimenting and developing new batc
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Set title.
 
 title=Mr T.
@@ -7937,16 +7929,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Testing the value of cbf_path.
@@ -7961,6 +7943,72 @@ call n c
 call td sm
 
 exit/b
+
+
+
+:_+ Check Long Label Names
+
+
+
+::_
+
+:check_long_label_names
+
+set fp=* Check long label names.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+call %0 32_character_long_label_name_12
+
+call %0 64_character_long_label_name_1264_character_long_label_4
+
+echo.
+echo Done.
+
+exit/b
+
+
+
+::_
+
+:32_character_long_label_name_12
+
+set fp=* 32 character label name.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+exit/b
+
+
+
+::_
+
+:64_character_long_label_name_1264_character_long_label_4
+
+set fp=* 64 character label name.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
