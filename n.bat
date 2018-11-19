@@ -5868,4 +5868,20 @@ exit/b
 
 
 
+:_
+
+:md
+
+set fp=* My documents.
+
+rem lu: Nov-19-2018
+
+echo %fp%
+
+set cbf_path=%homedrive%%homepath%\documents
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
