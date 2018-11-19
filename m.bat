@@ -3625,4 +3625,25 @@ exit/b
 
 
 
+:_
+
+:check_file_type_existence
+
+set fp=* Check the current folder for the presence of a particlar file type.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+if not exist *.pem (
+  echo.
+  echo * Error: No pem file exist in the current folder.
+  exit/b 1
+)
+
+exit/b 0
+
+
+
 :_ (!rfsp) (mov-6)
