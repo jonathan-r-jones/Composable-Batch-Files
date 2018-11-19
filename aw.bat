@@ -182,6 +182,27 @@ exit/b
 
 ::_
 
+:desu
+
+:subnets
+
+set fp=* Describe subnets. When you choose an AWS subnet, you are choosing the availability ^
+zone.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-subnets
+
+exit/b
+
+
+
+::_
+
 :run
 
 set fp=* Run Windows instance with tag.
@@ -443,24 +464,6 @@ echo %fp%
 echo.
 aws --output table ec2 describe-images --filters "Name=description,Values=*Postgre*" ^
   "Name=owner-alias,Values=amazon"
-
-exit/b
-
-
-
-::_
-
-:desu
-
-set fp=* Describe subnets.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-subnets
 
 exit/b
 
