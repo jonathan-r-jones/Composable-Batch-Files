@@ -1043,230 +1043,6 @@ exit/b
 
 
 
-:_+ Configure Family
-
-
-
-::_
-
-:scp
-
-:sh
-
-set fp=* Show current user profile.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure list
-
-exit/b
-
-
-
-::_
-
-:cfg
-
-:conf
-
-set fp=* Configure
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-exit/b
-
-
-
-::_
-
-:cfg_p
-
-:su
-
-:sp_p
-
-:su_p
-
-set fp=* Switch profile to procon_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=proconn_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_cp
-
-set fp=* Clear profile setting.
-
-rem lu: Nov-19-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_c
-
-:sp_c
-
-:su_c
-
-set fp=* Switch profile to cli_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=cli_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_t
-
-:sp_t
-
-:su_t
-
-set fp=* Switch profile to terraform_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=terraform_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_pp
-
-set fp=* Show proconn_user profile
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure list --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:cfg_apc
-
-set fp=* Add terraform_user profile. (create profile, add profile skw)
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile cli_user
-
-exit/b
-
-
-
-::_
-
-:cfg_ap
-
-set fp=* Add terraform_user profile.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile terraform_user
-
-exit/b
-
-
-
-::_
-
-:cfg_apup
-
-set fp=* Add proconn_user profile.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:cfg_h
-
-set fp=* Cfg help.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure help
-
-exit/b
-
-
-
 :_+ IAM Commands - User Information
 
 
@@ -1509,7 +1285,7 @@ echo.
 echo %fp%
 
 echo.
-aws iam add-user-to-group --group-name admins --user-name cli_user
+aws iam add-user-to-group --group-name admins --user-name mike
 
 exit/b
 
@@ -1613,6 +1389,224 @@ echo %fp%
 
 echo.
 aws iam create-access-key --user-name mike
+
+exit/b
+
+
+
+:_+ Configure Family
+
+
+
+::_
+
+:sp_cu
+
+set fp=* Switch profile to cli_user.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=cli_user
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:sp_pu
+
+rem qq-1
+
+set fp=* Switch profile to procon_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=procon_user
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cfga_cu
+
+set fp=* Add cli_user profile. (create profile, add profile skw)
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile cli_user
+
+exit/b
+
+
+
+::_
+
+:cfgp_pu
+
+set fp=* Add procon_user profile.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:sh
+
+set fp=* Show current user profile.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list
+
+exit/b
+
+
+
+::_
+
+rem qq-1
+
+
+
+::_
+
+:cfg_cp
+
+set fp=* Clear profile setting.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cfg_t
+
+:sp_t
+
+:su_t
+
+set fp=* Switch profile to terraform_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=terraform_user
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cfgl_pu
+
+set fp=* Show procon_user profile
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_ap
+
+set fp=* Add terraform_user profile.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile terraform_user
+
+exit/b
+
+
+
+::_
+
+:cfg_h
+
+set fp=* Cfg help.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure help
+
+exit/b
+
+
+
+::_
+
+:cfg
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
 
 exit/b
 
