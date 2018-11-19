@@ -242,6 +242,29 @@ exit/b
 
 ::_
 
+:create_test_security_group
+
+:csg
+
+set fp=* Create test security group.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name "Test Security Group" ^
+  --description "Test Security Group for EC2 instances to allow ports 22, 88 and 443"
+
+rem Group ID: sg-0fe9ba05e51b1d922
+
+exit/b
+
+
+
+::_
+
 :delete_security_group
 
 :sg_delete
@@ -281,6 +304,24 @@ exit/b
 
 ::_
 
+:autht1
+
+set fp=* Authorize test secrurity group ingress.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name "Test Security Group" --protocol tcp ^
+  --port 22 --cidr 172.54.125.8/32
+
+exit/b
+
+
+
+::_
+
 :auth2
 
 set fp=* Authorize secrurity group ingress. - 2nd port
@@ -299,6 +340,24 @@ exit/b
 
 ::_
 
+:autht2
+
+set fp=* Authorize test secrurity group ingress. - 2nd port
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name "Test Security Group" --protocol tcp ^
+  --port 80 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
 :auth3
 
 set fp=* Authorize secrurity group ingress. - 3rd port.
@@ -309,6 +368,24 @@ echo.
 echo %fp%
 
 aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+  --port 443 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
+:autht3
+
+set fp=* Authorize test secrurity group ingress. - 3rd port.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name "Test Security Group" --protocol tcp ^
   --port 443 --cidr 0.0.0.0/0
 
 exit/b
@@ -1421,8 +1498,6 @@ exit/b
 
 :sp_pu
 
-rem qq-1
-
 set fp=* Switch profile to procon_user.
 
 rem lu: Nov-6-2018
@@ -1489,12 +1564,6 @@ echo.
 aws configure list
 
 exit/b
-
-
-
-::_
-
-rem qq-1
 
 
 
@@ -1607,6 +1676,40 @@ echo %fp%
 
 echo.
 aws configure
+
+exit/b
+
+
+
+:_
+
+:run_cent_2
+
+set fp=* Run EC2 CentOS instance 5.5 GPU (Community AMI) with tag.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-42a2532b ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-0fe9ba05e51b1d922 ^
+  --subnet-id subnet-8ee161e9 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Test 2 CentOS 5.5 GPU - Community AMI}]"
+  --user-data file://my_script.sh
 
 exit/b
 
