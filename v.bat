@@ -211,7 +211,35 @@ exit/b
 
 
 
-:_
+:_ + Escape Characters
+
+
+
+::_
+
+:pare
+
+set fp=* Escape character for a parenthesis.
+
+rem skw what's the escape character for a batch file?
+
+rem Escaping Specific Characters: http://www.robvanderwoude.com/escapechars.php
+
+rem lu: Nov-20-2018
+
+echo.
+echo %fp%
+
+echo.
+echo * Error: No "*.%2" file exist(s^) in the current folder.
+
+rem echo The rain in Spain(s) is great.
+
+exit/b
+
+
+
+::_
 
 :percent_20
 

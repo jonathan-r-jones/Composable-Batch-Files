@@ -3636,9 +3636,9 @@ rem lu: Nov-19-2018
 echo.
 echo %fp%
 
-if not exist *.pem (
+if not exist *.%2 (
   echo.
-  echo * Error: No pem file exist in the current folder.
+  echo * Error: No "*.%2" file exist(s^) in the current folder.
   exit/b 1
 )
 

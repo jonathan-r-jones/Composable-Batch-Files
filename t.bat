@@ -8032,16 +8032,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* A rem statement with carets! Echo works, but rem does not.
@@ -8067,6 +8057,33 @@ your mother won't receive any telegram at all. So pay attention. ^
 - Charging Charlie, Charles A. Beckwith
 
 exit/b
+
+
+
+:_
+
+:vft
+
+set fp=* Validate file type existence check caller.
+
+rem lu: Nov-20-2018
+
+echo.
+echo %fp%
+
+call m check_file_type_existence batxx
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
