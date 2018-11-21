@@ -8004,11 +8004,69 @@ exit/b
 
 :_
 
+:
+
+set fp=* Exit program on td error.
+
+rem lu: Nov-20-2018
+
+echo.
+echo %fp%
+
+echo.
+call td clipjam_podcasts
+rem call td temp
+
+call m el_g
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+echo Later.
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* A rem statement with carets! Echo works, but rem does not.
+
+rem lu: Nov-20-2018
+
+echo.
+echo %fp%
+
+echo.
+echo If a man is bloody stupid, he told each group of newcomers, ^
+his mother will receive a telegram and it will say, your son is ^
+dead because he's stupid. Let's hope YOUR telegram only reads your ^
+son is dead. With the training we're going to give you here, maybe ^
+your mother won't receive any telegram at all. So pay attention. ^
+- Charging Charlie, Charles A. Beckwith
+
+rem If a man is bloody stupid, he told each group of newcomers, ^
+his mother will receive a telegram and it will say, your son is ^
+dead because he's stupid. Let's hope YOUR telegram only reads your ^
+son is dead. With the training we're going to give you here, maybe ^
+your mother won't receive any telegram at all. So pay attention. ^
+- Charging Charlie, Charles A. Beckwith
+
+exit/b
 
 
 

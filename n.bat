@@ -4500,8 +4500,6 @@ exit/b
 
 :cj
 
-:cj_pc
-
 :clipjam_podcasts
 
 set fp=* ClipJam podcasts folder.
