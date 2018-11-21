@@ -54,9 +54,15 @@ exit/b
 
 set fp=* Install Jenkins.
 
+echo.
 echo %fp%
 
- WAR file must be present in the current folder.
+call m file_type_presence war
+
+if %errorlevel% == 1 (
+ exit/b
+)
+
 rem qq-1
 
 java -jar jenkins.war

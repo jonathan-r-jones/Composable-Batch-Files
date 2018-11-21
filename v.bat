@@ -93,10 +93,14 @@ set fp=* The errorlevel statement.
 
 echo %fp%
 
-rem Imprimatur (!erro, !el, !erle)
 
 echo.
 echo Errorlevel: %errorlevel%
+
+rem Imprimatur (!erro, !el, !erle)
+if %errorlevel% == 1 (
+  exit/b
+)
 
 if %errorlevel% == 1 (
   echo.

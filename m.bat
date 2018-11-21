@@ -3634,12 +3634,15 @@ set fp=* Check the current folder for the presence of a particlar file type.
 rem lu: Nov-19-2018
 
 echo.
-echo %fp%
+echo * A "%2" file(s^) must be present in the current folder.
+
+echo.
 
 if not exist *.%2 (
-  echo.
-  echo * Error: No "*.%2" file exist(s^) in the current folder.
+  echo * Error: No "%2" file(s^) exist in the current folder.
   exit/b 1
+) else (
+  echo * Found "%2" file(s^).
 )
 
 exit/b 0
