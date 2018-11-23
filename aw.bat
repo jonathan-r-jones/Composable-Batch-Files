@@ -505,7 +505,7 @@ exit/b
 
 :delete_instance
 
-set fp=* Terminate instance. (delete instance skw)
+set fp=* Terminate EC2 instance. (delete instance skw)
 
 rem lu: Nov-6-2018
 
@@ -522,6 +522,30 @@ exit/b
 ::_
 
 :create_db
+
+set fp=* Create database
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --db-instance-identifier sg-cli-test ^
+  --allocated-storage 20 ^
+  --db-instance-class db.m1.small ^
+  --engine mysql ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_maria
 
 set fp=* Create database
 
@@ -1713,6 +1737,60 @@ aws ec2 run-instances ^
   --subnet-id subnet-8ee161e9 ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Test 2 CentOS 5.5 GPU - Community AMI}]"
   --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_+ Database-related family.
+
+
+
+::_
+
+:db_help
+
+set fp=* Help database.
+
+rem lu: Nov-23-2018
+
+echo.
+echo %fp%
+
+echo.
+
+rem aws rds create-db-instance help
+rem aws create-db-instance help
+
+call aws rds create-db-instance help>%temp%\j1.txt
+
+call me j1
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres
+
+set fp=* Create database.
+
+rem lu: Nov-23-2018
+
+echo.
+echo %fp%
+
+echo.
+rem qq-1
+aws rds create-db-instance ^
+  --db-instance-identifier PostgresTestDatabase ^
+  --allocated-storage 20 ^
+  --db-instance-class db.m1.small ^
+  --engine postgres ^
+  --license-model general-public-license ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
 
 exit/b
 
