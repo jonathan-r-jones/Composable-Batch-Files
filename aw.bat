@@ -1863,7 +1863,6 @@ set database_name=postgres_test_database_Nov_26_2018_2
 
 set instance_name=%database_name:_=-%
 
-rem qq-1
 echo.
 aws rds create-db-instance ^
   --allocated-storage 20 ^
