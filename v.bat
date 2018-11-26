@@ -445,44 +445,6 @@ exit/b
 
 
 
-:_
-
-set fp=* String replacement is cool.
-
-rem skw dos search and replace
-
-rem lu: Aug-23-2018
-
-echo %fp%
-
-echo.
-set str=teh cat in teh hat
-echo.%str%
-set str=%str:teh=the%
-echo.%str%
-
-echo.
-set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
-echo.%str%
-set str=%str:/=\%
-echo.%str%
-
-echo.
-set str=https://www.cnn.com
-echo.%str%
-set str=%str:https://www.=%
-set str=%str:http://www.=%
-echo.%str%
-
-echo.
-set cbf_url=%cbf_url:http://=%
-set cbf_url=%cbf_url:https://=%
-set cbf_url=%cbf_url:www.=%
-
-exit/b
-
-
-
 :_+ Guard Clause
 
 
@@ -637,6 +599,49 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+set fp=* String replacement is cool.
+
+rem skw dos search and replace
+
+rem lu: Nov-26-2018
+
+echo %fp%
+
+echo.
+set str=teh cat in teh hat
+echo.%str%
+set str=%str:teh=the%
+echo.%str%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+rem set database_name=postgres_test_database_Nov_26_2018_2
+rem set instance_name=%database_name:_=-%
+
+echo.
+set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
+echo.%str%
+set str=%str:/=\%
+echo.%str%
+
+echo.
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:https://www.=%
+set str=%str:http://www.=%
+echo.%str%
+
+echo.
+set cbf_url=%cbf_url:http://=%
+set cbf_url=%cbf_url:https://=%
+set cbf_url=%cbf_url:www.=%
+
+exit/b
 
 
 

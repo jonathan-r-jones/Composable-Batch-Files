@@ -1748,6 +1748,78 @@ exit/b
 
 ::_
 
+:create_db_postgres_1
+
+set fp=* Create database.
+
+rem lu: Nov-23-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-instance-identifier PostgresTestDatabase ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_mysql
+
+set fp=* Create database
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --db-instance-identifier MySQL-test-database ^
+  --allocated-storage 20 ^
+  --db-instance-class db.m1.small ^
+  --engine mysql ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_1
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-instance-identifier postgres-test-database-Nov-26-2018 ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
 :db_help
 
 set fp=* Help database.
@@ -1764,6 +1836,9 @@ rem aws create-db-instance help
 
 call aws rds create-db-instance help>%temp%\j1.txt
 
+rem The pause is important because the document takes a short bit of time to be created.
+pause
+
 call me j1
 
 exit/b
@@ -1776,19 +1851,26 @@ exit/b
 
 set fp=* Create database.
 
-rem lu: Nov-23-2018
+rem lu: Nov-26-2018
 
 echo.
 echo %fp%
 
-echo.
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+
+set database_name=postgres_test_database_Nov_26_2018_2
+
+set instance_name=%database_name:_=-%
+
 rem qq-1
+echo.
 aws rds create-db-instance ^
-  --db-instance-identifier PostgresTestDatabase ^
   --allocated-storage 20 ^
-  --db-instance-class db.m1.small ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_name% ^
+  --db-instance-class db.t2.micro ^
   --engine postgres ^
-  --license-model general-public-license ^
   --master-username myawsuser ^
   --master-user-password mypassword
 
