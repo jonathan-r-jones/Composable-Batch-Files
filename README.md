@@ -73,15 +73,15 @@ environment into a structured and organized one.
 
 
 
-## Part III - Customize CBF by Leveraging Environment Variables
+## Part III - Customize CBF by Leveraging and Recycling Environment Variables
 
-Besides functionalization, another feature CBF promotes is leveraging environment variables in 
-order to personalize your CBF user experience. This is achieved by **_mapping_** 
-nicknames/function names to environment variables. There is a CBF file named n.bat (Nicknames 
-Dictionary) whose sole purpose is to do this mapping. For example, in n.bat, you could add a 
-function with the nickname/function name of "docs" which maps the Documents folder to the 
-cbf_path environment variable. Then because another batch file td.bat (Transform Directory) 
-makes use of this mapping, typing "td docs" would navigate to the documents folder.
+Besides functionalization, another feature CBF promotes is leveraging and recycling 
+environment variables in order to personalize your CBF user experience. This is achieved by 
+**_mapping_** nicknames/function names to environment variables. There is a CBF file named 
+n.bat (Nicknames Dictionary) whose sole purpose is to do this mapping. For example, in n.bat, 
+you could add a function with the nickname/function name of "docs" which maps the Documents 
+folder to the cbf_path environment variable. Then because another batch file td.bat (Transform 
+Directory) makes use of this mapping, typing "td docs" would navigate to the documents folder.
 
 Creating a mapping function can be thought of as creating a bookmark for file system 
 locations, websites and filenames.
