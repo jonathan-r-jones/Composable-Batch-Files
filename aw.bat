@@ -1772,30 +1772,6 @@ exit/b
 
 ::_
 
-:create_db_mysql
-
-set fp=* Create database
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws rds create-db-instance ^
-  --db-instance-identifier MySQL-test-database ^
-  --allocated-storage 20 ^
-  --db-instance-class db.m1.small ^
-  --engine mysql ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-::_
-
 :create_db_postgres_1
 
 set fp=* Create database.
@@ -1847,7 +1823,31 @@ exit/b
 
 ::_
 
-:create_db_postgres
+:create_db_mysql
+
+set fp=* Create database
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --db-instance-identifier MySQL-test-database ^
+  --allocated-storage 20 ^
+  --db-instance-class db.m1.small ^
+  --engine mysql ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_Nov_27_2018
 
 set fp=* Create database.
 
@@ -1868,6 +1868,70 @@ aws rds create-db-instance ^
   --allocated-storage 20 ^
   --db-name %database_name% ^
   --db-instance-identifier %instance_name% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_Nov_26_2018
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+
+set database_name=postgres_test_database_Nov_26_2018_2
+
+set instance_name=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_name% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+
+set database_name=postgres_cli_database_Nov_27_2018
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier%^
   --db-instance-class db.t2.micro ^
   --engine postgres ^
   --master-username myawsuser ^
