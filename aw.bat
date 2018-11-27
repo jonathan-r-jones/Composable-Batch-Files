@@ -85,24 +85,6 @@ exit/b
 
 :_
 
-:cent
-
-set fp=* List EC@ AMI CentOS images.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-images --filters "Name=description, Values=*CentOS*" "Name=owner-alias,Values=amazon"
-
-exit/b
-
-
-
-:_
-
 :win
 
 :wind
@@ -200,6 +182,27 @@ exit/b
 
 ::_
 
+:desu
+
+:subnets
+
+set fp=* Describe subnets. When you choose an AWS subnet, you are choosing the availability ^
+zone.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-subnets
+
+exit/b
+
+
+
+::_
+
 :run
 
 set fp=* Run Windows instance with tag.
@@ -260,6 +263,29 @@ exit/b
 
 ::_
 
+:create_test_security_group
+
+:csg
+
+set fp=* Create test security group.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name "Test Security Group" ^
+  --description "Test Security Group for EC2 instances to allow ports 22, 88 and 443"
+
+rem Group ID: sg-0fe9ba05e51b1d922
+
+exit/b
+
+
+
+::_
+
 :delete_security_group
 
 :sg_delete
@@ -299,6 +325,24 @@ exit/b
 
 ::_
 
+:autht1
+
+set fp=* Authorize test secrurity group ingress.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name "Test Security Group" --protocol tcp ^
+  --port 22 --cidr 172.54.125.8/32
+
+exit/b
+
+
+
+::_
+
 :auth2
 
 set fp=* Authorize secrurity group ingress. - 2nd port
@@ -317,6 +361,24 @@ exit/b
 
 ::_
 
+:autht2
+
+set fp=* Authorize test secrurity group ingress. - 2nd port
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name "Test Security Group" --protocol tcp ^
+  --port 80 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
 :auth3
 
 set fp=* Authorize secrurity group ingress. - 3rd port.
@@ -327,6 +389,24 @@ echo.
 echo %fp%
 
 aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+  --port 443 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
+:autht3
+
+set fp=* Authorize test secrurity group ingress. - 3rd port.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name "Test Security Group" --protocol tcp ^
   --port 443 --cidr 0.0.0.0/0
 
 exit/b
@@ -391,25 +471,7 @@ exit/b
 
 ::_
 
-:desu
-
-set fp=* Describe subnets.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-subnets
-
-exit/b
-
-
-
-::_
-
-:run_in_linux
+:run_linux
 
 set fp=* Run Linux instance.
 
@@ -443,7 +505,7 @@ exit/b
 
 :delete_instance
 
-set fp=* Terminate instance. (delete instance skw)
+set fp=* Terminate EC2 instance. (delete instance skw)
 
 rem lu: Nov-6-2018
 
@@ -460,6 +522,30 @@ exit/b
 ::_
 
 :create_db
+
+set fp=* Create database
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --db-instance-identifier sg-cli-test ^
+  --allocated-storage 20 ^
+  --db-instance-class db.m1.small ^
+  --engine mysql ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_maria
 
 set fp=* Create database
 
@@ -552,240 +638,6 @@ echo %fp%
 echo.
 
 aws ec2 describe-security-group-references help
-
-exit/b
-
-
-
-:_+ IAM Commands - User Information
-
-
-
-::_
-
-:cu
-
-:create_user
-
-set fp=* Create user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-rem aws iam create-user --user-name mike
-aws iam create-user --user-name cli_user
-
-exit/b
-
-
-
-::_
-
-:delete_user
-
-set fp=* Delete user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-rem aws iam create-user --user-name mike
-aws iam delete-user --user-name cli_user
-
-exit/b
-
-
-
-::_
-
-:lak_c
-
-set fp=* List access keys for cli_user.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name cli_user
-
-exit/b
-
-
-
-::_
-
-:cak
-
-set fp=* Create access key for cli_user.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-access-key --user-name cli_user
-
-exit/b
-
-
-
-::_
-
-:create_group
-
-:crgr
-
-set fp=* Create group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-group --group-name admins
-
-exit/b
-
-
-
-::_
-
-:lgp
-
-set fp=* List group policies.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-policies
-
-exit/b
-
-
-
-::_
-
-:agp
-
-:attach_policy_ec2
-
-set fp=* Attach policy.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
-  --group-name admins
-
-exit/b
-
-
-
-::_
-
-:agp2
-
-:attach_policy_s3
-
-set fp=* Attach S3 policy.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess ^
-  --group-name admins
-
-exit/b
-
-
-
-::_
-
-:gu
-
-set fp=* Get user information.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam get-user --user-name mike
-
-exit/b
-
-
-
-::_
-
-:gui_t
-
-set fp=* Get user information.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam get-user --user-name terraform_user
-
-exit/b
-
-
-
-::_
-
-:gu_t
-
-set fp=* List access keys for tu.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name terraform_user
-
-exit/b
-
-
-
-::_
-
-:add_user_to_group
-
-:autg
-
-set fp=* Add user to group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam add-user-to-group --group-name admins --user-name cli_user
 
 exit/b
 
@@ -931,7 +783,7 @@ exit/b
 
 :_
 
-:check_index_existence
+:check_index_file_existence
 
 set fp=* Check the current folder for the presence of an index.htm file(s).
 
@@ -988,229 +840,6 @@ exit/b
 
 
 
-:_+ Configure Family
-
-
-
-::_
-
-:scp
-
-:sh
-
-set fp=* Show current user profile.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure list
-
-exit/b
-
-
-
-::_
-
-:cfg
-
-:conf
-
-set fp=* Configure
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-exit/b
-
-
-
-::_
-
-:cfg_p
-
-:su
-
-:sp_p
-
-:su_p
-
-set fp=* Switch profile to procon_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=proconn_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_c
-
-:sp_c
-
-:su_c
-
-set fp=* Switch profile to cli_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=cli_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_t
-
-:sp_t
-
-:su_t
-
-set fp=* Switch profile to terraform_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=terraform_user
-
-call %0 scp
-
-exit/b
-
-
-
-::_
-
-:cfg_pp
-
-set fp=* Show proconn_user profile
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure list --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:cfg_apc
-
-set fp=* Add terraform_user profile. (create profile, add profile skw)
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile cli_user
-
-exit/b
-
-
-
-::_
-
-:cfg_ap
-
-set fp=* Add terraform_user profile.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile terraform_user
-
-exit/b
-
-
-
-::_
-
-:cfg_a2
-
-set fp=* Add proconn_user profile.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:cfg_h
-
-set fp=* Cfg help.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure help
-
-exit/b
-
-
-
-::_
-
-:lak_pc
-
-set fp=* List access keys for pc.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam list-access-keys --user-name procon_user
-
-exit/b
-
-
-
 :_
 
 :s3_lbc
@@ -1250,7 +879,7 @@ exit/b
 
 :_
 
-:confirm
+:confirm_website
 
 set fp=* Confirm website.
 
@@ -1342,7 +971,7 @@ call %0 make_bucket_publicly_readable
 
 call td cas
 
-call %0 check_index_existence
+call %0 check_index_file_existence
 
 if %errorlevel% == 1 (
   exit/b
@@ -1352,7 +981,7 @@ call %0 copy_files_to_bucket
 
 call %0 define_website
 
-call %0 confirm
+call %0 confirm_website
 
 call sf cas
 
@@ -1390,7 +1019,7 @@ echo %fp%
 
 echo.
 
-call %0 create_user
+call %0 create_user_mike
 
 rem admins
 call %0 create_group
@@ -1427,6 +1056,822 @@ echo %fp%
 echo.
 
 call %0 delete_security_group
+
+exit/b
+
+
+
+:_
+
+:cent
+
+set fp=* List EC@ AMI CentOS images.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-images --filters "Name=description, Values=*CentOS*" "Name=owner-alias,Values=amazon"
+
+exit/b
+
+
+
+:_
+
+:run_linux_2
+
+set fp=* Run CentOS instance with tag.
+
+rem lu: Nov-15-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-00b94673edfccb7ca ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Amazon Linux 2}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:run_cent
+
+set fp=* Run EC2 CentOS instance 5.5 GPU (Community AMI) with tag.
+
+rem lu: Nov-15-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-42a2532b ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CentOS 5.5 GPU - Community AMI}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_+ IAM Commands - User Information
+
+
+
+::_
+
+:lak_tu
+
+set fp=* List access keys for tu.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name terraform_user
+
+exit/b
+
+
+
+::_
+
+:lak_pc
+
+set fp=* List access keys for pc.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name procon_user
+
+exit/b
+
+
+
+::_
+
+:lak_cli
+
+set fp=* List access keys for cli_user.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:delete_user
+
+set fp=* Delete user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam delete-user --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:cak_cli
+
+set fp=* Create access key for cli_user.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-access-key --user-name cli_user
+
+exit/b
+
+
+
+::_
+
+:create_group
+
+:crgr
+
+set fp=* Create group. Note: This is an IAM group, and not a security group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-group --group-name admins
+
+exit/b
+
+
+
+::_
+
+:lgp
+
+set fp=* List group policies.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-policies
+
+exit/b
+
+
+
+::_
+
+:agp
+
+:attach_policy_ec2
+
+set fp=* Attach policy.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess ^
+  --group-name admins
+
+exit/b
+
+
+
+::_
+
+:agp2
+
+:attach_policy_s3
+
+set fp=* Attach S3 policy.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess ^
+  --group-name admins
+
+exit/b
+
+
+
+::_
+
+:gu_pc
+
+set fp=* Get user information for PC.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name procon_user
+
+exit/b
+
+
+
+::_
+
+:gui_t
+
+set fp=* Get user information.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name terraform_user
+
+exit/b
+
+
+
+::_
+
+:gu_t
+
+set fp=* List access keys for tu.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name terraform_user
+
+exit/b
+
+
+
+::_
+
+:add_user_to_group
+
+:autg
+
+set fp=* Add user to group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam add-user-to-group --group-name admins --user-name mike
+
+exit/b
+
+
+
+:_+ User Mike Commands
+
+
+
+::_
+
+:create_user_mike
+
+set fp=* Create user Mike commands.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+call %0 cu_mike
+
+call %0 gu_mike
+
+call %0 lak_mike
+
+rem Be sure to store the access key because it won't be shown again!
+rem Find a way to communicate this secret key. Email is not secure.
+call %0 cak_mike
+
+exit/b
+
+
+
+::_
+
+:cu
+
+:cu_mike
+
+set fp=* Create user Mike.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-user --user-name mike
+
+exit/b
+
+
+
+::_
+
+:gu_mike
+
+set fp=* Get user information for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name mike
+
+exit/b
+
+
+
+::_
+
+:lak_mike
+
+set fp=* List access keys for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name mike
+
+exit/b
+
+
+
+::_
+
+:cak_mike
+
+set fp=* Create access key for Mike.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-access-key --user-name mike
+
+exit/b
+
+
+
+:_+ Configure Family
+
+
+
+::_
+
+:sp_cu
+
+set fp=* Switch profile to cli_user.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=cli_user
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:sp_pu
+
+set fp=* Switch profile to procon_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=procon_user
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cfga_cu
+
+set fp=* Add cli_user profile. (create profile, add profile skw)
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile cli_user
+
+exit/b
+
+
+
+::_
+
+:cfgp_pu
+
+set fp=* Add procon_user profile.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:sh
+
+set fp=* Show current user profile.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list
+
+exit/b
+
+
+
+::_
+
+:cfg_cp
+
+set fp=* Clear profile setting.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cfg_t
+
+:sp_t
+
+:su_t
+
+set fp=* Switch profile to terraform_user.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=terraform_user
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cfgl_pu
+
+set fp=* Show procon_user profile
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_ap
+
+set fp=* Add terraform_user profile.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile terraform_user
+
+exit/b
+
+
+
+::_
+
+:cfg_h
+
+set fp=* Cfg help.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure help
+
+exit/b
+
+
+
+::_
+
+:cfg
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
+
+exit/b
+
+
+
+:_
+
+:run_cent_2
+
+set fp=* Run EC2 CentOS instance 5.5 GPU (Community AMI) with tag.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-42a2532b ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-0fe9ba05e51b1d922 ^
+  --subnet-id subnet-8ee161e9 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Test 2 CentOS 5.5 GPU - Community AMI}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_+ Database-related family.
+
+
+
+::_
+
+:create_db_postgres_1
+
+set fp=* Create database.
+
+rem lu: Nov-23-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-instance-identifier PostgresTestDatabase ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_mysql
+
+set fp=* Create database
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --db-instance-identifier MySQL-test-database ^
+  --allocated-storage 20 ^
+  --db-instance-class db.m1.small ^
+  --engine mysql ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_1
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-instance-identifier postgres-test-database-Nov-26-2018 ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:db_help
+
+set fp=* Help database.
+
+rem lu: Nov-23-2018
+
+echo.
+echo %fp%
+
+echo.
+
+rem aws rds create-db-instance help
+rem aws create-db-instance help
+
+call aws rds create-db-instance help>%temp%\j1.txt
+
+rem The pause is important because the document takes a short bit of time to be created.
+pause
+
+call me j1
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+
+set database_name=postgres_test_database_Nov_26_2018_2
+
+set instance_name=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_name% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
 
 exit/b
 
