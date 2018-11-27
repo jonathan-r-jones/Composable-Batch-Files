@@ -47,57 +47,57 @@ echo Usage Note: Do not make internal calls to a composite function because
 echo that could cause a circular reference.
 
 echo.
-echo     Parameter  Description
-echo -------------  --------------------------------------------------
-echo  build_applet  Build the applet.
-echo     build_ejb  Build EJB WAR file.
-echo       compile  Run sencha app build testing.
-echo      compilep  Run sencha app build production.
-echo      copy_ext  Copy ext folder contents to the right place.
-echo  double_click  Perform command-line equivalent of a double click.
-echo       del_hex  Delete WildFly Dynamic Folder.
-echo          depl  Deploy a new WAR file.
-echo       depl_s3  Deploy a new WAR file in the S3 envrironment.
-echo          el_c  Error level - clear.
-echo         el_cs  Error level - clear silently.
-echo          el_g  Error level - get.
-echo          el_s  Error level - set.
-echo           env  List CBF environment variables.
-echo          exit  Exit batch file.
-echo         exitp  Exit batch file with pause.
-echo            f5  Compile and refresh Ext JS code in existing hex.
-echo   fix_buttons  Fix button warnings by Mike Stonkey.
-echo      fix_menu  Fix menu warnings by Mike Stonkey.
-echo gen_cred_proc  Run generate encrypted Maven credentials process.
-echo       gen_ver  Generate new timestamp-based Mercury version #.
-echo          mde1  Mercury Development Environment (MDE) validation.
-echo          mde2  MDE prerequisites - part 2.
-echo          mde3  MDE prerequisites - part 3.
-echo  [your label]  [your description] [Build your own.]
-echo           ppt  PowerPoint Presentation on CBF.
-echo   prepare_mob  Prepare for mobile deployment.
-echo        pscrub  Partially scrub deployment environment.
-echo             r  Run application.
-echo            rd  Remove folder at current location.
-echo         reset  Reset CBF environment variables.
-echo     run_tirem  Run tirem.
-echo           sde  Set default text editor.
-echo         scrub  When deploying new War file, this prepares env.
-echo set_parent_fd  Set parent folder.
-echo    s6_deleted  Rerun these commands if sencha folder was deleted.
-echo start_wildfly  Start WildFly. Refresh the environment.
-echo  stop_wildfly  Stop WildFly.
-echo           svc  Start Windows Services viewer.
-echo  tirem_preq_1  One-time copy necessary to set up target folder.
-echo  tirem_preq_2  Tirem prerequisite 2: One-time setup requirement.
-echo  tirem_preq_3  Tirem prerequisite 3: One-time setup requirement.
-echo    update_pub  In preparation for mobile deploy., update public.
-echo   update_tags  Update tag files.
-echo      wild_svc  Install WildFly as a service.
-echo        wiz_lh  Run wizard that builds a WAR file for localhost.
-echo        wiz_jv  Run wizard that builds only Java changes for localhost.
-echo      wiz_prod  Run wizard that builds a WAR file for production.
-echo      wiz_stag  Run wizard that builds a WAR file for staging.
+echo          Parameter  Description
+echo ------------------  -------------------------------------------------------------------
+echo       build_applet  Build the applet.
+echo          build_ejb  Build EJB WAR file.
+echo            compile  Run sencha app build testing.
+echo           compilep  Run sencha app build production.
+echo           copy_ext  Copy ext folder contents to the right place.
+echo       double_click  Perform command-line equivalent of a double click.
+echo            del_hex  Delete WildFly Dynamic Folder.
+echo               depl  Deploy a new WAR file.
+echo            depl_s3  Deploy a new WAR file in the S3 envrironment.
+echo               el_c  Error level - clear.
+echo              el_cs  Error level - clear silently.
+echo               el_g  Error level - get.
+echo               el_s  Error level - set.
+echo                env  List CBF environment variables.
+echo               exit  Exit batch file.
+echo              exitp  Exit batch file with pause.
+echo                 f5  Compile and refresh Ext JS code in existing hex.
+echo file_type_presence  Check the current folder for the presence of a particlar file type.
+echo        fix_buttons  Fix button warnings by Mike Stonkey.
+echo           fix_menu  Fix menu warnings by Mike Stonkey.
+echo      gen_cred_proc  Run generate encrypted Maven credentials process.
+echo            gen_ver  Generate new timestamp-based Mercury version #.
+echo               mde1  Mercury Development Environment (MDE) validation.
+echo               mde2  MDE prerequisites - part 2.
+echo               mde3  MDE prerequisites - part 3.
+echo       [your label]  [your description] [Build your own.]
+echo                ppt  PowerPoint Presentation on CBF.
+echo        prepare_mob  Prepare for mobile deployment.
+echo             pscrub  Partially scrub deployment environment.
+echo                 rd  Remove folder at current location.
+echo              reset  Reset CBF environment variables.
+echo          run_tirem  Run tirem.
+echo                sde  Set default text editor.
+echo              scrub  When deploying new War file, this prepares env.
+echo      set_parent_fd  Set parent folder.
+echo         s6_deleted  Rerun these commands if sencha folder was deleted.
+echo      start_wildfly  Start WildFly. Refresh the environment.
+echo       stop_wildfly  Stop WildFly.
+echo                svc  Start Windows Services viewer.
+echo       tirem_preq_1  One-time copy necessary to set up target folder.
+echo       tirem_preq_2  Tirem prerequisite 2: One-time setup requirement.
+echo       tirem_preq_3  Tirem prerequisite 3: One-time setup requirement.
+echo         update_pub  In preparation for mobile deploy., update public.
+echo        update_tags  Update tag files.
+echo           wild_svc  Install WildFly as a service.
+echo             wiz_lh  Run wizard that builds a WAR file for localhost.
+echo             wiz_jv  Run wizard that builds only Java changes for localhost.
+echo           wiz_prod  Run wizard that builds a WAR file for production.
+echo           wiz_stag  Run wizard that builds a WAR file for staging.
 
 exit/b
 
@@ -3622,6 +3622,30 @@ echo.
 echo * New ErrorLevel: %errorlevel%
 
 exit/b
+
+
+
+:_
+
+:file_type_presence
+
+set fp=* Check the current folder for the presence of a particlar file type.
+
+rem lu: Nov-19-2018
+
+echo.
+echo * A "%2" file(s^) must be present in the current folder.
+
+echo.
+
+if not exist *.%2 (
+  echo * Error: No "%2" file(s^) exist in the current folder.
+  exit/b 1
+) else (
+  echo * Found "%2" file(s^).
+)
+
+exit/b 0
 
 
 

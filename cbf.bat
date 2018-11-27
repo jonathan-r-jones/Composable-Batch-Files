@@ -106,6 +106,7 @@ echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
 echo     s  Open a Visual Studio solution. Has TD parameter.
+echo    sh  Perform SSH-related commands.
 echo    sx  Use Sublime to edit a batch file in the CBF folder.
 echo    sf  Surf to websites.
 echo    sm  Run Sublime.

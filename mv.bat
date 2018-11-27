@@ -91,11 +91,19 @@ rem lu: Jul-15-2018
 echo.
 echo %fp%
 
-call td cj_pc
+call td clipjam_podcasts
+
+if %errorlevel% == 1 (
+  exit/b
+)
 
 call m remove_hidden_attributes
 
-call td cj_pc
+call td clipjam_podcasts
+
+if %errorlevel% == 1 (
+  exit/b
+)
 
 call n cj_au
 

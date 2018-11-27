@@ -3273,6 +3273,8 @@ exit/b
 
 ::_
 
+:ed
+
 :edge
 
 set fp=* Microsoft Edge.
@@ -4152,7 +4154,7 @@ exit/b
 
 ::_
 
-:ed
+:edsn
 
 set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt github page.
 
@@ -4497,8 +4499,6 @@ exit/b
 :_
 
 :cj
-
-:cj_pc
 
 :clipjam_podcasts
 
@@ -5533,7 +5533,11 @@ exit/b
 
 
 
-:_
+:_+ Cart
+
+
+
+::_
 
 :c_apc
 
@@ -5551,7 +5555,7 @@ exit/b
 
 
 
-:_
+::_
 
 :cart
 
@@ -5567,7 +5571,7 @@ exit/b
 
 
 
-:_
+::_
 
 :c_docs
 
@@ -5680,7 +5684,11 @@ exit/b
 
 
 
-:_
+:_+ Repositories
+
+
+
+::_
 
 :r
 
@@ -5700,7 +5708,7 @@ exit/b
 
 
 
-:_
+::_
 
 :d_aa_repos
 
@@ -5716,7 +5724,7 @@ exit/b
 
 
 
-:_
+::_
 
 :c_aa_repos
 
@@ -5732,7 +5740,11 @@ exit/b
 
 
 
-:_
+:_+ Program Files
+
+
+
+::_
 
 :pf
 
@@ -5748,7 +5760,7 @@ exit/b
 
 
 
-:_
+::_
 
 :pf86
 
@@ -5840,6 +5852,26 @@ exit/b
 
 :_
 
+:md
+
+set fp=* My documents.
+
+rem lu: Nov-19-2018
+
+echo %fp%
+
+set cbf_path=%homedrive%%homepath%\documents
+
+exit/b
+
+
+
+:_ + AWS Configuration
+
+
+
+::_
+
 :aws_cfg
 
 set fp=* AWS configuration.
@@ -5847,6 +5879,26 @@ set fp=* AWS configuration.
 rem lu: Nov-6-2018
 
 echo %fp%
+
+set cbf_filename=%userprofile%\.aws\config
+
+set cbf_path=%userprofile%\.aws
+
+exit/b
+
+
+
+::_
+
+:aws_creds
+
+set fp=* AWS configuration credentials.
+
+rem lu: Nov-19-2018
+
+echo %fp%
+
+set cbf_filename=%userprofile%\.aws\credentials
 
 set cbf_path=%userprofile%\.aws
 

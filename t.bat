@@ -12,14 +12,6 @@ set filep=* This file is used for testing, experimenting and developing new batc
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Set title.
 
 title=Mr T.
@@ -7937,16 +7929,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Testing the value of cbf_path.
@@ -7961,6 +7943,147 @@ call n c
 call td sm
 
 exit/b
+
+
+
+:_+ Check Long Label Names
+
+
+
+::_
+
+:check_long_label_names
+
+set fp=* Check long label names.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+call %0 32_character_long_label_name_12
+
+call %0 64_character_long_label_name_1264_character_long_label_4
+
+echo.
+echo Done.
+
+exit/b
+
+
+
+::_
+
+:32_character_long_label_name_12
+
+set fp=* 32 character label name.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+exit/b
+
+
+
+::_
+
+:64_character_long_label_name_1264_character_long_label_4
+
+set fp=* 64 character label name.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Exit program on td error.
+
+rem lu: Nov-20-2018
+
+echo.
+echo %fp%
+
+echo.
+call td clipjam_podcasts
+rem call td temp
+
+call m el_g
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+echo Later.
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* A rem statement with carets! Echo works, but rem does not.
+
+rem lu: Nov-20-2018
+
+echo.
+echo %fp%
+
+echo.
+echo If a man is bloody stupid, he told each group of newcomers, ^
+his mother will receive a telegram and it will say, your son is ^
+dead because he's stupid. Let's hope YOUR telegram only reads your ^
+son is dead. With the training we're going to give you here, maybe ^
+your mother won't receive any telegram at all. So pay attention. ^
+- Charging Charlie, Charles A. Beckwith
+
+rem If a man is bloody stupid, he told each group of newcomers, ^
+his mother will receive a telegram and it will say, your son is ^
+dead because he's stupid. Let's hope YOUR telegram only reads your ^
+son is dead. With the training we're going to give you here, maybe ^
+your mother won't receive any telegram at all. So pay attention. ^
+- Charging Charlie, Charles A. Beckwith
+
+exit/b
+
+
+
+:_
+
+:vft
+
+set fp=* Validate file type existence check caller.
+
+rem lu: Nov-20-2018
+
+echo.
+echo %fp%
+
+call m check_file_type_existence batxx
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
