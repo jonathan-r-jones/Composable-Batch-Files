@@ -1936,6 +1936,67 @@ aws rds create-db-instance ^
   --engine postgres ^
   --master-username myawsuser ^
   --master-user-password mypassword
+rem qq-1
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_Nov_28_2018
+
+set fp=* Create a database that mimics the connectable one.
+
+rem lu: Nov-28-2018
+
+echo.
+echo %fp%
+
+set database_name=postgres_cli_database_Nov_28_2018
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier%^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+rem qq-1
+
+exit/b
+
+
+
+::_
+
+:cli_nov_29_postgres_test_db
+
+set fp=* Create a database that mimics the connectable one.
+
+rem lu: Nov-29-2018
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier%^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+rem qq-1
 
 exit/b
 

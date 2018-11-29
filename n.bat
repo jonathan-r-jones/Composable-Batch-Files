@@ -5447,6 +5447,8 @@ exit/b
 
 :_
 
+:devops
+
 :wg
 
 set fp=* DevOps Working Group.
