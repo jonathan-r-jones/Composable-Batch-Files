@@ -493,24 +493,18 @@ exit/b
 
 set fp=* Do super status, that is status, including remote information, for all repositories.
 
-rem fcd: Apr-6-2017
+rem fcd: Nov-30-2018
 
 rem This function is because it uses recursive calls into its own file but DOESN'T use
 rem a single goto statement, which is an anti-pattern.
 
 echo %fp%
 
-call td cbf
+call st cbf
 
-call g s
+call st ql
 
-call td ql
-
-call g s
-
-call td fr
-
-call g s
+call st c_docs
 
 exit/b
 

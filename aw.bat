@@ -1936,7 +1936,6 @@ aws rds create-db-instance ^
   --engine postgres ^
   --master-username myawsuser ^
   --master-user-password mypassword
-rem qq-1
 
 exit/b
 
@@ -1966,7 +1965,6 @@ aws rds create-db-instance ^
   --engine postgres ^
   --master-username myawsuser ^
   --master-user-password mypassword
-rem qq-1
 
 exit/b
 
@@ -1996,7 +1994,6 @@ aws rds create-db-instance ^
   --engine postgres ^
   --master-username myawsuser ^
   --master-user-password mypassword
-rem qq-1
 
 exit/b
 
