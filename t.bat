@@ -3469,27 +3469,6 @@ exit/b
 
 :_
 
-set fp=* Experiment with the ampersand character.
-
-rem Outcome: The ampersand character allows you to multiple commands on single line.
-rem Think of it as a semicolon for batch files.
-
-rem Line continuation = "&".
-
-rem This works!
-
-echo.
-echo %fp%
-echo.
-
-echo hey & echo hey 2
-
-m exitp
-
-
-
-:_
-
 :dpz
 
 set fp=* DP Zero is the folder where the script is executing from. DP Zero in action.
@@ -8084,6 +8063,27 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Exploring the pipe command.
+
+rem (!pipe)
+
+rem lu: Dec-3-2018
+
+echo.
+echo %fp%
+
+echo.
+echo paul ^
+green
+
+exit/b
 
 
 

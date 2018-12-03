@@ -571,17 +571,24 @@ exit/b
 
 
 
-:_
+:_+ Line Continuation
 
-:
 
-set fp=* Line continuation.
+
+::_
+
+:care
+
+:caret
+
+rem qq-1
+
+set fp=* Line continuation with caret character.
 
 rem How do you continue a batch file line onto a second line?
 
 rem lu: Nov-2-2018
 
-echo.
 echo %fp%
 
 echo.
@@ -589,6 +596,29 @@ echo Four score and seven years ago our fathers brought forth on this continent 
 conceived in liberty and dedicated to the proposition that all men are created equal.
 
 exit/b
+
+
+
+::_
+
+:ampe
+
+set fp=* Experiment with the ampersand character.
+
+rem Outcome: The ampersand character allows you to multiple commands on single line.
+rem Think of it as a semicolon for batch files.
+
+rem Line continuation = "&".
+
+rem This works!
+
+echo.
+echo %fp%
+echo.
+
+echo hey & echo hey 2
+
+m exitp
 
 
 
