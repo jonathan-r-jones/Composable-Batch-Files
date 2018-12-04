@@ -1445,6 +1445,8 @@ exit/b
 
 ::_
 
+:au
+
 :author
 
 set fp=* Configure GitHub author and email. Note: Please don't confuse this with the Bitbucket author signature.
@@ -1459,8 +1461,6 @@ exit/b
 
 
 ::_
-
-:au
 
 :st
 

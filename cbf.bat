@@ -97,6 +97,7 @@ echo     n  Nicknames dictionary.
 echo  n_ey  Empty Nicknames dictionary. Useful for restarting.
 echo    nm  Perform NPM-related tasks.
 echo    no  Run Notepad.
+echo   nox  Use Notepad to edit a batch file in the CBF folder.
 echo   npp  Run Notepad++.
 echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
 echo    of  Open Folder. Has TD parameter.

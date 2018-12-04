@@ -3664,7 +3664,7 @@ rem lu: Dec-4-2018
 echo.
 echo %fp%
 
-set path=%path%;h:\composable-batch-files
+set path=%path%;C:\Users\JJones2\j\Composable-Batch-Files
 
 exit/b
 
@@ -3685,7 +3685,7 @@ echo %fp%
 
 call %0 set_gfe_path
 
-set composable_batch_files=h:\composable-batch-files
+set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 
 exit/b
 
