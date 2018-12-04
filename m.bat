@@ -3649,4 +3649,46 @@ exit/b 0
 
 
 
+:_
+
+:sp
+
+:sgp
+
+:set_gfe_path
+
+set fp=* Set GFE path.
+
+rem lu: Dec-4-2018
+
+echo.
+echo %fp%
+
+set path=%path%;h:\composable-batch-files
+
+exit/b
+
+
+
+:_
+
+:ige
+
+:initialize_gfe_environment
+
+set fp=* Initialize GFE environment.
+
+rem lu: Dec-4-2018
+
+echo.
+echo %fp%
+
+call %0 set_gfe_path
+
+set composable_batch_files=h:\composable-batch-files
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
