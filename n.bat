@@ -5942,22 +5942,6 @@ exit/b
 
 :_
 
-:sh
-
-set fp=* Sh keygen.
-
-rem lu: Dec-4-2018
-
-echo %fp%
-
-set cbf_path=%localappdata%\Programs\Git\usr\lib\ssh\
-
-exit/b
-
-
-
-:_
-
 :gfe
 
 set fp=* Gfe.txt.
@@ -5985,6 +5969,42 @@ rem lu: Aug-9-2018
 echo %fp%
 
 set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
+
+exit/b
+
+
+
+:_
+
+:dfw
+
+set fp=* Download for windows.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_url=https://www.google.com/search?as_q=%2+download+windows
+
+exit/b
+
+
+
+:_
+
+:git_user_bin
+
+:gub
+
+:sh
+
+set fp=* Git user bin. Loaded with utilities.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_path=%localappdata%\Programs\Git\usr\bin
 
 exit/b
 
