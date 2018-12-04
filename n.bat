@@ -5908,4 +5908,36 @@ exit/b
 
 
 
+:_
+
+:misc
+
+set fp=* Miscellany folder.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\j\miscellany
+
+exit/b
+
+
+
+:_
+
+:j
+
+set fp=* J folder.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\j
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
