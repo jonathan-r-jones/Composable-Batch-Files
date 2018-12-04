@@ -3691,4 +3691,21 @@ exit/b
 
 
 
+:_
+
+:svc
+
+set fp=* Windows services.
+
+rem lu: Dec-4-2018
+
+echo.
+echo %fp%
+
+start c:\windows\system32\services.msc /s
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
