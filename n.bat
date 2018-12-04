@@ -4418,22 +4418,6 @@ exit/b
 
 :_
 
-:wopa
-
-set fp=* WordPad.
-
-rem lu: Aug-9-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
-
-exit/b
-
-
-
-:_
-
 :nx
 
 set fp=* VP folder.
@@ -5935,6 +5919,72 @@ rem lu: Dec-4-2018
 echo %fp%
 
 set cbf_path=%userprofile%\j
+
+exit/b
+
+
+
+:_
+
+:ad
+
+set fp=* Local app data.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_path=%localappdata%
+
+exit/b
+
+
+
+:_
+
+:sh
+
+set fp=* Sh keygen.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_path=%localappdata%\Programs\Git\usr\lib\ssh\
+
+exit/b
+
+
+
+:_
+
+:gfe
+
+set fp=* Gfe.txt.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_filename=%userprofile%\j\miscellany\gfe.txt
+
+exit/b
+
+
+
+:_
+
+:wp
+
+:wopa
+
+set fp=* WordPad.
+
+rem lu: Aug-9-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
 
 exit/b
 

@@ -61,4 +61,23 @@ exit/b
 
 
 
+:_
+
+:genk
+
+:keyg
+
+set fp=* Generate a new SSH key.
+
+rem lu: Dec-4-2018
+
+echo.
+echo %fp%
+
+ssh-keygen -t rsa -b 4096 -C %2
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
