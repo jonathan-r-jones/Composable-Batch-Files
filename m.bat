@@ -1416,6 +1416,8 @@ exit/b
 
 ::_
 
+:initialize_environment
+
 :ise
 
 set fp=* Initialize environment. The idea is to create a pit of success for the user.
@@ -3655,9 +3657,9 @@ exit/b 0
 
 :sgp
 
-:set_gfe_path
+:set_big_path
 
-set fp=* Set GFE path.
+set fp=* Set big laptop path.
 
 rem lu: Dec-4-2018
 
@@ -3672,9 +3674,11 @@ exit/b
 
 :_
 
-:ige
+:big
 
-:initialize_gfe_environment
+:ibe
+
+:initialize_big_environment
 
 set fp=* Initialize GFE environment.
 
@@ -3683,7 +3687,9 @@ rem lu: Dec-4-2018
 echo.
 echo %fp%
 
-call %0 set_gfe_path
+call %0 initialize_environment
+
+call %0 set_big_path
 
 set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 

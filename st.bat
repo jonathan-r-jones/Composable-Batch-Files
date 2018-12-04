@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* STatus batch file.
+set filename_stands_for=* Status batch file.
 
 
 
