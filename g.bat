@@ -673,6 +673,21 @@ exit/b
 
 :_
 
+:cbig
+
+set fp=* Commit with big description.
+
+echo %fp%
+
+echo.
+call git commit -a -m "From big latpop."
+
+exit/b
+
+
+
+:_
+
 Metadata: Track Size (!tsg)
 
      Date      Lines      Bytes  Functions  Notes
@@ -2273,6 +2288,30 @@ if %errorlevel% == 0 exit/b
 call %0 add_files_generic_action
 
 call %0 commit_with_timestamp_description
+
+call %0 push
+
+call %0 rf_status
+
+exit/b
+
+
+
+::_
+
+:acpb
+
+:acpg
+
+set fp=* Add, commit and push for big laptop.
+
+rem fcd: Dec-4-2018
+
+echo %fp%
+
+call %0 add_files_generic_action
+
+call %0 cbig
 
 call %0 push
 
