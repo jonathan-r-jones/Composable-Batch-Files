@@ -6008,4 +6008,20 @@ exit/b
 
 
 
+ :_
+
+:tc
+
+set fp=* TC.
+
+rem lu: Dec-5-2018
+
+echo %fp%
+
+set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

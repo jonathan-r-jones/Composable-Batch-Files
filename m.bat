@@ -3678,6 +3678,8 @@ exit/b
 
 :ibe
 
+:ige
+
 :initialize_big_environment
 
 set fp=* Initialize GFE environment.
@@ -3690,6 +3692,8 @@ echo %fp%
 call %0 initialize_environment
 
 call %0 set_big_path
+
+call %0 set_default_browser ed
 
 set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 
