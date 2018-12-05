@@ -944,22 +944,6 @@ exit/b
 
 :_
 
-:usr
-
-set fp=* User profile.
-
-rem fcd: Jul-7-2017
-
-echo %fp%
-
-set cbf_path=%userprofile%
-
-exit/b
-
-
-
-:_
-
 :ext
 
 set fp=Ext.
@@ -1601,22 +1585,6 @@ exit/b
 
 :_
 
-:do
-
-set fp=Download folder.
-
-rem lu: Feb-7-2018
-
-echo %fp%
-
-set cbf_path=%userprofile%\downloads
-
-exit/b
-
-
-
-:_
-
 :etc
 
 set fp=European Testing Conference.
@@ -2120,6 +2088,8 @@ exit/b
 :_
 
 :dn
+
+:do
 
 set fp=* Downloads folder.
 
@@ -5531,11 +5501,13 @@ exit/b
 
 set fp=* CART root folder.
 
-rem lu: Oct-17-2018
+rem lu: Dec-5-2018
 
 echo %fp%
 
-set cbf_path=c:\cart
+set cbf_path=%userprofile%\cart
+
+call n_ignore %1
 
 exit/b
 
@@ -6011,6 +5983,26 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\
 
 set cbf_url=https://www.google.com/advanced_search
+
+exit/b
+
+
+
+:_
+
+:up
+
+:user
+
+:usr
+
+set fp=* User profile.
+
+rem lu: Dec-5-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%
 
 exit/b
 
