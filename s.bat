@@ -6,10 +6,7 @@
 
 :_
 
-set filep=* Open a Visual Studio solution.
-
-rem echo.
-rem echo %filep%
+set filename_stands_for=* Search helper batch file.
 
 
 
@@ -17,33 +14,15 @@ rem echo %filep%
 
 set fp=* Route help callers.
 
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
+
+if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-
-
-:_
-
-set fp=* If it is provided, go to percent 1.
-
-rem echo.
-rem echo * Outside of the if statement, the error level is %errorlevel%.
-
-call m clear_errorlevel_silently
-
-if not "%~1" == "" (
-  call td %~1 %2
-
-  if not %errorlevel% == 0 (
-    echo.
-    echo * Inside of the if statement, error level is %errorlevel%.
-    rem No error message needed as "td" will report the error.
-    exit/b
-  )
-)
-
-goto main_function
+goto %1
 
 
 
@@ -53,17 +32,31 @@ goto main_function
 
 :help
 
-echo.
-echo Filename stands for: Run SoLution.
+echo Filename stands for: %filename_stands_for%
 
 echo.
-echo Last Updated: Jul-25-2018
+echo %filep%
+
+echo.
+echo Last Updated: Dec-5-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current folder is used.
+echo Usage: %0 [space separated parameter(s)]
+
+set parameter_1=Parameter 1: Desired search function.
+set parameter_1=%parameter_1% 
+
+echo.
+echo %parameter_1%
+
+set parameter_2=Parameter 2: Search criteria.
+set parameter_2=%parameter_2% 
+
+echo.
+echo %parameter_2%
 
 exit/b
 
@@ -71,30 +64,23 @@ exit/b
 
 :_
 
-:main_function
+:dfw
 
-set fp=* Run the Visual Studio solution in the current folder.
+set fp=* Download for windows.
 
-rem (!rfsp) (mov2)
+rem lu: Dec-5-2018
 
 echo.
 echo %fp%
 
-dir /b *.sln>%tmp%\filename.txt
+set cbf_url=https://www.google.com/search?as_q=%2+download+for+windows
 
-if %errorlevel% == 1 (
-  echo.
-  echo * No solution file was found in the current folder.
-  ver>nul
-  exit/b
-)
+call sfc
 
-set /p filename=<%tmp%\filename.txt
-
-start "%programfiles%\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe" "%filename%"
+rem qq-1
 
 exit/b
 
 
 
-:_
+:_ (!rfsp) (mov-6)

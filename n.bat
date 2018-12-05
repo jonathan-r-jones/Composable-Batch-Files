@@ -287,22 +287,6 @@ exit/b
 
 :_
 
-:g
-
-set fp=* G.bat.
-
-rem FCD: Jun-1-2017
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\g.bat
-
-exit/b
-
-
-
-:_
-
 :settings_xml
 
 set fp=* M2's settings.xml file.
@@ -4844,7 +4828,7 @@ exit/b
 
 :_
 
-:gas
+:git_as
 
 set fp=* Git API status.
 
@@ -6005,6 +5989,26 @@ rem lu: Dec-4-2018
 echo %fp%
 
 set cbf_path=%localappdata%\Programs\Git\usr\bin
+
+exit/b
+
+
+
+:_
+
+:g
+
+:gas
+
+set fp=* Google advanced search
+
+rem lu: Dec-5-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+set cbf_url=https://www.google.com/advanced_search
 
 exit/b
 
