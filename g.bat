@@ -1495,6 +1495,24 @@ exit/b
 
 ::_
 
+:aust
+
+set fp=* Run author and store.
+
+rem lu: Dec-5-2018
+
+echo %fp%
+
+call %0 au
+
+call %0 st
+
+exit/b
+
+
+
+::_
+
 :author_bit
 
 set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
