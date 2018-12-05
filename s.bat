@@ -73,7 +73,7 @@ rem lu: Dec-5-2018
 echo.
 echo %fp%
 
-set cbf_url=https://www.google.com/search?as_q=%2+download+for+windows
+set cbf_url=https://www.google.com/search?as_q=%~2+download+for+windows
 
 call sfc
 
