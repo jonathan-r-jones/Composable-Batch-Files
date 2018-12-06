@@ -65,6 +65,8 @@ exit/b
 
 :genk
 
+:generate_ssh_key
+
 :keyg
 
 set fp=* Generate a new SSH key.

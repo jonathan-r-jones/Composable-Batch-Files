@@ -3629,30 +3629,6 @@ exit/b
 
 :_
 
-:file_type_presence
-
-set fp=* Check the current folder for the presence of a particlar file type.
-
-rem lu: Nov-19-2018
-
-echo.
-echo * A "%2" file(s^) must be present in the current folder.
-
-echo.
-
-if not exist *.%2 (
-  echo * Error: No "%2" file(s^) exist in the current folder.
-  exit/b 1
-) else (
-  echo * Found "%2" file(s^).
-)
-
-exit/b 0
-
-
-
-:_
-
 :sp
 
 :sgp
@@ -3725,6 +3701,76 @@ echo %fp%
 start c:\windows\system32\services.msc /s
 
 exit/b
+
+
+
+:_
+
+:u2d
+
+set fp=* Unix to DOS.
+
+rem lu: Dec-6-2018
+
+echo.
+echo %fp%
+
+echo.
+%localappdata%\Programs\Git\usr\bin\unix2dos ca-bundle.crt
+
+exit/b
+
+
+
+:_ + File Presence
+
+
+
+::_
+
+:file_type_presence
+
+set fp=* Check the current folder for the presence of a particlar file type.
+
+rem lu: Nov-19-2018
+
+echo.
+echo * A "%2" file(s^) must be present in the current folder.
+
+echo.
+
+if not exist *.%2 (
+  echo * Error: No "%2" file(s^) exist in the current folder.
+  exit/b 1
+) else (
+  echo * Found "%2" file(s^).
+)
+
+exit/b 0
+
+
+
+::_
+
+:specific_file_presence
+
+set fp=* Check the current folder for the presence of a particlar file type.
+
+rem lu: Nov-19-2018
+
+echo.
+echo * The file "%2" must be present in the current folder.
+
+echo.
+
+if not exist %2 (
+  echo * Error: The file "%2" does NOT exist in the current folder.
+  exit/b 1
+) else (
+  echo * Found file "%2".
+)
+
+exit/b 0
 
 
 

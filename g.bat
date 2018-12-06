@@ -2407,4 +2407,66 @@ exit/b
 
 
 
+:_
+
+:crt
+
+set fp=* Add cert.
+
+echo %fp%
+
+git config --system http.sslCAPath C:/Users/JJones2/j/Miscellany/ca-bundle.crt 
+
+exit/b
+
+
+
+:_
+
+:crt2
+
+set fp=* Add cert using backslashes.
+
+echo %fp%
+
+git config --system http.sslCAPath C:\Users\JJones2\j\Miscellany\ca-bundle.crt 
+
+exit/b
+
+
+
+:_
+
+:cart
+
+set fp=* Overview of the process that successfully set up the Certificate and pulled the Cart project.
+
+rem lu: Dec-6-2018
+
+echo.
+echo %fp%
+
+rem Generate certificate.
+call shh generate_ssh_key
+
+rem Upload key to cart site.
+
+rem One website used.
+call sf certificate_setup_directions
+
+rem Where the keys are suspected to be.
+call td keys
+
+call td ssh_keys
+
+rem What the private is expected to be called.
+call m specific_file_presence id_rsa
+
+rem Notice that the cloning (SSH) URL is different from the surfing (HTTPS) URL.
+call cn cart_cn c
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

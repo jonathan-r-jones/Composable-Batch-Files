@@ -8058,16 +8058,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Exploring the pipe command.
@@ -8082,6 +8072,35 @@ echo %fp%
 echo.
 echo paul ^
 green
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Testing specific file command.
+
+rem lu: Dec-6-2018
+
+echo.
+echo %fp%
+
+call td ssh_keys
+
+call m specific_file_presence id_rsa
 
 exit/b
 

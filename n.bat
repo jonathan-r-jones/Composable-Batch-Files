@@ -5954,13 +5954,15 @@ exit/b
 
 :_
 
+:home
+
 :up
 
 :user
 
 :usr
 
-set fp=* User profile.
+set fp=* User profile/home.
 
 rem lu: Dec-5-2018
 
@@ -6052,6 +6054,8 @@ exit/b
 
 :git_user_bin
 
+:gu
+
 :gub
 
 :sh
@@ -6063,6 +6067,42 @@ rem lu: Dec-4-2018
 echo %fp%
 
 set cbf_path=%localappdata%\Programs\Git\usr\bin
+
+exit/b
+
+
+
+:_
+
+:keys
+
+:ssh
+
+:ssh_keys
+
+set fp=* Location that worked for the SSH keys folder.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\.ssh
+
+exit/b
+
+
+
+:_
+
+:certificate_setup_directions
+
+set fp=* Certificate setup directions.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+set cbf_url=https://blogs.msdn.microsoft.com/phkelley/2014/01/20/adding-a-corporate-or-self-signed-certificate-authority-to-git-exes-store/
 
 exit/b
 
