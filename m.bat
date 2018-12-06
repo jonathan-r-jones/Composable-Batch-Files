@@ -3668,6 +3668,10 @@ echo %fp%
 
 set path=%path%;C:\Users\JJones2\j\Composable-Batch-Files
 
+call n jre
+
+set path=%path%;%cbf_path%
+
 exit/b
 
 

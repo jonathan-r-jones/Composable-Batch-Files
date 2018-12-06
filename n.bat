@@ -5850,6 +5850,8 @@ exit/b
 
 :_
 
+:mi
+
 :misc
 
 set fp=* Miscellany folder.
@@ -6008,7 +6010,7 @@ exit/b
 
 
 
- :_
+:_
 
 :tc
 
@@ -6019,6 +6021,22 @@ rem lu: Dec-5-2018
 echo %fp%
 
 set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
+
+exit/b
+
+
+
+:_
+
+:jre
+
+set fp=* Java runtime path.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+set cbf_path=C:\Program Files (x86)\Java\jre1.8.0_191\bin
 
 exit/b
 
