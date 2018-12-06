@@ -6048,7 +6048,7 @@ exit/b
 
 :deve
 
-set fp=* Devenvironment envrionment.
+set fp=* Dev environment Excel file.
 
 rem lu: Dec-6-2018
 
