@@ -3701,6 +3701,8 @@ call %0 set_default_browser ed
 
 set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 
+set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_191
+
 title=Big Laptop
 
 cls

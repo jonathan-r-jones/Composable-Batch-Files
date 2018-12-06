@@ -27,7 +27,7 @@ if "%~1" == "help" goto help
 
 set fp=* Route other callers.
 
-if "%~1"=="" goto open_folder_in_windows_explorer_at_current_directory
+if "%~1"=="" goto open_folder_in_win_explorer_cd
 
 goto open_folder_in_windows_explorer
 
@@ -73,7 +73,7 @@ call td %1 %2
 rem echo Errorlevel from OF: %errorlevel%
 
 if "%errorlevel%"=="0" (
-  explorer %cd%
+  goto open_folder_in_win_explorer_cd
 ) else (
   call m clear_errorlevel_silently
 )
@@ -84,7 +84,7 @@ exit/b
 
 :_
 
-:open_folder_in_windows_explorer_at_current_directory
+:open_folder_in_win_explorer_cd
 
 set fp=* At the current directory.
 
