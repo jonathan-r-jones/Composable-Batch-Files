@@ -6042,4 +6042,24 @@ exit/b
 
 
 
+:_
+
+:de
+
+:deve
+
+set fp=* Devenvironment envrionment.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+call n mi
+
+set cbf_filename=%cbf_path%\development environment.xlsx
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
