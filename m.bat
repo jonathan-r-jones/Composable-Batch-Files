@@ -3679,6 +3679,8 @@ set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 
 set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_191
 
+set cbf_default_repository_folder=%userprofile%\j
+
 title=Big Laptop
 
 cls

@@ -5505,7 +5505,7 @@ rem lu: Oct-24-2018
 
 echo %fp%
 
-set cbf_path=c:\cart\iCart-Doco
+set cbf_path=%cbf_default_repository_folder%\iCart-Doco
 
 set cbf_url=https://github.com/DevTechnology/iCart-Doco.git
 
