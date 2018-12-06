@@ -32,6 +32,7 @@ goto %1
 
 :help
 
+echo.
 echo Filename stands for: %filename_stands_for%
 
 echo.
@@ -74,6 +75,27 @@ echo.
 echo %fp%
 
 set cbf_url=https://www.google.com/search?as_q=%~2+download+for+windows
+
+call sfc
+
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:s
+
+set fp=* Standard Google search.
+
+rem lu: Dec-6-2018
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.google.com/search?as_q=%~2
 
 call sfc
 
