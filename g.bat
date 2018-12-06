@@ -2446,6 +2446,21 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
+rem SSL certificate problem: unable to get local issuer certificate
+
+rem ::C:\Users\JJones2\AppData\Local\Programs\Git\usr\ssl\certs\ca-bundle.crt
+
+rem Maybe the problem is that I need to restart the ssh agent?
+
+rem That was not the problem.
+
+rem Where does Github expect to find ssh keys using windows terminal?
+
+rem %userprofile%
+
+rem 1.	Generate an ssh key pair and add it to your git account (https://github.ice.dhs.gov/settings/keys)
+rem 2.	Using any git client tool clone cart repo, use the git url - git@github.ice.dhs.gov:ERO/cart.git
+
 rem Generate certificate.
 call shh generate_ssh_key
 
