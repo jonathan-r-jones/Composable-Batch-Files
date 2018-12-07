@@ -6125,4 +6125,22 @@ exit/b
 
 
 
+:_
+
+:sz
+
+set fp=* Share-Zone.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
+
+set cbf_path=%dropbox%\it\share-zone
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
