@@ -12,30 +12,6 @@ set filep=* This file is used for vetted functions.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
-set fp=* Set title.
-
-title=Vetted Functions
-
-
-
-:_
-
-set fp=* Set color.
-
-color 0e
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
@@ -581,8 +557,6 @@ exit/b
 
 :caret
 
-rem qq-1
-
 set fp=* Line continuation with caret character.
 
 rem How do you continue a batch file line onto a second line?
@@ -634,32 +608,33 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
+:sr
+
 set fp=* String replacement is cool.
 
 rem skw dos search and replace
 
-rem lu: Nov-26-2018
+rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 echo.
+echo Example 1
 set str=teh cat in teh hat
 echo.%str%
 set str=%str:teh=the%
 echo.%str%
 
-rem This search and replace was necessary because database names can only contain underscores
-rem and instance names can only contain dashes. Nov-26-2018
-rem set database_name=postgres_test_database_Nov_26_2018_2
-rem set instance_name=%database_name:_=-%
-
 echo.
+echo Example 2
 set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
 echo.%str%
 set str=%str:/=\%
 echo.%str%
 
 echo.
+echo Example 3
 set str=https://www.cnn.com
 echo.%str%
 set str=%str:https://www.=%
@@ -667,9 +642,23 @@ set str=%str:http://www.=%
 echo.%str%
 
 echo.
+echo Example 4
+set cbf_url=https://www.github.com
+echo.%cbf_url%
 set cbf_url=%cbf_url:http://=%
 set cbf_url=%cbf_url:https://=%
 set cbf_url=%cbf_url:www.=%
+rem qq-1
+echo.%cbf_url%
+
+echo.
+echo Example 5
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+set database_name=postgres_test_database_Nov_26_2018_2
+echo %database_name%
+set database_name=%database_name:_=-%
+echo %database_name%
 
 exit/b
 

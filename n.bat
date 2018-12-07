@@ -101,7 +101,7 @@ echo            m2  %userprofile%\.m2
 echo            m6  c:\projects\netbeans\mercury6
 echo   nb [or] prj  c:\projects\netbeans
 echo            no  Notepad
-echo           npp  Notepad++
+echo            np  Notepad++
 echo            pf  c:\program files
 echo       pom_ear  \projects\netbeans\mercury6\Mercury-ear\pom.xml
 echo       pom_ejb  \projects\netbeans\mercury6\Mercury-ejb\pom.xml
@@ -3285,7 +3285,7 @@ exit/b
 
 ::_
 
-:npp
+:np
 
 set fp=* Notepad++.
 
@@ -3305,6 +3305,7 @@ if "%cbf_application_location%" == "" (
 )
 
 set cbf_application=%cbf_application_location%
+set cbf_path=%cbf_application_location:\notepad++.exe=%
 
 exit/b
 

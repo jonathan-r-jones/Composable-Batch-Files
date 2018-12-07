@@ -22,19 +22,9 @@ if "%~1" == "help" m editor_help
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 :main_function
 
 set fp=* Main function.
-
-echo %filename_stands_for%
 
 call n %0
 if "%~1" == "" (
