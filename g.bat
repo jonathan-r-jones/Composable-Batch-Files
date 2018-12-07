@@ -2266,6 +2266,24 @@ exit/b
 
 ::_
 
+:pn
+
+:pulln
+
+set fp=* Pull with a nickname location provider.
+
+echo %fp%
+
+call td %2
+
+call %0 pull  
+
+exit/b
+
+
+
+::_
+
 :pull
 
 set fp=* Pull. Do a get-latest from the default branch. (!step, !pull, !step3)
