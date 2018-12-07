@@ -6143,29 +6143,6 @@ exit/b
 
 :_
 
-:s
-
-:sz
-
-set fp=* Share-Zone.
-
-rem lu: Dec-7-2018
-
-echo %fp%
-
-set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
-set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
-set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
-
-set cbf_path=%userprofile%\j\share-zone\copied software
-if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone
-
-exit/b
-
-
-
-:_
-
 :mecfg
 
 set fp=* Multi-Edit Config file folder.
@@ -6198,7 +6175,7 @@ exit/b
 
 :_
 
-:js
+:je
 
 set fp=* Jenkins admin password file.
 
@@ -6206,7 +6183,32 @@ rem lu: Dec-7-2018
 
 echo %fp%
 
-set cbf_filename=C:\Users\JJones2\.jenkins\secrets\initialAdminPassword
+set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
+
+set cbf_path=%userprofile%\.jenkins
+
+exit/b
+
+
+
+:_
+
+:s
+
+:sz
+
+set fp=* Share-Zone.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
+set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
+set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
+
+set cbf_path=%userprofile%\j\share-zone\copied software
+if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone\copied software
 
 exit/b
 

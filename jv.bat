@@ -57,14 +57,15 @@ set fp=* Install Jenkins.
 echo.
 echo %fp%
 
+call td s
+
 call m file_type_presence war
 
 if %errorlevel% == 1 (
  exit/b
 )
 
-rem qq-1
-
+echo.
 java -jar jenkins.war
 
 exit/b
