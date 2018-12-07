@@ -5466,15 +5466,13 @@ exit/b
 
 :cart
 
-set fp=* CART root folder.
+:govc
+
+set fp=* Pass through.
 
 rem lu: Dec-5-2018
 
-echo %fp%
-
-set cbf_path=%userprofile%\cart
-
-call n_ignore %1
+call %userprofile%\j\share-zone\n_ignore %1
 
 exit/b
 
@@ -6209,6 +6207,22 @@ set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
 
 set cbf_path=%userprofile%\j\share-zone\copied software
 if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone\copied software
+
+exit/b
+
+
+
+:_
+
+:nig
+
+:sz fp=* N ignore.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+call set cbf_filename=%userprofile%\j\share-zone\n_ignore.bat
 
 exit/b
 
