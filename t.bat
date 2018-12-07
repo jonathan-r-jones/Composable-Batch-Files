@@ -8079,16 +8079,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Testing specific file command.
@@ -8101,6 +8091,52 @@ echo %fp%
 call td ssh_keys
 
 call m specific_file_presence id_rsa
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:or_statement
+
+set fp=* Or statement.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+echo.
+
+
+if "%~1" == "" (
+  echo Nothing.
+) else (
+  echo Something.
+)
+
+if "%~2" == "a" (
+  echo.
+  echo It's a!
+)
+
+if ("%~2" == "a") or "%~2" == "b" (
+  echo.
+  echo It's a or b!
+)
+
+rem qq-1
 
 exit/b
 

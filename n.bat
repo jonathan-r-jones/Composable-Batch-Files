@@ -6136,8 +6136,25 @@ rem lu: Dec-7-2018
 echo %fp%
 
 set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
+set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
 
 set cbf_path=%dropbox%\it\share-zone
+
+exit/b
+
+
+
+:_
+
+:xt
+
+set fp=* Xaml Mobile Test.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
 
 exit/b
 
