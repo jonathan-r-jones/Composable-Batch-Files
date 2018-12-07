@@ -304,22 +304,6 @@ exit/b
 
 :_
 
-:s
-
-set fp=S.bat.
-
-rem FCD: Jul-27-2017
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\s.bat
-
-exit/b
-
-
-
-:_
-
 :cw
 
 :edcw
@@ -6126,6 +6110,8 @@ exit/b
 
 
 :_
+
+:s
 
 :sz
 
