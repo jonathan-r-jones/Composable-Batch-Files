@@ -8136,8 +8136,6 @@ if ("%~2" == "a") or "%~2" == "b" (
   echo It's a or b!
 )
 
-rem qq-1
-
 exit/b
 
 

@@ -6160,4 +6160,21 @@ exit/b
 
 
 
+:_
+
+:test_private
+
+set fp=* Test 1 - Private repo.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/test1.git
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
