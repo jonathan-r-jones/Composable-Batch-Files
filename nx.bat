@@ -27,7 +27,7 @@ if "%~1" == "help" goto help
 
 :_
 
-call npp %composable_batch_files%\%~1.bat
+call np %composable_batch_files%\%~1.bat
 
 exit/b
 
