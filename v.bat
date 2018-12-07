@@ -648,7 +648,6 @@ echo.%cbf_url%
 set cbf_url=%cbf_url:http://=%
 set cbf_url=%cbf_url:https://=%
 set cbf_url=%cbf_url:www.=%
-rem qq-1
 echo.%cbf_url%
 
 echo.
