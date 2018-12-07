@@ -6164,4 +6164,20 @@ exit/b
 
 
 
+:_
+
+:mecfg
+
+set fp=* Multi-Edit Config file folder.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
