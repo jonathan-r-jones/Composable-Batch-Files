@@ -6157,7 +6157,7 @@ set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
 set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
 set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
 
-set cbf_path=%userprofile%\j\share-zone
+set cbf_path=%userprofile%\j\share-zone\copied software
 if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone
 
 exit/b
@@ -6175,6 +6175,38 @@ rem lu: Dec-7-2018
 echo %fp%
 
 set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+exit/b
+
+
+
+:_
+
+:lh
+
+set fp=* Localhost on port 8080.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_url=http://localhost:8080
+
+exit/b
+
+
+
+:_
+
+:js
+
+set fp=* Jenkins admin password file.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_filename=C:\Users\JJones2\.jenkins\secrets\initialAdminPassword
 
 exit/b
 
