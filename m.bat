@@ -75,6 +75,8 @@ echo               mde1  Mercury Development Environment (MDE) validation.
 echo               mde2  MDE prerequisites - part 2.
 echo               mde3  MDE prerequisites - part 3.
 echo       [your label]  [your description] [Build your own.]
+echo                  p  Push all desired repos.
+echo                 pl  Pull all desired repos.
 echo                ppt  PowerPoint Presentation on CBF.
 echo        prepare_mob  Prepare for mobile deployment.
 echo             pscrub  Partially scrub deployment environment.
