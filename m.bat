@@ -3684,7 +3684,7 @@ set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_191
 
 set cbf_default_repository_folder=%userprofile%\j
 
-set share-zone-path=%userprofile%\j\sharezone
+set share-zone=%userprofile%\j\share-zone
 
 title=Big Laptop
 
