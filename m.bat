@@ -1433,6 +1433,9 @@ call %0 initialize_default_repository_folder
 
 call %0 initialize_default_text_editor
 
+set share-zone=%dropbox%\it\share-zone
+rem qq-1
+
 cls
 
 exit/b
@@ -3680,6 +3683,8 @@ set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_191
 
 set cbf_default_repository_folder=%userprofile%\j
+
+set share-zone-path=%userprofile%\j\sharezone
 
 title=Big Laptop
 

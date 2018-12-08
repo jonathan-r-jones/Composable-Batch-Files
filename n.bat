@@ -5446,6 +5446,26 @@ exit/b
 
 ::_
 
+:cart
+
+:govc
+
+:nig
+
+:pass
+
+set fp=* Pass through.
+
+rem lu: Dec-5-2018
+
+call %share-zone%\n_ignore %1
+
+exit/b
+
+
+
+::_
+
 :c_apc
 
 set fp=* iCart.
@@ -5457,22 +5477,6 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\iCart-apc\apc
 
 set cbf_url=https://github.com/DevTechnology/iCart-apc
-
-exit/b
-
-
-
-::_
-
-:cart
-
-:govc
-
-set fp=* Pass through.
-
-rem lu: Dec-5-2018
-
-call %userprofile%\j\share-zone\n_ignore %1
 
 exit/b
 
@@ -6207,22 +6211,6 @@ set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
 
 set cbf_path=%userprofile%\j\share-zone\copied software
 if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone\copied software
-
-exit/b
-
-
-
-:_
-
-:nig
-
-:sz fp=* N ignore.
-
-rem lu: Dec-7-2018
-
-echo %fp%
-
-call set cbf_filename=%userprofile%\j\share-zone\n_ignore.bat
 
 exit/b
 

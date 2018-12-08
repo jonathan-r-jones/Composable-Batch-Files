@@ -8100,16 +8100,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :or_statement
 
 set fp=* Or statement.
@@ -8137,6 +8127,38 @@ if ("%~2" == "a") or "%~2" == "b" (
   echo.
   echo It's a or b!
 )
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test share-zone path.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+echo.
+
+rem set share-zone=c:\a
+
+cd /d %share-zone%
+rem qq-1
 
 exit/b
 
