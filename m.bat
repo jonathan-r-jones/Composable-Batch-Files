@@ -3781,4 +3781,46 @@ exit/b 0
 
 
 
+:_+ Batch Pull and Push
+
+
+
+::_
+
+:pl
+
+set fp=* Pull all desired repos.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+call pl cbf
+
+call pl s
+
+exit/b
+
+
+
+::_
+
+:p
+
+set fp=* Push all desired repos.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+call p cbf
+
+call p s
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
