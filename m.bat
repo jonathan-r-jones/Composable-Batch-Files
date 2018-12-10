@@ -1436,7 +1436,6 @@ call %0 initialize_default_repository_folder
 call %0 initialize_default_text_editor
 
 set share-zone=%dropbox%\it\share-zone
-rem qq-1
 
 cls
 
