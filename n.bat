@@ -6209,8 +6209,8 @@ set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
 set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
 set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
 
-set cbf_path=%userprofile%\j\share-zone\copied software
-if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone\copied software
+set cbf_path=%userprofile%\j\share-zone
+if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone
 
 exit/b
 
