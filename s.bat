@@ -97,7 +97,7 @@ echo %fp%
 
 set cbf_url=https://www.google.com/search?as_q=%~2
 
-call sfc
+call sfcu
 
 rem qq-1
 
