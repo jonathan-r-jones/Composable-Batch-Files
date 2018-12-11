@@ -2488,8 +2488,6 @@ rem One website used.
 call sf certificate_setup_directions
 
 rem Where the keys are suspected to be.
-call td keys
-
 call td ssh_keys
 
 rem What the private is expected to be called.

@@ -275,6 +275,7 @@ echo.
 echo %fp%
 
 echo.
+rem (!tsg)
 aws ec2 create-security-group --group-name "Test Security Group" ^
   --description "Test Security Group for EC2 instances to allow ports 22, 88 and 443"
 
