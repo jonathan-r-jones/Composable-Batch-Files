@@ -1586,9 +1586,9 @@ exit/b
 
 ::_
 
-:cup_kb
+:cp_kb
 
-set fp=* Configure user profile.
+set fp=* Configure profile.
 
 rem lu: Dec-11-2018
 
