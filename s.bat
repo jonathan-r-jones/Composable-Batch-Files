@@ -76,7 +76,7 @@ echo %fp%
 
 set cbf_url=https://www.google.com/search?as_q=%~2+download+for+windows
 
-call sfc
+call sfcu
 
 rem qq-1
 
