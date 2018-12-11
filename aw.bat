@@ -416,7 +416,7 @@ exit/b
 
 ::_
 
-:dsg
+:dsg_1
 
 set fp=* Describe security group.
 
@@ -427,6 +427,24 @@ echo %fp%
 
 echo.
 aws ec2 describe-security-groups --group-names EC2SecurityGroup
+
+exit/b
+
+
+
+::_
+
+:dsg
+
+set fp=* Describe security groups.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups
 
 exit/b
 
@@ -992,23 +1010,6 @@ exit/b
 
 ::_
 
-:e_d
-
-set fp=* Delete Envrionment 1.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-call %0 delete_web_bucket
-
-exit/b
-
-
-
-::_
-
 :e_c2
 
 set fp=* Create environment, part 2.
@@ -1023,7 +1024,7 @@ echo.
 call %0 create_user_mike
 
 rem admins
-call %0 create_group
+call %0 create_iam_group
 
 call %0 attach_policy_ec2
 
@@ -1031,6 +1032,9 @@ call %0 attach_policy_s3
 
 call %0 add_user_to_group
 
+rem See the BEFORE picture. What are the current security groups? How many are there?
+call %0 dsg
+ 
 call %0 create_security_group
 
 call %0 auth1
@@ -1038,6 +1042,26 @@ call %0 auth1
 call %0 auth2
 
 call %0 auth3
+
+rem See the AFTER picture. What are the current security groups? How many are there?
+call %0 dsg
+
+xit/b
+
+
+
+::_
+
+:e_d
+
+set fp=* Delete Envrionment 1.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+call %0 delete_web_bucket
 
 exit/b
 
@@ -1244,11 +1268,11 @@ exit/b
 
 ::_
 
-:create_group
+:create_iam_group
 
 :crgr
 
-set fp=* Create group. Note: This is an IAM group, and not a security group.
+set fp=* Create IAM group. Note: This is an IAM group, and not a security group.
 
 rem lu: Nov-2-2018
 
@@ -1505,7 +1529,7 @@ exit/b
 
 ::_
 
-:sp_cu
+:sp_cl
 
 set fp=* Switch profile to cli_user.
 
@@ -1524,7 +1548,7 @@ exit/b
 
 ::_
 
-:sp_pu
+:sp_pr
 
 set fp=* Switch profile to procon_user.
 
@@ -1536,6 +1560,43 @@ echo %fp%
 set AWS_PROFILE=procon_user
 
 call %0 sh
+
+exit/b
+
+
+
+::_
+
+:sp_kb
+
+set fp=* Switch profile to kibble_balance user.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=kibble_balance
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cup_kb
+
+set fp=* Configure user profile.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile kibble_balance
 
 exit/b
 
@@ -1586,7 +1647,7 @@ set fp=* Show current user profile.
 rem lu: Nov-6-2018
 
 echo.
-echo %fp%
+echo %fp% AWS Profile: %AWS_PROFILE%
 
 echo.
 aws configure list

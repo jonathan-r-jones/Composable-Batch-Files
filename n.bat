@@ -3790,24 +3790,6 @@ exit/b
 
 :_
 
-:awsam
-
-set fp=* AirWatch Samples.
-
-rem lu: Jul-20-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\AirWatch-samples
-
-set cbf_url=https://github.com/vmwaresamples/AirWatch-samples.git
-
-exit/b
-
-
-
-:_
-
 :mgr
 
 set fp=* Meetup Manager.
@@ -4514,26 +4496,6 @@ rem lu: Aug-16-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\Fresnel Dated Backups
-
-exit/b
-
-
-
-:_
-
-:aw
-
-:airwatch
-
-set fp=* VMware AirWatch SDK.
-
-rem lu: Aug-16-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\Xamarin-AWSDK\samples\xamariniossampleapp
-
-set cbf_url=https://github.com/vmwareairwatchsdk/Xamarin-AWSDK.git
 
 exit/b
 
@@ -6214,6 +6176,44 @@ rem lu: Nov-2-2018
 echo %fp%
 
 set cbf_path=%tfkeys% 
+
+exit/b
+
+
+
+:_
+
+:awsam
+
+set fp=* AirWatch Samples.
+
+rem lu: Jul-20-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\AirWatch-samples
+
+set cbf_url=https://github.com/vmwaresamples/AirWatch-samples.git
+
+exit/b
+
+
+
+:_
+
+:aw
+
+:airwatch
+
+set fp=* VMware AirWatch SDK.
+
+rem lu: Aug-16-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\Xamarin-AWSDK\samples\xamariniossampleapp
+
+set cbf_url=https://github.com/vmwareairwatchsdk/Xamarin-AWSDK.git
 
 exit/b
 
