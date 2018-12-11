@@ -1999,4 +1999,82 @@ exit/b
 
 
 
+:_
+
+:run_windows_dec_10_2018
+
+set fp=* Run Windows instance with tag. This works.
+
+rem Microsoft Windows Server 2016 Base - ami-050202fb72f001b47
+rem Microsoft Windows 2016 Datacenter edition. [English]
+rem Root device type: ebs Virtualization type: hvm ENA Enabled: Yes
+rem Available on free tier
+
+rem lu: Dec-10-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-050202fb72f001b47 ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Windows_2016_Dec_10}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:run_windows_dec_10_2018_2
+
+set fp=* Run Windows instance with tag on GovCloud.
+
+rem Microsoft Windows Server 2016 Base - ami-050202fb72f001b47
+rem Microsoft Windows 2016 Datacenter edition. [English]
+rem Root device type: ebs Virtualization type: hvm ENA Enabled: Yes
+rem Available on free tier
+
+rem lu: Dec-10-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-050202fb72f001b47 ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Windows_2016_Dec_10}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
