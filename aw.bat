@@ -2264,4 +2264,57 @@ exit/b
 
 
 
+:_
+
+:start
+
+set fp=* Start my instance from the command line!
+
+rem lu: Dec-12-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 start-instances --instance-ids i-0bce1b3771799a4ed
+                                       
+exit/b
+
+
+
+:_
+
+:stop
+
+set fp=* Stop my instance from the command line!
+
+rem lu: Dec-12-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 stop-instances --instance-ids i-0bce1b3771799a4ed
+                                       
+exit/b
+
+
+
+:_
+
+:connect
+
+set fp=* Connect to my instance from the command line!
+
+rem lu: Dec-12-2018
+
+echo.
+echo %fp%
+
+call x %1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
