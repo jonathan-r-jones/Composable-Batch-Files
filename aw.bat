@@ -275,7 +275,6 @@ echo.
 echo %fp%
 
 echo.
-rem (!tsg)
 aws ec2 create-security-group --group-name "Test Security Group" ^
   --description "Test Security Group for EC2 instances to allow ports 22, 88 and 443"
 
@@ -427,6 +426,24 @@ echo %fp%
 
 echo.
 aws ec2 describe-security-groups --group-names EC2SecurityGroup
+
+exit/b
+
+
+
+::_
+
+:dr
+
+set fp=* Describe regions.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-regions
 
 exit/b
 
@@ -1529,6 +1546,44 @@ exit/b
 
 ::_
 
+:sp_te
+
+set fp=* Switch profile to terraform_user.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=terraform_user
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:sp_kb
+
+set fp=* Switch profile to kibble_balance user.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=kibble_balance
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
 :sp_cl
 
 set fp=* Switch profile to cli_user.
@@ -1567,25 +1622,6 @@ exit/b
 
 ::_
 
-:sp_kb
-
-set fp=* Switch profile to kibble_balance user.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=kibble_balance
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
 :cp_kb
 
 set fp=* Configure profile.
@@ -1597,6 +1633,24 @@ echo %fp%
 
 echo.
 aws configure --profile kibble_balance
+
+exit/b
+
+
+
+::_
+
+:cp_te
+
+set fp=* Configure profile for Terraform user.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile terraform_user
 
 exit/b
 
@@ -1622,11 +1676,11 @@ exit/b
 
 ::_
 
-:cfgp_pu
+:cp_pr
 
-set fp=* Add procon_user profile.
+set fp=* Configure procon_user.
 
-rem lu: Nov-19-2018
+rem lu: Dec-11-2018
 
 echo.
 echo %fp%
@@ -1668,29 +1722,6 @@ echo.
 echo %fp%
 
 set AWS_PROFILE=
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
-:cfg_t
-
-:sp_t
-
-:su_t
-
-set fp=* Switch profile to terraform_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=terraform_user
 
 call %0 sh
 
@@ -2135,6 +2166,47 @@ aws ec2 run-instances ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Windows_2016_Dec_10}]"
   --user-data file://my_script.sh
 
+exit/b
+
+
+
+:_
+
+:li_smallest_windows_possible
+
+set fp=* Launch smallest Windows instance posssible with tag on GovCloud.
+
+rem Microsoft Windows Server 2016 Base - ami-050202fb72f001b47
+
+rem Microsoft Windows 2016 Datacenter edition. [English]
+rem Root device type: ebs Virtualization type: hvm ENA Enabled: Yes
+rem Available on free tier
+
+rem lu: Dec-10-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-02ee68cd896a434c8 ^
+  --instance-type t3.nano ^
+  --key-name kibble_balance_key_pair ^
+  --security-group-ids sg-0d72c1ec60ee3852d ^
+  --subnet-id subnet-9c220fd6 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Tiny_Windows_Dec_11}]"
+  --user-data file://my_script.sh
+
+rem qq-1
 exit/b
 
 
