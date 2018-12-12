@@ -2286,7 +2286,7 @@ exit/b
 
 :stop
 
-set fp=* Stop my instance from the command line!
+set fp=* Stop a running instance from the command line.
 
 rem lu: Dec-12-2018
 
@@ -2294,8 +2294,8 @@ echo.
 echo %fp%
 
 echo.
-aws ec2 stop-instances --instance-ids i-0bce1b3771799a4ed
-                                       
+aws ec2 stop-instances --instance-ids i-0bce1b3771799a4ed --color off
+
 exit/b
 
 
@@ -2312,6 +2312,32 @@ echo.
 echo %fp%
 
 call x %1
+
+exit/b
+
+
+
+:_
+
+:retag
+
+set fp=* Retag a resource.
+
+rem lu: Dec-12-2018
+
+echo.
+echo %fp%
+
+aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Jenkins_Dec_11_2018
+
+rem These also work.
+rem aws ec2 create-tags help>%temp%/j1.txt
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
+
+rem Below here didn't work.
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
 
 exit/b
 
