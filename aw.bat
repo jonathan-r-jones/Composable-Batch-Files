@@ -408,7 +408,6 @@ echo %fp%
 
 aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
   --port 3389 --cidr 0.0.0.0/0
-rem qq-1
 
 exit/b
 
@@ -2225,7 +2224,42 @@ aws ec2 run-instances ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Tiny_Windows_Dec_11}]"
   --user-data file://my_script.sh
 
-rem qq-1
+exit/b
+
+
+
+:_
+
+:li_t3_medium
+
+set fp=* Launch instance t3 medium Windows on GovCloud.
+
+rem I installed Jenkins on this server.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-02ee68cd896a434c8 ^
+  --instance-type t3.medium ^
+  --key-name kibble_balance_key_pair ^
+  --security-group-ids sg-0d72c1ec60ee3852d ^
+  --subnet-id subnet-9c220fd6 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=T3_Medium_Dec_11}]"
+  --user-data file://my_script.sh
+
 exit/b
 
 
