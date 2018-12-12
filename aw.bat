@@ -397,6 +397,25 @@ exit/b
 
 ::_
 
+:auth4
+
+set fp=* Authorize secrurity group ingress. - 4th port for RDP connection.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+  --port 3389 --cidr 0.0.0.0/0
+rem qq-1
+
+exit/b
+
+
+
+::_
+
 :autht3
 
 set fp=* Authorize test secrurity group ingress. - 3rd port.
