@@ -6131,24 +6131,6 @@ exit/b
 
 :_
 
-:je
-
-set fp=* Jenkins admin password file.
-
-rem lu: Dec-7-2018
-
-echo %fp%
-
-set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
-
-set cbf_path=%userprofile%\.jenkins
-
-exit/b
-
-
-
-:_
-
 :s
 
 :sz
@@ -6227,7 +6209,7 @@ exit/b
 
 :_
 
-:connect
+:je_server
 
 set fp=* Connect to my AWS instance from the command line!
 
@@ -6236,6 +6218,24 @@ rem lu: Dec-12-2018
 echo %fp%
 
 set cbf_filename=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
+
+exit/b
+
+
+
+:_
+
+:je
+
+set fp=* Jenkins admin password file.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
+
+set cbf_path=%userprofile%\.jenkins
 
 exit/b
 

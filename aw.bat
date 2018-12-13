@@ -2290,23 +2290,6 @@ exit/b
 
 :_
 
-:connect
-
-set fp=* Connect to my instance from the command line!
-
-rem lu: Dec-12-2018
-
-echo.
-echo %fp%
-
-call x %1
-
-exit/b
-
-
-
-:_
-
 :retag
 
 set fp=* Retag a resource.
@@ -2440,6 +2423,23 @@ echo.
 echo %fp%
 
 if "%~2" == "kb" set AWS_PROFILE=kibble_balance
+
+exit/b
+
+
+
+:_
+
+:connect
+
+set fp=* Connect to my instance from the command line!
+
+rem lu: Dec-12-2018
+
+echo.
+echo %fp%
+
+call x je_server
 
 exit/b
 
