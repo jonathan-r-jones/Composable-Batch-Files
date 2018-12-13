@@ -6241,4 +6241,21 @@ exit/b
 
 
 
+:_
+
+:cbfh
+
+set fp=* Open a new Composable Batch Files Helper.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\Composable Batch Files Helper.lnk
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

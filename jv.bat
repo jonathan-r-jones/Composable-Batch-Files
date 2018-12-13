@@ -57,7 +57,7 @@ set fp=* Install Jenkins.
 echo.
 echo %fp%
 
-call td s
+call td dn
 
 call m file_type_presence war
 

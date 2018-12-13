@@ -1436,7 +1436,6 @@ rem Add a path entry for %composable_batch_files%.
 call %0 initialize_default_browser
 
 call %0 initialize_default_repository_folder
-rem qq-1
 
 call %0 initialize_default_text_editor
 
