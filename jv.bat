@@ -65,10 +65,10 @@ if %errorlevel% == 1 (
  exit/b
 )
 
+color 60
+
 echo.
 java -jar jenkins.war
-
-color 60
 
 exit/b
 
