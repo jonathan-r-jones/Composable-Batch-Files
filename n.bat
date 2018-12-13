@@ -6264,7 +6264,7 @@ exit/b
 
 :sbt
 
-set fp=* Spring boot test code.
+set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
 
 rem lu: Dec-13-2018
 
@@ -6273,6 +6273,22 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
 
 set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
+
+exit/b
+
+
+
+:_
+
+:sbt2
+
+set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
+
+rem lu: Dec-13-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
 
 exit/b
 
