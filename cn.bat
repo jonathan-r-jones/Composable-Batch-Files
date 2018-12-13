@@ -128,6 +128,8 @@ set fp=* Use the default repository folder to install the repository.
 
 call td r
 
+call n %1
+
 goto main_function
 
 
