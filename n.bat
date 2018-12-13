@@ -6154,23 +6154,6 @@ exit/b
 
 :_
 
-:cbfh
-
-set fp=* Open a new Composable Batch Files Helper.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%composable_batch_files%\Composable Batch Files Helper.lnk
-
-exit/b
-
-
-
-:_
-
 :80
 
 :lh
@@ -6296,14 +6279,13 @@ exit/b
 
 :mvh
 
-set fp=Maven Home.
+set fp=* Maven Home.
 
 rem fcd: Jul-7-2017
 
 rem This is useful for new installs.
 
 echo %fp%
-echo.
 
 set cbf_path=%maven_home%
 
@@ -6325,6 +6307,23 @@ echo %fp%
 echo.
 
 set cbf_path=%java_home%
+
+exit/b
+
+
+
+:_
+
+:cbfh
+
+set fp=* Open a new Composable Batch Files Helper.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\Composable Batch Files Helper.lnk
 
 exit/b
 
