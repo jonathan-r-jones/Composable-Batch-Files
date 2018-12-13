@@ -871,25 +871,6 @@ exit/b
 
 :_
 
-:mh
-
-set fp=Maven Home.
-
-rem fcd: Jul-7-2017
-
-rem This is useful for new installs.
-
-echo %fp%
-echo.
-
-set cbf_path=%maven_home%
-
-exit/b
-
-
-
-:_
-
 :ext
 
 set fp=Ext.
@@ -6246,25 +6227,6 @@ exit/b
 
 ::_
 
-:jvh
-
-set fp=Java Home.
-
-rem fcd: Jul-6-2017
-
-rem This is useful for new installs.
-
-echo %fp%
-echo.
-
-set cbf_path=%java_home%
-
-exit/b
-
-
-
-::_
-
 :jvoh
 
 set fp=Java Opends Home.
@@ -6325,6 +6287,44 @@ rem lu: Dec-6-2018
 echo %fp%
 
 set cbf_path=C:\Program Files (x86)\Java
+
+exit/b
+
+
+
+::_
+
+:mvh
+
+set fp=Maven Home.
+
+rem fcd: Jul-7-2017
+
+rem This is useful for new installs.
+
+echo %fp%
+echo.
+
+set cbf_path=%maven_home%
+
+exit/b
+
+
+
+::_
+
+:jvh
+
+set fp=Java Home.
+
+rem fcd: Jul-6-2017
+
+rem This is useful for new installs.
+
+echo %fp%
+echo.
+
+set cbf_path=%java_home%
 
 exit/b
 

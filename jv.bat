@@ -119,8 +119,6 @@ if %errorlevel% == 0 (
   call fs java.exe
 )
 
-rem qq-1
-
 exit/b
 
 
