@@ -1078,6 +1078,8 @@ call %0 auth2
 
 call %0 auth3
 
+call %0 auth4
+
 rem See the AFTER picture. What are the current security groups? How many are there?
 call %0 dsg
 
@@ -2216,7 +2218,7 @@ exit/b
 
 set fp=* Launch instance t3 medium Windows on GovCloud.
 
-rem I installed Jenkins on this server.
+rem I installed Jenkins on this server. Then I retagged it to Jenkins.
 
 rem lu: Dec-11-2018
 
