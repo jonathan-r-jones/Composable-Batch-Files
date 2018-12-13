@@ -57,7 +57,15 @@ exit/b
 
 set fp=* Main function.
 
-call n %~1
+set cbf_filename=
+
+if not "%~1" == "" call n %~1
+
+if "%cbf_filename%" == "" (
+  echo.
+  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
+  exit/b 1
+)
 
 call m double_click
 

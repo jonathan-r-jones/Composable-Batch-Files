@@ -6304,7 +6304,6 @@ rem fcd: Jul-6-2017
 rem This is useful for new installs.
 
 echo %fp%
-echo.
 
 set cbf_path=%java_home%
 
@@ -6316,11 +6315,12 @@ exit/b
 
 :cbfh
 
+:cbfn
+
 set fp=* Open a new Composable Batch Files Helper.
 
 rem lu: Dec-13-2018
 
-echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\Composable Batch Files Helper.lnk
