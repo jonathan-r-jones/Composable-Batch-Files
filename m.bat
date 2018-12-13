@@ -1481,7 +1481,7 @@ echo %fp%
 if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
-set_default_repository_folder c_aa_repos
+call %0 set_default_repository_folder c_aa_repos
 rem if "%cbf_default_repository_folder%" == "" call %0 set_default_repository_folder temp
 
 exit/b

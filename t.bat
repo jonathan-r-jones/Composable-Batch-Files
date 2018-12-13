@@ -8155,6 +8155,23 @@ exit/b
 
 :_
 
+:
+
+set fp=* Call blongo.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+call m dosc_blongo
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -8167,14 +8184,17 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Call blongo.
+set fp=* Test setting default repository folder.
 
 rem lu: Dec-13-2018
 
 echo.
 echo %fp%
 
-call m dosc_blongo
+echo.
+call m set_default_repository_folder aa
+rem set_default_repository_folder c_aa_repos
+rem qq-1
 
 exit/b
 

@@ -67,6 +67,8 @@ if %errorlevel% == 1 (
 
 call m dosc_yeonbl
 
+title=Run Jenkins - Dedicated Job Window
+
 echo.
 call java -jar jenkins.war
 
