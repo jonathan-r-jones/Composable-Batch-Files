@@ -1429,12 +1429,16 @@ rem fcd: Dec-13-2018
 echo.
 echo %fp%
 
-rem call %0 initialize_default_browser
+rem Add a system environment variable for %composable_batch_files%.
 
-rem call %0 initialize_default_repository_folder
+rem Add a path entry for %composable_batch_files%.
+
+call %0 initialize_default_browser
+
+call %0 initialize_default_repository_folder
 rem qq-1
 
-rem call %0 initialize_default_text_editor
+call %0 initialize_default_text_editor
 
 set share-zone=%dropbox%\it\share-zone
 
