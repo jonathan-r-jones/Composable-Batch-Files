@@ -52,7 +52,7 @@ exit/b
 
 :je
 
-set fp=* Install Jenkins.
+set fp=* Run Jenkins.
 
 echo.
 echo %fp%
@@ -67,6 +67,8 @@ if %errorlevel% == 1 (
 
 echo.
 java -jar jenkins.war
+
+color 60
 
 exit/b
 

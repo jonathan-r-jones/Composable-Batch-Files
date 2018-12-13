@@ -8134,16 +8134,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test share-zone path.
@@ -8159,6 +8149,33 @@ rem set share-zone=c:\a
 
 cd /d %share-zone%
 rem qq-1
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:dosc_blongo
+
+set fp=* Change dos window color to: black on gold
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+color 60
 
 exit/b
 
