@@ -6270,10 +6270,9 @@ rem lu: Dec-13-2018
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\
+set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
 
-set cbf_url=
-rem       qq-1
+set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
 
 exit/b
 

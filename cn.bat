@@ -116,6 +116,20 @@ call m set_parent_fd "%cbf_path%\.." parent_folder
 
 cd /d %parent_folder%
 
+goto main_function
+
+
+
+:_
+
+:repository_folder
+
+set fp=* Use the default repository folder to install the repository.
+
+call td r
+
+goto main_function
+
 
 
 :_

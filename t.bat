@@ -8194,7 +8194,6 @@ echo %fp%
 echo.
 call m set_default_repository_folder aa
 rem set_default_repository_folder c_aa_repos
-rem qq-1
 
 exit/b
 
