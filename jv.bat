@@ -65,7 +65,7 @@ if %errorlevel% == 1 (
  exit/b
 )
 
-call m dosc_blongo
+call m dosc_yeonbl
 
 echo.
 call java -jar jenkins.war

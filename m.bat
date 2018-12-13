@@ -3829,7 +3829,11 @@ exit/b
 
 
 
-:_
+:_+ DOS Colors
+
+
+
+::_
 
 :dosc_blongo
 
@@ -3841,6 +3845,23 @@ echo.
 echo %fp%
 
 color 60
+
+exit/b
+
+
+
+::_
+
+:dosc_yeonbl
+
+set fp=* Change dos window color to: yellow on black
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+color 0e
 
 exit/b
 

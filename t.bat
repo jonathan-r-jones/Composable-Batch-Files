@@ -8148,7 +8148,6 @@ echo.
 rem set share-zone=c:\a
 
 cd /d %share-zone%
-rem qq-1
 
 exit/b
 
@@ -8176,7 +8175,6 @@ echo.
 echo %fp%
 
 call m dosc_blongo
-rem qq-1
 
 exit/b
 
