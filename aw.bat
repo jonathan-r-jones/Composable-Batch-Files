@@ -1583,16 +1583,16 @@ exit/b
 
 ::_
 
-:sp_kb
+:sp
 
 set fp=* Switch profile to kibble_balance user.
 
-rem lu: Dec-11-2018
+rem lu: Dec-13-2018
 
 echo.
 echo %fp%
 
-set AWS_PROFILE=kibble_balance
+if "%~2" == "kb" set AWS_PROFILE=kibble_balance
 
 call %0 sh
 
@@ -1633,24 +1633,6 @@ echo %fp%
 set AWS_PROFILE=procon_user
 
 call %0 sh
-
-exit/b
-
-
-
-::_
-
-:cp_kb
-
-set fp=* Configure profile.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile kibble_balance
 
 exit/b
 
@@ -2266,6 +2248,8 @@ exit/b
 
 :_
 
+:star
+
 :start
 
 set fp=* Start my instance from the command line!
@@ -2275,8 +2259,10 @@ rem lu: Dec-12-2018
 echo.
 echo %fp%
 
+call %0 saii %2
+
 echo.
-aws ec2 start-instances --instance-ids i-0bce1b3771799a4ed
+aws ec2 start-instances --instance-ids %aws_instance_id_1%
                                        
 exit/b
 
@@ -2338,6 +2324,120 @@ rem Below here didn't work.
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
+
+exit/b
+
+
+
+:_
+
+:ec2_help
+
+set fp=* Get EC2 help.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+call aws ec2 help>%temp%\j1.txt
+
+call me j1
+
+exit/b
+
+
+
+:_
+
+:stats
+
+set fp=* Get instance status.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-instances --color off
+
+exit/b
+
+
+
+:_
+
+:stat
+
+:istatus
+
+set fp=* Get instance status.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-instance-status --instance-ids i-0bce1b3771799a4ed --color off
+
+exit/b
+
+
+
+:_
+
+:cp
+
+set fp=* Configure profile.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+call %0 sap %2
+
+
+echo.
+aws configure --profile %AWS_PROFILE%
+
+exit/b
+
+
+
+:_
+
+:saii
+
+set fp=* Set AWS instance id.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+if "%~2" == "je" set aws_instance_id_1=i-0bce1b3771799a4ed
+
+exit/b
+
+
+
+:_
+
+:sap
+
+:set_aws_profile
+
+set fp=* Set AWS profile.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+if "%~2" == "kb" set AWS_PROFILE=kibble_balance
 
 exit/b
 
