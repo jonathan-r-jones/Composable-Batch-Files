@@ -3829,4 +3829,21 @@ exit/b
 
 
 
+:_
+
+:dosc_blongo
+
+set fp=* Change dos window color to: black on gold
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+color 60
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

@@ -65,10 +65,10 @@ if %errorlevel% == 1 (
  exit/b
 )
 
-color 60
+call m dosc_blongo
 
 echo.
-java -jar jenkins.war
+call java -jar jenkins.war
 
 exit/b
 

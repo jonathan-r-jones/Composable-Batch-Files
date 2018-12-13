@@ -8166,16 +8166,17 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-:dosc_blongo
+:
 
-set fp=* Change dos window color to: black on gold
+set fp=* Call blongo.
 
 rem lu: Dec-13-2018
 
 echo.
 echo %fp%
 
-color 60
+call m dosc_blongo
+rem qq-1
 
 exit/b
 
