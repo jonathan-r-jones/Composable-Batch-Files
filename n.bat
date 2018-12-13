@@ -6115,22 +6115,6 @@ exit/b
 
 :_
 
-:lh
-
-set fp=* Localhost on port 8080.
-
-rem lu: Dec-7-2018
-
-echo %fp%
-
-set cbf_url=http://localhost:8080
-
-exit/b
-
-
-
-:_
-
 :s
 
 :sz
@@ -6253,6 +6237,24 @@ echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\Composable Batch Files Helper.lnk
+
+exit/b
+
+
+
+:_
+
+:80
+
+:lh
+
+set fp=* Localhost on port 8080.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_url=http://localhost:8080
 
 exit/b
 
