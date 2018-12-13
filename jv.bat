@@ -92,4 +92,37 @@ exit/b
 
 
 
+:_
+
+:iji
+
+set fp=* Investigate Java installation.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+call td jvpf
+
+if %errorlevel% == 0 (
+  echo.
+  echo **** Search 1 completed.
+  call fs java.exe
+)
+
+call td jvpf86
+
+if %errorlevel% == 0 (
+  echo.
+  echo **** Search 2 completed.
+  call fs java.exe
+)
+
+rem qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

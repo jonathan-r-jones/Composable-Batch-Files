@@ -2281,8 +2281,10 @@ rem lu: Dec-12-2018
 echo.
 echo %fp%
 
+call %0 saii %2
+
 echo.
-aws ec2 stop-instances --instance-ids i-0bce1b3771799a4ed --color off
+aws ec2 stop-instances --instance-ids  %aws_instance_id_1% --color off
 
 exit/b
 

@@ -871,25 +871,6 @@ exit/b
 
 :_
 
-:jh
-
-set fp=Java Home.
-
-rem fcd: Jul-6-2017
-
-rem This is useful for new installs.
-
-echo %fp%
-echo.
-
-set cbf_path=%java_home%
-
-exit/b
-
-
-
-:_
-
 :mh
 
 set fp=Maven Home.
@@ -902,25 +883,6 @@ echo %fp%
 echo.
 
 set cbf_path=%maven_home%
-
-exit/b
-
-
-
-:_
-
-:ojh
-
-set fp=Opends Java Home.
-
-rem fcd: Jul-6-2017
-
-rem This is useful for new installs.
-
-echo %fp%
-echo.
-
-set cbf_path=%opends_java_home%
 
 exit/b
 
@@ -5933,22 +5895,6 @@ exit/b
 
 :_
 
-:jre
-
-set fp=* Java runtime path.
-
-rem lu: Dec-6-2018
-
-echo %fp%
-
-set cbf_path=C:\Program Files (x86)\Java\jre1.8.0_191\bin
-
-exit/b
-
-
-
-:_
-
 :de
 
 :deve
@@ -6289,6 +6235,96 @@ rem lu: Dec-13-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
+
+exit/b
+
+
+
+:_+ Java
+
+
+
+::_
+
+:jvh
+
+set fp=Java Home.
+
+rem fcd: Jul-6-2017
+
+rem This is useful for new installs.
+
+echo %fp%
+echo.
+
+set cbf_path=%java_home%
+
+exit/b
+
+
+
+::_
+
+:jvoh
+
+set fp=Java Opends Home.
+
+rem fcd: Jul-6-2017
+
+rem This is useful for new installs.
+
+echo %fp%
+echo.
+
+set cbf_path=%opends_java_home%
+
+exit/b
+
+
+
+::_
+
+:jvre
+
+set fp=* Java runtime path.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+set cbf_path=C:\Program Files (x86)\Java\jre1.8.0_191\bin
+
+exit/b
+
+
+
+::_
+
+:jvpf
+
+set fp=* Java under Program Files.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+set cbf_path=C:\Program Files\Java
+
+exit/b
+
+
+
+::_
+
+:jvpf86
+
+set fp=* Java under Program Files (x86).
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+set cbf_path=C:\Program Files (x86)\Java
 
 exit/b
 

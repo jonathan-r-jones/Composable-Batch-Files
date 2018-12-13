@@ -8191,9 +8191,7 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-echo.
 call m set_default_repository_folder aa
-rem set_default_repository_folder c_aa_repos
 
 exit/b
 
