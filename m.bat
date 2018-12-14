@@ -1478,10 +1478,10 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
+call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
-call %0 set_default_repository_folder c_aa_repos
 rem if "%cbf_default_repository_folder%" == "" call %0 set_default_repository_folder temp
 
 exit/b
@@ -3804,7 +3804,10 @@ echo %fp%
 
 call pl cbf
 
+call pl c_docs
+
 call pl s
+
 
 exit/b
 
@@ -3822,6 +3825,8 @@ echo.
 echo %fp%
 
 call p cbf
+
+call p c_docs
 
 call p s
 

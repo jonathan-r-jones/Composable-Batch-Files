@@ -506,6 +506,8 @@ call st ql
 
 call st c_docs
 
+call st s
+
 exit/b
 
 
