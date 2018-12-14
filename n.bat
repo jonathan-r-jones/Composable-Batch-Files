@@ -6120,22 +6120,6 @@ exit/b
 
 :_
 
-:je_server
-
-set fp=* Connect to my AWS instance from the command line!
-
-rem lu: Dec-12-2018
-
-echo %fp%
-
-set cbf_filename=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
-
-exit/b
-
-
-
-:_
-
 :je
 
 set fp=* Jenkins admin password file.
@@ -6324,6 +6308,26 @@ rem lu: Dec-13-2018
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\Composable Batch Files Helper.lnk
+
+exit/b
+
+
+
+:_
+
+:je_server
+
+set fp=* Connect to my AWS instance from the command line!
+
+rem lu: Dec-12-2018
+
+echo %fp%
+
+rem This filename is from Dec-14-2018
+set cbf_filename=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
+
+rem This filename is from c. Dec-11-2018
+set cbf_filename=%userprofile%\downloads\
 
 exit/b
 
