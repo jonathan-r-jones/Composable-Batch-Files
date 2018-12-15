@@ -6154,40 +6154,6 @@ exit/b
 
 
 
-:_
-
-:sbt
-
-set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
-
-rem lu: Dec-13-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
-
-set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
-
-exit/b
-
-
-
-:_
-
-:sbt2
-
-set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
-
-rem lu: Dec-13-2018
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
-
-exit/b
-
-
-
 :_+ Java
 
 
@@ -6328,6 +6294,44 @@ set cbf_filename=%userprofile%\downloads\ec2-18-253-148-152.us-gov-east-1.comput
                                          
 rem This filename is from c. Dec-11-2018
 set cbf_filename=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
+
+exit/b
+
+
+
+:_+ Spring Boot Sample Projects
+
+
+
+::_
+
+:sb_sample
+
+set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
+
+rem lu: Dec-13-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
+
+set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
+
+exit/b
+
+
+
+::_
+
+:sbt
+
+set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
+
+rem lu: Dec-13-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
 
 exit/b
 
