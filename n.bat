@@ -5876,26 +5876,6 @@ exit/b
 
 
 
-:_
-
-:de
-
-:deve
-
-set fp=* Dev environment Excel file.
-
-rem lu: Dec-6-2018
-
-echo %fp%
-
-call n mi
-
-set cbf_filename=%cbf_path%\development environment.xlsx
-
-exit/b
-
-
-
 :_ + Git
 
 
@@ -6334,6 +6314,28 @@ rem lu: Dec-13-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
+
+exit/b
+
+
+
+:_
+
+:de
+
+:deen
+
+:deve
+
+set fp=* Dev environment Excel file.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+call n c_docs
+
+set cbf_filename=%cbf_path%\development environment.xlsx
 
 exit/b
 

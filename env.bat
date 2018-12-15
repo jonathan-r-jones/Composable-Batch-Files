@@ -1,1 +1,1 @@
-m env
+m env %1

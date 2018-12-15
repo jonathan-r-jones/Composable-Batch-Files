@@ -50,34 +50,6 @@ exit/b
 
 :_
 
-:je
-
-set fp=* Run Jenkins.
-
-echo.
-echo %fp%
-
-call td dn
-
-call m file_type_presence war
-
-if %errorlevel% == 1 (
- exit/b
-)
-
-call m dosc_yeonbl
-
-title=Run Jenkins - Dedicated Job Window
-
-echo.
-call java -jar jenkins.war
-
-exit/b
-
-
-
-:_
-
 :ver
 
 set fp=* Display Java version currently in use.
@@ -140,6 +112,35 @@ echo %fp%
 
 echo.
 ren *.jar *.zip
+
+exit/b
+
+
+
+:_
+
+:je
+
+set fp=* Run Jenkins.
+
+echo.
+echo %fp%
+
+rem This assume that the Jenkins war file is in the downloads folder.
+call td dn
+
+call m file_type_presence war
+
+if %errorlevel% == 1 (
+ exit/b
+)
+
+call m dosc_yeonbl
+
+title=Run Jenkins - Dedicated Job Window
+
+echo.
+call java -jar jenkins.war
 
 exit/b
 
