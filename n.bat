@@ -5682,24 +5682,6 @@ exit/b
 
 ::_
 
-:aws_cfg
-
-set fp=* AWS configuration.
-
-rem lu: Nov-6-2018
-
-echo %fp%
-
-set cbf_filename=%userprofile%\.aws\config
-
-set cbf_path=%userprofile%\.aws
-
-exit/b
-
-
-
-::_
-
 :aws_creds
 
 set fp=* AWS configuration credentials.
@@ -5833,28 +5815,6 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\
 
 set cbf_url=https://www.google.com/advanced_search
-
-exit/b
-
-
-
-:_
-
-:home
-
-:up
-
-:user
-
-:usr
-
-set fp=* User profile/home.
-
-rem lu: Dec-5-2018
-
-echo %fp%
-
-set cbf_path=%userprofile%
 
 exit/b
 
@@ -6207,42 +6167,6 @@ exit/b
 
 
 
-::_
-
-:mvh
-
-set fp=* Maven Home.
-
-rem fcd: Jul-7-2017
-
-rem This is useful for new installs.
-
-echo %fp%
-
-set cbf_path=%maven_home%
-
-exit/b
-
-
-
-::_
-
-:jvh
-
-set fp=* Java Home.
-
-rem fcd: Dec-14-2018
-
-rem This is useful for new installs.
-
-echo %fp%
-
-set cbf_path=%java_home%
-
-exit/b
-
-
-
 :_
 
 :cbfh
@@ -6392,7 +6316,109 @@ rem lu: Dec-15-2018
 echo %fp%
 
 set cbf_url=https://gist.github.com/g0t4/12d888d0ce9e40b79d8454dabdad7033
+
+exit/b
+
+
+
+:_+ Home Folders
+
+
+
+::_
+
+:mvh
+
+set fp=* Maven Home.
+
+rem fcd: Jul-7-2017
+
+rem This is useful for new installs.
+
+echo %fp%
+
+set cbf_path=%maven_home%
+
+exit/b
+
+
+
+::_
+
+:jvh
+
+:java_home
+
+set fp=* Java Home.
+
+rem fcd: Dec-14-2018
+
+rem This is useful for new installs.
+
+echo %fp%
+
+set cbf_path=%java_home%
+
+exit/b
+
+
+
+::_
+
+:aws_cfg
+
+:aws_home
+
+set fp=* AWS configuration.
+
+rem lu: Nov-6-2018
+
+echo %fp%
+
+set cbf_filename=%userprofile%\.aws\config
+
+set cbf_path=%userprofile%\.aws
+
+exit/b
+
+
+
+::_
+
+:je_home
+
+set fp=* Jenkins home
+
+rem lu: Dec-15-2018
+
+echo %fp%
+
+call n home
+
+set cbf_path=%cbf_path%\.jenkines
 rem       qq-1
+
+exit/b
+
+
+
+::_
+
+:home
+
+:up
+
+:user
+
+:usr
+
+set fp=* User profile/home.
+
+rem lu: Dec-5-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%
 
 exit/b
 
