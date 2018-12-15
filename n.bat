@@ -6324,10 +6324,10 @@ rem lu: Dec-12-2018
 echo %fp%
 
 rem This filename is from Dec-14-2018
-set cbf_filename=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
-
+set cbf_filename=%userprofile%\downloads\ec2-18-253-148-152.us-gov-east-1.compute.amazonaws.com.rdp
+                                         
 rem This filename is from c. Dec-11-2018
-set cbf_filename=%userprofile%\downloads\
+set cbf_filename=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
 
 exit/b
 
