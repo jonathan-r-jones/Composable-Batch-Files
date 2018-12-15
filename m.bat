@@ -3876,4 +3876,24 @@ exit/b
 
 
 
+:_
+
+:mvn_c
+
+set fp=* Maven compile sbt.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+call td sbt
+
+echo.
+mvn compile
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
