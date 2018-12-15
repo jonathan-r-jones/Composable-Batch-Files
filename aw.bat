@@ -1566,118 +1566,6 @@ exit/b
 
 ::_
 
-:sp_te
-
-set fp=* Switch profile to terraform_user.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=terraform_user
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
-:sp
-
-set fp=* Switch profile to kibble_balance user.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-if "%~2" == "kb" set AWS_PROFILE=kibble_balance
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
-:sp_cl
-
-set fp=* Switch profile to cli_user.
-
-rem lu: Nov-19-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=cli_user
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
-:sp_pr
-
-set fp=* Switch profile to procon_user.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=procon_user
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
-:cp_te
-
-set fp=* Configure profile for Terraform user.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile terraform_user
-
-exit/b
-
-
-
-::_
-
-:cfga_cu
-
-set fp=* Add cli_user profile. (create profile, add profile skw)
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile cli_user
-
-exit/b
-
-
-
-::_
-
 :cp_pr
 
 set fp=* Configure procon_user.
@@ -1689,24 +1577,6 @@ echo %fp%
 
 echo.
 aws configure --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:sh
-
-set fp=* Show current user profile.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp% AWS Profile: %AWS_PROFILE%
-
-echo.
-aws configure list
 
 exit/b
 
@@ -2375,27 +2245,6 @@ exit/b
 
 :_
 
-:cp
-
-set fp=* Configure profile.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-call %0 sap %2
-
-
-echo.
-aws configure --profile %AWS_PROFILE%
-
-exit/b
-
-
-
-:_
-
 :saii
 
 set fp=* Set AWS instance id.
@@ -2413,25 +2262,6 @@ exit/b
 
 :_
 
-:sap
-
-:set_aws_profile
-
-set fp=* Set AWS profile.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-if "%~2" == "kb" set AWS_PROFILE=kibble_balance
-
-exit/b
-
-
-
-:_
-
 :connect
 
 set fp=* Connect to my instance from the command line!
@@ -2442,6 +2272,229 @@ echo.
 echo %fp%
 
 call x je_server
+
+exit/b
+
+
+
+:_+ Profiles
+
+
+
+::_
+
+:cp_te
+
+set fp=* Configure profile for Terraform user.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile terraform_user
+
+exit/b
+
+
+
+::_
+
+:cp_cu
+
+set fp=* Add cli_user profile. (create profile, add profile skw)
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile cli_user
+
+exit/b
+
+
+
+::_
+
+:cp_kb
+
+set fp=* Add kb
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile kibble_balance
+
+exit/b
+
+
+
+::_
+
+:cp_kb2
+
+set fp=* Add kb
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure help
+
+exit/b
+
+
+
+::_
+
+:sh
+
+set fp=* Show current user profile.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp% AWS Profile: %AWS_PROFILE%
+
+echo.
+aws configure list
+
+exit/b
+
+
+
+::_
+
+:set_test_profile
+
+set fp=* Set AWS Profile test.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+echo.
+set AWS_PROFILE=testxx
+
+echo.
+echo AWS_PROFILE: %aws_profile%
+
+exit/b
+
+
+
+::_
+
+:look_up_profile_name
+
+set fp=* Look up profile name.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+if "%~2" == "cl" set AWS_PROFILE_NAME=cli_user
+if "%~2" == "kb" set AWS_PROFILE_NAME=kibble_balance
+if "%~2" == "pr" set AWS_PROFILE_NAME=procon_user
+if "%~2" == "te" set AWS_PROFILE_NAME=terraform_user
+
+exit/b
+
+
+
+::_
+
+:cnp
+
+set fp=* Configure new profile.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
+
+call %0 sp %2
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:spb
+
+set fp=* Blank AWS Profile.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+set aws_profile=
+
+echo.
+echo AWS Profile: %aws_profile%
+
+exit/b
+
+
+
+::_
+
+:cp
+
+set fp=* Configure profile.
+
+rem lu: Dec-14-2018
+
+if "%~2" == "" goto cnp
+
+call %0 look_up_profile_name %2
+
+echo.
+echo * Configure profile for: %aws_profile_name%
+
+echo.
+aws configure --profile %AWS_PROFILE_NAME%
+
+exit/b
+
+
+
+:_
+
+:set_profile
+
+:sp
+
+set fp=* Set profile.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+call %0 look_up_profile_name %2
+
+set aws_profile=%aws_profile_name%
+
+echo.
+echo AWS PROFILE: %aws_profile%
 
 exit/b
 
