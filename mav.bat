@@ -179,4 +179,22 @@ exit/b
 
 
 
+:_
+
+:clean
+
+set fp=* Clean.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+echo.
+mvn clean
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
