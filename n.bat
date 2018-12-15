@@ -2826,7 +2826,7 @@ exit/b
 
 :_
 
-:p
+:play
 
 set fp=* Playpark.
 
@@ -5241,6 +5241,8 @@ exit/b
 
 :_
 
+:p
+
 :poun
 
 set fp=* Pounders.
@@ -6247,9 +6249,9 @@ exit/b
 
 :jvh
 
-set fp=Java Home.
+set fp=* Java Home.
 
-rem fcd: Jul-6-2017
+rem fcd: Dec-14-2018
 
 rem This is useful for new installs.
 
