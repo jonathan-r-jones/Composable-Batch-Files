@@ -2496,6 +2496,8 @@ set aws_profile=%aws_profile_name%
 echo.
 echo AWS PROFILE: %aws_profile%
 
+call %0 sh
+
 exit/b
 
 
