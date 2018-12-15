@@ -90,6 +90,7 @@ echo     h  Perform Sencha-related tasks.
 echo     m  Perform miscellaneous tasks.
 echo   mcd  Make and navigate (cd) to a folder.
 echo    me  Run Multi-Edit.
+echo   mav  Maven wrapper.
 echo    mv  Move files wrapper.
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
 rem (!rfsp) (mov-2)
