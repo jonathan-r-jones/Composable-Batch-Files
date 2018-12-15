@@ -6395,8 +6395,7 @@ echo %fp%
 
 call n home
 
-set cbf_path=%cbf_path%\.jenkines
-rem       qq-1
+set cbf_path=%cbf_path%\.jenkins
 
 exit/b
 
