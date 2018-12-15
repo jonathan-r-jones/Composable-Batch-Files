@@ -106,7 +106,7 @@ echo %fp%
 call td jvpf
 
 if %errorlevel% == 0 (
-  dir /a /b /s /o-d "*%~2*">%temp%\search_results_fs_special.txt
+  dir /a /b /s /o-d "*java.exe*">%temp%\search_results_fs_special.txt
   echo.
   echo **** Search 1 completed.
 )
@@ -114,7 +114,7 @@ if %errorlevel% == 0 (
 call td jvpf86
 
 if %errorlevel% == 0 (
-  dir /a /b /s /o-d "*%~2*">>%temp%\search_results_fs_special.txt
+  dir /a /b /s /o-d "*java.exe*">>%temp%\search_results_fs_special.txt
   echo.
   echo **** Search 2 completed.
 )
