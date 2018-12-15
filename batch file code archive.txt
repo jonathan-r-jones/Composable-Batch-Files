@@ -1,5 +1,24 @@
 :_
 
+:
+
+set fp=* Archive test.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+echo.
+
+rem qq-1
+
+exit/b
+
+
+
+:_
+
 :s6
 
 set fp=* Sencha.

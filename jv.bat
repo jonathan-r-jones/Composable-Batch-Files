@@ -115,8 +115,8 @@ call td jvpf86
 
 if %errorlevel% == 0 (
   echo.
-  echo **** Search 2 completed.
-  call fs java.exe
+  rem echo **** Search 2 completed.
+  rem call fs java.exe
 )
 
 exit/b
