@@ -6381,4 +6381,21 @@ exit/b
 
 
 
+:_
+
+:wes
+
+set fp=* Wes' challenge.
+
+rem lu: Dec-15-2018
+
+echo %fp%
+
+set cbf_url=https://gist.github.com/g0t4/12d888d0ce9e40b79d8454dabdad7033
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

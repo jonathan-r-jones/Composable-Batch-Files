@@ -183,7 +183,7 @@ exit/b
 
 :clean
 
-set fp=* Clean.
+set fp=* Clean, which removes the target folder.
 
 rem lu: Dec-14-2018
 
