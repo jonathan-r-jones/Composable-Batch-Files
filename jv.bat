@@ -106,17 +106,21 @@ echo %fp%
 call td jvpf
 
 if %errorlevel% == 0 (
+  dir /a /b /s /o-d "*%~2*">%temp%\search_results_fs_special.txt
   echo.
   echo **** Search 1 completed.
-  call fs java.exe
 )
 
 call td jvpf86
 
 if %errorlevel% == 0 (
+  dir /a /b /s /o-d "*%~2*">>%temp%\search_results_fs_special.txt
   echo.
-  rem echo **** Search 2 completed.
-  rem call fs java.exe
+  echo **** Search 2 completed.
+)
+
+if %errorlevel% == 0 (
+  start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_fs_special.txt"
 )
 
 exit/b
