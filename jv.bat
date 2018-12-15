@@ -127,4 +127,22 @@ exit/b
 
 
 
+:_
+
+:rjz
+
+set fp=* Rename Jar file to zip file in order to examine its contents.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+echo.
+ren *.jar *.zip
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
