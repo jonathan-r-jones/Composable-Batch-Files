@@ -6281,7 +6281,49 @@ exit/b
 
 
 
+:_
+
+:de
+
+:deen
+
+:deve
+
+set fp=* Dev environment Excel file.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+call n c_docs
+
+set cbf_filename=%cbf_path%\development environment.xlsx
+
+exit/b
+
+
+
 :_+ Spring Boot Sample Projects
+
+
+
+::_
+
+:mysb
+
+set fp=* My clone of the spring boot test code from the PluralSight Jenkins 2 course.
+
+rem I did this so that I could fail the build to test failures.
+
+rem lu: Dec-13-2018
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
+
+set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
+
+exit/b
 
 
 
@@ -6321,21 +6363,19 @@ exit/b
 
 :_
 
-:de
+:zoom
 
-:deen
+set fp=* ZoomIt
 
-:deve
-
-set fp=* Dev environment Excel file.
-
-rem lu: Dec-6-2018
+rem lu: Dec-14-2018
 
 echo %fp%
 
-call n c_docs
+call n p
 
-set cbf_filename=%cbf_path%\development environment.xlsx
+set cbf_application=%cbf_path%\zoomit.exe
+
+set cbf_filename=%cbf_application%
 
 exit/b
 
