@@ -2130,6 +2130,8 @@ exit/b
 
 ::_
 
+:start_instance
+
 :start_instances
 
 set fp=* Start my instance from the command line!
@@ -2163,34 +2165,10 @@ rem Set default instance ID to Jenkins server.
 set instance_id_1=i-0bce1b3771799a4ed
 
 rem CentOS
-if "%~2" == "ce" set instance_id_1=i-0541637f32cfe7ddd
+if "%~2" == "ce" set instance_id_1=i-0a3f6e316da1b58a1
 
 rem Jenkins
 if "%~2" == "je" set instance_id_1=i-0bce1b3771799a4ed
-
-exit/b
-
-
-
-::_
-
-:set_device_type
-
-set fp=* Set device type.
-
-rem lu: Dec-17-2018
-
-echo.
-echo %fp%
-
-rem Set default instance ID to Jenkins server.
-set device_type=gp2
-
-rem CentOS
-if "%~2" == "ce" set device_type=
-
-rem Jenkins
-if "%~2" == "je" set device_type=/dev/sda1
 
 exit/b
 
@@ -2211,10 +2189,34 @@ rem Set default ID to Jenkins server.
 set volume_id_1=vol-0c73f3f635ffb6d67
 
 rem CentOS
-if "%~2" == "ce" set volume_id_1=vol-029a9960c12067771
+if "%~2" == "ce" set volume_id_1=vol-09cdfa1292211b42a
 
 rem Jenkins
 if "%~2" == "je" set volume_id_1=vol-0c73f3f635ffb6d67
+
+exit/b
+
+
+
+::_
+
+:set_device_type
+
+set fp=* Set device type.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+rem Set default instance ID to Jenkins server.
+set device_type=gp2
+
+rem CentOS
+if "%~2" == "ce" set device_type=/dev/sda1
+
+rem Jenkins
+if "%~2" == "je" set device_type=/dev/sda1
 
 exit/b
 
@@ -2243,7 +2245,7 @@ pause
 
 call %0 set_volume_id %2
 
-call %0 detach_volume
+call %0 detach_volume %2
 
 exit/b
 
@@ -2310,7 +2312,6 @@ call %0 set_volume_id %2
 call %0 set_instance_id %2
 
 call %0 set_device_type %2
-rem qq-1
 
 echo.
 call aws ec2 attach-volume --volume-id  %volume_id_1% ^
@@ -2322,7 +2323,7 @@ exit/b
 
 
 
-::_
+:_
 
 :retag
 
