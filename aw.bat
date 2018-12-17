@@ -2142,7 +2142,7 @@ echo %fp%
 call %0 set_instance_id %2
 
 echo.
-call aws ec2 start-instances --instance-ids %aws_instance_id_1%
+call aws ec2 start-instances --instance-ids %instance_id_1%
                                        
 exit/b
 
@@ -2160,7 +2160,7 @@ echo.
 echo %fp%
 
 rem Set default instance ID to Jenkins server.
-set aws_instance_id_1=i-0bce1b3771799a4ed
+set instance_id_1=i-0bce1b3771799a4ed
 
 rem CentOS
 if "%~2" == "ce" set instance_id_1=i-0541637f32cfe7ddd
@@ -2187,10 +2187,10 @@ rem Set default instance ID to Jenkins server.
 set device_type=gp2
 
 rem CentOS
-if "%~2" == "ce" set device_type=standard
+if "%~2" == "ce" set device_type=
 
 rem Jenkins
-if "%~2" == "je" set device_type=gp2
+if "%~2" == "je" set device_type=/dev/sda1
 
 exit/b
 
@@ -2263,7 +2263,7 @@ echo %fp%
 call %0 set_instance_id %2
 
 echo.
-aws ec2 stop-instances --instance-ids  %aws_instance_id_1% --color off
+aws ec2 stop-instances --instance-ids  %instance_id_1% --color off
 
 exit/b
 
@@ -2718,7 +2718,7 @@ aws ec2 run-instances ^
   --key-name kibble_balance_key_pair ^
   --security-group-ids sg-0d72c1ec60ee3852d ^
   --subnet-id subnet-9c220fd6 ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CentOS Community Ed. Dec-17-2018}]"
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CentOS Comm. Ed. Dec-17-2018}]"
   --user-data file://my_script.sh
 
 exit/b
