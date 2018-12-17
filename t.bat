@@ -39,7 +39,7 @@ if "%~1" == "help" goto help
 
 :_
 
-set fp=* If percent is not blank, then to percent 1.
+set fp=* If percent is not blank, then go to percent 1.
 
 if not "%~1" == "" goto %1
 

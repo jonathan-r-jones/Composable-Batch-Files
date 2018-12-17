@@ -14,13 +14,13 @@ set filename_stands_for=* AWS-related tasks.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto help
-
 if "%~1" == "/?" goto help
 
 if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
+
+if "%~1" == "" goto main_function
 
 goto %1
 
@@ -42,7 +42,7 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: Function to execute.
+echo Parameter 1: Function to execute. If left blank, main function will be executed.
 
 exit/b
 
@@ -124,17 +124,26 @@ exit/b
 
 :_
 
+:ah
+
 :ahelp
 
 set fp=* AWS help.
 
-rem lu: Nov-2-2018
+rem lu: Dec-17-2018
 
 echo.
 echo %fp%
 
-echo.
-aws help
+set cbf_filename=%temp%\ahelp.txt
+
+call aws %2 %3 %4 %5 help>%cbf_filename%
+
+call n no
+
+set cbf_parameter=%cbf_filename%
+
+call r
 
 exit/b
 
@@ -2097,8 +2106,7 @@ rem lu: Dec-12-2018
 echo.
 echo %fp%
 
-call %0 saii %2
-rem qq-1
+call %0 set_aws_instance_id %2
 
 echo.
 aws ec2 start-instances --instance-ids %aws_instance_id_1%
@@ -2118,7 +2126,7 @@ rem lu: Dec-12-2018
 echo.
 echo %fp%
 
-call %0 saii %2
+call %0 set_aws_instance_id %2
 
 echo.
 aws ec2 stop-instances --instance-ids  %aws_instance_id_1% --color off
@@ -2214,6 +2222,8 @@ exit/b
 
 :saii
 
+:set_aws_instance_id
+
 set fp=* Set AWS instance id.
 
 rem lu: Dec-13-2018
@@ -2224,6 +2234,10 @@ echo %fp%
 rem Set default instance ID to Jenkins server.
 set aws_instance_id_1=i-0bce1b3771799a4ed
 
+rem CentOS
+if "%~2" == "ce" set aws_instance_id_1=i-0510bb1aaa716f470
+
+rem Jenkins
 if "%~2" == "je" set aws_instance_id_1=i-0bce1b3771799a4ed
 
 exit/b
@@ -2508,12 +2522,11 @@ exit/b
 
 :_
 
-:li_linux_3
+:li_linux_Dec_17_2018
 
-set fp=* Run CentOS instance with tag.
+set fp=* Launch instance CentOS.
 
 rem lu: Dec-17-2018
-rem qq-1
 
 echo.
 echo %fp%
@@ -2529,15 +2542,25 @@ if %errorlevel% == 1 (
 echo.
 aws ec2 run-instances ^
   --count 1 ^
-  --image-id ami-00b94673edfccb7ca ^
-  --instance-type t2.micro ^
-  --key-name TerraformTest2 ^
-  --security-group-ids sg-06fbc60e67d4aebbe ^
-  --subnet-id subnet-8e0b7181 ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Amazon Linux 2}]"
+  --image-id ami-08521bc84009eae26 ^
+  --instance-type d2.xlarge ^
+  --key-name kibble_balance_key_pair ^
+  --security-group-ids sg-0d72c1ec60ee3852d ^
+  --subnet-id subnet-9c220fd6 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CentOS Community Ed. Dec-17-2018}]"
   --user-data file://my_script.sh
 
 exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfsp) (mov4)
 
 
 

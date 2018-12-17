@@ -3035,7 +3035,6 @@ exit/b
 set filep=* Show the state of the CBF environment variables.
 
 if not "%~2" == "" call n %2
-rem qq-1
 
 cls
 
