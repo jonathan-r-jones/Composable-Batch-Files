@@ -2103,19 +2103,26 @@ exit/b
 
 :start
 
-set fp=* Start instance and attach a volume.
+:restart
+
+set fp=* Restart an instance and attach a volume.
 
 rem lu: Dec-17-2018
 
 echo.
 echo %fp%
 
-call %0 set_aws_instance_id %2
+call %0 set_instance_id %2
 
 call %0 attach_volume %2
 
+echo.
+echo You need to wait until the volume is "in-use" before hitting any key.
+echo.
+
+pause
+
 call %0 start_instances %2
-rem qq-1
 
 exit/b
 
@@ -2132,11 +2139,59 @@ rem lu: Dec-12-2018
 echo.
 echo %fp%
 
-call %0 set_aws_instance_id %2
+call %0 set_instance_id %2
 
 echo.
 call aws ec2 start-instances --instance-ids %aws_instance_id_1%
                                        
+exit/b
+
+
+
+::_
+
+:set_instance_id
+
+set fp=* Set AWS instance id.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+rem Set default instance ID to Jenkins server.
+set aws_instance_id_1=i-0bce1b3771799a4ed
+
+rem CentOS
+if "%~2" == "ce" set instance_id_1=i-0541637f32cfe7ddd
+
+rem Jenkins
+if "%~2" == "je" set instance_id_1=i-0bce1b3771799a4ed
+
+exit/b
+
+
+
+::_
+
+:set_device_type
+
+set fp=* Set device type.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+rem Set default instance ID to Jenkins server.
+set device_type=gp2
+
+rem CentOS
+if "%~2" == "ce" set device_type=standard
+
+rem Jenkins
+if "%~2" == "je" set device_type=gp2
+
 exit/b
 
 
@@ -2156,7 +2211,7 @@ rem Set default ID to Jenkins server.
 set volume_id_1=vol-0c73f3f635ffb6d67
 
 rem CentOS
-if "%~2" == "ce" set volume_id_1=vol-014202a56152dc0d6
+if "%~2" == "ce" set volume_id_1=vol-029a9960c12067771
 
 rem Jenkins
 if "%~2" == "je" set volume_id_1=vol-0c73f3f635ffb6d67
@@ -2167,23 +2222,28 @@ exit/b
 
 ::_
 
-:set_aws_instance_id
+:stop
 
-set fp=* Set AWS instance id.
+set fp=* Detach a volume and stop and instance.
 
-rem lu: Dec-13-2018
+rem lu: Dec-17-2018
 
 echo.
 echo %fp%
 
-rem Set default instance ID to Jenkins server.
-set aws_instance_id_1=i-0bce1b3771799a4ed
+call %0 set_instance_id %2
 
-rem CentOS
-if "%~2" == "ce" set aws_instance_id_1=i-0510bb1aaa716f470
+call %0 stop_instances %2
 
-rem Jenkins
-if "%~2" == "je" set aws_instance_id_1=i-0bce1b3771799a4ed
+echo.
+echo You need to wait until the instance has stopped before hitting any key.
+echo.
+
+pause
+
+call %0 set_volume_id %2
+
+call %0 detach_volume
 
 exit/b
 
@@ -2200,7 +2260,7 @@ rem lu: Dec-12-2018
 echo.
 echo %fp%
 
-call %0 set_aws_instance_id %2
+call %0 set_instance_id %2
 
 echo.
 aws ec2 stop-instances --instance-ids  %aws_instance_id_1% --color off
@@ -2212,6 +2272,8 @@ exit/b
 ::_
 
 :dv
+
+:detach_volume
 
 set fp=* Detach a volume only AFTER and instance has been stopped.
 
@@ -2245,10 +2307,16 @@ echo %fp%
 
 call %0 set_volume_id %2
 
-echo.
-call aws ec2 attach-volume --volume-id  %volume_id_1% --color off --instance_id
+call %0 set_instance_id %2
+
+call %0 set_device_type %2
 rem qq-1
 
+echo.
+call aws ec2 attach-volume --volume-id  %volume_id_1% ^
+                           --instance_id %instance_id_1% ^
+                           --device %device_type% ^
+                           --color off 
 
 exit/b
 
@@ -2615,6 +2683,16 @@ exit/b
 
 :_
 
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfsp) (mov4)
+
+
+
+:_
+
 :li_linux_Dec_17_2018
 
 set fp=* Launch instance CentOS.
@@ -2644,16 +2722,6 @@ aws ec2 run-instances ^
   --user-data file://my_script.sh
 
 exit/b
-
-
-
-:_
-
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfsp) (mov4)
 
 
 
