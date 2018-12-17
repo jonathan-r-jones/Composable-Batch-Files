@@ -2309,7 +2309,11 @@ exit/b
 set fp=* Attach a volume only BEFORE and instance has started.
 
 rem This is buggy on Dec-17-2018.
+rem So you can detach a volume but the attach-volume has an issue.
 rem __main__.py: error: the following arguments are required: --instance-id
+
+rem The workaround is to start the volume in the console. You don't even know if there is a charge for a running 
+rem volume.
 
 rem lu: Dec-17-2018
 
@@ -2324,6 +2328,10 @@ call %0 set_device_type %2
 
 @echo on
 
+call aws ec2 attach-volume --volume-id %volume_id% --instance_id %instance_id% --device %device_type%
+
+@echo off
+
 rem These attempts don't work.
 rem call aws ec2 attach-volume --volume_id %volume_id%
 
@@ -2335,12 +2343,10 @@ rem call aws ec2 attach-volume --instance_id %instance_id%
 rem call aws ec2 attach-volume --instance_id '%instance_id%'
 rem call aws ec2 attach-volume --instance_id '%instance_id%'
 
-call aws ec2 attach-volume --volume-id %volume_id% --instance_id %instance_id% --device %device_type%
 rem call aws ec2 attach-volume --volume-id=%volume_id% --instance_id=%instance_id% --device=%device_type%
 rem call aws ec2 attach-volume --volume-id='%volume_id%' --instance_id='%instance_id%' --device='%device_type%'
 rem call aws ec2 attach-volume --volume-id "%volume_id%" --instance_id "%instance_id%" --device "%device_type%"
 
-@echo off
 
 exit/b
 
