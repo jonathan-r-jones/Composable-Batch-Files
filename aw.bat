@@ -2133,6 +2133,8 @@ exit/b
 
 ::_
 
+:si
+
 :start_instance
 
 :start_instances
@@ -2167,7 +2169,7 @@ echo %fp%
 rem Set default instance ID to Jenkins server.
 set instance_id=i-0bce1b3771799a4ed
 
-rem CentOS
+rem CentOS (!sid)
 if "%~2" == "ce" set instance_id=i-0f7c7db92897103c5
 
 rem Jenkins

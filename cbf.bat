@@ -110,7 +110,7 @@ echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
 echo     s  Internet search helper.
 echo   sln  Open a Visual Studio solution. Has TD parameter.
-echo   shh  Perform SSH-related commands.
+echo    sh  Perform SSH-related commands.
 echo    sx  Use Sublime to edit a batch file in the CBF folder.
 echo    sf  Surf to websites.
 echo    sm  Run Sublime.

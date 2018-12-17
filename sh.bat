@@ -50,13 +50,32 @@ exit/b
 
 :_
 
-:connect_ec2
+:connect_ec2_old
 
 set fp=* Connect to an EC2 Instance.
 
 echo %fp%
 
 ssh -i ../secret/flask-server.pem ec2-user@ec2-35-163-224-123.us-west-2.compute.amazonaws.com
+
+exit/b
+
+
+
+:_
+
+:connect_ec2
+
+set fp=* Connect to an EC2 Instance.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+ssh -i "kibble_balance_key_pair.pem" root@ec2-18-253-149-113.us-gov-east-1.compute.amazonaws.com
 
 exit/b
 
