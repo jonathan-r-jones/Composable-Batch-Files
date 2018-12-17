@@ -2117,10 +2117,13 @@ call %0 set_instance_id %2
 call %0 attach_volume %2
 
 echo.
-echo You need to wait until the volume is "in-use" before hitting any key.
-echo.
+echo You need to wait until the volume is "in-use" before continuing.
 
-pause
+echo.
+set /P user_option=Would you like to continue? (y/n): 
+
+if not "%user_option%"=="y" echo.
+if not "%user_option%"=="y" exit/b
 
 call %0 start_instances %2
 
@@ -2144,7 +2147,7 @@ echo %fp%
 call %0 set_instance_id %2
 
 echo.
-call aws ec2 start-instances --instance-ids %instance_id_1%
+call aws ec2 start-instances --instance-ids %instance_id%
                                        
 exit/b
 
@@ -2162,13 +2165,13 @@ echo.
 echo %fp%
 
 rem Set default instance ID to Jenkins server.
-set instance_id_1=i-0bce1b3771799a4ed
+set instance_id=i-0bce1b3771799a4ed
 
 rem CentOS
-if "%~2" == "ce" set instance_id_1=i-0a3f6e316da1b58a1
+if "%~2" == "ce" set instance_id=i-0f7c7db92897103c5
 
 rem Jenkins
-if "%~2" == "je" set instance_id_1=i-0bce1b3771799a4ed
+if "%~2" == "je" set instance_id=i-0bce1b3771799a4ed
 
 exit/b
 
@@ -2186,13 +2189,13 @@ echo.
 echo %fp%
 
 rem Set default ID to Jenkins server.
-set volume_id_1=vol-0c73f3f635ffb6d67
+set volume_id=vol-0c73f3f635ffb6d67
 
-rem CentOS
-if "%~2" == "ce" set volume_id_1=vol-09cdfa1292211b42a
+rem CentOS (!vid)
+if "%~2" == "ce" set volume_id=vol-0bd1ab1ee51305743
 
 rem Jenkins
-if "%~2" == "je" set volume_id_1=vol-0c73f3f635ffb6d67
+if "%~2" == "je" set volume_id=vol-0c73f3f635ffb6d67
 
 exit/b
 
@@ -2238,10 +2241,13 @@ call %0 set_instance_id %2
 call %0 stop_instances %2
 
 echo.
-echo You need to wait until the instance has stopped before hitting any key.
-echo.
+echo You need to wait until the instance has stopped before continuing.
 
-pause
+echo.
+set /P user_option=Would you like to continue? (y/n): 
+
+if not "%user_option%"=="y" echo.
+if not "%user_option%"=="y" exit/b
 
 call %0 set_volume_id %2
 
@@ -2265,7 +2271,7 @@ echo %fp%
 call %0 set_instance_id %2
 
 echo.
-aws ec2 stop-instances --instance-ids  %instance_id_1% --color off
+aws ec2 stop-instances --instance-ids  %instance_id% --color off
 
 exit/b
 
@@ -2287,7 +2293,7 @@ echo %fp%
 call %0 set_volume_id %2
 
 echo.
-call aws ec2 detach-volume --volume-id  %volume_id_1% --color off
+call aws ec2 detach-volume --volume-id  %volume_id% --color off
 
 
 exit/b
@@ -2302,6 +2308,9 @@ exit/b
 
 set fp=* Attach a volume only BEFORE and instance has started.
 
+rem This is buggy on Dec-17-2018.
+rem __main__.py: error: the following arguments are required: --instance-id
+
 rem lu: Dec-17-2018
 
 echo.
@@ -2313,11 +2322,25 @@ call %0 set_instance_id %2
 
 call %0 set_device_type %2
 
-echo.
-call aws ec2 attach-volume --volume-id  %volume_id_1% ^
-                           --instance_id %instance_id_1% ^
-                           --device %device_type% ^
-                           --color off 
+@echo on
+
+rem These attempts don't work.
+rem call aws ec2 attach-volume --volume_id %volume_id%
+
+rem call aws ec2 attach-volume --instance_id=%instance_id%
+rem call aws ec2 attach-volume --instance_id='%instance_id%'
+rem call aws ec2 attach-volume --instance_id="%instance_id%"
+
+rem call aws ec2 attach-volume --instance_id %instance_id%
+rem call aws ec2 attach-volume --instance_id '%instance_id%'
+rem call aws ec2 attach-volume --instance_id '%instance_id%'
+
+call aws ec2 attach-volume --volume-id %volume_id% --instance_id %instance_id% --device %device_type%
+rem call aws ec2 attach-volume --volume-id=%volume_id% --instance_id=%instance_id% --device=%device_type%
+rem call aws ec2 attach-volume --volume-id='%volume_id%' --instance_id='%instance_id%' --device='%device_type%'
+rem call aws ec2 attach-volume --volume-id "%volume_id%" --instance_id "%instance_id%" --device "%device_type%"
+
+@echo off
 
 exit/b
 
