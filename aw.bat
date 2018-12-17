@@ -1143,40 +1143,6 @@ exit/b
 
 :_
 
-:run_linux_2
-
-set fp=* Run CentOS instance with tag.
-
-rem lu: Nov-15-2018
-
-echo.
-echo %fp%
-
-call td tfkeys
-
-call %0 check_pem_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-echo.
-aws ec2 run-instances ^
-  --count 1 ^
-  --image-id ami-00b94673edfccb7ca ^
-  --instance-type t2.micro ^
-  --key-name TerraformTest2 ^
-  --security-group-ids sg-06fbc60e67d4aebbe ^
-  --subnet-id subnet-8e0b7181 ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Amazon Linux 2}]"
-  --user-data file://my_script.sh
-
-exit/b
-
-
-
-:_
-
 :run_cent
 
 set fp=* Run EC2 CentOS instance 5.5 GPU (Community AMI) with tag.
@@ -2132,6 +2098,7 @@ echo.
 echo %fp%
 
 call %0 saii %2
+rem qq-1
 
 echo.
 aws ec2 start-instances --instance-ids %aws_instance_id_1%
@@ -2253,6 +2220,9 @@ rem lu: Dec-13-2018
 
 echo.
 echo %fp%
+
+rem Set default instance ID to Jenkins server.
+set aws_instance_id_1=i-0bce1b3771799a4ed
 
 if "%~2" == "je" set aws_instance_id_1=i-0bce1b3771799a4ed
 
@@ -2497,6 +2467,75 @@ echo.
 echo AWS PROFILE: %aws_profile%
 
 call %0 sh
+
+exit/b
+
+
+
+:_
+
+:run_linux_2
+
+set fp=* Run CentOS instance with tag.
+
+rem lu: Nov-15-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-00b94673edfccb7ca ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Amazon Linux 2}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:li_linux_3
+
+set fp=* Run CentOS instance with tag.
+
+rem lu: Dec-17-2018
+rem qq-1
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-00b94673edfccb7ca ^
+  --instance-type t2.micro ^
+  --key-name TerraformTest2 ^
+  --security-group-ids sg-06fbc60e67d4aebbe ^
+  --subnet-id subnet-8e0b7181 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Amazon Linux 2}]"
+  --user-data file://my_script.sh
 
 exit/b
 

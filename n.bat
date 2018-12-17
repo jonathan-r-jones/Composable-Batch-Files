@@ -6329,6 +6329,8 @@ exit/b
 
 :mvh
 
+:mv_hm
+
 set fp=* Maven Home.
 
 rem fcd: Jul-7-2017
@@ -6346,6 +6348,8 @@ exit/b
 ::_
 
 :jvh
+
+:jv_hm
 
 :java_home
 
@@ -6367,6 +6371,8 @@ exit/b
 
 :aws_cfg
 
+:aws_hm
+
 :aws_home
 
 set fp=* AWS configuration.
@@ -6385,7 +6391,10 @@ exit/b
 
 ::_
 
+:je_hm
+
 :je_home
+
 
 set fp=* Jenkins home
 
@@ -6403,6 +6412,8 @@ exit/b
 
 ::_
 
+:hm
+
 :home
 
 :up
@@ -6413,7 +6424,7 @@ exit/b
 
 set fp=* User profile/home.
 
-rem lu: Dec-5-2018
+rem lu: Dec-17-2018
 
 echo %fp%
 
