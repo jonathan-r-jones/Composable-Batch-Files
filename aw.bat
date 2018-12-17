@@ -139,7 +139,7 @@ set cbf_filename=%temp%\ahelp.txt
 
 call aws %2 %3 %4 %5 help>%cbf_filename%
 
-call n no
+call n me
 
 set cbf_parameter=%cbf_filename%
 
@@ -2093,11 +2093,37 @@ exit/b
 
 
 
-:_
+:_+ Start and Stop Controls
+
+
+
+::_
 
 :star
 
 :start
+
+set fp=* Start instance and attach a volume.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+call %0 set_aws_instance_id %2
+
+call %0 attach_volume %2
+
+call %0 start_instances %2
+rem qq-1
+
+exit/b
+
+
+
+::_
+
+:start_instances
 
 set fp=* Start my instance from the command line!
 
@@ -2109,15 +2135,63 @@ echo %fp%
 call %0 set_aws_instance_id %2
 
 echo.
-aws ec2 start-instances --instance-ids %aws_instance_id_1%
+call aws ec2 start-instances --instance-ids %aws_instance_id_1%
                                        
 exit/b
 
 
 
-:_
+::_
 
-:stop
+:set_volume_id
+
+set fp=* Set volume id.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+rem Set default ID to Jenkins server.
+set volume_id_1=vol-0c73f3f635ffb6d67
+
+rem CentOS
+if "%~2" == "ce" set volume_id_1=vol-014202a56152dc0d6
+
+rem Jenkins
+if "%~2" == "je" set volume_id_1=vol-0c73f3f635ffb6d67
+
+exit/b
+
+
+
+::_
+
+:set_aws_instance_id
+
+set fp=* Set AWS instance id.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+rem Set default instance ID to Jenkins server.
+set aws_instance_id_1=i-0bce1b3771799a4ed
+
+rem CentOS
+if "%~2" == "ce" set aws_instance_id_1=i-0510bb1aaa716f470
+
+rem Jenkins
+if "%~2" == "je" set aws_instance_id_1=i-0bce1b3771799a4ed
+
+exit/b
+
+
+
+::_
+
+:stop_instances
 
 set fp=* Stop a running instance from the command line.
 
@@ -2135,7 +2209,52 @@ exit/b
 
 
 
-:_
+::_
+
+:dv
+
+set fp=* Detach a volume only AFTER and instance has been stopped.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+call %0 set_volume_id %2
+
+echo.
+call aws ec2 detach-volume --volume-id  %volume_id_1% --color off
+
+
+exit/b
+
+
+
+::_
+
+:av
+
+:attach_volume
+
+set fp=* Attach a volume only BEFORE and instance has started.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+call %0 set_volume_id %2
+
+echo.
+call aws ec2 attach-volume --volume-id  %volume_id_1% --color off --instance_id
+rem qq-1
+
+
+exit/b
+
+
+
+::_
 
 :retag
 
@@ -2213,32 +2332,6 @@ echo %fp%
 
 echo.
 aws ec2 describe-instance-status --instance-ids i-0bce1b3771799a4ed --color off
-
-exit/b
-
-
-
-:_
-
-:saii
-
-:set_aws_instance_id
-
-set fp=* Set AWS instance id.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-rem Set default instance ID to Jenkins server.
-set aws_instance_id_1=i-0bce1b3771799a4ed
-
-rem CentOS
-if "%~2" == "ce" set aws_instance_id_1=i-0510bb1aaa716f470
-
-rem Jenkins
-if "%~2" == "je" set aws_instance_id_1=i-0bce1b3771799a4ed
 
 exit/b
 
