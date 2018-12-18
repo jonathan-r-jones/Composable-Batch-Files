@@ -2120,7 +2120,7 @@ echo.
 echo You need to wait until the volume is "in-use" before continuing.
 
 echo.
-set /P user_option=Would you like to continue? (y/n): 
+set /P user_option=Does the volume now say "in-use"? (y/n): 
 
 if not "%user_option%"=="y" echo.
 if not "%user_option%"=="y" exit/b
@@ -2246,7 +2246,7 @@ echo.
 echo You need to wait until the instance has stopped before continuing.
 
 echo.
-set /P user_option=Would you like to continue? (y/n): 
+set /P user_option=So has the instance stopped yet? (y/n): 
 
 if not "%user_option%"=="y" echo.
 if not "%user_option%"=="y" exit/b
