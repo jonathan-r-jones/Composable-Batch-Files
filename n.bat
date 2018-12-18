@@ -6381,7 +6381,7 @@ rem lu: Nov-6-2018
 
 echo %fp%
 
-set cbf_filename=%userprofile%\.aws\config
+set cbf_filename=%userprofile%\.aws\credentials
 
 set cbf_path=%userprofile%\.aws
 
