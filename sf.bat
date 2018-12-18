@@ -126,6 +126,7 @@ set fp=* Override default browser.
 
 echo.
 echo %fp%
+
 call an %2
 
 
@@ -134,9 +135,9 @@ call an %2
 
 :main_function
 
+echo.
 set fp=* Surf the internet.
 
-echo.
 echo %fp%
 
 rem lu: Jan-31-2018
