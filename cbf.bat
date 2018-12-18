@@ -66,6 +66,7 @@ echo.
 
 echo  File  Description
 echo  ----  ------------------------------------------------------------------
+echo    aw  A wrapper around AWS CLI.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
 echo   clc  Simple calculator.
@@ -118,8 +119,8 @@ echo   sql  SQL/Database, including LDAP, related tasks.
 echo    st  Run git status remotely. Has TD parameter.
 echo     t  Testing, experimenting and developing new batch file functions.
 echo    tf  Perform Terraform-related tasks.
-echo    tk  Wrapper around taskkill command.
-echo    tl  Wrapper around tasklist command.
+echo    tk  Wrapper around the taskkill command.
+echo    tl  Wrapper around the tasklist command.
 echo    td  Transform Directory.
 echo   tdp  Transform Directory to parent folder.
 echo    te  Batch file template used for creating new batch files.

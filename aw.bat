@@ -151,24 +151,6 @@ exit/b
 
 :_
 
-:wh
-
-set fp=* Website help.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 website help
-
-exit/b
-
-
-
-:_
-
 :s3_ctp
 
 set fp=* Copy stuff to bucket.
@@ -186,6 +168,42 @@ exit/b
 
 
 :_+ Full web parts process according to AWS CLI instructor.
+
+
+
+::_
+
+:dsg
+
+set fp=* Describe our new security group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups --group-names EC2SecurityGroup
+
+exit/b
+
+
+
+::_
+
+:dsgs
+
+set fp=* Describe security groups.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups
+
+exit/b
 
 
 
@@ -316,24 +334,6 @@ exit/b
 
 ::_
 
-:auth1
-
-set fp=* Authorize secrurity group ingress.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
-  --port 22 --cidr 172.54.125.8/32
-
-exit/b
-
-
-
-::_
-
 :autht1
 
 set fp=* Authorize test secrurity group ingress.
@@ -352,24 +352,6 @@ exit/b
 
 ::_
 
-:auth2
-
-set fp=* Authorize secrurity group ingress. - 2nd port
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
-  --port 80 --cidr 0.0.0.0/0
-
-exit/b
-
-
-
-::_
-
 :autht2
 
 set fp=* Authorize test secrurity group ingress. - 2nd port
@@ -380,6 +362,42 @@ echo.
 echo %fp%
 
 aws ec2 authorize-security-group-ingress --group-name "Test Security Group" --protocol tcp ^
+  --port 80 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
+:auth1
+
+set fp=* Authorize secrurity group ingress.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+  --port 22 --cidr 172.54.125.8/32
+
+exit/b
+
+
+
+::_
+
+:auth2
+
+set fp=* Authorize secrurity group ingress. - 2nd port
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
   --port 80 --cidr 0.0.0.0/0
 
 exit/b
@@ -442,24 +460,6 @@ exit/b
 
 ::_
 
-:dsg_1
-
-set fp=* Describe security group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-security-groups --group-names EC2SecurityGroup
-
-exit/b
-
-
-
-::_
-
 :dr
 
 set fp=* Describe regions.
@@ -471,24 +471,6 @@ echo %fp%
 
 echo.
 aws ec2 describe-regions
-
-exit/b
-
-
-
-::_
-
-:dsg
-
-set fp=* Describe security groups.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-security-groups
 
 exit/b
 
@@ -632,44 +614,6 @@ exit/b
 
 :_
 
-:sg_help_d
-
-set fp=* Security group help.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-
-aws ec2 delete-security-group help
-
-exit/b
-
-
-
-:_
-
-:sg_help
-
-set fp=* Security group help.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-
-aws ec2 security-group help
-
-exit/b
-
-
-
-:_
-
 :sg_ref
 
 set fp=* Describe sg refs.
@@ -682,25 +626,6 @@ echo %fp%
 echo.
 
 aws ec2 describe-security-group-references --group-id sg-0e67f09ea592e68ff
-
-exit/b
-
-
-
-:_
-
-:sg_ref_help
-
-set fp=* Describe sg refs.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-
-aws ec2 describe-security-group-references help
 
 exit/b
 
@@ -752,6 +677,8 @@ exit/b
 
 :s3_ls
 
+:show_buckets
+
 set fp=* List all s3 buckets.
 
 rem lu: Nov-2-2018
@@ -761,24 +688,6 @@ echo %fp%
 
 echo.
 aws s3 ls
-
-exit/b
-
-
-
-::_
-
-:s3_h
-
-set fp=* Help for S3
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws s3 help
 
 exit/b
 
@@ -1614,24 +1523,6 @@ exit/b
 
 ::_
 
-:cfg_h
-
-set fp=* Cfg help.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure help
-
-exit/b
-
-
-
-::_
-
 :cfg
 
 set fp=* Configure
@@ -1712,7 +1603,7 @@ exit/b
 
 ::_
 
-:create_db_postgres_1
+:create_db_postgres_2
 
 set fp=* Create database.
 
@@ -2388,25 +2279,6 @@ exit/b
 
 :_
 
-:ec2_help
-
-set fp=* Get EC2 help.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-call aws ec2 help>%temp%\j1.txt
-
-call me j1
-
-exit/b
-
-
-
-:_
-
 :stats
 
 set fp=* Get instance status.
@@ -2429,7 +2301,7 @@ exit/b
 
 :istatus
 
-set fp=* Get instance status.
+set fp=* Get a particular instance status.
 
 rem lu: Dec-13-2018
 
@@ -2513,24 +2385,6 @@ echo %fp%
 
 echo.
 aws configure --profile kibble_balance
-
-exit/b
-
-
-
-::_
-
-:cp_kb2
-
-set fp=* Add kb
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure help
 
 exit/b
 
@@ -2659,7 +2513,7 @@ exit/b
 
 
 
-:_
+::_
 
 :set_profile
 
@@ -2758,18 +2612,6 @@ aws ec2 run-instances ^
   --subnet-id subnet-9c220fd6 ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CentOS Comm. Ed. Dec-17-2018}]"
   --user-data file://my_script.sh
-
-exit/b
-
-
-
-:_
-
-:show_buckets
-
-set fp=* Show buckets to verify that your AWS CLI connecting and working.
-
-aws s3 ls
 
 exit/b
 
