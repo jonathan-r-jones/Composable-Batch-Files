@@ -2330,7 +2330,10 @@ call %0 set_device_type %2
 
 @echo on
 
-call aws ec2 attach-volume --volume-id %volume_id% --instance_id %instance_id% --device %device_type%
+call aws ec2 attach-volume "[{\"volume-id\":\"%volume_id%\",\"instance_id\":\"%instance_id%,\"device\":%device_type%\"}]"
+rem --volume-id %volume_id% --instance_id %instance_id% --device %device_type%
+rem "[{\"DeviceName\":\"/dev/sdb\",\"Ebs\":{\"VolumeSize\":20,\"DeleteOnTermination\":false,\"VolumeType\":\"standard\"}}]"
+
 
 @echo off
 
@@ -2345,6 +2348,7 @@ rem call aws ec2 attach-volume --instance_id %instance_id%
 rem call aws ec2 attach-volume --instance_id '%instance_id%'
 rem call aws ec2 attach-volume --instance_id '%instance_id%'
 
+rem call aws ec2 attach-volume --volume-id %volume_id% --instance_id %instance_id% --device %device_type%
 rem call aws ec2 attach-volume --volume-id=%volume_id% --instance_id=%instance_id% --device=%device_type%
 rem call aws ec2 attach-volume --volume-id='%volume_id%' --instance_id='%instance_id%' --device='%device_type%'
 rem call aws ec2 attach-volume --volume-id "%volume_id%" --instance_id "%instance_id%" --device "%device_type%"
