@@ -2763,4 +2763,16 @@ exit/b
 
 
 
+:_
+
+:show_buckets
+
+set fp=* Show buckets to verify that your AWS CLI connecting and working.
+
+aws s3 ls
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

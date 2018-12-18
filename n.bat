@@ -5355,6 +5355,8 @@ exit/b
 
 :cart
 
+:cn_bgs
+
 :earm
 
 :gc
@@ -5363,6 +5365,8 @@ exit/b
 
 :govc
 
+:ic_hp
+
 :ic
 
 :ic_info
@@ -5370,6 +5374,10 @@ exit/b
 :nig
 
 :pass
+
+:tf1
+
+:tf2
 
 set fp=* Pass through.
 

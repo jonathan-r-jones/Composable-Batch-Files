@@ -1479,6 +1479,37 @@ exit/b
 
 ::_
 
+:au_cart
+
+set fp=* Configure author for Cart.
+
+echo %fp%
+
+git config user.name "JJones2"
+
+exit/b
+
+
+
+::_
+
+:author_bit
+
+set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
+
+echo %fp%
+
+@echo on
+git config --global user.name "Jonathan17"
+git config --global user.email "jonathan.r.jones@nesassociates.com"
+@echo off
+
+exit/b
+
+
+
+::_
+
 :st
 
 :store
@@ -1508,23 +1539,6 @@ echo %fp%
 call %0 au
 
 call %0 st
-
-exit/b
-
-
-
-::_
-
-:author_bit
-
-set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
-
-echo %fp%
-
-@echo on
-git config --global user.name "Jonathan17"
-git config --global user.email "jonathan.r.jones@nesassociates.com"
-@echo off
 
 exit/b
 
