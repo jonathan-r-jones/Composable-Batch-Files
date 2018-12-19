@@ -1972,22 +1972,6 @@ exit/b
 
 :_
 
-:wa
-
-set fp=* WindowsApps.
-
-rem lu: Jun-5-2018
-
-echo %fp%
-
-set cbf_path=%localappdata%\Microsoft\WindowsApps
-
-exit/b
-
-
-
-:_
-
 :dn
 
 :do
@@ -6321,6 +6305,114 @@ exit/b
 
 
 
+:_
+
+:ppt
+
+set fp=* Powerpoint.
+
+rem lu: Dec-18-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\microsoft office\root\office16\powerpnt.exe
+
+exit/b
+
+
+
+:_
+
+:hungry_shark
+
+set fp=* Hungry shark.
+
+rem lu: Dec-18-2018
+
+echo %fp%
+
+set cbf_url=https://www.youtube.com/watch?v=L8_GYxIOErQ
+
+exit/b
+
+
+
+:_
+
+:jaws_ppt
+
+set fp=* Jaws PowerPoint
+
+rem lu: Dec-18-2018
+
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\jaws.pptx
+
+exit/b
+
+
+
+:_
+
+:s
+
+:sz
+
+set fp=* Share-Zone.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
+set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
+set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
+
+set cbf_path=%userprofile%\j\share-zone
+if "%computername%" == "ASUS" set cbf_path=%dropbox%\it\share-zone
+if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone
+
+exit/b
+
+
+
+:_
+
+:cs
+
+set fp=* Copied software.
+
+rem lu: Dec-19-2018
+
+echo %fp%
+
+call n sz
+
+set cbf_path=%cbf_path%\copied software
+
+exit/b
+
+
+
+:_
+
+:cc
+
+set fp=* Copied clif file.
+
+rem lu: Dec-19-2018
+
+echo %fp%
+
+call n sz
+
+set cbf_filename=%cbf_path%\copy of cc.asc
+
+exit/b
+
+
+
 :_+ Home Folders
 
 
@@ -6434,109 +6526,19 @@ exit/b
 
 
 
-:_
+::_
 
-:ppt
+:wa
 
-set fp=* Powerpoint.
-
-rem lu: Dec-18-2018
-
-echo %fp%
-
-set cbf_application=c:\program files\microsoft office\root\office16\powerpnt.exe
-
-exit/b
-
-
-
-:_
-
-:hungry_shark
-
-set fp=* Hungry shark.
-
-rem lu: Dec-18-2018
-
-echo %fp%
-
-set cbf_url=https://www.youtube.com/watch?v=L8_GYxIOErQ
-
-exit/b
-
-
-
-:_
-
-:jaws_ppt
-
-set fp=* Jaws PowerPoint
-
-rem lu: Dec-18-2018
-
-echo %fp%
-
-set cbf_filename=%composable_batch_files%\jaws.pptx
-
-exit/b
-
-
-
-:_
-
-:s
-
-:sz
-
-set fp=* Share-Zone.
-
-rem lu: Dec-7-2018
-
-echo %fp%
-
-set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
-set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
-set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
-
-set cbf_path=%userprofile%\j\share-zone
-if "%computername%" == "ASUS" set cbf_path=%dropbox%\it\share-zone
-if "%computername%" == "XPS" set cbf_path=%dropbox%\it\share-zone
-
-exit/b
-
-
-
-:_
-
-:cs
-
-set fp=* Copied software.
+set fp=* Windows Apps.
 
 rem lu: Dec-19-2018
 
 echo %fp%
 
-call n sz
+set cbf_path=%cbf_default_repository_folder%\
 
-set cbf_path=%cbf_path%\copied software
-
-exit/b
-
-
-
-:_
-
-:cc
-
-set fp=* Copied clif file.
-
-rem lu: Dec-19-2018
-
-echo %fp%
-
-call n sz
-
-set cbf_filename=%cbf_path%\copy of cc.asc
+set cbf_path=%localappdata%\Microsoft\WindowsApps
 
 exit/b
 
