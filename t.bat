@@ -8198,3 +8198,22 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Copied software.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+echo.
+cd "copied software"
+rem qq-1
+
+exit/b
+
+
+
+:_
