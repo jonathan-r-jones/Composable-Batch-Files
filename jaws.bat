@@ -89,8 +89,8 @@ exit/b
 
 rem     Typing "jaws --version" is the equivalent as typing "aws version".
 rem     So why bother using jaws then? Because jaws allows you to create a repeatable, testable, 
-rem     version-controllable script. Jaws is a wrapper around AWS. Things you put in jaws will
-rem     generally be more sophisticated than this simple example. You'll see.
+rem     version-controllable and perfectible script. Jaws is a wrapper around AWS. Things you 
+rem     put in jaws will generally be more sophisticated than this simple example. You'll see.
 
 echo.
 aws --version
