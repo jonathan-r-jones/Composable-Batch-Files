@@ -664,14 +664,6 @@ exit/b
 
 :cd
 
-:ex
-
-:here
-
-:this
-
-:x
-
 set fp=Current directory.
 
 rem fcd: May-9-2017
@@ -4248,7 +4240,7 @@ exit/b
 
 :_
 
-:ppt
+:cppt
 
 set fp=* CBF Powerpoint presentation.
 
@@ -6441,6 +6433,54 @@ rem lu: Dec-17-2018
 echo %fp%
 
 set cbf_path=%userprofile%
+
+exit/b
+
+
+
+:_
+
+:ppt
+
+set fp=* Powerpoint.
+
+rem lu: Dec-18-2018
+
+echo %fp%
+
+set cbf_application=c:\program files\microsoft office\root\office16\powerpnt.exe
+
+exit/b
+
+
+
+:_
+
+:hungry_shark
+
+set fp=* Hungry shark.
+
+rem lu: Dec-18-2018
+
+echo %fp%
+
+set cbf_url=https://www.youtube.com/watch?v=L8_GYxIOErQ
+
+exit/b
+
+
+
+:_
+
+:jaws_ppt
+
+set fp=* Jaws PowerPoint
+
+rem lu: Dec-18-2018
+
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\jaws.pptx
 
 exit/b
 

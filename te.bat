@@ -32,6 +32,7 @@ goto main_function
 
 :help
 
+echo.
 echo Filename stands for: %filename_stands_for%
 
 set filep=File purpose: This template file can be used as a "Save As" to create a new 

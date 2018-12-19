@@ -32,34 +32,43 @@ goto %1
 
 :help
 
+echo.
 echo Filename stands for: %filename_stands_for%
 
-set filep=File purpose: This template file can be used as a "Save As" to create a new 
-set filep=%filep% composable batch file.
+set filep=File purpose: This file is a wrapper around the AWS CLI.
 
 echo.
 echo %filep%
 
 echo.
-echo Last Updated: 
+echo Last Updated: Dec-18-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
 
-echo.
-echo Usage: %0 [space separated parameter(s)]
-
-set parameter_1=Parameter 1 (Optional): 
-set parameter_1=%parameter_1% 
+set parameter_1=Parameter 1: The function you wish to execute.
 
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2 (Optional): 
-set parameter_2=%parameter_2% 
+exit/b
+
+
+
+:_
+
+:is_hungry
+
+set fp=* Jaws is hungry. Get out of the water!
+
+rem Think of this as a function.
+
+rem lu: Dec-18-2018
 
 echo.
-echo %parameter_2%
+echo %fp%
+
+call sf hungry_shark
 
 exit/b
 
@@ -408,4 +417,21 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-6)qq
+:_
+
+:ppt
+
+set fp=* Jaws Powerpoint.
+
+rem lu: Dec-18-2018
+
+echo.
+echo %fp%
+
+call x jaws_ppt
+
+exit/b
+
+
+
+:_ (!rfsp) (mov-6)
