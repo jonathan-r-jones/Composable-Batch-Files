@@ -8189,6 +8189,24 @@ exit/b
 
 :_
 
+:
+
+set fp=* Copied software.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+echo.
+cd "copied software"
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -8201,7 +8219,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Copied software.
+set fp=* Set temp filename.
 
 rem lu: Dec-19-2018
 
@@ -8209,8 +8227,7 @@ echo.
 echo %fp%
 
 echo.
-cd "copied software"
-rem qq-1
+set cbf_filename=%temp%\describe_instances2.txt
 
 exit/b
 

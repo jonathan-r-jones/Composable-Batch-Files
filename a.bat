@@ -28,8 +28,6 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
@@ -128,6 +126,8 @@ exit/b
 
 :ahelp
 
+:h
+
 set fp=* AWS help.
 
 rem lu: Dec-17-2018
@@ -191,6 +191,8 @@ exit/b
 
 ::_
 
+:d_sec
+
 :dsgs
 
 set fp=* Describe security groups.
@@ -208,6 +210,76 @@ exit/b
 
 
 ::_
+
+:d_ins
+
+set fp=* Describes instances.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-instances --color off
+
+exit/b
+
+
+
+::_
+
+:d_insp
+
+set fp=* Describes instances and pipe to file.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+call an np
+
+set cbf_filename=%temp%\describe_instances.txt
+
+call aws ec2 describe-instances>%cbf_filename%
+
+call m apf
+
+call r
+
+exit/b
+
+
+
+::_
+
+:d_subp
+
+set fp=* Describes subnets and pipe to file.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+call an np
+
+set cbf_filename=%temp%\describe_instances.txt
+
+call aws ec2 describe-subnets>%cbf_filename%
+
+call m apf
+
+call r
+
+exit/b
+
+
+
+::_
+
+:d_sub
 
 :describe_subnets
 
@@ -283,6 +355,7 @@ echo.
 echo %fp%
 
 echo.
+rem qq-1
 aws ec2 create-security-group --group-name EC2SecurityGroup ^
   --description "Security Group for EC2 instances to allow ports 22, 88 and 443"
 
@@ -293,8 +366,6 @@ exit/b
 ::_
 
 :create_test_security_group
-
-:csg
 
 set fp=* Create test security group.
 
@@ -1001,14 +1072,14 @@ call %0 auth3
 call %0 auth4
 
 rem See the AFTER picture. What are the current security groups? How many are there?
+
 call %0 dsg
 
 call %0 describe_subnets
-rem qq
 
 call %0 create_instance
 
-xit/b
+exit/b
 
 
 
@@ -1016,7 +1087,7 @@ xit/b
 
 :e_d
 
-set fp=* Delete Envrionment 1.
+set fp=* Delete Environment 1.
 
 rem lu: Nov-5-2018
 
@@ -2279,24 +2350,6 @@ rem Below here didn't work.
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
-
-exit/b
-
-
-
-:_
-
-:stats
-
-set fp=* Get instance status.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-instances --color off
 
 exit/b
 

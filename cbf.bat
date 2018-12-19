@@ -66,7 +66,8 @@ echo.
 
 echo  File  Description
 echo  ----  ------------------------------------------------------------------
-echo    aw  A wrapper around AWS CLI.
+echo     a  A wrapper around AWS CLI.
+echo    an  Application nickname dictionary.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
 echo   clc  Simple calculator.

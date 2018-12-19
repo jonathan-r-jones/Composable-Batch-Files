@@ -1407,6 +1407,45 @@ exit/b
 
 ::_
 
+:big
+
+:ibe
+
+:ige
+
+:initialize_big_environment
+
+set fp=* Initialize GFE environment.
+
+rem lu: Dec-4-2018
+
+echo.
+echo %fp%
+
+call %0 initialize_environment
+
+call %0 set_big_path
+
+call %0 set_default_browser kr
+
+set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
+
+set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_191
+
+set cbf_default_repository_folder=%userprofile%\j
+
+set share-zone=%userprofile%\j\share-zone
+
+title=Big Laptop
+
+cls
+
+exit/b
+
+
+
+::_
+
 :initialize_default_browser
 
 set fp=* Initialize default browser.
@@ -3573,45 +3612,6 @@ exit/b
 
 :_
 
-:big
-
-:ibe
-
-:ige
-
-:initialize_big_environment
-
-set fp=* Initialize GFE environment.
-
-rem lu: Dec-4-2018
-
-echo.
-echo %fp%
-
-call %0 initialize_environment
-
-call %0 set_big_path
-
-call %0 set_default_browser ed
-
-set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
-
-set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_191
-
-set cbf_default_repository_folder=%userprofile%\j
-
-set share-zone=%userprofile%\j\share-zone
-
-title=Big Laptop
-
-cls
-
-exit/b
-
-
-
-:_
-
 :svc
 
 set fp=* Windows services.
@@ -3792,9 +3792,26 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
+call me cc
+
 call me gfe
 
-call me cc
+exit/b
+
+
+
+:_
+
+:apf
+
+set fp=* Associate cbf_parameter to cbf_filename.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+set cbf_parameter=%cbf_filename%
 
 exit/b
 
