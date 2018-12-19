@@ -57,18 +57,16 @@ exit/b
 
 :_
 
-:is_hungry
+:ppt
 
-set fp=* Jaws is hungry. Get out of the water!
-
-rem Think of this as a function.
+set fp=* Jaws Powerpoint.
 
 rem lu: Dec-18-2018
 
 echo.
 echo %fp%
 
-call sf hungry_shark
+call x jaws_ppt
 
 exit/b
 
@@ -76,16 +74,42 @@ exit/b
 
 :_
 
-:sc
+:hello
 
-set fp=* Look up sample code.
+echo.
+echo Hello from the Jaws batch file. Think of "hello" as the name of a function you call.
 
-rem lu: Nov-2-2018
+exit/b
+
+
+
+:_
+
+:version
+
+rem     Typing "jaws --version" is the equivalent as typing "aws version".
+rem     So why bother using jaws then? Because jaws allows you to create a repeatable, testable, 
+rem     version-controllable script. Jaws is a wrapper around AWS. Things you put in jaws will
+rem     generally be more sophisticated than this simple example. You'll see.
+
+echo.
+aws --version
+
+exit/b
+
+
+
+:_
+
+:cfg
+
+set fp=* Configure
 
 echo.
 echo %fp%
 
-call sf aws_cli
+echo.
+aws configure
 
 exit/b
 
@@ -103,7 +127,7 @@ echo.
 echo %fp%
 
 echo.
-aws ec2 describe-security-groups --group-names EC2SecurityGroup
+aws ec2 describe-security-groups --group-names JawsSecurityGroup
 
 exit/b
 
@@ -203,7 +227,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+aws ec2 authorize-security-group-ingress --group-name JawsSecurityGroup --protocol tcp ^
   --port 22 --cidr 172.54.125.8/32
 
 exit/b
@@ -221,7 +245,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+aws ec2 authorize-security-group-ingress --group-name JawsSecurityGroup --protocol tcp ^
   --port 80 --cidr 0.0.0.0/0
 
 exit/b
@@ -239,7 +263,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+aws ec2 authorize-security-group-ingress --group-name JawsSecurityGroup --protocol tcp ^
   --port 443 --cidr 0.0.0.0/0
 
 exit/b
@@ -257,7 +281,7 @@ rem lu: Dec-11-2018
 echo.
 echo %fp%
 
-aws ec2 authorize-security-group-ingress --group-name EC2SecurityGroup --protocol tcp ^
+aws ec2 authorize-security-group-ingress --group-name JawsSecurityGroup --protocol tcp ^
   --port 3389 --cidr 0.0.0.0/0
 
 exit/b
@@ -419,16 +443,18 @@ exit/b
 
 :_
 
-:ppt
+:is_hungry
 
-set fp=* Jaws Powerpoint.
+set fp=* Jaws is hungry. Get out of the water!
+
+rem Think of this as a function.
 
 rem lu: Dec-18-2018
 
 echo.
 echo %fp%
 
-call x jaws_ppt
+call sf hungry_shark
 
 exit/b
 
