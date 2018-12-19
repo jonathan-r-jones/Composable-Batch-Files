@@ -3781,4 +3781,23 @@ exit/b
 
 
 
+:_
+
+:ow
+
+set fp=* Open gfe "waiting" files.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+call me gfe
+
+call me cc
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

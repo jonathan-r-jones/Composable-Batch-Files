@@ -5736,9 +5736,11 @@ exit/b
 
 
 
-:_
+:_ + Appdata
 
-:ad
+::_
+
+:lad
 
 set fp=* Local app data.
 
@@ -5747,6 +5749,24 @@ rem lu: Dec-4-2018
 echo %fp%
 
 set cbf_path=%localappdata%
+
+exit/b
+
+
+
+:_
+
+:ad
+
+:apda
+
+set fp=* App data.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_path=%appdata%
 
 exit/b
 
@@ -5764,7 +5784,7 @@ rem lu: Dec-4-2018
 
 echo %fp%
 
-set cbf_filename=%userprofile%\j\share-zone\gfe.txt
+set cbf_filename=%userprofile%\j\share-zone\gfe.asc
 
 exit/b
 
@@ -6499,6 +6519,24 @@ echo %fp%
 call n sz
 
 set cbf_path=%cbf_path%\copied software
+
+exit/b
+
+
+
+:_
+
+:cc
+
+set fp=* Copied clif file.
+
+rem lu: Dec-19-2018
+
+echo %fp%
+
+call n sz
+
+set cbf_filename=%cbf_path%\copy of cc.asc
 
 exit/b
 
