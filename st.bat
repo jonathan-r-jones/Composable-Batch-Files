@@ -26,8 +26,6 @@ if "%~1" == "help" goto help
 
 set fp=* Preprocessing.
 
-rem lu: Jul-16-2018
-
 echo.
 echo %fp%
 
@@ -53,7 +51,7 @@ echo.
 echo %filep%
 
 echo.
-echo Last Updated: Jul-16-2018
+echo Last Updated: Dec-19-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -71,9 +69,6 @@ exit/b
 :_
 
 :main_function
-
-echo.
-echo %filename_stands_for%
 
 call g s
 

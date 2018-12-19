@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Jonathan's AWS batch file.
+set filename_stands_for=* Jonathan plus AWS = Jaws. A CWS CLI demo companion file.
 
 
 
