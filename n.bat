@@ -5764,7 +5764,7 @@ rem lu: Dec-4-2018
 
 echo %fp%
 
-set cbf_filename=%userprofile%\j\miscellany\gfe.txt
+set cbf_filename=%userprofile%\j\share-zone\gfe.txt
 
 exit/b
 

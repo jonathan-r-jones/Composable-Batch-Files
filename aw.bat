@@ -209,6 +209,8 @@ exit/b
 
 ::_
 
+:describe_subnets
+
 :desu
 
 :subnets
@@ -930,7 +932,7 @@ Metadata: Track Size (!tsaw)
 
 :e_c
 
-set fp=* Create Envrionment 1.
+set fp=* Create Environment 1.
 
 rem lu: Nov-5-2018
 
@@ -1000,6 +1002,11 @@ call %0 auth4
 
 rem See the AFTER picture. What are the current security groups? How many are there?
 call %0 dsg
+
+call %0 describe_subnets
+rem qq
+
+call %0 create_instance
 
 xit/b
 
