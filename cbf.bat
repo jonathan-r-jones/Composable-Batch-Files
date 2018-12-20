@@ -68,6 +68,7 @@ echo  File  Description
 echo  ----  ------------------------------------------------------------------
 echo     a  A wrapper around AWS CLI.
 echo    an  Application nickname dictionary.
+echo    aw  A CWS CLI demo companion file.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
 echo   clc  Simple calculator.
@@ -89,7 +90,6 @@ echo     g  Perform Git-related tasks.
 echo    gg  Git Gui helper. Has TD parameter.
 echo    gl  Glossary of terms used in CBF.
 echo     h  Perform Sencha-related tasks.
-echo  jaws  A CWS CLI demo companion file.
 echo     m  Perform miscellaneous tasks.
 echo   mcd  Make and navigate (cd) to a folder.
 echo    me  Run Multi-Edit.

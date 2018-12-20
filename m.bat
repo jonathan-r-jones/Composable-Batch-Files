@@ -1397,7 +1397,7 @@ call %0 initialize_default_repository_folder
 
 call %0 initialize_default_text_editor
 
-call %0 set_white_list_settings
+call %0 set_white_list_settings_1
 
 cls
 
@@ -1407,15 +1407,19 @@ exit/b
 
 ::_
 
-:set_white_list_settings
+:set_white_list_settings_1
 
-if /i "%computername%" == "asus" goto next_step
-if /i "%computername%" == "buzz" goto next_step
-if /i "%computername%" == "xps" goto next_step
+if /i "%computername%" == "asus" goto set_white_list_settings_2
+if /i "%computername%" == "buzz" goto set_white_list_settings_2
+if /i "%computername%" == "xps" goto set_white_list_settings_2
 
 exit/b
 
-:next_step
+
+
+::_
+
+:set_white_list_settings_2
 
 set share-zone=%dropbox%\it\share-zone
 set path=%savannah%\belfry;%path%
