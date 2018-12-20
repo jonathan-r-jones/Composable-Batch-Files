@@ -27,8 +27,6 @@ if "%~1" == "help" goto help
 
 set fp=* Preprocessing.
 
-rem lu: Jul-16-2018
-
 if not "%~1" == "" call td %~1
 
 goto main_function
@@ -47,7 +45,7 @@ echo.
 echo Filename stands for: Add/Commit/Push.
 
 echo.
-echo Last Updated: Jul-16-2018
+echo Last Updated: Dec-20-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -55,7 +53,7 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current folder is used. ^
 
-exit/b
+exit
 
 
 
