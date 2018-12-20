@@ -3815,9 +3815,9 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-call me cc
-
 call me gfe
+
+call me cc
 
 exit/b
 

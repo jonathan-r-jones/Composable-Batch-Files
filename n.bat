@@ -5351,9 +5351,15 @@ exit/b
 
 :pass
 
+:sg_id
+
+:subnet_id
+
 :tf1
 
 :tf2
+
+:vpc_id
 
 set fp=* Pass through.
 
@@ -6539,6 +6545,22 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\
 
 set cbf_path=%localappdata%\Microsoft\WindowsApps
+
+exit/b
+
+
+
+:_
+
+:mous
+
+set fp=* Mouse.
+
+rem lu: Dec-20-2018
+
+echo %fp%
+
+set cbf_application=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
 
 exit/b
 

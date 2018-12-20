@@ -83,27 +83,6 @@ exit/b
 
 :_
 
-:win
-
-:wind
-
-set fp=* List EC2 Windows images.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-images --filters "Name=description, Values=*2016-*" "Name=owner-alias,Values=amazon"
-rem aws ec2 describe-images --owners amazon --filters "Name=platform,Values=windows"
-
-exit/b
-
-
-
-:_
-
 :dry
 
 set fp=* Dry run.
@@ -167,17 +146,80 @@ exit/b
 
 
 
-:_+ Full web parts process according to AWS CLI instructor.
+:_+ Describe functions.
 
 
 
 ::_
 
-:dsg
+:d_sgs
+
+set fp=* Describe security groups.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups
+
+exit/b
+
+
+
+::_
+
+:d_sgsp
+
+set fp=* Describe security groups, pipe to file.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+call an me
+
+set cbf_filename=%temp%\describe_sgs.txt
+
+call aws ec2 describe-security-groups>%cbf_filename%
+
+call m apf
+
+call r
+
+exit/b
+
+
+
+::_
+
+:d_sg_id
+
+set fp=* Describe our new security group on id.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+call n sg_id
+
+echo.
+aws ec2 describe-security-groups --group-id %sg_id%
+
+exit/b
+
+
+
+::_
+
+:d_sg
 
 set fp=* Describe our new security group.
 
-rem lu: Nov-2-2018
+rem lu: Dec-20-2018
 
 echo.
 echo %fp%
@@ -191,19 +233,38 @@ exit/b
 
 ::_
 
-:d_sec
+:win
 
-:dsgs
+:wind
 
-set fp=* Describe security groups.
+set fp=* List EC2 Windows images.
 
-rem lu: Dec-11-2018
+rem lu: Nov-6-2018
 
 echo.
 echo %fp%
 
 echo.
-aws ec2 describe-security-groups
+aws ec2 describe-images --filters "Name=description, Values=*2016-*" "Name=owner-alias,Values=amazon"
+rem aws ec2 describe-images --owners amazon --filters "Name=platform,Values=windows"
+
+exit/b
+
+
+
+::_
+
+:d_vpcs
+
+set fp=* Describe VPCs.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-vpcs
 
 exit/b
 
@@ -343,21 +404,42 @@ exit/b
 
 ::_
 
-:create_security_group
+:create_test_security_group
 
-:csg
+set fp=* Create test security group.
 
-set fp=* Create security group.
-
-rem lu: Nov-2-2018
+rem lu: Nov-19-2018
 
 echo.
 echo %fp%
 
 echo.
-rem qq-1
+aws ec2 create-security-group --group-name "Test Security Group" ^
+  --description "Test Security Group for EC2 instances to allow ports 22, 88 and 443"
+
+rem Group ID: sg-0fe9ba05e51b1d922
+
+exit/b
+
+
+
+::_
+
+:create_security_group_id
+
+set fp=* Create security group.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+call n vpc_id
+
+echo.
 aws ec2 create-security-group --group-name EC2SecurityGroup ^
-  --description "Security Group for EC2 instances to allow ports 22, 88 and 443"
+  --description "Security Group for EC2 instances to allow ports 22, 88, 443, and 3389." ^
+  --vpc-id %vpc_id%
 
 exit/b
 
@@ -436,6 +518,86 @@ echo %fp%
 
 aws ec2 authorize-security-group-ingress --group-name "Test Security Group" --protocol tcp ^
   --port 80 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
+:auth1_id
+
+set fp=* Authorize secrurity group ingress.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+call n sg_id
+
+aws ec2 authorize-security-group-ingress --protocol tcp ^
+  --port 22 --cidr 172.54.125.8/32 --group-id %sg_id%
+
+exit/b
+
+
+
+::_
+
+:auth2_id
+
+set fp=* Authorize secrurity group ingress. - 2nd port
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+call n sg_id
+
+aws ec2 authorize-security-group-ingress --protocol tcp ^
+  --port 80 --cidr 0.0.0.0/0 --group-id %sg_id%
+
+exit/b
+
+
+
+::_
+
+:auth3_id
+
+set fp=* Authorize secrurity group ingress. - 3rd port.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+call n sg_id
+
+aws ec2 authorize-security-group-ingress --protocol tcp ^
+  --port 443 --cidr 0.0.0.0/0 --group-id %sg_id%
+
+exit/b
+
+
+
+::_
+
+:auth4_id
+
+set fp=* Authorize secrurity group ingress. - 4th port for RDP connection.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+call n sg_id
+
+aws ec2 authorize-security-group-ingress --protocol tcp ^
+  --port 3389 --cidr 0.0.0.0/0 --group-id %sg_id%
 
 exit/b
 
@@ -1085,6 +1247,40 @@ exit/b
 
 ::_
 
+:e_c3
+
+set fp=* Create environment, part 3.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+call %0 create_security_group_id
+
+call %0 d_sg_id
+
+call %0 auth1_id
+
+call %0 auth2_id
+
+call %0 auth3_id
+
+call %0 auth4_id
+
+rem See the AFTER picture. What are the current security groups? How many are there?
+call %0 d_sg_id
+
+call %0 describe_subnets
+
+call %0 launch_instance_id
+
+exit/b
+
+
+
+::_
+
 :e_d
 
 set fp=* Delete Environment 1.
@@ -1172,6 +1368,24 @@ exit/b
 
 
 :_+ IAM Commands - User Information
+
+
+
+::_
+
+:lak_jj
+
+set fp=* List access keys for JJ.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name JJones2
+
+exit/b
 
 
 
@@ -1358,6 +1572,24 @@ echo %fp%
 
 echo.
 aws iam get-user --user-name procon_user
+
+exit/b
+
+
+
+::_
+
+:gu_jj
+
+set fp=* Get user information for JJ.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name JJones2
 
 exit/b
 
@@ -2671,6 +2903,49 @@ aws ec2 run-instances ^
   --security-group-ids sg-0d72c1ec60ee3852d ^
   --subnet-id subnet-9c220fd6 ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CentOS Comm. Ed. Dec-17-2018}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:li_windows_on_id
+
+set fp=* Launch instance t3 medium Windows on id cloud.
+
+rem Microsoft Windows Server 2016 Base - ami-ddb1d0bc
+rem Microsoft Windows 2016 Datacenter edition. [English]
+rem Root device type: ebs Virtualization type: hvm
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+call td s
+
+call %0 check_pem_existence
+rem qq-1
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call n sg_id
+
+call n subnet_id
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-ddb1d0bc ^
+  --instance-type t3.medium ^
+  --key-name  cart-key ^
+  --security-group-ids %sg_id% ^
+  --subnet-id %subnet_id% ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Jenkins_Dec_20_2018}]"
   --user-data file://my_script.sh
 
 exit/b
