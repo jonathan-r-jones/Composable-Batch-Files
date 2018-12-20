@@ -51,7 +51,8 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current folder is used.
+echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current 
+echo folder is used.
 
 exit/b
 
