@@ -2300,9 +2300,7 @@ exit/b
 
 ::_
 
-:star
-
-:start
+:start_and_attach
 
 :restart
 
@@ -2336,13 +2334,17 @@ exit/b
 
 :si
 
+:star
+
+:start
+
 :start_instance
 
 :start_instances
 
 set fp=* Start my instance from the command line!
 
-rem lu: Dec-12-2018
+rem lu: Dec-20-2018
 
 echo.
 echo %fp%
@@ -2375,6 +2377,9 @@ if "%~2" == "ce" set instance_id=i-0f7c7db92897103c5
 
 rem Jenkins
 if "%~2" == "je" set instance_id=i-0bce1b3771799a4ed
+
+rem iJenkins
+if "%~2" == "ij" set instance_id=i-05a46eb9d1166d95f
 
 exit/b
 
@@ -2430,7 +2435,7 @@ exit/b
 
 ::_
 
-:stop
+:stop_and_detach
 
 set fp=* Detach a volume and stop and instance.
 
@@ -2455,6 +2460,25 @@ if not "%user_option%"=="y" exit/b
 call %0 set_volume_id %2
 
 call %0 detach_volume %2
+
+exit/b
+
+
+
+::_
+
+:stop
+
+set fp=* Stop and instance.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+call %0 set_instance_id %2
+
+call %0 stop_instances %2
 
 exit/b
 
@@ -2927,7 +2951,6 @@ echo %fp%
 call td s
 
 call %0 check_pem_existence
-rem qq-1
 
 if %errorlevel% == 1 (
   exit/b
@@ -2942,7 +2965,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-ddb1d0bc ^
   --instance-type t3.medium ^
-  --key-name  cart-key ^
+  --key-name cart-key ^
   --security-group-ids %sg_id% ^
   --subnet-id %subnet_id% ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Jenkins_Dec_20_2018}]"
