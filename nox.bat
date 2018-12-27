@@ -23,13 +23,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-
-
-:_
-
-call no %composable_batch_files%\%~1.bat
-
-exit/b
+goto main_function
 
 
 
@@ -54,6 +48,22 @@ echo Parameter 1: Filename in the CBF folder without the "bat" extension.
 echo.
 echo For example, typing "mx m" would edit the m.bat file in the Composable
 echo. Batch Files folder.
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+if not exist %composable_batch_files%\%~1.bat (
+  echo.
+  echo * The file "%composable_batch_files%\%~1.bat" does not exist.
+  exit/b
+)
+
+call no %composable_batch_files%\%~1.bat
 
 exit/b
 
