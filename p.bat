@@ -54,9 +54,9 @@ exit/b
 
 if not "%~1" == "" call td %~1
 
-echo.
-echo Error level: %errorlevel%
-rem qq-1
+if %errorlevel% == 1 (
+  exit/b
+)
 
 call g acp
 

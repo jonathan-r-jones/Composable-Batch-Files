@@ -584,7 +584,6 @@ exit/b
 :fiex
 
 set fp=* File existence. (skw filename existence)
-rem qq-1
 
 rem lu: Dec-27-2018
 
@@ -600,8 +599,6 @@ if exist "mx.bat" (
 ) else (
   echo File does not exist.
 )
-
-rem qq-1
 
 exit/b
 
