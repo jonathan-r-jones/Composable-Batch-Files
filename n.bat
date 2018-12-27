@@ -5982,22 +5982,6 @@ exit/b
 
 :_
 
-:mecfg
-
-set fp=* Multi-Edit Config file folder.
-
-rem lu: Dec-7-2018
-
-echo %fp%
-
-set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
-
-exit/b
-
-
-
-:_
-
 :tfkeys
 
 set fp=* TF Keys.
@@ -6561,6 +6545,43 @@ rem lu: Dec-20-2018
 echo %fp%
 
 set cbf_application=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
+
+exit/b
+
+
+
+:_+ Multi-Edit Config Files
+
+
+
+::_
+
+:mecfg
+
+set fp=* Multi-Edit Config file folder.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+exit/b
+
+
+
+::_
+
+:mecfg2
+
+set fp=* Multi-Edit Config file folder.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+rem qq-1
 
 exit/b
 
