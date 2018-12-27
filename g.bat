@@ -2480,8 +2480,9 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
+rem On Dec-27-2018, I copied the key from my GFE to IJ, and it worked!
+
 rem SSL certificate problem: unable to get local issuer certificate
-rem qq-1
 
 rem ::C:\Users\JJones2\AppData\Local\Programs\Git\usr\ssl\certs\ca-bundle.crt
 
