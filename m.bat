@@ -3740,6 +3740,7 @@ call p c_docs
 call p s
 
 if not "%machinename%"=="gfe" call cyft mecfg mecfg_s
+rem qq-1
 
 exit/b
 
