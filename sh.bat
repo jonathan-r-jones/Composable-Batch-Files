@@ -138,4 +138,25 @@ exit/b
 
 
 
+:_
+
+:chpa
+
+set fp=* Change passphrase.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+call td home
+
+echo.
+ssh-keygen -p -f .\.ssh\id_rsa
+rem qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
