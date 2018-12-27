@@ -3741,6 +3741,9 @@ call pl c_docs
 
 call pl s
 
+if /i "%computername%"=="LIPTWICE224520" call cy copy_me_config
+rem qq-1
+
 exit/b
 
 
@@ -3805,6 +3808,8 @@ exit/b
 
 
 :_
+
+:gfe
 
 :ow
 
