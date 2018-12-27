@@ -2227,48 +2227,6 @@ exit/b
 
 
 
-:_
-
-:li_windows_on_id
-
-set fp=* Launch instance t3 medium Windows on id cloud.
-
-rem Microsoft Windows Server 2016 Base - ami-ddb1d0bc
-rem Microsoft Windows 2016 Datacenter edition. [English]
-rem Root device type: ebs Virtualization type: hvm
-
-rem lu: Dec-20-2018
-
-echo.
-echo %fp%
-
-call td s
-
-call %0 check_pem_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-call n sg_id
-
-call n subnet_id
-
-echo.
-aws ec2 run-instances ^
-  --count 1 ^
-  --image-id ami-ddb1d0bc ^
-  --instance-type t3.medium ^
-  --key-name cart-key ^
-  --security-group-ids %sg_id% ^
-  --subnet-id %subnet_id% ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Jenkins_Dec_20_2018}]"
-  --user-data file://my_script.sh
-
-exit/b
-
-
-
 :_+ Describe functions.
 
 
@@ -2984,6 +2942,48 @@ echo %fp%
 echo.
 
 aws ec2 describe-security-group-references --group-id sg-0e67f09ea592e68ff
+
+exit/b
+
+
+
+:_
+
+:li_windows_on_id
+
+set fp=* Launch instance t3 medium Windows on id cloud.
+
+rem Microsoft Windows Server 2016 Base - ami-ddb1d0bc
+rem Microsoft Windows 2016 Datacenter edition. [English]
+rem Root device type: ebs Virtualization type: hvm
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+call td s
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call n sg_id
+
+call n subnet_id
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-ddb1d0bc ^
+  --instance-type t3.medium ^
+  --key-name cart-key ^
+  --security-group-ids %sg_id% ^
+  --subnet-id %subnet_id% ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Jenkins_Dec_20_2018}]"
+  --user-data file://my_script.sh
 
 exit/b
 

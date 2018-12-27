@@ -2214,46 +2214,6 @@ exit/b
 
 
 
-:_+ Remote Double Click Candidates, a.k.a. lnk type files.
-
-
-
-::_
-
-:desk
-
-set fp=* Show desktop.
-
-rem lu: Jun-13-2018
-
-echo %fp%
-
-set cbf_path=%userprofile%\desktop
-
-set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
-
-exit/b
-
-
-
-::_
-
-:w
-
-:win
-
-set fp=* Show open windows.
-
-rem lu: Jun-13-2018
-
-echo %fp%
-
-set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
-
-exit/b
-
-
-
 :_
 
 :pm
@@ -3187,6 +3147,8 @@ exit/b
 ::_
 
 :no
+
+:note
 
 set fp=* Notepad.
 
@@ -4349,22 +4311,6 @@ rem lu: Jan-23-2018
 echo %fp%
 
 set cbf_path=%temp%
-
-exit/b
-
-
-
-:_
-
-:docs
-
-set fp=* Documents folder.
-
-rem lu: Jul-9-2018
-
-echo %fp%
-
-set cbf_path=%userprofile%\documents
 
 exit/b
 
@@ -6599,6 +6545,84 @@ rem lu: Dec-4-2018
 echo %fp%
 
 set cbf_filename=%share-zone%\gfe.asc
+
+exit/b
+
+
+
+:_+ Windows Folders
+
+
+
+::_
+
+:docs
+
+set fp=* Documents folder.
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\documents
+
+exit/b
+
+
+
+::_
+
+:desk
+
+set fp=* Windows desktop.
+
+rem lu: Dec-27-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\desktop
+
+exit/b
+
+
+
+:_+ Remote Double Click Candidates, a.k.a. lnk type files.
+
+
+
+::_
+
+:l_d
+
+:lnk_d
+
+set fp=* Show desktop.
+
+rem lu: Jun-13-2018
+
+echo %fp%
+
+set cbf_path=%userprofile%\desktop
+
+set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
+
+exit/b
+
+
+
+::_
+
+l_w
+
+:lnk_w
+
+set fp=* Show open windows.
+
+rem lu: Jun-13-2018
+
+echo %fp%
+
+set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
 
 exit/b
 
