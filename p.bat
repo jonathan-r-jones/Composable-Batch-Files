@@ -37,7 +37,7 @@ echo.
 echo Filename stands for: Add/Commit/Push.
 
 echo.
-echo Last Updated: Dec-20-2018
+echo Last Updated: Dec-27-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -45,7 +45,6 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current ^
 folder is used. If "-a" is specified, all preswired folders will be pushed.
-rem qq-1
 
 exit/b
 
@@ -62,7 +61,6 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
-echo.
 call m p
 
 exit/b
