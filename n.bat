@@ -1436,7 +1436,7 @@ exit/b
 
 :_
 
-:d
+:dd
 
 set fp=Root of the D Drive.
 
@@ -2038,7 +2038,7 @@ exit/b
 
 :_
 
-:dd
+:dudo
 
 set fp=* Dunkin donuts.
 
@@ -6561,6 +6561,8 @@ exit/b
 
 
 ::_
+
+:d
 
 :desk
 
