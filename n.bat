@@ -6581,7 +6581,6 @@ rem lu: Dec-7-2018
 echo %fp%
 
 set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
-rem qq-1
 
 exit/b
 

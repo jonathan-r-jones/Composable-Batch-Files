@@ -74,6 +74,12 @@ set cbf_filename=%composable_batch_files%\%~1.bat
 
 set cbf_parameter=%cbf_filename%
 
+if not exist "%cbf_filename%" (
+  echo.
+  echo * The file "%cbf_filename%" does not exist.
+  exit/b
+)
+
 call r
 
 exit/b

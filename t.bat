@@ -8207,16 +8207,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Set temp filename.
@@ -8230,6 +8220,16 @@ echo.
 set cbf_filename=%temp%\describe_instances2.txt
 
 exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
