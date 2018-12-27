@@ -117,65 +117,6 @@ exit/b
 
 :_
 
-:dsg
-
-set fp=* Describe our new security group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-security-groups --group-names JawsSecurityGroup
-
-exit/b
-
-
-
-:_
-
-:dsgs
-
-set fp=* Describe security groups.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-security-groups
-
-exit/b
-
-
-
-:_
-
-:desu
-
-:subnets
-
-set fp=* Describe subnets. When you choose an AWS subnet, you are choosing the availability ^
-zone.
-
-rem lu: Nov-19-2018
-
-rem Presentation topic.
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-subnets
-
-exit/b
-
-
-
-:_
-
 :create_security_group
 
 :csg
@@ -290,50 +231,6 @@ exit/b
 
 :_
 
-:e_c2
-
-set fp=* Create environment, part 2.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-
-call %0 create_user_mike
-
-rem admins
-call %0 create_iam_group
-
-call %0 attach_policy_ec2
-
-call %0 attach_policy_s3
-
-call %0 add_user_to_group
-
-rem See the BEFORE picture. What are the current security groups? How many are there?
-call %0 dsg
- 
-call %0 create_security_group
-
-call %0 auth1
-
-call %0 auth2
-
-call %0 auth3
-
-call %0 auth4
-
-rem See the AFTER picture. What are the current security groups? How many are there?
-call %0 dsg
-
-xit/b
-
-
-
-:_
-
 :cli_nov_29_postgres_test_db
 
 set fp=* Create a database that mimics the connectable one.
@@ -389,24 +286,6 @@ exit/b
 
 :_
 
-:istats
-
-set fp=* Get instances status.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-instances --color off
-
-exit/b
-
-
-
-:_
-
 :li_t3_medium
 
 set fp=* Launch instance t3 medium Windows on GovCloud.
@@ -455,6 +334,143 @@ echo.
 echo %fp%
 
 call sf hungry_shark
+
+exit/b
+
+
+
+:_
+
+:cren
+
+set fp=* Create environment.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+echo.
+
+call %0 create_user_mike
+
+call %0 create_iam_group
+
+call %0 attach_policy_ec2
+
+call %0 attach_policy_s3
+
+call %0 add_user_to_group
+
+rem See the BEFORE picture. What are the current security groups? How many are there?
+call %0 dsg
+ 
+call %0 create_security_group
+
+call set_firewall_rules
+
+rem See the AFTER picture. What are the current security groups? How many are there?
+
+call %0 dsg
+
+xit/b
+
+
+
+::_
+
+:set_firewall_rules
+
+set fp=* Set firewall rules.
+
+call %0 auth1
+
+call %0 auth2
+
+call %0 auth3
+
+call %0 auth4
+
+exit/b
+
+
+
+:_+ Descibe Functions
+
+
+
+::_
+
+:d_sg
+
+set fp=* Describe our new security group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups --group-names JawsSecurityGroup
+
+exit/b
+
+
+
+::_
+
+:d_sgs
+
+set fp=* Describe security groups.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups
+
+exit/b
+
+
+
+::_
+
+:d_su
+
+:subnets
+
+set fp=* Describe subnets. When you choose an AWS subnet, you are choosing the availability ^
+zone.
+
+rem lu: Nov-19-2018
+
+rem Presentation topic.
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-subnets
+
+exit/b
+
+
+
+::_
+
+:d_ins
+
+set fp=* Get instances status.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-instances --color off
 
 exit/b
 
