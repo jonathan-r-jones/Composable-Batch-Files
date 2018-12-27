@@ -126,9 +126,6 @@ set fp=* Run Jenkins.
 echo.
 echo %fp%
 
-rem This assume that the Jenkins war file is in the downloads folder.
-call td dn
-
 call m file_type_presence war
 
 if %errorlevel% == 1 (
