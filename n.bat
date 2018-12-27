@@ -6578,6 +6578,22 @@ exit/b
 
 
 
+::_
+
+:32
+
+set fp=* Windows system 32.
+
+rem lu: Dec-27-2018
+
+echo %fp%
+
+set cbf_path=c:\windows\system32
+
+exit/b
+
+
+
 :_+ Remote Double Click Candidates, a.k.a. lnk type files.
 
 

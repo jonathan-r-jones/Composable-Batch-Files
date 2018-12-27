@@ -59,6 +59,7 @@ echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 echo             d  Date, newest first.
 echo            d2  Date, smallest first.
+echo            fo  Folders only.
 echo           hid  Hidden files and folders.
 echo             s  Size, biggest first.
 echo            s2  Size, smallest first.
@@ -199,6 +200,24 @@ echo %fp%
 
 echo.
 dir /ah
+
+exit/b
+
+
+
+:_
+
+:fo
+
+set fp=* Folders only.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+echo.
+dir /a:d
 
 exit/b
 
