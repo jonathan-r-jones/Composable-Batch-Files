@@ -146,6 +146,8 @@ set fp=* Change passphrase.
 
 rem lu: Dec-27-2018
 
+rem This worked!
+
 echo.
 echo %fp%
 
@@ -153,7 +155,6 @@ call td home
 
 echo.
 ssh-keygen -p -f .\.ssh\id_rsa
-rem qq-1
 
 exit/b
 

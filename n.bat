@@ -5275,13 +5275,13 @@ exit/b
 
 ::_
 
-:cart
+:cart_git
 
-:cn_cart
+:cart_cn
 
-:cn_bgs
+:bgs_cn
 
-:earm
+:earm_cn
 
 :gc
 
@@ -5782,55 +5782,11 @@ exit/b
 
 
 
-:_ + Git
-
-
-
-::_
-
-:gh
-
-:git
-
-set fp=* Git.
-
-rem lu: Dec-6-2018
-
-echo %fp%
-
-set cbf_path=%localappdata%\Programs\Git
-
-set cbf_url=https://github.com
-
-exit/b
-
-
-
-::_
-
-:git_user_bin
-
-:gu
-
-:gub
-
-:sh
-
-set fp=* Git user bin. Loaded with utilities.
-
-rem lu: Dec-4-2018
-
-echo %fp%
-
-set cbf_path=%localappdata%\Programs\Git\usr\bin
-
-exit/b
-
-
-
 :_
 
 :keys
+
+:sh
 
 :ssh
 
@@ -6566,6 +6522,8 @@ exit/b
 
 :desk
 
+:desktop
+
 set fp=* Windows desktop.
 
 rem lu: Dec-27-2018
@@ -6631,6 +6589,68 @@ rem lu: Jun-13-2018
 echo %fp%
 
 set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
+
+exit/b
+
+
+
+:_
+
+:cart
+
+set fp=* Cart.
+
+rem lu: Dec-27-2018
+
+echo %fp%
+
+call n desktop
+
+set cbf_path=%cbf_path%\cart
+
+exit/b
+
+
+
+:_ + Git
+
+
+
+::_
+
+:gh
+
+:git
+
+set fp=* Git.
+
+rem lu: Dec-6-2018
+
+echo %fp%
+
+set cbf_path=%localappdata%\Programs\Git
+
+set cbf_url=https://github.com
+
+exit/b
+
+
+
+::_
+
+:git_user_bin
+
+:gu
+
+:gub
+
+set fp=* Git user bin. Loaded with utilities. Super path.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_path=%localappdata%\Programs\Git\usr\bin
 
 exit/b
 
