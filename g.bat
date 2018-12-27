@@ -2473,14 +2473,15 @@ exit/b
 
 :cart
 
-set fp=* Overview of the process that successfully set up the Certificate and pulled the Cart project.
+set fp=* Overview of the process that sets a certificate and pulls the Cart project.
 
-rem lu: Dec-6-2018
+rem lu: Dec-27-2018
 
 echo.
 echo %fp%
 
 rem SSL certificate problem: unable to get local issuer certificate
+rem qq-1
 
 rem ::C:\Users\JJones2\AppData\Local\Programs\Git\usr\ssl\certs\ca-bundle.crt
 

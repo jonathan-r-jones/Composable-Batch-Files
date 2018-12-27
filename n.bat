@@ -458,22 +458,6 @@ exit/b
 
 :_
 
-:m
-
-set fp=* M.bat.
-
-rem FCD: Apr-10-2017
-
-echo %fp%
-
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\m.bat
-
-exit/b
-
-
-
-:_
-
 :fn
 
 set fp=* Filename nicknames.
@@ -5293,6 +5277,8 @@ exit/b
 
 :cart
 
+:cn_cart
+
 :cn_bgs
 
 :earm
@@ -6482,6 +6468,8 @@ exit/b
 
 :_
 
+:m
+
 :mous
 
 set fp=* Mouse.
@@ -6489,6 +6477,8 @@ set fp=* Mouse.
 rem lu: Dec-20-2018
 
 echo %fp%
+
+set cbf_filename=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
 
 set cbf_application=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
 

@@ -3481,33 +3481,6 @@ exit/b
 
 
 
-:_
-
-:cart
-
-set fp=* Count lines of code in Cart.
-
-rem lu: Oct-17-2018
-
-echo.
-echo %fp%
-
-del %temp%\j1.txt
-
-rem call td cart
-
-rem call cy copy_cart_cs_files_to_a_temp_folder
-
-cd /d %temp%\cart_cs
-
-for /r %%j in (*.cs) do type "%%j">>"%temp%\j1.txt"
-
-call me j1
-
-exit/b
-
-
-
 :_+ Error Level
 
 
@@ -3843,6 +3816,33 @@ echo.
 echo %fp%
 
 set cbf_parameter=%cbf_filename%
+
+exit/b
+
+
+
+:_
+
+:cart
+
+set fp=* Count lines of code in Cart.
+
+rem lu: Oct-17-2018
+
+echo.
+echo %fp%
+
+del %temp%\j1.txt
+
+rem call td cart
+
+rem call cy copy_cart_cs_files_to_a_temp_folder
+
+cd /d %temp%\cart_cs
+
+for /r %%j in (*.cs) do type "%%j">>"%temp%\j1.txt"
+
+call me j1
 
 exit/b
 
