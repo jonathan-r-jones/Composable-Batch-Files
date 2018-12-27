@@ -5766,24 +5766,6 @@ exit/b
 
 :_
 
-:big
-
-:gfe
-
-set fp=* Gfe.txt.
-
-rem lu: Dec-4-2018
-
-echo %fp%
-
-set cbf_filename=%userprofile%\j\share-zone\gfe.asc
-
-exit/b
-
-
-
-:_
-
 :wp
 
 :wopa
@@ -6583,6 +6565,24 @@ rem lu: Dec-7-2018
 echo %fp%
 
 set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+exit/b
+
+
+
+:_
+
+:big
+
+:gfe
+
+set fp=* Gfe.txt.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_filename=%share-zone%\gfe.asc
 
 exit/b
 
