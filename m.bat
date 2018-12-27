@@ -1459,6 +1459,8 @@ set cbf_default_repository_folder=%userprofile%\j
 
 set share-zone=%userprofile%\j\share-zone
 
+set machinename=gfe
+
 title=Big Laptop
 
 cls
@@ -3741,8 +3743,7 @@ call pl c_docs
 
 call pl s
 
-if /i "%computername%"=="LIPTWICE224520" call cy copy_me_config
-rem qq-1
+if "%machinename%"=="gfe" call cyft mecfg_s mecfg
 
 exit/b
 
@@ -3764,6 +3765,8 @@ call p cbf
 call p c_docs
 
 call p s
+
+if not "%machinename%"=="gfe" call cyft mecfg mecfg_s
 
 exit/b
 

@@ -61,7 +61,8 @@ echo %filename_stands_for%
 call n %1
 
 echo.
-xcopy /e %cbf_path%
+xcopy /d /h /r /s /y "%cbf_path%"
+rem qq-1
 
 rem (!rfsp) (mov-2)
 

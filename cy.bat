@@ -290,11 +290,15 @@ exit/b
 
 
 
-:_
+:_+ Copy ME Config
 
-:copy_me_config
 
-set fp=* Copy Multi-Edit config files to the proper location.
+
+::_
+
+:copy_from_me_sz
+
+set fp=* Copy Multi-Edit config files from share-zone.
 
 rem lu: Dec-27-2018
 
@@ -305,7 +309,26 @@ call td mecfg
 
 echo.
 xcopy /d /h /r /s /y %share-zone%\Multi-Edit_2008_Config_Files 
-rem qq-1
+
+exit/b
+
+
+
+::_
+
+:copy_to_sz
+
+set fp=* Copy Multi-Edit config files to share-zone.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+call td mecfg
+
+echo.
+xcopy /d /h /r /s /y %share-zone%\Multi-Edit_2008_Config_Files 
 
 exit/b
 

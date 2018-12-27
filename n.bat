@@ -2468,6 +2468,22 @@ exit/b
 
 :_
 
+:a2
+
+set fp=* A test folder.
+
+rem lu: Dec-27-2018
+
+echo %fp%
+
+set cbf_path=c:\a2
+
+exit/b
+
+
+
+:_
+
 :aa
 
 set fp=* Aa, a.k.a. permanent folders for Jonathan.
@@ -6556,7 +6572,7 @@ exit/b
 
 ::_
 
-:mecfg2
+:mecfg_s
 
 set fp=* Multi-Edit Config file folder.
 
@@ -6564,7 +6580,7 @@ rem lu: Dec-7-2018
 
 echo %fp%
 
-set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
 
 exit/b
 

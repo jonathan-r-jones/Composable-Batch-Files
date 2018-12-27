@@ -8234,3 +8234,21 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Test cyft batch file.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+echo.
+if not "%machinename%"=="gfe" call cyft mecfg mecfg_s
+
+exit/b
+
+
+
+:_
