@@ -639,7 +639,7 @@ echo %fp%
 
 if exist "%1" (
   echo.
-  echo It exists.
+  echo Folder exists.
 )
 
 if not exist "%1" echo It does NOT exist.

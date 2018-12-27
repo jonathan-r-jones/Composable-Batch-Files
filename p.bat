@@ -21,17 +21,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-
-
-:_
-
-set fp=* Preprocessing.
-
-if not "%~1" == "" call td %~1
-
 goto main_function
-
-exit/b
 
 
 
@@ -61,6 +51,12 @@ exit/b
 :_
 
 :main_function
+
+if not "%~1" == "" call td %~1
+
+echo.
+echo Error level: %errorlevel%
+rem qq-1
 
 call g acp
 
