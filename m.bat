@@ -1453,6 +1453,8 @@ call %0 set_default_browser kr
 
 set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 
+set JAVA_TOOL_OPTIONS=
+
 set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_192
 
 set cbf_default_repository_folder=%userprofile%\j
