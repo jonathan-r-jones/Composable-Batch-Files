@@ -4630,8 +4630,6 @@ exit/b
 
 ::_
 
-:ij
-
 :inc
 
 :injs
@@ -4759,7 +4757,7 @@ exit/b
 
 :_
 
-:pt
+:caz
 
 set fp=* Custom Azure Data - Port Types.
 
@@ -5283,11 +5281,15 @@ exit/b
 
 :earm_cn
 
+:gaws
+
 :gc
 
 :gocl
 
 :govc
+
+:ij
 
 :iaws
 
@@ -5300,6 +5302,8 @@ exit/b
 :nig
 
 :pass
+
+:pt
 
 :sg_id
 
