@@ -478,27 +478,6 @@ exit/b 0
 
 :_
 
-:delete_security_group
-
-:sg_delete
-
-set fp=* Delete security group.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-
-aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
-
-exit/b
-
-
-
-:_
-
 :cli_nov_29_postgres_test_db
 
 set fp=* Create a database that mimics the connectable one.
@@ -539,56 +518,16 @@ echo %fp%
 
 aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Jenkins_Dec_11_2018
 
-rem These also work.
-rem aws ec2 create-tags help>%temp%/j1.txt
+rem This also works.
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
 
-rem Below here didn't work.
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
-
 exit/b
 
 
 
 :_
 
-:li_t3_medium
-
-set fp=* Launch instance t3 medium Windows on GovCloud.
-
-rem I installed Jenkins on this server. Then I retagged it to Jenkins.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-call td tfkeys
-
-call %0 check_pem_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-echo.
-aws ec2 run-instances ^
-  --count 1 ^
-  --image-id ami-02ee68cd896a434c8 ^
-  --instance-type t3.medium ^
-  --key-name kibble_balance_key_pair ^
-  --security-group-ids sg-0d72c1ec60ee3852d ^
-  --subnet-id subnet-9c220fd6 ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=T3_Medium_Dec_11}]"
-  --user-data file://my_script.sh
-
-exit/b
-
-
-
-:_
+:the_end
 
 :is_hungry
 
@@ -602,6 +541,27 @@ echo.
 echo %fp%
 
 call sf hungry_shark
+
+exit/b
+
+
+
+:_
+
+:delete_security_group
+
+:sg_delete
+
+set fp=* Delete security group.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+echo.
+
+aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
 
 exit/b
 
