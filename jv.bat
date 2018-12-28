@@ -126,6 +126,8 @@ set fp=* Run Jenkins.
 echo.
 echo %fp%
 
+call td desktop
+
 call m file_type_presence war
 
 if %errorlevel% == 1 (
@@ -135,8 +137,6 @@ if %errorlevel% == 1 (
 call m dosc_yeonbl
 
 title=Run Jenkins - Dedicated Job Window
-
-call td desktop
 
 echo.
 call java -jar jenkins.war
