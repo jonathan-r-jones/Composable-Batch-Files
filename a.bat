@@ -1763,14 +1763,12 @@ exit/b
 
 :stop
 
-set fp=* Stop and instance.
+set fp=* Stop an instance.
 
-rem lu: Dec-20-2018
+rem lu: Dec-27-2018
 
 echo.
 echo %fp%
-
-call %0 set_instance_id %2
 
 call %0 stop_instances %2
 
@@ -1788,6 +1786,12 @@ rem lu: Dec-12-2018
 
 echo.
 echo %fp%
+
+rem if "%~2" == "" (
+  rem echo.
+  rem echo You must specify and instance nickname.
+  rem exit/b
+rem )
 
 call %0 set_instance_id %2
 
