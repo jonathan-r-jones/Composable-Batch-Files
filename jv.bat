@@ -136,6 +136,8 @@ call m dosc_yeonbl
 
 title=Run Jenkins - Dedicated Job Window
 
+call td desktop
+
 echo.
 call java -jar jenkins.war
 
