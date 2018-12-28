@@ -5337,7 +5337,11 @@ rem lu: Oct-17-2018
 
 echo %fp%
 
+<<<<<<< Updated upstream
 set cbf_path=%cbf_default_repository_folder%\iCart-apc\apc
+=======
+set cbf_path=%userprofile%\j\cart
+>>>>>>> Stashed changes
 
 set cbf_url=https://github.com/DevTechnology/iCart-apc
 
