@@ -26,7 +26,10 @@ if "%~1" == "help" m editor_help
 
 set fp=* Main function.
 
+set cbf_filename=
+
 call n %0
+
 if "%~1" == "" (
   m open_application_without_a_parameter
 )
@@ -39,6 +42,12 @@ if %errorlevel% == 0 (
   set cbf_filename=%~1
 ) else (
   call n %1
+)
+
+if "%cbf_filename%" == "" (
+  echo.
+  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
+  exit/b 1
 )
 
 set cbf_parameter=%cbf_filename%

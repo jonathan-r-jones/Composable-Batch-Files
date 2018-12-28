@@ -55,6 +55,7 @@ rem echo %filename_stands_for%
 set cbf_filename=
 
 call n %0
+
 if "%~1" == "" (
   m open_application_without_a_parameter
 )
