@@ -163,7 +163,8 @@ exit/b
 
 :cfg
 
-set fp=* Configure
+set fp=* Configure. On GovCloud and ICloud, there is a gotch for the Default region name. ^
+Must be us-gov-west-1.
 
 echo.
 echo %fp%

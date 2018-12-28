@@ -5299,6 +5299,8 @@ exit/b
 
 :ic_info
 
+:jm
+
 :nig
 
 :pass
@@ -6659,6 +6661,24 @@ echo %fp%
 set cbf_path=%localappdata%\Programs\Git\usr\bin
 
 if exist "c:\Program Files\Git\usr\bin\" set cbf_path=c:\Program Files\Git\usr\bin
+
+exit/b
+
+
+
+:_
+
+:aig
+
+set fp=* Run a2.
+
+rem lu: Dec-28-2018
+
+echo %fp%
+
+call n s
+
+set cbf_filename=%cbf_path%\aig.bat
 
 exit/b
 

@@ -2189,16 +2189,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfsp) (mov4)
-
-
-
-:_
-
 :li_linux_Dec_17_2018
 
 set fp=* Launch instance CentOS.
@@ -2302,7 +2292,7 @@ exit/b
 
 :d_sg
 
-set fp=* Describe our new security group.
+set fp=* Describe EC2 security group.
 
 rem lu: Dec-20-2018
 
@@ -2310,7 +2300,8 @@ echo.
 echo %fp%
 
 echo.
-aws ec2 describe-security-groups --group-names EC2SecurityGroup
+aws ec2 describe-security-groups --group-names EC2SecurityGroup --group-ids 
+rem qq-1
 
 exit/b
 

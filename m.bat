@@ -1461,6 +1461,8 @@ set cbf_default_repository_folder=%userprofile%\j
 
 set share-zone=%userprofile%\j\share-zone
 
+set path=%path%;%share-zone%
+
 set machinename=gfe
 
 title=Big Laptop
