@@ -6658,20 +6658,4 @@ exit/b
 
 
 
-:_
-
-:gaws
-
-set fp=* GovCloud AWS.
-
-rem lu: Dec-28-2018
-
-echo %fp%
-
-set cbf_url=https://809984885555.signin.amazonaws-us-gov.com/console
-
-exit/b
-
-
-
 :_ (!rfsp) (mov-6)
