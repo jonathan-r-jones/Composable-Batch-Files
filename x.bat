@@ -43,9 +43,9 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: If parameter 1 contains a period, then it will simulate the double-click on 
-echo that file which is in the current folder. Or else, it will do a remote double click on
-echo on the filename specified by the nickname.
+echo Parameter 1: If parameter 1 contains a period, then it will simulate the double-click ^
+on that file which is in the current folder. Or else, it will do a remote double click on ^
+on the filename specified by the nickname.
 
 exit/b
 

@@ -18,9 +18,9 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-if not "%~1" == "" call n %1
+if not "%~1" == "" call n %~1
 
-if not "%~2" == "" call n %2
+if not "%~2" == "" call n %~2
 
 goto main_function
 
@@ -65,7 +65,10 @@ set fp=* CBF_Application contains a double dash. Run it raw.
 
 echo %fp%
 
-%cbf_application%
+rem This also works so why is this function here?
+rem start "my title" "%cbf_application%" 
+
+"%cbf_application%"
 
 exit/b
 
