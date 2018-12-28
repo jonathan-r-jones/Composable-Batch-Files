@@ -5990,14 +5990,10 @@ exit/b
 set fp=* Java runtime path.
 
 rem lu: Dec-6-2018
-rem qq-1
 
 echo %fp%
 
-set cbf_path=C:\Program Files (x86)\Java\jre1.8.0_191\bin
-            :C:\Program Files (x86)\Java\jre1.8.0_192\bin\java.exe
-
-
+set cbf_path=C:\Program Files (x86)\Java\jre1.8.0_192\bin
 
 exit/b
 
@@ -6657,6 +6653,22 @@ rem lu: Dec-4-2018
 echo %fp%
 
 set cbf_path=%localappdata%\Programs\Git\usr\bin
+
+exit/b
+
+
+
+:_
+
+:gaws
+
+set fp=* GovCloud AWS.
+
+rem lu: Dec-28-2018
+
+echo %fp%
+
+set cbf_url=https://809984885555.signin.amazonaws-us-gov.com/console
 
 exit/b
 
