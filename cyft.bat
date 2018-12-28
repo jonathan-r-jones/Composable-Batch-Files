@@ -76,9 +76,6 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-echo.
-echo * CD: %cd%
-
 call cyf %1
 
 exit/b
