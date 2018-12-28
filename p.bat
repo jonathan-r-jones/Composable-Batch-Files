@@ -28,7 +28,8 @@ if "%~1" == "-c" goto main_function
 call td %~1
 
 if %errorlevel% == 1 (
-  echo * There has been an error.
+  echo.
+  echo * There has been a folder error.
   exit/b
 )
 
