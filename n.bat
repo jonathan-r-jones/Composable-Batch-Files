@@ -6472,7 +6472,7 @@ exit/b
 
 :mecfg_s
 
-set fp=* Multi-Edit Config file folder.
+set fp=* Multi-Edit Config file folder in Share-Zone.
 
 rem lu: Dec-7-2018
 
