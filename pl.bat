@@ -21,9 +21,18 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-if "%~1" == "-a" goto pull_prewired_folders
+if "%~1" == "" goto pull_prewired_folders
 
-goto preprocessing
+if "%~1" == "-c" goto main_function
+
+call td %~1
+
+if %errorlevel% == 1 (
+  echo * There has been an error.
+  exit/b
+)
+
+goto main_function
 
 
 
@@ -43,8 +52,8 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current ^
-folder is used. If "-a" is specified, all preswired folders will be pulled.
+echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, ^
+all prewired folders will be pulled. If "-c" is specified, the current folder is pulled.
 
 exit/b
 
@@ -62,22 +71,6 @@ echo.
 echo %fp%
 
 call m pl
-
-exit/b
-
-
-
-:_
-
-:preprocessing
-
-set fp=* Preprocessing.
-
-rem lu: Dec-7-2018
-
-if not "%~1" == "" call td %~1
-
-goto main_function
 
 exit/b
 
