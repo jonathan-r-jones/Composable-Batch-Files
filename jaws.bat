@@ -548,27 +548,6 @@ exit/b
 
 :_
 
-:delete_security_group
-
-:sg_delete
-
-set fp=* Delete security group.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-echo.
-
-aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
-
-exit/b
-
-
-
-:_
-
 :cren
 
 set fp=* Create environment.
@@ -680,7 +659,26 @@ exit/b
 
 
 
-:_+ Clean up old user.
+:_+ Clean up old stuff so as to be ready for the next demo.
+
+
+
+::_
+
+:delete_security_group
+
+:sg_delete
+
+set fp=* Delete security group.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
+
+exit/b
 
 
 
@@ -697,13 +695,32 @@ rem lu: Dec-28-2018
 echo.
 echo %fp%
 
-aws iam delete-access-key --access-key-id "AKIALKCTYZWT6XHHWD4A" --user-name cli_demo_user
+aws iam delete-access-key --access-key-id AKIALFJIWNYYPFBKQNAQ --user-name cli_demo_user
 
 exit/b
 
 
 
 ::_
+
+:rug
+
+set fp=* Remove user from group.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+aws iam remove-user-from-group --user-name cli_demo_user --group-name cli_users_group
+
+exit/b
+
+
+
+::_
+
+:du
 
 :delete_user
 
@@ -715,6 +732,26 @@ echo.
 echo %fp%
 
 aws iam delete-user --user-name cli_demo_user
+
+exit/b
+
+
+
+::_
+
+:delete_security_group
+
+:sg_delete
+
+set fp=* Delete security group.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
+rem qq-1
 
 exit/b
 
