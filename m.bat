@@ -1524,7 +1524,7 @@ echo.
 echo %fp%
 
 if /i "%computername%" == "asus" call m set_default_text_editor no
-if /i "%computername%" == "xps" call m set_default_text_editor npp
+if /i "%computername%" == "xps" call m set_default_text_editor np
 if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
 
 exit/b
@@ -2509,7 +2509,7 @@ echo bind-address=127.0.0.1
 echo.
 echo Then you need to reboot or restart MySQL.
 
-call npp mysql
+call np mysql
 
 exit/b
 
@@ -2584,19 +2584,19 @@ rem lu: Dec-5-2017
 echo.
 echo %fp%
 
-call npp pom_root
+call np pom_root
 
-call npp pom_ear
+call np pom_ear
 
-call npp pom_ejb
+call np pom_ejb
 
-call npp pom_web
+call np pom_web
 
-call npp cw
+call np cw
 
-call npp cwp
+call np cwp
 
-call npp cwt
+call np cwt
 
 exit/b
 
@@ -2833,7 +2833,7 @@ rem fcd: Jul-17-2017
 
 echo %fp%
 
-call npp gencred_input
+call np gencred_input
 
 pause
 
@@ -2841,11 +2841,11 @@ call m gen_creds
 
 pause
 
-call npp gencred_output
+call np gencred_output
 
 pause
 
-call npp settings_xml
+call np settings_xml
 
 rem On Jul-17-2017, Ikjae said to falsify this process you need to delete you repository 
 rem folder, which forces reauthentication.
@@ -3742,7 +3742,6 @@ call p c_docs
 call p s
 
 if not "%machinename%"=="gfe" call cyft mecfg mecfg_s
-rem qq-1
 
 exit/b
 

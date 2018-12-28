@@ -57,23 +57,6 @@ exit/b
 
 :_
 
-:ppt
-
-set fp=* Jaws Powerpoint.
-
-rem lu: Dec-18-2018
-
-echo.
-echo %fp%
-
-call x jaws_ppt
-
-exit/b
-
-
-
-:_
-
 :hello
 
 echo.
@@ -471,6 +454,23 @@ echo %fp%
 
 echo.
 aws ec2 describe-instances --color off
+
+exit/b
+
+
+
+:_
+
+:ppt
+
+set fp=* Jaws Powerpoint.
+
+rem lu: Dec-18-2018
+
+echo.
+echo %fp%
+
+call x jaws_ppt
 
 exit/b
 
