@@ -8225,16 +8225,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test cyft batch file.
@@ -8248,6 +8238,16 @@ echo.
 if not "%machinename%"=="gfe" call cyft mecfg mecfg_s
 
 exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

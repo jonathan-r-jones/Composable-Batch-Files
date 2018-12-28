@@ -55,12 +55,17 @@ exit/b
 
 
 
+:_ **** Beginning of Demo Code ****
+
+
+
 :_
 
 :hello
 
 echo.
-echo Hello from the Jaws batch file. Think of "hello" as the name of a function you call.
+echo Hello from the Jaws batch file. Think of "hello" as the name of a function you call ^
+and "exit/b" as just the end of the function.
 
 exit/b
 
@@ -84,6 +89,78 @@ exit/b
 
 :_
 
+:create_user
+
+set fp=* Create user Jaws.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-user --user-name cli_demo_user
+
+exit/b
+
+
+
+:_
+
+:get_user
+
+set fp=* Get user Jaws.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam get-user --user-name cli_demo_user
+
+exit/b
+
+
+
+:_
+
+:lak
+
+set fp=* List access keys.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-access-keys --user-name cli_demo_user
+
+exit/b
+
+
+
+:_
+
+:cak
+
+set fp=* Create access key.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-access-key --user-name cli_demo_user
+
+exit/b
+
+
+
+:_
+
 :cfg
 
 set fp=* Configure
@@ -100,11 +177,193 @@ exit/b
 
 :_
 
+:create_group
+
+set fp=* Create a group for CLI users.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam create-group --group-name cli_users_group
+
+exit/b
+
+
+
+:_
+
+:lipo
+
+set fp=* List policies.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws iam list-policies
+
+exit/b
+
+
+
+:_
+
+:agp_ec2
+
+set fp=* Attach group policy for EC2.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+aws iam attach-group-policy --policy-arn arn:aws-us-gov:iam::aws:policy/AmazonEC2FullAccess ^
+  --group-name cli_users_group
+
+exit/b
+
+
+
+:_
+
+:agp_rds
+
+set fp=* Attach group policy for RDS.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+aws iam attach-group-policy --policy-arn arn:aws-us-gov:iam::aws:policy/AmazonRDSFullAccess ^
+  --group-name cli_users_group
+
+exit/b
+
+
+
+:_
+
+:autg
+
+set fp=* Add user to group.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+aws iam add-user-to-group --group-name cli_users_group --user-name cli_demo_user
+
+exit/b
+
+
+
+:_
+
 :create_security_group
 
 :csg
 
 set fp=* Create security group.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name CLIDemoSecurityGroup ^
+  --description "Security Group for EC2 instances to allow ports 22, 88 and 443"
+
+exit/b
+
+
+
+:_
+
+:auth1
+
+set fp=* Authorize secrurity group ingress. Specify my local IP Address as cidr.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
+  --port 22 --cidr 172.54.125.8/32
+
+exit/b
+
+
+
+:_
+
+:auth2
+
+set fp=* Authorize secrurity group ingress. - 2nd port
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
+  --port 80 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+:_
+
+:auth3
+
+set fp=* Authorize secrurity group ingress. - 3rd port.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
+  --port 443 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+:_
+
+:auth4
+
+set fp=* Authorize secrurity group ingress. - 4th port for RDP connection.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
+  --port 3389 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
+:dsg
+
+:d_sg
+
+set fp=* Describe our new security group.
 
 rem lu: Nov-2-2018
 
@@ -112,10 +371,108 @@ echo.
 echo %fp%
 
 echo.
-aws ec2 create-security-group --group-name JawsSecurityGroup ^
-  --description "Security Group for EC2 instances to allow ports 22, 88 and 443"
+aws ec2 describe-security-groups --group-names CLIDemoSecurityGroup
 
 exit/b
+
+
+
+:_
+
+:deim
+
+set fp=* Describe images.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-images --filters "Name=description, Values=*Amazon Linux 2*" ^
+  "Name=owner-alias,Values=amazon"
+
+exit/b
+
+
+
+:_
+
+:d_su
+
+:desu
+
+:subnets
+
+set fp=* Describe subnets. When you choose an AWS subnet, you are choosing the availability ^
+zone.
+
+rem lu: Nov-19-2018
+
+rem Presentation topic.
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-subnets
+
+exit/b
+
+
+
+:_
+
+:ri_cli_demo
+
+set fp=* Run instance t3 medium Windows OS.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-02ee68cd896a434c8 ^
+  --instance-type t3.medium ^
+  --key-name kibble_balance_key_pair ^
+  --security-group-ids sg-078d10276ecdd6281 ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CLI_Demo_Dec_28_2018}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:check_pem_existence
+
+set fp=* Check the current folder for the presence of an *.pem file(s).
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+if not exist *.pem (
+  echo.
+  echo * Error: No pem file exist in the current folder.
+  exit/b 1
+)
+
+exit/b 0
 
 
 
@@ -134,79 +491,7 @@ echo %fp%
 
 echo.
 
-aws ec2 delete-security-group --group-name JawsSecurityGroup
-
-exit/b
-
-
-
-:_
-
-:auth1
-
-set fp=* Authorize secrurity group ingress.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name JawsSecurityGroup --protocol tcp ^
-  --port 22 --cidr 172.54.125.8/32
-
-exit/b
-
-
-
-:_
-
-:auth2
-
-set fp=* Authorize secrurity group ingress. - 2nd port
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name JawsSecurityGroup --protocol tcp ^
-  --port 80 --cidr 0.0.0.0/0
-
-exit/b
-
-
-
-:_
-
-:auth3
-
-set fp=* Authorize secrurity group ingress. - 3rd port.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name JawsSecurityGroup --protocol tcp ^
-  --port 443 --cidr 0.0.0.0/0
-
-exit/b
-
-
-
-:_
-
-:auth4
-
-set fp=* Authorize secrurity group ingress. - 4th port for RDP connection.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name JawsSecurityGroup --protocol tcp ^
-  --port 3389 --cidr 0.0.0.0/0
+aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
 
 exit/b
 
@@ -384,24 +669,6 @@ exit/b
 
 ::_
 
-:d_sg
-
-set fp=* Describe our new security group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-security-groups --group-names JawsSecurityGroup
-
-exit/b
-
-
-
-::_
-
 :d_sgs
 
 set fp=* Describe security groups.
@@ -413,29 +680,6 @@ echo %fp%
 
 echo.
 aws ec2 describe-security-groups
-
-exit/b
-
-
-
-::_
-
-:d_su
-
-:subnets
-
-set fp=* Describe subnets. When you choose an AWS subnet, you are choosing the availability ^
-zone.
-
-rem lu: Nov-19-2018
-
-rem Presentation topic.
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-subnets
 
 exit/b
 
@@ -471,6 +715,46 @@ echo.
 echo %fp%
 
 call x jaws_ppt
+
+exit/b
+
+
+
+:_+ Clean up old user.
+
+
+
+::_
+
+:dak
+
+:delete_access_key
+
+set fp=* Delete access key.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+aws iam delete-access-key --access-key-id "AKIALKCTYZWT6XHHWD4A" --user-name cli_demo_user
+
+exit/b
+
+
+
+::_
+
+:delete_user
+
+set fp=* Delete user.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+aws iam delete-user --user-name cli_demo_user
 
 exit/b
 

@@ -749,7 +749,7 @@ echo.
 echo %fp%
 
 echo.
-aws iam delete-user --user-name cli_user
+aws iam delete-user --user-name jaws
 
 exit/b
 

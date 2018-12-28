@@ -6658,6 +6658,8 @@ echo %fp%
 
 set cbf_path=%localappdata%\Programs\Git\usr\bin
 
+if exist "c:\Program Files\Git\usr\bin\" set cbf_path=c:\Program Files\Git\usr\bin
+
 exit/b
 
 
