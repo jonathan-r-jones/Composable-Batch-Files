@@ -1672,6 +1672,10 @@ if "%~2" == "ce" set instance_id=i-0f7c7db92897103c5
 rem Jenkins
 if "%~2" == "je" set instance_id=i-0bce1b3771799a4ed
 
+rem Jenkins Mimic
+if "%~2" == "jm" set instance_id=i-0327d0c33cef79f33
+rem qq-1
+
 rem iJenkins
 if "%~2" == "ij" set instance_id=i-05a46eb9d1166d95f
 
