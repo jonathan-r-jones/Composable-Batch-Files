@@ -42,8 +42,6 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo %filep%
@@ -6389,6 +6387,8 @@ exit/b
 
 
 ::_
+
+:h
 
 :hm
 

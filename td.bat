@@ -47,9 +47,8 @@ if "%~1" == "help" goto help
 goto main_function
 
 
-:_ (!rfsp) (mov-6)
 
-:h
+:_ (!rfsp) (mov-6)
 
 :help
 
@@ -57,7 +56,7 @@ echo.
 echo Filename stands for: Transform Directory.
 
 echo.
-echo Last Updated: Mar-26-2018
+echo Last Updated: Dec-28-2018
 
 echo.
 echo Usage: %0 [Parameter 1]

@@ -66,6 +66,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* Set URL.
 
+set cbf_application=
 set cbf_url=
 
 call un %1
