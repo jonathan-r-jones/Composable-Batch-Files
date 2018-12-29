@@ -118,6 +118,8 @@ if "%cbf_parameter%" == "" (
 
 call start "my title" "%cbf_application%:""%cbf_parameter%"
 
+set cbf_application=
+
 exit/b
 
 

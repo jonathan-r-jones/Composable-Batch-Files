@@ -2290,7 +2290,6 @@ exit/b
 :d_sgsp
 
 set fp=* Describe security groups, pipe to file.
-rem qq-1
 
 rem lu: Dec-11-2018
 
@@ -2349,8 +2348,6 @@ rem Below here don't work.
 
 rem aws ec2 describe-security-groups --group-names EC2SecurityGroup --group-ids sg-67b1b303
 rem An error occurred (VPCIdNotSpecified) when calling the DescribeSecurityGroups operation: No default VPC for this user
-
-rem qq-1
 
 exit/b
 

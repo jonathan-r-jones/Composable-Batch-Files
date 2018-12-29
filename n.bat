@@ -6684,4 +6684,26 @@ exit/b
 
 
 
+:_
+
+:mste
+
+:team
+
+:teams
+
+set fp=* Microsoft Teams.
+
+rem lu: Dec-28-2018
+
+echo %fp%
+
+call an ie
+
+set cbf_url=https://teams.microsoft.com
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
