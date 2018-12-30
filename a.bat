@@ -1674,7 +1674,6 @@ if "%~2" == "je" set instance_id=i-0bce1b3771799a4ed
 
 rem Jenkins Mimic
 if "%~2" == "jm" set instance_id=i-0327d0c33cef79f33
-rem qq-1
 
 rem iJenkins
 if "%~2" == "ij" set instance_id=i-05a46eb9d1166d95f
@@ -2733,7 +2732,7 @@ exit/b
 
 :auth1
 
-set fp=* Authorize secrurity group ingress.
+set fp=* Authorize security group ingress for 1st port, ? on port 22.
 
 rem lu: Nov-2-2018
 
@@ -2751,7 +2750,7 @@ exit/b
 
 :auth2
 
-set fp=* Authorize secrurity group ingress. - 2nd port
+set fp=* Authorize security group ingress for 2nd port, ? on port 80.
 
 rem lu: Nov-2-2018
 
@@ -2769,7 +2768,7 @@ exit/b
 
 :auth3
 
-set fp=* Authorize secrurity group ingress for 3rd port, 443.
+set fp=* Authorize security group ingress for 3rd port, ? on port 443.
 rem qq-1
 
 rem lu: Nov-2-2018
@@ -2788,7 +2787,7 @@ exit/b
 
 :auth4
 
-set fp=* Authorize secrurity group ingress for 4th port,  RDP connection on port 3389.
+set fp=* Authorize security group ingress for 4th port, RDP connection on port 3389.
 
 rem lu: Dec-11-2018
 
