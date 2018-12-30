@@ -2732,7 +2732,7 @@ exit/b
 
 :auth1
 
-set fp=* Authorize security group ingress for 1st port, ? on port 22.
+set fp=* Authorize security group ingress for 1st port, SSH traffic on port 22.
 
 rem lu: Nov-2-2018
 
@@ -2750,9 +2750,9 @@ exit/b
 
 :auth2
 
-set fp=* Authorize security group ingress for 2nd port, ? on port 80.
+set fp=* Authorize security group ingress for 2nd port, HTTP traffic on port 80.
 
-rem lu: Nov-2-2018
+rem lu: Dec-30-2018
 
 echo.
 echo %fp%
@@ -2768,8 +2768,7 @@ exit/b
 
 :auth3
 
-set fp=* Authorize security group ingress for 3rd port, ? on port 443.
-rem qq-1
+set fp=* Authorize security group ingress for 3rd port, HTTPS traffic on port 443.
 
 rem lu: Nov-2-2018
 
@@ -2787,7 +2786,7 @@ exit/b
 
 :auth4
 
-set fp=* Authorize security group ingress for 4th port, RDP connection on port 3389.
+set fp=* Authorize security group ingress for 4th port, RDP connection traffic on port 3389.
 
 rem lu: Dec-11-2018
 

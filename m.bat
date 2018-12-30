@@ -3749,6 +3749,8 @@ call p s
 
 if not "%machinename%"=="gfe" call cyft mecfg mecfg_s
 
+if not "%machinename%"=="gfe" cd\
+
 exit/b
 
 
