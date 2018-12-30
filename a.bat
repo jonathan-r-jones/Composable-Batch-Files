@@ -2769,7 +2769,8 @@ exit/b
 
 :auth3
 
-set fp=* Authorize secrurity group ingress. - 3rd port.
+set fp=* Authorize secrurity group ingress for 3rd port, 443.
+rem qq-1
 
 rem lu: Nov-2-2018
 
@@ -2787,7 +2788,7 @@ exit/b
 
 :auth4
 
-set fp=* Authorize secrurity group ingress. - 4th port for RDP connection.
+set fp=* Authorize secrurity group ingress for 4th port,  RDP connection on port 3389.
 
 rem lu: Dec-11-2018
 
