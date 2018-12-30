@@ -3724,6 +3724,8 @@ call pl s
 
 if "%machinename%"=="gfe" call cyft mecfg_s mecfg
 
+if "%machinename%"=="gfe" cd\
+
 exit/b
 
 
