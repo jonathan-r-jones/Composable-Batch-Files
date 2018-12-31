@@ -1671,6 +1671,9 @@ set instance_id=i-0bce1b3771799a4ed
 rem CentOS (!sid)
 if "%~2" == "ce" set instance_id=i-0f7c7db92897103c5
 
+rem Bee Clone
+if "%~2" == "bc" set instance_id=i-04499acea0fa9f3a4
+
 rem Jenkins
 if "%~2" == "je" set instance_id=i-0bce1b3771799a4ed
 
