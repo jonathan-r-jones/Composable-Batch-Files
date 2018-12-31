@@ -482,6 +482,8 @@ exit/b
 
 :e_c2
 
+:env
+
 set fp=* Create environment, part 2.
 
 rem lu: Nov-6-2018

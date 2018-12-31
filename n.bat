@@ -5934,15 +5934,18 @@ exit/b
 
 :je
 
-set fp=* Jenkins admin password file.
+set fp=* Jenkins.
 
 rem lu: Dec-7-2018
 
 echo %fp%
 
+rem Admin password file.
 set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
 
 set cbf_path=%userprofile%\.jenkins
+
+set cbf_url=https://jenkins.io
 
 exit/b
 
@@ -6705,6 +6708,38 @@ echo %fp%
 call an ie
 
 set cbf_url=https://teams.microsoft.com
+
+exit/b
+
+
+
+:_
+
+:jsc
+
+set fp=* Jenkins Slave Clone.
+
+rem lu: Dec-30-2018
+
+echo %fp%
+
+set cbf_filename=%userprofile%\downloads\10.168.73.179.rdp
+
+exit/b
+
+
+
+:_
+
+:bc
+
+set fp=* Bee Clone.
+
+rem lu: Dec-30-2018
+
+echo %fp%
+
+set cbf_filename=%userprofile%\downloads\10.168.73.223.rdp
 
 exit/b
 
