@@ -2965,9 +2965,9 @@ exit/b
 
 :_
 
-:transform_cbf_application
+:expand_to_path_only
 
-set fp=* Transform CBF variable.
+set fp=* Expand to path only.
 
 rem lu: Mar-14-2018
 
@@ -3066,17 +3066,26 @@ exit/b
 
 ::_
 
+:env_c
+
 :reset
 
 :reset_cbf_variables
 
-set fp=* Reset CBF variables.
+set fp=* Reset CBF variables. (skw clear env)
 
+echo.
 echo %fp%
 
 set cbf_application=
 
 set cbf_application_location=
+
+rem set cbf_default_browser=
+
+rem set cbf_default_text_editor=
+
+rem set cbf_default_repository_folder=
 
 set cbf_filename=
 
@@ -3795,9 +3804,9 @@ exit/b
 
 :_
 
-:gfe
+:g
 
-:ow
+:gfe
 
 set fp=* Open gfe "waiting" files.
 

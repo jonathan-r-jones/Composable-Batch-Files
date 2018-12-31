@@ -15,27 +15,6 @@ echo %filep%
 
 :_
 
-set fp=* In order to promote freshness, reset the error level.
-
-ver>nul
-
-
-
-:_
-
-set fp=* Emulate cd and go to the parent folder.
-
-if "%~1" == ".." (
-  echo.
-  echo %fp%
-  cd %1
-  exit/b
-)
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "" goto help
@@ -44,7 +23,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-goto main_function
+goto execute_code
 
 
 
@@ -73,13 +52,28 @@ exit/b
 
 :_
 
-:find_parent_folder
+:execute_code
 
-call m set_parent_fd "%cbf_path%\.." parent_folder
-rem echo Parent Folder: %parent_folder%
-cd /d %parent_folder%
 
-exit/b
+
+:_
+
+set fp=* In order to promote freshness, reset the error level.
+
+ver>nul
+
+
+
+:_
+
+set fp=* Emulate cd and go to the parent folder.
+
+if "%~1" == ".." (
+  echo.
+  echo %fp%
+  cd %1
+  exit/b
+)
 
 
 
@@ -109,6 +103,19 @@ if not exist "%cbf_path%" (
 )
 
 cd /d "%cbf_path%"
+
+exit/b
+
+
+
+:_
+
+:find_parent_folder
+
+call m set_parent_fd "%cbf_path%\.." parent_folder
+
+rem echo Parent Folder: %parent_folder%
+cd /d %parent_folder%
 
 exit/b
 

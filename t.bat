@@ -8252,3 +8252,23 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Path only experiment.
+
+rem lu: Dec-30-2018
+
+echo.
+echo %fp%
+
+echo.
+set cbf_filename=%userprofile%\j\BGS\terraform-scripts\dv\BGS\main.tf
+
+set cbf_path=%~p%cbf_filename%
+
+exit/b
+
+
+
+:_

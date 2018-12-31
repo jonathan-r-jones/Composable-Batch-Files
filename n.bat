@@ -1718,7 +1718,7 @@ rem lu: Mar-9-2018
 
 echo %fp%
 
-call m transform_cbf_application "%cbf_application%"
+call m expand_to_path_only "%cbf_application%"
 
 exit/b
 
@@ -1734,7 +1734,7 @@ rem lu: Mar-9-2018
 
 echo %fp%
 
-call m transform_cbf_application "%cbf_filename%"
+call m expand_to_path_only "%cbf_filename%"
 
 exit/b
 

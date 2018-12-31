@@ -1925,8 +1925,9 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-echo.
-aws ec2 describe-instance-status --instance-ids i-0bce1b3771799a4ed --color off
+call %0 set_instance_id %2
+
+aws ec2 describe-instance-status --instance-ids %instance_id% --color off
 
 exit/b
 
