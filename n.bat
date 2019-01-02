@@ -6493,6 +6493,22 @@ exit/b
 
 
 
+::_
+
+:mecfg_dr
+
+set fp=* Multi-Edit Config file folder in Share-Zone.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
 :_
 
 :big

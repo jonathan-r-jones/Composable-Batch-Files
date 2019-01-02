@@ -3869,4 +3869,31 @@ exit/b
 
 
 
+:_
+
+:de_mecfg
+
+set fp=* Delete conflicted copies in Multi-Edit folders.
+
+rem lu: Jan-2-2019
+
+echo.
+echo %fp%
+
+call td mecfg
+
+call de mecfg
+
+call td mecfg_s
+
+call de mecfg
+
+call td mecfg_dr
+
+call de mecfg
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)
