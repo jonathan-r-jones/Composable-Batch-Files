@@ -5031,22 +5031,6 @@ exit/b
 
 
 
-:_
-
-:ro
-
-set fp=* Reach out.
-
-rem lu: Sep-15-2018
-
-echo %fp%
-
-set cbf_path=%reach out%
-
-exit/b
-
-
-
 :_+ Dutch Treat
 
 
@@ -6758,6 +6742,44 @@ rem lu: Dec-30-2018
 echo %fp%
 
 set cbf_filename=%userprofile%\downloads\10.168.73.223.rdp
+
+exit/b
+
+
+
+:_+ Reach Out
+
+
+
+::_
+
+:ro
+
+set fp=* Reach out.
+
+rem lu: Sep-15-2018
+
+echo %fp%
+
+set cbf_path=%reach out%
+
+exit/b
+
+
+
+::_
+
+:ro_dr
+
+:rodr
+
+set fp=* Reach out on dropbox.
+
+rem lu: Jan-2-2019
+
+echo %fp%
+
+set cbf_path=%dropbox%\!savannah\reach out
 
 exit/b
 
