@@ -5263,6 +5263,8 @@ exit/b
 
 :cart_cn
 
+:cix
+
 :bgs_cn
 
 :earm_cn
@@ -5285,6 +5287,8 @@ exit/b
 
 :ic_info
 
+:je2
+
 :jm
 
 :nig
@@ -5304,6 +5308,8 @@ exit/b
 :vpc_id
 
 set fp=* Pass through.
+
+echo %fp%
 
 rem lu: Dec-5-2018
 
@@ -6780,6 +6786,22 @@ rem lu: Jan-2-2019
 echo %fp%
 
 set cbf_path=%dropbox%\!savannah\reach out
+
+exit/b
+
+
+
+:_
+
+:wk
+
+set fp=* Reach out.
+
+rem lu: Sep-15-2018
+
+echo %fp%
+
+set cbf_filename=%share-zone%\copy of wk.asc
 
 exit/b
 
