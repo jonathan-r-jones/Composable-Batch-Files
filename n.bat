@@ -4216,7 +4216,7 @@ exit/b
 
 :_
 
-:o
+:root
 
 set fp=* Root
 
@@ -5306,6 +5306,8 @@ exit/b
 :pt
 
 :sg_id
+
+:sq
 
 :subnet_id
 
@@ -6810,6 +6812,70 @@ rem lu: Sep-15-2018
 echo %fp%
 
 set cbf_filename=%share-zone%\copy of wk.asc
+
+exit/b
+
+
+
+:_
+
+:ex
+
+set fp=* Excel.
+
+rem lu: Jan-3-2019
+
+echo %fp%
+
+rem Determine installation path.
+
+if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application_location=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_location="c:\program files (x86)\notepad++\notepad++.exe"
+
+if "%cbf_application_location%" == "" (
+  echo.
+  echo Notepad++ is not installed.
+  exit/b
+)
+
+set cbf_application=%cbf_application_location%
+set cbf_path=%cbf_application_location:\excel.exe=%
+
+exit/b
+
+
+
+:_
+
+:devo
+
+:dero
+
+set fp=* DevOps Roadmap.
+
+rem lu: Jan-3-2019
+
+echo %fp%
+
+set cbf_filename=%cbf_default_repository_folder%\iCart-Doco\DevOps Roadmap.xlsx
+
+exit/b
+
+
+
+:_
+
+:o
+
+set fp=* Microsoft Outlook.
+
+rem lu: Jan-3-2019
+
+echo %fp%
+
+call an edge
+
+set cbf_url=https://outlook.office.com/owa
 
 exit/b
 
