@@ -147,7 +147,7 @@ echo.
 git clone %cbf_url%
 
 if "%~2" == "" (
-  if not %cbf_path% == "" (
+  if not "%cbf_path%" == "" (
     call td %1
   )
 )
