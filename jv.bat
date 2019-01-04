@@ -126,7 +126,7 @@ set fp=* Run Jenkins.
 echo.
 echo %fp%
 
-call td cs
+call td desk
 
 call m file_type_presence war
 

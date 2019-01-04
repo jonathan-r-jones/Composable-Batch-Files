@@ -177,6 +177,8 @@ exit/b
 
 :_
 
+:ex
+
 :we
 
 set fp=* Windows Explorer.
@@ -186,7 +188,7 @@ rem lu: Jan-4-2019
 echo.
 echo %fp%
 
-tasklist /fi "username ne nt authority\system" /fi "status eq running" /fi "imagename eq explorer.exe"
+tasklist /fi "username ne nt authority\system" /fi "status eq running" /fi "imagename eq explorer.exe" /fi "windowtitle ne untitle*"
 
 rem These don't work.
 rem /fi "im eq explorer.exe"

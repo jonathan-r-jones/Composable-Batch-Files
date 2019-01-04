@@ -151,11 +151,11 @@ echo %fp%
 
 echo.
 
-
 rem taskkill /fi "imagename eq explorer.exe" /fi "windowtitle ne N/A"
 rem taskkill /fi "imagename eq explorer.exe" /fi "session name eq console"
 
 rem Warning: Do not use the below command, which forced me to reboot.
+rem taskkill /fi "username ne nt authority\system" /fi "status eq running" /fi "imagename eq explorer.exe" /f /im explorer.exe 
 rem taskkill /f /im explorer.exe /fi "username ne nt authority\system" /fi "status eq running" /fi "imagename eq explorer.exe"
 rem taskkill /f /im explorer.exe
 
