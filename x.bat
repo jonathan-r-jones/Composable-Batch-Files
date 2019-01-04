@@ -34,18 +34,14 @@ goto main_function
 :help
 
 echo.
-echo Filename stands for: X marks the spot. An easy to type batch file.
-
-echo.
 echo Last Updated: May-22-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: If parameter 1 contains a period, then it will simulate the double-click ^
-on that file which is in the current folder. Or else, it will do a remote double click on ^
-on the filename specified by the nickname.
+echo Parameter 1: Nickname for file to double click. If you wish to "double click" a file in ^
+current folder, simply type the filename itself and hit enter.
 
 exit/b
 
@@ -63,7 +59,7 @@ if not "%~1" == "" call n %~1
 
 if "%cbf_filename%" == "" (
   echo.
-  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
+  echo * Nickname Error: There is no cbf_filename defined for '%~1'.
   exit/b 1
 )
 

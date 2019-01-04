@@ -70,9 +70,10 @@ exit/b
 
 set filep=* Clear screen and reset color.
 
-call td o
+call td root
 
 cls
+
 color
 
 exit/b
