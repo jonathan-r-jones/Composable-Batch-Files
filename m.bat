@@ -1409,29 +1409,6 @@ exit/b
 
 ::_
 
-:set_white_list_settings_1
-
-if /i "%computername%" == "asus" goto set_white_list_settings_2
-if /i "%computername%" == "buzz" goto set_white_list_settings_2
-if /i "%computername%" == "xps" goto set_white_list_settings_2
-
-exit/b
-
-
-
-::_
-
-:set_white_list_settings_2
-
-set share-zone=%dropbox%\it\share-zone
-set path=%savannah%\belfry;%path%
-
-exit/b
-
-
-
-::_
-
 :big
 
 :ibe
@@ -1470,6 +1447,29 @@ set machinename=gfe
 title=Big Laptop
 
 cls
+
+exit/b
+
+
+
+::_
+
+:set_white_list_settings_1
+
+if /i "%computername%" == "asus" goto set_white_list_settings_2
+if /i "%computername%" == "buzz" goto set_white_list_settings_2
+if /i "%computername%" == "xps" goto set_white_list_settings_2
+
+exit/b
+
+
+
+::_
+
+:set_white_list_settings_2
+
+set share-zone=%dropbox%\it\share-zone
+set path=%savannah%\belfry;%path%
 
 exit/b
 

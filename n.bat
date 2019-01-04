@@ -5127,8 +5127,6 @@ exit/b
 
 :_
 
-:p
-
 :poun
 
 set fp=* Pounders.
@@ -5243,6 +5241,8 @@ exit/b
 
 :bgs2
 
+:cartgit
+
 :cart_git
 
 :cart_cn
@@ -5273,6 +5273,14 @@ exit/b
 
 :je2
 
+:je2h
+
+:je2r
+
+:je2_h
+
+:je2_help
+
 :jm
 
 :nexus
@@ -5286,6 +5294,10 @@ exit/b
 :oc_cn
 
 :pass
+
+:pass_through
+
+:p
 
 :pt
 
