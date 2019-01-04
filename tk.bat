@@ -13,14 +13,6 @@ set filep=%filep% reuse and remember your commonly used commands.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "" goto kill
@@ -148,13 +140,12 @@ exit/b
 
 :_
 
-:exp
-
 set fp=* Taskkill Explorer windows.
 
 echo %fp%
 echo.
 
+rem Warning: Do not use. This forced me to reboot.
 taskkill /f /im explorer.exe
 
 exit/b

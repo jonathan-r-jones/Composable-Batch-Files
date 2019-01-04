@@ -752,7 +752,6 @@ echo.
 echo %fp%
 
 aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
-rem qq-1
 
 exit/b
 

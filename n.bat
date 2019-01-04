@@ -6903,4 +6903,20 @@ exit/b
 
 
 
+:_
+
+:nj
+
+set fp=* New Jenkins.
+
+rem lu: Jan-4-2019
+
+echo %fp%
+
+set cbf_filename=%userprofile%\downloads\ec2-18-253-135-181.us-gov-east-1.compute.amazonaws.com.rdp
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

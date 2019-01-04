@@ -1630,6 +1630,8 @@ exit/b
 
 :si
 
+:st
+
 :star
 
 :start
@@ -1655,6 +1657,8 @@ exit/b
 
 
 ::_
+
+:inid
 
 :set_instance_id
 
@@ -1682,6 +1686,9 @@ if "%~2" == "jm" set instance_id=i-0327d0c33cef79f33
 
 rem iJenkins
 if "%~2" == "ij" set instance_id=i-05a46eb9d1166d95f
+
+rem NewJenkins, orange sunset
+if "%~2" == "nj" set instance_id=i-072a65f07b004f9fd
 
 exit/b
 
@@ -2992,6 +2999,137 @@ echo %fp%
 echo.
 
 aws ec2 describe-security-group-references --group-id sg-0e67f09ea592e68ff
+
+exit/b
+
+
+
+:_+ Set up New Jenkins
+
+
+
+::_
+
+:nj_create_security_group
+
+:csg
+
+set fp=* Create security group.
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name NewJenkinsSecurityGroup ^
+  --description "Security Group for EC2 instances to allow ports 22, 88 and 443"
+
+exit/b
+
+
+
+::_
+
+:nj_auth1
+
+set fp=* Authorize secrurity group ingress. Specify my local IP Address as cidr.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name NewJenkinsSecurityGroup --protocol tcp ^
+  --port 22 --cidr 172.54.125.8/32
+
+exit/b
+
+
+
+::_
+
+:nj_auth2
+
+set fp=* Authorize secrurity group ingress. - 2nd port
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name NewJenkinsSecurityGroup --protocol tcp ^
+  --port 80 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
+:nj_auth3
+
+set fp=* Authorize secrurity group ingress. - 3rd port.
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name NewJenkinsSecurityGroup --protocol tcp ^
+  --port 443 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
+:nj_auth4
+
+set fp=* Authorize secrurity group ingress. - 4th port for RDP connection.
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name NewJenkinsSecurityGroup --protocol tcp ^
+  --port 3389 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+::_
+
+:ri_new_jenkins
+
+set fp=* Run instance t3 medium Windows OS.
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-02ee68cd896a434c8 ^
+  --instance-type t3.medium ^
+  --key-name kibble_balance_key_pair ^
+  --security-group-ids sg-025758dcc49a9688a ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=New_Jenkins_Jan_4_2019}]"
+  --user-data file://my_script.sh
 
 exit/b
 
