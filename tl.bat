@@ -13,14 +13,6 @@ set filep=%filep% reuse and remember your commonly used commands.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "" goto l
@@ -144,6 +136,62 @@ echo %fp%
 tasklist /fo table>%temp%\search_results.txt
 
 call me sr
+
+exit/b
+
+
+
+:_
+
+:test
+
+set fp=* Test. This works.
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+TASKLIST /FI "USERNAME ne NT AUTHORITY\SYSTEM" /FI "STATUS eq running"
+
+exit/b
+
+
+
+:_
+
+:test2
+
+set fp=* Undercase. This works.
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+tasklist /fi "username ne nt authority\system" /fi "status eq running"
+
+exit/b
+
+
+
+:_
+
+:we
+
+set fp=* Windows Explorer.
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+tasklist /fi "username ne nt authority\system" /fi "status eq running" /fi "imagename eq explorer.exe"
+
+rem These don't work.
+rem /fi "im eq explorer.exe"
+rem /fi "image eq explorer.exe"
+rem /fi "image name eq explorer.exe"
 
 exit/b
 
