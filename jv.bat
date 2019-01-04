@@ -126,7 +126,7 @@ set fp=* Run Jenkins.
 echo.
 echo %fp%
 
-call td desktop
+call td cs
 
 call m file_type_presence war
 
@@ -134,7 +134,7 @@ if %errorlevel% == 1 (
  exit/b
 )
 
-call m dosc_yeonbl
+call m dos_color_yeonbl
 
 title=Run Jenkins - Dedicated Job Window
 

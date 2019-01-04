@@ -3789,7 +3789,7 @@ exit/b
 
 ::_
 
-:dosc_yeonbl
+:dos_color_yeonbl
 
 set fp=* Change dos window color to: yellow on black
 

@@ -68,7 +68,9 @@ exit/b
 
 :main_function
 
-set filep=* Clear screen and reset color.
+set fp=* Clear screen and reset color.
+
+echo %fp%
 
 call td root
 

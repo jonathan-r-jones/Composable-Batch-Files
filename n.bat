@@ -488,22 +488,6 @@ exit/b
 
 :_
 
-:start
-
-set fp=Windows Startup.
-
-rem fcd: May-9-2017
-
-echo %fp%
-
-set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
-
-exit/b
-
-
-
-:_
-
 :stan
 
 set fp=Open folder standalone.
@@ -6637,7 +6621,7 @@ rem lu: Dec-27-2018
 
 echo %fp%
 
-call n desktop
+call n r
 
 set cbf_path=%cbf_path%\cart
 
@@ -6876,6 +6860,44 @@ echo %fp%
 call an edge
 
 set cbf_url=https://outlook.office.com/owa
+
+exit/b
+
+
+
+:_+ Windows Related
+
+
+
+::_
+
+:snip
+
+:snto
+
+set fp=* Snipping tool.
+
+rem lu: Jan-4-2019
+
+echo %fp%
+
+set cbf_application=%windir%\system32\SnippingTool.exe
+
+exit/b
+
+
+
+::_
+
+:start
+
+set fp=Windows Startup.
+
+rem fcd: May-9-2017
+
+echo %fp%
+
+set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
 
 exit/b
 
