@@ -5935,24 +5935,6 @@ exit/b
 
 
 
-:_
-
-:80
-
-:lh
-
-set fp=* Localhost on port 8080.
-
-rem lu: Dec-7-2018
-
-echo %fp%
-
-set cbf_url=http://localhost:8080
-
-exit/b
-
-
-
 :_+ Java
 
 
@@ -6139,26 +6121,6 @@ rem lu: Dec-13-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
-
-exit/b
-
-
-
-:_
-
-:zoom
-
-set fp=* ZoomIt
-
-rem lu: Dec-14-2018
-
-echo %fp%
-
-call n p
-
-set cbf_application=%cbf_path%\zoomit.exe
-
-set cbf_filename=%cbf_application%
 
 exit/b
 
@@ -6831,24 +6793,6 @@ exit/b
 
 :_
 
-:devo
-
-:dero
-
-set fp=* DevOps Roadmap.
-
-rem lu: Jan-3-2019
-
-echo %fp%
-
-set cbf_filename=%cbf_default_repository_folder%\iCart-Doco\DevOps Roadmap.xlsx
-
-exit/b
-
-
-
-:_
-
 :o
 
 set fp=* Microsoft Outlook.
@@ -6866,6 +6810,26 @@ exit/b
 
 
 :_+ Windows Related
+
+
+
+::_
+
+:zoom
+
+set fp=* ZoomIt
+
+rem lu: Dec-14-2018
+
+echo %fp%
+
+call n p
+
+set cbf_application=%cbf_path%\zoomit.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
 
 
 
@@ -6914,6 +6878,48 @@ rem lu: Jan-4-2019
 echo %fp%
 
 set cbf_filename=%userprofile%\downloads\ec2-18-253-135-181.us-gov-east-1.compute.amazonaws.com.rdp
+
+exit/b
+
+
+
+:_
+
+:devo
+
+:dero
+
+:map
+
+:roma
+
+set fp=* DevOps Roadmap.
+
+rem lu: Jan-3-2019
+
+echo %fp%
+
+set cbf_filename=%cbf_default_repository_folder%\iCart-Doco\DevOps Roadmap.xlsx
+
+exit/b
+
+
+
+:_
+
+:8080
+
+:lh
+
+set fp=* Localhost on port 8080.
+
+rem lu: Dec-7-2018
+
+echo %fp%
+
+call an kr
+
+set cbf_url=http://localhost:8080
 
 exit/b
 
