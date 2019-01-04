@@ -140,13 +140,19 @@ exit/b
 
 :_
 
+:ex
+
+:we
+
 set fp=* Taskkill Explorer windows.
 
 echo %fp%
 echo.
 
-rem Warning: Do not use. This forced me to reboot.
-taskkill /f /im explorer.exe
+taskkill /fi "imagename eq explorer.exe" /fi "windowtitle ne N/A" /fi "windowtitle ne Tortoise" 
+
+rem Warning: Do not use the below command. This forced me to reboot.
+rem taskkill /f /im explorer.exe
 
 exit/b
 
