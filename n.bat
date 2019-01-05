@@ -143,22 +143,6 @@ Metadata: Track Size (!tsn)
 
 :_
 
-:pc
-
-set fp=* Gpodder podcaster.
-
-rem lu: Feb-2-2018
-
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\gPodder\gpodder.exe
-
-exit/b
-
-
-
-:_
-
 :edsw
 
 :system_widget
@@ -1301,24 +1285,6 @@ set cbf_filename=d:\aa\NovaCodeCamp.PizzaRatings\pizza.sln
 set cbf_path=d:\aa\NovaCodeCamp.PizzaRatings
 
 set cbf_url=https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git
-
-exit/b
-
-
-
-:_
-
-:pc
-
-set fp=Gpodder podcaster.
-
-rem lu: Jan-15-2018
-
-echo %fp%
-
-set cbf_path=%aa%
-
-set cbf_application=C:\Program Files (x86)\gPodder\gpodder.exe
 
 exit/b
 
@@ -6932,6 +6898,24 @@ echo %fp%
 call an kr
 
 set cbf_url=http://localhost:8080
+
+exit/b
+
+
+
+:_
+
+:pc
+
+set fp=* Podcaster.
+
+rem lu: Jan-5-2019
+
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
+
+set cbf_filename=%cbf_application%
 
 exit/b
 
