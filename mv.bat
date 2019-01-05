@@ -81,7 +81,7 @@ exit/b
 
 ::_
 
-:move_old_clipjam
+:move_old_clipjam_files
 
 set fp=* Move old ClipJam files from the Podcasts to Audiobooks folder.
 
@@ -150,7 +150,6 @@ echo.
 echo %fp%
 
 rem Open the podcaster application and download podcasts from there.
-rem Then click any button to continue this script.
 call x pc
 
 call %0 initialize_environment
@@ -159,7 +158,7 @@ call %0 move_podcasts_to_the_staging_folder
 
 call %0 run_tag_program
 
-call %0 move_old_clipjam
+call %0 move_old_clipjam_files
 
 call %0 move_sa_to_cj
 
