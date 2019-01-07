@@ -197,4 +197,24 @@ exit/b
 
 
 
+:_
+
+:p
+
+set fp=* Package sbt.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+call td sbt
+
+echo.
+mvn package
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
