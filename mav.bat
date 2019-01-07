@@ -157,18 +157,20 @@ exit/b
 
 
 
-:_
+:_+ Some Common commands.
+
+
+
+::_
 
 :c
 
-set fp=* Maven compile sbt.
+set fp=* Compile.
 
 rem lu: Dec-14-2018
 
 echo.
 echo %fp%
-
-call td sbt
 
 echo.
 mvn compile
@@ -177,18 +179,16 @@ exit/b
 
 
 
-:_
+::_
 
 :t
 
-set fp=* Test sbt.
+set fp=* Test.
 
 rem lu: Dec-14-2018
 
 echo.
 echo %fp%
-
-call td sbt
 
 echo.
 mvn test
@@ -197,21 +197,37 @@ exit/b
 
 
 
-:_
+::_
 
 :p
 
-set fp=* Package sbt.
+set fp=* Package. Builds a jar, not a war file. Can be renamed to a zip in order to get access to files inside it.
 
-rem lu: Dec-14-2018
+rem lu: Jan-7-2019
 
 echo.
 echo %fp%
 
-call td sbt
-
 echo.
 mvn package
+
+exit/b
+
+
+
+:_
+
+:v
+
+set fp=* Version.
+
+rem lu: Jan-7-2019
+
+echo.
+echo %fp%
+
+echo.
+mvn -version
 
 exit/b
 
