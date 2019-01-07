@@ -3819,6 +3819,8 @@ echo %fp%
 
 call me gfe
 
+pause
+
 call me cc
 
 exit/b
