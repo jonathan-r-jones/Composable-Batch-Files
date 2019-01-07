@@ -5909,6 +5909,7 @@ echo %fp%
 rem Admin password file.
 set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
 
+rem If you delete things from here, Jenkins may reset things.
 set cbf_path=%userprofile%\.jenkins
 
 set cbf_url=https://jenkins.io
@@ -6068,6 +6069,7 @@ echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
 
+rem This needs to be updated.
 set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
 
 exit/b
@@ -6076,17 +6078,20 @@ exit/b
 
 ::_
 
+:sbs
+
 :sb_sample
 
 set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
 
-rem lu: Dec-13-2018
+rem lu: Jan-7-2019
 
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
 
 set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
+rem qq-1
 
 exit/b
 
@@ -6108,7 +6113,7 @@ exit/b
 
 
 
-:_
+::_
 
 :wes
 
