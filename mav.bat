@@ -141,26 +141,6 @@ exit/b
 
 :_
 
-:c
-
-set fp=* Maven compile sbt.
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-call td sbt
-
-echo.
-mvn compile
-
-exit/b
-
-
-
-:_
-
 :t
 
 set fp=* Test sbt.
@@ -192,6 +172,26 @@ echo %fp%
 
 echo.
 mvn clean
+
+exit/b
+
+
+
+:_
+
+:c
+
+set fp=* Maven compile sbt.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+call td sbt
+
+echo.
+mvn compile
 
 exit/b
 
