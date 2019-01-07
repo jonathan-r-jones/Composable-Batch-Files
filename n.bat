@@ -847,7 +847,7 @@ exit/b
 
 :_
 
-:m2
+:m2p
 
 set fp=M2.
 
@@ -5250,6 +5250,8 @@ exit/b
 :je2_help
 
 :jm
+
+:m2
 
 :nexus
 
