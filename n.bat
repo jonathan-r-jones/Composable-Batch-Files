@@ -2384,7 +2384,8 @@ rem lu: Nov-2-2018
 
 echo %fp%
 
-set cbf_path=%aa%
+if exist "c:\aa" set cbf_path=c:\aa
+if exist "d:\aa" set cbf_path=d:\aa
 
 exit/b
 
