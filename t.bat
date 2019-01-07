@@ -8243,16 +8243,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Path only experiment.
@@ -8266,6 +8256,32 @@ echo.
 set cbf_filename=%userprofile%\j\BGS\terraform-scripts\dv\BGS\main.tf
 
 set cbf_path=%~p%cbf_filename%
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test mew32.
+
+rem lu: Jan-7-2019
+
+echo %fp%
+
+start mew32
 
 exit/b
 

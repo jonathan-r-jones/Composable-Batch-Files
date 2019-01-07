@@ -1631,9 +1631,9 @@ exit/b
 
 ::_
 
-:cu_cn
+:cn_cu
 
-set fp=* Custome clone.
+set fp=* Clone custom repository.
 
 echo %fp%
 echo.
@@ -1651,8 +1651,8 @@ set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mobility.git
 set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git
 set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git
 set origin_url=https://github.com/edsnider/marvel-xfdemo.git
-set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
 set origin_url=https://github.com/jonathan-r-jones/fresnel.git
+set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
 
 rem 2. New folder path.
 set new_folder_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
@@ -1680,10 +1680,12 @@ set folder_name=mercury6
 set folder_name=Xamarin_Marvel_Demo
 set folder_name=ForGitTesting
 set folder_name=BusterFromFresnel
+set folder_name=ForGitTesting2
 
 rem 4. Branch name.
 set branch_name=clean6.2
 set branch_name=master
+set branch_name=Branch2
 
 rem 5. Execute.
 
