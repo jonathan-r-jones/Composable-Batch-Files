@@ -6108,7 +6108,6 @@ rem lu: Dec-13-2018
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
-rem qq-1
 
 exit/b
 

@@ -141,26 +141,6 @@ exit/b
 
 :_
 
-:t
-
-set fp=* Test sbt.
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-call td sbt
-
-echo.
-mvn test
-
-exit/b
-
-
-
-:_
-
 :clean
 
 set fp=* Clean, which removes the target folder.
@@ -192,6 +172,26 @@ call td sbt
 
 echo.
 mvn compile
+
+exit/b
+
+
+
+:_
+
+:t
+
+set fp=* Test sbt.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+call td sbt
+
+echo.
+mvn test
 
 exit/b
 
