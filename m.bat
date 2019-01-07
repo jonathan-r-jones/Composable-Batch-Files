@@ -3817,11 +3817,21 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-call me gfe
+call fn gfe
 
-pause
+set first_filename=%cbf_filename%
 
-call me cc
+call fn cc
+
+set second_filename=%cbf_filename%
+
+start mew32 "%first_filename%" "%second_filename%"
+
+rem call me gfe
+
+rem pause
+
+rem call me cc
 
 exit/b
 
