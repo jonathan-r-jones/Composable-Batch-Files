@@ -5431,20 +5431,6 @@ m exitp
 
 :_
 
-set fp=* Color test.
-
-rem fcd: Apr-17-2017
-
-echo.
-echo %fp%
-
-color d0
-exit/b
-
-
-
-:_
-
 set fp=* Percent 2 testing.
 
 rem fcd: Apr-18-2017
@@ -8263,16 +8249,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test mew32.
@@ -8282,6 +8258,78 @@ rem lu: Jan-7-2019
 echo %fp%
 
 start mew32
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_+ Color Tests
+
+
+
+::_
+
+:ct1
+
+set fp=* Color test.
+
+rem fcd: Apr-17-2017
+
+echo.
+echo %fp%
+
+color d0
+
+exit/b
+
+
+
+::_
+
+:ct2
+
+set fp=* Test color.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+color 1a
+
+exit/b
+
+
+
+::_
+
+:ct3
+
+set fp=* Test color.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+color 1b
+color 1c
+color 2c
+color 3c
+color 4c
+color 5c
+color 6c
+color 60
 
 exit/b
 

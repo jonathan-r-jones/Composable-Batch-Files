@@ -6968,7 +6968,45 @@ exit/b
 
 
 
-:_
+:_+ Cart API
+
+
+
+::_
+
+:api
+
+:capi
+
+set fp=* H2.
+
+rem lu: Jan-8-2019
+
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api
+
+exit/b
+
+
+
+::_
+
+:h2
+
+set fp=* H2.
+
+rem lu: Jan-8-2019
+
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/h2-console
+
+exit/b
+
+
+
+::_
 
 :dev
 

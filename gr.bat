@@ -14,7 +14,7 @@ set filename_stands_for=* Gradle-related tasks.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto gr_dev
 
 if "%~1" == "/?" goto help
 
@@ -110,6 +110,8 @@ exit/b
 
 set fp=* Build for development.
 
+color 60
+
 rem lu: Jan-8-2019
 
 echo.
@@ -117,6 +119,27 @@ echo %fp%
 
 echo.
 gradlew
+
+exit/b
+
+
+
+:_
+
+:gr_dev
+
+set fp=* Build CAPI for development.
+
+color 60
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+call td dev
+
+call %0 d
 
 exit/b
 
