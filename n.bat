@@ -7024,4 +7024,39 @@ exit/b
 
 
 
+:_
+
+:jtt
+
+set fp=* Jenkins trigger test.
+
+rem lu: Jan-8-2019
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\jenkins-trigger-test
+
+set cbf_url=https://github.com/jonathan-r-jones/jenkins-trigger-test.git
+
+exit/b
+
+
+
+:_
+
+:solsys
+
+set fp=* Solitaire system.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://github.com/g0t4/solitaire-systemjs-course
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

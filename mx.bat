@@ -72,13 +72,38 @@ call n me
 
 set cbf_filename=%composable_batch_files%\%~1.bat
 
-set cbf_parameter=%cbf_filename%
-
 if not exist "%cbf_filename%" (
-  echo.
-  echo * The file "%cbf_filename%" does not exist.
+  goto make_max_work
   exit/b
 )
+
+set cbf_parameter=%cbf_filename%
+
+call r
+
+exit/b
+
+
+
+:_
+
+:make_max_work
+
+set fp=* Make mx.bat work for the n_ignore file too.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\%~1.bat
+
+if not exist %cbf_filename% (
+  echo.
+  echo * The file "%cbf_filename%" does not exist.
+)
+
+set cbf_parameter=%cbf_filename%
 
 call r
 
