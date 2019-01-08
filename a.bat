@@ -2932,6 +2932,8 @@ exit/b
 
 :_+ Profiles
 
+:profs
+
 
 
 ::_
@@ -3015,7 +3017,7 @@ set fp=* Show current user profile.
 rem lu: Dec-14-2018
 
 echo.
-echo %fp% AWS Profile: %AWS_PROFILE%
+echo %fp% * AWS Profile: %AWS_PROFILE%
 
 echo.
 aws configure list
@@ -3101,7 +3103,7 @@ echo %fp%
 set aws_profile=
 
 echo.
-echo AWS Profile: %aws_profile%
+echo * AWS Profile: %aws_profile%
 
 exit/b
 
@@ -3137,7 +3139,7 @@ exit/b
 
 set fp=* Set profile.
 
-rem lu: Dec-14-2018
+rem lu: Jan-8-2019
 
 echo.
 echo %fp%
@@ -3147,7 +3149,7 @@ call %0 look_up_profile_name %2
 set aws_profile=%aws_profile_name%
 
 echo.
-echo AWS PROFILE: %aws_profile%
+echo * AWS PROFILE: %aws_profile%
 
 call %0 sh
 
