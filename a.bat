@@ -2948,7 +2948,6 @@ echo.
 echo %fp%
 
 call me aws_creds
-rem       qq-1
 
 exit/b
 

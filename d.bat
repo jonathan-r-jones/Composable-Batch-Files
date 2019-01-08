@@ -156,7 +156,7 @@ exit/b
 
 :_
 
-:ta
+:todff
 
 set fp=* Files and folders changed today.
 
@@ -172,7 +172,7 @@ exit/b
 
 :_
 
-:t
+:todf
 
 set fp=* Files changed today.
 
@@ -218,6 +218,23 @@ echo %fp%
 
 echo.
 dir /a:d
+
+exit/b
+
+
+
+:_
+
+:t
+
+set fp=* Tree view.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+tree/f
 
 exit/b
 

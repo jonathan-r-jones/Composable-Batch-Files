@@ -5184,7 +5184,7 @@ exit/b
 
 :_
 
-:dev
+:dtg
 
 set fp=* Dev Technology.
 
@@ -5207,6 +5207,8 @@ exit/b
 :bgs1
 
 :bgs2
+
+:bgsp
 
 :cab
 
@@ -6894,8 +6896,6 @@ exit/b
 
 :_
 
-:devo
-
 :dero
 
 :map
@@ -6947,6 +6947,40 @@ echo %fp%
 set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
 
 set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+:_
+
+:fiex
+
+set fp=* Filename extensions.
+
+rem lu: Jan-8-2019
+
+echo %fp%
+
+set cbf_url=http://en.wikipedia.org/wiki/Alphabetical_list_of_file_extensions
+
+exit/b
+
+
+
+:_
+
+:dev
+
+:devo
+
+set fp=* Develop branch.
+
+rem lu: Jan-8-2019
+
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\develop\api
 
 exit/b
 
