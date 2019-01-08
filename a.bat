@@ -48,24 +48,6 @@ exit/b
 
 :_
 
-:vers
-
-set fp=* Version
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws --version
-
-exit/b
-
-
-
-:_
-
 :sc
 
 set fp=* Look up sample code.
@@ -1045,101 +1027,6 @@ echo %fp%
 
 echo.
 aws iam create-access-key --user-name mike
-
-exit/b
-
-
-
-:_+ Configure Family
-
-
-
-::_
-
-:cp_pr
-
-set fp=* Configure procon_user.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:cfg_cp
-
-set fp=* Clear profile setting.
-
-rem lu: Nov-19-2018
-
-echo.
-echo %fp%
-
-set AWS_PROFILE=
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
-:cfgl_pu
-
-set fp=* Show procon_user profile
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure list --profile procon_user
-
-exit/b
-
-
-
-::_
-
-:cfg_ap
-
-set fp=* Add terraform_user profile.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile terraform_user
-
-exit/b
-
-
-
-::_
-
-:cfg
-
-set fp=* Configure
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
 
 exit/b
 
@@ -3130,6 +3017,119 @@ aws ec2 run-instances ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=New_Jenkins_Jan_4_2019}]"
   --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:vers
+
+set fp=* Version.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+echo.
+aws --version
+
+exit/b
+
+
+
+:_+ Configure Family
+
+
+
+::_
+
+:cp_pr
+
+set fp=* Configure procon_user.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_cp
+
+set fp=* Clear profile setting.
+
+rem lu: Nov-19-2018
+
+echo.
+echo %fp%
+
+set AWS_PROFILE=
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cfgl_pu
+
+set fp=* Show procon_user profile
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure list --profile procon_user
+
+exit/b
+
+
+
+::_
+
+:cfg_ap
+
+set fp=* Add terraform_user profile.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile terraform_user
+
+exit/b
+
+
+
+::_
+
+:cfg
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
 
 exit/b
 
