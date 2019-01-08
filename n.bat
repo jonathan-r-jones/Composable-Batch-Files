@@ -5723,8 +5723,6 @@ exit/b
 
 :_
 
-:g
-
 :gas
 
 set fp=* Google advanced search
@@ -6465,6 +6463,8 @@ exit/b
 :_
 
 :big
+
+:g
 
 :gf
 
