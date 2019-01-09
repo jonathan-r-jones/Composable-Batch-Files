@@ -12,14 +12,6 @@ set filename_stands_for=* Use Sublime to edit a batch file in the CBF folder.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto help

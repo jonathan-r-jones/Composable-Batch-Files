@@ -12,14 +12,6 @@ set filename_stands_for=* Simple calculator.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "" goto help
@@ -113,6 +105,7 @@ exit/b
 
 set fp=* Addition.
 
+echo.
 echo %fp%
 
 set /a addition=%1+%3
@@ -130,6 +123,7 @@ exit/b
 
 set fp=* Subtraction.
 
+echo.
 echo %fp%
 
 set /a subtraction=%1-%3
@@ -147,6 +141,7 @@ exit/b
 
 set fp=* Multiplication.
 
+echo.
 echo %fp%
 
 set /a multiplication=%1*%3
@@ -164,6 +159,7 @@ exit/b
 
 set fp=* Division.
 
+echo.
 echo %fp%
 
 set /a division=%1/%3

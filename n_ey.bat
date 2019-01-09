@@ -12,14 +12,6 @@ set filep=* Nickname dictionary that sets the environment variables correspondin
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* In order to promote freshness, reset the error level.
 
 ver>nul

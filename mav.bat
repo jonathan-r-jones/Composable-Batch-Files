@@ -233,4 +233,40 @@ exit/b
 
 
 
+:_
+
+:br
+
+set fp=* Bootrun.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+mvn spring-boot::run
+
+exit/b
+
+
+
+:_
+
+:sbc
+
+set fp=* Spring-boot compile?
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+mvn spring-boot::compile
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

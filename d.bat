@@ -12,14 +12,6 @@ set filep=* Directory listing: an easier to type version.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto alphabetical
@@ -77,6 +69,7 @@ set fp=* Alphabetical by filename.
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -94,6 +87,7 @@ set fp=* Size, biggest first.
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -111,6 +105,7 @@ set fp=* Size, smallest first.
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -128,6 +123,7 @@ set fp=* Date, newest first.
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -145,6 +141,7 @@ set fp=* Date, oldest first.
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -162,6 +159,7 @@ set fp=* Files and folders changed today.
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 
 forfiles /d +0 /c "cmd /c echo @file @ftime @fsize"
@@ -180,6 +178,7 @@ rem findstr /bvc:" " removes header and summary
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 
 forfiles /d +0 /c "cmd /c if @isdir==FALSE echo @file @ftime @fsize"
@@ -196,6 +195,7 @@ set fp=* Look for the hidden files and folders.
 
 rem Creation Date: Feb-7-2017
 
+echo.
 echo %fp%
 
 echo.

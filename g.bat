@@ -12,14 +12,6 @@ set filep=* Perform Git-related tasks.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto help s
@@ -84,6 +76,7 @@ exit/b
 
 set fp=* 3a. Push changes into development branch.
 
+echo.
 echo %fp%
 
 cd | find /i "Development">nul
@@ -103,6 +96,7 @@ exit/b
 
 set fp=* 5a. Add remote origin for testing. This is a one-time action. (!arot)
 
+echo.
 echo %fp%
 
 echo.
@@ -118,6 +112,7 @@ exit/b
 
 set fp=* 5a. Add remote origin for testing. This is a one-time action. (!arot)
 
+echo.
 echo %fp%
 
 echo.
@@ -133,6 +128,7 @@ exit/b
 
 set fp=* 5b. Add remote origin for testing. This is a one-time action.
 
+echo.
 echo %fp%
 
 echo.
@@ -148,6 +144,7 @@ exit/b
 
 set fp=* 5d. Add remote origin for Quickla. This is a one-time action.
 
+echo.
 echo %fp%
 
 echo.
@@ -163,6 +160,7 @@ exit/b
 
 set fp=* 5e. Add remote origin for Batch Files. This is a one-time action.
 
+echo.
 echo %fp%
 
 echo.
@@ -178,6 +176,7 @@ exit/b
 
 set fp=* 8. Read help.
 
+echo.
 echo %fp%
 
 git --help>"%temp%\git_help.txt"
@@ -195,6 +194,7 @@ exit/b
 
 set fp=* 10. Diff head.
 
+echo.
 echo %fp%
 
 echo.
@@ -216,6 +216,7 @@ rem Outcome: This worked! Oct-13-2016
 
 rem Note: You must have already initialized the repository.
 
+echo.
 echo %fp%
 
 rem This works. Nov-28-2016
@@ -229,25 +230,11 @@ exit/b
 
 :_
 
-:com
-
-set fp=* 9b. Check out master.
-
-echo %fp%
-
-echo.
-git checkout -b master
-
-exit/b
-
-
-
-:_
-
 :fixbranch
 
 set fp=* 14. Fix branch.
 
+echo.
 echo %fp%
 
 echo.
@@ -263,6 +250,7 @@ exit/b
 
 set fp=* 3a. Push changes into Nov-1 development branch.
 
+echo.
 echo %fp%
 
 echo.
@@ -282,6 +270,7 @@ exit/b
 
 set fp=* pushnv
 
+echo.
 echo %fp%
 
 echo.
@@ -297,6 +286,7 @@ exit/b
 
 set fp=* Pull Clean 62.
 
+echo.
 echo %fp%
   
 echo.
@@ -316,6 +306,7 @@ set fp=* Fetch branch.
 
 rem Creation Date: Jan-23-2017
 
+echo.
 echo %fp%
 
 rem Didn't work on Dec-20-2016.
@@ -336,29 +327,11 @@ exit/b
 
 set fp=* 9b. Pull original branch.
 
+echo.
 echo %fp%
 
 @echo on
 git pull origin original
-@echo off
-
-exit/b
-
-
-
-:_
-
-:co
-
-set fp=* 9c. Check out branch.
-
-echo %fp%
-
-rem This worked. Jan-30-2017
-
-@echo on
-echo.
-git checkout -b Branch2
 @echo off
 
 exit/b
@@ -374,6 +347,7 @@ set fp=* Local status.
 rem What local status means is merely that you haven't changed any files on your local drive.
 rem It doesn't mean that you have the latest files.
 
+echo.
 echo %fp%
 
 echo.
@@ -391,6 +365,7 @@ set fp=* Remove an individual file.
 
 rem fcd: Feb-16-2017
 
+echo.
 echo %fp%
 
 git rm -f %2
@@ -405,81 +380,8 @@ set fp=* This code block was added from my machine named Buzz.
 
 rem fcd: Feb-28-2017
 
-echo %fp%
-
-exit/b
-
-
-
-:_
-
-:ss6
-
-set fp=* Sencha status.
-
-echo %fp%
-
 echo.
-cd c:\projects\netbeans\sencha
-
-git remote update
-git status
-
-exit/b
-
-
-
-:_
-
-:sm6
-
-set fp=* Mercury 6 status.
-
 echo %fp%
-
-echo.
-cd c:\projects\netbeans\mercury6
-
-git remote update
-git status
-
-exit/b
-
-
-
-:_
-
-:sba
-
-set fp=* Batch files status.
-
-echo %fp%
-
-c:
-
-cd c:\mercury\batch_files
-
-echo.
-git remote update
-git status
-
-exit/b
-
-
-
-:_
-
-:ss6dr
-
-set fp=* S6 @ DropBox status.
-
-echo %fp%
-echo.
-
-cd C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha
-
-git remote update
-git status
 
 exit/b
 
@@ -498,6 +400,7 @@ rem fcd: Nov-30-2018
 rem This function is because it uses recursive calls into its own file but DOESN'T use
 rem a single goto statement, which is an anti-pattern.
 
+echo.
 echo %fp%
 
 call st cbf
@@ -520,46 +423,11 @@ set fp=* Help.
 
 rem fcd: Apr-6-2017
 
+echo.
 echo %fp%
 echo.
 
 echo The help content is under construction.
-
-exit/b
-
-
-
-:_
-
-:ss6c
-
-set fp=* Sencha status captured.
-
-echo %fp%
-echo.
-
-cd c:\projects\netbeans\sencha
-
-git remote update
-git status>c:\a\j1.txt
-
-exit/b
-
-
-
-:_
-
-:sm6c
-
-set fp=* Mercury 6 status captured.
-
-echo %fp%
-echo.
-
-cd c:\projects\netbeans\mercury6
-
-git remote update
-git status>c:\a\j3.txt
 
 exit/b
 
@@ -579,6 +447,7 @@ exit/b
 
 set fp=* Push changes to the cloud.
 
+echo.
 echo %fp%
 
 echo.
@@ -596,6 +465,7 @@ exit/b
 
 set fp=* Push changes into master.
 
+echo.
 echo %fp%
 echo.
 
@@ -613,6 +483,7 @@ set fp=* Add and commit a Pom file.
 
 rem fcd: Apr-11-2017
 
+echo.
 echo %fp%
 
 call %0 csf pom.xml "Update version number."
@@ -632,6 +503,7 @@ set fp=* Add, commit and push for batch file changes for mobility.
 
 rem fcd: Oct-24-2017
 
+echo.
 echo %fp%
 
 cd c:\mercury\mobility
@@ -652,6 +524,7 @@ exit/b
 
 set fp=* Commit with timestamp description.
 
+echo.
 echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
@@ -679,6 +552,7 @@ exit/b
 
 set fp=* Commit with big description.
 
+echo.
 echo %fp%
 
 echo.
@@ -711,6 +585,7 @@ set fp=* Add POM files for version labelling.
 
 rem fcd: May-3-2017
 
+echo.
 echo %fp%
 
 call %0 asf Mercury-ear/pom.xml
@@ -735,6 +610,7 @@ set fp=* Add, commit and push for regression test document changes.
 
 rem fcd: May-30-2017
 
+echo.
 echo %fp%
 
 cd c:\mercury\documentation
@@ -755,6 +631,7 @@ set fp=* Delete mysteriously added png image files.
 
 rem fcd: Apr-28-2017
 
+echo.
 echo %fp%
 
 cd c:\projects\netbeans\mercury6
@@ -778,6 +655,7 @@ rem specific folder: skw
 
 rem Creation Date: Jun-20-2017
 
+echo.
 echo %fp%
 
 call td m6
@@ -800,6 +678,7 @@ set fp=* Delete pngs 2.
 
 rem Creation Date: Aug-3-2017
 
+echo.
 echo %fp%
 
 call td m6
@@ -837,6 +716,7 @@ exit/b
 
 set fp=* Check remote status.
 
+echo.
 echo %fp%
 echo.
 
@@ -856,6 +736,7 @@ set fp=* Add single file.
 
 rem add single file, add specific file
 
+echo.
 echo %fp%
 
 git add %2
@@ -873,6 +754,7 @@ set fp=* Commit single file.
 rem This is not really working. If I run this in a folder with many
 rem changed files, it seems to commit them all May-15-2017 
 
+echo.
 echo %fp%
 echo.
 
@@ -901,6 +783,7 @@ exit/b
 
 set fp=* Commit ONLY those files that were staged for commit.
 
+echo.
 echo %fp%
 echo.
 
@@ -919,6 +802,7 @@ exit/b
 
 set fp=* Commit all added files.
 
+echo.
 echo %fp%
 echo.
 
@@ -939,6 +823,7 @@ set fp=* Pull batch files.
 
 rem lu: Nov-17-2017
 
+echo.
 echo %fp%
 
 call td ba
@@ -957,6 +842,7 @@ set fp=* Unstage for commit. If %2 is blank, all files will be unstaged.
 
 rem lu: Nov-27-2017
 
+echo.
 echo %fp%
 
 git reset HEAD %2
@@ -973,6 +859,7 @@ set fp=* Check 4 statuses.
 
 rem lu: Dec-5-2017
 
+echo.
 echo %fp%
 
 call cls
@@ -999,6 +886,7 @@ set fp=* Add bowling folder to git.
 
 rem lu: Jan-12-2018
 
+echo.
 echo %fp%
 
 echo "# bowling" >> README.md
@@ -1025,6 +913,7 @@ git commit -m "first commit"
 git remote add origin https://github.com/jonathan-r-jones/[put new repo name here].git
 git push -u origin master
 
+echo.
 echo %fp%
 echo.
 
@@ -1044,6 +933,7 @@ git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/ticktockmenuma
 
 git push -u origin master
 
+echo.
 echo %fp%
 echo.
 
@@ -1061,6 +951,7 @@ set fp=* Add, commit and push for batch file changes.
 
 rem fcd: Apr-13-2017
 
+echo.
 echo %fp%
 
 call td cbf
@@ -1089,6 +980,7 @@ set fp=* Step 1. Initialize Git in the current folder. This is a one-time generi
 
 rem (!step)
 
+echo.
 echo %fp%
 
 echo.
@@ -1108,6 +1000,7 @@ set fp=* Step 2. Add remote origin. This is a one-time origin-specific action. (
 
 rem (!step)
 
+echo.
 echo %fp%
 
 goto grao
@@ -1142,6 +1035,7 @@ exit/b
 
 set fp=* Add remote origin for CBF URL.
 
+echo.
 echo %fp%
 
 call n %2
@@ -1160,6 +1054,7 @@ set fp=* Pull master
 
 rem lu: Jan-17-2018
 
+echo.
 echo %fp%
 
 git pull origin master
@@ -1176,36 +1071,13 @@ exit/b
 
 set fp=* Push changes into master.
 
+echo.
 echo %fp%
 echo.
 
 git push --set-upstream origin master
 
 rem (!step)
-
-exit/b
-
-
-
-:_
-
-:rf_status
-
-:s
-
-:status
-
-set fp=* Status, including remote information.
-
-echo %fp%
-
-echo.
-call git remote update
-
-call git status
-
-col
-
 
 exit/b
 
@@ -1223,6 +1095,7 @@ set fp=* Stashing changes allows you to do a get-latest (or bring in someone's e
 
 rem lu: Jan-22-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -1240,6 +1113,7 @@ set fp=* Pop takes stashed changes and reapplies them to the working directory.
 
 rem lu: Jan-22-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -1257,6 +1131,7 @@ set fp=* Pop takes stashed changes and reapplies them to the working directory.
 
 rem lu: Jan-22-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -1284,6 +1159,7 @@ set fp=* Merge tool help.
 
 rem lu: Jan-22-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -1301,6 +1177,7 @@ set fp=* Set default merge tool to use.
 
 rem lu: Jan-22-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -1319,6 +1196,7 @@ set fp=* Surf to this repository in Git.
 
 rem lu: Jan-5-2018
 
+echo.
 echo %fp%
 
 start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" https://github.com/jonathan-r-jones/composable_batch_files
@@ -1341,6 +1219,7 @@ rem Creation Date: Jan-23-2017
 
 rem remove: skw
 
+echo.
 echo %fp%
 
 rd /q /s .git
@@ -1357,6 +1236,7 @@ set fp=* 9b. Identify branch.
 
 rem skw: identify_branch
 
+echo.
 echo %fp%
 echo.
 
@@ -1378,6 +1258,7 @@ set fp=* Git help git.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 git help git
@@ -1394,6 +1275,7 @@ set fp=* Git help for a specific git command.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 git help %2
@@ -1414,6 +1296,7 @@ set fp=* Set the tag version number.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 git tag %2
@@ -1430,6 +1313,7 @@ set fp=* Get the tag version numbers.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -1447,6 +1331,7 @@ set fp=* Push tags.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -1468,6 +1353,7 @@ exit/b
 
 set fp=* Configure GitHub author and email. Note: Please don't confuse this with the Bitbucket author signature.
 
+echo.
 echo %fp%
 
 git config --global user.name "Jonathan R. Jones"
@@ -1487,6 +1373,7 @@ set fp=* Store credentials so that Git stops asking for credentials after each p
 
 rem lu: Mar-1-2018
 
+echo.
 echo %fp%
 
 git config credential.helper store
@@ -1503,6 +1390,7 @@ set fp=* Run author and store.
 
 rem lu: Dec-5-2018
 
+echo.
 echo %fp%
 
 call %0 au
@@ -1519,6 +1407,7 @@ exit/b
 
 set fp=* Configure author for Cart.
 
+echo.
 echo %fp%
 
 git config user.name "JJones2"
@@ -1533,6 +1422,7 @@ exit/b
 
 set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
 
+echo.
 echo %fp%
 
 @echo on
@@ -1550,6 +1440,7 @@ exit/b
 
 set fp=* Configure BitBucket author and email.
 
+echo.
 echo %fp%
 
 @echo on
@@ -1575,6 +1466,7 @@ rem Creation Date: Dec-9-2016
 
 rem skw filename too long github
 
+echo.
 echo %fp%
 
 git config core.longpaths true
@@ -1593,6 +1485,7 @@ rem See: https://github.com/restsharp/RestSharp/blob/develop/CONTRIBUTING.md
 
 rem lu: May-31-2018
 
+echo.
 echo %fp%
 
 git config --global core.autocrlf true
@@ -1613,6 +1506,7 @@ set fp=* Clone all Xamarin University repos.
 
 rem lu: Jun-5-2018
 
+echo.
 echo %fp%
 
 call td xu_r
@@ -1635,6 +1529,7 @@ exit/b
 
 set fp=* Clone custom repository.
 
+echo.
 echo %fp%
 echo.
   
@@ -1715,6 +1610,7 @@ set fp=* Get build version number.
 
 rem Function Creation Date: Jan-30-2017
 
+echo.
 echo %fp%
 
 echo.
@@ -1736,6 +1632,7 @@ set fp=* Get the git version number.
 
 rem lu: Jun-7-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -1751,6 +1648,7 @@ set fp=* Git commands from Visual Studio Code.
 
 rem lu: Nov-21-2017
 
+echo.
 echo %fp%
 
 // - git._syncAll
@@ -1817,6 +1715,7 @@ exit/b
 
 set fp=* Read the log. Among other things, you can use this to see when a GitHub repo was last updated.
 
+echo.
 echo %fp%
 
 git log>"%temp%\git_log.txt"
@@ -1840,6 +1739,7 @@ set fp=* Identify source repository of your current folder.
 
 rem lu: May-9-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -1859,6 +1759,7 @@ rem This didn't work properly.
 
 rem Creation Date: Jan-31-2017
 
+echo.
 echo %fp%
   
 echo.
@@ -1880,6 +1781,7 @@ set fp=* Add particular file.
 
 rem fcd: Feb-16-2017
 
+echo.
 echo %fp%
 
 git add .gitignore
@@ -1896,6 +1798,7 @@ set fp=* Create a gitinore file to the current directory.
 
 rem lu: Jan-19-2018
 
+echo.
 echo %fp%
 
 if exist .gitignore echo.
@@ -1920,6 +1823,7 @@ set fp=* Make sure your master Gitignore is up-to-date, then copy it to the curr
 
 rem lu: Sep-11-2018
 
+echo.
 echo.
 echo %fp%
 
@@ -1954,6 +1858,7 @@ exit/b
 
 set fp=* Pull with a nickname location provider.
 
+echo.
 echo %fp%
 
 call td %2
@@ -1970,6 +1875,7 @@ exit/b
 
 set fp=* Pull. Do a get-latest from the default branch. (!step, !pull, !step3)
 
+echo.
 echo %fp%
 echo.
   
@@ -1993,6 +1899,7 @@ set fp=* Add, commit and push with timestamp commit description.
 
 rem fcd: Apr-13-2017
 
+echo.
 echo %fp%
 
 cd | find /i "C:\projects\netbeans\sencha">nul
@@ -2025,6 +1932,7 @@ set fp=* Add, commit and push for big laptop.
 
 rem fcd: Dec-4-2018
 
+echo.
 echo %fp%
 
 call %0 add_files_generic_action
@@ -2045,6 +1953,7 @@ exit/b
 
 set fp=* ACP commands for the mac.
 
+echo.
 echo %fp%
 
 git add -A
@@ -2071,6 +1980,7 @@ exit/b
 
 set fp=* Add files generic action.
 
+echo.
 echo %fp%
 
 git add -A
@@ -2085,6 +1995,7 @@ exit/b
 
 set fp=* Add files.
 
+echo.
 echo %fp%
 
 git add .
@@ -2099,6 +2010,7 @@ exit/b
 
 set fp=* Add files. (!step4)
 
+echo.
 echo %fp%
 
 git add *.*
@@ -2113,6 +2025,7 @@ exit/b
 
 set fp=* Add cert.
 
+echo.
 echo %fp%
 
 git config --system http.sslCAPath C:/Users/JJones2/j/Miscellany/ca-bundle.crt 
@@ -2127,6 +2040,7 @@ exit/b
 
 set fp=* Add cert using backslashes.
 
+echo.
 echo %fp%
 
 git config --system http.sslCAPath C:\Users\JJones2\j\Miscellany\ca-bundle.crt 
@@ -2143,6 +2057,7 @@ set fp=* Overview of the process that sets a certificate and pulls the Cart proj
 
 rem lu: Dec-27-2018
 
+echo.
 echo.
 echo %fp%
 
@@ -2202,6 +2117,7 @@ rem Note: Running this will detach your head. To reattach head, run reattach_hea
 
 rem I validated that this works on ForGitTesting on Aug-17-2017.
 
+echo.
 echo %fp%
 
 rem git checkout a18e821
@@ -2232,6 +2148,7 @@ set fp=* Reattach a detached head.
 
 rem fcd: May-2-2017 (skw how to reattach head)
 
+echo.
 echo %fp%
 
 rem git checkout clean6.2
@@ -2249,6 +2166,7 @@ set fp=* Revert all PERSISTENT changes from m6 and s6.
 
 rem Creation Date: Aug-30-2017
 
+echo.
 echo %fp%
   
 call %0 delete_pngs
@@ -2271,6 +2189,7 @@ set fp=* Return to baseline configuration after a build. Exercise caution as thi
 
 rem lu: Aug-31-2017
 
+echo.
 echo %fp%
 
 call %0 rvall
@@ -2293,6 +2212,7 @@ set fp=* Report on untracked files.
 
 rem lu: Sep-14-2017
 
+echo.
 echo %fp%
 
 git clean -n
@@ -2311,6 +2231,7 @@ set fp=* Revert single file.
 
 rem lu: Jan-23-2018
 
+echo.
 echo %fp%
   
 git checkout %2
@@ -2327,6 +2248,7 @@ set fp=* Revert persistent files. Revert files in need of constant reversion.
 
 rem lu: Aug-31-2017
 
+echo.
 echo %fp%
   
 cd \projects\netbeans\sencha\html5application\public_html
@@ -2366,6 +2288,7 @@ rem Step back 2 versions.
 
 rem reverse 2: skw
 
+echo.
 echo %fp%
 
 echo.
@@ -2389,6 +2312,7 @@ rem How do you roll back in git?
 
 rem This worked on David's machine on Aug-3-2017.
 
+echo.
 echo %fp%
 
 echo.
@@ -2415,6 +2339,7 @@ rem This worked on FGT and Fresnel on Jul-19-2018.
 
 rem lu: Jul-19-2018
 
+echo.
 echo %fp%
 
 call :reset_head_1
@@ -2441,6 +2366,7 @@ rem Step back 1 version.
 
 rem Test on FGT.
 
+echo.
 echo %fp%
 
 echo.
@@ -2460,6 +2386,7 @@ set fp=* Remove untracked folders and files. Use with caution.
 
 rem lu: Aug-17-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -2479,6 +2406,7 @@ rem Last successful run date: May-30-2018
 
 rem Last Updated: May-30-2018
 
+echo.
 echo %fp%
  
 git checkout *.*
@@ -2509,12 +2437,95 @@ rem This didn't seem to work on Jan-31-2017.
 
 rem Function Creation Date: Jan-30-2017
 
+echo.
 echo %fp%
 echo.
 
 git reset --hard HEAD
 git clean -f
 git pull
+
+exit/b
+
+
+
+:_+ Branch Operations
+
+
+
+::_
+
+:com
+
+set fp=* 9b. Check out master.
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b master
+
+exit/b
+
+
+
+::_
+
+:co
+
+set fp=* 9c. Check out branch.
+
+echo.
+echo %fp%
+
+rem This worked. Jan-30-2017
+
+echo.
+git checkout -b Branch2
+
+exit/b
+
+
+
+:_
+
+:rf_status
+
+:s
+
+:status
+
+set fp=* Status, including remote information.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+call git remote update
+
+call git status
+
+col
+
+exit/b
+
+
+
+:_
+
+:diff
+
+set fp=* Diff.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+git diff
 
 exit/b
 

@@ -12,14 +12,6 @@ set filename_stands_for=* Perform Terraform-related tasks.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto help s
@@ -75,6 +67,7 @@ set fp=* Get the Terraform version number.
 
 rem lu: Oct-29-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -92,6 +85,7 @@ set fp=* Check Terraform plan status.
 
 rem lu: Oct-29-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -109,6 +103,7 @@ set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g.
 
 rem lu: Oct-29-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -126,6 +121,7 @@ set fp=* This execution plan can be reviewed prior to running apply to get a sen
 
 rem lu: Oct-29-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -146,6 +142,7 @@ set fp=* Destroy a plan.
 
 rem lu: Oct-29-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -166,6 +163,7 @@ set fp=* Execute a plan!
 
 rem lu: Oct-29-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -183,6 +181,7 @@ set fp=* Shared function.
 
 rem lu: Oct-30-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -207,6 +206,7 @@ set fp=* Plan.
 
 rem lu: Oct-30-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -224,6 +224,7 @@ set fp=* Apply.
 
 rem lu: Oct-30-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -241,6 +242,7 @@ set fp=* Destroy.
 
 rem lu: Oct-30-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -264,6 +266,7 @@ set fp=* Plan.
 
 rem lu: Oct-30-2018
 
+echo.
 echo %fp%
 
 call %0 check_tf_existence
@@ -291,6 +294,7 @@ set fp=* Apply.
 
 rem lu: Oct-30-2018
 
+echo.
 echo %fp%
 
 call %0 check_tf_existence
@@ -318,6 +322,7 @@ set fp=* Destroy.
 
 rem lu: Oct-30-2018
 
+echo.
 echo %fp%
 
 call %0 check_tf_existence
@@ -341,6 +346,7 @@ set fp=* Check the current folder for the presence of Terraform file(s).
 
 rem lu: Oct-31-2018
 
+echo.
 echo %fp%
 
 if not exist *.tf (
@@ -365,6 +371,7 @@ set fp=* Terraform console.
 
 rem lu: Nov-1-2018
 
+echo.
 echo %fp%
 
 call %0 check_tf_existence
@@ -388,6 +395,7 @@ set fp=* Format tf file.
 
 rem lu: Nov-1-2018
 
+echo.
 echo %fp%
 
 call %0 check_tf_existence
@@ -411,6 +419,7 @@ set fp=* Refresh state file.
 
 rem lu: Nov-1-2018
 
+echo.
 echo %fp%
 
 call %0 check_tf_existence
@@ -434,6 +443,7 @@ set fp=* Manually mark a resource for recreation.
 
 rem lu: Nov-1-2018
 
+echo.
 echo %fp%
 
 call %0 check_tf_existence

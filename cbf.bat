@@ -12,14 +12,6 @@ set filename_stands_for=* Composable batch files menu.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
@@ -61,9 +53,10 @@ exit/b
 
 set fp=* List of CBF Helper Batch (.bat) files.
 
-echo  %fp%
 echo.
+echo %fp%
 
+echo.
 echo  File  Description
 echo  ----  ------------------------------------------------------------------
 echo     a  A wrapper around AWS CLI.
@@ -90,6 +83,7 @@ echo    fs  Filenames search.
 echo     g  Perform Git-related tasks.
 echo    gg  Git Gui helper. Has TD parameter.
 echo    gl  Glossary of terms used in CBF.
+echo    gr  Perform Gradle-related tasks.
 echo     h  Perform Sencha-related tasks.
 echo     m  Perform miscellaneous tasks.
 echo   mcd  Make and navigate (cd) to a folder.

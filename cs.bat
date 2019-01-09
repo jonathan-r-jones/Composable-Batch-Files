@@ -12,14 +12,6 @@ set filename_stands_for=* File contents search.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "" goto help

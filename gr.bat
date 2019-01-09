@@ -74,7 +74,7 @@ echo.
 echo %fp%
 
 echo.
-rem qq-1
+
 gradlew -Pprod clean bootWar
 
 exit/b
@@ -140,6 +140,40 @@ echo %fp%
 call td dev
 
 call %0 d
+
+exit/b
+
+
+
+:_
+
+:tasks
+
+set fp=* List tasks.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+gradle tasks
+
+exit/b
+
+
+
+:_
+
+:br
+
+set fp=* Bootrun from Sean. Notice that there is also a Maven version of this same command.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+gradle bootrun --debug-jvm
 
 exit/b
 

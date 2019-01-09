@@ -12,14 +12,6 @@ set filename_stands_for=* The batch file is a mirror of sorts for the command li
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "" goto help
@@ -64,6 +56,7 @@ exit/b
 
 set fp=* Say Monday.
 
+echo.
 echo %fp%
 
 exit/b
@@ -76,6 +69,7 @@ exit/b
 
 set fp=* Say Tuesday.
 
+echo.
 echo %fp%
 
 exit/b
@@ -88,6 +82,7 @@ exit/b
 
 set fp=* Say Wednesday.
 
+echo.
 echo %fp%
 
 exit/b
@@ -100,6 +95,7 @@ exit/b
 
 set fp=* Say Everyday.
 
+echo.
 echo %fp%
 
 call %0 monday

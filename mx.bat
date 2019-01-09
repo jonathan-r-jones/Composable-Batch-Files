@@ -12,14 +12,6 @@ set filename_stands_for=* Use Multi-Edit to edit a batch file in the CBF folder.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -66,6 +58,7 @@ exit/b
 
 set fp=* Main function.
 
+echo.
 echo %filename_stands_for%
 
 call n me
@@ -101,6 +94,7 @@ set cbf_filename=%share-zone%\%~1.bat
 if not exist %cbf_filename% (
   echo.
   echo * The file "%cbf_filename%" does not exist.
+  exit/b
 )
 
 set cbf_parameter=%cbf_filename%

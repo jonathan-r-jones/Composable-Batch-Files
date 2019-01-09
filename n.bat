@@ -50,7 +50,7 @@ echo.
 echo Last Updated: May-8-2018
 
 echo.
-echo The filename stands for: Nickname dictionary.
+echo The filename stands for: Nickname or Alias dictionary.
 
 echo.
 echo Usage: %0 [single parameter]

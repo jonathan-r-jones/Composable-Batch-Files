@@ -15,17 +15,10 @@ set filep=* Clear screen and reset color.
 set fp=* Set title.
 
 echo.
+echo.
 echo %fp%
 
 title=Composable Batch Files
-
-
-
-:_
-
-set fp=* Add some whitespace.
-
-echo.
 
 
 
@@ -70,6 +63,7 @@ exit/b
 
 set fp=* Clear screen and reset color.
 
+echo.
 echo %fp%
 
 call td root

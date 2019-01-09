@@ -6,14 +6,6 @@
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set Function_Purpose=* Route callers.
 
 if "%~1" == "" goto help
@@ -34,6 +26,7 @@ set fp=* This file is used to illustrate how Composable Batch Files work.
 
 rem lu: Aug-8-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -54,6 +47,7 @@ exit/b
 
 set fp=* Function 3. Code from another batch file.
 
+echo.
 echo %fp%
 
 rem echo * From %0.bat. Put some code here.

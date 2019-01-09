@@ -12,14 +12,6 @@ set filep=* Perform NPM-related tasks.
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "" goto help
@@ -101,6 +93,7 @@ set fp=* Install third party package and save setting in the package.json file.
 
 rem lu: Sep-12-2018
 
+echo.
 echo %fp%
 
 if not exist package.json (
@@ -126,6 +119,7 @@ set fp=* Globally install a package so that it works everywhere on the command l
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -143,6 +137,7 @@ set fp=* Install package and save setting in the development section of the pack
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -160,6 +155,7 @@ set fp=* Install any dependencies listed in pacagage.json.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -177,6 +173,7 @@ set fp=* Install a package using its GitHub URL.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 call n %2
@@ -198,6 +195,7 @@ set fp=%fp% NPM will not upgrade automically in this case.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -217,6 +215,7 @@ set fp=%fp% Given this example, this will install the latest 1.8 version.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -239,6 +238,7 @@ set fp=* Run start script.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 echo.
 
@@ -256,6 +256,7 @@ set fp=* Run tests.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 npm test
@@ -276,6 +277,7 @@ set fp=* Involved help.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 npm help npm
@@ -293,6 +295,7 @@ set fp=* NPM help for a specific command.
 rem lu: Apr-24-2018
 
 echo.
+echo.
 echo %fp%
 
 npm help %2
@@ -309,6 +312,7 @@ set fp=* NPM help-search for a specific command.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -330,6 +334,7 @@ set fp=* Automated wizard that walks you through creating a package.json file.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -347,6 +352,7 @@ set fp=* Automated wizard that walks you through creating a package.json file wi
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -368,6 +374,7 @@ set fp=* Set default license to MIT.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 npm set init-license 'MIT'
@@ -384,6 +391,7 @@ set fp=* Get default license setting.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -405,6 +413,7 @@ set fp=* Verbose list of my globally installed packages.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 npm list -g --depth 0 --long true
@@ -421,6 +430,7 @@ set fp=* List of installed packages.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -438,6 +448,7 @@ set fp=* List of installed packages that only I have installed. As opposed to th
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -455,6 +466,7 @@ set fp=* List of globally installed packages.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 npm list --global true
@@ -471,6 +483,7 @@ set fp=* Verbose list of my globally installed packages in JSON format.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -488,6 +501,7 @@ set fp=* Verbose list of my globally installed packages in JSON format for dev d
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -509,6 +523,7 @@ set fp=* Uninstall "%2" local package and remove dependency section in the packa
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -526,6 +541,7 @@ set fp=* Uninstall "%2" global package and remove dependency section in the pack
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -543,6 +559,7 @@ set fp=* Uninstall "%2" global package.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -560,6 +577,7 @@ set fp=* Prune extraneous packages, that is, those that are not in the package.j
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -577,6 +595,7 @@ set fp=* Go to the GitHub repository for a given package.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 npm repo %2
@@ -593,6 +612,7 @@ set fp=* Add user which is similar to Git's author stuff.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -616,6 +636,7 @@ set fp=* Check NPM's version.
 
 rem lu: Sep-12-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -637,6 +658,7 @@ set fp=* Check NPM's long version.
 
 rem lu: Sep-12-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -654,6 +676,7 @@ set fp=* Automatically increment the patch version number.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 npm version patch
@@ -670,6 +693,7 @@ set fp=* Automatically increment the minor version number.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 npm version minor
@@ -686,6 +710,7 @@ set fp=* Automatically increment the major version number.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 npm version major
@@ -706,6 +731,7 @@ set fp=* Publish project to NPM.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -723,6 +749,7 @@ set fp=* Publish project to NPM in a beta release.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -744,6 +771,7 @@ set fp=* Information about the current repository.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 npm info
@@ -760,6 +788,7 @@ set fp=* Information about a named repository.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 npm info %2
@@ -780,6 +809,7 @@ set fp=* Update all dependencies to the latest version.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -797,6 +827,7 @@ set fp=* Update a single package dependency, in this case "%2".
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -818,6 +849,7 @@ set fp=* Install latest stable version of NPM. Be sure to run as ADMINISTRATOR.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -835,6 +867,7 @@ set fp=* Update NPM itself.
 
 rem lu: Sep-12-2018
 
+echo.
 echo %fp%
 
 echo.
@@ -865,6 +898,7 @@ set fp=* Batch install DutchTreat packages.
 
 rem lu: Sep-18-2018
 
+echo.
 echo %fp%
 
 call %0 inst bootstrap
