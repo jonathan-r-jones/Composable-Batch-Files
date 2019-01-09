@@ -32,6 +32,7 @@ goto main_function
 
 :help
 
+echo.
 echo Searches the current folder and all its subfolders for filenames match the given search criterion, then pipes the results into a temporary file.
 
 echo.
@@ -54,6 +55,7 @@ exit/b
 
 :main_function
 
+echo.
 echo %filep% Search for filenames containing "%~1".
 echo %filep% Search for filenames containing "%~1".>%temp%\search_results_fs.txt
 echo.>>%temp%\search_results_cs.txt
@@ -64,6 +66,7 @@ echo.>>%temp%\search_results_fs.txt
 
 rem Files are sorted newest files first.
 
+echo.
 rem Shows files and folders.
 dir /a /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 

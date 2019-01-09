@@ -120,6 +120,97 @@ echo %fp%
 echo.
 gradlew
 
+rem I noticed that ./gradlew doesn't work but .\gradlew does.
+
+exit/b
+
+
+
+:_
+
+:task
+
+:tasks
+
+set fp=* List tasks.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle tasks
+
+exit/b
+
+
+
+:_
+rem qq-1
+
+
+
+:_
+
+:stat
+
+set fp=* Status.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+call gradle --status
+
+echo.
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:buil
+
+:build
+
+set fp=* Build.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+call gradle build
+rem qq-1
+
+col
+
+echo.
+
+exit/b
+
+
+
+:_
+
+:buildw
+
+set fp=* Gradlew build.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+gradlew build
+
 exit/b
 
 
@@ -147,16 +238,53 @@ exit/b
 
 :_
 
-:tasks
+:help
 
-set fp=* List tasks.
+set fp=* Help
 
 rem lu: Jan-9-2019
 
 echo.
 echo %fp%
 
-gradle tasks
+echo.
+gradle help
+
+exit/b
+
+
+
+:_
+
+:test
+
+set fp=* Test.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle test
+
+exit/b
+
+
+
+:_
+
+:model
+
+set fp=* Model.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle model
 
 exit/b
 
@@ -174,6 +302,24 @@ echo.
 echo %fp%
 
 gradle bootrun --debug-jvm
+
+exit/b
+
+
+
+:_
+
+:prop
+
+set fp=* Properties.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle properties
 
 exit/b
 

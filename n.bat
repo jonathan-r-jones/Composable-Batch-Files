@@ -3303,7 +3303,7 @@ exit/b
 
 :_
 
-:conf
+:jm_conf
 
 set fp=* JM Conference app.
 
@@ -5221,6 +5221,10 @@ exit/b
 :cix
 
 :bgs_cn
+
+:conf
+
+:dese
 
 :djjf
 
