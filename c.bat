@@ -15,7 +15,6 @@ set filep=* Clear screen and reset color.
 set fp=* Set title.
 
 echo.
-echo.
 echo %fp%
 
 title=Composable Batch Files

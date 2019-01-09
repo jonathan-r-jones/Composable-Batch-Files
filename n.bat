@@ -6760,9 +6760,9 @@ exit/b
 
 :_
 
-:wk
+:cwk
 
-set fp=* Reach out.
+set fp=* Copy of work.asc.
 
 rem lu: Sep-15-2018
 
@@ -6978,11 +6978,17 @@ exit/b
 
 :capi
 
-set fp=* H2.
+:dev
+
+:devo
+
+set fp=* Develop branch.
 
 rem lu: Jan-8-2019
 
 echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\develop\api
 
 set cbf_url=http://localhost:8080/cart-api
 
@@ -7001,24 +7007,6 @@ rem lu: Jan-8-2019
 echo %fp%
 
 set cbf_url=http://localhost:8080/cart-api/h2-console
-
-exit/b
-
-
-
-::_
-
-:dev
-
-:devo
-
-set fp=* Develop branch.
-
-rem lu: Jan-8-2019
-
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\develop\api
 
 exit/b
 
