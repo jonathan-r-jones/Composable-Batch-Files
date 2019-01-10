@@ -6668,7 +6668,7 @@ rem lu: Dec-28-2018
 
 echo %fp%
 
-call an ie
+call an edge
 
 set cbf_url=https://teams.microsoft.com
 
