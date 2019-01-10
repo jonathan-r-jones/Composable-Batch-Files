@@ -147,7 +147,6 @@ exit/b
 
 
 :_
-rem qq-1
 
 
 
@@ -166,7 +165,6 @@ echo.
 call gradle --status
 
 echo.
-rem qq-1
 
 exit/b
 
@@ -187,7 +185,6 @@ echo %fp%
 
 echo.
 call gradle build
-rem qq-1
 
 col
 
