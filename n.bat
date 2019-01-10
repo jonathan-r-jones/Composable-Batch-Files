@@ -143,6 +143,7 @@ set fp=SystemWidget.js.
 
 rem FCD: Apr-7-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\SystemWidget.js
@@ -159,6 +160,7 @@ set fp=Pom root.
 
 rem FCD: Apr-10-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\pom.xml
@@ -175,6 +177,7 @@ set fp=Pom Ear.
 
 rem FCD: Apr-10-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
@@ -191,6 +194,7 @@ set fp=Pom Ejb.
 
 rem FCD: Apr-10-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
@@ -207,6 +211,7 @@ set fp=Pom Web.
 
 rem FCD: Apr-10-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
@@ -223,6 +228,7 @@ set fp=* td.bat.
 
 rem FCD: May-13-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\td.bat
@@ -243,6 +249,7 @@ rem Tag 6.2017.5.6.1200 for successful production deployment
 
 rem fcd: May-8-2017
 
+echo.
 echo %fp%
 
 call %0 pom_root %2
@@ -267,6 +274,7 @@ set fp=* M2's settings.xml file.
 
 rem lu: Nov-21-2017
 
+echo.
 echo %fp%
 echo.
 
@@ -288,6 +296,7 @@ set fp=ContactsWidget.js.
 
 rem FCD: Apr-7-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
@@ -306,6 +315,7 @@ set fp=ContactsWidget.js for tablet.
 
 rem FCD: Sep-25-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
@@ -328,6 +338,7 @@ set fp=Mobile blocker 1.
 
 rem FCD: Sep-25-2017
 
+echo.
 echo %fp%
 
 rem     // OPEN mobile login.
@@ -351,6 +362,7 @@ set fp=Mobile blocker 2.
 
 rem FCD: Sep-25-2017
 
+echo.
 echo %fp%
 
 rem     // OPEN mobile login.
@@ -372,6 +384,7 @@ set fp=* Mobile log.
 
 rem lu: Dec-4-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
@@ -388,6 +401,7 @@ set fp=* App.json.
 
 rem lu: Dec-4-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
@@ -404,6 +418,7 @@ set fp=Netconfig.
 
 rem lu: Dec-6-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
@@ -422,6 +437,7 @@ set fp=ContactsWidget.js for phone.
 
 rem FCD: Sep-25-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
@@ -438,6 +454,7 @@ set fp=* Filename nicknames.
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\fn.bat
@@ -454,6 +471,7 @@ set fp=* J2.txt.
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%temp%\j2.txt
@@ -470,6 +488,7 @@ set fp=Open folder standalone.
 
 rem fcd: May-9-2017
 
+echo.
 echo %fp%
 
 call m set_wildfly_location
@@ -490,6 +509,7 @@ set fp=Open folder server.
 
 rem FCD: Apr-5-2017
 
+echo.
 echo %fp%
 
 call m set_wildfly_location
@@ -508,6 +528,7 @@ set fp=Tirem.
 
 rem FCD: Mar-6-2017
 
+echo.
 echo %fp%
 
 set cbf_path=c:\projects\netbeans\mercury6\mercury-tirem
@@ -524,6 +545,7 @@ set fp=Mercury 6.
 
 rem FCD: Mar-15-2017
 
+echo.
 echo %fp%
 
 set cbf_path=c:\projects\netbeans\mercury6
@@ -540,6 +562,7 @@ set fp=Deployment.
 
 rem FCD: Apr-5-2017
 
+echo.
 echo %fp%
 
 call m set_wildfly_location
@@ -558,6 +581,7 @@ set fp=Target. (WAR file creation location)
 
 rem FCD: Apr-7-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\projects\netbeans\mercury6\Mercury-web\target
@@ -574,6 +598,7 @@ set fp=Public.
 
 rem FCD: Apr-14-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html
@@ -594,6 +619,7 @@ set fp=Sencha.
 
 rem FCD: Mar-22-2017
 
+echo.
 echo %fp%
 
 set cbf_path=c:\projects\netbeans\sencha
@@ -610,6 +636,7 @@ set fp=Current directory.
 
 rem fcd: May-9-2017
 
+echo.
 echo %fp%
 
 echo.
@@ -631,6 +658,7 @@ set fp=Set WildFly dynamic temporary folder location.
 
 rem Function Creation Date: Feb-9-2017
 
+echo.
 echo %fp%
 
 call m set_wildfly_location
@@ -663,6 +691,7 @@ set fp=Hex root.
 
 rem FCD: Apr-5-2017
 
+echo.
 echo %fp%
 
 call m set_wildfly_location
@@ -683,6 +712,7 @@ rem skw: Heatmap image generation location.
 
 rem fcd: May-17-2017
 
+echo.
 echo %fp%
 
 call %0 hex
@@ -707,6 +737,7 @@ set fp=Mercury projects.
 
 rem fcd: May-12-2017
 
+echo.
 echo %fp%
 
 set cbf_path=c:\projects\netbeans
@@ -723,6 +754,7 @@ set fp=Wildfly server Log.
 
 rem fcd: May-22-2017
 
+echo.
 echo %fp%
 
 call m set_wildfly_location
@@ -743,6 +775,7 @@ set fp=WildFly resources folder.
 
 rem fcd: Jun-2-2017
 
+echo.
 echo %fp%
 
 call td hex
@@ -761,6 +794,7 @@ set fp=MacOS dropbox folder.
 
 rem fcd: Jun-22-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
@@ -777,6 +811,7 @@ set fp=MySql configuration file in order to close open port at 3306.
 
 rem fcd: Jun-26-2017
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
@@ -795,6 +830,7 @@ set fp=Ldap.
 
 rem fcd: Jul-5-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Mercury\LDAP\OpenDS-2.2.1
@@ -811,6 +847,7 @@ set fp=Ext.
 
 rem fcd: Jul-7-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\ext
@@ -829,6 +866,7 @@ set fp=Mercury.
 
 rem fcd: Jul-7-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\mercury
@@ -845,6 +883,7 @@ set fp=M2.
 
 rem fcd: Jul-7-2017
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\.m2
@@ -861,6 +900,7 @@ set fp=M2 Home.
 
 rem fcd: Jul-7-2017
 
+echo.
 echo %fp%
 
 set cbf_path=%m2_home%
@@ -877,6 +917,7 @@ set fp=Sencha class folder on Dropbox.
 
 rem fud: Aug-4-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Users\jonathan.r.jones\Documents\dropbox\IT\Sencha Class on Aug-7-2017
@@ -893,6 +934,7 @@ set fp=Sencha class folder.
 
 rem fud: Aug-4-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\SenchaTraining
@@ -909,6 +951,7 @@ set fp=In the future please use "targ" instead of "war" for this folder.
 
 rem fud: Aug-7-2017
 
+echo.
 echo %fp%
 
 call %0 targ
@@ -925,6 +968,7 @@ set fp=Sencha training labs.
 
 rem fud: Aug-8-2017
 
+echo.
 echo %fp%
 
 set cbf_path=c:\senchatraining\labs
@@ -941,6 +985,7 @@ set fp=Android SDK.
 
 rem fud: Aug-8-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Users\jonathan.r.jones\AppData\Local\Android\sdk
@@ -957,6 +1002,7 @@ set fp=Yelp Extplorer.
 
 rem fud: Aug-15-2017
 
+echo.
 echo %fp%
 
 set cbf_path=c:\senchatraining\labs\yelpextplorer
@@ -975,6 +1021,7 @@ set fp=Public @ Dropbox.
 
 rem fud: Aug-15-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha\HTML5Application\public_html
@@ -993,6 +1040,7 @@ set fp=S6 @ Dropbox.
 
 rem fud: Aug-15-2017
 
+echo.
 echo %fp%
 echo.
 
@@ -1014,6 +1062,7 @@ set fp=Utils relative path.
 
 rem fud: Aug-17-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils
@@ -1030,6 +1079,7 @@ set fp=Classic utils.
 
 rem lu: Sep-6-2017
 
+echo.
 echo %fp%
 echo.
 
@@ -1047,6 +1097,7 @@ set fp=Modern utils.
 
 rem fud: Aug-17-2017
 
+echo.
 echo %fp%
 echo.
 
@@ -1068,6 +1119,7 @@ set fp=AGI Licenses.
 
 rem lu: Nov-9-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\mercury\agi licenses
@@ -1084,6 +1136,7 @@ set fp=AGI License file on development machine.
 
 rem lu: Sep-26-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\projects\netbeans\mercury6\Mercury-ejb\src\main\resources
@@ -1100,6 +1153,7 @@ set fp=AGI License file on the server.
 
 rem lu: Sep-26-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\lib
@@ -1116,6 +1170,7 @@ set fp=Mobility.
 
 rem lu: Oct-23-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Mercury\Mobility
@@ -1134,6 +1189,7 @@ set fp=Latest WAR File.
 
 rem lu: Oct-24-2017
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Mercury\Latest WAR File
@@ -1150,6 +1206,7 @@ set fp=Wildfly Image Resource 1.
 
 rem lu: Nov-1-2017
 
+echo.
 echo %fp%
 
 call %0 hex
@@ -1168,6 +1225,7 @@ set fp=Wildfly Image Resource 2 - classic.
 
 rem lu: Nov-1-2017
 
+echo.
 echo %fp%
 
 call %0 hex
@@ -1186,6 +1244,7 @@ set fp=Wildfly Image Resource 3 - modern.
 
 rem lu: Nov-1-2017
 
+echo.
 echo %fp%
 
 call %0 hex
@@ -1204,6 +1263,7 @@ set fp=Netconfig on server.
 
 rem lu: Nov-14-2017
 
+echo.
 echo %fp%
 
 call %0 hex
@@ -1222,6 +1282,7 @@ set fp=Paul Sheriff Course.
 
 rem lu: Dec-18-2017
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\Paul Sheriff Unit Testing Course\UnitTestProject4\bin\debug
@@ -1238,6 +1299,7 @@ set fp=* IT.
 
 rem lu: Jan-18-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\
@@ -1254,6 +1316,7 @@ set fp=* Dropbox.
 
 rem lu: Feb-2-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%
@@ -1270,6 +1333,7 @@ set fp=Alex's pizza code.
 
 rem lu: Feb-2-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=d:\aa\NovaCodeCamp.PizzaRatings\pizza.sln
@@ -1290,6 +1354,7 @@ set fp=* Visual Studio.
 
 rem lu: Jan-31-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
@@ -1308,6 +1373,7 @@ set fp=TT VS solution.
 
 rem lu: Jan-31-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\it\ticktockmenu\TickTockMenu.sln
@@ -1330,6 +1396,7 @@ set fp=Credential generator input file. The format is: username:password.
 
 rem fcd: Jul-17-2017
 
+echo.
 echo %fp%
 
 if not exist %tmp%\certutil_input.txt echo.
@@ -1349,6 +1416,7 @@ set fp=Credential generator output file. Copy this into you m2's settings.xml fi
 
 rem fcd: Jul-17-2017
 
+echo.
 echo %fp%
 echo.
 
@@ -1366,6 +1434,7 @@ set fp=* Root of the C Drive.
 
 rem lu: Feb-5-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\
@@ -1382,6 +1451,7 @@ set fp=Root of the D Drive.
 
 rem lu: Feb-5-2018
 
+echo.
 echo %fp%
 
 set cbf_path=d:\
@@ -1398,6 +1468,7 @@ set fp=Bowling solution.
 
 rem lu: Feb-6-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it
@@ -1416,6 +1487,7 @@ set fp=European Testing Conference.
 
 rem lu: Feb-7-2018
 
+echo.
 echo %fp%
 
 set cbf_url=http://europeantestingconference.eu/2018/location/
@@ -1432,6 +1504,7 @@ set fp=Gmail.
 
 rem lu: Feb-13-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://mail.google.com
@@ -1448,6 +1521,7 @@ set fp=Stack Overflow
 
 rem lu: Feb-15-2018
 
+echo.
 echo %fp%
 
 set cbf_url=http://stackoverflow.com/
@@ -1464,6 +1538,7 @@ set fp=Karl 2 Testing Solution.
 
 rem lu: Feb-16-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\IT\Karl-2-C-Sharp-Testing
@@ -1482,6 +1557,7 @@ set fp=Karl 2 Testing Solution.
 
 rem lu: Feb-16-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -1502,6 +1578,7 @@ set fp=Docker workshop.
 
 rem lu: Feb-16-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/AlinaIo/etc2018.git
@@ -1518,6 +1595,7 @@ set fp=Docker hub.
 
 rem lu: Feb-16-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://hub.docker.com
@@ -1534,6 +1612,7 @@ set fp=* YouTube.
 
 rem lu: Feb-25-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://www.youtube.com
@@ -1550,6 +1629,7 @@ set fp=* Readme.md.
 
 rem lu: Mar-1-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=Readme.md
@@ -1570,6 +1650,7 @@ set fp=* GitHub all-star.
 
 rem lu: Mar-1-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\freecodecamp
@@ -1588,6 +1669,7 @@ set fp=* Mercury documentation.
 
 rem lu: Mar-1-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
@@ -1604,6 +1686,7 @@ set fp=* Multi-Edit Config Files Dated Backups.
 
 rem lu: Jan-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
@@ -1620,6 +1703,7 @@ set fp=* Quickla.
 
 rem lu: Apr-10-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
@@ -1642,6 +1726,7 @@ set fp=* CBF Path. Set CBF_Path based on the currently set CBF_Path.
 
 rem lu: Mar-9-2018
 
+echo.
 echo %fp%
 
 rem Don't need to set it because it's already set.
@@ -1658,6 +1743,7 @@ set fp=* CBF Application. Set CBF_Path based on the currently set CBF_Applicatio
 
 rem lu: Mar-9-2018
 
+echo.
 echo %fp%
 
 call m expand_to_path_only "%cbf_application%"
@@ -1674,6 +1760,7 @@ set fp=* CBF Filename.
 
 rem lu: Mar-9-2018
 
+echo.
 echo %fp%
 
 call m expand_to_path_only "%cbf_filename%"
@@ -1694,6 +1781,7 @@ set fp=* Package.json file.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=package.json
@@ -1710,6 +1798,7 @@ set fp=* NPM Playbook Course.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/joeeames/NPMPlaybookCourse
@@ -1726,6 +1815,7 @@ set fp=* NPM shortcuts.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://docs.npmjs.com/misc/config
@@ -1742,6 +1832,7 @@ set fp=* Express.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/strongloop/express
@@ -1758,6 +1849,7 @@ set fp=* CBF on MPM.
 
 rem lu: Apr-25-2018
 
+echo.
 echo %fp%
 
 set cbf_url=npm.im/composable-batch-files
@@ -1774,6 +1866,7 @@ set fp=* Global package.json file.
 
 rem lu: May-4-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\Program Files\nodejs\node_modules\npm\package.json
@@ -1790,6 +1883,7 @@ set fp=* My Git website.
 
 rem lu: May-9-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones
@@ -1806,6 +1900,7 @@ set fp=* Mobile App Development requirements.
 
 rem lu: May-18-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/mobile-app.git
@@ -1822,6 +1917,7 @@ set fp=* Monkey cache.
 
 rem lu: May-18-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jamesmontemagno/monkey-cache.git
@@ -1838,6 +1934,7 @@ set fp=* Cake sample.
 
 rem lu: May-21-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/lprichar/CakeSample
@@ -1854,6 +1951,7 @@ set fp=* Alex' sort and remove usings.
 
 rem lu: Jun-4-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/alexsorokoletov/VisualStudioMac.SortRemoveUsings
@@ -1870,6 +1968,7 @@ set fp=* Cool carousel.
 
 rem lu: Jun-4-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\xamarin-forms-samples\Navigation\CarouselPage
@@ -1886,6 +1985,7 @@ set fp=* Xamarin Forms starter kit.
 
 rem lu: Jun-5-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/NowBI/Xamarin-Forms-Mobile-Template
@@ -1904,6 +2004,7 @@ set fp=* Downloads folder.
 
 rem lu: Jun-7-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\downloads
@@ -1920,6 +2021,7 @@ set fp=* Various file types.
 
 rem lu: Jun-8-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\various file types
@@ -1936,6 +2038,7 @@ set fp=* Filename with spaces.
 
 rem lu: Jun-8-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\it\various file types\filename with spaces.txt
@@ -1952,6 +2055,7 @@ set fp=* XU Xam 205.
 
 rem lu: Jun-8-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\xam205
@@ -1968,6 +2072,7 @@ set fp=* Xamarin forms css.
 
 rem lu: Jun-8-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jamcneil/XamarinFormsCSS.git
@@ -1984,6 +2089,7 @@ set fp=* Dunkin donuts.
 
 rem lu: Jun-10-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jCho23/DunkinDonuts.git
@@ -2002,6 +2108,7 @@ set fp=* Hamburger menu xamarin forms.
 
 rem lu: Jun-10-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/twolfprogrammer/Xamarin.Forms-Hamburger-Menu-Example.git
@@ -2018,6 +2125,7 @@ set fp=* Master detail.
 
 rem lu: Jun-10-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\Master-Detail_Navigation_Xamarin.Forms
@@ -2040,6 +2148,7 @@ set fp=* Hamster.
 
 rem lu: Jun-10-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\hamster
@@ -2058,6 +2167,7 @@ set fp=* Xamarin Forms Simple App, Simple Xapp, Simple Jack.
 
 rem lu: Jun-12-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\SimpleXapp
@@ -2076,6 +2186,7 @@ set fp=* Marvel.
 
 rem lu: Jun-12-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\aa\repositories\marvel-xfdemo\src
@@ -2094,6 +2205,7 @@ set fp=* Open governance.
 
 rem lu: Jun-12-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\open-governance
@@ -2112,6 +2224,7 @@ set fp=* Open governance fork.
 
 rem lu: Jun-12-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\open-governance-fork
@@ -2130,6 +2243,7 @@ set fp=* Image Manipulation.
 
 rem lu: Jun-13-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Image Manipulation
@@ -2148,6 +2262,7 @@ set fp=* Postman.
 
 rem lu: Jun-14-2018
 
+echo.
 echo %fp%
 
 set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
@@ -2168,6 +2283,7 @@ set fp=* Temporary search results.
 
 rem lu: Jun-14-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%temp%\search_results.txt
@@ -2184,6 +2300,7 @@ set fp=* Temporary search results for fs.
 
 rem lu: Jun-14-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%temp%\search_results_fs.txt
@@ -2200,6 +2317,7 @@ set fp=* Temporary search results for cs.
 
 rem lu: Jun-14-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%temp%\search_results_cs.txt
@@ -2216,6 +2334,7 @@ set fp=* Xamarin Essentials Demo.
 
 rem lu: Jun-18-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/marcofolio/XamSMS
@@ -2236,6 +2355,7 @@ set fp=* CBF on GitHub Pages.
 
 rem lu: Jan-31-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
@@ -2252,6 +2372,7 @@ set fp=* Composable batch files.
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
@@ -2272,6 +2393,7 @@ set fp=* Jonathan's Github page.
 
 rem lu: Sep-11-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones
@@ -2288,6 +2410,7 @@ set fp=* CBF Pulse on GitHub.
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/pulse
@@ -2306,6 +2429,7 @@ set fp=* Publishing an iOS App.
 
 rem lu: Jun-19-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
@@ -2324,6 +2448,7 @@ set fp=* AppCenter.
 
 rem lu: Jun-21-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -2342,6 +2467,7 @@ set fp=* A folder.
 
 rem lu: Dec-12-2017
 
+echo.
 echo %fp%
 
 set cbf_path=c:\a
@@ -2358,6 +2484,7 @@ set fp=* A test folder.
 
 rem lu: Dec-27-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\a2
@@ -2374,6 +2501,7 @@ set fp=* Aa, a.k.a. permanent folders for Jonathan.
 
 rem lu: Nov-2-2018
 
+echo.
 echo %fp%
 
 if exist "c:\aa" set cbf_path=c:\aa
@@ -2391,6 +2519,7 @@ set fp=* CSAM Asset Data
 
 rem lu: Jun-19-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\csamaa
@@ -2409,6 +2538,7 @@ set fp=* SPDR.
 
 rem lu: Jun-18-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -2427,6 +2557,7 @@ set fp=* Drawable folder.
 
 rem lu: Jun-22-2018
 
+echo.
 echo %fp%
 
 set cbf_path=.\NavigationMasterDetail\NavigationMasterDetail.Droid\Resources\Drawable
@@ -2443,6 +2574,7 @@ set fp=* MVC Splunk REST API.
 
 rem lu: Jun-26-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -2465,6 +2597,7 @@ set fp=* Xamarin University root folder. Necessary for the clone to work.
 
 rem lu: Jul-12-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\xamarin_university
@@ -2483,6 +2616,7 @@ rem To clone this special repo, use "g cn_xu".
 
 rem lu: Jun-5-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\xamarin_university\AllCourseExercises
@@ -2501,6 +2635,7 @@ set fp=* Xamarin lightning talks.
 
 rem lu: Jun-5-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://university.xamarin.com/lightninglectures
@@ -2517,6 +2652,7 @@ set fp=* BUILD 2018 Workshops by Xamarin University.
 
 rem lu: Jun-5-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/XamarinUniversity/build2018-labs.git
@@ -2533,6 +2669,7 @@ set fp=* Xamarin.Forms 3.0 CSS
 
 rem lu: Jun-5-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jamcneil/XamarinFormsCSS
@@ -2549,6 +2686,7 @@ set fp=* Azure functions.
 
 rem lu: Jun-5-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/Krumelur/XamBlob
@@ -2565,6 +2703,7 @@ set fp=* XU Course 205 - Astronomy Solution.
 
 rem lu: Jun-6-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS205
@@ -2583,6 +2722,7 @@ set fp=* XU Course 103. Make your Images Look Great on all Devices [IOS103] by J
 
 rem lu: Jun-26-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS103
@@ -2601,6 +2741,7 @@ set fp=* Page 10.
 
 rem lu: Jun-27-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\fresnel\fresnel\Views
@@ -2619,6 +2760,7 @@ set fp=* Lee Richardardson's Xamarin Forms calculator.
 
 rem lu: Jun-28-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\mobile-calc-forms
@@ -2639,6 +2781,7 @@ set fp=* Closing credits.
 
 rem lu: Jun-12-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/for-git-testing/blob/master/whiskey.png
@@ -2655,6 +2798,7 @@ set fp=* DalSoft Rest client.
 
 rem lu: Jul-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -2673,6 +2817,7 @@ set fp=* Call a Web API From a .NET Client (C#).
 
 rem lu: Jul-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -2691,6 +2836,7 @@ set fp=* My HTTP Client Console App.
 
 rem lu: Jul-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\HTTPClientConsoleApp
@@ -2709,6 +2855,7 @@ set fp=* Playpark.
 
 rem lu: Jul-6-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\playpark
@@ -2729,6 +2876,7 @@ set fp=* Staging area.
 
 rem lu: Jul-8-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%my documents%\mp3 content staging area\files ready For Transfer
@@ -2745,6 +2893,7 @@ set fp=* JSON users.
 
 rem lu: Jul-9-2018
 
+echo.
 echo %fp%
 
 set cbf_url=http://jsonplaceholder.typicode.com/users
@@ -2761,6 +2910,7 @@ set fp=* Forms tutor.
 
 rem lu: Jul-9-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\FormsTutor
@@ -2795,6 +2945,7 @@ set fp=* Starter mobile.
 
 rem lu: Jul-9-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -2813,6 +2964,7 @@ set fp=* SolarWinds Orion SDK.
 
 rem lu: Jul-10-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -2833,6 +2985,7 @@ set fp=* XAM 150: Consuming REST-based Web Services
 
 rem lu: Jul-9-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150
@@ -2861,6 +3014,7 @@ set fp=* Fresnel resources for Android.
 
 rem lu: Jul-13-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\fresnel\Fresnel.Android\Resources\drawable
@@ -2879,6 +3033,7 @@ set fp=* Fresnel resources for iOS.
 
 rem lu: Jul-13-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\fresnel\Fresnel.iOS\Resources
@@ -2899,6 +3054,7 @@ set fp=* Image Manipulation - Fresnel Images source.
 
 rem lu: Jun-13-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Image Manipulation\fresnel
@@ -2915,6 +3071,7 @@ set fp=* Fresnel drawable images source.
 
 rem lu: Jun-13-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\fresnel\fresnel.android\resources\drawable
@@ -2933,6 +3090,7 @@ set fp=* Diamond Paint.NET file.
 
 rem lu: Jul-13-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%Dropbox%\image manipulation\menu 4 square diamond icon.pdn
@@ -2949,6 +3107,7 @@ set fp=* ClipJam audiobooks folder.
 
 rem lu: Jul-15-2018
 
+echo.
 echo %fp%
 
 set cbf_path=g:\audiobooks
@@ -2965,6 +3124,7 @@ set fp=* J1.txt.
 
 rem lu: Feb-1-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%temp%\j1.txt
@@ -2987,6 +3147,7 @@ set fp=* Chrome.
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
@@ -3003,6 +3164,7 @@ set fp=* Firefox.
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_application=c:\program files\mozilla firefox\firefox.exe
@@ -3021,6 +3183,7 @@ set fp=* Microsoft Edge.
 
 rem lu: Feb-7-2018
 
+echo.
 echo %fp%
 
 set cbf_application=microsoft-edge
@@ -3039,6 +3202,7 @@ rem This is used as the system default browser, if none is set. Please DO NOT DE
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_application=c:\program files\internet explorer\iexplore.exe
@@ -3055,6 +3219,7 @@ set fp=* Opera.
 
 rem lu: Feb-13-2018
 
+echo.
 echo %fp%
 
 set cbf_application=c:\program files\opera\launcher.exe
@@ -3081,6 +3246,7 @@ rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_application=c:\windows\system32\notepad.exe
@@ -3097,6 +3263,7 @@ set fp=* Notepad++.
 
 rem lu: Mar-9-2018
 
+echo.
 echo %fp%
 
 rem Determine installation path.
@@ -3125,6 +3292,7 @@ set fp=* Multi-Edit.
 
 rem lu: Jun-8-2018
 
+echo.
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
@@ -3141,6 +3309,7 @@ set fp=* Sublime.
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_application=C:\Program Files\Sublime Text 3\sublime_text.exe
@@ -3157,6 +3326,7 @@ set fp=* Vivaldi.
 
 rem lu: Jul-17-2018
 
+echo.
 echo %fp%
 
 set cbf_application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
@@ -3173,6 +3343,7 @@ set fp=* Bike search.
 
 rem lu: Jun-20-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
@@ -3191,6 +3362,7 @@ set fp=* Feed reader sample.
 
 rem lu: Jul-17-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\feedreader
@@ -3209,6 +3381,7 @@ set fp=* Madison Monkeys.
 
 rem lu: Jul-17-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\madisonmonkeys
@@ -3231,6 +3404,7 @@ set fp=* Lee Richardardson on GitHub.
 
 rem lu: Jul-18-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/lprichar
@@ -3247,6 +3421,7 @@ set fp=* Easy layout.
 
 rem lu: Jul-18-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\EasyLayout.Forms
@@ -3265,6 +3440,7 @@ set fp=* Carousel.
 
 rem lu: Jul-18-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\CarouselView
@@ -3283,6 +3459,7 @@ set fp=* Hanselman forms.
 
 rem lu: Jul-18-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\Hanselman.Forms
@@ -3301,6 +3478,7 @@ set fp=* JM Conference app.
 
 rem lu: Jul-18-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\app-conference\src
@@ -3319,6 +3497,7 @@ set fp=* JM NavDrawer.
 
 rem lu: Jul-18-2018
 
+echo.
 echo %fp%
 
 rem set cbf_path=%cbf_default_repository_folder%\Xam.NavDrawer
@@ -3337,6 +3516,7 @@ set fp=* AWRestAPI.
 
 rem lu: Jul-20-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\AWRestAPI
@@ -3357,6 +3537,7 @@ rem Radio button. skw
 
 rem lu: Jul-23-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\Beyond-Basics
@@ -3402,6 +3583,7 @@ set fp=* Monkeys.
 
 rem lu: Jul-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=
@@ -3420,6 +3602,7 @@ set fp=* JM Xamarin.Forms-Monkeys.
 
 rem lu: Jul-18-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\Xamarin.Forms-Monkeys\Monkeys-CarouselView
@@ -3445,6 +3628,7 @@ set fp=* App monkeys.
 
 rem lu: Jul-23-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\app-monkeys
@@ -3465,6 +3649,7 @@ set fp=* Welcome carousel.
 
 rem lu: Jul-24-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\WelcomeCarousel
@@ -3483,6 +3668,7 @@ set fp=Resume.
 
 rem lu: Feb-7-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\resume\jonathan jones' resume.doc
@@ -3505,6 +3691,7 @@ set fp=* Android Manifest in a subfolder of the current folder.
 
 rem lu: Jul-26-2018
 
+echo.
 echo %fp%
 
 set current_folder=%cd%
@@ -3535,6 +3722,7 @@ set fp=* Microsoft Word.
 
 rem lu: Jul-26-2018
 
+echo.
 echo %fp%
 
 set cbf_application=c:\program files\microsoft office\root\office16\winword.exe
@@ -3555,6 +3743,7 @@ set fp=* Skeptics.txt short form
 
 rem lu: Jul-17-2018
 
+echo.
 echo %fp%
 
 rem Works with: Chrome, IE, OP, VI.
@@ -3577,6 +3766,7 @@ set fp=* Skeptics.txt longer form.
 
 rem lu: Jul-17-2018
 
+echo.
 echo %fp%
 
 rem Works with: Chrome, IE, OP, VI.
@@ -3600,6 +3790,7 @@ set fp=* Work documents file and folder.
 
 rem lu: Jul-26-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\work\wk\documents
@@ -3618,6 +3809,7 @@ set fp=* Meetup Manager.
 
 rem lu: Jul-30-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\MeetupManager
@@ -3636,6 +3828,7 @@ set fp=* Buster from Fresnel.
 
 rem lu: Jul-30-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\buster-from-fresnel
@@ -3656,6 +3849,7 @@ set fp=* Buster.
 
 rem lu: Jul-27-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\buster
@@ -3674,6 +3868,7 @@ set fp=* Git gui.
 
 rem lu: Aug-1-2018
 
+echo.
 echo %fp%
 
 set cbf_application=C:\Program Files\Git\cmd\git-gui.exe
@@ -3690,6 +3885,7 @@ set fp=* Petzold.
 
 rem lu: Aug-2-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\xamarin-forms-book-samples
@@ -3708,6 +3904,7 @@ set fp=* Vetted Pictures.
 
 rem lu: Aug-2-2018
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Users\jonat\Documents\Dropbox\vetted pictures
@@ -3724,6 +3921,7 @@ set fp=* Pinch gesture.
 
 rem lu: Aug-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\xamarin-forms-samples\WorkingWithGestures\PinchGesture
@@ -3740,6 +3938,7 @@ set fp=* Mobility samples.
 
 rem lu: Aug-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\mobile-samples
@@ -3758,6 +3957,7 @@ set fp=* Live player samples!
 
 rem lu: Aug-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\mobile-samples\liveplayer
@@ -3787,6 +3987,7 @@ rem           star:  2,267
 
 rem lu: Jun-1-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\xamarin-forms-samples
@@ -3812,6 +4013,7 @@ rem   last updated:  Jun-1-2018
 rem       watchers:  312
 rem           star:  1,241
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/Xamarin/Plugins.git
@@ -3833,6 +4035,7 @@ rem   last updated:  Jan-10-2018
 rem       watchers:  139
 rem           star:  905
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\Xamarin.Plugins
@@ -3851,6 +4054,7 @@ set fp=* Hello world prototype.
 
 rem lu: May-30-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\xaml_prototype
@@ -3869,6 +4073,7 @@ set fp=* Xamarin folder.
 
 rem lu: Mar-1-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\xamarin
@@ -3885,6 +4090,7 @@ set fp=* Ed Snider's Xamarin book sample code from his Github, not the Pakt gith
 
 rem lu: Jul-5-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book
@@ -3909,6 +4115,7 @@ set fp=* Ed Snider's book, the Packt Publishing version.
 
 rem lu: Mar-1-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-Second-Edition
@@ -3927,6 +4134,7 @@ set fp=* Jesse Liberty's Xamarin Pluralsight course.
 
 rem lu: May-8-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\first-mobile-app-Jesse
@@ -3949,6 +4157,7 @@ set fp=* My implementation of Jesse Liberty's Xamarin Pluralsight course.
 
 rem lu: May-8-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\first-mobile-app-Jonathan
@@ -3967,6 +4176,7 @@ set fp=Hello World.
 
 rem lu: Jan-16-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
@@ -3985,6 +4195,7 @@ rem Bugsweeper (!bugs)
 
 rem lu: Jun-1-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\xamarin-forms-samples\bugsweeper
@@ -4001,6 +4212,7 @@ set fp=* James' Battery solution.
 
 rem lu: Jan-31-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\BatteryPlugin
@@ -4019,6 +4231,7 @@ set fp=* James' Media plugin.
 
 rem lu: Jun-4-2018
 
+echo.
 echo %fp%
 
 set cbf_url=http://github.com/jamesmontemagno/MediaPlugin
@@ -4035,6 +4248,7 @@ set fp=* Xamarin Forms Samples - Working with images.
 
 rem lu: Aug-7-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\xamarin-forms-samples\workingwithimages
@@ -4053,6 +4267,7 @@ set fp=* Pan gesture.
 
 rem lu: Aug-3-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\xamarin-forms-samples\WorkingWithGestures\PanGesture
@@ -4069,6 +4284,7 @@ set fp=* How to modularize a batch file.
 
 rem lu: Aug-7-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\it\composable-batch-files\how to modularize a batch file.asc
@@ -4085,6 +4301,7 @@ set fp=* Latest Music.
 
 rem lu: Aug-8-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\mp3\Jun-5-2018
@@ -4101,6 +4318,7 @@ set fp=* Tech Talk DC.
 
 rem lu: Aug-8-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://www.meetup.com/techtalkdc/
@@ -4117,6 +4335,7 @@ set fp=* CBF png file.
 
 rem lu: Aug-8-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/composable-batch-files/master/jj3d.png
@@ -4133,6 +4352,7 @@ set fp=* CBF Powerpoint presentation.
 
 rem lu: Aug-8-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\CBF.pptx
@@ -4149,6 +4369,7 @@ set fp=* VP folder.
 
 rem lu: Aug-14-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\vetted pictures\new and exciting
@@ -4165,6 +4386,7 @@ set fp=* Root
 
 rem lu: Aug-10-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\
@@ -4181,6 +4403,7 @@ set fp=* Hello world batch file.
 
 rem lu: Aug-10-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\hello_world.bat
@@ -4197,6 +4420,7 @@ set fp=* Foo takes you to the bar folder. Of course it does.
 
 rem lu: Aug-10-2018
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Program Files\MSBuild\Microsoft\Windows Workflow Foundation\bar
@@ -4215,6 +4439,7 @@ set fp=* ClipJam podcasts folder.
 
 rem lu: Jul-15-2018
 
+echo.
 echo %fp%
 
 set cbf_path=g:\podcasts
@@ -4233,6 +4458,7 @@ rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.
 
 rem lu: Jan-23-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%temp%
@@ -4249,6 +4475,7 @@ set fp=* Gettysburg Address.
 
 rem lu: Aug-13-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\Gettysburg_Address.txt
@@ -4265,6 +4492,7 @@ set fp=* Cnn.
 
 rem lu: Jan-24-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://www.cnn.com
@@ -4281,6 +4509,7 @@ set fp=* Conference Vision.
 
 rem lu: Aug-15-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\ConferenceVision
@@ -4299,6 +4528,7 @@ set fp=* Fresnel dated backup.
 
 rem lu: Aug-16-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\Fresnel Dated Backups
@@ -4321,6 +4551,7 @@ set fp=* Test the use of an enterprise profile on VSTS. Formerly the mobile app 
 
 rem lu: Aug-20-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\Mobile
@@ -4341,6 +4572,7 @@ set fp=* Fresnel Mobile App.
 
 rem lu: Jun-21-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\fresnel
@@ -4359,6 +4591,7 @@ set fp=* Fresnel Mobile App, local backup version.
 
 rem lu: Jul-26-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\backups\fresnel
@@ -4377,6 +4610,7 @@ set fp=* Quick Launcher, local backup version.
 
 rem lu: Jul-26-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\backups\Quickla-for-Multi-Edit
@@ -4395,6 +4629,7 @@ set fp=* CBF, local backup version.
 
 rem lu: Jul-26-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\backups\Composable-Batch-Files
@@ -4413,6 +4648,7 @@ set fp=* Backups folder.
 
 rem lu: Jul-26-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\backups
@@ -4429,6 +4665,7 @@ set fp=* Curl.
 
 rem lu: Aug-23-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\aa\curl-7.61.0-win64-mingw\bin
@@ -4445,6 +4682,7 @@ set fp=* Test t from n.bat.
 
 rem lu: Aug-23-2018
 
+echo.
 echo %fp%
 
 exit/b
@@ -4459,6 +4697,7 @@ set fp=* Apiary questions.
 
 rem lu: Aug-23-2018
 
+echo.
 echo %fp%
 
 set cbf_url=http://private-64c770-fresnelapi.apiary-mock.com/fresnelapi/questions
@@ -4475,6 +4714,7 @@ set fp=* 503 Badapi.
 
 rem lu: Aug-23-2018
 
+echo.
 echo %fp%
 
 set cbf_url=503.badapi.net
@@ -4491,6 +4731,7 @@ set fp=* Belfy.
 
 rem lu: Aug-24-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%savannah%\belfry
@@ -4507,6 +4748,7 @@ set fp=* 404 badapi.
 
 rem lu: Aug-23-2018
 
+echo.
 echo %fp%
 
 set cbf_url=http://badapi.net/notfound
@@ -4523,6 +4765,7 @@ set fp=* Proxy endpoint 404 badapi.
 
 rem lu: Aug-23-2018
 
+echo.
 echo %fp%
 
 set cbf_url=GET http://404.badapi.net
@@ -4539,6 +4782,7 @@ set fp=* Git API status.
 
 rem lu: Aug-23-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://status.github.com/api/status.json
@@ -4557,6 +4801,7 @@ set fp=* Star Wars Api people.
 
 rem lu: Aug-24-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://swapi.co/api/people
@@ -4581,6 +4826,7 @@ set fp=* Incidents JSON, a. k. a. logical razors.
 
 rem lu: Aug-23-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\it\fresnel\incidents.json
@@ -4599,6 +4845,7 @@ set fp=* Metro map.
 
 rem lu: Aug-24-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/For-Git-Testing/master/Art/dc_metro_map.jpg
@@ -4615,6 +4862,7 @@ set fp=* Json Placeholder on GitHub.
 
 rem lu: Jul-17-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jsonplaceholder
@@ -4633,6 +4881,7 @@ set fp=* Json Placeholder.
 
 rem lu: Aug-24-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://jsonplaceholder.typicode.com/users
@@ -4649,6 +4898,7 @@ set fp=* Custom Azure Data. If data is returned you will see a wall of ascii.
 
 rem lu: Aug-24-2018
 
+echo.
 echo %fp%
 
 set cbf_header=zumo-api-version: 2.0.0
@@ -4686,6 +4936,7 @@ set fp=* Van's Azure Functions.
 
 rem lu: Aug-29-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\Nova2018CodeCamp2
@@ -4704,6 +4955,7 @@ set fp=* Custom Azure Data - Port Types.
 
 rem lu: Aug-29-2018
 
+echo.
 echo %fp%
 
 set cbf_header=zumo-api-version: 2.0.0
@@ -4724,6 +4976,7 @@ set fp=* Dot Net core HelloWorld conole application.
 
 rem lu: Aug-31-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\HelloWorld
@@ -4740,6 +4993,7 @@ set fp=* Dot Net core myApp console application.
 
 rem lu: Aug-31-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\myApp
@@ -4756,6 +5010,7 @@ set fp=* Test 1 path.
 
 rem lu: Sep-2-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\test1
@@ -4772,6 +5027,7 @@ set fp=* Test 2 path.
 
 rem lu: Sep-2-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\test2
@@ -4788,6 +5044,7 @@ set fp=* Test 3 path.
 
 rem lu: Sep-4-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\test3
@@ -4808,6 +5065,7 @@ set fp=* Web api core resources for Shawn W.'s course.
 
 rem lu: Sep-5-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\webapicoreresources\data
@@ -4830,6 +5088,7 @@ set fp=* My code camp completed exercises by Shawn W.
 
 rem lu: Sep-4-2018
 
+echo.
 echo %fp%
 
 set cbf_path=C:\aa\MyCodeCampCompletedExercises
@@ -4846,6 +5105,7 @@ set fp=* Mobile back-end.
 
 rem lu: Sep-4-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\MobileBackend
@@ -4868,6 +5128,7 @@ set fp=* Original Kevin Dockx Restful API course.
 
 rem lu: Sep-7-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\RESTfulAPIAspNetCore_Course
@@ -4886,6 +5147,7 @@ set fp=* Restful API Asp Net Core Course by Kevin Dockx - My modifications.
 
 rem lu: Sep-7-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\dx
@@ -4904,6 +5166,7 @@ set fp=* Visual Studio Installer.
 
 rem lu: Sep-11-2018
 
+echo.
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe
@@ -4920,6 +5183,7 @@ set fp=* Big project by Shawn Wildermuth.
 
 rem lu: Sep-11-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\BigProject
@@ -4942,6 +5206,7 @@ set fp=* Code referenced Visual Studio Git Ignore.
 
 rem lu: Sep-11-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\it\gitignore\VisualStudio.gitignore
@@ -4964,6 +5229,7 @@ set fp=* Visual Studio Git Ignore.
 
 rem lu: Jan-19-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=.gitignore
@@ -4988,6 +5254,7 @@ set fp=* DutchTreat by Shawn Wildermuth and me.
 
 rem lu: Sep-11-2018
 
+echo.
 echo %fp%
 
 if "%~2" == "" (
@@ -5015,6 +5282,7 @@ set fp=* DutchTreat root.
 
 rem lu: Sep-19-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\DutchTreat
@@ -5031,6 +5299,7 @@ set fp=* Shawn Wildermuth's Resources.
 
 rem lu: Sep-12-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\BuildingASPNETCore2
@@ -5051,6 +5320,7 @@ set fp=* Shawn's Completed exercises.
 
 rem lu: Sep-18-2018
 
+echo.
 echo %fp%
 
 if "%~2" == "" (
@@ -5074,6 +5344,7 @@ set fp=* Karl.
 
 rem lu: Sep-24-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%savannah%\karl
@@ -5090,6 +5361,7 @@ set fp=* Pounders.
 
 rem lu: Sep-27-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Software\Tools
@@ -5108,6 +5380,7 @@ set fp=* DevOps Working Group.
 
 rem lu: Oct-22-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\DevOps-WG
@@ -5126,6 +5399,7 @@ set fp=* ForGitTesting.
 
 rem lu: Sep-6-2017
 
+echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\For-Git-Testing
@@ -5144,6 +5418,7 @@ set fp=* ARM templates.
 
 rem lu: Oct-23-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\
@@ -5162,6 +5437,7 @@ set fp=* WG Wiki.
 
 rem lu: Oct-24-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\
@@ -5180,6 +5456,7 @@ set fp=* Dev Technology.
 
 rem lu: Oct-22-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/DevTechnology
@@ -5286,6 +5563,7 @@ exit/b
 
 set fp=* Pass through.
 
+echo.
 echo %fp%
 
 rem lu: Dec-5-2018
@@ -5306,6 +5584,7 @@ set fp=* iCart APC.
 
 rem lu: Oct-17-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\j\cart
@@ -5324,6 +5603,7 @@ set fp=* Cart Documents.
 
 rem lu: Oct-24-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\iCart-Doco
@@ -5344,6 +5624,7 @@ set fp=* Pluralsight's Terraform class.
 
 rem lu: Oct-29-2018
 
+echo.
 echo %fp%
 
 if "%~2" == "" (
@@ -5373,6 +5654,7 @@ set fp=* Module 3. Website says "Teal/Green" alternating/load-balanced websites.
 
 rem lu: Nov-1-2018
 
+echo.
 echo %fp%
 
 call td tf 03
@@ -5397,6 +5679,7 @@ rem The Terraform output is the AWS Elastic Load Balancer Public DNS.
 
 rem lu: Nov-1-2018
 
+echo.
 echo %fp%
 
 call td tf 04
@@ -5417,6 +5700,7 @@ set fp=* Module 4. I didn't complete this module because it required some Azure 
 
 rem lu: Nov-1-2018
 
+echo.
 echo %fp%
 
 call td tf 05
@@ -5445,6 +5729,7 @@ set fp=* Default repository folder.
 
 rem lu: Jul-10-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%
@@ -5461,6 +5746,7 @@ set fp=* D aa repositories.
 
 rem lu: Nov-2-2018
 
+echo.
 echo %fp%
 
 set cbf_path=d:\aa\repositories
@@ -5477,6 +5763,7 @@ set fp=* C aa repositories.
 
 rem lu: Nov-2-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\aa\repositories
@@ -5497,6 +5784,7 @@ set fp=* Program files.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\program files
@@ -5513,6 +5801,7 @@ set fp=* Program files x86.
 
 rem lu: Apr-24-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\program files (x86)
@@ -5533,6 +5822,7 @@ set fp=* AWS CLI sample code.
 
 rem lu: Nov-2-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://bootstrap-it.com/awscli/#intro
@@ -5551,6 +5841,7 @@ set fp=* AWS CLI Reference.
 
 rem lu: Nov-2-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://docs.aws.amazon.com/cli/latest/reference/index.html
@@ -5569,6 +5860,7 @@ set fp=* My AWS CLI CART Admin website.
 
 rem lu: Nov-2-2018
 
+echo.
 echo %fp%
 
 set cbf_url=http://cartsite2018.com.s3-website-us-east-1.amazonaws.com/
@@ -5587,6 +5879,7 @@ set fp=* My documents.
 
 rem lu: Nov-19-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%homedrive%%homepath%\documents
@@ -5607,6 +5900,7 @@ set fp=* AWS configuration credentials.
 
 rem lu: Nov-19-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%userprofile%\.aws\credentials
@@ -5627,6 +5921,7 @@ set fp=* Miscellany folder.
 
 rem lu: Dec-4-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\j\miscellany
@@ -5645,6 +5940,7 @@ set fp=* Local app data.
 
 rem lu: Dec-4-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%localappdata%
@@ -5663,6 +5959,7 @@ set fp=* App data.
 
 rem lu: Dec-4-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%appdata%
@@ -5681,6 +5978,7 @@ set fp=* WordPad.
 
 rem lu: Aug-9-2018
 
+echo.
 echo %fp%
 
 set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
@@ -5697,6 +5995,7 @@ set fp=* Download for windows.
 
 rem lu: Dec-4-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://www.google.com/search?as_q=%2+download+windows
@@ -5713,6 +6012,7 @@ set fp=* Google advanced search
 
 rem lu: Dec-5-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\
@@ -5731,6 +6031,7 @@ set fp=* TC.
 
 rem lu: Dec-5-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
@@ -5753,6 +6054,7 @@ set fp=* Location that worked for the SSH keys folder.
 
 rem lu: Dec-6-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\.ssh
@@ -5769,6 +6071,7 @@ set fp=* Certificate setup directions.
 
 rem lu: Dec-6-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://blogs.msdn.microsoft.com/phkelley/2014/01/20/adding-a-corporate-or-self-signed-certificate-authority-to-git-exes-store/
@@ -5785,6 +6088,7 @@ set fp=* Bitbucket.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://bitbucket.org/dashboard/overview
@@ -5801,6 +6105,7 @@ set fp=* Xaml Mobile Test.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
@@ -5817,6 +6122,7 @@ set fp=* Test 1 - Private repo.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/test1.git
@@ -5833,6 +6139,7 @@ set fp=* TF Keys.
 
 rem lu: Nov-2-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%tfkeys% 
@@ -5849,6 +6156,7 @@ set fp=* AirWatch Samples.
 
 rem lu: Jul-20-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\AirWatch-samples
@@ -5869,6 +6177,7 @@ set fp=* VMware AirWatch SDK.
 
 rem lu: Aug-16-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\Xamarin-AWSDK\samples\xamariniossampleapp
@@ -5891,6 +6200,7 @@ set fp=* Jenkins.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 rem Admin password file.
@@ -5913,6 +6223,7 @@ set fp=* Jenkins workspace.
 
 rem lu: Jan-7-2019
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\.jenkins\workspace
@@ -5935,6 +6246,7 @@ rem fcd: Jul-6-2017
 
 rem This is useful for new installs.
 
+echo.
 echo %fp%
 echo.
 
@@ -5954,6 +6266,7 @@ set fp=* Java runtime path.
 
 rem lu: Dec-6-2018
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Program Files (x86)\Java\jre1.8.0_192\bin
@@ -5970,6 +6283,7 @@ set fp=* Java under Program Files.
 
 rem lu: Dec-6-2018
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Program Files\Java
@@ -5986,6 +6300,7 @@ set fp=* Java under Program Files (x86).
 
 rem lu: Dec-6-2018
 
+echo.
 echo %fp%
 
 set cbf_path=C:\Program Files (x86)\Java
@@ -6004,6 +6319,7 @@ set fp=* Open a new Composable Batch Files Helper.
 
 rem lu: Dec-13-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\Composable Batch Files Helper.lnk
@@ -6020,6 +6336,7 @@ set fp=* Connect to my AWS instance from the command line!
 
 rem lu: Dec-12-2018
 
+echo.
 echo %fp%
 
 rem This filename is from Dec-14-2018
@@ -6044,6 +6361,7 @@ set fp=* Dev environment Excel file.
 
 rem lu: Dec-6-2018
 
+echo.
 echo %fp%
 
 call n c_docs
@@ -6068,6 +6386,7 @@ rem I did this so that I could fail the build to test failures.
 
 rem lu: Dec-13-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
@@ -6089,6 +6408,7 @@ set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
 
 rem lu: Jan-7-2019
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot
@@ -6107,6 +6427,7 @@ set fp=* Spring boot test code from the PluralSight Jenkins 2 course.
 
 rem lu: Dec-13-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
@@ -6123,6 +6444,7 @@ set fp=* Wes' challenge.
 
 rem lu: Dec-15-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://gist.github.com/g0t4/12d888d0ce9e40b79d8454dabdad7033
@@ -6139,6 +6461,7 @@ set fp=* Powerpoint.
 
 rem lu: Dec-18-2018
 
+echo.
 echo %fp%
 
 set cbf_application=c:\program files\microsoft office\root\office16\powerpnt.exe
@@ -6155,6 +6478,7 @@ set fp=* Hungry shark.
 
 rem lu: Dec-18-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://www.youtube.com/watch?v=L8_GYxIOErQ
@@ -6171,6 +6495,7 @@ set fp=* Jaws PowerPoint
 
 rem lu: Dec-18-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\jaws.pptx
@@ -6189,6 +6514,7 @@ set fp=* Share-Zone.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
@@ -6211,6 +6537,7 @@ set fp=* Copied software.
 
 rem lu: Dec-19-2018
 
+echo.
 echo %fp%
 
 call n sz
@@ -6229,6 +6556,7 @@ set fp=* Copied clif file.
 
 rem lu: Dec-19-2018
 
+echo.
 echo %fp%
 
 call n sz
@@ -6255,6 +6583,7 @@ rem fcd: Jul-7-2017
 
 rem This is useful for new installs.
 
+echo.
 echo %fp%
 
 set cbf_path=%maven_home%
@@ -6277,6 +6606,7 @@ rem fcd: Dec-14-2018
 
 rem This is useful for new installs.
 
+echo.
 echo %fp%
 
 set cbf_path=%java_home%
@@ -6297,6 +6627,7 @@ set fp=* AWS configuration.
 
 rem lu: Nov-6-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%userprofile%\.aws\credentials
@@ -6318,6 +6649,7 @@ set fp=* Jenkins home
 
 rem lu: Dec-15-2018
 
+echo.
 echo %fp%
 
 call n home
@@ -6346,6 +6678,7 @@ set fp=* User profile/home.
 
 rem lu: Dec-17-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%
@@ -6362,6 +6695,7 @@ set fp=* Windows Apps.
 
 rem lu: Dec-19-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\
@@ -6382,6 +6716,7 @@ set fp=* Mouse.
 
 rem lu: Dec-20-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
@@ -6404,6 +6739,7 @@ set fp=* Multi-Edit Config file folder.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
@@ -6420,6 +6756,7 @@ set fp=* Multi-Edit Config file folder in Share-Zone.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
@@ -6436,6 +6773,7 @@ set fp=* Multi-Edit Config file folder in Share-Zone.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
@@ -6458,6 +6796,7 @@ set fp=* Gfe.txt.
 
 rem lu: Dec-4-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\gfe.asc
@@ -6478,6 +6817,7 @@ set fp=* Documents folder.
 
 rem lu: Jul-9-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\documents
@@ -6498,6 +6838,7 @@ set fp=* Windows desktop.
 
 rem lu: Dec-27-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\desktop
@@ -6514,6 +6855,7 @@ set fp=* Windows system 32.
 
 rem lu: Dec-27-2018
 
+echo.
 echo %fp%
 
 set cbf_path=c:\windows\system32
@@ -6536,6 +6878,7 @@ set fp=* Show desktop.
 
 rem lu: Jun-13-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%userprofile%\desktop
@@ -6556,6 +6899,7 @@ set fp=* Show open windows.
 
 rem lu: Jun-13-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
@@ -6572,6 +6916,7 @@ set fp=* Cart.
 
 rem lu: Dec-27-2018
 
+echo.
 echo %fp%
 
 call n r
@@ -6596,6 +6941,7 @@ set fp=* Git.
 
 rem lu: Dec-6-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%localappdata%\Programs\Git
@@ -6618,6 +6964,7 @@ set fp=* Git user bin. Loaded with utilities. Super path.
 
 rem lu: Dec-4-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%localappdata%\Programs\Git\usr\bin
@@ -6636,6 +6983,7 @@ set fp=* Run a2.
 
 rem lu: Dec-28-2018
 
+echo.
 echo %fp%
 
 call n s
@@ -6658,6 +7006,7 @@ set fp=* Microsoft Teams.
 
 rem lu: Dec-28-2018
 
+echo.
 echo %fp%
 
 call an edge
@@ -6676,6 +7025,7 @@ set fp=* Jenkins Slave Clone.
 
 rem lu: Dec-30-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%userprofile%\downloads\10.168.73.179.rdp
@@ -6692,6 +7042,7 @@ set fp=* Bee Clone.
 
 rem lu: Dec-30-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%userprofile%\downloads\10.168.73.223.rdp
@@ -6712,6 +7063,7 @@ set fp=* Reach out.
 
 rem lu: Sep-15-2018
 
+echo.
 echo %fp%
 
 set cbf_path=%reach out%
@@ -6730,6 +7082,7 @@ set fp=* Reach out on dropbox.
 
 rem lu: Jan-2-2019
 
+echo.
 echo %fp%
 
 set cbf_path=%dropbox%\!savannah\reach out
@@ -6746,6 +7099,7 @@ set fp=* Copy of work.asc.
 
 rem lu: Sep-15-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\copy of wk.asc
@@ -6762,6 +7116,7 @@ set fp=* Excel.
 
 rem lu: Jan-3-2019
 
+echo.
 echo %fp%
 
 rem Determine installation path.
@@ -6790,6 +7145,7 @@ set fp=* Microsoft Outlook.
 
 rem lu: Jan-3-2019
 
+echo.
 echo %fp%
 
 call an edge
@@ -6812,6 +7168,7 @@ set fp=* ZoomIt
 
 rem lu: Dec-14-2018
 
+echo.
 echo %fp%
 
 call n p
@@ -6834,6 +7191,7 @@ set fp=* Snipping tool.
 
 rem lu: Jan-4-2019
 
+echo.
 echo %fp%
 
 set cbf_application=%windir%\system32\SnippingTool.exe
@@ -6850,6 +7208,7 @@ set fp=Windows Startup.
 
 rem fcd: May-9-2017
 
+echo.
 echo %fp%
 
 set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
@@ -6866,6 +7225,7 @@ set fp=* New Jenkins.
 
 rem lu: Jan-4-2019
 
+echo.
 echo %fp%
 
 set cbf_filename=%userprofile%\downloads\ec2-18-253-135-181.us-gov-east-1.compute.amazonaws.com.rdp
@@ -6886,6 +7246,7 @@ set fp=* DevOps Roadmap.
 
 rem lu: Jan-3-2019
 
+echo.
 echo %fp%
 
 set cbf_filename=%cbf_default_repository_folder%\iCart-Doco\DevOps Roadmap.xlsx
@@ -6904,6 +7265,7 @@ set fp=* Localhost on port 8080.
 
 rem lu: Dec-7-2018
 
+echo.
 echo %fp%
 
 call an kr
@@ -6922,6 +7284,7 @@ set fp=* Podcaster.
 
 rem lu: Jan-5-2019
 
+echo.
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
@@ -6940,6 +7303,7 @@ set fp=* Filename extensions.
 
 rem lu: Jan-8-2019
 
+echo.
 echo %fp%
 
 set cbf_url=http://en.wikipedia.org/wiki/Alphabetical_list_of_file_extensions
@@ -6966,6 +7330,7 @@ set fp=* Develop branch.
 
 rem lu: Jan-8-2019
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\cart\api
@@ -6984,6 +7349,7 @@ set fp=* H2.
 
 rem lu: Jan-8-2019
 
+echo.
 echo %fp%
 
 set cbf_url=http://localhost:8080/cart-api/h2-console
@@ -7000,6 +7366,7 @@ set fp=* Jenkins trigger test.
 
 rem lu: Jan-8-2019
 
+echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\jenkins-trigger-test
@@ -7019,6 +7386,7 @@ set fp=* Solitaire system.
 rem lu: Jan-8-2019
 
 echo.
+echo.
 echo %fp%
 
 set cbf_url=https://github.com/g0t4/solitaire-systemjs-course
@@ -7035,6 +7403,7 @@ set fp=* J folder and file.
 
 rem lu: Dec-4-2018
 
+echo.
 echo %fp%
 
 set cbf_filename=%savannah%\belfry\j.bat

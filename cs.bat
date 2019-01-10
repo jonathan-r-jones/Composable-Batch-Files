@@ -70,6 +70,7 @@ exit/b
 
 set fp=* Main function.
 
+echo.
 echo %filename_stands_for%
 echo %filename_stands_for%>%temp%\search_results_cs.txt
 echo.>>%temp%\search_results_cs.txt
