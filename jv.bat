@@ -145,4 +145,56 @@ exit/b
 
 
 
+:_
+
+:get_java_version
+
+set fp=* Get Java version.
+
+rem Outcome: This works!
+
+echo.
+echo %fp%
+echo.
+
+cd c:\mercury\batch_files
+
+javac generate_mercury_version_number.java
+
+java -cp . generate_mercury_version_number>c:\a\j3.txt
+
+set /p java_timestamp=<c:\a\j3.txt
+
+echo jt: %java_timestamp%
+
+exit/b
+
+
+
+:_
+
+:jv
+
+set fp=* Which Java version is running on this machine?
+
+rem FCD: Mar-2-2017
+
+rem echo.
+rem echo %fp%
+echo.
+
+call c:\mercury\batch_files\update_java_timestamp.bat
+
+set /p timestamp=<%tmp%\java_timestamp.txt
+
+echo Java Version on %computername% on %timestamp%:
+
+echo.
+
+java -version
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

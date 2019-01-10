@@ -99,8 +99,6 @@ set cbf_url=https://www.google.com/search?as_q=%~2
 
 call sfcu
 
-rem qq-1
-
 exit/b
 
 

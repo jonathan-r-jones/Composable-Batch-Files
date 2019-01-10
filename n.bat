@@ -5643,22 +5643,6 @@ exit/b
 
 
 
-:_
-
-:j
-
-set fp=* J folder.
-
-rem lu: Dec-4-2018
-
-echo %fp%
-
-set cbf_path=%userprofile%\j
-
-exit/b
-
-
-
 :_ + Appdata
 
 ::_
@@ -7046,6 +7030,24 @@ echo.
 echo %fp%
 
 set cbf_url=https://github.com/g0t4/solitaire-systemjs-course
+
+exit/b
+
+
+
+:_
+
+:j
+
+set fp=* J folder and file.
+
+rem lu: Dec-4-2018
+
+echo %fp%
+
+set cbf_filename=%savannah%\belfry\j.bat
+
+set cbf_path=%userprofile%\j
 
 exit/b
 
