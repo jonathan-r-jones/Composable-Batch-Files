@@ -12,14 +12,6 @@ set filep=* Nickname dictionary that sets the environment variables correspondin
 
 :_
 
-set fp=* Add some whitespace.
-
-echo.
-
-
-
-:_
-
 set fp=* In order to promote freshness, reset the error level.
 
 ver>nul
@@ -4988,8 +4980,6 @@ exit/b
 
 ::_
 
-:dt
-
 :dutr
 
 :dutch_treat
@@ -6978,7 +6968,7 @@ rem lu: Jan-8-2019
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\develop\api
+set cbf_path=%cbf_default_repository_folder%\cart\api
 
 set cbf_url=http://localhost:8080/cart-api
 
@@ -7050,6 +7040,25 @@ echo %fp%
 set cbf_filename=%savannah%\belfry\j.bat
 
 set cbf_path=%userprofile%\j
+
+exit/b
+
+
+
+:_
+
+:dt
+
+set fp=* JJ DevOps testing.
+
+rem lu: Jan-10-2019
+
+echo.
+echo %fp%
+
+set cbf_name=jj_devops_testing
+
+set cbf_path=%cbf_default_repository_folder%\%cbf_name%
 
 exit/b
 
