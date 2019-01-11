@@ -5471,6 +5471,12 @@ exit/b
 
 ::_
 
+:acrg
+
+:acrj
+
+:bgs
+
 :bgs1
 
 :bgs2
@@ -5478,6 +5484,8 @@ exit/b
 :bgsp
 
 :btbt
+
+:cap
 
 :cart
 
@@ -5527,9 +5535,27 @@ exit/b
 
 :je2_help
 
+:jf_acr
+
+:jf_bgs
+
+:jf_cap
+
+:jf_dj
+
+:jf_odl
+
+:jf_odls
+
 :jm
 
+rem (!rfsp) (mov-2)
+
 :m2
+
+:nere
+
+:nexu
 
 :nexus
 
@@ -7433,4 +7459,23 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-6)
+:_
+
+:acr
+
+set fp=* ACR.
+
+rem lu: Jan-10-2019
+
+echo.
+echo %fp%
+
+set cbf_name=acr
+
+set cbf_path=%cbf_default_repository_folder%\%cbf_name%
+
+exit/b
+
+
+
+:_

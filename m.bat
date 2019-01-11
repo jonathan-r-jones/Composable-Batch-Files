@@ -3908,4 +3908,27 @@ exit/b
 
 
 
+:_
+
+:jf
+
+set fp=* Open both Jenkinsfiles.
+
+rem lu: Jan-10-2019
+
+echo.
+echo %fp%
+
+call me jf_acr
+
+call me jf_bgs
+
+call me cap
+
+call me jf_odls
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)

@@ -66,9 +66,11 @@ echo.>>%temp%\search_results_fs.txt
 
 rem Files are sorted newest files first.
 
-echo.
 rem Shows files and folders.
+echo.
 dir /a /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
+
+if %Errorlevel% == 0 echo * Files found.
 
 rem (!rfsp) (mov-3)
 
