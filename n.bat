@@ -5547,6 +5547,8 @@ exit/b
 
 :jf_odls
 
+:jjigit
+
 :jm
 
 rem (!rfsp) (mov-2)
@@ -5592,9 +5594,9 @@ set fp=* Pass through.
 echo.
 echo %fp%
 
-rem lu: Dec-5-2018
+rem lu: Jan-11-2019
 
-call %share-zone%\n_ignore %1
+call %share-zone%\ni.bat %1
 
 exit/b
 
