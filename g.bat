@@ -1871,6 +1871,8 @@ exit/b
 
 ::_
 
+:pl
+
 :pull
 
 set fp=* Pull. Do a get-latest from the default branch. (!step, !pull, !step3)

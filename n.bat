@@ -3748,7 +3748,7 @@ echo %fp%
 
 rem Works with: Chrome, IE, OP, VI.
 
-rem Doesn't works with: Firefox, Edge.
+rem Doesn't work with: Firefox, Edge.
 
 set cbf_filename=C:\a\skeptics.txt
             
@@ -3771,7 +3771,7 @@ echo %fp%
 
 rem Works with: Chrome, IE, OP, VI.
 
-rem Doesn't works with: Edge, Firefox, even though Fx converts the filename to exactly the cbf_url 
+rem Doesn't work with: Edge, Firefox, even though Fx converts the filename to exactly the cbf_url 
 rem here.
 
 set cbf_filename=C:\a\skeptics.txt
