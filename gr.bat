@@ -120,7 +120,8 @@ echo %fp%
 echo.
 gradlew
 
-rem I noticed that ./gradlew doesn't work but .\gradlew does.
+rem I noticed that ./gradlew doesn't work but .\gradlew does. So if you see ./gradlew, I
+rem think that means you're looking at a non-Window environment.
 
 exit/b
 
@@ -317,6 +318,24 @@ echo %fp%
 
 echo.
 gradle properties
+
+exit/b
+
+
+
+:_
+
+:scan
+
+set fp=* Scan. Builds an online report.
+
+rem lu: Jan-11-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle --scan
 
 exit/b
 

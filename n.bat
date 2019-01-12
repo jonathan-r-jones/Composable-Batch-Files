@@ -7498,3 +7498,20 @@ exit/b
 
 
 :_
+
+:psg
+
+set fp=* Pipeline script generator.
+
+rem lu: Jan-11-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
+
+exit/b
+
+
+
+:_
