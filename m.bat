@@ -3912,7 +3912,7 @@ exit/b
 
 :jf
 
-set fp=* Open both Jenkinsfiles.
+set fp=* Open 4 Jenkinsfiles.
 
 rem lu: Jan-10-2019
 
@@ -3923,7 +3923,7 @@ call me jf_acr
 
 call me jf_bgs
 
-call me cap
+call me jf_cap
 
 call me jf_odls
 
