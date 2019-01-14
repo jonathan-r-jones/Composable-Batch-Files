@@ -5530,6 +5530,10 @@ exit/b
 
 :jjigit
 
+:ji
+
+:jira
+
 :jm
 
 rem (!rfsp) (mov-2)
@@ -7251,9 +7255,11 @@ exit/b
 
 :map
 
+:paro
+
 :roma
 
-set fp=* DevOps Roadmap.
+set fp=* DevOps Roadmap, a.k.a. Pa's roadmap.  
 
 rem lu: Jan-3-2019
 

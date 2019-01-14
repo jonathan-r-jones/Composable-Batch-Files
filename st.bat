@@ -31,7 +31,6 @@ echo %fp%
 
 if not "%~1" == "" call td %~1
 
-rem qq-1
 goto main_function
 
 exit/b

@@ -2469,7 +2469,7 @@ exit/b
 
 :status
 
-set fp=* Status, including remote information.
+set fp=* Status for ******** "%cd%" ********.
 
 rem lu: Jan-9-2019
 
