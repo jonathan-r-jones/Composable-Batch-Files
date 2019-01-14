@@ -389,34 +389,6 @@ exit/b
 
 :_
 
-:ss
-
-:super_status
-
-set fp=* Do super status, that is status, including remote information, for all repositories.
-
-rem fcd: Nov-30-2018
-
-rem This function is because it uses recursive calls into its own file but DOESN'T use
-rem a single goto statement, which is an anti-pattern.
-
-echo.
-echo %fp%
-
-call st cbf
-
-call st ql
-
-call st c_docs
-
-call st s
-
-exit/b
-
-
-
-:_
-
 :hlp
 
 set fp=* Help.
@@ -2528,6 +2500,32 @@ echo %fp%
 
 echo.
 git diff
+
+exit/b
+
+
+
+:_
+
+:ss
+
+:super_status
+
+set fp=* Do super status, that is status, including remote information, for all repositories.
+
+rem fcd: Nov-30-2018
+
+rem This function is because it uses recursive calls into its own file but DOESN'T use
+rem a single goto statement, which is an anti-pattern.
+
+echo.
+echo %fp%
+
+call st cbf
+
+call st c_docs
+
+call st s
 
 exit/b
 

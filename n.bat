@@ -5458,6 +5458,8 @@ exit/b
 
 :bgs
 
+:bgs_cn
+
 :bgs1
 
 :bgs2
@@ -5477,8 +5479,6 @@ exit/b
 :cart_cn
 
 :cix
-
-:bgs_cn
 
 :conf
 
@@ -7103,6 +7103,8 @@ exit/b
 :_
 
 :cwk
+
+:wkc
 
 set fp=* Copy of work.asc.
 
