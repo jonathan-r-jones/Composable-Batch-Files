@@ -69,8 +69,6 @@ call m clear_errorlevel_silently
 
 move *.* %cbf_path%
 
-rem (!rfsp) (mov-2)
-
 exit/b
 
 
@@ -150,38 +148,19 @@ echo.
 echo %fp%
 
 rem Open the podcaster application and download podcasts from there.
-call x pc
+rem call x pc
 
-pause
-
-call %0 initialize_environment
+rem (!rfsp) (mov-2)
 
 call %0 move_podcasts_to_the_staging_folder
 
-pause
-
 call %0 run_tag_program
+
+pause
 
 call %0 move_old_clipjam_files
 
 call %0 move_sa_to_cj
-
-exit/b
-
-
-
-::_
-
-:initialize_environment
-
-set fp= * Initialize environment.
-
-echo.
-echo %fp%
-
-set podcast_folder=%my documents%\gpodder\downloads
-
-set staging_area_root="%my documents%\MP3 Content Staging Area\"
 
 exit/b
 
@@ -198,9 +177,14 @@ rem FCD: Feb-24-2017
 echo.
 echo %fp%
 
-cd %podcast_folder%
+call td sa
 
-for /r %%j in (*.mp3) do move "%%j" "%staging_area%"
+set mp3_staging_area=%cd%
+
+call td pc
+
+echo.
+for /r %%j in (*.mp3) do move "%%j" "%mp3_staging_area%"
 
 exit/b
 
