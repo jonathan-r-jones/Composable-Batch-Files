@@ -7471,6 +7471,8 @@ exit/b
 
 :_
 
+:gsg
+
 :psg
 
 set fp=* Pipeline script generator.
@@ -7479,6 +7481,8 @@ rem lu: Jan-11-2019
 
 echo.
 echo %fp%
+
+call an kr
 
 set cbf_url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
 
@@ -7580,7 +7584,6 @@ echo.
 echo %fp%
 
 set cbf_filename=jenkinsfile
-rem       qq-1
 
 exit/b
 
