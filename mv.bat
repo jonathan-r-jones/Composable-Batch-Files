@@ -128,7 +128,7 @@ rem lu: Jul-8-2018
 echo.
 echo %fp%
 
-call td staging_area 
+call td staging_area
 
 call n clipjam_podcasts
 
@@ -152,9 +152,13 @@ echo %fp%
 rem Open the podcaster application and download podcasts from there.
 call x pc
 
+pause
+
 call %0 initialize_environment
 
 call %0 move_podcasts_to_the_staging_folder
+
+pause
 
 call %0 run_tag_program
 
