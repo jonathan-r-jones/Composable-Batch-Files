@@ -2868,25 +2868,6 @@ exit/b
 
 :_
 
-:sa
-
-:staging_area
-
-set fp=* Staging area.
-
-rem lu: Jul-8-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%my documents%\mp3 content staging area\files ready For Transfer
-
-exit/b
-
-
-
-:_
-
 :ju
 
 set fp=* JSON users.
@@ -7306,25 +7287,6 @@ exit/b
 
 :_
 
-:pc
-
-set fp=* Podcaster.
-
-rem lu: Jan-5-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-:_
-
 :fiex
 
 set fp=* Filename extensions.
@@ -7509,6 +7471,88 @@ echo.
 echo %fp%
 
 set cbf_url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
+
+exit/b
+
+
+
+:_+ MP3
+
+
+
+::_
+
+:mp3a
+
+:mp3am
+
+set fp=* MP3 accidentally moved.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\mp3\Jan-14-2019 - Accidentally Moved
+
+exit/b
+
+
+
+::_
+
+:mp3
+
+set fp=* MP3 root.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\mp3
+
+exit/b
+
+
+
+:_
+
+:pc
+
+:podcast_folder
+
+set fp=* Podcaster.
+
+rem lu: Jan-5-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
+
+set cbf_filename=%cbf_application%
+
+set cbf_path=%my documents%\gpodder\downloads
+
+exit/b
+
+
+
+:_
+
+:sa
+
+:staging_area
+
+set fp=* Staging area.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%my documents%\mp3 staging area
 
 exit/b
 
