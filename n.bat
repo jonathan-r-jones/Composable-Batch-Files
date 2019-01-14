@@ -7569,3 +7569,21 @@ exit/b
 
 
 :_
+
+:jf
+
+set fp=* Jenkinsfile in current folder.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=jenkinsfile
+rem       qq-1
+
+exit/b
+
+
+
+:_
