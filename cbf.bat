@@ -119,6 +119,7 @@ echo    tf  Perform Terraform-related tasks.
 echo    tk  Wrapper around the taskkill command.
 echo    tl  Wrapper around the tasklist command.
 echo    td  Transform Directory.
+echo   tdf  Transform Directory where only the Cbf_filename is known.
 echo   tdp  Transform Directory to parent folder.
 echo    te  Batch file template used for creating new batch files.
 echo     v  Vetted functions (Useful for copying-and-pasting).

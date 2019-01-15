@@ -2967,23 +2967,6 @@ exit/b
 
 :_
 
-:expand_to_path_only
-
-set fp=* Expand to path only.
-
-rem lu: Mar-14-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%~p2
-
-exit/b
-
-
-
-:_
-
 :publish
 
 set fp=* The steps to publish a new version.
@@ -3926,6 +3909,23 @@ call me jf_bgs
 call me jf_cap
 
 call me jf_odls
+
+exit/b
+
+
+
+:_
+
+:expand_to_path_only
+
+set fp=* Expand to path only.
+
+rem lu: Mar-14-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%~p2
 
 exit/b
 

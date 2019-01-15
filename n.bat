@@ -7520,7 +7520,7 @@ rem lu: Jan-11-2019
 echo.
 echo %fp%
 
-set cbf_filename=%cbf_default_repository_folder%\share-zone\jenkins log.xlsx
+set cbf_filename=%share-zone%\jenkins log.xlsx
 
 exit/b
 

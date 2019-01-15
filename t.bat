@@ -8336,3 +8336,20 @@ exit/b
 
 
 :_
+
+:expand_to_full_path
+
+set fp=* Expands %I to a fully qualified path name.
+
+rem lu: Mar-14-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%~d2%~p2
+
+exit/b
+
+
+
+:_
