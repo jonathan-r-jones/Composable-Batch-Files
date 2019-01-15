@@ -32,6 +32,7 @@ goto %1
 
 set fp=* Dir: an easier to type version.
 
+echo.
 echo Filename stands for: Dir.
 
 echo.

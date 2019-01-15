@@ -69,7 +69,7 @@ set fp=* Set URL.
 set cbf_application=
 set cbf_url=
 
-call un %1
+call un %1 %2
 
 if "%cbf_url%" == "" (
   echo.

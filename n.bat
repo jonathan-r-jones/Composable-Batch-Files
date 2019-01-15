@@ -7272,15 +7272,17 @@ exit/b
 
 
 
-:_
+:_+ Local Host
 
-:8080
+
+
+::_
 
 :lh
 
 set fp=* Localhost on port 8080.
 
-rem lu: Dec-7-2018
+rem lu: Jan-15-2019
 
 echo.
 echo %fp%
@@ -7288,6 +7290,44 @@ echo %fp%
 call an kr
 
 set cbf_url=http://localhost:8080
+
+exit/b
+
+
+
+::_
+
+:8080
+
+set fp=* Localhost on port %1.
+
+rem lu: Jan-15-2019
+
+echo.
+echo %fp%
+
+call an kr
+
+set cbf_url=http://localhost:%1
+
+exit/b
+
+
+
+::_
+
+:8082
+
+set fp=* Localhost on port %1.
+
+rem lu: Jan-15-2019
+
+echo.
+echo %fp%
+
+call an kr
+
+set cbf_url=http://localhost:%1
 
 exit/b
 
@@ -7334,6 +7374,23 @@ echo %fp%
 set cbf_path=%cbf_default_repository_folder%\cart\api
 
 set cbf_url=http://localhost:8080/cart-api
+
+exit/b
+
+
+
+::_
+
+:8082
+
+set fp=* 8082.
+
+rem lu: Jan-15-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8082/cart-api
 
 exit/b
 
