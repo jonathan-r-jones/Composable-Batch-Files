@@ -3895,12 +3895,14 @@ exit/b
 
 :jf
 
-set fp=* Open 4 Jenkinsfiles.
+set fp=* Open Jenkinsfiles.
 
 rem lu: Jan-10-2019
 
 echo.
 echo %fp%
+
+call me jf    
 
 call me jf_acr
 

@@ -7629,9 +7629,13 @@ exit/b
 
 
 
-:_
+:_+ Jenkinsfile
 
-:jf
+
+
+::_
+
+:jfc
 
 set fp=* Jenkinsfile in current folder.
 
@@ -7641,6 +7645,25 @@ echo.
 echo %fp%
 
 set cbf_filename=jenkinsfile
+
+exit/b
+
+
+
+::_
+
+:jf
+
+set fp=* Our Jenkinsfile.
+
+rem lu: Jan-15-2019
+
+echo.
+echo %fp%
+
+call n dev
+
+set cbf_filename=%cbf_path%\jenkinsfile
 
 exit/b
 
