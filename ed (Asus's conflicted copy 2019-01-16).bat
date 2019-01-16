@@ -6,15 +6,6 @@
 
 :_
 
-set filename_stands_for=* Editor abstraction layer.
-
-echo.
-echo %filename_stands_for%
-
-
-
-:_
-
 set fp=* Shift parameters.
 
 shift /0
@@ -23,29 +14,11 @@ shift /0
 
 :_
 
-set fp=* Prepocess.
-
-rem lu: Jan-16-2019
-
-rem echo %fp%
-
-set cbf_filename=
-
-call n %0
-
-
-
-:_
-
-set fp=* Route callers.
+set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
-
-if "%~1" == "" (
-  m open_application_without_a_parameter
-)
 
 set file_has_no_extension=0
 
@@ -82,18 +55,7 @@ if "%file_has_no_extension%" == "1" (
   goto n_switch_only
 )
 
-rem If a period is detected in the first parameter, then edit that file. Else, use the
-rem nickname dictionary to determine the filename.
-echo %1 | find /i ".">nul
-
-if %errorlevel% == 0 (
-  edit_file_in_the_current_folder
-) else (
-  goto edit_using_alias
-)
-
-exit/b
-
+goto simple_workflow
 
 
 
@@ -102,7 +64,10 @@ exit/b
 :help
 
 echo.
-echo Last Updated: Jan-16-2019
+echo Filename stands for: Editor abstraction layer.
+
+echo.
+echo Last Updated: Jun-8-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -137,6 +102,14 @@ rem lu: Jan-16-2019
 echo.
 echo %fp%
 
+set cbf_filename=
+
+call n %0
+
+if "%~1" == "" (
+  m open_application_without_a_parameter
+)
+
 rem If a period is detected in the first parameter, then edit that file. Else, use the
 rem nickname dictionary to determine the filename.
 echo %1 | find /i ".">nul
@@ -147,32 +120,21 @@ if %errorlevel% == 0 (
   call n %1
 )
 
-set cbf_parameter=%cbf_filename%
-
-call r
-
-exit/b
-
-
-
-:_
-
-:n_switch_only
-
-set fp=* N switch only.
-
-echo.
-echo %fp%
-
-rem If a period is detected in the first parameter, then edit that file. Else, use the
-rem nickname dictionary to determine the filename.
-echo %1 | find /i ".">nul
-
-if %errorlevel% == 1 (
-  set cbf_filename=%~1
+if "%~2" == "-c" (
+  echo.
+  echo * Create the file. 
+  set cbf_parameter=%cbf_filename%
+  call r
+  exit/b 1
 )
 
-call m clear_errorlevel_silently
+if "%~3" == "-c" (
+  echo.
+  echo * Create the file. 
+  set cbf_parameter=%cbf_filename%
+  call r
+  exit/b 1
+)
 
 if "%cbf_filename%" == "" (
   echo.
@@ -190,7 +152,24 @@ set cbf_parameter=%cbf_filename%
 
 call r
 
+rem (!rfsp) (mov-2)
+
 exit/b
+
+
+
+:_
+
+:n_switch_only
+
+set fp=* N switch only.
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+rem exit/b
 
 
 
@@ -205,55 +184,52 @@ rem lu: Jan-16-2019
 echo.
 echo %fp%
 
-rem If a period is detected in the first parameter, then edit that file. Else, use the
-rem nickname dictionary to determine the filename.
-echo %1 | find /i ".">nul
-
-if %errorlevel% == 1 (
-  set cbf_filename=%~1
-)
-
-call m clear_errorlevel_silently
-
-set cbf_parameter=%cbf_filename%
-
-call r
-
 rem exit/b
 
 
 
 :_
 
-:edit_file_in_the_current_folder
+:simple_workflow
 
-set fp=* Edit file in the current folder.
-
-rem lu: Jan-16-2019
+set fp=* Simple workflow, i. e. no switches specified.
 
 echo.
 echo %fp%
 
-set cbf_filename=%~1
+set cbf_filename=
 
-set cbf_parameter=%cbf_filename%
+call n %0
 
-call r
+if "%~1" == "" (
+  m open_application_without_a_parameter
+)
 
-exit/b
+rem If a period is detected in the first parameter, then edit that file. Else, use the
+rem nickname dictionary to determine the filename.
+echo %1 | find /i ".">nul
 
+if %errorlevel% == 0 (
+  set cbf_filename=%~1
+) else (
+  call n %1
+)
 
+if "%~2" == "-c" (
+  echo.
+  echo * Create the file. 
+  set cbf_parameter=%cbf_filename%
+  call r
+  exit/b 1
+)
 
-:_
-
-:edit_using_alias
-
-set fp=* Edit a file using an alias lookup.
-
-echo.
-echo %fp%
-
-call n %1
+if "%~3" == "-c" (
+  echo.
+  echo * Create the file. 
+  set cbf_parameter=%cbf_filename%
+  call r
+  exit/b 1
+)
 
 if "%cbf_filename%" == "" (
   echo.
