@@ -87,7 +87,7 @@ rem nickname dictionary to determine the filename.
 echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 (
-  edit_file_in_the_current_folder
+  goto edit_file_in_the_current_folder
 ) else (
   goto edit_using_alias
 )
