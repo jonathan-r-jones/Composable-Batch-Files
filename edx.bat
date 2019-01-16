@@ -6,15 +6,7 @@
 
 :_
 
-set fp=* Shift parameters.
-
-shift /0
-
-echo.
-echo * Percent 1: %1
-
-echo.
-echo * Percent 2: %2
+set filename_stands_for=* Edit a file.
 
 
 
@@ -26,40 +18,46 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-echo.
-echo 1
-
 goto main_function
 
 
 
 :_
 
+:h
+
 :help
 
+echo Filename stands for: %filename_stands_for%
+
+set filep=File purpose: Edit files.
+
 echo.
-echo Filename stands for: Editor helper.
+echo %filep%
 
 echo.
 echo Last Updated: Jun-8-2018
 
 echo.
-echo Usage: %0 [Parameter 1]
+echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Nickname of the file you wish to edit,
-set parameter_1=%parameter_1% or the name of a filename in the current folder.
-set parameter_1=%parameter_1% If left blank, the application is simply started.
-
-set parameter_1=Parameter 2 and or 3: If equal "-c", create the file. 
-set parameter_1=%parameter_2% If equal "-n", the file has no extension.
-
-rem Before merging them, do file comparison for each one.
+set parameter_1=Parameter 1 (Optional): The filename nickname of the file to execute
+set parameter_1=%parameter_1% or filename of a file in the current folder.
 
 echo.
 echo %parameter_1%
 
+set parameter_2=Parameter 2 (Optional): The Application nickname to use to edit the file.
+set parameter_2=%parameter_2% If left blank, the default text editor is used.
+
 echo.
 echo %parameter_2%
+
+set parameter_3=Parameter 3 (Optional): If "x", parameter 1 is assumed to be an
+set parameter_3=%parameter_3% extensionless filename rather than a nickname.
+
+echo.
+echo %parameter_3%
 
 exit/b
 
@@ -69,17 +67,11 @@ exit/b
 
 :main_function
 
-rem echo %filename_stands_for%
+echo %filename_stands_for%
 
-set cbf_filename=
-
-call n %0
-
-echo.
-echo 2
-
-if "%~1" == "" (
-  m open_application_without_a_parameter
+if "%~3" == "x" (
+  set cbf_filename=%~1
+  goto final_step
 )
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
@@ -87,46 +79,33 @@ rem nickname dictionary to determine the filename.
 echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 (
+  echo If called.
   set cbf_filename=%~1
 ) else (
-  call n %1
+  call fn %1
 )
 
-echo.
-echo 3
-
-if "%~2" == "-c" (
-  echo.
-  echo * Create the file. 
-  set cbf_parameter=%cbf_filename%
-  call r
-  exit/b 1
+if "%~2" == "" (
+  rem Set statements aren't allowed inside if blocks, so this is the workaround.
+  call m set_cbf_application_to_dte
+) else (
+  call an %2
 )
-
-if "%~3" == "-c" (
-  echo.
-  echo * Create the file. 
-  set cbf_parameter=%cbf_filename%
-  call r
-  exit/b 1
-)
-
-echo.
-echo 4
 
 if "%cbf_filename%" == "" (
   echo.
-  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
-  exit/b 1
-)
-
-if not exist "%cbf_filename%" (
-  echo.
-  echo * Error: The file "%cbf_filename%" does not exist.
-  exit/b 1
+  echo * Error: CBF_Filename equals nothing.
+  exit/b
 )
 
 set cbf_parameter=%cbf_filename%
+
+rem echo.
+rem echo CBF_Parameter: %cbf_parameter%
+
+
+
+:final_step
 
 call r
 

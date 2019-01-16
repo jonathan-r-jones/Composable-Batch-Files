@@ -6,7 +6,9 @@
 
 :_
 
-set filename_stands_for=* Edit a file.
+set fp=* Shift parameters.
+
+shift /0
 
 
 
@@ -18,46 +20,72 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-goto main_function
+set file_has_no_extension=0
+
+if "%~2" == "-n" set file_has_no_extension=1
+
+if "%~3" == "-n" set file_has_no_extension=1
+
+if "%~2" == "-c" (
+   if "%file_has_no_extension%" == "0" (
+      goto c_switch_only
+   )
+)
+
+if "%~3" == "-c" (
+   if "%file_has_no_extension%" == "0" (
+      echo 2
+      goto c_switch_only
+   )
+)
+
+if "%~2" == "-c" (
+   if "%file_has_no_extension%" == "1" (
+      goto c_and_n_switches
+   )
+)
+
+if "%~3" == "-c" (
+   if "%file_has_no_extension%" == "1" (
+      goto c_and_n_switches
+   )
+)
+
+if "%file_has_no_extension%" == "1" (
+  goto n_switch_only
+)
+
+goto simple_workflow
 
 
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: %filename_stands_for%
-
-set filep=File purpose: Edit files.
-
 echo.
-echo %filep%
+echo Filename stands for: Editor abstraction layer.
 
 echo.
 echo Last Updated: Jun-8-2018
 
 echo.
-echo Usage: %0 [space separated parameter(s)]
+echo Usage: %0 [Parameter 1]
 
-set parameter_1=Parameter 1 (Optional): The filename nickname of the file to execute
-set parameter_1=%parameter_1% or filename of a file in the current folder.
+set parameter_1=Parameter 1 (optional): File alias or current folder filename. If current ^
+folder filename has no extension then -n must be used also. If left blank, the application ^
+is merely started.
+
+set parameter_2=Parameter 2 or 3 (optional): Use -c to force file creation. Use -n to ^
+specify a file with no extension.
+
+rem Before merging the other editor batch files here, do file comparison for each one.
 
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2 (Optional): The Application nickname to use to edit the file.
-set parameter_2=%parameter_2% If left blank, the default text editor is used.
-
 echo.
 echo %parameter_2%
-
-set parameter_3=Parameter 3 (Optional): If "x", parameter 1 is assumed to be an
-set parameter_3=%parameter_3% extensionless filename rather than a nickname.
-
-echo.
-echo %parameter_3%
 
 exit/b
 
@@ -65,13 +93,64 @@ exit/b
 
 :_
 
-:main_function
+:c_switch_only
 
-echo %filename_stands_for%
+set fp=* C switch only.
 
-if "%~3" == "x" (
-  set cbf_filename=%~1
-  goto final_step
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+rem exit/b
+
+
+
+:_
+
+:n_switch_only
+
+set fp=* N switch only.
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+rem exit/b
+
+
+
+:_
+
+:c_and_n_switches
+
+set fp=* C and N switches.
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+rem exit/b
+
+
+
+:_
+
+:simple_workflow
+
+set fp=* Simple workflow, i. e. no switches specified.
+
+echo.
+echo %fp%
+
+set cbf_filename=
+
+call n %0
+
+if "%~1" == "" (
+  m open_application_without_a_parameter
 )
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
@@ -79,33 +158,40 @@ rem nickname dictionary to determine the filename.
 echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 (
-  echo If called.
   set cbf_filename=%~1
 ) else (
-  call fn %1
+  call n %1
 )
 
-if "%~2" == "" (
-  rem Set statements aren't allowed inside if blocks, so this is the workaround.
-  call m set_cbf_application_to_dte
-) else (
-  call an %2
+if "%~2" == "-c" (
+  echo.
+  echo * Create the file. 
+  set cbf_parameter=%cbf_filename%
+  call r
+  exit/b 1
+)
+
+if "%~3" == "-c" (
+  echo.
+  echo * Create the file. 
+  set cbf_parameter=%cbf_filename%
+  call r
+  exit/b 1
 )
 
 if "%cbf_filename%" == "" (
   echo.
-  echo * Error: CBF_Filename equals nothing.
-  exit/b
+  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
+  exit/b 1
+)
+
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: The file "%cbf_filename%" does not exist.
+  exit/b 1
 )
 
 set cbf_parameter=%cbf_filename%
-
-rem echo.
-rem echo CBF_Parameter: %cbf_parameter%
-
-
-
-:final_step
 
 call r
 

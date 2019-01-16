@@ -77,7 +77,8 @@ echo     d  Easier-to-type and remember version of "dir".
 echo    dn  Perform Dot Net core functions.
 echo     e  Exit command window.
 echo    ea  Application-centric way to run an application.
-echo    ed  Edit a file. Emulated Surf.
+echo    ed  Edit a file abstraction layer.
+echo   edx  Edit a file. Emulated Surf.
 echo   env  Show the state of the CBF environment variables.
 echo    fs  Filenames search.
 echo     g  Perform Git-related tasks.
