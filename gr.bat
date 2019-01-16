@@ -74,8 +74,8 @@ echo.
 echo %fp%
 
 echo.
-
-gradlew -Pprod clean bootWar
+call gradlew -Pprod clean bootWar
+echo.
 
 exit/b
 
