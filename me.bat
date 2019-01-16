@@ -1,2 +1,2 @@
 @echo off
-edx me %1
+edx %0 %1 %2
