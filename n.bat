@@ -7670,3 +7670,20 @@ exit/b
 
 
 :_
+
+:swag
+
+set fp=* Swagger on local.
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
+
+exit/b
+
+
+
+:_

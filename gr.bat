@@ -110,7 +110,7 @@ exit/b
 
 set fp=* Build for development.
 
-color 60
+rem color 60
 
 rem lu: Jan-8-2019
 
@@ -219,7 +219,7 @@ exit/b
 
 set fp=* Build CAPI for development.
 
-color 60
+rem color 60
 
 rem lu: Jan-8-2019
 
@@ -264,7 +264,7 @@ echo.
 echo %fp%
 
 echo.
-gradle test
+gradlew test
 
 exit/b
 
@@ -336,6 +336,24 @@ echo %fp%
 
 echo.
 gradle --scan
+
+exit/b
+
+
+
+:_
+
+:upli
+
+set fp=* Update Liquibase.
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle liquibaseUpdate
 
 exit/b
 
