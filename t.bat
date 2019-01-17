@@ -8263,16 +8263,6 @@ exit/b
 
 
 
-:_
-
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
 :_+ Color Tests
 
 
@@ -8347,6 +8337,45 @@ echo.
 echo %fp%
 
 set cbf_path=%~d2%~p2
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Computer name testing.
+
+rem lu: Jan-17-2019
+
+echo.
+echo %fp%
+
+echo %computername% | find /i "lipt">nul
+
+if %errorlevel% == 1 (
+   echo Computer name doesn't contain "lipt".
+)
+
+echo.
+if /i "%computername%" == "xps" echo it is
+
+echo.
+echo CompN: %computername%
+
+rem qq-1
 
 exit/b
 

@@ -81,7 +81,15 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
-call m p
+call p cbf
+
+call p s
+
+if not "%machinename%"=="gfe" (
+   call 8
+   call cyft mecfg mecfg_s
+   cd\
+)
 
 rem (!rfsp) (mov-2)
 

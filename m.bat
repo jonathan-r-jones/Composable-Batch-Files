@@ -3722,29 +3722,6 @@ exit/b
 
 
 
-::_
-
-:p
-
-set fp=* Push all desired repos.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-call p cbf
-
-call p s
-
-if not "%machinename%"=="gfe" call cyft mecfg mecfg_s
-
-if not "%machinename%"=="gfe" cd\
-
-exit/b
-
-
-
 :_+ DOS Colors
 
 
