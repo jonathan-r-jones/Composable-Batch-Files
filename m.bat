@@ -3785,39 +3785,6 @@ exit/b
 
 :_
 
-:g
-
-:gfe
-
-set fp=* Open gfe "waiting" files.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-call fn gfe
-
-set first_filename=%cbf_filename%
-
-call fn cc
-
-set second_filename=%cbf_filename%
-
-start mew32 "%first_filename%" "%second_filename%"
-
-rem call me gfe
-
-rem pause
-
-rem call me cc
-
-exit/b
-
-
-
-:_
-
 :apf
 
 set fp=* Associate cbf_parameter to cbf_filename.
@@ -3891,6 +3858,8 @@ exit/b
 
 :jf
 
+:jfs
+
 set fp=* Open Jenkinsfiles.
 
 rem lu: Jan-10-2019
@@ -3924,6 +3893,60 @@ echo.
 echo %fp%
 
 set cbf_path=%~p2
+
+exit/b
+
+
+
+:_+ Multi-Edit Packs
+
+
+
+::_
+
+:aff
+
+set fp=* Open affinity files.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc"
+
+exit/b
+
+
+
+::_
+
+:g
+
+:gfe
+
+set fp=* Open gfe "waiting" files.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+call fn gfe
+
+set first_filename=%cbf_filename%
+
+call fn cc
+
+set second_filename=%cbf_filename%
+
+start mew32 "%first_filename%" "%second_filename%"
+
+rem call me gfe
+
+rem pause
+
+rem call me cc
 
 exit/b
 
