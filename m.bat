@@ -3712,8 +3712,6 @@ echo %fp%
 
 call pl cbf
 
-call pl c_docs
-
 call pl s
 
 if "%machinename%"=="gfe" call cyft mecfg_s mecfg
@@ -3736,8 +3734,6 @@ echo.
 echo %fp%
 
 call p cbf
-
-call p c_docs
 
 call p s
 

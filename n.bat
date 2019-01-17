@@ -5496,6 +5496,8 @@ exit/b
 
 :govc
 
+:ht
+
 :ij
 
 :iaws
@@ -5619,8 +5621,9 @@ rem lu: Oct-24-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\iCart-Doco
+set cbf_path=%share-zone%\Cart Documents
 
+rem This is out of date in the sense that the most documents are not here.
 set cbf_url=https://github.com/DevTechnology/iCart-Doco.git
 
 exit/b
@@ -6377,7 +6380,7 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-call n c_docs
+call %0 c_docs
 
 set cbf_filename=%cbf_path%\development environment.xlsx
 
@@ -7266,7 +7269,9 @@ rem lu: Jan-3-2019
 echo.
 echo %fp%
 
-set cbf_filename=%cbf_default_repository_folder%\iCart-Doco\DevOps Roadmap.xlsx
+call %0 c_docs
+
+set cbf_filename=%cbf_path%\DevOps Roadmap.xlsx
 
 exit/b
 
@@ -7681,6 +7686,25 @@ echo.
 echo %fp%
 
 set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
+
+exit/b
+
+
+
+:_
+
+:c_db
+
+set fp=* Cart local db folder.
+
+rem lu: Jan-17-2019
+
+echo.
+echo %fp%
+
+call n dev
+
+set cbf_path=%cbf_path%\build\h2db
 
 exit/b
 

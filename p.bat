@@ -23,7 +23,7 @@ if "%~1" == "help" goto help
 
 if "%~1" == "" goto push_prewired_folders
 
-if "%~1" == "-c" goto main_function
+if "%~1" == "-c" goto current_folder
 
 call td %~1
 
@@ -33,7 +33,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-goto main_function
+goto current_folder
 
 
 
@@ -62,6 +62,16 @@ exit/b
 
 :_
 
+:current_folder
+
+call g acp
+
+exit/b
+
+
+
+:_
+
 :push_prewired_folders
 
 set fp=* Push prewired folders.
@@ -72,16 +82,6 @@ echo.
 echo %fp%
 
 call m p
-
-exit/b
-
-
-
-:_
-
-:main_function
-
-call g acp
 
 rem (!rfsp) (mov-2)
 

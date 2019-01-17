@@ -255,7 +255,9 @@ exit/b
 
 :br
 
-set fp=* Bootrun.
+:sbr
+
+set fp=* Spring Bootrun.
 
 rem lu: Jan-9-2019
 

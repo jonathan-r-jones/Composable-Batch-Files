@@ -2523,8 +2523,6 @@ echo %fp%
 
 call st cbf
 
-call st c_docs
-
 call st s
 
 exit/b
