@@ -5632,6 +5632,23 @@ exit/b
 
 :_
 
+:j5
+
+set fp=* J5.
+
+rem lu: Jan-17-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\j5.s
+
+exit/b
+
+
+
+:_
+
 :tf
 
 :terr
