@@ -5338,6 +5338,8 @@ exit/b
 
 :poun
 
+:pounders
+
 set fp=* Pounders.
 
 rem lu: Sep-27-2018
@@ -7206,7 +7208,7 @@ rem lu: Dec-14-2018
 echo.
 echo %fp%
 
-call n p
+call n pounders
 
 set cbf_application=%cbf_path%\zoomit.exe
 
