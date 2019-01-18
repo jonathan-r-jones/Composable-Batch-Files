@@ -7730,3 +7730,24 @@ exit/b
 
 
 :_
+
+:skyp
+
+:skype
+
+set fp=* Skype for business.
+
+rem lu: Jan-18-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+:_
