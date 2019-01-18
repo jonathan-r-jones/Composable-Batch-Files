@@ -5643,7 +5643,7 @@ rem lu: Jan-17-2019
 echo.
 echo %fp%
 
-set cbf_filename=%temp%\j5.s
+set cbf_filename=%share-zone%\j5.s
 
 exit/b
 
