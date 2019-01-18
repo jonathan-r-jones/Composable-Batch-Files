@@ -2912,25 +2912,9 @@ exit/b
 
 
 
-::_
-
-:cfg
-
-set fp=* Configure
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-exit/b
-
-
-
 :_+ Profiles
+
+:profiles
 
 :profs
 
@@ -2984,24 +2968,6 @@ echo %fp%
 
 echo.
 aws configure --profile cli_user
-
-exit/b
-
-
-
-::_
-
-:cp_kb
-
-set fp=* Add kb
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile kibble_balance
 
 exit/b
 
@@ -3068,28 +3034,6 @@ exit/b
 
 ::_
 
-:cnp
-
-set fp=* Configure new profile.
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-call %0 sp %2
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
 :clpr
 
 set fp=* Clear AWS Profile.
@@ -3132,6 +3076,24 @@ exit/b
 
 ::_
 
+:cp_kb
+
+set fp=* Add kb
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile kibble_balance
+
+exit/b
+
+
+
+::_
+
 :set_profile
 
 :sp
@@ -3151,6 +3113,46 @@ echo.
 echo * AWS PROFILE: %aws_profile%
 
 call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cnp
+
+set fp=* Configure new profile.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
+
+call %0 set_profile %2
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cfg
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
 
 exit/b
 
