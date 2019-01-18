@@ -89,17 +89,16 @@ exit/b
 
 :_
 
-:create_user
+:cfg
 
-set fp=* Create user Jaws.
-
-rem lu: Dec-28-2018
+set fp=* Configure. On GovCloud and ICloud, there is a gotch for the Default region name. ^
+Must be us-gov-west-1.
 
 echo.
 echo %fp%
 
 echo.
-aws iam create-user --user-name cli_demo_user
+aws configure
 
 exit/b
 
@@ -107,9 +106,10 @@ exit/b
 
 :_
 
+rem qq-1
 :get_user
 
-set fp=* Get user Jaws.
+set fp=* Get user cli_demo_user.
 
 rem lu: Dec-28-2018
 
@@ -154,23 +154,6 @@ echo %fp%
 
 echo.
 aws iam create-access-key --user-name cli_demo_user
-
-exit/b
-
-
-
-:_
-
-:cfg
-
-set fp=* Configure. On GovCloud and ICloud, there is a gotch for the Default region name. ^
-Must be us-gov-west-1.
-
-echo.
-echo %fp%
-
-echo.
-aws configure
 
 exit/b
 
