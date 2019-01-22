@@ -7706,6 +7706,7 @@ exit/b
 set fp=* Multi-Edit Config file folder.
 
 rem lu: Dec-7-2018
+rem qq-1
 
 echo.
 echo %fp%
@@ -7721,7 +7722,6 @@ exit/b
 :mecfgdb
 
 set fp=* Multi-Edit Config Files Dated Backups.
-rem qq-1
 
 rem lu: Jan-3-2018
 
