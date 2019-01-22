@@ -431,6 +431,27 @@ exit/b
 
 :_
 
+:the_end
+
+:is_hungry
+
+set fp=* Jaws is hungry. Get out of the water!
+
+rem Think of this as a function.
+
+rem lu: Dec-18-2018
+
+echo.
+echo %fp%
+
+call sf hungry_shark
+
+exit/b
+
+
+
+:_
+
 :delete_security_group
 
 :sg_delete
@@ -442,7 +463,10 @@ rem lu: Nov-5-2018
 echo.
 echo %fp%
 
+rem First you need to delete the instance from the console.
+
 aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
+
 
 exit/b
 
@@ -513,27 +537,6 @@ aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Jenkin
 
 rem This also works.
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
-
-exit/b
-
-
-
-:_
-
-:the_end
-
-:is_hungry
-
-set fp=* Jaws is hungry. Get out of the water!
-
-rem Think of this as a function.
-
-rem lu: Dec-18-2018
-
-echo.
-echo %fp%
-
-call sf hungry_shark
 
 exit/b
 
