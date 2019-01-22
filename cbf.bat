@@ -66,7 +66,7 @@ echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF Helper batch files.
 echo   clc  Simple calculator.
 echo    cn  Used for Git cloning tasks.
-echo   col  Reset the dos window color.
+echo   col  Performs shell window colors operations.
 echo    cs  File contents search.
 echo    cu  Curl batch file hooked up to the nicknames dictionary.
 echo    cy  Copy file(s).
@@ -104,7 +104,6 @@ echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
 echo    of  Open Folder. Has TD parameter.
 echo     p  Add, commit and push Git changes. Has TD parameter.
 echo    pl  Performs Git pull. Has TD parameter.
-echo  plum  Performs shell window colors operations.
 echo    pg  Ping batch file hooked up to the nicknames dictionary.
 echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
