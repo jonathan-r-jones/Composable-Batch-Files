@@ -1680,23 +1680,6 @@ exit/b
 
 :_
 
-:mecfig
-
-set fp=* Multi-Edit Config Files Dated Backups.
-
-rem lu: Jan-3-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
-
-exit/b
-
-
-
-:_
-
 :ql
 
 set fp=* Quickla.
@@ -6762,61 +6745,6 @@ exit/b
 
 
 
-:_+ Multi-Edit Config Files
-
-
-
-::_
-
-:mecfg
-
-set fp=* Multi-Edit Config file folder.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
-
-exit/b
-
-
-
-::_
-
-:mecfg_s
-
-set fp=* Multi-Edit Config file folder in Share-Zone.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
-
-exit/b
-
-
-
-::_
-
-:mecfg_dr
-
-set fp=* Multi-Edit Config file folder in Share-Zone.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
-
-exit/b
-
-
-
 :_
 
 :big
@@ -7762,7 +7690,79 @@ echo.
 echo %fp%
 
 set cbf_filename=%savannah%\belfry\synchronize with dropbox.bat
-rem       qq-1
+
+exit/b
+
+
+
+:_+ Multi-Edit Config Files
+
+
+
+::_
+
+:mecfg
+
+set fp=* Multi-Edit Config file folder.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+exit/b
+
+
+
+::_
+
+:mecfgdb
+
+set fp=* Multi-Edit Config Files Dated Backups.
+rem qq-1
+
+rem lu: Jan-3-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
+
+exit/b
+
+
+
+::_
+
+:mecfg_s
+
+set fp=* Multi-Edit Config file folder in Share-Zone.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
+::_
+
+:mecfg_dr
+
+set fp=* Multi-Edit Config file folder in Share-Zone.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
 
 exit/b
 

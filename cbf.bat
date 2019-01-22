@@ -74,6 +74,7 @@ echo  cyft  Copy files from nickname parameter 1 to nickname parameter 2.
 echo   cyt  Copies file in the current directory to nickname-specified path.
 echo   cyf  Copies files from a cbf_path nickname.
 echo     d  Easier-to-type and remember version of "dir".
+echo    de  Delete operations.
 echo    dn  Perform Dot Net core functions.
 echo     e  Exit command window.
 echo    ea  Application-centric way to run an application.
