@@ -7751,3 +7751,21 @@ exit/b
 
 
 :_
+
+:8
+
+set fp=* 8.
+
+rem lu: Jan-22-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%savannah%\belfry\synchronize with dropbox.bat
+rem       qq-1
+
+exit/b
+
+
+
+:_
