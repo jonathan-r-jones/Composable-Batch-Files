@@ -7706,7 +7706,6 @@ exit/b
 set fp=* Multi-Edit Config file folder.
 
 rem lu: Dec-7-2018
-rem qq-1
 
 echo.
 echo %fp%
