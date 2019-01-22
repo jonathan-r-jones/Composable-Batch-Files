@@ -61,6 +61,12 @@ exit/b
 
 :_
 
+rem qq-2 (Bookmark)
+
+
+
+:_
+
 :hello
 
 echo.
@@ -80,8 +86,9 @@ rem     So why bother using jaws then? Because jaws allows you to create a repea
 rem     version-controllable and perfectible script. Jaws is a wrapper around AWS. Things you 
 rem     put in jaws will generally be more sophisticated than this simple example. You'll see.
 
-echo.
+@echo on
 aws --version
+@echo off
 
 exit/b
 
@@ -91,8 +98,8 @@ exit/b
 
 :cfg
 
-set fp=* Configure. On GovCloud and ICloud, there is a gotch for the Default region name. ^
-Must be us-gov-west-1.
+set fp=* Configure. On our customer's system, there is a gotch for the Default region name. ^
+Must be us-gov-west-1 which struggled to learn. Here we will use us-gov-east-1.
 
 echo.
 echo %fp%
@@ -106,7 +113,6 @@ exit/b
 
 :_
 
-rem qq-1
 :get_user
 
 set fp=* Get user cli_demo_user.
@@ -136,24 +142,6 @@ echo %fp%
 
 echo.
 aws iam list-access-keys --user-name cli_demo_user
-
-exit/b
-
-
-
-:_
-
-:cak
-
-set fp=* Create access key.
-
-rem lu: Dec-28-2018
-
-echo.
-echo %fp%
-
-echo.
-aws iam create-access-key --user-name cli_demo_user
 
 exit/b
 
@@ -271,9 +259,28 @@ exit/b
 
 :_
 
+:dsg
+
+:d_sg
+
+set fp=* Describe our new security group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+aws ec2 describe-security-groups --group-names CLIDemoSecurityGroup
+
+exit/b
+
+
+
+:_
+
 :auth1
 
-set fp=* Authorize secrurity group ingress. Specify my local IP Address as cidr.
+set fp=* Authorize security group ingress for 1st port, SSH traffic on port 22.
 
 rem lu: Nov-2-2018
 
@@ -291,7 +298,7 @@ exit/b
 
 :auth2
 
-set fp=* Authorize secrurity group ingress. - 2nd port
+set fp=* Authorize security group ingress for 2nd port, HTTP traffic on port 80.
 
 rem lu: Nov-2-2018
 
@@ -309,7 +316,7 @@ exit/b
 
 :auth3
 
-set fp=* Authorize secrurity group ingress. - 3rd port.
+set fp=* Authorize security group ingress for 3rd port, HTTPS traffic on port 443.
 
 rem lu: Nov-2-2018
 
@@ -327,7 +334,7 @@ exit/b
 
 :auth4
 
-set fp=* Authorize secrurity group ingress. - 4th port for RDP connection.
+set fp=* Authorize security group ingress for 4th port, RDP connection traffic on port 3389.
 
 rem lu: Dec-11-2018
 
@@ -337,25 +344,8 @@ echo %fp%
 aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
   --port 3389 --cidr 0.0.0.0/0
 
-exit/b
-
-
-
-::_
-
-:dsg
-
-:d_sg
-
-set fp=* Describe our new security group.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-security-groups --group-names CLIDemoSecurityGroup
+rem To see the after picture, run this command.
+rem call dsg 
 
 exit/b
 
@@ -382,8 +372,6 @@ exit/b
 
 :_
 
-:d_su
-
 :desu
 
 :subnets
@@ -407,16 +395,18 @@ exit/b
 
 :_
 
-:ri_cli_demo
+:ri
 
-set fp=* Run instance t3 medium Windows OS.
+:run_instance_cli_demo
+
+set fp=* Run instance. Pem file must be in the current folder.
 
 rem lu: Dec-28-2018
 
 echo.
 echo %fp%
 
-call td tfkeys
+call td a
 
 call %0 check_pem_existence
 
@@ -427,13 +417,32 @@ if %errorlevel% == 1 (
 echo.
 aws ec2 run-instances ^
   --count 1 ^
-  --image-id ami-02ee68cd896a434c8 ^
+  --image-id ami-fff7118e ^
   --instance-type t3.medium ^
   --key-name kibble_balance_key_pair ^
-  --security-group-ids sg-078d10276ecdd6281 ^
+  --security-group-ids sg-0221d125e029d634f ^
   --subnet-id subnet-8c04e4e5 ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CLI_Demo_Dec_28_2018}]"
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CLI_Demo_Jan_22_2019}]"
   --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:delete_security_group
+
+:sg_delete
+
+set fp=* Delete security group.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
 
 exit/b
 
@@ -643,26 +652,25 @@ exit/b
 
 
 
-:_+ Clean up old stuff so as to be ready for the next demo.
+:_
 
+:cak
 
+set fp=* Create access key.
 
-::_
-
-:delete_security_group
-
-:sg_delete
-
-set fp=* Delete security group.
-
-rem lu: Nov-5-2018
+rem lu: Dec-28-2018
 
 echo.
 echo %fp%
 
-aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
+echo.
+aws iam create-access-key --user-name cli_demo_user
 
 exit/b
+
+
+
+:_+ Clean up old stuff so as to be ready for the next demo.
 
 
 
@@ -716,25 +724,6 @@ echo.
 echo %fp%
 
 aws iam delete-user --user-name cli_demo_user
-
-exit/b
-
-
-
-::_
-
-:delete_security_group
-
-:sg_delete
-
-set fp=* Delete security group.
-
-rem lu: Dec-28-2018
-
-echo.
-echo %fp%
-
-aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
 
 exit/b
 
