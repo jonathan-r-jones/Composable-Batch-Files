@@ -130,22 +130,4 @@ exit/b
 
 
 
-:_
-
-:flash
-
-set fp=* Flash.
-
-rem lu: Jan-22-2019
-
-echo.
-echo %fp%
-
-color 36
-rem qq-1
-
-exit/b
-
-
-
 :_ (!rfsp) (mov-6)
