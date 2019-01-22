@@ -6206,50 +6206,6 @@ exit/b
 
 
 
-:_+ Jenkins
-
-
-
-::_
-
-:je
-
-set fp=* Jenkins.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-rem Admin password file.
-set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
-
-rem If you delete things from here, Jenkins may reset things.
-set cbf_path=%userprofile%\.jenkins
-
-set cbf_url=https://jenkins.io
-
-exit/b
-
-
-
-::_
-
-:jew
-
-set fp=* Jenkins workspace.
-
-rem lu: Jan-7-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\.jenkins\workspace
-
-exit/b
-
-
-
 :_+ Java
 
 
@@ -7461,25 +7417,6 @@ exit/b
 
 :_
 
-:jelo
-
-:jl
-
-set fp=* Jenkins Log.
-
-rem lu: Jan-11-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\jenkins log.xlsx
-
-exit/b
-
-
-
-:_
-
 :gsg
 
 :psg
@@ -7576,46 +7513,6 @@ echo.
 echo %fp%
 
 set cbf_path=%my documents%\mp3 staging area
-
-exit/b
-
-
-
-:_+ Jenkinsfile
-
-
-
-::_
-
-:jfc
-
-set fp=* Jenkinsfile in current folder.
-
-rem lu: Jan-14-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=jenkinsfile
-
-exit/b
-
-
-
-::_
-
-:jf
-
-set fp=* Our Jenkinsfile.
-
-rem lu: Jan-15-2019
-
-echo.
-echo %fp%
-
-call n dev
-
-set cbf_filename=%cbf_path%\jenkinsfile
 
 exit/b
 
@@ -7762,6 +7659,105 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
+:_+ Jenkins
+
+
+
+::_
+
+:je
+
+set fp=* Jenkins.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+rem Admin password file.
+set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
+
+rem If you delete things from here, Jenkins may reset things.
+set cbf_path=%userprofile%\.jenkins
+
+set cbf_url=https://jenkins.io
+
+exit/b
+
+
+
+::_
+
+:jf
+
+set fp=* Our Jenkinsfile.
+
+rem lu: Jan-15-2019
+
+echo.
+echo %fp%
+
+call n dev
+
+set cbf_filename=%cbf_path%\jenkinsfile
+
+exit/b
+
+
+
+::_
+
+:jew
+
+set fp=* Jenkins workspace.
+
+rem lu: Jan-7-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\.jenkins\workspace
+
+exit/b
+
+
+
+::_
+
+:jfc
+
+set fp=* Jenkinsfile in current folder.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=jenkinsfile
+
+exit/b
+
+
+
+::_
+
+:jelo
+
+:jl
+
+set fp=* Jenkins Log.
+
+rem lu: Jan-11-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\jenkins log.xlsx
 
 exit/b
 

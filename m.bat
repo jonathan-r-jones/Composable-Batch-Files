@@ -3883,6 +3883,8 @@ exit/b
 
 :aff
 
+:inot
+
 set fp=* Open affinity files.
 
 rem lu: Jan-9-2019

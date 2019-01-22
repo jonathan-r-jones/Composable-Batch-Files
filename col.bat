@@ -130,4 +130,21 @@ exit/b
 
 
 
+:_
+
+:flash
+
+set fp=* Yellow on black.
+
+rem lu: Jan-22-2019
+
+echo.
+echo %fp%
+
+color 0e
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
