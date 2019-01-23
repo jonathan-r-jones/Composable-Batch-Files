@@ -1380,6 +1380,8 @@ exit/b
 
 :initialize_environment
 
+:in_env
+
 :ise
 
 set fp=* Initialize environment. The idea is to create a pit of success for the user.
@@ -3900,6 +3902,23 @@ exit/b
 
 ::_
 
+:affc
+
+set fp=* Open affinity files and close the DOS windows.
+
+rem lu: Jan-23-2019
+
+echo.
+echo %fp%
+
+start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc"
+
+exit
+
+
+
+::_
+
 :g
 
 :gfe
@@ -3928,6 +3947,27 @@ rem pause
 rem call me cc
 
 exit/b
+
+
+
+:_
+
+:cosy
+
+set fp=* Compose synchronization.
+
+rem lu: Jan-23-2019
+
+echo.
+echo %fp%
+
+call col sailboat
+
+call %0 initialize_environment
+
+call 8
+
+exit
 
 
 

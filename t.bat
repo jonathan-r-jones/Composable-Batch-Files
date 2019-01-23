@@ -8344,16 +8344,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Computer name testing.
@@ -8375,7 +8365,33 @@ if /i "%computername%" == "xps" echo it is
 echo.
 echo CompN: %computername%
 
-rem qq-1
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* File or folder test.
+
+rem lu: Jan-23-2019
+
+echo.
+echo %fp%
+
+echo.
+xcopy /d /h /r /y "%reach out%\cc.asc" "%share-zone%\copy of cc.asc"
 
 exit/b
 
