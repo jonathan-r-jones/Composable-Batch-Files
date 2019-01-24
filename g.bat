@@ -2569,7 +2569,7 @@ exit/b
 
 :rema
 
-set fp=* Rebase from master branch.
+set fp=* Rebase from master branch. How you get a git branch to update from its source master branch.
 
 rem lu: Jan-24-2019
 
