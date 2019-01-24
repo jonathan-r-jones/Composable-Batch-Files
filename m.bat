@@ -3877,6 +3877,27 @@ exit/b
 
 
 
+:_
+
+:cosy
+
+set fp=* Compose synchronization.
+
+rem lu: Jan-23-2019
+
+echo.
+echo %fp%
+
+call col sailboat
+
+call %0 initialize_environment
+
+call 8
+
+exit
+
+
+
 :_+ Multi-Edit Packs
 
 
@@ -3950,24 +3971,30 @@ exit/b
 
 
 
-:_
+::_
 
-:cosy
+:a
 
-set fp=* Compose synchronization.
+set fp=* Open Affinity files.
 
-rem lu: Jan-23-2019
+rem lu: Jan-24-2019
 
 echo.
 echo %fp%
 
-call col sailboat
+echo %computername% | find /i "lipt">nul
 
-call %0 initialize_environment
+if %errorlevel% == 0 (
+   echo.
+   echo * Computer name contains "lipt".
+   call %0 g
+   exit/b
+)
 
-call 8
+call %0 aff
+rem qq-1
 
-exit
+exit/b
 
 
 
