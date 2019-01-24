@@ -2370,7 +2370,7 @@ exit/b
 
 ::_
 
-:jj
+:jjgit
 
 set fp=* Jonathan's Github page.
 
@@ -3673,23 +3673,6 @@ cd properties
 set cbf_filename=%cd%\AndroidManifest.xml
 
 cd %current_folder%
-
-exit/b
-
-
-
-:_
-
-:wo
-
-set fp=* Microsoft Word.
-
-rem lu: Jul-26-2018
-
-echo.
-echo %fp%
-
-set cbf_application=c:\program files\microsoft office\root\office16\winword.exe
 
 exit/b
 
@@ -5401,7 +5384,9 @@ exit/b
 
 :dtg
 
-set fp=* Dev Technology.
+:dtggit
+
+set fp=* Dev Technology Group.
 
 rem lu: Oct-22-2018
 
@@ -5445,6 +5430,8 @@ exit/b
 :cart_git
 
 :cart_cn
+
+:cjt
 
 :cix
 
@@ -5526,9 +5513,15 @@ rem (!rfsp) (mov-2)
 
 :pass
 
+:devgit
+
 :pass_through
 
+:iac
+
 :p
+
+:jj
 
 :pt
 
@@ -7016,35 +7009,6 @@ exit/b
 
 :_
 
-:ex
-
-set fp=* Excel.
-
-rem lu: Jan-3-2019
-
-echo.
-echo %fp%
-
-rem Determine installation path.
-
-if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application_location=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
-if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_location="c:\program files (x86)\notepad++\notepad++.exe"
-
-if "%cbf_application_location%" == "" (
-  echo.
-  echo Notepad++ is not installed.
-  exit/b
-)
-
-set cbf_application=%cbf_application_location%
-set cbf_path=%cbf_application_location:\excel.exe=%
-
-exit/b
-
-
-
-:_
-
 :o
 
 set fp=* Microsoft Outlook.
@@ -7357,25 +7321,6 @@ echo %fp%
 set cbf_filename=%savannah%\belfry\j.bat
 
 set cbf_path=%userprofile%\j
-
-exit/b
-
-
-
-:_
-
-:dt
-
-set fp=* JJ DevOps testing.
-
-rem lu: Jan-10-2019
-
-echo.
-echo %fp%
-
-set cbf_name=jj_devops_testing
-
-set cbf_path=%cbf_default_repository_folder%\%cbf_name%
 
 exit/b
 
@@ -7817,6 +7762,68 @@ echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\ForGitTesting_master_branch
+
+exit/b
+
+
+
+:_+ Microsoft Products
+
+
+
+::_
+
+:ex
+
+set fp=* Excel.
+
+rem lu: Jan-3-2019
+
+echo.
+echo %fp%
+
+rem Determine installation path.
+
+if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application_location=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
+
+if "%cbf_application_location%" == "" (
+  echo.
+  echo Notepad++ is not installed.
+  exit/b
+)
+
+set cbf_application=%cbf_application_location%
+set cbf_path=%cbf_application_location:\excel.exe=%
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:wo
+
+set fp=* Word.
+
+rem lu: Jan-24-2019
+
+echo.
+echo %fp%
+
+rem Determine installation path.
+
+if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe" set cbf_application_location=C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe
+
+if "%cbf_application_location%" == "" (
+  echo.
+  echo Notepad++ is not installed.
+  exit/b
+)
+
+set cbf_application=%cbf_application_location%
+set cbf_path=%cbf_application_location:\winword.exe=%
+set cbf_filename=%cbf_application%
 
 exit/b
 

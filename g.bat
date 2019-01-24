@@ -2429,44 +2429,6 @@ exit/b
 
 
 
-:_+ Branch Operations
-
-
-
-::_
-
-:com
-
-set fp=* 9b. Check out master.
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b master
-
-exit/b
-
-
-
-::_
-
-:co
-
-set fp=* 9c. Check out branch.
-
-echo.
-echo %fp%
-
-rem This worked. Jan-30-2017
-
-echo.
-git checkout -b Branch2
-
-exit/b
-
-
-
 :_
 
 :rf_status
@@ -2579,6 +2541,62 @@ echo %fp%
 echo.
 git fetch
 git rebase origin/master
+
+exit/b
+
+
+
+:_+ Branch Operations
+
+
+
+::_
+
+:com
+
+set fp=* 9b. Check out master.
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b master
+
+exit/b
+
+
+
+::_
+
+:co
+
+set fp=* 9c. Check out branch.
+
+echo.
+echo %fp%
+
+rem This worked. Jan-30-2017
+
+echo.
+git checkout -b Branch2
+
+exit/b
+
+
+
+::_
+
+:cod
+
+set fp=* 9b. Check out develop.
+
+rem lu: Jan-24-2019
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b develop
 
 exit/b
 
