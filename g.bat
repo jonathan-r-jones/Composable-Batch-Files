@@ -2475,6 +2475,9 @@ exit/b
 
 :status
 
+echo.
+echo %cd%
+
 set fp=* Show status. .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
 rem qq-1
 
