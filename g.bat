@@ -2479,9 +2479,8 @@ echo.
 echo %cd%
 
 set fp=* Show status. .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
-rem qq-1
 
-rem lu: Jan-9-2019
+rem lu: Jan-24-2019
 
 echo.
 echo %fp%
@@ -2531,9 +2530,9 @@ rem a single goto statement, which is an anti-pattern.
 echo.
 echo %fp%
 
-call st cbf
+call s cbf
 
-call st s
+call s s
 
 exit/b
 
@@ -2548,6 +2547,8 @@ exit/b
 :re
 
 :reba
+
+:rede
 
 set fp=* Rebase from develop branch.
 
