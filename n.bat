@@ -5361,25 +5361,6 @@ exit/b
 
 :_
 
-:fgt
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\For-Git-Testing
-
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
-
-exit/b
-
-
-
-:_
-
 :arm
 
 set fp=* ARM templates.
@@ -7762,6 +7743,80 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkins log.xlsx
+
+exit/b
+
+
+
+:_+ FGT
+
+
+
+::_
+
+:fgt
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\For-Git-Testing
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+exit/b
+
+
+
+::_
+
+:fgt_d
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\ForGitTesting_develop_branch
+
+exit/b
+
+
+
+::_
+
+:fgt_j
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\ForGitTesting_jj_devops_branch
+
+exit/b
+
+
+
+::_
+
+:fgt_m
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\ForGitTesting_master_branch
 
 exit/b
 

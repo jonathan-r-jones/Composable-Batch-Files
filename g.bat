@@ -51,7 +51,7 @@ echo             a  Add changes.
 echo           asf  Add single file.
 echo          back  The git equivalent of the back button.
 echo             c  Commit changes for only those files that were staged.
-echo         cu_cn  Custom clone. For basic cloning, use cn.bat.
+echo            cn  Custom clone. For basic cloning, use cn.bat.
 echo           ghg  Git help git.
 echo           ghs  Git help for specific git command.
 echo          pull  Get-latest.
@@ -1472,6 +1472,79 @@ exit/b
 
 ::_
 
+:cn
+
+set fp=* Clone a custom repository using a different code style.
+
+echo.
+echo %fp%
+  
+rem 1. Repository URL.
+set origin_url=https://github.com/jonathan-r-jones/java_bouillabaisse.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/batch_files.git
+set origin_url=https://github.com/bruderstein/NppTidy2.git
+set origin_url=https://github.com/jamesmontemagno/MeetupManager.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
+set origin_url=https://github.com/jamesmontemagno/Hanselman.Forms.git
+set origin_url=https://github.com/NASAWorldWind/WebWorldWind.git
+set origin_url=https://github.com/Homebrew/brew.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mobility.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git
+set origin_url=https://github.com/edsnider/marvel-xfdemo.git
+set origin_url=https://github.com/jonathan-r-jones/fresnel.git
+set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
+call n fgt
+set origin_url=%cbf_url%
+
+rem 2. New folder path.
+set new_folder_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
+set new_folder_path=c:\aa
+set new_folder_path=c:\mercury
+set new_folder_path=c:\projects\netbeans
+set new_folder_path=%aa%
+set new_folder_path=%aa%\repositories
+
+rem 3. Branch name.
+set branch_name=clean6.2
+set branch_name=Branch2
+set branch_name=develop
+set branch_name=master
+set branch_name=jj_devops
+
+rem 4. Folder name.
+set folder_name=tirem
+set folder_name=bouillabaisse
+set folder_name=ForGitTesting3
+set folder_name=Batch_Files
+set folder_name=MeetupManager
+set folder_name=Documentation
+set folder_name=HanselmanForms
+set folder_name=WebWorldWind_June_2_2017
+set folder_name=Homebrew_Jun_7_2017
+set folder_name=s6_secondary_repo
+set folder_name=Mobility
+set folder_name=sencha
+set folder_name=mercury6
+set folder_name=Xamarin_Marvel_Demo
+set folder_name=ForGitTesting
+set folder_name=BusterFromFresnel
+set folder_name=ForGitTesting2
+set folder_name=ForGitTesting_%branch_name%_branch
+
+rem 5. Execute.
+
+cd /d %new_folder_path%
+
+echo.
+git clone %origin_url% --branch %branch_name% .\%folder_name%
+
+exit/b
+
+
+
+::_
+
 :cn_xu
 
 set fp=* Clone all Xamarin University repos.
@@ -1490,75 +1563,6 @@ cd AllCourseExercises
 git submodule init
 
 git submodule update
-
-exit/b
-
-
-
-::_
-
-:cn_cu
-
-set fp=* Clone custom repository.
-
-echo.
-echo %fp%
-echo.
-  
-rem 1. Repository URL.
-set origin_url=https://github.com/jonathan-r-jones/java_bouillabaisse.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/batch_files.git
-set origin_url=https://github.com/bruderstein/NppTidy2.git
-set origin_url=https://github.com/jamesmontemagno/MeetupManager.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
-set origin_url=https://github.com/jamesmontemagno/Hanselman.Forms.git
-set origin_url=https://github.com/NASAWorldWind/WebWorldWind.git
-set origin_url=https://github.com/Homebrew/brew.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mobility.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git
-set origin_url=https://github.com/edsnider/marvel-xfdemo.git
-set origin_url=https://github.com/jonathan-r-jones/fresnel.git
-set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
-
-rem 2. New folder path.
-set new_folder_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
-set new_folder_path=c:\aa
-set new_folder_path=c:\mercury
-set new_folder_path=c:\projects\netbeans
-set new_folder_path=%aa%
-set new_folder_path=%aa%\repositories
-
-rem 3. Folder name.
-set folder_name=tirem
-set folder_name=bouillabaisse
-set folder_name=ForGitTesting2
-set folder_name=ForGitTesting3
-set folder_name=Batch_Files
-set folder_name=MeetupManager
-set folder_name=Documentation
-set folder_name=HanselmanForms
-set folder_name=WebWorldWind_June_2_2017
-set folder_name=Homebrew_Jun_7_2017
-set folder_name=s6_secondary_repo
-set folder_name=Mobility
-set folder_name=sencha
-set folder_name=mercury6
-set folder_name=Xamarin_Marvel_Demo
-set folder_name=ForGitTesting
-set folder_name=BusterFromFresnel
-set folder_name=ForGitTesting2
-
-rem 4. Branch name.
-set branch_name=clean6.2
-set branch_name=master
-set branch_name=Branch2
-
-rem 5. Execute.
-
-cd /d %new_folder_path%
-
-git clone %origin_url% --branch %branch_name% .\%folder_name%
 
 exit/b
 
@@ -1864,6 +1868,8 @@ exit/b
 
 
 ::_
+
+:j
 
 :acp
 
@@ -2469,7 +2475,8 @@ exit/b
 
 :status
 
-set fp=* Status for ******** "%cd%" ********.
+set fp=* Show status. .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+rem qq-1
 
 rem lu: Jan-9-2019
 
@@ -2481,7 +2488,7 @@ call git remote update
 
 call git status
 
-col
+call col>nul
 
 exit/b
 
@@ -2524,6 +2531,50 @@ echo %fp%
 call st cbf
 
 call st s
+
+exit/b
+
+
+
+:_+ Rebase
+
+
+
+::_
+
+:re
+
+:reba
+
+set fp=* Rebase from develop branch.
+
+rem lu: Jan-24-2019
+
+echo.
+echo %fp%
+
+echo.
+git fetch
+git rebase origin/develop
+
+exit/b
+
+
+
+::_
+
+:rema
+
+set fp=* Rebase from master branch.
+
+rem lu: Jan-24-2019
+
+echo.
+echo %fp%
+
+echo.
+git fetch
+git rebase origin/master
 
 exit/b
 

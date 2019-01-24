@@ -108,14 +108,14 @@ echo    pg  Ping batch file hooked up to the nicknames dictionary.
 echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
 echo    rf  Remove folder corresponding to specified CBF path nickname. 
-echo     s  Internet search helper.
+echo     s  Run git status remotely. Has TD parameter.
+echo    se  Internet search helper.
 echo   sln  Open a Visual Studio solution. Has TD parameter.
 echo    sh  Perform SSH-related commands.
 echo    sx  Use Sublime to edit a batch file in the CBF folder.
 echo    sf  Surf to websites.
 echo    sm  Run Sublime.
 echo   sql  SQL/Database, including LDAP, related tasks.
-echo    st  Run git status remotely. Has TD parameter.
 echo     t  Testing, experimenting and developing new batch file functions.
 echo    tf  Perform Terraform-related tasks.
 echo    tk  Wrapper around the taskkill command.

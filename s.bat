@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Search helper batch file.
+set filename_stands_for=* Status batch file.
 
 
 
@@ -14,15 +14,23 @@ set filename_stands_for=* Search helper batch file.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto help
-
 if "%~1" == "/?" goto help
 
 if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-goto %1
+
+
+:_
+
+set fp=* Preprocessing.
+
+if not "%~1" == "" call td %~1
+
+goto main_function
+
+exit/b
 
 
 
@@ -32,75 +40,39 @@ goto %1
 
 :help
 
-echo.
 echo Filename stands for: %filename_stands_for%
+
+set filep=File purpose: Goes to a path, then call the status function.
 
 echo.
 echo %filep%
 
 echo.
-echo Last Updated: Dec-5-2018
+echo Last Updated: Dec-19-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
 
-echo.
-echo Usage: %0 [space separated parameter(s)]
-
-set parameter_1=Parameter 1: Desired search function.
+set parameter_1=Parameter 1: Path parameter.
 set parameter_1=%parameter_1% 
 
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2: Search criteria.
-set parameter_2=%parameter_2% 
-
-echo.
-echo %parameter_2%
-
 exit/b
 
 
 
 :_
 
-:dfw
+:main_function
 
-set fp=* Download for windows.
+call g s
 
-rem lu: Dec-5-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.google.com/search?as_q=%~2+download+for+windows
-
-call sfcu
-
-rem qq-1
+rem (!rfsp) (mov-2)
 
 exit/b
 
 
 
 :_
-
-:s
-
-set fp=* Standard Google search.
-
-rem lu: Dec-6-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.google.com/search?as_q=%~2
-
-call sfcu
-
-exit/b
-
-
-
-:_ (!rfsp) (mov-6)
