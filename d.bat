@@ -56,7 +56,9 @@ echo            fo  Folders only.
 echo           hid  Hidden files and folders.
 echo             s  Size, biggest first.
 echo            s2  Size, smallest first.
-echo             t  Files and folders changed today.
+echo             t  Treeview piped to a file.
+echo            tn  Treeview normal.
+echo            to  Files and folders changed today.
 
 exit/b
 
@@ -227,6 +229,27 @@ exit/b
 :_
 
 :t
+
+set fp=* Tree view piped to a file.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+tree/f>%temp%\treeview_results.txt
+
+rem (!rfsp) (mov-2)
+
+start "Test Title" "%cbf_default_text_editor%" "%temp%\treeview_results.txt"
+
+exit/b
+
+
+
+:_
+
+:tn
 
 set fp=* Tree view.
 

@@ -3977,12 +3977,9 @@ exit/b
 
 :a
 
-set fp=* Open Affinity files.
+set fp=* Open Affinity files router.
 
 rem lu: Jan-24-2019
-
-echo.
-echo %fp%
 
 echo %computername% | find /i "lipt">nul
 
@@ -3994,6 +3991,7 @@ if %errorlevel% == 0 (
 )
 
 call %0 aff
+rem qq-1
 
 exit/b
 

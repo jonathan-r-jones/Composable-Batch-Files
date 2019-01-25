@@ -3731,25 +3731,6 @@ exit/b
 
 :_
 
-:wd
-
-set fp=* Work documents file and folder.
-
-rem lu: Jul-26-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\work\wk\documents
-
-set cbf_filename=%dropbox%\work\wk\documents\blank.txt
-
-exit/b
-
-
-
-:_
-
 :mgr
 
 set fp=* Meetup Manager.
@@ -7165,7 +7146,7 @@ echo %fp%
 
 call an kr
 
-set cbf_url=http://localhost:%1
+set cbf_lh=http://localhost:%1
 
 exit/b
 
@@ -7824,6 +7805,61 @@ if "%cbf_application_location%" == "" (
 set cbf_application=%cbf_application_location%
 set cbf_path=%cbf_application_location:\winword.exe=%
 set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+:_+ Blank Documents
+
+
+
+::_
+
+:meblk
+
+set fp=* Use Multi-Edit to edit a blank txt document.
+
+rem lu: Jan-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\blank.txt
+
+exit/b
+
+
+
+::_
+
+:woblk
+
+set fp=* Use Word to edit a blank docx document.
+
+rem lu: Jan-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\blank.docx
+
+exit/b
+
+
+
+::_
+
+:exblk
+
+set fp=* Use Excel to edit a blank docx document.
+
+rem lu: Jan-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\blank.xlsx
 
 exit/b
 

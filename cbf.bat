@@ -87,6 +87,7 @@ echo    gg  Git Gui helper. Has TD parameter.
 echo    gl  Glossary of terms used in CBF.
 echo    gr  Perform Gradle-related tasks.
 echo     h  Perform Sencha-related tasks.
+echo    lh  Surf localhost.
 echo     m  Perform miscellaneous tasks.
 echo   mcd  Make and navigate (cd) to a folder.
 echo    me  Run Multi-Edit.
