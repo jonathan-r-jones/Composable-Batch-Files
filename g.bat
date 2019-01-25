@@ -2440,7 +2440,7 @@ exit/b
 echo.
 echo %cd%
 
-set fp=* Show status. .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+set fp=* Show status. oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo
 
 rem lu: Jan-24-2019
 
