@@ -5476,8 +5476,6 @@ exit/b
 
 :rach
 
-:earm_svcs
-
 rem (!rfsp) (mov-2)
 
 :m2
@@ -5509,6 +5507,8 @@ rem (!rfsp) (mov-2)
 :jj
 
 :pt
+
+:rach
 
 :sg_id
 
