@@ -7868,3 +7868,38 @@ exit/b
 
 
 :_
+
+:ssfc
+
+set fp=* Screen shots from craig.
+
+rem lu: Jan-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Screen Shots from Craig.docx
+
+exit/b
+
+
+
+:_
+
+:smgn
+
+set fp=* Sm gradle nexus.
+
+rem lu: Jan-25-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\sm_gradle_nexus\api
+rem       qq-1
+
+exit/b
+
+
+
+:_
