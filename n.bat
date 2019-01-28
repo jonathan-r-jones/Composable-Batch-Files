@@ -7818,6 +7818,8 @@ exit/b
 
 ::_
 
+:meb
+
 :meblk
 
 set fp=* Use Multi-Edit to edit a blank txt document.
@@ -7835,6 +7837,8 @@ exit/b
 
 ::_
 
+:wob
+
 :woblk
 
 set fp=* Use Word to edit a blank docx document.
@@ -7851,6 +7855,8 @@ exit/b
 
 
 ::_
+
+:exb
 
 :exblk
 
@@ -7896,7 +7902,6 @@ echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\sm_gradle_nexus\api
-rem       qq-1
 
 exit/b
 
