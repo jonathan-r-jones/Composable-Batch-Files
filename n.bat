@@ -5506,7 +5506,15 @@ rem (!rfsp) (mov-2)
 
 :p
 
+:crai
+
 :jj
+
+:mc1
+
+:mc2
+
+:mdp
 
 :pt
 
@@ -7887,23 +7895,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\blank.xlsx
-
-exit/b
-
-
-
-:_
-
-:ssfc
-
-set fp=* Screen shots from craig.
-
-rem lu: Jan-25-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\Screen Shots from Craig.docx
 
 exit/b
 
