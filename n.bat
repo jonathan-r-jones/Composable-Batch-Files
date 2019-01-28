@@ -5478,6 +5478,10 @@ exit/b
 
 :earm_svcs
 
+:cson
+
+:mp
+
 rem (!rfsp) (mov-2)
 
 :m2
