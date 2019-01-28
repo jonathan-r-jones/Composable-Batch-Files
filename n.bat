@@ -7608,7 +7608,7 @@ exit/b
 
 :jf
 
-set fp=* Our Jenkinsfile.
+set fp=* Develop branch Jenkinsfile.
 
 rem lu: Jan-15-2019
 
@@ -7618,6 +7618,25 @@ echo %fp%
 call n dev
 
 set cbf_filename=%cbf_path%\jenkinsfile
+
+exit/b
+
+
+
+::_
+
+:jf_s
+
+set fp=* Share-zone Jenkinsfile.
+
+rem lu: Jan-15-2019
+
+echo.
+echo %fp%
+
+call n dev
+
+set cbf_filename=%share-zone%\jenkinsfile
 
 exit/b
 

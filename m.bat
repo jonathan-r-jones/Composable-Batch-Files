@@ -3846,7 +3846,9 @@ rem lu: Jan-10-2019
 echo.
 echo %fp%
 
-call me jf    
+call me jj
+
+call me jf
 
 call me iac
 
@@ -3991,7 +3993,6 @@ if %errorlevel% == 0 (
 )
 
 call %0 aff
-rem qq-1
 
 exit/b
 
