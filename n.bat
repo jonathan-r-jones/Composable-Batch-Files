@@ -7922,3 +7922,41 @@ exit/b
 
 
 :_
+
+:demo
+
+set fp=* Demo on Jan-29-2019.
+
+rem lu: Jan-29-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\demo.pptx
+
+exit/b
+
+
+
+:_
+
+:gwp
+
+set fp=* Gradle wrapper properties
+
+rem lu: Jan-29-2019
+
+echo.
+echo %fp%
+
+call n jj
+
+set cbf_path=%cbf_path%\gradle\wrapper
+
+set cbf_filename=%cbf_path%\gradle-wrapper.properties
+
+exit/b
+
+
+
+:_
