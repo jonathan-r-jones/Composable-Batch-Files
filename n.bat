@@ -7734,6 +7734,8 @@ exit/b
 
 :fgt_d
 
+:fgtd
+
 set fp=* ForGitTesting.
 
 rem lu: Sep-6-2017
@@ -7750,6 +7752,8 @@ exit/b
 ::_
 
 :fgt_j
+
+:fgtj
 
 set fp=* ForGitTesting.
 

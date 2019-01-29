@@ -75,6 +75,7 @@ echo   cyt  Copies file in the current directory to nickname-specified path.
 echo   cyf  Copies files from a cbf_path nickname.
 echo     d  Easier-to-type and remember version of "dir".
 echo    de  Delete operations.
+echo   def  Delete folder corresponding to specified CBF path nickname. 
 echo    dn  Perform Dot Net core functions.
 echo     e  Exit command window.
 echo    ea  Application-centric way to run an application.
@@ -108,7 +109,6 @@ echo    pl  Performs Git pull. Has TD parameter.
 echo    pg  Ping batch file hooked up to the nicknames dictionary.
 echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
-echo    rf  Remove folder corresponding to specified CBF path nickname. 
 echo     s  Run git status remotely. Has TD parameter.
 echo    se  Internet search helper.
 echo   sln  Open a Visual Studio solution. Has TD parameter.

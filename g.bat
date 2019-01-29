@@ -206,30 +206,6 @@ exit/b
 
 :_
 
-:11
-
-:delb
-
-set fp=* 10. Delete branch. (!delb) (skw delete_branch)
-
-rem Outcome: This worked! Oct-13-2016
-
-rem Note: You must have already initialized the repository.
-
-echo.
-echo %fp%
-
-rem This works. Nov-28-2016
-rem git push origin --delete %2
-echo.
-git push origin --delete development-Nov-16-2016
-
-exit/b
-
-
-
-:_
-
 :fixbranch
 
 set fp=* 14. Fix branch.
@@ -1466,108 +1442,6 @@ exit/b
 
 
 
-:_+ Custom Clones
-
-
-
-::_
-
-:cn
-
-set fp=* Clone a custom repository using a different code style.
-
-echo.
-echo %fp%
-  
-rem 1. Repository URL.
-set origin_url=https://github.com/jonathan-r-jones/java_bouillabaisse.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/batch_files.git
-set origin_url=https://github.com/bruderstein/NppTidy2.git
-set origin_url=https://github.com/jamesmontemagno/MeetupManager.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
-set origin_url=https://github.com/jamesmontemagno/Hanselman.Forms.git
-set origin_url=https://github.com/NASAWorldWind/WebWorldWind.git
-set origin_url=https://github.com/Homebrew/brew.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mobility.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git
-set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git
-set origin_url=https://github.com/edsnider/marvel-xfdemo.git
-set origin_url=https://github.com/jonathan-r-jones/fresnel.git
-set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
-call n fgt
-set origin_url=%cbf_url%
-
-rem 2. New folder path.
-set new_folder_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
-set new_folder_path=c:\aa
-set new_folder_path=c:\mercury
-set new_folder_path=c:\projects\netbeans
-set new_folder_path=%aa%
-set new_folder_path=%aa%\repositories
-
-rem 3. Branch name.
-set branch_name=clean6.2
-set branch_name=Branch2
-set branch_name=develop
-set branch_name=master
-set branch_name=jj_devops
-
-rem 4. Folder name.
-set folder_name=tirem
-set folder_name=bouillabaisse
-set folder_name=ForGitTesting3
-set folder_name=Batch_Files
-set folder_name=MeetupManager
-set folder_name=Documentation
-set folder_name=HanselmanForms
-set folder_name=WebWorldWind_June_2_2017
-set folder_name=Homebrew_Jun_7_2017
-set folder_name=s6_secondary_repo
-set folder_name=Mobility
-set folder_name=sencha
-set folder_name=mercury6
-set folder_name=Xamarin_Marvel_Demo
-set folder_name=ForGitTesting
-set folder_name=BusterFromFresnel
-set folder_name=ForGitTesting2
-set folder_name=ForGitTesting_%branch_name%_branch
-
-rem 5. Execute.
-
-cd /d %new_folder_path%
-
-echo.
-git clone %origin_url% --branch %branch_name% .\%folder_name%
-
-exit/b
-
-
-
-::_
-
-:cn_xu
-
-set fp=* Clone all Xamarin University repos.
-
-rem lu: Jun-5-2018
-
-echo.
-echo %fp%
-
-call td xu_r
-
-git clone https://github.com/XamarinUniversity/AllCourseExercises.git
-
-cd AllCourseExercises
-
-git submodule init
-
-git submodule update
-
-exit/b
-
-
-
 :_+ Get Version Number
 
 
@@ -2510,6 +2384,8 @@ exit/b
 
 :reba
 
+:rebase
+
 :rede
 
 set fp=* Rebase from develop branch.
@@ -2597,6 +2473,137 @@ echo %fp%
 
 echo.
 git checkout -b develop
+
+exit/b
+
+
+
+:_+ Branch Operations
+
+
+
+::_
+
+:delb
+
+:debr
+
+set fp=* 10. Delete branch. (!delb) (skw delete_branch)
+
+rem Outcome: This worked! Oct-13-2016
+
+rem Note: You must have already initialized the repository.
+
+echo.
+echo %fp%
+
+rem This works. Nov-28-2016
+rem git push origin --delete %2
+
+echo.
+git push origin --delete development-Nov-16-2016
+
+exit/b
+
+
+
+:_+ Custom Clones
+
+
+
+::_
+
+:cn
+
+set fp=* Clone a custom repository using a different code style.
+
+echo.
+echo %fp%
+  
+rem 1. Repository URL.
+set origin_url=https://github.com/jonathan-r-jones/java_bouillabaisse.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/batch_files.git
+set origin_url=https://github.com/bruderstein/NppTidy2.git
+set origin_url=https://github.com/jamesmontemagno/MeetupManager.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
+set origin_url=https://github.com/jamesmontemagno/Hanselman.Forms.git
+set origin_url=https://github.com/NASAWorldWind/WebWorldWind.git
+set origin_url=https://github.com/Homebrew/brew.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mobility.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/sencha.git
+set origin_url=https://Jonathan17@bitbucket.org/nesmercuryteam/mercury6.git
+set origin_url=https://github.com/edsnider/marvel-xfdemo.git
+set origin_url=https://github.com/jonathan-r-jones/fresnel.git
+set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
+call n fgt
+set origin_url=%cbf_url%
+
+rem 2. New folder path.
+set new_folder_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
+set new_folder_path=c:\aa
+set new_folder_path=c:\mercury
+set new_folder_path=c:\projects\netbeans
+set new_folder_path=%aa%
+set new_folder_path=%aa%\repositories
+
+rem 3. Branch name.
+set branch_name=clean6.2
+set branch_name=Branch2
+set branch_name=master
+set branch_name=jj_devops
+set branch_name=develop
+
+rem 4. Folder name.
+set folder_name=tirem
+set folder_name=bouillabaisse
+set folder_name=ForGitTesting3
+set folder_name=Batch_Files
+set folder_name=MeetupManager
+set folder_name=Documentation
+set folder_name=HanselmanForms
+set folder_name=WebWorldWind_June_2_2017
+set folder_name=Homebrew_Jun_7_2017
+set folder_name=s6_secondary_repo
+set folder_name=Mobility
+set folder_name=sencha
+set folder_name=mercury6
+set folder_name=Xamarin_Marvel_Demo
+set folder_name=ForGitTesting
+set folder_name=BusterFromFresnel
+set folder_name=ForGitTesting2
+set folder_name=ForGitTesting_%branch_name%_branch
+
+rem 5. Execute.
+
+cd /d %new_folder_path%
+
+echo.
+git clone %origin_url% --branch %branch_name% .\%folder_name%
+
+exit/b
+
+
+
+::_
+
+:cn_xu
+
+set fp=* Clone all Xamarin University repos.
+
+rem lu: Jun-5-2018
+
+echo.
+echo %fp%
+
+call td xu_r
+
+git clone https://github.com/XamarinUniversity/AllCourseExercises.git
+
+cd AllCourseExercises
+
+git submodule init
+
+git submodule update
 
 exit/b
 
