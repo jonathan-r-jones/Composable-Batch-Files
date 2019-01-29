@@ -3998,4 +3998,37 @@ exit/b
 
 
 
+:_
+
+:demo
+
+set fp=* Demo on Jan-29-2019.
+
+rem lu: Jan-29-2019
+
+echo.
+echo %fp%
+
+rem Jenkins 2 is a place for ERO Pipelines.
+rem qq-1
+call sf je2r
+
+echo.
+pause
+
+rem Jenkins 2 automatically pulls the latest Jenkinsfile from GitHub.
+rem Launchtime timestamp confirmation of changes.
+call np jj
+
+echo.
+pause
+
+call sf nexu
+
+rem The plan is to have these war files hosted in the upcoming development environment.
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)
