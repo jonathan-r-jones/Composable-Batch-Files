@@ -3790,23 +3790,6 @@ exit/b
 
 :_
 
-:gg
-
-set fp=* Git gui.
-
-rem lu: Aug-1-2018
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files\Git\cmd\git-gui.exe
-
-exit/b
-
-
-
-:_
-
 :petz
 
 set fp=* Petzold.
@@ -5482,7 +5465,11 @@ exit/b
 
 :mp
 
+:rfd
+
 rem (!rfsp) (mov-2)
+
+:iccl
 
 :m2
 
@@ -6800,25 +6787,6 @@ exit/b
 
 
 
-:_
-
-:cart
-
-set fp=* Cart.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-call n r
-
-set cbf_path=%cbf_path%\cart
-
-exit/b
-
-
-
 :_ + Git
 
 
@@ -6839,6 +6807,27 @@ echo %fp%
 set cbf_path=%localappdata%\Programs\Git
 
 set cbf_url=https://github.com
+
+exit/b
+
+
+
+::_
+
+:gg
+
+set fp=* Git gui.
+
+rem lu: Aug-1-2018
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files\Git\cmd\git-gui.exe
+
+if exist C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe set cbf_application=C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe
+
+set cbf_filename=%cbf_application%
 
 exit/b
 

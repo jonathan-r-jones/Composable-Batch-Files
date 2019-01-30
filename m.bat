@@ -3846,8 +3846,10 @@ rem lu: Jan-10-2019
 echo.
 echo %fp%
 
+rem jj_devops
 call me jj
 
+rem dev
 rem call me jf
 
 call me iac
@@ -4010,7 +4012,7 @@ echo.
 echo %fp%
 
 rem Jenkins 2 is a place for ERO Pipelines.
-rem qq-1
+
 call sf je2r
 
 echo.

@@ -2343,7 +2343,6 @@ rem lu: Jan-9-2019
 echo.
 echo %fp%
 
-echo.
 git diff
 
 exit/b
