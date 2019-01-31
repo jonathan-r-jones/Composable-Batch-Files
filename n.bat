@@ -5497,6 +5497,8 @@ rem (!rfsp) (mov-2)
 
 :p
 
+:cain
+
 :crai
 
 :jj
@@ -7760,11 +7762,9 @@ exit/b
 
 ::_
 
-:meb
+:txb
 
-:meblk
-
-set fp=* Use Multi-Edit to edit a blank txt document.
+set fp=* Edit a blank txt document.
 
 rem lu: Jan-25-2019
 
@@ -8029,6 +8029,23 @@ echo %fp%
 set cbf_application=%systemroot%\system32\SystemPropertiesAdvanced.exe
 
 set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+:_
+
+:cts
+
+set fp=* Craig's Terraform State file.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Craig's Terraform State file.txt
 
 exit/b
 
