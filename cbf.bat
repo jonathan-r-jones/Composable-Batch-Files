@@ -67,6 +67,7 @@ echo   cbf  Show this list of CBF Helper batch files.
 echo   clc  Simple calculator.
 echo    cn  Used for Git cloning tasks.
 echo   col  Performs shell window colors operations.
+echo    cp  Run Code Compare with aliases or filenames.
 echo    cs  File contents search.
 echo    cu  Curl batch file hooked up to the nicknames dictionary.
 echo    cy  Copy file(s).
