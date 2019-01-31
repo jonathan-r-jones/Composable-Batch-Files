@@ -7972,3 +7972,24 @@ exit/b
 
 
 :_
+
+:cm
+
+:cmac
+
+:ql
+
+set fp=* Quickla CMAC.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
+
+exit/b
+
+
+
+:_
