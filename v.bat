@@ -631,7 +631,6 @@ exit/b
 :caret
 
 set fp=* Line continuation with caret character.
-rem qq-1
 
 rem How do you continue a batch file line onto a second line?
 
