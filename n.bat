@@ -7935,6 +7935,8 @@ exit/b
 
 ::_
 
+:sk
+
 :skyp
 
 :skype
