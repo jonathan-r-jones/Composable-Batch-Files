@@ -23,7 +23,7 @@ if "%~1" == "help" goto help
 
 :_
 
-set fp=* If percent is not blank, then to percent 1.
+set fp=* If percent 1 is not blank, then to percent 1.
 
 if not "%~1" == "" goto %1
 
@@ -41,6 +41,7 @@ goto main_function
 
 :help
 
+echo.
 echo File Purpose: %filep%
 
 echo.
@@ -53,9 +54,10 @@ echo.
 echo Usage: %0 (optional parameter 1)
 
 echo.
-echo Parameter 1: Batch file label you wish to execute. If left blank, 
-echo the code below the last code block in this file, a. k. a. the main function, will 
-echo be executed.
+set parameter_1=Parameter 1: Batch file label you wish to execute. If left blank, ^
+the function(s) immediately following the main function, will be executed.
+
+echo %parameter_1%
 
 exit/b
 
@@ -186,59 +188,6 @@ if "%~2" == "" (
 ) else (
   echo Percent 2 is something.
 )
-
-exit/b
-
-
-
-:_ + Escape Characters
-
-
-
-::_
-
-:pare
-
-set fp=* Escape character for a parenthesis.
-
-rem skw what's the escape character for a batch file?
-
-rem Escaping Specific Characters: http://www.robvanderwoude.com/escapechars.php
-
-rem lu: Nov-20-2018
-
-echo.
-echo %fp%
-
-echo.
-echo * Error: No "*.%2" file exist(s^) in the current folder.
-
-rem echo The rain in Spain(s) is great.
-
-exit/b
-
-
-
-::_
-
-:percent_20
-
-set fp=* How do you escape a percent sign in a batch file?
-
-rem Answer: 2 '%' signs equals one.
-
-rem double percent sign: skw
-
-rem percent 20 issue in environment variables. skw
-
-rem fcd: Aug-2-2017
-
-echo %fp%
-
-set cbf_url='https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile'
-
-echo.
-echo cbf_url: %cbf_url%
 
 exit/b
 
@@ -448,55 +397,6 @@ if not exist *.tf (
 )
 
 exit/b 0
-
-
-
-:_+ Line Continuation
-
-
-
-::_
-
-:care
-
-:caret
-
-set fp=* Line continuation with caret character.
-
-rem How do you continue a batch file line onto a second line?
-
-rem lu: Nov-2-2018
-
-echo %fp%
-
-echo.
-echo Four score and seven years ago our fathers brought forth on this continent a new nation, ^
-conceived in liberty and dedicated to the proposition that all men are created equal.
-
-exit/b
-
-
-
-::_
-
-:ampe
-
-set fp=* Experiment with the ampersand character.
-
-rem Outcome: The ampersand character allows you to multiple commands on single line.
-rem Think of it as a semicolon for batch files.
-
-rem Line continuation = "&".
-
-rem This works!
-
-echo.
-echo %fp%
-echo.
-
-echo hey & echo hey 2
-
-m exitp
 
 
 
@@ -717,6 +617,105 @@ goto _xit
 :del "file identifier report.txt"
 
 exit/b
+
+
+
+:_+ Line Continuation, Escape Characters and more.
+
+
+
+::_
+
+:care
+
+:caret
+
+set fp=* Line continuation with caret character.
+rem qq-1
+
+rem How do you continue a batch file line onto a second line?
+
+rem lu: Nov-2-2018
+
+echo %fp%
+
+echo.
+echo Four score and seven years ago our fathers brought forth on this continent a new nation, ^
+conceived in liberty and dedicated to the proposition that all men are created equal.
+
+exit/b
+
+
+
+::_
+
+:percent_20
+
+set fp=* How do you escape a percent sign in a batch file?
+
+rem Answer: 2 '%' signs equals one.
+
+rem double percent sign: skw
+
+rem percent 20 issue in environment variables. skw
+
+rem fcd: Aug-2-2017
+
+echo %fp%
+
+set cbf_url='https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile'
+
+echo.
+echo cbf_url: %cbf_url%
+
+exit/b
+
+
+
+::_
+
+:pare
+
+set fp=* Escape character for a parenthesis.
+
+rem skw what's the escape character for a batch file?
+
+rem Escaping Specific Characters: http://www.robvanderwoude.com/escapechars.php
+
+rem lu: Nov-20-2018
+
+echo.
+echo %fp%
+
+echo.
+echo * Error: No "*.%2" file exist(s^) in the current folder.
+
+rem echo The rain in Spain(s) is great.
+
+exit/b
+
+
+
+::_
+
+:ampe
+
+set fp=* Experiment with the ampersand character.
+
+rem Outcome: The ampersand character allows you to multiple commands on single line.
+rem Think of it as a semicolon for batch files.
+
+rem Line continuation = "&".
+
+rem This works!
+
+echo.
+echo %fp%
+echo.
+
+echo hey & echo hey 2
+
+m exitp
 
 
 

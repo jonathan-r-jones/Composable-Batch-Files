@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Code Compare batch file.
+set filename_stands_for=*  Run Code Compare with aliases or filenames.
 
 
 
@@ -14,7 +14,7 @@ set filename_stands_for=* Code Compare batch file.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto just_run_code_compare
 
 if "%~1" == "/?" goto help
 
@@ -43,17 +43,17 @@ echo Last Updated: Jan-30-2019
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 and 2: Current folder filename or file alias.
-set parameter_1=%parameter_1% 
+set parameter_1=Parameter 1 and 2: A filename in the current folder or a file alias. If ^
+left blank, Code Compare is simply run.   
 
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2: If -l is specified filenames only are used. If left blank, aliases are used.
-set parameter_2=%parameter_2% 
+set parameter_3=Parameter 3: If -l is specified filenames only are used. If left ^
+blank, aliases only are used.
 
 echo.
-echo %parameter_2%
+echo %parameter_3%
 
 exit/b
 
@@ -98,7 +98,9 @@ if not exist "%cbf_filename%" (
 
 set file_2=%cbf_filename%
 
-"c:\program files\devart\code compare\codecompare.exe" "%file_1%" "%file_2%"
+call an coco
+
+"%cbf_application%" "%file_1%" "%file_2%"
 
 exit/b
 
@@ -115,7 +117,26 @@ rem lu: Jan-30-2019
 echo.
 echo %fp%
 
-"c:\program files\devart\code compare\codecompare.exe" "%~1" "%~2"
+call an coco
+
+"%cbf_application%" "%~1" "%~2"
+
+exit/b
+
+
+
+:_
+
+:just_run_code_compare
+
+set fp=* Just run Code Compare.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+call ea coco
 
 exit/b
 

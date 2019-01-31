@@ -7953,3 +7953,22 @@ exit/b
 
 
 :_
+
+:coco
+
+set fp=* Code compare.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=c:\program files\devart\code compare\codecompare.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+:_
