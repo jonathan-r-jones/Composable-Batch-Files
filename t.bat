@@ -8371,16 +8371,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* File or folder test.
@@ -8394,6 +8384,41 @@ echo.
 xcopy /d /h /r /y "%reach out%\cc.asc" "%share-zone%\copy of cc.asc"
 
 exit/b
+
+
+
+:_
+
+:
+
+set fp=* Interesting Java code snippet that I'm not sure what it does.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+rem From gradlew.bat
+
+echo.
+rem set JAVA_EXE=java.exe
+rem %JAVA_EXE% -version >NUL 2>&1
+
+java -version 2>&1
+
+if "%ERRORLEVEL%" == "0" echo Is zero.
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

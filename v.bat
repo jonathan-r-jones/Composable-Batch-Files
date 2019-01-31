@@ -718,13 +718,29 @@ m exitp
 
 
 
-:_
+::_
 
-:main_function
+:at_sign
 
-set fp=* Code below here runs.
+set fp=* Use of the at sign "@" before rem. Even with echo on, the statement "Hello 2" will ^
+not be disploayed.
 
-rem ******* (!rfcea, !rfsp) (mov4)
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+echo.
+
+@echo on
+
+rem Hello 1.
+
+@rem Hello 2.
+
+@echo off
+
+exit/b
 
 
 
@@ -764,6 +780,38 @@ exit/b
                environment variable for %1 and expands to the
                drive letter and path of the first one found.
 %~ftza1     - expands %1 to a DIR like output line
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:psc
+
+set fp=* How to save command line arguments. This works.
+
+rem Test percent star command.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cmd_line_args=%*
+
+echo.
+echo Cmd_line_args: %Cmd_line_args%
 
 exit/b
 

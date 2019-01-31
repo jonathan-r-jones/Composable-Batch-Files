@@ -7010,67 +7010,6 @@ exit/b
 
 
 
-:_+ Windows Related
-
-
-
-::_
-
-:zoom
-
-set fp=* ZoomIt
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-call n pounders
-
-set cbf_application=%cbf_path%\zoomit.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:snip
-
-:snto
-
-set fp=* Snipping tool.
-
-rem lu: Jan-4-2019
-
-echo.
-echo %fp%
-
-set cbf_application=%windir%\system32\SnippingTool.exe
-
-exit/b
-
-
-
-::_
-
-:start
-
-set fp=Windows Startup.
-
-rem fcd: May-9-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
-
-exit/b
-
-
-
 :_
 
 :nj
@@ -7463,27 +7402,6 @@ echo %fp%
 call n dev
 
 set cbf_path=%cbf_path%\build\h2db
-
-exit/b
-
-
-
-:_
-
-:skyp
-
-:skype
-
-set fp=* Skype for business.
-
-rem lu: Jan-18-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
-
-set cbf_filename=%cbf_application%
 
 exit/b
 
@@ -7987,6 +7905,128 @@ echo.
 echo %fp%
 
 set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
+
+exit/b
+
+
+
+:_+ Windows Related Functions
+
+
+
+::_
+
+:copa
+
+set fp=* Control panel.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=%systemroot%\system32\control.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:skyp
+
+:skype
+
+set fp=* Skype for business.
+
+rem lu: Jan-18-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:zoom
+
+set fp=* ZoomIt
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+call n pounders
+
+set cbf_application=%cbf_path%\zoomit.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:snip
+
+:snto
+
+set fp=* Snipping tool.
+
+rem lu: Jan-4-2019
+
+echo.
+echo %fp%
+
+set cbf_application=%windir%\system32\SnippingTool.exe
+
+exit/b
+
+
+
+::_
+
+:start
+
+set fp=Windows Startup.
+
+rem fcd: May-9-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+
+exit/b
+
+
+
+::_
+
+:oden
+
+:odenv
+
+set fp=* Open Environment Variable dialogue box.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=%systemroot%\system32\SystemPropertiesAdvanced.exe
+
+set cbf_filename=%cbf_application%
 
 exit/b
 
