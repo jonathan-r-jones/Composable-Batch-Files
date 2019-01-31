@@ -85,13 +85,11 @@ exit/b
 
 :ah
 
-:ahelp
-
 :h
 
 set fp=* AWS help.
 
-rem lu: Dec-17-2018
+rem lu: Jan-31-2019
 
 echo.
 echo %fp%
@@ -1987,7 +1985,7 @@ exit/b
 
 :d_sgsp
 
-set fp=* Describe security groups, pipe to file.
+set fp=* Describe security groups and pipe to file.
 
 rem lu: Dec-11-2018
 
@@ -2000,7 +1998,7 @@ set cbf_filename=%temp%\describe_sgs.txt
 
 call aws ec2 describe-security-groups>%cbf_filename%
 
-call m apf
+call m associate_cbf_parameter_to_cbf_filename
 
 call r
 
@@ -2125,7 +2123,7 @@ set cbf_filename=%temp%\describe_instances.txt
 
 call aws ec2 describe-instances>%cbf_filename%
 
-call m apf
+call m associate_cbf_parameter_to_cbf_filename
 
 call r
 
@@ -2150,7 +2148,7 @@ set cbf_filename=%temp%\describe_instances.txt
 
 call aws ec2 describe-subnets>%cbf_filename%
 
-call m apf
+call m associate_cbf_parameter_to_cbf_filename
 
 call r
 
@@ -2483,7 +2481,6 @@ exit/b
 
 set fp=* Authorize security group ingress for 4th port, RDP connection traffic on port 3389.
 
-rem qq-1
 rem lu: Dec-11-2018
 
 echo.
@@ -2536,6 +2533,29 @@ exit/b
 
 :deim
 
+set fp=* Describe images and pipe to file. This creates 150 megabyte file!
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\describe_images.txt
+
+aws --output table ec2 describe-images>%cbf_filename%
+
+call m associate_cbf_parameter_to_cbf_filename
+
+call r
+
+exit/b
+
+
+
+::_
+
+:deim_o
+
 set fp=* Describe images.
 
 rem lu: Nov-2-2018
@@ -2553,7 +2573,7 @@ exit/b
 
 ::_
 
-:deim2
+:deim_pg
 
 set fp=* Describe images with PostgreSQL.
 

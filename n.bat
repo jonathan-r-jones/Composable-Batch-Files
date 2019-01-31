@@ -5467,6 +5467,10 @@ exit/b
 
 :rfd
 
+:icd
+
+:onbo
+
 rem (!rfsp) (mov-2)
 
 :iccl
