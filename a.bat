@@ -1965,7 +1965,30 @@ exit/b
 
 ::_
 
-:d_sgs
+:dsc_sg
+
+set fp=* Describe EC2 security group.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups --group-names EC2SecurityGroup --group-ids sg-67b1b303
+
+rem Below here don't work.
+
+rem aws ec2 describe-security-groups --group-names EC2SecurityGroup --group-ids sg-67b1b303
+rem An error occurred (VPCIdNotSpecified) when calling the DescribeSecurityGroups operation: No default VPC for this user
+
+exit/b
+
+
+
+::_
+
+:dsc_sgs
 
 set fp=* Describe security groups.
 
@@ -1983,7 +2006,7 @@ exit/b
 
 ::_
 
-:d_sgsp
+:dsc_sgsp
 
 set fp=* Describe security groups and pipe to file.
 
@@ -2008,7 +2031,7 @@ exit/b
 
 ::_
 
-:d_sg_id
+:dsc_sg_id
 
 set fp=* Describe our new security group on id.
 
@@ -2021,29 +2044,6 @@ call n sg_id
 
 echo.
 aws ec2 describe-security-groups --group-id %sg_id%
-
-exit/b
-
-
-
-::_
-
-:d_sg
-
-set fp=* Describe EC2 security group.
-
-rem lu: Dec-20-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-security-groups --group-names EC2SecurityGroup --group-ids sg-67b1b303
-
-rem Below here don't work.
-
-rem aws ec2 describe-security-groups --group-names EC2SecurityGroup --group-ids sg-67b1b303
-rem An error occurred (VPCIdNotSpecified) when calling the DescribeSecurityGroups operation: No default VPC for this user
 
 exit/b
 
@@ -2072,7 +2072,7 @@ exit/b
 
 ::_
 
-:d_vpcs
+:dsc_vpcs
 
 set fp=* Describe VPCs.
 

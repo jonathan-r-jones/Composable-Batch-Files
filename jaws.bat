@@ -259,9 +259,7 @@ exit/b
 
 :_
 
-:dsg
-
-:d_sg
+:dsc_sg
 
 set fp=* Describe our new security group.
 
@@ -353,7 +351,7 @@ exit/b
 
 :_
 
-:deim
+:dsc_im
 
 set fp=* Describe images.
 
@@ -373,6 +371,8 @@ exit/b
 :_
 
 :desu
+
+:dsc_su
 
 :subnets
 
@@ -604,7 +604,7 @@ exit/b
 
 ::_
 
-:d_sgs
+:dsc_sgs
 
 set fp=* Describe security groups.
 
@@ -622,7 +622,7 @@ exit/b
 
 ::_
 
-:d_ins
+:dsc_ins
 
 set fp=* Get instances status.
 
@@ -717,6 +717,8 @@ exit/b
 
 :du
 
+:de_us
+
 :delete_user
 
 set fp=* Delete user.
@@ -727,6 +729,24 @@ echo.
 echo %fp%
 
 aws iam delete-user --user-name cli_demo_user
+
+exit/b
+
+
+
+:_
+
+:dsc_vpcs
+
+set fp=* Describe VPCs.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-vpcs
 
 exit/b
 

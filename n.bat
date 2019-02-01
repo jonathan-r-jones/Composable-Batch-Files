@@ -5471,6 +5471,8 @@ exit/b
 
 :onbo
 
+:p
+
 rem (!rfsp) (mov-2)
 
 :iccl
@@ -5499,7 +5501,7 @@ rem (!rfsp) (mov-2)
 
 :iac
 
-:p
+:cart_s3
 
 :cain
 
@@ -8039,6 +8041,8 @@ exit/b
 
 
 :_
+
+:ctf
 
 :cts
 
