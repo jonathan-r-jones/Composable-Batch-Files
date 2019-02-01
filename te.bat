@@ -43,10 +43,10 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1 (Optional): 
 
+set parameter_2=Parameter 2 (Optional): 
+
 echo.
 echo %parameter_1%
-
-set parameter_2=Parameter 2 (Optional): 
 
 echo.
 echo %parameter_2%

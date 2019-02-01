@@ -23,7 +23,7 @@ shift /0
 
 :_
 
-set fp=* Prepocess.
+set fp=* Preprocess.
 
 rem lu: Jan-16-2019
 

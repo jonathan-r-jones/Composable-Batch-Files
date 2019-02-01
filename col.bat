@@ -39,22 +39,26 @@ set filep=File purpose: This template file can be used as a "Save As" to create 
 set filep=%filep% composable batch file.
 
 echo.
-echo Last Updated: 
+echo Last Updated: Jan-31-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
+set parameter_1=Parameter 1 (Optional): Function to execute.
 set parameter_1=%parameter_1% 
 
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2 (Optional): 
-set parameter_2=%parameter_2% 
+echo.
+echo Menu of Available Functions
 
 echo.
-echo %parameter_2%
+echo  File  Description
+echo  ----  ------------------------------------------------------------------
+echo     s  Show color values.
+
+rem qq-1
 
 exit/b
 
@@ -96,6 +100,23 @@ exit/b
 
 :_
 
+:default
+
+set fp=* Default DOS window, i. e. white on black.
+
+rem lu: Jan-22-2019
+
+echo.
+echo %fp%
+
+color 0f
+
+exit/b
+
+
+
+:_
+
 :sail
 
 :sailboat
@@ -115,16 +136,16 @@ exit/b
 
 :_
 
-:default
+:me
 
-set fp=* Default DOS window.
+set fp=* Multi-Edit.
 
-rem lu: Jan-22-2019
+rem lu: Jan-31-2019
 
 echo.
 echo %fp%
 
-color 0f
+color 5f
 
 exit/b
 
@@ -142,6 +163,40 @@ echo.
 echo %fp%
 
 color 0e
+
+exit/b
+
+
+
+:_
+
+:wog
+
+set fp=* White on gray.
+
+rem lu: Feb-1-2019
+
+echo.
+echo %fp%
+
+color 8f
+
+exit/b
+
+
+
+:_
+
+:yob
+
+set fp=* Yellow on blue.
+
+rem lu: Feb-1-2019
+
+echo.
+echo %fp%
+
+color 1e
 
 exit/b
 

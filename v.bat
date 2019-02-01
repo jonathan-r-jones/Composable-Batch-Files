@@ -797,7 +797,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-:psc
+:cla
 
 set fp=* How to save command line arguments. This works.
 
@@ -808,10 +808,13 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cmd_line_args=%*
+rem set cmd_line_args=%*
+
+rem echo.
+rem echo Commanmd line Arguments: %Cmd_line_args%
 
 echo.
-echo Cmd_line_args: %Cmd_line_args%
+echo Commanmd line Arguments: %*
 
 exit/b
 

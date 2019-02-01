@@ -1378,6 +1378,31 @@ exit/b
 
 ::_
 
+:initialize_environment_router
+
+set fp=* Initialize environment router.
+
+rem lu: Feb-1-2019
+
+echo %computername% | find /i "lipt">nul
+
+if %errorlevel% == 0 (
+   echo.
+   echo * Computer name contains "lipt".
+   call %0 initialize_big_environment
+rem qq-1
+   exit/b
+)
+
+call %0 initialize_environment
+
+exit/b
+
+
+
+::_
+rem qq-1
+
 :initialize_environment
 
 :in_env
