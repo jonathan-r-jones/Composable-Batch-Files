@@ -8423,3 +8423,20 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:a-b
+
+set fp=* Test dashes in label names.
+
+rem lu: Feb-1-2019
+
+echo.
+echo %fp%
+
+rem qq-1
+
+exit/b
+
+
+
+:_
