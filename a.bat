@@ -593,7 +593,7 @@ exit/b
 
 :_
 
-:cent
+:dsc_im
 
 set fp=* List EC@ AMI CentOS images.
 
@@ -1813,9 +1813,9 @@ exit/b
 
 :_
 
-:stat
+:dsc_stat
 
-:istatus
+:stat
 
 set fp=* Get a particular instance status.
 
@@ -1824,6 +1824,7 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
+echo.
 call %0 set_instance_id %2
 
 aws ec2 describe-instance-status --instance-ids %instance_id% --color off
@@ -2158,7 +2159,9 @@ exit/b
 
 ::_
 
-:d_sub
+:dsc_su
+
+:dsc_sub
 
 :describe_subnets
 
@@ -3174,6 +3177,44 @@ echo %fp%
 
 echo.
 aws configure
+
+exit/b
+
+
+
+:_
+
+:ri_feb-1-2019
+
+set fp=* Run small test instance on GovCloud.
+
+rem lu: Feb-1-2019
+
+rem Community AMI RedHat-7.6_x86_64 - ami-0f05ffda83f1c5a2a [Copied ami-67b5d606 from us-gov-west-1]
+rem RedHat-7.6_x86_64 Root device type: ebs Virtualization type: hvm
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-0f05ffda83f1c5a2a ^
+  --instance-type t3.nano ^
+  --key-name kibble_balance_key_pair ^
+  --security-group-ids sg-025758dcc49a9688a ^
+  --subnet-id subnet-df0f0da7 ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=small_test_Feb_1_2019}]"
+  --user-data file://my_script.sh
+rem qq-1
 
 exit/b
 
