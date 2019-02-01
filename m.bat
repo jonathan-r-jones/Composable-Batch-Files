@@ -1390,7 +1390,6 @@ if %errorlevel% == 0 (
    echo.
    echo * Computer name contains "lipt".
    call %0 initialize_big_environment
-rem qq-1
    exit/b
 )
 
@@ -1401,7 +1400,6 @@ exit/b
 
 
 ::_
-rem qq-1
 
 :initialize_environment
 
@@ -4055,6 +4053,24 @@ pause
 call sf nexu
 
 rem The plan is to have these war files hosted in the upcoming development environment.
+
+exit/b
+
+
+
+:_
+
+:jump
+
+set fp=* Jump.
+
+rem lu: Feb-1-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * How high? Feb-1-2019 1:04 AM
 
 exit/b
 

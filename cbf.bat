@@ -110,6 +110,7 @@ echo    pl  Performs Git pull. Has TD parameter.
 echo    pg  Ping batch file hooked up to the nicknames dictionary.
 echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
+echo   rzr  Multi-Edit abstraction layer batch file.
 echo     s  Run git status remotely. Has TD parameter.
 echo    se  Internet search helper.
 echo   sln  Open a Visual Studio solution. Has TD parameter.

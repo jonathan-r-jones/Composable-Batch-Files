@@ -47,9 +47,7 @@ call m initialize_environment_router
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
-
-if "%~1" == "/?" goto help
+if "%~0" == "/?" goto help
 
 goto main_function
 
@@ -65,12 +63,11 @@ echo.
 echo Last Updated: Jan-16-2019
 
 echo.
-echo Usage: %0 [Parameter 1]
+echo Usage: rzr (space separated parameters)
 
 set parameter_1=Parameter 1: Batch file to call.
-is merely started.
 
-set parameter_2=Parameter 2 (otpional): First parameter to pass.
+set parameter_2=Parameters (optional): Parameters to pass to the batch file named in parameter 1.
 
 echo.
 echo %parameter_1%
@@ -93,7 +90,9 @@ rem lu: Feb-1-2019
 echo.
 echo %fp%
 
-call %0.bat %1 %2 %3 %4 %5 %6
+cd\
+
+call %0 %1 %2 %3 %4 %5 %6
 
 exit/b
 
