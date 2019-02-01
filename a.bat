@@ -1787,32 +1787,6 @@ exit/b
 
 :_
 
-:retag
-
-set fp=* Retag a resource.
-
-rem lu: Dec-12-2018
-
-echo.
-echo %fp%
-
-aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Jenkins_Dec_11_2018
-
-rem These also work.
-rem aws ec2 create-tags help>%temp%/j1.txt
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
-
-rem Below here didn't work.
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
-
-exit/b
-
-
-
-:_
-
 :dsc_stat
 
 :stat
@@ -1953,7 +1927,7 @@ aws ec2 run-instances ^
   --key-name cart-key ^
   --security-group-ids %sg_id% ^
   --subnet-id %subnet_id% ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=Jenkins_Dec_20_2018}]"
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=small_test_Feb_1_2019}]"
   --user-data file://my_script.sh
 
 exit/b
@@ -3214,7 +3188,76 @@ aws ec2 run-instances ^
   --subnet-id subnet-df0f0da7 ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=small_test_Feb_1_2019}]"
   --user-data file://my_script.sh
-rem qq-1
+
+exit/b
+
+
+
+:_
+
+:ri_feb-1-2019_id
+
+set fp=* Run small test instance on ic.
+
+rem lu: Feb-1-2019
+
+rem Red Hat Enterprise Linux 7.6 (HVM), SSD Volume Type - ami-a1d349c0
+rem Red Hat Enterprise Linux version 7.6 (HVM), EBS General Purpose (SSD) Volume Type
+rem Root device type: ebs Virtualization type: hvm
+
+rem instance id: i-0ee6674f1356c148b
+
+echo.
+echo %fp%
+
+call td s
+
+call %0 check_pem_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call n sg_id
+
+call n subnet_id
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-a1d349c0 ^
+  --instance-type t1.micro ^
+  --key-name cart-key ^
+  --security-group-ids %sg_id% ^
+  --subnet-id %subnet_id% ^
+  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=small_test_Feb_1_2019}]"
+  --user-data file://my_script.sh
+
+exit/b
+
+
+
+:_
+
+:retag
+
+set fp=* Retag a resource.
+
+rem lu: Dec-12-2018
+
+echo.
+echo %fp%
+
+aws ec2 create-tags --resources i-0ee6674f1356c148b --tags Key=Name,Value=small_test_Feb_1_2019
+
+rem These also work.
+rem aws ec2 create-tags help>%temp%/j1.txt
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
+
+rem Below here didn't work.
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
 
 exit/b
 
