@@ -83,7 +83,7 @@ exit/b
 
 :main_function
 
-set fp=* %0 batch file's main function.
+set fp=* Rzr batch file's main function.
 
 rem lu: Feb-1-2019
 
