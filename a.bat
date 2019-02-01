@@ -1064,263 +1064,6 @@ exit/b
 
 
 
-:_+ Database-related family.
-
-
-
-::_
-
-:create_db_postgres_1
-
-set fp=* Create database.
-
-rem lu: Nov-23-2018
-
-echo.
-echo %fp%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-instance-identifier PostgresTestDatabase ^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-::_
-
-:create_db_postgres_2
-
-set fp=* Create database.
-
-rem lu: Nov-26-2018
-
-echo.
-echo %fp%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-instance-identifier postgres-test-database-Nov-26-2018 ^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-::_
-
-:db_help
-
-set fp=* Help database.
-
-rem lu: Nov-23-2018
-
-echo.
-echo %fp%
-
-echo.
-
-rem aws rds create-db-instance help
-rem aws create-db-instance help
-
-call aws rds create-db-instance help>%temp%\j1.txt
-
-rem The pause is important because the document takes a short bit of time to be created.
-pause
-
-call me j1
-
-exit/b
-
-
-
-::_
-
-:create_db_mysql
-
-set fp=* Create database
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws rds create-db-instance ^
-  --db-instance-identifier MySQL-test-database ^
-  --allocated-storage 20 ^
-  --db-instance-class db.m1.small ^
-  --engine mysql ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-::_
-
-:create_db_postgres_Nov_27_2018
-
-set fp=* Create database.
-
-rem lu: Nov-26-2018
-
-echo.
-echo %fp%
-
-rem This search and replace was necessary because database names can only contain underscores
-rem and instance names can only contain dashes. Nov-26-2018
-
-set database_name=postgres_test_database_Nov_26_2018_2
-
-set instance_name=%database_name:_=-%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-name %database_name% ^
-  --db-instance-identifier %instance_name% ^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-::_
-
-:create_db_postgres_Nov_26_2018
-
-set fp=* Create database.
-
-rem lu: Nov-26-2018
-
-echo.
-echo %fp%
-
-rem This search and replace was necessary because database names can only contain underscores
-rem and instance names can only contain dashes. Nov-26-2018
-
-set database_name=postgres_test_database_Nov_26_2018_2
-
-set instance_name=%database_name:_=-%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-name %database_name% ^
-  --db-instance-identifier %instance_name% ^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-::_
-
-:create_db_postgres
-
-set fp=* Create database.
-
-rem lu: Nov-26-2018
-
-echo.
-echo %fp%
-
-rem This search and replace was necessary because database names can only contain underscores
-rem and instance names can only contain dashes. Nov-26-2018
-
-set database_name=postgres_cli_database_Nov_27_2018
-
-set instance_identifier=%database_name:_=-%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-name %database_name% ^
-  --db-instance-identifier %instance_identifier%^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-::_
-
-:create_db_postgres_Nov_28_2018
-
-set fp=* Create a database that mimics the connectable one.
-
-rem lu: Nov-28-2018
-
-echo.
-echo %fp%
-
-set database_name=postgres_cli_database_Nov_28_2018
-
-set instance_identifier=%database_name:_=-%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-name %database_name% ^
-  --db-instance-identifier %instance_identifier%^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-::_
-
-:cli_nov_29_postgres_test_db
-
-set fp=* Create a database that mimics the connectable one.
-
-rem lu: Nov-29-2018
-
-echo.
-echo %fp%
-
-set database_name=%1
-
-set instance_identifier=%database_name:_=-%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-name %database_name% ^
-  --db-instance-identifier %instance_identifier%^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
 :_
 
 :run_windows_dec_10_2018
@@ -2552,6 +2295,8 @@ exit/b
 
 :deim_pg
 
+:dsc_pg
+
 set fp=* Describe images with PostgreSQL.
 
 rem lu: Nov-2-2018
@@ -3258,6 +3003,292 @@ rem Below here didn't work.
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
 rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
+
+exit/b
+
+
+
+:_+ Database-related family.
+
+
+
+::_
+
+:create_db_mysql
+
+set fp=* Create database
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --db-instance-identifier MySQL-test-database ^
+  --allocated-storage 20 ^
+  --db-instance-class db.m1.small ^
+  --engine mysql ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:db_help
+
+set fp=* Help for databases.
+
+rem lu: Nov-23-2018
+
+echo.
+echo %fp%
+
+echo.
+
+rem aws rds create-db-instance help
+rem aws create-db-instance help
+
+call aws rds create-db-instance help>%temp%\j1.txt
+
+rem The pause is important because the document takes a short bit of time to be created.
+pause
+
+call me j1
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_1
+
+set fp=* Create database.
+
+rem lu: Nov-23-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-instance-identifier PostgresTestDatabase ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_2
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-instance-identifier postgres-test-database-Nov-26-2018 ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_Nov_26_2018
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+
+set database_name=postgres_test_database_Nov_26_2018_2
+
+set instance_name=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_name% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+
+set database_name=postgres_cli_database_Nov_27_2018
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier%^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_Nov_27_2018
+
+set fp=* Create database.
+
+rem lu: Nov-26-2018
+
+echo.
+echo %fp%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+
+set database_name=postgres_test_database_Nov_26_2018_2
+
+set instance_name=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_name% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:create_db_postgres_Nov_28_2018
+
+set fp=* Create a database that mimics the connectable one.
+
+rem lu: Nov-28-2018
+
+echo.
+echo %fp%
+
+set database_name=postgres_cli_database_Nov_28_2018
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier%^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:cli_nov_29_postgres_test_db
+
+set fp=* Create a database that mimics the connectable one.
+
+rem lu: Nov-29-2018
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier%^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myawsuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:cli_feb_1_postgres_test_db
+
+set fp=* Create a database that mimics the connectable one.
+
+rem lu: Feb-1-2019
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier%^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password mypassword
 
 exit/b
 
