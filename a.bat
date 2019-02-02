@@ -3271,6 +3271,8 @@ exit/b
 
 set fp=* Create a database that mimics the connectable one.
 
+rem This worked on GovCloud but not iCloud.
+
 rem lu: Feb-1-2019
 
 echo.
@@ -3284,6 +3286,38 @@ echo.
 aws rds create-db-instance ^
   --allocated-storage 20 ^
   --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier%^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+::_
+
+:cli_feb_1_2019_postgres_test_db
+
+set fp=* Create a database that mimics the connectable one. Needs db-subnet-group-name.
+
+rem Doesn't work yet.
+
+rem lu: Feb-1-2019
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-subnet-group-name ^
   --db-instance-identifier %instance_identifier%^
   --db-instance-class db.t2.micro ^
   --engine postgres ^
