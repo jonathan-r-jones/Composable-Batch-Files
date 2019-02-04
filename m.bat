@@ -1469,6 +1469,8 @@ set path=%path%;%share-zone%
 
 set machinename=gfe
 
+set aa=c:\aa
+
 title=Big Laptop
 
 cls
