@@ -4092,4 +4092,22 @@ exit/b
 
 
 
+:_
+
+:set_feta
+
+set fp=* Set cbf_filename equal to cbf_application.
+
+rem lu: Feb-4-2019
+
+echo.
+echo %fp%
+
+echo.
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)

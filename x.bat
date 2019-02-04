@@ -51,11 +51,17 @@ exit/b
 
 :main_function
 
-set fp=* Main function.
+set fp=* Main function for "%0.bat".
 
 set cbf_filename=
 
+set cbf_application=
+
 if not "%~1" == "" call n %~1
+
+if "%cbf_filename%" == "" (
+  call m set_feta 
+)
 
 if "%cbf_filename%" == "" (
   echo.

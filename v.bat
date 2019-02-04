@@ -680,7 +680,6 @@ set fp=* Escape character for a parenthesis.
 rem skw what's the escape character for a batch file?
 
 rem Escaping Specific Characters: http://www.robvanderwoude.com/escapechars.php
-rem qq-1
 
 rem lu: Nov-20-2018
 
@@ -788,16 +787,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :cla
 
 set fp=* How to save command line arguments. This works.
@@ -816,6 +805,38 @@ rem echo Commanmd line Arguments: %Cmd_line_args%
 
 echo.
 echo Commanmd line Arguments: %*
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Set statements aren't allowed inside if blocks so here is the workaround.
+
+rem lu: Feb-4-2019
+
+rem set statements inside if blocks: skw
+
+echo.
+echo %fp%
+
+echo.
+if "%~2" == "" (
+  call m set_cbf_application_to_dte
+)
 
 exit/b
 

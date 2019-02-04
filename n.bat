@@ -3095,7 +3095,7 @@ echo %fp%
 
 set cbf_filename=%temp%\j1.txt
 
-set cbf_url=%cbf_filename%
+rem set cbf_url=%cbf_filename%
 
 exit/b
 
@@ -8097,13 +8097,7 @@ rem lu: Feb-4-2019
 echo.
 echo %fp%
 
-rem This is pretty cool. You can run PGA either by "sf pag, ea pga or x pga." Nice.
-
 set cbf_url=http://127.0.0.1:50255/browser/
-
-set cbf_application=%cbf_url%
-
-set cbf_filename=%cbf_application%
 
 exit/b
 
