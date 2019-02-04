@@ -495,35 +495,6 @@ exit/b 0
 
 :_
 
-:cli_nov_29_postgres_test_db
-
-set fp=* Create a database that mimics the connectable one.
-
-rem lu: Nov-29-2018
-
-echo.
-echo %fp%
-
-set database_name=%1
-
-set instance_identifier=%database_name:_=-%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-name %database_name% ^
-  --db-instance-identifier %instance_identifier%^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myawsuser ^
-  --master-user-password mypassword
-
-exit/b
-
-
-
-:_
-
 :retag
 
 set fp=* Retag a resource.
@@ -747,6 +718,38 @@ echo %fp%
 
 echo.
 aws ec2 describe-vpcs
+
+exit/b
+
+
+
+:_
+
+:postgres_database_from_cli_on_Feb_4_2019
+
+set fp=* Create database.
+
+rem lu: Feb-4-2019
+
+echo.
+echo %fp%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password mypassword
 
 exit/b
 
