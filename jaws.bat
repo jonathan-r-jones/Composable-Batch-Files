@@ -735,7 +735,7 @@ echo.
 echo %fp%
 
 rem This search and replace was necessary because database names can only contain underscores
-rem and instance names can only contain dashes. Nov-26-2018
+rem and instance names can only contain dashes.
 
 set database_name=%1
 

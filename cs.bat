@@ -32,6 +32,7 @@ goto main_function
 
 :help
 
+echo.
 echo Filename stands for: %filename_stands_for%
 
 set filep=File purpose: Search the current folder and its subfolders for filenames 

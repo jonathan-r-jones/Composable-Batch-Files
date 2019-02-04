@@ -3301,6 +3301,7 @@ exit/b
 :cli_feb_1_2019_postgres_test_db
 
 set fp=* Create a database that mimics the connectable one. Needs db-subnet-group-name.
+rem qq-1
 
 rem Doesn't work yet.
 
@@ -3319,6 +3320,38 @@ aws rds create-db-instance ^
   --db-name %database_name% ^
   --db-subnet-group-name ^
   --db-instance-identifier %instance_identifier%^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password mypassword
+
+exit/b
+
+
+
+:_
+
+:postgres_database_from_cli_on_Feb_4_2019
+
+set fp=* Create database.
+
+rem lu: Feb-4-2019
+
+echo.
+echo %fp%
+
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes.
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
   --db-instance-class db.t2.micro ^
   --engine postgres ^
   --master-username myuser ^

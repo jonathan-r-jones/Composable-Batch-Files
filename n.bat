@@ -2480,6 +2480,8 @@ exit/b
 
 :aa
 
+:perm
+
 set fp=* Aa, a.k.a. permanent folders for Jonathan.
 
 rem lu: Nov-2-2018
@@ -8056,6 +8058,27 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\Craig's Terraform State file.txt
+
+exit/b
+
+
+
+:_
+
+:sqlw
+
+:wb
+
+set fp=* SQL Workbench.
+
+rem lu: Feb-4-2019
+
+echo.
+echo %fp%
+
+set cbf_application=%aa%\SQL Workbench\SQLWorkbench.exe
+
+set cbf_filename=%cbf_application%
 
 exit/b
 
