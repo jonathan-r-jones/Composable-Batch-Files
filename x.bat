@@ -59,6 +59,12 @@ set cbf_application=
 
 if not "%~1" == "" call n %~1
 
+if %errorlevel% == 1 (
+  echo.
+  echo There was an error finding the alias for "%~1".
+  exit/b
+)
+
 if "%cbf_filename%" == "" (
   call m set_feta 
 )

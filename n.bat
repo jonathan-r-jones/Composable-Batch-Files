@@ -7995,7 +7995,9 @@ exit/b
 
 set fp=* Snipping tool.
 
-rem lu: Jan-4-2019
+rem lu: Feb-4-2019
+
+rem clip, screen shot: skw
 
 echo.
 echo %fp%

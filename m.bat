@@ -4103,7 +4103,6 @@ rem lu: Feb-4-2019
 echo.
 echo %fp%
 
-echo.
 set cbf_filename=%cbf_application%
 
 exit/b
