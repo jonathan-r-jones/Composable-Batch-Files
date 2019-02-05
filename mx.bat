@@ -89,6 +89,8 @@ rem lu: Jan-8-2019
 echo.
 echo %fp%
 
+rem echo 1.
+
 set cbf_filename=%share-zone%\%~1.bat
 
 if not exist %cbf_filename% (
@@ -96,6 +98,8 @@ if not exist %cbf_filename% (
   echo * The file "%cbf_filename%" does not exist.
   exit/b
 )
+
+rem echo 2.
 
 set cbf_parameter=%cbf_filename%
 

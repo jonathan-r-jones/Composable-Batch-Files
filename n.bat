@@ -75,7 +75,6 @@ echo           cwt  ContactsWidget for Tablet
 echo          depl  [wildfly_location]\standalone\deployments
 echo            fx  Firefox
 echo             g  %COMPOSABLE_BATCH_FILES%\g.bat
-echo            gh  GitHub.com
 echo           git  GitHub.com
 echo         gpcbf  Google Pages for Composable Batch Files on GitHub
 echo       heatmap  \standalone\tmp\vfs\temp\[dynamically generated]
@@ -6755,6 +6754,25 @@ exit/b
 
 
 
+::_
+
+:win
+
+:wind
+
+set fp=* Windows.
+
+rem lu: Feb-5-2019
+
+echo.
+echo %fp%
+
+set cbf_path=c:\windows
+
+exit/b
+
+
+
 :_+ Remote Double Click Candidates, a.k.a. lnk type files.
 
 
@@ -8117,6 +8135,8 @@ rem lu: Feb-4-2019
 
 echo.
 echo %fp%
+
+set cbf_application=C:\Program Files (x86)\pgAdmin 4\v4\runtime\pgAdmin4.exe
 
 set cbf_url=http://127.0.0.1:50255/browser/
 
