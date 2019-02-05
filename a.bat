@@ -3446,4 +3446,23 @@ exit/b
 
 
 
+:_
+
+:gco
+
+set fp=* Get console output.
+
+rem lu: Feb-5-2019
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 get-console-output --instance-id i-0eb232930c66d6baf
+rem qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

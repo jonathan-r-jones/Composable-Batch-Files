@@ -5477,8 +5477,6 @@ exit/b
 
 :p
 
-rem (!rfsp) (mov-2)
-
 :iccl
 
 :m2
@@ -8069,6 +8067,25 @@ exit/b
 
 :_
 
+:ctfo
+
+:cts
+
+set fp=* Craig's Terraform State file - old.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Craig's Terraform State file - old.txt
+
+exit/b
+
+
+
+:_
+
 :sqlw
 
 :wb
@@ -8107,4 +8124,61 @@ exit/b
 
 
 
-:_
+:_+ Putty
+
+
+
+::_
+
+:putt
+
+set fp=* Putty.
+
+rem lu: Feb-5-2019
+
+echo.
+echo %fp%
+
+set cbf_application=c:\program files\putty\putty.exe
+
+exit/b
+
+
+
+::_
+
+:puge
+
+:putg
+
+set fp=* Puttygen.
+
+rem lu: Feb-5-2019
+
+echo.
+echo %fp%
+
+set cbf_application=c:\program files\putty\puttygen.exe
+
+exit/b
+
+
+
+::_
+
+:pug
+
+set fp=* AWS Putty user guide.
+
+rem lu: Feb-5-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console
+
+exit/b
+
+
+
+:_ (!rfsp) (mov-6)
