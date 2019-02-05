@@ -6742,6 +6742,8 @@ exit/b
 
 :32
 
+:sys32
+
 set fp=* Windows system 32.
 
 rem lu: Dec-27-2018

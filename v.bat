@@ -812,16 +812,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Set statements aren't allowed inside if blocks so here is the workaround.
@@ -837,6 +827,66 @@ echo.
 if "%~2" == "" (
   call m set_cbf_application_to_dte
 )
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* How to sort a file.
+
+rem lu: Feb-5-2019
+
+echo.
+echo %fp%
+
+echo.
+sort j3.txt>j4.txt
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:where
+
+set fp=* How to tell from where a command is being run.
+
+rem lu: Feb-5-2019
+
+goto Feb-5-2019
+
+In windows how can you tell where a particular command is being run?
+
+Windows Server 2003 and later (i.e. anything after Windows XP 32 bit) provide the where.exe 
+program which does some of what which does, though it matches all types of files, not just 
+executable commands. (It does not match built-in shell commands like cd.) It will even accept 
+wildcards, so where nt* finds all files in your %PATH% and current directory whose names start 
+with nt.
+
+Try where /? for help.
+
+:Feb-5-2019
+
+echo.
+echo %fp%
+
+echo.
+where j.bat
 
 exit/b
 
