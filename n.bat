@@ -36,6 +36,7 @@ goto %1
 
 :help
 
+echo.
 echo %filep%
 
 echo.
@@ -5409,6 +5410,8 @@ exit/b
 :earm_cn
 
 :gaws
+
+:paws
 
 :gc
 
