@@ -3446,4 +3446,36 @@ exit/b
 
 
 
+:_
+
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_6_2019_0314
+
+set fp=* Create database with multiple tags.
+
+rem lu: Feb-6-2019
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password mypassword ^
+  --tags "Key"="BillingCoder","Value"="xyz123" ^
+         "Key"="POC","Value"="test@test.com" ^
+         "Key"="Version","Value"="1.0"
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

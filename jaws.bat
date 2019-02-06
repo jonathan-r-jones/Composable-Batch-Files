@@ -61,12 +61,6 @@ exit/b
 
 :_
 
-rem qq-2 (Bookmark)
-
-
-
-:_
-
 :hello
 
 echo.
@@ -725,17 +719,14 @@ exit/b
 
 :_
 
-:postgres_database_from_cli_on_Feb_4_2019
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_6_2019_0314
 
-set fp=* Create database.
+set fp=* Create database with multiple tags.
 
-rem lu: Feb-4-2019
+rem lu: Feb-6-2019
 
 echo.
 echo %fp%
-
-rem This search and replace was necessary because database names can only contain underscores
-rem and instance names can only contain dashes.
 
 set database_name=%1
 
@@ -749,7 +740,10 @@ aws rds create-db-instance ^
   --db-instance-class db.t2.micro ^
   --engine postgres ^
   --master-username myuser ^
-  --master-user-password mypassword
+  --master-user-password mypassword ^
+  --tags "Key"="BillingCoder","Value"="xyz123" ^
+         "Key"="POC","Value"="test@test.com" ^
+         "Key"="Version","Value"="1.0"
 
 exit/b
 
