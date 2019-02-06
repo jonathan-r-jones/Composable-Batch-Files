@@ -2994,7 +2994,6 @@ echo.
 echo %fp%
 
 aws ec2 create-tags --resources i-0ee6674f1356c148b --tags Key=Name,Value=small_test_Feb_1_2019
-rem qq-1
 
 rem These also work.
 rem aws ec2 create-tags help>%temp%/j1.txt
@@ -3492,15 +3491,18 @@ echo %fp%
 
 aws ec2 create-tags --resources db-NT4LGMYIOPTZSLPIGFRDGCMED4 --tags Key=Namex,Value=small_test_Feb_1_2019
 rem aws ec2 create-tags --resources db-NT4LGMYIOPTZSLPIGFRDGCMED4 --tags Key=Application,Value=CART
-rem qq-1
 
 exit/b
 
 
 
-:_
+:_+ security_group_for_db_on_gaws
 
-:create_security_group_for_db
+
+
+::_
+
+:create_security_group_for_db_on_gaws
 
 set fp=* Create security group for db.
 
@@ -3513,14 +3515,14 @@ call n vpc_id
 
 echo.
 aws ec2 create-security-group --group-name PostgresDevSecurityGroup ^
-  --description "Security Group for EC2 instances to allow ports 5432." ^
-  --vpc-id %vpc_id%
+  --description "Security Group for Postgres use." ^
+  --vpc-id vpc-af32d0c6
 
 exit/b
 
 
 
-:_
+::_
 
 :auth5
 
@@ -3533,6 +3535,39 @@ echo %fp%
 
 aws ec2 authorize-security-group-ingress --group-name PostgresDevSecurityGroup --protocol tcp ^
   --port 5432 --cidr 0.0.0.0/0
+
+exit/b
+
+
+
+:_
+
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_6_2019_0539
+
+set fp=* Create database with multiple tags using Postgres Security Group.
+
+rem lu: Feb-6-2019
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password mypassword ^
+  --tags "Key"="BillingCoder","Value"="xyz123" ^
+         "Key"="POC","Value"="test@test.com" ^
+         "Key"="Version","Value"="1.0"
+rem qq-1
 
 exit/b
 
