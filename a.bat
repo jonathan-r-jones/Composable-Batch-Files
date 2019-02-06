@@ -3567,7 +3567,6 @@ aws rds create-db-instance ^
   --tags "Key"="BillingCoder","Value"="xyz123" ^
          "Key"="POC","Value"="test@test.com" ^
          "Key"="Version","Value"="1.0"
-rem qq-1
 
 exit/b
 
