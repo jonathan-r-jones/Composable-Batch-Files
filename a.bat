@@ -2994,6 +2994,7 @@ echo.
 echo %fp%
 
 aws ec2 create-tags --resources i-0ee6674f1356c148b --tags Key=Name,Value=small_test_Feb_1_2019
+rem qq-1
 
 rem These also work.
 rem aws ec2 create-tags help>%temp%/j1.txt
@@ -3473,6 +3474,65 @@ aws rds create-db-instance ^
   --tags "Key"="BillingCoder","Value"="xyz123" ^
          "Key"="POC","Value"="test@test.com" ^
          "Key"="Version","Value"="1.0"
+
+exit/b
+
+
+
+:_
+
+:tag
+
+set fp=* Tag a resource.
+
+rem lu: Feb-6-2019
+
+echo.
+echo %fp%
+
+aws ec2 create-tags --resources db-NT4LGMYIOPTZSLPIGFRDGCMED4 --tags Key=Namex,Value=small_test_Feb_1_2019
+rem aws ec2 create-tags --resources db-NT4LGMYIOPTZSLPIGFRDGCMED4 --tags Key=Application,Value=CART
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:create_security_group_for_db
+
+set fp=* Create security group for db.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+call n vpc_id
+
+echo.
+aws ec2 create-security-group --group-name PostgresDevSecurityGroup ^
+  --description "Security Group for EC2 instances to allow ports 5432." ^
+  --vpc-id %vpc_id%
+
+exit/b
+
+
+
+:_
+
+:auth5
+
+set fp=* Authorize security group ingress for 5th port, Postgres connection traffic on port 5432.
+
+rem lu: Feb-6-2019
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress --group-name PostgresDevSecurityGroup --protocol tcp ^
+  --port 5432 --cidr 0.0.0.0/0
 
 exit/b
 
