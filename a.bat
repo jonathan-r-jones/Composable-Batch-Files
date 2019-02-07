@@ -3524,6 +3524,28 @@ exit/b
 
 ::_
 
+:create_security_group_for_db_on_iaws
+
+set fp=* Create security group for db.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+call n vpc_id
+
+echo.
+aws ec2 create-security-group --group-name PostgresDevSecurityGroup ^
+  --description "Security Group for Postgres use." ^
+  --vpc-id %vpc_id%
+
+exit/b
+
+
+
+::_
+
 :auth5
 
 set fp=* Authorize security group ingress for 5th port, Postgres connection traffic on port 5432.
@@ -3533,8 +3555,11 @@ rem lu: Feb-6-2019
 echo.
 echo %fp%
 
-aws ec2 authorize-security-group-ingress --group-name PostgresDevSecurityGroup --protocol tcp ^
-  --port 5432 --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress ^
+  --group-id sg-cffc0aa8 ^
+  --port 5432 --cidr 0.0.0.0/0 ^
+  --protocol tcp
+rem qq-1
 
 exit/b
 

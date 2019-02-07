@@ -893,3 +893,22 @@ exit/b
 
 
 :_
+
+:locl
+
+:clip
+
+set fp=* Load clipboard. How to put something onto the clipboard!
+
+rem lu: Feb-7-2019
+
+echo.
+echo %fp%
+
+echo This text is on the clipboard. Cool. | clip
+
+exit/b
+
+
+
+:_

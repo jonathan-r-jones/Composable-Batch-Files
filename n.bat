@@ -5501,6 +5501,12 @@ exit/b
 
 :devgit
 
+:chef
+
+:icook
+
+:pass-through
+
 :pass_through
 
 :iac
@@ -8141,7 +8147,9 @@ echo %fp%
 
 set cbf_application=C:\Program Files (x86)\pgAdmin 4\v4\runtime\pgAdmin4.exe
 
-set cbf_url=http://127.0.0.1:50255/browser/
+rem I commented the url because the correct way to start PGA is thought the exe.
+rem Having the URL here kind of makes things confusing.
+rem set cbf_url=http://127.0.0.1:50255/browser/
 
 exit/b
 

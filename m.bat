@@ -4120,7 +4120,6 @@ rem lu: Feb-5-2019
 echo.
 echo %fp%
 
-echo.
 shutdown /s
 
 exit/b
