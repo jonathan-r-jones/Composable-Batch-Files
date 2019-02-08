@@ -5505,6 +5505,14 @@ exit/b
 
 :icook
 
+:api
+
+:dapi
+
+:capi
+
+:dev
+
 :pass-through
 
 :pass_through
@@ -7164,102 +7172,6 @@ echo.
 echo %fp%
 
 set cbf_url=http://en.wikipedia.org/wiki/Alphabetical_list_of_file_extensions
-
-exit/b
-
-
-
-:_+ Cart API
-
-
-
-::_
-
-:api
-
-:capi
-
-:dev
-
-:devo
-
-set fp=* Develop branch.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\cart\api
-
-set cbf_url=http://localhost:8080/cart-api
-
-exit/b
-
-
-
-::_
-
-:dapi
-
-set fp=* Dev server api.
-
-rem lu: Feb-8-2019
-
-echo.
-echo %fp%
-
-goto Feb-8-2019
-
-If the server's not up, you get this message.
-
-HTTP Status 404 – Not Found
-Type Status Report
-
-Message Not found
-
-Description The origin server did not find a current representation for the target resource or 
-is not willing to disclose that one exists.
-
-Apache Tomcat/9.0.12
-
-:Feb-8-2019
-
-set cbf_url=http://10.168.78.40:8080/cart-api/status
-
-exit/b
-
-
-
-::_
-
-:8082
-
-set fp=* 8082.
-
-rem lu: Jan-15-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8082/cart-api
-
-exit/b
-
-
-
-::_
-
-:h2
-
-set fp=* H2.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/h2-console
 
 exit/b
 
