@@ -81,6 +81,8 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
+call m lu
+
 if not "%machinename%"=="gfe" (
    call 8
    call cyft mecfg mecfg_s

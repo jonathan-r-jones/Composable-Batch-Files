@@ -3144,27 +3144,6 @@ del /f c:\pcarss\web\jsp\CVS\Root
 
 :_
 
-set fp=* Experiment with Timestamp
-
-echo.
-echo %fp%
-echo.
-
-rem fdate /Ff /Atoday /Omn
-rem datenum
-set time_snapshot=%time%
-echo %time_snapshot%
-set time2=<time /t
-echo Date: %date%
-echo Time2: %time2%
-echo Time3: %date% %time%
-
-m exit
-
-
-
-:_
-
 :configuration_run_me_3
 
 set fp=* configuration_environment_run_me_3
@@ -8429,11 +8408,122 @@ exit/b
 
 :_
 
+set fp=* Experiment with Timestamp
+
+echo.
+echo %fp%
+echo.
+
+rem fdate /Ff /Atoday /Omn
+rem datenum
+set time_snapshot=%time%
+echo %time_snapshot%
+set time2=<time /t
+echo Date: %date%
+echo Time2: %time2%
+echo Time3: %date% %time%
+
+m exit
+
+
+
+:_
+
+:
+
+set fp=* Test timestamp.
+
+rem lu: Feb-8-2019
+
+echo.
+echo %fp%
+
+echo.
+echo Date: %date%
+
+echo.
+echo Time: %time%
+
+echo.
+echo Date and Time: %date% %time%
+
+echo.
+echo Date and Time: %date% %time%
+
+echo.
+date /t
+
+echo.
+time /t
+
+date /t>%temp%\time_string.txt
+
+time /t>>%temp%\time_string.txt
+
+echo.
+echo 7.
+type %temp%\time_string.txt
+
+echo.
+echo 8.
+set /p time_test=<%temp%\time_string.txt
+echo %time_test%
+
+echo.
+echo 9.
+date /t>%temp%\date_9.txt
+set /p date_9=<%temp%\date_9.txt
+echo %date_9%
+
+echo.
+echo 10.
+time /t>%temp%\time_10.txt
+set /p time_10=<%temp%\time_10.txt
+echo %time_10%
+
+echo.
+echo 11.
+set combined_11=%0 - %computername% - %date_9%%time_10%
+echo %combined_11%
+
+echo.
+echo 12.
+set combined_12=%0 - %computername% - %date_9%%time_10%
+echo %combined_12%>%share-zone%\last_updated_log.txt
+type %share-zone%\last_updated_log.txt
+
+rem qq-1
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Call ulul.
+
+rem lu: Feb-8-2019
+
+echo.
+echo %fp%
+
+echo.
+call m ulul
+rem qq-1
+
+exit/b
 
 
 

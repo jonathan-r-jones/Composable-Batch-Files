@@ -8212,4 +8212,23 @@ exit/b
 
 
 
+:_ 
+
+:lu
+
+:lul
+
+set fp=* Last updated log file.
+
+rem lu: Feb-8-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\last_updated_log.txt
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

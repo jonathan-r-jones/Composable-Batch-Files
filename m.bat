@@ -1679,20 +1679,6 @@ exit/b
 
 :_
 
-:lu
-
-set fp=* Last updated.
-
-rem fcd: May-17-2017
-
-echo Last Updated: May-17-2017 3:38 PM
-
-exit/b
-
-
-
-:_
-
 :ppt
 
 :pptx
@@ -4121,6 +4107,37 @@ echo.
 echo %fp%
 
 shutdown /s
+
+exit/b
+
+
+
+:_
+
+:lu
+
+:ulul
+
+set fp=* Update the last_updated_log.txt.
+
+rem lu: Feb-8-2019
+
+echo.
+echo %fp%
+
+rem echo 9.
+date /t>%temp%\date_9.txt
+set /p date_9=<%temp%\date_9.txt
+rem echo %date_9%
+
+rem echo 10.
+time /t>%temp%\time_10.txt
+set /p time_10=<%temp%\time_10.txt
+rem echo %time_10%
+
+set combined_12=%0 - %computername% - %date_9%%time_10%
+echo.>>%share-zone%\last_updated_log.txt
+echo %combined_12%>>%share-zone%\last_updated_log.txt
 
 exit/b
 
