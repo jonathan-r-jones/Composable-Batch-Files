@@ -8519,7 +8519,6 @@ echo %fp%
 
 echo.
 call m ulul
-rem qq-1
 
 exit/b
 
