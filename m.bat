@@ -4135,7 +4135,7 @@ time /t>%temp%\time_10.txt
 set /p time_10=<%temp%\time_10.txt
 rem echo %time_10%
 
-set combined_12=%0 - %computername% - %date_9%%time_10%
+set combined_12=%2 - %computername% - %date_9%%time_10%
 echo.>>%share-zone%\last_updated_log.txt
 echo %combined_12%>>%share-zone%\last_updated_log.txt
 

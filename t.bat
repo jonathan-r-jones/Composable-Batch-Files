@@ -8492,8 +8492,6 @@ set combined_12=%0 - %computername% - %date_9%%time_10%
 echo %combined_12%>%share-zone%\last_updated_log.txt
 type %share-zone%\last_updated_log.txt
 
-rem qq-1
-
 exit/b
 
 
