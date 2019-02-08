@@ -1876,6 +1876,8 @@ exit/b
 
 ::_
 
+:b
+
 :d
 
 :dsc_su
@@ -1889,7 +1891,7 @@ exit/b
 :subnets
 
 set fp=* Describe subnets. When you choose an AWS subnet, you are choosing the availability ^
-zone. Also, a way to say "Is Amazon breathing?". :) Can we talk to Amazon?
+zone. Also, a way to say "Is Amazon breathing?". :) Can we talk to Amazon? Like a health check.
 
 rem lu: Nov-19-2018
 

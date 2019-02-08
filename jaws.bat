@@ -723,7 +723,11 @@ exit/b
 
 set fp=* Create database with multiple tags.
 
-rem lu: Feb-6-2019
+rem lu: Feb-8-2019
+
+rem Gotcha: When using the console and you specifty to "Create new security group.", that 
+rem new security group will have an authorization for port number 5432, the default
+rem connection port for PostgreSQL.
 
 echo.
 echo %fp%
