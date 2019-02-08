@@ -81,8 +81,6 @@ exit/b
 
 :main_function
 
-call m lu %0
-
 call g pull
 
 rem (!rfsp) (mov-2)

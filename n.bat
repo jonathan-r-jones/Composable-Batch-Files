@@ -7200,6 +7200,40 @@ exit/b
 
 ::_
 
+:dapi
+
+set fp=* Dev server api.
+
+rem lu: Feb-8-2019
+
+echo.
+echo %fp%
+
+goto Feb-8-2019
+
+If the server's not up, you get this message.
+
+HTTP Status 404 – Not Found
+Type Status Report
+
+Message Not found
+
+Description The origin server did not find a current representation for the target resource or 
+is not willing to disclose that one exists.
+
+Apache Tomcat/9.0.12
+
+:Feb-8-2019
+
+set cbf_url=http://10.168.78.40:8080/cart-api/status
+rem qq-1
+
+exit/b
+
+
+
+::_
+
 :8082
 
 set fp=* 8082.
