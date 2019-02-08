@@ -7226,7 +7226,6 @@ Apache Tomcat/9.0.12
 :Feb-8-2019
 
 set cbf_url=http://10.168.78.40:8080/cart-api/status
-rem qq-1
 
 exit/b
 
