@@ -8574,16 +8574,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* 
@@ -8595,6 +8585,43 @@ echo %fp%
 
 echo.
 ping 192.0.2.2 -n 1 -w 0
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:rand
+
+set fp=* Test random.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+echo.
+echo 1: %random%
+
+echo.
+echo 2: %random%
+
+echo.
+echo 3: %random%
+
+echo.
+echo 4: %random%%random%
 
 exit/b
 
