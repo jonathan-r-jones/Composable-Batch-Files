@@ -894,23 +894,6 @@ exit/b
 
 :_
 
-:m2h
-
-set fp=M2 Home.
-
-rem fcd: Jul-7-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%m2_home%
-
-exit/b
-
-
-
-:_
-
 :stdr
 
 set fp=Sencha class folder on Dropbox.
@@ -5517,6 +5500,8 @@ exit/b
 
 :n2r
 
+:port
+
 :pass-through
 
 :pass_through
@@ -6222,25 +6207,6 @@ exit/b
 
 ::_
 
-:jre
-
-:jvre
-
-set fp=* Java runtime path.
-
-rem lu: Dec-6-2018
-
-echo.
-echo %fp%
-
-set cbf_path=C:\Program Files (x86)\Java\jre1.8.0_192\bin
-
-exit/b
-
-
-
-::_
-
 :jvpf
 
 set fp=* Java under Program Files.
@@ -6328,7 +6294,7 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-call %0 c_docs
+call n c_docs
 
 set cbf_filename=%cbf_path%\development environment.xlsx
 
@@ -6526,145 +6492,6 @@ echo %fp%
 call n sz
 
 set cbf_filename=%cbf_path%\copy of cc.asc
-
-exit/b
-
-
-
-:_+ Home Folders
-
-
-
-::_
-
-:mvh
-
-:mv_hm
-
-set fp=* Maven Home.
-
-rem fcd: Jul-7-2017
-
-rem This is useful for new installs.
-
-echo.
-echo %fp%
-
-set cbf_path=%maven_home%
-
-exit/b
-
-
-
-::_
-
-:jvh
-
-:jv_hm
-
-:java_home
-
-set fp=* Java Home.
-
-rem fcd: Dec-14-2018
-
-rem This is useful for new installs.
-
-echo.
-echo %fp%
-
-set cbf_path=%java_home%
-
-exit/b
-
-
-
-::_
-
-:aws_cfg
-
-:aws_hm
-
-:aws_home
-
-set fp=* AWS configuration.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%userprofile%\.aws\credentials
-
-set cbf_path=%userprofile%\.aws
-
-exit/b
-
-
-
-::_
-
-:je_hm
-
-:je_home
-
-
-set fp=* Jenkins home
-
-rem lu: Dec-15-2018
-
-echo.
-echo %fp%
-
-call n home
-
-set cbf_path=%cbf_path%\.jenkins
-
-exit/b
-
-
-
-::_
-
-:h
-
-:hm
-
-:home
-
-:up
-
-:user
-
-:usr
-
-set fp=* User profile/home.
-
-rem lu: Dec-17-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%
-
-exit/b
-
-
-
-::_
-
-:wa
-
-set fp=* Windows Apps.
-
-rem lu: Dec-19-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\
-
-set cbf_path=%localappdata%\Microsoft\WindowsApps
 
 exit/b
 
@@ -7098,67 +6925,6 @@ echo %fp%
 call %0 c_docs
 
 set cbf_filename=%cbf_path%\DevOps Roadmap.xlsx
-
-exit/b
-
-
-
-:_+ Local Host
-
-
-
-::_
-
-:lh
-
-set fp=* Localhost on port 8080.
-
-rem lu: Jan-15-2019
-
-echo.
-echo %fp%
-
-call an kr
-
-set cbf_url=http://localhost:8080
-
-exit/b
-
-
-
-::_
-
-:8080
-
-set fp=* Localhost on port %1.
-
-rem lu: Jan-15-2019
-
-echo.
-echo %fp%
-
-call an kr
-
-set cbf_lh=http://localhost:%1
-
-exit/b
-
-
-
-::_
-
-:8082
-
-set fp=* Localhost on port %1.
-
-rem lu: Jan-15-2019
-
-echo.
-echo %fp%
-
-call an kr
-
-set cbf_url=http://localhost:%1
 
 exit/b
 
@@ -8175,6 +7941,202 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\last_updated_log.txt
+
+exit/b
+
+
+
+:_+ Home Folders
+
+
+
+::_
+
+:jh
+
+:jvh
+
+:jv_hm
+
+:java_home
+
+set fp=* Java Home.
+
+rem fcd: Dec-14-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%java_home%
+
+exit/b
+
+
+
+::_
+
+:nh
+
+set fp=* Node home.
+
+rem fcd: Feb-11-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%node_home%
+
+exit/b
+
+
+
+::_
+
+:jre
+
+:jrh
+
+:jvre
+
+set fp=* Java runtime path.
+
+rem lu: Dec-6-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%jre_home%
+
+exit/b
+
+
+
+::_
+
+:m2h
+
+set fp=* M2 Home.
+
+rem fcd: Feb-11-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%m2_home%
+
+exit/b
+
+
+
+::_
+
+:mh
+
+:mvh
+
+:mv_hm
+
+set fp=* Maven Home.
+
+rem fcd: Jul-7-2017
+
+rem This is useful for new installs.
+
+echo.
+echo %fp%
+
+set cbf_path=%maven_home%
+
+exit/b
+
+
+
+::_
+
+:aws_cfg
+
+:aws_hm
+
+:aws_home
+
+set fp=* AWS configuration.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%userprofile%\.aws\credentials
+
+set cbf_path=%userprofile%\.aws
+
+exit/b
+
+
+
+::_
+
+:je_hm
+
+:je_home
+
+
+set fp=* Jenkins home
+
+rem lu: Dec-15-2018
+
+echo.
+echo %fp%
+
+call n home
+
+set cbf_path=%cbf_path%\.jenkins
+
+exit/b
+
+
+
+::_
+
+:h
+
+:hm
+
+:home
+
+:up
+
+:user
+
+:usr
+
+set fp=* User profile/home.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%
+
+exit/b
+
+
+
+::_
+
+:wa
+
+set fp=* Windows Apps.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\
+
+set cbf_path=%localappdata%\Microsoft\WindowsApps
 
 exit/b
 

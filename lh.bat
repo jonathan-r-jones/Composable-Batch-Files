@@ -43,7 +43,7 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 echo.
-echo Parameter 1: LH Nickname. If blank, surf to the current cbf_lh.
+echo Parameter 1: Alias that point to a cbf_port_number.
 
 echo.
 echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
@@ -68,45 +68,14 @@ set fp=* Set URL.
 
 set cbf_application=
 set cbf_url=
-set cbf_lh=
 
-call un %1 %2
+call un %1
 
-if "%cbf_lh%" == "" (
-  set cbf_lh = "%cbf_url%"
-)
+set cbf_url=http://localhost:%cbf_port_number%
 
-if "%cbf_lh%" == "" (
-  echo.
-  echo * Nickname Error: There is no cbf_lh defined for '%~1'. 
-  rem echo Errorlevel: %errorlevel%.
-  call m clear_errorlevel_silently
-  exit/b
-)
-
-if %errorlevel% == 1 (
-  rem This may never be called.
-  echo.
-  echo * Error: There was an error after the dictionary call was made. 
-  exit/b
-)
-
-set cbf_parameter=%cbf_lh%
+set cbf_parameter=%cbf_url%
 
 goto set_browser
-
-
-
-:_
-
-:use_current_cbf_lh
-
-set fp=* Use current CBF_URL.
-
-echo.
-echo %fp%
-
-set cbf_parameter=%cbf_lh%
 
 
 
@@ -120,11 +89,22 @@ if not "%cbf_application%" == "" goto main_function
 
 if not "%~2" == "" goto override_default_browser
 
-echo 2
-
 set cbf_application=%cbf_default_browser%
 
 goto main_function
+
+
+
+:_
+
+:use_current_cbf_lh
+
+set fp=* Use current CBF_URL.
+
+echo.
+echo %fp%
+
+set cbf_parameter=%cbf_lh%
 
 
 

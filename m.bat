@@ -4143,4 +4143,48 @@ exit/b
 
 
 
+:_+ Angular
+
+
+
+::_
+
+:ng
+
+set fp=* Start Angular.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+echo.
+ng serve
+
+exit/b
+
+
+
+::_
+
+:port
+
+set fp=* Run the Admin Portal on localhost.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+call lh port
+
+call td port
+
+echo.
+ng serve
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)

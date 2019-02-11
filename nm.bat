@@ -85,6 +85,26 @@ exit/b
 
 ::_
 
+:inst_pj
+
+:install_pj
+
+set fp=* Install any dependencies listed in pacagage.json.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+echo.
+
+npm install
+
+exit/b
+
+
+
+::_
+
 :inst
 
 :install
@@ -142,24 +162,6 @@ echo %fp%
 
 echo.
 npm install %2 --save--dev
-
-exit/b
-
-
-
-::_
-
-:install_pj
-
-set fp=* Install any dependencies listed in pacagage.json.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-echo.
-
-npm install
 
 exit/b
 
@@ -906,6 +908,25 @@ call %0 inst jquery
 call %0 inst jquery-validation
 call %0 inst jquery-validation-unobtrusive
 call %0 inst font-awesome
+
+exit/b
+
+
+
+:_
+
+:iac
+
+set fp=* Install Angular client.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+echo.
+npm install -g @angular/cli
+rem qq-1
 
 exit/b
 

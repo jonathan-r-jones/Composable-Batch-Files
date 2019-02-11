@@ -32,7 +32,7 @@ set cbf_url=
 
 :_
 
-call n %1
+call n %1 %2
 
 exit/b
 
