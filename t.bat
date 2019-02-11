@@ -8498,6 +8498,82 @@ exit/b
 
 :_
 
+:
+
+set fp=* Call ulul.
+
+rem lu: Feb-8-2019
+
+echo.
+echo %fp%
+
+echo.
+call m ulul
+
+exit/b
+
+
+
+:_
+
+:matr
+
+:matrix
+
+set fp=* Matrix
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+echo.
+
+color 02 
+
+:tricks 
+
+echo %random% %random%  %random% %random%   %random% %random%    %random% %random%
+
+goto tricks
+
+exit/b
+
+
+
+:_
+
+:matr2
+
+:matrix2
+
+set fp=* Matrix 2.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+echo.
+
+for /l %%i in (1,1,100) do echo.
+
+:top
+
+color 02
+
+echo B%random% a%random% t%random% c%random% h%random% c%random% c%random%
+
+ping 192.0.2.2 -n 1 -w 0 >nul
+
+goto top
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -8510,15 +8586,15 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Call ulul.
+set fp=* 
 
-rem lu: Feb-8-2019
+rem lu: Feb-11-2019
 
 echo.
 echo %fp%
 
 echo.
-call m ulul
+ping 192.0.2.2 -n 1 -w 0
 
 exit/b
 
