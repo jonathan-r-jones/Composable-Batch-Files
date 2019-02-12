@@ -7731,6 +7731,8 @@ exit/b
 
 ::_
 
+:clip
+
 :snip
 
 :snto
