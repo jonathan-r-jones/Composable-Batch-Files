@@ -7586,23 +7586,6 @@ exit/b
 
 :_
 
-:demo
-
-set fp=* Demo on Jan-29-2019.
-
-rem lu: Jan-29-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\demo.pptx
-
-exit/b
-
-
-
-:_
-
 :gwp
 
 set fp=* Gradle wrapper properties
@@ -7722,8 +7705,26 @@ echo %fp%
 call n pounders
 
 set cbf_application=%cbf_path%\zoomit.exe
+rem qq-1
 
 set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:demo
+
+set fp=* Demo on Jan-29-2019.
+
+rem lu: Jan-29-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\demo.pptx
 
 exit/b
 
