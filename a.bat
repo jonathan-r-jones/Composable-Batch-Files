@@ -3601,4 +3601,49 @@ exit/b
 
 
 
+:_
+
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_12_2019_1100
+
+set fp=* Create database with multiple tags using Postgres Security Group.
+
+rem lu: Feb-6-2019
+
+echo.
+echo %fp%
+
+call %0 set_profile kb
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password cartpass ^
+  --tags ^
+    "Key"="Application","Value"="CART" ^
+    "Key"="BillingCoder","Value"="xyz123" ^
+    "Key"="Environment","Value"="dv" ^
+    "Key"="POC","Value"="test@gmail.com" ^
+    "Key"="Portfolio","Value"="ABC" ^
+    "Key"="Version","Value"="1.0"
+
+exit/b
+rem qq-1
+Environment: dv
+Name: CartTestDB
+Portfolio: ERO
+ResourcePOC: jonathan.jones@associates.ice.dhs.gov
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
