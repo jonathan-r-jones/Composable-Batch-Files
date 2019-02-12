@@ -5502,6 +5502,12 @@ exit/b
 
 :port
 
+:s3
+
+:gitcain
+
+:je2cain
+
 :pass-through
 
 :pass_through
@@ -7705,7 +7711,8 @@ echo %fp%
 call n pounders
 
 set cbf_application=%cbf_path%\zoomit.exe
-rem qq-1
+
+if not exist %cbf_application% set cbf_application=%share-zone%\copied software\zoomit.exe
 
 set cbf_filename=%cbf_application%
 
