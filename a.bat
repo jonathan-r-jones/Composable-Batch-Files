@@ -2729,7 +2729,7 @@ set fp=* Show current user profile.
 rem lu: Dec-14-2018
 
 echo.
-echo %fp% * AWS Profile: %AWS_PROFILE%
+echo %fp% AWS Profile: %AWS_PROFILE%
 
 echo.
 aws configure list
@@ -3500,32 +3500,6 @@ exit/b
 
 
 
-:_+ security_group_for_db_on_gaws
-
-
-
-::_
-
-:create_security_group_for_db_on_gaws
-
-set fp=* Create security group for db.
-
-rem lu: Dec-20-2018
-
-echo.
-echo %fp%
-
-call n vpc_id
-
-echo.
-aws ec2 create-security-group --group-name PostgresDevSecurityGroup ^
-  --description "Security Group for Postgres use." ^
-  --vpc-id vpc-af32d0c6
-
-exit/b
-
-
-
 :_
 
 :postgres_db_fr_cli_on_gaws_asus_at_Feb_6_2019_0539
@@ -3560,9 +3534,92 @@ exit/b
 
 :_
 
-:postgres_db_fr_cli_on_gaws_asus_at_Feb_12_2019_1100
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_6_2019_0314
+
+set fp=* Create database with multiple tags.
+
+rem lu: Feb-8-2019
+
+rem Gotcha: When using the console and you specifty to "Create new security group.", that 
+rem new security group will have an authorization for port number 5432, the default
+rem connection port for PostgreSQL.
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password mypassword ^
+  --tags "Key"="BillingCoder","Value"="xyz123" ^
+         "Key"="POC","Value"="test@test.com" ^
+         "Key"="Version","Value"="1.0"
+
+exit/b
+
+
+
+:_+ 3 Script functions needed to create a connectable PostgresDB.
+
+
+
+::_
+
+:create_security_group_for_db_on_gaws
+
+set fp=* Create security group for db.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name PostgresDevSecurityGroup ^
+  --description "Security Group for Postgres use." ^
+  --vpc-id vpc-af32d0c6
+
+exit/b
+
+
+
+::_
+
+:auth5
+
+set fp=* Authorize security group ingress for Postgres connection traffic on port 5432.
+
+rem lu: Feb-12-2019
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress ^
+  --group-id sg-06a257b836873b16d ^
+  --port 5432 --cidr 0.0.0.0/0 ^
+  --protocol tcp
+
+exit/b
+
+
+
+::_
+
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_12_2019_0512
 
 set fp=* Create database with multiple tags using Postgres Security Group.
+
+rem This worked! I think this may be the first time I created a PostgresSQL database entirely
+rem from script, and didn't use the console.
 
 rem lu: Feb-6-2019
 
@@ -3590,14 +3647,8 @@ aws rds create-db-instance ^
     "Key"="Environment","Value"="dv" ^
     "Key"="POC","Value"="test@gmail.com" ^
     "Key"="Portfolio","Value"="ABC" ^
-    "Key"="Version","Value"="1.0"
-
-exit/b
-rem qq-1
-Environment: dv
-Name: CartTestDB
-Portfolio: ERO
-ResourcePOC: jonathan.jones@associates.ice.dhs.gov
+    "Key"="Version","Value"="1.0" ^
+  --vpc-security-group-ids sg-06a257b836873b16d
 
 exit/b
 
