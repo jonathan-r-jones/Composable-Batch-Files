@@ -89,4 +89,44 @@ exit/b
 
 
 
+:_
+
+:me_cocos
+
+set fp=* Delete conflicted copies in Mutli-Edit folders.
+
+rem lu: Feb-13-2019
+
+echo.
+echo %fp%
+
+
+rem 1.
+call td mecfg
+
+cd mac
+
+call %0 coco 
+
+
+rem 2.
+call td mecfg_dr
+
+cd mac
+
+call %0 coco 
+
+
+rem 3.
+call td mecfg_s
+
+cd mac
+
+call %0 coco 
+
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
