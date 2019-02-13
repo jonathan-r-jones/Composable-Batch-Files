@@ -7471,7 +7471,6 @@ rem Determine installation path.
 
 if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
 
-rem qq-1
 if "%cbf_application%" == "" (
   echo.
   echo * Excel is not installed.

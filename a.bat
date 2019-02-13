@@ -3656,7 +3656,7 @@ exit/b
 
 :_
 
-:gaws_feb-12-2019_0930
+:gaws_feb-12-2019_0931
 
 set fp=* Fix tag issue with instances.
 
@@ -3685,9 +3685,84 @@ aws ec2 run-instances ^
   --key-name %cbf_file% ^
   --security-group-ids sg-4320d92a ^
   --subnet-id subnet-8c04e4e5 ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=gaws_feb-12-2019_0930}]
+  --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=gaws_feb-12-2019_0931}]
 
-rem qq-1
+exit/b
+
+
+
+:_
+
+:gaws_feb-12-2019_0935
+
+set fp=* Fix tag issue with instances.
+
+rem lu: Feb-12-2019
+
+rem This worked.
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+set cbf_file=kibble_balance_key_pair
+
+call m specific_file_presence %cbf_file%.pem
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-0f05ffda83f1c5a2a ^
+  --instance-type t3.nano ^
+  --key-name %cbf_file% ^
+  --security-group-ids sg-4320d92a ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications ^
+    ResourceType=instance,Tags=[{Key=Name,Value=Test},{Key=POC,Value=Bill}]
+
+exit/b
+
+
+
+:_
+
+:gaws_feb-12-2019_1006
+
+set fp=* Create instance with multiple tags.
+
+rem lu: Feb-12-2019
+
+rem This worked.
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+set cbf_file=kibble_balance_key_pair
+
+call m specific_file_presence %cbf_file%.pem
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-0f05ffda83f1c5a2a ^
+  --instance-type t3.nano ^
+  --key-name %cbf_file% ^
+  --security-group-ids sg-4320d92a ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications ^
+    ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=instancename},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
+
 exit/b
 
 
