@@ -4167,6 +4167,24 @@ exit/b
 
 ::_
 
+:ngp
+
+set fp=* Complie and start Angular for production.
+
+rem lu: Feb-12-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build --prod
+
+exit/b
+
+
+
+::_
+
 :port
 
 set fp=* Run the Admin Portal on localhost.
@@ -4182,6 +4200,24 @@ call td port
 
 echo.
 ng serve
+
+exit/b
+
+
+
+:_
+
+:d
+
+set fp=* Doskey history.
+
+rem lu: Feb-12-2019
+
+echo.
+echo %fp%
+
+echo.
+doskey /history
 
 exit/b
 

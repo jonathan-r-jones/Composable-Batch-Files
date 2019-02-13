@@ -926,7 +926,6 @@ echo %fp%
 
 echo.
 npm install -g @angular/cli
-rem qq-1
 
 exit/b
 

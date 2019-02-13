@@ -7907,6 +7907,8 @@ exit/b
 
 :putg
 
+:puttg
+
 set fp=* Puttygen.
 
 rem lu: Feb-5-2019

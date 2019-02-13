@@ -3474,7 +3474,7 @@ aws rds create-db-instance ^
   --engine postgres ^
   --master-username myuser ^
   --master-user-password mypassword ^
-  --tags "Key"="BillingCoder","Value"="xyz123" ^
+  --tags "Key"="BillingCode","Value"="xyz123" ^
          "Key"="POC","Value"="test@test.com" ^
          "Key"="Version","Value"="1.0"
 
@@ -3524,7 +3524,7 @@ aws rds create-db-instance ^
   --engine postgres ^
   --master-username myuser ^
   --master-user-password mypassword ^
-  --tags "Key"="BillingCoder","Value"="xyz123" ^
+  --tags "Key"="BillingCode","Value"="xyz123" ^
          "Key"="POC","Value"="test@test.com" ^
          "Key"="Version","Value"="1.0"
 
@@ -3560,7 +3560,7 @@ aws rds create-db-instance ^
   --engine postgres ^
   --master-username myuser ^
   --master-user-password mypassword ^
-  --tags "Key"="BillingCoder","Value"="xyz123" ^
+  --tags "Key"="BillingCode","Value"="xyz123" ^
          "Key"="POC","Value"="test@test.com" ^
          "Key"="Version","Value"="1.0"
 
@@ -3643,7 +3643,7 @@ aws rds create-db-instance ^
   --master-user-password cartpass ^
   --tags ^
     "Key"="Application","Value"="CART" ^
-    "Key"="BillingCoder","Value"="xyz123" ^
+    "Key"="BillingCode","Value"="xyz123" ^
     "Key"="Environment","Value"="dv" ^
     "Key"="POC","Value"="test@gmail.com" ^
     "Key"="Portfolio","Value"="ABC" ^
