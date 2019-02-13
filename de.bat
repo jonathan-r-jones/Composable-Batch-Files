@@ -53,9 +53,9 @@ exit/b
 
 :_
 
-:mecfg
+:coco
 
-set fp=* Delete conflicted copies.
+set fp=* Delete conflicted copies created by DropBox.
 
 rem lu: Jan-2-2019
 
@@ -63,6 +63,27 @@ echo.
 echo %fp%
 
 del "*conflicted copy*.*"
+
+exit/b
+
+
+
+:_
+
+:mecfg_mac
+
+set fp=* Delete conflicted copies in the mac folder.
+
+rem lu: Feb-13-2019
+
+echo.
+echo %fp%
+
+call td mecfg_s
+
+cd mac
+
+call %0 coco 
 
 exit/b
 

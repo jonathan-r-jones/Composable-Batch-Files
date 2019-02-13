@@ -5508,6 +5508,8 @@ exit/b
 
 :je2cain
 
+:pem
+
 :pass-through
 
 :pass_through
@@ -7224,26 +7226,9 @@ exit/b
 
 ::_
 
-:mecfg_s
-
-set fp=* Multi-Edit Config file folder in Share-Zone.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
-
-exit/b
-
-
-
-::_
-
 :mecfg_dr
 
-set fp=* Multi-Edit Config file folder in Share-Zone.
+set fp=* Multi-Edit Config file folder in DropBox.
 
 rem lu: Dec-7-2018
 
@@ -7251,6 +7236,23 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
+::_
+
+:mecfg_s
+
+set fp=* Multi-Edit Config file folder in Share-Zone.
+
+rem lu: Feb-13-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
 
 exit/b
 
@@ -8064,6 +8066,8 @@ exit/b
 
 
 ::_
+
+:aws
 
 :aws_cfg
 
