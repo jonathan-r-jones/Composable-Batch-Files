@@ -61,7 +61,7 @@ if not "%~1" == "" call n %~1
 
 if %errorlevel% == 1 (
   echo.
-  echo There was an error finding the alias for "%~1".
+  echo * There was an error executing the alias for "%~1".
   exit/b
 )
 

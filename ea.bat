@@ -26,7 +26,7 @@ if "%~1" == "help" goto help
 
 set fp=* Detect a period in the first parameter and run.
 
-rem lu: Feb-1-2018
+rem lu: Feb-12-2019
 
 echo %1 | find /i ".">nul
 
@@ -34,8 +34,12 @@ if %errorlevel% == 0 set cbf_application=%~1
 
 if %errorlevel% == 1 call an %1
 
+if %errorlevel% == 1 exit/b
+
 if "%~2" == "" set cbf_parameter=
+
 if not "%~2" == "" call fn %2
+
 if not "%~2" == "" set cbf_parameter=%cbf_filename%
 
 call r

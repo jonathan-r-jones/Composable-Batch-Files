@@ -7469,12 +7469,13 @@ echo %fp%
 
 rem Determine installation path.
 
-if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application_location=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
+if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
 
-if "%cbf_application_location%" == "" (
+rem qq-1
+if "%cbf_application%" == "" (
   echo.
-  echo Notepad++ is not installed.
-  exit/b
+  echo * Excel is not installed.
+  exit/b 1
 )
 
 set cbf_application=%cbf_application_location%
