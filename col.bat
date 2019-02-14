@@ -58,7 +58,6 @@ echo  File  Description
 echo  ----  ------------------------------------------------------------------
 echo     s  Show color values.
 
-rem qq-1
 
 exit/b
 
@@ -136,9 +135,9 @@ exit/b
 
 :_
 
-:me
+:whipur
 
-set fp=* Multi-Edit.
+set fp=* White on purple.
 
 rem lu: Jan-31-2019
 
@@ -197,6 +196,40 @@ echo.
 echo %fp%
 
 color 1e
+
+exit/b
+
+
+
+:_
+
+:grewhi
+
+set fp=* Green on white.
+
+rem lu: Feb-1-2019
+
+echo.
+echo %fp%
+
+color f2
+
+exit/b
+
+
+
+:_
+
+:whigre
+
+set fp=* Green on white.
+
+rem lu: Feb-1-2019
+
+echo.
+echo %fp%
+
+color 2f
 
 exit/b
 

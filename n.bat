@@ -5510,6 +5510,8 @@ exit/b
 
 :pem
 
+:earm
+
 :pass-through
 
 :pass_through
