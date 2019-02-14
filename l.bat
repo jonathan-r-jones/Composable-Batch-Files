@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Template batch file.
+set filename_stands_for=* Google searcher.
 
 
 
@@ -36,20 +36,15 @@ echo.
 echo Filename stands for: %filename_stands_for%
 
 echo.
-echo Last Updated: 
+echo Last Updated: Feb-14-2019 
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Search criteria.
 
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 exit/b
 
@@ -59,10 +54,12 @@ exit/b
 
 :main_function
 
+echo.
 echo %filename_stands_for%
 
+set cbf_url=https://www.google.com/search?as_q=%~1
 
-rem qq-1
+call sfcu
 
 exit/b
 

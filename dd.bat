@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Template batch file.
+set filename_stands_for=* Create dir *.war /s batch file.
 
 
 
@@ -36,12 +36,12 @@ echo.
 echo Filename stands for: %filename_stands_for%
 
 echo.
-echo Last Updated: 
+echo Last Updated: Feb-14-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
+set parameter_1=Parameter 1: Filename extension.
 
 set parameter_2=Parameter 2 (Optional): 
 
@@ -61,8 +61,7 @@ exit/b
 
 echo %filename_stands_for%
 
-
-rem qq-1
+dir *.%1 %2
 
 exit/b
 

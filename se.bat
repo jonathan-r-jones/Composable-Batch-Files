@@ -93,9 +93,10 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-set cbf_url=https://www.google.com/search?as_q=%~2
+set cbf_url=https://www.google.com/search?as_q=%~1
 
 call sfcu
+rem qq-1
 
 exit/b
 
