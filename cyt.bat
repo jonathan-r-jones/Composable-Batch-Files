@@ -76,6 +76,7 @@ exit/b
 
 :main_function
 
+echo.
 echo %filename_stands_for%
 
 call n %2

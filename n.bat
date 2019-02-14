@@ -5512,6 +5512,8 @@ exit/b
 
 :earm
 
+:nas
+
 :pass-through
 
 :pass_through
@@ -7221,7 +7223,6 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
-rem qq-1
 
 exit/b
 
@@ -7784,6 +7785,8 @@ exit/b
 
 ::_
 
+:env
+
 :oden
 
 :odenv
@@ -8010,6 +8013,8 @@ exit/b
 ::_
 
 :jre
+
+:jreh
 
 :jrh
 

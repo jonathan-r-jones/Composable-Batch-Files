@@ -78,8 +78,6 @@ set cbf_url=https://www.google.com/search?as_q=%~2+download+for+windows
 
 call sfcu
 
-rem qq-1
-
 exit/b
 
 

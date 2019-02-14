@@ -46,7 +46,7 @@ echo Parameter 2 (Optional): Path to walk prior to running Parameter 1.
 
 echo.
 echo     Parameter  Description
-echo -------------  -----------------------------------------------------
+echo -------------  -------------------------------------------------------------
 echo             a  Add changes.
 echo           asf  Add single file.
 echo          back  The git equivalent of the back button.
@@ -61,7 +61,7 @@ echo         rv_sf  Revert file.
 echo         rv_fd  Revert folder.
 echo         rv_pe  Revert persistent files.
 echo             s  Get status, including remote information.
-echo           src  Identify source repository of your current folder.
+echo           src  Identify source repository information of your current folder.
 echo            ss  Get super status.
 
 exit/b
@@ -1579,13 +1579,15 @@ exit/b
 
 ::_
 
+:inco
+
 :src
 
 :sour
 
 :source
 
-set fp=* Identify source repository of your current folder.
+set fp=* Identify source repository information of your current folder.
 
 rem lu: May-9-2018
 

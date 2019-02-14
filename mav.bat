@@ -271,4 +271,22 @@ exit/b
 
 
 
+:_
+
+:cp
+
+set fp=* Clean package.
+
+rem lu: Feb-14-2019
+
+echo.
+echo %fp%
+
+echo.
+mvn clean package
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
