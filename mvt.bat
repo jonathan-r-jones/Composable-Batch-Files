@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Copy file to nickname.
+set filename_stands_for=* Moves file in the current directory to nickname-specified path.
 
 
 
@@ -22,17 +22,6 @@ if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-
-
-:_
-
-set fp=* Data validation.
-
-if "%~2" == "" (
-  echo * Destination path nickname is required.
-  exit/b
-)
-  
 goto main_function
 
 
@@ -46,7 +35,7 @@ goto main_function
 echo.
 echo Filename stands for: %filename_stands_for%
 
-set filep=File purpose: Copies a file in the current directory to a nickname-specified path.
+set filep=File purpose: Move a file in the current directory to a nickname-specified path.
 
 echo.
 echo %filep%
@@ -83,12 +72,12 @@ echo %filename_stands_for%
 call n %2
 
 echo.
-xcopy "%~1" %cbf_path%
+move "%~1" %cbf_path%
 
-rem (!rfsp) (mov-2)
+rem qq-1
 
 exit/b
 
 
 
-:_
+:_ (!rfsp) (mov-6)

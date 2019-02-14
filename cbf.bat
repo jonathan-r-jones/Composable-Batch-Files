@@ -63,13 +63,13 @@ echo     a  A wrapper around AWS CLI.
 echo    an  Application nickname dictionary.
 echo    aw  A CWS CLI demo companion file.
 echo     c  Clear screen and reset color.
-echo   cbf  Show this list of CBF Helper batch files.
+echo   cbf  Show this list of CBF batch files.
 echo   clc  Simple calculator.
 echo    cn  Used for Git cloning tasks.
 echo   col  Performs shell window colors operations.
 echo    cp  Run Code Compare with aliases or filenames.
 echo    cs  File contents search.
-echo    cu  Curl batch file hooked up to the nicknames dictionary.
+echo    cu  Curl operations hooked up to the nicknames dictionary.
 echo    cy  Copy file(s).
 echo  cyft  Copy files from nickname parameter 1 to nickname parameter 2.
 echo   cyt  Copies file in the current directory to nickname-specified path.
@@ -108,10 +108,10 @@ echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
 echo    of  Open Folder. Has TD parameter.
 echo     p  Add, commit and push Git changes. Has TD parameter.
 echo    pl  Performs Git pull. Has TD parameter.
-echo    pg  Ping batch file hooked up to the nicknames dictionary.
+echo    pg  Ping command hooked up to the nicknames dictionary.
 echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
-echo   rzr  Multi-Edit abstraction layer batch file.
+echo   rzr  Multi-Edit abstraction layer.
 echo     s  Run git status remotely. Has TD parameter.
 echo    se  Internet search helper.
 echo   sln  Open a Visual Studio solution. Has TD parameter.

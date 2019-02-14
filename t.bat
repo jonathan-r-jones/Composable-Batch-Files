@@ -8592,16 +8592,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :rand
 
 set fp=* Test random.
@@ -8622,6 +8612,43 @@ echo 3: %random%
 
 echo.
 echo 4: %random%%random%
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Figure out how to tell if a batch file parameter starts with a dash.
+
+rem lu: Feb-14-2019
+
+echo.
+echo %fp%
+
+set str=politic
+
+echo.
+echo %str%
+
+set first_character=%str:~0,1%
+
+echo.
+echo First character: %first_character%
+
+if %first_character%==- echo Yep. It's a dash.
 
 exit/b
 
