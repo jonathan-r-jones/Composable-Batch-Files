@@ -8106,7 +8106,6 @@ exit/b
 
 :je_home
 
-
 set fp=* Jenkins home
 
 rem lu: Dec-15-2018
@@ -8159,8 +8158,6 @@ rem lu: Dec-19-2018
 
 echo.
 echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\
 
 set cbf_path=%localappdata%\Microsoft\WindowsApps
 

@@ -3062,13 +3062,15 @@ exit/b
 
 ::_
 
+:cenv
+
 :env_c
 
 :reset
 
 :reset_cbf_variables
 
-set fp=* Reset CBF variables. (skw clear env)
+set fp=* Reset CBF variables. (skw clear environment variables)
 
 echo.
 echo %fp%
@@ -3090,8 +3092,6 @@ set cbf_parameter=
 set cbf_path=
 
 set cbf_url=
-
-env
 
 exit/b
 
@@ -4278,7 +4278,6 @@ echo ******* Current folder: %cd% >> "%cbf_filename%"
 echo. >> "%cbf_filename%"
 dir "*conflict*.*" /s >> "%cbf_filename%"
 
-rem qq-1
 call an no
 
 call m assoc_pf
