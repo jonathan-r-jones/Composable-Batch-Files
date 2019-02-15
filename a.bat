@@ -3769,4 +3769,81 @@ exit/b
 
 
 
+:_
+
+:gaws_feb-15-2019_0515_Ubuntu_2
+
+set fp=* Create an instance that I can use to practice my Linux CLI.
+
+rem lu: Feb-15-2019
+
+rem This worked.
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+set cbf_file=kibble_balance_key_pair
+
+call m specific_file_presence %cbf_file%.pem
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-39a64048 ^
+  --instance-type t3.medium ^
+  --key-name %cbf_file% ^
+  --security-group-ids sg-4320d92a ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications ^
+    ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
+
+exit/b
+
+
+
+:_
+
+:4
+
+set fp=* Connect to Ubuntu server.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+call n git_user_bin
+
+set git_user_bin=%cbf_path%
+
+call td tfkeys
+
+echo.
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+rem ec2user@172.31.7.105
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
