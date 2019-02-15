@@ -8638,16 +8638,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test conflicted copy report.
@@ -8670,6 +8660,60 @@ call an me
 call m assoc_pf
 
 call r
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Runtime second try.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+echo.
+:
+set starttime=%time%
+echo Beginning to run the script, it's %starttime% now.
+
+echo Good Morning! You look hot today ;)
+echo The script started running at: %starttime% 
+set endtime=%TIME%
+echo Finished running the script, it's %endtime% now
+
+rem make t0 into a scaler in 100ths of a second 
+set h=%starttime:~0,2%
+set m=%starttime:~3,2%
+set s=%starttime:~6,2%
+set c=%starttime:~8,2%
+set /a starttimescalar = %h% * 3600 + %m% * 60 + %s%
+
+rem make t into a scaler in 100ths of a second
+set h=%endtime:~0,2%
+set m=%endtime:~3,2%
+set s=%endtime:~6,2%
+set c=%endtime:~8,2%
+set /a endtimescalar = %h% * 3600 + %m% * 60 + %s%
+
+rem runtime in 100ths is now just end - start
+set /a runtime = %endtimescalar% - %starttimescalar%
+set runtime = %s%.%c%
+echo Script took %runtime% s to complete
 
 exit/b
 

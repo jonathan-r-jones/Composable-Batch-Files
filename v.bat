@@ -852,16 +852,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :where
 
 set fp=* How to tell from where a command is being run.
@@ -908,6 +898,16 @@ echo %fp%
 echo This text is on the clipboard. Cool. | clip
 
 exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

@@ -30,6 +30,7 @@ goto %1
 
 :help
 
+echo.
 echo Filename stands for: %filename_stands_for%
 
 echo.

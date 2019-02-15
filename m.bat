@@ -84,6 +84,8 @@ echo          run_tirem  Run tirem.
 echo                sde  Set default text editor.
 echo              scrub  When deploying new War file, this prepares env.
 echo      set_parent_fd  Set parent folder.
+echo        start_timer  Sets the start time of a script.
+echo         stop_timer  Reports the length of the script run time.
 echo         s6_deleted  Rerun these commands if sencha folder was deleted.
 echo      start_wildfly  Start WildFly. Refresh the environment.
 echo       stop_wildfly  Stop WildFly.
@@ -4278,12 +4280,96 @@ echo ******* Current folder: %cd% >> "%cbf_filename%"
 echo. >> "%cbf_filename%"
 dir "*conflict*.*" /s >> "%cbf_filename%"
 
-rem qq-1
 call an no
 
 call m assoc_pf
 
 call r
+
+exit/b
+
+
+
+:_+ Timer Script
+
+
+
+::_
+
+:start_timer
+
+set fp=* Start timer.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+set starttime=%time%
+
+exit/b
+
+
+
+::_
+
+:stop_timer
+
+set fp=* Stop timer.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+set endtime=%time%
+
+rem make t0 into a scaler in 100ths of a second 
+set h=%starttime:~0,2%
+set m=%starttime:~3,2%
+set s=%starttime:~6,2%
+set c=%starttime:~8,2%
+set /a starttimescalar = %h% * 3600 + %m% * 60 + %s%
+
+rem make t into a scaler in 100ths of a second
+set h=%endtime:~0,2%
+set m=%endtime:~3,2%
+set s=%endtime:~6,2%
+set c=%endtime:~8,2%
+set /a endtimescalar = %h% * 3600 + %m% * 60 + %s%
+
+rem Runtime in 100ths is:.
+set /a runtime = %endtimescalar% - %starttimescalar%
+
+set runtime = %s%.%c%
+
+echo.
+echo Start time: %starttime% 
+echo   End time: %endtime% 
+echo   Run time: %runtime%
+
+exit/b
+
+
+
+::_
+
+:timer
+
+set fp=* Call time example.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+call %0 start_timer
+
+echo.
+echo hi
+pause
+
+call %0 stop_timer
 
 exit/b
 
