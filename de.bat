@@ -53,7 +53,7 @@ exit/b
 
 :_
 
-:coco
+:concop
 
 set fp=* Delete conflicted copies created by DropBox.
 
@@ -62,7 +62,7 @@ rem lu: Jan-2-2019
 echo.
 echo %fp%
 
-del "*conflicted copy*.*"
+del /s "*conflicted copy*.*"
 
 exit/b
 
@@ -83,7 +83,7 @@ call td mecfg_s
 
 cd mac
 
-call %0 coco 
+call %0 concop
 
 exit/b
 
@@ -91,7 +91,7 @@ exit/b
 
 :_
 
-:me_cocos
+:me_concops
 
 set fp=* Delete conflicted copies in Mutli-Edit folders.
 
@@ -100,30 +100,21 @@ rem lu: Feb-13-2019
 echo.
 echo %fp%
 
-
 rem 1.
-call td mecfg
-
-cd mac
-
-call %0 coco 
-
+call td s
+call %0 concop
 
 rem 2.
-call td mecfg_dr
-
-cd mac
-
-call %0 coco 
-
+call td mecfg
+call %0 concop
 
 rem 3.
+call td mecfg_dr
+call %0 concop
+
+rem 4.
 call td mecfg_s
-
-cd mac
-
-call %0 coco 
-
+call %0 concop
 
 exit/b
 

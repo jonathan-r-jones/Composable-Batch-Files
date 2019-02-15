@@ -4232,4 +4232,61 @@ exit/b
 
 
 
+:_
+
+:concop
+
+set fp=* Conflicted Copy Report
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\conflicted copy report.txt
+
+echo. > "%cbf_filename%"
+echo %fp% >> "%cbf_filename%"
+
+echo -------------------------------------------------------- >> "%cbf_filename%"
+
+rem 1.
+call td s
+echo. >> "%cbf_filename%"
+echo ******* Current folder: %cd% >> "%cbf_filename%"
+echo. >> "%cbf_filename%"
+dir "*conflict*.*" /s >> "%cbf_filename%"
+
+rem 2.
+call td mecfg
+echo. >> "%cbf_filename%"
+echo ******* Current folder: %cd% >> "%cbf_filename%"
+echo. >> "%cbf_filename%"
+dir "*conflict*.*" /s >> "%cbf_filename%"
+
+rem 3.
+call td mecfg_dr
+echo. >> "%cbf_filename%"
+echo ******* Current folder: %cd% >> "%cbf_filename%"
+echo. >> "%cbf_filename%"
+dir "*conflict*.*" /s >> "%cbf_filename%"
+
+rem 4.
+call td mecfg_s
+echo. >> "%cbf_filename%"
+echo ******* Current folder: %cd% >> "%cbf_filename%"
+echo. >> "%cbf_filename%"
+dir "*conflict*.*" /s >> "%cbf_filename%"
+
+rem qq-1
+call an no
+
+call m assoc_pf
+
+call r
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)

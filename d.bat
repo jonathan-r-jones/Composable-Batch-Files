@@ -264,4 +264,22 @@ exit/b
 
 
 
+:_
+
+:concop
+
+set fp=* Conflicted copy.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+echo.
+del "*conflicted copy*.*"
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6) 
