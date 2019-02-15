@@ -20,14 +20,6 @@ title=Mr T.
 
 :_
 
-set fp=* Set color.
-
-color 0e
-
-
-
-:_
-
 set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
@@ -8619,16 +8611,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Figure out how to tell if a batch file parameter starts with a dash.
@@ -8649,6 +8631,45 @@ echo.
 echo First character: %first_character%
 
 if %first_character%==- echo Yep. It's a dash.
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test conflicted copy report.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\conflicted copy report.txt
+
+echo test Feb-15-2019 > "%cbf_filename%"
+
+echo test2 Feb-15-2019 >> "%cbf_filename%"
+
+echo test3 Feb-15-2019 >> "%cbf_filename%"
+
+call an me
+
+call m assoc_pf
+
+call r
 
 exit/b
 

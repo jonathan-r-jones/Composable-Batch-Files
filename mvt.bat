@@ -72,9 +72,7 @@ echo %filename_stands_for%
 call n %2
 
 echo.
-move "%~1" %cbf_path%
-
-rem qq-1
+move %~1 "%cbf_path%"
 
 exit/b
 

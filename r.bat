@@ -59,23 +59,6 @@ exit/b
 
 :_
 
-:run_application_in_raw_format
-
-set fp=* CBF_Application contains a double dash. Run it raw.
-
-echo %fp%
-
-rem This also works so why is this function here?
-rem start "my title" "%cbf_application%" 
-
-"%cbf_application%"
-
-exit/b
-
-
-
-:_
-
 :main_function
 
 set fp=* Run application - main function.
@@ -100,6 +83,23 @@ if "%cbf_parameter%" == "" (
 rem echo * Run application with parameter.
 
 start "my title" "%cbf_application%" "%cbf_parameter%"
+
+exit/b
+
+
+
+:_
+
+:run_application_in_raw_format
+
+set fp=* CBF_Application contains a double dash. Run it raw.
+
+echo %fp%
+
+rem This also works so why is this function here?
+rem start "my title" "%cbf_application%" 
+
+"%cbf_application%"
 
 exit/b
 
