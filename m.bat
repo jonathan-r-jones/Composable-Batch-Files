@@ -1425,7 +1425,6 @@ call %0 initialize_default_repository_folder
 call %0 initialize_default_text_editor
 
 call %0 set_white_list_settings_1
-rem qq-1
 
 cls
 
