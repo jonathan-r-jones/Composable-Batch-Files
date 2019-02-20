@@ -1304,11 +1304,14 @@ echo %fp%
 rem Set default instance ID to Jenkins server.
 set instance_id=i-0bce1b3771799a4ed
 
+rem Bee Clone
+if "%~2" == "bc" set instance_id=i-04499acea0fa9f3a4
+
 rem CentOS (!sid)
 if "%~2" == "ce" set instance_id=i-0f7c7db92897103c5
 
-rem Bee Clone
-if "%~2" == "bc" set instance_id=i-04499acea0fa9f3a4
+rem iJenkins
+if "%~2" == "ij" set instance_id=i-05a46eb9d1166d95f
 
 rem Jenkins
 if "%~2" == "je" set instance_id=i-0bce1b3771799a4ed
@@ -1316,11 +1319,11 @@ if "%~2" == "je" set instance_id=i-0bce1b3771799a4ed
 rem Jenkins Mimic
 if "%~2" == "jm" set instance_id=i-0327d0c33cef79f33
 
-rem iJenkins
-if "%~2" == "ij" set instance_id=i-05a46eb9d1166d95f
-
 rem NewJenkins, orange sunset
 if "%~2" == "nj" set instance_id=i-072a65f07b004f9fd
+
+rem Ubuntu
+if "%~2" == "ub" set instance_id=i-0ce1f47a5dcd7f7b0
 
 exit/b
 
@@ -3336,6 +3339,17 @@ set fp=* Create security group for db.
 
 rem lu: Dec-20-2018
 
+goto Feb-20-2019
+
+Warning
+
+If you use 0.0.0.0/0, you enable all IPv4 addresses to access your instance using SSH. If you 
+use ::/0, you enable all IPv6 address to access your instance. This is acceptable for a short 
+time in a test environment, but it's unsafe for production environments. In production, you 
+authorize only a specific IP address or range of addresses to access your instance.
+
+:Feb-20-2019
+
 echo.
 echo %fp%
 
@@ -3343,6 +3357,7 @@ echo.
 aws ec2 create-security-group --group-name PostgresDevSecurityGroup ^
   --description "Security Group for Postgres use." ^
   --vpc-id vpc-af32d0c6
+
 
 exit/b
 
@@ -3356,12 +3371,17 @@ set fp=* Authorize security group ingress for Postgres connection traffic on por
 
 rem lu: Feb-12-2019
 
+Warning
+
+If you use 0.0.0.0/0, you enable all IPv4 addresses to access your instance using SSH. If you use ::/0, you enable all IPv6 address to access your instance. This is acceptable for a short time in a test environment, but it's unsafe for production environments. In production, you authorize only a specific IP address or range of addresses to access your instance.
+
 echo.
 echo %fp%
 
 aws ec2 authorize-security-group-ingress ^
+  --cidr 0.0.0.0/0 ^
   --group-id sg-06a257b836873b16d ^
-  --port 5432 --cidr 0.0.0.0/0 ^
+  --port 5432 ^
   --protocol tcp
 
 exit/b
@@ -3518,83 +3538,6 @@ aws ec2 run-instances ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
     ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=instancename},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
-
-exit/b
-
-
-
-:_
-
-:gaws_feb-15-2019_0515_Ubuntu_2
-
-set fp=* Create an instance that I can use to practice my Linux CLI.
-
-rem lu: Feb-15-2019
-
-rem This worked.
-
-echo.
-echo %fp%
-
-call td tfkeys
-
-set cbf_file=kibble_balance_key_pair
-
-call m specific_file_presence %cbf_file%.pem
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-echo.
-aws ec2 run-instances ^
-  --count 1 ^
-  --image-id ami-39a64048 ^
-  --instance-type t3.medium ^
-  --key-name %cbf_file% ^
-  --security-group-ids sg-4320d92a ^
-  --subnet-id subnet-8c04e4e5 ^
-  --tag-specifications ^
-    ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
-
-exit/b
-
-
-
-:_
-
-:4
-
-set fp=* Connect to Ubuntu server.
-
-rem lu: Feb-15-2019
-
-echo.
-echo %fp%
-
-call n git_user_bin
-
-set git_user_bin=%cbf_path%
-
-call td tfkeys
-
-echo.
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem ec2user@172.31.7.105
 
 exit/b
 
@@ -3961,6 +3904,186 @@ aws ec2 run-instances ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
     ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
+
+exit/b
+
+
+
+:_
+
+:gaws_feb-15-2019_0515_Ubuntu_2
+
+set fp=* Create an instance that I can use to practice my Linux CLI.
+
+rem lu: Feb-15-2019
+
+rem This worked.
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+set cbf_file=kibble_balance_key_pair
+
+call m specific_file_presence %cbf_file%.pem
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-39a64048 ^
+  --instance-type t3.medium ^
+  --key-name %cbf_file% ^
+  --security-group-ids sg-4320d92a ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications ^
+    ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
+
+exit/b
+
+
+
+:_
+
+:4
+
+set fp=* Connect to Ubuntu server.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+call n git_user_bin
+
+set git_user_bin=%cbf_path%
+
+call td tfkeys
+
+echo.
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-89-115.us-gov-east-1.compute.amazonaws.com
+
+rem ec2user@172.31.7.105
+
+
+
+exit/b
+
+
+
+:_+ 3 Script functions needed to create a connectable Linux server.
+
+
+
+::_
+
+:create_security_group_for_linux_on_gaws
+
+set fp=* Create security group for Linux.
+
+rem lu: Feb-20-2019
+
+goto Feb-20-2019.2
+
+Warning
+
+If you use 0.0.0.0/0, you enable all IPv4 addresses to access your instance using SSH. If you 
+use ::/0, you enable all IPv6 address to access your instance. This is acceptable for a short 
+time in a test environment, but it's unsafe for production environments. In production, you 
+authorize only a specific IP address or range of addresses to access your instance.
+
+:Feb-20-2019.2
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name LinuxDevSecurityGroup ^
+  --description "Security Group for testing Linux use." ^
+  --vpc-id vpc-af32d0c6
+
+
+exit/b
+
+
+
+::_
+
+:auth_Feb-20-2019
+
+set fp=* Authorize security group ingress for Linux connection traffic on port 22.
+
+rem lu: Feb-20-2019
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress ^
+  --cidr 0.0.0.0/0 ^
+  --group-id "sg-0954b6bc75f88a5ed" ^
+  --port 22 ^
+  --protocol tcp
+
+exit/b
+
+
+
+::_
+
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_12_2019_0512
+
+set fp=* Create database with multiple tags using Postgres Security Group.
+
+rem This worked! I think this may be the first time I created a PostgresSQL database entirely
+rem from script, and didn't use the console.
+
+rem lu: Feb-6-2019
+
+echo.
+echo %fp%
+
+call %0 set_profile kb
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myuser ^
+  --master-user-password cartpass ^
+  --tags ^
+    "Key"="Application","Value"="CART" ^
+    "Key"="BillingCode","Value"="xyz123" ^
+    "Key"="Environment","Value"="dv" ^
+    "Key"="POC","Value"="test@gmail.com" ^
+    "Key"="Portfolio","Value"="ABC" ^
+    "Key"="Version","Value"="1.0" ^
+  --vpc-security-group-ids sg-06a257b836873b16d
 
 exit/b
 
