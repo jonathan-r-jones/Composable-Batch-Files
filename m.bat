@@ -1425,6 +1425,7 @@ call %0 initialize_default_repository_folder
 call %0 initialize_default_text_editor
 
 call %0 set_white_list_settings_1
+rem qq-1
 
 cls
 
@@ -1464,6 +1465,7 @@ set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_192
 set cbf_default_repository_folder=%userprofile%\j
 
 set share-zone=%userprofile%\j\share-zone
+rem qq-1
 
 set path=%path%;%share-zone%
 
