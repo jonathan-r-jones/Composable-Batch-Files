@@ -4375,4 +4375,67 @@ exit/b
 
 
 
+:_
+
+:coma
+
+set fp=* Compile CMAC macros.
+
+rem lu: Feb-19-2019
+
+echo.
+echo %fp%
+
+set macro_folder=%dropbox%\Multi-Edit_2008_Config_Files\Mac
+
+echo Compile Aliases.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Aliases.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile Shared.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Shared.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile Regexes.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Regexes.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile Finder.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Finder.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile Format.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Format.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile ListMgr.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\ListMgr.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile Clif.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Clif.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile Searcher.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Searcher.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile Jonathan's_Macro.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Jonathan's_Macros.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+echo Compile Build CMAC Macros.
+set filename=%savannah%\cmac\Quickla-for-Multi-Edit\Build_CMAC_Macros.s
+"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%" -WE -I"c:\program files (x86)\Multi-Edit 2008\Src"
+
+:This works.
+rem :"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro_folder%"
+rem :cmacwin.exe "%filename%" -p"%macro_folder%"
+rem :"c:\program files (x86)\multi-edit 2008\cmacwin.exe"
+rem :cmacwin.exe
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)

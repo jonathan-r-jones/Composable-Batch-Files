@@ -8566,6 +8566,27 @@ exit/b
 
 :_
 
+:matr3
+
+set fp=* Matrix 3.
+
+rem lu: Feb-19-2019
+
+echo.
+echo %fp%
+
+:tricks_Feb-19-2019
+
+echo Please wait . . . hard drive formatting. %random% %random%%random% %random%%random% %random%%random%
+
+goto tricks_Feb-19-2019
+
+exit/b
+
+
+
+:_
+
 :
 
 set fp=* 

@@ -2661,252 +2661,6 @@ exit/b
 
 
 
-:_+ Profiles
-
-:profiles
-
-:profs
-
-
-
-::_
-
-:vcf
-
-set fp=* View credentials file.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-call me aws_creds
-
-exit/b
-
-
-
-::_
-
-:cp_te
-
-set fp=* Configure profile for Terraform user.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile terraform_user
-
-exit/b
-
-
-
-::_
-
-:cp_cu
-
-set fp=* Add cli_user profile. (create profile, add profile skw)
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile cli_user
-
-exit/b
-
-
-
-::_
-
-:sh
-
-set fp=* Show current user profile.
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp% AWS Profile: %AWS_PROFILE%
-
-echo.
-aws configure list
-
-exit/b
-
-
-
-::_
-
-:set_test_profile
-
-set fp=* Set AWS Profile test.
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-echo.
-set AWS_PROFILE=testxx
-
-echo.
-echo AWS_PROFILE: %aws_profile%
-
-exit/b
-
-
-
-::_
-
-:look_up_profile_name
-
-set fp=* Look up profile name.
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-if "%~2" == "cl" set AWS_PROFILE_NAME=cli_user
-if "%~2" == "kb" set AWS_PROFILE_NAME=kibble_balance
-if "%~2" == "pr" set AWS_PROFILE_NAME=procon_user
-if "%~2" == "te" set AWS_PROFILE_NAME=terraform_user
-
-exit/b
-
-
-
-::_
-
-:clpr
-
-set fp=* Clear AWS Profile.
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-set aws_profile=
-
-echo.
-echo * AWS Profile: %aws_profile%
-
-exit/b
-
-
-
-::_
-
-:cp
-
-set fp=* Configure profile.
-
-rem lu: Dec-14-2018
-
-if "%~2" == "" goto cnp
-
-call %0 look_up_profile_name %2
-
-echo.
-echo * Configure profile for: %aws_profile_name%
-
-echo.
-aws configure --profile %AWS_PROFILE_NAME%
-
-exit/b
-
-
-
-::_
-
-:cp_kb
-
-set fp=* Add kb
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure --profile kibble_balance
-
-exit/b
-
-
-
-::_
-
-:set_profile
-
-:sp
-
-set fp=* Set profile.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-call %0 look_up_profile_name %2
-
-set aws_profile=%aws_profile_name%
-
-echo.
-echo * AWS PROFILE: %aws_profile%
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
-:cnp
-
-set fp=* Configure new profile.
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-call %0 set_profile %2
-
-call %0 sh
-
-exit/b
-
-
-
-::_
-
-:cfg
-
-set fp=* Configure
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-echo.
-aws configure
-
-exit/b
-
-
-
 :_
 
 :ri_feb-1-2019
@@ -3841,6 +3595,289 @@ rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-go
 "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
 
 rem ec2user@172.31.7.105
+
+exit/b
+
+
+
+:_+ Profiles
+
+:profiles, profs: skw
+
+
+
+::_
+
+:vcf
+
+set fp=* View credentials file.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+call me aws_creds
+
+exit/b
+
+
+
+::_
+
+:cp_te
+
+set fp=* Configure profile for Terraform user.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile terraform_user
+
+exit/b
+
+
+
+::_
+
+:sh
+
+set fp=* Show current user profile.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp% AWS Profile: %AWS_PROFILE%
+
+echo.
+aws configure list
+
+exit/b
+
+
+
+::_
+
+:set_test_profile
+
+set fp=* Set AWS Profile test.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+echo.
+set AWS_PROFILE=testxx
+
+echo.
+echo AWS_PROFILE: %aws_profile%
+
+exit/b
+
+
+
+::_
+
+:look_up_profile_name
+
+set fp=* Look up profile name.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+if "%~2" == "cd" set AWS_PROFILE_NAME=cli_demo_user
+if "%~2" == "cl" set AWS_PROFILE_NAME=cli_user
+if "%~2" == "kb" set AWS_PROFILE_NAME=kibble_balance
+if "%~2" == "pr" set AWS_PROFILE_NAME=procon_user
+if "%~2" == "te" set AWS_PROFILE_NAME=terraform_user
+
+exit/b
+
+
+
+::_
+
+:clpr
+
+set fp=* Clear AWS Profile.
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+set aws_profile=
+
+echo.
+echo * AWS Profile: %aws_profile%
+
+exit/b
+
+
+
+::_
+
+:cp
+
+set fp=* Configure profile.
+
+rem lu: Dec-14-2018
+
+if "%~2" == "" goto cnp
+
+call %0 look_up_profile_name %2
+
+echo.
+echo * Configure profile for: %aws_profile_name%
+
+echo.
+aws configure --profile %AWS_PROFILE_NAME%
+
+exit/b
+
+
+
+::_
+
+:cp_kb
+
+set fp=* Add kb
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile kibble_balance
+
+exit/b
+
+
+
+::_
+
+:cfg
+
+set fp=* Configure
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure
+
+exit/b
+
+
+
+::_
+
+:set_profile
+
+:sp
+
+set fp=* Set profile.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+call %0 look_up_profile_name %2
+
+set aws_profile=%aws_profile_name%
+
+echo.
+echo * AWS PROFILE: %aws_profile%
+
+call %0 sh
+
+exit/b
+
+
+
+::_
+
+:cp_cu
+
+set fp=* Add cli_user profile. (create profile, add profile skw)
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile cli_user
+
+exit/b
+
+
+
+::_
+
+:ap_kb
+
+set fp=* Add cli_user profile. (create profile, add profile skw)
+
+rem lu: Feb-20-2019
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile kibble_balance
+
+exit/b
+
+
+
+::_
+
+:ap_cd
+
+set fp=* Add cli_demo_user profile.
+
+rem lu: Feb-20-2019
+
+echo.
+echo %fp%
+
+echo.
+aws configure --profile cli_demo_user
+
+exit/b
+
+
+
+::_
+
+:cnp
+
+set fp=* Add new profile.
+
+rem Configure new profile, add profile: skw
+
+rem lu: Feb-20-2019
+
+echo.
+echo %fp%
+
+echo.
+aws configure
+
+call %0 set_profile %2
+
+call %0 sh
 
 exit/b
 
