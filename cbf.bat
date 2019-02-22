@@ -97,6 +97,7 @@ echo   mcd  Make and navigate (cd) to a folder.
 echo    me  Run Multi-Edit.
 echo   mav  Maven wrapper.
 echo    mv  Move files wrapper.
+echo   mvt  Move file in the current directory to nickname-specified path.
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder.
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary.
