@@ -595,7 +595,7 @@ exit/b
 
 :_
 
-:dsc_im
+:d_im
 
 set fp=* List EC@ AMI CentOS images.
 
@@ -1270,7 +1270,7 @@ exit/b
 
 :start_instances
 
-set fp=* Start my instance from the command line!
+set fp=* Start my instance from the command line.
 
 rem lu: Dec-20-2018
 
@@ -1301,6 +1301,7 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
+echo.
 rem Set default instance ID to Jenkins server.
 set instance_id=i-0bce1b3771799a4ed
 
@@ -1535,7 +1536,7 @@ exit/b
 
 :_
 
-:dsc_stat
+:d_stat
 
 :stat
 
@@ -1546,7 +1547,6 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-echo.
 call %0 set_instance_id %2
 
 aws ec2 describe-instance-status --instance-ids %instance_id% --color off
@@ -1688,7 +1688,7 @@ exit/b
 
 ::_
 
-:dsc_sg
+:d_sg
 
 set fp=* Describe EC2 security group.
 
@@ -1711,7 +1711,7 @@ exit/b
 
 ::_
 
-:dsc_sgs
+:d_sgs
 
 set fp=* Describe security groups.
 
@@ -1729,7 +1729,7 @@ exit/b
 
 ::_
 
-:dsc_sgsp
+:d_sgsp
 
 set fp=* Describe security groups and pipe to file.
 
@@ -1754,7 +1754,7 @@ exit/b
 
 ::_
 
-:dsc_sg_id
+:d_sg_id
 
 set fp=* Describe our new security group on id.
 
@@ -1795,7 +1795,7 @@ exit/b
 
 ::_
 
-:dsc_vpcs
+:d_vpcs
 
 set fp=* Describe VPCs.
 
@@ -1885,9 +1885,9 @@ exit/b
 
 :d
 
-:dsc_su
+:d_su
 
-:dsc_sub
+:d_sub
 
 :describe_subnets
 
@@ -2304,7 +2304,7 @@ exit/b
 
 :deim_pg
 
-:dsc_pg
+:d_pg
 
 set fp=* Describe images with PostgreSQL.
 
@@ -3982,11 +3982,9 @@ rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69
 
 rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-89-115.us-gov-east-1.compute.amazonaws.com
 
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-100-135.us-gov-east-1.compute.amazonaws.com
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@
 
-rem ec2user@172.31.7.105
-
-
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-135-197.us-gov-east-1.compute.amazonaws.com
 
 exit/b
 
@@ -4087,6 +4085,32 @@ aws rds create-db-instance ^
     "Key"="Version","Value"="1.0" ^
   --vpc-security-group-ids sg-06a257b836873b16d
 
+exit/b
+
+
+
+:_
+
+:d_i
+
+:d_in
+
+:d_inst
+
+:d_instances
+
+set fp=* Describe specified instance.
+
+rem lu: Feb-22-2019
+
+echo.
+echo %fp%
+
+call %0 set_instance_id %2
+
+echo.
+call aws ec2 describe-instances --instance-ids %instance_id%
+                                       
 exit/b
 
 
