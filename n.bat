@@ -5516,6 +5516,8 @@ exit/b
 
 :ui
 
+:cer
+
 :pass-through
 
 :pass_through
