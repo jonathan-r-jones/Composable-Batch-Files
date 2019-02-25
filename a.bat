@@ -1301,7 +1301,6 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-echo.
 rem Set default instance ID to Jenkins server.
 set instance_id=i-0bce1b3771799a4ed
 
@@ -1325,6 +1324,9 @@ if "%~2" == "nj" set instance_id=i-072a65f07b004f9fd
 
 rem Ubuntu
 if "%~2" == "ub" set instance_id=i-0ce1f47a5dcd7f7b0
+
+rem Ubuntu 3
+if "%~2" == "ub3" set instance_id=i-04c9959fe9334ca57
 
 exit/b
 
@@ -1549,6 +1551,7 @@ echo %fp%
 
 call %0 set_instance_id %2
 
+echo.
 aws ec2 describe-instance-status --instance-ids %instance_id% --color off
 
 exit/b
@@ -1806,24 +1809,6 @@ echo %fp%
 
 echo.
 aws ec2 describe-vpcs
-
-exit/b
-
-
-
-::_
-
-:d_ins
-
-set fp=* Describes instances.
-
-rem lu: Dec-19-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-instances --color off
 
 exit/b
 
@@ -2434,6 +2419,50 @@ echo.
 
 aws ec2 describe-security-group-references --group-id sg-0e67f09ea592e68ff
 
+exit/b
+
+
+
+::_
+
+:d_ins
+
+set fp=* Describes instances.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-instances --color off
+
+exit/b
+
+
+
+::_
+
+:d_i
+
+:d_in
+
+:d_inst
+
+:d_instances
+
+set fp=* Describe specified instance.
+
+rem lu: Feb-22-2019
+
+echo.
+echo %fp%
+
+call %0 set_instance_id %2
+
+echo.
+call aws ec2 describe-instances --instance-ids %instance_id%
+                                       
 exit/b
 
 
@@ -3909,15 +3938,58 @@ exit/b
 
 
 
-:_
+:_+ 3 Script functions needed to create a connectable Linux server.
 
-:gaws_feb-15-2019_0515_Ubuntu_2
 
-set fp=* Create an instance that I can use to practice my Linux CLI.
 
-rem lu: Feb-15-2019
+::_
 
-rem This worked.
+:create_security_group_for_linux_on_gaws_3
+
+set fp=* Create security group for Linux 3.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name LinuxDevSecurityGroup3 ^
+  --description "Security Group version 3 for testing Linux use." ^
+  --vpc-id vpc-af32d0c6
+
+exit/b
+
+
+
+::_
+
+:auth_Feb-25-2019
+
+set fp=* Authorize security group ingress for Linux connection traffic on port 22.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress ^
+  --cidr 10.0.0.0/8 ^
+  --group-id "sg-03ab419874a9a2ea1" ^
+  --port 22 ^
+  --protocol tcp
+
+exit/b
+
+
+
+::_
+
+:gaws_feb-25-2019_1207_Ubuntu_3
+
+set fp=* Create an instance with an updated security group.
+
+rem lu: Feb-25-2019
 
 echo.
 echo %fp%
@@ -3938,7 +4010,7 @@ aws ec2 run-instances ^
   --image-id ami-39a64048 ^
   --instance-type t3.medium ^
   --key-name %cbf_file% ^
-  --security-group-ids sg-4320d92a ^
+  --security-group-ids sg-03ab419874a9a2ea1 ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
     ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
@@ -3984,13 +4056,15 @@ rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-89-1
 
 rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@
 
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-135-197.us-gov-east-1.compute.amazonaws.com
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-135-197.us-gov-east-1.compute.amazonaws.com
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-170-172.us-gov-east-1.compute.amazonaws.com
 
 exit/b
 
 
 
-:_+ 3 Script functions needed to create a connectable Linux server.
+:_+ Ubunto 1. This works. 3 Script functions needed to create a connectable Linux server.
 
 
 
@@ -4049,6 +4123,44 @@ exit/b
 
 ::_
 
+:gaws_feb-15-2019_0515_Ubuntu_2
+
+set fp=* Create an instance that I can use to practice my Linux CLI.
+
+rem lu: Feb-15-2019
+
+rem This worked.
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+set cbf_file=kibble_balance_key_pair
+
+call m specific_file_presence %cbf_file%.pem
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-39a64048 ^
+  --instance-type t3.medium ^
+  --key-name %cbf_file% ^
+  --security-group-ids sg-4320d92a ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications ^
+    ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
+
+exit/b
+
+
+
+::_
+
 :postgres_db_fr_cli_on_gaws_asus_at_Feb_12_2019_0512
 
 set fp=* Create database with multiple tags using Postgres Security Group.
@@ -4085,32 +4197,6 @@ aws rds create-db-instance ^
     "Key"="Version","Value"="1.0" ^
   --vpc-security-group-ids sg-06a257b836873b16d
 
-exit/b
-
-
-
-:_
-
-:d_i
-
-:d_in
-
-:d_inst
-
-:d_instances
-
-set fp=* Describe specified instance.
-
-rem lu: Feb-22-2019
-
-echo.
-echo %fp%
-
-call %0 set_instance_id %2
-
-echo.
-call aws ec2 describe-instances --instance-ids %instance_id%
-                                       
 exit/b
 
 

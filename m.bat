@@ -1464,7 +1464,6 @@ set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_192
 set cbf_default_repository_folder=%userprofile%\j
 
 set share-zone=%userprofile%\j\share-zone
-rem qq-1
 
 set path=%path%;%share-zone%
 
@@ -3906,6 +3905,8 @@ exit
 ::_
 
 :aff
+
+:affi
 
 :inot
 
