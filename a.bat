@@ -4227,7 +4227,7 @@ call %0 tag_generic BillingCode mybillingcode
 
 call %0 tag_generic Environment myenv
 
-call %0 tag_generic Name gaws_feb-15-2019_0515_Ubuntu
+call %0 tag_generic Name w1Idvwebcar003
 
 call %0 tag_generic Notes "This works. Warning: Belongs to a wide open security group."
 

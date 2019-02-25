@@ -5518,6 +5518,8 @@ exit/b
 
 :cer
 
+:tag
+
 :pass-through
 
 :pass_through
