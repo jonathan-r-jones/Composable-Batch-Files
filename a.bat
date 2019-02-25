@@ -3272,24 +3272,6 @@ exit/b
 
 :_
 
-:tag
-
-set fp=* Tag a resource.
-
-rem lu: Feb-6-2019
-
-echo.
-echo %fp%
-
-aws ec2 create-tags --resources db-NT4LGMYIOPTZSLPIGFRDGCMED4 --tags Key=Namex,Value=small_test_Feb_1_2019
-rem aws ec2 create-tags --resources db-NT4LGMYIOPTZSLPIGFRDGCMED4 --tags Key=Application,Value=CART
-
-exit/b
-
-
-
-:_
-
 :postgres_db_fr_cli_on_gaws_asus_at_Feb_6_2019_0539
 
 set fp=* Create database with multiple tags using Postgres Security Group.
@@ -4123,7 +4105,7 @@ exit/b
 
 ::_
 
-:gaws_feb-15-2019_0515_Ubuntu_2
+:gaws_feb-15-2019_0515_Ubuntu
 
 set fp=* Create an instance that I can use to practice my Linux CLI.
 
@@ -4196,6 +4178,79 @@ aws rds create-db-instance ^
     "Key"="Portfolio","Value"="ABC" ^
     "Key"="Version","Value"="1.0" ^
   --vpc-security-group-ids sg-06a257b836873b16d
+
+exit/b
+
+
+
+:_+ Tags
+
+
+
+::_
+
+:tag_one
+
+set fp=* Change a single tag on a resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_resource_id=i-0ce1f47a5dcd7f7b0
+
+call %0 tag_generic Notes "Tough to say."
+
+exit/b
+
+
+
+::_
+
+:tag
+
+:tag_all
+
+set fp=* Tag or retag all the tags on a resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_resource_id=i-0ce1f47a5dcd7f7b0
+
+call %0 tag_generic Application "Learn Linux."
+
+call %0 tag_generic BillingCode mybillingcode
+
+call %0 tag_generic Environment myenv
+
+call %0 tag_generic Name gaws_feb-15-2019_0515_Ubuntu
+
+call %0 tag_generic Notes "This works. Warning: Belongs to a wide open security group."
+
+call %0 tag_generic Portfolio TestPortfolio
+
+call %0 tag_generic ResourcePOC theMan
+
+exit/b
+
+
+
+::_
+
+:tag_generic
+
+set fp=* Tag generic "%2" - "%3".
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+aws ec2 create-tags --resources %cbf_resource_id% --tags Key=%2,Value=%3
 
 exit/b
 
