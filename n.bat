@@ -5520,6 +5520,12 @@ exit/b
 
 :tag
 
+:sv1
+
+:sv2
+
+:sv3
+
 :pass-through
 
 :pass_through
@@ -8163,6 +8169,23 @@ echo.
 echo %fp%
 
 set cbf_path=%localappdata%\Microsoft\WindowsApps
+
+exit/b
+
+
+
+:_
+
+:ub
+
+set fp=* Ubuntu server.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_instance_id=i-0ce1f47a5dcd7f7b0
 
 exit/b
 

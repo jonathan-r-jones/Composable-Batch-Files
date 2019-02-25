@@ -1277,10 +1277,10 @@ rem lu: Dec-20-2018
 echo.
 echo %fp%
 
-call %0 set_instance_id %2
+call n %2
 
 echo.
-call aws ec2 start-instances --instance-ids %instance_id%
+call aws ec2 start-instances --instance-ids %cbf_instance_id%
                                        
 exit/b
 
@@ -1294,9 +1294,9 @@ exit/b
 
 :set_instance_id
 
-set fp=* Set AWS instance id.
+set fp=* Deprecated. Set AWS instance id.
 
-rem lu: Dec-13-2018
+rem lu: Feb-25-2019
 
 echo.
 echo %fp%
@@ -1446,10 +1446,10 @@ rem if "%~2" == "" (
   rem exit/b
 rem )
 
-call %0 set_instance_id %2
+call n %2
 
 echo.
-aws ec2 stop-instances --instance-ids  %instance_id% --color off
+aws ec2 stop-instances --instance-ids  %cbf_instance_id% --color off
 
 exit/b
 
@@ -1549,10 +1549,10 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-call %0 set_instance_id %2
+call n %2
 
 echo.
-aws ec2 describe-instance-status --instance-ids %instance_id% --color off
+aws ec2 describe-instance-status --instance-ids %cbf_instance_id% --color off
 
 exit/b
 
@@ -2458,10 +2458,10 @@ rem lu: Feb-22-2019
 echo.
 echo %fp%
 
-call %0 set_instance_id %2
+call n %2
 
 echo.
-call aws ec2 describe-instances --instance-ids %instance_id%
+call aws ec2 describe-instances --instance-ids %cbf_instance_id%
                                        
 exit/b
 
