@@ -92,7 +92,7 @@ exit/b
 
 :cfg
 
-set fp=* Configure. On our customer's system, there is a gotch for the Default region name. ^
+set fp=* Configure. On our customer's system, there is a gotcha for the Default region name. ^
 Must be us-gov-west-1 which struggled to learn. Here we will use us-gov-east-1.
 
 echo.
@@ -230,11 +230,86 @@ exit/b
 
 
 
+:_+ Descibe Functions
+
+
+
+::_
+
+:d_sg
+
+set fp=* Describe our demo security group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups --group-names CLIDemoSecurityGroup
+
+exit/b
+
+
+
+::_
+
+:d_sgs
+
+set fp=* Describe security groups.
+
+rem lu: Dec-11-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups
+
+exit/b
+
+
+
+::_
+
+:d_ins
+
+set fp=* Get instances status.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-instances --color off
+
+exit/b
+
+
+
+:_
+
+:delete_security_group
+
+set fp=* Delete security group.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+rem First you need to delete the instance from the console.
+
+aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
+
+exit/b
+
+
+
 :_
 
 :create_security_group
-
-:csg
 
 set fp=* Create security group.
 
@@ -245,7 +320,7 @@ echo %fp%
 
 echo.
 aws ec2 create-security-group --group-name CLIDemoSecurityGroup ^
-  --description "Security Group for EC2 instances to allow ports 22, 88 and 443"
+  --description "Security Group for EC2 instances to allow access on port 22."
 
 exit/b
 
@@ -253,34 +328,17 @@ exit/b
 
 :_
 
-:dsc_sg
+:auth_port_22
 
-set fp=* Describe our new security group.
+set fp=* Authorize security group ingress for port 22, SSH traffic. Warning: wide open version.
 
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws ec2 describe-security-groups --group-names CLIDemoSecurityGroup
-
-exit/b
-
-
-
-:_
-
-:auth1
-
-set fp=* Authorize security group ingress for 1st port, SSH traffic on port 22.
-
-rem lu: Nov-2-2018
+rem lu: Feb-26-2019
 
 echo.
 echo %fp%
 
 aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
-  --port 22 --cidr 172.54.125.8/32
+  --port 22 --cidr 0.0.0.0/0
 
 exit/b
 
@@ -288,64 +346,7 @@ exit/b
 
 :_
 
-:auth2
-
-set fp=* Authorize security group ingress for 2nd port, HTTP traffic on port 80.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
-  --port 80 --cidr 0.0.0.0/0
-
-exit/b
-
-
-
-:_
-
-:auth3
-
-set fp=* Authorize security group ingress for 3rd port, HTTPS traffic on port 443.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
-  --port 443 --cidr 0.0.0.0/0
-
-exit/b
-
-
-
-:_
-
-:auth4
-
-set fp=* Authorize security group ingress for 4th port, RDP connection traffic on port 3389.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress --group-name CLIDemoSecurityGroup --protocol tcp ^
-  --port 3389 --cidr 0.0.0.0/0
-
-rem To see the after picture, run this command.
-rem call dsg 
-
-exit/b
-
-
-
-:_
-
-:dsc_im
+:d_im
 
 set fp=* Describe images.
 
@@ -364,9 +365,11 @@ exit/b
 
 :_
 
+:b
+
 :desu
 
-:dsc_su
+:d_su
 
 :subnets
 
@@ -388,21 +391,22 @@ exit/b
 
 
 :_
+rem qq-1
 
-:ri
+:gaws_feb-26-2019_0209_Ubuntu
 
-:run_instance_cli_demo
+set fp=* Create an Linux instance for demo.
 
-set fp=* Run instance. Pem file must be in the current folder.
-
-rem lu: Dec-28-2018
+rem lu: Feb-26-2019
 
 echo.
 echo %fp%
 
-call td a
+call td tfkeys
 
-call %0 check_pem_existence
+set cbf_file=kibble_balance_key_pair
+
+call m specific_file_presence %cbf_file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -411,13 +415,13 @@ if %errorlevel% == 1 (
 echo.
 aws ec2 run-instances ^
   --count 1 ^
-  --image-id ami-fff7118e ^
+  --image-id ami-39a64048 ^
   --instance-type t3.medium ^
-  --key-name kibble_balance_key_pair ^
-  --security-group-ids sg-0221d125e029d634f ^
+  --key-name %cbf_file% ^
+  --security-group-ids sg-097e360d813a1734b ^
   --subnet-id subnet-8c04e4e5 ^
-  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=CLI_Demo_Jan_22_2019}]"
-  --user-data file://my_script.sh
+  --tag-specifications ^
+    ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
 
 exit/b
 
@@ -425,9 +429,38 @@ exit/b
 
 :_
 
-:delete_security_group
+:connect
 
-:sg_delete
+:ub
+
+set fp=* Connect to Ubuntu server.
+
+rem lu: Feb-26-2019
+
+echo.
+echo %fp%
+
+call n git_user_bin
+
+set git_user_bin=%cbf_path%
+
+call td tfkeys
+
+echo.
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-90-111.us-gov-east-1.compute.amazonaws.com
+
+exit/b
+
+
+
+:_+ 3 Script functions needed to create a connectable PostgresDB.
+
+
+
+::_
+
+:delete_PostgresDemoSecurityGroup
 
 set fp=* Delete security group.
 
@@ -436,10 +469,143 @@ rem lu: Nov-5-2018
 echo.
 echo %fp%
 
-rem First you need to delete the instance from the console.
+aws ec2 delete-security-group --group-name PostgresDemoSecurityGroup
 
-aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
+exit/b
 
+
+
+::_
+
+:create__PostgresDemoSecurityGroup
+
+set fp=* Create security group for db.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name PostgresDemoSecurityGroup ^
+  --description "Security Group for Postgres use." ^
+  --vpc-id vpc-af32d0c6
+
+exit/b
+
+
+
+::_
+
+:d_sg_PostgresDemoSecurityGroup
+
+set fp=* Describe our demo security group.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-security-groups --group-names PostgresDemoSecurityGroup
+
+exit/b
+
+
+
+::_
+
+:auth_5432
+
+set fp=* Authorize security group ingress for Postgres connection traffic on port 5432.
+
+rem lu: Feb-26-2019
+
+echo.
+echo %fp%
+
+aws ec2 authorize-security-group-ingress ^
+  --group-id sg-0b411fec244b9b168 ^
+  --port 5432 --cidr 0.0.0.0/0 ^
+  --protocol tcp
+
+exit/b
+
+
+
+::_
+
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_26_2019_0159
+
+set fp=* Create database with multiple tags using Postgres Security Group.
+
+rem lu: Feb-26-2019
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myusername ^
+  --master-user-password mypassword ^
+  --tags ^
+    "Key"="Application","Value"="CART" ^
+    "Key"="BillingCoder","Value"="xyz123" ^
+    "Key"="Environment","Value"="dv" ^
+    "Key"="POC","Value"="test@gmail.com" ^
+    "Key"="Portfolio","Value"="ABC" ^
+    "Key"="Version","Value"="1.0" ^
+  --vpc-security-group-ids sg-0b411fec244b9b168
+
+exit/b
+
+
+
+:_+ Tags
+
+
+
+::_
+
+:tag_one
+
+set fp=* Change a single tag on a resource.
+rem qq-1
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_resource_id=i-0c88567bad07be0f1
+
+call %0 tag_generic Name Brand_New_Server_Name
+
+exit/b
+
+
+
+::_
+
+:tag_generic
+
+set fp=* Tag generic "%2" - "%3".
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+aws ec2 create-tags --resources %cbf_resource_id% --tags Key=%2,Value=%3
 
 exit/b
 
@@ -563,46 +729,6 @@ exit/b
 
 
 
-:_+ Descibe Functions
-
-
-
-::_
-
-:dsc_sgs
-
-set fp=* Describe security groups.
-
-rem lu: Dec-11-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-security-groups
-
-exit/b
-
-
-
-::_
-
-:dsc_ins
-
-set fp=* Get instances status.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-instances --color off
-
-exit/b
-
-
-
 :_
 
 :ppt
@@ -712,92 +838,6 @@ echo %fp%
 
 echo.
 aws ec2 describe-vpcs
-
-exit/b
-
-
-
-:_+ 3 Script functions needed to create a connectable PostgresDB.
-
-
-
-::_
-
-:create_security_group_for_db_on_gaws
-
-set fp=* Create security group for db.
-
-rem lu: Dec-20-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 create-security-group --group-name PostgresDevSecurityGroup ^
-  --description "Security Group for Postgres use." ^
-  --vpc-id vpc-af32d0c6
-
-exit/b
-
-
-
-::_
-
-:auth5
-
-set fp=* Authorize security group ingress for Postgres connection traffic on port 5432.
-
-rem lu: Feb-12-2019
-
-echo.
-echo %fp%
-
-aws ec2 authorize-security-group-ingress ^
-  --group-id sg-06a257b836873b16d ^
-  --port 5432 --cidr 0.0.0.0/0 ^
-  --protocol tcp
-
-exit/b
-
-
-
-::_
-
-:postgres_db_fr_cli_on_gaws_asus_at_Feb_12_2019_0512
-
-set fp=* Create database with multiple tags using Postgres Security Group.
-
-rem This worked! I think this may be the first time I created a PostgresSQL database entirely
-rem from script, and didn't use the console.
-
-rem lu: Feb-6-2019
-
-echo.
-echo %fp%
-
-call %0 set_profile kb
-
-set database_name=%1
-
-set instance_identifier=%database_name:_=-%
-
-echo.
-aws rds create-db-instance ^
-  --allocated-storage 20 ^
-  --db-name %database_name% ^
-  --db-instance-identifier %instance_identifier% ^
-  --db-instance-class db.t2.micro ^
-  --engine postgres ^
-  --master-username myuser ^
-  --master-user-password cartpass ^
-  --tags ^
-    "Key"="Application","Value"="CART" ^
-    "Key"="BillingCoder","Value"="xyz123" ^
-    "Key"="Environment","Value"="dv" ^
-    "Key"="POC","Value"="test@gmail.com" ^
-    "Key"="Portfolio","Value"="ABC" ^
-    "Key"="Version","Value"="1.0" ^
-  --vpc-security-group-ids sg-06a257b836873b16d
 
 exit/b
 

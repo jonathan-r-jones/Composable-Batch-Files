@@ -4001,51 +4001,6 @@ exit/b
 
 
 
-:_
-
-:4
-
-set fp=* Connect to Ubuntu server.
-
-rem lu: Feb-15-2019
-
-echo.
-echo %fp%
-
-call n git_user_bin
-
-set git_user_bin=%cbf_path%
-
-call td tfkeys
-
-echo.
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-89-115.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-135-197.us-gov-east-1.compute.amazonaws.com
-
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-170-172.us-gov-east-1.compute.amazonaws.com
-
-exit/b
-
-
-
 :_+ Ubunto 1. This works. 3 Script functions needed to create a connectable Linux server.
 
 

@@ -160,4 +160,33 @@ exit/b
 
 
 
+:_
+
+:4
+
+:ub
+
+set fp=* Connect to Ubuntu server.
+
+rem lu: Feb-15-2019
+
+echo.
+echo %fp%
+
+call n git_user_bin
+
+set git_user_bin=%cbf_path%
+
+call td tfkeys
+
+echo.
+
+rem This works.
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-170-172.us-gov-east-1.compute.amazonaws.com
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
