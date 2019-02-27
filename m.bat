@@ -3898,118 +3898,6 @@ exit
 
 
 
-:_+ Multi-Edit Packs
-
-
-
-::_
-
-:aff
-
-:affi
-
-:inot
-
-set fp=* Open affinity files.
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc"
-
-exit/b
-
-
-
-::_
-
-:affc
-
-set fp=* Open affinity files and close the DOS windows.
-
-rem lu: Jan-23-2019
-
-echo.
-echo %fp%
-
-start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc"
-
-exit
-
-
-
-::_
-
-:g
-
-:gfe
-
-set fp=* Open gfe "waiting" files.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-call fn gfe
-
-set first_filename=%cbf_filename%
-
-call fn cc
-
-set second_filename=%cbf_filename%
-
-start mew32 "%first_filename%" "%second_filename%"
-
-rem call me gfe
-
-rem pause
-
-rem call me cc
-
-exit/b
-
-
-
-::_
-
-:a
-
-set fp=* Open Affinity files router.
-
-rem lu: Jan-24-2019
-
-echo %computername% | find /i "lipt">nul
-
-if %errorlevel% == 0 (
-   echo.
-   echo * Computer name contains "lipt".
-   call %0 g
-   exit/b
-)
-
-call %0 aff
-
-exit/b
-
-
-
-::_
-
-:ac
-
-set fp=* Open Affinity files router and close shell window.
-
-rem lu: Feb-1-2019
-
-call %0 a
-
-exit
-
-
-
 :_
 
 :demo
@@ -4435,6 +4323,145 @@ rem :"c:\program files (x86)\multi-edit 2008\cmacwin.exe" "%filename%" -p"%macro
 rem :cmacwin.exe "%filename%" -p"%macro_folder%"
 rem :"c:\program files (x86)\multi-edit 2008\cmacwin.exe"
 rem :cmacwin.exe
+
+exit/b
+
+
+
+:_+ Multi-Edit Packs
+
+
+
+::_
+
+:g
+
+:gfe
+
+set fp=* Open gfe "waiting" files.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+call fn gfe
+
+set first_filename=%cbf_filename%
+
+call fn cc
+
+set second_filename=%cbf_filename%
+
+start mew32 "%first_filename%" "%second_filename%"
+
+rem call me gfe
+
+rem pause
+
+rem call me cc
+
+exit/b
+
+
+
+::_
+
+:a
+
+set fp=* Open Affinity files router.
+
+rem lu: Jan-24-2019
+
+echo %computername% | find /i "lipt">nul
+
+if %errorlevel% == 0 (
+   echo.
+   echo * Computer name contains "lipt".
+   call %0 g
+   exit/b
+)
+
+call %0 aff
+
+exit/b
+
+
+
+::_
+
+:aff
+
+:affi
+
+:inot
+
+set fp=* Open affinity files.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc"
+
+exit/b
+
+
+
+::_
+
+:affc
+
+set fp=* Open affinity files and close the DOS windows.
+
+rem lu: Jan-23-2019
+
+echo.
+echo %fp%
+
+start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc"
+
+exit
+
+
+
+::_
+
+:ac
+
+set fp=* Open Affinity files router and close shell window.
+
+rem lu: Feb-1-2019
+
+call %0 a
+
+exit
+
+
+
+::_
+
+:w
+
+:wait
+
+set fp=* Open "waiting" files.
+
+rem lu: Feb-27-2019
+
+echo.
+echo %fp%
+
+call fn machine-specific-file
+
+set first_filename=%cbf_filename%
+
+call fn cc
+
+set second_filename=%cbf_filename%
+
+start mew32 "%first_filename%" "%second_filename%"
 
 exit/b
 

@@ -8193,4 +8193,21 @@ exit/b
 
 
 
+:_
+
+:machine-specific-file
+
+set fp=* Machine-specific file.
+
+rem lu: Feb-27-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%reach out%\%computername%.asc
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

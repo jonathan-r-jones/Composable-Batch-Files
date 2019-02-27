@@ -60,7 +60,7 @@ echo.
 echo  File  Description
 echo  ----  ------------------------------------------------------------------
 echo     a  A wrapper around AWS CLI.
-echo    an  Application nickname dictionary.
+echo    an  Application nickname dictionary layer of abstraction.
 echo    aw  A CWS CLI demo companion file.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF batch files.
@@ -84,6 +84,7 @@ echo    ea  Application-centric way to run an application.
 echo    ed  Edit a file abstraction layer.
 echo   edx  Edit a file. Emulated Surf.
 echo   env  Show the state of the CBF environment variables.
+echo    fn  Filenames dictionary layer of abstraction.
 echo    fs  Filenames search.
 echo     g  Perform Git-related tasks.
 echo    gg  Git Gui helper. Has TD parameter.
@@ -131,6 +132,7 @@ echo    td  Transform Directory.
 echo   tdf  Transform Directory where only the Cbf_filename is known.
 echo   tdp  Transform Directory to parent folder.
 echo    te  Batch file template used for creating new batch files.
+echo    un  URL nicknames dictionary layer of abstraction.
 echo     v  Vetted functions (Useful for copying-and-pasting).
 echo    wp  Run Wordpad.
 echo     x  Remote double-click equivalent way to run a file.
