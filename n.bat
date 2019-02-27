@@ -5911,6 +5911,8 @@ exit/b
 
 ::_
 
+:ac
+
 :aws_creds
 
 set fp=* AWS configuration credentials.
