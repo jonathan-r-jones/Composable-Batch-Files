@@ -1538,28 +1538,6 @@ exit/b
 
 :_
 
-:d_stat
-
-:stat
-
-set fp=* Get a particular instance status.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-call n %2
-
-echo.
-aws ec2 describe-instance-status --instance-ids %cbf_instance_id% --color off
-
-exit/b
-
-
-
-:_
-
 :connect
 
 set fp=* Connect to my instance from the command line!
@@ -1686,6 +1664,52 @@ exit/b
 
 
 :_+ Describe functions.
+
+
+
+::_
+
+:d_i
+
+:d_in
+
+:d_inst
+
+set fp=* Describe instance for a particular instance.
+
+rem lu: Feb-22-2019
+
+echo.
+echo %fp%
+
+call n %2
+
+echo.
+call aws ec2 describe-instances --instance-ids %cbf_instance_id%
+                                       
+exit/b
+
+
+
+::_
+
+:d_stat
+
+:stat
+
+set fp=* Describe status for a particular instance.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+call n %2
+
+echo.
+aws ec2 describe-instance-status --instance-ids %cbf_instance_id% --color off
+
+exit/b
 
 
 
@@ -2441,32 +2465,6 @@ exit/b
 
 
 
-::_
-
-:d_i
-
-:d_in
-
-:d_inst
-
-:d_instances
-
-set fp=* Describe specified instance.
-
-rem lu: Feb-22-2019
-
-echo.
-echo %fp%
-
-call n %2
-
-echo.
-call aws ec2 describe-instances --instance-ids %cbf_instance_id%
-                                       
-exit/b
-
-
-
 :_+ Set up New Jenkins
 
 
@@ -2769,32 +2767,6 @@ aws ec2 run-instances ^
   --subnet-id %subnet_id% ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=small_test_Feb_1_2019}]"
   --user-data file://my_script.sh
-
-exit/b
-
-
-
-:_
-
-:retag
-
-set fp=* Retag a resource.
-
-rem lu: Dec-12-2018
-
-echo.
-echo %fp%
-
-aws ec2 create-tags --resources i-0ee6674f1356c148b --tags Key=Name,Value=small_test_Feb_1_2019
-
-rem These also work.
-rem aws ec2 create-tags help>%temp%/j1.txt
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
-
-rem Below here didn't work.
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
 
 exit/b
 
@@ -3562,6 +3534,8 @@ exit/b
 
 ::_
 
+:ac
+
 :vcf
 
 set fp=* View credentials file.
@@ -3827,7 +3801,7 @@ exit/b
 
 :cp_de
 
-set fp=* Configue default.
+set fp=* Configue default. Doesn't work properly.
 
 rem lu: Feb-20-2019
 
@@ -4139,6 +4113,32 @@ exit/b
 
 
 :_+ Tags
+
+
+
+::_
+
+:retag
+
+set fp=* Retag a resource.
+
+rem lu: Dec-12-2018
+
+echo.
+echo %fp%
+
+aws ec2 create-tags --resources i-0ee6674f1356c148b --tags Key=Name,Value=small_test_Feb_1_2019
+
+rem These also work.
+rem aws ec2 create-tags help>%temp%/j1.txt
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
+
+rem Below here didn't work.
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
+
+exit/b
 
 
 
