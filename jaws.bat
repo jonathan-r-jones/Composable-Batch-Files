@@ -391,9 +391,8 @@ exit/b
 
 
 :_
-rem qq-1
 
-:gaws_feb-26-2019_0209_Ubuntu
+:gaws_feb-27-2019_0209_Ubuntu
 
 set fp=* Create an Linux instance for demo.
 
@@ -418,7 +417,7 @@ aws ec2 run-instances ^
   --image-id ami-39a64048 ^
   --instance-type t3.medium ^
   --key-name %cbf_file% ^
-  --security-group-ids sg-097e360d813a1734b ^
+  --security-group-ids "sg-09a26e3a1cfeee2bb" ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
     ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
@@ -448,7 +447,7 @@ call td tfkeys
 
 echo.
 
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-90-111.us-gov-east-1.compute.amazonaws.com
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-170-172.us-gov-east-1.compute.amazonaws.com
 
 exit/b
 
@@ -535,7 +534,7 @@ exit/b
 
 ::_
 
-:postgres_db_fr_cli_on_gaws_asus_at_Feb_26_2019_0159
+:postgres_db_fr_cli_on_gaws_asus_at_Feb_27_2019_0159
 
 set fp=* Create database with multiple tags using Postgres Security Group.
 

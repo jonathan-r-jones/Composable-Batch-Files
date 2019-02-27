@@ -4428,20 +4428,6 @@ exit
 
 ::_
 
-:ac
-
-set fp=* Open Affinity files router and close shell window.
-
-rem lu: Feb-1-2019
-
-call %0 a
-
-exit
-
-
-
-::_
-
 :w
 
 :wait
