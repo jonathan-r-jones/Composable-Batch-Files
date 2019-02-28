@@ -5532,6 +5532,8 @@ exit/b
 
 :3
 
+:ruby
+
 :pass-through
 
 :pass_through
