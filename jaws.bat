@@ -578,7 +578,6 @@ exit/b
 :tag_one
 
 set fp=* Change a single tag on a resource.
-rem qq-1
 
 rem lu: Feb-25-2019
 
