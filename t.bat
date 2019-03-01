@@ -8506,7 +8506,11 @@ exit/b
 
 
 
-:_
+:_+ Matrix Solutions
+
+
+
+::_
 
 :matr
 
@@ -8533,7 +8537,7 @@ exit/b
 
 
 
-:_
+::_
 
 :matr2
 
@@ -8564,7 +8568,7 @@ exit/b
 
 
 
-:_
+::_
 
 :matr3
 
@@ -8580,6 +8584,300 @@ echo %fp%
 echo Please wait . . . hard drive formatting. %random% %random%%random% %random%%random% %random%%random%
 
 goto tricks_Feb-19-2019
+
+exit/b
+
+
+
+::_
+
+:matr4
+
+set fp=* Matrix 4.
+
+rem lu: Mar-1-2019
+
+echo.
+echo %fp%
+
+:tricks_Mar-1-2019
+
+echo 1111 01 10100001 1010101010 10101 1  10101001 10101 10101 10010 1010101 1001
+echo 01 01 10100001 1010101010 10101 1  10101001 10101 10101 10010 1010101 100101
+echo 10100001 1010101010 10101 1  10101001 10101 10101 10010 1010101 100101 10
+echo 10100001 1010101010 10101 1  Help me! 10101 10101 10010 1010101 100101 10
+echo 10000001 1010101010 10101 1  Help me! 10101 10101 10010 1010101 100101 10
+echo 10100001 1010101010 10101 1  Help me! 10101 10101 10010 1010101 100101 10
+echo 1010101010 10101 1  10101001 10101 10101 10010 1010101 100101 10 10100 010 0
+echo 10101 1  10101001 10101 10101 10010 1010101 100101 10 101 01 0101001 0000 00
+echo 1  10101001 10101 10101 10010 1010101 100101 10 111100 01010101 10101010 100
+
+goto tricks_Mar-1-2019
+
+exit/b
+
+
+
+::_
+
+:mat5
+
+set fp=* Matrix 5.
+
+rem lu: Mar-1-2019
+
+echo.
+echo %fp%
+
+:tricks_mat5
+
+echo 1
+echo  1
+echo   1
+echo    1
+echo     1
+echo      1
+echo       1
+echo        1
+
+goto tricks_mat5
+
+exit/b
+
+
+
+::_
+
+:mat6
+
+set fp=* %1.
+
+rem lu: Mar-1-2019
+
+echo.
+echo %fp%
+
+:tricks_mat6
+
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo xxx 0001 101101010 10101 4 Help me! 10101 10101 10010 1
+echo z2 0001 1010101010 10101 1 Help me! 10101 10101 10010 13
+echo Remembering that you are going to die is the best way I
+echo know to avoid the trap of thinking you have something to
+echo lost. You are already naked. - Steve Jobs
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo 1  10101001 10101 10101 10010 1010101 100101 10 111100 0
+
+goto tricks_%1
+
+exit/b
+
+
+
+::_
+
+:mat7
+
+set fp=* %1.
+
+rem lu: Mar-1-2019
+
+echo.
+echo %fp%
+
+:tricks_mat7
+
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo z2 0001 1010101010 10101 1 Help me! 10101 10101 10010 13
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo 1  10101001 10101 10101 10010 1010101 100101 10 111100 0
+
+goto tricks_%1
+
+exit/b
+
+
+
+::_
+
+:mat8
+
+set fp=* %1.
+
+rem lu: Mar-1-2019
+
+echo.
+echo %fp%
+
+:tricks_mat8
+
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo.
+type %composable_batch_files%\parrot.txt
+echo.
+echo.
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo 1  10101001 10101 10101 10010 1010101 100101 10 111100 0
+
+goto tricks_%1
 
 exit/b
 
@@ -8688,16 +8986,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Runtime second try.
@@ -8735,6 +9023,34 @@ rem runtime in 100ths is now just end - start
 set /a runtime = %endtimescalar% - %starttimescalar%
 set runtime = %s%.%c%
 echo Script took %runtime% s to complete
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test type.
+
+rem lu: Mar-1-2019
+
+echo.
+echo %fp%
+
+echo.
+type parrot.txt
 
 exit/b
 
