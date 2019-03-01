@@ -5534,6 +5534,12 @@ exit/b
 
 :ruby
 
+:bgsc
+
+:rec1
+
+:rec2
+
 :pass-through
 
 :pass_through
