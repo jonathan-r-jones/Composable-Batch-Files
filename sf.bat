@@ -115,6 +115,8 @@ if not "%cbf_application%" == "" goto main_function
 
 if not "%~2" == "" goto override_default_browser
 
+if not "%cbf_specific_browser%" == "" goto use_specific_browser
+
 set cbf_application=%cbf_default_browser%
 
 goto main_function
@@ -132,6 +134,21 @@ echo %fp%
 
 call an %2
 
+goto main_function
+
+
+
+:_
+
+:use_specific_browser
+
+set fp=* Use specific browser.
+
+echo.
+echo %fp%
+
+set cbf_application=%cbf_specific_browser%
+
 
 
 :_
@@ -146,6 +163,10 @@ echo %fp%
 rem lu: Jan-31-2018
 
 call r
+
+rem Putting this line here makes debugging a little difficult because it is hard to see
+rem that the variable is set at all. Mar-4-2019
+set cbf_specific_browser=
 
 exit/b
 

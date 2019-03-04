@@ -5544,6 +5544,16 @@ exit/b
 
 :chef2
 
+:palm
+
+:palms
+
+:cat
+
+:seca
+
+:hede
+
 :pass-through
 
 :pass_through
@@ -7688,155 +7698,6 @@ exit/b
 
 
 
-:_+ Windows Related Functions
-
-
-
-::_
-
-:copa
-
-set fp=* Control panel.
-
-rem lu: Jan-31-2019
-
-echo.
-echo %fp%
-
-set cbf_application=%systemroot%\system32\control.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:sk
-
-:skyp
-
-:skype
-
-set fp=* Skype for business.
-
-rem lu: Jan-18-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:zoom
-
-set fp=* ZoomIt
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-call n pounders
-
-set cbf_application=%cbf_path%\zoomit.exe
-
-if not exist %cbf_application% set cbf_application=%share-zone%\copied software\zoomit.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:demo
-
-set fp=* Demo on Jan-29-2019.
-
-rem lu: Jan-29-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\demo.pptx
-
-exit/b
-
-
-
-::_
-
-:clip
-
-:snip
-
-:snto
-
-set fp=* Snipping tool.
-
-rem lu: Feb-4-2019
-
-rem clip, screen shot: skw
-
-echo.
-echo %fp%
-
-set cbf_application=%windir%\system32\SnippingTool.exe
-
-exit/b
-
-
-
-::_
-
-:start
-
-set fp=Windows Startup.
-
-rem fcd: May-9-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
-
-exit/b
-
-
-
-::_
-
-:env
-
-:oden
-
-:odenv
-
-set fp=* Open Environment Variable dialogue box.
-
-rem lu: Jan-31-2019
-
-echo.
-echo %fp%
-
-set cbf_application=%systemroot%\system32\SystemPropertiesAdvanced.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
 :_
 
 :ctf
@@ -8223,6 +8084,172 @@ echo.
 echo %fp%
 
 set cbf_filename=%reach out%\%computername%.asc
+
+exit/b
+
+
+
+:_+ Windows Related Functions
+
+
+
+::_
+
+:copa
+
+set fp=* Control panel.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=%systemroot%\system32\control.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:sk
+
+:skyp
+
+:skype
+
+set fp=* Skype for business.
+
+rem lu: Jan-18-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:zoom
+
+set fp=* ZoomIt
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+call n pounders
+
+set cbf_application=%cbf_path%\zoomit.exe
+
+if not exist %cbf_application% set cbf_application=%share-zone%\copied software\zoomit.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:demo
+
+set fp=* Demo on Jan-29-2019.
+
+rem lu: Jan-29-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\demo.pptx
+
+exit/b
+
+
+
+::_
+
+:clip
+
+:snip
+
+:snto
+
+set fp=* Snipping tool.
+
+rem lu: Feb-4-2019
+
+rem clip, screen shot: skw
+
+echo.
+echo %fp%
+
+set cbf_application=%windir%\system32\SnippingTool.exe
+
+exit/b
+
+
+
+::_
+
+:start
+
+set fp=Windows Startup.
+
+rem fcd: May-9-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+
+exit/b
+
+
+
+::_
+
+:env
+
+:oden
+
+:odenv
+
+set fp=* Open Environment Variable dialogue box.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=%systemroot%\system32\SystemPropertiesAdvanced.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:svc
+
+set fp=* Start Windows Services viewer.
+
+rem fcd: May-11-2017
+
+echo.
+echo %fp%
+
+set cbf_application=c:\windows\system32\services.msc
 
 exit/b
 

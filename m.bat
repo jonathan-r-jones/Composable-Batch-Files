@@ -1637,22 +1637,6 @@ exit/b
 
 :_
 
-:svc
-
-set fp=* Start Windows Services viewer.
-
-rem fcd: May-11-2017
-
-echo %fp%
-
-start c:\windows\system32\services.msc /s
-
-exit/b
-
-
-
-:_
-
 :gdt
 
 :generate_date_as_filename
@@ -3258,6 +3242,28 @@ exit/b
 
 ::_
 
+:set_specific_browser
+
+set fp=* Set specific browser.
+
+rem lu: Mar-4-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" set cbf_specific_browser=
+if "%~2" == "" exit/b
+
+call an %2
+
+set cbf_specific_browser=%cbf_application%
+
+exit/b
+
+
+
+::_
+
 :set_default_repository_folder
 
 set fp=* Set default repository folder.
@@ -3616,23 +3622,6 @@ set path=%path%;C:\Users\JJones2\j\Composable-Batch-Files
 call n jre
 
 set path=%path%;%cbf_path%
-
-exit/b
-
-
-
-:_
-
-:svc
-
-set fp=* Windows services.
-
-rem lu: Dec-4-2018
-
-echo.
-echo %fp%
-
-start c:\windows\system32\services.msc /s
 
 exit/b
 
@@ -4448,6 +4437,25 @@ call fn cc
 set second_filename=%cbf_filename%
 
 start mew32 "%first_filename%" "%second_filename%"
+
+exit/b
+
+
+
+:_
+
+:si
+
+:syin
+
+set fp=* System Information.
+
+rem lu: Mar-4-2019
+
+echo.
+echo %fp%
+
+systeminfo
 
 exit/b
 

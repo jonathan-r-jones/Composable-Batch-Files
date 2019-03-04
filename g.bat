@@ -2612,4 +2612,26 @@ exit/b
 
 
 
+:_
+
+:fx
+
+set fp=* Fix last updated file by reverting and pulling it from repository.
+
+rem lu: Mar-4-2019
+
+echo.
+echo %fp%
+
+call td s
+
+call %0 rvsf last_updated_log.txt
+
+call g pl
+rem qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
