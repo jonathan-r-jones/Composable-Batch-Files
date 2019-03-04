@@ -64,25 +64,6 @@ exit/b
 
 :_
 
-:bp
-
-set fp=* Build for production. This optimizes the cart-api application for production.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-echo.
-call gradlew -Pprod clean bootWar
-echo.
-
-exit/b
-
-
-
-:_
-
 :v
 
 :vers
@@ -95,33 +76,6 @@ echo.
 echo %fp%
 
 gradle -version
-
-exit/b
-
-
-
-:_
-
-:b
-
-:bd
-
-:d
-
-set fp=* Build for development.
-
-rem color 60
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-echo.
-gradlew
-
-rem I noticed that ./gradlew doesn't work but .\gradlew does. So if you see ./gradlew, I
-rem think that means you're looking at a non-Window environment.
 
 exit/b
 
@@ -197,24 +151,6 @@ exit/b
 
 :_
 
-:buildw
-
-set fp=* Gradlew build.
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-echo.
-gradlew build
-
-exit/b
-
-
-
-:_
-
 :gr_dev
 
 set fp=* Build CAPI for development.
@@ -247,24 +183,6 @@ echo %fp%
 
 echo.
 gradle help
-
-exit/b
-
-
-
-:_
-
-:test
-
-set fp=* Test.
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-echo.
-gradlew test
 
 exit/b
 
@@ -354,6 +272,88 @@ echo %fp%
 
 echo.
 gradle liquibaseUpdate
+
+exit/b
+
+
+
+:_
+
+:b
+
+:bd
+
+:d
+
+set fp=* Build for development.
+
+rem color 60
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+echo.
+gradlew
+
+rem I noticed that ./gradlew doesn't work but .\gradlew does. So if you see ./gradlew, I
+rem think that means you're looking at a non-Window environment.
+
+exit/b
+
+
+
+:_
+
+:buildw
+
+set fp=* Gradlew build.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+gradlew build
+
+exit/b
+
+
+
+:_
+
+:test
+
+set fp=* Test.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+echo.
+gradlew test
+
+exit/b
+
+
+
+:_
+
+:bp
+
+set fp=* Build for production. This optimizes the cart-api application for production.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+echo.
+call gradlew -Pprod clean bootWar
+echo.
 
 exit/b
 
