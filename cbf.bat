@@ -64,6 +64,7 @@ echo    an  Application nickname dictionary layer of abstraction.
 echo    aw  A CWS CLI demo companion file.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF batch files.
+echo    ch  A wrapper around Chef, a command line utility.
 echo   clc  Simple calculator.
 echo    cn  Used for Git cloning tasks.
 echo   col  Performs shell window colors operations.
@@ -91,6 +92,7 @@ echo    gg  Git Gui helper. Has TD parameter.
 echo    gl  Glossary of terms used in CBF.
 echo    gr  Perform Gradle-related tasks.
 echo     h  Perform Sencha-related tasks.
+echo    kn  A wrapper around Knife, a Chef command line utility.
 echo     l  Google searcher.
 echo    lh  Surf localhost.
 echo     m  Perform miscellaneous tasks.

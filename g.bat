@@ -1081,7 +1081,6 @@ rem lu: Jan-22-2018
 
 echo.
 echo %fp%
-echo.
 
 call :stash
 
