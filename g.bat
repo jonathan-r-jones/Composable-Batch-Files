@@ -2079,11 +2079,13 @@ exit/b
 
 ::_
 
+:cosf
+
 :rv_sf
 
 :rvsf
 
-set fp=* Revert single file.
+set fp=* Revert or check out single file.
 
 rem lu: Jan-23-2018
 
