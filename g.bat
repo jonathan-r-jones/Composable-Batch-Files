@@ -2627,7 +2627,6 @@ call td s
 call %0 rvsf last_updated_log.txt
 
 call g pl
-rem qq-1
 
 exit/b
 
