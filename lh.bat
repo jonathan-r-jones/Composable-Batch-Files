@@ -69,8 +69,6 @@ set fp=* Set URL.
 set cbf_application=
 set cbf_url=
 
-call un %1
-
 set cbf_url=http://localhost:%cbf_port_number%
 
 set cbf_parameter=%cbf_url%

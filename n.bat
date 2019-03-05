@@ -7182,23 +7182,6 @@ exit/b
 
 :_
 
-:swag
-
-set fp=* Swagger on local.
-
-rem lu: Jan-16-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
-
-exit/b
-
-
-
-:_
-
 :c_db
 
 set fp=* Cart local db folder.
@@ -8252,6 +8235,59 @@ echo.
 echo %fp%
 
 set cbf_application=c:\windows\system32\services.msc
+
+exit/b
+
+
+
+:_
+
+:h2
+
+set fp=* H2.
+
+rem lu: Mar-5-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/h2-console
+rem       qq-1
+
+exit/b
+
+
+
+:_
+
+:swag
+
+set fp=* Swagger on local.
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
+
+exit/b
+
+
+
+:_
+
+:ty
+
+set fp=* Type command.
+
+rem lu: Mar-5-2019
+
+echo.
+echo %fp%
+
+set cbf_application=type
+rem       qq-1
 
 exit/b
 

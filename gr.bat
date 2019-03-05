@@ -162,8 +162,6 @@ rem lu: Jan-8-2019
 echo.
 echo %fp%
 
-call td dev
-
 call %0 d
 
 exit/b
