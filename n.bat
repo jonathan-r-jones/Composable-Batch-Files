@@ -5556,6 +5556,8 @@ exit/b
 
 :cartc
 
+:bgsc
+
 :pass-through
 
 :pass_through

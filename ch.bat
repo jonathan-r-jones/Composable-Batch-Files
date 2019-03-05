@@ -71,7 +71,7 @@ exit/b
 
 :_
 
-:gen
+:gen_repo
 
 :gero
 
@@ -84,6 +84,24 @@ echo %fp%
 
 echo.
 chef generate repo %2
+
+exit/b
+
+
+
+:_
+
+:gen_cook
+
+set fp=* Generate cookbook.
+
+rem lu: Mar-4-2019
+
+echo.
+echo %fp%
+
+echo.
+chef generate cookbook %2
 
 exit/b
 
