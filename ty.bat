@@ -64,6 +64,7 @@ echo %filename_stands_for%
 
 call fn %1
 
+echo.
 type "%cbf_filename%"
 
 echo.

@@ -8252,7 +8252,6 @@ echo.
 echo %fp%
 
 set cbf_url=http://localhost:8080/cart-api/h2-console
-rem       qq-1
 
 exit/b
 
@@ -8287,7 +8286,44 @@ echo.
 echo %fp%
 
 set cbf_application=type
-rem       qq-1
+
+exit/b
+
+
+
+:_+ Message Center
+
+
+
+::_
+
+:mtw
+
+set fp=* Message to work.
+
+rem lu: Mar-5-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\mtw.asc
+
+exit/b
+
+
+
+::_
+
+:mtg
+
+set fp=* Message to GFE.
+
+rem lu: Mar-5-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\mtg.asc
 
 exit/b
 
