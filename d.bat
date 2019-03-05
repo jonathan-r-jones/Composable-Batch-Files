@@ -14,7 +14,7 @@ set filep=* Directory listing: an easier to type version.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto alphabetical
+if "%~1" == "" goto d
 
 if "%~1" == "/?" goto help
 
@@ -65,6 +65,8 @@ exit/b
 
 
 :_
+
+:a
 
 :alphabetical
 

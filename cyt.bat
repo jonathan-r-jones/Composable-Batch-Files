@@ -85,6 +85,8 @@ call n %2
 echo.
 xcopy "%~1" "%cbf_path%"
 
+td %2
+
 rem (!rfsp) (mov-2)
 
 exit/b

@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* .
+set filename_stands_for=* A wrapper around the netstat command.
 
 
 
@@ -14,13 +14,15 @@ set filename_stands_for=* .
 
 set fp=* Route help callers.
 
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
 if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-goto %1
+goto main_function
 
 
 
@@ -55,15 +57,13 @@ exit/b
 
 :_
 
-:
-
-set fp=* .
+:main_function
 
 echo.
-echo %fp%
+echo %filename_stands_for%
 
-
-rem qq-1
+rem netstat -ano | findstr :<yourPortNumber>
+netstat -ano | findstr :%1
 
 exit/b
 

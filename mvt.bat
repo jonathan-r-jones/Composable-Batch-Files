@@ -74,6 +74,8 @@ call n %2
 echo.
 move "%~1" "%cbf_path%"
 
+td %2
+
 exit/b
 
 

@@ -108,6 +108,7 @@ echo    nd  Show nickname definition.
 echo  n_ey  Empty Nicknames dictionary. Useful for restarting.
 echo    nm  Perform NPM-related tasks.
 echo    no  Run Notepad.
+echo   net  Netstat-related commands.
 echo   nox  Use Notepad to edit a batch file in the CBF folder.
 echo    np  Run Notepad++.
 echo    nx  Use Notepad++ to edit a batch file in the CBF folder.
@@ -115,6 +116,7 @@ echo    of  Open Folder. Has TD parameter.
 echo     p  Add, commit and push Git changes. Has TD parameter.
 echo    pl  Performs Git pull. Has TD parameter.
 echo    pg  Ping command hooked up to the nicknames dictionary.
+echo    pg  PostgreSQL-related commands.
 echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
 echo   rzr  Multi-Edit abstraction layer.

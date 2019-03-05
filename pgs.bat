@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* A wrapper around chef, a command line utility.
+set filename_stands_for=* PostgreSQL-related commands.
 
 
 
@@ -14,7 +14,7 @@ set filename_stands_for=* A wrapper around chef, a command line utility.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto main_function
+if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
@@ -57,33 +57,15 @@ exit/b
 
 :_
 
-:main_function
+:i
 
-echo.
-echo %filename_stands_for%
-
-echo.
-chef
-
-exit/b
-
-
-
-:_
-
-:gen_repo
-
-:gero
-
-set fp=* Generate repo.
-
-rem lu: Mar-4-2019
+set fp=* Initialize a new database.
 
 echo.
 echo %fp%
 
-echo.
-chef generate repo %2
+initdb -D c:\aa\pgdata
+rem qq-1
 
 exit/b
 
@@ -91,29 +73,9 @@ exit/b
 
 :_
 
-:gen_cook
+:s
 
-set fp=* Generate cookbook.
-
-rem lu: Mar-4-2019
-
-echo.
-echo %fp%
-
-echo.
-chef generate cookbook %2
-
-exit/b
-
-
-
-:_
-
-:rspec
-
-set fp=* ChefSpec/Rspec tests resources and recipes as part of a simulated chef-client run.
-
-rem Results are compared to defined expectations.
+set fp=* Start the database server.
 
 rem lu: Mar-5-2019
 
@@ -121,7 +83,8 @@ echo.
 echo %fp%
 
 echo.
-chef exec rspec
+pg_ctl -D ^"c^:^\aa^\pgdata^" -l logfile start
+rem qq-1
 
 exit/b
 

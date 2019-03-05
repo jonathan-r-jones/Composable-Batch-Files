@@ -164,3 +164,21 @@ exit/b
 
 
 :_
+
+:id
+
+set fp=* Kill using ID.
+
+rem lu: Mar-5-2019
+
+echo.
+echo %fp%
+
+echo.
+taskkill /PID %2 /F
+
+exit/b
+
+
+
+:_ (!rfsp) (mov-6)
