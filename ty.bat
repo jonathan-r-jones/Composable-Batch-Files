@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Template batch file.
+set filename_stands_for=* Use type command to view nickname-specified file
 
 
 
@@ -64,10 +64,9 @@ echo %filename_stands_for%
 
 call fn %1
 
-type %cbf_filename%
+type "%cbf_filename%"
 
 echo.
-rem qq-1
 
 exit/b
 

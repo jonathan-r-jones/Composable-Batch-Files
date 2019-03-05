@@ -127,6 +127,7 @@ echo    sf  Surf to websites.
 echo    sm  Run Sublime.
 echo   sql  SQL/Database, including LDAP, related tasks.
 echo     t  Testing, experimenting and developing new batch file functions.
+echo    ty  Use type command to view nickname-specified file.
 echo    tf  Perform Terraform-related tasks.
 echo    tk  Wrapper around the taskkill command.
 echo    tl  Wrapper around the tasklist command.
