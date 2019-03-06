@@ -9048,6 +9048,24 @@ exit/b
 
 :_
 
+:
+
+set fp=* Test literal percent sign.
+
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+echo.
+echo %%1
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -9060,7 +9078,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Test literal percent sign.
+set fp=* Not equal to nothing environment variable.
 
 rem lu: Mar-6-2019
 
@@ -9068,8 +9086,10 @@ echo.
 echo %fp%
 
 echo.
-echo %%1
-rem qq-1
+
+if not "%machinename%"=="gfe" (
+   echo Not nothing.
+)
 
 exit/b
 

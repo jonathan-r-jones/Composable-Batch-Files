@@ -3697,33 +3697,6 @@ exit/b 0
 
 
 
-:_+ Batch Pull and Push
-
-
-
-::_
-
-:pl
-
-set fp=* Pull all desired repos.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-call pl cbf
-
-call pl s
-
-if "%machinename%"=="gfe" call cyft mecfg_s mecfg
-
-if "%machinename%"=="gfe" cd\
-
-exit/b
-
-
-
 :_+ DOS Colors
 
 

@@ -21,9 +21,9 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-if "%~1" == "" goto pull_prewired_folders
+if "%~1" == "" goto main_function
 
-if "%~1" == "-c" goto main_function
+if "%~1" == "-c" goto pull_current_folder
 
 call td %~1
 
@@ -62,16 +62,11 @@ exit/b
 
 :_
 
-:pull_prewired_folders
+:pull_current_folder
 
-set fp=* Pull prewired folders.
+call g pull
 
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-call m pl
+rem (!rfsp) (mov-2)
 
 exit/b
 
@@ -81,9 +76,31 @@ exit/b
 
 :main_function
 
-call g pull
+set fp=* Pull prewired folders.
 
-rem (!rfsp) (mov-2)
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+call td cbf
+
+call g pl
+
+call td s
+
+call g pl
+rem qq-1
+
+if "%machinename%"=="gfe" call cyft mecfg_s mecfg
+
+if "%machinename%"=="gfe" cd\
+
+if not "%machinename%"=="gfe" (
+   call 8
+   call cyft mecfg mecfg_s
+   cd\
+)
 
 exit/b
 
