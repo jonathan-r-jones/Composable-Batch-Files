@@ -1,0 +1,48 @@
+2019-03-05 18:40:46.509 EST [14224] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-03-05 18:40:46.509 EST [14224] LOG:  listening on IPv6 address "::1", port 5432
+2019-03-05 18:40:46.801 EST [14520] LOG:  database system was interrupted; last known up at 2019-03-05 18:28:59 EST
+2019-03-05 18:40:48.811 EST [14520] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-03-05 18:40:48.824 EST [14520] LOG:  redo starts at 0/16484E8
+2019-03-05 18:40:48.824 EST [14520] LOG:  invalid record length at 0/16485C8: wanted 24, got 0
+2019-03-05 18:40:48.824 EST [14520] LOG:  redo done at 0/1648590
+2019-03-05 18:40:50.122 EST [14224] LOG:  database system is ready to accept connections
+2019-03-05 18:47:31.959 EST [10304] ERROR:  relation "public.databasechangeloglock" does not exist at character 22
+2019-03-05 18:47:31.959 EST [10304] STATEMENT:  select count(*) from public.databasechangeloglock
+2019-03-05 18:59:21.686 EST [14224] LOG:  server process (PID 3868) was terminated by exception 0xC000013A
+2019-03-05 18:59:21.686 EST [14224] DETAIL:  Failed process was running: SET application_name = 'PostgreSQL JDBC Driver'
+2019-03-05 18:59:21.686 EST [14224] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2019-03-05 18:59:21.687 EST [14224] LOG:  terminating any other active server processes
+2019-03-05 18:59:21.690 EST [2812] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.690 EST [2812] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.690 EST [2812] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.691 EST [8200] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.691 EST [8200] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.691 EST [8200] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.692 EST [13068] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.692 EST [13068] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.692 EST [13068] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.693 EST [14828] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.693 EST [14828] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.693 EST [14828] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.694 EST [14980] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.694 EST [14980] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.694 EST [14980] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.695 EST [11572] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.695 EST [11572] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.695 EST [11572] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.696 EST [14368] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.696 EST [14368] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.696 EST [14368] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.698 EST [10304] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.698 EST [10304] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.698 EST [10304] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.703 EST [14468] WARNING:  terminating connection because of crash of another server process
+2019-03-05 18:59:21.703 EST [14468] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 18:59:21.703 EST [14468] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 18:59:21.769 EST [14224] LOG:  all server processes terminated; reinitializing
+2019-03-05 18:59:21.925 EST [15892] LOG:  database system was interrupted; last known up at 2019-03-05 18:51:05 EST
+2019-03-05 18:59:23.183 EST [15892] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-03-05 18:59:23.196 EST [15892] LOG:  redo starts at 0/16D8AF0
+2019-03-05 18:59:23.196 EST [15892] LOG:  invalid record length at 0/16D8BD0: wanted 24, got 0
+2019-03-05 18:59:23.196 EST [15892] LOG:  redo done at 0/16D8B98
+^C

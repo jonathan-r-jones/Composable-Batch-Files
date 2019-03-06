@@ -5558,6 +5558,8 @@ exit/b
 
 :bgsc
 
+:clb
+
 :pass-through
 
 :pass_through
@@ -8244,40 +8246,6 @@ exit/b
 
 :_
 
-:h2
-
-set fp=* H2.
-
-rem lu: Mar-5-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/h2-console
-
-exit/b
-
-
-
-:_
-
-:swag
-
-set fp=* Swagger on local.
-
-rem lu: Jan-16-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
-
-exit/b
-
-
-
-:_
-
 :ty
 
 set fp=* Type command.
@@ -8326,6 +8294,41 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\mtg.asc
+
+exit/b
+
+
+
+:_
+
+:h2
+
+set fp=* H2.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/h2-console
+
+exit/b
+
+
+
+:_
+
+:swag
+
+set fp=* Swagger on local.
+rem qq-1
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
 
 exit/b
 

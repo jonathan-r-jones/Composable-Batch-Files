@@ -14,7 +14,7 @@ set filename_stands_for=* Gradle-related tasks.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto gr_dev
+if "%~1" == "" goto w
 
 if "%~1" == "/?" goto help
 
@@ -277,13 +277,9 @@ exit/b
 
 :_
 
-:b
+:w
 
-:bd
-
-:d
-
-set fp=* Build for development.
+set fp=* Run gradlew.
 
 rem color 60
 

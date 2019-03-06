@@ -14,7 +14,7 @@ set filename_stands_for=* A wrapper around the netstat command.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto find_5432
 
 if "%~1" == "/?" goto help
 
@@ -22,7 +22,7 @@ if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-goto main_function
+goto %1
 
 
 
@@ -57,12 +57,31 @@ exit/b
 
 :_
 
-:main_function
+:find_5432
+
+set fp=* Find 5432.
 
 echo.
 echo %filename_stands_for%
 
 rem netstat -ano | findstr :<yourPortNumber>
+
+echo.
+netstat -ano | findstr :5432
+
+exit/b
+
+
+
+:_
+
+:s
+
+set fp=* Search for string.
+
+echo.
+echo %fp%
+
 netstat -ano | findstr :%1
 
 exit/b
