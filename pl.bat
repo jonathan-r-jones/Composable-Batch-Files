@@ -6,10 +6,7 @@
 
 :_
 
-set filep=* Pull with path walker.
-
-rem echo.
-rem echo %filep%
+set filename_stands_for=* Pull with path walker.
 
 
 
@@ -81,6 +78,12 @@ rem lu: Mar-6-2019
 echo.
 echo %fp%
 
+if not "%machinename%"=="gfe" (
+   cd\
+   call 8
+   call cyft mecfg mecfg_s
+)
+
 call td cbf
 
 call g pl
@@ -88,17 +91,10 @@ call g pl
 call td s
 
 call g pl
-rem qq-1
 
 if "%machinename%"=="gfe" call cyft mecfg_s mecfg
 
 if "%machinename%"=="gfe" cd\
-
-if not "%machinename%"=="gfe" (
-   call 8
-   call cyft mecfg mecfg_s
-   cd\
-)
 
 exit/b
 
