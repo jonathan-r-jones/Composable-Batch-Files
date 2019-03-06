@@ -8359,4 +8359,23 @@ exit/b
 
 
 
+:_
+
+:cart_recipes
+
+set fp=* Cart recipes.
+
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+call n cartc
+
+set cbf_path=%cbf_path%\recipes
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
