@@ -116,7 +116,7 @@ echo    of  Open Folder. Has TD parameter.
 echo     p  Add, commit and push Git changes. Has TD parameter.
 echo    pl  Performs Git pull. Has TD parameter.
 echo    pg  Ping command hooked up to the nicknames dictionary.
-echo    pg  PostgreSQL-related commands.
+echo   pgs  PostgreSQL-related commands.
 echo    ps  Enter PowerShell.
 echo     r  Run application using CBF variables.
 echo   rzr  Multi-Edit abstraction layer.
