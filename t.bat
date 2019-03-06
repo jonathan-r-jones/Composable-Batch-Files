@@ -9030,6 +9030,24 @@ exit/b
 
 :_
 
+:
+
+set fp=* Test type.
+
+rem lu: Mar-1-2019
+
+echo.
+echo %fp%
+
+echo.
+type parrot.txt
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -9042,15 +9060,16 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Test type.
+set fp=* Test literal percent sign.
 
-rem lu: Mar-1-2019
+rem lu: Mar-6-2019
 
 echo.
 echo %fp%
 
 echo.
-type parrot.txt
+echo %%1
+rem qq-1
 
 exit/b
 

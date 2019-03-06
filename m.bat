@@ -4474,8 +4474,7 @@ echo %fp%
 
 echo.
 assoc .asc=Multi-Edit
-rem You must type the following line directly on the command line.
-rem ftype Multi-Edit=mew32.exe %1 %*
+ftype Multi-Edit=mew32.exe %%1 %%*
 
 exit/b
 
