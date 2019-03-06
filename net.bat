@@ -67,7 +67,23 @@ echo %filename_stands_for%
 rem netstat -ano | findstr :<yourPortNumber>
 
 echo.
-netstat -ano | findstr :5432
+netstat -a -n -o | findstr :5432
+
+exit/b
+
+
+
+:_
+
+:pl
+
+set fp=* Plain.
+
+echo.
+echo %fp%
+
+echo.
+netstat -a -n -o
 
 exit/b
 

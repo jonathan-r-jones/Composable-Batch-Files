@@ -8334,4 +8334,23 @@ exit/b
 
 
 
+:_
+
+:ni
+
+set fp=* Ni.
+
+rem lu: Mar-5-2019
+
+echo.
+echo %fp%
+
+call n s
+
+set cbf_filename=%cbf_path%\ni.bat
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

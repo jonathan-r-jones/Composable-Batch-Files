@@ -75,6 +75,8 @@ exit/b
 
 :s
 
+:start
+
 set fp=* Start the database server.
 
 rem lu: Mar-5-2019
@@ -84,7 +86,24 @@ echo %fp%
 
 echo.
 pg_ctl -D ^"c^:^\aa^\pgdata^" -l logfile start
-rem qq-1
+
+exit/b
+
+
+
+:_
+
+:stop
+
+set fp=* Stop the database server.
+
+rem lu: Mar-5-2019
+
+echo.
+echo %fp%
+
+echo.
+pg_ctl -D ^"c^:^\aa^\pgdata^" -l logfile stop
 
 exit/b
 

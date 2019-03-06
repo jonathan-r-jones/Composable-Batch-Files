@@ -45,4 +45,48 @@
 2019-03-05 18:59:23.196 EST [15892] LOG:  redo starts at 0/16D8AF0
 2019-03-05 18:59:23.196 EST [15892] LOG:  invalid record length at 0/16D8BD0: wanted 24, got 0
 2019-03-05 18:59:23.196 EST [15892] LOG:  redo done at 0/16D8B98
+^C2019-03-05 19:35:14.773 EST [3440] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-03-05 19:35:14.774 EST [3440] LOG:  listening on IPv6 address "::1", port 5432
+2019-03-05 19:35:15.062 EST [10828] LOG:  database system was interrupted; last known up at 2019-03-05 18:59:23 EST
+2019-03-05 19:35:16.696 EST [10828] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-03-05 19:35:16.703 EST [10828] LOG:  invalid record length at 0/16D8C40: wanted 24, got 0
+2019-03-05 19:35:16.703 EST [10828] LOG:  redo is not required
+2019-03-05 19:35:18.131 EST [3440] LOG:  database system is ready to accept connections
+2019-03-05 19:41:28.786 EST [3440] LOG:  server process (PID 13848) was terminated by exception 0xC000013A
+2019-03-05 19:41:28.786 EST [3440] DETAIL:  Failed process was running: SET application_name = 'PostgreSQL JDBC Driver'
+2019-03-05 19:41:28.786 EST [3440] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2019-03-05 19:41:28.786 EST [3440] LOG:  terminating any other active server processes
+2019-03-05 19:41:28.790 EST [2260] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.790 EST [2260] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.790 EST [2260] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.791 EST [8548] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.791 EST [8548] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.791 EST [8548] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.792 EST [13928] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.792 EST [13928] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.792 EST [13928] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.793 EST [14396] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.793 EST [14396] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.793 EST [14396] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.794 EST [14444] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.794 EST [14444] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.794 EST [14444] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.794 EST [15248] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.794 EST [15248] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.794 EST [15248] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.796 EST [13796] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.796 EST [13796] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.796 EST [13796] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.796 EST [11924] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.796 EST [11924] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.796 EST [11924] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.802 EST [10684] WARNING:  terminating connection because of crash of another server process
+2019-03-05 19:41:28.802 EST [10684] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-03-05 19:41:28.802 EST [10684] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-03-05 19:41:28.831 EST [3440] LOG:  all server processes terminated; reinitializing
+2019-03-05 19:41:28.986 EST [16076] LOG:  database system was interrupted; last known up at 2019-03-05 19:40:17 EST
+2019-03-05 19:41:29.970 EST [16076] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-03-05 19:41:29.981 EST [16076] LOG:  redo starts at 0/16D9C30
+2019-03-05 19:41:29.981 EST [16076] LOG:  invalid record length at 0/16D9D10: wanted 24, got 0
+2019-03-05 19:41:29.981 EST [16076] LOG:  redo done at 0/16D9CD8
 ^C

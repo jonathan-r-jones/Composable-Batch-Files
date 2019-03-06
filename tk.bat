@@ -175,7 +175,7 @@ echo.
 echo %fp%
 
 echo.
-taskkill /PID %2 /F
+taskkill /pid %2 /f
 
 exit/b
 
