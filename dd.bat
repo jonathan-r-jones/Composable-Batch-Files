@@ -59,8 +59,10 @@ exit/b
 
 :main_function
 
+echo.
 echo %filename_stands_for%
 
+echo.
 dir *.%1 %2
 
 exit/b

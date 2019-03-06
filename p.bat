@@ -83,6 +83,8 @@ echo %fp%
 
 call m lu %0
 
+call de multi-edit_conflicted_files
+
 if not "%machinename%"=="gfe" (
    call 8
    call cyft mecfg mecfg_s

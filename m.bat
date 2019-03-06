@@ -3764,33 +3764,6 @@ exit/b
 
 :_
 
-:de_mecfg
-
-set fp=* Delete conflicted copies in Multi-Edit folders.
-
-rem lu: Jan-2-2019
-
-echo.
-echo %fp%
-
-call td mecfg
-
-call de mecfg
-
-call td mecfg_s
-
-call de mecfg
-
-call td mecfg_dr
-
-call de mecfg
-
-exit/b
-
-
-
-:_
-
 :jf
 
 :jfs
@@ -4085,62 +4058,6 @@ echo.
 echo %fp%
 
 set cbf_parameter=%cbf_filename%
-
-exit/b
-
-
-
-:_
-
-:concop
-
-set fp=* Conflicted Copy Report
-
-rem lu: Feb-15-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%temp%\conflicted copy report.txt
-
-echo. > "%cbf_filename%"
-echo %fp% >> "%cbf_filename%"
-
-echo -------------------------------------------------------- >> "%cbf_filename%"
-
-rem 1.
-call td s
-echo. >> "%cbf_filename%"
-echo ******* Current folder: %cd% >> "%cbf_filename%"
-echo. >> "%cbf_filename%"
-dir "*conflict*.*" /s >> "%cbf_filename%"
-
-rem 2.
-call td mecfg
-echo. >> "%cbf_filename%"
-echo ******* Current folder: %cd% >> "%cbf_filename%"
-echo. >> "%cbf_filename%"
-dir "*conflict*.*" /s >> "%cbf_filename%"
-
-rem 3.
-call td mecfg_dr
-echo. >> "%cbf_filename%"
-echo ******* Current folder: %cd% >> "%cbf_filename%"
-echo. >> "%cbf_filename%"
-dir "*conflict*.*" /s >> "%cbf_filename%"
-
-rem 4.
-call td mecfg_s
-echo. >> "%cbf_filename%"
-echo ******* Current folder: %cd% >> "%cbf_filename%"
-echo. >> "%cbf_filename%"
-dir "*conflict*.*" /s >> "%cbf_filename%"
-
-call an no
-
-call m assoc_pf
-
-call r
 
 exit/b
 

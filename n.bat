@@ -6468,6 +6468,8 @@ exit/b
 
 :_
 
+:hs
+
 :hungry_shark
 
 set fp=* Hungry shark.
@@ -7274,6 +7276,7 @@ rem lu: Dec-7-2018
 
 echo.
 echo %fp%
+rem qq-1
 
 set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
 
