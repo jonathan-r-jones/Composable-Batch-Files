@@ -4028,6 +4028,10 @@ exit/b
 
 :h
 
+:hist
+
+:history
+
 set fp=* Doskey history.
 
 rem lu: Feb-12-2019
@@ -4429,25 +4433,6 @@ echo.
 echo %fp%
 
 systeminfo
-
-exit/b
-
-
-
-:_
-
-:asme
-
-set fp=* Associate asc files with Multi-Edit.
-
-rem lu: Mar-5-2019
-
-echo.
-echo %fp%
-
-echo.
-assoc .asc=Multi-Edit
-ftype Multi-Edit=mew32.exe %%1 %%*
 
 exit/b
 

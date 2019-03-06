@@ -175,25 +175,6 @@ exit/b
 
 :_
 
-:todf
-
-set fp=* Files changed today.
-
-rem findstr /bvc:" " removes header and summary
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-
-forfiles /d +0 /c "cmd /c if @isdir==FALSE echo @file @ftime @fsize"
-
-exit/b
-
-
-
-:_
-
 :hid
 
 set fp=* Look for the hidden files and folders.
@@ -279,6 +260,39 @@ echo %fp%
 
 echo.
 del "*conflicted copy*.*"
+
+exit/b
+
+
+
+:_
+
+:toda
+
+:today
+
+set fp=* Files changed today.
+
+rem findstr /bvc:" " removes header and summary
+
+rem The problem is that this doesn't search subfolders.
+rem qq-1
+
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+forfiles /s /d +0 /c "cmd /c if @isdir==FALSE echo @path @ftime @fsize">%temp%\d_search_results_fs.txt
+
+if %Errorlevel% == 0 echo.
+if %Errorlevel% == 0 echo * Files found.
+
+if %errorlevel% == 0 (
+  start "Test Title" "%cbf_default_text_editor%" "%temp%\d_search_results_fs.txt"
+) else (
+  call m clear_errorlevel_silently
+)
 
 exit/b
 

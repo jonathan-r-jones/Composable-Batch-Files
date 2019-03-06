@@ -72,8 +72,6 @@ dir /a /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 
 if %Errorlevel% == 0 echo * Files found.
 
-rem (!rfsp) (mov-3)
-
 rem Folder only.
 rem dir /a:d /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 
@@ -81,8 +79,6 @@ rem 3 Files only.
 rem dir /a-h /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 rem dir /a-d /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 rem dir /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
-
-rem (!rfsp) (mov-2)
 
 if %errorlevel% == 0 (
   start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_fs.txt"
@@ -94,4 +90,4 @@ exit/b
 
 
 
-:_ 
+:_ (!rfsp) (mov-2)

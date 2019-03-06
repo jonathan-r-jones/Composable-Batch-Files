@@ -5560,6 +5560,12 @@ exit/b
 
 :clb
 
+:sf1
+
+:sf2
+
+:sf3
+
 :pass-through
 
 :pass_through
@@ -8345,7 +8351,7 @@ rem lu: Mar-5-2019
 echo.
 echo %fp%
 
-call n s
+call td s
 
 set cbf_filename=%cbf_path%\ni.bat
 

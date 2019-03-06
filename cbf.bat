@@ -61,6 +61,7 @@ echo  File  Description
 echo  ----  ------------------------------------------------------------------
 echo     a  A wrapper around AWS CLI.
 echo    an  Application nickname dictionary layer of abstraction.
+echo    as  Windows file association commands.
 echo    aw  A CWS CLI demo companion file.
 echo     c  Clear screen and reset color.
 echo   cbf  Show this list of CBF batch files.

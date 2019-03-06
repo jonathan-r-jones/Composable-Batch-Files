@@ -353,4 +353,22 @@ exit/b
 
 
 
+:_
+
+:fqt
+
+set fp=* FQT bootrun.
+
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle -Pfqt bootrun
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

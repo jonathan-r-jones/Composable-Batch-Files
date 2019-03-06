@@ -66,8 +66,6 @@ exit/b
 
 call g pull
 
-rem (!rfsp) (mov-2)
-
 exit/b
 
 
@@ -106,4 +104,4 @@ exit/b
 
 
 
-:_
+:_ (!rfsp) (mov-8)

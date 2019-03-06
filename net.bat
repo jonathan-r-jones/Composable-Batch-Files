@@ -104,4 +104,40 @@ exit/b
 
 
 
+:_
+
+:merc1
+
+set fp=* Netstat used by Mercury version 1.
+
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+echo.
+netstat -a -n>%temp%\j1.txt
+
+exit/b
+
+
+
+:_
+
+:merc2
+
+set fp=* Netstat used by Mercury version 2.
+
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+echo.
+netstat -an>%temp%\j2.txt
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

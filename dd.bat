@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Create dir *.war /s batch file.
+set filename_stands_for=* Dir file for *.extensionname uses.
 
 
 
@@ -43,7 +43,7 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Filename extension.
 
-set parameter_2=Parameter 2 (Optional): 
+set parameter_2=Parameter 2 (Optional): '/s' e.g. means to search subfolders.
 
 echo.
 echo %parameter_1%
