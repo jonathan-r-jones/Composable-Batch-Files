@@ -8514,8 +8514,6 @@ exit/b
 
 :mat1
 
-:matr
-
 set fp=* Matrix
 
 rem lu: Feb-11-2019
@@ -8885,6 +8883,8 @@ exit/b
 
 ::_
 
+:matr
+
 :matrix
 
 :matw
@@ -8898,6 +8898,26 @@ echo %fp%
 
 :tricks_matw
 
+echo 1  10101001 10101 10101 10010 1010101 100101 10 111100 0
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
+echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
 echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
 echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
 echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
@@ -8957,7 +8977,7 @@ echo %random% %random% %random% %random% %random% %random% %random% %random% %ra
 echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random%
 echo 1  10101001 10101 10101 10010 1010101 100101 10 111100 0
 
-goto tricks_%1
+goto tricks_matw
 
 exit/b
 

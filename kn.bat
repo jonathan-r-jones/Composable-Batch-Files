@@ -67,4 +67,29 @@ exit/b
 
 
 
+:_
+
+:
+
+set fp=* Pargat's converge line.
+
+rem lu: Mar-7-2019
+
+echo.
+echo %fp%
+
+echo.
+knife bootstrap --yes 10.0.2.20 -N chefclientone.natnetwork.home -x parxxx -P BaadaBxxx --json-attribut-file ./env.json --sudo -r 'recipe[Tomcat-ActiveMQ]'
+
+rem 10.0.2.20: IP Address of the client
+rem chefclientone.natnetwork.home: domain name from which it is identified
+rem parxxx: username
+rem BaadaBxxx: password
+rem 'recipe[Tomcat-ActiveMQ]': a cookbook or a role
+rem qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

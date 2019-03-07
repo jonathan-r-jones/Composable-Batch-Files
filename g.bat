@@ -1910,6 +1910,8 @@ exit/b
 
 set fp=* Overview of the process that sets a certificate and pulls the Cart project.
 
+rem How to set up a certificate.
+
 rem lu: Dec-27-2018
 
 echo.
