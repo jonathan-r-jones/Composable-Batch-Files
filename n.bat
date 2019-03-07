@@ -7276,7 +7276,6 @@ rem lu: Dec-7-2018
 
 echo.
 echo %fp%
-rem qq-1
 
 set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
 
@@ -8330,7 +8329,6 @@ exit/b
 :swag
 
 set fp=* Swagger on local.
-rem qq-1
 
 rem lu: Jan-16-2019
 
@@ -8376,6 +8374,23 @@ echo %fp%
 call n cartc
 
 set cbf_path=%cbf_path%\recipes
+
+exit/b
+
+
+
+:_
+
+:devp
+
+set fp=* DevPuzzler.
+
+rem lu: Mar-7-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://github.com/DevTechnology/DevPuzzlers
 
 exit/b
 

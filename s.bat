@@ -40,6 +40,7 @@ exit/b
 
 :help
 
+echo.
 echo Filename stands for: %filename_stands_for%
 
 set filep=File purpose: Goes to a path, then call the status function.
