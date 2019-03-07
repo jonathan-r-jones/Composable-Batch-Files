@@ -60,8 +60,8 @@ echo.
 echo %fp%
 
 echo.
-assoc .asc=Multi-Edit
-ftype Multi-Edit=mew32.exe %%1 %%*
+assoc .asc=asc
+ftype asc=mew32.exe %%1 %%*
 
 exit/b
 
@@ -80,7 +80,7 @@ echo %fp%
 
 echo.
 assoc .yml=yml
-ftype yml=Notepad++.exe %%1 %%*
+ftype yml=notepad++.exe %%1 %%*
 
 exit/b
 
@@ -97,7 +97,7 @@ echo %fp%
 
 echo.
 assoc .gradle=gradle
-ftype gradle=Notepad++.exe %%1 %%*
+ftype gradle=notepad++.exe %%1 %%*
 
 exit/b
 
@@ -114,7 +114,7 @@ echo %fp%
 
 echo.
 assoc .xml=xmlfile
-ftype xmlfile=Notepad++.exe %%1 %%*
+ftype xmlfile=notepad++.exe %%1 %%*
 
 exit/b
 
