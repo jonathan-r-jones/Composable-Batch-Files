@@ -387,8 +387,6 @@ exit/b
 
 ::_
 
-:p
-
 :push
 
 :rf_push
@@ -1744,11 +1742,9 @@ exit/b
 
 ::_
 
-:j
-
 :acp
 
-:update
+:p
 
 set fp=* Add, commit and push with timestamp commit description.
 
@@ -2080,7 +2076,24 @@ exit/b
 
 ::_
 
-:cosf
+:co_sf
+
+set fp=* Check out single file based on file's alias.
+
+rem lu: Mar-7-2019
+
+echo.
+echo %fp%
+  
+call n %2
+
+git checkout %cbf_filename%
+
+exit/b
+
+
+
+::_
 
 :rv_sf
 

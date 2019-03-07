@@ -81,6 +81,8 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
+cll g co_sf lu
+
 call m lu %0
 
 call de multi-edit_conflicted_files
