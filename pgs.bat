@@ -75,6 +75,8 @@ exit/b
 
 :s
 
+:star
+
 :start
 
 set fp=* Start the database server.

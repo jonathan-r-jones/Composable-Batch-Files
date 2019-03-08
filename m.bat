@@ -3737,7 +3737,7 @@ exit/b
 
 :_
 
-:cart
+:cart_count
 
 set fp=* Count lines of code in Cart.
 
@@ -3757,39 +3757,6 @@ cd /d %temp%\cart_cs
 for /r %%j in (*.cs) do type "%%j">>"%temp%\j1.txt"
 
 call me j1
-
-exit/b
-
-
-
-:_
-
-:jf
-
-:jfs
-
-set fp=* Open Jenkinsfiles.
-
-rem lu: Jan-10-2019
-
-echo.
-echo %fp%
-
-rem jj_devops
-call me jj
-
-rem dev
-rem call me jf
-
-call me iac
-
-call me jf_acr
-
-call me jf_bgs
-
-call me jf_cap
-
-call me jf_odls
 
 exit/b
 
@@ -4350,6 +4317,39 @@ echo.
 echo %fp%
 
 systeminfo
+
+exit/b
+
+
+
+:_
+
+:jens
+
+:jfs
+
+set fp=* Open Jenkinsfiles.
+
+rem lu: Jan-10-2019
+
+echo.
+echo %fp%
+
+rem jj_devops
+call me jj
+
+rem dev
+rem call me jf
+
+call me iac
+
+call me jf_acr
+
+call me jf_bgs
+
+call me jf_cap
+
+call me jf_odls
 
 exit/b
 

@@ -1258,36 +1258,6 @@ exit/b
 
 ::_
 
-:si
-
-:st
-
-:star
-
-:start
-
-:start_instance
-
-:start_instances
-
-set fp=* Start my instance from the command line.
-
-rem lu: Dec-20-2018
-
-echo.
-echo %fp%
-
-call n %2
-
-echo.
-call aws ec2 start-instances --instance-ids %cbf_instance_id%
-                                       
-exit/b
-
-
-
-::_
-
 :iid
 
 :inid
@@ -1407,49 +1377,6 @@ if not "%user_option%"=="y" exit/b
 call %0 set_volume_id %2
 
 call %0 detach_volume %2
-
-exit/b
-
-
-
-::_
-
-:stop
-
-set fp=* Stop an instance.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-call %0 stop_instances %2
-
-exit/b
-
-
-
-::_
-
-:stop_instances
-
-set fp=* Stop a running instance from the command line.
-
-rem lu: Dec-12-2018
-
-echo.
-echo %fp%
-
-rem if "%~2" == "" (
-  rem echo.
-  rem echo You must specify and instance nickname.
-  rem exit/b
-rem )
-
-call n %2
-
-echo.
-aws ec2 stop-instances --instance-ids  %cbf_instance_id% --color off
 
 exit/b
 
@@ -1669,45 +1596,17 @@ exit/b
 
 ::_
 
-:d_i
+:d_ins
 
-:d_in
+set fp=* Describes instances.
 
-:d_inst
-
-set fp=* Describe instance for a particular instance.
-
-rem lu: Feb-22-2019
+rem lu: Dec-19-2018
 
 echo.
 echo %fp%
 
-call n %2
-
 echo.
-call aws ec2 describe-instances --instance-ids %cbf_instance_id%
-                                       
-exit/b
-
-
-
-::_
-
-:d_stat
-
-:stat
-
-set fp=* Describe status for a particular instance.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-call n %2
-
-echo.
-aws ec2 describe-instance-status --instance-ids %cbf_instance_id% --color off
+aws ec2 describe-instances --color off
 
 exit/b
 
@@ -2442,24 +2341,6 @@ echo %fp%
 echo.
 
 aws ec2 describe-security-group-references --group-id sg-0e67f09ea592e68ff
-
-exit/b
-
-
-
-::_
-
-:d_ins
-
-set fp=* Describes instances.
-
-rem lu: Dec-19-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-instances --color off
 
 exit/b
 
@@ -4206,6 +4087,125 @@ echo.
 echo %fp%
 
 aws ec2 create-tags --resources %cbf_resource_id% --tags Key=%2,Value=%3
+
+exit/b
+
+
+
+:_+ Common Instance Operations
+
+
+
+::_
+
+:si
+
+:star
+
+:start
+
+:start_instance
+
+:start_instances
+
+set fp=* Start my instance from the command line.
+
+rem lu: Dec-20-2018
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo You must specify and instance alias.
+  exit/b
+rem )
+
+call n %2
+
+echo.
+call aws ec2 start-instances --instance-ids %cbf_instance_id%
+                                       
+exit/b
+
+
+
+::_
+
+:stop
+
+set fp=* Stop an instance.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo You must specify and instance alias.
+  exit/b
+)
+
+call n %2
+
+aws ec2 stop-instances --instance-ids %cbf_instance_id%
+
+exit/b
+
+
+
+::_
+
+:d_i
+
+:d_in
+
+:d_inst
+
+set fp=* Describe a particular instance.
+
+rem lu: Feb-22-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo You must specify and instance alias.
+  exit/b
+)
+
+call n %2
+
+echo.
+call aws ec2 describe-instances --instance-ids %cbf_instance_id%
+                                       
+exit/b
+
+
+
+::_
+
+:stat
+
+set fp=* Describe status for a particular instance.
+
+rem lu: Mar-8-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo You must specify and instance alias.
+  exit/b
+)
+
+call n %2
+
+echo.
+aws ec2 describe-instance-status --instance-ids %cbf_instance_id%
 
 exit/b
 

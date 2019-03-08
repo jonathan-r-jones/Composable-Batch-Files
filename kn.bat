@@ -86,7 +86,6 @@ rem chefclientone.natnetwork.home: domain name from which it is identified
 rem parxxx: username
 rem BaadaBxxx: password
 rem 'recipe[Tomcat-ActiveMQ]': a cookbook or a role
-rem qq-1
 
 exit/b
 

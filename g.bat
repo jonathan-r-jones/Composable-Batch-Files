@@ -1495,115 +1495,6 @@ exit/b
 
 :_
 
-set fp=* Git commands from Visual Studio Code.
-
-rem lu: Nov-21-2017
-
-echo.
-echo %fp%
-
-// - git._syncAll
-// - git.branch
-// - git.checkout
-// - git.clean
-// - git.cleanAll
-// - git.clone
-// - git.close
-// - git.commit
-// - git.commitAll
-// - git.commitAllAmend
-// - git.commitAllSigned
-// - git.commitStaged
-// - git.commitStagedAmend
-// - git.commitStagedSigned
-// - git.commitWithInput
-// - git.createTag
-// - git.deleteBranch
-// - git.ignore
-// - git.init
-// - git.merge
-// - git.openChange
-// - git.openFile
-// - git.openHEADFile
-// - git.openResource
-// - git.publish
-// - git.pull
-// - git.pullFrom
-// - git.pullRebase
-// - git.push
-// - git.pushTo
-// - git.pushWithTags
-// - git.refresh
-// - git.revertChange
-// - git.revertSelectedRanges
-// - git.showOutput
-// - git.stage
-// - git.stageAll
-// - git.stageChange
-// - git.stageSelectedRanges
-// - git.stash
-// - git.stashPop
-// - git.stashPopLatest
-// - git.sync
-// - git.undoCommit
-// - git.unstage
-// - git.unstageAll
-// - git.unstageSelectedRanges
-
-exit/b
-
-
-
-:_+ Metadata
-
-
-
-::_
-
-:l
-
-:log
-
-set fp=* Read the log. Among other things, you can use this to see when a GitHub repo was last updated.
-
-echo.
-echo %fp%
-
-git log>"%temp%\git_log.txt"
-
-"%cbf_default_text_editor%" "%temp%\git_log.txt"
-
-
-exit/b
-
-
-
-::_
-
-:inco
-
-:src
-
-:sour
-
-:source
-
-set fp=* Identify source repository information of your current folder.
-
-rem lu: May-9-2018
-
-echo.
-echo %fp%
-
-echo.
-git remote -v
-
-exit/b
-
-
-
-:_
-
 :track_info
 
 set fp=* Set tracking information for this branch.
@@ -2327,35 +2218,6 @@ exit/b
 
 :_
 
-:rf_status
-
-:s
-
-:status
-
-echo.
-echo %cd%
-
-set fp=* Show status. oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo
-
-rem lu: Jan-24-2019
-
-echo.
-echo %fp%
-
-echo.
-call git remote update
-
-call git status
-
-call col>nul
-
-exit/b
-
-
-
-:_
-
 :diff
 
 set fp=* Diff.
@@ -2499,35 +2361,6 @@ exit/b
 
 
 
-:_+ Branch Operations
-
-
-
-::_
-
-:delb
-
-:debr
-
-set fp=* 10. Delete branch. (!delb) (skw delete_branch)
-
-rem Outcome: This worked! Oct-13-2016
-
-rem Note: You must have already initialized the repository.
-
-echo.
-echo %fp%
-
-rem This works. Nov-28-2016
-rem git push origin --delete %2
-
-echo.
-git push origin --delete development-Nov-16-2016
-
-exit/b
-
-
-
 :_+ Custom Clones
 
 
@@ -2646,6 +2479,114 @@ call td s
 call %0 rvsf last_updated_log.txt
 
 call g pl
+
+exit/b
+
+
+
+:_+ Metadata
+
+
+
+::_
+
+:rf_status
+
+:s
+
+:status
+
+echo.
+echo %cd%
+
+set fp=* Show status. oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo
+
+rem lu: Jan-24-2019
+
+echo.
+echo %fp%
+
+echo.
+call git remote update
+
+call git status
+
+call col>nul
+
+exit/b
+
+
+
+::_
+
+:l
+
+:log
+
+set fp=* Read the log. Among other things, you can use this to see when a GitHub repo was last updated.
+
+echo.
+echo %fp%
+
+git log>"%temp%\git_log.txt"
+
+"%cbf_default_text_editor%" "%temp%\git_log.txt"
+
+
+exit/b
+
+
+
+::_
+
+:src
+
+:info
+
+:sour
+
+:source
+
+set fp=* Identify source repository information of your current folder.
+
+rem lu: May-9-2018
+
+echo.
+echo %fp%
+
+echo.
+git remote -v
+
+exit/b
+
+
+
+:_+ Branch Operations
+
+
+
+::_
+
+:delb
+
+:debr
+
+set fp=* 10. Delete branch. (!delb) (skw delete_branch)
+
+rem Outcome:
+
+rem This worked! Oct-13-2016
+rem This worked! Mar-8-2019
+
+rem Note: You must have already initialized the repository.
+
+echo.
+echo %fp%
+
+echo.
+rem git push origin --delete development-Nov-16-2016
+
+git push origin --delete jj_devops
 
 exit/b
 
