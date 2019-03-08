@@ -73,9 +73,9 @@ echo  coco  Code Compare preloaded with j1txt and j2txt
 echo    cs  File contents search
 echo    cu  Curl hooked up to the nicknames dictionary
 echo    cy  Copy file(s)
-echo  cyft  Copy files from nickname parameter 1 to nickname parameter 2
-echo   cyt  Copies file in the current directory to nickname-specified path
-echo   cyf  Copies files from a cbf_path nickname
+echo  cyft  Copy file from nickname parameter 1 to nickname parameter 2
+echo   cyt  Copy file in the current directory to nickname-specified path
+echo   cyf  Copy file from a cbf_path nickname
 echo     d  Easier-to-type and remember version of "dir"
 echo    dd  Dir filename extension searcher
 echo    de  Delete

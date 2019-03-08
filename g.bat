@@ -938,7 +938,28 @@ exit/b
 
 ::_
 
+:aro
+
 :2
+
+:2a
+
+set fp=* Add remote origin for CBF URL.
+
+echo.
+echo %fp%
+
+call n %2
+
+git remote add origin %cbf_url%
+
+exit/b
+
+
+
+::_
+
+:2b
 
 :origin
 
@@ -970,23 +991,6 @@ git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/resume.git
 :grao
 
 git remote add origin https://github.com/jonathan-r-jones/BigProject.git 
-
-exit/b
-
-
-
-::_
-
-:aro
-
-set fp=* Add remote origin for CBF URL.
-
-echo.
-echo %fp%
-
-call n %2
-
-git remote add origin %cbf_url%
 
 exit/b
 
@@ -1728,8 +1732,8 @@ set fp=* Pull. Do a get-latest from the default branch. (!step, !pull, !step3)
 
 echo.
 echo %fp%
-echo.
-  
+ 
+echo. 
 git pull
 
 exit/b

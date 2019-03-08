@@ -6896,6 +6896,8 @@ echo %fp%
 
 set cbf_path=%reach out%
 
+set cbf_url=https://github.com/jonathan-r-jones/Reach-Out.git
+
 exit/b
 
 
@@ -8393,6 +8395,23 @@ echo.
 echo %fp%
 
 set cbf_url=https://github.com/DevTechnology/DevPuzzlers
+
+exit/b
+
+
+
+:_
+
+:tr
+
+set fp=* Transfer.
+
+rem lu: Mar-8-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\transfer
 
 exit/b
 
