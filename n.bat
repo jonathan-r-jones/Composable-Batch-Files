@@ -8417,4 +8417,21 @@ exit/b
 
 
 
+:_
+
+:n1
+
+set fp=* N1.
+
+rem lu: Mar-8-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\ni.bat
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
