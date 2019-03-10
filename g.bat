@@ -1795,58 +1795,6 @@ exit/b
 
 
 
-:_
-
-:cart
-
-set fp=* Overview of the process that sets a certificate and pulls the Cart project.
-
-rem How to set up a certificate.
-
-rem lu: Dec-27-2018
-
-echo.
-echo.
-echo %fp%
-
-rem On Dec-27-2018, I copied the key from my GFE to IJ, and it worked!
-
-rem SSL certificate problem: unable to get local issuer certificate
-
-rem ::C:\Users\JJones2\AppData\Local\Programs\Git\usr\ssl\certs\ca-bundle.crt
-
-rem Maybe the problem is that I need to restart the ssh agent?
-
-rem That was not the problem.
-
-rem Where does Github expect to find ssh keys using windows terminal?
-
-rem %userprofile%
-
-rem 1.	Generate an ssh key pair and add it to your git account (https://github.ice.dhs.gov/settings/keys)
-rem 2.	Using any git client tool clone cart repo, use the git url - git@github.ice.dhs.gov:ERO/cart.git
-
-rem Generate certificate.
-call shh generate_ssh_key
-
-rem Upload key to cart site.
-
-rem One website used.
-call sf certificate_setup_directions
-
-rem Where the keys are suspected to be.
-call td ssh_keys
-
-rem What the private is expected to be called.
-call m specific_file_presence id_rsa
-
-rem Notice that the cloning (SSH) URL is different from the surfing (HTTPS) URL.
-call cn cart_cn c
-
-exit/b
-
-
-
 :_+ Roll Back and Revert Functions
 
 :Revert Family (!rvfy)
