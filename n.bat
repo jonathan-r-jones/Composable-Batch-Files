@@ -5568,6 +5568,8 @@ exit/b
 
 :xcee
 
+:igit
+
 :pass-through
 
 :pass_through
@@ -6782,13 +6784,19 @@ exit/b
 
 ::_
 
+:git_bin
+
 :git_user_bin
 
 :gu
 
 :gub
 
-set fp=* Git user bin. Loaded with utilities. Super path.
+:super_bin
+
+:super_git
+
+set fp=* Git user bin. Loaded with utilities. Super path. (skw: super git)
 
 rem lu: Dec-4-2018
 
@@ -7417,84 +7425,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkins log.xlsx
-
-exit/b
-
-
-
-:_+ FGT
-
-
-
-::_
-
-:fgt
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\For-Git-Testing
-
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
-
-exit/b
-
-
-
-::_
-
-:fgt_d
-
-:fgtd
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\ForGitTesting_develop_branch
-
-exit/b
-
-
-
-::_
-
-:fgt_j
-
-:fgtj
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\ForGitTesting_jj_devops_branch
-
-exit/b
-
-
-
-::_
-
-:fgt_m
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\ForGitTesting_master_branch
 
 exit/b
 
@@ -8429,6 +8359,84 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\ni.bat
+
+exit/b
+
+
+
+:_+ FGT
+
+
+
+::_
+
+:fgt
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\For-Git-Testing
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+exit/b
+
+
+
+::_
+
+:fgt_d
+
+:fgtd
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\ForGitTesting_develop_branch
+
+exit/b
+
+
+
+::_
+
+:fgt_j
+
+:fgtj
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\ForGitTesting_jj_devops_branch
+
+exit/b
+
+
+
+::_
+
+:fgt_m
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\ForGitTesting_master_branch
 
 exit/b
 
