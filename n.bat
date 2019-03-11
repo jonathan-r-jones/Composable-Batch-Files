@@ -5580,6 +5580,8 @@ exit/b
 
 :ckje
 
+:copy_test_file
+
 :pass-through
 
 :pass_through
