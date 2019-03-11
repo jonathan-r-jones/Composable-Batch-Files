@@ -2413,6 +2413,8 @@ exit/b
 
 :_
 
+:fix
+
 :fx
 
 set fp=* Fix last updated file by reverting and pulling it from repository.
