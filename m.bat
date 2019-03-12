@@ -4392,6 +4392,8 @@ exit/b
 
 ::_
 
+:f
+
 :gdf
 
 set fp=* Generates a date file.
