@@ -65,14 +65,14 @@ call n me
 
 set cbf_filename=%composable_batch_files%\%~1.bat
 
-echo Mar-11-2019.1
+rem echo Mar-11-2019.1
 
 if not exist "%cbf_filename%" (
   goto make_max_work
   exit/b
 )
 
-echo Mar-11-2019.2
+rem echo Mar-11-2019.2
 
 set cbf_parameter=%cbf_filename%
 
@@ -93,7 +93,7 @@ rem lu: Jan-8-2019
 echo.
 echo %fp%
 
-echo Mar-11-2019.3
+rem echo Mar-11-2019.3
 
 set cbf_filename=%share-zone%\%~1.bat
 
@@ -103,7 +103,7 @@ if not exist %cbf_filename% (
   exit/b
 )
 
-echo Mar-11-2019.4
+rem echo Mar-11-2019.4
 
 set cbf_parameter=%cbf_filename%
 

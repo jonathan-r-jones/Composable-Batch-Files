@@ -65,11 +65,11 @@ set fp=* Run application - main function.
 
 if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_edge_case
 
-echo Mar-11-2019.5
+rem echo Mar-11-2019.5
 
-rem echo %cbf_application% | find /i -->nul
+echo %cbf_application% | C:\Windows\System32\find.exe /i "--">nul
 
-echo Mar-11-2019.6
+rem echo Mar-11-2019.6
 
 if %errorlevel% == 0 (
   echo.
