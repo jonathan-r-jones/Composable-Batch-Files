@@ -1637,32 +1637,6 @@ exit/b
 
 :_
 
-:gdt
-
-:generate_date_as_filename
-
-set fp=* Generate date as filename.
-
-rem fcd: May-12-2017
-
-echo %fp%
-echo.
-
-cd c:\mercury\batch_files
-
-rem The below class name is case sensitive.
-java -cp . Get_timestamp_for_use_as_filename>%tmp%\mercury_date_as_filename.txt
-
-set /p date_as_filename=<%tmp%\mercury_date_as_filename.txt
-
-echo %date_as_filename%
-
-exit/b
-
-
-
-:_
-
 :ppt
 
 :pptx
@@ -1840,31 +1814,6 @@ cd..
 call mcd app
 
 xcopy /s C:\projects\netbeans\sencha\HTML5Application\public_html\app
-
-exit/b
-
-
-
-:_
-
-:net
-
-set fp=* Netstat.
-
-rem fcd: Jun-26-2017
-
-echo %fp%
-
-cd c:\mercury\batch_files
-
-java -cp . Get_timestamp_for_use_as_filename>%tmp%\date_time_as_filename.txt
-set /p date_as_filename=<%tmp%\date_time_as_filename.txt
-
-set dt_filename=%tmp%\nestat_results_for_machine_%computername%_%date_as_filename%.txt
-
-netstat -a -n>%dt_filename%
-
-call no %dt_filename%
 
 exit/b
 
@@ -4350,6 +4299,116 @@ call me jf_bgs
 call me jf_cap
 
 call me jf_odls
+
+exit/b
+
+
+
+:_+ Generate Date as Filename
+
+
+
+::_
+
+:gdt_old
+
+:generate_date_as_filename
+
+set fp=* Generate date as filename.
+
+rem fcd: Mar-12-2019
+
+echo.
+echo %fp%
+
+call td cbf
+
+rem The below class name is case sensitive.
+java -cp . Get_timestamp_for_use_as_filename>%tmp%\mercury_date_as_filename.txt
+
+set /p date_as_filename=<%tmp%\mercury_date_as_filename.txt
+
+echo Mar-12-2019
+
+echo %date_as_filename%
+
+exit/b
+
+
+
+::_
+
+:gdt_1
+
+:generate_date_as_filename
+
+set fp=* Generate date as filename.
+
+rem fcd: Mar-12-2019
+
+rem This works.
+
+echo.
+echo %fp%
+
+call td a
+
+rem The below class name is case sensitive.
+java -classpath %composable_batch_files% Get_timestamp_for_use_as_filename>%tmp%\date_as_filename.txt
+
+set /p date_as_filename=<%tmp%\date_as_filename.txt
+
+echo.
+echo %date_as_filename%
+
+exit/b
+
+
+
+::_
+
+:net
+
+set fp=* Netstat.
+
+rem fcd: Jun-26-2017
+
+echo %fp%
+
+cd c:\mercury\batch_files
+
+java -cp . Get_timestamp_for_use_as_filename>%tmp%\date_time_as_filename.txt
+set /p date_as_filename=<%tmp%\date_time_as_filename.txt
+
+set dt_filename=%tmp%\nestat_results_for_machine_%computername%_%date_as_filename%.txt
+
+netstat -a -n>%dt_filename%
+
+call no %dt_filename%
+
+exit/b
+
+
+
+::_
+
+:gdf
+
+set fp=* Generates a date file.
+
+rem fcd: Mar-12-2019
+
+rem This works.
+
+echo.
+echo %fp%
+
+rem The below class name is case sensitive.
+java -classpath %composable_batch_files% Get_timestamp_for_use_as_filename>date_as_filename.txt
+
+set /p date_as_filename=<date_as_filename.txt
+
+ren date_as_filename.txt %date_as_filename%.txt
 
 exit/b
 
