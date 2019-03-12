@@ -276,36 +276,6 @@ m exit
 
 :_
 
-set fp=4. * Test block 2. Fall-through style.
-
-echo.
-echo %fp%
-echo.
-
-echo hey
-
-m exit
-
-
-
-:_
-
-:test_block
-
-set fp=5. * Test block 1. Go-to style.
-
-echo.
-echo %fp%
-echo.
-
-echo hey
-
-m exit
-
-
-
-:_
-
 set fp=7. * Make a copy of cc.asc.
 
 echo.
