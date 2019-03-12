@@ -84,7 +84,7 @@ if "%file_has_no_extension%" == "1" (
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
 rem nickname dictionary to determine the filename.
-echo %1 | find /i ".">nul
+echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
   goto edit_file_in_the_current_folder
@@ -139,7 +139,7 @@ echo %fp%
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
 rem nickname dictionary to determine the filename.
-echo %1 | find /i ".">nul
+echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
   set cbf_filename=%~1
@@ -166,7 +166,7 @@ echo %fp%
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
 rem nickname dictionary to determine the filename.
-echo %1 | find /i ".">nul
+echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 1 (
   set cbf_filename=%~1
@@ -207,7 +207,7 @@ echo %fp%
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
 rem nickname dictionary to determine the filename.
-echo %1 | find /i ".">nul
+echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 1 (
   set cbf_filename=%~1
