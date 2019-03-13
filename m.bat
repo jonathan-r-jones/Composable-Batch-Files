@@ -3802,6 +3802,8 @@ exit/b
 
 :_
 
+:s
+
 :sh
 
 set fp=* Shutdown the computer.
