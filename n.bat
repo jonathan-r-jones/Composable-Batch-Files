@@ -5582,6 +5582,8 @@ exit/b
 
 :copy_test_file
 
+:n
+
 :pass-through
 
 :pass_through
