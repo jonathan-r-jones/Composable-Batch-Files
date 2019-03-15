@@ -2223,6 +2223,8 @@ set fp=* Rebase from develop branch.
 
 rem lu: Jan-24-2019
 
+rem I had some pain with this code so I am not too happy with it.
+
 echo.
 echo %fp%
 
@@ -2537,6 +2539,64 @@ echo.
 rem git push origin --delete development-Nov-16-2016
 
 git push origin --delete jj_devops
+
+exit/b
+
+
+
+::_
+
+:delb_jj
+
+set fp=* Delete branch jj_devops.
+
+echo.
+echo %fp%
+
+call td cart
+
+echo.
+git push origin --delete jj_devops
+
+exit/b
+
+
+
+::_
+
+:creb_jj
+
+set fp=* Create branch jj_devops.
+
+echo.
+echo %fp%
+
+call td cart
+
+echo.
+git checkout -b jj_devops develop
+
+exit/b
+
+
+
+::_
+
+:creb
+
+set fp=* Create test branch in for-git-testing.
+
+rem lu: Mar-15-2019
+
+rem I stopped working on this because GitHub was slow. I would like to get this working.
+
+echo.
+echo %fp%
+
+call td fgt
+
+echo.
+git branch ??
 
 exit/b
 

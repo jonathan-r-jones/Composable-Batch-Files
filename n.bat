@@ -7362,7 +7362,6 @@ exit/b
 :jf
 
 set fp=* Develop branch Jenkinsfile.
-rem qq-1
 
 rem lu: Jan-15-2019
 
@@ -7425,6 +7424,23 @@ echo.
 echo %fp%
 
 set cbf_filename=jenkinsfile
+
+exit/b
+
+
+
+::_
+
+:jjb
+
+set fp=* Jenkinsfile backup of of my jj_devops Jenkinsfile.
+
+rem lu: Mar-15-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\jenkinsfile
 
 exit/b
 
@@ -8398,7 +8414,7 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\For-Git-Testing
+set cbf_path=%cbf_default_repository_folder%\For-Git-Testing
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
