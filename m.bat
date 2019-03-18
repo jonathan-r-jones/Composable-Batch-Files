@@ -4440,7 +4440,7 @@ set fp=* Is this hole cart path only? Disallow check-ins from the cart path.
 
 rem lu: Mar-18-2019
 
-echo %fp%
+rem echo %fp%
 
 echo %cd% | find /i "j\cart">nul
 
