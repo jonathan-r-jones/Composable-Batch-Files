@@ -230,6 +230,27 @@ exit/b
 
 
 
+:_
+
+:create_sg
+
+:create_security_group
+
+set fp=* Create security group.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 create-security-group --group-name CLIDemoSecurityGroup ^
+  --description "Security Group for EC2 instances to allow access on port 22."
+
+exit/b
+
+
+
 :_+ Descibe Functions
 
 
@@ -237,6 +258,8 @@ exit/b
 ::_
 
 :d_sg
+
+:describe_sg
 
 set fp=* Describe our demo security group.
 
@@ -265,62 +288,6 @@ echo %fp%
 
 echo.
 aws ec2 describe-security-groups
-
-exit/b
-
-
-
-::_
-
-:d_ins
-
-set fp=* Get instances status.
-
-rem lu: Dec-13-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 describe-instances --color off
-
-exit/b
-
-
-
-:_
-
-:delete_security_group
-
-set fp=* Delete security group.
-
-rem lu: Nov-5-2018
-
-echo.
-echo %fp%
-
-rem First you need to delete the instance from the console.
-
-aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
-
-exit/b
-
-
-
-:_
-
-:create_security_group
-
-set fp=* Create security group.
-
-rem lu: Dec-28-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 create-security-group --group-name CLIDemoSecurityGroup ^
-  --description "Security Group for EC2 instances to allow access on port 22."
 
 exit/b
 
@@ -392,7 +359,7 @@ exit/b
 
 :_
 
-:gaws_feb-27-2019_0209_Ubuntu
+:gaws_mar-19-2019_1126_Ubuntu
 
 set fp=* Create an Linux instance for demo.
 
@@ -417,7 +384,7 @@ aws ec2 run-instances ^
   --image-id ami-39a64048 ^
   --instance-type t3.medium ^
   --key-name %cbf_file% ^
-  --security-group-ids sg-0f1b0240a8da72049 ^
+  --security-group-ids sg-0047d128fc8b50d49 ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
     ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
@@ -434,6 +401,36 @@ exit/b
 
 set fp=* Connect to Ubuntu server.
 
+rem lu: Mar-18-2019
+
+echo.
+echo %fp%
+
+call n git_user_bin
+
+set git_user_bin=%cbf_path%
+
+call td tfkeys
+
+rem Change this line to your ip address.
+set public_dns=ec2-18-253-65-121.us-gov-east-1.compute.amazonaws.com
+
+echo.
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%public_dns%
+
+exit/b
+
+
+
+:_
+
+:connect_existing
+
+:ub
+
+set fp=* Connect to Ubuntu server.
+
 rem lu: Feb-26-2019
 
 echo.
@@ -445,9 +442,12 @@ set git_user_bin=%cbf_path%
 
 call td tfkeys
 
+rem Change this line to your ip address.
+set public_dns=ec2-18-253-68-33.us-gov-east-1.compute.amazonaws.com
+
 echo.
 
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-170-172.us-gov-east-1.compute.amazonaws.com
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%public_dns%
 
 exit/b
 
@@ -524,9 +524,86 @@ echo.
 echo %fp%
 
 aws ec2 authorize-security-group-ingress ^
-  --group-id sg-0aca11e029594bae7 ^
+  --group-id sg-0e5279f665d6240df ^
   --port 5432 --cidr 0.0.0.0/0 ^
   --protocol tcp
+
+exit/b
+
+
+
+::_
+
+:postgres_db_fr_cli_on_gaws_asus_at_Mar_19_2019
+
+set fp=* Create database with multiple tags using Postgres Security Group.
+
+rem lu: Feb-26-2019
+
+echo.
+echo %fp%
+
+set database_name=%1
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.micro ^
+  --engine postgres ^
+  --master-username myusername ^
+  --master-user-password mypassword ^
+  --tags ^
+    "Key"="Application","Value"="CART" ^
+    "Key"="BillingCoder","Value"="xyz123" ^
+    "Key"="Environment","Value"="dv" ^
+    "Key"="POC","Value"="test@gmail.com" ^
+    "Key"="Portfolio","Value"="ABC" ^
+    "Key"="Version","Value"="1.0" ^
+  --vpc-security-group-ids sg-0e5279f665d6240df
+
+exit/b
+
+
+
+:_+ Tags
+
+
+
+::_
+
+:rename_server_tag
+
+set fp=* Change a single tag on a resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_instance_id=i-041bdefac740a8f18
+
+call %0 tag_generic Name Brand_New_Server_Name
+
+exit/b
+
+
+
+::_
+
+:tag_generic
+
+set fp=* Tag generic "%2" - "%3".
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+aws ec2 create-tags --resources %cbf_instance_id% --tags Key=%2,Value=%3
 
 exit/b
 
@@ -564,46 +641,6 @@ aws rds create-db-instance ^
     "Key"="Portfolio","Value"="ABC" ^
     "Key"="Version","Value"="1.0" ^
   --vpc-security-group-ids sg-0aca11e029594bae7
-
-exit/b
-
-
-
-:_+ Tags
-
-
-
-::_
-
-:tag_one
-
-set fp=* Change a single tag on a resource.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-set cbf_resource_id=i-0c88567bad07be0f1
-
-call %0 tag_generic Name Brand_New_Server_Name
-
-exit/b
-
-
-
-::_
-
-:tag_generic
-
-set fp=* Tag generic "%2" - "%3".
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-aws ec2 create-tags --resources %cbf_resource_id% --tags Key=%2,Value=%3
 
 exit/b
 
@@ -836,6 +873,79 @@ echo %fp%
 
 echo.
 aws ec2 describe-vpcs
+
+exit/b
+
+
+
+:_
+
+:delete_security_group
+
+set fp=* Delete security group.
+
+rem lu: Nov-5-2018
+
+echo.
+echo %fp%
+
+rem First you need to delete the instance from the console.
+
+aws ec2 delete-security-group --group-name CLIDemoSecurityGroup
+
+exit/b
+
+
+
+:_
+
+:d_ins
+
+set fp=* Describe instances.
+
+rem lu: Dec-13-2018
+
+echo.
+echo %fp%
+
+echo.
+aws ec2 describe-instances --color off
+
+exit/b
+
+
+
+:_
+
+:gaws_feb-27-2019_0209_Ubuntu
+
+set fp=* Create an Linux instance for demo.
+
+rem lu: Feb-26-2019
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+set cbf_file=kibble_balance_key_pair
+
+call m specific_file_presence %cbf_file%.pem
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-39a64048 ^
+  --instance-type t3.medium ^
+  --key-name %cbf_file% ^
+  --security-group-ids sg-0f1b0240a8da72049 ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications ^
+    ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
 
 exit/b
 

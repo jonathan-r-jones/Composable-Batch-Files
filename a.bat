@@ -1258,45 +1258,41 @@ exit/b
 
 ::_
 
-:iid
-
-:inid
-
 :set_instance_id
 
-set fp=* Deprecated. Set AWS instance id.
+set fp=* Set AWS instance id.
 
-rem lu: Feb-25-2019
+rem lu: Mar-18-2019
 
 echo.
 echo %fp%
 
 rem Set default instance ID to Jenkins server.
-set instance_id=i-0bce1b3771799a4ed
+set cbf_instance_id=i-0bce1b3771799a4ed
 
 rem Bee Clone
-if "%~2" == "bc" set instance_id=i-04499acea0fa9f3a4
+if "%~2" == "bc" set cbf_instance_id=i-04499acea0fa9f3a4
 
 rem CentOS (!sid)
-if "%~2" == "ce" set instance_id=i-0f7c7db92897103c5
+if "%~2" == "ce" set cbf_instance_id=i-0f7c7db92897103c5
 
 rem iJenkins
-if "%~2" == "ij" set instance_id=i-05a46eb9d1166d95f
+if "%~2" == "ij" set cbf_instance_id=i-05a46eb9d1166d95f
 
 rem Jenkins
-if "%~2" == "je" set instance_id=i-0bce1b3771799a4ed
+if "%~2" == "je" set cbf_instance_id=i-0bce1b3771799a4ed
 
 rem Jenkins Mimic
-if "%~2" == "jm" set instance_id=i-0327d0c33cef79f33
+if "%~2" == "jm" set cbf_instance_id=i-0327d0c33cef79f33
 
 rem NewJenkins, orange sunset
-if "%~2" == "nj" set instance_id=i-072a65f07b004f9fd
+if "%~2" == "nj" set cbf_instance_id=i-072a65f07b004f9fd
 
-rem Ubuntu
-if "%~2" == "ub" set instance_id=i-0ce1f47a5dcd7f7b0
+rem Ubuntu - gaws_feb-15-2019_0515_Ubuntu
+if "%~2" == "ub" set cbf_instance_id=i-0ce1f47a5dcd7f7b0
 
 rem Ubuntu 3
-if "%~2" == "ub3" set instance_id=i-04c9959fe9334ca57
+if "%~2" == "ub3" set cbf_instance_id=i-04c9959fe9334ca57
 
 exit/b
 
@@ -3417,6 +3413,8 @@ exit/b
 
 :ac
 
+:creds
+
 :vcf
 
 set fp=* View credentials file.
@@ -3454,9 +3452,9 @@ exit/b
 
 :sh
 
-set fp=* Show current user profile.
+set fp=* Show current user profile. (skw show profile, show_profile)
 
-rem lu: Dec-14-2018
+rem lu: Mar-18-2019
 
 echo.
 echo %fp% AWS Profile: %AWS_PROFILE%
@@ -3691,45 +3689,6 @@ echo %fp%
 
 echo.
 aws configure --profile default
-
-exit/b
-
-
-
-:_
-
-:4.5
-
-set fp=* Connect to any Linux server.
-
-rem lu: Feb-20-2019
-
-echo.
-echo %fp%
-
-call n git_user_bin
-
-set git_user_bin=%cbf_path%
-
-call td tfkeys
-
-echo.
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem ec2user@172.31.7.105
 
 exit/b
 
@@ -4110,7 +4069,7 @@ exit/b
 
 set fp=* Start my instance from the command line.
 
-rem lu: Dec-20-2018
+rem lu: Mar-18-2019
 
 echo.
 echo %fp%
@@ -4119,9 +4078,9 @@ if "%~2" == "" (
   echo.
   echo You must specify and instance alias.
   exit/b
-rem )
+)
 
-call n %2
+call %0 set_instance_id %2
 
 echo.
 call aws ec2 start-instances --instance-ids %cbf_instance_id%
@@ -4206,6 +4165,45 @@ call n %2
 
 echo.
 aws ec2 describe-instance-status --instance-ids %cbf_instance_id%
+
+exit/b
+
+
+
+:_
+
+:4.5
+
+set fp=* Connect to any Linux server.
+
+rem lu: Feb-20-2019
+
+echo.
+echo %fp%
+
+call n git_user_bin
+
+set git_user_bin=%cbf_path%
+
+call td tfkeys
+
+echo.
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+rem ec2user@172.31.7.105
 
 exit/b
 

@@ -4254,6 +4254,24 @@ exit/b
 
 
 
+::_
+
+:waitc
+
+set fp=* Wait and close.
+
+rem lu: Mar-18-2019
+
+echo.
+echo %fp%
+
+echo.
+call %0 wait
+
+exit
+
+
+
 :_
 
 :si
