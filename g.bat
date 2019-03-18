@@ -1662,14 +1662,8 @@ rem echo Cart Path Return Value: %errorlevel%
 
 if %errorlevel% == 1 (
    call m clear_errorlevel_silently
-rem qq-1
    exit/b
 )
-
-rem qq-1
-
-
-rem qq-1
 
 call %0 add_files_generic_action
 
