@@ -1656,6 +1656,21 @@ cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 exit/b
 
+call m cart_path_only
+
+rem echo Cart Path Return Value: %errorlevel%
+
+if %errorlevel% == 1 (
+   call m clear_errorlevel_silently
+rem qq-1
+   exit/b
+)
+
+rem qq-1
+
+
+rem qq-1
+
 call %0 add_files_generic_action
 
 call %0 commit_with_timestamp_description

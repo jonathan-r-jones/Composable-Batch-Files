@@ -21,18 +21,6 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-call m cart_path_only
-
-echo Cart Path Return Value: %errorlevel%
-
-if %errorlevel% == 1 (
-   call m clear_errorlevel_silently
-rem qq-1
-   exit/b
-)
-
-rem qq-1
-
 if "%~1" == "" goto push_prewired_folders
 
 if "%~1" == "-c" goto current_folder
