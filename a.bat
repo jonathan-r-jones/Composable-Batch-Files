@@ -1260,7 +1260,7 @@ exit/b
 
 :set_instance_id
 
-set fp=* Set AWS instance id.
+set fp=* Deprecated. Use call n %? instead. Set AWS instance id.
 
 rem lu: Mar-18-2019
 
@@ -4080,7 +4080,7 @@ if "%~2" == "" (
   exit/b
 )
 
-call %0 set_instance_id %2
+call n %2
 
 echo.
 call aws ec2 start-instances --instance-ids %cbf_instance_id%
