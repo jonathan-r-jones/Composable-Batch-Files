@@ -6,7 +6,9 @@
 
 :_
 
-set filep=* Nickname dictionary that sets the environment variables corresponding to a given unique nickname parameter.
+set filep=* Nickname dictionary that sets environment variables corresponding to a given unique nickname parameter.
+
+rem global variable database
 
 
 
@@ -7119,27 +7121,6 @@ exit/b
 
 
 
-:_
-
-:gsg
-
-:psg
-
-set fp=* Pipeline script generator.
-
-rem lu: Jan-11-2019
-
-echo.
-echo %fp%
-
-call an kr
-
-set cbf_url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
-
-exit/b
-
-
-
 :_+ MP3
 
 
@@ -7855,6 +7836,8 @@ exit/b
 
 :nh
 
+:node_home
+
 set fp=* Node home.
 
 rem fcd: Feb-11-2019
@@ -8278,40 +8261,6 @@ exit/b
 
 :_
 
-:h2
-
-set fp=* H2.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/h2-console
-
-exit/b
-
-
-
-:_
-
-:swag
-
-set fp=* Swagger on local.
-
-rem lu: Jan-16-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
-
-exit/b
-
-
-
-:_
-
 :ni
 
 set fp=* Ni.
@@ -8472,6 +8421,84 @@ echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\ForGitTesting_master_branch
+
+exit/b
+
+
+
+:_+ Localhost
+
+
+
+::_
+
+:h2
+
+set fp=* H2.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/h2-console
+
+exit/b
+
+
+
+::_
+
+:swag
+
+set fp=* Swagger on local.
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
+
+exit/b
+
+
+
+::_
+
+:gsg
+
+:psg
+
+set fp=* Pipeline script generator.
+
+rem lu: Jan-11-2019
+
+echo.
+echo %fp%
+
+call an kr
+
+set cbf_url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
+
+exit/b
+
+
+
+::_
+
+:42
+
+:4200
+
+set fp=* Localhost port 4200.
+
+rem lu: Mar-18-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:4200
 
 exit/b
 

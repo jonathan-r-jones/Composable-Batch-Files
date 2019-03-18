@@ -78,6 +78,7 @@ echo   cyt  Copy file in the current directory to nickname-specified path
 echo   cyf  Copy file from a cbf_path nickname
 echo     d  Easier-to-type and remember version of "dir"
 echo    dd  Dir filename extension searcher
+echo   dds  Dir filename extension searcher including subfolders
 echo    de  Delete
 echo   def  Delete folder corresponding to specified CBF path nickname 
 echo    dn  Dot Net core

@@ -1459,8 +1459,6 @@ set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 
 set JAVA_TOOL_OPTIONS=
 
-set JRE_HOME=C:\Program Files (x86)\Java\jre1.8.0_192
-
 set cbf_default_repository_folder=%userprofile%\j
 
 set share-zone=%userprofile%\j\share-zone
@@ -4304,10 +4302,8 @@ rem lu: Jan-10-2019
 echo.
 echo %fp%
 
-rem jj_devops
 call me jj
 
-rem dev
 rem call me jf
 
 call me iac
@@ -4433,6 +4429,28 @@ set /p date_as_filename=<date_as_filename.txt
 ren date_as_filename.txt %date_as_filename%.txt
 
 exit/b
+
+
+
+:_
+
+:cart_path_only
+
+set fp=* Is this hole cart path only? Disallow check-ins from the cart path.
+
+rem lu: Mar-18-2019
+
+echo %fp%
+
+echo %cd% | find /i "j\cart">nul
+
+if %errorlevel% == 0 (
+ echo.
+ echo * You are on the cart path. You've been a bad golfer.
+ exit/b 1
+)
+
+exit/b 0
 
 
 
