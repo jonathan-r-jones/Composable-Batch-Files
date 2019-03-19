@@ -3664,7 +3664,7 @@ goto :eof
 
 :forfiles
 
-set fp=* Forfiles help file. (!ff, !forf)
+set fp=* Forfiles help file. (!forf)
 
 rem      Creation Date: Nov-25-2016
 
@@ -9162,6 +9162,25 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test close imm.
+
+rem lu: Mar-19-2019
+
+echo.
+echo %fp%
+
+echo.
+call "%savannah%\belfry\immc.bat"
+rem qq-1
+
+exit/b
 
 
 
