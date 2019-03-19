@@ -30,7 +30,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-goto main_function
+goto pull_current_folder
 
 
 
