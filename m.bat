@@ -3849,68 +3849,6 @@ exit/b
 
 
 
-:_+ Angular
-
-
-
-::_
-
-:ng
-
-set fp=* Complie and start Angular.
-
-rem lu: Feb-11-2019
-
-echo.
-echo %fp%
-
-echo.
-ng serve
-
-exit/b
-
-
-
-::_
-
-:ngp
-
-set fp=* Complie and start Angular for production.
-
-rem lu: Feb-12-2019
-
-echo.
-echo %fp%
-
-echo.
-ng build --prod
-
-exit/b
-
-
-
-::_
-
-:port
-
-set fp=* Run the Admin Portal on localhost.
-
-rem lu: Feb-11-2019
-
-echo.
-echo %fp%
-
-call lh port
-
-call td port
-
-echo.
-ng serve
-
-exit/b
-
-
-
 :_
 
 :d
@@ -4451,6 +4389,86 @@ if %errorlevel% == 0 (
 )
 
 exit/b 0
+
+
+
+:_+ Angular
+
+
+
+::_
+
+:ng
+
+set fp=* Complie and start Angular.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+echo.
+ng serve
+
+exit/b
+
+
+
+::_
+
+:ngp
+
+set fp=* Complie and start Angular for production.
+
+rem lu: Feb-12-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build --prod
+
+exit/b
+
+
+
+::_
+
+:port
+
+set fp=* Run the Admin Portal on localhost.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+call lh port
+
+call td port
+
+echo.
+ng serve
+
+exit/b
+
+
+
+::_
+
+:ngb
+
+set fp=* Build angular.
+
+rem lu: Mar-19-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build
+
+exit/b
 
 
 

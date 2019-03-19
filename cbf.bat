@@ -71,6 +71,7 @@ echo   col  Shell window colors operations
 echo    cp  Code Compare with aliases or filenames
 echo  coco  Code Compare preloaded with j1txt and j2txt
 echo    cs  File contents search
+echo   cst  File contents search with td parameter
 echo    cu  Curl hooked up to the nicknames dictionary
 echo    cy  Copy file(s)
 echo  cyft  Copy file from nickname parameter 1 to nickname parameter 2
@@ -89,6 +90,7 @@ echo   edx  Edit a file Emulated Surf
 echo   env  Show the state of the CBF environment variables
 echo    fn  Filenames dictionary layer of abstraction
 echo    fs  Filenames search
+echo   fst  Filenames search with a td parameter
 echo   fsp  Perennial filenames search
 echo     g  Git
 echo    gg  Git Gui helper Has TD parameter
