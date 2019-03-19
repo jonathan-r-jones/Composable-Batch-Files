@@ -4445,9 +4445,9 @@ rem echo %fp%
 echo %cd% | find /i "j\cart">nul
 
 if %errorlevel% == 0 (
- echo.
- echo * You are on the cart path. You've been a bad golfer.
- exit/b 1
+  echo.
+  echo * You are on the cart path. You've been a bad golfer.
+  exit/b 1
 )
 
 exit/b 0

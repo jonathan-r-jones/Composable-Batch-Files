@@ -84,9 +84,13 @@ if not "%machinename%"=="gfe" (
    call cyft mecfg mecfg_s
 )
 
-call pl cbf
+call td cbf
 
-call pl s
+call g pl
+
+call td s
+
+call g pl
 
 if "%machinename%"=="gfe" call cyft mecfg_s mecfg
 
