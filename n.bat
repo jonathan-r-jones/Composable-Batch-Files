@@ -5596,6 +5596,10 @@ exit/b
 
 :dapi3
 
+:j
+
+:gitjd
+
 :pass-through
 
 :pass_through
@@ -7093,7 +7097,7 @@ exit/b
 
 :_
 
-:j
+:jfold
 
 set fp=* J folder and file.
 
@@ -8294,7 +8298,7 @@ exit/b
 
 ::_
 
-:je
+:jenk
 
 set fp=* Jenkins.
 
