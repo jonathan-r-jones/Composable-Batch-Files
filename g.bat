@@ -2247,6 +2247,8 @@ exit/b
 
 ::_
 
+:rebase_m
+
 :rema
 
 set fp=* Rebase from master branch. How you get a git branch to update from its source master branch.
@@ -2358,13 +2360,14 @@ set new_folder_path=c:\mercury
 set new_folder_path=c:\projects\netbeans
 set new_folder_path=%aa%
 set new_folder_path=%aa%\repositories
+set new_folder_path=C:\Users\JJones2\j
 
 rem 3. Branch name.
 set branch_name=clean6.2
 set branch_name=Branch2
-set branch_name=master
 set branch_name=jj_devops
 set branch_name=develop
+set branch_name=master
 
 rem 4. Folder name.
 set folder_name=tirem
@@ -2385,6 +2388,7 @@ set folder_name=ForGitTesting
 set folder_name=BusterFromFresnel
 set folder_name=ForGitTesting2
 set folder_name=ForGitTesting_%branch_name%_branch
+set folder_name=fgt2
 
 rem 5. Execute.
 
@@ -2559,6 +2563,8 @@ exit/b
 
 set fp=* Delete branch jj_devops.
 
+rem This worked on Mar-20-2019.
+
 echo.
 echo %fp%
 
@@ -2573,17 +2579,17 @@ exit/b
 
 ::_
 
-:creb_jj
+:seeb
 
-set fp=* Create branch jj_devops.
+set fp=* See all branches.
+
+rem lu: Mar-20-2019
 
 echo.
 echo %fp%
 
-call td cart
-
 echo.
-git checkout -b jj_devops develop
+git branch -a
 
 exit/b
 
@@ -2605,7 +2611,132 @@ echo %fp%
 call td fgt
 
 echo.
-git branch ??
+git branch exp_Mar_20_2 master
+
+exit/b
+
+
+
+::_
+
+:cbm
+
+set fp=* Create branch based on master.
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b %1 master
+
+exit/b
+
+
+
+::_
+
+:cbd
+
+set fp=* Create branch based on develop.
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b %2 develop
+
+exit/b
+
+
+
+::_
+
+:new_fgt
+
+set fp=* How to start a fresh fgt.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+set branch_name=Branch3
+
+call td j
+
+call m rd fgt2
+
+call g cn
+
+cd fgt2
+
+call %0 cbm %branch_name%
+
+calll %0 po %branch_name%
+
+cd fgt2
+
+call g s
+
+exit/b
+
+
+
+::_
+
+:new_jj_devops
+
+set fp=* How to start a fresh jj_devops.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+rem Back up our jenkins file, if necessary.
+cyfn jj jb
+
+set branch_name=jj_devops
+
+call td j
+
+rem Remove local code.
+call m rd jj_devops
+
+rem Clone develop branch into jj_devops folder.
+call k cn_jj_devops_starter
+
+call td jj
+
+rem Create branch based on develop.
+call %0 cbd %branch_name%
+
+rem Push to origin.
+call %0 po %branch_name%
+
+call td jj
+
+call g s
+
+rem Restore your Jenkinsfile, if necessary.
+cyfn jb jj
+
+exit/b
+
+
+
+::_
+
+:po
+
+set fp=* Push origin.
+
+echo.
+echo %fp%
+
+echo.
+
+git push --set-upstream origin %2
 
 exit/b
 

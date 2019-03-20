@@ -67,6 +67,7 @@ echo   cbf  Show this list of CBF batch files
 echo    ch  Chef command line utility
 echo   clc  Simple calculator
 echo    cn  Git cloning
+echo   cnn  Git cloning based entirely on the nickname parameter
 echo   col  Shell window colors operations
 echo    cp  Code Compare with aliases or filenames
 echo  coco  Code Compare preloaded with j1txt and j2txt

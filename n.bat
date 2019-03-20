@@ -5594,6 +5594,8 @@ exit/b
 
 :sw3
 
+:dapi3
+
 :pass-through
 
 :pass_through
@@ -6388,7 +6390,7 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-call n c_docs
+call %0 c_docs
 
 set cbf_filename=%cbf_path%\development environment.xlsx
 
@@ -6565,7 +6567,7 @@ rem lu: Dec-19-2018
 echo.
 echo %fp%
 
-call n sz
+call %0 sz
 
 set cbf_path=%cbf_path%\copied software
 
@@ -6584,7 +6586,7 @@ rem lu: Dec-19-2018
 echo.
 echo %fp%
 
-call n sz
+call %0 sz
 
 set cbf_filename=%cbf_path%\copy of cc.asc
 
@@ -6848,7 +6850,7 @@ rem lu: Dec-28-2018
 echo.
 echo %fp%
 
-call n s
+call %0 s
 
 set cbf_filename=%cbf_path%\aig.bat
 
@@ -7220,7 +7222,7 @@ rem lu: Jan-17-2019
 echo.
 echo %fp%
 
-call n dev
+call %0 dev
 
 set cbf_path=%cbf_path%\build\h2db
 
@@ -7466,7 +7468,7 @@ rem lu: Jan-29-2019
 echo.
 echo %fp%
 
-call n jj
+call %0 jj
 
 set cbf_path=%cbf_path%\gradle\wrapper
 
@@ -7823,7 +7825,7 @@ rem lu: Dec-15-2018
 echo.
 echo %fp%
 
-call n home
+call %0 home
 
 set cbf_path=%cbf_path%\.jenkins
 
@@ -7870,23 +7872,6 @@ echo.
 echo %fp%
 
 set cbf_path=%localappdata%\Microsoft\WindowsApps
-
-exit/b
-
-
-
-:_
-
-:ub
-
-set fp=* Ubuntu server.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-set cbf_instance_id=i-0ce1f47a5dcd7f7b0
 
 exit/b
 
@@ -7966,7 +7951,7 @@ rem lu: Dec-14-2018
 echo.
 echo %fp%
 
-call n pounders
+call %0 pounders
 
 set cbf_application=%cbf_path%\zoomit.exe
 
@@ -8160,7 +8145,7 @@ rem lu: Mar-6-2019
 echo.
 echo %fp%
 
-call n cartc
+call %0 cartc
 
 set cbf_path=%cbf_path%\recipes
 
@@ -8214,84 +8199,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\ni.bat
-
-exit/b
-
-
-
-:_+ FGT
-
-
-
-::_
-
-:fgt
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_default_repository_folder%\For-Git-Testing
-
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
-
-exit/b
-
-
-
-::_
-
-:fgt_d
-
-:fgtd
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\ForGitTesting_develop_branch
-
-exit/b
-
-
-
-::_
-
-:fgt_j
-
-:fgtj
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\ForGitTesting_jj_devops_branch
-
-exit/b
-
-
-
-::_
-
-:fgt_m
-
-set fp=* ForGitTesting.
-
-rem lu: Sep-6-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\ForGitTesting_master_branch
 
 exit/b
 
@@ -8419,7 +8326,7 @@ rem lu: Jan-15-2019
 echo.
 echo %fp%
 
-call n dev
+call %0 dev
 
 set cbf_filename=%cbf_path%\jenkinsfile
 
@@ -8438,7 +8345,7 @@ rem lu: Jan-15-2019
 echo.
 echo %fp%
 
-call n dev
+call %0 dev
 
 set cbf_filename=%share-zone%\jenkinsfile
 
@@ -8532,6 +8439,99 @@ echo.
 echo %fp%
 
 set cbf_path=%cbf_default_repository_folder%\cart\devops\server-deployed-code
+
+exit/b
+
+
+
+:_+ Instances
+
+
+
+::_
+
+:ub
+
+set fp=* Ubuntu server.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_instance_id=i-0ce1f47a5dcd7f7b0
+
+exit/b
+
+
+
+:_+ FGT
+
+
+
+::_
+
+:fgt
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+set cbf_path=%cbf_default_repository_folder%\For-Git-Testing
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+
+exit/b
+
+
+
+::_
+
+:fgt_d
+
+:fgtd
+
+set fp=* ForGitTesting, develop branch.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+call %0 fgt
+
+set cbf_branch_name=develop
+
+set cbf_path=%cbf_path%_develop_branch
+
+exit/b
+
+
+
+::_
+
+:fgt_j
+
+:fgtj
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+call %0 fgt
+
+set cbf_branch_name=jj_devops
+
+set cbf_path=%cbf_path%_jj_devops_branch
 
 exit/b
 

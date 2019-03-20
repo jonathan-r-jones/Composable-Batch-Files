@@ -9157,6 +9157,44 @@ exit/b
 
 :_
 
+:
+
+set fp=* Test close imm.
+
+rem lu: Mar-19-2019
+
+echo.
+echo %fp%
+
+echo.
+call "%savannah%\belfry\immc.bat"
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* What happens after a failed goto statement?
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+echo.
+goto nonexistentent_label
+
+echo Post bad call.
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -9169,16 +9207,23 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Test close imm.
+set fp=* Test cd.
 
-rem lu: Mar-19-2019
+rem lu: Mar-20-2019
 
 echo.
 echo %fp%
 
 echo.
-call "%savannah%\belfry\immc.bat"
-rem qq-1
+cd ..
+
+echo 2
+
+cd ..
+
+echo 3
+
+cd ..
 
 exit/b
 
