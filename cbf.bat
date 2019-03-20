@@ -74,7 +74,8 @@ echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl hooked up to the nicknames dictionary
 echo    cy  Copy file(s)
-echo  cyft  Copy file from nickname parameter 1 to nickname parameter 2
+echo  cyfn  Copy file from nickname filename parameter 1 to nickname filename parameter 2
+echo  cyft  Copy file from nickname path parameter 1 to nickname path parameter 2
 echo   cyt  Copy file in the current directory to nickname-specified path
 echo   cyf  Copy file from a cbf_path nickname
 echo     d  Easier-to-type and remember version of "dir"

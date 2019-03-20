@@ -1966,8 +1966,6 @@ exit/b
 
 :dn
 
-:do
-
 set fp=* Downloads folder.
 
 rem lu: Jun-7-2018
@@ -2909,7 +2907,7 @@ exit/b
 
 :_
 
-:sw
+:solar_w
 
 set fp=* SolarWinds Orion SDK.
 
@@ -5589,6 +5587,12 @@ exit/b
 :d3
 
 :uigit
+
+:swag
+
+:sw
+
+:sw3
 
 :pass-through
 
@@ -8316,7 +8320,9 @@ exit/b
 
 ::_
 
-:swag
+:swaglh
+
+:swag_lh
 
 set fp=* Swagger on local.
 
@@ -8507,6 +8513,25 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkins log.xlsx
+
+exit/b
+
+
+
+:_
+
+:devo
+
+:do
+
+set fp=* Devops.
+
+rem lu: Mar-19-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_default_repository_folder%\cart\devops\server-deployed-code
 
 exit/b
 
