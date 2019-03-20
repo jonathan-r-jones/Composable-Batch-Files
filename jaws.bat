@@ -64,8 +64,8 @@ exit/b
 :hello
 
 echo.
-echo Hello from the Jaws batch file. Think of "hello" as the name of a function you call ^
-and "exit/b" as just the end of the function.
+echo Hello world from the Jaws batch file. Think of "hello" as the name of a function you ^
+^ and "exit/b" as just the end of the function.
 
 exit/b
 
