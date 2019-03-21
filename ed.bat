@@ -150,7 +150,11 @@ if %errorlevel% == 0 (
   call n %1
 )
 
+
 set cbf_parameter=%cbf_filename%
+
+echo.
+echo cbf_parameter: %cbf_parameter%
 
 call r
 

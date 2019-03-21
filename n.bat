@@ -5600,6 +5600,18 @@ exit/b
 
 :gitjd
 
+:zip
+
+:unzip
+
+:cart_svc
+
+:runcart
+
+:sc
+
+:rc
+
 :pass-through
 
 :pass_through
