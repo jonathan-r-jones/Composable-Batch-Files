@@ -49,6 +49,8 @@ if "%~1" == "" (
 
 set file_has_no_extension=0
 
+if "%~2" == "-d" goto d_switch_only
+
 if "%~2" == "-n" set file_has_no_extension=1
 
 if "%~3" == "-n" set file_has_no_extension=1
@@ -112,7 +114,8 @@ folder filename has no extension then -n must be used also. If left blank, the a
 is merely started.
 
 set parameter_2=Parameter 2 or 3 (optional): Use -c to force file creation. Use -n to ^
-specify a file with no extension.
+specify a file with no extension. Use -d to blank out a file before opening it (Use with ^
+caution).
 
 rem Before merging the other editor batch files here, do file comparison for each one.
 
@@ -146,6 +149,35 @@ if %errorlevel% == 0 (
 ) else (
   call n %1
 )
+
+set cbf_parameter=%cbf_filename%
+
+call r
+
+exit/b
+
+
+
+:_
+
+:d_switch_only
+
+set fp=* D switch only. Blank out the file before opening it.
+
+rem lu: Mar-21-2019
+
+echo.
+echo %fp%
+
+echo p1: %1
+
+call n %1
+
+rem echo %cbf_filename%
+
+del %cbf_filename%
+
+call %0 %1 -c
 
 set cbf_parameter=%cbf_filename%
 

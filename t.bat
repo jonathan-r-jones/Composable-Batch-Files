@@ -9195,16 +9195,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test cd.
@@ -9224,6 +9214,95 @@ cd ..
 echo 3
 
 cd ..
+
+exit/b
+
+
+
+:_+ Hello World Battle
+
+
+
+::_
+
+:hw
+
+set fp=* Hello world from %0.
+
+rem lu: Mar-21-2019
+
+echo.
+echo %fp%
+
+exit/b
+
+
+
+::_
+     
+:hw_battle
+
+set fp=* Call t versus call %0 versus call label.
+
+rem lu: Mar-21-2019
+
+echo.
+echo %fp%
+
+call %0 hw
+
+call t hw
+
+call :hw
+
+exit/b
+
+
+
+::_
+     
+:hw_battle_2
+
+set fp=* Called from eof. Why should this matter?
+
+rem lu: Mar-21-2019
+
+echo.
+echo %fp%
+
+call %0 hw
+
+call t hw
+
+call :hw
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test blanking out a file.
+
+rem lu: Mar-21-2019
+
+echo.
+echo %fp%
+
+echo.
+echo .>c:\a\j
 
 exit/b
 
