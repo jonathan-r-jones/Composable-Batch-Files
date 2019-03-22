@@ -7823,7 +7823,7 @@ rem lu: Sep-2-2018
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\
+set cbf_path=%cbf_repo_folder%\
 
 td test2
 

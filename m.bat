@@ -1459,7 +1459,7 @@ set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 
 set JAVA_TOOL_OPTIONS=
 
-set cbf_default_repository_folder=%userprofile%\j
+set cbf_repo_folder=%userprofile%\j
 
 set share-zone=%userprofile%\j\share-zone
 
@@ -1535,7 +1535,7 @@ call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
-rem if "%cbf_default_repository_folder%" == "" call %0 set_default_repository_folder temp
+rem if "%cbf_repo_folder%" == "" call %0 set_default_repository_folder temp
 
 exit/b
 
@@ -3016,7 +3016,7 @@ rem set cbf_default_browser=
 
 rem set cbf_default_text_editor=
 
-rem set cbf_default_repository_folder=
+rem set cbf_repo_folder=
 
 set cbf_filename=
 
@@ -3062,7 +3062,7 @@ echo.
 echo Default Text Editor: %cbf_default_text_editor%
 
 echo.
-echo Default Repository Folder: %cbf_default_repository_folder%
+echo Default Repository Folder: %cbf_repo_folder%
 
 echo.
 echo Filename: %cbf_filename%
@@ -3222,7 +3222,7 @@ echo %fp%
 
 if not "%~2" == "" call n %2
 
-set cbf_default_repository_folder=%cbf_path%
+set cbf_repo_folder=%cbf_path%
 
 exit/b
 
@@ -4467,6 +4467,25 @@ echo %fp%
 
 echo.
 ng build
+
+exit/b
+
+
+
+:_
+
+:ns
+
+set fp=* Open N and NI.bat.
+
+rem lu: Mar-22-2019
+
+echo.
+echo %fp%
+
+call mx ni
+
+call mx n
 
 exit/b
 
