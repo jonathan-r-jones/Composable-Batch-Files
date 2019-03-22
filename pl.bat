@@ -81,7 +81,7 @@ echo %fp%
 if not "%machinename%"=="gfe" (
    cd\
    call 8
-   call cyft mecfg mecfg_s
+   call cyfn mecfg mecfg_s
 )
 
 call td cbf
@@ -92,7 +92,7 @@ call td s
 
 call g pl
 
-if "%machinename%"=="gfe" call cyft mecfg_s mecfg
+if "%machinename%"=="gfe" call cyfn mecfg_s mecfg
 
 if "%machinename%"=="gfe" cd\
 
