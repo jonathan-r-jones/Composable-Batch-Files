@@ -8344,7 +8344,7 @@ echo %fp%
 
 call %0 dev
 
-set cbf_filename=%cbf_path%\jenkinsfile
+set cbf_filename=%cbf_%\jenkinsfile
 
 exit/b
 
@@ -8551,6 +8551,6 @@ set cbf_path=%cbf_path%_jj_devops_branch
 
 exit/b
 
-
+            
 
 :_ (!rfsp) (mov-6)
