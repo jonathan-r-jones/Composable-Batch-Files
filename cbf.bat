@@ -75,8 +75,8 @@ echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl hooked up to the nicknames dictionary
 echo    cy  Copy file(s)
-echo  cyfn  Copy file from nickname filename parameter 1 to nickname filename parameter 2
-echo  cyft  Copy file from nickname path parameter 1 to nickname path parameter 2
+echo  cyfn  Copy file from alias filename parm 1 to alias filename param 2
+echo  cypn  Copy file from alias path param 1 to alias path param 2
 echo   cyt  Copy file in the current directory to nickname-specified path
 echo   cyf  Copy file from a cbf_path nickname
 echo     d  Easier-to-type and remember version of "dir"
@@ -111,7 +111,7 @@ echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary
 echo    nd  Show nickname definition
-echo  n_ey  Empty Nicknames dictionary, useful for building a nicknames dictionary anew
+echo  n_ey  An empty nicknames dictionary, useful for starting over
 echo    nm  NPM
 echo    no  Notepad
 echo   net  Netstat

@@ -334,4 +334,20 @@ exit/b
 
 
 
+:_
+
+:cc
+
+set fp=* Make a copy of CC.asc.
+
+echo.
+echo %fp%
+
+echo.
+xcopy /d /h /r /y "%reach out%\cc.asc" "%reach out%\copy of cc.asc"
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-9)
