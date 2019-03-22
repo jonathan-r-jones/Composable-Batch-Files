@@ -2048,34 +2048,6 @@ exit/b
 
 ::_
 
-:roll_back_repo_1
-
-set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
-
-rem Composer function.
-
-rem One reason I like this command is that it moves back slowly so will help you be
-rem careful not to rollback to fr.
-
-set fp=%fp% so move the whole repo back a single check-in version.
-
-rem This worked on FGT and Fresnel on Jul-19-2018.
-
-rem lu: Jul-19-2018
-
-echo.
-echo %fp%
-
-call :reset_head_1
-
-call :roll_back_repo
-
-exit/b
-
-
-
-::_
-
 :back
 
 :reset_head_1
@@ -2737,6 +2709,34 @@ echo %fp%
 echo.
 
 git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:roll_back_repo_1
+
+set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
+
+
+rem One reason I like this command is that it moves back slowly so will help you be
+rem careful not to rollback to far.
+
+set fp=%fp% so move the whole repo back a single check-in version.
+
+rem This worked on FGT and Fresnel on Jul-19-2018.
+rem This worked on CBF on Mar-22-2019.
+
+rem lu: Mar-22-2019
+
+echo.
+echo %fp%
+
+call :reset_head_1
+
+call :roll_back_repo
 
 exit/b
 
