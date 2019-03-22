@@ -8154,24 +8154,6 @@ exit/b
 
 :
 
-set fp=* Test cypn batch file.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-echo.
-if not "%machinename%"=="gfe" call cypn mecfg mecfg_s
-
-exit/b
-
-
-
-:_
-
-:
-
 set fp=* Path only experiment.
 
 rem lu: Dec-30-2018
@@ -9303,6 +9285,24 @@ echo %fp%
 
 echo.
 echo .>c:\a\j
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Test cypn batch file.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+echo.
+if not "%machinename%"=="gfe" call cypn mecfg mecfg_s
 
 exit/b
 

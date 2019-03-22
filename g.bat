@@ -1947,27 +1947,6 @@ exit/b
 
 ::_
 
-:rv_sf
-
-:rvsf
-
-set fp=* Revert or check out single file.
-
-rem lu: Jan-23-2018
-
-echo.
-echo %fp%
-  
-git reset head %2
-git checkout %2
-rem qq-1
-
-exit/b
-
-
-
-::_
-
 :rv_pe
 
 set fp=* Revert persistent files. Revert files in need of constant reversion.
@@ -2739,6 +2718,28 @@ echo %fp%
 call :reset_head_1
 
 call :roll_back_repo
+
+exit/b
+
+
+
+::_
+
+:rv_sf
+
+:rvsf
+
+set fp=* Revert or check out single file.
+
+rem lu: Mar-22-2019
+
+rem This worked on CBF files. Mar-22-2019
+
+echo.
+echo %fp%
+  
+git reset head %2
+git checkout %2
 
 exit/b
 
