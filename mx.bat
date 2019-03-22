@@ -100,7 +100,7 @@ set cbf_filename=%share-zone%\%~1.bat
 if not exist %cbf_filename% (
   echo.
   echo * The file "%cbf_filename%" does not exist.
-  exit/b
+  exit/b 1
 )
 
 rem echo Mar-11-2019.4

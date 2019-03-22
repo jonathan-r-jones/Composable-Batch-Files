@@ -4474,7 +4474,7 @@ exit/b
 
 :_
 
-:ns
+:n
 
 set fp=* Open N and NI.bat.
 

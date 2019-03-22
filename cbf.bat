@@ -105,6 +105,7 @@ echo     m  Perform miscellaneous tasks
 echo   mcd  Make and navigate (cd) to a folder
 echo    me  Multi-Edit
 echo   mav  Maven
+echo    mm  Test mx then me bat files
 echo    mv  Move files
 echo   mvt  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder

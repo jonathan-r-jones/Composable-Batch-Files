@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* .
+set filename_stands_for=* Test mx then me bat files.
 
 
 
@@ -20,7 +20,7 @@ if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-goto %1
+goto main_function
 
 
 
@@ -34,20 +34,15 @@ echo.
 echo Filename stands for: %filename_stands_for%
 
 echo.
-echo Last Updated: 
+echo Last Updated: Mar-22-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Alias.
 
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 exit/b
 
@@ -62,8 +57,16 @@ set fp=* Main function of '%filename_stands_for%'
 echo.
 echo %fp%
 
+call m clear_errorlevel_silently
 
-rem qq-1
+call mx.bat %1
+
+rem echo EL: %errorlevel%
+
+if %errorlevel% == 1 (
+  call me %1
+  exit/b
+)
 
 exit/b
 
