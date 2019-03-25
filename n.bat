@@ -7366,8 +7366,7 @@ if "%cbf_application%" == "" (
   exit/b 1
 )
 
-set cbf_application=%cbf_application_location%
-set cbf_path=%cbf_application_location:\excel.exe=%
+set cbf_path=%cbf_application:\excel.exe=%
 set cbf_filename=%cbf_application%
 
 exit/b
@@ -7387,16 +7386,15 @@ echo %fp%
 
 rem Determine installation path.
 
-if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe" set cbf_application_location=C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe
+if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe
 
-if "%cbf_application_location%" == "" (
+if "%cbf_application%" == "" (
   echo.
-  echo Notepad++ is not installed.
+  echo * Word is not installed.
   exit/b
 )
 
-set cbf_application=%cbf_application_location%
-set cbf_path=%cbf_application_location:\winword.exe=%
+set cbf_path=%cbf_application:\winword.exe=%
 set cbf_filename=%cbf_application%
 
 exit/b
