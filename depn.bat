@@ -71,6 +71,8 @@ if "%cbf_path%" == "" (
   exit/b
 )
 
+call tdp %1
+
 echo.
 rd /s %cbf_path%
 

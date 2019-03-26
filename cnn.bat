@@ -75,9 +75,9 @@ echo %fp%
 
 call n %1
 
-if "%cbf_branch_name%" == "" (
+if "%cbf_branch%" == "" (
    echo.
-   echo "* Error: Branch name is a required field."
+   echo "* Error: Branch is a required field."
    exit/b
 )
 
@@ -101,7 +101,7 @@ if exist "%cbf_path%" (
 )
 
 echo.
-git clone %cbf_clone_url% --branch %cbf_branch_name% %cbf_path%
+git clone %cbf_clone_url% --branch %cbf_branch% %cbf_path%
 
 call td %1
 

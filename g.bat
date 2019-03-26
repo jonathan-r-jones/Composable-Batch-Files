@@ -2501,10 +2501,9 @@ rem Note: You must have already initialized the repository.
 echo.
 echo %fp%
 
-echo.
-rem git push origin --delete development-Nov-16-2016
+call td cart
 
-git push origin --delete jj_devops
+git push origin --delete jj_test
 
 exit/b
 

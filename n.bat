@@ -8500,6 +8500,8 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
+set cbf_branch=master
+
 set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
 set cbf_path=%cbf_repo_folder%\For-Git-Testing

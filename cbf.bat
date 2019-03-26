@@ -69,8 +69,8 @@ echo   clc  Simple calculator
 echo    cn  Git cloning
 echo   cnn  Git cloning based entirely on the nickname parameter
 echo   col  Shell window colors operations
-echo    cp  Code Compare with aliases or filenames
-echo  coco  Code Compare preloaded with j1txt and j2txt
+echo  ccfn  Code Compare with aliases or filenames
+echo  cc12  Code Compare preloaded with j1txt and j2txt
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl hooked up to the nicknames dictionary
@@ -83,7 +83,8 @@ echo     d  Easier-to-type and remember version of "dir"
 echo    dd  Dir filename extension searcher
 echo   dds  Dir filename extension searcher including subfolders
 echo    de  Delete
-echo   def  Delete folder corresponding to specified CBF path nickname 
+echo  depn  Delete folder corresponding to specified CBF path nickname 
+rem qq-1
 echo    dn  Dot Net core
 echo     e  Exit command window
 echo    ea  Application-centric way to run an application
