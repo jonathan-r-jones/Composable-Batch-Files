@@ -1461,7 +1461,7 @@ exit/b
 
 :_
 
-:connect
+:connect_old
 
 set fp=* Connect to my instance from the command line!
 
@@ -4051,6 +4051,45 @@ exit/b
 
 
 
+:_
+
+:4.5
+
+set fp=* Connect to any Linux server.
+
+rem lu: Feb-20-2019
+
+echo.
+echo %fp%
+
+call n git_user_bin
+
+set git_user_bin=%cbf_path%
+
+call td tfkeys
+
+echo.
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
+
+rem ec2user@172.31.7.105
+
+exit/b
+
+
+
 :_+ Common Instance Operations
 
 
@@ -4170,13 +4209,15 @@ exit/b
 
 
 
-:_
+::_
 
-:4.5
+:conn
 
-set fp=* Connect to any Linux server.
+:ub
 
-rem lu: Feb-20-2019
+set fp=* Connect to Ubuntu server.
+
+rem lu: Feb-26-2019
 
 echo.
 echo %fp%
@@ -4187,23 +4228,12 @@ set git_user_bin=%cbf_path%
 
 call td tfkeys
 
+rem Change this line to your ip address.
+set public_dns=ec2-18-253-68-246.us-gov-east-1.compute.amazonaws.com
+
 echo.
 
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-75-81.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-user@ec2-18-253-69-77.us-gov-east-1.compute.amazonaws.com
-
-rem ec2user@172.31.7.105
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%public_dns%
 
 exit/b
 

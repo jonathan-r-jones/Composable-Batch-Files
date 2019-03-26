@@ -53,10 +53,10 @@ exit/b
 
 set fp=* List of CBF Helper Batch (bat) files.
 
-echo
+echo.
 echo %fp%
 
-echo
+echo.
 echo  File  Wrapper Description
 echo  ----  ------------------------------------------------------------------
 echo     a  AWS CLI
