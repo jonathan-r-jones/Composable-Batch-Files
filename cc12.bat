@@ -52,7 +52,7 @@ exit/b
 echo.
 echo filename_stands_for
 
-call cp j1 j2
+call ccfn j1 j2
 
 exit/b
 
