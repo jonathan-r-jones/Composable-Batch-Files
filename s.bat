@@ -52,9 +52,9 @@ echo.
 echo Last Updated: Dec-19-2018
 
 echo.
-echo Usage: %0 [Parameter 1]
+echo Usage: %0 [Optional Parameter 1]
 
-set parameter_1=Parameter 1: Path parameter.
+set parameter_1=Parameter 1: Path parameter. If left blank, current folder is used.
 set parameter_1=%parameter_1% 
 
 echo.
