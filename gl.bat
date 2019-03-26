@@ -61,8 +61,9 @@ echo            fp  Function purpose
 echo            lu  Last updated. The last time the file was updated.
 echo  td parameter  Transform Directory passed in as a parameter, meaning to 
 echo                  change folders before running the batch file. For example,
-echo                  running "p cbf" switches to the CBF folder assigned in the
-echo                  nicknames folder before running the batch file p.bat.
+echo                  running "p cbf" switches to the CBF folder, the alias for 
+echo                  which is assigned in the nicknames dictionary (n.bat), 
+echo                  before running the batch file p.bat.
 
 rem (!rfsp) (mov-2)
 

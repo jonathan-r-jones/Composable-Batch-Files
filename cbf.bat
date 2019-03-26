@@ -83,7 +83,7 @@ echo     d  Easier-to-type and remember version of "dir"
 echo    dd  Dir filename extension searcher
 echo   dds  Dir filename extension searcher including subfolders
 echo    de  Delete
-echo  depn  Delete folder corresponding to specified CBF path nickname 
+echo  depn  Delete folder corresponding to CBF path alias parameter
 rem qq-1
 echo    dn  Dot Net core
 echo     e  Exit command window
@@ -106,7 +106,7 @@ echo     m  Perform miscellaneous tasks
 echo   mcd  Make and navigate (cd) to a folder
 echo    me  Multi-Edit
 echo   mav  Maven
-echo    mm  Test mx then me bat files
+echo    mm  Uses mx.bat then me.bat to decipher which file to edit
 echo    mv  Move files
 echo   mvt  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder

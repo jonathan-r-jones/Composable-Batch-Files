@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Test mx then me bat files.
+set filename_stands_for=* Uses mx.bat then me.bat to decipher which file to edit.
 
 
 
