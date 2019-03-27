@@ -128,6 +128,7 @@ echo   pgs  PostgreSQL
 echo    ps  PowerShell
 echo     r  Run application using CBF variables
 echo   rzr  Multi-Edit abstraction layer for running CBF files
+echo  rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo     s  Check git status remotely, has TD parameter
 echo    se  Internet search helper
 echo   sln  Open a Visual Studio solution, has TD parameter

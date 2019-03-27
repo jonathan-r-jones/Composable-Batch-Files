@@ -34,7 +34,7 @@ echo.
 echo Filename stands for: %filename_stands_for%
 
 echo.
-echo Last Updated: Oct-29-2018
+echo Last Updated: Mar-27-2019
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -42,17 +42,11 @@ echo Usage: %0 [Parameter 1]
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
+set parameter_1=Parameter 1: Function you wish to run.
 set parameter_1=%parameter_1% 
 
 echo.
 echo %parameter_1%
-
-set parameter_2=Parameter 2 (Optional): 
-set parameter_2=%parameter_2% 
-
-echo.
-echo %parameter_2%
 
 exit/b
 
@@ -118,7 +112,8 @@ exit/b
 
 :plan_chapter_2
 
-set fp=* This execution plan can be reviewed prior to running apply to get a sense for what Terraform will do.
+set fp=* This execution plan can be reviewed prior to running apply to get a sense for what ^
+Terraform will do.
 
 rem lu: Oct-29-2018
 
@@ -169,23 +164,6 @@ echo %fp%
 
 echo.
 terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
-
-exit/b
-
-
-
-:_
-
-:shared_function
-
-set fp=* Shared function.
-
-rem lu: Oct-30-2018
-
-echo.
-echo %fp%
-
-echo.
 
 exit/b
 

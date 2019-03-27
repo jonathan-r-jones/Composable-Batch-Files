@@ -4366,7 +4366,6 @@ if %errorlevel% == 0 (
    echo.
    echo * Computer name contains "lipt".
    call %0 g
-rem qq-1
    exit/b
 )
 
