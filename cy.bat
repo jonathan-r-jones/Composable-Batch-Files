@@ -350,4 +350,26 @@ exit/b
 
 
 
+:_
+
+:te
+
+set fp=* Turn the template file into a new batch file.
+
+rem lu: Mar-28-2019
+
+echo.
+echo %fp%
+
+call td cbf
+
+echo.
+xcopy te.bat %2.bat
+
+call me %2.bat
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-9)

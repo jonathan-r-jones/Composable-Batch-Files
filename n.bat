@@ -5618,6 +5618,8 @@ exit/b
 
 :optj
 
+:cc
+
 :pass-through
 
 :pass_through
@@ -6599,7 +6601,7 @@ exit/b
 
 :_
 
-:cc
+:ccf
 
 set fp=* Copied clif file.
 

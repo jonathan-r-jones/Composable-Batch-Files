@@ -1577,7 +1577,7 @@ title = Composable Batch Files Helper
 
 :c
 
-:cc
+:ccs
 
 :clear
 
@@ -3025,59 +3025,6 @@ set cbf_parameter=
 set cbf_path=
 
 set cbf_url=
-
-exit/b
-
-
-
-::_
-
-:e
-
-:ev
-
-:env
-
-:cbf
-
-set filep=* Show the state of the CBF environment variables.
-
-if not "%~2" == "" call n %2
-
-cls
-
-echo.
-echo %filep%
-
-echo.
-echo Application: %cbf_application%
-
-echo.
-echo Application Location: %cbf_application_location%
-
-echo.
-echo Default Browser: %cbf_default_browser%
-
-echo.
-echo Default Text Editor: %cbf_default_text_editor%
-
-echo.
-echo Default Repository Folder: %cbf_repo_folder%
-
-echo.
-echo Filename: %cbf_filename%
-
-echo.
-echo Header: %cbf_header%
-
-echo.
-echo Parameter: %cbf_parameter%
-
-echo.
-echo Path: %cbf_path%
-
-echo.
-echo URL: %cbf_url%
 
 exit/b
 

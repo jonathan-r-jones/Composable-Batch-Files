@@ -20,7 +20,7 @@ if "%~1" == "-h" goto help
 
 if "%~1" == "help" goto help
 
-goto %1
+goto main_function
 
 
 
