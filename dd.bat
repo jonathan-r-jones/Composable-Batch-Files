@@ -63,7 +63,7 @@ echo.
 echo %filename_stands_for%
 
 echo.
-dir *.%1 %2
+dir *.%1* %2
 
 exit/b
 

@@ -2259,24 +2259,6 @@ exit/b
 
 ::_
 
-:delete_instance
-
-set fp=* Terminate EC2 instance. (delete instance skw)
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-echo.
-aws ec2 terminate-instances --instance-ids i-056508e5569ebfb4d
-
-exit/b
-
-
-
-::_
-
 :create_db
 
 set fp=* Create database
@@ -4155,6 +4137,10 @@ exit/b
 
 ::_
 
+:di
+
+:din
+
 :d_i
 
 :d_in
@@ -4234,6 +4220,32 @@ set public_dns=ec2-18-253-68-246.us-gov-east-1.compute.amazonaws.com
 echo.
 
 "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%public_dns%
+
+exit/b
+
+
+
+:_
+
+:delete_instance
+
+set fp=* Terminate EC2 instance. (delete instance skw)
+
+rem lu: Mar-28-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Aborted. You must specify an instance to delete.
+  exit/b
+)
+
+call ni %2
+
+echo.
+aws ec2 terminate-instances --instance-ids %cbf_instance_id%
 
 exit/b
 

@@ -5532,6 +5532,8 @@ exit/b
 
 :3
 
+:4
+
 :ruby
 
 :bgsc
@@ -5619,6 +5621,14 @@ exit/b
 :optj
 
 :cc
+
+:fqt
+
+:5
+
+:6
+
+:7
 
 :pass-through
 
@@ -8005,6 +8015,10 @@ exit/b
 ::_
 
 :clip
+
+:shot
+
+:snap
 
 :snip
 

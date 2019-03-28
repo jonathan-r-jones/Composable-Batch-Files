@@ -3567,30 +3567,6 @@ exit/b 0
 
 
 
-::_
-
-:specific_file_presence
-
-set fp=* Check the current folder for the presence of a particlar file type.
-
-rem lu: Nov-19-2018
-
-echo.
-echo * The file "%2" must be present in the current folder.
-
-echo.
-
-if not exist %2 (
-  echo * Error: The file "%2" does NOT exist in the current folder.
-  exit/b 1
-) else (
-  echo * Found file "%2".
-)
-
-exit/b 0
-
-
-
 :_+ DOS Colors
 
 
@@ -4341,7 +4317,7 @@ call fn gfe
 
 set first_filename=%cbf_filename%
 
-call fn cc
+call fn ccf
 
 set second_filename=%cbf_filename%
 
@@ -4431,6 +4407,29 @@ echo.
 call %0 wait
 
 exit
+
+
+
+::_
+
+:specific_file_presence
+
+set fp=* Check the current folder for the presence of a "%2".
+
+rem lu: Mar-28-2019
+
+echo.
+echo %fp%
+
+if not exist %2 (
+  echo. 
+  echo * Error: The file "%2" does NOT exist in the current folder.
+  exit/b 1
+) else (
+  echo * Found file "%2".
+)
+
+exit/b 0
 
 
 
