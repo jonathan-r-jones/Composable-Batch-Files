@@ -3823,7 +3823,10 @@ exit/b
 
 :ulul
 
+:update_lu
+
 set fp=* Update the last_updated_log.txt.
+rem qq-1
 
 rem lu: Feb-8-2019
 

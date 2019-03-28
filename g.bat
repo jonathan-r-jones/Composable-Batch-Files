@@ -1928,25 +1928,6 @@ exit/b
 
 ::_
 
-:co_sf
-
-set fp=* Check out single file based on file's alias.
-
-rem lu: Mar-7-2019
-
-echo.
-echo %fp%
-  
-call n %2
-
-git checkout %cbf_filename%
-
-exit/b
-
-
-
-::_
-
 :rv_pe
 
 set fp=* Revert persistent files. Revert files in need of constant reversion.
@@ -2739,6 +2720,26 @@ echo %fp%
   
 git reset head %2
 git checkout %2
+
+exit/b
+
+
+
+::_
+
+:co_sf
+
+set fp=* Check out single file based on file's alias.
+rem qq-1
+
+rem lu: Mar-7-2019
+
+echo.
+echo %fp%
+  
+call n %2
+
+git checkout %cbf_filename%
 
 exit/b
 
