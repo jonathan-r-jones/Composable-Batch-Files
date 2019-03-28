@@ -2167,9 +2167,14 @@ call :is_working_tree_clean cbf
 
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
-call :is_working_tree_clean ro
+echo %computername% | find /i "lipt">nul
 
+if %errorlevel% == 0 goto Mar-28-2019-1
+
+call :is_working_tree_clean ro
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+:Mar-28-2019-1
 
 call :is_working_tree_clean s
 
@@ -2182,9 +2187,6 @@ if %sum_of_error_levels% == 0 (
   echo.
   echo * Number of dirty repositories = %sum_of_error_levels%
 )
-
-
-rem qq-1
 
 exit/b
 
@@ -2201,7 +2203,6 @@ rem lu: Mar-28-2019
 rem echo.
 rem echo %fp%
 
-rem qq-1
 call td %1>nul
 
 call s | find /i "working tree clean">nul
