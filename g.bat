@@ -2126,9 +2126,9 @@ exit/b
 
 :_
 
-:ss
+:ss_old
 
-:super_status
+:super_status_old
 
 set fp=* Do super status, that is status, including remote information, for all repositories.
 
@@ -2143,6 +2143,77 @@ echo %fp%
 call s cbf
 
 call s s
+
+exit/b
+
+
+
+:_
+
+:ss
+
+:super_status
+
+set fp=* Do super status, that is status, including remote information, for all repositories.
+
+rem fcd: Mar-28-2019
+
+echo.
+echo %fp%
+
+set /a sum_of_error_levels=0
+
+call :is_working_tree_clean cbf
+
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+call :is_working_tree_clean ro
+
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+call :is_working_tree_clean s
+
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+if %sum_of_error_levels% == 0 (
+  echo.
+  echo * All repositories are clean.
+) else (
+  echo.
+  echo * Number of dirty repositories = %sum_of_error_levels%
+)
+
+
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:is_working_tree_clean
+
+set fp=* Is working tree clean?
+
+rem lu: Mar-28-2019
+
+rem echo.
+rem echo %fp%
+
+rem qq-1
+call td %1>nul
+
+call s | find /i "working tree clean">nul
+
+set current_folder=%cd%
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Warning: Dirty tree at %current_folder%.
+  exit/b 1
+)
+
 
 exit/b
 
@@ -2730,7 +2801,6 @@ exit/b
 :co_sf
 
 set fp=* Check out single file based on file's alias.
-rem qq-1
 
 rem lu: Mar-7-2019
 

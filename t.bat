@@ -9282,6 +9282,24 @@ exit/b
 
 :_
 
+:
+
+set fp=* Test cypn batch file.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+echo.
+if not "%machinename%"=="gfe" call cypn mecfg mecfg_s
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* Code below here runs.
@@ -9294,15 +9312,22 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Test cypn batch file.
+set fp=* Test "working tree clean".
 
-rem lu: Dec-27-2018
+rem lu: Mar-28-2019
 
 echo.
 echo %fp%
 
 echo.
-if not "%machinename%"=="gfe" call cypn mecfg mecfg_s
+rem call s s
+call s s | find /i "working tree clean">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo Error: Dirty tree at %cd%.
+  exit/b
+)
 
 exit/b
 

@@ -75,14 +75,15 @@ echo %fp%
 echo.
 echo Errorlevel: %errorlevel%
 
-rem Imprimatur (!erro, !el, !erle)
-if %errorlevel% == 1 (
-  exit/b
-)
-
 if %errorlevel% == 1 (
   echo.
   echo Error: 
+  exit/b
+)
+
+rem Imprimatur (!erro, !el, !erle)
+if %errorlevel% == 1 (
+  exit/b
 )
 
 if %errorlevel% == 0 (
