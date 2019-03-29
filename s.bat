@@ -68,7 +68,7 @@ exit/b
 
 :main_function
 
-call g s
+call g status
 
 rem (!rfsp) (mov-2)
 

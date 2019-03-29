@@ -2419,8 +2419,6 @@ exit/b
 
 :rf_status
 
-:s
-
 :status
 
 echo.
@@ -2637,7 +2635,7 @@ calll %0 po %branch_name%
 
 cd fgt2
 
-call g s
+call g status
 
 exit/b
 
@@ -2677,7 +2675,7 @@ call %0 po %branch_name%
 
 call td jj
 
-call g s
+call g status
 
 rem Restore your Jenkinsfile, if necessary.
 cyfn jb jj
@@ -2774,7 +2772,7 @@ exit/b
 
 :_
 
-:ss
+:s
 
 :super_status
 
