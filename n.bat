@@ -467,23 +467,6 @@ exit/b
 
 :_
 
-:j2
-
-set fp=* J2.txt.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%temp%\j2.txt
-
-exit/b
-
-
-
-:_
-
 :stan
 
 set fp=Open folder standalone.
@@ -3065,25 +3048,6 @@ exit/b
 
 
 
-:_
-
-:j1
-
-set fp=* J1.txt.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%temp%\j1.txt
-
-rem set cbf_url=%cbf_filename%
-
-exit/b
-
-
-
 :_+ Browsers (!brows)
 
 
@@ -3314,7 +3278,7 @@ rem lu: Jul-17-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\feedreader
+set cbf_path=%cbf_repo%\feedreader
 
 set cbf_url=https://github.com/codehollow/FeedReader.git
 
@@ -3333,7 +3297,7 @@ rem lu: Jul-17-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\madisonmonkeys
+set cbf_path=%cbf_repo%\madisonmonkeys
 
 set cbf_url=https://github.com/psberres/MadisonMonkeys.git
 
@@ -3373,7 +3337,7 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\EasyLayout.Forms
+set cbf_path=%cbf_repo%\EasyLayout.Forms
 
 set cbf_url=https://github.com/lprichar/EasyLayout.Forms.git
 
@@ -3392,7 +3356,7 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\CarouselView
+set cbf_path=%cbf_repo%\CarouselView
 
 set cbf_url=https://github.com/alexrainman/CarouselView.git
 
@@ -3411,7 +3375,7 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\Hanselman.Forms
+set cbf_path=%cbf_repo%\Hanselman.Forms
 
 set cbf_url=https://github.com/jamesmontemagno/Hanselman.Forms.git
 
@@ -3430,7 +3394,7 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\app-conference\src
+set cbf_path=%cbf_repo%\app-conference\src
 
 set cbf_url=https://github.com/xamarinhq/app-conference.git
 
@@ -3449,7 +3413,7 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-rem set cbf_path=%cbf_repo_folder%\Xam.NavDrawer
+rem set cbf_path=%cbf_repo%\Xam.NavDrawer
 
 set cbf_url=https://github.com/jamesmontemagno/Xam.NavDrawer.git
 
@@ -3468,7 +3432,7 @@ rem lu: Jul-20-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\AWRestAPI
+set cbf_path=%cbf_repo%\AWRestAPI
 
 set cbf_url=https://github.com/scotcurry/AWRestAPI.git
 
@@ -3489,7 +3453,7 @@ rem lu: Jul-23-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\Beyond-Basics
+set cbf_path=%cbf_repo%\Beyond-Basics
 
 set cbf_url=
 
@@ -3554,7 +3518,7 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\Xamarin.Forms-Monkeys\Monkeys-CarouselView
+set cbf_path=%cbf_repo%\Xamarin.Forms-Monkeys\Monkeys-CarouselView
 
 set cbf_url=https://github.com/jamesmontemagno/Xamarin.Forms-Monkeys.git
 
@@ -3580,7 +3544,7 @@ rem lu: Jul-23-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\app-monkeys
+set cbf_path=%cbf_repo%\app-monkeys
 
 set cbf_url=https://github.com/jamesmontemagno/app-monkeys.git
 
@@ -3601,7 +3565,7 @@ rem lu: Jul-24-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\WelcomeCarousel
+set cbf_path=%cbf_repo%\WelcomeCarousel
 
 set cbf_url=https://github.com/leroygumede/WelcomeCarousel.git
 
@@ -3725,7 +3689,7 @@ rem lu: Jul-30-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\MeetupManager
+set cbf_path=%cbf_repo%\MeetupManager
 
 set cbf_url=https://github.com/jamesmontemagno/MeetupManager.git
 
@@ -3744,7 +3708,7 @@ rem lu: Jul-30-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\buster-from-fresnel
+set cbf_path=%cbf_repo%\buster-from-fresnel
 
 set cbf_url=https://github.com/jonathan-r-jones/buster-from-fresnel
 
@@ -3784,7 +3748,7 @@ rem lu: Aug-2-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\xamarin-forms-book-samples
+set cbf_path=%cbf_repo%\xamarin-forms-book-samples
 
 set cbf_url=https://github.com/xamarin/xamarin-forms-book-samples.git
 
@@ -3820,7 +3784,7 @@ rem lu: Aug-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\xamarin-forms-samples\WorkingWithGestures\PinchGesture
+set cbf_path=%cbf_repo%\xamarin-forms-samples\WorkingWithGestures\PinchGesture
 
 exit/b
 
@@ -3837,7 +3801,7 @@ rem lu: Aug-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\mobile-samples
+set cbf_path=%cbf_repo%\mobile-samples
 
 set cbf_url=https://github.com/xamarin/mobile-samples.git
 
@@ -3856,7 +3820,7 @@ rem lu: Aug-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\mobile-samples\liveplayer
+set cbf_path=%cbf_repo%\mobile-samples\liveplayer
 
 exit/b
 
@@ -4166,7 +4130,7 @@ rem lu: Aug-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\xamarin-forms-samples\WorkingWithGestures\PanGesture
+set cbf_path=%cbf_repo%\xamarin-forms-samples\WorkingWithGestures\PanGesture
 
 exit/b
 
@@ -4408,7 +4372,7 @@ rem lu: Aug-15-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\ConferenceVision
+set cbf_path=%cbf_repo%\ConferenceVision
 
 set cbf_url=https://github.com/Microsoft/ConferenceVision.git
 
@@ -4427,7 +4391,7 @@ rem lu: Aug-16-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\Fresnel Dated Backups
+set cbf_path=%cbf_repo%\Fresnel Dated Backups
 
 exit/b
 
@@ -4490,7 +4454,7 @@ rem lu: Jul-26-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\backups\fresnel
+set cbf_path=%cbf_repo%\backups\fresnel
 
 set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
 
@@ -4509,7 +4473,7 @@ rem lu: Jul-26-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\backups\Quickla-for-Multi-Edit
+set cbf_path=%cbf_repo%\backups\Quickla-for-Multi-Edit
 
 set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
@@ -4528,7 +4492,7 @@ rem lu: Jul-26-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\backups\Composable-Batch-Files
+set cbf_path=%cbf_repo%\backups\Composable-Batch-Files
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
 
@@ -4547,7 +4511,7 @@ rem lu: Jul-26-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\backups
+set cbf_path=%cbf_repo%\backups
 
 exit/b
 
@@ -4763,7 +4727,7 @@ rem lu: Jul-17-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\jsonplaceholder
+set cbf_path=%cbf_repo%\jsonplaceholder
 
 set cbf_url=https://github.com/typicode/jsonplaceholder.git
 
@@ -4837,7 +4801,7 @@ rem lu: Aug-29-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\Nova2018CodeCamp2
+set cbf_path=%cbf_repo%\Nova2018CodeCamp2
 
 set cbf_url=https://github.com/lvanlowe/Nova2018CodeCamp2
 
@@ -4966,7 +4930,7 @@ rem lu: Sep-5-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\webapicoreresources\data
+set cbf_path=%cbf_repo%\webapicoreresources\data
 
 set cbf_url=https://github.com/shawnwildermuth/webapicoreresources
 
@@ -4997,7 +4961,7 @@ exit/b
 
 ::_
 
-:mb
+:mb_old
 
 set fp=* Mobile back-end.
 
@@ -5029,7 +4993,7 @@ rem lu: Sep-7-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\RESTfulAPIAspNetCore_Course
+set cbf_path=%cbf_repo%\RESTfulAPIAspNetCore_Course
 
 set cbf_url=https://github.com/KevinDockx/RESTfulAPIAspNetCore_Course.git
 
@@ -5200,7 +5164,7 @@ rem lu: Sep-12-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\BuildingASPNETCore2
+set cbf_path=%cbf_repo%\BuildingASPNETCore2
 
 set cbf_url=https://github.com/psauthor/BuildingASPNETCore2
 
@@ -5283,7 +5247,7 @@ rem lu: Oct-22-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\DevOps-WG
+set cbf_path=%cbf_repo%\DevOps-WG
 
 set cbf_url=https://github.com/DevTechnology/DevOps-WG
 
@@ -5302,7 +5266,7 @@ rem lu: Oct-23-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\
+set cbf_path=%cbf_repo%\
 
 set cbf_url=https://github.com/Azure/azure-quickstart-templates
 
@@ -5321,7 +5285,7 @@ rem lu: Oct-24-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\
+set cbf_path=%cbf_repo%\
 
 set cbf_url=https://github.com/DevTechnology/DevOps-WG/wiki
 
@@ -5630,6 +5594,10 @@ exit/b
 
 :7
 
+:devo
+
+:mb
+
 :pass-through
 
 :pass_through
@@ -5853,7 +5821,7 @@ rem lu: Jul-10-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%
+set cbf_path=%cbf_repo%
 
 exit/b
 
@@ -6138,7 +6106,7 @@ rem lu: Dec-5-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\
+set cbf_path=%cbf_repo%\
 
 set cbf_url=https://www.google.com/advanced_search
 
@@ -6282,7 +6250,7 @@ rem lu: Jul-20-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\AirWatch-samples
+set cbf_path=%cbf_repo%\AirWatch-samples
 
 set cbf_url=https://github.com/vmwaresamples/AirWatch-samples.git
 
@@ -6303,7 +6271,7 @@ rem lu: Aug-16-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\Xamarin-AWSDK\samples\xamariniossampleapp
+set cbf_path=%cbf_repo%\Xamarin-AWSDK\samples\xamariniossampleapp
 
 set cbf_url=https://github.com/vmwareairwatchsdk/Xamarin-AWSDK.git
 
@@ -6449,7 +6417,7 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\jenkins2-course-spring-boot
+set cbf_path=%cbf_repo%\jenkins2-course-spring-boot
 
 rem This needs to be updated.
 set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
@@ -6471,7 +6439,7 @@ rem lu: Jan-7-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\jenkins2-course-spring-boot
+set cbf_path=%cbf_repo%\jenkins2-course-spring-boot
 
 set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
 
@@ -6490,7 +6458,7 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
+set cbf_path=%cbf_repo%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
 
 exit/b
 
@@ -7099,7 +7067,7 @@ rem lu: Jan-8-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\jenkins-trigger-test
+set cbf_path=%cbf_repo%\jenkins-trigger-test
 
 set cbf_url=https://github.com/jonathan-r-jones/jenkins-trigger-test.git
 
@@ -7157,7 +7125,7 @@ echo %fp%
 
 set cbf_name=acr
 
-set cbf_path=%cbf_repo_folder%\%cbf_name%
+set cbf_path=%cbf_repo%\%cbf_name%
 
 exit/b
 
@@ -7483,7 +7451,7 @@ rem lu: Jan-25-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\sm_gradle_nexus\api
+set cbf_path=%cbf_repo%\sm_gradle_nexus\api
 
 exit/b
 
@@ -8364,7 +8332,7 @@ echo %fp%
 
 call %0 dev
 
-set cbf_filename=%cbf_repo_folder%\cart\api\jenkinsfile
+set cbf_filename=%cbf_repo%\cart\api\jenkinsfile
 
 exit/b
 
@@ -8461,25 +8429,6 @@ exit/b
 
 
 
-:_
-
-:devo
-
-:do
-
-set fp=* Devops.
-
-rem lu: Mar-19-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_repo_folder%\cart\devops\server-deployed-code
-
-exit/b
-
-
-
 :_+ Instances
 
 
@@ -8520,7 +8469,7 @@ set cbf_branch=master
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
-set cbf_path=%cbf_repo_folder%\For-Git-Testing
+set cbf_path=%cbf_repo%\For-Git-Testing
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
@@ -8575,4 +8524,112 @@ exit/b
 
             
 
-:_ (!rfsp) (mov-6) Nicknames
+:_+ J Files
+
+
+
+::_
+
+:j1
+
+set fp=* J1.txt.
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=c:\a\j1.txt
+
+rem set cbf_url=%cbf_filename%
+
+exit/b
+
+
+
+::_
+
+:j2
+
+set fp=* J2.txt.
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=c:\a\j2.txt
+
+exit/b
+
+
+
+::_
+
+:j3
+
+set fp=* J3.txt.
+
+rem lu: Mar-29-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\j3.txt
+
+exit/b
+
+
+
+::_
+
+:j4
+
+set fp=* J4.txt.
+
+rem lu: Mar-29-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\j4.txt
+
+exit/b
+
+
+
+::_
+
+:j5
+
+set fp=* %1.txt.
+
+rem lu: Mar-29-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\%1.txt
+
+exit/b
+
+
+
+::_
+
+:j6
+
+set fp=* %1.txt.
+
+rem lu: Mar-29-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\%1.txt
+
+exit/b
+
+
+
+:_ (!efn, !rfsp) (mov-6) Nicknames

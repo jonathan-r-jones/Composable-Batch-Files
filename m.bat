@@ -1459,7 +1459,7 @@ set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 
 set JAVA_TOOL_OPTIONS=
 
-set cbf_repo_folder=%userprofile%\j
+set cbf_repo=%userprofile%\j
 
 set share-zone=%userprofile%\j\share-zone
 
@@ -1535,7 +1535,7 @@ call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
-rem if "%cbf_repo_folder%" == "" call %0 set_default_repository_folder temp
+rem if "%cbf_repo%" == "" call %0 set_default_repository_folder temp
 
 exit/b
 
@@ -3016,7 +3016,7 @@ rem set cbf_default_browser=
 
 rem set cbf_default_text_editor=
 
-rem set cbf_repo_folder=
+rem set cbf_repo=
 
 set cbf_filename=
 
@@ -3169,7 +3169,7 @@ echo %fp%
 
 if not "%~2" == "" call n %2
 
-set cbf_repo_folder=%cbf_path%
+set cbf_repo=%cbf_path%
 
 exit/b
 
@@ -4161,6 +4161,14 @@ set fp=* Is this hole cart path only? Disallow check-ins from the cart path.
 rem lu: Mar-18-2019
 
 rem echo %fp%
+
+echo %cd% | find /i "j\cart-cookbook">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * You are on the cookbook. No problem.
+  exit/b 0
+)
 
 echo %cd% | find /i "j\cart">nul
 

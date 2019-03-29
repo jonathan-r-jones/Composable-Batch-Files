@@ -34,9 +34,6 @@ echo.
 echo Filename stands for: %filename_stands_for%
 
 echo.
-echo Last Updated: 
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1 (Optional): 
@@ -61,6 +58,9 @@ set fp=* Main function of '%filename_stands_for%'
 
 echo.
 echo %fp%
+
+echo.
+echo lu: 
 
 
 rem qq-1

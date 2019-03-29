@@ -2150,50 +2150,6 @@ exit/b
 
 :_
 
-:ss
-
-:super_status
-
-set fp=* Do super status, that is status, including remote information, for all repositories.
-
-rem fcd: Mar-28-2019
-
-echo.
-echo %fp%
-
-set /a sum_of_error_levels=0
-
-call :is_working_tree_clean cbf
-
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
-echo %computername% | find /i "lipt">nul
-
-if %errorlevel% == 0 goto Mar-28-2019-1
-
-call :is_working_tree_clean ro
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
-:Mar-28-2019-1
-
-call :is_working_tree_clean s
-
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
-if %sum_of_error_levels% == 0 (
-  echo.
-  echo * All repositories are clean.
-) else (
-  echo.
-  echo * Number of dirty repositories = %sum_of_error_levels%
-)
-
-exit/b
-
-
-
-:_
-
 :is_working_tree_clean
 
 set fp=* Is working tree clean?
@@ -2811,6 +2767,64 @@ echo %fp%
 call n %2
 
 git checkout %cbf_filename%
+
+exit/b
+
+
+
+:_
+
+:ss
+
+:super_status
+
+set fp=* Do super status, that is status, including remote information, for all repositories.
+
+rem fcd: Mar-28-2019
+
+echo.
+echo %fp%
+
+set /a sum_of_error_levels=0
+
+
+:community_path
+
+call :is_working_tree_clean cbf
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+call :is_working_tree_clean s
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+
+echo %computername% | find /i "lipt">nul
+
+if %errorlevel% == 0 goto gfe_path
+
+
+:nongfe_path
+
+call :is_working_tree_clean ro
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+goto community_path_resumed
+
+
+:gfe_path
+
+call :is_working_tree_clean cartc
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+
+:community_path_resumed
+
+if %sum_of_error_levels% == 0 (
+  echo.
+  echo * All repositories are clean.
+) else (
+  echo.
+  echo * Number of dirty repositories = %sum_of_error_levels%
+)
 
 exit/b
 

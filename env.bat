@@ -75,7 +75,7 @@ echo.
 echo Default Text Editor: %cbf_default_text_editor%
 
 echo.
-echo Default Repository Folder: %cbf_repo_folder%
+echo Default Repository Folder: %cbf_repo%
 
 echo.
 echo Filename: %cbf_filename%

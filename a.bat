@@ -3985,6 +3985,35 @@ exit/b
 
 ::_
 
+:retag_unwanted_resource
+
+set fp=* Retag unwanted resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+call n %2
+
+if "%~2" == "" (
+  echo.
+  echo * Instance id is a required field.
+  exit/b
+)
+
+set cbf_resource_id=%cbf_instance_id%
+
+call %0 tag_generic BillingCode mybillingcode
+
+call %0 tag_generic ResourceType "Unusable instance. Please delete me."
+
+exit/b
+
+
+
+::_
+
 :tag
 
 :tag_all

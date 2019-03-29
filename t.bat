@@ -7823,7 +7823,7 @@ rem lu: Sep-2-2018
 
 echo %fp%
 
-set cbf_path=%cbf_repo_folder%\
+set cbf_path=%cbf_repo%\
 
 td test2
 
@@ -9300,16 +9300,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test "working tree clean".
@@ -9328,6 +9318,47 @@ if %errorlevel% == 1 (
   echo Error: Dirty tree at %cd%.
   exit/b
 )
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Search and replace.
+
+rem lu: Mar-29-2019
+
+echo.
+echo %fp%
+
+rem search and replace dos
+
+echo.
+@echo off
+
+for /f "tokens=*" %%A in (c:\a\j6.txt) do set myVar=%%A
+
+echo %myvar%
+
+set str1=Charlie
+set str2=Bob
+
+set myvar=!myVar:%str1%=%str2%!
+ 
+echo [ %myvar% ]
 
 exit/b
 

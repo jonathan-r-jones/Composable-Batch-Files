@@ -112,7 +112,7 @@ echo   mvt  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary
-echo    nd  Show nickname definition
+echo    nd  Show nickname definition information
 echo  n_ey  An empty nicknames dictionary, useful for starting over
 echo    nm  NPM
 echo    no  Notepad
