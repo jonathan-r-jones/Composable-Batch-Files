@@ -99,6 +99,8 @@ call p cbf
 
 call p s
 
+call ss
+
 exit/b (!rfsp) (mov-2)
 
 

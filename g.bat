@@ -2778,7 +2778,7 @@ exit/b
 
 :super_status
 
-set fp=* Do super status, that is status, including remote information, for all repositories.
+set fp=* Do super status, that is status for all selected repositories.
 
 rem fcd: Mar-28-2019
 

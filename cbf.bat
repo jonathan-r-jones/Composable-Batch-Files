@@ -131,6 +131,7 @@ echo   rzr  Multi-Edit abstraction layer for running CBF files
 echo  rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo     s  Check git status remotely, has TD parameter
 echo    se  Internet search helper
+echo    ss  Super status, that is status for all selected repositories
 echo   sln  Open a Visual Studio solution, has TD parameter
 echo    sh  SSH
 echo    sx  Use Sublime to edit a batch file in the CBF folder
