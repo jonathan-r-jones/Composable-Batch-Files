@@ -4369,7 +4369,7 @@ echo %fp%
 
 call :aff
 
-exit/b
+exit
 
 
 

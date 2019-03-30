@@ -2419,6 +2419,8 @@ exit/b
 
 :rf_status
 
+:s
+
 :status
 
 echo.
@@ -2772,7 +2774,7 @@ exit/b
 
 :_
 
-:s
+:ss
 
 :super_status
 
