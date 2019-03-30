@@ -2820,7 +2820,8 @@ set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 if %sum_of_error_levels% == 0 (
   echo.
-  echo * All repositories are clean.
+  echo * Sans souci.
+rem qq-1
 ) else (
   echo.
   echo * Number of dirty repositories = %sum_of_error_levels%
