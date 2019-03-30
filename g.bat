@@ -1671,7 +1671,7 @@ call %0 commit_with_timestamp_description
 
 call %0 push
 
-call %0 rf_status
+rem call %0 rf_status
 
 exit/b
 
