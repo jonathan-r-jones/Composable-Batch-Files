@@ -84,7 +84,6 @@ echo    dd  Dir filename extension searcher
 echo   dds  Dir filename extension searcher including subfolders
 echo    de  Delete
 echo  depn  Delete folder corresponding to CBF path alias parameter
-rem qq-1
 echo    dn  Dot Net core
 echo     e  Exit command window
 echo    ea  Application-centric way to run an application
@@ -137,6 +136,8 @@ echo    sh  SSH
 echo    sx  Use Sublime to edit a batch file in the CBF folder
 echo    sf  Surf to websites
 echo    sm  Sublime
+echo    sp  Super push, i.e. push all selected repositories
+echo   spl  Super pull, i.e. push all selected repositories
 echo   sql  MySQL/Database, including LDAP, related tasks
 echo     t  Testing, experimenting and developing new batch file functions
 echo    ty  Use the type command to view a nickname-specified file

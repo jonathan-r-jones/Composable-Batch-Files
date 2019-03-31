@@ -17,19 +17,15 @@ rem echo %filep%
 
 set fp=* Route callers.
 
+if "%~1" == "" goto current_folder
+
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
 
-if "%~1" == "" goto push_prewired_folders
-
-if "%~1" == "-c" goto current_folder
-
 call td %~1
 
 if %errorlevel% == 1 (
-  echo.
-  echo * There has been a folder error.
   exit/b
 )
 
@@ -54,7 +50,7 @@ echo Usage: %0 [Parameter 1]
 
 echo.
 echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, ^
-all prewired folders will be pushed. If "-c" is specified, the current folder is pushed.
+the current folder is pushed.
 
 exit/b
 
@@ -67,41 +63,6 @@ exit/b
 call g acp
 
 exit/b
-
-
-
-:_
-
-:push_prewired_folders
-
-set fp=* Push prewired folders.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-rem
-rem call g co_sf lu
-
-call m update_lu %0
-
-call de multi-edit_conflicted_files
-
-if not "%machinename%"=="gfe" (
-   call 8
-   call cypn mecfg mecfg_s
-   call p ro
-   cd\
-)
-
-call p cbf
-
-call p s
-
-call ss
-
-exit/b (!rfsp) (mov-2)
 
 
 

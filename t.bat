@@ -9243,6 +9243,47 @@ exit/b
 
 ::_
      
+:hw_battle_parm
+
+set fp=* Call t versus call %0 versus call label, parameter passing.
+
+rem Result: Stangely, when calling with a colon, parameter doesn't seem to work. Mar-31-2019
+
+rem lu: Mar-21-2019
+
+echo.
+echo %fp%
+
+call %0 hw2 "Percent Zero!"
+
+call t hw2 "Called with t."
+
+call :hw2 "Called with colon."
+
+exit/b
+
+
+
+::_
+
+:hw2 %1 %2
+
+set fp=* Hello world 2.
+
+rem lu: Mar-31-2019
+
+echo.
+echo %fp%
+
+echo.
+echo %2
+
+exit/b
+
+
+
+::_
+     
 :hw_battle_2
 
 set fp=* Called from eof. Why should this matter?
@@ -9325,18 +9366,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
-:
-
 set fp=* Search and replace.
 
 rem lu: Mar-29-2019
@@ -9361,6 +9390,16 @@ set myvar=!myVar:%str1%=%str2%!
 echo [ %myvar% ]
 
 exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

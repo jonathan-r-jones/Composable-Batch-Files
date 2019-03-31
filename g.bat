@@ -387,6 +387,8 @@ exit/b
 
 ::_
 
+:pus
+
 :push
 
 :rf_push
@@ -2821,11 +2823,32 @@ set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 if %sum_of_error_levels% == 0 (
   echo.
   echo * Sans souci.
-rem qq-1
 ) else (
   echo.
   echo * Number of dirty repositories = %sum_of_error_levels%
 )
+
+exit/b
+
+
+
+:_
+
+:ac
+
+set fp=* Add and commit with message.
+
+rem lu: Mar-31-2019
+
+echo.
+echo %fp%
+
+echo.
+call a
+
+call %0 add
+
+call %0 commit
 
 exit/b
 

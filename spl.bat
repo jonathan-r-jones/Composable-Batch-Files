@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Pull with path walker.
+set filename_stands_for=* Super pull, i.e. push all selected repositories.
 
 
 
@@ -17,6 +17,8 @@ set fp=* Route callers.
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
+
+if "%~1" == "" goto main_function
 
 if "%~1" == "" goto pull_current_folder
 
@@ -37,7 +39,7 @@ goto pull_current_folder
 :help
 
 echo.
-echo Filename stands for: Git pull.
+echo Filename stands for: %filep%
 
 echo.
 echo Last Updated: Jul-16-2018
@@ -55,9 +57,32 @@ exit/b
 
 :_
 
-:pull_current_folder
+:main_function
 
-call g pull
+set fp=* Main function of "%filep%.
+
+rem lu: Mar-31-2019
+
+echo.
+echo %fp%
+
+if not "%machinename%"=="gfe" (
+   cd\
+   call 8
+   call cypn mecfg mecfg_s
+)
+
+call td cbf
+
+call g pl
+
+call td s
+
+call g pl
+
+if "%machinename%"=="gfe" call cypn mecfg_s mecfg
+
+if "%machinename%"=="gfe" cd\
 
 exit/b
 
