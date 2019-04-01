@@ -9414,16 +9414,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test color change.
@@ -9436,9 +9426,18 @@ echo %fp%
 echo.
 color 4e
 echo %fp%
-rem qq-1
 
 exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

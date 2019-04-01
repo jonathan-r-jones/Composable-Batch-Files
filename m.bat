@@ -4441,4 +4441,21 @@ exit/b 0
 
 
 
+:_
+
+:show_parrot
+
+set fp=* Show parrot.
+
+rem lu: Apr-1-2019
+
+echo.
+call n parrot
+
+type %cbf_filename%
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)

@@ -8653,4 +8653,21 @@ exit/b
 
 
 
+:_
+
+:parrot
+
+set fp=* Parrot.
+
+rem lu: Apr-1-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\parrot.txt
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames
