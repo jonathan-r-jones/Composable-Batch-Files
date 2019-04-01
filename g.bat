@@ -2197,6 +2197,15 @@ call m clear_errorlevel_silently
 call s>%tmp%\git_status_message.txt
 
 
+type %tmp%\git_status_message.txt | find /i "diverged">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Diverged code found at %current_folder%.
+  exit/b 1
+)
+
+
 type %tmp%\git_status_message.txt | find /i "behind">nul
 
 if %errorlevel% == 0 (
