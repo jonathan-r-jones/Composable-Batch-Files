@@ -5503,7 +5503,7 @@ exit/b
 
 :devo
 
-:pass
+:pass-through
 
 :iac
 
@@ -8643,11 +8643,11 @@ rem lu: Apr-1-2019
 echo.
 echo %fp%
 
-set cbf_application=
+set cbf_root=%cbf_repo%\cart\api\src\main\resources\config\liquibase\
 
-set cbf_filename=
+set cbf_filename=%cbf_root%\cart_enrollee.csv
 
-set cbf_path=
+set cbf_path=%cbf_root%
 
 exit/b
 

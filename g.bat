@@ -2916,7 +2916,7 @@ call a
 
 call %0 add
 
-call %0 commit
+call %0 commit %2
 
 exit/b
 
