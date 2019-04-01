@@ -2173,7 +2173,6 @@ if %errorlevel% == 1 (
   exit/b 1
 )
 
-
 exit/b
 
 
@@ -2221,6 +2220,15 @@ type %tmp%\git_status_message.txt | find /i "Untracked files:">nul
 if %errorlevel% == 0 (
   echo.
   echo * Untracked file found in %current_folder%.
+  exit/b 1
+)
+
+
+type %tmp%\git_status_message.txt | find /i "ahead">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Ahead of origin found in %current_folder%.
   exit/b 1
 )
 
