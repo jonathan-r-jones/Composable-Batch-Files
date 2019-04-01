@@ -1608,6 +1608,8 @@ exit/b
 
 :ql
 
+:qlgit
+
 set fp=* Quickla.
 
 rem lu: Apr-10-2018
@@ -5239,10 +5241,6 @@ exit/b
 
 :btbt
 
-:cap
-
-:cart
-
 :cartgit
 
 :cart_git
@@ -5499,13 +5497,13 @@ exit/b
 
 :7
 
-:devo
-
 :mb
 
-:pass-through
+:cart
 
-:pass_through
+:devo
+
+:pass
 
 :iac
 
@@ -8650,7 +8648,6 @@ set cbf_application=
 set cbf_filename=
 
 set cbf_path=
-rem       qq-1
 
 exit/b
 
