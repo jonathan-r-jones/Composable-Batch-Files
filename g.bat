@@ -2197,6 +2197,16 @@ call m clear_errorlevel_silently
 
 call s>%tmp%\git_status_message.txt
 
+
+type %tmp%\git_status_message.txt | find /i "behind">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Behind origin found in %current_folder%.
+  exit/b 1
+)
+
+
 type %tmp%\git_status_message.txt | find /i "modified:">nul
 
 if %errorlevel% == 0 (
@@ -2204,6 +2214,7 @@ if %errorlevel% == 0 (
   echo * Modified file found in %current_folder%.
   exit/b 1
 )
+
 
 type %tmp%\git_status_message.txt | find /i "Untracked files:">nul
 
@@ -2213,13 +2224,6 @@ if %errorlevel% == 0 (
   exit/b 1
 )
 
-type %tmp%\git_status_message.txt | find /i "behind">nul
-
-if %errorlevel% == 0 (
-  echo.
-  echo * Behind origin found in %current_folder%.
-  exit/b 1
-)
 
 exit/b 0
 
