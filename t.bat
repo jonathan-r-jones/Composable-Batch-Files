@@ -9395,16 +9395,6 @@ exit/b
 
 :_
 
-:main_function
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Can you put a call message into an environment variable?
@@ -9417,6 +9407,36 @@ echo %fp%
 call s>%tmp%\git_status_message.txt
 
 set /p git_status_message=<%tmp%\git_status_message.txt
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test color change.
+
+rem lu: Apr-1-2019
+
+echo.
+echo %fp%
+
+echo.
+color 4e
+echo %fp%
+rem qq-1
 
 exit/b
 
