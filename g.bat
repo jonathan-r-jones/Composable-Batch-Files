@@ -2178,6 +2178,53 @@ exit/b
 
 
 
+:_
+
+:evaluate_folders_git_status
+
+set fp=* Evaluate folder's git status.
+
+rem lu: Apr-1-2019
+
+rem echo.
+rem echo %fp%
+
+call td %1>nul
+
+set current_folder=%cd%
+
+call m clear_errorlevel_silently
+
+call s>%tmp%\git_status_message.txt
+
+type %tmp%\git_status_message.txt | find /i "modified:">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Modified file found in %current_folder%.
+  exit/b 1
+)
+
+type %tmp%\git_status_message.txt | find /i "Untracked files:">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Untracked file found in %current_folder%.
+  exit/b 1
+)
+
+type %tmp%\git_status_message.txt | find /i "behind">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Behind origin found in %current_folder%.
+  exit/b 1
+)
+
+exit/b 0
+
+
+
 :_+ Rebase
 
 
@@ -2792,12 +2839,11 @@ set /a sum_of_error_levels=0
 
 :community_path
 
-call :is_working_tree_clean cbf
+call :evaluate_folders_git_status cbf
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
-call :is_working_tree_clean s
+call :evaluate_folders_git_status s
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
 
 echo %computername% | find /i "lipt">nul
 
@@ -2806,7 +2852,7 @@ if %errorlevel% == 0 goto gfe_path
 
 :nongfe_path
 
-call :is_working_tree_clean ro
+call :evaluate_folders_git_status ro
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 goto community_path_resumed
@@ -2814,7 +2860,8 @@ goto community_path_resumed
 
 :gfe_path
 
-call :is_working_tree_clean cartc
+call :evaluate_folders_git_status cartc
+
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 

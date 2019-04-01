@@ -9404,3 +9404,22 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Can you put a call message into an environment variable?
+
+rem lu: Apr-1-2019
+
+echo.
+echo %fp%
+
+call s>%tmp%\git_status_message.txt
+
+set /p git_status_message=<%tmp%\git_status_message.txt
+
+exit/b
+
+
+
+:_

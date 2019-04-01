@@ -4312,6 +4312,8 @@ exit/b
 
 :temp
 
+:tmp
+
 set fp=* Temp.
 
 rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.

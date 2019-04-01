@@ -1,5 +1,34 @@
 :_
 
+:is_working_tree_clean
+
+set fp=* Is working tree clean?
+
+rem lu: Mar-28-2019
+
+rem echo.
+rem echo %fp%
+
+call td %1>nul
+
+call s | find /i "working tree clean">nul
+rem qq-1
+
+set current_folder=%cd%
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Warning: Dirty tree at %current_folder%.
+  exit/b 1
+)
+
+
+exit/b
+
+
+
+:_
+
 set fp=4. * Test block 2. Fall-through style.
 
 echo.
