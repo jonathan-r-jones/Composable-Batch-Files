@@ -84,6 +84,8 @@ if "%machinename%"=="gfe" call cypn mecfg_s mecfg
 
 if "%machinename%"=="gfe" cd\
 
+call ss
+
 exit/b
 
 
