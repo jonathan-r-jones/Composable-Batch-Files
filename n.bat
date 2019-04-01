@@ -326,7 +326,7 @@ exit/b
 
 
 
-:_ + Mobile Login Enabling
+:_+ Mobile Login Enabling
 
 
 
@@ -1352,48 +1352,6 @@ exit/b
 
 
 
-:_+ Gencred Files
-
-
-
-::_
-
-:gencred_input
-
-set fp=Credential generator input file. The format is: username:password.
-
-rem fcd: Jul-17-2017
-
-echo.
-echo %fp%
-
-if not exist %tmp%\certutil_input.txt echo.
-if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FILES%\certutil_input.txt" "%tmp%"
-
-set cbf_filename=%tmp%\certutil_input.txt
-
-exit/b
-
-
-
-::_
-
-:gencred_output
-
-set fp=Credential generator output file. Copy this into you m2's settings.xml file.
-
-rem fcd: Jul-17-2017
-
-echo.
-echo %fp%
-echo.
-
-set cbf_filename=%tmp%\certutil_output.txt
-
-exit/b
-
-
-
 :_
 
 :c
@@ -2215,61 +2173,6 @@ echo.
 echo %fp%
 
 set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
-
-exit/b
-
-
-
-:_+ Search Results
-
-
-
-::_
-
-:sr
-
-set fp=* Temporary search results.
-
-rem lu: Jun-14-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%temp%\search_results.txt
-
-exit/b
-
-
-
-::_
-
-:sr_fs
-
-set fp=* Temporary search results for fs.
-
-rem lu: Jun-14-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%temp%\search_results_fs.txt
-
-exit/b
-
-
-
-::_
-
-:sr_cs
-
-set fp=* Temporary search results for cs.
-
-rem lu: Jun-14-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%temp%\search_results_cs.txt
 
 exit/b
 
@@ -7251,78 +7154,6 @@ exit/b
 
 
 
-:_+ Multi-Edit Config Files
-
-
-
-::_
-
-:mecfg
-
-set fp=* Multi-Edit Config file folder.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
-
-exit/b
-
-
-
-::_
-
-:mecfg_db
-
-set fp=* Multi-Edit Config Files Dated Backups.
-
-rem lu: Jan-3-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
-
-exit/b
-
-
-
-::_
-
-:mecfg_dr
-
-set fp=* Multi-Edit Config file folder in DropBox.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
-
-exit/b
-
-
-
-::_
-
-:mecfg_s
-
-set fp=* Multi-Edit Config file folder in Share-Zone.
-
-rem lu: Feb-13-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
-
-exit/b
-
-
-
 :_+ Microsoft Products
 
 
@@ -8629,6 +8460,175 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\%1.txt
+
+exit/b
+
+
+
+:_+ Multi-Edit Configuration Files (skw Multi-Edit Config Files)
+
+
+
+::_
+
+:mecfg
+
+set fp=* Multi-Edit Config file folder.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+exit/b
+
+
+
+::_
+
+:mecfg_db
+
+set fp=* Multi-Edit Config Files Dated Backups.
+
+rem lu: Jan-3-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
+
+exit/b
+
+
+
+::_
+
+:mecfg_dr
+
+set fp=* Multi-Edit Config file folder in DropBox.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
+::_
+
+:mecfg_s
+
+set fp=* Multi-Edit Config file folder in Share-Zone.
+
+rem lu: Feb-13-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
+:_+ Gencred Files
+
+
+
+::_
+
+:gencred_input
+
+set fp=Credential generator input file. The format is: username:password.
+
+rem fcd: Jul-17-2017
+
+echo.
+echo %fp%
+
+if not exist %tmp%\certutil_input.txt echo.
+if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FILES%\certutil_input.txt" "%tmp%"
+
+set cbf_filename=%tmp%\certutil_input.txt
+
+exit/b
+
+
+
+::_
+
+:gencred_output
+
+set fp=Credential generator output file. Copy this into you m2's settings.xml file.
+
+rem fcd: Jul-17-2017
+
+echo.
+echo %fp%
+echo.
+
+set cbf_filename=%tmp%\certutil_output.txt
+
+exit/b
+
+
+
+:_+ Search Results
+
+
+
+::_
+
+:sr
+
+set fp=* Temporary search results.
+
+rem lu: Jun-14-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\search_results.txt
+
+exit/b
+
+
+
+::_
+
+:sr_fs
+
+set fp=* Temporary search results for fs.
+
+rem lu: Jun-14-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\search_results_fs.txt
+
+exit/b
+
+
+
+::_
+
+:sr_cs
+
+set fp=* Temporary search results for cs.
+
+rem lu: Jun-14-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%temp%\search_results_cs.txt
 
 exit/b
 
