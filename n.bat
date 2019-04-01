@@ -8634,4 +8634,26 @@ exit/b
 
 
 
+:_
+
+:csv
+
+set fp=* CSV.
+
+rem lu: Apr-1-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames
