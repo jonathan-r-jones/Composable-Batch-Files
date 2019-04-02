@@ -2890,8 +2890,7 @@ set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 if %sum_of_error_levels% == 0 (
   echo.
-  echo * Sans souci. (%2)
-rem qq-1
+  echo * Sans souci.
   call m show_ascii_art
   echo.
 ) else (
