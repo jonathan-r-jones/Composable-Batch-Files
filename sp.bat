@@ -73,7 +73,7 @@ call p cbf
 
 call p s
 
-call ss
+call ss Push
 
 exit/b (!rfsp) (mov-2)
 
