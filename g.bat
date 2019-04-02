@@ -2913,9 +2913,6 @@ rem lu: Mar-31-2019
 echo.
 echo %fp%
 
-echo.
-call a
-
 call %0 add
 
 call %0 commit %2

@@ -8685,4 +8685,38 @@ exit/b
 
 
 
+:_
+
+:mock
+
+set fp=* Mockaroo.
+
+rem lu: Apr-2-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.mockaroo.com/schemas/162497
+
+exit/b
+
+
+
+:_
+
+:aqua
+
+set fp=* Ascii aquarium.
+
+rem lu: Apr-2-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.cyberciti.biz/tips/linux-unix-apple-osx-terminal-ascii-aquarium.html
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames
