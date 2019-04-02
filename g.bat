@@ -2892,6 +2892,7 @@ if %sum_of_error_levels% == 0 (
   echo.
   echo * Sans souci.
   call m show_ascii_art
+  echo.
 rem qq-1
 ) else (
   echo.
