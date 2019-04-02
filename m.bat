@@ -4458,4 +4458,21 @@ exit/b
 
 
 
+:_
+
+:show_ascii_art
+
+set fp=* Show Ascii art.
+
+rem lu: Apr-1-2019
+
+echo.
+call n ascii_art
+
+type %cbf_filename%
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)

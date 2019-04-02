@@ -8669,4 +8669,20 @@ exit/b
 
 
 
+:_
+
+:ascii_art
+
+set fp=* ASCII art.
+
+rem lu: Apr-1-2019
+
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\ascii_art.txt
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames

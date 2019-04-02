@@ -2889,7 +2889,8 @@ set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 :community_path_resumed
 
 if %sum_of_error_levels% == 0 (
-  call m show_parrot
+  call m show_ascii_art
+rem qq-1
   echo.
   echo * Sans souci.
 ) else (
