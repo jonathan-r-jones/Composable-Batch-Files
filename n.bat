@@ -5445,8 +5445,6 @@ exit/b
 
 :sf1f
 
-:mpj
-
 :ckje
 
 :copy_test_file
@@ -5514,6 +5512,8 @@ exit/b
 :crai
 
 :jj
+
+:mpj
 
 :mc1
 

@@ -2893,7 +2893,6 @@ if %sum_of_error_levels% == 0 (
   echo * Sans souci.
   call m show_ascii_art
   echo.
-rem qq-1
 ) else (
   echo.
   echo * Number of dirty repositories = %sum_of_error_levels%
