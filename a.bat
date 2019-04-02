@@ -4244,7 +4244,7 @@ set git_user_bin=%cbf_path%
 call td tfkeys
 
 rem Change this line to your ip address.
-set public_dns=ec2-18-253-68-246.us-gov-east-1.compute.amazonaws.com
+set public_dns=ec2-18-253-128-125.us-gov-east-1.compute.amazonaws.com
 
 echo.
 
