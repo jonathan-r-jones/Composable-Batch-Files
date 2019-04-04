@@ -2876,6 +2876,9 @@ if %errorlevel% == 0 goto gfe_path
 call :evaluate_folders_git_status ro
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
+call :evaluate_folders_git_status ql
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
 goto community_path_resumed
 
 
