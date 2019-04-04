@@ -65,6 +65,7 @@ call de multi-edit_conflicted_files
 if not "%machinename%"=="gfe" (
    call 8
    call cypn mecfg mecfg_s
+   call p ql
    call p ro
    cd\
 )
