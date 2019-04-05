@@ -4329,12 +4329,9 @@ call fn ccf
 
 set filename_2=%cbf_filename%
 
-call mx n
-rem qq-1
+set filename_3=%cbf_composable_batch_files%\n.bat
 
-set filename_3=%cbf_filename%
-
-call mx ni
+call fn ni
 
 set filename_4=%cbf_filename%
 
