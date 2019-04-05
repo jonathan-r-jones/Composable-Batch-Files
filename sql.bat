@@ -8,16 +8,8 @@
 
 set filep=* SQL batch file intended to be used for database-related tasks.
 
-echo.
-echo %filep%
-
-
-
-:_
-
-set fp=* Add echo.
-
-echo.
+rem echo.
+rem echo %filep%
 
 
 
@@ -30,6 +22,8 @@ if "%~1" == "" goto help
 if "%~1" == "/?" goto help
 
 if "%~1" == "help" goto help
+
+call ni set_pg_dev_pwd
 
 goto %1
 
@@ -1651,6 +1645,25 @@ echo.
 echo On Nov-20-2017, I had the following error when trying to import an LDIF while OpenDS was running.
 echo.
 echo From XPS: Equivalent command line: C:\Mercury\LDAP\OpenDS-2.2.1\bat\import-ldif.bat "--ldifFile" "C:\Mercury\Backups\EC2AMAZ-F3EA4DJ_Nov-20-2017_8_01_PM.ldif" "--backendID" "userRoot" "--clearBackend" "--hostname" "XPS" "--port" "4444" "--bindDN" "cn=Directory Manager" "--bindPassword" "********" "--trustAll" "--noPropertiesFile"
+
+exit/b
+
+
+
+:_
+
+:geen
+
+set fp=* Get enrollees.
+
+rem lu: Apr-5-2019
+rem qq-1
+
+echo.
+echo %fp%
+echo.
+
+psql -U postgres -d cart -c "select * from cart_enrollee;" -hcart-dev.cmyhy248r22x.us-gov-west-1.rds.amazonaws.com
 
 exit/b
 
