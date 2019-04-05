@@ -123,7 +123,7 @@ echo    of  Open Folder, has TD parameter
 echo     p  Add, commit and push Git changes, has TD parameter
 echo    pl  Git pull, has TD parameter
 echo    pg  Ping hooked up to the nicknames dictionary
-echo   pgs  PostgreSQL
+echo   pgs  PostgreSQL (in development)
 echo    ps  PowerShell
 echo     r  Run application using CBF variables
 echo   rzr  Multi-Edit abstraction layer for running CBF files

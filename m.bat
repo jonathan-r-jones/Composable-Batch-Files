@@ -4323,13 +4323,22 @@ echo %fp%
 
 call fn gfe
 
-set first_filename=%cbf_filename%
+set filename_1=%cbf_filename%
 
 call fn ccf
 
-set second_filename=%cbf_filename%
+set filename_2=%cbf_filename%
 
-start mew32 "%first_filename%" "%second_filename%"
+call mx n
+rem qq-1
+
+set filename_3=%cbf_filename%
+
+call mx ni
+
+set filename_4=%cbf_filename%
+
+start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%"
 
 exit/b
 

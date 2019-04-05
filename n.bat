@@ -5449,8 +5449,6 @@ exit/b
 
 :copy_test_file
 
-:n
-
 :d3
 
 :uigit
