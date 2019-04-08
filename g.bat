@@ -2582,7 +2582,7 @@ echo %fp%
 
 call td cart
 
-git push origin --delete jj_test
+git push origin --delete jj_cart_89
 
 exit/b
 
