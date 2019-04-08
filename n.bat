@@ -6519,6 +6519,8 @@ exit/b
 
 :mous
 
+:mouse
+
 set fp=* Mouse.
 
 rem lu: Dec-20-2018

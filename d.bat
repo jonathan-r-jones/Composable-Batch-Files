@@ -132,7 +132,7 @@ echo.
 echo %fp%
 echo.
 
-dir /o-d %2
+dir /o-d %2 | more
 
 exit/b
 
@@ -276,7 +276,6 @@ set fp=* Files changed today.
 rem findstr /bvc:" " removes header and summary
 
 rem The problem is that this doesn't search subfolders.
-rem qq-1
 
 rem lu: Mar-6-2019
 
