@@ -345,6 +345,7 @@ echo %fp%
 
 echo.
 xcopy /d /h /r /y "%reach out%\cc.asc" "%share-zone%\copy of cc.asc"
+rem qq-1
 
 exit/b
 
