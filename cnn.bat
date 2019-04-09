@@ -75,6 +75,12 @@ echo %fp%
 
 call n %1
 
+if %errorlevel% == 1 (
+  echo.
+  echo **** Error processing alias.
+  exit/b
+)
+
 if "%cbf_branch%" == "" (
    echo.
    echo "* Error: Branch is a required field."

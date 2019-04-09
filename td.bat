@@ -104,6 +104,8 @@ if not exist "%cbf_path%" (
 
 cd /d "%cbf_path%"
 
+set cbf_back=%cbf_path%
+
 exit/b
 
 

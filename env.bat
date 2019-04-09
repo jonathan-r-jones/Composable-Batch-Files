@@ -66,6 +66,9 @@ echo.
 echo Application: %cbf_application%
 
 echo.
+echo Back: %cbf_back%
+
+echo.
 echo Clone URL: %cbf_clone_url%
 
 echo.
@@ -91,8 +94,6 @@ echo Path: %cbf_path%
 
 echo.
 echo URL: %cbf_url%
-
-rem qq-1
 
 
 

@@ -387,6 +387,8 @@ exit/b
 
 ::_
 
+:p
+
 :pus
 
 :push
@@ -1641,8 +1643,6 @@ exit/b
 
 :acp
 
-:p
-
 set fp=* Add, commit and push with timestamp commit description.
 
 rem fcd: Apr-13-2017
@@ -2825,7 +2825,7 @@ exit/b
 
 :debr
 
-set fp=* 10. Delete branch. (!delb) (skw delete_branch)
+set fp=* Delete branch. (!delb) (skw delete_branch)
 
 rem Outcome:
 
@@ -2839,7 +2839,7 @@ echo %fp%
 
 call td cart
 
-git push origin --delete jj_cart_412
+git push origin --delete cart_412
 
 exit/b
 

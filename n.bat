@@ -5515,9 +5515,13 @@ exit/b
 
 :japi
 
-:cart_412
+:cart-412
 
 :wb
+
+:cart-412-2
+
+:cart-412-3
 
 :pass-through
 
@@ -8733,6 +8737,8 @@ rem lu: Apr-2-2019
 echo.
 echo %fp%
 
+rem call m set_specific_browser fx
+
 set cbf_url=https://www.mockaroo.com/schemas/162497
 
 exit/b
@@ -8751,6 +8757,63 @@ echo.
 echo %fp%
 
 set cbf_url=https://www.cyberciti.biz/tips/linux-unix-apple-osx-terminal-ascii-aquarium.html
+
+exit/b
+
+
+
+:_+ Bookmark
+
+
+
+::_
+
+:sbm
+
+set fp=* Set bookmark.
+
+rem lu: Apr-9-2019
+
+echo.
+echo %fp%
+
+set cbf_bookmark=%cd%
+
+exit/b
+
+
+
+::_
+
+:bm
+
+set fp=* Go back to bookmark.
+
+rem lu: Apr-9-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_bookmark%
+
+exit/b
+
+
+
+:_
+
+:back
+
+:bk
+
+set fp=* Back button.
+
+rem lu: Apr-9-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_back%
 
 exit/b
 

@@ -4329,7 +4329,7 @@ call fn ccf
 
 set filename_2=%cbf_filename%
 
-set filename_3=%cbf_composable_batch_files%\n.bat
+set filename_3=%composable_batch_files%\n.bat
 
 call fn ni
 
