@@ -2564,32 +2564,6 @@ exit/b
 
 ::_
 
-:delb
-
-:debr
-
-set fp=* 10. Delete branch. (!delb) (skw delete_branch)
-
-rem Outcome:
-
-rem This worked! Oct-13-2016
-rem This worked! Mar-8-2019
-
-rem Note: You must have already initialized the repository.
-
-echo.
-echo %fp%
-
-call td cart
-
-git push origin --delete jj_cart_89
-
-exit/b
-
-
-
-::_
-
 :delb_jj
 
 set fp=* Delete branch jj_devops.
@@ -2668,6 +2642,8 @@ exit/b
 
 :cbd
 
+:create_branch_based_on_develop
+
 set fp=* Create branch based on develop.
 
 echo.
@@ -2715,7 +2691,7 @@ exit/b
 
 ::_
 
-:new_jj_devops
+:new_jj_devops_branch
 
 set fp=* How to start a fresh jj_devops.
 
@@ -2739,11 +2715,10 @@ call k cn_jj_devops_starter
 
 call td jj
 
-rem Create branch based on develop.
-call %0 cbd %branch_name%
+call %0 create_branch_based_on_develop %branch_name%
 
 rem Push to origin.
-call %0 po %branch_name%
+call %0 push_origin %branch_name%
 
 call td jj
 
@@ -2759,6 +2734,8 @@ exit/b
 ::_
 
 :po
+
+:push_origin
 
 set fp=* Push origin.
 
@@ -2837,6 +2814,32 @@ echo %fp%
 call n %2
 
 git checkout %cbf_filename%
+
+exit/b
+
+
+
+::_
+
+:delb
+
+:debr
+
+set fp=* 10. Delete branch. (!delb) (skw delete_branch)
+
+rem Outcome:
+
+rem This worked! Oct-13-2016
+rem This worked! Mar-8-2019
+
+rem Note: You must have already initialized the repository.
+
+echo.
+echo %fp%
+
+call td cart
+
+git push origin --delete jj_cart_412
 
 exit/b
 

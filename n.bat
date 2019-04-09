@@ -5515,7 +5515,9 @@ exit/b
 
 :japi
 
-:jj_cart_412
+:cart_412
+
+:wb
 
 :pass-through
 
@@ -7409,8 +7411,6 @@ exit/b
 
 :sqlw
 
-:wb
-
 set fp=* SQL Workbench.
 
 rem lu: Feb-4-2019
@@ -7427,6 +7427,8 @@ exit/b
 
 
 :_
+
+:golf
 
 :pga
 
@@ -8666,6 +8668,23 @@ set cbf_root=%cbf_repo%\cart\api\src\main\resources\config\liquibase
 set cbf_filename=%cbf_root%\cart_enrollee.csv
 
 set cbf_path=%cbf_root%
+
+exit/b
+
+
+
+:_
+
+:rcsv
+
+set fp=* Relative path CSV.
+
+rem lu: Apr-9-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%cd%\api\src\main\resources\config\liquibase
 
 exit/b
 
