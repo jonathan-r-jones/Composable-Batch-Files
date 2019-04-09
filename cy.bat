@@ -344,7 +344,7 @@ echo.
 echo %fp%
 
 echo.
-xcopy /d /h /r /y "%reach out%\cc.asc" "%reach out%\copy of cc.asc"
+xcopy /d /h /r /y "%reach out%\cc.asc" "%safe-zone%\copy of cc.asc"
 
 exit/b
 
