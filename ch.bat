@@ -49,7 +49,7 @@ echo.
 echo %parameter_1%
 
 echo.
-echo %parameter_2%
+eccheho %parameter_2%
 
 exit/b
 
@@ -122,6 +122,24 @@ echo %fp%
 
 echo.
 chef exec rspec
+
+exit/b
+
+
+
+:_
+
+:vers
+
+set fp=* Version.
+
+rem lu: Apr-10-2019
+
+echo.
+echo %fp%
+
+echo.
+chef -v
 
 exit/b
 

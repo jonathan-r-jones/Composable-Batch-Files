@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Super pull, i.e. push all selected repositories.
+set filename_stands_for=* Super pull, i.e. pull all chosen repositories.
 
 
 
@@ -59,12 +59,10 @@ exit/b
 
 :main_function
 
-set fp=* Main function of "%filep%.
-
-rem lu: Mar-31-2019
+rem lu: Apr-10-2019
 
 echo.
-echo %fp%
+echo %filename_stands_for%
 
 if not "%machinename%"=="gfe" (
    cd\
