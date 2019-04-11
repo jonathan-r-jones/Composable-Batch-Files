@@ -66,8 +66,8 @@ echo     c  Clear screen and reset color
 echo   cbf  Show this list of CBF batch files
 echo    ch  Chef command line utility
 echo   clc  Simple calculator
-echo    cn  Git cloning
-echo   cnn  Git cloning based entirely on the nickname parameter
+echo    cn  Git cloning, based entirely on the nickname parameter
+echo   cng  Git cloning, generic version
 echo   col  Shell window colors operations
 echo  ccfn  Code Compare with aliases or filenames
 echo  cc12  Code Compare preloaded with j1txt and j2txt
@@ -111,7 +111,7 @@ echo   mvt  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary
-echo    nd  Show nickname definition information
+echo   ndi  Nickname definition information
 echo  n_ey  An empty nicknames dictionary, useful for starting over
 echo    nm  NPM
 echo    no  Notepad

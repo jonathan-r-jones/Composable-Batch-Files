@@ -3434,6 +3434,8 @@ exit/b
 
 :sh
 
+:shpr
+
 set fp=* Show current user profile. (skw show profile, show_profile)
 
 rem lu: Mar-18-2019
@@ -3616,7 +3618,7 @@ exit/b
 
 ::_
 
-:cnp
+:anp
 
 set fp=* Add new profile.
 

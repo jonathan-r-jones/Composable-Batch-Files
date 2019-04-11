@@ -70,7 +70,7 @@ if not "%machinename%"=="gfe" (
    call cypn mecfg mecfg_s
 )
 
-call m update_lu %0
+rem call m update_lu %0
 
 call td cbf
 

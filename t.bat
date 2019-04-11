@@ -9366,6 +9366,8 @@ exit/b
 
 :_
 
+:sar
+
 set fp=* Search and replace.
 
 rem lu: Mar-29-2019
@@ -9378,11 +9380,11 @@ rem search and replace dos
 echo.
 @echo off
 
-for /f "tokens=*" %%A in (c:\a\j6.txt) do set myVar=%%A
+for /f "tokens=*" %%A in (c:\a\j1.txt) do set myVar=%%A
 
 echo %myvar%
 
-set str1=Charlie
+set str1=Program
 set str2=Bob
 
 set myvar=!myVar:%str1%=%str2%!
@@ -9438,6 +9440,29 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Echo path.
+
+rem lu: Apr-11-2019
+
+echo.
+echo %fp%
+
+rem echo.
+rem echo Path: %path%
+rem qq-1
+
+rem echo %path%>c:\a\j1.txt
+
+sort c:\a\j1.txt
+
+exit/b
 
 
 
