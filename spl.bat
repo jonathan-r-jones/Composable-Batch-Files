@@ -70,15 +70,12 @@ if not "%machinename%"=="gfe" (
    call cypn mecfg mecfg_s
 )
 
-rem call m update_lu %0
 
-call td cbf
+call pl cbf
 
-call g pl
+call pl s
 
-call td s
-
-call g pl
+call m update_lu %0
 
 if "%machinename%"=="gfe" call cypn mecfg_s mecfg
 
