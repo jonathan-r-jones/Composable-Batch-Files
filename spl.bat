@@ -75,8 +75,6 @@ call pl cbf
 
 call pl s
 
-call m update_lu %0
-
 if "%machinename%"=="gfe" call cypn mecfg_s mecfg
 
 if "%machinename%"=="gfe" cd\

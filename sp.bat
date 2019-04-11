@@ -70,6 +70,8 @@ if not "%machinename%"=="gfe" (
 
 call p cbf
 
+call m update_lu %0
+
 call p s
 
 call ss Push
