@@ -58,8 +58,6 @@ echo %fp%
 rem
 rem call g co_sf lu
 
-call m update_lu %0
-
 call de multi-edit_conflicted_files
 
 if not "%machinename%"=="gfe" (
