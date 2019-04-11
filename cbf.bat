@@ -99,6 +99,7 @@ echo    gg  Git Gui helper Has TD parameter
 echo    gl  Glossary of terms used in CBF
 echo    gr  Gradle
 echo     h  Sencha
+echo     i  Specific nickname's definition information
 echo    kn  Knife, a Chef command line utility
 echo     l  Google searcher
 echo     m  Perform miscellaneous tasks
@@ -111,7 +112,6 @@ echo   mvt  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary
-echo   ndi  Nickname definition information
 echo  n_ey  An empty nicknames dictionary, useful for starting over
 echo    nm  NPM
 echo    no  Notepad
