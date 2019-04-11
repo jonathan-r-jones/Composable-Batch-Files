@@ -1081,7 +1081,7 @@ exit/b
 
 :snp
 
-set fp=* Pop takes stashed changes and reapplies them to the working directory.
+set fp=* Stash and pop.
 
 rem lu: Jan-22-2018
 
