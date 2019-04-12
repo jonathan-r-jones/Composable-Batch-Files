@@ -70,18 +70,14 @@ if not "%machinename%"=="gfe" (
    call cypn mecfg mecfg_s
 )
 
-
 call pl cbf
 
 call pl s
 
 if "%machinename%"=="gfe" call cypn mecfg_s mecfg
-
 if "%machinename%"=="gfe" cd\
 
-call ss Pull
-
-rem Apr-1-2019 9:19 AM
+call ss
 
 exit/b
 

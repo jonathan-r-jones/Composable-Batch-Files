@@ -55,9 +55,6 @@ rem lu: Mar-31-2019
 echo.
 echo %fp%
 
-rem
-rem call g co_sf lu
-
 call de multi-edit_conflicted_files
 
 if not "%machinename%"=="gfe" (
@@ -74,7 +71,7 @@ call m update_lu %0
 
 call p s
 
-call ss Push
+call ss
 
 exit/b (!rfsp) (mov-2)
 
