@@ -111,8 +111,6 @@ set cbf_parameter=%cbf_url%
 
 set fp=* Set browser.
 
-if not "%cbf_application%" == "" goto main_function
-
 if not "%~2" == "" goto override_default_browser
 
 if not "%cbf_specific_browser%" == "" goto use_specific_browser

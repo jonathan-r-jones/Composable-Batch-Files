@@ -89,7 +89,6 @@ echo     e  Exit command window
 echo    ea  Application-centric way to run an application
 echo    ed  Edit a file abstraction layer
 echo   edx  Edit a file Emulated Surf
-echo   env  Show the state of the CBF environment variables
 echo    fn  Filenames dictionary layer of abstraction
 echo    fs  Filenames search
 echo   fst  Filenames search with a td parameter
@@ -99,7 +98,7 @@ echo    gg  Git Gui helper Has TD parameter
 echo    gl  Glossary of terms used in CBF
 echo    gr  Gradle
 echo     h  Sencha
-echo     i  Specific nickname's definition information
+echo     i  CBF environment variable information
 echo    kn  Knife, a Chef command line utility
 echo     l  Google searcher
 echo     m  Perform miscellaneous tasks

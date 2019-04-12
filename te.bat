@@ -12,13 +12,9 @@ set filename_stands_for=* .
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
 
 goto main_function
 

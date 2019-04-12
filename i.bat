@@ -12,15 +12,11 @@ set filename_stands_for=* Show nickname definition.
 
 :_
 
-set fp=* Route help callers.
-
-if "%~1" == "" goto help
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
+if "%~1" == "" goto show_the_state_of_the_cbf_environment_variables
 
 goto main_function
 
@@ -41,7 +37,8 @@ echo Last Updated: Feb-15-2019
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Nickname to show definition for.
+set parameter_1=Parameter 1 (Optional): Nickname to show definition for. If left blank ^
+current CBF environment variables are shown.
 
 echo.
 echo %parameter_1%
@@ -76,6 +73,57 @@ if not "%cbf_path%" == "" echo * Path was set to: "%cbf_path%".
 
 if not "%cbf_url%" == "" echo.
 if not "%cbf_url%" == "" echo * URL was set to: "%cbf_url%".
+
+exit/b
+
+
+
+:_
+
+:show_the_state_of_the_cbf_environment_variables
+
+set fp=* Show the state of the CBF environment variables.
+rem qq-1
+
+cls
+
+echo.
+echo %fp%
+
+echo.
+echo Application: %cbf_application%
+
+echo.
+echo Back: %cbf_back%
+
+echo.
+echo Clone URL: %cbf_clone_url%
+
+echo.
+echo Default Browser: %cbf_default_browser%
+
+echo.
+echo Default Text Editor: %cbf_default_text_editor%
+
+echo.
+echo Default Repository Folder: %cbf_repo%
+
+echo.
+echo Filename: %cbf_filename%
+
+echo.
+echo Header: %cbf_header%
+
+echo.
+echo Parameter: %cbf_parameter%
+
+echo.
+echo Path: %cbf_path%
+
+echo.
+echo URL: %cbf_url%
+
+
 
 exit/b
 
