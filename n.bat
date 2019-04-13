@@ -4910,7 +4910,7 @@ exit/b
 
 ::_
 
-:dx
+:dockx
 
 set fp=* Restful API Asp Net Core Course by Kevin Dockx - My modifications.
 
@@ -8821,6 +8821,62 @@ echo.
 echo %fp%
 
 set cbf_path=%cbf_back%
+
+exit/b
+
+
+
+:_+ App Center Demo
+
+
+
+::_
+
+:dx
+
+:imdx
+
+set fp=* Introduction to Mobile Development with Xamarin by James Montemagno.
+
+rem lu: Apr-13-2019
+
+echo.
+echo %fp%
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/dotnet-presentations/xamarin.git
+
+set cbf_path=%cbf_repo%\imdx\Introduction to Mobile Development with Xamarin
+
+set cbf_filename=%cbf_path%\Introduction to Mobile Development with Xamarin.pptx
+
+set cbf_url=https://github.com/dotnet-presentations/xamarin.git
+
+exit/b
+
+
+
+::_
+
+:acd
+
+set fp=* App Center Demo.
+
+rem lu: Apr-13-2019
+
+echo.
+echo %fp%
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+
+set cbf_path=%cbf_repo%\acd
+
+set cbf_filename=%cbf_path%\App Center Demo.pptx
+
+set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
 exit/b
 

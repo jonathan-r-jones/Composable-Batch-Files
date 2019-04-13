@@ -83,7 +83,6 @@ exit/b
 :show_the_state_of_the_cbf_environment_variables
 
 set fp=* Show the state of the CBF environment variables.
-rem qq-1
 
 cls
 
@@ -106,9 +105,6 @@ echo.
 echo Default Text Editor: %cbf_default_text_editor%
 
 echo.
-echo Default Repository Folder: %cbf_repo%
-
-echo.
 echo Filename: %cbf_filename%
 
 echo.
@@ -119,6 +115,9 @@ echo Parameter: %cbf_parameter%
 
 echo.
 echo Path: %cbf_path%
+
+echo.
+echo Repo: %cbf_repo%
 
 echo.
 echo URL: %cbf_url%
