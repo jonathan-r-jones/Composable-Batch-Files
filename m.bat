@@ -4316,7 +4316,7 @@ exit/b
 
 set fp=* Open gfe files.
 
-rem lu: Dec-13-2018
+rem lu: Apr-15-2019
 
 echo.
 echo %fp%
@@ -4335,7 +4335,11 @@ call fn ni
 
 set filename_4=%cbf_filename%
 
-start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%"
+call fn i2
+
+set filename_5=%cbf_filename%
+
+start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%"
 
 exit/b
 
