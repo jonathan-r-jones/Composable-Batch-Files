@@ -7208,6 +7208,7 @@ echo %fp%
 rem Determine installation path.
 
 if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
+if exist "c:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application=c:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE
 
 if "%cbf_application%" == "" (
   echo.
@@ -7236,6 +7237,7 @@ echo %fp%
 rem Determine installation path.
 
 if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe
+if exist "c:\Program Files\Microsoft Office\root\Office16\winword.exe" set cbf_application=c:\Program Files\Microsoft Office\root\Office16\winword.exe
 
 if "%cbf_application%" == "" (
   echo.
