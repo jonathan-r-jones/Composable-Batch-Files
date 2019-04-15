@@ -81,12 +81,6 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_branch%" == "" (
-   echo.
-   echo "* Error: Branch is a required field."
-   exit/b
-)
-
 if "%cbf_clone_url%" == "" (
    echo.
    echo "* Error: Clone URL is a required field."
@@ -104,6 +98,10 @@ if exist "%cbf_path%" (
    echo "* Error: CBF Path already exists."
    call td %1
    exit/b
+)
+
+if "%cbf_branch%" == "" (
+   set cbf_branch=master
 )
 
 echo.

@@ -5533,6 +5533,12 @@ exit/b
 
 :mapper
 
+:cade
+
+:isso
+
+:issoa
+
 :pass-through
 
 :iac
@@ -5540,7 +5546,6 @@ exit/b
 :cart_s3
 
 :cain
-
 
 :jj
 
