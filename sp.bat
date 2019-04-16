@@ -19,8 +19,6 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto main_function
 
 
@@ -48,12 +46,10 @@ exit/b
 
 :main_function
 
-set fp=* Main function of "%filep%".
-
 rem lu: Mar-31-2019
 
 echo.
-echo %fp%
+echo %filep%
 
 call de multi-edit_conflicted_files
 
