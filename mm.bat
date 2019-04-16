@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Uses mx.bat then me.bat to decipher which file to edit.
+set filename_stands_for=* Uses mx.bat and then maybe me.bat to decipher which file to edit.
 
 
 
@@ -52,10 +52,8 @@ exit/b
 
 :main_function
 
-set fp=* Main function of '%filename_stands_for%'
-
 echo.
-echo %fp%
+echo %filename_stands_for%
 
 call m clear_errorlevel_silently
 
