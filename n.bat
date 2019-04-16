@@ -1,4 +1,4 @@
-:_
+:_ (!n)
 
 @echo off
 
@@ -24,11 +24,7 @@ ver>nul
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
-
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 goto %1
 
@@ -5539,6 +5535,8 @@ exit/b
 
 :issoa
 
+:wp
+
 :pass-through
 
 :iac
@@ -6562,8 +6560,6 @@ exit/b
 
 :big
 
-:g
-
 :gf
 
 :gfe
@@ -7465,10 +7461,10 @@ set cbf_application=C:\Program Files (x86)\pgAdmin 4\v4\runtime\pgAdmin4.exe
 
 rem I commented the url because the correct way to start PGA is thought the exe.
 rem Having the URL here kind of makes things confusing.
-//set cbf_url=http://127.0.0.1:50255/browser/
-//set cbf_url=http://127.0.0.1:59171/browser/
+rem set cbf_url=http://127.0.0.1:50255/browser/
+rem set cbf_url=http://127.0.0.1:59171/browser/
 
-// I added this line so that sf golf would work.
+rem  I added this line so that sf golf would work.
 set cbf_url=http://127.0.0.1:59171/?key=74c91a8a-0ef6-4550-9e08-7b7f4c0e3f09
 
 exit/b
