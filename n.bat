@@ -5981,6 +5981,8 @@ exit/b
 
 :apda
 
+:appd
+
 set fp=* App data.
 
 rem lu: Dec-4-2018
@@ -8901,6 +8903,23 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\i2.asc
+
+exit/b
+
+
+
+:_
+
+:arp
+
+set fp=* Add or Remove Programs.
+
+rem lu: Apr-17-2019
+
+echo.
+echo %fp%
+
+set cbf_application=appwiz.cpl
 
 exit/b
 
