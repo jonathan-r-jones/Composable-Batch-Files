@@ -2885,12 +2885,14 @@ goto community_path_resumed
 
 :gfe_path
 
-call :evaluate_folders_git_status cartc
+call :evaluate_folders_git_status isso
 
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 
 :community_path_resumed
+
+call td s
 
 if %sum_of_error_levels% == 0 (
   echo.
