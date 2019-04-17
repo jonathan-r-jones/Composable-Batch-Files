@@ -96,7 +96,7 @@ if "%~2" == "p" goto find_parent_folder
 
 if not exist "%cbf_path%" (
   echo.
-  echo * Error: Folder does not exist at "%cbf_path%". 
+  echo * Folder does not exist at "%cbf_path%". 
   exit/b 1
 )
 
