@@ -30,10 +30,6 @@ if "%~3" == "" (
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 if "%~2" == "+" goto addition
 
 if "%~2" == "-" goto subtraction

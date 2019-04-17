@@ -18,10 +18,6 @@ if "%~1" == "" goto w
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 if not "%~2" == "" call td %~2
 
 goto %1

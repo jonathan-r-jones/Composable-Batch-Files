@@ -18,10 +18,6 @@ if "%~1" == "" goto emulate_cd
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 goto main_function
 
 

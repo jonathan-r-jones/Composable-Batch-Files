@@ -16,10 +16,6 @@ set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 goto main_function
 
 
@@ -85,10 +81,11 @@ echo   dds  Dir filename extension searcher including subfolders
 echo    de  Delete
 echo  depn  Delete folder corresponding to CBF path alias parameter
 echo    dn  Dot Net core
-echo     e  Exit command window
+echo     e  Uses mx.bat then me.bat to decipher which file to edit
 echo    ea  Application-centric way to run an application
 echo    ed  Edit a file abstraction layer
 echo   edx  Edit a file Emulated Surf
+echo    ex  Exit command window
 echo    fn  Filenames dictionary layer of abstraction
 echo    fs  Filenames search
 echo   fst  Filenames search with a td parameter
@@ -105,7 +102,6 @@ echo     m  Perform miscellaneous tasks
 echo   mcd  Make and navigate (cd) to a folder
 echo    me  Multi-Edit
 echo   mav  Maven
-echo    mm  Uses mx.bat then me.bat to decipher which file to edit
 echo    mv  Move files
 echo   mvt  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder

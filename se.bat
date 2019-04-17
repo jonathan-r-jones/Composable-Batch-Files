@@ -18,10 +18,6 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 goto %1
 
 
@@ -96,7 +92,6 @@ echo %fp%
 set cbf_url=https://www.google.com/search?as_q=%~1
 
 call sfcu
-rem qq-1
 
 exit/b
 

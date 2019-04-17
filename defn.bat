@@ -18,10 +18,6 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 goto main_function
 
 
@@ -62,7 +58,6 @@ echo %fp%
 call n %1
 
 del %cbf_filename%
-rem qq-1
 
 exit/b
 

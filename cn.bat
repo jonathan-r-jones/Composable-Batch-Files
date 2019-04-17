@@ -19,11 +19,7 @@ set fp=* Route help callers.
 
 if "%~1" == "" goto help
 
-if "%~1" == "?" goto help
-
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 call n %1
 

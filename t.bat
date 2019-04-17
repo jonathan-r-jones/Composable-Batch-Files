@@ -24,9 +24,6 @@ set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
-
 
 
 :_
@@ -9456,7 +9453,6 @@ echo %fp%
 
 rem echo.
 rem echo Path: %path%
-rem qq-1
 
 rem echo %path%>c:\a\j1.txt
 

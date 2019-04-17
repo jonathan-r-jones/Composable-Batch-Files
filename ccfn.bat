@@ -18,10 +18,6 @@ if "%~1" == "" goto just_run_code_compare
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 if "%~3" == "-l" goto use_filenames_not_aliases
 
 goto main_function

@@ -18,10 +18,6 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 goto main_function
 
 
@@ -62,7 +58,6 @@ call n %1
 
 echo.
 xcopy /d /h /r /s /y "%cbf_path%"
-rem qq-1
 
 rem (!rfsp) (mov-2)
 

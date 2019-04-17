@@ -18,8 +18,6 @@ if "%~1" == "" goto use_current_cbf_url
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto code_execution_area
 
 

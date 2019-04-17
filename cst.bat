@@ -16,10 +16,6 @@ set fp=* Route help callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "-h" goto help
-
-if "%~1" == "help" goto help
-
 call td %3
 
 goto main_function
@@ -63,7 +59,6 @@ echo.
 echo %fp%
 
 call cs %1 %2
-rem qq-1
 
 exit/b
 
