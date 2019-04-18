@@ -3719,25 +3719,6 @@ exit/b
 
 :_
 
-:s
-
-:sh
-
-set fp=* Shutdown the computer.
-
-rem lu: Feb-5-2019
-
-echo.
-echo %fp%
-
-shutdown /s /t 1
-
-exit/b
-
-
-
-:_
-
 :lu
 
 :ulul

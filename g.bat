@@ -2186,7 +2186,7 @@ rem lu: Apr-1-2019
 rem echo.
 rem echo %fp%
 
-call td %1>nul
+call td %2>nul
 
 set current_folder=%cd%
 
@@ -2838,71 +2838,6 @@ echo %fp%
 call td cart
 
 git push origin --delete cart_412
-
-exit/b
-
-
-
-:_
-
-:ss
-
-:super_status
-
-set fp=* Do super status, that is status for all selected repositories.
-
-rem fcd: Mar-28-2019
-
-echo.
-echo %fp%
-
-set /a sum_of_error_levels=0
-
-
-:community_path
-
-call :evaluate_folders_git_status cbf
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
-call :evaluate_folders_git_status s
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
-echo %computername% | find /i "lipt">nul
-
-if %errorlevel% == 0 goto gfe_path
-
-
-:nongfe_path
-
-call :evaluate_folders_git_status ro
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
-call :evaluate_folders_git_status ql
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
-goto community_path_resumed
-
-
-:gfe_path
-
-call :evaluate_folders_git_status isso
-
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
-
-
-:community_path_resumed
-
-call td s
-
-if %sum_of_error_levels% == 0 (
-  echo.
-  echo * Sans souci.
-  call m show_ascii_art
-  echo.
-) else (
-  echo.
-  echo * Number of dirty repositories = %sum_of_error_levels%
-)
 
 exit/b
 

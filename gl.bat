@@ -53,6 +53,7 @@ echo.
 echo  Term/Abbrev.  Definition/Description
 echo -------------  ------------------------------------------------------------
 echo           cbf  composable batch files
+echo         filep  File purpose
 echo            fp  Function purpose
 echo            lu  Last updated. The last time the file was updated.
 echo  td parameter  Transform Directory passed in as a parameter, meaning to 

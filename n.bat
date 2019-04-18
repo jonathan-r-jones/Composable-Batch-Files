@@ -5535,6 +5535,8 @@ exit/b
 
 :wp
 
+:cdocs
+
 :pass-through
 
 :iac
@@ -5596,26 +5598,6 @@ echo %fp%
 set cbf_path=%userprofile%\j\cart
 
 set cbf_url=https://github.com/DevTechnology/iCart-apc
-
-exit/b
-
-
-
-::_
-
-:c_docs
-
-set fp=* Cart Documents.
-
-rem lu: Oct-24-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\Cart Documents
-
-rem This is out of date in the sense that the most documents are not here.
-set cbf_url=https://github.com/DevTechnology/iCart-Doco.git
 
 exit/b
 

@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* .
+set filep=* Shutdown the computer.
 
 setlocal
 
@@ -32,17 +32,7 @@ echo.
 echo File purpose: %filep%
 
 echo.
-echo Usage: %0 [space separated parameter(s)]
-
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
-
-echo.
-echo %parameter_1%
-
-echo.
-echo %parameter_2%
+echo Usage: %0
 
 exit/b
 
@@ -52,14 +42,14 @@ exit/b
 
 :main_function
 
-rem lu: 
+rem lu: Feb-5-2019
 
 endlocal
 
 echo.
 echo %filep%
 
-rem qq-1
+shutdown /s /t 1
 
 exit/b
 

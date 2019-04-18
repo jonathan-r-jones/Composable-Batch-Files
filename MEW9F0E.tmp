@@ -8,8 +8,6 @@
 
 set filep=* This file is used for testing, experimenting and developing new batch file functions.
 
-setlocal
-
 
 
 :_
@@ -9468,16 +9466,12 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-rem set fp=* Play with setlocal.
+set fp=* Play with setlocal.
 
 rem lu: Apr-18-2019
 
-call tt.bat
-
-endlocal
-
 echo.
-echo %filep%
+echo %fp%
 
 echo.
 
