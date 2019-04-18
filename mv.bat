@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Wrapper around the Move command.
+set filep=* Wrapper around the Move command.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,15 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-echo.
-echo %filep%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Sep-4-2018

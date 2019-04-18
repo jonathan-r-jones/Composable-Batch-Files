@@ -25,8 +25,6 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.

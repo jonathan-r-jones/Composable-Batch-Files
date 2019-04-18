@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Ping batch file.
+set filep=* This file is used to hook up Ping with n.bat entries.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,20 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-set filep=File purpose: This file is used to hook up Ping with n.bat entries.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Aug-23-2018
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [space separated parameters]
@@ -63,7 +53,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call n %1
 

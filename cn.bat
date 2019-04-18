@@ -8,8 +8,7 @@
 
 set filep=* Clone a Git repository using a nickname only.
 
-echo.
-echo %filep%                         
+setlocal
 
 
 
@@ -29,8 +28,6 @@ goto preprocessor
 
 :_
 
-:h
-
 :help
 
 echo.
@@ -47,9 +44,7 @@ exit/b
 
 :preprocessor
 
-set fp=* Initialize key variable used by this file.
-
-rem lu: Mar-20-2019
+set fp=* Initialize key variables used by this file.
 
 echo.
 echo %fp%
@@ -62,12 +57,7 @@ set cbf_path=
 
 :_
 
-:main_function
-
-set fp=* Main function.
-
-echo.
-echo %fp%
+set fp=* Guard clause.
 
 call n %1
 
@@ -95,6 +85,19 @@ if exist "%cbf_path%" (
    call td %1
    exit/b
 )
+
+
+
+:_
+
+set fp=* Main function.
+
+rem lu: 
+
+endlocal
+
+echo.
+echo %filep%
 
 if "%cbf_branch%" == "" (
    set cbf_branch=master

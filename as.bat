@@ -6,13 +6,15 @@
 
 :_
 
-set filename_stands_for=* Windows file association commands.
+set filep=* Windows file association commands.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
+
+if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
@@ -22,12 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Mar-6-2019

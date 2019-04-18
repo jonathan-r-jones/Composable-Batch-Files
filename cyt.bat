@@ -6,41 +6,28 @@
 
 :_
 
-set filename_stands_for=* Copy file to nickname.
+set filep=* Copy file to nickname.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-
-
-:_
-
-set fp=* Data validation.
-
-if "%~2" == "" (
-  echo * Destination path nickname is required.
-  exit/b
-)
-  
-goto main_function
+goto proprocessor
 
 
 
 :_
-
-:h
 
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: Copies a file in the current directory to a nickname-specified path.
 
@@ -71,10 +58,21 @@ exit/b
 
 :_
 
-:main_function
+:preprocessor
+
+set fp=* Data validation.
+
+if "%~2" == "" (
+  echo * Destination path nickname is required.
+  exit/b
+)
+  
+
+
+:_
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call n %2
 

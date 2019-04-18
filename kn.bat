@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* A wrapper around Knife, a Chef command line utility.
+set filep=* A wrapper around Knife, a Chef command line utility.
 
 
 
@@ -14,20 +14,20 @@ set filename_stands_for=* A wrapper around Knife, a Chef command line utility.
 
 set fp=* Route help callers.
 
+if "%~1" == "" goto main_function
+
 if "%~1" == "/?" goto help
 
-goto main_function
+goto %1
 
 
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: 
@@ -54,7 +54,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 echo.
 knife
@@ -65,7 +65,7 @@ exit/b
 
 :_
 
-:
+:parg
 
 set fp=* Pargat's converge line.
 

@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Copy files from nickname parameter 1 to nickname parameter 2.
+set filep=* Copy files from nickname parameter 1 to nickname parameter 2.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,15 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-echo.
-echo Last Updated: Mar-19-2019
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -58,7 +53,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call fn %1
 

@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Composable batch files menu.
+set filep=* Composable batch files menu.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
@@ -22,11 +22,9 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: This file shows a list of available CBF files.
 

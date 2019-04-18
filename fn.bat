@@ -26,22 +26,18 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto main_function
 
 
 
 :_ (!rfsp) (mov-6)
 
-:h
-
 :help
 
 echo %filep%                         
 
 echo.
-echo The filename stands for: Filename Nicknames.
+echo The File purpose: Filename Nicknames.
 
 echo.
 echo Last Updated: Jan-24-2018

@@ -6,10 +6,10 @@
 
 :_
 
-set filename_stands_for=* Editor abstraction layer.
+set filep=* Editor abstraction layer.
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 
 
@@ -40,8 +40,6 @@ call n %0
 set fp=* Route callers.
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 if "%~1" == "" (
   m open_application_without_a_parameter

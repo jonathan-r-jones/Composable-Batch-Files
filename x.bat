@@ -8,20 +8,15 @@
 
 set filep=* Remote double-click equivalent way to run a file.
 
-echo.
-echo %filep%
-
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 goto main_function
 
@@ -29,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Last Updated: May-22-2018
+echo. File purpose: %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -51,7 +44,8 @@ exit/b
 
 :main_function
 
-set fp=* Main function for "%0.bat".
+echo.
+echo %filep%
 
 set cbf_filename=
 

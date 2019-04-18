@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Gradle-related tasks.
+set filep=* Gradle-related tasks.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto w
 
@@ -26,12 +26,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: This template file can be used as a "Save As" to create a new 
 set filep=%filep% composable batch file.

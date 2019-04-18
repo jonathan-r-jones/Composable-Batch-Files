@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Copies file from a cbf_path nickname.
+set filep=* Copies file from a cbf_path nickname.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Sep-7-2018
@@ -52,7 +50,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call n %1
 

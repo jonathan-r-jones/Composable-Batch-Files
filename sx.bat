@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Use Sublime to edit a batch file in the CBF folder.
+set filep=* Use Sublime to edit a batch file in the CBF folder.
 
 
 
@@ -18,19 +18,16 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto main_function
 
 
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: %filename_stands_for%
+echo.
+echo File purpose: %filep%
 
 echo.
 echo File purpose: Use Sublime to edit a batch file in the CBF folder.
@@ -54,7 +51,7 @@ exit/b
 
 set fp=* Main function.
 
-echo %filename_stands_for%
+echo %filep%
 
 call n sm
 

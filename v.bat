@@ -12,25 +12,13 @@ set filep=* This file is used for vetted functions.
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
+
+if "%~1" == "" code_execution_area
 
 if "%~1" == "/?" goto help
 
-
-
-:_
-
-set fp=* If percent 1 is not blank, then to percent 1.
-
-if not "%~1" == "" goto %1
-
-
-
-:_
-
-set fp=* Go to execution area.
-
-goto main_function
+goto %1
 
 
 
@@ -42,10 +30,10 @@ echo.
 echo File Purpose: %filep%
 
 echo.
-echo Filename stands for: Vetted functions.
+echo File purpose: %filep%
 
 echo.
-echo Last Updated (lu): Jul-8-2018
+echo lu: Apr-18-2019
 
 echo.
 echo Usage: %0 (optional parameter 1)
@@ -901,7 +889,7 @@ exit/b
 
 :_
 
-:main_function
+:code_execution_area
 
 set fp=* Code below here runs.
 

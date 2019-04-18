@@ -24,12 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: CopY file(s). This file is useful when fixed locations are involved.
+echo File purpose: CopY file(s). This file is useful when fixed locations are involved.
 
 echo.
 echo Last Updated: Feb-6-2018

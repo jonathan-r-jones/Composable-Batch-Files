@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* The batch file is a mirror of sorts for the command line.
+set filep=* The batch file is a mirror of sorts for the command line.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,11 +24,9 @@ goto %1
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: This file attempts to demonostrate how it's easy to see what command
 set filep=%filep% you are running. This can help you build easy and cool scripts.

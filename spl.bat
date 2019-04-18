@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Super pull, i.e. pull all chosen repositories.
+set filep=* Super pull, i.e. pull all chosen repositories.
 
 
 
@@ -15,8 +15,6 @@ set filename_stands_for=* Super pull, i.e. pull all chosen repositories.
 set fp=* Route callers.
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 if "%~1" == "" goto main_function
 
@@ -34,15 +32,13 @@ goto pull_current_folder
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filep%
+echo File purpose for: %filep%
 
 echo.
-echo Last Updated: Jul-16-2018
+echo Last Updated: Apr-18-2019
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -62,7 +58,7 @@ exit/b
 rem lu: Apr-10-2019
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 if not "%machinename%"=="gfe" (
    cd\

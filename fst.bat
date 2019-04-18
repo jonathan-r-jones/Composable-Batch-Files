@@ -6,13 +6,15 @@
 
 :_
 
-set filename_stands_for=* Filenames search with td paramater.
+set filep=* Filenames search with td paramater.
+
+setlocal
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
@@ -24,12 +26,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: 
@@ -55,8 +55,10 @@ exit/b
 
 :main_function
 
+endlocal
+
 echo.
-echo %fp%
+echo %filep%
 
 call fs %1 %2
 

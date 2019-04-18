@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Perform Terraform-related tasks.
+set filep=* Perform Terraform-related tasks.
 
 
 
@@ -18,20 +18,16 @@ if "%~1" == "" goto help s
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto %1
 
 
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Mar-27-2019

@@ -6,10 +6,10 @@
 
 :_
 
-set filename_stands_for=* Multi-edit abstraction layer.
+set filep=* Multi-edit abstraction layer.
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 
 

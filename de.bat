@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Delete batch file.
+set filep=* Delete batch file.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Jan-2-2019

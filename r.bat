@@ -16,8 +16,6 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 if not "%~1" == "" call n %~1
 
 if not "%~2" == "" call n %~2
@@ -36,7 +34,7 @@ echo.
 echo File purpose: %filep%
 
 echo.
-echo Filename stands for: Run application.
+echo File purpose: Run application.
 
 echo.
 echo Last Updated (lu): Jun-14-2018

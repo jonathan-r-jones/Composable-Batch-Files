@@ -24,14 +24,12 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 set fp=* Dir: an easier to type version.
 
 echo.
-echo Filename stands for: Dir.
+echo File purpose: Dir.
 
 echo.
 echo Last Updated: Feb-6-2018

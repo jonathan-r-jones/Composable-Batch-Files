@@ -19,8 +19,6 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 
 
 :_
@@ -37,12 +35,10 @@ exit/b
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: Run Git Gui.
+echo File purpose: Run Git Gui.
 
 echo.
 echo Last Updated: Aug-1-2018

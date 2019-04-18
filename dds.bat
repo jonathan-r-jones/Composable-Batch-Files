@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Dir filename extension searcher including subfolders.
+set filep=* Dir filename extension searcher including subfolders.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Mar-18-2019
@@ -50,10 +48,8 @@ exit/b
 
 :main_function
 
-set fp=* Main function of %0.
-
 echo.
-echo %fp%
+echo %filep%
 
 call dd %1 /s
 

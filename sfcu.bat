@@ -18,15 +18,11 @@ if "%~1" == "" goto use_current_cbf_url
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto code_execution_area
 
 
 
 :_
-
-:h
 
 :help
 
@@ -37,7 +33,7 @@ echo.
 echo Last Updated: Dec-5-2018
 
 echo.
-echo Filename stands for: SurF.
+echo File purpose: SurF.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

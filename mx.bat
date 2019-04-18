@@ -6,7 +6,9 @@
 
 :_
 
-set filename_stands_for=* Use Multi-Edit to edit a batch file in the CBF folder.
+set filep=* Use Multi-Edit to edit a batch file in the CBF folder. Make mx.bat work for the n_ignore file too.
+
+setlocal
 
 
 
@@ -18,19 +20,16 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto main_function
 
 
 
 :_ (!rfsp) (mov-6)
 
-:h
-
 :help
 
-echo Filename stands for: %filename_stands_for%
+echo.
+echo File Purpose: %filep%
 
 echo.
 echo File purpose: Use Multi-Edit to edit a batch file in the CBF folder.
@@ -59,7 +58,7 @@ exit/b
 set fp=* Main function.
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call n me
 
@@ -86,12 +85,12 @@ exit/b
 
 :make_max_work
 
-set fp=* Make mx.bat work for the n_ignore file too.
-
 rem lu: Jan-8-2019
 
+endlocal
+
 echo.
-echo %fp%
+echo %filep%
 
 rem echo Mar-11-2019.3
 

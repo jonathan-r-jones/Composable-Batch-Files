@@ -6,19 +6,17 @@
 
 :_
 
-set filename_stands_for=* AWS-related tasks.
+set filep=* AWS-related tasks.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto b
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "" goto main_function
 
 goto %1
 
@@ -29,7 +27,7 @@ goto %1
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Nov-1-2018
@@ -38,7 +36,7 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: Function to execute. If left blank, main function will be executed.
+echo Parameter 1: Function to execute. If left blank, heartbeat is checked.
 
 exit/b
 

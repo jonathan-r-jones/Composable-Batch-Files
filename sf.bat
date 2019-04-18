@@ -24,18 +24,13 @@ goto code_execution_area
 
 :_
 
-:h
-
 :help
 
 echo.
 echo %filep%
 
 echo.
-echo Last Updated: May-30-2018
-
-echo.
-echo Filename stands for: SurF.
+echo File purpose: SurF.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -151,9 +146,9 @@ set cbf_application=%cbf_specific_browser%
 
 :main_function
 
-echo.
 set fp=* Surf the internet.
 
+echo.
 echo %fp%
 
 rem lu: Jan-31-2018

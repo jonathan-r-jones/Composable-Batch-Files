@@ -35,11 +35,9 @@ goto %1
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: sencHa-related tasks.
+echo File purpose: sencHa-related tasks.
 
 echo.
 echo Last Updated: Feb-6-2018

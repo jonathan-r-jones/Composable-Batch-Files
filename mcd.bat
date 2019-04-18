@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Make and navigate (cd) to a folder.
+set filep=* Make and navigate (cd) to a folder.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,15 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-echo.
-echo Last Updated: Aug-31-2018
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -52,7 +47,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 md %1>nul
 cd %1

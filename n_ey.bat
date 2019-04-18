@@ -26,15 +26,11 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto %1
 
 
 
 :_
-
-:h
 
 :help
 
@@ -44,7 +40,7 @@ echo.
 echo Last Updated: May-8-2018
 
 echo.
-echo The filename stands for: Nickname dictionary.
+echo The File purpose: Nickname dictionary.
 
 echo.
 echo Usage: %0 [single parameter]

@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Maven batch file.
+set filep=* Maven-related tasks.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,11 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: Maven-related tasks.
+echo.
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Dec-14-2018

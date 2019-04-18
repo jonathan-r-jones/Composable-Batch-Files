@@ -6,13 +6,14 @@
 
 :_
 
-set filename_stands_for=* Trandform folder to parent folder.
+set filep=* Trandform folder to parent folder.
 
+setlocal
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto emulate_cd
 
@@ -24,15 +25,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-echo.
-echo Last Updated: Jul-16-2018
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -68,10 +64,10 @@ exit/b
 
 call td %1
 
-set fp=* Trandform folder to parent folder.
+endlocal
 
 echo.
-echo %fp%
+echo %filep%
 
 if %errorlevel% == 0 (
   cd..

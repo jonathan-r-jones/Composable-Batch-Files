@@ -19,26 +19,19 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
-
-
-:_
-
 exit
 
 
 
 :_ (!rfsp)
 
-:h
-
 :help
 
-echo Filename stands for: Exit.
+echo.
+echo %filep%
 
 echo.
-echo Last Updated: Feb-6-2018
+echo Last Updated: Apr-18-2019
 
 echo.
 echo Usage: %0 [Parameter 1]

@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Use type command to view nickname-specified file
+set filep=* Use type command to view nickname-specified file
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: 
@@ -56,7 +54,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call fn %1
 

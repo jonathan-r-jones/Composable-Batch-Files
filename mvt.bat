@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Moves file in the current directory to nickname-specified path.
+set filep=* Moves file in the current directory to nickname-specified path.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: Move a file in the current directory to a nickname-specified path.
 
@@ -63,7 +61,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call n %2
 

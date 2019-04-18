@@ -8,27 +8,39 @@
 
 set filep=* Open a Visual Studio solution.
 
-rem echo.
-rem echo %filep%
-
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
+goto preprocessor
+
+
+:_
+
+:help
+
+echo.
+echo File purpose: %filep%
+
+echo.
+echo Usage: %0 [Parameter 1]
+
+echo.
+echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current folder is used.
+
+exit/b
 
 
 
 :_
 
-set fp=* If it is provided, go to percent 1.
+:preprocessor
 
-rem echo.
-rem echo * Outside of the if statement, the error level is %errorlevel%.
+set fp=* Preprocessor. If it is provided, go to percent 1.
 
 call m clear_errorlevel_silently
 
@@ -42,30 +54,6 @@ if not "%~1" == "" (
     exit/b
   )
 )
-
-goto main_function
-
-
-
-:_
-
-:h
-
-:help
-
-echo.
-echo Filename stands for: Run SoLution.
-
-echo.
-echo Last Updated: Jul-25-2018
-
-echo.
-echo Usage: %0 [Parameter 1]
-
-echo.
-echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, the current folder is used.
-
-exit/b
 
 
 

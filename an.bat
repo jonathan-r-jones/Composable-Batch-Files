@@ -8,9 +8,6 @@
 
 set filep=* Application nickname dictionary that sets the full application name corresponding to a given unique nickname parameter.
 
-rem echo.
-rem echo %filep%
-
 
 
 :_
@@ -29,15 +26,11 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto main_function
 
 
 
 :_ (!rfsp) (mov-6)
-
-:h
 
 :help
 
@@ -45,7 +38,7 @@ echo.
 echo %filep%
 
 echo.
-echo The filename stands for: Application Nicknames.
+echo The File purpose: Application Nicknames.
 
 echo.
 echo Last Updated: Jan-24-2018

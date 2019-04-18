@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Google searcher.
+set filep=* Google searcher.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Feb-14-2019 
@@ -51,7 +49,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 set cbf_url=https://www.google.com/search?as_q=%~1
 

@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Search helper batch file.
+set filep=* Search helper batch file.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,18 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Dec-5-2018
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]

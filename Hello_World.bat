@@ -18,8 +18,6 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 goto %1
 
 rem Could've also used call :%1 followed by exit/b.
@@ -27,8 +25,6 @@ rem Could've also used call :%1 followed by exit/b.
 
 
 :_ (!rfsp)
-
-:h
 
 :help
 

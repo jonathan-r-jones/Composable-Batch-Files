@@ -25,7 +25,7 @@ goto %1
 :help
 
 echo.
-echo Filename stands for: Perform miscellaneous tasks.
+echo File purpose: Perform miscellaneous tasks.
 
 echo.
 echo Last Updated: Feb-6-2018
@@ -3065,7 +3065,7 @@ exit/b
 
 :editor_help
 
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: Edit files in an editor.
 set filep=%filep%

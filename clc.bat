@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Simple calculator.
+set filep=* Simple calculator.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -38,17 +38,18 @@ if "%~2" == "*" goto multiplication
 
 if "%~2" == "/" goto division
 
-goto main_function
+echo.
+echo Invalid second parameter.
+
+goto help
 
 
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: Performs 4 basic math functions.
 
@@ -76,20 +77,6 @@ set parameter_3=Parameter 3: Second number
 
 echo.
 echo %parameter_3%
-
-exit/b
-
-
-
-:_
-
-:main_function
-
-echo %filename_stands_for%
-
-
-
-rem (!rfsp) (mov-2)
 
 exit/b
 

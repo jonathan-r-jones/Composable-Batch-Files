@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Download helper batch file.
+set filep=* Download helper batch file.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,11 +24,9 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: This template file can be used as a "Save As" to create a new 
 set filep=%filep% composable batch file.
@@ -65,7 +63,8 @@ exit/b
 
 :main_function
 
-echo %filename_stands_for%
+echo.
+echo %filep%
 
 call n dfw java
 

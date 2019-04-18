@@ -6,46 +6,26 @@
 
 :_
 
-set filename_stands_for=* Status batch file.
+set filep=* Status batch file.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-
-
-:_
-
-set fp=* Preprocessing.
-
-if not "%~1" == "" call td %~1
-
-goto main_function
-
-exit/b
+goto preprocessing
 
 
 
 :_
-
-:h
 
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-set filep=File purpose: Goes to a path, then call the status function.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Dec-19-2018
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [Optional Parameter 1]
@@ -62,7 +42,17 @@ exit/b
 
 :_
 
-:main_function
+:preprocessing
+
+set fp=* Preprocessing.
+
+if not "%~1" == "" call td %~1
+
+exit/b
+
+
+
+:_
 
 call g status
 

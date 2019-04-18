@@ -24,8 +24,6 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
@@ -58,8 +56,6 @@ endlocal
 
 echo.
 echo %filep%
-
-rem qq-1
 
 exit/b
 

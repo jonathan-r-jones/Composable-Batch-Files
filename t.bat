@@ -22,25 +22,13 @@ title=Mr T.
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-
-
-:_
-
-set fp=* If percent is not blank, then go to percent 1.
-
 if not "%~1" == "" goto %1
 
-
-
-:_
-
-set fp=* Go to execution area.
-
-goto main_function
+goto code_execution_area
 
 
 
@@ -51,7 +39,7 @@ goto main_function
 echo File Purpose: %filep%
 
 echo.
-echo Filename stands for: Testing.
+echo File purpose: Testing.
 
 echo.
 echo Last Updated (lu): Apr-30-2018
@@ -9456,7 +9444,7 @@ exit/b
 
 :_
 
-:main_function
+:code_execution_aread
 
 set fp=* Code below here runs.
 
@@ -9481,7 +9469,6 @@ echo %filep%
 
 echo.
 
-rem qq-1
 
 exit/b
 

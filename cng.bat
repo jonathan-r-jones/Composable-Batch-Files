@@ -8,14 +8,11 @@
 
 set filep=* Clone a Git repository - basic version.
 
-echo.
-echo %filep%                         
-
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -27,15 +24,13 @@ goto preprocessing
 
 :_
 
-:h
-
 :help
 
 rem echo.
 rem echo File Purpose: %filep%
 
 echo.
-echo Filename stands for: CloNe repository.
+echo File purpose: CloNe repository.
 
 echo.
 echo Usage: cn [Parameter 1] [Parameter 2]

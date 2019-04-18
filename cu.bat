@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Curl batch file.
+set filep=* Curl batch file.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: This file is used to hook up Curl with n.bat entries.
 
@@ -63,7 +61,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call n %1
 

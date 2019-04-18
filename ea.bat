@@ -18,8 +18,6 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
 
 
 :_
@@ -50,15 +48,13 @@ exit/b
 
 :_ (!rfsp) (mov-6)
 
-:h
-
 :help
 
 echo.
 echo %filep%
 
 echo.
-echo Filename stands for: Execute application.
+echo File purpose: Execute application.
 
 echo.
 echo Last Updated: Aug-28-2018

@@ -8,22 +8,17 @@
 
 set filep=* Transform directory to the folder of a filename nickname.
 
-echo.
-echo %filep%
-
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "help" goto help
-
-goto execute_code
+goto preprocessor
 
 
 
@@ -32,10 +27,10 @@ goto execute_code
 :help
 
 echo.
-echo Filename stands for: %filep%
+echo File purpose: %filep%
 
 echo.
-echo Last Updated: Jan-15-2019
+echo Last Updated: Apr-18-2019
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -49,11 +44,7 @@ exit/b
 
 :_
 
-:execute_code
-
-
-
-:_
+:preprocessor
 
 set fp=* In order to promote freshness, reset the error level.
 

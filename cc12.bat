@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Run code compare with j1 and j2.
+set filep=* Run code compare with j1 and j2.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto main_function
 
@@ -24,12 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Mar-6-2019
@@ -46,7 +44,7 @@ exit/b
 :main_function
 
 echo.
-echo filename_stands_for
+echo filep
 
 call ccfn j1 j2
 

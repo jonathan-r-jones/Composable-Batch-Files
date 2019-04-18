@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Glossary of CBF Terms.
+set filep=* Glossary of CBF Terms.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
@@ -22,11 +22,9 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: This file is a glossary of terms used in CBF.
 
@@ -47,7 +45,7 @@ exit/b
 
 :main_function
 
-echo %filename_stands_for%
+echo %filep%
 
 echo.
 echo  Term/Abbrev.  Definition/Description

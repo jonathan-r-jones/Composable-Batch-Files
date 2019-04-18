@@ -8,9 +8,6 @@
 
 set filep=* Add, commit and push Git changes with timestamp commit message.
 
-rem echo.
-rem echo %filep%
-
 
 
 :_
@@ -20,8 +17,6 @@ set fp=* Route callers.
 if "%~1" == "" goto current_folder
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 call td %~1
 
@@ -35,12 +30,10 @@ goto current_folder
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: Add/Commit/Push.
+echo File purpose: Add/Commit/Push.
 
 echo.
 echo Last Updated: Dec-27-2018

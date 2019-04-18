@@ -13,7 +13,7 @@ set filep=%filep% reuse and remember your commonly used commands.
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto l
 
@@ -25,20 +25,12 @@ goto %1
 
 :_
 
-:h
-
 :help
 
+echo.
 echo %filep%
 
 echo.
-echo Filename stands for: Tasklist.
-
-echo.
-echo Last Updated: May-8-2018
-
-echo.
-
 echo Usage: %0 [Optional Parameter 1]
 
 echo.

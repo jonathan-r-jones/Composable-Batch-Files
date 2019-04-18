@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Perform .NET Core functions.
+set filep=* Perform .NET Core functions.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto run
 
@@ -24,12 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Aug-31-2018

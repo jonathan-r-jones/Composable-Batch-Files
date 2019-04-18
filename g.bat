@@ -24,11 +24,9 @@ goto %1
 
 :_
 
-:h
-
 :help
 
-echo Filename stands for: Git-related tasks.
+echo File purpose: Git-related tasks.
 
 echo.
 echo Last Updated: Jul-9-2018

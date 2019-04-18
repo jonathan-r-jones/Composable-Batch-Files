@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Perform Java-related operations.
+set filep=* Perform Java-related operations.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Nov-19-2018

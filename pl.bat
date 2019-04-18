@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Pull with path walker.
+set filep=* Pull with path walker.
 
 
 
@@ -15,8 +15,6 @@ set filename_stands_for=* Pull with path walker.
 set fp=* Route callers.
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 if "%~1" == "" goto pull_current_folder
 
@@ -32,12 +30,10 @@ goto pull_current_folder
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: Git pull.
+echo File purpose: Git pull.
 
 echo.
 echo Last Updated: Jul-16-2018

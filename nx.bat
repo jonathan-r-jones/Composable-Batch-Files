@@ -17,11 +17,7 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
-
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 goto main_function
 
@@ -29,12 +25,10 @@ goto main_function
 
 :_ (!rfsp) (mov-6)
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: Multi-Edit (x) file.
+echo File purpose: Multi-Edit (x) file.
 
 echo.
 echo Last Updated: Feb-6-2018

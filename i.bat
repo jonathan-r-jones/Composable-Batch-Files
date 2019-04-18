@@ -6,7 +6,7 @@
 
 :_
 
-set filename_stands_for=* Show nickname definition.
+set filep=* Show nickname definition.
 
 
 
@@ -24,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Feb-15-2019
@@ -52,7 +50,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call m cenv
 

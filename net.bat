@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* A wrapper around the netstat command.
+set filep=* A wrapper around the netstat command.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto find_5432
 
@@ -24,15 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-echo.
-echo Last Updated: 
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -58,7 +53,7 @@ exit/b
 set fp=* Find 5432.
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 rem netstat -ano | findstr :<yourPortNumber>
 

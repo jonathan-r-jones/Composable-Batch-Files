@@ -15,13 +15,13 @@ echo %filep%
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto execute_code
+goto preprocessor
 
 
 
@@ -30,10 +30,7 @@ goto execute_code
 :help
 
 echo.
-echo Filename stands for: Transform Directory.
-
-echo.
-echo Last Updated: Dec-28-2018
+echo Filename purpose: %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -50,11 +47,20 @@ exit/b
 
 :_
 
-:execute_code
+:find_parent_folder
+
+call m set_parent_fd "%cbf_path%\.." parent_folder
+
+rem echo Parent Folder: %parent_folder%
+cd /d %parent_folder%
+
+exit/b
 
 
 
 :_
+
+:preprocessor
 
 set fp=* In order to promote freshness, reset the error level.
 
@@ -76,8 +82,6 @@ if "%~1" == ".." (
 
 
 :_
-
-:main_function
 
 set fp=* Main function.
 
@@ -103,19 +107,6 @@ if not exist "%cbf_path%" (
 cd /d "%cbf_path%"
 
 set cbf_back=%cbf_path%
-
-exit/b
-
-
-
-:_
-
-:find_parent_folder
-
-call m set_parent_fd "%cbf_path%\.." parent_folder
-
-rem echo Parent Folder: %parent_folder%
-cd /d %parent_folder%
 
 exit/b
 

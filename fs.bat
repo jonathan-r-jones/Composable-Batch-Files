@@ -12,7 +12,7 @@ set filep=* Filenames search.
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,15 +24,13 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
 echo Searches the current folder and all its subfolders for filenames match the given search criterion, then pipes the results into a temporary file.
 
 echo.
-echo Filename stands for: Filenames search.
+echo File purpose: Filenames search.
 
 echo.
 echo Last Updated: Jun-7-2018

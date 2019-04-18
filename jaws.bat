@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Jonathan plus AWS = Jaws. A CWS CLI demo companion file.
+set filep=* Jonathan plus AWS = Jaws. A CWS CLI demo companion file. This file is a wrapper around the AWS CLI.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,20 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
-
-set filep=File purpose: This file is a wrapper around the AWS CLI.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Dec-18-2018
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]

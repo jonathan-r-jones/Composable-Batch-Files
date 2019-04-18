@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* Uses mx.bat and then maybe me.bat to decipher which file to edit.
+set filep=* Uses mx.bat and then maybe me.bat to decipher which file to edit.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
@@ -22,12 +22,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Mar-22-2019
@@ -49,7 +47,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call m clear_errorlevel_silently
 

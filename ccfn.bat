@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=*  Run Code Compare with aliases or filenames.
+set filep=* Run Code Compare with aliases or filenames.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto just_run_code_compare
 
@@ -26,12 +26,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 echo.
 echo Last Updated: Jan-30-2019
@@ -60,7 +58,7 @@ exit/b
 :main_function
 
 echo.
-echo %filename_stands_for%
+echo %filep%
 
 call n %1
 

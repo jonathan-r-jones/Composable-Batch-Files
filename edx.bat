@@ -6,17 +6,15 @@
 
 :_
 
-set filename_stands_for=* Edit a file.
+set filep=* Edit a file.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 goto main_function
 
@@ -24,19 +22,13 @@ goto main_function
 
 :_
 
-:h
-
 :help
-
-echo Filename stands for: %filename_stands_for%
-
-set filep=File purpose: Edit files.
 
 echo.
 echo %filep%
 
 echo.
-echo Last Updated: Jun-8-2018
+echo Last Updated: Apr-18-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -67,7 +59,8 @@ exit/b
 
 :main_function
 
-echo %filename_stands_for%
+echo.
+echo %filep%
 
 if "%~3" == "x" (
   set cbf_filename=%~1

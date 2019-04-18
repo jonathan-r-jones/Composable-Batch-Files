@@ -6,13 +6,13 @@
 
 :_
 
-set filename_stands_for=* File contents search.
+set filep=* File contents search.
 
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -24,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: %filename_stands_for%
+echo File purpose: %filep%
 
 set filep=File purpose: Search the current folder and its subfolders for filenames 
 set filep=%filep% whose contents match the user-provided search criterion, then
@@ -65,11 +63,9 @@ exit/b
 
 :main_function
 
-set fp=* Main function.
-
 echo.
-echo %filename_stands_for%
-echo %filename_stands_for%>%temp%\search_results_cs.txt
+echo %filep%
+echo %filep%>%temp%\search_results_cs.txt
 echo.>>%temp%\search_results_cs.txt
 
 echo.

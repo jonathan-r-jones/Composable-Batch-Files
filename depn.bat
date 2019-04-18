@@ -8,20 +8,15 @@
 
 set filep=* Remove folder of the specified CBF path nickname. WARNING: Powerful batch file. Exercise caution.
 
-echo.
-echo %filep%
-
 
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
 
 goto main_function
 
@@ -29,12 +24,10 @@ goto main_function
 
 :_
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: Remove folder.
+echo File purpose: Remove folder.
 
 echo.
 echo Last Updated: Aug-9-2018
@@ -56,7 +49,7 @@ exit/b
 
 :main_function
 
-set fp=* Main function.
+echo %filep%
 
 if not "%~1" == "" call pn %1
 

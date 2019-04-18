@@ -15,17 +15,9 @@ echo %filep%
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "/?" goto help
-
-if "%~1" == "help" goto help
-
-
-
-:_
-
-set fp=* Route other callers.
 
 if "%~1"=="" goto open_folder_in_win_explorer_cd
 
@@ -35,15 +27,10 @@ goto open_folder_in_windows_explorer
 
 :_ (!rfsp) (mov-6)
 
-:h
-
 :help
 
 echo.
-echo Filename stands for: Open Folder.
-
-echo.
-echo Last Updated: Feb-6-2018
+echo File purpose: %filep%
 
 echo.
 echo Usage: of [Parameter 1]
@@ -87,8 +74,6 @@ exit/b
 :open_folder_in_win_explorer_cd
 
 set fp=* At the current directory.
-
-rem fcd: May-25-2017
 
 echo.
 echo %fp%

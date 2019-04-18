@@ -12,34 +12,21 @@ set filep=* Perform NPM-related tasks.
 
 :_
 
-set fp=* Route help callers.
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-
-
-:_
-
-set fp=* Route callers.
-
 goto %1
 
-exit/b
-
 
 
 :_
-
-:h
 
 :help
 
-echo Filename stands for: NPM stuff.
-
-echo.
-echo Last Updated: Apr-29-2018
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]
