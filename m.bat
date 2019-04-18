@@ -3730,7 +3730,7 @@ rem lu: Feb-5-2019
 echo.
 echo %fp%
 
-shutdown /s
+shutdown /s /t 1
 
 exit/b
 
