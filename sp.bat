@@ -59,6 +59,8 @@ if not "%machinename%"=="gfe" (
    call p ql
    call p ro
    cd\
+) else (
+  call p isso
 )
 
 call p cbf
@@ -66,8 +68,6 @@ call p cbf
 call m update_lu %0
 
 call p s
-
-call p isso
 
 call ss
 
