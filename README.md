@@ -183,3 +183,24 @@ example:
 
 There is also a PowerPoint presentation, which similar too this Readme file, for this 
 repository located in this repository at CBF.pptx.
+
+
+
+### Batch File Structures
+
+In the batch file collection here, as Apr-19-2019, there are about 6 types of structures used:
+
+* %1 - the new functions should be at the bottom of the file.
+
+* main_function - should be at the very bottom of batch file.
+
+* preprocessor - implies a top-to-bottom control flow starting at the preprocessor entry 
+point.
+
+* code_execution_area - implies a top-to-bottow control flow starting at the 
+code_execution_area entry point. The newest functions should be at the bottom of the file.
+
+* %1/code_execution_area hybrid - Goes to the code_execution_area unless a percent 1 is 
+provided.
+
+* custom goto - usually leverage a parameterless call to perform some default functionality.
