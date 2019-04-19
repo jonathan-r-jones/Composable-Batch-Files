@@ -27,15 +27,12 @@ goto main_function
 :help
 
 echo.
-echo File purpose: %filep%
-
-echo.
-echo Last Updated: 
+echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameters: First 2 parameters are the same as cs.bat.
+set parameter_1=Parameters 1 amd 2: Same as cs.bat.
 
 set parameter_3=Parameter 3: Folder alias to switch to.
 
