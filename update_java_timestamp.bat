@@ -1,66 +1,6 @@
-:_ (!bftt)
+:_
 
 @echo off
-
-
-
-:_
-
-set fp=* Set color.
-
-rem echo %fp%
-rem echo.
-
-rem color 3f
-rem &doscolor
-
-
-
-:_
-
-set fp=* Router.
-
-rem echo %fp%
-rem echo.
-
-goto code_execution_area
-
-goto %configuration%
-
-m exit
-
-
-
-:_
-
-:exit
-
-set fp= * Exit.
-
-echo.
-echo.
-rem echo %fp%
-
-rem (!x)
-
-pause
-exit
-
-
-
-:_
-
-:code_execution_area
-
-set fp=* Execution area. Code below here runs.
-
-rem echo.
-rem echo %fp%
-
-cls
-echo.
-
-rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
@@ -81,4 +21,4 @@ exit/b
 
 
 
-:_ EOF << (!eftt)
+:_

@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Uses mx.bat and then maybe me.bat to decipher which file to edit.
+set filep=* Use mx.bat and then maybe me.bat to decipher which file to edit.
 
 
 
@@ -28,12 +28,9 @@ echo.
 echo File purpose: %filep%
 
 echo.
-echo Last Updated: Mar-22-2019
+echo Usage: %0 [space separated parameter 1]
 
-echo.
-echo Usage: %0 [space separated parameter(s)]
-
-set parameter_1=Parameter 1: Alias.
+set parameter_1=Parameter 1: Alias of filename you wish to edit.
 
 echo.
 echo %parameter_1%
