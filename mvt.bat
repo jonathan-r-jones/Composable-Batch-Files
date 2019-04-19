@@ -29,14 +29,6 @@ goto main_function
 echo.
 echo File purpose: %filep%
 
-set filep=File purpose: Move a file in the current directory to a nickname-specified path.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Jun-13-2018
-
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
