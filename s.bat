@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Status batch file.
+set filep=* Git status batch file.
 
 
 
@@ -30,7 +30,7 @@ echo File purpose: %filep%
 echo.
 echo Usage: %0 [Optional Parameter 1]
 
-set parameter_1=Parameter 1: Path parameter. If left blank, current folder is used.
+set parameter_1=Parameter 1: Path alias parameter. If left blank, current folder is used.
 set parameter_1=%parameter_1% 
 
 echo.
@@ -48,17 +48,14 @@ set fp=* Preprocessing.
 
 if not "%~1" == "" call td %~1
 
-exit/b
-
 
 
 :_
 
 call g status
+echo.
 
 rem (!rfsp) (mov-2)
-
-exit/b
 
 
 
