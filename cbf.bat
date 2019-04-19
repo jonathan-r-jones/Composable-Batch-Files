@@ -64,7 +64,7 @@ echo    cn  Git cloning, based entirely on the nickname parameter
 echo   cng  Git cloning, generic version
 echo   col  Shell window colors operations
 echo  ccfn  Code Compare with aliases or filenames
-echo  cc12  Code Compare preloaded with j1txt and j2txt
+echo  cc12  Code Compare preloaded with j1.txt and j2.txt
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl hooked up to the nicknames dictionary
@@ -130,7 +130,7 @@ echo    sx  Use Sublime to edit a batch file in the CBF folder
 echo    sf  Surf to websites
 echo    sm  Sublime
 echo    sp  Super push, i.e. push all selected repositories
-echo   spl  Super pull, i.e. push all selected repositories
+echo   spl  Super pull, i.e. pull all selected repositories
 echo   sql  MySQL/Database, including LDAP, related tasks
 echo     t  Testing, experimenting and developing new batch file functions
 echo    ty  Use the type command to view a nickname-specified file
