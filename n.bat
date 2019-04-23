@@ -5541,6 +5541,8 @@ exit/b
 
 :ds
 
+:awsr
+
 :pass-through
 
 :iac

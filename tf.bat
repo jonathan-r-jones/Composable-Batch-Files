@@ -168,9 +168,9 @@ exit/b
 :_+ Main Parts 12
 
 rem The purpose of folder 12 was to try and do some the of the same Terrraform work I had been
-rem doing on my personal AWS account but now do it on my AWS work account. I don't think I can achieve
-rem this currently because my AWS work account does not have programmatic access, which
-rem comes with the AWS access and secret keys, which I need for Terraform.
+rem doing on my personal AWS account but now do it on my AWS work account. I don't think I can 
+rem achieve this currently because my AWS work account does not have programmatic access, 
+rem which comes with the AWS access and secret keys, which I need for Terraform.
 
 
 ::_
@@ -251,7 +251,8 @@ if %errorlevel% == 1 (
 )
 
 echo.
-terraform plan -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color
+rem terraform plan -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color
+terraform plan -var "private_key_path=%pem_path%"
 
 exit/b
 
@@ -279,7 +280,8 @@ if %errorlevel% == 1 (
 )
 
 echo.
-terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
+rem terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
+terraform apply -var "private_key_path=%pem_path%" -no-color -auto-approve
 
 exit/b
 

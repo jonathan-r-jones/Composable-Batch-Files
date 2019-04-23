@@ -14,7 +14,7 @@ set filep=* Directory listing: an easier to type version.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto d
+if "%~1" == "" goto a
 
 if "%~1" == "/?" goto help
 
@@ -258,13 +258,13 @@ exit/b
 
 set fp=* Date, newest first.
 
-rem lu: Feb-1-2018
+rem lu: Apr-23-2019
 
 echo.
 echo %fp%
 echo.
 
-dir /o-d %2 | more
+dir /o-d
 
 exit/b
 

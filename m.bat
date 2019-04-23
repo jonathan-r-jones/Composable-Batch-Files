@@ -3006,15 +3006,9 @@ echo %fp%
 
 set cbf_application=
 
-set cbf_application_location=
-
-rem set cbf_default_browser=
-
-rem set cbf_default_text_editor=
-
-rem set cbf_repo=
-
 set cbf_filename=
+
+set cbf_instance_id=
 
 set cbf_parameter=
 

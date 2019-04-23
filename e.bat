@@ -50,10 +50,8 @@ call m clear_errorlevel_silently
 
 call mx.bat %1
 
-rem echo EL: %errorlevel%
-
 if %errorlevel% == 1 (
-  call me %1
+  call me %1 %2 %3
   exit/b
 )
 
