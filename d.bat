@@ -32,9 +32,6 @@ echo.
 echo File purpose: Dir.
 
 echo.
-echo Last Updated: Feb-6-2018
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
 echo.
@@ -62,44 +59,6 @@ exit/b
 
 :_
 
-:a
-
-:alphabetical
-
-set fp=* Alphabetical by filename.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-echo.
-
-dir
-
-exit/b
-
-
-
-:_
-
-:s
-
-set fp=* Size, biggest first.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-echo.
-
-dir /o-s %2
-
-exit/b
-
-
-
-:_
-
 :s2
 
 set fp=* Size, smallest first.
@@ -111,24 +70,6 @@ echo %fp%
 echo.
 
 dir /os %2
-
-exit/b
-
-
-
-:_
-
-:d
-
-set fp=* Date, newest first.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-echo.
-
-dir /o-d %2 | more
 
 exit/b
 
@@ -288,6 +229,62 @@ if %errorlevel% == 0 (
 ) else (
   call m clear_errorlevel_silently
 )
+
+exit/b
+
+
+
+:_
+
+:s
+
+set fp=* Size, biggest first.
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+echo.
+
+dir /o-s %2
+
+exit/b
+
+
+
+:_
+
+:d
+
+set fp=* Date, newest first.
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+echo.
+
+dir /o-d %2 | more
+
+exit/b
+
+
+
+:_
+
+:a
+
+:alphabetical
+
+set fp=* Alphabetical, folders firstd.
+
+rem lu: Apr-23-2019
+
+echo.
+echo %fp%
+
+echo.
+dir /ogn
 
 exit/b
 
