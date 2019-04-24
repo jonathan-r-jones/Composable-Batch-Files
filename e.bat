@@ -48,6 +48,13 @@ echo %filep%
 
 call m clear_errorlevel_silently
 
+echo %1 | C:\Windows\System32\find.exe /i ".">nul
+
+if %errorlevel% == 0 (
+  call me %1 %2 %3
+  exit/b
+)
+
 call mx.bat %1
 
 if %errorlevel% == 1 (

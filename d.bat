@@ -276,7 +276,7 @@ exit/b
 
 :alphabetical
 
-set fp=* Alphabetical, folders firstd.
+set fp=* Alphabetical, folders first.
 
 rem lu: Apr-23-2019
 

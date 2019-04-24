@@ -5577,8 +5577,8 @@ exit/b
 
 set fp=* Pass through.
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 rem lu: Apr-16-2019
 

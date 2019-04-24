@@ -8,8 +8,8 @@
 
 set filep=* Transform directory.
 
-echo.
-echo %filep%
+rem echo.
+rem echo %filep%
 
 
 

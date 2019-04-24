@@ -4438,4 +4438,38 @@ exit/b
 
 
 
+:_
+
+:save_location
+
+set fp=* Save location.
+
+rem lu: Apr-24-2019
+
+rem echo.
+rem echo %fp%
+
+set cbf_saved_location=%cd%
+
+exit/b
+
+
+
+:_
+
+:restore_location
+
+set fp=* Restore location.
+
+rem lu: Apr-24-2019
+
+rem echo.
+rem echo %fp%
+
+cd /d "%cbf_saved_location%"
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)
