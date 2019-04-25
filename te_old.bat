@@ -6,8 +6,9 @@
 
 :_
 
-echo.
-echo 
+set filep=* .
+
+setlocal
 
 
 
@@ -24,6 +25,9 @@ goto main_function
 :_
 
 :help
+
+echo.
+echo File purpose: %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -48,8 +52,10 @@ exit/b
 
 rem lu: 
 
+endlocal
 
-rem qq-1
+echo.
+echo %filep%
 
 exit/b
 

@@ -30,12 +30,6 @@ echo.
 echo Searches the current folder and all its subfolders for filenames match the given search criterion, then pipes the results into a temporary file.
 
 echo.
-echo File purpose: Filenames search.
-
-echo.
-echo Last Updated: Jun-7-2018
-
-echo.
 echo Usage: %0 [parameters]
 
 echo.

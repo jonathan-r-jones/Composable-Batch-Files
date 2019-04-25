@@ -6,7 +6,10 @@
 
 :_
 
-set filep=* File contents search.
+set filep=* File contents search for current folder and subfolders. Pipe the results into a temporary file.
+
+echo.
+echo %filep%
 
 
 
@@ -27,19 +30,6 @@ goto main_function
 :help
 
 echo.
-echo File purpose: %filep%
-
-set filep=File purpose: Search the current folder and its subfolders for filenames 
-set filep=%filep% whose contents match the user-provided search criterion, then
-set filep=%filep% pipe the results into a temporary file.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Jun-7-2018
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Search criterion. Double quotes are necessary
@@ -48,7 +38,7 @@ set parameter_1=%parameter_1% only if spaces are used.
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2 (Optional): File type to search. For example, "*.txt" (without quotes)
+set parameter_2=Parameter 2 (Optional): File type to search. For example, "txt" (without quotes)
 set parameter_2=%parameter_2% would search only txt type files. If left blank, then
 set parameter_2=%parameter_2% all file types will be searched.
 
@@ -63,8 +53,6 @@ exit/b
 
 :main_function
 
-echo.
-echo %filep%
 echo %filep%>%temp%\search_results_cs.txt
 echo.>>%temp%\search_results_cs.txt
 
@@ -75,7 +63,7 @@ echo Search Criterion: %1>>%temp%\search_results_cs.txt
 if "%~2" == "" (
   set file_type=*.*
 ) else (
-  set file_type=%2
+  set file_type=*.%2
 )
 
 echo.
@@ -89,7 +77,7 @@ echo.>>%temp%\search_results_cs.txt
 
 rem "findstr" seems to be more powerful the "find".
 
-findstr /i /n /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
+findstr /m /o /i /n /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
 
 rem (!rfsp) (mov-2)
 

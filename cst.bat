@@ -8,6 +8,9 @@
 
 set filep=* Contents search with td paramater.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -16,8 +19,6 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-call td %3
-
 goto main_function
 
 
@@ -25,9 +26,6 @@ goto main_function
 :_
 
 :help
-
-echo.
-echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -50,8 +48,7 @@ exit/b
 
 :main_function
 
-echo.
-echo %filep%
+call td %3
 
 call cs %1 %2
 

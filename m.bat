@@ -4103,7 +4103,7 @@ exit/b
 
 :gdf
 
-set fp=* Generates a date file.
+set fp=* Generate a date file. (skw create file)
 
 rem fcd: Mar-12-2019
 
