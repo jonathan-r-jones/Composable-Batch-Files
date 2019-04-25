@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Dir search with td parameter.
+set filep=* Remote dir search.
 
 echo.
 echo %filep%
@@ -48,6 +48,8 @@ exit/b
 
 :preprocessor
 
+call m save_location
+
 call td %1
 
 
@@ -57,6 +59,8 @@ call td %1
 :main_function
 
 call d %2
+
+call m restore_location
 
 exit/b
 

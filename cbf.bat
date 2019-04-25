@@ -75,7 +75,8 @@ echo   cyt  Copy file in the current directory to nickname-specified path
 echo   cyf  Copy file from a cbf_path nickname
 echo     d  Easier-to-type and remember version of "dir"
 echo    dd  Dir filename extension searcher
-echo    dt  Dir filename extension searcher with a td parameter
+echo    dr  Dir remote searcher
+echo    dt  Dir with a td parameter
 echo   dds  Dir filename extension searcher including subfolders
 echo    de  Delete
 echo  depn  Delete folder corresponding to CBF path alias parameter
