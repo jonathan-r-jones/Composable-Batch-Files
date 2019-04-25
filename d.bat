@@ -6,7 +6,10 @@
 
 :_
 
-set filep=* Directory listing: an easier to type version.
+set filep=* Dir for current folder.
+
+rem echo.
+rem echo %filep%
 
 
 

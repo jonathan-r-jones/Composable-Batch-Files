@@ -32,7 +32,7 @@ goto main_function
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: File extension you wish to search.
+set parameter_1=Parameter 1: File extension you wish to search. Don't include the "*".
 
 echo.
 echo %parameter_1%
@@ -45,7 +45,7 @@ exit/b
 
 :main_function
 
-call dd %1 /s
+dir *.%1
 
 exit/b
 

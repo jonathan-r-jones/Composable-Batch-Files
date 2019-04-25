@@ -6,7 +6,8 @@
 
 :_
 
-set filep=* Dir file for *.extensionname uses.
+echo.
+echo * Dir file for *.extensionname uses including subfolders.
 
 
 
@@ -25,12 +26,6 @@ goto main_function
 :_
 
 :help
-
-echo.
-echo File purpose: %filep%
-
-echo.
-echo Last Updated: Feb-14-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -54,10 +49,7 @@ exit/b
 :main_function
 
 echo.
-echo %filep%
-
-echo.
-dir *.%1* %2
+dir *.%1 /s
 
 exit/b
 

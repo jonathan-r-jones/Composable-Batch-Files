@@ -73,11 +73,12 @@ echo  cyfn  Copy file from alias filename parm 1 to alias filename param 2
 echo  cypn  Copy file from alias path param 1 to alias path param 2
 echo   cyt  Copy file in the current directory to nickname-specified path
 echo   cyf  Copy file from a cbf_path nickname
-echo     d  Easier-to-type and remember version of "dir"
-echo    dd  Dir filename extension searcher
+echo     d  Dir for current folder
+rem qq-1
+echo    dd  Dir filename extension searcher including subfolders
+echo   ddc  Dir filename extension searcher current folder only
 echo    dr  Dir remote searcher
 echo    dt  Dir with a td parameter
-echo   dds  Dir filename extension searcher including subfolders
 echo    de  Delete
 echo  depn  Delete folder corresponding to CBF path alias parameter
 echo    dn  Dot Net core
