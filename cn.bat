@@ -8,7 +8,8 @@
 
 set filep=* Clone a Git repository using a nickname only.
 
-setlocal
+echo.
+echo %filep%
 
 
 
@@ -19,8 +20,6 @@ set fp=* Route help callers.
 if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
-
-call n %1
 
 goto preprocessor
 
@@ -46,8 +45,8 @@ exit/b
 
 set fp=* Initialize key variables used by this file.
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 set cbf_branch_name=
 set cbf_clone_url=
@@ -92,12 +91,7 @@ if exist "%cbf_path%" (
 
 set fp=* Main function.
 
-rem lu: 
-
-endlocal
-
-echo.
-echo %filep%
+rem lu: Apr-25-2019
 
 if "%cbf_branch%" == "" (
    set cbf_branch=master

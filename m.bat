@@ -4099,11 +4099,11 @@ exit/b
 
 ::_
 
-:f
+:t
 
 :gdf
 
-set fp=* Generate a date file. (skw create file)
+set fp=* Generate a timestamped name file. (skw create file)
 
 rem fcd: Mar-12-2019
 

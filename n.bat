@@ -8879,6 +8879,27 @@ exit/b
 
 
 
+::_
+
+:jjc
+
+set fp=* JJ Comment.
+
+rem lu: Apr-25-2019
+
+echo.
+echo %fp%
+
+set cbf_branch=jj_comment
+
+set cbf_clone_url=git@github.ice.dhs.gov:ERO/cart.git
+
+set cbf_path=%cbf_repo%\%cbf_branch%
+
+exit/b
+
+
+
 :_
 
 :i2
@@ -8908,6 +8929,25 @@ echo.
 echo %fp%
 
 set cbf_application=appwiz.cpl
+
+exit/b
+
+
+
+:_
+
+:k
+
+:off
+
+set fp=* One file folder.
+
+rem lu: Apr-25-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\one file folder
 
 exit/b
 

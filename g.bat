@@ -2835,7 +2835,8 @@ echo %fp%
 
 call td cart
 
-git push origin --delete cart_412
+rem git push origin --delete cart_412
+git push origin --delete cart-412-3
 
 exit/b
 

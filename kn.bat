@@ -6,7 +6,8 @@
 
 :_
 
-set filep=* A wrapper around Knife, a Chef command line utility.
+echo.
+echo * A wrapper around Knife, a Chef command line utility.
 
 
 
@@ -14,7 +15,7 @@ set filep=* A wrapper around Knife, a Chef command line utility.
 
 set fp=* Route help callers.
 
-if "%~1" == "" goto main_function
+if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
@@ -35,29 +36,10 @@ echo Last Updated:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Function name to execute.
 
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
-
-exit/b
-
-
-
-:_
-
-:main_function
-
-echo.
-echo %filep%
-
-echo.
-knife
 
 exit/b
 
@@ -82,6 +64,46 @@ rem chefclientone.natnetwork.home: domain name from which it is identified
 rem parxxx: username
 rem BaadaBxxx: password
 rem 'recipe[Tomcat-ActiveMQ]': a cookbook or a role
+
+exit/b
+
+
+
+:_
+
+:ssl
+
+set fp=* SSL fetch
+
+rem lu: Apr-25-2019
+
+echo.
+echo %fp%
+
+echo.
+knife ssl fetch
+
+exit/b
+
+
+
+:_
+
+:b
+
+:noli
+
+set fp=* Node list. Heartbeat check. Chef is breathing.
+
+rem lu: Apr-25-2019
+
+echo.
+echo %fp%
+
+call td pems
+
+echo.
+knife node list
 
 exit/b
 
