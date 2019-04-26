@@ -2405,7 +2405,7 @@ exit/b
 
 :_
 
-:draw
+:drawable
 
 set fp=* Drawable folder.
 
@@ -5544,6 +5544,8 @@ exit/b
 :ds
 
 :awsr
+
+:rl
 
 :pass-through
 
@@ -8950,6 +8952,23 @@ echo.
 echo %fp%
 
 set cbf_path=%share-zone%\one file folder
+
+exit/b
+
+
+
+:_
+
+:draw
+
+set fp=* Draw.io. A nice network diagram drawing tool.
+
+rem lu: Apr-26-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.draw.io/
 
 exit/b
 
