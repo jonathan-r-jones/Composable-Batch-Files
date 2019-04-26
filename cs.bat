@@ -53,8 +53,8 @@ exit/b
 
 :main_function
 
-echo %filep%>%temp%\search_results_cs.txt
-echo.>>%temp%\search_results_cs.txt
+rem echo %filep%>%temp%\search_results_cs.txt
+rem echo.>>%temp%\search_results_cs.txt
 
 echo.
 echo Search Criterion: %1
