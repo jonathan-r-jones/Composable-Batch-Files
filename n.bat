@@ -5223,6 +5223,20 @@ exit/b
 
 ::_
 
+:sr1
+
+:sr2
+
+:sr3
+
+:fqt
+
+:sr4
+
+:sr5
+
+:sr6
+
 :acrg
 
 :acrj
@@ -5385,18 +5399,6 @@ exit/b
 
 :tag
 
-:sv1
-
-:sv2
-
-:1
-
-:2
-
-:3
-
-:4
-
 :ruby
 
 :bgsc
@@ -5481,16 +5483,6 @@ exit/b
 
 :cc
 
-:5
-
-:fqt
-
-:6
-
-:sr6
-
-:7
-
 :mb
 
 :cart
@@ -5546,6 +5538,8 @@ exit/b
 :awsr
 
 :rl
+
+:cbd
 
 :pass-through
 
@@ -8878,27 +8872,6 @@ set cbf_path=%cbf_repo%\acd
 set cbf_filename=%cbf_path%\App Center Demo.pptx
 
 set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
-
-exit/b
-
-
-
-::_
-
-:jjc
-
-set fp=* JJ Comment.
-
-rem lu: Apr-25-2019
-
-echo.
-echo %fp%
-
-set cbf_branch=jj_comment
-
-set cbf_clone_url=git@github.ice.dhs.gov:ERO/cart.git
-
-set cbf_path=%cbf_repo%\%cbf_branch%
 
 exit/b
 

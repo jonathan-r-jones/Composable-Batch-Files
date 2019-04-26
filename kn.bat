@@ -91,6 +91,8 @@ exit/b
 
 :b
 
+:nl
+
 :noli
 
 set fp=* Node list. Heartbeat check. Chef is breathing.

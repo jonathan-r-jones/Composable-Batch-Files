@@ -109,19 +109,25 @@ if %errorlevel% == 1 (
 )
 
 if not "%cbf_application%" == "" echo.
-if not "%cbf_application%" == "" echo * Application was set to: "%cbf_application%".
+if not "%cbf_application%" == "" echo * Application: %cbf_application%
 
 if not "%cbf_filename%" == "" echo.
-if not "%cbf_filename%" == "" echo * Filename was set to: "%cbf_filename%".
+if not "%cbf_filename%" == "" echo * Filename: %cbf_filename%
+
+if not "%cbf_host_name%" == "" echo.
+if not "%cbf_host_name%" == ""   echo *   Host name: %cbf_host_name%
 
 if not "%cbf_instance_id%" == "" echo.
-if not "%cbf_instance_id%" == "" echo * Instance ID was set to: "%cbf_instance_id%".
+if not "%cbf_instance_id%" == "" echo * Instance ID: %cbf_instance_id%
+
+if not "%cbf_ip%" == "" echo.
+if not "%cbf_ip%" == ""          echo *          IP: %cbf_ip%
 
 if not "%cbf_path%" == "" echo.
-if not "%cbf_path%" == "" echo * Path was set to: "%cbf_path%".
+if not "%cbf_path%" == "" echo * Path: %cbf_path%
 
 if not "%cbf_url%" == "" echo.
-if not "%cbf_url%" == "" echo * URL was set to: "%cbf_url%".
+if not "%cbf_url%" == "" echo * URL: %cbf_url%
 
 exit/b
 

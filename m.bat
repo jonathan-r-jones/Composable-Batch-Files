@@ -3008,11 +3008,17 @@ set cbf_application=
 
 set cbf_filename=
 
+set cbf_host_name=
+
 set cbf_instance_id=
+
+set cbf_ip=
 
 set cbf_parameter=
 
 set cbf_path=
+
+set cbf_pem=
 
 set cbf_url=
 
@@ -4304,11 +4310,11 @@ call fn i2
 
 set filename_3=%cbf_filename%
 
-set filename_4=%composable_batch_files%\n.bat
-
 call fn ni
 
-set filename_5=%cbf_filename%
+set filename_4=%cbf_filename%
+
+set filename_5=%composable_batch_files%\n.bat
 
 start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%"
 

@@ -6,8 +6,12 @@
 
 :_
 
-set filep=* Use mx.bat and then maybe me.bat to decipher which file to edit.
+set filep=* Edit file.
 
+rem Use mx.bat and then maybe me.bat to decipher which file to edit.
+
+echo.
+echo %filep%
 
 
 :_
@@ -43,9 +47,6 @@ exit/b
 
 :main_function
 
-echo.
-echo %filep%
-
 call m clear_errorlevel_silently
 
 echo %1 | C:\Windows\System32\find.exe /i ".">nul
@@ -55,10 +56,10 @@ if %errorlevel% == 0 (
   exit/b
 )
 
-call mx.bat %1
+call mx.bat %1>nul
 
 if %errorlevel% == 1 (
-  call me %1 %2 %3
+  call me %1 %2 %3>nul
   exit/b
 )
 
