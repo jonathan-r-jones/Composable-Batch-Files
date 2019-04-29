@@ -74,8 +74,8 @@ goto set_browser
 
 set fp=* Use current CBF_URL.
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 set cbf_parameter=%cbf_url%
 

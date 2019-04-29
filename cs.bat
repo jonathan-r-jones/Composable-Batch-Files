@@ -6,7 +6,9 @@
 
 :_
 
-set filep=* File contents search for current folder and subfolders. Pipe the results into a temporary file.
+set filep=* File contents search for current folder and subfolders.
+
+rem Pipe the results into a temporary file.
 
 echo.
 echo %filep%
@@ -40,7 +42,7 @@ echo %parameter_1%
 
 set parameter_2=Parameter 2 (Optional): File type to search. For example, "txt" (without quotes)
 set parameter_2=%parameter_2% would search only txt type files. If left blank, then
-set parameter_2=%parameter_2% all file types will be searched.
+set parameter_2=%parameter_2% the default, which is batch files (*.bat), will be searched.
 
 echo.
 echo %parameter_2%
@@ -53,15 +55,15 @@ exit/b
 
 :main_function
 
-rem echo %filep%>%temp%\search_results_cs.txt
-rem echo.>>%temp%\search_results_cs.txt
+echo %filep%>%temp%\search_results_cs.txt
+echo.>>%temp%\search_results_cs.txt
 
 echo.
 echo Search Criterion: %1
 echo Search Criterion: %1>>%temp%\search_results_cs.txt
 
 if "%~2" == "" (
-  set file_type=*.*
+  set file_type=*.bat
 ) else (
   set file_type=*.%2
 )
@@ -78,6 +80,7 @@ echo.>>%temp%\search_results_cs.txt
 rem "findstr" seems to be more powerful the "find".
 
 findstr /m /o /i /n /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
+rem qq-1
 
 rem (!rfsp) (mov-2)
 

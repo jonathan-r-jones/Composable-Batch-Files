@@ -6003,23 +6003,6 @@ exit/b
 
 :_
 
-:dfw
-
-set fp=* Download for windows.
-
-rem lu: Dec-4-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.google.com/search?as_q=%2+download+windows
-
-exit/b
-
-
-
-:_
-
 :gas
 
 set fp=* Google advanced search
@@ -8942,6 +8925,25 @@ echo.
 echo %fp%
 
 set cbf_url=https://www.draw.io/
+
+exit/b
+
+
+
+:_
+
+:dfw
+
+set fp=* Download for windows.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+set cbf_appended_words=%%20download%%20for%%20windows
+
+rem Old Way set cbf_url=https://www.google.com/search?as_q=%2+download+windows
 
 exit/b
 

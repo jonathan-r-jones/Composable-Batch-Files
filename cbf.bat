@@ -141,6 +141,7 @@ echo    tf  Terraform
 echo    tk  Taskkill
 echo    tl  Tasklist
 echo    td  Transform Directory
+echo    ty  Type command to view nickname-specified file
 echo   tdf  Transform Directory where only the Cbf_filename is known
 echo   tdp  Transform Directory to parent folder
 echo    te  Batch file template used for creating new batch files

@@ -6,8 +6,10 @@
 
 :_
 
+set filep=* 
+
 echo.
-echo 
+echo %filep%
 
 
 

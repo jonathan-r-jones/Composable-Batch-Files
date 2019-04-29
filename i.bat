@@ -57,6 +57,9 @@ echo.
 echo %fp%
 
 echo.
+echo Appended Words: %cbf_appended_words%
+
+echo.
 echo Application: %cbf_application%
 
 echo.

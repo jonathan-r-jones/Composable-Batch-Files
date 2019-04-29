@@ -8,6 +8,9 @@
 
 set filep=* Google searcher.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -30,15 +33,17 @@ echo.
 echo File purpose: %filep%
 
 echo.
-echo Last Updated: Feb-14-2019 
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Search criteria.
 
+set parameter_2=Parameter 2 (Optional): Alias for appended words.
+
 echo.
 echo %parameter_1%
+
+echo.
+echo %parameter_2%
 
 exit/b
 
@@ -48,10 +53,11 @@ exit/b
 
 :main_function
 
-echo.
-echo %filep%
+set cbf_appended_words=
 
-set cbf_url=https://www.google.com/search?as_q=%~1
+if not "%~2" == "" call n %2
+
+set cbf_url=https://www.google.com/search?as_q=%~1%cbf_appended_words%
 
 call sfcu
 
