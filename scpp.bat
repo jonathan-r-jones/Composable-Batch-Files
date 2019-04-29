@@ -75,7 +75,7 @@ set cbf_file_to_upload=%2
 
 :_
 
-set fp=* Guard clause.
+set fp=* Guard clauses.
 
 if "%cbf_file_to_upload" == "" (
    echo.
@@ -123,7 +123,6 @@ set scp_path=%cbf_path%
 
 echo.
 %scp_path%\scp -i %cbf_pem% %cbf_file_to_upload% %server_with_folder%
-rem qq-1
 
 exit/b (!rfsp) (mov-2)
 

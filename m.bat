@@ -3001,8 +3001,8 @@ exit/b
 
 set fp=* Reset CBF variables. (skw clear environment variables)
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 set cbf_application=
 

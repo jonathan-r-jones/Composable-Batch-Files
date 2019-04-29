@@ -133,3 +133,90 @@ exit/b
 
 
 :_
+
+:t2
+
+set fp=* Defining the url.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+rem This may work.
+
+call n %2
+
+echo.
+curl -v -F ‘data=Apr-29-2019_2_24_PM.txt’ %cbf_url%
+
+exit/b
+
+
+
+:_
+
+:t3
+
+set fp=* Finding the upload folder.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+rem This works.
+
+call n %2
+
+echo.
+curl -v -F ‘data=Apr-29-2019_2_24_PM.txt’ %cbf_url%
+
+exit/b
+
+
+
+:_
+
+:t4
+
+set fp=* Copy the same as scp does.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+call n %2
+
+set server_with_folder=zzadmin@%cbf_ip%:/home/zzadmin/
+
+echo.
+curl -v -F ‘data=Apr-29-2019_3_07_PM.txt’ %server_with_folder%
+
+exit/b
+
+
+
+:_
+
+:t5
+
+set fp=* More testing.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+call n sr3
+
+echo.
+curl -v --upload-file Apr-29-2019_3_07_PM.txt %cbf_url%
+rem qq-1
+
+exit/b
+
+
+
+:_

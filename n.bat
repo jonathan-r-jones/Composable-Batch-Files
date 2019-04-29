@@ -5408,8 +5408,6 @@ exit/b
 
 :cartc
 
-:bgsc
-
 :clb
 
 :sf1
@@ -5525,6 +5523,14 @@ exit/b
 :rl
 
 :cbd
+
+:full_pem
+
+:cap
+
+:odls
+
+:chefsp
 
 :pass-through
 
@@ -8320,7 +8326,7 @@ echo %fp%
 
 call %0 fgt
 
-set cbf_branch_name=develop
+set cbf_branch=develop
 
 set cbf_path=%cbf_path%_develop_branch
 
@@ -8343,7 +8349,7 @@ echo %fp%
 
 call %0 fgt
 
-set cbf_branch_name=jj_devops
+set cbf_branch=jj_devops
 
 set cbf_path=%cbf_path%_jj_devops_branch
 
@@ -8931,6 +8937,23 @@ echo.
 echo %fp%
 
 set cbf_path=%share-zone%\one-file
+
+exit/b
+
+
+
+:_
+
+:npl
+
+set fp=* Now playing.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+set cbf_npl=453
 
 exit/b
 

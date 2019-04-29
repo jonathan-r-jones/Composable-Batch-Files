@@ -48,7 +48,7 @@ set fp=* Initialize key variables used by this file.
 rem echo.
 rem echo %fp%
 
-set cbf_branch_name=
+set cbf_branch=
 set cbf_clone_url=
 set cbf_path=
 
