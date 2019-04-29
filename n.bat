@@ -4441,21 +4441,6 @@ exit/b
 
 :_
 
-:t
-
-set fp=* Test t from n.bat.
-
-rem lu: Aug-23-2018
-
-echo.
-echo %fp%
-
-exit/b
-
-
-
-:_
-
 :ques
 
 set fp=* Apiary questions.
@@ -7874,7 +7859,9 @@ exit/b
 
 set fp=* Open Environment Variable dialogue box.
 
-rem lu: Jan-31-2019
+rem lu: Apr-29-2019
+
+rem System Properties, Advanced System Settings, edit path, edit you path, edit env, set env: skw
 
 echo.
 echo %fp%
@@ -8896,25 +8883,6 @@ exit/b
 
 :_
 
-:k
-
-:off
-
-set fp=* One file folder.
-
-rem lu: Apr-25-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\one file folder
-
-exit/b
-
-
-
-:_
-
 :draw
 
 set fp=* Draw.io. A nice network diagram drawing tool.
@@ -8944,6 +8912,25 @@ echo %fp%
 set cbf_appended_words=%%20download%%20for%%20windows
 
 rem Old Way set cbf_url=https://www.google.com/search?as_q=%2+download+windows
+
+exit/b
+
+
+
+:_
+
+:k
+
+:off
+
+set fp=* One file.
+
+rem lu: Apr-25-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\one-file
 
 exit/b
 

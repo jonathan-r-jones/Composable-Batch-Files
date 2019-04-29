@@ -75,6 +75,9 @@ echo.
 echo Default Text Editor: %cbf_default_text_editor%
 
 echo.
+echo File to upload: %cbf_file_to_upload%
+
+echo.
 echo Filename: %cbf_filename%
 
 echo.
@@ -85,6 +88,9 @@ echo Parameter: %cbf_parameter%
 
 echo.
 echo Path: %cbf_path%
+
+echo.
+echo Pem: %cbf_pem%
 
 echo.
 echo Repo: %cbf_repo%
@@ -116,6 +122,9 @@ if not "%cbf_application%" == "" echo * Application: %cbf_application%
 
 if not "%cbf_filename%" == "" echo.
 if not "%cbf_filename%" == "" echo * Filename: %cbf_filename%
+
+if not "%cbf_file_to_upload%" == "" echo.
+if not "%cbf_file_to_upload%" == "" echo * File to upload: %cbf_file_to_upload%
 
 if not "%cbf_host_name%" == "" echo.
 if not "%cbf_host_name%" == ""   echo *   Host name: %cbf_host_name%

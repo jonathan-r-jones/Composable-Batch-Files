@@ -3008,6 +3008,8 @@ set cbf_application=
 
 set cbf_filename=
 
+set cbf_file_to_upload=
+
 set cbf_host_name=
 
 set cbf_instance_id=
@@ -4124,6 +4126,8 @@ java -classpath %composable_batch_files% Get_timestamp_for_use_as_filename>date_
 set /p date_as_filename=<date_as_filename.txt
 
 ren date_as_filename.txt %date_as_filename%.txt
+
+call dd txt
 
 exit/b
 

@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto %1
 
 
 
@@ -76,6 +76,57 @@ if "%cbf_header%" == "" (
 echo.
 
 rem (!rfsp) (mov-2)
+
+exit/b
+
+
+
+:_
+
+:t
+
+set fp=* Basic curl test of a URL.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+rem This works.
+
+call n %2
+
+echo.
+curl %cbf_url%
+
+exit/b
+
+
+
+:_
+
+:ta
+
+set fp=* Basic curl test all servers.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+rem This works.
+
+call %0 t sr1
+
+call %0 t sr2
+
+call %0 t sr3
+
+call %0 t sr4
+
+call %0 t sr5
+
+call %0 t sr6
 
 exit/b
 
