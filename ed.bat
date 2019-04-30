@@ -25,10 +25,6 @@ shift /0
 
 set fp=* Preprocess.
 
-rem lu: Jan-16-2019
-
-rem echo %fp%
-
 set cbf_filename=
 
 call n %0
@@ -49,9 +45,9 @@ set file_has_no_extension=0
 
 if "%~2" == "-d" goto d_switch_only
 
-if "%~2" == "-n" set file_has_no_extension=1
+if "%~2" == "-e" set file_has_no_extension=1
 
-if "%~3" == "-n" set file_has_no_extension=1
+if "%~3" == "-e" set file_has_no_extension=1
 
 if "%~2" == "-c" (
    if "%file_has_no_extension%" == "0" (
@@ -111,7 +107,7 @@ set parameter_1=Parameter 1 (optional): File alias or current folder filename. I
 folder filename has no extension then -n must be used also. If left blank, the application ^
 is merely started.
 
-set parameter_2=Parameter 2 or 3 (optional): Use -c to force file creation. Use -n to ^
+set parameter_2=Parameter 2 or 3 (optional): Use -c to force file creation. Use -e to ^
 specify a file with no extension. Use -d to blank out a file before opening it (Use with ^
 caution).
 

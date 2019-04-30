@@ -1451,19 +1451,18 @@ call %0 set_big_path
 
 call %0 set_default_browser kr
 
-set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
-
-set JAVA_TOOL_OPTIONS=
-
-set cbf_repo=%userprofile%\j
-
-set share-zone=%userprofile%\j\share-zone
-
-set path=%path%;%share-zone%
-
-set machinename=gfe
-
 set aa=c:\aa
+set cbf_repo=%userprofile%\j
+set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
+set JAVA_TOOL_OPTIONS=
+set KITCHEN_YAML=.kitchen-aws.yml
+set path=%path%;%share-zone%
+set machinename=gfe
+set share-zone=%userprofile%\j\share-zone
+call n pems
+set SSH_KEY_PATH=%cbf_path%
+call n sr6
+set SSH_KEY_PATH=%SSH_KEY_PATH%\%cbf_pem%
 
 title=Big Laptop
 
@@ -4322,7 +4321,7 @@ set filename_5=%composable_batch_files%\n.bat
 
 start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%"
 
-exit/b
+exit
 
 
 

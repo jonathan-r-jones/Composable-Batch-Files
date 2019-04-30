@@ -9444,16 +9444,6 @@ exit/b
 
 :_
 
-:code_execution_aread
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 rem set fp=* Play with setlocal.
@@ -9469,6 +9459,40 @@ echo %filep%
 
 echo.
 
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Complex set statement.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call n pems
+rem qq-1
+set SSH_KEY_PATH=%cbf_path%
+call n sr6
+set SSH_KEY_PATH=%SSH_KEY_PATH%\%cbf_pem%
+
+echo.
+echo %SSH_KEY_PATH%
 
 exit/b
 
