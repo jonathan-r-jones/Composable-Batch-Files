@@ -9196,7 +9196,7 @@ exit/b
 
 :hw
 
-set fp=* Hello world from %0.
+set fp=* Hello world from %0. - Apr-30-2019 5:08 PM
 
 rem lu: Mar-21-2019
 

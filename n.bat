@@ -8974,8 +8974,11 @@ rem lu: Apr-30-2019
 echo.
 echo %fp%
 
-set cbf_filename=
-rem       qq-1
+call n cc
+
+set cbf_filename=%cbf_path%\.kitchen\logs\kitchen.log
+
+set cbf_path=%cbf_path%\.kitchen\logs
 
 exit/b
 

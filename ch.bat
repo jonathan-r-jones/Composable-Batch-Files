@@ -152,6 +152,8 @@ rem lu: Apr-30-2019
 echo.
 echo %fp%
 
+call td cc
+
 echo.
 kitchen list
 
@@ -192,7 +194,6 @@ echo %fp%
 
 echo.
 kitchen diagnose --all
-rem qq-1
 
 exit/b
 

@@ -4261,6 +4261,24 @@ exit/b
 
 
 
+:_
+
+:ag
+
+set fp=* QuickLauncer menu for caling g.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+echo.
+call %0 g
+
+exit
+
+
+
 :_+ Multi-Edit Packs
 
 
@@ -4321,7 +4339,7 @@ set filename_5=%composable_batch_files%\n.bat
 
 start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%"
 
-exit
+exit/b
 
 
 
