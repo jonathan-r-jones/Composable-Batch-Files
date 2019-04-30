@@ -8963,4 +8963,22 @@ exit/b
 
 
 
+:_
+
+:klog
+
+set fp=* Kitchen Log.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames

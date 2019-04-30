@@ -141,4 +141,61 @@ exit/b
 
 
 
+:_
+
+:kl
+
+set fp=* Kitchen list.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+echo.
+kitchen list
+
+exit/b
+
+
+
+:_
+
+:kc
+
+set fp=* Kitchen create.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen create --no-color
+
+exit/b
+
+
+
+:_
+
+:kd
+
+set fp=* Kitchen diagnose.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+echo.
+kitchen diagnose --all
+rem qq-1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
