@@ -1459,10 +1459,8 @@ set KITCHEN_YAML=.kitchen-aws.yml
 set path=%path%;%share-zone%
 set machinename=gfe
 set share-zone=%userprofile%\j\share-zone
-call n pems
-set SSH_KEY_PATH=%cbf_path%
-call n sr6
-set SSH_KEY_PATH=%SSH_KEY_PATH%\%cbf_pem%
+call ni full_pem
+set SSH_KEY_PATH=%cbf_full_pem%
 
 title=Big Laptop
 

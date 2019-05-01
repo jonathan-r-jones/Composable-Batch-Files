@@ -8,8 +8,8 @@
 
 set filep=* Editor abstraction layer.
 
-echo.
-echo %filep%
+rem echo.
+rem echo %filep%
 
 
 

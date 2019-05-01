@@ -1,3 +1,116 @@
+::_
+
+:old_6
+
+set fp=* Old server 6.
+
+echo.
+echo %fp%
+
+set cbf_root=10.168.78.117
+
+set cbf_instance_id=i-01a13b63f31893af1
+
+set cbf_ip=%cbf_root%
+
+set cbf_url=http://%cbf_root%
+
+exit/b
+
+
+
+::_
+
+:old_5
+
+set fp=* FQT server.
+
+rem lu: Mar-28-2019
+
+echo.
+echo %fp%
+
+set cbf_root=10.168.78.78
+
+set cbf_instance_id=i-0e2daf1a8544f23d9
+
+set cbf_ip=%cbf_root%
+
+set cbf_url=http://%cbf_root%
+
+exit/b
+
+
+
+::_
+
+:4_old2
+
+set fp=* Old FQT server.
+
+rem lu: Apr-1-2019
+
+echo.
+echo %fp%
+
+set cbf_root=10.168.78.112
+
+set cbf_instance_id=i-0553653ad5d7bc6d5
+
+set cbf_ip=%cbf_root%
+
+set cbf_url=http://%cbf_root%
+
+exit/b
+
+
+
+::_
+
+:4_old
+
+set fp=* FQT server.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_root=10.168.78.118
+
+set cbf_instance_id=i-0553653ad5d7bc6d5
+
+set cbf_ip=%cbf_root%
+
+set cbf_url=http://%cbf_root%
+
+exit/b
+
+
+
+::_
+
+:old_sr7
+
+set fp=* FQT server.
+
+rem lu: Mar-28-2019
+
+echo.
+echo %fp%
+
+set cbf_root=10.168.78.48
+
+set cbf_instance_id=i-0fccffe4a93be539d
+
+set cbf_ip=%cbf_root%
+
+set cbf_url=http://%cbf_root%
+
+exit/b
+
+
+
 :_
 
 :h

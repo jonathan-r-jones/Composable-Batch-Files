@@ -192,8 +192,30 @@ rem lu: Apr-30-2019
 echo.
 echo %fp%
 
+call td cc
+
 echo.
 kitchen diagnose --all
+
+exit/b
+
+
+
+:_
+
+:kv
+
+set fp=* Kitchen verify.
+
+rem lu: May-1-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen verify
 
 exit/b
 
