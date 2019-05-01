@@ -83,28 +83,6 @@ exit/b
 
 :_
 
-:t
-
-set fp=* Basic curl test of a URL.
-
-rem lu: Apr-29-2019
-
-echo.
-echo %fp%
-
-rem This works.
-
-call n %2
-
-echo.
-curl %cbf_url%
-
-exit/b
-
-
-
-:_
-
 :ta
 
 set fp=* Basic curl test all servers.
@@ -214,6 +192,28 @@ call n sr3
 echo.
 curl -v --upload-file Apr-29-2019_3_07_PM.txt %cbf_url%
 rem qq-1
+
+exit/b
+
+
+
+:_
+
+:t
+
+set fp=* Basic curl test of a URL.
+
+rem lu: Apr-29-2019
+
+echo.
+echo %fp%
+
+rem This works.
+
+call n %2
+
+echo.
+curl %cbf_url%
 
 exit/b
 

@@ -89,6 +89,90 @@ exit/b
 
 :_
 
+:kc
+
+set fp=* Kitchen create.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen create --no-color
+
+exit/b
+
+
+
+:_
+
+:kd
+
+set fp=* Kitchen diagnose.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen diagnose --all
+
+exit/b
+
+
+
+:_
+
+:kv
+
+set fp=* Kitchen verify.
+
+rem lu: May-1-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen verify
+
+exit/b
+
+
+
+:_+ Heartbeat commands.
+
+
+
+::_
+
+:kl
+
+set fp=* Kitchen list. Heartbeat check.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen list
+
+exit/b
+
+
+
+::_
+
 :b
 
 :nl
@@ -102,7 +186,7 @@ rem lu: Apr-25-2019
 echo.
 echo %fp%
 
-call td pems
+call td cc
 
 echo.
 knife node list

@@ -5538,6 +5538,10 @@ exit/b
 
 :cartje
 
+:sr8
+
+:ctf
+
 :pass-through
 
 :iac
@@ -8979,6 +8983,23 @@ call n cc
 set cbf_filename=%cbf_path%\.kitchen\logs\kitchen.log
 
 set cbf_path=%cbf_path%\.kitchen\logs
+
+exit/b
+
+
+
+:_
+
+:krb
+
+set fp=* Knife.rb file.
+
+rem lu: May-1-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%userprofile%\.chef\knife.rb
 
 exit/b
 
