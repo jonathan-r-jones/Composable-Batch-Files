@@ -665,7 +665,7 @@ set fp=* Escape character for a parenthesis.
 
 rem skw what's the escape character for a batch file?
 
-rem Escaping Specific Characters: http://www.robvanderwoude.com/escapechars.php
+rem Escaping Specific Characters: ^esch
 
 rem lu: Nov-20-2018
 
