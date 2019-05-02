@@ -5542,6 +5542,18 @@ exit/b
 
 :ctf
 
+:atr
+
+:asr
+
+:ecc
+
+:acrc
+
+:cr
+
+:yml
+
 :pass-through
 
 :iac

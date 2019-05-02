@@ -141,4 +141,392 @@ exit/b
 
 
 
+:_
+
+set fp=* List of kitchen commands.
+
+Commands:
+  kitchen console                                 # Kitchen Console!
+  kitchen converge [INSTANCE|REGEXP|all]          # Change instance state to ...
+  kitchen create [INSTANCE|REGEXP|all]            # Change instance state to ...
+  kitchen destroy [INSTANCE|REGEXP|all]           # Change instance state to ...
+  kitchen diagnose [INSTANCE|REGEXP|all]          # Show computed diagnostic ...
+  kitchen doctor INSTANCE|REGEXP                  # Check for common system p...
+  kitchen exec INSTANCE|REGEXP -c REMOTE_COMMAND  # Execute command on one or...
+  kitchen help [COMMAND]                          # Describe available comman...
+  kitchen init                                    # Adds some configuration t...
+  kitchen list [INSTANCE|REGEXP|all]              # Lists one or more instances
+  kitchen login INSTANCE|REGEXP                   # Log in to one instance
+  kitchen package INSTANCE|REGEXP                 # package an instance
+  kitchen setup [INSTANCE|REGEXP|all]             # Change instance state to ...
+  kitchen test [INSTANCE|REGEXP|all]              # Test (destroy, create, co...
+  kitchen verify [INSTANCE|REGEXP|all]            # Change instance state to ...
+  kitchen version                                 # Print Kitchen's version i...
+
+exit/b
+
+
+
+:_
+
+:knparg
+
+:parg
+
+set fp=* Pargat's converge line.
+
+rem lu: Mar-7-2019
+
+echo.
+echo %fp%
+
+echo.
+knife bootstrap --yes 10.0.2.20 -N chefclientone.natnetwork.home -x parxxx -P BaadaBxxx --json-attribut-file ./env.json --sudo -r 'recipe[Tomcat-ActiveMQ]'
+
+rem 10.0.2.20: IP Address of the client
+rem chefclientone.natnetwork.home: domain name from which it is identified
+rem parxxx: username
+rem BaadaBxxx: password
+rem 'recipe[Tomcat-ActiveMQ]': a cookbook or a role
+
+exit/b
+
+
+
+:_
+
+:knssl
+
+:ssl
+
+set fp=* SSL fetch
+
+rem lu: Apr-25-2019
+
+echo.
+echo %fp%
+
+echo.
+knife ssl fetch
+
+exit/b
+
+
+
+:_
+
+:kc
+
+set fp=* Kitchen create.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen create --no-color
+
+exit/b
+
+
+
+:_
+
+:kd
+
+set fp=* Kitchen diagnose.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen diagnose --all
+
+exit/b
+
+
+
+:_
+
+:kv
+
+:v
+
+set fp=* Kitchen verify.
+
+rem lu: May-1-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen verify
+
+exit/b
+
+
+
+:_+ Heartbeat commands.
+
+
+
+::_
+
+:h1
+
+:kl
+
+set fp=* Kitchen list. Heartbeat check.
+
+rem lu: Apr-30-2019
+
+rem Created this with "kc" and the .kitchen-aws.yml file, I think.
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen list
+
+exit/b
+
+
+
+::_
+
+:b
+
+:h2
+
+:knnl
+
+:nl
+
+:noli
+
+set fp=* Node list. Heartbeat check. Chef is breathing.
+
+rem lu: Apr-25-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+knife node list
+
+exit/b
+
+
+
+:_
+
+:kdest
+
+set fp=* Kitchen destroy.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen destroy
+
+exit/b
+
+
+
+:_
+
+:ks
+
+set fp=* Kitchen setup.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen setup
+
+exit/b
+
+
+
+:_
+
+:er
+
+:rs
+
+set fp=* Exec rspec.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+chef exec rspec
+
+exit/b
+
+
+
+:_
+
+:atr
+
+set fp=* Localhost used in apache_test.rb.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+echo.
+call e atr
+
+exit/b
+
+
+
+:_
+
+:asr
+
+set fp=* Apache_spec.rb.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+echo.
+call e asr
+
+exit/b
+
+
+
+:_
+
+:gt
+
+set fp=* Chef generate template.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+chef generate template index.html
+
+exit/b
+
+
+
+:_
+
+:ga
+
+set fp=* Chef generate attribute.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+chef generate attribute default
+
+exit/b
+
+
+
+:_
+
+:gen
+
+set fp=* Chef generate
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+echo.
+chef generate
+
+exit/b
+
+
+
+:_
+
+:kda
+
+set fp=* Kitchen diagnose all.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen diagnose --all
+
+exit/b
+
+
+
+:_
+
+:kcov
+
+set fp=* Kitchen converge.
+
+rem lu: May-2-2019
+
+rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen converge centos-7
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
