@@ -4292,8 +4292,8 @@ rem lu: Mar-26-2019
 echo %computername% | find /i "lipt">nul
 
 if %errorlevel% == 0 (
-   echo.
-   echo * Computer name contains "lipt".
+   rem echo * Computer name contains "lipt".
+   rem echo.
    call %0 g
    exit/b
 )
@@ -4317,19 +4317,19 @@ rem lu: Apr-15-2019
 echo.
 echo %fp%
 
-call fn gfe
+call fn gfe>nul
 
 set filename_1=%cbf_filename%
 
-call fn ccf
+call fn ccf>nul
 
 set filename_2=%cbf_filename%
 
-call fn i2
+call fn i2>nul
 
 set filename_3=%cbf_filename%
 
-call fn ni
+call fn ni>nul
 
 set filename_4=%cbf_filename%
 
