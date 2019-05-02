@@ -440,46 +440,6 @@ exit/b
 
 :_
 
-:gt
-
-set fp=* Chef generate template.
-
-rem lu: May-2-2019
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-chef generate template index.html
-
-exit/b
-
-
-
-:_
-
-:ga
-
-set fp=* Chef generate attribute.
-
-rem lu: May-2-2019
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-chef generate attribute default
-
-exit/b
-
-
-
-:_
-
 :gen
 
 set fp=* Chef generate
@@ -569,6 +529,46 @@ echo %fp%
 
 echo.
 chef generate recipe apache
+
+exit/b
+
+
+
+:_
+
+:gti
+
+set fp=* Chef generate template.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+chef generate template index.html
+
+exit/b
+
+
+
+:_
+
+:ga
+
+set fp=* Chef generate attribute.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+chef generate attribute default
 
 exit/b
 
