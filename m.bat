@@ -4140,7 +4140,7 @@ rem lu: Mar-18-2019
 
 rem echo %fp%
 
-echo %cd% | find /i "j\cart-cookbook">nul
+echo %cd% | find /i "j\cart_cookbook">nul
 
 if %errorlevel% == 0 (
   echo.

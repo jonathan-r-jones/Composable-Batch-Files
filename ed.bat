@@ -27,7 +27,7 @@ set fp=* Preprocess.
 
 set cbf_filename=
 
-call n %0
+call n %0>nul
 
 
 
@@ -280,10 +280,11 @@ exit/b
 
 set fp=* Edit a file using an alias lookup.
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
-call n %1
+call n %1>nul
+rem qq-1
 
 if "%cbf_filename%" == "" (
   echo.

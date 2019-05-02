@@ -478,28 +478,6 @@ exit/b
 
 :_
 
-:kcov
-
-set fp=* Kitchen converge.
-
-rem lu: May-2-2019
-
-rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-kitchen converge centos-7
-
-exit/b
-
-
-
-:_
-
 :genc
 
 set fp=* Generate cookbook.
@@ -569,6 +547,28 @@ call td cc
 
 echo.
 chef generate attribute default
+
+exit/b
+
+
+
+:_
+
+:kcon
+
+set fp=* Kitchen converge.
+
+rem lu: May-2-2019
+
+rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen converge centos-7
 
 exit/b
 
