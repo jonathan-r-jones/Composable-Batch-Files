@@ -289,6 +289,15 @@ set fp=* Kitchen list. Heartbeat check.
 
 rem lu: Apr-30-2019
 
+rem Outcome: May-2-2019 2:41 PM
+
+rem WARN: Unresolved specs during Gem::Specification.reset:
+rem bundler (>= 1.10)
+rem WARN: Clearing out unresolved specs.
+rem Please report a bug if this causes problems.
+rem Instance          Driver  Provisioner  Verifier  Transport  Last Action    Last Error
+rem default-centos-7  Ec2     ChefZero     Inspec    Ssh        <Not Created>  <None>
+
 rem Created this with "kc" and the .kitchen-aws.yml file, I think.
 
 echo.
@@ -524,6 +533,42 @@ call td cc
 
 echo.
 kitchen converge centos-7
+
+exit/b
+
+
+
+:_
+
+:genc
+
+set fp=* Generate cookbook.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+echo.
+chef generate cookbook cart_cookbook
+
+exit/b
+
+
+
+:_
+
+:gen_apache
+
+set fp=* Chef generate recipe apache.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+echo.
+chef generate recipe apache
 
 exit/b
 
