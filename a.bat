@@ -4361,4 +4361,39 @@ exit/b
 
 
 
+:_
+
+:postgres_db_fr_cli_on_gaws_May_2_2019_329
+
+set fp=* Create database with multiple tags using Postgres Security Group.
+
+echo.
+echo %fp%
+
+set database_name=crabfq
+
+set instance_identifier=%database_name:_=-%
+
+echo.
+aws rds create-db-instance ^
+  --allocated-storage 20 ^
+  --db-name %database_name% ^
+  --db-instance-identifier %instance_identifier% ^
+  --db-instance-class db.t2.medium ^
+  --engine postgres ^
+  --master-username %database_name%user ^
+  --master-user-password %database_name%pass ^
+  --tags ^
+    "Key"="Application","Value"="Crab" ^
+    "Key"="BillingCode","Value"="xyz123" ^
+    "Key"="Environment","Value"="dv" ^
+    "Key"="POC","Value"="test@gmail.com" ^
+    "Key"="Portfolio","Value"="ABC" ^
+    "Key"="Version","Value"="1.0" ^
+  --vpc-security-group-ids sg-06a257b836873b16d
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
