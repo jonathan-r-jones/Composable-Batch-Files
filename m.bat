@@ -1,4 +1,4 @@
-:_
+:_ (!m)
 
 @echo off
 
@@ -4329,13 +4329,17 @@ call fn i2>nul
 
 set filename_3=%cbf_filename%
 
+set filename_4=%composable_batch_files%\m.bat
+
 call fn ni>nul
 
-set filename_4=%cbf_filename%
+set filename_5=%cbf_filename%
 
-set filename_5=%composable_batch_files%\n.bat
+set filename_6=%composable_batch_files%\n.bat
 
-start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%"
+set filename_7=%composable_batch_files%\ch.bat
+
+start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%" "%filename_6%" "%filename_7%"
 
 exit/b
 

@@ -84,6 +84,9 @@ echo.
 echo Header: %cbf_header%
 
 echo.
+echo Instance ID: %cbf_instance_id%
+
+echo.
 echo Parameter: %cbf_parameter%
 
 echo.

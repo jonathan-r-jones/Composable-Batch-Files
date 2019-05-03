@@ -191,7 +191,6 @@ call n sr3
 
 echo.
 curl -v --upload-file Apr-29-2019_3_07_PM.txt %cbf_url%
-rem qq-1
 
 exit/b
 
@@ -211,6 +210,13 @@ echo %fp%
 rem This works.
 
 call n %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo Error: Alias "%2" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
 
 echo.
 curl %cbf_url%

@@ -68,6 +68,13 @@ if %errorlevel% == 1 (
 
 rem Imprimatur (!erro, !el, !erle)
 if %errorlevel% == 1 (
+  echo.
+  echo Error: Alias "%2" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if %errorlevel% == 1 (
   exit/b
 )
 

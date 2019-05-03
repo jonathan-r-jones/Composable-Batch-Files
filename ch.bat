@@ -215,26 +215,6 @@ exit/b
 
 :_
 
-:kc
-
-set fp=* Kitchen create.
-
-rem lu: Apr-30-2019
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-kitchen create --no-color
-
-exit/b
-
-
-
-:_
-
 :kd
 
 set fp=* Kitchen diagnose.
@@ -340,6 +320,47 @@ exit/b
 
 
 
+::_
+
+:er
+
+:rs
+
+:h3
+
+set fp=* Exec rspec.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+chef exec rspec
+
+exit/b
+
+
+
+::_
+
+:h4
+
+set fp=* Verify curl.
+
+rem lu: May-3-2019
+
+echo.
+echo %fp%
+
+call cu t sr12
+
+exit/b
+
+
+
 :_
 
 :kdest
@@ -375,28 +396,6 @@ call td cc
 
 echo.
 kitchen setup
-
-exit/b
-
-
-
-:_
-
-:er
-
-:rs
-
-set fp=* Exec rspec.
-
-rem lu: May-2-2019
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-chef exec rspec
 
 exit/b
 
@@ -554,6 +553,8 @@ exit/b
 
 :_
 
+:converge
+
 :kcon
 
 set fp=* Kitchen converge.
@@ -561,6 +562,7 @@ set fp=* Kitchen converge.
 rem lu: May-2-2019
 
 rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
+rem Converge creates an instance, which surprised me. May-3-2019
 
 echo.
 echo %fp%
@@ -569,6 +571,26 @@ call td cc
 
 echo.
 kitchen converge centos-7
+
+exit/b
+
+
+
+:_
+
+:kc
+
+set fp=* Kitchen create.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen create --no-color
 
 exit/b
 

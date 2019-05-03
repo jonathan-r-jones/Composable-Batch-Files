@@ -1596,6 +1596,25 @@ echo.
 echo %fp%
 
 echo.
+aws ec2 describe-instances --filters "Name=key-name,Values=cart*"
+rem aws ec2 describe-instances --filters "Name=key-name,Values=cart*"
+
+exit/b
+
+
+
+::_
+
+:d_ins_orig
+
+set fp=* Describes instances.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+echo.
 aws ec2 describe-instances --color off
 
 exit/b
@@ -3853,6 +3872,8 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
+set cbf_instance_id=
+
 if "%~2" == "" (
   echo.
   echo You must specify and instance alias.
@@ -3860,6 +3881,19 @@ if "%~2" == "" (
 )
 
 call n %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo Error: Alias "%2" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Instance ID cannot be blank.
+  exit/b
+)
 
 aws ec2 stop-instances --instance-ids %cbf_instance_id%
 

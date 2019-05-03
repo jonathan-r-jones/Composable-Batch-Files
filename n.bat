@@ -5560,6 +5560,10 @@ exit/b
 
 :sr12
 
+:sr10
+
+:sr14
+
 :pass-through
 
 :iac
@@ -6522,8 +6526,6 @@ exit/b
 
 
 :_
-
-:m
 
 :mous
 
@@ -8332,6 +8334,51 @@ set cbf_path=%cbf_repo%\For-Git-Testing
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
+exit/b
+
+
+
+::_
+
+:fgt1
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_branch=1
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+set cbf_path=%cbf_repo%\For-Git-Testing_branch_%cbf_branch%
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+exit/b
+
+
+
+::_
+
+:fgt2
+
+set fp=* ForGitTesting.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_branch=2
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+
+set cbf_path=%cbf_repo%\For-Git-Testing_branch_%cbf_branch%
+
+set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
 exit/b
 
