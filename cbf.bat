@@ -74,7 +74,6 @@ echo  cypn  Copy file from alias path param 1 to alias path param 2
 echo   cyt  Copy file in the current directory to nickname-specified path
 echo   cyf  Copy file from a cbf_path nickname
 echo     d  Dir for current folder
-rem qq-1
 echo    dd  Dir filename extension searcher including subfolders
 echo   ddc  Dir filename extension searcher current folder only
 echo    dr  Dir remote searcher

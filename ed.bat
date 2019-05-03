@@ -64,18 +64,18 @@ if "%~3" == "-c" (
 
 if "%~2" == "-c" (
    if "%file_has_no_extension%" == "1" (
-      goto c_and_n_switches
+      goto c_and_e_switches
    )
 )
 
 if "%~3" == "-c" (
    if "%file_has_no_extension%" == "1" (
-      goto c_and_n_switches
+      goto c_and_e_switches
    )
 )
 
 if "%file_has_no_extension%" == "1" (
-  goto n_switch_only
+  goto e_switch_only
 )
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
@@ -187,7 +187,7 @@ exit/b
 
 :_
 
-:n_switch_only
+:e_switch_only
 
 set fp=* N switch only.
 
@@ -226,7 +226,7 @@ exit/b
 
 :_
 
-:c_and_n_switches
+:c_and_e_switches
 
 set fp=* C and N switches.
 
@@ -284,7 +284,6 @@ rem echo.
 rem echo %fp%
 
 call n %1>nul
-rem qq-1
 
 if "%cbf_filename%" == "" (
   echo.

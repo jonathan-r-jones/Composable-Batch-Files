@@ -45,12 +45,14 @@ exit/b
 
 :main_function
 
-call fn %1
+echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
-echo.
-type "%cbf_filename%"
-
-echo.
+if %errorlevel% == 0 (
+  type %1
+) else (
+  call fn %1
+  type "%cbf_filename%"
+)
 
 exit/b
 

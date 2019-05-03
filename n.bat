@@ -8349,11 +8349,11 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
-set cbf_branch=1
+set cbf_branch=Branch1
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
-set cbf_path=%cbf_repo%\For-Git-Testing_branch_%cbf_branch%
+set cbf_path=%cbf_repo%\For-Git-Testing_%cbf_branch%
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
@@ -8372,11 +8372,11 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
-set cbf_branch=2
+set cbf_branch=Branch2
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
-set cbf_path=%cbf_repo%\For-Git-Testing_branch_%cbf_branch%
+set cbf_path=%cbf_repo%\For-Git-Testing_%cbf_branch%
 
 set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 

@@ -2316,24 +2316,6 @@ exit/b
 
 ::_
 
-:co
-
-set fp=* 9c. Check out branch.
-
-echo.
-echo %fp%
-
-rem This worked. Jan-30-2017
-
-echo.
-git checkout -b Branch2
-
-exit/b
-
-
-
-::_
-
 :cod
 
 set fp=* 9b. Check out develop.
@@ -2908,6 +2890,30 @@ alias gstp='git stash pop'
 alias gsts='git stash save' 
 alias gl="git pull" 
 alias gp="git push"
+
+exit/b
+
+
+
+:_
+
+:co
+
+set fp=* Use Git checkout to switch branches.
+
+rem lu: May-3-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is required.
+  exit/b
+)
+
+echo.
+git checkout %2
 
 exit/b
 
