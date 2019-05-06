@@ -8472,40 +8472,6 @@ exit/b
 
 ::_
 
-:j3
-
-set fp=* J3.txt.
-
-rem lu: Mar-29-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%temp%\j3.txt
-
-exit/b
-
-
-
-::_
-
-:j4
-
-set fp=* J4.txt.
-
-rem lu: Mar-29-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%temp%\j4.txt
-
-exit/b
-
-
-
-::_
-
 :j5
 
 set fp=* %1.txt.

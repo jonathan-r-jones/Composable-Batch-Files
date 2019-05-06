@@ -147,8 +147,8 @@ if %errorlevel% == 0 (
 
 set cbf_parameter=%cbf_filename%
 
-echo.
-echo cbf_parameter: %cbf_parameter%
+rem echo.
+rem echo cbf_parameter: %cbf_parameter%
 
 call r
 
