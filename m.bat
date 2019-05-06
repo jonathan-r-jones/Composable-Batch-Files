@@ -1451,7 +1451,7 @@ call %0 set_big_path
 
 call %0 set_default_browser kr
 
-call %0 set_default_text_editor np
+call %0 set_default_text_editor sm
 
 set aa=c:\aa
 set cbf_repo=%userprofile%\j
@@ -2965,8 +2965,8 @@ set fp=* Simulate a remote double click.
 
 rem lu: Feb-1-2018
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 rem Strangely, this also works. Feb-1-2018
 rem set cbf_application="%cbf_filename% - Shortcut.lnk"

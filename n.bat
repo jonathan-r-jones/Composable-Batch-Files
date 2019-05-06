@@ -962,7 +962,7 @@ exit/b
 
 :_
 
-:y
+:ye
 
 set fp=Yelp Extplorer.
 
@@ -5564,6 +5564,12 @@ exit/b
 
 :sr14
 
+:r
+
+:je
+
+:y
+
 :pass-through
 
 :iac
@@ -8992,7 +8998,7 @@ rem lu: Apr-29-2019
 echo.
 echo %fp%
 
-set cbf_npl=453
+set cbf_npl=525
 
 exit/b
 
@@ -9031,6 +9037,25 @@ echo.
 echo %fp%
 
 set cbf_filename=%userprofile%\.chef\knife.rb
+
+exit/b
+
+
+
+:_
+
+:kcom
+
+:kitchen_commands
+
+set fp=* Kichen (executable).
+
+rem lu: May-6-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://docs.chef.io/ctl_kitchen.html
 
 exit/b
 

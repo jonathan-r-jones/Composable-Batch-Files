@@ -233,28 +233,6 @@ exit/b
 
 
 
-:_
-
-:kv
-
-:v
-
-set fp=* Kitchen verify.
-
-rem lu: May-1-2019
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-kitchen verify
-
-exit/b
-
-
-
 :_+ Heartbeat commands.
 
 
@@ -304,14 +282,12 @@ exit/b
 
 :noli
 
-set fp=* Node list. Heartbeat check. Chef is breathing.
+set fp=* Kitchen node list. Heartbeat check. Chef server is breathing.
 
-rem lu: Apr-25-2019
+rem lu: May-6-2019
 
 echo.
 echo %fp%
-
-call td cc
 
 echo.
 knife node list
@@ -591,6 +567,68 @@ call td cc
 
 echo.
 kitchen create --no-color
+
+exit/b
+
+
+
+:_
+
+:test
+
+set fp=* Kitchen test.
+
+rem lu: May-6-2019
+
+rem Doesn't work because we aren't allowed to destroy instances.
+
+echo.
+echo %fp%
+
+echo.
+kitchen test
+
+exit/b
+
+
+
+:_
+
+:kv
+
+:v
+
+set fp=* Kitchen verify.
+
+rem lu: May-1-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen verify
+
+exit/b
+
+
+
+:_
+
+:upco
+
+set fp=* Upload cookbooks.
+
+rem lu: May-6-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+knife upload cookbooks
 
 exit/b
 

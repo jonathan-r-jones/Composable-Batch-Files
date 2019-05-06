@@ -48,6 +48,7 @@ exit/b
 echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
+  echo.
   type %1
 ) else (
   call fn %1
