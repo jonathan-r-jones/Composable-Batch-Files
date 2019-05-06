@@ -1451,14 +1451,15 @@ call %0 set_big_path
 
 call %0 set_default_browser kr
 
+call %0 set_default_text_editor np
+
 set aa=c:\aa
 set cbf_repo=%userprofile%\j
 set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 set JAVA_TOOL_OPTIONS=
 set KITCHEN_YAML=.kitchen-aws.yml
-set path=%path%;%share-zone%
 set machinename=gfe
-set share-zone=%userprofile%\j\share-zone
+
 call ni full_pem
 set SSH_KEY_PATH=%cbf_full_pem%
 
@@ -3511,6 +3512,10 @@ set path=%path%;C:\Users\JJones2\j\Composable-Batch-Files
 call n jre
 
 set path=%path%;%cbf_path%
+
+set share-zone=%userprofile%\j\share-zone
+
+set path=%path%;%share-zone%
 
 exit/b
 

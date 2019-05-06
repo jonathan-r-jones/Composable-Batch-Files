@@ -9466,6 +9466,29 @@ exit/b
 
 :_
 
+:
+
+set fp=* Complex set statement.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call n pems
+set SSH_KEY_PATH=%cbf_path%
+call n sr6
+set SSH_KEY_PATH=%SSH_KEY_PATH%\%cbf_pem%
+
+echo.
+echo %SSH_KEY_PATH%
+
+exit/b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.
@@ -9478,21 +9501,17 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Complex set statement.
+set fp=* Test setting default text editor.
 
-rem lu: Apr-30-2019
+rem lu: May-6-2019
 
 echo.
 echo %fp%
 
-call n pems
-rem qq-1
-set SSH_KEY_PATH=%cbf_path%
-call n sr6
-set SSH_KEY_PATH=%SSH_KEY_PATH%\%cbf_pem%
-
 echo.
-echo %SSH_KEY_PATH%
+call %0 set_default_text_editor np
+
+rem qq-1
 
 exit/b
 
