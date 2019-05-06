@@ -147,8 +147,6 @@ call %0 move_podcasts_to_the_staging_folder
 
 call %0 run_tag_program
 
-pause
-
 call %0 move_old_clipjam_files
 
 call %0 move_sa_to_cj
