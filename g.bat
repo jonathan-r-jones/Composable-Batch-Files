@@ -2815,10 +2815,13 @@ rem Note: You must have already initialized the repository.
 echo.
 echo %fp%
 
-call td cart
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field.
+  exit/b
+)
 
-rem git push origin --delete cart_412
-git push origin --delete cart-412-3
+git push origin --delete %2
 
 exit/b
 
@@ -2908,12 +2911,44 @@ echo %fp%
 
 if "%~2" == "" (
   echo.
-  echo * Percent 2 is required.
+  echo * Percent 2 is a required field.
   exit/b
 )
 
 echo.
 git checkout %2
+
+exit/b
+
+
+
+:_
+
+:crbr
+
+set fp=* Create branch.
+
+rem lu: May-6-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, source branch, is a required field.
+  exit/b
+)
+
+if "%~3" == "" (
+  echo.
+  echo * Percent 3, new destination branch, is a required field.
+  exit/b
+)
+
+echo.
+git checkout -b %3 %2
+
+git push --set-upstream origin %3
 
 exit/b
 

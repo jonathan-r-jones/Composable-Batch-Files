@@ -67,6 +67,13 @@ if %errorlevel% == 1 (
 )
 
 rem Imprimatur (!erro, !el, !erle)
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field.
+  exit/b
+)
+
 if %errorlevel% == 1 (
   echo.
   echo Error: Alias "%2" not found.
