@@ -4756,6 +4756,8 @@ exit/b
 
 :_
 
+:t1
+
 :test1
 
 set fp=* Test 1 path.
@@ -4773,6 +4775,8 @@ exit/b
 
 :_
 
+:t2
+
 :test2
 
 set fp=* Test 2 path.
@@ -4783,23 +4787,6 @@ echo.
 echo %fp%
 
 set cbf_path=%aa%\test2
-
-exit/b
-
-
-
-:_
-
-:test3
-
-set fp=* Test 3 path.
-
-rem lu: Sep-4-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\test3
 
 exit/b
 
@@ -5564,11 +5551,11 @@ exit/b
 
 :sr14
 
-:r
-
 :je
 
 :y
+
+:ct
 
 :pass-through
 

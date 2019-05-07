@@ -40,9 +40,10 @@ echo Parameter 1: Label method to run.
 
 echo.
 echo Parameter  Description
-echo ---------  --------------------------------------------------------------
+echo ---------  ----------------------------------------------------------------
 echo        ig  Copy Visual Studio Git Ignore file from Fresnel to the current
 echo            location.
+echo       apn  Copy all files in the current folder to an alias specified path.
 
 exit/b
 
@@ -341,7 +342,6 @@ echo %fp%
 
 echo.
 xcopy /d /h /r /y "%reach out%\cc.asc" "%share-zone%\copy of cc.asc"
-rem qq-1
 
 exit/b
 
@@ -393,6 +393,39 @@ if /i not exist "%Current_JDate%" md "%Current_JDate%"
 cd %Current_JDate%
 
 xcopy /s /y "%appdata%\Multi Edit Software\Multi-Edit\11\Config.04"
+
+exit/b
+
+
+
+:_
+
+:apn
+
+set fp=* Copy all files in the current folder to an alias specified path.
+
+rem lu: May-7-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field for alias.
+  exit/b
+)
+
+call n %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Issue with "%2" alias.
+  call m clear_errorlevel_silently  
+  exit/b
+)
+
+echo.
+xcopy /d /h /r /s /y . %cbf_path%
 
 exit/b
 

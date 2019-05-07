@@ -62,7 +62,7 @@ call n %1
 
 if %errorlevel% == 1 (
   echo.
-  echo **** Error processing alias.
+  echo * Error: Alias not found.
   exit/b
 )
 

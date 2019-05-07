@@ -463,7 +463,7 @@ echo.
 echo %fp%
 
 echo.
-chef generate cookbook cart_cookbook
+chef generate cookbook generated_cookbook
 
 exit/b
 
