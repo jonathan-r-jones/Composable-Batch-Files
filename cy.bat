@@ -425,7 +425,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
-xcopy /d /h /r /s /y . %cbf_path%
+xcopy /d /r /s /y . %cbf_path%
 
 exit/b
 
