@@ -5557,6 +5557,14 @@ exit/b
 
 :ct
 
+:pare
+
+:sr15
+
+:sr16
+
+:nl
+
 :pass-through
 
 :iac
@@ -7994,25 +8002,6 @@ exit/b
 
 :_
 
-:cart_recipes
-
-set fp=* Cart recipes.
-
-rem lu: Mar-6-2019
-
-echo.
-echo %fp%
-
-call %0 cartc
-
-set cbf_path=%cbf_path%\recipes
-
-exit/b
-
-
-
-:_
-
 :devp
 
 set fp=* DevPuzzler.
@@ -9043,6 +9032,27 @@ echo.
 echo %fp%
 
 set cbf_url=https://docs.chef.io/ctl_kitchen.html
+
+exit/b
+
+
+
+:_
+
+:cart_recipes
+
+:ccr
+
+set fp=* Cart recipes.
+
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+call %0 cc
+
+set cbf_path=%cbf_path%\recipes
 
 exit/b
 

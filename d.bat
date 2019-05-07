@@ -115,6 +115,8 @@ exit/b
 
 :_
 
+:h
+
 :hid
 
 set fp=* Look for the hidden files and folders.

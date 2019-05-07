@@ -4439,7 +4439,7 @@ exit
 
 :specific_file_presence
 
-set fp=* Check the current folder for the presence of a "%2".
+set fp=* Check the current folder for the presence of "%2".
 
 rem lu: Mar-28-2019
 
@@ -4451,7 +4451,8 @@ if not exist %2 (
   echo * Error: The file "%2" does NOT exist in the current folder.
   exit/b 1
 ) else (
-  echo * Found file "%2".
+  echo. 
+  echo * Found it.
 )
 
 exit/b 0

@@ -2954,4 +2954,22 @@ exit/b
 
 
 
+:_
+
+:lb
+
+set fp=* List all local and remote branches. (skw list branches)
+
+rem lu: May-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -a
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

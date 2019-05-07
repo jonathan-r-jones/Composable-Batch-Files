@@ -14,11 +14,11 @@ set filep=* A wrapper around chef, a command line utility.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto main_function
+if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto %1
+goto preprocessing
 
 
 
@@ -51,15 +51,16 @@ exit/b
 
 :_
 
-:main_function
+:preprocessing
 
-echo.
-echo %filep%
+call m specific_file_presence .kitchen-aws.yml
 
-echo.
-chef
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently
+  exit/b
+)
 
-exit/b
+goto %1
 
 
 
@@ -261,8 +262,6 @@ rem Created this with "kc" and the .kitchen-aws.yml file, I think.
 echo.
 echo %fp%
 
-call td cc
-
 echo.
 kitchen list
 
@@ -323,6 +322,28 @@ exit/b
 ::_
 
 :h4
+
+:kv
+
+:v
+
+set fp=* Kitchen verify.
+
+rem lu: May-1-2019
+
+echo.
+echo %fp%
+
+echo.
+kitchen verify
+
+exit/b
+
+
+
+::_
+
+:h5
 
 set fp=* Verify curl.
 
@@ -563,8 +584,6 @@ rem lu: Apr-30-2019
 echo.
 echo %fp%
 
-call td cc
-
 echo.
 kitchen create --no-color
 
@@ -594,28 +613,6 @@ exit/b
 
 :_
 
-:kv
-
-:v
-
-set fp=* Kitchen verify.
-
-rem lu: May-1-2019
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-kitchen verify
-
-exit/b
-
-
-
-:_
-
 :upco
 
 set fp=* Upload cookbooks.
@@ -629,6 +626,24 @@ call td cc
 
 echo.
 knife upload cookbooks
+
+exit/b
+
+
+
+:_
+
+:genf
+
+set fp=* Generate file.
+
+rem lu: May-7-2019
+
+echo.
+echo %fp%
+
+echo.
+chef generate file
 
 exit/b
 

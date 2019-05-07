@@ -3671,7 +3671,9 @@ rem lu: Dec-12-2018
 echo.
 echo %fp%
 
-aws ec2 create-tags --resources i-0ee6674f1356c148b --tags Key=Name,Value=small_test_Feb_1_2019
+call n sr16
+
+aws ec2 create-tags --resources %cbf_instance_id% --tags Key=Name,Value=w1idvtempcrt016
 
 rem These also work.
 rem aws ec2 create-tags help>%temp%/j1.txt
