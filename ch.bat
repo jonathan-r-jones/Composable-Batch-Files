@@ -106,26 +106,6 @@ exit/b
 
 :_
 
-:rspec
-
-set fp=* ChefSpec/Rspec tests resources and recipes as part of a simulated chef-client run.
-
-rem Results are compared to defined expectations.
-
-rem lu: Mar-5-2019
-
-echo.
-echo %fp%
-
-echo.
-chef exec rspec
-
-exit/b
-
-
-
-:_
-
 :vers
 
 set fp=* Version.
@@ -299,18 +279,20 @@ exit/b
 
 :er
 
-:rs
-
 :h3
 
-set fp=* Exec rspec.
+:rs
 
-rem lu: May-2-2019
+:rspec
+
+set fp=* ChefSpec/Rspec tests resources and recipes as part of a simulated chef-client run.
+
+rem Results are compared to defined expectations.
+
+rem lu: May-8-2019
 
 echo.
 echo %fp%
-
-call td cc
 
 echo.
 chef exec rspec
@@ -550,49 +532,6 @@ exit/b
 
 :_
 
-:converge
-
-:kcon
-
-set fp=* Kitchen converge.
-
-rem lu: May-2-2019
-
-rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
-rem Converge creates an instance, which surprised me. May-3-2019
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-kitchen converge centos-7
-
-exit/b
-
-
-
-:_
-
-:kc
-
-set fp=* Kitchen create.
-
-rem lu: Apr-30-2019
-
-echo.
-echo %fp%
-
-echo.
-kitchen create --no-color
-
-exit/b
-
-
-
-:_
-
 :test
 
 set fp=* Kitchen test.
@@ -644,6 +583,49 @@ echo %fp%
 
 echo.
 chef generate file
+
+exit/b
+
+
+
+:_
+
+:kc
+
+set fp=* Kitchen create.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+echo.
+kitchen create --no-color
+
+exit/b
+
+
+
+:_
+
+:conv
+
+:converge
+
+set fp=* Kitchen converge.
+
+rem lu: May-2-2019
+
+rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
+rem Converge creates an instance, which surprised me. May-3-2019
+
+echo.
+echo %fp%
+
+call td cc
+
+echo.
+kitchen converge centos-7
 
 exit/b
 
