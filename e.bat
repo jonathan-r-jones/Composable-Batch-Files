@@ -60,7 +60,6 @@ call mx.bat %1>nul
 
 if %errorlevel% == 1 (
   call me %1 %2 %3
-rem qq-1
   exit/b
 )
 
