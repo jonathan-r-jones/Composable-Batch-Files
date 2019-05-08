@@ -56,10 +56,11 @@ if %errorlevel% == 0 (
   exit/b
 )
 
-call mx.bat %1>nul
+call mx.bat %1
 
 if %errorlevel% == 1 (
   call me %1 %2 %3
+  call m clear_errorlevel_silently
   exit/b
 )
 

@@ -283,7 +283,7 @@ set fp=* Edit a file using an alias lookup.
 rem echo.
 rem echo %fp%
 
-call n %1>nul
+call n %1
 
 if "%cbf_filename%" == "" (
   echo.

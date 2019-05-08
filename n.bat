@@ -3089,8 +3089,8 @@ set fp=* Multi-Edit.
 
 rem lu: Jun-8-2018
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
 
@@ -7006,12 +7006,12 @@ exit/b
 
 :f8
 
-set fp=* 8.
+set fp=* Synchronize with dropbox.
 
 rem lu: Jan-22-2019
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 set cbf_filename=%savannah%\belfry\synchronize with dropbox.bat
 
@@ -8813,6 +8813,8 @@ exit/b
 :kitchen_commands
 
 set fp=* Kichen (executable).
+
+rem kitchen commands: skw
 
 rem lu: May-6-2019
 
