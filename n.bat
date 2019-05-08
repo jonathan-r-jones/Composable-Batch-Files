@@ -2294,25 +2294,6 @@ exit/b
 
 :_
 
-:ctr
-
-set fp=* AppCenter.
-
-rem lu: Jun-21-2018
-
-echo.
-echo %fp%
-
-set cbf_path=
-
-set cbf_url=https://appcenter.ms/apps
-
-exit/b
-
-
-
-:_
-
 :a
 
 set fp=* A folder.
@@ -3146,25 +3127,6 @@ echo.
 echo %fp%
 
 set cbf_application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
-
-exit/b
-
-
-
-:_
-
-:bike
-
-set fp=* Bike search.
-
-rem lu: Jun-20-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
-
-set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
 
 exit/b
 
@@ -4297,126 +4259,6 @@ echo.
 echo %fp%
 
 set cbf_path=%cbf_repo%\Fresnel Dated Backups
-
-exit/b
-
-
-
-:_+ Mobile Apps
-
-
-
-::_
-
-:ma
-
-:otzi
-
-set fp=* Test the use of an enterprise profile on VSTS. Formerly the mobile app prototype that Brian saw.
-
-rem lu: Aug-20-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\it\Mobile
-
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
-
-exit/b
-
-
-
-::_
-
-:fr
-
-:fres
-
-set fp=* Fresnel Mobile App.
-
-rem lu: Jun-21-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\it\fresnel
-
-set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
-
-exit/b
-
-
-
-::_
-
-:fr_bu
-
-set fp=* Fresnel Mobile App, local backup version.
-
-rem lu: Jul-26-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_repo%\backups\fresnel
-
-set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
-
-exit/b
-
-
-
-::_
-
-:ql_bu
-
-set fp=* Quick Launcher, local backup version.
-
-rem lu: Jul-26-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_repo%\backups\Quickla-for-Multi-Edit
-
-set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
-
-exit/b
-
-
-
-::_
-
-:cbf_bu
-
-set fp=* CBF, local backup version.
-
-rem lu: Jul-26-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_repo%\backups\Composable-Batch-Files
-
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
-
-exit/b
-
-
-
-::_
-
-:bu
-
-set fp=* Backups folder.
-
-rem lu: Jul-26-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_repo%\backups
 
 exit/b
 
@@ -8818,62 +8660,6 @@ exit/b
 
 
 
-:_+ App Center Demo
-
-
-
-::_
-
-:dx
-
-:imdx
-
-set fp=* Introduction to Mobile Development with Xamarin by James Montemagno.
-
-rem lu: Apr-13-2019
-
-echo.
-echo %fp%
-
-set cbf_branch=master
-
-set cbf_clone_url=https://github.com/dotnet-presentations/xamarin.git
-
-set cbf_path=%cbf_repo%\imdx\Introduction to Mobile Development with Xamarin
-
-set cbf_filename=%cbf_path%\Introduction to Mobile Development with Xamarin.pptx
-
-set cbf_url=https://github.com/dotnet-presentations/xamarin.git
-
-exit/b
-
-
-
-::_
-
-:acd
-
-set fp=* App Center Demo.
-
-rem lu: Apr-13-2019
-
-echo.
-echo %fp%
-
-set cbf_branch=master
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
-
-set cbf_path=%cbf_repo%\acd
-
-set cbf_filename=%cbf_path%\App Center Demo.pptx
-
-set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
-
-exit/b
-
-
-
 :_
 
 :i2
@@ -9053,6 +8839,220 @@ echo %fp%
 call %0 cc
 
 set cbf_path=%cbf_path%\recipes
+
+exit/b
+
+
+
+:_+ App Center Demo
+
+
+
+::_
+
+:dx
+
+:imdx
+
+set fp=* Introduction to Mobile Development with Xamarin by James Montemagno.
+
+rem lu: Apr-13-2019
+
+echo.
+echo %fp%
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/dotnet-presentations/xamarin.git
+
+set cbf_path=%cbf_repo%\imdx\Introduction to Mobile Development with Xamarin
+
+set cbf_filename=%cbf_path%\Introduction to Mobile Development with Xamarin.pptx
+
+set cbf_url=https://github.com/dotnet-presentations/xamarin.git
+
+exit/b
+
+
+
+::_
+
+:acd
+
+set fp=* App Center Demo.
+
+rem lu: Apr-13-2019
+
+echo.
+echo %fp%
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+
+set cbf_path=%cbf_repo%\acd
+
+set cbf_filename=%cbf_path%\App Center Demo.pptx
+
+set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+
+exit/b
+
+
+
+::_
+
+:ctr
+
+set fp=* AppCenter.
+
+rem lu: Jun-21-2018
+
+echo.
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://appcenter.ms/apps
+
+exit/b
+
+
+
+::_
+
+:bike
+
+set fp=* Bike search.
+
+rem lu: Jun-20-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
+
+set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
+
+exit/b
+
+
+
+:_+ Mobile Apps
+
+
+
+::_
+
+:ma
+
+:otzi
+
+set fp=* Test the use of an enterprise profile on VSTS. Formerly the mobile app prototype that Brian saw.
+
+rem lu: Aug-20-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\it\Mobile
+
+set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
+
+exit/b
+
+
+
+::_
+
+:fr
+
+:fres
+
+set fp=* Fresnel Mobile App.
+
+rem lu: Jun-21-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel
+
+set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+
+exit/b
+
+
+
+::_
+
+:fr_bu
+
+set fp=* Fresnel Mobile App, local backup version.
+
+rem lu: Jul-26-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_repo%\backups\fresnel
+
+set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+
+exit/b
+
+
+
+::_
+
+:ql_bu
+
+set fp=* Quick Launcher, local backup version.
+
+rem lu: Jul-26-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_repo%\backups\Quickla-for-Multi-Edit
+
+set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+
+exit/b
+
+
+
+::_
+
+:cbf_bu
+
+set fp=* CBF, local backup version.
+
+rem lu: Jul-26-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_repo%\backups\Composable-Batch-Files
+
+set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+
+exit/b
+
+
+
+::_
+
+:bu
+
+set fp=* Backups folder.
+
+rem lu: Jul-26-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_repo%\backups
 
 exit/b
 
