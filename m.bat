@@ -4131,7 +4131,7 @@ set /p date_as_filename=<date_as_filename.txt
 
 ren date_as_filename.txt %date_as_filename%.txt
 
-call dd txt
+dir *.txt
 
 exit/b
 

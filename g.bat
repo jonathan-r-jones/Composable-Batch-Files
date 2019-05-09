@@ -1,4 +1,4 @@
-:_
+:_ (!g)
 
 @echo off
 
@@ -2316,7 +2316,7 @@ exit/b
 
 ::_
 
-:cod
+:codb
 
 set fp=* 9b. Check out develop.
 
@@ -2537,26 +2537,6 @@ exit/b
 
 
 :_+ Branch Operations
-
-
-
-::_
-
-:delb_jj
-
-set fp=* Delete branch jj_devops.
-
-rem This worked on Mar-20-2019.
-
-echo.
-echo %fp%
-
-call td cart
-
-echo.
-git push origin --delete jj_devops
-
-exit/b
 
 
 
@@ -2799,6 +2779,24 @@ exit/b
 
 ::_
 
+:lb
+
+set fp=* List all local and remote branches. (skw list branches)
+
+rem lu: May-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -a
+
+exit/b
+
+
+
+::_
+
 :delb
 
 :debr
@@ -2820,8 +2818,24 @@ if "%~2" == "" (
   echo * Percent 2 is a required field.
   exit/b
 )
-
 git push origin --delete %2
+
+exit/b
+
+
+
+::_
+
+:delbj
+
+set fp=* Delete jj_devops branch.
+
+echo.
+echo %fp%
+
+call td cart
+
+git push origin --delete jj_devops
 
 exit/b
 
@@ -2954,19 +2968,112 @@ exit/b
 
 
 
-:_
+:_+ Checkout via command line May-9-2019
 
-:lb
 
-set fp=* List all local and remote branches. (skw list branches)
 
-rem lu: May-7-2019
+::_
+
+:fo
+
+set fp=* Fetch origin.
+
+rem lu: May-9-2019
+
+echo.
+echo %fp%
+
+git fetch origin
+
+exit/b
+
+
+
+::_
+
+:cosma
+
+set fp=* Check out sma branch.
+
+rem lu: May-9-2019
 
 echo.
 echo %fp%
 
 echo.
-git branch -a
+git checkout -b sm_another_jenkins origin/sm_another_jenkins
+
+exit/b
+
+
+
+::_
+
+:md
+
+set fp=* Merge develop.
+
+rem lu: May-9-2019
+
+echo.
+echo %fp%
+
+echo.
+git merge develop
+
+exit/b
+
+
+
+::_
+
+:cod
+
+set fp=* Check out develop.
+
+rem lu: May-9-2019
+
+echo.
+echo %fp%
+
+echo.
+git checkout develop
+
+exit/b
+
+
+
+::_
+
+:maj
+
+set fp=* Merge another jenkins.
+
+rem lu: May-9-2019
+
+echo.
+echo %fp%
+
+echo.
+git checkout develop
+
+exit/b
+
+
+
+:_
+
+:pod
+
+set fp=* Push origin develop.
+
+rem lu: May-9-2019
+
+echo.
+echo %fp%
+
+echo.
+git push origin develop
 
 exit/b
 

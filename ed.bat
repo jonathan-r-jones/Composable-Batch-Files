@@ -189,7 +189,7 @@ exit/b
 
 :e_switch_only
 
-set fp=* N switch only.
+set fp=* E switch only.
 
 echo.
 echo %fp%
@@ -228,7 +228,7 @@ exit/b
 
 :c_and_e_switches
 
-set fp=* C and N switches.
+set fp=* C and E switches.
 
 rem lu: Jan-16-2019
 
