@@ -30,12 +30,6 @@ echo.
 echo %filep%
 
 echo.
-echo Last Updated: Dec-5-2018
-
-echo.
-echo File purpose: SurF.
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
 echo.

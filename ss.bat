@@ -25,7 +25,7 @@ goto main_function
 :help
 
 echo.
-echo File purpose: %filepr%
+echo %filepr%
 
 echo.
 echo Usage: %0

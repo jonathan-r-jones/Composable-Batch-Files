@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Nickname dictionary that sets environment variables corresponding to a given unique nickname parameter.
+set filep=* Nickname/alias dictionary that sets environment variables corresponding to a given unique nickname parameter.
 
 rem global variable database
 
@@ -36,12 +36,6 @@ goto %1
 
 echo.
 echo %filep%
-
-echo.
-echo Last Updated: May-8-2018
-
-echo.
-echo The File purpose: Nickname or Alias dictionary.
 
 echo.
 echo Usage: %0 [single parameter]

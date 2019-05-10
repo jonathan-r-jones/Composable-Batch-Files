@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto preprocessor
+goto preprocess
 
 
 
@@ -27,10 +27,7 @@ goto preprocessor
 :help
 
 echo.
-echo File purpose: %filep%
-
-echo.
-echo Last Updated: Apr-18-2019
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -44,7 +41,7 @@ exit/b
 
 :_
 
-:preprocessor
+:preprocess
 
 set fp=* In order to promote freshness, reset the error level.
 

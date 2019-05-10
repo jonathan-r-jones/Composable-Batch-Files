@@ -6,7 +6,10 @@
 
 :_
 
-set filep=* Curl batch file.
+set filep=This file is used to hook up Curl with n.bat entries.
+
+echo.
+echo %filep%
 
 
 
@@ -25,17 +28,6 @@ goto %1
 :_
 
 :help
-
-echo.
-echo File purpose: %filep%
-
-set filep=File purpose: This file is used to hook up Curl with n.bat entries.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Aug-23-2018
 
 echo.
 echo Usage: %0 [space separated parameters]

@@ -19,17 +19,9 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-
-
-:_
-
-set fp=* Preprocessing.
-
 if not "%~1" == "" call td %~1
 
 goto main_function
-
-exit/b
 
 
 
@@ -38,10 +30,7 @@ exit/b
 :help
 
 echo.
-echo File purpose: Run Git Gui.
-
-echo.
-echo Last Updated: Aug-1-2018
+echo Run Git Gui.
 
 echo.
 echo Usage: %0 [Parameter 1]

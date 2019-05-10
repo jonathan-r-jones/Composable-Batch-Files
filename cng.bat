@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto preprocessing
+goto preprocess
 
 
 
@@ -27,10 +27,7 @@ goto preprocessing
 :help
 
 rem echo.
-rem echo File Purpose: %filep%
-
-echo.
-echo File purpose: CloNe repository.
+rem echo %filep%
 
 echo.
 echo Usage: cn [Parameter 1] [Parameter 2]
@@ -71,9 +68,9 @@ exit/b
 
 :_
 
-:preprocessing
+:preprocess
 
-set fp=* Preprocessing.
+set fp=* preprocess.
 
 if "%~2" == ""  (
   call n %1

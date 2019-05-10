@@ -31,13 +31,7 @@ goto main_function
 set fp=* Run application with or without a parameter.
 
 echo.
-echo File purpose: %filep%
-
-echo.
-echo File purpose: Run application.
-
-echo.
-echo Last Updated (lu): Jun-14-2018
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1] [Parameter 2]

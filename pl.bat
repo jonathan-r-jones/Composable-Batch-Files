@@ -33,10 +33,7 @@ goto pull_current_folder
 :help
 
 echo.
-echo File purpose: Git pull.
-
-echo.
-echo Last Updated: Jul-16-2018
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]

@@ -36,13 +36,7 @@ goto code_execution_area
 
 :help
 
-echo File Purpose: %filep%
-
-echo.
-echo File purpose: Testing.
-
-echo.
-echo Last Updated (lu): Apr-30-2018
+echo %filep%
 
 echo.
 echo Usage: %0 (optional parameter 1)
@@ -516,7 +510,7 @@ echo.
 echo %fp%
 echo.
 
-title File Purpose: The purpose of this file is to [blank].
+title The purpose of this file is to [blank].
 
 
 
@@ -9521,7 +9515,6 @@ rem call %2 /?
 rem call %2
 call %2 "/?">nul
 echo %2: %filep%
-rem qq-1
 
 exit/b
 
@@ -9554,7 +9547,6 @@ echo.
 rem for /r "%folder_to_search%" %%f in ("*.*") do echo hey
 rem for /r "%folder_to_search%" %%f in ("*.*") do call %0 process_file testy
 for /r "%folder_to_search%" %%f in ("*.bat") do call %0 process_file %%f
-rem qq-1
 
 exit/b
 

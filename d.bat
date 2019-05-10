@@ -8,9 +8,6 @@
 
 set filep=* Dir for current folder.
 
-rem echo.
-rem echo %filep%
-
 
 
 :_
@@ -28,11 +25,6 @@ goto %1
 :_
 
 :help
-
-set fp=* Dir: an easier to type version.
-
-echo.
-echo File purpose: Dir.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

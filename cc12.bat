@@ -8,6 +8,9 @@
 
 set filep=* Run code compare with j1 and j2.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -25,12 +28,6 @@ goto %1
 :_
 
 :help
-
-echo.
-echo File purpose: %filep%
-
-echo.
-echo Last Updated: Mar-6-2019
 
 echo.
 echo Usage: %0

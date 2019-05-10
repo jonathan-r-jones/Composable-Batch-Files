@@ -30,12 +30,6 @@ goto %1
 echo %filep%
 
 echo.
-echo File purpose: Taskkill.
-
-echo.
-echo Last Updated: May-8-2018
-
-echo.
 echo Usage: %0 [Parameter 1]
 
 echo.

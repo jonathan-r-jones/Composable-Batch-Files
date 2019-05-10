@@ -8,6 +8,9 @@
 
 set filep=* Make and navigate (cd) to a folder.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -27,9 +30,6 @@ goto main_function
 :help
 
 echo.
-echo File purpose: %filep%
-
-echo.
 echo Usage: %0 [Parameter 1]
 
 set parameter_1=Parameter 1: The name of the folder you wish to create and navigate to.
@@ -45,9 +45,6 @@ exit/b
 :_
 
 :main_function
-
-echo.
-echo %filep%
 
 md %1>nul
 cd %1

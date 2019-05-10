@@ -21,7 +21,7 @@ if "%~1" == "" %0 cbf
 
 if "%~1" == "/?" goto help
 
-goto preprocessor
+goto preprocess
 
 
 
@@ -60,7 +60,7 @@ exit/b
 
 :_
 
-:preprocessor
+:preprocess
 
 set fp=* In order to promote freshness, reset the error level.
 

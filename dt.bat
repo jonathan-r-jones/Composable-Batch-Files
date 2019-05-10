@@ -19,7 +19,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-goto preprocessor
+goto preprocess
 
 
 
@@ -46,7 +46,7 @@ exit/b
 
 :_
 
-:preprocessor
+:preprocess
 
 call td %1
 

@@ -6,7 +6,10 @@
 
 :_
 
-set filep=* Simple calculator.
+set filep=* Simple calculator that executes 4 basic math functions.
+
+echo.
+echo %filep%
 
 
 
@@ -15,6 +18,8 @@ set filep=* Simple calculator.
 set fp=* Route callers.
 
 if "%~1" == "" goto help
+
+if "%~1" == "/?" goto help
 
 if "%~2" == "" (
   echo Missing second parameter.
@@ -27,8 +32,6 @@ if "%~3" == "" (
   echo.
   goto help
 )
-
-if "%~1" == "/?" goto help
 
 if "%~2" == "+" goto addition
 
@@ -48,16 +51,6 @@ goto help
 :_
 
 :help
-
-echo File purpose: %filep%
-
-set filep=File purpose: Performs 4 basic math functions.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Jul-13-2018
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

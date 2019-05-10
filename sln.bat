@@ -16,7 +16,8 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-goto preprocessor
+goto preprocess
+
 
 
 :_
@@ -24,7 +25,7 @@ goto preprocessor
 :help
 
 echo.
-echo File purpose: %filep%
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -38,9 +39,9 @@ exit/b
 
 :_
 
-:preprocessor
+:preprocess
 
-set fp=* Preprocessor. If it is provided, go to percent 1.
+set fp=* preprocess. If it is provided, go to percent 1.
 
 call m clear_errorlevel_silently
 

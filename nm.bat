@@ -26,7 +26,8 @@ goto %1
 
 :help
 
-echo File purpose: %filep%
+echo.
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]

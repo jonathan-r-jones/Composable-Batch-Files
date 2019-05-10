@@ -8,9 +8,6 @@
 
 set filep=* SQL batch file intended to be used for database-related tasks.
 
-rem echo.
-rem echo %filep%
-
 
 
 :_
@@ -27,13 +24,10 @@ goto %1
 
 :_
 
-:h
-
 :help
 
-set fp=* Perform SQL-Mercury-related tasks.
-
-echo. Last Updated: Feb-6-2018
+echo.
+echo %filep%
 
 echo.
 echo Usage: s [Parameter 1]

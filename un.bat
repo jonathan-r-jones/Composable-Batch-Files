@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto preprocessor
+goto preprocess
 
 
 
@@ -41,7 +41,7 @@ exit/b
 
 :_
 
-:preprocessor
+:preprocess
 
 set fp=* In order to promote freshness, clear the environment variable.
 

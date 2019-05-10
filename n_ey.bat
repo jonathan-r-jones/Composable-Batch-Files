@@ -34,13 +34,8 @@ goto %1
 
 :help
 
+echo.
 echo %filep%
-
-echo.
-echo Last Updated: May-8-2018
-
-echo.
-echo The File purpose: Nickname dictionary.
 
 echo.
 echo Usage: %0 [single parameter]

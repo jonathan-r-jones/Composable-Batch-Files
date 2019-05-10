@@ -30,9 +30,6 @@ goto main_function
 :help
 
 echo.
-echo File purpose: %filep%
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Search criteria.

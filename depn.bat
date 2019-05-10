@@ -27,10 +27,7 @@ goto main_function
 :help
 
 echo.
-echo File purpose: Remove folder.
-
-echo.
-echo Last Updated: Aug-9-2018
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]

@@ -6,7 +6,10 @@
 
 :_
 
-set filep=* Composable batch files menu.
+set filep=This file shows a list of available CBF files.
+
+echo.
+echo %filep%
 
 
 
@@ -23,16 +26,6 @@ goto main_function
 :_
 
 :help
-
-echo File purpose: %filep%
-
-set filep=File purpose: This file shows a list of available CBF files.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: 
 
 echo.
 echo Usage: %0

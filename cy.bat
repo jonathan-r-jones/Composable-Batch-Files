@@ -27,10 +27,7 @@ goto %1
 :help
 
 echo.
-echo File purpose: CopY file(s). This file is useful when fixed locations are involved.
-
-echo.
-echo Last Updated: Feb-6-2018
+echo CopY file(s). This file is useful when fixed locations are involved.
 
 echo.
 echo Usage: cy [Parameter 1]

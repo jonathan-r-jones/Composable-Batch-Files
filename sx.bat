@@ -27,13 +27,7 @@ goto main_function
 :help
 
 echo.
-echo File purpose: %filep%
-
-echo.
-echo File purpose: Use Sublime to edit a batch file in the CBF folder.
-
-echo.
-echo Last Updated: Aug-13-2018
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]

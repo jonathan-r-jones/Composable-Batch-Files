@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Copy file to nickname.
+set filep=Copies a file in the current directory to a nickname-specified path.
 
 
 
@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto preprocessor
+goto preprocess
 
 
 
@@ -27,15 +27,7 @@ goto preprocessor
 :help
 
 echo.
-echo File purpose: %filep%
-
-set filep=File purpose: Copies a file in the current directory to a nickname-specified path.
-
-echo.
 echo %filep%
-
-echo.
-echo Last Updated: Jun-13-2018
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -58,7 +50,7 @@ exit/b
 
 :_
 
-:preprocessor
+:preprocess
 
 set fp=* Data validation.
 

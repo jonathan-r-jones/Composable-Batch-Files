@@ -8,6 +8,9 @@
 
 set filep=* AWS-related tasks.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -25,12 +28,6 @@ goto %1
 :_
 
 :help
-
-echo.
-echo File purpose: %filep%
-
-echo.
-echo Last Updated: Nov-1-2018
 
 echo.
 echo Usage: %0 [Parameter 1]

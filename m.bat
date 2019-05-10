@@ -25,12 +25,6 @@ goto %1
 :help
 
 echo.
-echo File purpose: Perform miscellaneous tasks.
-
-echo.
-echo Last Updated: Feb-6-2018
-
-echo.
 echo Usage: m [single parameter]
 
 echo.
@@ -3065,16 +3059,8 @@ exit/b
 
 :editor_help
 
-echo File purpose: %filep%
-
-set filep=File purpose: Edit files in an editor.
-set filep=%filep%
-
 echo.
 echo %filep%
-
-echo.
-echo Last Updated: Jun-8-2018
 
 echo.
 echo Usage: %0 [Parameter 1]

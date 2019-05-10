@@ -8,6 +8,9 @@
 
 set filep=* Glossary of CBF Terms.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -23,16 +26,6 @@ goto main_function
 :_
 
 :help
-
-echo File purpose: %filep%
-
-set filep=File purpose: This file is a glossary of terms used in CBF.
-
-echo.
-echo %filep%
-
-echo.
-echo Last Updated: Aug-7-2018
 
 echo.
 echo Usage: %0

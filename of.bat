@@ -30,7 +30,7 @@ goto open_folder_in_windows_explorer
 :help
 
 echo.
-echo File purpose: %filep%
+echo %filep%
 
 echo.
 echo Usage: of [Parameter 1]

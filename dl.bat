@@ -26,16 +26,7 @@ goto main_function
 
 :help
 
-echo File purpose: %filep%
-
-set filep=File purpose: This template file can be used as a "Save As" to create a new 
-set filep=%filep% composable batch file.
-
-echo.
 echo %filep%
-
-echo.
-echo Last Updated: 
 
 echo.
 echo Usage: %0 [Parameter 1]

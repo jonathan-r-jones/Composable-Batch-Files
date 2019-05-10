@@ -26,10 +26,7 @@ goto %1
 
 :help
 
-echo File purpose: Git-related tasks.
-
-echo.
-echo Last Updated: Jul-9-2018
+echo Git-related tasks.
 
 echo.
 echo Usage: g [Parameter 1] [Parameter 2]

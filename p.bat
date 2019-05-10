@@ -33,10 +33,7 @@ goto current_folder
 :help
 
 echo.
-echo File purpose: Add/Commit/Push.
-
-echo.
-echo Last Updated: Dec-27-2018
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]

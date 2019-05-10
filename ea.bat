@@ -18,9 +18,33 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
+goto main_function
+
+
+
+:_ (!rfsp) (mov-6)
+
+:help
+
+echo.
+echo %filep%
+
+echo.
+echo Usage: %0 [space separated parameters]
+
+echo.
+echo Parameter 1: Application nickname.
+
+echo.
+echo Parameter 2 (Optional): Filename nickname.
+
+exit/b
+
 
 
 :_
+
+:main_function
 
 set fp=* Detect a period in the first parameter and run.
 
@@ -41,32 +65,6 @@ if not "%~2" == "" call fn %2
 if not "%~2" == "" set cbf_parameter=%cbf_filename%
 
 call r
-
-exit/b
-
-
-
-:_ (!rfsp) (mov-6)
-
-:help
-
-echo.
-echo %filep%
-
-echo.
-echo File purpose: Execute application.
-
-echo.
-echo Last Updated: Aug-28-2018
-
-echo.
-echo Usage: %0 [space separated parameters]
-
-echo.
-echo Parameter 1: Application nickname.
-
-echo.
-echo Parameter 2 (Optional): Filename nickname.
 
 exit/b
 

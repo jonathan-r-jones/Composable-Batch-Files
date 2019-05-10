@@ -15,14 +15,6 @@ echo %filep%
 
 :_
 
-set fp=* Add echo.
-
-echo.
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -36,11 +28,6 @@ goto %1
 :_
 
 :help
-
-echo File purpose: sencHa-related tasks.
-
-echo.
-echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: m [single parameter]

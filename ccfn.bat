@@ -8,6 +8,9 @@
 
 set filep=* Run Code Compare with aliases or filenames.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -27,12 +30,6 @@ goto main_function
 :_
 
 :help
-
-echo.
-echo File purpose: %filep%
-
-echo.
-echo Last Updated: Jan-30-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

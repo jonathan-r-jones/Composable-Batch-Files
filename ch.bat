@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto preprocessing
+goto preprocess
 
 
 
@@ -27,10 +27,7 @@ goto preprocessing
 :help
 
 echo.
-echo File purpose: %filep%
-
-echo.
-echo Last Updated: 
+echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -51,7 +48,7 @@ exit/b
 
 :_
 
-:preprocessing
+:preprocess
 
 call m specific_file_presence .kitchen-aws.yml
 

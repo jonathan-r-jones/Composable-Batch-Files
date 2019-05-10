@@ -8,6 +8,9 @@
 
 set filep=* Clear screen and reset color.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -23,16 +26,6 @@ goto main_function
 :_ (!rfsp) (mov-6)
 
 :help
-
-set fp=%filep%
-
-echo File Purpose (fp): %fp%
-
-echo.
-echo File purpose: Clear screen.
-
-echo.
-echo Last Updated (lu): Feb-6-2018
 
 echo.
 echo Usage: %0

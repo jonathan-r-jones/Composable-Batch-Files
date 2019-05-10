@@ -27,10 +27,7 @@ goto main_function
 :help
 
 echo.
-echo File purpose: %filep%
-
-echo.
-echo Last Updated: Feb-15-2019
+echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

@@ -27,13 +27,7 @@ goto %1
 :help
 
 echo.
-echo File Purpose: %filep%
-
-echo.
-echo File purpose: %filep%
-
-echo.
-echo lu: Apr-18-2019
+echo %filep%
 
 echo.
 echo Usage: %0 (optional parameter 1)

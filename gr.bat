@@ -8,6 +8,9 @@
 
 set filep=* Gradle-related tasks.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -27,15 +30,6 @@ goto %1
 :_
 
 :help
-
-echo.
-echo File purpose: %filep%
-
-set filep=File purpose: This template file can be used as a "Save As" to create a new 
-set filep=%filep% composable batch file.
-
-echo.
-echo Last Updated: Jan-8-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

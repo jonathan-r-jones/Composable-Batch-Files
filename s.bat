@@ -16,7 +16,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-goto preprocessing
+goto preprocess
 
 
 
@@ -25,7 +25,7 @@ goto preprocessing
 :help
 
 echo.
-echo File purpose: %filep%
+echo %filep%
 
 echo.
 echo Usage: %0 [Optional Parameter 1]
@@ -42,9 +42,9 @@ exit/b
 
 :_
 
-:preprocessing
+:preprocess
 
-set fp=* Preprocessing.
+set fp=* preprocess.
 
 if not "%~1" == "" call td %~1
 

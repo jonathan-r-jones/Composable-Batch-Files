@@ -18,33 +18,16 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
+goto preprocess
+
 
 
 :_
 
-:preprocessor
-
-set fp=* In order to promote freshness, clear the environment variable.
-
-set cbf_path=
-
-goto main_function
-
-
-
-:_ (!rfsp) (mov-6)
-
 :help
 
-set fp=* Path nickname dictionary that sets the full path corresponding to a given unique nickname parameter.
-
+echo.
 echo %filep%
-
-echo.
-echo File purpose: Path Nicknames.
-
-echo.
-echo Last Updated: Feb-6-2018
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -53,6 +36,16 @@ echo.
 echo Parameter 1: Path nickname.
 
 exit/b
+
+
+
+:_
+
+:preprocess
+
+set fp=* In order to promote freshness, clear the environment variable.
+
+set cbf_path=
 
 
 
@@ -71,4 +64,4 @@ exit/b
 
 
 
-:_
+:_ (!rfsp) (mov-6)

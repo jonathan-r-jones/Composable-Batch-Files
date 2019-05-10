@@ -21,7 +21,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto preprocessor
+goto preprocess
 
 
 
@@ -41,7 +41,7 @@ exit/b
 
 :_
 
-:preprocessor
+:preprocess
 
 set fp=* Initialize key variables used by this file.
 

@@ -12,14 +12,6 @@ set filep=* Filename nickname dictionary that sets the full filename name corres
 
 :_
 
-set fp=* In order to promote freshness, clear the environment variable.
-
-set cbf_filename=
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "" goto help
@@ -34,13 +26,8 @@ goto main_function
 
 :help
 
+echo.
 echo %filep%                         
-
-echo.
-echo The File purpose: Filename Nicknames.
-
-echo.
-echo Last Updated: Jan-24-2018
 
 echo.
 echo Usage: %0 [single parameter]
@@ -52,6 +39,9 @@ exit/b
 :_
 
 :main_function
+
+rem In order to promote freshness, clear the environment variable.
+set cbf_filename=
 
 call n %1
 

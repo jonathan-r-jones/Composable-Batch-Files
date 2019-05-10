@@ -8,7 +8,8 @@
 
 set filep=* List of batch file descriptions.
 
-rem setlocal
+echo.
+echo %filep%
 
 
 
@@ -20,21 +21,13 @@ if "%~1" == "/?" goto help
 
 if not "%~1" == "" goto %1
 
-goto code_execution_area
+goto main_function
 
 
 
 :_
 
 :help
-
-echo File Purpose: %filep%
-
-echo.
-echo File purpose: Testing.
-
-echo.
-echo Last Updated (lu): Apr-30-2018
 
 echo.
 echo Usage: %0 (optional parameter 1)
@@ -50,39 +43,7 @@ exit/b
 
 :_
 
-:process_file
-
-set fp=* Process file.
-
-rem lu: May-10-2019
-
-rem echo.
-rem echo %fp%
-
-rem echo %2
-rem call %2 /?
-rem call %2
-call %2 "/?">nul
-echo %2: %filep%
-rem qq-1
-
-exit/b
-
-
-
-:_
-
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
-:
+:main_function
 
 set fp=* For loop test.
 
@@ -92,12 +53,25 @@ echo.
 echo %fp%
 
 set folder_to_search=%share-zone%
+set folder_to_search=%composable_batch_files%
 
 echo.
-rem for /r "%folder_to_search%" %%f in ("*.*") do echo hey
-rem for /r "%folder_to_search%" %%f in ("*.*") do call %0 process_file testy
 for /r "%folder_to_search%" %%f in ("*.bat") do call %0 process_file %%f
-rem qq-1
+
+exit/b
+
+
+
+:_
+
+:process_file
+
+set fp=* Process file.
+
+rem lu: May-10-2019
+
+call %2 "/?">nul
+echo %2: %filep%
 
 exit/b
 

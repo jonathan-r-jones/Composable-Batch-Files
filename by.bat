@@ -10,6 +10,9 @@ set filep=* Shutdown the computer.
 
 setlocal
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -27,9 +30,6 @@ goto main_function
 :help
 
 echo.
-echo File purpose: %filep%
-
-echo.
 echo Usage: %0
 
 exit/b
@@ -43,9 +43,6 @@ exit/b
 rem lu: Feb-5-2019
 
 endlocal
-
-echo.
-echo %filep%
 
 shutdown /s /t 1
 
