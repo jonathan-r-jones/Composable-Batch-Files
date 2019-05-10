@@ -1,4 +1,4 @@
-:_
+:_ (!t)
 
 @echo off
 
@@ -6,9 +6,9 @@
 
 :_
 
-set filep=* This file is used for testing, experimenting and developing new batch file functions.
+rem set filep=* This file is used for testing, experimenting and developing new batch file functions.
 
-setlocal
+rem setlocal
 
 
 
@@ -9489,16 +9489,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test setting default text editor.
@@ -9511,6 +9501,59 @@ echo %fp%
 echo.
 call %0 set_default_text_editor np
 
+exit/b
+
+
+
+:_
+
+:process_file
+
+set fp=* Process file.
+
+rem lu: May-10-2019
+
+rem echo.
+rem echo %fp%
+
+rem echo %2
+rem call %2 /?
+rem call %2
+call %2 "/?">nul
+echo %2: %filep%
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* For loop test.
+
+rem lu: May-10-2019
+
+echo.
+echo %fp%
+
+set folder_to_search=%share-zone%
+
+echo.
+rem for /r "%folder_to_search%" %%f in ("*.*") do echo hey
+rem for /r "%folder_to_search%" %%f in ("*.*") do call %0 process_file testy
+for /r "%folder_to_search%" %%f in ("*.bat") do call %0 process_file %%f
 rem qq-1
 
 exit/b

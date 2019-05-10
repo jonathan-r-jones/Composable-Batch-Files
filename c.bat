@@ -12,17 +12,6 @@ set filep=* Clear screen and reset color.
 
 :_
 
-set fp=* Set title.
-
-echo.
-echo %fp%
-
-title=Composable Batch Files
-
-
-
-:_
-
 set fp=* Route callers.
 
 if "%~1" == "/?" goto help
@@ -57,9 +46,6 @@ exit/b
 :main_function
 
 set fp=* Clear screen and reset color.
-
-echo.
-echo %fp%
 
 call td root
 
