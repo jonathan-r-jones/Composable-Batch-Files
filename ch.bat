@@ -50,6 +50,8 @@ exit/b
 
 :preprocess
 
+td cc
+
 call m specific_file_presence .kitchen-aws.yml
 
 if %errorlevel% == 1 (
