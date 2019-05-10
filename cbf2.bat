@@ -54,9 +54,9 @@ echo %fp%
 
 call td cbf
 
-set folder_to_search=%share-zone%
-set folder_to_search=%composable_batch_files%
 set folder_to_search=c:\aa\test1
+set folder_to_search=%composable_batch_files%
+set folder_to_search=%share-zone%
 
 echo.
 for /r "%folder_to_search%" %%f in ("*.bat") do call %0 process_file %%f
