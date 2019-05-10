@@ -499,7 +499,7 @@ exit/b
 
 :_
 
-:ti
+:tirem
 
 set fp=Tirem.
 
@@ -5410,6 +5410,8 @@ exit/b
 
 :rf
 
+:h2
+
 :pass-through
 
 :iac
@@ -7904,9 +7906,9 @@ exit/b
 
 ::_
 
-:h2
+:h2lh
 
-set fp=* H2.
+set fp=* H2 on local host.
 
 rem lu: Jan-8-2019
 
@@ -9060,6 +9062,40 @@ echo.
 echo %fp%
 
 set cbf_path=%cbf_repo%\backups
+
+exit/b
+
+
+
+:_
+
+:glued_path
+
+set fp=* Glued path.
+
+rem lu: May-10-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_glued_path%
+
+exit/b
+
+
+
+:_
+
+:ti
+
+set fp=* Test Integration relative path.
+
+rem lu: May-10-2019
+
+echo.
+echo %fp%
+
+set cbf_path=\test\integration
 
 exit/b
 

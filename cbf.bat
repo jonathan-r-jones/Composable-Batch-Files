@@ -65,6 +65,7 @@ echo    cy  Copy file(s)
 echo  cyfn  Copy file from alias filename parm 1 to alias filename param 2
 echo  cypn  Copy file from alias path param 1 to alias path param 2
 echo   cyt  Copy file in the current directory to nickname-specified path
+echo  cyte  Copy te.bat to a new batch
 echo   cyf  Copy file from a cbf_path nickname
 echo     d  Dir for current folder
 echo    dd  Dir filename extension searcher including subfolders
@@ -129,15 +130,15 @@ echo    sp  Super push, i.e. push all selected repositories
 echo   spl  Super pull, i.e. pull all selected repositories
 echo   sql  MySQL/Database, including LDAP, related tasks
 echo     t  Testing, experimenting and developing new batch file functions
-echo    ty  Use the type command to view a nickname-specified file
+echo    td  Transform Directory
+echo  tdfn  Transform Directory where only the Cbf_filename is known
+echo   tdp  Transform Directory to parent folder
+echo   tdg  Transform Directory by gluing a relative path onto a base path
+echo    te  Batch file template used for creating new batch files
 echo    tf  Terraform
 echo    tk  Taskkill
 echo    tl  Tasklist
-echo    td  Transform Directory
 echo    ty  Type command to view nickname-specified file
-echo  tdfn  Transform Directory where only the Cbf_filename is known
-echo   tdp  Transform Directory to parent folder
-echo    te  Batch file template used for creating new batch files
 echo    un  URL nicknames dictionary layer of abstraction
 echo     v  Vetted functions (Useful for copying-and-pasting)
 echo    wp  Wordpad

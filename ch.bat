@@ -50,7 +50,7 @@ exit/b
 
 :preprocess
 
-td cc
+call td cc
 
 call m specific_file_presence .kitchen-aws.yml
 
