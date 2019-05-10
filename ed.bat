@@ -8,12 +8,51 @@
 
 set filep=* Editor abstraction layer.
 
-rem echo.
-rem echo %filep%
+
+
+:_
+
+set fp=* Route callers 1.
+
+if "%~1" == "/?" goto help
+
+goto preprocess
 
 
 
 :_
+
+:help
+
+echo.
+echo %filep%
+
+echo.
+echo Usage: %0 [Parameter 1]
+
+set parameter_1=Parameter 1 (optional): File alias or current folder filename. If current ^
+folder filename has no extension then -n must be used also. If left blank, the application ^
+is merely started.
+
+set parameter_2=Parameter 2 or 3 (optional): Use -c to force file creation. Use -e to ^
+specify a file with no extension. Use -d to blank out a file before opening it (Use with ^
+caution).
+
+rem Before merging the other editor batch files here, do file comparison for each one.
+
+echo.
+echo %parameter_1%
+
+echo.
+echo %parameter_2%
+
+exit/b
+
+
+
+:_
+
+:preprocess
 
 set fp=* Shift parameters.
 
@@ -33,7 +72,7 @@ call n %0>nul
 
 :_
 
-set fp=* Route callers.
+set fp=* Route callers 1.
 
 if "%~1" == "/?" goto help
 
@@ -90,36 +129,6 @@ if %errorlevel% == 0 (
 
 exit/b
 
-
-
-
-:_
-
-:help
-
-echo.
-echo Last Updated: Jan-16-2019
-
-echo.
-echo Usage: %0 [Parameter 1]
-
-set parameter_1=Parameter 1 (optional): File alias or current folder filename. If current ^
-folder filename has no extension then -n must be used also. If left blank, the application ^
-is merely started.
-
-set parameter_2=Parameter 2 or 3 (optional): Use -c to force file creation. Use -e to ^
-specify a file with no extension. Use -d to blank out a file before opening it (Use with ^
-caution).
-
-rem Before merging the other editor batch files here, do file comparison for each one.
-
-echo.
-echo %parameter_1%
-
-echo.
-echo %parameter_2%
-
-exit/b
 
 
 

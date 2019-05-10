@@ -6,7 +6,13 @@
 
 :_
 
-set Function_Purpose=* Route callers.
+set filep=* This file is used to illustrate how Composable Batch Files work.
+
+
+
+:_
+
+set fp=* Route callers.
 
 if "%~1" == "" goto help
 
@@ -20,12 +26,8 @@ goto %1
 
 :help
 
-set fp=* This file is used to illustrate how Composable Batch Files work.
-
-rem lu: Aug-8-2018
-
 echo.
-echo %fp%
+echo %filep%
 
 echo.
 echo Usage: hello_world_2.bat [single parameter]

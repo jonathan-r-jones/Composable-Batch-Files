@@ -8,9 +8,6 @@
 
 set filep=* List of batch file descriptions.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -28,6 +25,9 @@ goto main_function
 :_
 
 :help
+
+echo.
+echo %filep%
 
 echo.
 echo Usage: %0 (optional parameter 1)
@@ -52,8 +52,11 @@ rem lu: May-10-2019
 echo.
 echo %fp%
 
+call td cbf
+
 set folder_to_search=%share-zone%
 set folder_to_search=%composable_batch_files%
+set folder_to_search=c:\aa\test1
 
 echo.
 for /r "%folder_to_search%" %%f in ("*.bat") do call %0 process_file %%f
