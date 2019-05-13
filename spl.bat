@@ -63,7 +63,6 @@ echo %filep%
 if not "%machinename%"=="gfe" (
    cd\
    call 8
-   call cypn mecfg mecfg_s
 )
 
 call pl cbf

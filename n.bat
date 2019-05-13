@@ -8123,27 +8123,6 @@ exit/b
 
 
 
-:_+ Instances
-
-
-
-::_
-
-:ub
-
-set fp=* Ubuntu server.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-set cbf_instance_id=i-0ce1f47a5dcd7f7b0
-
-exit/b
-
-
-
 :_+ FGT
 
 
@@ -9098,6 +9077,58 @@ echo.
 echo %fp%
 
 set cbf_path=\test\integration
+
+exit/b
+
+
+
+:_+ Instances
+
+
+
+::_
+
+:sr17
+
+set fp=* Cheg gaws practice server.
+
+rem lu: May-7-2019
+
+echo.
+echo %fp%
+
+set cbf_host_name=
+
+set cbf_instance_id=i-0c46260da6eb917b3
+
+set cbf_ip=18.253.66.185
+
+set cbf_url=http://%cbf_ip%
+
+exit/b
+
+
+
+::_
+
+:ub
+
+:sr18
+
+set fp=* Cheg gaws Ubuntu practice server.
+
+rem lu: May-13-2019
+
+echo.
+echo %fp%
+
+set cbf_host_name=
+
+set cbf_instance_id=i-0ce1f47a5dcd7f7b0
+
+set cbf_ip=18.253.125.85
+
+set cbf_url=http://%cbf_ip%
 
 exit/b
 

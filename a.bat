@@ -3847,7 +3847,7 @@ echo %fp%
 
 if "%~2" == "" (
   echo.
-  echo You must specify and instance alias.
+  echo Percent 2, the instance alias, is a required field.
   exit/b
 )
 
@@ -4424,6 +4424,68 @@ aws rds create-db-instance ^
     "Key"="Portfolio","Value"="ABC" ^
     "Key"="Version","Value"="1.0" ^
   --vpc-security-group-ids sg-06a257b836873b16d
+
+exit/b
+
+
+
+:_
+
+:gaws_May-13-2019_centos
+
+set fp=* Create an instance that I can use to practice Chef.
+
+echo.
+echo %fp%
+
+call td tfkeys
+
+set cbf_file=kibble_balance_key_pair
+
+call m specific_file_presence %cbf_file%.pem
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+aws ec2 run-instances ^
+  --count 1 ^
+  --image-id ami-08521bc84009eae26 ^
+  --instance-type d2.xlarge ^
+  --key-name %cbf_file% ^
+  --security-group-ids sg-4320d92a ^
+  --subnet-id subnet-8c04e4e5 ^
+  --tag-specifications ^
+    ResourceType=instance,Tags=[{Key=Application,Value=app},{Key=BillingCode,Value=Bill},{Key=Environment,Value=dv},{Key=Name,Value=%1},{Key=Portfolio,Value=ROE},{Key=ResourcePOC,Value=tom@test.com}]
+
+exit/b
+
+
+
+:_
+
+:coch
+
+set fp=* Connect to Chef server.
+
+rem lu: May-13-2019
+
+echo.
+echo %fp%
+
+call n git_user_bin
+
+set git_user_bin=%cbf_path%
+
+call td tfkeys
+
+rem Change this line to your ip address.
+set public_dns=ec2-18-253-125-85.us-gov-east-1.compute.amazonaws.com
+
+echo.
+
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%public_dns%
 
 exit/b
 
