@@ -8,8 +8,8 @@
 
 set filep=* Performs shell color-related operations.
 
-echo.
-echo %filep%
+rem echo.
+rem echo %filep%
 
 
 

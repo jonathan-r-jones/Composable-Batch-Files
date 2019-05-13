@@ -5115,18 +5115,6 @@ exit/b
 
 :je2_help
 
-:jf_acr
-
-:jf_bgs
-
-:jf_cap
-
-:jf_dj
-
-:jf_odl
-
-:jf_odls
-
 :jjigit
 
 :ji
@@ -5413,6 +5401,14 @@ exit/b
 :rf
 
 :h2
+
+:acrgit
+
+:acrm
+
+:acr
+
+:ant
 
 :pass-through
 
@@ -6887,25 +6883,6 @@ exit/b
 
 
 
-:_
-
-:acr
-
-set fp=* ACR.
-
-rem lu: Jan-10-2019
-
-echo.
-echo %fp%
-
-set cbf_name=acr
-
-set cbf_path=%cbf_repo%\%cbf_name%
-
-exit/b
-
-
-
 :_+ MP3
 
 
@@ -8027,25 +8004,6 @@ echo %fp%
 call %0 dev
 
 set cbf_filename=%cbf_repo%\cart\api\jenkinsfile
-
-exit/b
-
-
-
-::_
-
-:jf_s
-
-set fp=* Share-zone Jenkinsfile.
-
-rem lu: Jan-15-2019
-
-echo.
-echo %fp%
-
-call %0 dev
-
-set cbf_filename=%share-zone%\jenkinsfile
 
 exit/b
 

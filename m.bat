@@ -3989,19 +3989,19 @@ rem lu: Jan-10-2019
 echo.
 echo %fp%
 
-call me jj
+call e j
 
-rem call me jf
+call e acr
 
-call me iac
+call e ant
 
-call me jf_acr
+call e bgs
 
-call me jf_bgs
+call e cap
 
-call me jf_cap
+call e iac
 
-call me jf_odls
+call e odls
 
 exit/b
 

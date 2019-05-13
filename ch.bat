@@ -607,6 +607,8 @@ exit/b
 
 :_
 
+:cv
+
 :conv
 
 :converge
@@ -624,7 +626,7 @@ echo %fp%
 call td cc
 
 echo.
-kitchen converge centos-7
+kitchen converge centos-7 --no-color
 
 exit/b
 
