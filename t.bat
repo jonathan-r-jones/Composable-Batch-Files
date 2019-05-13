@@ -5307,7 +5307,7 @@ cd | find /i "C:\projects\netbeans\sencha">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 exit/b
 
-echo Errorlevel: %errorlevel%
+echo * Errorlevel: %errorlevel%
 
 exit/b
 
@@ -5516,7 +5516,7 @@ echo.
 echo %fp%
 
 cd %1
-echo Error Level: %errorlevel%
+echo * Error Level: %errorlevel%
 
 exit/b
 
@@ -6757,7 +6757,7 @@ goto nonexistinglabel 2>nul
 
 echo hey
 
-echo Errorlevel: %errorlevel%
+echo * Errorlevel: %errorlevel%
 
 exit/b
 
@@ -6795,10 +6795,10 @@ call td fr
 
 if %errorlevel% == 0 (
   echo.
-  echo Error level equals 0.
+  echo * Error level equals 0.
 ) else (
   echo.
-  echo Error level equals 1.
+  echo * Error level equals 1.
 )
 
 exit/b
@@ -6841,7 +6841,7 @@ rem dir /b *.xtxt> nul 2
 dir *.txxt > %temp%\j1.txt
 
 echo.
-echo Errorlevel: %errorlevel%
+echo * Errorlevel: %errorlevel%
 
 exit/b
 
@@ -9337,7 +9337,7 @@ call s s | find /i "working tree clean">nul
 
 if %errorlevel% == 1 (
   echo.
-  echo Error: Dirty tree at %cd%.
+  echo * Error: Dirty tree at %cd%.
   exit/b
 )
 

@@ -964,7 +964,7 @@ if exist C:\projects\netbeans\mercury6\Mercury-web\target call td targ
 
 echo.
 if exist *.war echo WAR file has been created.
-if not exist *.war echo Error: WAR file has NOT been created!
+if not exist *.war echo * Error: WAR file has NOT been created!
 if not exist *.war exit/b
 
 if exist C:\projects\netbeans\mercury6\Mercury-web\target call of targ
@@ -2150,7 +2150,7 @@ call td depl
 
 cd | find /i "c:\Mercury\Server\wildfly-9.0.2.Final\standalone\deployments">nul
 if %errorlevel% == 1 echo.
-if %errorlevel% == 1 echo Error: Deployment folder not found.
+if %errorlevel% == 1 echo * Error: Deployment folder not found.
 if %errorlevel% == 1 exit/b
 
 rem Ensure that the path here is equal to where the WAR file was copied to on the S3 bucket.
@@ -3208,7 +3208,7 @@ rem lu: Jul-16-2018
 echo %fp%
 
 echo.
-echo Errorlevel: %errorlevel%
+echo * Errorlevel: %errorlevel%
 
 exit/b
 
@@ -3998,6 +3998,8 @@ call e ant
 call e bgs
 
 call e cap
+
+call e gfs
 
 call e iac
 

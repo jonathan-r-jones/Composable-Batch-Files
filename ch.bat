@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* A wrapper around chef, a command line utility.
+set filep=* A wrapper around Chef's command line utility.
 
 
 
@@ -14,7 +14,7 @@ set filep=* A wrapper around chef, a command line utility.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto cv
 
 if "%~1" == "/?" goto help
 
@@ -32,15 +32,10 @@ echo %filep%
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1 (Optional): Alias function to run.
 
 echo.
 echo %parameter_1%
-
-echo.
-eccheho %parameter_2%
 
 exit/b
 
@@ -49,8 +44,6 @@ exit/b
 :_
 
 :preprocess
-
-call td cc
 
 call m specific_file_presence .kitchen-aws.yml
 
@@ -204,8 +197,6 @@ rem lu: Apr-30-2019
 echo.
 echo %fp%
 
-call td cc
-
 echo.
 kitchen diagnose --all
 
@@ -350,8 +341,6 @@ rem lu: May-2-2019
 echo.
 echo %fp%
 
-call td cc
-
 echo.
 kitchen destroy
 
@@ -369,8 +358,6 @@ rem lu: May-2-2019
 
 echo.
 echo %fp%
-
-call td cc
 
 echo.
 kitchen setup
@@ -444,8 +431,6 @@ rem lu: May-2-2019
 echo.
 echo %fp%
 
-call td cc
-
 echo.
 kitchen diagnose --all
 
@@ -500,8 +485,6 @@ rem lu: May-2-2019
 echo.
 echo %fp%
 
-call td cc
-
 echo.
 chef generate template index.html
 
@@ -519,8 +502,6 @@ rem lu: May-2-2019
 
 echo.
 echo %fp%
-
-call td cc
 
 echo.
 chef generate attribute default
@@ -559,8 +540,6 @@ rem lu: May-6-2019
 
 echo.
 echo %fp%
-
-call td cc
 
 echo.
 knife upload cookbooks
@@ -607,33 +586,6 @@ exit/b
 
 :_
 
-:cv
-
-:conv
-
-:converge
-
-set fp=* Kitchen converge.
-
-rem lu: May-2-2019
-
-rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
-rem Converge creates an instance, which surprised me. May-3-2019
-
-echo.
-echo %fp%
-
-call td cc
-
-echo.
-kitchen converge centos-7 --no-color
-
-exit/b
-
-
-
-:_
-
 :ca
 
 set fp=* Chef apply.
@@ -651,6 +603,33 @@ if "%~2" == "" (
 
 echo.
 chef-apply %2
+
+exit/b
+
+
+
+:_
+
+:c
+
+:cv
+
+:conv
+
+:converge
+
+set fp=* Kitchen converge.
+
+rem lu: May-13-2019
+
+rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
+rem Converge creates an instance, which surprised me. May-3-2019
+
+echo.
+echo %fp%
+
+echo.
+kitchen converge centos-7 --no-color
 
 exit/b
 

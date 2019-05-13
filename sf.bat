@@ -64,7 +64,7 @@ call un %1 %2
 if "%cbf_url%" == "" (
   echo.
   echo * Nickname Error: There is no cbf_url defined for '%~1'. 
-  rem echo Errorlevel: %errorlevel%.
+  rem echo * Errorlevel: %errorlevel%.
   call m clear_errorlevel_silently
   exit/b
 )

@@ -57,7 +57,7 @@ set cbf_path=
 
 call td %1 %2
 
-rem echo Errorlevel from OF: %errorlevel%
+rem echo * Errorlevel from OF: %errorlevel%
 
 if "%errorlevel%"=="0" (
   goto open_folder_in_win_explorer_cd

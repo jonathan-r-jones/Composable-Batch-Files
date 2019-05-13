@@ -52,11 +52,11 @@ echo %fp%
 
 
 echo.
-echo Errorlevel: %errorlevel%
+echo * Errorlevel: %errorlevel%
 
 if %errorlevel% == 1 (
   echo.
-  echo Error: 
+  echo * Error: 
   exit/b
 )
 
@@ -70,7 +70,7 @@ if "%~2" == "" (
 
 if %errorlevel% == 1 (
   echo.
-  echo Error: Alias "%2" not found.
+  echo * Error: Alias "%2" not found.
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -81,10 +81,10 @@ if %errorlevel% == 1 (
 
 if %errorlevel% == 0 (
   echo.
-  echo Error level equals 0.
+  echo * Error level equals 0.
 ) else (
   echo.
-  echo Error level equals 1.
+  echo * Error level equals 1.
 )
 
 exit/b
@@ -330,14 +330,14 @@ echo %fp%
 call n bullshit
 
 echo.
-echo Errorlevel: %errorlevel%
+echo * Errorlevel: %errorlevel%
 
 ver>nul
 
 call n cnn
 
 echo.
-echo Errorlevel: %errorlevel%
+echo * Errorlevel: %errorlevel%
 
 exit/b
 

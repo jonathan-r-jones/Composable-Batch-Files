@@ -73,7 +73,7 @@ echo.
 echo %fp%
 
 cd | find /i "Development">nul
-if not %errorlevel% == 0 echo Error: This is the master, not the development, folder so exiting.
+if not %errorlevel% == 0 echo * Error: This is the master, not the development, folder so exiting.
 if not %errorlevel% == 0 echo exit/b
 
 echo.
@@ -701,7 +701,7 @@ echo.
 echo %fp%
 echo.
 
-if "%~3" == "" echo Error: A commit description is required.
+if "%~3" == "" echo * Error: A commit description is required.
 if "%~3" == "" exit/b
 
 set commit_description=%3
@@ -730,7 +730,7 @@ echo.
 echo %fp%
 echo.
 
-if "%~2" == "" echo Error: A commit description is required.
+if "%~2" == "" echo * Error: A commit description is required.
 if "%~2" == "" exit/b
 
 git commit -m %2
@@ -749,7 +749,7 @@ echo.
 echo %fp%
 echo.
 
-if "%~2" == "" echo Error: A commit description is required.
+if "%~2" == "" echo * Error: A commit description is required.
 if "%~2" == "" exit/b
 
 git commit -a -m %2
@@ -1543,7 +1543,7 @@ echo.
 echo %fp%
 
 if exist .gitignore echo.
-if exist .gitignore echo Error: File already there.
+if exist .gitignore echo * Error: File already there.
 if exist .gitignore exit/b
 
 dir /b>.gitignore
