@@ -60,7 +60,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-rem Imprimatur (!erro, !el, !erle)
+rem Imprimatur (!p2, !erro, !el, !erle)
 
 if "%~2" == "" (
   echo.

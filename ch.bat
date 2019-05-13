@@ -630,4 +630,28 @@ exit/b
 
 
 
+:_
+
+:ca
+
+set fp=* Chef apply.
+
+rem lu: May-13-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, the name of the recipe you wish to run, is a required field.
+  exit/b
+)
+
+echo.
+chef-apply %2
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

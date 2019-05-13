@@ -9522,16 +9522,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* For loop test.
@@ -9547,6 +9537,34 @@ echo.
 rem for /r "%folder_to_search%" %%f in ("*.*") do echo hey
 rem for /r "%folder_to_search%" %%f in ("*.*") do call %0 process_file testy
 for /r "%folder_to_search%" %%f in ("*.bat") do call %0 process_file %%f
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Check title.
+
+rem lu: May-13-2019
+
+echo.
+echo %fp%
+
+echo.
+echo %title%
 
 exit/b
 

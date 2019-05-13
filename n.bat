@@ -24,6 +24,8 @@ ver>nul
 
 set fp=* Route callers.
 
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
 goto %1

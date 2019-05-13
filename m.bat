@@ -1448,7 +1448,7 @@ call %0 set_default_browser kr
 call %0 set_default_text_editor sm
 
 set aa=c:\aa
-set cbf_repo=%userprofile%\j
+set cbf_repo=C:\Users\JJones2\j
 set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 set JAVA_TOOL_OPTIONS=
 set KITCHEN_YAML=.kitchen-aws.yml
@@ -3499,7 +3499,7 @@ call n jre
 
 set path=%path%;%cbf_path%
 
-set share-zone=%userprofile%\j\share-zone
+set share-zone=C:\Users\JJones2\j\share-zone
 
 set path=%path%;%share-zone%
 
