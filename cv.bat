@@ -6,7 +6,10 @@
 
 :_
 
-set filep=* Curl test method for direct server tests.
+set filep=* Chef converge with a path parameter.
+
+echo.
+echo %filep%
 
 
 
@@ -25,20 +28,12 @@ goto main_function
 :help
 
 echo.
-echo %filep%
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Alias path parameter of the branch you want to converge.
 
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 exit/b
 
@@ -50,7 +45,9 @@ exit/b
 
 rem lu: 
 
-call cur t %1
+call td %1
+
+call ch cv
 
 exit/b
 

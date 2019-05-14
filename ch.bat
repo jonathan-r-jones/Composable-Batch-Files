@@ -14,8 +14,6 @@ set filep=* A wrapper around Chef's command line utility.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto cv
-
 if "%~1" == "/?" goto help
 
 goto preprocess
@@ -51,6 +49,8 @@ if %errorlevel% == 1 (
   call m clear_errorlevel_silently
   exit/b
 )
+
+if "%~1" == "" goto cv
 
 goto %1
 

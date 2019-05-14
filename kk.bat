@@ -6,7 +6,10 @@
 
 :_
 
-set filep=* Curl test method for direct server tests.
+set filep=* K caller for direct server connections.
+
+echo.
+echo %filep%
 
 
 
@@ -23,9 +26,6 @@ goto main_function
 :_
 
 :help
-
-echo.
-echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -50,7 +50,7 @@ exit/b
 
 rem lu: 
 
-call cur t %1
+call k k %1
 
 exit/b
 

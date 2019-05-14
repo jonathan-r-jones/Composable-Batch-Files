@@ -52,6 +52,7 @@ echo    as  Windows file associations
 echo     c  Clear screen and reset color
 echo   cbf  Show this list of CBF batch files
 echo    ch  Chef command line utility
+echo    cv  Chef converge with a path parameter
 echo   clc  Simple calculator
 echo    cn  Git cloning, based entirely on the nickname parameter
 echo   cng  Git cloning, generic version
@@ -60,7 +61,8 @@ echo  ccfn  Code Compare with aliases or filenames
 echo  cc12  Code Compare preloaded with j1.txt and j2.txt
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
-echo    cu  Curl hooked up to the nicknames dictionary
+echo    cu  Curl caller for direct server tests
+echo   cur  Curl hooked up to the nicknames dictionary
 echo    cy  Copy file(s)
 echo  cyfn  Copy file from alias filename parm 1 to alias filename param 2
 echo  cypn  Copy file from alias path param 1 to alias path param 2
@@ -77,6 +79,7 @@ echo  depn  Delete folder corresponding to CBF path alias parameter
 echo    dn  Dot Net core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit
 echo    ea  Application-centric way to run an application
+echo    eg  Edit a file by gluing a relative path onto a base path
 echo    ed  Edit a file abstraction layer
 echo   edx  Edit a file Emulated Surf
 echo    ex  Exit command window

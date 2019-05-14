@@ -4282,14 +4282,14 @@ exit
 
 set fp=* Open Affinity files router.
 
-rem lu: Mar-26-2019
+rem lu: May-14-2019
 
 echo %computername% | find /i "lipt">nul
 
 if %errorlevel% == 0 (
    rem echo * Computer name contains "lipt".
    rem echo.
-   call %0 g
+   call %0 gfe
    exit/b
 )
 
@@ -4300,8 +4300,6 @@ exit/b
 
 
 ::_
-
-:g
 
 :gfe
 
@@ -4329,12 +4327,12 @@ set filename_4=%composable_batch_files%\m.bat
 call fn ni>nul
 
 set filename_5=%cbf_filename%
-
 set filename_6=%composable_batch_files%\n.bat
-
 set filename_7=%composable_batch_files%\ch.bat
+set filename_8=%composable_batch_files%\v.bat
+set filename_9=%share-zone%\mtw.asc
 
-start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%" "%filename_6%" "%filename_7%"
+start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%" "%filename_6%" "%filename_7%" "%filename_8%" "%filename_9%"
 
 exit/b
 
