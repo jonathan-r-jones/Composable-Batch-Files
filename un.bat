@@ -51,9 +51,6 @@ set cbf_url=
 
 :_
 
-echo.
-echo %filep%
-
 call n %1 %2
 
 exit/b

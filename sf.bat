@@ -145,9 +145,6 @@ set cbf_application=%cbf_specific_browser%
 
 set fp=* Surf the internet.
 
-echo.
-echo %fp%
-
 rem lu: Jan-31-2018
 
 call r

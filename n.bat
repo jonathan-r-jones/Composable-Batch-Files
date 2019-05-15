@@ -5425,6 +5425,14 @@ exit/b
 
 :tu
 
+:chje
+
+:core
+
+:eboc
+
+:jj_jf
+
 :pass-through
 
 :iac

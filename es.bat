@@ -48,9 +48,17 @@ exit/b
 
 :main_function
 
-rem lu: 
+rem lu: May-15-2019
+
+set cbf_settings_file=
 
 call n %1
+
+if "%cbf_settings_file%" == "" (
+  echo.
+  echo * Error: CBF Settings file is not set.
+  exit/b
+)
 
 call e %cbf_settings_file%
 
