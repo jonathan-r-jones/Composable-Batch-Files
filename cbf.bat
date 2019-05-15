@@ -78,6 +78,7 @@ echo    de  Delete
 echo  depn  Delete folder corresponding to CBF path alias parameter
 echo    dn  Dot Net core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit
+echo    es  Edit settings file of an alias
 echo    ea  Application-centric way to run an application
 echo    eg  Edit a file by gluing a relative path onto a base path
 echo    ed  Edit a file abstraction layer
@@ -134,6 +135,7 @@ echo   spl  Super pull, i.e. pull all selected repositories
 echo   sql  MySQL/Database, including LDAP, related tasks
 echo     t  Testing, experimenting and developing new batch file functions
 echo    td  Transform Directory
+echo   tdc  Transform Directory to favorite child folder of alias
 echo  tdfn  Transform Directory where only the Cbf_filename is known
 echo   tdp  Transform Directory to parent folder
 echo   tdg  Transform Directory by gluing a relative path onto a base path

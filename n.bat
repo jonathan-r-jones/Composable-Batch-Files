@@ -5423,6 +5423,8 @@ exit/b
 
 :sr19
 
+:tu
+
 :pass-through
 
 :iac
@@ -9027,8 +9029,8 @@ set fp=* Glued path.
 
 rem lu: May-10-2019
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 set cbf_path=%cbf_glued_path%
 
@@ -9048,6 +9050,23 @@ echo.
 echo %fp%
 
 set cbf_path=\test\integration
+
+exit/b
+
+
+
+:_
+
+:re
+
+set fp=* Recipe relative path.
+
+rem lu: May-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=\recipes
 
 exit/b
 

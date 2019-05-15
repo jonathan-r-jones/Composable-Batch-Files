@@ -1424,6 +1424,46 @@ exit/b
 
 ::_
 
+:bl_cbf
+
+title=CBF
+
+goto big
+
+
+
+::_
+
+:bl_chef
+
+title=Chef
+
+goto big
+
+
+
+::_
+
+:bl_linux
+
+title=Linux
+
+goto big
+
+
+
+::_
+
+:bl_right
+
+title=Right Justified CBF
+
+goto big
+
+
+
+::_
+
 :big
 
 :ibe
@@ -1456,8 +1496,6 @@ set machinename=gfe
 
 call ni full_pem
 set SSH_KEY_PATH=%cbf_full_pem%
-
-title=Big Laptop
 
 cls
 
