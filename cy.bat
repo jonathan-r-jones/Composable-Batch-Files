@@ -441,14 +441,14 @@ rem lu: May-16-2019
 echo.
 echo %fp%
 
-call n ejf j
+call n j
 
 set source_filename=%cbf_jenkinsfile%
 
-call n ejf jft
+call n jft
 
 set destination_filename=%cbf_jenkinsfile%
-rem qjq-1
+rem qq-1
 
 xcopy %source_filename% %destination_filename%
 
