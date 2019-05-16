@@ -122,7 +122,7 @@ rem nickname dictionary to determine the filename.
 echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
-  goto edit_file_in_the_current_folder
+  goto edit_file_by_name
 ) else (
   goto edit_using_alias
 )
@@ -153,7 +153,6 @@ if %errorlevel% == 0 (
   call n %1
 )
 
-rem qq-1
 set cbf_parameter=%cbf_filename%
 
 rem echo.
@@ -264,9 +263,9 @@ rem exit/b
 
 :_
 
-:edit_file_in_the_current_folder
+:edit_file_by_name
 
-set fp=* Edit file in the current folder.
+set fp=* Edit file by name.
 
 rem lu: Jan-16-2019
 

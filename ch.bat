@@ -14,9 +14,11 @@ set filep=* A wrapper around Chef's command line utility.
 
 set fp=* Route callers.
 
+if "%~1" == "" goto cv
+
 if "%~1" == "/?" goto help
 
-goto preprocess
+goto %1
 
 
 
@@ -36,23 +38,6 @@ echo.
 echo %parameter_1%
 
 exit/b
-
-
-
-:_
-
-:preprocess
-
-call m specific_file_presence .kitchen-aws.yml
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently
-  exit/b
-)
-
-if "%~1" == "" goto cv
-
-goto %1
 
 
 
@@ -534,6 +519,8 @@ exit/b
 
 :upco
 
+:upl
+
 set fp=* Upload cookbooks.
 
 rem lu: May-6-2019
@@ -541,8 +528,11 @@ rem lu: May-6-2019
 echo.
 echo %fp%
 
+rem call td cc
+
 echo.
-knife upload cookbooks
+rem knife upload cookbooks
+knife cookbook upload cart_cookbook -o .\ --force
 
 exit/b
 
@@ -627,6 +617,13 @@ rem Converge creates an instance, which surprised me. May-3-2019
 
 echo.
 echo %fp%
+
+call m specific_file_presence .kitchen-aws.yml
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently
+  exit/b
+)
 
 echo.
 kitchen converge centos-7 --no-color

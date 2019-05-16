@@ -51,7 +51,7 @@ call n %1
 
 if "%cbf_jenkinsfile%" == "" (
   echo.
-  echo * Error: CBF Settings file is not set.
+  echo * Error: CBF Jenkinsfile is not set.
   exit/b
 )
 

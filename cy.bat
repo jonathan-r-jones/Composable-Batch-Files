@@ -38,9 +38,11 @@ echo Parameter 1: Label method to run.
 echo.
 echo Parameter  Description
 echo ---------  ----------------------------------------------------------------
+echo       apn  Copy all files in the current folder to an alias specified path.
+echo      jfds  Copy jj_devops Jenkinsfile to share-zone Jenkinsfile
+echo      jfsd  Copy share-zone Jenkinsfile to jj_devops Jenkinsfile 
 echo        ig  Copy Visual Studio Git Ignore file from Fresnel to the current
 echo            location.
-echo       apn  Copy all files in the current folder to an alias specified path.
 
 exit/b
 
@@ -423,6 +425,51 @@ if %errorlevel% == 1 (
 
 echo.
 xcopy /d /r /s /y . %cbf_path%
+
+exit/b
+
+
+
+:_
+
+:jfds
+
+set fp=* Copy jj_devops Jenkinsfile to share-zone Jenkinsfile.
+
+rem lu: May-16-2019
+
+echo.
+echo %fp%
+
+call n ejf j
+
+set source_filename=%cbf_jenkinsfile%
+
+call n ejf jft
+
+set destination_filename=%cbf_jenkinsfile%
+rem qjq-1
+
+xcopy %source_filename% %destination_filename%
+
+exit/b
+
+
+
+:_
+
+:jfsd
+
+set fp=* Copy share-zone Jenkinsfile to jj_devops Jenkinsfile.
+
+rem lu: May-16-2019
+
+echo.
+echo %fp%
+
+echo.
+
+rem qjq-1
 
 exit/b
 

@@ -3783,6 +3783,8 @@ exit/b
 
 :d
 
+:dh
+
 :h
 
 :hist

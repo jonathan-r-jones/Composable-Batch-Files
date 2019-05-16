@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Favorite child folder batch file.
+set filep=* Surf to jenkins url of an alias.
 
 echo.
 echo %filep%
@@ -48,19 +48,21 @@ exit/b
 
 :main_function
 
-rem lu: May-14-2019
+rem lu: 
 
-set cbf_fc_path=
+set cbf_jenkins_url=
 
 call n %1
 
-if "%cbf_fc_path%" == "" (
+if "%cbf_jenkins_url%" == "" (
   echo.
-  echo * Error: CBF FC Path is not set.
+  echo * Error: CBF Jenkins url is not set.
   exit/b
 )
 
-cd /d "%cbf_fc_path%"
+set cbf_url=%cbf_jenkins_url%
+
+call sf
 
 exit/b
 

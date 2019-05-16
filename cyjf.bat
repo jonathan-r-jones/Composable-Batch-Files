@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Favorite child folder batch file.
+set filep=* Copy Jenkinsfile from alias to alias.
 
 echo.
 echo %filep%
@@ -48,19 +48,18 @@ exit/b
 
 :main_function
 
-rem lu: May-14-2019
-
-set cbf_fc_path=
+rem lu: 
 
 call n %1
 
-if "%cbf_fc_path%" == "" (
-  echo.
-  echo * Error: CBF FC Path is not set.
-  exit/b
-)
+set cbf_filename=%cbf_jenkinsfile%
 
-cd /d "%cbf_fc_path%"
+rem if not exist %cbf_jenkinsfile% (
+  echo.
+  echo
+
+call n %2
+rem qq-1
 
 exit/b
 

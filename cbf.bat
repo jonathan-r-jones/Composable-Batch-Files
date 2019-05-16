@@ -67,7 +67,7 @@ echo    cy  Copy file(s)
 echo  cyfn  Copy file from alias filename parm 1 to alias filename param 2
 echo  cypn  Copy file from alias path param 1 to alias path param 2
 echo   cyt  Copy file in the current directory to nickname-specified path
-echo  cyte  Copy te.bat to a new batch
+echo  cyte  Copy te.bat to a new batch file
 echo   cyf  Copy file from a cbf_path nickname
 echo     d  Dir for current folder
 echo    dd  Dir filename extension searcher including subfolders

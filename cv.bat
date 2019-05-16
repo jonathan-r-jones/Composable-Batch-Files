@@ -8,9 +8,6 @@
 
 set filep=* Chef converge with a path parameter.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -19,6 +16,12 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
+if "%~1" == "" (
+  goto main_function  
+) else (
+  call td %1
+)
+
 goto main_function
 
 
@@ -26,6 +29,9 @@ goto main_function
 :_
 
 :help
+
+echo.
+echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -44,8 +50,6 @@ exit/b
 :main_function
 
 rem lu: 
-
-call td %1
 
 call ch cv
 
