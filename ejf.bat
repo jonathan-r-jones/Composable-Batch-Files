@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Edit the settings file of an alias.
+set filep=* Edit the Jenkinsfile of an alias.
 
 echo.
 echo %filep%
@@ -45,17 +45,17 @@ exit/b
 
 rem lu: May-15-2019
 
-set cbf_settings_file=
+set cbf_jenkinsfile=
 
 call n %1
 
-if "%cbf_settings_file%" == "" (
+if "%cbf_jenkinsfile%" == "" (
   echo.
   echo * Error: CBF Settings file is not set.
   exit/b
 )
 
-call e %cbf_settings_file%
+call e %cbf_jenkinsfile% -e
 
 exit/b
 

@@ -1537,6 +1537,8 @@ echo %fp%
 
 set cbf_url=https://www.youtube.com
 
+call m set_specific_browser vi
+
 exit/b
 
 
@@ -4086,9 +4088,9 @@ exit/b
 
 :nx
 
-set fp=* VP folder.
+set fp=* New and exciting.
 
-rem lu: Aug-14-2018
+rem lu: May-16-2019
 
 echo.
 echo %fp%
