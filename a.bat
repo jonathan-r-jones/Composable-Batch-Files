@@ -3663,14 +3663,22 @@ exit/b
 
 set fp=* Retag a resource.
 
-rem lu: Dec-12-2018
+rem lu: May-17-2019
 
 echo.
 echo %fp%
 
-call n sr19
+set cbf_instance_id=
 
-aws ec2 create-tags --resources %cbf_instance_id% --tags Key=Name,Value=w1idvtempcrt019
+call n sr21
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Error: Instance id not set.
+  exit/b
+)
+
+aws ec2 create-tags --resources %cbf_instance_id% --tags Key=Name,Value=w1idvtempcrt021
 
 rem These also work.
 rem aws ec2 create-tags help>%temp%/j1.txt
