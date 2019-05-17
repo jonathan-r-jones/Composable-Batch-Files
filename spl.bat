@@ -72,7 +72,7 @@ call pl s
 if "%machinename%"=="gfe" call cypn mecfg_s mecfg
 if "%machinename%"=="gfe" cd\
 
-call ss
+call ss %0
 
 exit/b
 

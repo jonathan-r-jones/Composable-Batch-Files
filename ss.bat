@@ -84,7 +84,7 @@ call td s>nul
 
 if %sum_of_error_levels% == 0 (
   echo.
-  echo * Sans souci.
+  echo * Sans souci. (%1)
   call m show_ascii_art
   echo.
 ) else (
