@@ -62,6 +62,8 @@ exit/b
 
 :main_function
 
+call m clear_errorlevel_silently
+
 call td %1
 
 endlocal
