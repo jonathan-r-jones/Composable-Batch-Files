@@ -447,10 +447,10 @@ set source_filename=%cbf_jenkinsfile%
 
 call n jft
 
-set destination_filename=%cbf_jenkinsfile%
-rem qq-1
+set destination_filename=%cbf_filename%
 
-xcopy %source_filename% %destination_filename%
+echo.
+xcopy /y %source_filename% %destination_filename%
 
 exit/b
 
@@ -467,9 +467,16 @@ rem lu: May-16-2019
 echo.
 echo %fp%
 
-echo.
+call n jft
 
-rem qjq-1
+set source_filename=%cbf_filename%
+
+call n j
+
+set destination_filename=%cbf_jenkinsfile%
+
+echo.
+xcopy /y %source_filename% %destination_filename%
 
 exit/b
 

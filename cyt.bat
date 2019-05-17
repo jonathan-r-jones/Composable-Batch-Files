@@ -6,7 +6,7 @@
 
 :_
 
-set filep=Copies a file in the current directory to a nickname-specified path.
+set filep=* Copies a file in the current directory to a nickname-specified path.
 
 
 
