@@ -50,10 +50,13 @@ echo %1 | C:\Windows\System32\find.exe /i ".">nul
 if %errorlevel% == 0 (
   echo.
   type %1
-) else (
-  call fn %1
-  type "%cbf_filename%"
+  exit/b
 )
+
+rem I am doing this instead of an else because the else seems to slightly broken. May-19-2019
+
+call fn %1
+type "%cbf_filename%"
 
 exit/b
 
