@@ -9562,6 +9562,24 @@ exit/b
 
 :_
 
+:
+
+set fp=* Check computername.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+echo.
+if "%computername%"=="BUZZ" echo Hi from Buzz.
+
+exit/b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.
@@ -9574,7 +9592,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Check computername.
+set fp=* 
 
 rem lu: May-20-2019
 
@@ -9582,7 +9600,7 @@ echo.
 echo %fp%
 
 echo.
-if "%computername%"=="BUZZ" echo Hi from Buzz.
+cd..
 
 exit/b
 

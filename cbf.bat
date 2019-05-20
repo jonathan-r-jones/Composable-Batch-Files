@@ -113,6 +113,7 @@ echo   nox  Use Notepad to edit a batch file in the CBF folder
 echo    np  Notepad++
 echo    nx  Use Notepad++ to edit a batch file in the CBF folder
 echo    of  Open Folder, has TD parameter
+echo   ofp  Transform directory to parent folder
 echo     p  Add, commit and push Git changes, has TD parameter
 echo    pl  Git pull, has TD parameter
 echo    pg  Ping hooked up to the nicknames dictionary
@@ -134,11 +135,11 @@ echo    sp  Super push, i.e. push all selected repositories
 echo   spl  Super pull, i.e. pull all selected repositories
 echo   sql  MySQL/Database, including LDAP, related tasks
 echo     t  Testing, experimenting and developing new batch file functions
-echo    td  Transform Directory
-echo   tdc  Transform Directory to favorite child folder of alias
-echo  tdfn  Transform Directory where only the Cbf_filename is known
-echo   tdp  Transform Directory to parent folder
-echo   tdg  Transform Directory by gluing a relative path onto a base path
+echo    td  Transform directory
+echo   tdc  Transform directory to favorite child folder of alias
+echo  tdfn  Transform directory where only the Cbf_filename is known
+echo   tdp  Transform directory to parent folder
+echo   tdg  Transform directory by gluing a relative path onto a base path
 echo    te  Batch file template used for creating new batch files
 echo    tf  Terraform
 echo    tk  Taskkill

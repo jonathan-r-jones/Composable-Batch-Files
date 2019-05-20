@@ -8,7 +8,6 @@
 
 set filep=* Trandform folder to parent folder.
 
-setlocal
 
 
 :_
@@ -62,14 +61,12 @@ exit/b
 
 :main_function
 
+echo.
+echo %filep%
+
 call m clear_errorlevel_silently
 
 call td %1
-
-endlocal
-
-echo.
-echo %filep%
 
 if %errorlevel% == 0 (
   cd..
