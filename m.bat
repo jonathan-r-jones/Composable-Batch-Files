@@ -4539,4 +4539,24 @@ exit/b
 
 
 
+:_
+
+:80
+
+:width
+
+set fp=* Console window width.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+echo.
+echo 12345678 1 12345678 2 12345678 3 12345678 4 12345678 5 12345678 6 12345678 7 12345678 8
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)
