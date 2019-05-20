@@ -1,4 +1,4 @@
-:_ (!n)
+:_ (!nb)
 
 @echo off
 
@@ -2559,27 +2559,6 @@ echo.
 echo %fp%
 
 set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS103
-
-exit/b
-
-
-
-:_
-
-:10
-
-:p10
-
-set fp=* Page 10.
-
-rem lu: Jun-27-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\it\fresnel\fresnel\Views
-
-set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\AboutPage.xaml
 
 exit/b
 
@@ -8711,100 +8690,6 @@ exit/b
 
 
 
-:_+ App Center Demo
-
-
-
-::_
-
-:dx
-
-:imdx
-
-set fp=* Introduction to Mobile Development with Xamarin by James Montemagno.
-
-rem lu: Apr-13-2019
-
-echo.
-echo %fp%
-
-set cbf_branch=master
-
-set cbf_clone_url=https://github.com/dotnet-presentations/xamarin.git
-
-set cbf_path=%cbf_repo%\imdx\Introduction to Mobile Development with Xamarin
-
-set cbf_filename=%cbf_path%\Introduction to Mobile Development with Xamarin.pptx
-
-set cbf_url=https://github.com/dotnet-presentations/xamarin.git
-
-exit/b
-
-
-
-::_
-
-:acd
-
-set fp=* App Center Demo.
-
-rem lu: Apr-13-2019
-
-echo.
-echo %fp%
-
-set cbf_branch=master
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
-
-set cbf_path=%cbf_repo%\acd
-
-set cbf_filename=%cbf_path%\App Center Demo.pptx
-
-set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
-
-exit/b
-
-
-
-::_
-
-:ctr
-
-set fp=* AppCenter.
-
-rem lu: Jun-21-2018
-
-echo.
-echo %fp%
-
-set cbf_path=
-
-set cbf_url=https://appcenter.ms/apps
-
-exit/b
-
-
-
-::_
-
-:bike
-
-set fp=* Bike search.
-
-rem lu: Jun-20-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
-
-set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
-
-exit/b
-
-
-
 :_+ Mobile Apps
 
 
@@ -8842,6 +8727,8 @@ rem lu: Jun-21-2018
 
 echo.
 echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/fresnel.git
 
 set cbf_path=%dropbox%\it\fresnel
 
@@ -9139,6 +9026,210 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkins log.xlsx
+
+exit/b
+
+
+
+:_+ App Center Demo
+
+
+
+::_
+
+:dx
+
+:imdx
+
+set fp=* Introduction to Mobile Development with Xamarin by James Montemagno.
+
+rem lu: Apr-13-2019
+
+echo.
+echo %fp%
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/dotnet-presentations/xamarin.git
+
+set cbf_path=%cbf_repo%\imdx\Introduction to Mobile Development with Xamarin
+
+set cbf_filename=%cbf_path%\Introduction to Mobile Development with Xamarin.pptx
+
+set cbf_url=https://github.com/dotnet-presentations/xamarin.git
+
+exit/b
+
+
+
+::_
+
+:bike
+
+set fp=* Bike search.
+
+rem lu: Jun-20-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
+
+set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
+
+exit/b
+
+
+
+::_
+
+:acd
+
+set fp=* App Center Demo.
+
+rem lu: Apr-13-2019
+
+echo.
+echo %fp%
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+
+set cbf_path=%cbf_repo%\acd
+
+set cbf_filename=%cbf_path%\App Center Demo.pptx
+
+set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+
+exit/b
+
+
+
+::_
+
+:ctr
+
+:yapps
+
+:yourapps
+
+set fp=* "Your apps."
+
+rem lu: Jun-21-2018
+
+echo.
+echo %fp%
+
+set cbf_path=
+
+set cbf_url=https://appcenter.ms/apps
+
+exit/b
+
+
+
+::_
+
+:apce
+
+set fp=* App center.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.visualstudio.com/app-center/
+
+exit/b
+
+
+
+::_
+
+:10
+
+:p10
+
+set fp=* Page 10.
+
+rem lu: Jun-27-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\it\fresnel\fresnel\Views
+
+set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\AboutPage.xaml
+
+exit/b
+
+
+
+:_
+
+:gitacd
+
+set fp=* ACD on GitHub.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+
+exit/b
+
+
+
+:_
+
+:pain
+
+set fp=* Paint.Net.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+set cbf_application=c:\program files\paint.net\paintdotnet.exe
+
+exit/b
+
+
+
+:_
+
+:bb
+
+set fp=* Build button for Android.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://appcenter.ms/users/jonathan.r.jones.3/apps/Fresnel.iOS/build/branches/master
+
+exit/b
+
+
+
+:_
+
+:scsh
+
+set fp=* Screen shots folder.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\Pictures\Screenshots
 
 exit/b
 

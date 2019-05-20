@@ -906,22 +906,3 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
-
-:80
-
-set fp=* How wide is the the command window?
-
-rem lu: Mar-10-2019
-
-echo.
-echo %fp%
-
-echo.
-echo The following line is 80 characters wide:
-echo 01234567 1 1234567 2 1234567 3 1234567 4 1234567 5 1234567 6 1234567 7 1234567 8
-
-exit/b
-
-
-
-:_

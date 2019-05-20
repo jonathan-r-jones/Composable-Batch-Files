@@ -4547,12 +4547,15 @@ exit/b
 
 set fp=* Console window width.
 
+rem How wide is the the command window?
+
 rem lu: May-20-2019
 
 echo.
 echo %fp%
 
 echo.
+echo * The following line is 80 characters wide:
 echo 12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8
 
 exit/b
