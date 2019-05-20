@@ -69,6 +69,8 @@ call pl cbf
 
 call pl s
 
+if "%computername%"=="BUZZ" call cypn mecfg_s mecfg
+
 if "%machinename%"=="gfe" call cypn mecfg_s mecfg
 if "%machinename%"=="gfe" cd\
 
