@@ -5445,6 +5445,8 @@ exit/b
 
 :sr20
 
+:nast
+
 :pass-through
 
 :iac

@@ -359,4 +359,22 @@ exit/b
 
 
 
+:_
+
+:pdev
+
+set fp=* Pdev.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+echo.
+Pdev -Pno-liquibase clean bootrun
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
