@@ -110,4 +110,21 @@ exit/b
 
 
 
+:_
+
+:xlsx
+
+set fp=* Associate xlsx files with Excel.
+
+echo.
+echo %fp%
+
+echo.
+assoc .xlsx=Excel.Sheet.16
+ftype Excel.Sheet.16="C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" %%1 %%*
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

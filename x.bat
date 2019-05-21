@@ -70,7 +70,6 @@ if "%cbf_filename%" == "" (
 )
 
 call m double_click
-rem qq-1
 
 call r
 

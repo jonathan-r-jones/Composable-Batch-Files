@@ -14,7 +14,7 @@ set filep=* Dir for current folder.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto a
+if "%~1" == "" goto d
 
 if "%~1" == "/?" goto help
 
@@ -145,27 +145,6 @@ exit/b
 
 :_
 
-:t
-
-set fp=* Tree view piped to a file.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-tree/f>%temp%\treeview_results.txt
-
-rem (!rfsp) (mov-2)
-
-start "Test Title" "%cbf_default_text_editor%" "%temp%\treeview_results.txt"
-
-exit/b
-
-
-
-:_
-
 :tn
 
 set fp=* Tree view.
@@ -284,6 +263,27 @@ echo %fp%
 
 echo.
 dir /ogn
+
+exit/b
+
+
+
+:_
+
+:t
+
+set fp=* Tree view piped to a file.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+tree/f>%temp%\treeview_results.txt
+
+rem (!rfsp) (mov-2)
+
+start "Test Title" "%cbf_default_text_editor%" "%temp%\treeview_results.txt"
 
 exit/b
 
