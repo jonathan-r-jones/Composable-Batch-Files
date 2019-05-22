@@ -1310,25 +1310,6 @@ exit/b
 
 :_
 
-:vs
-
-set fp=* Visual Studio.
-
-rem lu: Jan-31-2018
-
-echo.
-echo %fp%
-
-set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
-
-set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
-
-exit/b
-
-
-
-:_
-
 :tt
 
 set fp=TT VS solution.
@@ -3560,27 +3541,6 @@ exit/b
 
 :_
 
-:bs
-
-:bust
-
-set fp=* Buster.
-
-rem lu: Jul-27-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\it\buster
-
-set cbf_url=https://github.com/jonathan-r-jones/Buster.git
-
-exit/b
-
-
-
-:_
-
 :petz
 
 set fp=* Petzold.
@@ -4711,23 +4671,6 @@ echo %fp%
 set cbf_path=%dropbox%\it\dx
 
 set cbf_url=https://github.com/jonathan-r-jones/dx.git
-
-exit/b
-
-
-
-:_
-
-:vsi
-
-set fp=* Visual Studio Installer.
-
-rem lu: Sep-11-2018
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe
 
 exit/b
 
@@ -7382,205 +7325,6 @@ exit/b
 
 
 
-:_+ Home Folders
-
-
-
-::_
-
-:jh
-
-:jvh
-
-:jv_hm
-
-:java_home
-
-set fp=* Java Home.
-
-rem fcd: Dec-14-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%java_home%
-
-exit/b
-
-
-
-::_
-
-:nh
-
-:node_home
-
-set fp=* Node home.
-
-rem fcd: Feb-11-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%node_home%
-
-exit/b
-
-
-
-::_
-
-:jre
-
-:jreh
-
-:jrh
-
-:jvre
-
-set fp=* Java runtime path.
-
-rem lu: Dec-6-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%jre_home%
-
-exit/b
-
-
-
-::_
-
-:m2h
-
-set fp=* M2 Home.
-
-rem fcd: Feb-11-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%m2_home%
-
-exit/b
-
-
-
-::_
-
-:mh
-
-:mvh
-
-:mv_hm
-
-set fp=* Maven Home.
-
-rem fcd: Jul-7-2017
-
-rem This is useful for new installs.
-
-echo.
-echo %fp%
-
-set cbf_path=%maven_home%
-
-exit/b
-
-
-
-::_
-
-:aws
-
-:aws_cfg
-
-:aws_hm
-
-:aws_home
-
-set fp=* AWS configuration.
-
-rem lu: Nov-6-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%userprofile%\.aws\credentials
-
-set cbf_path=%userprofile%\.aws
-
-exit/b
-
-
-
-::_
-
-:je_hm
-
-:je_home
-
-set fp=* Jenkins home
-
-rem lu: Dec-15-2018
-
-echo.
-echo %fp%
-
-call %0 home
-
-set cbf_path=%cbf_path%\.jenkins
-
-exit/b
-
-
-
-::_
-
-:h
-
-:hm
-
-:home
-
-:up
-
-:user
-
-:usr
-
-set fp=* User profile/home.
-
-rem lu: Dec-17-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%
-
-exit/b
-
-
-
-::_
-
-:wa
-
-set fp=* Windows Apps.
-
-rem lu: Dec-19-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%localappdata%\Microsoft\WindowsApps
-
-exit/b
-
-
-
 :_
 
 :machine-specific-file
@@ -9230,6 +8974,272 @@ echo.
 echo %fp%
 
 set cbf_path=%userprofile%\Pictures\Screenshots
+
+exit/b
+
+
+
+:_
+
+:bs
+
+:bust
+
+set fp=* Buster.
+
+rem lu: May-21-2019
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Buster.git
+
+set cbf_filename=%dropbox%\it\buster\buster\Buster\Views\Page1.xaml
+
+set cbf_path=%dropbox%\it\buster
+
+set cbf_url=https://github.com/jonathan-r-jones/Buster.git
+
+exit/b
+
+
+
+:_+ Home Folders
+
+
+
+::_
+
+:jh
+
+:jvh
+
+:jv_hm
+
+:java_home
+
+set fp=* Java Home.
+
+rem fcd: Dec-14-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%java_home%
+
+exit/b
+
+
+
+::_
+
+:jre
+
+:jreh
+
+:jrh
+
+:jvre
+
+set fp=* Java runtime path.
+
+rem lu: Dec-6-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%jre_home%
+
+exit/b
+
+
+
+::_
+
+:nh
+
+:node_home
+
+set fp=* Node home.
+
+rem fcd: Feb-11-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%node_home%
+
+exit/b
+
+
+
+::_
+
+:m2h
+
+set fp=* M2 Home.
+
+rem fcd: Feb-11-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%m2_home%
+
+exit/b
+
+
+
+::_
+
+:mh
+
+:mvh
+
+:mv_hm
+
+set fp=* Maven Home.
+
+rem fcd: Jul-7-2017
+
+rem This is useful for new installs.
+
+echo.
+echo %fp%
+
+set cbf_path=%maven_home%
+
+exit/b
+
+
+
+::_
+
+:aws
+
+:aws_cfg
+
+:aws_hm
+
+:aws_home
+
+set fp=* AWS configuration.
+
+rem lu: Nov-6-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%userprofile%\.aws\credentials
+
+set cbf_path=%userprofile%\.aws
+
+exit/b
+
+
+
+::_
+
+:je_hm
+
+:je_home
+
+set fp=* Jenkins home
+
+rem lu: Dec-15-2018
+
+echo.
+echo %fp%
+
+call %0 home
+
+set cbf_path=%cbf_path%\.jenkins
+
+exit/b
+
+
+
+::_
+
+:h
+
+:hm
+
+:home
+
+:up
+
+:user
+
+:usr
+
+set fp=* User profile/home.
+
+rem lu: Dec-17-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%
+
+exit/b
+
+
+
+::_
+
+:wa
+
+set fp=* Windows Apps.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%localappdata%\Microsoft\WindowsApps
+
+exit/b
+
+
+
+:_+ Visual Studio
+
+
+
+::_
+
+:vsi
+
+set fp=* Visual Studio Installer.
+
+rem lu: Sep-11-2018
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe
+
+exit/b
+
+
+
+::_
+
+:vs
+
+set fp=* Visual Studio.
+
+rem lu: Jan-31-2018
+
+echo.
+echo %fp%
+
+set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
+   
+rem qq-1
+set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
 
 exit/b
 
