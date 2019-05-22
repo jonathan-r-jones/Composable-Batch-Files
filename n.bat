@@ -9237,7 +9237,6 @@ echo %fp%
 
 set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
    
-rem qq-1
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
 
