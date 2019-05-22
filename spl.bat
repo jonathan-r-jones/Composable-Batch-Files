@@ -16,17 +16,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "" goto main_function
-
-if "%~1" == "" goto pull_current_folder
-
-call td %~1
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-goto pull_current_folder
+goto main_function
 
 
 
@@ -35,17 +25,10 @@ goto pull_current_folder
 :help
 
 echo.
-echo File purpose for: %filep%
+echo %filep%
 
 echo.
-echo Last Updated: Apr-18-2019
-
-echo.
-echo Usage: %0 [Parameter 1]
-
-echo.
-echo Parameter 1 (Optional): The folder you wish to switch to. If left blank, ^
-the current folder is pulled.
+echo Usage: %0
 
 exit/b
 
@@ -61,20 +44,18 @@ echo.
 echo %filep%
 
 if not "%machinename%"=="gfe" (
-   cd\
-   call 8
+  call 8
 )
+
+call cypn mecfg_s mecfg
 
 call pl cbf
 
 call pl s
 
-if "%computername%"=="BUZZ" call cypn mecfg_s mecfg
-
-if "%machinename%"=="gfe" call cypn mecfg_s mecfg
-if "%machinename%"=="gfe" cd\
-
 call ss %0
+
+cd\
 
 exit/b
 
