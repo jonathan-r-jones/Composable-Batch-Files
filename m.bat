@@ -4454,7 +4454,6 @@ rem lu: Mar-18-2019
 echo.
 echo %fp%
 
-echo.
 call %0 wait
 
 exit
