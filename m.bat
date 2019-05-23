@@ -4433,7 +4433,7 @@ call fn machine-specific-file
 
 set first_filename=%cbf_filename%
 
-call fn cc
+call fn ccf
 
 set second_filename=%cbf_filename%
 
