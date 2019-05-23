@@ -8615,7 +8615,7 @@ exit/b
 
 :sr17
 
-set fp=* Cheg gaws practice server.
+set fp=* Gaws centos practice server.
 
 rem lu: May-7-2019
 
@@ -8627,6 +8627,8 @@ set cbf_host_name=
 set cbf_instance_id=i-0c46260da6eb917b3
 
 set cbf_ip=18.253.66.185
+
+set cbf_public_dns=ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
 
 set cbf_url=http://%cbf_ip%
 
@@ -8640,7 +8642,7 @@ exit/b
 
 :sr18
 
-set fp=* Cheg gaws Ubuntu practice server.
+set fp=* Gaws Ubuntu practice server.
 
 rem lu: May-13-2019
 
@@ -8652,6 +8654,8 @@ set cbf_host_name=
 set cbf_instance_id=i-0ce1f47a5dcd7f7b0
 
 set cbf_ip=18.253.125.85
+
+set cbf_public_dns=ec2-18-253-46-144.us-gov-east-1.compute.amazonaws.com
 
 set cbf_url=http://%cbf_ip%
 

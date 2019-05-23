@@ -3968,36 +3968,6 @@ exit/b
 
 
 
-::_
-
-:conn
-
-:ub
-
-set fp=* Connect to Ubuntu server.
-
-rem lu: Feb-26-2019
-
-echo.
-echo %fp%
-
-call n git_user_bin
-
-set git_user_bin=%cbf_path%
-
-call td tfkeys
-
-rem Change this line to your ip address.
-set public_dns=ec2-18-253-128-125.us-gov-east-1.compute.amazonaws.com
-
-echo.
-
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%public_dns%
-
-exit/b
-
-
-
 :_
 
 :delete_instance
@@ -4473,14 +4443,20 @@ exit/b
 
 :_
 
-:coch
+:conn
 
-set fp=* Connect to Chef server.
+set fp=* Connect.
 
-rem lu: May-13-2019
+rem lu: May-23-2019
 
 echo.
 echo %fp%
+
+if "%~1" == "" (
+  echo. 
+  echo Percent 1, server alias, is required.
+  exit/b
+)
 
 call n git_user_bin
 
@@ -4488,12 +4464,24 @@ set git_user_bin=%cbf_path%
 
 call td tfkeys
 
+set cbf_public_dns=
+
+call n %2
+
+if "%cbf_public_dns%" == "" (
+  echo. 
+  echo * Error: CBF Public DNS is not defined for server '%1'.
+  exit/b
+)
+
 rem Change this line to your ip address.
-set public_dns=ec2-18-253-125-85.us-gov-east-1.compute.amazonaws.com
+set public_dns=%cbf_public_dns%
 
 echo.
 
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%public_dns%
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%cbf_public_dns%
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" root@ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
+rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
 
 exit/b
 
