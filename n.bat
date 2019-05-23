@@ -8655,7 +8655,7 @@ set cbf_instance_id=i-0ce1f47a5dcd7f7b0
 
 set cbf_ip=18.253.125.85
 
-set cbf_public_dns=ec2-18-253-46-144.us-gov-east-1.compute.amazonaws.com
+set cbf_public_dns=ec2-18-253-117-88.us-gov-east-1.compute.amazonaws.com
 
 set cbf_url=http://%cbf_ip%
 
