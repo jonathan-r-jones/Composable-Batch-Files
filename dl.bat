@@ -26,6 +26,7 @@ goto main_function
 
 :help
 
+echo.
 echo %filep%
 
 echo.
