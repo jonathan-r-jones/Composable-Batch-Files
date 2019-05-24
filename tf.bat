@@ -224,94 +224,6 @@ exit/b
 
 
 
-:_+ Main Parts
-
-
-
-::_
-
-:p
-
-:plan
-
-set fp=* Plan.
-
-rem lu: Oct-30-2018
-
-echo.
-echo %fp%
-
-call %0 check_tf_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-echo.
-rem terraform plan -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color
-terraform plan -var "private_key_path=%pem_path%"
-
-exit/b
-
-
-
-::_
-
-:a
-
-:appl
-
-:apply
-
-set fp=* Apply.
-
-rem lu: Oct-30-2018
-
-echo.
-echo %fp%
-
-call %0 check_tf_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-echo.
-rem terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
-terraform apply -var "private_key_path=%pem_path%" -no-color -auto-approve
-
-exit/b
-
-
-
-::_
-
-:d
-
-:dest
-
-:destroy
-
-set fp=* Destroy.
-
-rem lu: Oct-30-2018
-
-echo.
-echo %fp%
-
-call %0 check_tf_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-echo.
-terraform destroy -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
-
-exit/b
-
-
-
 :_
 
 :check_tf_existence
@@ -428,6 +340,98 @@ if %errorlevel% == 1 (
 
 echo.
 terraform taint
+
+exit/b
+
+
+
+:_+ Main Parts
+
+
+
+::_
+
+:d
+
+:dest
+
+:destroy
+
+set fp=* Destroy.
+
+rem lu: Oct-30-2018
+
+echo.
+echo %fp%
+
+call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+terraform destroy -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
+
+exit/b
+
+
+
+::_
+
+:p
+
+:plan
+
+set fp=* Plan.
+
+rem lu: May-24-2019
+
+echo.
+echo %fp%
+
+call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call n pems
+
+echo.
+rem terraform plan -var-file="variables.tf" -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+terraform plan -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+
+exit/b
+
+
+
+::_
+
+:a
+
+:appl
+
+:apply
+
+set fp=* Apply.
+
+rem lu: May-24-2019
+
+echo.
+echo %fp%
+
+call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+rem terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
+rem terraform apply -var "private_key_path=%pem_path%" -no-color -auto-approve
+terraform apply -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+rem qq-1
 
 exit/b
 

@@ -53,7 +53,7 @@ exit/b
 :main_function
 
 echo.
-echo Copy files from pathname alias 1 (%1) to pathname alias 2 (%2).
+echo * Copy files from pathname alias 1 (%1) to pathname alias 2 (%2).
 
 call td %1
 

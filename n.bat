@@ -5369,6 +5369,8 @@ exit/b
 
 :nast
 
+:mot
+
 :pass-through
 
 :iac
