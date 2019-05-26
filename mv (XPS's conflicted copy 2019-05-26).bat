@@ -146,6 +146,7 @@ call %0 move_podcasts_to_the_staging_folder
 
 rem Run the tag program.
 call x tag
+rem qq-1
 
 call %0 move_old_clipjam_files
 
@@ -174,6 +175,22 @@ call td pc
 
 echo.
 for /r %%j in (*.mp3) do move "%%j" "%mp3_staging_area%"
+
+exit/b
+
+
+
+::_
+
+:run_tag_program
+
+set fp=* Run the Tag program.
+
+echo.
+echo %fp%
+
+"C:\Program Files (x86)\Mp3tag\mp3tag.exe"
+rem qq-1
 
 exit/b
 
