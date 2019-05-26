@@ -5121,8 +5121,6 @@ exit/b
 
 :cer
 
-:tag
-
 :ruby
 
 :bgsc
@@ -9262,6 +9260,23 @@ echo.
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
+
+exit/b
+
+
+
+:_
+
+:tag
+
+set fp=* Tagging program.
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Mp3tag\mp3tag.exe
 
 exit/b
 

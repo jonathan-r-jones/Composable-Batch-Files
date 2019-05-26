@@ -55,6 +55,8 @@ if %errorlevel% == 1 (
 
 call m clear_errorlevel_silently
 
+attrib -h
+
 move *.* %cbf_path%
 
 exit/b
@@ -142,7 +144,9 @@ rem (!rfsp) (mov-2)
 
 call %0 move_podcasts_to_the_staging_folder
 
-call %0 run_tag_program
+rem Run the tag program.
+call x tag
+rem qq-1
 
 call %0 move_old_clipjam_files
 
@@ -185,8 +189,8 @@ set fp=* Run the Tag program.
 echo.
 echo %fp%
 
-echo.
 "C:\Program Files (x86)\Mp3tag\mp3tag.exe"
+rem qq-1
 
 exit/b
 
