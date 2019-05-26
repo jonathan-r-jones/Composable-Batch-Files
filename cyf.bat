@@ -52,7 +52,7 @@ echo %filep%
 call n %1
 
 echo.
-xcopy /d /h /r /s /y "%cbf_path%"
+xcopy /d /r /s /y "%cbf_path%"
 
 rem (!rfsp) (mov-2)
 
