@@ -80,9 +80,10 @@ if "%cbf_path%" == "" (
 
 if exist "%cbf_path%" (
    echo.
-   echo "* Error: CBF Path already exists."
+   echo "* Error: CBF Path already exists.qq"
    call td %1
-   exit/b
+   rem exit/b
+rem qq-1
 )
 
 
