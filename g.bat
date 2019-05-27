@@ -2049,59 +2049,6 @@ exit/b
 
 
 
-::_
-
-:rv_fd
-
-set fp=* Revert folder.
-
-rem Last successful run date: May-30-2018
-
-rem Last Updated: May-30-2018
-
-echo.
-echo %fp%
- 
-git checkout *.*
-
-exit/b
-
-
-
-::_
-
-:rv
-
-:rv_lo
-
-:rv_local
-
-set fp=* Revert local.
-
-rem lu: Aug-7-2018
-
-rem If you don't care about any local changes and just want a copy from the repository.
-
-rem Revert all changes from this folder. Revert all local changes.
-
-rem blow away local changes, specific folder: skw
-
-rem This didn't seem to work on Jan-31-2017.
-
-rem Function Creation Date: Jan-30-2017
-
-echo.
-echo %fp%
-echo.
-
-git reset --hard HEAD
-git clean -f
-git pull
-
-exit/b
-
-
-
 :_
 
 :diff
@@ -2707,56 +2654,6 @@ exit/b
 
 ::_
 
-:roll_back_repo_1
-
-set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
-
-
-rem One reason I like this command is that it moves back slowly so will help you be
-rem careful not to rollback to far.
-
-set fp=%fp% so move the whole repo back a single check-in version.
-
-rem This worked on FGT and Fresnel on Jul-19-2018.
-rem This worked on CBF on Mar-22-2019.
-
-rem lu: Mar-22-2019
-
-echo.
-echo %fp%
-
-call :reset_head_1
-
-call :roll_back_repo
-
-exit/b
-
-
-
-::_
-
-:rv_sf
-
-:rvsf
-
-set fp=* Revert or check out single file.
-
-rem lu: Mar-22-2019
-
-rem This worked on CBF files. Mar-22-2019
-
-echo.
-echo %fp%
-  
-git reset head %2
-git checkout %2
-
-exit/b
-
-
-
-::_
-
 :co_sf
 
 set fp=* Check out single file based on file's alias.
@@ -2833,25 +2730,6 @@ echo %fp%
 call td cart
 
 git push origin --delete jj_devops
-
-exit/b
-
-
-
-:_
-
-:ac
-
-set fp=* Add and commit with message.
-
-rem lu: Mar-31-2019
-
-echo.
-echo %fp%
-
-call %0 add
-
-call %0 commit %2
 
 exit/b
 
@@ -3071,6 +2949,131 @@ echo %fp%
 
 echo.
 git push origin develop
+
+exit/b
+
+
+
+:_
+
+:ac
+
+set fp=* Add and commit with message.
+
+rem lu: Mar-31-2019
+
+echo.
+echo %fp%
+
+call %0 add
+
+call %0 commit %2
+
+exit/b
+
+
+
+:_+ Reversion
+
+
+
+::_
+
+:roll_back_repo_1
+
+set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
+
+rem One reason I like this command is that it moves back slowly so will help you be
+rem careful not to rollback to far.
+
+set fp=%fp% so move the whole repo back a single check-in version.
+
+rem This worked on FGT and Fresnel on Jul-19-2018.
+rem This worked on CBF on Mar-22-2019.
+
+rem lu: Mar-22-2019
+
+echo.
+echo %fp%
+
+call :reset_head_1
+
+call :roll_back_repo
+
+exit/b
+
+
+
+::_
+
+:rv_sf
+
+:rvsf
+
+set fp=* Revert or check out single file.
+
+rem lu: Mar-22-2019
+
+rem This worked on CBF files. Mar-22-2019
+
+echo.
+echo %fp%
+  
+git reset head %2
+git checkout %2
+
+exit/b
+
+
+
+::_
+
+:rv_fd
+
+set fp=* Revert folder.
+
+rem Last successful run date: May-30-2018
+
+rem Last Updated: May-30-2018
+
+echo.
+echo %fp%
+ 
+git checkout *.*
+
+exit/b
+
+
+
+::_
+
+:rv
+
+:rv_lo
+
+:rv_local
+
+set fp=* Revert local.
+
+rem lu: Aug-7-2018
+
+rem If you don't care about any local changes and just want a copy from the repository.
+
+rem Revert all changes from this folder. Revert all local changes.
+
+rem blow away local changes, specific folder: skw
+
+rem This didn't seem to work on Jan-31-2017.
+
+rem Function Creation Date: Jan-30-2017
+
+echo.
+echo %fp%
+echo.
+
+git reset --hard HEAD
+git clean -f
+git pull
 
 exit/b
 

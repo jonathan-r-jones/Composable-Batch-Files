@@ -7340,7 +7340,7 @@ rem lu: Feb-27-2019
 echo.
 echo %fp%
 
-set cbf_filename=%reach out%\%computername%.asc
+set cbf_filename=%dropbox%\!savannah\reach out\%computername%.asc
 
 exit/b
 
@@ -8543,23 +8543,6 @@ exit/b
 
 
 
-::_
-
-:bu
-
-set fp=* Backups folder.
-
-rem lu: Jul-26-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%cbf_repo%\backups
-
-exit/b
-
-
-
 :_
 
 :glued_path
@@ -8848,9 +8831,13 @@ set cbf_branch=master
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
+set cbf_fc_path=%cbf_repo%\acd\buster\buster\views
+
+set cbf_filename=%cbf_repo%\acd\App Center Demo.pptx
+
 set cbf_path=%cbf_repo%\acd
 
-set cbf_filename=%cbf_path%\App Center Demo.pptx
+set cbf_settings_file=%cbf_repo%\acd\buster\buster\Views\Page1.xaml
 
 set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
@@ -8990,6 +8977,8 @@ exit/b
 :_
 
 :bs
+
+:bu
 
 :bust
 
@@ -9281,6 +9270,77 @@ echo.
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\Mp3tag\mp3tag.exe
+
+exit/b
+
+
+
+:_
+
+:sv
+
+set fp=* Savannah.
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%savannah%\
+
+exit/b
+
+
+
+:_
+
+:buzz
+
+set fp=* buzz
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%dropbox%\!savannah\reach out\buzz.asc
+
+exit/b
+
+
+
+:_
+
+:xps
+
+set fp=* Xps.
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%dropbox%\!savannah\reach out\xps.asc
+
+exit/b
+
+
+
+:_
+
+:app2
+
+set fp=* App2. App Center Demo 2.
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/app2.git
+
+set cbf_path=%cbf_repo%\app2
+rem       qq-1
 
 exit/b
 

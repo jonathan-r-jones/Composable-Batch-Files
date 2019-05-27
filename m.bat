@@ -4561,4 +4561,22 @@ exit/b
 
 
 
+:_
+
+:keyt
+
+set fp=* Run the JDK keytool utility program.
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore dtg-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)
