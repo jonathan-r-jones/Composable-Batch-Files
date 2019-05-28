@@ -5371,6 +5371,12 @@ exit/b
 
 :mot
 
+:sr22
+
+:sr23
+
+:eat
+
 :pass-through
 
 :iac
@@ -6562,7 +6568,7 @@ exit/b
 
 :super_git
 
-set fp=* Git user bin. Loaded with utilities. Super path. (skw: super git)
+set fp=* Git user bin. Loaded with utilities. Super path. (skw: super git, GitHub super)
 
 rem lu: Dec-4-2018
 
@@ -8734,9 +8740,11 @@ exit/b
 
 ::_
 
+:jb
+
 :jft
 
-set fp=* Jenkinsfile test file.
+set fp=* Jenkinsfile backup.
 
 rem lu: May-16-2019
 
@@ -8744,6 +8752,25 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkinsfile
+
+exit/b
+
+
+
+::_
+
+:arc
+
+:ckje
+
+set fp=* Code keepers for Jenkinsfile.
+
+rem lu: Mar-11-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Jenkinsfile_Code_Keepers
 
 exit/b
 
@@ -9427,6 +9454,23 @@ set cbf_clone_url=https://github.com/jonathan-r-jones/%cbf_root%.git
 set cbf_path=%cbf_repo%\%cbf_root%
 
 set cbf_settings_file=%cbf_repo%\%cbf_root%\%cbf_root%\%cbf_root%\Views\Page1.xaml
+
+exit/b
+
+
+
+:_
+
+:gps
+
+set fp=* Gil's pipeline script.
+
+rem lu: May-28-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\gils_pipeline_script
 
 exit/b
 
