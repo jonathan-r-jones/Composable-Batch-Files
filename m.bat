@@ -4579,4 +4579,84 @@ exit/b
 
 
 
+:_
+
+:keyt_May-27-2019
+
+set fp=* Run the JDK keytool utility program for the App2 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app2-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+:_
+
+:keyt_May-27-2019.5
+
+set fp=* Run the JDK keytool utility program for the App5 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app5-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+:_
+
+:keyt_May-27-2019.6b
+
+set fp=* Run the JDK keytool utility program for the App6 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app6b-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+:_
+
+:keyt_May-27-2019.6d
+
+set fp=* Run the JDK keytool utility program for the App6 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app6d-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+:_
+
+:keyt_May-27-2019.7
+
+set fp=* Run the JDK keytool utility program for the App6 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app7-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)

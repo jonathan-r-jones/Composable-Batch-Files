@@ -117,6 +117,8 @@ Metadata: Track Size (!tsn)
      Date      Lines      Bytes  Functions  Notes
  -----------  ------  ---------  ---------  -------------------------------------------------
 
+:May-27-2019   9,349     99,887      499
+
 :Apr-15-2019   8,907     95,073      482
 
 :Aug-24-2018   5,148     60,394      300
@@ -8818,42 +8820,9 @@ exit/b
 
 ::_
 
-:acd
-
-set fp=* App Center Demo.
-
-rem lu: Apr-13-2019
-
-echo.
-echo %fp%
-
-set cbf_branch=master
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
-
-set cbf_fc_path=%cbf_repo%\acd\buster\buster\views
-
-set cbf_filename=%cbf_repo%\acd\App Center Demo.pptx
-
-set cbf_path=%cbf_repo%\acd
-
-set cbf_settings_file=%cbf_repo%\acd\buster\buster\Views\Page1.xaml
-
-set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
-
-exit/b
-
-
-
-::_
-
-:ctr
-
 :yapps
 
-:yourapps
-
-set fp=* "Your apps."
+set fp=* My apps in AppCenter.
 
 rem lu: Jun-21-2018
 
@@ -8901,6 +8870,39 @@ echo %fp%
 set cbf_path=%dropbox%\it\fresnel\fresnel\Views
 
 set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\AboutPage.xaml
+
+exit/b
+
+
+
+::_
+
+:acd
+
+set fp=* App Center Demo.
+
+rem lu: Apr-13-2019
+
+echo.
+echo %fp%
+
+set cbf_root=%1
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+
+set cbf_fc_path=%cbf_repo%\acd\buster\buster\views
+
+set cbf_filename=%cbf_repo%\acd\App Center Demo.pptx
+
+set cbf_android_manifest_file=%cbf_repo%\%cbf_root%\buster\buster.Android\Properties\AndroidManifest.xml
+
+set cbf_path=%cbf_repo%\acd
+
+set cbf_settings_file=%cbf_repo%\acd\buster\buster\Views\Page1.xaml
+
+set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
 exit/b
 
@@ -9225,7 +9227,7 @@ exit/b
 
 :vs
 
-set fp=* Visual Studio.
+set fp=* Visual Studio 2019.
 
 rem lu: Jan-31-2018
 
@@ -9235,6 +9237,24 @@ echo %fp%
 set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
    
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+exit/b
+
+
+
+::_
+
+:vs17
+
+set fp=* Visual Studio 2017.
+
+rem lu: Jan-31-2018
+
+echo.
+echo %fp%
+
+set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
+   
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
 
 exit/b
@@ -9340,7 +9360,73 @@ echo %fp%
 set cbf_clone_url=https://github.com/jonathan-r-jones/app2.git
 
 set cbf_path=%cbf_repo%\app2
-rem       qq-1
+
+exit/b
+
+
+
+:_
+
+:app3
+
+set fp=* App Center Demo 3.
+
+rem lu: May-27-2019
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/app3.git
+
+set cbf_path=%cbf_repo%\app3
+
+exit/b
+
+
+
+:_
+
+:app4
+
+set fp=* App Center Demo 4.
+
+rem lu: May-27-2019
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/app5.git
+
+set cbf_path=%cbf_repo%\app3
+
+exit/b
+
+
+
+:_
+
+:app5
+
+:app6
+
+:app7
+
+set fp=* App Center Demo test apps.
+
+rem lu: May-27-2019
+
+echo.
+echo %fp%
+
+set cbf_root=%1
+
+set cbf_android_manifest_file=%cbf_repo%\%cbf_root%\%cbf_root%\%cbf_root%.Android\Properties\AndroidManifest.xml
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/%cbf_root%.git
+
+set cbf_path=%cbf_repo%\%cbf_root%
+
+set cbf_settings_file=%cbf_repo%\%cbf_root%\%cbf_root%\%cbf_root%\Views\Page1.xaml
 
 exit/b
 
