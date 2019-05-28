@@ -51,34 +51,18 @@ exit/b
 
 :_
 
-:main_function
+set fp=* Use special syntax for Microsoft Edge.
 
-set fp=* Run application - main function.
-
-if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_edge_case
-
-rem echo Mar-11-2019.5
-
-echo %cbf_application% | C:\Windows\System32\find.exe /i "--">nul
-
-rem echo Mar-11-2019.6
-
-if %errorlevel% == 0 (
-  echo.
-  goto run_application_in_raw_format
-) else (
-  call m clear_errorlevel_silently
-)
+:microsoft_edge_edge_case
 
 if "%cbf_parameter%" == "" (
-  rem echo * Run application with no parameter.
-  call start "my title" "%cbf_application%"
+  call start "my title" "%cbf_application%:"
   exit/b
 )
 
-rem echo * Run application with parameter.
+call start "my title" "%cbf_application%:""%cbf_parameter%"
 
-start "my title" "%cbf_application%" "%cbf_parameter%"
+set cbf_application=
 
 exit/b
 
@@ -103,18 +87,32 @@ exit/b
 
 :_
 
-set fp=* Use special syntax for Microsoft Edge.
+:main_function
 
-:microsoft_edge_edge_case
+set fp=* Run application - main function.
+
+if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_edge_case
+
+rem echo Mar-11-2019.5
+
+echo %cbf_application% | C:\Windows\System32\find.exe /i "--">nul
+
+if %errorlevel% == 0 (
+  echo.
+  goto run_application_in_raw_format
+) else (
+  call m clear_errorlevel_silently
+)
 
 if "%cbf_parameter%" == "" (
-  call start "my title" "%cbf_application%:"
+  rem echo * Run application with no parameter.
+  call start "my title" "%cbf_application%"
   exit/b
 )
 
-call start "my title" "%cbf_application%:""%cbf_parameter%"
+rem echo * Run application with parameter.
 
-set cbf_application=
+start "my title" "%cbf_application%" "%cbf_parameter%"
 
 exit/b
 

@@ -1,3 +1,15 @@
+:_
+
+set fp=* Make a copy of WK.asc.
+
+echo.
+echo %fp%
+
+echo.
+xcopy /d /h /r /y "%reach out%\wk.asc" "%share-zone%\copy of wk.asc"
+
+
+
 ::_
 
 :old_6
@@ -145,8 +157,6 @@ exit/b
 
 set fp=* Execution area. Code below here runs.
 
-rem ******* (!rfcea, !rfsp) (mov4)
-
 
 
 :_
@@ -234,7 +244,6 @@ rem echo %fp%
 call td %1>nul
 
 call s | find /i "working tree clean">nul
-rem qq-1
 
 set current_folder=%cd%
 
@@ -265,7 +274,6 @@ m exit
 
 :_
 
-qq-1
 :
 
 set fp=* Archive test.
@@ -276,8 +284,6 @@ echo.
 echo %fp%
 
 echo.
-
-rem qq-1
 
 exit/b
 

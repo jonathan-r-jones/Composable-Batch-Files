@@ -307,7 +307,7 @@ if not exist "%cbf_filename%" (
 
 set cbf_parameter=%cbf_filename%
 
-rem call r
+call r
 
 rem (!rfsp) (mov-2)
 
