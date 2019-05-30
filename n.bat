@@ -4971,8 +4971,6 @@ exit/b
 
 :sr5
 
-:sr6
-
 :sr7
 
 :acrg
@@ -5376,6 +5374,8 @@ exit/b
 :sr23
 
 :eat
+
+:sr6
 
 :pass-through
 

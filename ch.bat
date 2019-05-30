@@ -576,7 +576,7 @@ exit/b
 
 :_
 
-:ca
+:capp
 
 set fp=* Chef apply.
 
