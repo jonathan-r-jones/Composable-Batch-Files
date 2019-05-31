@@ -4674,7 +4674,6 @@ echo %fp%
 
 echo.
 echo * Computername: %computername%
-rem qq-1
 
 exit/b
 
