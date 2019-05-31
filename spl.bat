@@ -55,8 +55,6 @@ call pl s
 
 call ss %0
 
-cd\
-
 exit/b
 
 
