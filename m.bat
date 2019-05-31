@@ -4661,4 +4661,23 @@ exit/b
 
 
 
+:_
+
+:who
+
+set fp=* Who am I?
+
+rem lu: May-31-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Computername: %computername%
+rem qq-1
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-6)
