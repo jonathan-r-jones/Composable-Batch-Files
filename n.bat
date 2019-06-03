@@ -7358,6 +7358,50 @@ exit/b
 
 ::_
 
+:clip
+
+:shot
+
+:snap
+
+:snip
+
+:snto
+
+set fp=* Snipping tool.
+
+rem lu: Feb-4-2019
+
+rem clip, screen shot: skw
+
+echo.
+echo %fp%
+
+set cbf_application=%windir%\system32\SnippingTool.exe
+
+exit/b
+
+
+
+::_
+
+:scsh
+
+set fp=* Screen shots folder. To get a screen shot into this folder, click windows key + print screen.
+
+rem lu: Jun-3-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\Pictures\Screenshots
+
+exit/b
+
+
+
+::_
+
 :copa
 
 set fp=* Control panel.
@@ -7433,33 +7477,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\demo.pptx
-
-exit/b
-
-
-
-::_
-
-:clip
-
-:shot
-
-:snap
-
-:snip
-
-:snto
-
-set fp=* Snipping tool.
-
-rem lu: Feb-4-2019
-
-rem clip, screen shot: skw
-
-echo.
-echo %fp%
-
-set cbf_application=%windir%\system32\SnippingTool.exe
 
 exit/b
 
@@ -8849,23 +8866,6 @@ exit/b
 
 :_
 
-:scsh
-
-set fp=* Screen shots folder.
-
-rem lu: May-20-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\Pictures\Screenshots
-
-exit/b
-
-
-
-:_
-
 :bs
 
 :bu
@@ -9380,6 +9380,23 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkinsfile
+
+exit/b
+
+
+
+::_
+
+:jt
+
+set fp=* Jenkinsfile tester.
+
+rem lu: Jun-2-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\jenkinsfile_tester
 
 exit/b
 

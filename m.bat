@@ -4203,6 +4203,24 @@ exit/b 0
 
 ::_
 
+:ngb
+
+set fp=* Build angular.
+
+rem lu: Mar-19-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build
+
+exit/b
+
+
+
+::_
+
 :ng
 
 set fp=* Complie and start Angular.
@@ -4214,24 +4232,6 @@ echo %fp%
 
 echo.
 ng serve
-
-exit/b
-
-
-
-::_
-
-:ngp
-
-set fp=* Complie and start Angular for production.
-
-rem lu: Feb-12-2019
-
-echo.
-echo %fp%
-
-echo.
-ng build --prod
 
 exit/b
 
@@ -4261,17 +4261,17 @@ exit/b
 
 ::_
 
-:ngb
+:ngp
 
-set fp=* Build angular.
+set fp=* Complie and start Angular for production.
 
-rem lu: Mar-19-2019
+rem lu: Feb-12-2019
 
 echo.
 echo %fp%
 
 echo.
-ng build
+ng build --prod
 
 exit/b
 

@@ -140,6 +140,7 @@ echo %fp%
 
 echo.
 knife bootstrap --yes 10.0.2.20 -N chefclientone.natnetwork.home -x parxxx -P BaadaBxxx --json-attribut-file ./env.json --sudo -r 'recipe[Tomcat-ActiveMQ]'
+rem qjq-1
 
 rem 10.0.2.20: IP Address of the client
 rem chefclientone.natnetwork.home: domain name from which it is identified
