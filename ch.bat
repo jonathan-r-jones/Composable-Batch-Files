@@ -127,33 +127,6 @@ exit/b
 
 :_
 
-:knparg
-
-:parg
-
-set fp=* Pargat's converge line.
-
-rem lu: Mar-7-2019
-
-echo.
-echo %fp%
-
-echo.
-knife bootstrap --yes 10.0.2.20 -N chefclientone.natnetwork.home -x parxxx -P BaadaBxxx --json-attribute-file ./env.json --sudo -r 'recipe[Tomcat-ActiveMQ]'
-rem qq-1
-
-rem 10.0.2.20: IP Address of the client
-rem chefclientone.natnetwork.home: domain name from which it is identified
-rem parxxx: username
-rem BaadaBxxx: password
-rem 'recipe[Tomcat-ActiveMQ]': a cookbook or a role
-
-exit/b
-
-
-
-:_
-
 :knssl
 
 :ssl
@@ -628,6 +601,26 @@ if %errorlevel% == 1 (
 
 echo.
 kitchen converge centos-7 --no-color
+
+exit/b
+
+
+
+:_
+
+:krl
+
+set fp=* Knife recipe list.
+
+rem lu: Jun-4-2019
+
+rem This worked on Jun-4-2019.
+
+echo.
+echo %fp%
+
+echo.
+knife recipe list
 
 exit/b
 
