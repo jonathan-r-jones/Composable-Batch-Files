@@ -2722,7 +2722,7 @@ exit/b
 
 :delbj
 
-set fp=* Delete jj_devops branch.
+set fp=* Delete jj_devops branch. (skw delete branch jj)
 
 echo.
 echo %fp%
