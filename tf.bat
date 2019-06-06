@@ -85,24 +85,6 @@ exit/b
 
 :_
 
-:init
-
-set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from Hashicorp.
-
-rem lu: Oct-29-2018
-
-echo.
-echo %fp%
-
-echo.
-terraform init -no-color
-
-exit/b
-
-
-
-:_
-
 :plan_chapter_2
 
 set fp=* This execution plan can be reviewed prior to running apply to get a sense for what ^
@@ -383,7 +365,7 @@ exit/b
 
 :plan
 
-set fp=* Plan.
+set fp=* Plan. This workd from the "dv" folder.
 
 rem lu: May-24-2019
 
@@ -414,7 +396,7 @@ exit/b
 
 :apply
 
-set fp=* Apply.
+set fp=* Apply. This workd from the "dv" folder.
 
 rem lu: May-24-2019
 
@@ -431,7 +413,24 @@ echo.
 rem terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
 rem terraform apply -var "private_key_path=%pem_path%" -no-color -auto-approve
 terraform apply -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
-rem qq-1
+
+exit/b
+
+
+
+:_
+
+:init
+
+set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from Hashicorp. This workd from the "dv" folder.
+
+rem lu: Oct-29-2018
+
+echo.
+echo %fp%
+
+echo.
+terraform init -no-color
 
 exit/b
 
