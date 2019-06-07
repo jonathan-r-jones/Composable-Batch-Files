@@ -3830,144 +3830,6 @@ exit/b
 
 
 
-:_+ Common Instance Operations
-
-
-
-::_
-
-:si
-
-:star
-
-:start
-
-:start_instance
-
-:start_instances
-
-set fp=* Start my instance from the command line.
-
-rem lu: Mar-18-2019
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo Percent 2, the instance alias, is a required field.
-  exit/b
-)
-
-call n %2
-
-echo.
-call aws ec2 start-instances --instance-ids %cbf_instance_id%
-                                       
-exit/b
-
-
-
-::_
-
-:stop
-
-set fp=* Stop an instance.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-set cbf_instance_id=
-
-if "%~2" == "" (
-  echo.
-  echo You must specify and instance alias.
-  exit/b
-)
-
-call n %2
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Alias "%2" not found.
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * Instance ID cannot be blank.
-  exit/b
-)
-
-aws ec2 stop-instances --instance-ids %cbf_instance_id%
-
-exit/b
-
-
-
-::_
-
-:di
-
-:din
-
-:d_i
-
-:d_in
-
-:d_inst
-
-set fp=* Describe a particular instance.
-
-rem lu: Feb-22-2019
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo You must specify and instance alias.
-  exit/b
-)
-
-call n %2
-
-echo.
-call aws ec2 describe-instances --instance-ids %cbf_instance_id%
-                                       
-exit/b
-
-
-
-::_
-
-:stat
-
-set fp=* Describe status for a particular instance.
-
-rem lu: Mar-8-2019
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo You must specify and instance alias.
-  exit/b
-)
-
-call n %2
-
-echo.
-aws ec2 describe-instance-status --instance-ids %cbf_instance_id%
-
-exit/b
-
-
-
 :_
 
 :delete_instance
@@ -4482,6 +4344,170 @@ echo.
 "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%cbf_public_dns%
 rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" root@ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
 rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
+
+exit/b
+
+
+
+:_+ Common Instance Operations
+
+
+
+::_
+
+:si
+
+:star
+
+:start
+
+:start_instance
+
+:start_instances
+
+set fp=* Start instance "%2".
+
+rem lu: Mar-18-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo Percent 2, the instance alias, is a required field.
+  exit/b
+)
+
+call n %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%2" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Instance ID cannot be blank.
+  exit/b
+)
+
+echo.
+call aws ec2 start-instances --instance-ids %cbf_instance_id%
+                                       
+exit/b
+
+
+
+::_
+
+:stop
+
+set fp=* Stop instance "%2".
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+set cbf_instance_id=
+
+if "%~2" == "" (
+  echo.
+  echo You must specify and instance alias.
+  exit/b
+)
+
+call n %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%2" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Instance ID cannot be blank.
+  exit/b
+)
+
+aws ec2 stop-instances --instance-ids %cbf_instance_id%
+
+exit/b
+
+
+
+::_
+
+:di
+
+:din
+
+:d_i
+
+:d_in
+
+:d_inst
+
+set fp=* Describe a particular instance.
+
+rem lu: Feb-22-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo You must specify and instance alias.
+  exit/b
+)
+
+call n %2
+
+echo.
+call aws ec2 describe-instances --instance-ids %cbf_instance_id%
+                                       
+exit/b
+
+
+
+::_
+
+:stat
+
+set fp=* Describe status for instance '%2".
+
+rem lu: Mar-8-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo You must specify and instance alias.
+  exit/b
+)
+
+call n %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%2" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Instance ID cannot be blank.
+  exit/b
+)
+
+echo.
+aws ec2 describe-instance-status --instance-ids %cbf_instance_id%
 
 exit/b
 

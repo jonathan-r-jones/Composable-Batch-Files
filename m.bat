@@ -4373,8 +4373,9 @@ set filename_6=%composable_batch_files%\n.bat
 set filename_7=%composable_batch_files%\ch.bat
 set filename_8=%composable_batch_files%\v.bat
 set filename_9=%share-zone%\mtw.asc
+set filename_10=%share-zone%\k.bat
 
-start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%" "%filename_6%" "%filename_7%" "%filename_8%" "%filename_9%"
+start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%" "%filename_6%" "%filename_7%" "%filename_8%" "%filename_9%" "%filename_10%"
 
 exit/b
 

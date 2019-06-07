@@ -626,4 +626,22 @@ exit/b
 
 
 
+:_
+
+:shro
+
+set fp=* Show role information.
+
+rem lu: Jun-7-2019
+
+echo.
+echo %fp%
+
+echo.
+knife role show cart_api_and_ui_only
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
