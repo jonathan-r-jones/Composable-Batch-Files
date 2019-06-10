@@ -147,6 +147,7 @@ call %0 move_podcasts_to_the_staging_folder
 rem Run the tag program.
 call x tag
 
+echo.
 pause
 
 call %0 move_old_clipjam_files
