@@ -47,11 +47,11 @@ if not "%machinename%"=="gfe" (
   call 8
 )
 
-call cypn mecfg_s mecfg
-
 call pl cbf
 
 call pl s
+
+call cypn mecfg_s mecfg
 
 call ss %0
 
