@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* K caller for direct server connections.
+set filep=* K caller for direct server connections to servers that have the zs_ci_user.
 
 echo.
 echo %filep%
@@ -50,7 +50,7 @@ exit/b
 
 rem lu: 
 
-call k k %1
+call k cci %1
 
 exit/b
 

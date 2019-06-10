@@ -4314,179 +4314,6 @@ exit
 
 
 
-:_+ Multi-Edit Packs
-
-
-
-::_
-
-:a
-
-set fp=* Open Affinity files router.
-
-rem lu: May-14-2019
-
-echo %computername% | find /i "lipt">nul
-
-if %errorlevel% == 0 (
-   rem echo * Computer name contains "lipt".
-   rem echo.
-   call %0 gfe
-   exit/b
-)
-
-call :aff
-
-exit/b
-
-
-
-::_
-
-:gfe
-
-set fp=* Open gfe files.
-
-rem lu: Apr-15-2019
-
-echo.
-echo %fp%
-
-call fn gfe>nul
-
-set filename_1=%cbf_filename%
-
-call fn ccf>nul
-
-set filename_2=%cbf_filename%
-
-call fn i2>nul
-
-set filename_3=%cbf_filename%
-
-set filename_4=%composable_batch_files%\m.bat
-
-call fn ni>nul
-
-set filename_5=%cbf_filename%
-set filename_6=%composable_batch_files%\n.bat
-set filename_7=%composable_batch_files%\ch.bat
-set filename_8=%composable_batch_files%\v.bat
-set filename_9=%share-zone%\mtw.asc
-set filename_10=%share-zone%\k.bat
-
-start mew32 "%filename_1%" "%filename_2%" "%filename_3%" "%filename_4%" "%filename_5%" "%filename_6%" "%filename_7%" "%filename_8%" "%filename_9%" "%filename_10%"
-
-exit/b
-
-
-
-::_
-
-:aff
-
-:affi
-
-:inot
-
-set fp=* Open affinity files.
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc" "%composable_batch_files%\n.bat"
-
-exit/b
-
-
-
-::_
-
-:affc
-
-set fp=* Open affinity files and close the DOS window.
-
-rem lu: Jan-23-2019
-
-echo.
-echo %fp%
-
-call :aff
-
-exit
-
-
-
-::_
-
-:w
-
-:wait
-
-set fp=* Open "waiting" files.
-
-rem lu: Feb-27-2019
-
-echo.
-echo %fp%
-
-call fn machine-specific-file
-
-set first_filename=%cbf_filename%
-
-call fn ccf
-
-set second_filename=%cbf_filename%
-
-start mew32 "%first_filename%" "%second_filename%"
-
-exit/b
-
-
-
-::_
-
-:waitc
-
-set fp=* Wait and close.
-
-rem lu: Mar-18-2019
-
-echo.
-echo %fp%
-
-call %0 wait
-
-exit
-
-
-
-::_
-
-:specific_file_presence
-
-set fp=* Check the current folder for the presence of "%2".
-
-rem lu: Mar-28-2019
-
-echo.
-echo %fp%
-
-if not exist %2 (
-  echo. 
-  echo * Error: The file "%2" does NOT exist in the current folder.
-  exit/b 1
-) else (
-  echo. 
-  echo * Found it.
-)
-
-exit/b 0
-
-
-
 :_
 
 :show_ascii_art
@@ -4680,4 +4507,168 @@ exit/b
 
 
 
-:_ (!efm, !rfsp) (mov-6)
+:_+ Multi-Edit Packs
+
+
+
+::_
+
+:a
+
+set fp=* Open Affinity files router.
+
+rem lu: May-14-2019
+
+echo %computername% | find /i "lipt">nul
+
+if %errorlevel% == 0 (
+   rem echo * Computer name contains "lipt".
+   rem echo.
+   call %0 gfe
+   exit/b
+)
+
+call :aff
+
+exit/b
+
+
+
+::_
+
+:aff
+
+:affi
+
+:inot
+
+set fp=* Open affinity files.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc" "%composable_batch_files%\n.bat"
+
+exit/b
+
+
+
+::_
+
+:affc
+
+set fp=* Open affinity files and close the DOS window.
+
+rem lu: Jan-23-2019
+
+echo.
+echo %fp%
+
+call :aff
+
+exit
+
+
+
+::_
+
+:w
+
+:wait
+
+set fp=* Open "waiting" files.
+
+rem lu: Feb-27-2019
+
+echo.
+echo %fp%
+
+call fn machine-specific-file
+
+set first_filename=%cbf_filename%
+
+call fn ccf
+
+set second_filename=%cbf_filename%
+
+start mew32 "%first_filename%" "%second_filename%"
+
+exit/b
+
+
+
+::_
+
+:waitc
+
+set fp=* Wait and close.
+
+rem lu: Mar-18-2019
+
+echo.
+echo %fp%
+
+call %0 wait
+
+exit
+
+
+
+::_
+
+:specific_file_presence
+
+set fp=* Check the current folder for the presence of "%2".
+
+rem lu: Mar-28-2019
+
+echo.
+echo %fp%
+
+if not exist %2 (
+  echo. 
+  echo * Error: The file "%2" does NOT exist in the current folder.
+  exit/b 1
+) else (
+  echo. 
+  echo * Found it.
+)
+
+exit/b 0
+
+
+
+::_
+
+:gfe
+
+set fp=* Open gfe files.
+
+rem lu: Apr-15-2019
+
+echo.
+echo %fp%
+
+set cbf_filename_list=
+
+set cbf_filename_list="%share-zone%\gfe.asc"
+
+set cbf_filename_list=%cbf_filename_list% "%share-zone%\copy of cc.asc"
+set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\ch.bat"
+set cbf_filename_list=%cbf_filename_list% "%share-zone%\i2.asc"
+set cbf_filename_list=%cbf_filename_list% "%share-zone%\k.bat"
+set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\m.bat"
+set cbf_filename_list=%cbf_filename_list% "%share-zone%\mtw.asc"
+set cbf_filename_list=%cbf_filename_list% "%share-zone%\ni.bat"
+set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\n.bat"
+set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\v.bat"
+
+start mew32 %cbf_filename_list%
+
+exit/b
+
+
+
+:_ (!efm, !rfsp) (mov-9)
