@@ -372,6 +372,10 @@ rem lu: May-24-2019
 echo.
 echo %fp%
 
+call td ci
+
+cd dv
+
 call %0 check_tf_existence
 
 if %errorlevel% == 1 (
@@ -403,6 +407,10 @@ rem lu: May-24-2019
 echo.
 echo %fp%
 
+call td ci
+
+cd dv
+
 call %0 check_tf_existence
 
 if %errorlevel% == 1 (
@@ -428,6 +436,16 @@ rem lu: Oct-29-2018
 
 echo.
 echo %fp%
+
+call td ci
+
+cd dv
+
+rem app-ec2
+
+rem It seems like if you want a new instance, you should run from the "dv" folder and enter 
+rem "no" when asked about copying state. If you want to modify an existing instance, run
+rem the init command from the "app-ec2" folder.
 
 echo.
 terraform init -no-color

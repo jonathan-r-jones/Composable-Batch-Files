@@ -4467,6 +4467,19 @@ if "%~2" == "" (
 
 call n %2
 
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%2" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Instance ID cannot be blank.
+  exit/b
+)
+
 echo.
 call aws ec2 describe-instances --instance-ids %cbf_instance_id%
                                        
