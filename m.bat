@@ -4686,6 +4686,8 @@ echo %fp%
 
 call cypn mecfg mecfg_s
 
+call p s
+
 exit/b
 
 
