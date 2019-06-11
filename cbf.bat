@@ -123,6 +123,7 @@ echo     r  Run application using CBF variables
 echo   rzr  Multi-Edit abstraction layer for running CBF files
 echo  rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo     s  Check git status remotely, has TD parameter
+echo sv_as  Use filename alias to "save as" a file in the current folder.
 echo  scpp  Secure Copy Protocol
 echo    se  Internet search helper
 echo    ss  Super status, that is status for all selected repositories

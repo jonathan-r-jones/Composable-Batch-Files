@@ -9369,6 +9369,23 @@ exit/b
 
 ::_
 
+:jf
+
+set fp=* Jenkinsfile folder.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\jenkinsfiles
+
+exit/b
+
+
+
+::_
+
 :arc
 
 :ckje
@@ -9380,7 +9397,7 @@ rem lu: Mar-11-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\Jenkinsfile_Code_Keepers
+set cbf_filename=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
 
 exit/b
 
@@ -9399,7 +9416,7 @@ rem lu: May-16-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\jenkinsfile
+set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_backup
 
 exit/b
 
@@ -9416,7 +9433,7 @@ rem lu: Jun-2-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\jenkinsfile_tester
+set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_tester
 
 exit/b
 
@@ -9440,25 +9457,6 @@ rem If you delete things from here, Jenkins may reset things.
 set cbf_path=%userprofile%\.jenkins
 
 set cbf_url=https://jenkins.io
-
-exit/b
-
-
-
-::_
-
-:jf
-
-set fp=* Develop branch Jenkinsfile.
-
-rem lu: Jan-15-2019
-
-echo.
-echo %fp%
-
-call %0 dev
-
-set cbf_filename=%cbf_repo%\cart\api\jenkinsfile
 
 exit/b
 

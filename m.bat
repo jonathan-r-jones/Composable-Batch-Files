@@ -3834,6 +3834,8 @@ exit/b
 
 :assoc_pf
 
+:assoc_p_fn
+
 :associate_cbf_parameter_to_cbf_filename
 
 set fp=* Associate cbf_parameter to cbf_filename.
