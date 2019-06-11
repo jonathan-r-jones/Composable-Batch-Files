@@ -4715,6 +4715,8 @@ rem lu: Jun-11-2019
 echo.
 echo %fp%
 
+call pl s
+
 call cypn mecfg_s mecfg
 
 exit/b
