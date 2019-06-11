@@ -3079,4 +3079,80 @@ exit/b
 
 
 
+:_+
+
+
+
+::_
+
+:tag
+
+set fp=* List tags.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+echo.
+git tag
+
+exit/b
+
+
+
+::_
+
+:taga
+
+set fp=* Add tag.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+echo.
+git tag -a v0.1 -m "my version 0.1"
+
+exit/b
+
+
+
+::_
+
+:tagd
+
+set fp=* Delete tag.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+echo.
+git tag -d list
+
+exit/b
+
+
+
+::_
+
+:tagp
+
+set fp=* Push tag.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+echo.
+git push origin v0.1
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
