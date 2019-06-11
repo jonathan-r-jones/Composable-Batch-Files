@@ -4681,6 +4681,8 @@ exit/b
 
 :cfg
 
+:p
+
 :push
 
 set fp=* Copy Multi-edit config files to share-zone.
@@ -4701,6 +4703,8 @@ exit/b
 ::_
 
 :cfgf
+
+:pl
 
 :pull
 
