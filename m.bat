@@ -4673,4 +4673,21 @@ exit/b
 
 
 
+:_
+
+:cfg
+
+set fp=* Copy Multi-edit config files to share-zone.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+call cypn mecfg mecfg_s
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-9)
