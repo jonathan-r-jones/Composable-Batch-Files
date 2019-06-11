@@ -9600,7 +9600,7 @@ echo.
 echo %fp%
 
 echo.
-cd..
+echo hi
 
 exit/b
 
