@@ -3805,52 +3805,6 @@ exit/b
 
 
 
-:_+ CBF Associations
-
-
-
-::_
-
-:assoc_fa
-
-:set_feta
-
-set fp=* Set cbf_filename equal to cbf_application.
-
-rem lu: Feb-4-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:apf
-
-:assoc_pf
-
-:assoc_p_fn
-
-:associate_cbf_parameter_to_cbf_filename
-
-set fp=* Associate cbf_parameter to cbf_filename.
-
-rem lu: Dec-19-2018
-
-echo.
-echo %fp%
-
-set cbf_parameter=%cbf_filename%
-
-exit/b
-
-
-
 :_+ Timer Script
 
 
@@ -4718,6 +4672,54 @@ echo %fp%
 call pl s
 
 call cypn mecfg_s mecfg
+
+exit/b
+
+
+
+:_+ CBF Associations
+
+
+
+::_
+
+:assoc_fa
+
+:set_feta
+
+:set_fn_eqt_app
+
+set fp=* Set cbf_filename equal to cbf_application.
+
+rem lu: Feb-4-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:apf
+
+:assoc_pf
+
+:assoc_p_fn
+
+:associate_cbf_parameter_to_cbf_filename
+
+set fp=* Associate cbf_parameter to cbf_filename.
+
+rem lu: Dec-19-2018
+
+echo.
+echo %fp%
+
+set cbf_parameter=%cbf_filename%
 
 exit/b
 

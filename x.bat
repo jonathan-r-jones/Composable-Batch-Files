@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Remote double-click equivalent way to run a file.
+set filep=* Remote double-click equivalent way to run an alias.
 
 
 
@@ -32,9 +32,22 @@ echo. %filep%
 echo.
 echo Usage: %0 [Parameter 1]
 
+rem User case: x rl
+rem User case: x cnn
+rem User case: x xc
+rem User case: x ex
+
 echo.
-echo Parameter 1: Nickname for file to double click. If you wish to "double click" a file in ^
-current folder, simply type the filename itself and hit enter.
+echo Parameter 1: Alias that you want to run or "double click" if you will.
+
+echo.
+echo Precedence of execution:
+echo.
+echo If filename isn't blank, execute it.
+echo If URL isn't blank, execute it.
+echo If application isn't blank, execute it.
+echo.
+echo If all of the above are blank, raise an error.
 
 exit/b
 
@@ -47,31 +60,34 @@ exit/b
 echo.
 echo %filep%
 
-set cbf_filename=
-
 set cbf_application=
+set cbf_filename=
+set cbf_url=
 
-if not "%~1" == "" call n %~1
+call n %~1
 
 if %errorlevel% == 1 (
   echo.
-  echo * There was an error executing the alias for "%~1".
+  echo * Error: Cannot find label "%~1".
   exit/b
 )
 
-if "%cbf_filename%" == "" (
-  call m set_feta 
+if not "%cbf_filename%" == "" (
+  if exist "%cbf_filename%" (
+    xfn %1>nul
+  )
 )
 
-if "%cbf_filename%" == "" (
-  echo.
-  echo * Nickname Error: There is no cbf_filename defined for '%~1'.
-  exit/b 1
+if not "%cbf_url%" == "" (
+  sf %1>nul
 )
 
-call m double_click
+if not "%cbf_application%" == "" (
+  xa %1>nul
+)
 
-call r
+echo.
+echo * Error: CBF parameters for filename, url and application are all blank.
 
 rem (!rfsp) (mov-2)
 

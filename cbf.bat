@@ -79,7 +79,6 @@ echo  depn  Delete folder corresponding to CBF path alias parameter
 echo    dn  Dot Net core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit
 echo    es  Edit settings file of an alias
-echo    ea  Application-centric way to run an application
 echo    eg  Edit a file by gluing a relative path onto a base path
 echo    ed  Edit a file abstraction layer
 echo   edx  Edit a file Emulated Surf
@@ -149,7 +148,9 @@ echo    ty  Type command to view nickname-specified file
 echo    un  URL nicknames dictionary layer of abstraction
 echo     v  Vetted functions (Useful for copying-and-pasting)
 echo    wp  Wordpad
-echo     x  Remote double-click equivalent way to run a file
+echo     x  Remote double-click equivalent way to run an alias
+echo    xa  Application-centric way to run an alias
+echo   xfn  Filename-centric way to run an alias
 
 exit/b
 

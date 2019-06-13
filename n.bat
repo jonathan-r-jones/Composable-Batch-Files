@@ -5421,6 +5421,10 @@ exit/b
 
 :sr31
 
+:563d
+
+:waas
+
 :pass-through
 
 :iac
@@ -8357,23 +8361,6 @@ exit/b
 
 :_
 
-:draw
-
-set fp=* Draw.io. A nice network diagram drawing tool.
-
-rem lu: Apr-26-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.draw.io/
-
-exit/b
-
-
-
-:_
-
 :dfw
 
 set fp=* Download for windows.
@@ -9536,6 +9523,50 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkins log.xlsx
+
+exit/b
+
+
+
+:_
+
+:draw
+
+:visi
+
+set fp=* Draw.io. A nice network diagram drawing tool that Adam used to create an ldd.
+
+rem A possible Visio substitute.
+
+rem lu: Apr-26-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.draw.io/
+
+exit/b
+
+
+
+:_
+
+:t2
+
+set fp=* Test 2
+
+rem lu: Jun-13-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=
 
 exit/b
 
