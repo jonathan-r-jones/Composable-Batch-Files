@@ -14,7 +14,7 @@ set filep=* Dir for current folder.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto d
+if "%~1" == "" goto do
 
 if "%~1" == "/?" goto help
 
@@ -243,6 +243,24 @@ echo %fp%
 echo.
 
 dir /o-d
+
+exit/b
+
+
+
+:_
+
+:do
+
+set fp=* Date, oldest first.
+
+rem lu: Apr-23-2019
+
+echo.
+echo %fp%
+echo.
+
+dir /od
 
 exit/b
 
