@@ -9594,14 +9594,14 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* 
 
-rem lu: May-20-2019
+rem lu: Jun-13-2019
 
 echo.
 echo %fp%
 
 echo.
-echo hi
 
+rem qq-1
 
 exit/b
 
