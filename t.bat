@@ -9589,22 +9589,3 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
-
-:
-
-set fp=* 
-
-rem lu: Jun-13-2019
-
-echo.
-echo %fp%
-
-echo.
-
-rem qq-1
-
-exit/b
-
-
-
-:_
