@@ -58,6 +58,7 @@ if %errorlevel% == 0 (
 call mx.bat %1
 
 if %errorlevel% == 1 (
+  rem call np %1 %2 %3
   call me %1 %2 %3
   call m clear_errorlevel_silently
   exit/b

@@ -3016,8 +3016,6 @@ exit/b
 
 :np
 
-:npp
-
 set fp=* Notepad++.
 
 rem lu: Mar-9-2018
@@ -5426,6 +5424,12 @@ exit/b
 :563d
 
 :waas
+
+:sr32
+
+:fqt3
+
+:fqt2
 
 :pass-through
 

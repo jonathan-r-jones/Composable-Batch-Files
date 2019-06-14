@@ -73,6 +73,8 @@ xcopy "%~1" "%cbf_path%"
 
 td %2
 
+call d a
+
 rem (!rfsp) (mov-2)
 
 exit/b
