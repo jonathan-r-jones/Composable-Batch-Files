@@ -3016,6 +3016,8 @@ exit/b
 
 :np
 
+:npp
+
 set fp=* Notepad++.
 
 rem lu: Mar-9-2018
