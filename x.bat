@@ -86,6 +86,12 @@ if not "%cbf_application%" == "" (
   xa %1>nul
 )
 
+if not "%cbf_path%" == "" (
+  if exist "%cbf_path%" (
+    td %1>nul
+  )
+)
+
 echo.
 echo * Error: CBF parameters for filename, url and application are all blank.
 

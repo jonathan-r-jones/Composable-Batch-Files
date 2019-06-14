@@ -4567,7 +4567,7 @@ rem lu: Sep-2-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\test2
+set cbf_path=%aa%
 
 exit/b
 
