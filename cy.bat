@@ -482,4 +482,39 @@ exit/b
 
 
 
+:_
+
+:sv_dr_to_local
+rem qq-1
+
+set fp=* Copy newer files from dropbox to my local drive.
+
+echo.
+echo %fp%
+
+echo.
+xcopy /d /h /r /s /y "%dropbox%\!savannah" "%savannah%"
+
+exit/b
+
+
+
+:_
+
+:cfg_dr_to_local
+
+set fp=* Copy Multi-Edit configuration files from dropbox to my local drive.
+
+set fp=* Now do vice versa.
+
+echo.
+echo %fp%
+
+echo.
+xcopy /d /h /r /s /y "%dropbox%\Multi-Edit_2008_Config_Files" "%Multi-Edit_2008_Config_Files%"
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-9)
