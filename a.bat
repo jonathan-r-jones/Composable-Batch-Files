@@ -4434,6 +4434,7 @@ if "%cbf_instance_id%" == "" (
   exit/b
 )
 
+echo.
 aws ec2 stop-instances --instance-ids %cbf_instance_id%
 
 exit/b

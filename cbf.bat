@@ -76,7 +76,7 @@ echo    dr  Dir remote searcher
 echo    dt  Dir with a td parameter
 echo    de  Delete
 echo  depn  Delete folder corresponding to CBF path alias parameter
-echo    dn  Dot Net core
+echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit
 echo    es  Edit settings file of an alias
 echo    eg  Edit a file by gluing a relative path onto a base path
