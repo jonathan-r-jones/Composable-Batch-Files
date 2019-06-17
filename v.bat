@@ -614,7 +614,7 @@ exit/b
 
 
 
-:_+ Line Continuation, Escape Characters and more.
+:_+ Line Continuation Characters, Escape Characters and more.
 
 
 
@@ -633,8 +633,8 @@ rem lu: Nov-2-2018
 echo %fp%
 
 echo.
-echo Four score and seven years ago our fathers brought forth on this continent a new nation, ^
-conceived in liberty and dedicated to the proposition that all men are created equal.
+echo Four score and seven years ago our fathers brought forth on this continent a new ^
+nation, conceived in liberty and dedicated to the proposition that all men are created equal.
 
 exit/b
 
@@ -763,10 +763,10 @@ exit/b
 %~z1        - expands %1 to size of file
 %~$PATH:1   - searches the directories listed in the PATH
                environment variable and expands %1 to the fully
-               qualified name of the first one found.  If the
+               qualified name of the first one found. If the
                environment variable name is not defined or the
                file is not found by the search, then this
-               modifier expands to the empty string    
+               modifier expands to the empty string
 
 %~dp1       - expands %1 to a drive letter and path only
 %~nx1       - expands %1 to a file name and extension only

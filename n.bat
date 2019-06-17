@@ -6,7 +6,8 @@
 
 :_
 
-set filep=* Nickname/alias dictionary that sets environment variables corresponding to a given unique nickname parameter.
+set filep=* Nickname/alias dictionary that sets environment variables corresponding to a ^
+given unique nickname parameter.
 
 rem global variable database
 
@@ -144,7 +145,8 @@ rem FCD: Apr-7-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\SystemWidget.js
+set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\^
+dashboard\SystemWidget.js
 
 exit/b
 
@@ -2819,7 +2821,7 @@ exit/b
 
 
 ::_
- 
+
 :res
        
 :fr_res
@@ -2840,7 +2842,7 @@ exit/b
 
 
 ::_
- 
+
 :fr_dr
                                            
 set fp=* Fresnel drawable images source.
