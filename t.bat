@@ -9589,3 +9589,26 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Test line continuation character.
+
+rem lu: Jun-17-2019
+
+echo.
+echo %fp%
+
+echo.
+set test=asdflasdff asdfasjklasdf asdflkasdfl  asdfasdfjklasdf asdfl asdf asdflasdfjklasdfl^
+abcdefzzz
+
+echo.
+echo %test%
+rem qq-1
+
+exit/b
+
+
+
+:_
