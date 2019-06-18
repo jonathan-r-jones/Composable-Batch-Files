@@ -3985,8 +3985,6 @@ rem lu: Jan-10-2019
 echo.
 echo %fp%
 
-call e j
-
 call e acr
 
 call e ant
