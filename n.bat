@@ -37,6 +37,9 @@ goto %1
 
 :help
 
+
+:test
+
 echo.
 echo %filep%
 
