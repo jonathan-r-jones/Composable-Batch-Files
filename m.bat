@@ -4177,7 +4177,7 @@ exit/b
 
 :ng
 
-set fp=* Complie and start Angular.
+set fp=* Compile and start Angular.
 
 rem lu: Feb-11-2019
 

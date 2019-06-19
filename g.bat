@@ -1,4 +1,4 @@
-:_ (!g)
+:_ (!gbat)
 
 @echo off
 
@@ -2480,261 +2480,6 @@ exit/b
 
 
 
-:_+ Branch Operations
-
-
-
-::_
-
-:seeb
-
-set fp=* See all branches.
-
-rem lu: Mar-20-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch -a
-
-exit/b
-
-
-
-::_
-
-:creb
-
-set fp=* Create test branch in for-git-testing.
-
-rem lu: Mar-15-2019
-
-rem I stopped working on this because GitHub was slow. I would like to get this working.
-
-echo.
-echo %fp%
-
-call td fgt
-
-echo.
-git branch exp_Mar_20_2 master
-
-exit/b
-
-
-
-::_
-
-:cbm
-
-set fp=* Create branch based on master.
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b %1 master
-
-exit/b
-
-
-
-::_
-
-:cbd
-
-:create_branch_based_on_develop
-
-set fp=* Create branch based on develop.
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b %2 develop
-
-exit/b
-
-
-
-::_
-
-:new_fgt
-
-set fp=* How to start a fresh fgt.
-
-rem lu: Mar-20-2019
-
-echo.
-echo %fp%
-
-set branch_name=Branch3
-
-call td j
-
-call m rd fgt2
-
-call g cn
-
-cd fgt2
-
-call %0 cbm %branch_name%
-
-calll %0 po %branch_name%
-
-cd fgt2
-
-call g status
-
-exit/b
-
-
-
-::_
-
-:new_jj_devops_branch
-
-set fp=* How to start a fresh jj_devops.
-
-rem lu: Mar-20-2019
-
-echo.
-echo %fp%
-
-rem Back up our jenkins file, if necessary.
-cyfn jj jb
-
-set branch_name=jj_devops
-
-call td j
-
-rem Remove local code.
-call m rd jj_devops
-
-rem Clone develop branch into jj_devops folder.
-call k cn_jj_devops_starter
-
-call td jj
-
-call %0 create_branch_based_on_develop %branch_name%
-
-rem Push to origin.
-call %0 push_origin %branch_name%
-
-call td jj
-
-call g status
-
-rem Restore your Jenkinsfile, if necessary.
-cyfn jb jj
-
-exit/b
-
-
-
-::_
-
-:po
-
-:push_origin
-
-set fp=* Push origin.
-
-echo.
-echo %fp%
-
-echo.
-
-git push --set-upstream origin %2
-
-exit/b
-
-
-
-::_
-
-:co_sf
-
-set fp=* Check out single file based on file's alias.
-
-rem lu: Mar-7-2019
-
-echo.
-echo %fp%
-  
-call n %2
-
-git checkout %cbf_filename%
-
-exit/b
-
-
-
-::_
-
-:lb
-
-set fp=* List all local and remote branches. (skw list branches)
-
-rem lu: May-7-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch -a
-
-exit/b
-
-
-
-::_
-
-:delb
-
-:debr
-
-set fp=* Delete branch. (!delb) (skw delete_branch)
-
-rem Outcome:
-
-rem This worked! Oct-13-2016
-rem This worked! Mar-8-2019
-
-rem Note: You must have already initialized the repository.
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 is a required field.
-  exit/b
-)
-git push origin --delete %2
-
-exit/b
-
-
-
-::_
-
-:delbj
-
-set fp=* Delete jj_devops branch. (skw delete branch jj)
-
-echo.
-echo %fp%
-
-call td cart
-
-git push origin --delete jj_devops
-
-exit/b
-
-
-
 :_
 
 :
@@ -3079,11 +2824,268 @@ exit/b
 
 
 
+:_+ Branch Operations
+
+
+
+::_
+
+:seeb
+
+set fp=* See all branches.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -a
+
+exit/b
+
+
+
+::_
+
+:creb
+
+set fp=* Create test branch in for-git-testing.
+
+rem lu: Mar-15-2019
+
+rem I stopped working on this because GitHub was slow. I would like to get this working.
+
+echo.
+echo %fp%
+
+call td fgt
+
+echo.
+git branch exp_Mar_20_2 master
+
+exit/b
+
+
+
+::_
+
+:cbm
+
+set fp=* Create branch based on master.
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b %1 master
+
+exit/b
+
+
+
+::_
+
+:cbd
+
+:create_branch_based_on_develop
+
+set fp=* Create branch based on develop.
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b %2 develop
+
+exit/b
+
+
+
+::_
+
+:new_fgt
+
+set fp=* How to start a fresh fgt.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+set branch_name=Branch3
+
+call td j
+
+call m rd fgt2
+
+call g cn
+
+cd fgt2
+
+call %0 cbm %branch_name%
+
+calll %0 po %branch_name%
+
+cd fgt2
+
+call g status
+
+exit/b
+
+
+
+::_
+
+:new_jj_devops_branch
+
+set fp=* How to start a fresh jj_devops.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+rem Back up our jenkins file, if necessary.
+cyfn jj jb
+
+set branch_name=jj_devops
+
+call td j
+
+rem Remove local code.
+call m rd jj_devops
+
+rem Clone develop branch into jj_devops folder.
+call k cn_jj_devops_starter
+
+call td jj
+
+call %0 create_branch_based_on_develop %branch_name%
+
+rem Push to origin.
+call %0 push_origin %branch_name%
+
+call td jj
+
+call g status
+
+rem Restore your Jenkinsfile, if necessary.
+cyfn jb jj
+
+exit/b
+
+
+
+::_
+
+:po
+
+:push_origin
+
+set fp=* Push origin.
+
+echo.
+echo %fp%
+
+echo.
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:co_sf
+
+set fp=* Check out single file based on file's alias.
+
+rem lu: Mar-7-2019
+
+echo.
+echo %fp%
+  
+call n %2
+
+git checkout %cbf_filename%
+
+exit/b
+
+
+
+::_
+
+:lb
+
+set fp=* List all local and remote branches. (skw list branches)
+
+rem lu: May-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -a
+
+exit/b
+
+
+
+::_
+
+:delb
+
+:debr
+
+set fp=* Delete branch. (!delb) (skw delete_branch)
+
+rem Outcome:
+
+rem This worked! Oct-13-2016
+rem This worked! Mar-8-2019
+
+rem Note: You must have already initialized the repository.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field.
+  exit/b
+)
+git push origin --delete %2
+
+exit/b
+
+
+
+::_
+
+:delbj
+
+set fp=* Delete jj_devops branch. (skw delete branch jj)
+
+echo.
+echo %fp%
+
+call td cart
+
+git push origin --delete jj_devops
+
+exit/b
+
+
+
 :_+
 
 
 
 ::_
+
+:lt
 
 :tag
 
@@ -3103,6 +3105,8 @@ exit/b
 
 ::_
 
+:add_tag
+
 :taga
 
 set fp=* Add tag.
@@ -3112,8 +3116,8 @@ rem lu: Jun-11-2019
 echo.
 echo %fp%
 
-echo.
-git tag -a v0.1 -m "my version 0.1"
+rem git tag -a v1.4 -m "my version 1.4"
+git tag -a version_api_0.0.1-20190618.233310-466__ui_0.0.1-20190618.233316-112 -m "version message"
 
 exit/b
 
@@ -3139,6 +3143,8 @@ exit/b
 
 ::_
 
+:push_tag
+
 :tagp
 
 set fp=* Push tag.
@@ -3149,7 +3155,7 @@ echo.
 echo %fp%
 
 echo.
-git push origin v0.1
+git push origin
 
 exit/b
 
