@@ -5446,6 +5446,10 @@ exit/b
 
 :elms
 
+:sr33
+
+:mc3
+
 :pass-through
 
 :iac
@@ -8951,6 +8955,10 @@ exit/b
 
 ::_
 
+:jdk
+
+:jdkh
+
 :jh
 
 :jvh
@@ -8983,6 +8991,8 @@ exit/b
 :jvre
 
 set fp=* Java runtime path.
+
+rem According to Craig M., this should be %java_home%\jre.
 
 rem lu: Dec-6-2018
 

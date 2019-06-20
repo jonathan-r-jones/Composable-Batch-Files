@@ -91,10 +91,6 @@ exit/b
 
 :_
 
-
-
-:_
-
 :stat
 
 set fp=* Status.
@@ -372,6 +368,47 @@ echo %fp%
 
 echo.
 Pdev -Pno-liquibase clean bootrun
+
+exit/b
+
+
+
+:_
+
+:bapi
+
+set fp=* Daily build per Sean.
+
+rem lu: Jun-20-2019
+
+echo.
+echo %fp%
+
+call tdc cart
+
+call pl
+
+call %0 bj
+
+exit/b
+
+
+
+:_
+
+:bj
+
+set fp=* Bootjar command.
+
+rem This worked on Jun-20-2019 but only after I fix the PKIX issue.
+
+rem lu: Jun-20-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle -Pdev bootJar
 
 exit/b
 

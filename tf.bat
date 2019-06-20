@@ -361,39 +361,6 @@ exit/b
 
 ::_
 
-:p
-
-:plan
-
-set fp=* Plan. This workd from the "dv" folder.
-
-rem lu: May-24-2019
-
-echo.
-echo %fp%
-
-call td ci
-
-cd dv
-
-call %0 check_tf_existence
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-call n pems
-
-echo.
-rem terraform plan -var-file="variables.tf" -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
-terraform plan -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
-
-exit/b
-
-
-
-::_
-
 :a
 
 :appl
@@ -430,9 +397,10 @@ exit/b
 
 :init
 
-set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from Hashicorp. This workd from the "dv" folder.
+set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from ^
+Hashicorp. This worked from the "dv" folder.
 
-rem lu: Oct-29-2018
+rem lu: Jun-20-2019
 
 echo.
 echo %fp%
@@ -449,6 +417,39 @@ rem the init command from the "app-ec2" folder.
 
 echo.
 terraform init -no-color
+
+exit/b
+
+
+
+:_
+
+:p
+
+:plan
+
+set fp=* Plan. This workd from the "dv" folder.
+
+rem lu: May-24-2019
+
+echo.
+echo %fp%
+
+call td ci
+
+cd dv
+
+call %0 check_tf_existence
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call n pems
+
+echo.
+rem terraform plan -var-file="variables.tf" -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+terraform plan -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
 
 exit/b
 

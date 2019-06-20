@@ -41,22 +41,6 @@ exit/b
 
 :_
 
-:ver
-
-set fp=* Display Java version currently in use.
-
-echo.
-echo %fp%
-
-echo.
-java -version
-
-exit/b
-
-
-
-:_
-
 :iji
 
 set fp=* Investigate Java installation.
@@ -138,6 +122,32 @@ exit/b
 
 :_
 
+:jv
+
+set fp=* Which Java version is running on this machine?
+
+rem FCD: Mar-2-2017
+
+rem echo.
+rem echo %fp%
+echo.
+
+call c:\mercury\batch_files\update_java_timestamp.bat
+
+set /p timestamp=<%tmp%\java_timestamp.txt
+
+echo Java Version on %computername% on %timestamp%:
+
+echo.
+
+java -version
+
+exit/b
+
+
+
+:_
+
 :get_java_version
 
 set fp=* Get Java version.
@@ -164,24 +174,14 @@ exit/b
 
 :_
 
-:jv
+:ver
 
-set fp=* Which Java version is running on this machine?
-
-rem FCD: Mar-2-2017
-
-rem echo.
-rem echo %fp%
-echo.
-
-call c:\mercury\batch_files\update_java_timestamp.bat
-
-set /p timestamp=<%tmp%\java_timestamp.txt
-
-echo Java Version on %computername% on %timestamp%:
+set fp=* Display Java version currently in use.
 
 echo.
+echo %fp%
 
+echo.
 java -version
 
 exit/b

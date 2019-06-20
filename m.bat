@@ -4151,86 +4151,6 @@ exit/b 0
 
 
 
-:_+ Angular
-
-
-
-::_
-
-:ngb
-
-set fp=* Build angular.
-
-rem lu: Mar-19-2019
-
-echo.
-echo %fp%
-
-echo.
-ng build
-
-exit/b
-
-
-
-::_
-
-:ng
-
-set fp=* Compile and start Angular.
-
-rem lu: Feb-11-2019
-
-echo.
-echo %fp%
-
-echo.
-ng serve
-
-exit/b
-
-
-
-::_
-
-:port
-
-set fp=* Run the Admin Portal on localhost.
-
-rem lu: Feb-11-2019
-
-echo.
-echo %fp%
-
-call lh port
-
-call td port
-
-echo.
-ng serve
-
-exit/b
-
-
-
-::_
-
-:ngp
-
-set fp=* Complie and start Angular for production.
-
-rem lu: Feb-12-2019
-
-echo.
-echo %fp%
-
-echo.
-ng build --prod
-
-exit/b
-
-
-
 :_
 
 :n
@@ -4340,104 +4260,6 @@ echo %fp%
 echo.
 echo * The following line is 80 characters wide:
 echo 12345678 1 2345678 2 2345678 3 2345678 4 2345678 5 2345678 6 2345678 7 2345678 8
-
-exit/b
-
-
-
-:_
-
-:keyt
-
-set fp=* Run the JDK keytool utility program.
-
-rem lu: May-26-2019
-
-echo.
-echo %fp%
-
-echo.
-keytool -genkey -v -keystore dtg-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
-
-exit/b
-
-
-
-:_
-
-:keyt_May-27-2019
-
-set fp=* Run the JDK keytool utility program for the App2 solution.
-
-echo.
-echo %fp%
-
-echo.
-keytool -genkey -v -keystore app2-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
-
-exit/b
-
-
-
-:_
-
-:keyt_May-27-2019.5
-
-set fp=* Run the JDK keytool utility program for the App5 solution.
-
-echo.
-echo %fp%
-
-echo.
-keytool -genkey -v -keystore app5-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
-
-exit/b
-
-
-
-:_
-
-:keyt_May-27-2019.6b
-
-set fp=* Run the JDK keytool utility program for the App6 solution.
-
-echo.
-echo %fp%
-
-echo.
-keytool -genkey -v -keystore app6b-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
-
-exit/b
-
-
-
-:_
-
-:keyt_May-27-2019.6d
-
-set fp=* Run the JDK keytool utility program for the App6 solution.
-
-echo.
-echo %fp%
-
-echo.
-keytool -genkey -v -keystore app6d-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
-
-exit/b
-
-
-
-:_
-
-:keyt_May-27-2019.7
-
-set fp=* Run the JDK keytool utility program for the App6 solution.
-
-echo.
-echo %fp%
-
-echo.
-keytool -genkey -v -keystore app7-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 
 exit/b
 
@@ -4625,6 +4447,128 @@ exit/b
 
 
 
+:_+ Keytool
+
+
+
+::_
+
+:keyt
+
+set fp=* Run the JDK keytool utility program.
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore dtg-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+::_
+
+:keyt_May-27-2019
+
+set fp=* Run the JDK keytool utility program for the App2 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app2-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+::_
+
+:keyt_May-27-2019.5
+
+set fp=* Run the JDK keytool utility program for the App5 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app5-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+::_
+
+:keyt_May-27-2019.6b
+
+set fp=* Run the JDK keytool utility program for the App6 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app6b-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+::_
+
+:keyt_May-27-2019.6d
+
+set fp=* Run the JDK keytool utility program for the App6 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app6d-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+::_
+
+:keyt_May-27-2019.7
+
+set fp=* Run the JDK keytool utility program for the App6 solution.
+
+echo.
+echo %fp%
+
+echo.
+keytool -genkey -v -keystore app7-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+exit/b
+
+
+
+::_
+
+:kt
+
+set fp=* Add cert to cacerts file.
+
+rem lu: Jun-20-2019
+
+echo.
+echo %fp%
+
+call td s
+
+echo.
+keytool -import -alias example -keystore "C:\Program Files\Java\jdk1.8.0_191\jre\lib\security\cacerts" -file nexus.cer
+
+exit/b
+
+
+
 :_+ ME Config Operations
 
 
@@ -4718,6 +4662,151 @@ echo.
 echo %fp%
 
 set cbf_parameter=%cbf_filename%
+
+exit/b
+
+
+
+:_
+
+:smdi
+
+set fp=* Sean's manual deployment instructions.
+
+rem lu: Jun-20-2019
+
+echo.
+echo %fp%
+
+call tdc cart
+
+call pull
+
+call gr bj
+
+call td cart
+
+cd icecart-portal-client
+
+call ng_build
+
+cd dist
+
+rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist>
+
+call scp_ui sr33
+
+call scp_ui sr31
+
+call scp_ui_j sr5
+
+call scp_api sr33
+
+call scp_api sr31
+
+call scp_api_j sr5
+rem qq-1
+
+exit/b
+
+
+
+
+:_+ Angular
+
+
+
+::_
+
+:ngb
+
+:ng_build
+
+set fp=* Build angular.
+
+rem lu: Mar-19-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build
+
+exit/b
+
+
+
+::_
+
+:ngp
+
+set fp=* Complie and start Angular for production.
+
+rem lu: Feb-12-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build --prod
+
+exit/b
+
+
+
+::_
+
+:ngf
+
+set fp=* Build for FQT.
+
+rem lu: Jun-20-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build --fqt
+
+exit/b
+
+
+
+::_
+
+:ng
+
+set fp=* Compile and start Angular.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+echo.
+ng serve
+
+exit/b
+
+
+
+::_
+
+:port
+
+set fp=* Run the Admin Portal on localhost.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+call lh port
+
+call td port
+
+echo.
+ng serve
 
 exit/b
 
