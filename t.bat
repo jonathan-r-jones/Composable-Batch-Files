@@ -9580,16 +9580,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test line continuation character.
@@ -9605,6 +9595,37 @@ abcdefzzz
 
 echo.
 echo %test%
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:where
+
+set fp=* Go to the where location.
+
+rem lu: Jun-20-2019
+
+echo.
+echo %fp%
+
+echo.
+where>c:\a\j1.txt
+set /p test=<where
+set /p test=<where
+echo 'test:' %test%
 rem qq-1
 
 exit/b
