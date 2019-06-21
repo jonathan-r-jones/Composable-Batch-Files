@@ -9603,4 +9603,22 @@ exit/b
 
 
 
+:_
+
+:slac
+
+set fp=* Slack.
+
+rem lu: Jun-21-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://devtdp.slack.com/messages/CH0QQ9ZDK/
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames
