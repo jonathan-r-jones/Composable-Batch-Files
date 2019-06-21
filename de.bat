@@ -102,7 +102,7 @@ rem lu: Jan-2-2019
 echo.
 echo %fp%
 
-if exist *conflicted copy*.* del /s "*conflicted copy*.*"
+if exist "*conflicted copy*.*" del /s "*conflicted copy*.*"
 
 exit/b
 
