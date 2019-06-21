@@ -4710,6 +4710,8 @@ sudo rm -rf /var/www/html*
 
 rem ps -ef | grep java // get the pid and kill it using sudo kill -9 pid
 
+sudo kill -9 (!kill)
+
 sudo cp /tmp/cart-api-0.0.1-SNAPSHOT.jar .
 
 sudo unzip -o ./ui.zip -d /var/www/html/
@@ -4778,7 +4780,12 @@ echo.
 echo %fp%
 
 echo.
-ng build --fqt
+
+rem This is wrong.
+rem ng build --fqt
+
+ng build --configuration=fqt
+rem qq-1
 
 exit/b
 
