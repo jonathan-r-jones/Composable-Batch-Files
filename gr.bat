@@ -414,4 +414,24 @@ exit/b
 
 
 
+:_
+
+:ed
+
+set fp=* Edward's gradle.
+
+rem lu: Jun-21-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle -Plocal -Pno-liquibase clean bootrun
+
+rem I usually just run "clean ; ./gradlew &"
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

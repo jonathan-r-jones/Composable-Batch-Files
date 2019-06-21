@@ -4705,6 +4705,18 @@ call scp_api sr33
 call scp_api sr31
 
 call scp_api_j sr5
+
+sudo rm -rf /var/www/html*
+
+rem ps -ef | grep java // get the pid and kill it using sudo kill -9 pid
+
+sudo cp /tmp/cart-api-0.0.1-SNAPSHOT.jar .
+
+sudo unzip -o ./ui.zip -d /var/www/html/
+
+export SERVER_NODE=master
+
+sudo nohup ./cart-api-0.0.1-SNAPSHOT.jar &
 rem qq-1
 
 exit/b
