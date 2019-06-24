@@ -1072,7 +1072,7 @@ exit/b
 
 ::_
 
-:snp
+:st
 
 set fp=* Stash and pop.
 

@@ -37,9 +37,6 @@ goto %1
 
 :help
 
-
-:test
-
 echo.
 echo %filep%
 
@@ -3286,33 +3283,6 @@ echo %fp%
 set cbf_path=%cbf_repo%\Beyond-Basics
 
 set cbf_url=
-
-exit/b
-
-c:\aa\Repositories\Beyond-Basics\1-xamarin-forms-moving-beyond-basics-m1-exercise-files\demos\1-tableview\Foodie.sln
-c:\aa\Repositories\Beyond-Basics\1-xamarin-forms-moving-beyond-basics-m1-exercise-files\demos\2-custom-cells\Foodie.sln
-c:\aa\Repositories\Beyond-Basics\1-xamarin-forms-moving-beyond-basics-m1-exercise-files\demos\3-behaviors\Foodie.sln
-c:\aa\Repositories\Beyond-Basics\1-xamarin-forms-moving-beyond-basics-m1-exercise-files\demos\4-triggers\Foodie.sln
-c:\aa\Repositories\Beyond-Basics\2-xamarin-forms-moving-beyond-basics-m2-exercise-files\1-listview-grouping\Foodie.sln
-
-
-:c:\aa\Repositories\Beyond-Basics\2-xamarin-forms-moving-beyond-basics-m2-exercise-files\2-grid-views\Foodie.sln
-
-:c:\aa\Repositories\Beyond-Basics\2-xamarin-forms-moving-beyond-basics-m2-exercise-files\3-value-converters\Foodie.sln
-
-:c:\aa\Repositories\Beyond-Basics\2-xamarin-forms-moving-beyond-basics-m2-exercise-files\4-template-selectors\Foodie.sln
-
-:c:\aa\Repositories\Beyond-Basics\3-xamarin-forms-moving-beyond-basics-m3-exercise-files\demos\1-styles\Foodie.sln
-
-:c:\aa\Repositories\Beyond-Basics\3-xamarin-forms-moving-beyond-basics-m3-exercise-files\demos\2-style-hierarchy\Foodie.sln
-
-:c:\aa\Repositories\Beyond-Basics\3-xamarin-forms-moving-beyond-basics-m3-exercise-files\demos\3-dynamic-styles\Foodie.sln
-
-:c:\aa\Repositories\Beyond-Basics\4-xamarin-forms-moving-beyond-basics-m4-exercise-files\demos\1-app-wide-colors\Foodie.sln
-
-:c:\aa\Repositories\Beyond-Basics\4-xamarin-forms-moving-beyond-basics-m4-exercise-files\demos\2-effects\Foodie.sln
-
-:c:\aa\Repositories\Beyond-Basics\4-xamarin-forms-moving-beyond-basics-m4-exercise-files\demos\3-native-binding\Foodie.sln
 
 exit/b
 
@@ -9614,8 +9584,8 @@ rem lu: Jun-21-2019
 echo.
 echo %fp%
 
-set cbf_url=https://devtdp.slack.com/messages/CH0QQ9ZDK/
-rem       qq-1
+set cbf_url=https://devtdp.slack.com/messages/CH0Q^
+Q9ZDK/
 
 exit/b
 
@@ -9633,7 +9603,6 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\!savannah\reach out
-rem       qq-1
 
 exit/b
 
