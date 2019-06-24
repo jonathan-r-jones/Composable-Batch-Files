@@ -4682,25 +4682,27 @@ call tdc cart
 
 call pull
 
-call gr bj
+call tdc cart
+
+call gr bootjar
 
 call td cart
 
 cd icecart-portal-client
 
-call ng_build
+call m rd dist
+
+call m ng_fqt
 
 cd dist
 
 rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist>
 
-call scp_ui sr33
+call k scp_ui sr33
 
-call scp_ui sr31
+call k scp_api sr33
 
 call scp_ui_j sr5
-
-call scp_api sr33
 
 call scp_api sr31
 
@@ -4708,18 +4710,30 @@ call scp_api_j sr5
 
 sudo rm -rf /var/www/html*
 
+cd /var/www
+
+sudo mkdir html
+
 rem ps -ef | grep java // get the pid and kill it using sudo kill -9 pid
 
 sudo kill -9 (!kill)
 
+cd
+
+cd /opt/cart
+
 sudo cp /tmp/cart-api-0.0.1-SNAPSHOT.jar .
+
+sudo cp /tmp/ui.zip .
 
 sudo unzip -o ./ui.zip -d /var/www/html/
 
+rem From the /opt/cart folder?:
 export SERVER_NODE=master
 
 sudo nohup ./cart-api-0.0.1-SNAPSHOT.jar &
 rem qq-1
+
 
 exit/b
 
@@ -4772,6 +4786,8 @@ exit/b
 
 :ngf
 
+:ng_fqt
+
 set fp=* Build for FQT.
 
 rem lu: Jun-20-2019
@@ -4785,7 +4801,6 @@ rem This is wrong.
 rem ng build --fqt
 
 ng build --configuration=fqt
-rem qq-1
 
 exit/b
 

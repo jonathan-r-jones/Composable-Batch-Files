@@ -398,6 +398,8 @@ exit/b
 
 :bj
 
+:bootjar
+
 set fp=* Bootjar command.
 
 rem This worked on Jun-20-2019 but only after I fix the PKIX issue.
