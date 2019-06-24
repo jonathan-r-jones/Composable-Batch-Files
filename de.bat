@@ -95,6 +95,8 @@ exit/b
 
 :concop
 
+:cc
+
 set fp=* Delete conflicted copies created by DropBox.
 
 rem lu: Jan-2-2019

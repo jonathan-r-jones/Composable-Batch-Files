@@ -9602,7 +9602,7 @@ rem lu: Jun-23-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\!savannah\reach out
+set cbf_path=%dropbox%\!savannah
 
 exit/b
 
