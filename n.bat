@@ -9621,4 +9621,22 @@ exit/b
 
 
 
+:_
+
+:drsv
+
+set fp=* Dropbox savannah.
+
+rem lu: Jun-23-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\!savannah\reach out
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames
