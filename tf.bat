@@ -428,7 +428,7 @@ exit/b
 
 :plan
 
-set fp=* Plan. This workd from the "dv" folder.
+set fp=* Plan. This worked from the "dv" folder.
 
 rem lu: May-24-2019
 

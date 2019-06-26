@@ -78,6 +78,7 @@ echo    de  Delete
 echo  depn  Delete folder corresponding to CBF path alias parameter
 echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit
+echo    el  Edit log file of an alias
 echo    es  Edit settings file of an alias
 echo    eg  Edit a file by gluing a relative path onto a base path
 echo    ed  Edit a file abstraction layer

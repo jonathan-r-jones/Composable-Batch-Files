@@ -5420,6 +5420,12 @@ exit/b
 
 :mc3
 
+:cainm
+
+:sr34
+
+:sr35
+
 :pass-through
 
 :iac
@@ -7932,6 +7938,23 @@ echo %fp%
 set cbf_filename=c:\a\j1.txt
 
 rem set cbf_url=%cbf_filename%
+
+exit/b
+
+
+
+::_
+
+:shl
+
+set fp=* sh.log
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+
+set cbf_log_file=c:\a\sh.log
 
 exit/b
 
