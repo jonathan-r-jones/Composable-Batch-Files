@@ -4732,8 +4732,6 @@ rem From the /opt/cart folder?:
 export SERVER_NODE=master
 
 sudo nohup ./cart-api-0.0.1-SNAPSHOT.jar &
-rem qq-1
-
 
 exit/b
 
