@@ -7495,7 +7495,7 @@ exit/b
 
 ::_
 
-:zoom
+:zoomit
 
 set fp=* ZoomIt
 
@@ -9645,6 +9645,30 @@ echo.
 echo %fp%
 
 set cbf_url=https://www.qrstuff.com/
+
+exit/b
+
+
+
+:_
+
+:zoom
+
+set fp=* Zoom, the presenter software.
+
+rem lu: Jun-27-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=
+rem       qq-1
 
 exit/b
 
