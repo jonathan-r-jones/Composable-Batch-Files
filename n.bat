@@ -9692,4 +9692,38 @@ exit/b
 
 
 
+:_
+
+:hldd
+
+set fp=* H Drive Logical Design Diagram.
+
+rem lu: Jun-27-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=h:\CART Logical Design Diagram.vsdx
+
+exit/b
+
+
+
+:_
+
+:sldd
+
+set fp=* Share-zone Drive Logical Design Diagram.
+
+rem lu: Jun-27-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Logical Design Diagram\CART Logical Design Diagram.vsdx
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames
