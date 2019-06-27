@@ -9362,6 +9362,8 @@ exit/b
 
 :app9
 
+:app10
+
 set fp=* App Center Demo test apps.
 
 rem lu: May-27-2019
@@ -9626,6 +9628,23 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\!savannah
+
+exit/b
+
+
+
+:_
+
+:qr
+
+set fp=* QR Stuff.
+
+rem lu: Jun-27-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.qrstuff.com/
 
 exit/b
 
