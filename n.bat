@@ -5190,6 +5190,8 @@ exit/b
 
 :ldd
 
+:ldds
+
 :opt
 
 :optj
