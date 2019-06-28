@@ -9611,7 +9611,7 @@ rem lu: Jun-21-2019
 echo.
 echo %fp%
 
-set cbf_url=https://devtdp.slack.com/messages/CH0Q^
+set cbf_url=https://devtdp.slack.com
 Q9ZDK/
 
 exit/b
@@ -9879,6 +9879,29 @@ set cbf_filename=%share-zone%\mob.docx
 set cbf_path=%cbf_repo%\
 
 set cbf_url=
+
+exit/b
+
+
+
+:_
+
+:slac
+
+set fp=* Slack
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=https://dev-technology-coi.slack.com/messages/DFT8KBCEP/
 
 exit/b
 
