@@ -9261,6 +9261,8 @@ exit/b
 
 :_
 
+:bz
+
 :buzz
 
 set fp=* buzz
@@ -9611,7 +9613,7 @@ rem lu: Jun-21-2019
 echo.
 echo %fp%
 
-set cbf_url=https://devtdp.slack.com/messages/CH0Q^
+set cbf_url=https://devtdp.slack.com
 Q9ZDK/
 
 exit/b
@@ -9723,6 +9725,185 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\Logical Design Diagram\CART Logical Design Diagram.vsdx
+
+exit/b
+
+
+
+:_+ BDSO
+
+
+
+::_
+
+:bdg
+
+set fp=* BDSO-Gateway.
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_clone_url=https://github.com/DevTechnology/bdso-gateway.git
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\bdso-gateway
+
+set cbf_url=https://github.com/DevTechnology/bdso-gateway
+
+exit/b
+
+
+
+::_
+
+:bdm
+
+set fp=* BDSO-MSA.
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_clone_url=https://github.com/DevTechnology/BDSO-MSA.git
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\bdso-msa
+
+set cbf_url=https://github.com/DevTechnology/BDSO-MSA
+
+exit/b
+
+
+
+::_
+
+:bd15
+
+set fp=* BDSO-Gateway, issue 15 branch.
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_branch=issue15
+
+set cbf_path=%cbf_repo%\bdso-gateway-%cbf_branch%-branch
+
+rem **** Variables are alphabetized below here.
+
+set cbf_clone_url=https://github.com/DevTechnology/bdso-gateway.git
+
+set cbf_fc_path=%cbf_path%
+
+set cbf_filename=%cbf_path%\platform\ci\Jenkinsfile
+
+set cbf_jenkinsfile=%cbf_path%\platform\ci\Jenkinsfile
+
+set cbf_jenkins_url=
+
+set cbf_url=https://github.com/DevTechnology/bdso-gateway/tree/issue15
+
+exit/b
+
+
+
+::_
+
+:bdj
+
+set fp=* BDSO Jenkins instance.
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=http://35.168.72.223:9090/login?from=%2F
+
+exit/b
+
+
+
+::_
+
+:bds
+
+set fp=* BDSO SonarQube.
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=http://35.169.150.151:9000/dashboard?id=BioService
+
+exit/b
+
+
+
+:_
+
+:mobp
+
+set fp=* Mob programming doc.
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=%share-zone%\mob.docx
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=
+
+exit/b
+
+
+
+:_
+
+:slac
+
+set fp=* Slack
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=https://dev-technology-coi.slack.com/messages/DFT8KBCEP/
 
 exit/b
 
