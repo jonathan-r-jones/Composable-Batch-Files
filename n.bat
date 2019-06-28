@@ -9815,6 +9815,52 @@ exit/b
 
 
 
+::_
+
+:bdj
+
+set fp=* BDSO Jenkins instance.
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=http://35.168.72.223:9090/login?from=%2F
+
+exit/b
+
+
+
+::_
+
+:bds
+
+set fp=* BDSO SonarQube.
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=http://35.169.150.151:9000/dashboard?id=BioService
+
+exit/b
+
+
+
 :_
 
 :mobp
