@@ -9677,6 +9677,23 @@ exit/b
 
                    
                                                                                                             
+::_
+
+:daws
+
+set fp=* Dev Technology 
+
+rem lu: Jun-28-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://505626223329.signin.aws.amazon.com/console
+            
+exit/b
+
+
+
 :_
 
 :caco
