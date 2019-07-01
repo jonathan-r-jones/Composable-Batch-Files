@@ -516,4 +516,21 @@ exit/b
 
 
 
+:_
+
+:ldd
+
+set fp=* Copy LDD from H drive to Share-zone.
+
+rem lu: Jul-1-2019
+
+echo.
+echo %fp%
+
+call cyfn hldd ldd
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-9)

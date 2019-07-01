@@ -2294,6 +2294,23 @@ exit/b
 
 :_
 
+:h
+
+set fp=* H drive.
+
+rem lu: Jul-1-2019
+
+echo.
+echo %fp%
+
+set cbf_path=h:\
+
+exit/b
+
+
+
+:_
+
 :a2
 
 set fp=* A test folder.
@@ -5429,6 +5446,8 @@ exit/b
 :sr34
 
 :sr35
+
+:hldd
 
 :pass-through
 
@@ -9729,40 +9748,6 @@ echo %fp%
 call td 563c
 
 set cbf_filename=%cd%\api\src\main\java\gov\dhs\ice\cart\web\rest\CartController.java
-
-exit/b
-
-
-
-:_
-
-:hldd
-
-set fp=* H Drive Logical Design Diagram.
-
-rem lu: Jun-27-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=h:\CART Logical Design Diagram.vsdx
-
-exit/b
-
-
-
-:_
-
-:sldd
-
-set fp=* Share-zone Drive Logical Design Diagram.
-
-rem lu: Jun-27-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\Logical Design Diagram\CART Logical Design Diagram.vsdx
 
 exit/b
 

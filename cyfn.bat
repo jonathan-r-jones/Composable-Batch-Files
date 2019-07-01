@@ -8,6 +8,9 @@
 
 set filep=* Copy files from nickname parameter 1 to nickname parameter 2.
 
+echo.
+echo %filep%
+
 
 
 :_
@@ -25,9 +28,6 @@ goto main_function
 :_
 
 :help
-
-echo.
-echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -51,9 +51,6 @@ exit/b
 :_
 
 :main_function
-
-echo.
-echo Copy files from filename alias 1 (%1) to filename alias 2 (%2).
 
 call fn %1
 
