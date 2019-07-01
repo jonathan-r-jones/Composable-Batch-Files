@@ -6,15 +6,16 @@
 
 :_
 
-set filep=* Surf the internet.
+set filep=* Surf to GitHub websites.
+
+echo.
+echo %filep%
 
 
 
 :_
 
 set fp=* Route callers.
-
-if "%~1" == "" goto use_current_url
 
 if "%~1" == "/?" goto help
 
@@ -25,9 +26,6 @@ goto code_execution_area
 :_
 
 :help
-
-echo.
-echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -58,18 +56,10 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* Set URL.
 
-set cbf_application=
+set cbf_github_url=
 set cbf_url=
 
-call un %1 %2
-
-if "%cbf_url%" == "" (
-  echo.
-  echo * Nickname Error: There is no cbf_url defined for '%~1'. 
-  rem echo * Errorlevel: %errorlevel%.
-  call m clear_errorlevel_silently
-  exit/b
-)
+call n %1
 
 if %errorlevel% == 1 (
   rem This may never be called.
@@ -78,22 +68,15 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-set cbf_parameter=%cbf_url%
+if "%cbf_github_url%" == "" (
+  echo. 
+  echo * GitHub url not found, so defaulting to cbf_url.
+  set cbf_parameter=%cbf_url%
+) else (
+  set cbf_parameter=%cbf_github_url%
+)
 
 goto set_browser
-
-
-
-:_
-
-:use_current_url
-
-set fp=* Use current CBF_URL.
-
-echo.
-echo %fp%
-
-set cbf_parameter=%cbf_github_url%
 
 
 
@@ -144,8 +127,6 @@ set cbf_application=%cbf_specific_browser%
 :_
 
 :main_function
-
-set fp=* Surf the internet.
 
 rem lu: Jan-31-2018
 

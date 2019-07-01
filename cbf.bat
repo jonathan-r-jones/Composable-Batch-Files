@@ -82,7 +82,7 @@ echo    el  Edit log file of an alias
 echo    es  Edit settings file of an alias
 echo    eg  Edit a file by gluing a relative path onto a base path
 echo    ed  Edit a file abstraction layer
-echo   edx  Edit a file Emulated Surf
+echo   edx  Edit a file (Emulated Surf)
 echo    ex  Exit command window
 echo    fn  Filenames dictionary layer of abstraction
 echo    fs  Filenames search
@@ -131,6 +131,7 @@ echo   sln  Open a Visual Studio solution, has TD parameter
 echo    sh  SSH
 echo    sx  Use Sublime to edit a batch file in the CBF folder
 echo    sf  Surf to websites
+echo   sfg  Surf to GitHub websites
 echo    sm  Sublime
 echo    sp  Super push, i.e. push all selected repositories
 echo   spl  Super pull, i.e. pull all selected repositories
