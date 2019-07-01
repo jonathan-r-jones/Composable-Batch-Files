@@ -485,7 +485,6 @@ exit/b
 :_
 
 :sv_dr_to_local
-rem qq-1
 
 set fp=* Copy newer files from dropbox to my local drive.
 
