@@ -64,9 +64,9 @@ goto nongfe_path
 
 :gfe_path
 
-call g evaluate_folders_git_status cade
-
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+rem Disabled for now. Jul-1-2019
+rem call g evaluate_folders_git_status cade
+rem set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 goto community_path_resumed
 
