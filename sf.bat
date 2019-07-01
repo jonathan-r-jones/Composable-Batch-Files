@@ -35,6 +35,8 @@ echo Usage: %0 [space separated parameter(s)]
 echo.
 echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.
 
+rem sf -b (switch browser) -g (use cbf_google_url) -j (use cbf_jenkins_url)
+
 echo.
 echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
 
