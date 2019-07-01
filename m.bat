@@ -1404,10 +1404,6 @@ rem fcd: Dec-13-2018
 echo.
 echo %fp%
 
-rem Add a system environment variable for %composable_batch_files%.
-
-rem Add a path entry for %composable_batch_files%.
-
 call %0 initialize_default_browser
 
 call %0 initialize_default_repository_folder
@@ -1560,6 +1556,7 @@ echo %fp%
 call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "earl" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
 rem if "%cbf_repo%" == "" call %0 set_default_repository_folder temp
 
