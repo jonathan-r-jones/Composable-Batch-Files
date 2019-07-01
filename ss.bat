@@ -59,6 +59,17 @@ echo %computername% | find /i "lipt">nul
 
 if %errorlevel% == 0 goto gfe_path
 
+goto nongfe_path
+
+
+:gfe_path
+
+call g evaluate_folders_git_status cade
+
+set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
+
+goto community_path_resumed
+
 
 :nongfe_path
 
@@ -69,13 +80,6 @@ call g evaluate_folders_git_status ql
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 goto community_path_resumed
-
-
-:gfe_path
-
-call g evaluate_folders_git_status isso
-
-set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 
 :community_path_resumed
