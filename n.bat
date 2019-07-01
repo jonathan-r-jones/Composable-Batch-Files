@@ -4837,6 +4837,8 @@ exit/b
 
 :pounders
 
+:soto
+
 set fp=* Pounders.
 
 rem lu: Sep-27-2018
@@ -9264,7 +9266,6 @@ exit/b
 :bz
 
 :buzz
-rem qq-1
 
 set fp=* Buzz.
 
