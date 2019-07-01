@@ -2141,7 +2141,7 @@ type %tmp%\git_status_message.txt | find /i "diverged">nul
 
 if %errorlevel% == 0 (
   echo.
-  echo * Diverged code found at %current_folder%. *******
+  echo * Diverged code found at %current_folder%.  _,.-'~'-.,__,.-'~'-.,_
   exit/b 1
 )
 
@@ -2150,7 +2150,7 @@ type %tmp%\git_status_message.txt | find /i "behind">nul
 
 if %errorlevel% == 0 (
   echo.
-  echo * Behind origin found in %current_folder%. *******
+  echo * Behind origin found at %current_folder%.  _,.-'~'-.,__,.-'~'-.,_
   exit/b 1
 )
 
@@ -2159,7 +2159,7 @@ type %tmp%\git_status_message.txt | find /i "modified:">nul
 
 if %errorlevel% == 0 (
   echo.
-  echo * Modified file found in %current_folder%. *******
+  echo * Modified file found at %current_folder%.  _,.-'~'-.,__,.-'~'-.,_
   exit/b 1
 )
 
@@ -2168,7 +2168,7 @@ type %tmp%\git_status_message.txt | find /i "Untracked files:">nul
 
 if %errorlevel% == 0 (
   echo.
-  echo * Untracked file found in %current_folder%. *******
+  echo * Untracked file found at %current_folder%.  _,.-'~'-.,__,.-'~'-.,_
   exit/b 1
 )
 
@@ -2177,7 +2177,7 @@ type %tmp%\git_status_message.txt | find /i "ahead">nul
 
 if %errorlevel% == 0 (
   echo.
-  echo * Ahead of origin found in %current_folder%. *******
+  echo * Ahead of origin found at %current_folder%.  _,.-'~'-.,__,.-'~'-.,_
   exit/b 1
 )
 
