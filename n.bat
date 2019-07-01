@@ -9264,8 +9264,9 @@ exit/b
 :bz
 
 :buzz
+rem qq-1
 
-set fp=* buzz
+set fp=* Buzz.
 
 rem lu: May-26-2019
 
@@ -9273,6 +9274,25 @@ echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\!savannah\reach out\buzz.asc
+
+exit/b
+
+
+
+:_
+
+:ea
+
+:earl
+
+set fp=* Earl.
+
+rem lu: Jun-30-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%dropbox%\!savannah\reach out\earl.asc
 
 exit/b
 
