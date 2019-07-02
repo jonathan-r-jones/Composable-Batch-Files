@@ -5449,6 +5449,8 @@ exit/b
 
 :hldd
 
+:dv
+
 :pass-through
 
 :iac
@@ -7297,35 +7299,6 @@ echo %fp%
 set cbf_application=%aa%\SQL Workbench\SQLWorkbench.exe
 
 set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-:_
-
-:golf
-
-:pga
-
-:pgad
-
-set fp=* PGAdmin.
-
-rem lu: Feb-4-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\pgAdmin 4\v4\runtime\pgAdmin4.exe
-
-rem I commented the url because the correct way to start PGA is thought the exe.
-rem Having the URL here kind of makes things confusing.
-rem set cbf_url=http://127.0.0.1:50255/browser/
-rem set cbf_url=http://127.0.0.1:59171/browser/
-
-rem  I added this line so that sf golf would work.
-set cbf_url=http://127.0.0.1:59171/?key=74c91a8a-0ef6-4550-9e08-7b7f4c0e3f09
 
 exit/b
 
@@ -9927,6 +9900,35 @@ set cbf_filename=
 set cbf_path=%cbf_repo%\
 
 set cbf_url=https://dev-technology-coi.slack.com/messages/DFT8KBCEP/
+
+exit/b
+
+
+
+:_
+
+:golf
+
+:pga
+
+:pgad
+
+set fp=* :Connect to our Postgres database using PGAdin.
+
+rem lu: Jul-2-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\pgAdmin 4\v4\runtime\pgAdmin4.exe
+
+rem I commented the url because the correct way to start PGA is thought the exe.
+rem Having the URL here kind of makes things confusing.
+rem set cbf_url=http://127.0.0.1:50255/browser/
+rem set cbf_url=http://127.0.0.1:59171/browser/
+
+rem  I added this line so that sf golf would work.
+rem set cbf_url=http://127.0.0.1:59171/?key=74c91a8a-0ef6-4550-9e08-7b7f4c0e3f09
 
 exit/b
 
