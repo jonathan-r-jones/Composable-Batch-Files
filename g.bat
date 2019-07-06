@@ -1311,7 +1311,7 @@ exit/b
 
 ::_
 
-:st
+:stor
 
 :store
 
@@ -1341,7 +1341,7 @@ echo %fp%
 
 call %0 au
 
-call %0 st
+call %0 stor
 
 exit/b
 
@@ -1764,36 +1764,6 @@ echo.
 echo %fp%
 
 git add *.*
-
-exit/b
-
-
-
-:_
-
-:crt
-
-set fp=* Add cert.
-
-echo.
-echo %fp%
-
-git config --system http.sslCAPath C:/Users/JJones2/j/Miscellany/ca-bundle.crt 
-
-exit/b
-
-
-
-:_
-
-:crt2
-
-set fp=* Add cert using backslashes.
-
-echo.
-echo %fp%
-
-git config --system http.sslCAPath C:\Users\JJones2\j\Miscellany\ca-bundle.crt 
 
 exit/b
 
@@ -3156,6 +3126,40 @@ echo %fp%
 
 echo.
 git push origin
+
+exit/b
+
+
+
+:_+ Certs
+
+
+
+::_
+
+:crt
+
+set fp=* Add cert.
+
+echo.
+echo %fp%
+
+git config --system http.sslCAPath C:/Users/JJones2/j/Miscellany/ca-bundle.crt 
+
+exit/b
+
+
+
+::_
+
+:crt2
+
+set fp=* Add cert using backslashes.
+
+echo.
+echo %fp%
+
+git config --system http.sslCAPath C:\Users\JJones2\j\Miscellany\ca-bundle.crt 
 
 exit/b
 
