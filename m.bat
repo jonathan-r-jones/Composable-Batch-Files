@@ -1535,6 +1535,7 @@ echo %fp%
 
 if /i "%computername%" == "asus" call m set_default_browser kr
 if /i "%computername%" == "buzz" call m set_default_browser kr
+if /i "%computername%" == "earl" call m set_default_browser kr
 if /i "%computername%" == "xps" call m set_default_browser kr
 if "%cbf_default_browser%" == "" call m set_default_browser ie
 
