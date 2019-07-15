@@ -69,7 +69,7 @@ exit/b
 
 ::_
 
-:move_old_clipjam_files
+:old_clipjam_files
 
 set fp=* Move old ClipJam files from the Podcasts to Audiobooks folder.
 
@@ -107,7 +107,7 @@ exit/b
 
 ::_
 
-:move_sa_to_cj
+:sa_to_cj
 
 set fp=* Move staging area podcasts to the Clipjam folder.
 
@@ -130,7 +130,7 @@ exit/b
 
 :pc
 
-set fp=* Overaching podcast mover.
+set fp=* Overarching podcast mover.
 
 rem lu: Aug-24-2018
 
@@ -150,9 +150,9 @@ call x tag
 echo.
 pause
 
-call %0 move_old_clipjam_files
+call %0 old_clipjam_files
 
-call %0 move_sa_to_cj
+call %0 sa_to_cj
 
 exit/b
 

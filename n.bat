@@ -2294,6 +2294,23 @@ exit/b
 
 :_
 
+:g
+
+set fp=* G drive.
+
+rem lu: Jul-15-2019
+
+echo.
+echo %fp%
+
+set cbf_path=g:\
+
+exit/b
+
+
+
+:_
+
 :h
 
 set fp=* H drive.
