@@ -7,7 +7,8 @@
 :_
 
 set filep=* Nickname/alias dictionary that sets recyclable environment variables ^
-corresponding to a given unique nickname parameter.
+corresponding to a given unique nickname parameter. This can be thought of as a large ^
+configuration file.
 
 rem global variable database
 

@@ -105,7 +105,7 @@ echo   mvt  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary
-echo  n_ey  An empty nicknames dictionary, useful for starting over
+echo   ney  An empty nicknames dictionary, useful for starting over
 echo    nm  NPM
 echo    no  Notepad
 echo   net  Netstat
@@ -123,7 +123,7 @@ echo     r  Run application using CBF variables
 echo   rzr  Multi-Edit abstraction layer for running CBF files
 echo  rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo     s  Check git status remotely, has TD parameter
-echo sv_as  Use filename alias to "save as" a file in the current folder.
+echo  svas  Use filename alias to "save as" a file in the current folder.
 echo  scpp  Secure Copy Protocol
 echo    se  Internet search helper
 echo    ss  Super status, that is status for all selected repositories
