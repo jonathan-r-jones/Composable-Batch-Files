@@ -9623,16 +9623,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test edit function.
@@ -9646,5 +9636,46 @@ echo.
 call e j1
 
 exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test me config variable.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+set Multi-Edit_2008_Config_Files=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+rem cd %Multi-Edit_2008_Config_Files%
+
+rem cd "%Multi-Edit_2008_Config_Files%"
+
+rem cd /d "%Multi-Edit_2008_Config_Files%"
+
+rem echo %Multi-Edit_2008_Config_Files%
+
+xcopy /d /h /r /s /y "%dropbox%\Multi-Edit_2008_Config_Files" "%Multi-Edit_2008_Config_Files%"
+rem qq-1
+
+exit/b
+
+
 
 :_
