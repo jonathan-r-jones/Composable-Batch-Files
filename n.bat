@@ -9971,4 +9971,23 @@ exit/b
 
 
 
+:_
+
+:pa
+
+:poan
+
+set fp=* Port analysis.
+
+rem lu: Jul-17-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=C:\Users\JJones2\j\Share-Zone\PPF\port analysis.xlsx
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames
