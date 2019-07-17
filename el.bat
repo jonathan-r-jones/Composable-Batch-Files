@@ -51,7 +51,7 @@ set cbf_log_file=
 
 call n %1
 
-if "%cbf_settings_file%" == "" (
+if "%cbf_log_file%" == "" (
   echo.
   echo * Error: CBF Log file is not set.
   exit/b

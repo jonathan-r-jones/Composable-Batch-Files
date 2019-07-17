@@ -84,6 +84,7 @@ echo    eg  Edit a file by gluing a relative path onto a base path
 echo    ed  Edit a file abstraction layer
 echo   edx  Edit a file (Emulated Surf)
 echo    ex  Exit command window
+echo     f  Use default application to open a file based on its alias and filename extension.
 echo    fn  Filenames dictionary layer of abstraction
 echo    fs  Filenames search
 echo   fst  Filenames search with a td parameter

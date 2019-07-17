@@ -9954,4 +9954,21 @@ exit/b
 
 
 
+:_
+
+:go
+
+set fp=* Google.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.google.com/advanced_search
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames

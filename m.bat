@@ -4842,4 +4842,46 @@ exit/b
 
 
 
+:_
+
+:compose_variable
+
+set fp=* Compose variable.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Variable to expand: %2
+
+set cbf_composed_variable=cbf_%2
+
+call %0 expand_variable "%%%cbf_composed_variable%%%"
+
+exit/b
+
+
+
+:_
+
+:expand_variable
+
+set fp=* Expand variable.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Expanded variable: %~2
+
+set cbf_expanded_variable=%~2
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-9)

@@ -26,7 +26,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if not "%~1" == "" goto %1
+rem if not "%~1" == "" goto %1
 
 goto code_execution_area
 
@@ -9641,16 +9641,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test me config variable.
@@ -9672,7 +9662,209 @@ rem cd /d "%Multi-Edit_2008_Config_Files%"
 rem echo %Multi-Edit_2008_Config_Files%
 
 xcopy /d /h /r /s /y "%dropbox%\Multi-Edit_2008_Config_Files" "%Multi-Edit_2008_Config_Files%"
-rem qq-1
+
+exit/b
+
+
+
+:_
+
+:stage1
+
+set fp=* stage1
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+call %0 stage2 filename
+
+exit/b
+
+
+
+:_
+
+:stage2
+
+set fp=* stage2.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Percent 1: %1
+
+echo.
+echo * Percent 2: %2
+
+call %0 stage3 cbf_%2
+
+exit/b
+
+
+
+:_
+
+:stage3
+
+set fp=* stage3.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Percent 1: %1
+
+echo.
+echo * Percent 2: %2
+
+set test=%2
+
+echo.
+echo * Test: %%%test%%%
+
+rem echo %%test%%
+
+rem echo %;%test%;%
+
+rem echo %"test"%
+
+rem echo "%test%"
+
+rem echo '%test%'
+
+rem echo %%%test%%%
+
+call %0 stage4 %%%test%%%
+
+exit/b
+
+
+
+:_
+
+:stage4
+
+set fp=* %1.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+set test4=%2
+
+echo.
+echo * Percent 1: %1
+
+echo.
+echo * Percent 2q: %test%
+
+echo.
+echo * Test4: %test4%
+
+rem call %0 stage4 %2
+
+exit/b
+
+
+
+:_
+
+:stage5
+
+set fp=* %1.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+call %0 stage6 default_browser
+
+exit/b
+
+
+
+:_
+
+:stage6
+
+set fp=* %1.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Percent 1: %1
+
+echo.
+echo * Percent 2: %2
+
+set composed_variable=cbf_%2
+
+call %0 stage7 "%%%composed_variable%%%"
+
+exit/b
+
+
+
+:_
+
+:stage7
+
+set fp=* %1.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Percent 1: %1
+
+echo.
+echo * Percent 2: %~2
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:compose_variable
+
+set fp=* Compose variable.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Variable to expand: %2
+
+set composed_variable=cbf_%2
+
+call m expand_variable "%%%composed_variable%%%"
 
 exit/b
 
