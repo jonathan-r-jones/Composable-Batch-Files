@@ -49,6 +49,7 @@ echo  ----  ------------------------------------------------------------------
 echo     a  AWS CLI
 echo    an  Application nickname dictionary layer of abstraction
 echo    as  Windows file associations
+echo     b  Shutdown windows
 echo     c  Clear screen and reset color
 echo   cbf  Show this list of CBF batch files
 echo    ch  Chef command line utility
