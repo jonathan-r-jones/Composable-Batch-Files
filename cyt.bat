@@ -69,7 +69,7 @@ echo %filep%
 call n %2
 
 echo.
-xcopy "%~1" "%cbf_path%"
+xcopy /d /y "%~1" "%cbf_path%"
 
 td %2
 
