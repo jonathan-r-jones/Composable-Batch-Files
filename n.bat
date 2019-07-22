@@ -9990,4 +9990,22 @@ exit/b
 
 
 
+:_
+
+:te
+
+set fp=* Template batch file.
+
+rem lu: Jul-22-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%composable_batch_files%\te.bat
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6) Nicknames

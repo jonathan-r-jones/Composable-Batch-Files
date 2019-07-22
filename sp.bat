@@ -44,17 +44,14 @@ exit/b
 
 :main_function
 
-rem lu: Mar-31-2019
+rem lu: Jul-22-2019
 
 echo.
 echo %filep%
 
 call de multi-edit_conflicted_files
 
-if "%machinename%"=="gfe" (
-  call p cade
-rem qq-1
-) else (
+if not "%machinename%"=="gfe" (
   call 8
   call cypn mecfg mecfg_s
   call p ql
