@@ -160,6 +160,36 @@ exit/b
 
 ::_
 
+:pc2
+
+set fp=* Overarching podcast mover, don't clean out old podcasts.
+
+rem lu: Aug-24-2018
+
+echo.
+echo %fp%
+
+rem Open the podcaster application and download podcasts from there.
+rem call x pc
+
+rem (!rfsp) (mov-2)
+
+call %0 move_podcasts_to_the_staging_folder
+
+rem Run the tag program.
+call x tag
+
+echo.
+pause
+
+call %0
+
+exit/b
+
+
+
+::_
+
 :move_podcasts_to_the_staging_folder
 
 set fp=* Move all podcasts to the staging folder.
