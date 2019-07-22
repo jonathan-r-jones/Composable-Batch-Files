@@ -5471,6 +5471,8 @@ exit/b
 
 :ppf
 
+:mode
+
 :pass-through
 
 :iac
@@ -7953,8 +7955,6 @@ echo %fp%
 
 set cbf_filename=c:\a\j1.txt
 
-rem set cbf_url=%cbf_filename%
-
 exit/b
 
 
@@ -10002,7 +10002,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\te.bat
-rem       qq-1
 
 exit/b
 
