@@ -5471,6 +5471,8 @@ exit/b
 
 :ppf
 
+:mode
+
 :pass-through
 
 :iac
@@ -7952,8 +7954,6 @@ echo.
 echo %fp%
 
 set cbf_filename=c:\a\j1.txt
-
-rem set cbf_url=%cbf_filename%
 
 exit/b
 
