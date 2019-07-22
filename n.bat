@@ -10002,7 +10002,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\te.bat
-rem       qq-1
 
 exit/b
 
