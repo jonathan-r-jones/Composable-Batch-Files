@@ -52,7 +52,8 @@ echo %filep%
 call de multi-edit_conflicted_files
 
 if "%machinename%"=="gfe" (
-  call p isso
+  call p cade
+rem qq-1
 ) else (
   call 8
   call cypn mecfg mecfg_s
