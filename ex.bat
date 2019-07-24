@@ -8,9 +8,6 @@
 
 set filep=* Exit command window.
 
-echo.
-echo %filep%
-
 
 
 :_

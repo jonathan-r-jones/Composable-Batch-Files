@@ -78,6 +78,9 @@ echo.
 echo Filename: %cbf_filename%
 
 echo.
+echo Github URL: %cbf_github_url%
+
+echo.
 echo Header: %cbf_header%
 
 echo.
@@ -125,6 +128,9 @@ if not "%cbf_filename%" == "" echo * Filename: %cbf_filename%
 
 if not "%cbf_file_to_upload%" == "" echo.
 if not "%cbf_file_to_upload%" == "" echo * File to upload: %cbf_file_to_upload%
+
+if not "%cbf_github_url%" == "" echo.
+if not "%cbf_github_url%" == ""   echo *  Github URL: %cbf_github_url%
 
 if not "%cbf_host_name%" == "" echo.
 if not "%cbf_host_name%" == ""   echo *   Host name: %cbf_host_name%

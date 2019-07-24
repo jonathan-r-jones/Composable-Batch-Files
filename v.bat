@@ -648,7 +648,7 @@ set fp=* How do you escape a percent sign in a batch file?
 
 rem Answer: 2 '%' signs equals one.
 
-rem double percent sign: skw
+rem percent percent, double percent sign: skw
 
 rem percent 20 issue in environment variables. skw
 

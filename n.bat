@@ -5473,6 +5473,12 @@ exit/b
 
 :mode
 
+:cit
+
+:fp
+
+:cf
+
 :pass-through
 
 :iac
