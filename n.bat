@@ -8276,6 +8276,22 @@ exit/b
 
 :_
 
+:ascii_art_2
+
+set fp=* ASCII art.
+
+rem lu: Apr-1-2019
+
+rem echo %fp%
+
+set cbf_filename=%composable_batch_files%\ascii_art_2.txt
+
+exit/b
+
+
+
+:_
+
 :mock
 
 set fp=* Mockaroo.
@@ -9941,7 +9957,7 @@ exit/b
 
 :pgad
 
-set fp=* :Connect to our Postgres database using PGAdin.
+set fp=* Connect to our Postgres database using PGAdin.
 
 rem lu: Jul-2-2019
 

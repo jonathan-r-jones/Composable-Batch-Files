@@ -4202,6 +4202,22 @@ exit/b
 
 
 
+:_
+
+:show_ascii_art_2
+
+set fp=* Show Ascii art 2.
+
+rem lu: Jul-26-2019
+
+call n ascii_art_2
+
+type %cbf_filename%
+
+exit/b
+
+
+
 :_+ Save and Restore Location
 
 
