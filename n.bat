@@ -5481,6 +5481,8 @@ exit/b
 
 :ts
 
+:sshk
+
 :pass-through
 
 :iac
@@ -10026,6 +10028,23 @@ echo.
 echo %fp%
 
 set cbf_filename=%composable_batch_files%\te.bat
+
+exit/b
+
+
+
+:_
+
+:myca
+
+set fp=* My cartys.
+
+rem lu: Jul-30-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\my_cartys.xlsx
 
 exit/b
 

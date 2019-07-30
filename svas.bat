@@ -85,13 +85,7 @@ rem lu:
 
 copy %cbf_filename% %2
 
-call n me
-
-set cbf_filename=%2
-
-call m assoc_p_fn
-
-call r
+start %2
 
 exit/b
 
