@@ -85,7 +85,7 @@ rem lu:
 
 copy %cbf_filename% %2
 
-start %2
+start "bogus" "%~2"
 
 exit/b
 
