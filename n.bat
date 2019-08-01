@@ -9717,46 +9717,6 @@ exit/b
 
 :_
 
-:zoom
-
-set fp=* Zoom, the presenter software.
-
-rem lu: Jun-27-2019
-
-echo.
-echo %fp%
-
-set cbf_application=
-
-set cbf_filename=
-
-set cbf_path=%cbf_repo%\
-
-set cbf_url=
-
-exit/b
-
-                   
-                                                                                                            
-::_
-
-:daws
-
-set fp=* Dev Technology 
-
-rem lu: Jun-28-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https://505626223329.signin.aws.amazon.com/console
-            
-exit/b
-
-
-
-:_
-
 :caco
 
 set fp=* Cart controller.
