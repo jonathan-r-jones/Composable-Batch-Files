@@ -4492,7 +4492,7 @@ exit/b
 
 :stat
 
-set fp=* Describe status for instance '%2".
+set fp=* Describe status for instance "%2".
 
 rem lu: Mar-8-2019
 

@@ -65,11 +65,13 @@ echo   cst  File contents search with td parameter
 echo    cu  Curl caller for direct server tests
 echo   cur  Curl hooked up to the nicknames dictionary
 echo    cy  Copy file(s)
+echo  cycf  Use file in the current folder to "save as" to a filename alias
+echo  cyfc  Use filename alias to "save as" a file in the current folder
+echo  cyfp  Copies file from a cbf_path nickname
 echo  cyfn  Copy file from alias filename parm 1 to alias filename param 2
 echo  cypn  Copy file from alias path param 1 to alias path param 2
 echo   cyt  Copy file in the current directory to nickname-specified path
 echo  cyte  Copy te.bat to a new batch file
-echo   cyf  Copy file from a cbf_path nickname
 echo     d  Dir for current folder
 echo    dd  Dir filename extension searcher including subfolders
 echo   ddc  Dir filename extension searcher current folder only
@@ -125,19 +127,18 @@ echo     r  Run application using CBF variables
 echo   rzr  Multi-Edit abstraction layer for running CBF files
 echo  rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo     s  Check git status remotely, has TD parameter
-echo  svas  Use filename alias to "save as" a file in the current folder.
 echo  scpp  Secure Copy Protocol
 echo    se  Internet search helper
-echo    ss  Super status, that is status for all selected repositories
-echo   sln  Open a Visual Studio solution, has TD parameter
 echo    sh  SSH
-echo    sx  Use Sublime to edit a batch file in the CBF folder
+echo   sln  Open a Visual Studio solution, has TD parameter
 echo    sf  Surf to websites
 echo   sfg  Surf to GitHub websites
 echo    sm  Sublime
 echo    sp  Super push, i.e. push all selected repositories
 echo   spl  Super pull, i.e. pull all selected repositories
 echo   sql  MySQL/Database, including LDAP, related tasks
+echo    ss  Super status, that is status for all selected repositories
+echo    sx  Use Sublime to edit a batch file in the CBF folder
 echo     t  Testing, experimenting and developing new batch file functions
 echo    td  Transform directory
 echo   tdc  Transform directory to favorite child folder of alias

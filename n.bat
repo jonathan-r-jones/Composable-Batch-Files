@@ -5485,6 +5485,10 @@ exit/b
 
 :fq
 
+:dms
+
+:dm1
+
 :pass-through
 
 :iac
@@ -10012,4 +10016,54 @@ exit/b
 
 
 
-:_ (!efn, !rfsp) (mov-6) Nicknames
+:_+ Data Model
+
+
+
+::_
+
+:cdm
+
+:cdmsc
+
+:dmc
+
+:dm3
+
+set fp=* Cart Data Model source code.
+
+rem lu: Aug-2-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Cart Data Model source code.jh
+
+exit/b
+
+
+
+::_
+
+:jdl
+
+:jhip
+
+:dm2
+
+:dme
+
+set fp=* JDL Studio by JHipster, a.k.a. data model editor.
+
+rem lu: Aug-2-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://start.jhipster.tech/jdl-studio
+
+exit/b
+
+
+
+:_ (!efnb, !efn, !rfsp) (mov-6) Nicknames
