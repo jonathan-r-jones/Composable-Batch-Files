@@ -53,7 +53,6 @@ call n %1
 
 echo.
 xcopy /d /r /s /y "%cbf_path%"
-rem qq-1
 
 rem (!rfsp) (mov-2)
 

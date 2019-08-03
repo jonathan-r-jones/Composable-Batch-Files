@@ -68,8 +68,6 @@ if %errorlevel% == 1 (
 )
 
 call cyf %1
-cyt and cyfp
-rem qq-1
 
 exit/b
 
