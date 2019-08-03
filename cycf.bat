@@ -48,6 +48,8 @@ exit/b
 
 :validate_user_input
 
+set cbf_filename=
+
 if "%~1" == "" (
   echo.
   echo * Percent 1 is a required field.

@@ -5489,6 +5489,8 @@ exit/b
 
 :dm1
 
+:dm
+
 :pass-through
 
 :iac
@@ -10025,6 +10027,8 @@ exit/b
 :cdm
 
 :cdmsc
+
+:dm
 
 :dmc
 

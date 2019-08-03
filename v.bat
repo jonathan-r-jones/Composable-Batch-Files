@@ -897,6 +897,56 @@ exit/b
 
 :_
 
+:validate_data
+
+rem Data Validation: skw
+
+if "%~1" == "" (
+  echo.
+  echo * Application alias is required.
+  exit/b
+)
+
+if "%~2" == "" (
+  echo.
+  echo * Data alias is required.
+  exit/b
+)
+
+call an %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_application%" (
+  echo.
+  echo * Error: Cannot find the alias "%cbf_application%".
+  exit/b
+)
+
+call fn %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: Cannot find the alias "%cbf_filename%".
+  exit/b
+)
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.

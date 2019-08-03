@@ -155,6 +155,7 @@ echo     v  Vetted functions (Useful for copying-and-pasting)
 echo    wp  Wordpad
 echo     x  Remote double-click equivalent way to run an alias
 echo    xa  Application-centric way to run an alias
+echo   xaf  Execute an application alias with a filenae alias
 echo   xfn  Filename-centric way to run an alias
 
 exit/b
