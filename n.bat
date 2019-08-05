@@ -5489,8 +5489,6 @@ exit/b
 
 :dm1
 
-:dm
-
 :pass-through
 
 :iac
@@ -10026,7 +10024,7 @@ exit/b
 
 :cdm
 
-:cdmsc
+:dmsc
 
 :dm
 
@@ -10041,7 +10039,9 @@ rem lu: Aug-2-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\Cart Data Model source code.jh
+set cbf_filename=%cbf_repo%\cade\Data Model\Data Model source code.jh
+
+set cbf_path=%cbf_repo%\cade\Data Model
 
 exit/b
 
@@ -10050,6 +10050,8 @@ exit/b
 ::_
 
 :jdl
+
+:jh
 
 :jhip
 
