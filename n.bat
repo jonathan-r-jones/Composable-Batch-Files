@@ -10072,38 +10072,4 @@ exit/b
 
 
 
-:_
-
-:rh
-
-set fp=* Redhat workshop.
-
-rem lu: Aug-6-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https:/redhatgov.io
-
-exit/b
-
-
-
-:_
-
-:rhs
-
-set fp=* Redhat workshop slides.
-
-rem lu: Aug-6-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https:/redhatgov.io
-
-exit/b
-
-
-
 :_ (!efnb, !efn, !rfsp) (mov-6) Nicknames
