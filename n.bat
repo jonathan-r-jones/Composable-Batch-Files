@@ -6401,16 +6401,14 @@ rem lu: Dec-7-2018
 echo.
 echo %fp%
 
-rem set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
-
-rem set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
-
 set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
 
 set cbf_path=%share-zone%
 
 set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
 
+rem set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
+rem set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
 
 exit/b
 
