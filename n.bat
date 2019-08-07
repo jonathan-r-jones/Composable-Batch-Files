@@ -7287,6 +7287,25 @@ exit/b
 
 :_
 
+:drql
+
+:qldr
+
+set fp=* Quickla CMAC on Dropbox.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\!savannah\cmac\Quickla-for-Multi-Edit
+
+exit/b
+
+
+
+:_
+
 :ctf
 
 :cts

@@ -76,7 +76,7 @@ goto community_path_resumed
 call g evaluate_folders_git_status drro
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
-call g evaluate_folders_git_status ql
+call g evaluate_folders_git_status drql
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
 goto community_path_resumed
