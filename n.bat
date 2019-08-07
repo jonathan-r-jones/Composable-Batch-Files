@@ -1586,7 +1586,11 @@ exit/b
 
 
 
-:_
+:_+ QuickLauncher
+
+
+
+::_
 
 :ql
 
@@ -1600,6 +1604,27 @@ echo.
 echo %fp%
 
 set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
+
+exit/b
+
+
+
+::_
+
+:drql
+
+:qldr
+
+set fp=* Quickla CMAC on Dropbox.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+
+set cbf_path=%dropbox%\!savannah\cmac\Quickla-for-Multi-Edit
 
 set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
@@ -7280,25 +7305,6 @@ echo.
 echo %fp%
 
 set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
-
-exit/b
-
-
-
-:_
-
-:drql
-
-:qldr
-
-set fp=* Quickla CMAC on Dropbox.
-
-rem lu: Jan-31-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\!savannah\cmac\Quickla-for-Multi-Edit
 
 exit/b
 
