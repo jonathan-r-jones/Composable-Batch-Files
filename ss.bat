@@ -49,6 +49,7 @@ set /a sum_of_error_levels=0
 :community_path
 
 call g evaluate_folders_git_status cbf
+rem qq-1
 
 set /a sum_of_error_levels=%sum_of_error_levels%+%errorlevel%
 
