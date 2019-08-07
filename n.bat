@@ -6804,9 +6804,8 @@ echo.
 echo %fp%
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Reach-Out.git
-rem qq-1
 
-set cbf_path=%dropbox%\!savannah\reach out2
+set cbf_path=%dropbox%\!savannah\reach out
 
 set cbf_url=https://github.com/jonathan-r-jones/Reach-Out.git
 
