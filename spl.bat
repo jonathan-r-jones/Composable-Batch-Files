@@ -45,7 +45,6 @@ echo %filep%
 
 if not "%machinename%"=="gfe" (
   call cy sv_dr_to_local
-rem qq-1
   call cy cfg_dr_to_local
 )
 

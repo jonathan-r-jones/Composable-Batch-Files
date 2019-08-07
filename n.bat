@@ -6796,7 +6796,7 @@ exit/b
 
 ::_
 
-:ro_dr
+:drro
 
 :rodr
 
