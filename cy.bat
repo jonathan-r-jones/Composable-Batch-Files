@@ -492,7 +492,7 @@ echo.
 echo %fp%
 
 echo.
-xcopy /d /h /r /s /y "%dropbox%\!savannah" "%savannah%"
+xcopy /d /r /s /y "%dropbox%\!savannah" "%savannah%"
 
 exit/b
 
@@ -510,7 +510,7 @@ echo.
 echo %fp%
 
 echo.
-xcopy /d /h /r /s /y "%dropbox%\Multi-Edit_2008_Config_Files" "%Multi-Edit_2008_Config_Files%"
+xcopy /d /r /s /y "%dropbox%\Multi-Edit_2008_Config_Files" "%Multi-Edit_2008_Config_Files%"
 
 exit/b
 
