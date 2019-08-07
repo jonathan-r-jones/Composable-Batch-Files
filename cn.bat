@@ -83,6 +83,7 @@ if exist "%cbf_path%" (
    echo "* Error: CBF Path already exists."
    call td %1
    rem exit/b
+rem qq-1
 )
 
 
@@ -98,7 +99,7 @@ if "%cbf_branch%" == "" (
 )
 
 echo.
-git clone %cbf_clone_url% --branch %cbf_branch% %cbf_path%
+git clone %cbf_clone_url% --branch %cbf_branch% "%cbf_path%"
 
 call td %1
 
