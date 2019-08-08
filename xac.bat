@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Execute an application alias with a filename alias.
+set filep=* Execute an application alias with a filename in the current folder.
 
 echo.
 echo %filep%
@@ -75,18 +75,11 @@ if not exist "%cbf_application%" (
   exit/b
 )
 
-call fn %2
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Alias "%1" not found.
-  call m clear_errorlevel_silently 
-  exit/b
-)
+set cbf_filename=%~2
 
 if not exist "%cbf_filename%" (
   echo.
-  echo * Error: Cannot find the alias "%cbf_filename%".
+  echo * Error: Cannot find the file "%cbf_filename%".
   exit/b
 )
 

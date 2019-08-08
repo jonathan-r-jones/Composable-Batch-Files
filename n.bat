@@ -10097,4 +10097,21 @@ exit/b
 
 
 
+:_
+
+:exre
+
+set fp=* Expense Reports.
+
+rem lu: Aug-8-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\Expense Reports
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6) Nicknames
