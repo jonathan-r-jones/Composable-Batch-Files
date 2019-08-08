@@ -10108,7 +10108,26 @@ rem lu: Aug-8-2019
 echo.
 echo %fp%
 
-set cbf_path=%share-zone%\Expense Reports
+call n wk
+
+set cbf_path=%cbf_path%\Expense Reports
+
+exit/b
+
+
+
+:_
+
+:wk
+
+set fp=* Work.
+
+rem lu: Aug-8-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\work\wk
 
 exit/b
 
