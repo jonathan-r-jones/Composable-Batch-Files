@@ -5056,8 +5056,6 @@ exit/b
 
 :ht
 
-:ij
-
 :iaws
 
 :ic_hp
@@ -5513,6 +5511,10 @@ exit/b
 :dms
 
 :dm1
+
+:cgit
+
+:990
 
 :pass-through
 
@@ -10128,6 +10130,23 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\work\wk
+
+exit/b
+
+
+
+:_
+
+:ij
+
+set fp=* IntelliJ.
+
+rem lu: Aug-9-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe
 
 exit/b
 
