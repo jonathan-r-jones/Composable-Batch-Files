@@ -7613,6 +7613,12 @@ exit/b
 
 ::_
 
+:add_to_path
+
+:add_path
+
+:addpath
+
 :env
 
 :oden
@@ -7773,90 +7779,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\ni.bat
-
-exit/b
-
-
-
-:_+ Localhost
-
-
-
-::_
-
-:h2lh
-
-set fp=* H2 on local host.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/h2-console
-
-exit/b
-
-
-
-::_
-
-:swaglh
-
-:swag_lh
-
-set fp=* Swagger on local.
-
-rem lu: Jan-16-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
-
-exit/b
-
-
-
-::_
-
-:gsg
-
-:psg
-
-set fp=* Pipeline script generator.
-
-rem lu: Jan-11-2019
-
-echo.
-echo %fp%
-
-call an kr
-
-set cbf_url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
-
-exit/b
-
-
-
-::_
-
-:42
-
-:4200
-
-:ui_lh
-
-:uilh
-
-set fp=* Localhost port 4200.
-
-rem lu: Mar-18-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:4200
 
 exit/b
 
@@ -10147,6 +10069,128 @@ echo.
 echo %fp%
 
 set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe
+
+exit/b
+
+
+
+:_+ Localhost
+
+
+
+::_
+
+:h2lh
+
+set fp=* H2 on local host.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/h2-console
+
+exit/b
+
+
+
+::_
+
+:swaglh
+
+:swag_lh
+
+set fp=* Swagger on local.
+
+rem lu: Jan-16-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
+
+exit/b
+
+
+
+::_
+
+:gsg
+
+:psg
+
+set fp=* Pipeline script generator.
+
+rem lu: Jan-11-2019
+
+echo.
+echo %fp%
+
+call an kr
+
+set cbf_url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
+
+exit/b
+
+
+
+::_
+
+:42
+
+:4200
+
+:ui_lh
+
+:uilh
+
+set fp=* Localhost port 4200.
+
+rem lu: Mar-18-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:4200
+
+exit/b
+
+
+
+:_
+
+:krm
+
+set fp=* Chromium.
+
+rem lu: Aug-12-2019
+
+echo.
+echo %fp%
+
+set cbf_application=c:\aa\ChromiumPortable\ChromiumPortable.exe
+
+exit/b
+
+
+
+:_
+
+:bash
+
+set fp=* Git bash.
+
+rem lu: Aug-12-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
+
+set cbf_filename=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
+
+set cbf_path=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
 
 exit/b
 

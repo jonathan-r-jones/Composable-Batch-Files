@@ -63,157 +63,6 @@ exit/b
 
 
 
-:_+ Installing
-
-
-
-::_
-
-:inst_pj
-
-:install_pj
-
-set fp=* Install any dependencies listed in pacagage.json.
-
-rem lu: Feb-11-2019
-
-echo.
-echo %fp%
-echo.
-
-npm install
-
-exit/b
-
-
-
-::_
-
-:inst
-
-:install
-
-set fp=* Install third party package and save setting in the package.json file.
-
-rem lu: Sep-12-2018
-
-echo.
-echo %fp%
-
-if not exist package.json (
-  echo.
-  echo * Error: The file package.json does not exist in the current folder.
-  exit/b
-)
-
-echo.
-npm install %2
-
-exit/b
-
-
-
-::_
-
-:i
-
-:inst_g
-
-set fp=* Globally install a package so that it works everywhere on the command line.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-echo.
-npm i %2 -g
-
-exit/b
-
-
-
-::_
-
-:inst_sd
-
-set fp=* Install package and save setting in the development section of the package.json file.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-echo.
-npm install %2 --save--dev
-
-exit/b
-
-
-
-::_
-
-:inst_gh
-
-set fp=* Install a package using its GitHub URL.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-call n %2
-
-echo.
-npm i %cbf_url%
-
-exit/b
-
-
-
-::_
-
-:inst_svh
-
-set fp=* Install a specific version of a package and HOLD at this version.
-
-set fp=%fp% NPM will not upgrade automically in this case.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-echo.
-npm i underscore@1.8.2 --save --save-exact
-
-exit/b
-
-
-
-::_
-
-:inst_sv
-
-set fp=* Install a specific version of a package.
-
-set fp=%fp% Given this example, this will install the latest 1.8 version.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-echo.
-
-rem For example: npm i underscore@1.7 --save
-
-npm i %2 --save
-
-exit/b
-
-
-
 :_
 
 :star
@@ -783,23 +632,47 @@ exit/b
 
 
 
-:_+ Updating (skw upgrading, upgrade)
+:_
+
+:bi
+
+set fp=* Batch install DutchTreat packages.
+
+rem lu: Sep-18-2018
+
+echo.
+echo %fp%
+
+call %0 inst bootstrap
+call %0 inst jquery
+call %0 inst jquery-validation
+call %0 inst jquery-validation-unobtrusive
+call %0 inst font-awesome
+
+exit/b
+
+
+
+:_+ Installing
 
 
 
 ::_
 
-:update
+:inst
 
-set fp=* Update all dependencies to the latest version.
+set fp=* Install any dependencies listed in package.json.
 
-rem lu: Apr-24-2018
+rem lu: Feb-11-2019
 
 echo.
 echo %fp%
-
 echo.
-npm update --save
+
+npm install
+
+rem If you have an issue with install or update, you may need to delete the node_modules ^
+subfolder.
 
 exit/b
 
@@ -807,9 +680,33 @@ exit/b
 
 ::_
 
-:update_sp
+:inst_s
 
-set fp=* Update a single package dependency, in this case "%2".
+set fp=* Install third party package and save setting in the package.json file.
+
+rem lu: Sep-12-2018
+
+echo.
+echo %fp%
+
+if not exist package.json (
+  echo.
+  echo * Error: The file package.json does not exist in the current folder.
+  exit/b
+)
+
+echo.
+npm install %2
+
+exit/b
+
+
+
+::_
+
+:inst_g
+
+set fp=* Globally install a package so that it works everywhere on the command line.
 
 rem lu: Apr-24-2018
 
@@ -817,13 +714,157 @@ echo.
 echo %fp%
 
 echo.
-npm update %2
+npm i %2 -g
+
+rem npm install -g %2
+
+rem Examples:
+rem npm install -g cordova
+rem npm install -g ionic
+rem npm install -g jspm
+rem npm install -g taco-cli
+rem npm install -g typings
+
+rem The equivalent command for Mac would be: sudo npm -install -g %2
 
 exit/b
 
 
 
-:_+ Updating NPM.
+::_
+
+:inst_sd
+
+set fp=* Install package and save setting in the development section of the package.json file.
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+echo.
+npm install %2 --save--dev
+
+exit/b
+
+
+
+::_
+
+:inst_gh
+
+set fp=* Install a package using its GitHub URL.
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+call n %2
+
+echo.
+npm i %cbf_url%
+
+exit/b
+
+
+
+::_
+
+:inst_svh
+
+set fp=* Install a specific version of a package and HOLD at this version.
+
+set fp=%fp% NPM will not upgrade automically in this case.
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+echo.
+npm i underscore@1.8.2 --save --save-exact
+
+exit/b
+
+
+
+::_
+
+:inst_sv
+
+set fp=* Install a specific version of a package.
+
+set fp=%fp% Given this example, this will install the latest 1.8 version.
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+echo.
+
+rem For example: npm i underscore@1.7 --save
+
+npm i %2 --save
+
+exit/b
+
+
+
+::_
+
+:iac
+
+set fp=* Install Angular client.
+
+rem lu: Feb-11-2019
+
+echo.
+echo %fp%
+
+echo.
+npm install -g @angular/cli
+
+exit/b
+
+
+
+::_
+
+:npmh
+
+set fp=* NPM install command for Sencha on Windows.
+
+rem lu: Mar-1-2018
+
+echo %fp%
+echo.
+
+npm install -g sencha
+
+exit/b
+
+
+
+::_
+
+:npmc
+
+set fp=* NPM install command for Sencha on Windows.
+
+rem lu: Mar-1-2018
+
+echo.
+echo %fp%
+
+npm install -g sencha-cmd
+
+exit/b
+
+
+
+:_+ Updating NPM. (skw upgrading, upgrade)
 
 
 
@@ -876,40 +917,55 @@ exit/b
 
 
 
-:_
+::_
 
-:bi
+:update
 
-set fp=* Batch install DutchTreat packages.
+set fp=* Update all dependencies to the latest version.
 
-rem lu: Sep-18-2018
+rem lu: Aug-12-2019
 
 echo.
 echo %fp%
 
-call %0 inst bootstrap
-call %0 inst jquery
-call %0 inst jquery-validation
-call %0 inst jquery-validation-unobtrusive
-call %0 inst font-awesome
+echo.
+npm update
 
 exit/b
 
 
 
-:_
+::_
 
-:iac
+:update_s
 
-set fp=* Install Angular client.
+set fp=* Update all dependencies to the latest version.
 
-rem lu: Feb-11-2019
+rem lu: Apr-24-2018
 
 echo.
 echo %fp%
 
 echo.
-npm install -g @angular/cli
+npm update --save
+
+exit/b
+
+
+
+::_
+
+:update_sp
+
+set fp=* Update a single package dependency, in this case "%2".
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+echo.
+npm update %2
 
 exit/b
 

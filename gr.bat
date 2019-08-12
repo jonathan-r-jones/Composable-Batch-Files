@@ -190,23 +190,6 @@ exit/b
 
 :_
 
-:br
-
-set fp=* Bootrun from Sean. Notice that there is also a Maven version of this same command.
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-gradle bootrun --debug-jvm
-
-exit/b
-
-
-
-:_
-
 :prop
 
 set fp=* Properties.
@@ -357,24 +340,6 @@ exit/b
 
 :_
 
-:pdev
-
-set fp=* Pdev.
-
-rem lu: May-20-2019
-
-echo.
-echo %fp%
-
-echo.
-Pdev -Pno-liquibase clean bootrun
-
-exit/b
-
-
-
-:_
-
 :bapi
 
 set fp=* Daily build per Sean.
@@ -418,9 +383,30 @@ exit/b
 
 :_
 
+:br
+
+set fp=* Bootrun from Sean. Notice that there is also a Maven version of this same command.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+gradle bootrun --debug-jvm
+
+exit/b
+
+
+
+:_+ Gradle commands that Edward and Matt use.
+
+
+
+::_
+
 :ed
 
-set fp=* Edward's gradle.
+set fp=* Edward's gradle command.
 
 rem lu: Jun-21-2019
 
@@ -431,6 +417,41 @@ echo.
 gradle -Plocal -Pno-liquibase clean bootrun
 
 rem I usually just run "clean ; ./gradlew &"
+
+exit/b
+
+
+
+::_
+
+:matt1
+
+set fp=* Bootrun from Matt.
+
+rem lu: Aug-12-2019
+
+echo.
+echo %fp%
+
+gradle clean bootRun --debug-jvm
+
+exit/b
+
+
+
+::_
+
+:matt2
+
+set fp=* Matt's gradle command.
+
+rem lu: Aug-12-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle -Pno-liquibase clean bootrun
 
 exit/b
 

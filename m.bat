@@ -2869,70 +2869,6 @@ exit/b
 
 
 
-:_+ NPM
-
-
-
-::_
-
-:npm
-
-set fp=* NPM install command for Windows.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-echo.
-
-npm install -g %2
-
-rem Examples:
-rem npm install -g cordova
-rem npm install -g ionic
-rem npm install -g jspm
-rem npm install -g taco-cli
-rem npm install -g typings
-
-rem The equivalent command for Mac would be: sudo npm -install -g %2
-
-exit/b
-
-
-
-::_
-
-:npmh
-
-set fp=* NPM install command for Sencha on Windows.
-
-rem lu: Mar-1-2018
-
-echo %fp%
-echo.
-
-npm install -g sencha
-
-exit/b
-
-
-
-::_
-
-:npmc
-
-set fp=* NPM install command for Sencha on Windows.
-
-rem lu: Mar-1-2018
-
-echo.
-echo %fp%
-
-npm install -g sencha-cmd
-
-exit/b
-
-
-
 :_
 
 :publish
@@ -4838,7 +4774,7 @@ exit/b
 
 ::_
 
-:port
+:lhp
 
 set fp=* Run the Admin Portal on localhost.
 
@@ -4847,7 +4783,35 @@ rem lu: Feb-11-2019
 echo.
 echo %fp%
 
-call lh port
+call sf 4200 krm
+
+call td port
+
+echo.
+ng serve
+
+exit/b
+
+
+
+::_
+
+:rc
+
+set fp=* Run CART locally.
+
+rem lu: Aug-12-2019
+
+echo.
+echo %fp%
+
+rem Run Postgres.
+
+call td api
+
+call gr matt1
+
+call sf 4200 krm
 
 call td port
 
