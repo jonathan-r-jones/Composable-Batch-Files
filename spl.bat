@@ -44,6 +44,7 @@ echo.
 echo %filep%
 
 if not "%machinename%"=="gfe" (
+  call 8
   call cy sv_dr_to_local
   call cy cfg_dr_to_local
 )

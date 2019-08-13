@@ -370,35 +370,6 @@ exit/b
 
 :_
 
-:bumu
-
-set fp=* Back up ME config files.
-
-echo.
-echo %fp%
-
-Get_JDate>%tmp%\JDate.txt
-set /p JDate=<%tmp%\JDate.txt
-set Current_JDate=Backup %JDate%
-
-echo.
-echo Current JDate = %Current_JDate%
-
-call td mecfg_db
-
-echo.
-if /i not exist "%Current_JDate%" md "%Current_JDate%"
-
-cd %Current_JDate%
-
-xcopy /s /y "%appdata%\Multi Edit Software\Multi-Edit\11\Config.04"
-
-exit/b
-
-
-
-:_
-
 :apn
 
 set fp=* Copy all files in the current folder to an alias specified path.
@@ -528,6 +499,35 @@ echo.
 echo %fp%
 
 call cyfn hldd ldd
+
+exit/b
+
+
+
+:_
+
+:bumu
+
+set fp=* Back up ME config files.
+
+echo.
+echo %fp%
+
+Get_JDate>%tmp%\JDate.txt
+set /p JDate=<%tmp%\JDate.txt
+set Current_JDate=Backup %JDate%
+
+echo.
+echo Current JDate = %Current_JDate%
+
+call td mecfg_db
+
+echo.
+if /i not exist "%Current_JDate%" md "%Current_JDate%"
+
+cd %Current_JDate%
+
+xcopy /s /y "%appdata%\Multi Edit Software\Multi-Edit\11\Config.04"
 
 exit/b
 

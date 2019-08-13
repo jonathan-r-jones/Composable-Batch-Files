@@ -7992,78 +7992,6 @@ exit/b
 
 
 
-:_+ Multi-Edit Configuration Files (skw Multi-Edit Config Files)
-
-
-
-::_
-
-:mecfg
-
-set fp=* Multi-Edit Config file folder.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
-
-exit/b
-
-
-
-::_
-
-:mecfg_db
-
-set fp=* Multi-Edit Config Files Dated Backups.
-
-rem lu: Jan-3-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
-
-exit/b
-
-
-
-::_
-
-:mecfg_dr
-
-set fp=* Multi-Edit Config file folder in DropBox.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
-
-exit/b
-
-
-
-::_
-
-:mecfg_s
-
-set fp=* Multi-Edit Config file folder in Share-Zone.
-
-rem lu: Feb-13-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
-
-exit/b
-
-
-
 :_+ Gencred Files
 
 
@@ -10191,6 +10119,78 @@ set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Men
 set cbf_filename=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
 
 set cbf_path=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
+
+exit/b
+
+
+
+:_+ Multi-Edit Configuration Files (skw Multi-Edit Config Files)
+
+
+
+::_
+
+:mecfg
+
+set fp=* Multi-Edit Config file folder.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+
+exit/b
+
+
+
+::_
+
+:mecfg_db
+
+set fp=* Multi-Edit Config Files Dated Backups.
+
+rem lu: Jan-3-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
+
+exit/b
+
+
+
+::_
+
+:mecfg_dr
+
+set fp=* Multi-Edit Config file folder in DropBox.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
+::_
+
+:mecfg_s
+
+set fp=* Multi-Edit Config file folder in Share-Zone.
+
+rem lu: Feb-13-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
 
 exit/b
 
