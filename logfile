@@ -1,0 +1,165 @@
+2019-08-13 10:31:28.868 EDT [3108] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-08-13 10:31:28.869 EDT [3108] LOG:  listening on IPv6 address "::1", port 5432
+2019-08-13 10:31:28.976 EDT [7492] LOG:  database system was interrupted; last known up at 2019-03-08 17:26:30 EST
+2019-08-13 10:31:39.155 EDT [7492] LOG:  database system was not properly shut down; automatic recovery in progress
+2019-08-13 10:31:39.161 EDT [7492] LOG:  redo starts at 0/16DA248
+2019-08-13 10:31:39.161 EDT [7492] LOG:  invalid record length at 0/16DA280: wanted 24, got 0
+2019-08-13 10:31:39.161 EDT [7492] LOG:  redo done at 0/16DA248
+2019-08-13 10:31:39.415 EDT [3108] LOG:  database system is ready to accept connections
+2019-08-13 10:57:38.901 EDT [5440] ERROR:  relation "cart_office" already exists
+2019-08-13 10:57:38.901 EDT [5440] STATEMENT:  CREATE TABLE public.cart_office (cd BIGINT DEFAULT nextval('public.office_cd_seq') NOT NULL, office_id VARCHAR(10), name VARCHAR(25), street_address VARCHAR(128), city VARCHAR(32), state_province VARCHAR(16), postal_code VARCHAR(16), timezone_id VARCHAR(35), aor VARCHAR(3), dco VARCHAR(3), CONSTRAINT cart_office_pkey PRIMARY KEY (cd))
+2019-08-13 11:04:02.715 EDT [15764] ERROR:  relation "public.databasechangeloglock" does not exist at character 22
+2019-08-13 11:04:02.715 EDT [15764] STATEMENT:  SELECT COUNT(*) FROM public.databasechangeloglock
+2019-08-13 11:04:05.687 EDT [15764] ERROR:  cannot change name of view column "length_in_minutes" to "length_in_seconds"
+2019-08-13 11:04:05.687 EDT [15764] STATEMENT:  CREATE OR REPLACE VIEW public.enrollees_vw AS select * from (
+	            SELECT cem.id  as map_id, co.aor, co.dco, co.timezone_id, ce.anumber, sb.office_id,
+	                ce.last_name||', '||ce.first_name as fullname,
+	                ce.gender, ce.language, ce.date_of_birth,
+	                ce.subject_id, ce.earm_case_id,
+	                case when dc.session_start_ts is null then sb.date::date::timestamp else dc.session_start_ts::timestamp::date::timestamp end as "cur_schedule_date",
+	                nb.date as next_appointment,
+	                sb.id as schedule_block_id,
+	                dc.session_start_ts::timestamp::date as "session_date",
+	                dc.session_start_ts::time as "start_time",
+	                dc.session_end_ts::time as "end_time",
+	                extract(epoch from (dc.session_end_ts::time - dc.session_start_ts::time))::bigint as "length_in_seconds",
+	                case when msr.msr_reason is null
+	                    then case when dc.session_end_ts is null
+	                         then ''
+	                         else 'New Appt.' end
+	                    else 'MSR'
+	                    end as "outcome",
+	                case when msr.msr_reason is null
+	                    then case when dc.session_end_ts is null
+	                         then '' else 'N/A' end
+	                    else msr.msr_reason end as "msr_reason",
+	                case when msr.comment is null
+	                    then case when msr.msr_reason is null
+	                            then 'N/A'
+	                            else '' end
+	                    else msr.comment
+	                    end as "msr_comment",
+	                msr.rank
+	            FROM cart_enrollee ce
+	            INNER JOIN enrollee_schedule_map cem
+	              ON ce.id = cem.enrollee_id
+	            INNER JOIN schedule_block sb
+	              ON sb.id = cem.schedule_block_id
+	            INNER JOIN schedule_block nb
+	              ON nb.id = cem.schedule_block_id
+	            INNER JOIN cart_office co
+	              ON co.office_id = sb.office_id
+	            LEFT JOIN data_collector dc
+	              ON dc.anumber = ce.anumber AND
+	                 (dc.session_start_ts::timestamp::date = sb.date OR
+	                 (nb.date > LocalTimestamp::date AND dc.session_start_ts::timestamp::date = LocalTimestamp::date))
+	            LEFT JOIN (select *,
+	                        case when msr_reason like '%Active%' then '1'
+	                             else case when msr_reason like '%Rapsheet%' then '2'
+	                                       else case when msr_reason like '%Officer%' then '3'
+	                                                 else case when msr_reason like '%Fingerprint%' then '4'
+	                                                           else case when msr_reason like '%Violation%' then '5' else '6' end
+	                                                           end
+	                                                end
+	                                        end
+	                            end as rank
+	                    from
+	                    (SELECT office_id, session_id, string_agg(msr_reason, ', ') as msr_reason, string_agg(comment,', ') as comment
+	                                FROM comment
+	                                WHERE type = 'MSR'
+	                                GROUP BY office_id, session_id) comm) msr
+	              ON msr.session_id = dc.session_id
+	
+	            WHERE sb.date > dc.session_start_ts::timestamp::date OR dc.session_start_ts is null OR
+	                  (sb.date = dc.session_start_ts::timestamp::date AND msr.msr_reason is not null)
+	
+	
+	            ) vw order by vw.cur_schedule_date, vw.rank, vw.outcome
+2019-08-13 11:06:19.941 EDT [8068] ERROR:  relation "public.databasechangeloglock" does not exist at character 22
+2019-08-13 11:06:19.941 EDT [8068] STATEMENT:  SELECT COUNT(*) FROM public.databasechangeloglock
+2019-08-13 11:06:22.411 EDT [8068] ERROR:  cannot change name of view column "length_in_minutes" to "length_in_seconds"
+2019-08-13 11:06:22.411 EDT [8068] STATEMENT:  CREATE OR REPLACE VIEW public.enrollees_vw AS select * from (
+	            SELECT cem.id  as map_id, co.aor, co.dco, co.timezone_id, ce.anumber, sb.office_id,
+	                ce.last_name||', '||ce.first_name as fullname,
+	                ce.gender, ce.language, ce.date_of_birth,
+	                ce.subject_id, ce.earm_case_id,
+	                case when dc.session_start_ts is null then sb.date::date::timestamp else dc.session_start_ts::timestamp::date::timestamp end as "cur_schedule_date",
+	                nb.date as next_appointment,
+	                sb.id as schedule_block_id,
+	                dc.session_start_ts::timestamp::date as "session_date",
+	                dc.session_start_ts::time as "start_time",
+	                dc.session_end_ts::time as "end_time",
+	                extract(epoch from (dc.session_end_ts::time - dc.session_start_ts::time))::bigint as "length_in_seconds",
+	                case when msr.msr_reason is null
+	                    then case when dc.session_end_ts is null
+	                         then ''
+	                         else 'New Appt.' end
+	                    else 'MSR'
+	                    end as "outcome",
+	                case when msr.msr_reason is null
+	                    then case when dc.session_end_ts is null
+	                         then '' else 'N/A' end
+	                    else msr.msr_reason end as "msr_reason",
+	                case when msr.comment is null
+	                    then case when msr.msr_reason is null
+	                            then 'N/A'
+	                            else '' end
+	                    else msr.comment
+	                    end as "msr_comment",
+	                msr.rank
+	            FROM cart_enrollee ce
+	            INNER JOIN enrollee_schedule_map cem
+	              ON ce.id = cem.enrollee_id
+	            INNER JOIN schedule_block sb
+	              ON sb.id = cem.schedule_block_id
+	            INNER JOIN schedule_block nb
+	              ON nb.id = cem.schedule_block_id
+	            INNER JOIN cart_office co
+	              ON co.office_id = sb.office_id
+	            LEFT JOIN data_collector dc
+	              ON dc.anumber = ce.anumber AND
+	                 (dc.session_start_ts::timestamp::date = sb.date OR
+	                 (nb.date > LocalTimestamp::date AND dc.session_start_ts::timestamp::date = LocalTimestamp::date))
+	            LEFT JOIN (select *,
+	                        case when msr_reason like '%Active%' then '1'
+	                             else case when msr_reason like '%Rapsheet%' then '2'
+	                                       else case when msr_reason like '%Officer%' then '3'
+	                                                 else case when msr_reason like '%Fingerprint%' then '4'
+	                                                           else case when msr_reason like '%Violation%' then '5' else '6' end
+	                                                           end
+	                                                end
+	                                        end
+	                            end as rank
+	                    from
+	                    (SELECT office_id, session_id, string_agg(msr_reason, ', ') as msr_reason, string_agg(comment,', ') as comment
+	                                FROM comment
+	                                WHERE type = 'MSR'
+	                                GROUP BY office_id, session_id) comm) msr
+	              ON msr.session_id = dc.session_id
+	
+	            WHERE sb.date > dc.session_start_ts::timestamp::date OR dc.session_start_ts is null OR
+	                  (sb.date = dc.session_start_ts::timestamp::date AND msr.msr_reason is not null)
+	
+	
+	            ) vw order by vw.cur_schedule_date, vw.rank, vw.outcome
+2019-08-13 11:25:06.165 EDT [17720] ERROR:  database "cart" is being accessed by other users
+2019-08-13 11:25:06.165 EDT [17720] DETAIL:  There is 1 other session using the database.
+2019-08-13 11:25:06.165 EDT [17720] STATEMENT:  DROP DATABASE cart;
+	
+2019-08-13 11:25:37.361 EDT [17720] ERROR:  database "cart" is being accessed by other users
+2019-08-13 11:25:37.361 EDT [17720] DETAIL:  There is 1 other session using the database.
+2019-08-13 11:25:37.361 EDT [17720] STATEMENT:  DROP DATABASE cart;
+	
+2019-08-13 11:26:43.198 EDT [17720] ERROR:  database "cart" is being accessed by other users
+2019-08-13 11:26:43.198 EDT [17720] DETAIL:  There is 1 other session using the database.
+2019-08-13 11:26:43.198 EDT [17720] STATEMENT:  DROP DATABASE cart;
+	
+2019-08-13 11:27:01.683 EDT [14900] ERROR:  canceling statement due to user request
+2019-08-13 11:27:01.685 EDT [3108] LOG:  received fast shutdown request
+2019-08-13 11:27:01.691 EDT [3108] LOG:  aborting any active transactions
+2019-08-13 11:27:01.692 EDT [504] FATAL:  terminating connection due to administrator command
+2019-08-13 11:27:01.692 EDT [3928] FATAL:  terminating connection due to administrator command
+2019-08-13 11:27:01.693 EDT [17720] FATAL:  terminating connection due to administrator command
+2019-08-13 11:27:01.695 EDT [3108] LOG:  background worker "logical replication launcher" (PID 14900) exited with exit code 1
+2019-08-13 11:27:01.707 EDT [5548] LOG:  shutting down
+2019-08-13 11:27:01.815 EDT [3108] LOG:  database system is shut down

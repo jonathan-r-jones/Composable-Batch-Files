@@ -2506,6 +2506,8 @@ exit/b
 
 :co
 
+:sb
+
 set fp=* Use Git checkout to switch branches.
 
 rem lu: May-3-2019
@@ -3028,6 +3030,7 @@ if "%~2" == "" (
   echo * Percent 2 is a required field.
   exit/b
 )
+
 git push origin --delete %2
 
 exit/b

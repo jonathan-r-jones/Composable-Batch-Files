@@ -5516,6 +5516,32 @@ exit/b
 
 :990
 
+:oc
+
+:certs
+
+:localyml
+
+:debr
+
+:cna
+
+:cnc
+
+:cnj
+
+:ncart
+
+:dvapi
+
+:dvcart
+
+:dvport
+
+:cartzip
+
+:cm
+
 :pass-through
 
 :iac
@@ -7217,6 +7243,25 @@ exit/b
 
 ::_
 
+:wobc
+
+set fp=* Use Word to edit a blank docx document in Cade.
+
+rem lu: Aug-15-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_filename=%cbf_path%\blank.docx
+
+exit/b
+
+
+
+::_
+
 :exb
 
 :exblk
@@ -7229,6 +7274,25 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\blank.xlsx
+
+exit/b
+
+
+
+::_
+
+:exbc
+
+set fp=* Use Excel to edit a blank docx document in Cade.
+
+rem lu: Aug-15-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_filename=%cbf_path%\blank.xlsx
 
 exit/b
 
@@ -7292,8 +7356,6 @@ exit/b
 
 
 :_
-
-:cm
 
 :cmac
 
@@ -10191,6 +10253,42 @@ echo.
 echo %fp%
 
 set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
+:_
+
+:pgdata
+
+set fp=* PGData.
+
+rem lu: Aug-13-2019
+
+echo.
+echo %fp%
+
+set cbf_path=c:\aa\pgdata
+
+exit/b
+
+
+
+:_
+
+:libs
+
+set fp=* Libs.
+
+rem lu: Aug-15-2019
+
+echo.
+echo %fp%
+
+call n api
+
+set cbf_path=%cbf_path%\build\libs
 
 exit/b
 

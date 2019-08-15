@@ -361,28 +361,6 @@ exit/b
 
 :_
 
-:bj
-
-:bootjar
-
-set fp=* Bootjar command.
-
-rem This worked on Jun-20-2019 but only after I fix the PKIX issue.
-
-rem lu: Jun-20-2019
-
-echo.
-echo %fp%
-
-echo.
-gradle -Pdev bootJar
-
-exit/b
-
-
-
-:_
-
 :br
 
 set fp=* Bootrun from Sean. Notice that there is also a Maven version of this same command.
@@ -393,6 +371,49 @@ echo.
 echo %fp%
 
 gradle bootrun --debug-jvm
+
+exit/b
+
+
+
+:_
+
+:b4d
+
+set fp=* Build for dev environment.
+
+rem lu: Aug-14-2019
+
+echo.
+echo %fp%
+
+call td api
+
+echo.
+
+gradle -Pdev clean bootJar
+
+exit/b
+
+
+
+:_
+
+:bj
+
+:bootjar
+
+set fp=* Bootjar command.
+
+rem This worked on Jun-20-2019 but only after I fixed the PKIX issue.
+
+rem lu: Jun-20-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle -Pdev bootJar
 
 exit/b
 
@@ -441,7 +462,7 @@ exit/b
 
 ::_
 
-:matt2
+:pinot
 
 set fp=* Matt's gradle command.
 

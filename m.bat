@@ -4619,44 +4619,92 @@ exit/b
 
 :_
 
-:smdi
+:compose_variable
 
-set fp=* Sean's manual deployment instructions.
+set fp=* Compose variable.
 
-rem lu: Jun-20-2019
+rem lu: Jul-16-2019
 
 echo.
 echo %fp%
 
-call tdc cart
+echo.
+echo * Variable to expand: %2
 
-call pull
+set cbf_composed_variable=cbf_%2
 
-call tdc cart
+call %0 expand_variable "%%%cbf_composed_variable%%%"
 
-call gr bootjar
+exit/b
+
+
+
+:_
+
+:expand_variable
+
+set fp=* Expand variable.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+echo.
+echo * Expanded variable: %~2
+
+set cbf_expanded_variable=%~2
+
+exit/b
+
+
+
+:_
+
+:smdi
+
+:htr
+
+set fp=* Sean's manual deployment instructions. (How to Refresh the Server: skw)
+
+rem lu: Aug-14-2019
+
+echo.
+echo %fp%
 
 call td cart
 
-cd icecart-portal-client
+call pull
+
+call td api
+
+call gr bootjar
+
+call td libs
+
+ren cart-api-1.0.0.jar cart-api.jar
+
+call td port
 
 call m rd dist
 
-call m ng_fqt
+call m build_for_fqt
 
-cd dist
+cd dist\icecart-portal-client
 
-rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist>
+rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist\icecart-portal-client>
 
-call k scp_ui sr33
+call k scp_ui_j sr5
 
-call k scp_api sr33
+call k scp_api_j sr5
 
-call scp_ui_j sr5
+call k scp_api_j sr31
 
-call scp_api sr31
+call k scp_ui_j sr31
 
-call scp_api_j sr5
+ps -ef | grep java: // get the pid and kill it using sudo kill -9 pid
+
+sudo kill -9 (!kl) The pid is the first of 2 numbers listed before cart jar file.
 
 sudo rm -rf /var/www/html*
 
@@ -4664,15 +4712,9 @@ cd /var/www
 
 sudo mkdir html
 
-rem ps -ef | grep java // get the pid and kill it using sudo kill -9 pid
-
-sudo kill -9 (!kill)
-
-cd
-
 cd /opt/cart
 
-sudo cp /tmp/cart-api-0.0.1-SNAPSHOT.jar .
+sudo cp /tmp/cart-api.jar .
 
 sudo cp /tmp/ui.zip .
 
@@ -4681,7 +4723,20 @@ sudo unzip -o ./ui.zip -d /var/www/html/
 rem From the /opt/cart folder?:
 export SERVER_NODE=master
 
-sudo nohup ./cart-api-0.0.1-SNAPSHOT.jar &
+rem sudo nohup ./cart-api-1.0.0.jar &
+
+cd
+
+ps -ef | grep java
+
+sudo service cart status
+
+sudo service cart restart: I ran this from the home folder only after I realized the database query 
+wasn't working.
+
+sudo service cart status
+
+rem Verify that the server is up by navigating to the URL. After picture.
 
 exit/b
 
@@ -4734,7 +4789,7 @@ exit/b
 
 :ngf
 
-:ng_fqt
+:build_for_fqt
 
 set fp=* Build for FQT.
 
@@ -4800,65 +4855,28 @@ exit/b
 
 set fp=* Run CART locally.
 
-rem lu: Aug-12-2019
+rem lu: Aug-15-2019
 
 echo.
 echo %fp%
 
-rem Run Postgres.
+rem Get Postgres running on local.
+rem call pql start
 
-call td api
+rem Run the API.
+call td dvapi
 
-call gr matt1
+rem You may want to do a get latest.
+pl
 
-call sf 4200 krm
+call gr pinot
 
-call td port
-
+rem Run the UI.
+call td dvport
 echo.
 ng serve
 
-exit/b
-
-
-
-:_
-
-:compose_variable
-
-set fp=* Compose variable.
-
-rem lu: Jul-16-2019
-
-echo.
-echo %fp%
-
-echo.
-echo * Variable to expand: %2
-
-set cbf_composed_variable=cbf_%2
-
-call %0 expand_variable "%%%cbf_composed_variable%%%"
-
-exit/b
-
-
-
-:_
-
-:expand_variable
-
-set fp=* Expand variable.
-
-rem lu: Jul-16-2019
-
-echo.
-echo %fp%
-
-echo.
-echo * Expanded variable: %~2
-
-set cbf_expanded_variable=%~2
+call sf 4200 krm
 
 exit/b
 
