@@ -4853,7 +4853,7 @@ exit/b
 
 :rc
 
-set fp=* Run CART locally.
+set fp=* Run CART locally, overarching process.
 
 rem lu: Aug-15-2019
 
@@ -4861,22 +4861,104 @@ echo.
 echo %fp%
 
 rem Get Postgres running on local.
-rem call pql start
+call pql start
 
-rem Run the API.
-call td dvapi
+td dvcart
 
 rem You may want to do a get latest.
 pl
 
-call gr pinot
+rem Run the API by using cmd_api or the line below.
+call m run_api
 
-rem Run the UI.
+call sf 4200 krm
+
+call x bash
+
+call get_cart_jwt.sh
+
+rem Run the UI by using cmd_ui or the line below.
+call m run_ui
+
+exit/b
+
+
+
+:_
+
+:run_ui
+
+set fp=* Run UI in the dvcart folder.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
 call td dvport
+
 echo.
 ng serve
 
-call sf 4200 krm
+exit/b
+
+
+
+:_
+
+:cmd_ui
+
+set fp=* Run UI cmd.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+echo.
+
+call m big
+
+call m run_ui
+
+exit/b
+
+
+
+:_
+
+:cmd_api
+
+set fp=* Run API cmd.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+echo.
+
+call m big
+
+call m run_api
+
+exit/b
+
+
+
+:_
+
+:run_api
+
+set fp=* Run API in the dvcart folder.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call td dvapi
+call gr pinot
 
 exit/b
 
