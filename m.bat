@@ -4680,6 +4680,9 @@ call td api
 
 call gr bootjar
 
+rem I saw a case where the the API will build but not run, so you may want to run on your
+rem local before deploying to the server.
+
 call td libs
 
 ren cart-api-1.0.0.jar cart-api.jar

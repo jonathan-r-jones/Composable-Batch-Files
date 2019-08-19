@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Transform Directory by gluing a relative path onto a base path.
+set filep=* Transform Directory by appending a relative path onto a base path.
 
 echo.
 echo %filep%
@@ -52,7 +52,7 @@ exit/b
 
 :main_function
 
-rem lu: May-10-2019
+rem lu: Aug-19-2019
 
 call n %1
 
