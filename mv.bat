@@ -69,7 +69,7 @@ exit/b
 
 ::_
 
-:old_clipjam_files
+:cj_2_old_cj
 
 set fp=* Move old ClipJam files from the Podcasts to Audiobooks folder.
 
@@ -107,7 +107,7 @@ exit/b
 
 ::_
 
-:sa_to_cj
+:sf_2_cj
 
 set fp=* Move staging area podcasts to the Clipjam folder.
 
@@ -142,7 +142,7 @@ rem call x pc
 
 rem (!rfsp) (mov-2)
 
-call %0 move_podcasts_to_the_staging_folder
+call %0 pc_2_sf
 
 rem Run the tag program.
 call x tag
@@ -150,9 +150,9 @@ call x tag
 echo.
 pause
 
-call %0 old_clipjam_files
+call %0 cj_2_old_cj
 
-call %0 sa_to_cj
+call %0 sf_2_cj
 
 exit/b
 
@@ -174,7 +174,7 @@ rem call x pc
 
 rem (!rfsp) (mov-2)
 
-call %0 move_podcasts_to_the_staging_folder
+call %0 pc_2_sf
 
 rem Run the tag program.
 call x tag
@@ -190,7 +190,7 @@ exit/b
 
 ::_
 
-:move_podcasts_to_the_staging_folder
+:pc_2_sf
 
 set fp=* Move all podcasts to the staging folder.
 
