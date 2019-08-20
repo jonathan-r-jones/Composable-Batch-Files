@@ -55,12 +55,11 @@ echo.
 echo * Errorlevel: %errorlevel%
 
 if %errorlevel% == 1 (
-  echo.
-  echo * Error: 
+  call m clear_errorlevel_silently
   exit/b
 )
 
-rem Imprimatur (!p2, !erro, !el, !erle)
+rem Imprimatur (!err, !p2, !erro, !el, !erle)
 
 if "%~2" == "" (
   echo.

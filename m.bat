@@ -4967,4 +4967,31 @@ exit/b
 
 
 
+:_
+
+:liq
+
+set fp=* Run Liquibase.
+
+rem lu: Aug-20-2019
+
+echo.
+echo %fp%
+
+call brfn cart lc
+rem call brfn cartdv lc
+
+echo.
+echo Log file: %cbf_filename%
+
+echo.
+liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_filename%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" update
+
+rem Matt's command is below.
+rem liquibase --driver=org.postgresql.Driver --changeLogFile="C:\dev\cart_app\cart\api\src\main\resources\config\liquibase\master.xml" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory=c:\dev\temp\liqui_MYDB_MYSCHEMA_Data.out update
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-9)

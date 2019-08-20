@@ -50,6 +50,8 @@ echo     a  AWS CLI
 echo    an  Application nickname dictionary layer of abstraction
 echo    as  Windows file associations
 echo     b  Shutdown windows
+echo   brp  Build relative path
+echo  brfn  Build relative filename
 echo     c  Clear screen and reset color
 echo   cbf  Show this list of CBF batch files
 echo    ch  Chef command line utility
@@ -59,7 +61,7 @@ echo    cn  Git cloning, based entirely on the nickname parameter
 echo   cng  Git cloning, generic version
 echo   col  Shell window colors operations
 echo  ccfn  Code Compare with aliases or filenames
-echo  cc12  Code Compare preloaded with j1.txt and j2.txt
+echo    cc  Code Compare preloaded with j1.txt and j2.txt
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl caller for direct server tests
@@ -81,6 +83,7 @@ echo    de  Delete
 echo  depn  Delete folder corresponding to CBF path alias parameter
 echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit
+echo   edr  Edit a relative-path constucted filename
 echo    el  Edit log file of an alias
 echo    es  Edit settings file of an alias
 echo    eg  Edit a file by gluing a relative path onto a base path
@@ -143,8 +146,9 @@ echo     t  Testing, experimenting and developing new batch file functions
 echo    td  Transform directory
 echo   tdc  Transform directory to favorite child folder of alias
 echo  tdfn  Transform directory where only the Cbf_filename is known
-echo   tdp  Transform directory to parent folder
 echo   tdg  Transform directory by gluing a relative path onto a base path
+echo   tdp  Transform directory to parent folder
+echo   tdr  Transform directory by appending a relative path onto a base path.
 echo    te  Batch file template used for creating new batch files
 echo    tf  Terraform
 echo    tk  Taskkill

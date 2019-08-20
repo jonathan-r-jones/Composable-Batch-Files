@@ -49,7 +49,7 @@ exit/b
 :main_function
 
 echo.
-dir *.%1* /s
+dir *.%1* %2
 
 exit/b
 

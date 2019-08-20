@@ -2337,7 +2337,7 @@ exit/b
 
 :_
 
-:h
+:hdr
 
 set fp=* H drive.
 
@@ -5256,8 +5256,6 @@ exit/b
 
 :optj
 
-:cc
-
 :mb
 
 :cart
@@ -5543,6 +5541,10 @@ exit/b
 :cm
 
 :lyr
+
+:ksi
+
+:cartdv
 
 :pass-through
 
@@ -7333,25 +7335,6 @@ call %0 jj
 set cbf_path=%cbf_path%\gradle\wrapper
 
 set cbf_filename=%cbf_path%\gradle-wrapper.properties
-
-exit/b
-
-
-
-:_
-
-:coco
-
-set fp=* Code compare.
-
-rem lu: Jan-31-2019
-
-echo.
-echo %fp%
-
-set cbf_application=c:\program files\devart\code compare\codecompare.exe
-
-set cbf_filename=%cbf_application%
 
 exit/b
 
@@ -10291,6 +10274,44 @@ echo %fp%
 call n api
 
 set cbf_path=%cbf_path%\build\libs
+
+exit/b
+
+
+
+:_
+
+:coco
+
+set fp=* Code compare.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=c:\program files\devart\code compare\codecompare.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+:_
+
+:lc
+
+set fp=* Liquibase configuration.
+
+rem lu: Aug-20-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=api\src\main\resources\config\liquibase\master.xml
+
+set cbf_path=api\src\main\resources\config\liquibase
 
 exit/b
 
