@@ -380,6 +380,8 @@ exit/b
 
 :b4d
 
+:build_jar
+
 set fp=* Build for dev environment.
 
 rem lu: Aug-14-2019
@@ -392,28 +394,6 @@ call td api
 echo.
 
 gradle -Pdev clean bootJar
-
-exit/b
-
-
-
-:_
-
-:bj
-
-:bootjar
-
-set fp=* Bootjar command.
-
-rem This worked on Jun-20-2019 but only after I fixed the PKIX issue.
-
-rem lu: Jun-20-2019
-
-echo.
-echo %fp%
-
-echo.
-gradle -Pdev bootJar
 
 exit/b
 
@@ -464,6 +444,8 @@ exit/b
 
 :pinot
 
+:run
+
 set fp=* Matt's gradle command.
 
 rem lu: Aug-12-2019
@@ -473,6 +455,28 @@ echo %fp%
 
 echo.
 gradle -Pno-liquibase clean bootrun
+
+exit/b
+
+
+
+:_
+
+:bj
+
+:bootjar
+
+set fp=* Bootjar command.
+
+rem This worked on Jun-20-2019 but only after I fixed the PKIX issue.
+
+rem lu: Jun-20-2019
+
+echo.
+echo %fp%
+
+echo.
+gradle -Pdev bootJar
 
 exit/b
 
