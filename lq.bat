@@ -53,8 +53,8 @@ rem lu: Aug-20-2019
 echo.
 echo %fp%
 
-call brfn cart lc
-rem call brfn cartdv lc
+call brfn cartdv lc
+rem call brfn cart lc
 
 echo.
 echo Log file: %cbf_filename%

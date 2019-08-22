@@ -4667,27 +4667,30 @@ exit/b
 
 set fp=* Sean's manual deployment instructions. (How to Refresh the Server: skw)
 
-rem lu: Aug-14-2019
+rem lu: Aug-22-2019
 
 echo.
 echo %fp%
 
-call td cart
+call td ma
 
 call pull
 
-call td api
+lq
+
+call tdc ma
 
 call gr build_jar
 
 rem I saw a case where the the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
+gr run_api
 
-call td libs
+call td lib
 
 ren cart-api-1.0.0.jar cart-api.jar
 
-call td port
+call td dvport
 
 call m rd dist
 
@@ -4697,19 +4700,28 @@ cd dist\icecart-portal-client
 
 rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist\icecart-portal-client>
 
-call k scp_ui_j sr5
+k scp_ui_j sr5
 
-call k scp_api_j sr5
+k scp_api_j sr5
 
-call k scp_api_j sr31
+k scp_ui_j sr31
 
-call k scp_ui_j sr31
+k scp_api_j sr31
+
+k cnj sr5
+
+   or
+
+k cna sr31
 
 ps -ef | grep java: // get the pid and kill it using sudo kill -9 pid
 
 sudo kill -9 (!kl) The pid is the first of 2 numbers listed before cart jar file.
 
 sudo rm -rf /var/www/html*
+
+rem Verify that the website is down.
+sf dev
 
 cd /var/www
 
@@ -4724,6 +4736,7 @@ sudo cp /tmp/ui.zip .
 sudo unzip -o ./ui.zip -d /var/www/html/
 
 rem From the /opt/cart folder?:
+
 export SERVER_NODE=master
 
 rem sudo nohup ./cart-api-1.0.0.jar &
@@ -4734,8 +4747,9 @@ ps -ef | grep java
 
 sudo service cart status
 
-sudo service cart restart: I ran this from the home folder only after I realized the database query 
-wasn't working.
+sudo service cart restart
+
+::I ran this from the home folder only after I realized the database query wasn't working.
 
 sudo service cart status
 
@@ -4864,7 +4878,7 @@ echo.
 echo %fp%
 
 rem Get Postgres running on local.
-call pql start
+pql start
 
 td dvcart
 
@@ -4922,7 +4936,7 @@ echo.
 
 call m big
 
-call m run_ui
+call td port
 
 exit/b
 
@@ -4943,25 +4957,9 @@ echo.
 
 call m big
 
-call m run_api
+rem call m run_api
 
-exit/b
-
-
-
-:_
-
-:run_api
-
-set fp=* Run API in the dvcart folder.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call td dvapi
-call gr pinot
+call td api
 
 exit/b
 

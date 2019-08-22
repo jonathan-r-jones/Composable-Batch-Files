@@ -389,10 +389,7 @@ rem lu: Aug-14-2019
 echo.
 echo %fp%
 
-call td api
-
 echo.
-
 gradle -Pdev clean bootJar
 
 exit/b
@@ -445,6 +442,8 @@ exit/b
 :pinot
 
 :run
+
+:run_api
 
 set fp=* Matt's gradle command.
 

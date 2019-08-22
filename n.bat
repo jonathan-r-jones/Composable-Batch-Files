@@ -5546,8 +5546,6 @@ exit/b
 
 :cartdv
 
-:pass-through
-
 :iac
 
 :cart_s3
@@ -5577,6 +5575,14 @@ exit/b
 :tf2
 
 :vpc_id
+
+:ma
+
+:maport
+
+:mazip
+
+:pass-through
 
 set fp=* Pass through.
 
@@ -8490,8 +8496,6 @@ exit/b
 
 ::_
 
-:ma
-
 :otzi
 
 set fp=* Test the use of an enterprise profile on VSTS. Formerly the mobile app prototype that Brian saw.
@@ -10262,6 +10266,8 @@ exit/b
 
 :_
 
+:lib
+
 :libs
 
 set fp=* Libs.
@@ -10271,9 +10277,9 @@ rem lu: Aug-15-2019
 echo.
 echo %fp%
 
-call n api
+call n ma
 
-set cbf_path=%cbf_path%\build\libs
+set cbf_path=%cbf_path%\api\build\libs
 
 exit/b
 
@@ -10312,6 +10318,57 @@ echo %fp%
 set cbf_filename=api\src\main\resources\config\liquibase\master.xml
 
 set cbf_path=api\src\main\resources\config\liquibase
+
+exit/b
+
+
+
+:_
+
+:dg
+
+set fp=* Datagrip.
+
+rem lu: Aug-22-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\aa\DataGrip 2019.2.2\bin\datagrip.exe
+
+exit/b
+
+
+
+:_
+
+:dbb
+
+set fp=* Database backups.
+
+rem lu: Aug-22-2019
+
+echo.
+echo %fp%
+
+set cbf_path=c:\aa\Database Backups
+
+exit/b
+
+
+
+:_
+
+:dlq
+
+set fp=* Download Liquibase version 3.6.3.
+
+rem lu: Aug-22-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://download.liquibase.org/download/?frm=n
 
 exit/b
 
