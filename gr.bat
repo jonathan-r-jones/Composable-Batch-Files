@@ -370,6 +370,14 @@ rem lu: Jan-9-2019
 echo.
 echo %fp%
 
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
 gradle bootrun --debug-jvm
 
 exit/b
@@ -388,6 +396,14 @@ rem lu: Aug-14-2019
 
 echo.
 echo %fp%
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
 
 echo.
 gradle -Pdev clean bootJar
@@ -411,6 +427,14 @@ rem lu: Jun-21-2019
 echo.
 echo %fp%
 
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
 echo.
 gradle -Plocal -Pno-liquibase clean bootrun
 
@@ -430,6 +454,14 @@ rem lu: Aug-12-2019
 
 echo.
 echo %fp%
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
 
 gradle clean bootRun --debug-jvm
 
@@ -452,6 +484,14 @@ rem lu: Aug-12-2019
 echo.
 echo %fp%
 
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
 echo.
 gradle -Pno-liquibase clean bootrun
 
@@ -473,6 +513,14 @@ rem lu: Jun-20-2019
 
 echo.
 echo %fp%
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
 
 echo.
 gradle -Pdev bootJar

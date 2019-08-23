@@ -4073,7 +4073,7 @@ if %errorlevel% == 0 (
   exit/b 0
 )
 
-echo %cd% | find /i "j\cart">nul
+echo %cd% | find /i "\cart">nul
 
 if %errorlevel% == 0 (
   echo.
@@ -4347,6 +4347,8 @@ exit
 :specific_file_presence
 
 set fp=* Check the current folder for the presence of "%2".
+
+rem is_present
 
 rem lu: Mar-28-2019
 
@@ -4672,29 +4674,29 @@ rem lu: Aug-22-2019
 echo.
 echo %fp%
 
-call td ma
+td ma
 
-call pull
+pl
 
 lq
 
 call tdc ma
 
-call gr build_jar
-
 rem I saw a case where the the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
 gr run_api
 
-call td lib
+gr build_jar
+
+td lib
 
 ren cart-api-1.0.0.jar cart-api.jar
 
-call td dvport
+td dvport
 
-call m rd dist
+m rd dist
 
-call m build_for_fqt
+m build_for_fqt
 
 cd dist\icecart-portal-client
 
@@ -4732,6 +4734,8 @@ cd /opt/cart
 sudo cp /tmp/cart-api.jar .
 
 sudo cp /tmp/ui.zip .
+
+ll
 
 sudo unzip -o ./ui.zip -d /var/www/html/
 
@@ -4880,13 +4884,16 @@ echo %fp%
 rem Get Postgres running on local.
 pql start
 
-td dvcart
+td ma
 
 rem You may want to do a get latest.
 pl
 
+lq
+
 rem Run the API by using cmd_api or the line below.
-call m run_api
+gr run_api
+rem qq-1
 
 call sf 4200 krm
 
@@ -4921,7 +4928,11 @@ exit/b
 
 
 
-:_
+:_+ Cmds
+
+
+
+::_
 
 :cmd_ui
 
@@ -4936,13 +4947,13 @@ echo.
 
 call m big
 
-call td port
+call td dvport
 
 exit/b
 
 
 
-:_
+::_
 
 :cmd_api
 
@@ -4957,9 +4968,28 @@ echo.
 
 call m big
 
-rem call m run_api
-
 call td api
+
+exit/b
+
+
+
+::_
+
+:cmd_golf
+
+set fp=* Run Golf cmd.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+echo.
+
+call m big
+
+call x golf
 
 exit/b
 
