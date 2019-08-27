@@ -1334,7 +1334,7 @@ exit/b
 
 :_
 
-:c
+:cdr
 
 set fp=* Root of the C Drive.
 
@@ -5583,6 +5583,8 @@ exit/b
 :mazip
 
 :lyml
+
+:c
 
 :pass-through
 

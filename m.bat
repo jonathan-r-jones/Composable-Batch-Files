@@ -1599,11 +1599,7 @@ title = Composable Batch Files Helper
 
 :_
 
-:c
-
-:ccs
-
-:clear
+:clco
 
 :clear_color_setting
 
@@ -4892,8 +4888,7 @@ pl
 lq
 
 rem Run the API by using cmd_api or the line below.
-gr run_api
-rem qq-1
+m cmd_api
 
 call sf 4200 krm
 
@@ -4902,7 +4897,7 @@ call x bash
 call get_cart_jwt.sh
 
 rem Run the UI by using cmd_ui or the line below.
-call m run_ui
+call m cmd_ui
 
 exit/b
 
@@ -4949,6 +4944,8 @@ call m big
 
 call td dvport
 
+ng serve
+
 exit/b
 
 
@@ -4970,6 +4967,8 @@ call m big
 
 call td api
 
+call gr run_api
+
 exit/b
 
 
@@ -4990,6 +4989,27 @@ echo.
 call m big
 
 call x golf
+
+exit/b
+
+
+
+::_
+
+:cmd_start_db
+
+set fp=* Start local database.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+echo.
+
+call m big
+
+call pql start
 
 exit/b
 
