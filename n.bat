@@ -5586,6 +5586,12 @@ exit/b
 
 :c
 
+:ly
+
+:lyb
+
+:jwt
+
 :pass-through
 
 set fp=* Pass through.
@@ -10373,6 +10379,25 @@ echo.
 echo %fp%
 
 set cbf_url=https://download.liquibase.org/download/?frm=n
+
+exit/b
+
+
+
+:_
+
+:dv_sec
+
+set fp=* Dev security folder.
+
+rem lu: Aug-28-2019
+
+echo.
+echo %fp%
+
+call n dvport
+
+set cbf_path=%cbf_path%\src\app\security
 
 exit/b
 
