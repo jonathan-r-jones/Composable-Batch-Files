@@ -4938,8 +4938,6 @@ rem lu: Aug-16-2019
 echo.
 echo %fp%
 
-echo.
-
 call m big
 
 call td dvport
@@ -4960,8 +4958,6 @@ rem lu: Aug-16-2019
 
 echo.
 echo %fp%
-
-echo.
 
 call m big
 
@@ -4984,8 +4980,6 @@ rem lu: Aug-16-2019
 echo.
 echo %fp%
 
-echo.
-
 call m big
 
 call x golf
@@ -5004,8 +4998,6 @@ rem lu: Aug-16-2019
 
 echo.
 echo %fp%
-
-echo.
 
 call m big
 
