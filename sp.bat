@@ -61,7 +61,7 @@ if not "%machinename%"=="gfe" (
 
 call p cbf
 
-rem call m update_lu %0
+call m update_lu %0
 
 call p s
 
