@@ -5594,6 +5594,10 @@ exit/b
 
 :rnc
 
+:caco
+
+:cs
+
 :pass-through
 
 set fp=* Pass through.
@@ -9654,25 +9658,6 @@ echo.
 echo %fp%
 
 set cbf_url=https://www.qrstuff.com/
-
-exit/b
-
-
-
-:_
-
-:caco
-
-set fp=* Cart controller.
-
-rem lu: Jun-27-2019
-
-echo.
-echo %fp%
-
-call td 563c
-
-set cbf_filename=%cd%\api\src\main\java\gov\dhs\ice\cart\web\rest\CartController.java
 
 exit/b
 
