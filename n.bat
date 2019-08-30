@@ -5592,6 +5592,8 @@ exit/b
 
 :jwt
 
+:rnc
+
 :pass-through
 
 set fp=* Pass through.
