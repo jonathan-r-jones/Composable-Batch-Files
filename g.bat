@@ -1036,6 +1036,8 @@ exit/b
 
 ::_
 
+:stas
+
 :stash
 
 set fp=* Stashing changes allows you to do a get-latest (or bring in someone's else's code) without losing your local changes.

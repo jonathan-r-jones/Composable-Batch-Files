@@ -5598,6 +5598,8 @@ exit/b
 
 :cs
 
+:dist
+
 :pass-through
 
 set fp=* Pass through.

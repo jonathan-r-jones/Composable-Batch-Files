@@ -4680,13 +4680,13 @@ call tdc ma
 
 rem I saw a case where the the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
-gr run_api
+(cmd_api)
 
 gr build_jar
 
 td lib
 
-ren cart-api-1.0.0.jar cart-api.jar
+ren cart-api-1.1.0.jar cart-api.jar
 
 td dvport
 
@@ -4694,7 +4694,7 @@ m rd dist
 
 m build_for_fqt
 
-cd dist\icecart-portal-client
+of dist
 
 rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist\icecart-portal-client>
 
@@ -4867,6 +4867,8 @@ exit/b
 
 
 ::_
+
+:htrl
 
 :rc
 
