@@ -4672,11 +4672,15 @@ echo %fp%
 
 td ma
 
+g sb develop
+
 pl
+
+cmd_start_db
 
 lq
 
-call tdc ma
+tdc ma
 
 rem I saw a case where the the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
@@ -4718,9 +4722,6 @@ sudo kill -9 (!kl) The pid is the first of 2 numbers listed before cart jar file
 
 sudo rm -rf /var/www/html*
 
-rem Verify that the website is down.
-sf dev
-
 cd /var/www
 
 sudo mkdir html
@@ -4733,10 +4734,14 @@ sudo cp /tmp/ui.zip .
 
 ll
 
+rem Verify that the website is down.
+sf dev
+
 sudo unzip -o ./ui.zip -d /var/www/html/
 
 rem From the /opt/cart folder?:
 
+rem On master server only.
 export SERVER_NODE=master
 
 rem sudo nohup ./cart-api-1.0.0.jar &
