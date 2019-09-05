@@ -3319,31 +3319,6 @@ exit/b 1
 
 
 
-:_
-
-:nsl
-
-set fp=* Nslookup IPV4 versus IPV6.
-
-rem lu: Oct-3-2018
-
-echo.
-echo %fp%
-echo.
-
-nslookup nytimes.com
-
-nslookup cnn.com
-
-nslookup washingtonpost.com
-
-rem Eric said that I need to find the setting that allows me to set my IP Address to IPV4.
-rem We had this problem in Stuttgart on Oct-3-2018.
-
-exit/b
-
-
-
 :_+ Error Level
 
 
@@ -4748,8 +4723,6 @@ rem sudo nohup ./cart-api-1.0.0.jar &
 
 cd
 
-ps -ef | grep java
-
 sudo service cart status
 
 sudo service cart restart
@@ -5009,6 +4982,31 @@ echo %fp%
 call m big
 
 call pql start
+
+exit/b
+
+
+
+:_
+
+:nsl
+
+set fp=* Nslookup IPV4 versus IPV6.
+
+rem lu: Oct-3-2018
+
+echo.
+echo %fp%
+echo.
+
+nslookup nytimes.com
+
+nslookup cnn.com
+
+nslookup washingtonpost.com
+
+rem Eric said that I need to find the setting that allows me to set my IP Address to IPV4.
+rem We had this problem in Stuttgart on Oct-3-2018.
 
 exit/b
 

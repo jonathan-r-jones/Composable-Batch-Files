@@ -4996,6 +4996,12 @@ exit/b
 
 ::_
 
+:fymls
+
+:dymls
+
+:yml
+
 :sr1
 
 :sr2
@@ -5268,12 +5274,6 @@ exit/b
 
 :npji
 
-:yml4
-
-:yml1
-
-:yml4
-
 :ymlp
 
 :japi
@@ -5339,8 +5339,6 @@ exit/b
 :acrc
 
 :cr
-
-:yml
 
 :sr9
 
@@ -5599,6 +5597,12 @@ exit/b
 :cs
 
 :dist
+
+:kan
+
+:dyml
+
+:ened
 
 :pass-through
 
