@@ -4691,7 +4691,7 @@ k cnj sr5
 
 k cna sr31
 
-ps -ef | grep java: // get the pid and kill it using sudo kill -9 pid
+ps -ef | grep java
 
 sudo kill -9 (!kl) The pid is the first of 2 numbers listed before cart jar file.
 
@@ -4714,12 +4714,8 @@ sf dev
 
 sudo unzip -o ./ui.zip -d /var/www/html/
 
-rem From the /opt/cart folder?:
-
 rem On master server only.
 export SERVER_NODE=master
-
-rem sudo nohup ./cart-api-1.0.0.jar &
 
 cd
 
@@ -4727,11 +4723,9 @@ sudo service cart status
 
 sudo service cart restart
 
-::I ran this from the home folder only after I realized the database query wasn't working.
-
 sudo service cart status
 
-rem Verify that the server is up by navigating to the URL. After picture.
+rem Verify that the server is working.
 
 exit/b
 
@@ -4867,17 +4861,20 @@ pl
 
 lq
 
+e ly
+
 rem Run the API by using cmd_api or the line below.
 m cmd_api
 
-call sf 4200 krm
+x bash
 
-call x bash
+./get_cart_jwt.sh
 
-call get_cart_jwt.sh
+sf 4200 krm
 
 rem Run the UI by using cmd_ui or the line below.
 call m cmd_ui
+
 
 exit/b
 

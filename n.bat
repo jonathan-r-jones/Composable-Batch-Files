@@ -5604,6 +5604,8 @@ exit/b
 
 :ened
 
+:dymlb
+
 :pass-through
 
 set fp=* Pass through.
