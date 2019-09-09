@@ -5606,6 +5606,10 @@ exit/b
 
 :dymlb
 
+:myc
+
+:srap
+
 :pass-through
 
 set fp=* Pass through.
