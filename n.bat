@@ -5610,6 +5610,14 @@ exit/b
 
 :srap
 
+:dp
+
+:earm1
+
+:earm2
+
+:htearm
+
 :pass-through
 
 set fp=* Pass through.
@@ -9862,7 +9870,7 @@ exit/b
 
 :pgad
 
-set fp=* Connect to our Postgres database using PGAdin.
+set fp=* Connect to our Postgres database using PGAdmin.
 
 rem lu: Jul-2-2019
 

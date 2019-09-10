@@ -75,6 +75,10 @@ if %errorlevel% == 1 (
 if not "%cbf_filename%" == "" (
   if exist "%cbf_filename%" (
     xfn %1>nul
+  ) else (
+    echo.
+    echo * Error: File "%cbf_filename%" does not exist.
+    exit/b
   )
 )
 

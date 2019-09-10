@@ -4667,7 +4667,7 @@ td lib
 
 ren cart-api-1.1.0.jar cart-api.jar
 
-td dvport
+td dp
 
 m rd dist
 
@@ -4691,10 +4691,6 @@ k cnj sr5
 
 k cna sr31
 
-ps -ef | grep java
-
-sudo kill -9 (!kl) The pid is the first of 2 numbers listed before cart jar file.
-
 sudo rm -rf /var/www/html*
 
 cd /var/www
@@ -4716,10 +4712,6 @@ sudo unzip -o ./ui.zip -d /var/www/html/
 
 rem On master server only.
 export SERVER_NODE=master
-
-cd
-
-sudo service cart status
 
 sudo service cart restart
 
