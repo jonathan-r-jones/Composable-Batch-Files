@@ -4659,7 +4659,7 @@ tdc ma
 
 rem I saw a case where the the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
-(cmd_api)
+cmd_api
 
 gr build_jar
 

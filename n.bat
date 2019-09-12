@@ -5618,6 +5618,20 @@ exit/b
 
 :htearm
 
+:rq
+
+:magit
+
+:fyml
+
+:esw
+
+:fqma
+
+:dema
+
+:desl
+
 :pass-through
 
 set fp=* Pass through.
@@ -7596,6 +7610,25 @@ echo.
 echo %fp%
 
 set cbf_path=%userprofile%\Pictures\Screenshots
+
+exit/b
+
+
+
+::_
+
+:scshc
+
+set fp=* Screen shots folder under Cade.
+
+rem lu: Sep-12-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_path=%cbf_path%\Screen Shots
 
 exit/b
 
@@ -10410,4 +10443,21 @@ exit/b
 
 
 
-:_ (!efnb, !efn, !rfsp) (mov-6) Nicknames
+:_
+
+:anwo
+
+set fp=* Angular Workshop.
+
+rem lu: Sep-12-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://gitlab.com/gzson79/angularworkshopdevtech
+
+exit/b
+
+
+
+:_ (!efnb, !efn, !rfsp) (mov-6)
