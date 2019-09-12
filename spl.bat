@@ -53,7 +53,7 @@ call pl cbf
 
 call pl s
 
-call cypn mecfg_s mecfg
+call cypp mecfg_s mecfg
 
 call ss %0
 

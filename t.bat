@@ -9306,7 +9306,7 @@ exit/b
 
 :
 
-set fp=* Test cypn batch file.
+set fp=* Test cypp batch file.
 
 rem lu: Dec-27-2018
 
@@ -9314,7 +9314,7 @@ echo.
 echo %fp%
 
 echo.
-if not "%machinename%"=="gfe" call cypn mecfg mecfg_s
+if not "%machinename%"=="gfe" call cypp mecfg mecfg_s
 
 exit/b
 
