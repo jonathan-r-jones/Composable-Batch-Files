@@ -93,7 +93,7 @@ set fp=* Use current CBF_URL.
 echo.
 echo %fp%
 
-set cbf_parameter=%cbf_github_url%
+set cbf_parameter=%cbf_url%
 
 
 

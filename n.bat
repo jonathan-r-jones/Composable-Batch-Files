@@ -5632,6 +5632,8 @@ exit/b
 
 :desl
 
+:dao
+
 :pass-through
 
 set fp=* Pass through.
