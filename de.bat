@@ -80,10 +80,6 @@ call td mecfg
 call %0 concop
 
 rem 3.
-call td mecfg_dr
-call %0 concop
-
-rem 4.
 call td mecfg_s
 call %0 concop
 

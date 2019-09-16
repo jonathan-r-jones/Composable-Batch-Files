@@ -52,6 +52,8 @@ echo %filep%
 call de multi-edit_conflicted_files
 
 if not "%machinename%"=="gfe" (
+  call td mecfg_dr
+  call de concop
   call 8
   call cypp mecfg mecfg_s
   call p drql
@@ -64,6 +66,7 @@ call p cbf
 call m update_lu %0
 
 call p s
+rem qq-1
 
 call ss %0
 
