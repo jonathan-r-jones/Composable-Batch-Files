@@ -4661,11 +4661,10 @@ rem I saw a case where the the API will build but not run, so you may want to ru
 rem local before deploying to the server.
 cmd_api
 
-gr build_jar
 
 td lib
 
-ren cart-api-1.1.0.jar cart-api.jar
+ren cart-api-1.2.0.jar cart-api.jar
 
 td dp
 
@@ -4674,6 +4673,7 @@ m rd dist
 m build_for_fqt
 
 of dist
+gr build_jar
 
 rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist\icecart-portal-client>
 
@@ -4785,6 +4785,26 @@ rem This is wrong.
 rem ng build --fqt
 
 ng build --configuration=fqt
+
+exit/b
+
+
+
+::_
+
+:ngt
+
+:ng_test
+
+set fp=* Test angular.
+
+rem lu: Sep-16-2019
+
+echo.
+echo %fp%
+
+echo.
+ng test
 
 exit/b
 

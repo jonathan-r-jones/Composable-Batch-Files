@@ -5634,6 +5634,8 @@ exit/b
 
 :dao
 
+:prod
+
 :pass-through
 
 set fp=* Pass through.
@@ -7618,6 +7620,8 @@ exit/b
 
 
 ::_
+
+:cscsh
 
 :scshc
 
