@@ -4645,6 +4645,8 @@ rem lu: Aug-22-2019
 echo.
 echo %fp%
 
+sf dv
+
 td ma
 
 g sb develop
@@ -4661,6 +4663,7 @@ rem I saw a case where the the API will build but not run, so you may want to ru
 rem local before deploying to the server.
 cmd_api
 
+gr build_jar
 
 td lib
 
@@ -4673,7 +4676,6 @@ m rd dist
 m build_for_fqt
 
 of dist
-gr build_jar
 
 rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist\icecart-portal-client>
 
@@ -4718,6 +4720,102 @@ sudo service cart restart
 sudo service cart status
 
 rem Verify that the server is working.
+
+exit/b
+
+
+
+
+:_
+
+:htr_fqt
+
+set fp=* How to refresh FQT.
+
+rem lu: Sep-17-2019
+
+echo.
+echo %fp%
+
+sf fq
+
+td ma
+
+g sb develop
+
+pl
+
+cmd_start_db
+
+lq
+
+tdc ma
+
+rem I saw a case where the the API will build but not run, so you may want to run on your
+rem local before deploying to the server.
+cmd_api
+
+gr build_jar_for_fqt
+
+td lib
+
+ren cart-api-1.2.0.jar cart-api.jar
+
+td dp
+
+m rd dist
+
+m build_for_fqt
+
+of dist
+
+rem zip up C:\Users\JJones2\j\cart\icecart-portal-client\dist\icecart-portal-client>
+
+k scp_ui_j sr27
+
+k scp_api_j sr32
+
+k scp_ui_j sr27
+
+k scp_api_j sr32
+
+k cnj sr27
+
+   or
+
+k cna sr32
+
+sudo rm -rf /var/www/html*
+
+cd /var/www
+
+sudo mkdir html
+
+cd /opt/cart
+
+sudo cp /tmp/cart-api.jar .
+
+sudo cp /tmp/ui.zip .
+
+ll
+
+sudo kill -9
+
+rem Verify that the website is down.
+sf fq
+
+sudo unzip -o ./ui.zip -d /var/www/html/
+
+rem On master server only.
+export SERVER_NODE=master
+
+sudo nohup ./cart-api.jar &
+
+sudo service cart restart
+
+sudo service cart status
+
+rem Verify that the website is up.
 
 exit/b
 
@@ -4774,16 +4872,12 @@ exit/b
 
 set fp=* Build for FQT.
 
-rem lu: Jun-20-2019
+rem lu: Sep-17-2019
 
 echo.
 echo %fp%
 
 echo.
-
-rem This is wrong.
-rem ng build --fqt
-
 ng build --configuration=fqt
 
 exit/b

@@ -4996,6 +4996,10 @@ exit/b
 
 ::_
 
+:sr27
+
+:sr32
+
 :fymls
 
 :dymls
@@ -5436,8 +5440,6 @@ exit/b
 
 :tns
 
-:sr27
-
 :ci
 
 :xc
@@ -5457,8 +5459,6 @@ exit/b
 :563d
 
 :waas
-
-:sr32
 
 :fqt3
 

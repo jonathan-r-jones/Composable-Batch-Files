@@ -3011,8 +3011,6 @@ exit/b
 
 ::_
 
-:delb
-
 :debr
 
 set fp=* Delete branch. (!delb) (skw delete_branch)
@@ -3041,7 +3039,7 @@ exit/b
 
 ::_
 
-:delbj
+:debrj
 
 set fp=* Delete jj_devops branch. (skw delete branch jj)
 

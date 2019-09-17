@@ -412,6 +412,32 @@ exit/b
 
 
 
+:_
+
+:build_jar_for_fqt
+
+set fp=* Build for FQT environment.
+
+rem lu: Sep-17-2019
+
+echo.
+echo %fp%
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
+echo.
+gradle -Pfqt clean bootJar
+
+exit/b
+
+
+
 :_+ Gradle commands that Edward and Matt use.
 
 

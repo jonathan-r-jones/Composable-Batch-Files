@@ -84,6 +84,7 @@ echo  depn  Delete folder corresponding to CBF path alias parameter
 echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit
 echo   edr  Edit a relative-path constucted filename
+echo   ejf  Edit Jenkinsfile of an alias
 echo    el  Edit log file of an alias
 echo    es  Edit settings file of an alias
 echo    eg  Edit a file by gluing a relative path onto a base path
@@ -136,6 +137,7 @@ echo    sh  SSH
 echo   sln  Open a Visual Studio solution, has TD parameter
 echo    sf  Surf to websites
 echo   sfg  Surf to GitHub websites
+echo  sfje  Surf to Jenkins websites
 echo    sm  Sublime
 echo    sp  Super push, i.e. push all selected repositories
 echo   spl  Super pull, i.e. pull all selected repositories
