@@ -5304,8 +5304,6 @@ exit/b
 
 :issoa
 
-:wp
-
 :cdocs
 
 :troy

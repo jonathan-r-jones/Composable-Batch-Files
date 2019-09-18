@@ -4822,6 +4822,135 @@ exit/b
 
 
 
+:_
+
+:run_ui
+
+set fp=* Run UI in the dvcart folder.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call td dvport
+
+echo.
+ng serve
+
+exit/b
+
+
+
+:_+ Cmds
+
+
+
+::_
+
+:cmd_ui
+
+set fp=* Run UI cmd.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call td dvport
+
+ng serve
+
+exit/b
+
+
+
+::_
+
+:cmd_api
+
+set fp=* Run API cmd.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call td api
+
+call gr run_api
+
+exit/b
+
+
+
+::_
+
+:cmd_golf
+
+set fp=* Run Golf cmd.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call x golf
+
+exit/b
+
+
+
+::_
+
+:cmd_start_db
+
+set fp=* Start local database.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call pql start
+
+exit/b
+
+
+
+:_
+
+:nsl
+
+set fp=* Nslookup IPV4 versus IPV6.
+
+rem lu: Oct-3-2018
+
+echo.
+echo %fp%
+echo.
+
+nslookup nytimes.com
+
+nslookup cnn.com
+
+nslookup washingtonpost.com
+
+rem Eric said that I need to find the setting that allows me to set my IP Address to IPV4.
+rem We had this problem in Stuttgart on Oct-3-2018.
+
+exit/b
+
+
+
 :_+ Angular
 
 
@@ -4981,135 +5110,6 @@ sf 4200 krm
 rem Run the UI by using cmd_ui or the line below.
 call m cmd_ui
 
-
-exit/b
-
-
-
-:_
-
-:run_ui
-
-set fp=* Run UI in the dvcart folder.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call td dvport
-
-echo.
-ng serve
-
-exit/b
-
-
-
-:_+ Cmds
-
-
-
-::_
-
-:cmd_ui
-
-set fp=* Run UI cmd.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call m big
-
-call td dvport
-
-ng serve
-
-exit/b
-
-
-
-::_
-
-:cmd_api
-
-set fp=* Run API cmd.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call m big
-
-call td api
-
-call gr run_api
-
-exit/b
-
-
-
-::_
-
-:cmd_golf
-
-set fp=* Run Golf cmd.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call m big
-
-call x golf
-
-exit/b
-
-
-
-::_
-
-:cmd_start_db
-
-set fp=* Start local database.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call m big
-
-call pql start
-
-exit/b
-
-
-
-:_
-
-:nsl
-
-set fp=* Nslookup IPV4 versus IPV6.
-
-rem lu: Oct-3-2018
-
-echo.
-echo %fp%
-echo.
-
-nslookup nytimes.com
-
-nslookup cnn.com
-
-nslookup washingtonpost.com
-
-rem Eric said that I need to find the setting that allows me to set my IP Address to IPV4.
-rem We had this problem in Stuttgart on Oct-3-2018.
 
 exit/b
 
