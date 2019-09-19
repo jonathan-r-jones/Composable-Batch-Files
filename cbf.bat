@@ -60,7 +60,7 @@ echo   clc  Simple calculator
 echo    cn  Git cloning, based entirely on the nickname parameter
 echo   cng  Git cloning, generic version
 echo   col  Shell window colors operations
-echo  ccfn  Code Compare with aliases or filenames
+echo  ccff  Code Compare with aliases or filenames
 echo    cc  Code Compare preloaded with j1.txt and j2.txt
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
@@ -70,7 +70,7 @@ echo    cy  Copy file(s)
 echo  cycf  Use file in the current folder to "save as" to a filename alias
 echo   cyf  Copies file from a cbf_path nickname
 echo  cyfc  Use filename alias to "save as" a file in the current folder
-echo  cyfn  Copy file from alias filename parm 1 to alias filename param 2
+echo  cyff  Copy file from alias filename parm 1 to alias filename param 2
 echo  cypp  Copy file from alias path param 1 to alias path param 2
 echo   cyt  Copy file in the current directory to nickname-specified path
 echo  cyte  Copy te.bat to a new batch file
@@ -121,6 +121,7 @@ echo   nox  Use Notepad to edit a batch file in the CBF folder
 echo    np  Notepad++
 echo    nx  Use Notepad++ to edit a batch file in the CBF folder
 echo    of  Open Folder, has TD parameter
+echo  offn  Open folder where only the filename is known.
 echo   ofp  Transform directory to parent folder
 echo     p  Add, commit and push Git changes, has TD parameter
 echo    pl  Git pull, has TD parameter
@@ -133,11 +134,11 @@ echo  rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo     s  Check git status remotely, has TD parameter
 echo  scpp  Secure Copy Protocol
 echo    se  Internet search helper
+echo    sf  Surf to websites
+echo sfgit  Surf to GitHub websites
+echo  sfje  Surf to Jenkins websites
 echo    sh  SSH
 echo   sln  Open a Visual Studio solution, has TD parameter
-echo    sf  Surf to websites
-echo   sfg  Surf to GitHub websites
-echo  sfje  Surf to Jenkins websites
 echo    sm  Sublime
 echo    sp  Super push, i.e. push all selected repositories
 echo   spl  Super pull, i.e. pull all selected repositories

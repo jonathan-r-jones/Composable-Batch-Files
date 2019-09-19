@@ -8,9 +8,6 @@
 
 set filep=* Run code compare with j1 and j2.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -41,9 +38,9 @@ exit/b
 :main_function
 
 echo.
-echo filep
+echo %filep%
 
-call ccfn j1 j2
+call ccff j1 j2
 
 exit/b
 

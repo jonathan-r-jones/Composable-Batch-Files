@@ -127,6 +127,8 @@ exit/b
 
 :_
 
+:f
+
 :fo
 
 set fp=* Folders only.

@@ -498,7 +498,7 @@ rem lu: Jul-1-2019
 echo.
 echo %fp%
 
-call cyfn hldd ldd
+call cyff hldd ldd
 
 exit/b
 

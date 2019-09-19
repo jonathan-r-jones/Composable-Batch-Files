@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* 
+set filep=* Open folder where only the filename is known.
 
 echo.
 echo %filep%
@@ -30,15 +30,10 @@ goto validate_user_input
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Filename alias of your target destination.
 
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 exit/b
 
@@ -48,9 +43,11 @@ exit/b
 
 :validate_user_input
 
+rem lu: Sep-19-2019
+
 if "%~1" == "" (
   echo.
-  echo * Missing input: 
+  echo * Missing input: The filename alias of your target destination is required.
   exit/b
 )
 
@@ -60,10 +57,10 @@ if "%~1" == "" (
 
 :main_function
 
-rem lu: 
+rem lu: Sep-19-2019
 
-
-rem qq-1
+call tdfn %1
+call of
 
 exit/b
 

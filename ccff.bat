@@ -8,9 +8,6 @@
 
 set filep=* Run Code Compare with aliases or filenames.
 
-echo.
-echo %filep%
-
 
 
 :_

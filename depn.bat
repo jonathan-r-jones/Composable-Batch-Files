@@ -46,6 +46,7 @@ exit/b
 
 :main_function
 
+echo.
 echo %filep%
 
 if not "%~1" == "" call pn %1

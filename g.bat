@@ -2790,8 +2790,14 @@ rem Function Creation Date: Jan-30-2017
 
 echo.
 echo %fp%
-echo.
 
+if not "%~2" == "" (
+  echo.
+  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
+  exit/b
+)
+
+echo.
 git reset --hard HEAD
 git clean -f
 git pull
@@ -2923,7 +2929,7 @@ echo.
 echo %fp%
 
 rem Back up our jenkins file, if necessary.
-cyfn jj jb
+cyff jj jb
 
 set branch_name=jj_devops
 
@@ -2947,7 +2953,7 @@ call td jj
 call g status
 
 rem Restore your Jenkinsfile, if necessary.
-cyfn jb jj
+cyff jb jj
 
 exit/b
 

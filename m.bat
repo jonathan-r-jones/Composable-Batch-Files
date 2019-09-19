@@ -3877,39 +3877,6 @@ exit/b
 
 
 
-:_
-
-:jens
-
-:jfs
-
-set fp=* Open Jenkinsfiles.
-
-rem lu: Jan-10-2019
-
-echo.
-echo %fp%
-
-call e acr
-
-call e ant
-
-call e bgs
-
-call e cap
-
-call e eat
-
-call e gfs
-
-call e iac
-
-call e odls
-
-exit/b
-
-
-
 :_+ Generate Date as Filename
 
 
@@ -5110,6 +5077,39 @@ sf 4200 krm
 rem Run the UI by using cmd_ui or the line below.
 call m cmd_ui
 
+
+exit/b
+
+
+
+:_
+
+:jens
+
+:jfs
+
+set fp=* Open Jenkinsfiles.
+
+rem lu: Jan-10-2019
+
+echo.
+echo %fp%
+
+call e acr
+
+call e ant
+
+call e bgs
+
+call e cap
+
+call e eat
+
+call e gfs
+
+call e iac
+
+call e odls
 
 exit/b
 
