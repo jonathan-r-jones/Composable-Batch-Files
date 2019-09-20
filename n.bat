@@ -5644,6 +5644,22 @@ exit/b
 
 :cr5
 
+:er2
+
+:er1
+
+:er3
+
+:cfglq
+
+:rep3
+
+:rep2
+
+:rep1
+
+:rep4
+
 :pass-through
 
 set fp=* Pass through.
@@ -9873,6 +9889,8 @@ exit/b
 :dm3
 
 set fp=* Cart Data Model source code.
+
+rem data diagram: skw
 
 rem lu: Aug-2-2019
 
