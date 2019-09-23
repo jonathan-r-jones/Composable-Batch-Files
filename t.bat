@@ -9840,16 +9840,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :compose_variable
 
 set fp=* Compose variable.
@@ -9865,6 +9855,40 @@ echo * Variable to expand: %2
 set composed_variable=cbf_%2
 
 call m expand_variable "%%%composed_variable%%%"
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Enrollee edit issue.
+
+rem lu: Sep-23-2019
+
+echo.
+echo %fp%
+
+call n ened
+
+echo.  
+if exist "%cbf_filename%" == (
+  echo * File exists.
+) else (
+  echo * File NOT exists.
+)  
 
 exit/b
 

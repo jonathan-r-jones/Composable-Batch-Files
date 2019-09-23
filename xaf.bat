@@ -32,7 +32,7 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Application alias.
 
-set parameter_2=Parameter 2: Data alias:.
+set parameter_2=Parameter 2: Filename alias.
 
 echo.
 echo %parameter_1%
@@ -60,6 +60,8 @@ if "%~2" == "" (
   exit/b
 )
 
+set cbf_filename=
+
 call an %1
 
 if %errorlevel% == 1 (
@@ -86,7 +88,7 @@ if %errorlevel% == 1 (
 
 if not exist "%cbf_filename%" (
   echo.
-  echo * Error: Cannot find the alias "%cbf_filename%".
+  echo * Error: Cannot find the file named "%cbf_filename%".
   exit/b
 )
 

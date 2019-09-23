@@ -5044,7 +5044,11 @@ exit/b
 
 :htrl
 
+:loca
+
 :rc
+
+:rulo
 
 set fp=* Run CART locally, overarching process. (How to run: skw)
 

@@ -5660,6 +5660,16 @@ exit/b
 
 :rep4
 
+:loca
+
+:rulo
+
+:maxm
+
+:enad
+
+:conflq
+
 :pass-through
 
 set fp=* Pass through.
