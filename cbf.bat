@@ -66,13 +66,13 @@ echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl caller for direct server tests
 echo   cur  Curl hooked up to the nicknames dictionary
-echo    cy  Copy file(s)
+echo    cy  Copy file in the current directory to nickname-specified path
 echo  cycf  Use file in the current folder to "save as" to a filename alias
 echo   cyf  Copies file from a cbf_path nickname
 echo  cyfc  Use filename alias to "save as" a file in the current folder
 echo  cyff  Copy file from alias filename parm 1 to alias filename param 2
 echo  cypp  Copy file from alias path param 1 to alias path param 2
-echo   cyt  Copy file in the current directory to nickname-specified path
+echo  cysf  Copy files using static formulas
 echo  cyte  Copy te.bat to a new batch file
 echo     d  Dir for current folder
 echo    dd  Dir filename extension searcher including subfolders

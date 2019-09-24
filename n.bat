@@ -10504,4 +10504,21 @@ exit/b
 
 
 
+:_
+
+:shic
+
+set fp=* Share-zone Icons.
+
+rem lu: Sep-24-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\icons
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
