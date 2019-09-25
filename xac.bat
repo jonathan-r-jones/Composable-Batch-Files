@@ -32,7 +32,7 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Application alias.
 
-set parameter_2=Parameter 2: Data alias:.
+set parameter_2=Parameter 2: Filename in the current folder.
 
 echo.
 echo %parameter_1%

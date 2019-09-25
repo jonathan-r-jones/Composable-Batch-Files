@@ -5670,6 +5670,16 @@ exit/b
 
 :conflq
 
+:m
+
+:rcl
+
+:esc
+
+:esch
+
+:esct
+
 :pass-through
 
 set fp=* Pass through.
@@ -10516,6 +10526,25 @@ echo.
 echo %fp%
 
 set cbf_path=%share-zone%\icons
+
+exit/b
+
+
+
+:_
+
+:eq
+
+set fp=* Enrollment quandary.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+call n c
+
+set cbf_filename=%cbf_path%\enrollment quandary.xlsx
 
 exit/b
 

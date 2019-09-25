@@ -41,6 +41,9 @@ echo.
 echo Parameter 1: Alias that you want to run or "double click" if you will.
 
 echo.
+echo Parameter 2 (Optional): If "-c" is used, this will force the creation of a new file.
+
+echo.
 echo Precedence of execution:
 echo.
 echo If filename isn't blank, execute it.
@@ -76,6 +79,9 @@ if not "%cbf_filename%" == "" (
   if exist "%cbf_filename%" (
     xfn %1>nul
   ) else (
+    if "%2" == "-c" (
+      goto force_file_creation
+    )
     echo.
     echo * Error: File "%cbf_filename%" does not exist.
     exit/b
@@ -100,6 +106,38 @@ echo.
 echo * Error: CBF parameters for filename, url and application are all blank.
 
 rem (!rfsp) (mov-2)
+
+exit/b
+
+
+
+:_
+
+:force_file_creation
+
+set fp=* Force file creation.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+set destination_filename=%cbf_filename%
+
+echo %cbf_filename% | find /i ".xlsx">nul
+
+echo cbf_filename 1: %cbf_filename%
+rem It seems that you can't change an environment variable inside an error conditional
+rem so I am doing it outside of the if block. Sep-25-2019
+call n exb
+echo cbf_filename 2: %cbf_filename%
+
+if %errorlevel% == 0 (
+  echo destination_filename: %destination_filename%
+  xcopy %cbf_filename% "%destination_filename%"
+  echo.
+  echo * File copied.
+)
 
 exit/b
 
