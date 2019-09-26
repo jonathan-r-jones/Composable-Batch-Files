@@ -67,7 +67,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
-xcopy /y "%cbf_source_filename%" "%cbf_filename%"
+copy "%cbf_source_filename%" "%cbf_filename%"
 
 exit/b
 

@@ -29,7 +29,7 @@ goto %1
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): Nickname function to run.
+set parameter_1=Parameter 1: Formula function to run.
 set parameter_1=%parameter_1% 
 
 echo.

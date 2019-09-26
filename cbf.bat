@@ -66,8 +66,8 @@ echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl caller for direct server tests
 echo   cur  Curl hooked up to the nicknames dictionary
-echo    cy  Copy file in the current directory to nickname-specified path
 echo  cycf  Use file in the current folder to "save as" to a filename alias
+echo  cycp  Copy file in the current directory to nickname-specified path
 echo   cyf  Copies file from a cbf_path nickname
 echo  cyfc  Use filename alias to "save as" a file in the current folder
 echo  cyff  Copy file from alias filename parm 1 to alias filename param 2
@@ -79,8 +79,9 @@ echo    dd  Dir filename extension searcher including subfolders
 echo   ddc  Dir filename extension searcher current folder only
 echo    dr  Dir remote searcher
 echo    dt  Dir with a td parameter
-echo    de  Delete
+echo  defn  Delete file base on passed in filename alias
 echo  depn  Delete folder corresponding to CBF path alias parameter
+echo  desf  Delete using static formulas
 echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit
 echo   edr  Edit a relative-path constucted filename
@@ -102,6 +103,7 @@ echo    gl  Glossary of terms used in CBF
 echo    gr  Gradle
 echo     h  Sencha
 echo     i  CBF environment variable information
+echo    ji  Jira operations
 echo    kn  Knife, a Chef command line utility
 echo     l  Google searcher
 echo     m  Perform miscellaneous tasks
@@ -109,7 +111,7 @@ echo   mcd  Make and navigate (cd) to a folder
 echo    me  Multi-Edit
 echo   mav  Maven
 echo    mv  Move files
-echo   mvt  Move file in the current directory to nickname-specified path
+echo  mvcp  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)
 echo     n  Nicknames dictionary

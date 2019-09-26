@@ -8523,7 +8523,7 @@ rem lu: Apr-29-2019
 echo.
 echo %fp%
 
-set cbf_npl=525
+set cbf_npl=1037
 
 exit/b
 
@@ -10531,7 +10531,11 @@ exit/b
 
 
 
-:_
+:_ + EQ
+
+
+
+::_
 
 :eq
 
@@ -10545,6 +10549,63 @@ echo %fp%
 call n c
 
 set cbf_filename=%cbf_path%\enrollment quandary.xlsx
+
+exit/b
+
+
+
+::_
+
+:eq2
+
+set fp=* Enrollment quandary 2.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+call n c
+
+set cbf_filename=%cbf_path%\enrollment quandary 2.xlsx
+
+exit/b
+
+
+
+::_
+
+:eq3
+
+set fp=* Enrollment quandary 3.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+call n c
+
+set cbf_filename=%cbf_path%\enrollment quandary 3.xlsx
+
+exit/b
+
+
+
+::_
+
+:eq4
+
+set fp=* Enrollment quandary 4.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+call n c
+
+set cbf_filename=%cbf_path%\amalgamated enrollment quandary.xlsx
 
 exit/b
 
