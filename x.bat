@@ -126,18 +126,19 @@ set destination_filename=%cbf_filename%
 
 echo %cbf_filename% | find /i ".xlsx">nul
 
-echo cbf_filename 1: %cbf_filename%
 rem It seems that you can't change an environment variable inside an error conditional
 rem so I am doing it outside of the if block. Sep-25-2019
 call n exb
-echo cbf_filename 2: %cbf_filename%
 
 if %errorlevel% == 0 (
-  echo destination_filename: %destination_filename%
-  xcopy %cbf_filename% "%destination_filename%"
+  copy %cbf_filename% "%destination_filename%"
   echo.
   echo * File copied.
 )
+
+echo.
+echo * Open the new file.
+xfn %1>nul
 
 exit/b
 

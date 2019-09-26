@@ -30,7 +30,7 @@ echo.
 echo CopY file(s). This file is useful when fixed locations are involved.
 
 echo.
-echo Usage: cy [Parameter 1]
+echo Usage: %0 [Parameter 1]
 
 echo.
 echo Parameter 1: Label method to run.

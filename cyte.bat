@@ -49,8 +49,8 @@ call td cbf
 
 if "%~1" == "" (
   echo.
-  echo * Percent 1 is a required field.
-  exit/b
+  echo * Error: Percent 1 is a required field.
+  goto help
 )
 
 set new_file=%1.bat

@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* 
+set filep=* Check for the existence of a file.
 
 echo.
 echo %filep%
@@ -27,20 +27,14 @@ goto validate_user_input
 
 :help
 
-rem lu: 
-
+rem lu: Sep-26-2019
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Fliename alias to check the existence of.
 
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 exit/b
 
@@ -62,8 +56,15 @@ if "%~1" == "" (
 
 :main_function
 
+call fn %1
 
-rem qq-1
+if exist "%cbf_filename%" (
+  echo.
+  echo * File "%cbf_filename%" exists.
+) else (
+  echo.
+  echo * File "%cbf_filename%" DOES NOT exist.
+)
 
 exit/b
 

@@ -6,7 +6,10 @@
 
 :_
 
-set filep=* Delete file based on nickname.
+set filep=* Delete a file based on a passed in filename alias.
+
+echo.
+echo %filep%
 
 
 
@@ -18,7 +21,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto validate_user_input
 
 
 
@@ -27,12 +30,9 @@ goto main_function
 :help
 
 echo.
-echo %filep%
-
-echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Filename alias.
+set parameter_1=Parameter 1: Alias of filename you wish to delete.
 
 echo.
 echo %parameter_1%
@@ -43,17 +43,28 @@ exit/b
 
 :_
 
-:main_function
-
-echo.
-echo %filep%
+:validate_user_input
 
 call n %1
 
-del %cbf_filename%
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: The file you are trying to delete doesn't exist.
+  exit/b
+)
+
+
+
+:_
+
+:main_function
+
+rem lu: 
+
+del "%cbf_filename%"
 
 exit/b
 
 
 
-:_ (!rfsp) (mov-6)
+:_ (!rfsp) (mov-7)
