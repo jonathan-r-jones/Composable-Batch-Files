@@ -45,7 +45,7 @@ echo %fp%
 
 echo.
 echo  File  Wrapper Description
-echo  ----  ------------------------------------------------------------------
+echo  ----  ----------------------------------------------------------------------------------
 echo     a  AWS CLI
 echo    an  Application nickname dictionary layer of abstraction
 echo    as  Windows file associations

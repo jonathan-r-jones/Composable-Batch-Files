@@ -5680,6 +5680,16 @@ exit/b
 
 :esct
 
+:devm
+
+:devs
+
+:ofs
+
+:ofm
+
+:rele
+
 :pass-through
 
 set fp=* Pass through.
