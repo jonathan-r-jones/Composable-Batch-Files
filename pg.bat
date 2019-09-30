@@ -55,7 +55,15 @@ exit/b
 echo.
 echo %filep%
 
+set cbf_url=
+
 call n %1
+
+if "%cbf_url%" == "" (
+  echo.
+  echo * Error: cbf_url is not set.
+  exit/b
+)
 
 set cbf_url=%cbf_url:http://=%
 set cbf_url=%cbf_url:https://=%

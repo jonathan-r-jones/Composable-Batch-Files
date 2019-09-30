@@ -5690,6 +5690,36 @@ exit/b
 
 :rele
 
+:fqsl
+
+:aocs
+
+:csia
+
+:pap2
+
+:pap1
+
+:prsl
+
+:prma
+
+:dvt
+
+:relegit
+
+:releji
+
+:relen2
+
+:crelms
+
+:elmsfc
+
+:cerelms
+
+:elmshp
+
 :pass-through
 
 set fp=* Pass through.
@@ -7677,9 +7707,11 @@ exit/b
 
 :cscsh
 
+:scshb
+
 :scshc
 
-set fp=* Screen shots folder under Cade.
+set fp=* Screen shots backup folder under Cade.
 
 rem lu: Sep-12-2019
 
