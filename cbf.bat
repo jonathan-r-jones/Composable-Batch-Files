@@ -68,9 +68,9 @@ echo    cu  Curl caller for direct server tests
 echo   cur  Curl hooked up to the nicknames dictionary
 echo  cycf  Use file in the current folder to "save as" to a filename alias
 echo  cycp  Copy file in the current directory to nickname-specified path
-echo   cyf  Copies file from a cbf_path nickname
 echo  cyfc  Use filename alias to "save as" a file in the current folder
 echo  cyff  Copy file from alias filename parm 1 to alias filename param 2
+echo   cyp  Copies file from a cbf_path nickname
 echo  cypp  Copy file from alias path param 1 to alias path param 2
 echo  cysf  Copy files using static formulas
 echo  cyte  Copy te.bat to a new batch file

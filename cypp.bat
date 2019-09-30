@@ -67,7 +67,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-call cyf %1
+call cyp %1
 
 exit/b
 

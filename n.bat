@@ -6050,12 +6050,12 @@ exit/b
 
 set fp=* Miscellany folder.
 
-rem lu: Dec-4-2018
+rem lu: Sep-30-2019
 
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\j\miscellany
+set cbf_path=%dropbox%\jonathan\miscellany
 
 exit/b
 
