@@ -1058,6 +1058,8 @@ exit/b
 
 :pop
 
+:unstash
+
 set fp=* Pop takes stashed changes and reapplies them to the working directory.
 
 rem lu: Jan-22-2018
