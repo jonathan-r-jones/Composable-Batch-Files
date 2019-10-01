@@ -50,13 +50,20 @@ if "%~1" == "" (
   goto help
 )
 
+call fn %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Batch file label "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
 
 
 :_
 
 :main_function
-
-call fn %1
 
 if exist "%cbf_filename%" (
   echo.

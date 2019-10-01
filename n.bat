@@ -10636,6 +10636,25 @@ exit/b
 
 ::_
 
+:aeq
+
+set fp=* Amalgamated Enrollment quandary.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+call n c
+
+set cbf_filename=%cbf_path%\3 anumbers enrollment quandary.png
+
+exit/b
+
+
+
+::_
+
 :eq4
 
 set fp=* Enrollment quandary 4.
@@ -10655,6 +10674,7 @@ exit/b
 
 :_
 
+<<<<<<< HEAD
 :bases
 
 :bashs
@@ -10662,13 +10682,29 @@ exit/b
 set fp=* Base shortcuts.
 
 rem base icons: skw
+=======
+:eq
+
+set fp=* EQ.
+>>>>>>> 78d7935b07870535ad081e3fed06f68dd06b8d99
 
 rem lu: Oct-1-2019
 
 echo.
 echo %fp%
 
+<<<<<<< HEAD
 set cbf_path=%dropbox%\it\shortcuts\base
+=======
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=
+rem       qq-1
+>>>>>>> 78d7935b07870535ad081e3fed06f68dd06b8d99
 
 exit/b
 
