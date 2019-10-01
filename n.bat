@@ -10653,4 +10653,25 @@ exit/b
 
 
 
+:_
+
+:bases
+
+:bashs
+
+set fp=* Base shortcuts.
+
+rem base icons: skw
+
+rem lu: Oct-1-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\it\shortcuts\base
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
