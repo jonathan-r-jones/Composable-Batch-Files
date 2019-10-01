@@ -10636,6 +10636,25 @@ exit/b
 
 ::_
 
+:aeq
+
+set fp=* Amalgamated Enrollment quandary.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+call n c
+
+set cbf_filename=%cbf_path%\3 anumbers enrollment quandary.png
+
+exit/b
+
+
+
+::_
+
 :eq4
 
 set fp=* Enrollment quandary 4.
@@ -10648,6 +10667,30 @@ echo %fp%
 call n c
 
 set cbf_filename=%cbf_path%\amalgamated enrollment quandary.xlsx
+
+exit/b
+
+
+
+:_
+
+:eq
+
+set fp=* EQ.
+
+rem lu: Oct-1-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=
+rem       qq-1
 
 exit/b
 
