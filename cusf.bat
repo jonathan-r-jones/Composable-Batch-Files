@@ -50,31 +50,6 @@ exit/b
 
 :_
 
-:main_function
-
-echo.
-echo %filep%
-
-call n %1
-
-echo.
-
-if "%cbf_header%" == "" (
-  call curl %2 %3 %4 %5 %cbf_url%
-) else (
-  call curl %2 %3 %4 %5 %cbf_url% -H "%cbf_header%"
-)
-
-echo.
-
-rem (!rfsp) (mov-2)
-
-exit/b
-
-
-
-:_
-
 :ta
 
 set fp=* Basic curl test all servers.
@@ -212,6 +187,31 @@ if %errorlevel% == 1 (
 
 echo.
 curl %cbf_url%
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+echo.
+echo %filep%
+
+call n %1
+
+echo.
+
+if "%cbf_header%" == "" (
+  call curl %2 %3 %4 %5 %cbf_url%
+) else (
+  call curl %2 %3 %4 %5 %cbf_url% -H "%cbf_header%"
+)
+
+echo.
+
+rem (!rfsp) (mov-2)
 
 exit/b
 

@@ -5720,6 +5720,12 @@ exit/b
 
 :elmshp
 
+:kdva
+
+:kfq
+
+:kdv
+
 :pass-through
 
 set fp=* Pass through.
@@ -10579,7 +10585,7 @@ exit/b
 
 ::_
 
-:eq
+:eq1
 
 set fp=* Enrollment quandary.
 
@@ -10654,6 +10660,8 @@ exit/b
 
 
 ::_
+
+:eq
 
 :eq4
 

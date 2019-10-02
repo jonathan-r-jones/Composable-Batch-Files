@@ -61,16 +61,16 @@ if %errorlevel% == 1 (
 
 rem Imprimatur (!err, !p2, !erro, !el, !erle)
 
-if "%~2" == "" (
+if %errorlevel% == 1 (
   echo.
-  echo * Percent 2 is a required field.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
   exit/b
 )
 
-if %errorlevel% == 1 (
+if "%~2" == "" (
   echo.
-  echo * Error: Alias "%2" not found.
-  call m clear_errorlevel_silently 
+  echo * Percent 2 is a required field.
   exit/b
 )
 
@@ -405,6 +405,20 @@ rem lu: Dec-7-2018
 
 echo.
 echo %fp%
+
+echo.
+echo Example 7
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:https://=%
+echo.%str%
+
+echo.
+echo Example 6
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:cnn=google%
+echo.%str%
 
 echo.
 echo Example 1
@@ -940,6 +954,35 @@ if not exist "%cbf_filename%" (
   echo.
   echo * Error: Cannot find the alias "%cbf_filename%".
   exit/b
+)
+
+
+
+:_
+
+:vui
+
+:validate_user_input
+
+if "%~1" == "" (
+  echo.
+  echo * Error: A parameter is required.
+  goto help
+)
+
+call un %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_url%" == "" (
+  echo.
+  echo * Error: cbf_url is unassigned.
+  goto help
 )
 
 

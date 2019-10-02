@@ -64,8 +64,8 @@ echo  ccff  Code Compare with aliases or filenames
 echo    cc  Code Compare preloaded with j1.txt and j2.txt
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
-echo    cu  Curl caller for direct server tests
-echo   cur  Curl hooked up to the nicknames dictionary
+echo    cu  Curl hooked up to the nicknames dictionary
+echo   cur  Curl with static functions
 echo  cycf  Use file in the current folder to "save as" to a filename alias
 echo  cycp  Copy file in the current directory to nickname-specified path
 echo  cyfc  Use filename alias to "save as" a file in the current folder
@@ -122,6 +122,7 @@ echo    no  Notepad
 echo   net  Netstat
 echo   nox  Use Notepad to edit a batch file in the CBF folder
 echo    np  Notepad++
+echo    ns  NSLookup wrapper
 echo    nx  Use Notepad++ to edit a batch file in the CBF folder
 echo    of  Open Folder, has TD parameter
 echo  offn  Open folder where only the filename is known.

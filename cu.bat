@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Curl test method for direct server tests.
+set filep=* Curl hooked up to the nicknames dictionary.
 
 
 
@@ -43,9 +43,9 @@ exit/b
 
 :main_function
 
-rem lu: 
+rem lu: Oct-2-2019
 
-call cur t %1
+call cusf t %1
 
 exit/b
 

@@ -4893,31 +4893,6 @@ exit/b
 
 
 
-:_
-
-:nsl
-
-set fp=* Nslookup IPV4 versus IPV6.
-
-rem lu: Oct-3-2018
-
-echo.
-echo %fp%
-echo.
-
-nslookup nytimes.com
-
-nslookup cnn.com
-
-nslookup washingtonpost.com
-
-rem Eric said that I need to find the setting that allows me to set my IP Address to IPV4.
-rem We had this problem in Stuttgart on Oct-3-2018.
-
-exit/b
-
-
-
 :_+ Angular
 
 
@@ -5116,6 +5091,31 @@ call e gfs
 call e iac
 
 call e odls
+
+exit/b
+
+
+
+:_
+
+:nsl
+
+set fp=* Nslookup IPV4 versus IPV6.
+
+rem lu: Oct-3-2018
+
+echo.
+echo %fp%
+echo.
+
+nslookup nytimes.com
+
+nslookup cnn.com
+
+nslookup washingtonpost.com
+
+rem Eric said that I need to find the setting that allows me to set my IP Address to IPV4.
+rem We had this problem in Stuttgart on Oct-3-2018.
 
 exit/b
 
