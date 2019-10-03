@@ -3021,7 +3021,7 @@ exit/b
 
 :debr
 
-set fp=* Delete branch. (!delb) (skw delete_branch)
+set fp=* Delete remote branch. (!delb) (skw delete_branch)
 
 rem Outcome:
 
@@ -3040,6 +3040,28 @@ if "%~2" == "" (
 )
 
 git push origin --delete %2
+rem qq-1
+
+exit/b
+
+
+
+::_
+
+:debrlo
+
+set fp=* Delete branch - local only.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field.
+  exit/b
+)
+
+git branch -D %2
 
 exit/b
 
