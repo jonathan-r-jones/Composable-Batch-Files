@@ -3040,7 +3040,6 @@ if "%~2" == "" (
 )
 
 git push origin --delete %2
-rem qq-1
 
 exit/b
 

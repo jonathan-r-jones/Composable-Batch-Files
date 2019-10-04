@@ -5240,8 +5240,6 @@ exit/b
 
 :dapi3
 
-:j
-
 :gitjd
 
 :zip
