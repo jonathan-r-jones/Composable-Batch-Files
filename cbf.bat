@@ -57,6 +57,7 @@ echo   cbf  Show this list of CBF batch files
 echo    ch  Chef command line utility
 echo    cv  Chef converge with a path parameter
 echo   clc  Simple calculator
+echo  clop  Copy CBF_Path to the clipboard
 echo    cn  Git cloning, based entirely on the nickname parameter
 echo   cng  Git cloning, generic version
 echo   col  Shell window colors operations

@@ -902,7 +902,8 @@ rem lu: Feb-7-2019
 echo.
 echo %fp%
 
-echo This text is on the clipboard. Cool. | clip
+echo "This text is on the clipboard. Cool." | clip
+rem echo "%cbf_path%" | clip
 
 exit/b
 
