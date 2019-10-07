@@ -4899,19 +4899,19 @@ exit/b
 
 ::_
 
-:ngb
+:ngf
 
-:ng_build
+:build_for_fqt
 
-set fp=* Build angular.
+set fp=* Build for FQT.
 
-rem lu: Mar-19-2019
+rem lu: Sep-17-2019
 
 echo.
 echo %fp%
 
 echo.
-ng build
+ng build --configuration=fqt
 
 exit/b
 
@@ -4921,7 +4921,25 @@ exit/b
 
 :ngp
 
-set fp=* Complie and start Angular for production.
+set fp=* Complie and start Angular for production. Used this for version 1.3.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build --configuration=prod
+
+exit/b
+
+
+
+::_
+
+:ngp_old
+
+set fp=* Complie and start Angular for production - old. Not sure this works..
 
 rem lu: Feb-12-2019
 
@@ -4937,19 +4955,19 @@ exit/b
 
 ::_
 
-:ngf
+:ngb
 
-:build_for_fqt
+:ng_build
 
-set fp=* Build for FQT.
+set fp=* Build angular.
 
-rem lu: Sep-17-2019
+rem lu: Mar-19-2019
 
 echo.
 echo %fp%
 
 echo.
-ng build --configuration=fqt
+ng build
 
 exit/b
 

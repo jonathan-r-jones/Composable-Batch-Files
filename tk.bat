@@ -169,4 +169,23 @@ exit/b
 
 
 
+:_
+
+:5432
+
+set fp=* Kill Postgres.
+
+rem lu: Mar-5-2019
+
+echo.
+echo %fp%
+
+echo.
+rem Under construction.
+rem taskkill /pid %2 /f
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

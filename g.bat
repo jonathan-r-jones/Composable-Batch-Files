@@ -2814,17 +2814,53 @@ exit/b
 
 ::_
 
-:seeb
+:lbra
 
-set fp=* See all branches.
+set fp=* List all branches, that is local and remote. (skw list branches)
 
-rem lu: Mar-20-2019
+rem lu: Oct-7-2019
 
 echo.
 echo %fp%
 
 echo.
 git branch -a
+
+exit/b
+
+
+
+::_
+
+:lbrl
+
+set fp=* List local branches only.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch
+
+exit/b
+
+
+
+::_
+
+:lbrr
+
+set fp=* List remote branches only.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -r
 
 exit/b
 
@@ -3001,29 +3037,9 @@ exit/b
 
 ::_
 
-:lb
+:debrr
 
-set fp=* List all local and remote branches. (skw list branches)
-
-rem lu: May-7-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch -a
-
-exit/b
-
-
-
-::_
-
-:debr
-
-set fp=* Delete remote branch. (!delb) (skw delete_branch)
-
-rem Outcome:
+set fp=* Delete branch, remote only. (!delb) (skw delete_branch)
 
 rem This worked! Oct-13-2016
 rem This worked! Mar-8-2019
@@ -3039,6 +3055,7 @@ if "%~2" == "" (
   exit/b
 )
 
+echo.
 git push origin --delete %2
 
 exit/b
@@ -3047,9 +3064,9 @@ exit/b
 
 ::_
 
-:debrlo
+:debrl
 
-set fp=* Delete branch - local only.
+set fp=* Delete branch, local only.
 
 echo.
 echo %fp%
@@ -3060,6 +3077,7 @@ if "%~2" == "" (
   exit/b
 )
 
+echo.
 git branch -D %2
 
 exit/b
@@ -3194,6 +3212,26 @@ echo.
 echo %fp%
 
 git config --system http.sslCAPath C:\Users\JJones2\j\Miscellany\ca-bundle.crt 
+
+exit/b
+
+
+
+:_
+
+:dlt
+
+set fp=* Delete a local tag.
+
+rem lu: Oct-7-2019
+
+rem how to delete a local tag: skw
+
+echo.
+echo %fp%
+
+echo.
+git tag -d
 
 exit/b
 

@@ -14,7 +14,7 @@ set filep=* This file is used for vetted functions.
 
 set fp=* Route callers.
 
-if "%~1" == "" code_execution_area
+if "%~1" == "" main_function
 
 if "%~1" == "/?" goto help
 
@@ -961,8 +961,6 @@ if not exist "%cbf_filename%" (
 
 :_
 
-:vui
-
 :validate_user_input
 
 if "%~1" == "" (
@@ -990,7 +988,7 @@ if "%cbf_url%" == "" (
 
 :_
 
-:code_execution_area
+:main_function
 
 set fp=* Code below here runs.
 

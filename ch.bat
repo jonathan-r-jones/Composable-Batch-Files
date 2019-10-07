@@ -574,8 +574,6 @@ exit/b
 
 :_
 
-:cv
-
 :conv
 
 :converge

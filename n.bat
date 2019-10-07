@@ -5722,6 +5722,8 @@ exit/b
 
 :elms
 
+:cv
+
 :pass-through
 
 set fp=* Pass through.
@@ -10692,6 +10694,25 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\shortcuts\base
+
+exit/b
+
+
+
+:_
+
+:redo
+
+set fp=* Release documents.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_path=%cbf_path%\release documents
 
 exit/b
 
