@@ -19,6 +19,8 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
+if "%~1" == "" goto copy_cd_to_clipboard
+
 goto validate_user_input
 
 
@@ -32,7 +34,8 @@ rem lu: Oct-4-2019
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Alias of the path that you want to copy to the clipboard.
+set parameter_1=Parameter 1 (Optional): Alias of the path that you want to copy to the ^
+clipboard. If no parameter is passed, the current folder's path is copied to the clipboard.
 
 echo.
 echo %parameter_1%
@@ -43,13 +46,17 @@ exit/b
 
 :_
 
-:validate_user_input
+:copy_cd_to_clipboard
 
-if "%~1" == "" (
-  echo.
-  echo * Error: A parameter is required.
-  goto help
-)
+echo "%cd%" | clip
+
+exit/b
+
+
+
+:_
+
+:validate_user_input
 
 set cbf_path=
 call n %1
@@ -80,9 +87,7 @@ set fp= * CBF_Path "%cbf_path%" copied to clipboard.
 echo.
 echo %fp%
 
-
 echo "%cbf_path%" | clip
-rem qq-1
 
 exit/b
 
