@@ -10730,7 +10730,6 @@ echo.
 echo %fp%
 
 set cbf_path=C:\Users\jonat\Dropbox\Transfer
-rem       qq-1
 
 exit/b
 
