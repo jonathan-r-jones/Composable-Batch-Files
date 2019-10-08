@@ -10718,4 +10718,22 @@ exit/b
 
 
 
+:_
+
+:tran
+
+set fp=* Transfer folder.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+set cbf_path=C:\Users\jonat\Dropbox\Transfer
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)

@@ -48,7 +48,12 @@ exit/b
 
 :copy_cd_to_clipboard
 
-echo "%cd%" | clip
+set fp=* Copy current folder path to the clipboard.
+
+echo.
+echo %fp%
+
+echo %cd% | clip
 
 exit/b
 
@@ -82,12 +87,12 @@ if "%cbf_path%" == "" (
 
 :p
 
-set fp= * CBF_Path "%cbf_path%" copied to clipboard.
+set fp=* CBF_Path "%cbf_path%" was copied to the clipboard.
 
 echo.
 echo %fp%
 
-echo "%cbf_path%" | clip
+echo %cbf_path% | clip
 
 exit/b
 
