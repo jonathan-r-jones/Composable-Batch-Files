@@ -5055,12 +5055,13 @@ echo %fp%
 rem Get Postgres running on local.
 pql start
 
-td ma
+td m
 
 rem You may want to do a get latest.
 pl
 
 lq
+rem If liquibase fails, you may need to wipe your local databaase.
 
 e ly
 
@@ -5076,7 +5077,6 @@ sf 4200 krm
 
 rem Run the UI by using cmd_ui or the line below.
 call m cmd_ui
-
 
 exit/b
 

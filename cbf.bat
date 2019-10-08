@@ -54,19 +54,20 @@ echo   brp  Build relative path
 echo  brfn  Build relative filename
 echo     c  Clear screen and reset color
 echo   cbf  Show this list of CBF batch files
+echo    cc  Code Compare preloaded with j1.txt and j2.txt
+echo  ccff  Code Compare with aliases or filenames
 echo    ch  Chef command line utility
-echo    cv  Chef converge with a path parameter
 echo   clc  Simple calculator
-echo   clp  Copy CBF_Path to the clipboard
 echo    cn  Git cloning, based entirely on the nickname parameter
 echo   cng  Git cloning, generic version
 echo   col  Shell window colors operations
-echo  ccff  Code Compare with aliases or filenames
-echo    cc  Code Compare preloaded with j1.txt and j2.txt
+echo    cp  Copy CBF_Path to the clipboard
+echo   cpf  Copy CBF_Filename contents to the clipboard
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl hooked up to the nicknames dictionary
 echo   cur  Curl with static functions
+echo    cv  Chef converge with a path parameter
 echo  cycf  Use file in the current folder to "save as" to a filename alias
 echo  cycp  Copy file in the current directory to nickname-specified path
 echo  cyfc  Use filename alias to "save as" a file in the current folder

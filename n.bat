@@ -5724,6 +5724,20 @@ exit/b
 
 :cv
 
+:l1
+
+:l2
+
+:l3
+
+:l4
+
+:dbbu
+
+:rep5
+
+:rep6
+
 :pass-through
 
 set fp=* Pass through.
@@ -10339,6 +10353,8 @@ exit/b
 :_
 
 :dbb
+
+:dbbu
 
 set fp=* Database backups.
 
