@@ -3124,9 +3124,11 @@ exit/b
 
 :sm
 
+:subl
+
 set fp=* Sublime.
 
-rem lu: Jan-24-2018
+rem lu: Oct-9-2019
 
 echo.
 echo %fp%
@@ -5737,6 +5739,14 @@ exit/b
 :rep5
 
 :rep6
+
+:rep7
+
+:rep8
+
+:1152
+
+:hash
 
 :pass-through
 

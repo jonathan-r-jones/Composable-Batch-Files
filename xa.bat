@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto validate_user_input
 
 
 
@@ -39,6 +39,27 @@ echo.
 echo Parameter 2 (Optional): Filename nickname.
 
 exit/b
+
+
+
+:_
+
+:validate_user_input
+
+call an %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: An application alias for "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_application%" (
+  echo.
+  echo * Error: The application was not found at "%cbf_application%".
+  exit/b
+)
 
 
 

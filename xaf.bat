@@ -34,11 +34,16 @@ set parameter_1=Parameter 1: Application alias.
 
 set parameter_2=Parameter 2: Filename alias.
 
+set parameter_3=Parameter 3: Passing in "-c" forces the file creation.
+
 echo.
 echo %parameter_1%
 
 echo.
 echo %parameter_2%
+
+echo.
+echo %parameter_3%
 
 exit/b
 
@@ -85,6 +90,8 @@ if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
   exit/b
 )
+
+if "%3"=="-c" goto main_function
 
 if not exist "%cbf_filename%" (
   echo.

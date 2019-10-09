@@ -2423,8 +2423,8 @@ echo %fp%
 
 git log>"%temp%\git_log.txt"
 
-"%cbf_default_text_editor%" "%temp%\git_log.txt"
-
+rem "%cbf_default_text_editor%" "%temp%\git_log.txt"
+call sm "%temp%\git_log.txt"
 
 exit/b
 
