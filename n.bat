@@ -10745,7 +10745,28 @@ rem lu: Oct-7-2019
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonat\Dropbox\Transfer
+set cbf_path=%dropbox%\Transfer
+
+exit/b
+
+
+
+:_
+
+:prex
+
+:tama
+
+set fp=* Process explorer.
+
+rem task manager, sysinternals: skw
+
+rem lu: Oct-9-2019
+
+echo.
+echo %fp%
+
+set cbf_application=%dropbox%\Software\Tools\Process Explorer\procexp64.exe
 
 exit/b
 
