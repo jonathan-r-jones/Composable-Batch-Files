@@ -5748,6 +5748,10 @@ exit/b
 
 :hash
 
+:ssi
+
+:rf_ma
+
 :pass-through
 
 set fp=* Pass through.
@@ -8333,44 +8337,6 @@ exit/b
 
 :_
 
-:csv
-
-set fp=* CSV.
-
-rem lu: Apr-1-2019
-
-echo.
-echo %fp%
-
-set cbf_root=%cbf_repo%\cart\api\src\main\resources\config\liquibase
-
-set cbf_filename=%cbf_root%\cart_enrollee.csv
-
-set cbf_path=%cbf_root%
-
-exit/b
-
-
-
-:_
-
-:rcsv
-
-set fp=* Relative path CSV.
-
-rem lu: Apr-9-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%cd%\api\src\main\resources\config\liquibase
-
-exit/b
-
-
-
-:_
-
 :parrot
 
 set fp=* Parrot.
@@ -10326,25 +10292,6 @@ exit/b
 
 :_
 
-:lc
-
-set fp=* Liquibase configuration.
-
-rem lu: Aug-20-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=api\src\main\resources\config\liquibase\master.xml
-
-set cbf_path=api\src\main\resources\config\liquibase
-
-exit/b
-
-
-
-:_
-
 :dg
 
 set fp=* Datagrip.
@@ -10374,23 +10321,6 @@ echo.
 echo %fp%
 
 set cbf_path=c:\aa\Database Backups
-
-exit/b
-
-
-
-:_
-
-:dlq
-
-set fp=* Download Liquibase version 3.6.3.
-
-rem lu: Aug-22-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https://download.liquibase.org/download/?frm=n
 
 exit/b
 
@@ -10777,6 +10707,88 @@ echo.
 echo %fp%
 
 set cbf_application=%dropbox%\Software\Tools\Process Explorer\procexp64.exe
+
+exit/b
+
+
+
+:_+ Liquibase
+
+
+
+::_
+
+:lqc
+
+set fp=* Liquibase configuration.
+
+rem lu: Oct-10-2019
+
+echo.
+echo %fp%
+
+call n rf_ma 
+
+set cbf_filename=%cbf_path%\api\src\main\resources\config\liquibase\master.xml
+
+set cbf_path=%cbf_path%\api\src\main\resources\config\liquibase\changelog
+
+set cbf_path=https://confluence.ice.dhs.gov/display/CART/Liquibase+Filename+and+ChangeSet+IDs
+
+exit/b
+
+
+
+::_
+
+:dlq
+
+set fp=* Download Liquibase version 3.6.3.
+
+rem lu: Aug-22-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://download.liquibase.org/download/?frm=n
+
+exit/b
+
+
+
+::_
+
+:csv
+
+set fp=* CSV.
+
+rem lu: Apr-1-2019
+
+echo.
+echo %fp%
+
+set cbf_root=%cbf_repo%\cart\api\src\main\resources\config\liquibase
+
+set cbf_filename=%cbf_root%\cart_enrollee.csv
+
+set cbf_path=%cbf_root%
+
+exit/b
+
+
+
+::_
+
+:rcsv
+
+set fp=* Relative path CSV.
+
+rem lu: Apr-9-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%cd%\api\src\main\resources\config\liquibase
 
 exit/b
 

@@ -53,7 +53,7 @@ rem lu: Aug-20-2019
 echo.
 echo %fp%
 
-call brfn cartdv lc
+call brfn cartdv lqc
 rem call brfn cart lc
 
 echo.

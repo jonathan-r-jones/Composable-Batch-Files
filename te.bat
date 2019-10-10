@@ -19,7 +19,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-goto validate_user_input
+goto validate_input
 
 
 
@@ -48,7 +48,7 @@ exit/b
 
 :_
 
-:validate_user_input
+:validate_input
 
 if "%~1" == "" (
   echo.

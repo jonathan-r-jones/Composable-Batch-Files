@@ -2970,6 +2970,8 @@ set cbf_filename=
 
 set cbf_file_to_upload=
 
+set cbf_github_url=
+
 set cbf_host_name=
 
 set cbf_instance_id=

@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Make and navigate (cd) to a folder.
+set filep=* Create and navigate to folder.
 
 echo.
 echo %filep%

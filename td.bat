@@ -83,12 +83,18 @@ if "%~1" == ".." (
 
 :_
 
-set fp=* Main function.
+set fp=* Validate input.
 
-rem Clear CBF path.
 set cbf_path=
 
 if not "%~1" == "" call n %1 %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
 
 if "%cbf_path%" == "" (
   echo.
@@ -103,6 +109,12 @@ if not exist "%cbf_path%" (
   echo * Folder does not exist at "%cbf_path%". 
   exit/b 1
 )
+
+
+
+:_
+
+set fp=* Main function.
 
 cd /d "%cbf_path%"
 
