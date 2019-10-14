@@ -113,7 +113,7 @@ echo     m  Perform miscellaneous tasks
 echo   mcd  Make and navigate (cd) to a folder
 echo    me  Multi-Edit
 echo   mav  Maven
-echo    mv  Move files
+echo    mv  Move files using static functions
 echo  mvcp  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)

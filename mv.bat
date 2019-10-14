@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Wrapper around the Move command.
+set filep=* Move files static functions.
 
 
 
@@ -30,7 +30,7 @@ echo.
 echo %filep%
 
 echo.
-echo Usage: %0 [Parameter 1]
+echo Usage: %0 [Parameter 1] static function to call.
 
 exit/b
 
