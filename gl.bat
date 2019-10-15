@@ -38,23 +38,23 @@ exit/b
 
 :main_function
 
-echo %filep%
-
 echo.
-echo  Term/Abbrev.  Definition/Description
-echo -------------  ------------------------------------------------------------
-echo             a  Application
-echo           cbf  composable batch files
-echo         filep  File purpose
-echo             f  Filename
-echo            fp  Function purpose
-echo            lu  Last updated. The last time the file was updated.
-echo  td parameter  Transform Directory passed in as a parameter, meaning to 
+echo Term/Abbreviat.  Definition/Description
+echo ---------------  ------------------------------------------------------------
+echo               a  Application
+echo             cbf  composable batch files
+echo           filep  File purpose
+echo               f  Filename
+echo              fp  Function purpose
+echo              lu  Last updated. The last time the file was updated.
+echo    td parameter  Transform Directory passed in as a parameter, meaning to 
 echo                  change folders before running the batch file. For example,
 echo                  running "p cbf" switches to the CBF folder, the alias for 
 echo                  which is assigned in the nicknames dictionary (n.bat), 
 echo                  before running the batch file p.bat.
-echo             p  path
+echo               p  path
+echo static function  A single, self-contained batch file function which is 
+echo                  called by invoking its batch file label.
 
 rem (!rfsp) (mov-2)
 

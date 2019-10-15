@@ -48,6 +48,7 @@ echo  File  Wrapper Description
 echo  ----  ----------------------------------------------------------------------------------
 echo     a  AWS CLI
 echo    an  Application nickname dictionary layer of abstraction
+echo   ang  Angular-related tasks
 echo    as  Windows file associations
 echo     b  Shutdown windows
 echo   brp  Build relative path

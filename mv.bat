@@ -30,7 +30,7 @@ echo.
 echo %filep%
 
 echo.
-echo Usage: %0 [Parameter 1] static function to call.
+echo Usage: %0 [Parameter 1] (where parameter one is the static function you wish to call)
 
 exit/b
 

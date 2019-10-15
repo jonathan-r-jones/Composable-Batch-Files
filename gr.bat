@@ -17,7 +17,7 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%~1" == "" goto w
+if "%~1" == "" goto bfp_wtd
 
 if "%~1" == "/?" goto help
 
@@ -244,7 +244,7 @@ exit/b
 
 :_
 
-:w
+:rgw
 
 set fp=* Run gradlew.
 
@@ -303,9 +303,9 @@ exit/b
 
 :_
 
-:bp
+:bfpw
 
-set fp=* Build for production. This optimizes the cart-api application for production.
+set fp=* Build for production, war file. This optimizes the cart-api application for production.
 
 rem lu: Jan-8-2019
 
@@ -314,6 +314,46 @@ echo %fp%
 
 echo.
 call gradlew -Pprod clean bootWar
+echo.
+
+exit/b
+
+
+
+:_
+
+:bfp_wtd
+
+:build_for_production_with_td
+
+set fp=* Build for production, jar file with td alias.
+
+rem lu: Oct-15-2019
+
+echo.
+echo %fp%
+
+call td rf_ma
+
+call %0 bfp
+
+exit/b
+
+
+
+:_
+
+:bfp
+
+set fp=* Build for production, jar file.
+
+rem lu: Oct-15-2019
+
+echo.
+echo %fp%
+
+echo.
+call gradlew -Pprod clean bootJar
 echo.
 
 exit/b

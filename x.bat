@@ -93,7 +93,7 @@ if not "%cbf_url%" == "" (
 )
 
 if not "%cbf_application%" == "" (
-  call xa %1
+  call xa %1>nul
   exit/b
 )
 

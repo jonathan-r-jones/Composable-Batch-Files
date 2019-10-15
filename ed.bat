@@ -291,7 +291,14 @@ set fp=* Edit a file using an alias lookup.
 rem echo.
 rem echo %fp%
 
-call n %1
+call fn %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
 
 if "%cbf_filename%" == "" (
   echo.

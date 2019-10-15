@@ -36,7 +36,7 @@ echo.
 echo Parameter 1: Application nickname.
 
 echo.
-echo Parameter 2 (Optional): Filename nickname.
+echo Parameter 2 (Optional): Filename alias.
 
 exit/b
 
@@ -61,29 +61,38 @@ if not exist "%cbf_application%" (
   exit/b
 )
 
+if "%~2" == "" goto percent_2_is_blank
+
+call fn %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: An filename alias for "%2" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: The CBF_Filename was not found at "%cbf_parameter%".
+  exit/b
+)
+
+set cbf_parameter=%cbf_filename%
+
+goto main_function
+
+
+
+:percent_2_is_blank
+
+set cbf_parameter=
+
 
 
 :_
 
 :main_function
-
-set fp=* Detect a period in the first parameter and run.
-
-rem lu: Feb-12-2019
-
-echo %1 | find /i ".">nul
-
-if %errorlevel% == 0 set cbf_application=%~1
-
-if %errorlevel% == 1 call an %1
-
-if %errorlevel% == 1 exit/b
-
-if "%~2" == "" set cbf_parameter=
-
-if not "%~2" == "" call fn %2
-
-if not "%~2" == "" set cbf_parameter=%cbf_filename%
 
 call r
 

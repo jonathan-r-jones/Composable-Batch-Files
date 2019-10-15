@@ -2694,120 +2694,6 @@ exit/b
 
 
 
-:_+ Reversion
-
-
-
-::_
-
-:roll_back_repo_1
-
-set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
-
-rem One reason I like this command is that it moves back slowly so will help you be
-rem careful not to rollback to far.
-
-set fp=%fp% so move the whole repo back a single check-in version.
-
-rem This worked on FGT and Fresnel on Jul-19-2018.
-rem This worked on CBF on Mar-22-2019.
-
-rem lu: Mar-22-2019
-
-echo.
-echo %fp%
-
-call :reset_head_1
-
-call :roll_back_repo
-
-exit/b
-
-
-
-::_
-
-:rsf
-
-:rv_sf
-
-:rvsf
-
-set fp=* Revert or check out single file.
-
-rem lu: Mar-22-2019
-
-rem This worked on CBF files. Mar-22-2019
-
-echo.
-echo %fp%
-  
-git reset head %2
-git checkout %2
-
-exit/b
-
-
-
-::_
-
-:rv_fd
-
-set fp=* Revert folder.
-
-rem Last successful run date: May-30-2018
-
-rem Last Updated: May-30-2018
-
-echo.
-echo %fp%
- 
-git checkout *.*
-
-exit/b
-
-
-
-::_
-
-:rv
-
-:rv_lo
-
-:rv_local
-
-set fp=* Revert local.
-
-rem lu: Aug-7-2018
-
-rem If you don't care about any local changes and just want a copy from the repository.
-
-rem Revert all changes from this folder. Revert all local changes.
-
-rem blow away local changes, specific folder: skw
-
-rem This didn't seem to work on Jan-31-2017.
-
-rem Function Creation Date: Jan-30-2017
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
-  exit/b
-)
-
-echo.
-git reset --hard HEAD
-git clean -f
-git pull
-
-exit/b
-
-
-
 :_+ Branch Operations
 
 
@@ -3101,88 +2987,6 @@ exit/b
 
 
 
-:_+
-
-
-
-::_
-
-:lt
-
-:tag
-
-set fp=* List tags.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-echo.
-git tag
-
-exit/b
-
-
-
-::_
-
-:add_tag
-
-:taga
-
-set fp=* Add tag.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-rem git tag -a v1.4 -m "my version 1.4"
-git tag -a version_api_0.0.1-20190618.233310-466__ui_0.0.1-20190618.233316-112 -m "version message"
-
-exit/b
-
-
-
-::_
-
-:tagd
-
-set fp=* Delete tag.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-echo.
-git tag -d list
-
-exit/b
-
-
-
-::_
-
-:push_tag
-
-:tagp
-
-set fp=* Push tag.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-echo.
-git push origin
-
-exit/b
-
-
-
 :_+ Certs
 
 
@@ -3232,6 +3036,236 @@ echo %fp%
 
 echo.
 git tag -d
+
+exit/b
+
+
+
+:_+ Tag Operations (!fytag)
+
+
+
+::_
+
+:lt
+
+:ltag
+
+:tag
+
+set fp=* List tags.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+echo.
+git tag
+
+exit/b
+
+
+
+::_
+
+:detag
+
+:tagd
+
+set fp=* Delete tag.
+
+rem lu: Oct-15-2019
+
+rem delete a tag: skw
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: Paramter 2 needs to be the tag you wish to delete.
+  exit/b
+)
+
+echo.
+git tag -d "%2"
+
+rem This also works I think: git tag --delete v1.3.0
+
+exit/b
+
+
+
+::_
+
+:add_tag
+
+:taga
+
+set fp=* Add tag.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+rem git tag -a v1.4 -m "my version 1.4"
+git tag -a version_api_0.0.1-20190618.233310-466__ui_0.0.1-20190618.233316-112 -m "version message"
+
+exit/b
+
+
+
+::_
+
+:push_tag
+
+:tagp
+
+set fp=* Push tag.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+echo.
+git push origin
+
+exit/b
+
+
+
+:_+ Reversion Family (!fyrv)
+
+
+
+::_
+
+:roll_back_repo_1
+
+set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
+
+rem One reason I like this command is that it moves back slowly so will help you be
+rem careful not to rollback to far.
+
+set fp=%fp% so move the whole repo back a single check-in version.
+
+rem This worked on FGT and Fresnel on Jul-19-2018.
+rem This worked on CBF on Mar-22-2019.
+
+rem lu: Mar-22-2019
+
+echo.
+echo %fp%
+
+call :reset_head_1
+
+call :roll_back_repo
+
+exit/b
+
+
+
+::_
+
+:rsf
+
+:rv_sf
+
+:rvsf
+
+set fp=* Revert or check out single file.
+
+rem lu: Mar-22-2019
+
+rem This worked on CBF files. Mar-22-2019
+
+echo.
+echo %fp%
+  
+git reset head %2
+git checkout %2
+
+exit/b
+
+
+
+::_
+
+:rv_fd
+
+set fp=* Revert folder.
+
+rem Last successful run date: May-30-2018
+
+rem Last Updated: May-30-2018
+
+echo.
+echo %fp%
+ 
+git checkout *.*
+
+exit/b
+
+
+
+::_
+
+:rv
+
+:rv_lo
+
+:rv_local
+
+set fp=* Revert local.
+
+rem lu: Aug-7-2018
+
+rem If you don't care about any local changes and just want a copy from the repository.
+
+rem Revert all changes from this folder. Revert all local changes.
+
+rem blow away local changes, specific folder: skw
+
+rem This didn't seem to work on Jan-31-2017.
+
+rem Function Creation Date: Jan-30-2017
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
+  exit/b
+)
+
+echo.
+git reset --hard HEAD
+git clean -f
+git pull
+
+exit/b
+
+
+
+:_
+
+:rvrrm
+
+set fp=* Revert back to what's in the remote repo, master branch.
+
+rem lu: Oct-15-2019
+
+rem I was getting this message: Your branch is ahead of 'origin/master' by 5 commits.
+
+echo.
+echo %fp%
+
+echo.
+git reset --hard origin/master
 
 exit/b
 

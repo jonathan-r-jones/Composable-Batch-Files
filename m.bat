@@ -1,4 +1,4 @@
-:_ (!m)
+:_ (!mtest, !m)
 
 @echo off
 
@@ -4791,26 +4791,6 @@ exit/b
 
 
 
-:_
-
-:run_ui
-
-set fp=* Run UI in the dvcart folder.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call td dvport
-
-echo.
-ng serve
-
-exit/b
-
-
-
 :_+ Cmds
 
 
@@ -4895,190 +4875,21 @@ exit/b
 
 
 
-:_+ Angular
-
-
-
 ::_
 
-:ngf
+:run_ui
 
-:build_for_fqt
+set fp=* Run UI in the dvcart folder.
 
-set fp=* Build for FQT.
-
-rem lu: Sep-17-2019
+rem lu: Aug-16-2019
 
 echo.
 echo %fp%
 
-echo.
-ng build --configuration=fqt
-
-exit/b
-
-
-
-::_
-
-:ngp
-
-set fp=* Complie and start Angular for production. Used this for version 1.3.
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-echo.
-ng build --configuration=prod
-
-exit/b
-
-
-
-::_
-
-:ngp_old
-
-set fp=* Complie and start Angular for production - old. Not sure this works..
-
-rem lu: Feb-12-2019
-
-echo.
-echo %fp%
-
-echo.
-ng build --prod
-
-exit/b
-
-
-
-::_
-
-:ngb
-
-:ng_build
-
-set fp=* Build angular.
-
-rem lu: Mar-19-2019
-
-echo.
-echo %fp%
-
-echo.
-ng build
-
-exit/b
-
-
-
-::_
-
-:ngt
-
-:ng_test
-
-set fp=* Test angular.
-
-rem lu: Sep-16-2019
-
-echo.
-echo %fp%
-
-echo.
-ng test
-
-exit/b
-
-
-
-::_
-
-:ng
-
-set fp=* Compile and start Angular.
-
-rem lu: Feb-11-2019
-
-echo.
-echo %fp%
+call td dvport
 
 echo.
 ng serve
-
-exit/b
-
-
-
-::_
-
-:lhp
-
-set fp=* Run the Admin Portal on localhost.
-
-rem lu: Feb-11-2019
-
-echo.
-echo %fp%
-
-call sf 4200 krm
-
-call td port
-
-echo.
-ng serve
-
-exit/b
-
-
-
-::_
-
-:htrl
-
-:loca
-
-:rc
-
-:rcl
-
-:rulo
-
-set fp=* Run CART locally, overarching process. (How to run: skw)
-
-rem lu: Sep-25-2019
-
-echo.
-echo %fp%
-
-rem Get Postgres running on local.
-pql start
-
-td m
-
-rem You may want to do a get latest.
-pl
-
-lq
-rem If liquibase fails, you may need to wipe your local databaase.
-
-e ly
-
-rem Run the API by using cmd_api or the line below.
-
-m cmd_api
-
-x bash
-
-./get_cart_jwt.sh
-
-sf 4200 krm
-
-rem Run the UI by using cmd_ui or the line below.
-call m cmd_ui
 
 exit/b
 
