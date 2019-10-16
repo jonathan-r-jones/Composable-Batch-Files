@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Move files static functions.
+set filep=* Move files composite functions.
 
 
 
@@ -30,7 +30,7 @@ echo.
 echo %filep%
 
 echo.
-echo Usage: %0 [Parameter 1] (where parameter one is the static function you wish to call)
+echo Usage: %0 [Parameter 1] (where parameter one is the composite function you wish to call)
 
 exit/b
 
