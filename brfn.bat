@@ -19,7 +19,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto validate_input
 
 
 
@@ -30,9 +30,9 @@ goto main_function
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
+set parameter_1=Parameter 1: Path alias to use for appending.
 
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Fliename alias to use for appending.
 
 echo.
 echo %parameter_1%
@@ -46,25 +46,65 @@ exit/b
 
 :_
 
-:main_function
+:validate_input
 
-rem lu: Aug-20-2019
 
-call n %1
+
+:_
+
+:validate_path
+
+call pn %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_path%" (
+  echo.
+  echo * Error: The CBF_Path "%cbf_path%" could not be found.
+  exit/b
+)
 
 set cbf_built_filename=%cbf_path%
 
-call n %2
+
+
+:_
+
+:validate_filename
+
+call fn %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
+  exit/b
+)
+
+
+
+:_
+
+:main_function
+
+rem Warning: This batch file is under construction as of Oct-16-2019. *********************
+
+rem Seems like we would need a new cbf variable something like cbf_filename_without_path
+
+exit/b
 
 set cbf_built_filename=%cbf_built_filename%\%cbf_filename%
-
-rem if exist %cbf_built_filename% echo * Filename exists.
-
-if not exist %cbf_built_filename% (
-  echo.
-  echo * Built filename not found: "%cbf_built_filename%".
-  exit/b 1
-)
 
 set cbf_filename=%cbf_built_filename%
 

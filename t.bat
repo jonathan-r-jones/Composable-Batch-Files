@@ -9862,16 +9862,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Enrollee edit issue.
@@ -9889,6 +9879,35 @@ if exist "%cbf_filename%" == (
 ) else (
   echo * File NOT exists.
 )  
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test building relative filename.
+
+rem lu: Oct-16-2019
+
+echo.
+echo %fp%
+
+echo.
+
+rem qq-1
 
 exit/b
 

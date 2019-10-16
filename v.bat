@@ -986,6 +986,73 @@ if "%cbf_url%" == "" (
 
 
 
+:_+ Validation Family (!fyva)
+
+
+
+::_
+
+:validate_application
+
+call an %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_path%" (
+  echo.
+  echo * Error: The CBF_Application "%cbf_application%" could not be found.
+  exit/b
+)
+
+
+
+::_
+
+:validate_filename
+
+call fn %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
+  exit/b
+)
+
+
+
+::_
+
+:validate_path
+
+call pn %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias "%1" was not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_path%" (
+  echo.
+  echo * Error: The CBF_Path "%cbf_path%" could not be found.
+  exit/b
+)
+
+
+
 :_
 
 :main_function

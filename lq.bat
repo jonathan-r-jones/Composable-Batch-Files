@@ -48,16 +48,15 @@ exit/b
 
 :main_function
 
-rem lu: Aug-20-2019
+rem lu: Oct-16-2019
 
 echo.
 echo %fp%
 
-call brfn cartdv lqc
-rem call brfn cart lc
+call fn lqc
 
 echo.
-echo Log file: %cbf_filename%
+echo changeLogFile: %cbf_filename%
 
 echo.
 liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_filename%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" update

@@ -2312,7 +2312,7 @@ rem lu: Dec-12-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\a
+set cbf_path=c:\axxx
 
 exit/b
 
@@ -10747,7 +10747,7 @@ set cbf_filename=%cbf_path%\api\src\main\resources\config\liquibase\master.xml
 
 set cbf_path=%cbf_path%\api\src\main\resources\config\liquibase\changelog
 
-set cbf_path=https://confluence.ice.dhs.gov/display/CART/Liquibase+Filename+and+ChangeSet+IDs
+set cbf_url=https://confluence.ice.dhs.gov/display/CART/Liquibase+Filename+and+ChangeSet+IDs
 
 exit/b
 

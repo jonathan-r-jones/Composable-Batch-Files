@@ -4601,13 +4601,66 @@ exit/b
 
 
 
-:_
+:_+ How To Family (!fyht)
+
+
+
+::_
+
+:htrl
+
+:loca
+
+:rc
+
+:rcl
+
+:rulo
+
+set fp=* How to run CART locally, the overarching process.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+rem Get Postgres running on local.
+pql start
+
+td m
+
+rem You may want to do a get latest.
+pl
+
+lq
+rem If liquibase fails, you may need to wipe your local databaase.
+
+e ly
+
+rem Run the API by using cmd_api or the line below.
+
+m cmd_api
+
+x bash
+
+./get_cart_jwt.sh
+
+sf 4200 krm
+
+rem Run the UI by using cmd_ui or the line below.
+call m cmd_ui
+
+exit/b
+
+
+
+::_
 
 :smdi
 
 :htr
 
-set fp=* Sean's manual deployment instructions. (How to Refresh the Server: skw)
+set fp=* How to refresh the server, Sean's manual deployment instructions.
 
 rem lu: Aug-22-2019
 
@@ -4695,7 +4748,7 @@ exit/b
 
 
 
-:_
+::_
 
 :htr_fqt
 
