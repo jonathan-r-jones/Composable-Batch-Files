@@ -71,7 +71,7 @@ call an %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" not found.
+  echo * Error: Alias not found. (skw Oct-17-2019 5:59 PM)
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -86,7 +86,7 @@ call fn %2
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%2" not found.
+  echo * Error: Alias not found. (skw Oct-17-2019 5:58 PM)
   call m clear_errorlevel_silently 
   exit/b
 )

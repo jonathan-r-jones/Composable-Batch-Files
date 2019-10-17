@@ -51,7 +51,7 @@ set cbf_url=
 
 :_
 
-call n %1 %2
+call n %1
 
 exit/b
 

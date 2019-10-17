@@ -67,7 +67,7 @@ echo   cpf  Copy CBF_Filename contents to the clipboard
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl hooked up to the nicknames dictionary
-echo   cur  Curl with composite functions
+echo   cur  Curl with atomic functions
 echo    cv  Chef converge with a path parameter
 echo  cycf  Use file in the current folder to "save as" to a filename alias
 echo  cycp  Copy file in the current directory to nickname-specified path
@@ -114,7 +114,7 @@ echo     m  Perform miscellaneous tasks
 echo   mcd  Make and navigate (cd) to a folder
 echo    me  Multi-Edit
 echo   mav  Maven
-echo    mv  Move files using composite functions
+echo    mv  Move files using atomic functions
 echo  mvcp  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)

@@ -31,7 +31,7 @@ echo.
 echo Parameter 1: Function to execute.
 
 echo.
-echo Usage Note: Do not make internal calls to a composite function because 
+echo Usage Note: Do not make internal calls to a atomic function because 
 echo that could cause a circular reference.
 
 echo.
@@ -4627,7 +4627,8 @@ echo %fp%
 rem Get Postgres running on local.
 pql start
 
-td m
+rem Check what branch you are on.
+s m
 
 rem You may want to do a get latest.
 pl
@@ -4639,6 +4640,7 @@ e ly
 
 rem Run the API by using cmd_api or the line below.
 
+rem qq-1
 m cmd_api
 
 x bash

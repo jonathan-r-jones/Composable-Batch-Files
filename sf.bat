@@ -18,7 +18,7 @@ if "%~1" == "" goto use_current_url
 
 if "%~1" == "/?" goto help
 
-goto code_execution_area
+goto validate_input
 
 
 
@@ -46,37 +46,34 @@ exit/b
 
 :_
 
-:code_execution_area
+:validate_input
 
-set fp=* Execution area. Code below here runs.
 
-rem ******* (!rfcea, !rfsp) (mov4)
+
+::_
+
+:validate_url
+
+call un %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Oct-17-2019 3:51 PM.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_url%" == "" (
+  echo.
+  echo * Error: The CBF_URL value is empty.
+  exit/b
+)
 
 
 
 :_
 
 set fp=* Set URL.
-
-set cbf_application=
-set cbf_url=
-
-call un %1 %2
-
-if "%cbf_url%" == "" (
-  echo.
-  echo * Nickname Error: There is no cbf_url defined for '%~1'. 
-  rem echo * Errorlevel: %errorlevel%.
-  call m clear_errorlevel_silently
-  exit/b
-)
-
-if %errorlevel% == 1 (
-  rem This may never be called.
-  echo.
-  echo * Error: There was an error after the dictionary call was made. 
-  exit/b
-)
 
 set cbf_parameter=%cbf_url%
 

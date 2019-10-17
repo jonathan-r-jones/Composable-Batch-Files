@@ -68,7 +68,7 @@ call n %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" was not found.
+  echo * Oct-17-2019 5:38 PM
   call m clear_errorlevel_silently 
   exit/b
 )

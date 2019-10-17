@@ -5766,6 +5766,14 @@ exit/b
 
 :fqtyml
 
+:bsc
+
+:sw_binu
+
+:sw_tools
+
+:lymlb
+
 :pass-through
 
 set fp=* Pass through.
@@ -10069,25 +10077,6 @@ echo.
 echo %fp%
 
 set cbf_url=http://localhost:8080/cart-api/h2-console
-
-exit/b
-
-
-
-::_
-
-:swaglh
-
-:swag_lh
-
-set fp=* Swagger on local.
-
-rem lu: Jan-16-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8080/cart-api/swagger-ui.html
 
 exit/b
 

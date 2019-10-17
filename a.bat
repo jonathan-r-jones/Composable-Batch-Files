@@ -4382,7 +4382,7 @@ call n %2
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%2" not found.
+  echo * Oct-17-2019 5:28 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -4423,7 +4423,7 @@ call n %2
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%2" not found.
+  echo * Oct-17-2019 5:31 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -4470,7 +4470,7 @@ call n %2
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%2" not found.
+  echo * Oct-17-2019 5:27 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -4509,7 +4509,7 @@ call n %2
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%2" not found.
+  echo * Oct-17-2019 5:26 PM
   call m clear_errorlevel_silently 
   exit/b
 )

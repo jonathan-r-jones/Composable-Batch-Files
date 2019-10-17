@@ -62,7 +62,7 @@ call n %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias not found.
+  echo * Oct-17-2019 5:37 PM
   exit/b
 )
 

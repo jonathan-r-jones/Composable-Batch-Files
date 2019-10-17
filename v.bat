@@ -63,7 +63,7 @@ rem Imprimatur (!err, !p2, !erro, !el, !erle)
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" was not found.
+  echo * Oct-17-2019 5:55 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -931,7 +931,7 @@ call an %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" not found.
+  echo * Oct-17-2019 5:52 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -946,7 +946,7 @@ call fn %2
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" not found.
+  echo * Oct-17-2019 5:51 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -973,7 +973,7 @@ call un %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" was not found.
+  echo * Oct-17-2019 5:50 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -992,13 +992,34 @@ if "%cbf_url%" == "" (
 
 ::_
 
+:validate_url
+
+call un %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Alias not found. (skw Oct-17-2019 6:00 PM)
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_url%" == "" (
+  echo.
+  echo * The system cannot find the batch label specified "%1".
+  exit/b
+)
+
+
+
+::_
+
 :validate_application
 
 call an %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" was not found.
+  echo * Error: Alias not found. (skw Oct-17-2019 6:01 PM)
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -1019,7 +1040,7 @@ call fn %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" was not found.
+  echo * Error: Alias not found. (skw Oct-17-2019 6:02 PM)
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -1040,7 +1061,7 @@ call pn %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias "%1" was not found.
+  echo * Error: Alias not found. (skw Oct-17-2019 6:03 PM)
   call m clear_errorlevel_silently 
   exit/b
 )
