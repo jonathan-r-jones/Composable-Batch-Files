@@ -2889,6 +2889,8 @@ exit/b
 
 :push_origin
 
+:lu: Oct-18-2019
+
 set fp=* Push origin.
 
 echo.
@@ -2896,6 +2898,7 @@ echo %fp%
 
 echo.
 
+rem If %2 is empty, this still works.
 git push --set-upstream origin %2
 
 exit/b

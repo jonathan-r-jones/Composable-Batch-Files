@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto validate_input
 
 
 
@@ -58,7 +58,40 @@ exit/b
 
 :_
 
-:main_function
+:force_file_creation
+
+set fp=* Force file creation.
+
+rem lu: Sep-25-2019
+
+echo.
+echo %fp%
+
+set destination_filename=%cbf_filename%
+
+echo %cbf_filename% | find /i ".xlsx">nul
+
+rem It seems that you can't change an environment variable inside an error conditional
+rem so I am doing it outside of the if block. Sep-25-2019
+call n exb
+
+if %errorlevel% == 0 (
+  copy %cbf_filename% "%destination_filename%"
+  echo.
+  echo * File copied.
+)
+
+echo.
+echo * Open the new file.
+xfn %1>nul
+
+exit/b
+
+
+
+:_
+
+:validate_input
 
 echo.
 echo %filep%
@@ -71,7 +104,8 @@ call n %~1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Cannot find label "%~1".
+  echo * Error: Label not found. - skw Oct-18-2019 2:59 PM
+  call m clear_errorlevel_silently 
   exit/b
 )
 
@@ -107,39 +141,6 @@ echo.
 echo * Error: CBF parameters for filename, url and application are all blank.
 
 rem (!rfsp) (mov-2)
-
-exit/b
-
-
-
-:_
-
-:force_file_creation
-
-set fp=* Force file creation.
-
-rem lu: Sep-25-2019
-
-echo.
-echo %fp%
-
-set destination_filename=%cbf_filename%
-
-echo %cbf_filename% | find /i ".xlsx">nul
-
-rem It seems that you can't change an environment variable inside an error conditional
-rem so I am doing it outside of the if block. Sep-25-2019
-call n exb
-
-if %errorlevel% == 0 (
-  copy %cbf_filename% "%destination_filename%"
-  echo.
-  echo * File copied.
-)
-
-echo.
-echo * Open the new file.
-xfn %1>nul
 
 exit/b
 

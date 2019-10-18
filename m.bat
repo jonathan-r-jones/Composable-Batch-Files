@@ -4640,7 +4640,6 @@ e ly
 
 rem Run the API by using cmd_api or the line below.
 
-rem qq-1
 m cmd_api
 
 x bash

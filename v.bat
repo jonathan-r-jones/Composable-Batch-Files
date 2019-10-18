@@ -63,7 +63,7 @@ rem Imprimatur (!err, !p2, !erro, !el, !erle)
 
 if %errorlevel% == 1 (
   echo.
-  echo * Oct-17-2019 5:55 PM
+  echo * Error: Label not found. - skw
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -998,7 +998,7 @@ call un %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias not found. (skw Oct-17-2019 6:00 PM)
+  echo * Error: Label not found. - skw
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -1019,7 +1019,7 @@ call an %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias not found. (skw Oct-17-2019 6:01 PM)
+  echo * Error: Label not found. - skw
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -1040,7 +1040,7 @@ call fn %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias not found. (skw Oct-17-2019 6:02 PM)
+  echo * Error: Label not found. - skw
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -1061,7 +1061,7 @@ call pn %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Alias not found. (skw Oct-17-2019 6:03 PM)
+  echo * Error: Label not found. - skw
   call m clear_errorlevel_silently 
   exit/b
 )
