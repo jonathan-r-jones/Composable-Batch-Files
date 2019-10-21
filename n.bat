@@ -5790,6 +5790,8 @@ exit/b
 
 :rep10
 
+:kri
+
 :pass-through
 
 set fp=* Pass through.
