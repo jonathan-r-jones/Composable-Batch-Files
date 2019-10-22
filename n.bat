@@ -5060,8 +5060,6 @@ exit/b
 
 :paws
 
-:gc
-
 :gocl
 
 :govc
@@ -5791,6 +5789,10 @@ exit/b
 :rep10
 
 :kri
+
+:dvsl
+
+:dvma
 
 :pass-through
 

@@ -65,8 +65,6 @@ exit/b
 
 :gen_cook
 
-:gc
-
 set fp=* Generate cookbook.
 
 rem lu: Mar-4-2019
