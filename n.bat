@@ -2312,7 +2312,7 @@ rem lu: Dec-12-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\axxx
+set cbf_path=c:\a
 
 exit/b
 
@@ -5793,6 +5793,12 @@ exit/b
 :dvsl
 
 :dvma
+
+:cf1
+
+:cf2
+
+:reki
 
 :pass-through
 
