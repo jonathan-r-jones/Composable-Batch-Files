@@ -168,7 +168,7 @@ echo    un  URL nicknames dictionary layer of abstraction
 echo     v  Vetted functions (Useful for copying-and-pasting)
 echo    wp  Wordpad
 echo     x  Remote double-click equivalent way to run an alias
-echo    xa  Application-centric way of running an application with an optional filename parameter.
+echo    xa  Application-centric way of running an application with an optional filename parameter
 echo   xac  Execute an application alias with a filename in the current folder
 echo   xaf  Execute an application alias with a filename alias
 echo   xfn  Filename-centric way to run an alias

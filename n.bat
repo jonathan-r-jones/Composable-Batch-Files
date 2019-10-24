@@ -5800,6 +5800,10 @@ exit/b
 
 :reki
 
+:logs
+
+:1232
+
 :pass-through
 
 set fp=* Pass through.
@@ -9096,8 +9100,6 @@ exit/b
 
 :_
 
-:bs
-
 :bu
 
 :bust
@@ -10756,11 +10758,9 @@ rem lu: Oct-10-2019
 echo.
 echo %fp%
 
-call n rf_ma 
+set cbf_filename=%cd%\src\main\resources\config\liquibase\master.xml
 
-set cbf_filename=%cbf_path%\api\src\main\resources\config\liquibase\master.xml
-
-set cbf_path=%cbf_path%\api\src\main\resources\config\liquibase\changelog
+set cbf_path=%cd%\src\main\resources\config\liquibase\changelog
 
 set cbf_url=https://confluence.ice.dhs.gov/display/CART/Liquibase+Filename+and+ChangeSet+IDs
 
@@ -10818,6 +10818,25 @@ echo.
 echo %fp%
 
 set cbf_path=%cd%\api\src\main\resources\config\liquibase
+
+exit/b
+
+
+
+:_
+
+:bs
+
+:bs4
+
+set fp=* Migrating to BootStrap 4 documentation.
+
+rem lu: Oct-24-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://getbootstrap.com/docs/4.3/migration/
 
 exit/b
 
