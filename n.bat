@@ -5566,8 +5566,6 @@ exit/b
 
 :ma
 
-:maport
-
 :mazip
 
 :lyml
@@ -5803,6 +5801,18 @@ exit/b
 :logs
 
 :1232
+
+:ma_icp
+
+:rf_ma_icp
+
+:ma_api
+
+:rf_ma_api
+
+:jwtc
+
+:ujwt
 
 :pass-through
 
@@ -10359,25 +10369,6 @@ exit/b
 
 :_
 
-:dv_sec
-
-set fp=* Dev security folder.
-
-rem lu: Aug-28-2019
-
-echo.
-echo %fp%
-
-call n dvport
-
-set cbf_path=%cbf_path%\src\app\security
-
-exit/b
-
-
-
-:_
-
 :anwo
 
 set fp=* Angular Workshop.
@@ -10837,6 +10828,23 @@ echo.
 echo %fp%
 
 set cbf_url=https://getbootstrap.com/docs/4.3/migration/
+
+exit/b
+
+
+
+:_
+
+:rp_sec
+
+set fp=* Security folder.
+
+rem lu: Oct-26-2019
+
+echo.
+echo %fp%
+
+set cbf_path=icecart-portal-client\src\app\security
 
 exit/b
 

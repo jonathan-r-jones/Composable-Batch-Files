@@ -59,6 +59,7 @@ echo              label  A batch file label, a.k.a. alias or nickname.
 echo                 lu  Last updated. The last time the file was updated.
 echo                  p  Path alias, when used in batch file name
 echo                rf_  Prefix used to designate that a label has at least one caller.
+echo                rp_  Prefix used to designate that a label is a relative path.
 echo       td parameter  Transform Directory passed in as a parameter, meaning to 
 echo                     change folders before running the batch file. For example,
 echo                     running "p cbf" switches to the CBF folder, the alias for 

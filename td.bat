@@ -91,7 +91,7 @@ if not "%~1" == "" call n %1 %2
 
 if %errorlevel% == 1 (
   echo.
-  echo * Oct-17-2019 5:45 PM
+  echo * Error: Label not found. Oct-17-2019 5:45 PM
   call m clear_errorlevel_silently 
   exit/b
 )

@@ -51,7 +51,7 @@ echo %cd% | find /i "\api">nul
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: You must be in the api folder, used to correctly assign a relative path, for this command to work.
+  echo * Error: For this command to work, you must be in the api folder, which is used to assign a relative path.
   exit/b 1
 )
 
