@@ -5566,8 +5566,6 @@ exit/b
 
 :ma
 
-:maport
-
 :mazip
 
 :lyml
@@ -5799,6 +5797,22 @@ exit/b
 :cf2
 
 :reki
+
+:logs
+
+:1232
+
+:ma_icp
+
+:rf_ma_icp
+
+:ma_api
+
+:rf_ma_api
+
+:jwtc
+
+:ujwt
 
 :pass-through
 
@@ -9096,8 +9110,6 @@ exit/b
 
 :_
 
-:bs
-
 :bu
 
 :bust
@@ -10357,25 +10369,6 @@ exit/b
 
 :_
 
-:dv_sec
-
-set fp=* Dev security folder.
-
-rem lu: Aug-28-2019
-
-echo.
-echo %fp%
-
-call n dvport
-
-set cbf_path=%cbf_path%\src\app\security
-
-exit/b
-
-
-
-:_
-
 :anwo
 
 set fp=* Angular Workshop.
@@ -10756,11 +10749,9 @@ rem lu: Oct-10-2019
 echo.
 echo %fp%
 
-call n rf_ma 
+set cbf_filename=%cd%\src\main\resources\config\liquibase\master.xml
 
-set cbf_filename=%cbf_path%\api\src\main\resources\config\liquibase\master.xml
-
-set cbf_path=%cbf_path%\api\src\main\resources\config\liquibase\changelog
+set cbf_path=%cd%\src\main\resources\config\liquibase\changelog
 
 set cbf_url=https://confluence.ice.dhs.gov/display/CART/Liquibase+Filename+and+ChangeSet+IDs
 
@@ -10818,6 +10809,42 @@ echo.
 echo %fp%
 
 set cbf_path=%cd%\api\src\main\resources\config\liquibase
+
+exit/b
+
+
+
+:_
+
+:bs
+
+:bs4
+
+set fp=* Migrating to BootStrap 4 documentation.
+
+rem lu: Oct-24-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://getbootstrap.com/docs/4.3/migration/
+
+exit/b
+
+
+
+:_
+
+:rp_sec
+
+set fp=* Security folder.
+
+rem lu: Oct-26-2019
+
+echo.
+echo %fp%
+
+set cbf_path=icecart-portal-client\src\app\security
 
 exit/b
 
