@@ -6787,86 +6787,6 @@ exit/b
 
 
 
-:_+ Windows Folders
-
-
-
-::_
-
-:docs
-
-set fp=* Documents folder.
-
-rem lu: Jul-9-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\documents
-
-exit/b
-
-
-
-::_
-
-:d
-
-:desk
-
-:desktop
-
-set fp=* Windows desktop.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\desktop
-
-exit/b
-
-
-
-::_
-
-:32
-
-:sys32
-
-set fp=* Windows system 32.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-set cbf_path=c:\windows\system32
-
-exit/b
-
-
-
-::_
-
-:win
-
-:wind
-
-set fp=* Windows.
-
-rem lu: Feb-5-2019
-
-echo.
-echo %fp%
-
-set cbf_path=c:\windows
-
-exit/b
-
-
-
 :_+ Remote Double Click Candidates, a.k.a. lnk type files.
 
 
@@ -10845,6 +10765,103 @@ echo.
 echo %fp%
 
 set cbf_path=icecart-portal-client\src\app\security
+
+exit/b
+
+
+
+:_+ Windows Folders
+
+
+
+::_
+
+:star
+
+set fp=* Open Windows startup folder.
+
+rem lu: Oct-28-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+exit/b
+
+
+
+::_
+
+:docs
+
+set fp=* Documents folder.
+
+rem lu: Jul-9-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\documents
+
+exit/b
+
+
+
+::_
+
+:d
+
+:desk
+
+:desktop
+
+set fp=* Windows desktop.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\desktop
+
+exit/b
+
+
+
+::_
+
+:32
+
+:sys32
+
+set fp=* Windows system 32.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+set cbf_path=c:\windows\system32
+
+exit/b
+
+
+
+::_
+
+:win
+
+:wind
+
+set fp=* Windows.
+
+rem lu: Feb-5-2019
+
+echo.
+echo %fp%
+
+set cbf_path=c:\windows
 
 exit/b
 
