@@ -4864,7 +4864,7 @@ call m big
 
 call td dvport
 
-ng serve
+call ang run_ui
 
 exit/b
 
@@ -4935,12 +4935,18 @@ exit/b
 
 set fp=* Run UI in the dvcart folder.
 
-rem lu: Aug-16-2019
+rem lu: Oct-24-2019
 
 echo.
 echo %fp%
 
-call td dvport
+echo %cd% | find /i "\icecart-portal-client">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the "icecart-portal-client" folder for this command to work.
+  exit/b 1
+)
 
 echo.
 ng serve

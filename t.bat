@@ -919,6 +919,7 @@ cd\!affinity\tegu
 cd
 
 set /p Counter=<Script_Runs.txt
+
 Incrementor %Counter% >Script_Runs.txt
 
 set script_file=show_data
@@ -9891,25 +9892,6 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
-:
-
-set fp=* Test building relative filename.
-
-rem lu: Oct-16-2019
-
-echo.
-echo %fp%
-
-echo.
-
-rem qq-1
-
-exit/b
 
 
 

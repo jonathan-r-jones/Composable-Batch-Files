@@ -1,4 +1,4 @@
-:_
+:_ (!veb)
 
 @echo off
 
@@ -14,7 +14,7 @@ set filep=* This file is used for vetted functions.
 
 set fp=* Route callers.
 
-if "%~1" == "" main_function
+if "%~1" == "" goto main_function
 
 if "%~1" == "/?" goto help
 
@@ -63,7 +63,7 @@ rem Imprimatur (!err, !p2, !erro, !el, !erle)
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Label not found. - skw
+  echo * Error: Label not found.
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -390,77 +390,6 @@ if not exist *.tf (
 )
 
 exit/b 0
-
-
-
-:_
-
-:sr
-
-set fp=* String replacement is cool.
-
-rem skw dos search and replace
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-echo.
-echo Example 7
-set str=https://www.cnn.com
-echo.%str%
-set str=%str:https://=%
-echo.%str%
-
-echo.
-echo Example 6
-set str=https://www.cnn.com
-echo.%str%
-set str=%str:cnn=google%
-echo.%str%
-
-echo.
-echo Example 1
-set str=teh cat in teh hat
-echo.%str%
-set str=%str:teh=the%
-echo.%str%
-
-echo.
-echo Example 2
-set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
-echo.%str%
-set str=%str:/=\%
-echo.%str%
-
-echo.
-echo Example 3
-set str=https://www.cnn.com
-echo.%str%
-set str=%str:https://www.=%
-set str=%str:http://www.=%
-echo.%str%
-
-echo.
-echo Example 4
-set cbf_url=https://www.github.com
-echo.%cbf_url%
-set cbf_url=%cbf_url:http://=%
-set cbf_url=%cbf_url:https://=%
-set cbf_url=%cbf_url:www.=%
-echo.%cbf_url%
-
-echo.
-echo Example 5
-rem This search and replace was necessary because database names can only contain underscores
-rem and instance names can only contain dashes. Nov-26-2018
-set database_name=postgres_test_database_Nov_26_2018_2
-echo %database_name%
-set database_name=%database_name:_=-%
-echo %database_name%
-
-exit/b
 
 
 
@@ -998,7 +927,7 @@ call un %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Label not found. - skw
+  echo * Error: Label not found.
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -1071,6 +1000,171 @@ if not exist "%cbf_path%" (
   echo * Error: The CBF_Path "%cbf_path%" could not be found.
   exit/b
 )
+
+
+
+:_
+
+:pev
+
+set fp=* How to populate an environment variable from a file.
+
+rem lu: Oct-24-2019
+
+rem populating an environment variable from a file: skw
+
+rem The problem with this command is that it only does the first line of the file.
+
+echo.
+echo %fp%
+
+echo.
+set /p test=<c:\a\j1.txt
+
+echo.
+echo %test%
+
+exit/b
+
+
+
+:_
+
+:repl
+
+:sr
+
+set fp=* String replacement is cool.
+
+rem skw dos search and replace
+
+rem echo(%text:%search%=%replace%%)
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+echo.
+echo Example 16:
+set /p str=<c:\a\j1.txt
+echo %str%
+set str=%ridiculous*:syncing%
+echo.%str%
+
+echo.
+echo Example 15: 
+set str='Authorization': 'Bearer eyJhb
+echo %str%
+set str=%bearer*:syncing%
+echo.%str%
+
+echo.
+echo Example 14: 'Authorization': 'Bearer eyJhb
+set str='Authorization': 'Bearer eyJhb
+echo %str%
+set str=%str:'Bearer*.=new string%
+echo.%str%
+
+echo.
+echo Example 13: 'Authorization': 'Bearer eyJhb
+set str='Authorization': 'Bearer eyJhb
+echo %str%
+set str=%str:'Bearer.*=new string%
+echo.%str%
+
+echo.
+echo Example 12: 'Authorization': 'Bearer eyJhb
+set str='Authorization': 'Bearer eyJhb
+echo %str%
+set str=%str:'Bearer=new string%
+echo.%str%
+
+exit/b
+
+echo.
+echo Example 11: Replace dog.
+set str=This is a dog.
+echo %str%
+set str=%str:dog=cat%
+echo.%str%
+
+echo.
+echo Example 10: Replace bearer and more text with syncing using a wildcard.
+set /p str=<c:\a\j1.txt
+echo %str%
+set str=%ridiculous*:syncing%
+echo.%str%
+
+echo.
+echo Example 9: Replace bearer and more text with syncing using a wildcard.
+set str=bearer blah a lot of text
+echo %str%
+set str=%bea*:syncing%
+echo.%str%
+
+echo.
+echo Example 8: Replace authorization with syncing.
+set str=authorization
+echo %str%
+set str=%authorization:syncing%
+echo.%str%
+
+echo.
+echo Example 7: Remove the https.
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:https://=%
+echo.%str%
+
+echo.
+echo Example 6: Replace cnn with google.
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:cnn=google%
+echo.%str%
+
+echo.
+echo Example 5: Fix the hat.
+set str=teh cat in teh hat
+echo.%str%
+set str=%str:teh=the%
+echo.%str%
+
+echo.
+echo Example 4: Change slash to backslash.
+set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
+echo.%str%
+set str=%str:/=\%
+echo.%str%
+
+echo.
+echo Example 3: Remove the first part of the string.
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:https://www.=%
+set str=%str:http://www.=%
+echo.%str%
+
+echo.
+echo Example 2: Same as Ex. 3.
+set cbf_url=https://www.github.com
+echo.%cbf_url%
+set cbf_url=%cbf_url:http://=%
+set cbf_url=%cbf_url:https://=%
+set cbf_url=%cbf_url:www.=%
+echo.%cbf_url%
+
+echo.
+echo Example 1: Replace unserscores with dashes.
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+set database_name=postgres_test_database_Nov_26_2018_2
+echo %database_name%
+set database_name=%database_name:_=-%
+echo %database_name%
+
+exit/b
 
 
 

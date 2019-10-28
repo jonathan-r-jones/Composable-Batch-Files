@@ -58,7 +58,7 @@ call un %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Oct-17-2019 3:51 PM.
+  echo * Error: Label not found. Oct-17-2019 3:51 PM.
   call m clear_errorlevel_silently 
   exit/b
 )

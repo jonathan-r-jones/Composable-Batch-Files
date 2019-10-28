@@ -19,7 +19,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto validate_input
 
 
 
@@ -43,20 +43,37 @@ echo %parameter_2%
 exit/b
 
 
+:_
+
+:validate_input
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: For this command to work, you must be in the api folder, which is used to assign a relative path.
+  exit/b 1
+)
+
+call fn lqc
+
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
+  exit/b
+)
+
+echo.
+echo * Liquibase configuration file being used: %cbf_filename%
+
+
 
 :_
 
 :main_function
 
-rem lu: Oct-16-2019
-
 echo.
 echo %fp%
-
-call fn lqc
-
-echo.
-echo changeLogFile: %cbf_filename%
 
 echo.
 liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_filename%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" update

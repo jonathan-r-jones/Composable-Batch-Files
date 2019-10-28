@@ -543,9 +543,9 @@ exit/b
 
 :run_api
 
-set fp=* Matt's gradle command.
+set fp=* Run the API using Matt's gradle command.
 
-rem lu: Aug-12-2019
+rem lu: Oct-24-2019
 
 echo.
 echo %fp%

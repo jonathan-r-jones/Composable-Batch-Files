@@ -48,13 +48,27 @@ exit/b
 
 :main_function
 
-rem lu: Aug-20-2019
+rem lu: Oct-26-2019
 
 call n %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Label not found. Oct-26-2019 11:02 AM
+  call m clear_errorlevel_silently 
+  exit/b
+)
 
 set cbf_built_path=%cbf_path%
 
 call n %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Label not found. Oct-26-2019 11:03 AM
+  call m clear_errorlevel_silently 
+  exit/b
+)
 
 set cbf_built_path=%cbf_built_path%\%cbf_path%
 
