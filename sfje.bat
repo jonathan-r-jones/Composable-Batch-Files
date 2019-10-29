@@ -69,6 +69,7 @@ if "%cbf_jenkins_url%" == "" (
 set cbf_url=%cbf_jenkins_url%
 
 call sf
+echo.
 
 
 
