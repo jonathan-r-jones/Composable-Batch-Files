@@ -19,7 +19,11 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-goto main_function
+if "%~1" == "" goto help
+
+if "%~2" == "" goto help
+
+goto validate_input
 
 
 
@@ -30,9 +34,9 @@ goto main_function
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
+set parameter_1=Parameter 1: Path alias.
 
-set parameter_2=Parameter 2 (Optional): 
+set parameter_2=Parameter 2: Filename with path alias.
 
 echo.
 echo %parameter_1%
@@ -40,7 +44,88 @@ echo %parameter_1%
 echo.
 echo %parameter_2%
 
+echo.
+echo Example 1: edr ma jwt
+
+echo.
+echo Example 2: edr 1232 jwt
+
 exit/b
+
+
+
+:_
+
+:validate_input
+
+
+
+:_
+
+:validate_path
+
+set cbf_relative_path=
+
+call pn %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Label not found. Oct-26-2019 11:02 AM
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not exist "%cbf_path%" (
+  echo.
+  echo * Error: Path "%cbf_path%" not found. Oct-30-2019 6:17 PM
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+set cbf_built_path=%cbf_path%
+
+call n %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Label not found. Oct-30-2019 6:27 PM
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+set cbf_built_path=%cbf_built_path%\%cbf_relative_path%
+
+if not exist "%cbf_built_path%" (
+  echo.
+  echo * Error: Path "%cbf_built_path%" not found. Oct-30-2019 6:289 PM
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+
+
+:_
+
+:validate_filename
+
+set cbf_filename_without_path=
+
+call fn %2
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Oct-17-2019 5:35 PM
+  call m clear_errorlevel_silently 
+  exit/b 1
+)
+
+set cbf_built_filename=%cbf_built_path%\%cbf_filename_without_path%
+
+if not exist "%cbf_built_filename%" (
+  echo.
+  echo * Error: The filename "%cbf_built_filename%" could not be found.
+  exit/b 1
+)
 
 
 
@@ -48,16 +133,7 @@ exit/b
 
 :main_function
 
-rem lu: Aug-20-2019
-
-call brfn %1 %2
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently
-  exit/b
-)
-
-call e "%cbf_filename%"
+call e "%cbf_built_filename%"
 
 exit/b
 

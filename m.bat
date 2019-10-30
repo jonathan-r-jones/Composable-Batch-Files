@@ -4892,6 +4892,26 @@ exit/b
 
 ::_
 
+:crf
+
+:npcrf
+
+set fp=* Set now playing cart root folder for use by the UI and API lnk files.
+
+rem lu: Oct-30-2019
+
+echo.
+echo %fp%
+
+rem To change the now playing cart root folder, edit the alias below.
+call td rf_ma
+
+exit/b
+
+
+
+::_
+
 :lnk_ui
 
 set fp=* Run UI lnk, for use by shortcut icons.
@@ -4903,17 +4923,9 @@ echo %fp%
 
 call m big
 
-call td dvport
+call %0 npcrf
 
-call ang run_ui
-
-exit/b
-
-
-
-::_
-
-:run_ui
+cd icecart-portal-client
 
 call ang run_ui
 
@@ -4934,9 +4946,21 @@ echo %fp%
 
 call m big
 
-call td api
+call %0 npcrf
+
+cd api
 
 call gr run_api
+
+exit/b
+
+
+
+::_
+
+:run_ui
+
+call ang run_ui
 
 exit/b
 

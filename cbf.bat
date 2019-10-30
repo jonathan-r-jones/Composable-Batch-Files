@@ -51,8 +51,6 @@ echo    an  Application nickname dictionary layer of abstraction
 echo   ang  Angular-related tasks
 echo    as  Windows file associations
 echo     b  Shutdown windows
-echo   brp  Build relative path
-echo  brfn  Build relative filename
 echo     c  Clear screen and reset color
 echo   cbf  Show this list of CBF batch files
 echo    cc  Code Compare preloaded with j1.txt and j2.txt
@@ -158,7 +156,7 @@ echo   tdc  Transform directory to favorite child folder of alias
 echo  tdfn  Transform directory where only the Cbf_filename is known
 echo   tdg  Transform directory by gluing a relative path onto a base path
 echo   tdp  Transform directory to parent folder
-echo   tdr  Transform directory by appending a relative path onto a base path.
+echo   tdr  Transform directory by appending a relative path onto a base path
 echo    te  Batch file template used for creating new batch files
 echo    tf  Terraform
 echo    tk  Taskkill
