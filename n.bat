@@ -1,4 +1,4 @@
-:_ (!nb)
+:_ (!n)
 
 @echo off
 
@@ -5818,6 +5818,8 @@ exit/b
 
 :carcon
 
+:qpd
+
 :pass-through
 
 set fp=* Pass through.
@@ -6688,6 +6690,8 @@ exit/b
 
 
 :_
+
+:rf_s
 
 :s
 
@@ -10740,25 +10744,6 @@ exit/b
 
 :_
 
-:bs
-
-:bs4
-
-set fp=* Migrating to BootStrap 4 documentation.
-
-rem lu: Oct-24-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https://getbootstrap.com/docs/4.3/migration/
-
-exit/b
-
-
-
-:_
-
 :rp_sec
 
 set fp=* Security folder.
@@ -10871,4 +10856,101 @@ exit/b
 
 
 
-:_ (!efnb, !efn, !rfsp) (mov-6)
+:_+ Juxtaposing Files
+
+
+
+::_
+
+:jxo
+
+set fp=* Original file.
+
+rem lu: Oct-29-2019
+
+echo.
+echo %fp%
+
+call n rf_s
+
+set cbf_filename=%cbf_path%\juxtapose original file.txt
+
+exit/b
+
+
+
+::_
+
+:jxm
+
+set fp=* My modified file.
+
+rem lu: Oct-29-2019
+
+echo.
+echo %fp%
+
+call n rf_s
+
+set cbf_filename=%cbf_path%\juxtapose my modified file.txt
+
+exit/b
+
+
+
+:_+ Bootstrap Family (!fybs)
+
+
+
+::_
+
+:bs
+
+set fp=* Migrating to BootStrap 4 documentation.
+
+rem lu: Oct-24-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://getbootstrap.com/docs/4.3/migration/
+
+exit/b
+
+
+
+::_
+
+:bsi
+
+set fp=* Font Awesome icon library.
+
+rem lu: Oct-29-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://fontawesome.com/icons?d=gallery
+
+exit/b
+
+
+
+::_
+
+:bsw3c
+
+set fp=* Bootstarp 4 at w3c.
+
+rem lu: Oct-29-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.w3schools.com/bootstrap4/default.asp
+
+exit/b
+
+
+
+:_ (!efn, !rfsp) (mov-6)

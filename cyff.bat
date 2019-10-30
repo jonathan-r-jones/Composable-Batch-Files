@@ -55,6 +55,9 @@ exit/b
 call fn %1
 
 if %errorlevel% == 1 (
+  echo.
+  echo * Error: Label not found. Oct-29-2019 10:27 AM
+  call m clear_errorlevel_silently 
   exit/b
 )
 
@@ -63,6 +66,9 @@ set cbf_source_filename=%cbf_filename%
 call fn %2
 
 if %errorlevel% == 1 (
+  echo.
+  echo * Error: Label not found. Oct-29-2019 10:28 AM
+  call m clear_errorlevel_silently 
   exit/b
 )
 

@@ -146,6 +146,8 @@ exit/b
 
 :_
 
+:run_ui
+
 :serve
 
 :srv
@@ -156,6 +158,14 @@ rem lu: Feb-11-2019
 
 echo.
 echo %fp%
+
+echo %cd% | find /i "\icecart-portal-client">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the icecart-portal-client folder for this command to work.
+  exit/b 1
+)
 
 echo.
 ng serve

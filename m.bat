@@ -4027,25 +4027,6 @@ exit/b 0
 
 :_
 
-:n
-
-set fp=* Open N and NI.bat.
-
-rem lu: Mar-22-2019
-
-echo.
-echo %fp%
-
-call mx ni
-
-call mx n
-
-exit/b
-
-
-
-:_
-
 :ag
 
 set fp=* QuickLauncer menu for caling g.
@@ -4630,17 +4611,19 @@ pql start
 rem Check what branch you are on.
 s m
 
-rem You may want to do a get latest.
+rem You may want to do a get-latest.
 pl
 
+
+rem Switch to the api folder.
 lq
 rem If liquibase fails, you may need to wipe your local databaase.
 
 e ly
 
-rem Run the API by using cmd_api or the line below.
+rem Run the API by using m lnk_api, for the ma folder only, or the line below in the right justified window.
 
-m cmd_api
+gr run_api
 
 x bash
 
@@ -4648,8 +4631,8 @@ x bash
 
 sf 4200 krm
 
-rem Run the UI by using cmd_ui or the line below.
-call m cmd_ui
+rem Run the UI by using lnk_ui or the line below.
+call ang run_ui
 
 exit/b
 
@@ -4684,7 +4667,7 @@ tdc ma
 
 rem I saw a case where the the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
-cmd_api
+lnk_api
 
 gr build_jar
 
@@ -4776,7 +4759,7 @@ tdc ma
 
 rem I saw a case where the the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
-cmd_api
+lnk_api
 
 gr build_jar_for_fqt
 
@@ -4845,116 +4828,6 @@ exit/b
 
 
 
-:_+ Cmds
-
-
-
-::_
-
-:cmd_ui
-
-set fp=* Run UI cmd.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call m big
-
-call td dvport
-
-call ang run_ui
-
-exit/b
-
-
-
-::_
-
-:cmd_api
-
-set fp=* Run API cmd.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call m big
-
-call td api
-
-call gr run_api
-
-exit/b
-
-
-
-::_
-
-:cmd_golf
-
-set fp=* Run Golf cmd.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call m big
-
-call x golf
-
-exit/b
-
-
-
-::_
-
-:cmd_start_db
-
-set fp=* Start local database.
-
-rem lu: Aug-16-2019
-
-echo.
-echo %fp%
-
-call m big
-
-call pql start
-
-exit/b
-
-
-
-::_
-
-:run_ui
-
-set fp=* Run UI in the dvcart folder.
-
-rem lu: Oct-24-2019
-
-echo.
-echo %fp%
-
-echo %cd% | find /i "\icecart-portal-client">nul
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: You must be in the "icecart-portal-client" folder for this command to work.
-  exit/b 1
-)
-
-echo.
-ng serve
-
-exit/b
-
-
-
 :_
 
 :jens
@@ -5008,6 +4881,110 @@ nslookup washingtonpost.com
 
 rem Eric said that I need to find the setting that allows me to set my IP Address to IPV4.
 rem We had this problem in Stuttgart on Oct-3-2018.
+
+exit/b
+
+
+
+:_+ Lnks
+
+
+
+::_
+
+:lnk_ui
+
+set fp=* Run UI lnk, for use by shortcut icons.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call td dvport
+
+call ang run_ui
+
+exit/b
+
+
+
+::_
+
+:run_ui
+
+call ang run_ui
+
+exit/b
+
+
+
+::_
+
+:lnk_api
+
+set fp=* Run API cmd, for use by shortcut icons.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call td api
+
+call gr run_api
+
+exit/b
+
+
+
+::_
+
+:run_api
+
+call gr run_api
+
+exit/b
+
+
+
+::_
+
+:cmd_golf
+
+set fp=* Run Golf cmd.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call x golf
+
+exit/b
+
+
+
+::_
+
+:cmd_start_db
+
+set fp=* Start local database.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call pql start
 
 exit/b
 
