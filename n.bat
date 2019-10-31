@@ -10,8 +10,6 @@ set filep=* Nickname/alias dictionary that sets recyclable environment variables
 corresponding to a given unique nickname parameter. This can be thought of as a large ^
 configuration file.
 
-rem global variable database
-
 
 
 :_
@@ -45,7 +43,7 @@ echo.
 echo Usage: %0 [single parameter]
 
 echo.
-echo Parameter 1: Function to execute.
+echo Parameter 1: Alias to run assignment for.
 
 echo.
 echo In the function block corresponding to the label, you can set any or all 
@@ -57,6 +55,8 @@ echo line, it will set the variable plus it will describe itself.
 echo.
 echo Notes: I kept the facade dictionaries because they help make clear the 
 echo author's intent when calling which variable is being set.
+
+rem global variable database
 
 echo.
 echo Parm/Nickname  Target
@@ -4992,11 +4992,7 @@ exit/b
 
 
 
-:_+ Cart
-
-
-
-::_
+:_
 
 :sr27
 
@@ -5820,14 +5816,19 @@ exit/b
 
 :qpd
 
+:sein
+
+:csi
+
+:stag
+
+:rlc
+
+:cpc
+
 :pass-through
 
 set fp=* Pass through.
-
-rem echo.
-rem echo %fp%
-
-rem lu: Apr-16-2019
 
 call %share-zone%\ni.bat %1
 
@@ -5835,7 +5836,7 @@ exit/b
 
 
 
-::_
+:_
 
 :apc
 
@@ -7945,25 +7946,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\mtg.asc
-
-exit/b
-
-
-
-:_
-
-:ni
-
-set fp=* Ni.
-
-rem lu: Mar-5-2019
-
-echo.
-echo %fp%
-
-call td s
-
-set cbf_filename=%cbf_path%\ni.bat
 
 exit/b
 
@@ -10948,6 +10930,23 @@ echo.
 echo %fp%
 
 set cbf_url=https://www.w3schools.com/bootstrap4/default.asp
+
+exit/b
+
+
+
+:_
+
+:swte
+
+set fp=* SwaggerTest.
+
+rem lu: Oct-31-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_repo%\SwaggertTest
 
 exit/b
 

@@ -106,6 +106,7 @@ echo    gr  Gradle
 echo     h  Sencha
 echo     i  CBF environment variable information
 echo    ji  Jira operations
+echo  keyt  KeyTool wrapper
 echo    kn  Knife, a Chef command line utility
 echo     l  Google searcher
 echo     m  Perform miscellaneous tasks

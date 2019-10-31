@@ -4355,41 +4355,44 @@ exit/b
 
 ::_
 
-:si
+:stat
 
-:star
+set fp=* Describe status for instance "%2".
 
-:start
-
-:start_instance
-
-:start_instances
-
-set fp=* Start instance "%2".
-
-rem lu: Mar-18-2019
+rem lu: Mar-8-2019
 
 echo.
 echo %fp%
 
-if "%~2" == "" (
-  echo.
-  echo Percent 2, the instance alias, is a required field.
-  exit/b
-)
-
-call n %2
+call :validate_input %1 %2
 
 if %errorlevel% == 1 (
-  echo.
-  echo * Oct-17-2019 5:28 PM
   call m clear_errorlevel_silently 
   exit/b
 )
 
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * Instance ID cannot be blank.
+echo.
+aws ec2 describe-instance-status --instance-ids %cbf_instance_id%
+
+exit/b
+
+
+
+::_
+
+:star
+
+set fp=* Start instance "%2".
+
+rem lu: Oct-31-2019
+
+echo.
+echo %fp%
+
+call :validate_input %1 %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
   exit/b
 )
 
@@ -4411,26 +4414,10 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
-set cbf_instance_id=
-
-if "%~2" == "" (
-  echo.
-  echo You must specify and instance alias.
-  exit/b
-)
-
-call n %2
+call :validate_input %1 %2
 
 if %errorlevel% == 1 (
-  echo.
-  echo * Oct-17-2019 5:31 PM
   call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * Instance ID cannot be blank.
   exit/b
 )
 
@@ -4442,6 +4429,8 @@ exit/b
 
 
 ::_
+
+:dein
 
 :di
 
@@ -4455,29 +4444,15 @@ exit/b
 
 set fp=* Describe a particular instance.
 
-rem lu: Feb-22-2019
+rem lu: Oct-31-2019
 
 echo.
 echo %fp%
 
-if "%~2" == "" (
-  echo.
-  echo You must specify and instance alias.
-  exit/b
-)
-
-call n %2
+call :validate_input %1 %2
 
 if %errorlevel% == 1 (
-  echo.
-  echo * Oct-17-2019 5:27 PM
   call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * Instance ID cannot be blank.
   exit/b
 )
 
@@ -4490,38 +4465,29 @@ exit/b
 
 ::_
 
-:stat
-
-set fp=* Describe status for instance "%2".
-
-rem lu: Mar-8-2019
-
-echo.
-echo %fp%
+:validate_input
 
 if "%~2" == "" (
   echo.
-  echo You must specify and instance alias.
-  exit/b
+  echo * Error: You must specify and instance alias. Oct-31-2019 11:50 AM
+  exit/b 1
 )
+
+set cbf_instance_id=
 
 call n %2
 
 if %errorlevel% == 1 (
   echo.
-  echo * Oct-17-2019 5:26 PM
-  call m clear_errorlevel_silently 
-  exit/b
+  echo * Error: Label not found. Oct-31-2019 11:33 AM
+  exit/b 1
 )
 
 if "%cbf_instance_id%" == "" (
   echo.
-  echo * Instance ID cannot be blank.
-  exit/b
+  echo * Error: Instance ID cannot be blank.
+  exit/b 1
 )
-
-echo.
-aws ec2 describe-instance-status --instance-ids %cbf_instance_id%
 
 exit/b
 
