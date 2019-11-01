@@ -31,7 +31,7 @@ goto validate_user_input
 
 :help
 
-rem lu: 
+rem lu: Oct-31-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -112,8 +112,8 @@ if %errorlevel% == 1 (
 
 if "%cbf_url%" == "" (
   echo.
-  echo * Error: Cbf_url is unassigned.
-  goto help
+  echo * Error: Cbf_url is unassigned for "%1".
+  exit/b
 )
 
 

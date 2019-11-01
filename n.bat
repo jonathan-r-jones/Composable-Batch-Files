@@ -10952,4 +10952,26 @@ exit/b
 
 
 
+:_
+
+:th
+
+set fp=* Test helper.
+
+rem lu: Oct-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6)

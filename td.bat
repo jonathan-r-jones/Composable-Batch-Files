@@ -47,6 +47,47 @@ exit/b
 
 :_
 
+:preprocess
+
+set fp=* In order to promote freshness, reset the error level.
+
+ver>nul
+
+
+
+:_
+
+set fp=* Validate input.
+
+set cbf_path=
+
+call n %1
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Label not found. Oct-17-2019 5:45 PM
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_path%" == "" (
+  echo.
+  echo * Cbf_path is not assigned for '%~1'.
+  goto try_alternative
+)
+
+if not exist "%cbf_path%" (
+  echo.
+  echo * Folder does not exist at "%cbf_path%". 
+  goto try_alternative
+)
+
+goto main_function
+
+
+
+:_
+
 :find_parent_folder
 
 call m set_parent_fd "%cbf_path%\.." parent_folder
@@ -60,11 +101,32 @@ exit/b
 
 :_
 
-:preprocess
+:try_alternative
 
-set fp=* In order to promote freshness, reset the error level.
+set fp=* Try alternative.
 
-ver>nul
+echo.
+echo %fp%
+
+if not "%cbf_filename%" == "" (
+rem qq-1
+  echo.
+  echo Oct-31-2019 8:03 PM
+  call m expand_to_path_only "%cbf_filename%"
+  goto validate_version_2
+)
+                
+if not "%cbf_application%" == "" (
+  echo.
+  call m expand_to_path_only "%cbf_application%"
+  goto validate_version_2
+)
+                
+echo.
+echo * Error: Can't find anywhere to go.
+rem qq-1
+
+exit/b
 
 
 
@@ -83,38 +145,11 @@ if "%~1" == ".." (
 
 :_
 
-set fp=* Validate input.
-
-set cbf_path=
-
-if not "%~1" == "" call n %1 %2
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Label not found. Oct-17-2019 5:45 PM
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%cbf_path%" == "" (
-  echo.
-  echo * Nickname Missing: There is no cbf_path defined for '%~1'. 
-  exit/b 1
-)
-
-if "%~2" == "p" goto find_parent_folder
-
-if not exist "%cbf_path%" (
-  echo.
-  echo * Folder does not exist at "%cbf_path%". 
-  exit/b 1
-)
-
-
-
-:_
+:main_function
 
 set fp=* Main function.
+
+if "%~2" == "p" goto find_parent_folder
 
 cd /d "%cbf_path%"
 

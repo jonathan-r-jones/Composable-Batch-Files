@@ -934,7 +934,7 @@ if %errorlevel% == 1 (
 
 if "%cbf_url%" == "" (
   echo.
-  echo * The system cannot find the batch label specified "%1".
+  echo * The cbf_url is unassigned for "%1".
   exit/b
 )
 
@@ -953,7 +953,13 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not exist "%cbf_path%" (
+if "%cbf_application%" == "" (
+  echo.
+  echo * The cbf_application is unassigned for "%1".
+  exit/b
+)
+
+if not exist "%cbf_application%" (
   echo.
   echo * Error: The CBF_Application "%cbf_application%" could not be found.
   exit/b
@@ -974,6 +980,12 @@ if %errorlevel% == 1 (
   exit/b
 )
 
+if "%cbf_filename%" == "" (
+  echo.
+  echo * The cbf_filename is unassigned for "%1".
+  exit/b
+)
+
 if not exist "%cbf_filename%" (
   echo.
   echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
@@ -990,8 +1002,14 @@ call pn %1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Label not found. - skw
+  echo * Error: Label not found.
   call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_path%" == "" (
+  echo.
+  echo * The cbf_path is unassigned for "%1".
   exit/b
 )
 
