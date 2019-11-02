@@ -183,7 +183,7 @@ exit/b
 
 :_
 
-:list
+:list_agg
 
 set fp=* List certs.
 
@@ -198,6 +198,65 @@ echo.
 keytool -list -keystore cacerts
 
 rem Password is "changeit", the default.
+
+exit/b
+
+
+
+:_
+
+:listl
+
+set fp=* List certs on Linux.
+
+rem lu: Oct-31-2019
+
+echo.
+echo %fp%
+
+rem In Linux, the cacerts keystore file is located in the <RA Home>/jre/lib/security folder 
+rem but it cannot be found on AIX.
+
+cd 
+
+echo.
+keytool -list -keystore cacerts
+
+exit/b
+
+
+
+:_
+
+:list
+
+set fp=* List certs.
+
+rem lu: Nov-1-2019
+
+echo.
+echo %fp%
+
+echo.
+keytool -list -keystore truststore.jks
+
+exit/b
+
+
+
+:_
+
+:add_cert_Nov-1-2019
+
+set fp=* Add cert to jks file.
+
+rem lu: Nov-1-2019
+
+echo.
+echo %fp%
+
+echo.
+keytool -import -alias imm_fqt -keystore truststore.jks -file fqt_imm.cer
 
 exit/b
 

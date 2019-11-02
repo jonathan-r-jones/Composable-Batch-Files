@@ -109,7 +109,6 @@ echo.
 echo %fp%
 
 if not "%cbf_filename%" == "" (
-rem qq-1
   echo.
   echo Oct-31-2019 8:03 PM
   call m expand_to_path_only "%cbf_filename%"
@@ -124,7 +123,7 @@ if not "%cbf_application%" == "" (
                 
 echo.
 echo * Error: Can't find anywhere to go.
-rem qq-1
+rem qjq-1
 
 exit/b
 
@@ -146,6 +145,8 @@ if "%~1" == ".." (
 :_
 
 :main_function
+
+:validate_version_2
 
 set fp=* Main function.
 

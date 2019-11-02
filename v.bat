@@ -44,54 +44,6 @@ exit/b
 
 :_
 
-:errorlevel
-
-set fp=* The errorlevel statement.
-
-echo %fp%
-
-
-echo.
-echo * Errorlevel: %errorlevel%
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently
-  exit/b
-)
-
-rem Imprimatur (!err, !p2, !erro, !el, !erle)
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Label not found.
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 is a required field.
-  exit/b
-)
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-if %errorlevel% == 0 (
-  echo.
-  echo * Error level equals 0.
-) else (
-  echo.
-  echo * Error level equals 1.
-)
-
-exit/b
-
-
-
-:_
-
 :else
 
 set fp=* The else statement.
@@ -925,7 +877,7 @@ if "%cbf_url%" == "" (
 
 call un %1
 
-if %errorlevel% == 1 (
+if %errorlevel% gtr 0 (
   echo.
   echo * Error: Label not found.
   call m clear_errorlevel_silently 
@@ -1181,6 +1133,150 @@ set database_name=postgres_test_database_Nov_26_2018_2
 echo %database_name%
 set database_name=%database_name:_=-%
 echo %database_name%
+
+exit/b
+
+
+
+:_+ Testing Error Level. (skw test error level, test errorlevel)
+
+
+
+::_
+
+:style_1
+
+set fp=* Test error level when looking for folders. %1
+
+rem lu: Nov-1-2019
+
+rem This works.
+
+echo.
+echo %fp%
+
+cd /d c:\a
+
+rem Imprimatur (!err, !p2, !erro, !el, !erle)
+
+if %errorlevel% gtr 0 (
+  echo.
+  echo * Error: Label not found.
+  call m clear_errorlevel_silently
+) else (
+  echo.
+  echo * Error level equals 0.
+)
+
+exit/b
+
+
+
+::_
+
+:style_old
+
+set fp=* The errorlevel statement.
+
+echo %fp%
+
+echo.
+echo * Errorlevel: %errorlevel%
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently
+  exit/b
+)
+
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: Label not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field.
+  exit/b
+)
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Error level equals 0.
+) else (
+  echo.
+  echo * Error level equals 1.
+)
+
+exit/b
+
+
+
+::_
+
+:style_2
+
+set fp=* Test error level when looking for folders. %1
+
+rem lu: Nov-1-2019
+
+rem This works.
+
+echo.
+echo %fp%
+
+cd /d c:\aq
+
+if %errorlevel% equ 0 (
+  echo.
+  echo * Error level equals 0.
+) else (
+  echo.
+  echo * Error level equals 1.
+)
+
+exit/b
+
+
+
+::_
+
+:style_10
+
+set fp=* Test error level when looking for folders. %1
+
+rem lu: Nov-1-2019
+
+rem This works.
+
+echo.
+echo %fp%
+
+cd /d c:\a
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Error level equals 0.
+) else (
+  echo.
+  echo * Error level equals 1.
+)
+
+cd /d c:\ax
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Error level equals 0.
+) else (
+  echo.
+  echo * Error level equals 1.
+)
 
 exit/b
 

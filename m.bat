@@ -3979,6 +3979,8 @@ rem fcd: Mar-12-2019
 
 rem This works.
 
+rem Find my make file command. skw
+
 echo.
 echo %fp%
 
@@ -4492,14 +4494,13 @@ s m
 rem You may want to do a get-latest.
 pl
 
-
 rem Switch to the api folder.
 lq
 rem If liquibase fails, you may need to wipe your local databaase.
 
 e ly
 
-rem Run the API by using m lnk_api, for the ma folder only, or the line below in the right justified window.
+rem Run the API by using m lnk_api. You may need to edit npcrf.
 
 gr run_api
 
@@ -4508,6 +4509,10 @@ x bash
 ./get_cart_jwt.sh
 
 sf 4200 krm
+
+rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
+call n crf_icp
+call nm inst
 
 rem Run the UI by using lnk_ui or the line below.
 call ang run_ui
@@ -4745,26 +4750,6 @@ exit/b
 
 ::_
 
-:crf
-
-:npcrf
-
-set fp=* Set now playing cart root folder for use by the UI and API lnk files.
-
-rem lu: Oct-30-2019
-
-echo.
-echo %fp%
-
-rem To change the now playing cart root folder, edit the alias below.
-call td rf_ma
-
-exit/b
-
-
-
-::_
-
 :lnk_ui
 
 set fp=* Run UI lnk, for use by shortcut icons.
@@ -4776,9 +4761,9 @@ echo %fp%
 
 call m big
 
-call %0 npcrf
+call td crf_icp
 
-cd icecart-portal-client
+call nm install
 
 call ang run_ui
 
@@ -4799,9 +4784,7 @@ echo %fp%
 
 call m big
 
-call %0 npcrf
-
-cd api
+call td crf_api
 
 call gr run_api
 

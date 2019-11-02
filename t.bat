@@ -33,6 +33,9 @@ goto code_execution_area
 
 
 :_
+ ___  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  
+  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)
+(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
 
 :help
 
@@ -53,9 +56,6 @@ exit/b
 :_
 
 rem Begin script body. (!sbody)
- ___  ______  ______  ______  ______  ______  ______  ______  ______  ___
-  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
- (______)(______)(______)(______)(______)(______)(______)(______)(______)
 
 
 
@@ -6777,30 +6777,6 @@ echo %fp%
 call td 150 3
 
 if exist BookClient.Droid\obj rd /q /s .\BookClient.Droid\obj
-
-exit/b
-
-
-
-:_
-
-:
-
-set fp=* Test error level when looking for folders.
-
-rem lu: Jul-16-2018
-
-echo %fp%
-
-call td fr
-
-if %errorlevel% == 0 (
-  echo.
-  echo * Error level equals 0.
-) else (
-  echo.
-  echo * Error level equals 1.
-)
 
 exit/b
 

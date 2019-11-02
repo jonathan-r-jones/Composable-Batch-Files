@@ -4382,6 +4382,8 @@ exit/b
 
 :star
 
+:start
+
 set fp=* Start instance "%2".
 
 rem lu: Oct-31-2019

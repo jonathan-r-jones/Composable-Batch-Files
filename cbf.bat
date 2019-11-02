@@ -6,7 +6,7 @@
 
 :_
 
-set filep=This file shows a list of available CBF files.
+set filep=* This file shows a list of available CBF files.
 
 echo.
 echo %filep%
@@ -39,6 +39,10 @@ exit/b
 :main_function
 
 set fp=* List of CBF Helper Batch (bat) files.
+
+echo   __  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  __
+echo   __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
+echo  (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)
 
 echo.
 echo %fp%

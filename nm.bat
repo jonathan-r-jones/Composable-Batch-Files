@@ -661,6 +661,8 @@ exit/b
 
 :inst
 
+:install
+
 set fp=* Install any dependencies listed in package.json.
 
 rem lu: Feb-11-2019
