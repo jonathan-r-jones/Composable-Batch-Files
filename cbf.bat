@@ -8,9 +8,6 @@
 
 set filep=* This file shows a list of available CBF files.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -38,18 +35,17 @@ exit/b
 
 :main_function
 
-set fp=* List of CBF Helper Batch (bat) files.
-
-echo   __  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  __
-echo   __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
-echo  (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)
+set fp=* List of Composable Batch Files (CBF). For help type: [Filename] /?
 
 echo.
 echo %fp%
 
 echo.
 echo  File  Wrapper Description
-echo  ----  ----------------------------------------------------------------------------------
+echo  __ _   ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  __
+echo  __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
+echo (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
+echo.
 echo     a  AWS CLI
 echo    an  Application nickname dictionary layer of abstraction
 echo   ang  Angular-related tasks

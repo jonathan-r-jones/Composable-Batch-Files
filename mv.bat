@@ -150,7 +150,7 @@ call x tag
 echo.
 pause
 
-call %0 cj_2_old_cj
+rem call %0 cj_2_old_cj
 
 call %0 sf_2_cj
 
