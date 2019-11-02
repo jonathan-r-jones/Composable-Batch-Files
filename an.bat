@@ -26,7 +26,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto validate_input
 
 
 
@@ -46,15 +46,33 @@ echo Usage: %0 [single parameter]
 exit/b
 
 
+
 :_
 
-:main_function
+:validate_input
 
-rem echo Caller 1: an.bat, Percent 1: %~1
+set cbf_application=
 
-call n %~1
+call n %1
 
-exit/b
+if %errorlevel% gtr 0 (
+  echo.
+  echo * Error: Label not found. Nov-1-2019 8:55 PM
+  call m clear_errorlevel_silently 
+  exit/b 1
+)
+
+if not defined cbf_application (
+  echo.
+  echo * The cbf_application is not defined for "%1". Nov-1-2019 8:56 PM
+  exit/b 1
+)
+
+if not exist "%cbf_application%" (
+  echo.
+  echo * Error: The CBF_Application "%cbf_application%" could not be found. Nov-1-2019 8:56 PM
+  exit/b 1
+)
 
 
 

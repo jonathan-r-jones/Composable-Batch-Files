@@ -9863,11 +9863,83 @@ exit/b
 
 :_
 
+:
+
+set fp=* If not defined.
+
+rem lu: Nov-1-2019
+
+echo.
+echo %fp%
+
+echo.
+set test=
+
+if not defined test echo not defined
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Testing find.
+
+rem lu: Nov-1-2019
+
+echo.
+echo %fp%
+
+call m clear_errorlevel_silently
+
+set errorlevel=99055
+
+echo %1 | find /i "..">nul
+
+if %errorlevel% == 0 (
+  echo 0
+) else (
+  echo else!
+)
+
+echo Er: %errorlevel%
+
+exit/b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Testing expand path.
+
+rem lu: Nov-1-2019
+
+echo.
+echo %fp%
+
+echo.
+@echo on
+call m expand_to_path_only c:\west\j1.txt
+rem call m expand_to_path_only "c:\blast\j1.txt"
+@echo off
+
+echo %cbf_path% Nov-1-2019 10:11 PM
+
+exit/b
 
 
 

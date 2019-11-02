@@ -268,32 +268,6 @@ exit/b
 
 
 
-:_
-
-:reset_error_level
-
-set fp=* Test return codes for "n" calls. How do you reset errorlevel?
-
-rem lu: Jul-18-2018
-
-echo %fp%
-
-call n bullshit
-
-echo.
-echo * Errorlevel: %errorlevel%
-
-ver>nul
-
-call n cnn
-
-echo.
-echo * Errorlevel: %errorlevel%
-
-exit/b
-
-
-
 :_+ Guard Clause
 
 
@@ -790,84 +764,34 @@ exit/b
 
 
 
-:_
-
-:validate_data
-
-rem Data Validation: skw
-
-if "%~1" == "" (
-  echo.
-  echo * Application alias is required.
-  exit/b
-)
-
-if "%~2" == "" (
-  echo.
-  echo * Data alias is required.
-  exit/b
-)
-
-call an %1
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Oct-17-2019 5:52 PM
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if not exist "%cbf_application%" (
-  echo.
-  echo * Error: Cannot find the alias "%cbf_application%".
-  exit/b
-)
-
-call fn %2
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Oct-17-2019 5:51 PM
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if not exist "%cbf_filename%" (
-  echo.
-  echo * Error: Cannot find the alias "%cbf_filename%".
-  exit/b
-)
-
-
-
-:_
-
-:validate_user_input
-
-if "%~1" == "" (
-  echo.
-  echo * Error: A parameter is required.
-  goto help
-)
-
-call un %1
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Oct-17-2019 5:50 PM
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%cbf_url%" == "" (
-  echo.
-  echo * Error: cbf_url is unassigned.
-  goto help
-)
-
-
-
 :_+ Validation Family (!fyva)
+
+
+
+::_
+
+:validate_path
+
+rem Imprimatur (!err, !p2, !erro, !el, !erle)
+
+if %errorlevel% gtr 0 (
+  echo.
+  echo * Error: Label not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not defined cbf_path (
+  echo.
+  echo * The cbf_path is not defined for "%1".
+  exit/b
+)
+
+if not exist "%cbf_path%" (
+  echo.
+  echo * Error: The CBF_Path "%cbf_path%" could not be found.
+  exit/b
+)
 
 
 
@@ -884,9 +808,9 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_url%" == "" (
+if not defined cbf_url (
   echo.
-  echo * The cbf_url is unassigned for "%1".
+  echo * The cbf_url is not defined for "%1".
   exit/b
 )
 
@@ -905,9 +829,9 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_application%" == "" (
+if not defined cbf_application (
   echo.
-  echo * The cbf_application is unassigned for "%1".
+  echo * The cbf_application is not definied for "%1".
   exit/b
 )
 
@@ -932,7 +856,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_filename%" == "" (
+if not defined cbf_filename (
   echo.
   echo * The cbf_filename is unassigned for "%1".
   exit/b
@@ -941,33 +865,6 @@ if "%cbf_filename%" == "" (
 if not exist "%cbf_filename%" (
   echo.
   echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
-  exit/b
-)
-
-
-
-::_
-
-:validate_path
-
-call pn %1
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Label not found.
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%cbf_path%" == "" (
-  echo.
-  echo * The cbf_path is unassigned for "%1".
-  exit/b
-)
-
-if not exist "%cbf_path%" (
-  echo.
-  echo * Error: The CBF_Path "%cbf_path%" could not be found.
   exit/b
 )
 
@@ -1157,8 +1054,6 @@ echo %fp%
 
 cd /d c:\a
 
-rem Imprimatur (!err, !p2, !erro, !el, !erle)
-
 if %errorlevel% gtr 0 (
   echo.
   echo * Error: Label not found.
@@ -1187,7 +1082,6 @@ if %errorlevel% == 1 (
   call m clear_errorlevel_silently
   exit/b
 )
-
 
 if %errorlevel% == 1 (
   echo.
@@ -1277,6 +1171,32 @@ if %errorlevel% == 0 (
   echo.
   echo * Error level equals 1.
 )
+
+exit/b
+
+
+
+::_
+
+:reset_error_level
+
+set fp=* Test return codes for "n" calls. How do you reset errorlevel?
+
+rem lu: Jul-18-2018
+
+echo %fp%
+
+call n bullshit
+
+echo.
+echo * Errorlevel: %errorlevel%
+
+ver>nul
+
+call n cnn
+
+echo.
+echo * Errorlevel: %errorlevel%
 
 exit/b
 

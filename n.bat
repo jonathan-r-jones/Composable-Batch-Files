@@ -1,4 +1,4 @@
-:_ (!n)
+:_ (!nb)
 
 @echo off
 
@@ -10970,21 +10970,16 @@ exit/b
 
 :_
 
-:th
+:6
 
-set fp=* Test helper.
+set fp=* Go to 6.
 
-rem lu: Oct-31-2019
+rem lu: Nov-1-2019
 
 echo.
 echo %fp%
 
-set cbf_application=
-
-set cbf_filename=
-
-set cbf_path=
-rem       qjq-1
+set cbf_path=d:\aa\1\2\3\4\5\6 
 
 exit/b
 

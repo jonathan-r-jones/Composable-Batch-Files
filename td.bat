@@ -21,7 +21,13 @@ if "%~1" == "" %0 cbf
 
 if "%~1" == "/?" goto help
 
-goto preprocess
+echo %1 | find /i "..">nul
+
+if %errorlevel% == 0 (
+  goto back_magic
+) else (
+  goto preprocess
+)
 
 
 
@@ -51,35 +57,86 @@ exit/b
 
 set fp=* In order to promote freshness, reset the error level.
 
-ver>nul
+call m clear_errorlevel_silently
+
+goto validate_input
 
 
 
 :_
 
+:back_magic
+
+set fp=* Back magic
+
+cd..
+
+if "%~1" == "..." (
+  cd..
+)
+
+if "%~1" == "...." (
+  cd..
+  cd..
+)
+
+if "%~1" == "....." (
+  cd..
+  cd..
+  cd..
+)
+
+if "%~1" == "......" (
+  cd..
+  cd..
+  cd..
+  cd..
+)
+
+if "%~1" == "......." (
+  cd..
+  cd..
+  cd..
+  cd..
+  cd..
+)
+
+if "%~1" == "........" (
+  cd..
+  cd..
+  cd..
+  cd..
+  cd..
+  cd..
+)
+
+if "%~1" == "........." (
+  cd..
+  cd..
+  cd..
+  cd..
+  cd..
+  cd..
+  cd..
+)
+
+exit/b
+
+
+
+:_
+
+:validate_input
+
 set fp=* Validate input.
 
 set cbf_path=
 
-call n %1
+call pn %1
 
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Label not found. Oct-17-2019 5:45 PM
-  call m clear_errorlevel_silently 
+if %errorlevel% gtr 0 (
+  goto try_filename
   exit/b
-)
-
-if "%cbf_path%" == "" (
-  echo.
-  echo * Cbf_path is not assigned for '%~1'.
-  goto try_alternative
-)
-
-if not exist "%cbf_path%" (
-  echo.
-  echo * Folder does not exist at "%cbf_path%". 
-  goto try_alternative
 )
 
 goto main_function
@@ -88,57 +145,46 @@ goto main_function
 
 :_
 
-:find_parent_folder
+:try_filename
 
-call m set_parent_fd "%cbf_path%\.." parent_folder
-
-rem echo Parent Folder: %parent_folder%
-cd /d %parent_folder%
-
-exit/b
-
-
-
-:_
-
-:try_alternative
-
-set fp=* Try alternative.
+set fp=* Try filename.
 
 echo.
 echo %fp%
 
-if not "%cbf_filename%" == "" (
-  echo.
-  echo Oct-31-2019 8:03 PM
-  call m expand_to_path_only "%cbf_filename%"
-  goto validate_version_2
-)
-                
-if not "%cbf_application%" == "" (
-  echo.
-  call m expand_to_path_only "%cbf_application%"
-  goto validate_version_2
-)
-                
-echo.
-echo * Error: Can't find anywhere to go.
-rem qjq-1
+call fn %1
 
-exit/b
+if %errorlevel% gtr 0 (
+  goto try_application
+  exit/b
+)
+
+call m expand_to_path_only "%cbf_filename%"
+
+goto main_function
 
 
 
 :_
 
-set fp=* Emulate cd and go to the parent folder.
+:try_application
 
-if "%~1" == ".." (
+set fp=* Try application.
+
+echo.
+echo %fp%
+
+call an %1
+
+if %errorlevel% gtr 0 (
   echo.
-  echo %fp%
-  cd %1
+  echo * Error: Can't find anywhere to go. Nov-1-2019 8:54 PM
   exit/b
 )
+
+call m expand_to_path_only "%cbf_application%"
+
+goto main_function
 
 
 
@@ -146,15 +192,7 @@ if "%~1" == ".." (
 
 :main_function
 
-:validate_version_2
-
-set fp=* Main function.
-
-if "%~2" == "p" goto find_parent_folder
-
 cd /d "%cbf_path%"
-
-set cbf_back=%cbf_path%
 
 exit/b
 

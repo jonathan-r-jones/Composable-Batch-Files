@@ -3354,7 +3354,7 @@ exit/b
 
 
 
-::_ (!clea)
+::_ (!clea) (skw clear_error_level)
 
 :el_cs
 
@@ -3365,6 +3365,8 @@ set fp=* Clear/reset errorLevel silently.
 rem lu: Aug-7-2018
 
 ver>nul
+
+rem set errorlevel=0
 
 exit/b
 
@@ -3574,7 +3576,7 @@ rem lu: Mar-14-2018
 echo.
 echo %fp%
 
-set cbf_path=%~p2
+set cbf_path=%~d2%~p2
 
 exit/b
 

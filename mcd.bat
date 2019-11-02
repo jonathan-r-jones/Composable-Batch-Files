@@ -46,7 +46,7 @@ exit/b
 
 :main_function
 
-md %1>nul
+md %1
 cd %1
 
 rem (!rfsp) (mov-2)
