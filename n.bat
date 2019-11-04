@@ -5842,6 +5842,16 @@ exit/b
 
 :kl
 
+:dy
+
+:fy
+
+:saml
+
+:jks
+
+:tls
+
 :pass-through
 
 set fp=* Pass through.

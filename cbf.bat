@@ -35,11 +35,15 @@ exit/b
 
 :main_function
 
-set fp=* List of Composable Batch Files (CBF). For help type: [Filename] /?
-
 echo.
-echo %fp%
-
+echo * List of Composable Batch Files (CBF).
+echo.
+echo * For general help, see the Readme at the bottom of: 
+echo. 
+echo   https://github.com/jonathan-r-jones/Composable-Batch-Files
+echo. 
+echo * For help with a particular batch file, type: [Filename] /?
+echo.
 echo.
 echo  File  Wrapper Description
 echo  __ _   ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  __

@@ -45,7 +45,7 @@ exit/b
 
 :_
 
-:keyt
+:gen_key
 
 set fp=* Run the JDK keytool utility program.
 
@@ -228,24 +228,6 @@ exit/b
 
 :_
 
-:list
-
-set fp=* List certs.
-
-rem lu: Nov-1-2019
-
-echo.
-echo %fp%
-
-echo.
-keytool -list -keystore truststore.jks
-
-exit/b
-
-
-
-:_
-
 :add_cert_Nov-1-2019
 
 set fp=* Add cert to jks file.
@@ -262,4 +244,22 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-7)
+:_
+
+:list
+
+set fp=* List certs.
+
+rem lu: Nov-1-2019
+
+echo.
+echo %fp%
+
+echo.
+keytool -list -keystore truststore.jks
+
+exit/b
+
+
+
+:_ (!efkeyt, !rfsp) (mov-7)

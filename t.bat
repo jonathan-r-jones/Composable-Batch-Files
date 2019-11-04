@@ -9912,16 +9912,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Testing expand path.
@@ -9940,6 +9930,16 @@ rem call m expand_to_path_only "c:\blast\j1.txt"
 echo %cbf_path% Nov-1-2019 10:11 PM
 
 exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

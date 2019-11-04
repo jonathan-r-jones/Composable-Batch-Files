@@ -4497,7 +4497,6 @@ rem You may want to do a get-latest.
 pl
 
 rem Switch to the api folder.
-lq
 rem If liquibase fails, you may need to wipe your local databaase.
 
 e ly
@@ -4505,6 +4504,7 @@ e ly
 rem Run the API by using m lnk_api. You may need to edit npcrf.
 
 gr run_api
+lq
 
 x bash
 
@@ -4514,9 +4514,9 @@ sf 4200 krm
 
 rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
 call n crf_icp
-call nm inst
 
-rem Run the UI by using lnk_ui or the line below.
+rem Run the UI by using lnk_ui or by the 2 lines below.
+call nm inst
 call ang run_ui
 
 exit/b
