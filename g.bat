@@ -1,4 +1,4 @@
-:_ (!gbat)
+:_ (!g)
 
 @echo off
 
@@ -3072,6 +3072,24 @@ exit/b
 
 ::_
 
+:ft
+
+set fp=* Fetch tags.
+
+rem lu: 
+
+echo.
+echo %fp%
+
+echo.
+git fetch --tags
+
+exit/b
+
+
+
+::_
+
 :detag
 
 :tagd
@@ -3274,4 +3292,24 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-6)
+:_
+
+:cbbt
+
+set fp=* Create a branch based on a tag.
+
+rem create branch from release, create branch from tag
+
+rem lu: Nov-5-2019
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b v140 tags/v1.4.0
+
+exit/b
+
+
+
+:_ (!efg, !rfsp) (mov-6)

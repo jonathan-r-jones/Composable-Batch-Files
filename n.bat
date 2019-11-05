@@ -2320,7 +2320,7 @@ exit/b
 
 :_
 
-:g
+:gdr
 
 set fp=* G drive.
 
@@ -5851,6 +5851,8 @@ exit/b
 :jks
 
 :tls
+
+:1253
 
 :pass-through
 
@@ -10990,6 +10992,31 @@ echo.
 echo %fp%
 
 set cbf_path=d:\aa\1\2\3\4\5\6 
+
+exit/b
+
+
+
+:_
+
+:ctt
+
+set fp=* CBF test definition.
+
+rem lu: Nov-5-2019
+
+echo.
+echo %fp%
+
+set cbf_application=xx
+
+set cbf_filename=xx
+
+set cbf_jenkins_url=https
+
+set cbf_path=%cbf_repo%\x
+
+set cbf_url=xxx
 
 exit/b
 

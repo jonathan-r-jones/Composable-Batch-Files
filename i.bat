@@ -130,16 +130,19 @@ if not "%cbf_file_to_upload%" == "" echo.
 if not "%cbf_file_to_upload%" == "" echo * File to upload: %cbf_file_to_upload%
 
 if not "%cbf_github_url%" == "" echo.
-if not "%cbf_github_url%" == ""   echo *  Github URL: %cbf_github_url%
+if not "%cbf_github_url%" == "" echo * Github URL: %cbf_github_url%
 
 if not "%cbf_host_name%" == "" echo.
-if not "%cbf_host_name%" == ""   echo *   Host name: %cbf_host_name%
+if not "%cbf_host_name%" == "" echo * Host name: %cbf_host_name%
+
+if not "%cbf_jenkins_url%" == "" echo.
+if not "%cbf_jenkins_url%" == ""   echo * Jenkns URL: %cbf_jenkins_url%
 
 if not "%cbf_instance_id%" == "" echo.
 if not "%cbf_instance_id%" == "" echo * Instance ID: %cbf_instance_id%
 
 if not "%cbf_ip%" == "" echo.
-if not "%cbf_ip%" == ""          echo *          IP: %cbf_ip%
+if not "%cbf_ip%" == "" echo * IP: %cbf_ip%
 
 if not "%cbf_path%" == "" echo.
 if not "%cbf_path%" == "" echo * Path: %cbf_path%
