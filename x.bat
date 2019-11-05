@@ -6,7 +6,9 @@
 
 :_
 
-set filep=* Remote double-click equivalent way to run an alias.
+set filep=* Simulate a double-click.
+
+rem A remote double-click equivalent way to run an alias.
 
 
 

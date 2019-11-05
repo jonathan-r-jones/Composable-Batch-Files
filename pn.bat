@@ -51,7 +51,7 @@ if %errorlevel% gtr 0 (
   echo.
   echo * Error: Label not found. Nov-1-2019 8:32 PM
   call m clear_errorlevel_silently 
-  exit/b 1
+  exit/b 99
 )
 
 if not defined cbf_path (

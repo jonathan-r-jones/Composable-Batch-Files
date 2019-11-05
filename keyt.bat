@@ -262,4 +262,22 @@ exit/b
 
 
 
+:_
+
+:l
+
+set fp=* List certs.
+
+rem lu: Nov-1-2019
+
+echo.
+echo %fp%
+
+echo.
+keytool -list -keystore %2
+
+exit/b
+
+
+
 :_ (!efkeyt, !rfsp) (mov-7)

@@ -134,6 +134,10 @@ set cbf_path=
 
 call pn %1
 
+if %errorlevel% == 99 (
+  exit/b
+)
+
 if %errorlevel% gtr 0 (
   goto try_filename
   exit/b

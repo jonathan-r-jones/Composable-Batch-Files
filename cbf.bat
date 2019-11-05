@@ -170,6 +170,7 @@ echo    ty  Type command to view nickname-specified file
 echo    un  URL nicknames dictionary layer of abstraction
 echo     v  Vetted functions (Useful for copying-and-pasting)
 echo    wp  Wordpad
+echo     x  Simulate a double-click. A remote double-click equivalent way to run an alias.
 echo     x  Remote double-click equivalent way to run an alias
 echo    xa  Application-centric way of running an application with an optional filename parameter
 echo   xac  Execute an application alias with a filename in the current folder
