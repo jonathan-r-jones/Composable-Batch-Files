@@ -4866,7 +4866,7 @@ set fp=* Show Ascii art 2.
 
 rem lu: Jul-26-2019
 
-call n ascii_art_scuba
+call n ascii_art_scuba>nul
 
 type %cbf_filename%
 
