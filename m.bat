@@ -4049,38 +4049,6 @@ exit
 
 
 
-:_
-
-:show_ascii_art
-
-set fp=* Show Ascii art.
-
-rem lu: Apr-1-2019
-
-call n ascii_art
-
-type %cbf_filename%
-
-exit/b
-
-
-
-:_
-
-:show_ascii_art_2
-
-set fp=* Show Ascii art 2.
-
-rem lu: Jul-26-2019
-
-call n ascii_art_scuba
-
-type %cbf_filename%
-
-exit/b
-
-
-
 :_+ Save and Restore Location
 
 
@@ -4849,6 +4817,58 @@ echo %fp%
 call m big
 
 call pql start
+
+exit/b
+
+
+
+:_+ ASCII Art Family (!fyaa)
+
+
+
+::_
+
+:show_ascii_art
+
+set fp=* Show Ascii art.
+
+rem lu: Apr-1-2019
+
+call n ascii_art
+
+type %cbf_filename%
+
+exit/b
+
+
+
+::_
+
+:show_ascii_art_2
+
+set fp=* Show Ascii art 2.
+
+rem lu: Jul-26-2019
+
+call n ascii_art_2
+
+type %cbf_filename%
+
+exit/b
+
+
+
+::_
+
+:show_ascii_art_scuba
+
+set fp=* Show Ascii art 2.
+
+rem lu: Jul-26-2019
+
+call n ascii_art_scuba
+
+type %cbf_filename%
 
 exit/b
 
