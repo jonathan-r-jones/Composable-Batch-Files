@@ -8588,23 +8588,6 @@ exit/b
 
 :_
 
-:krb
-
-set fp=* Knife.rb file.
-
-rem lu: May-1-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%userprofile%\.chef\knife.rb
-
-exit/b
-
-
-
-:_
-
 :kcom
 
 :kitchen_commands
@@ -8618,7 +8601,7 @@ rem lu: May-6-2019
 echo.
 echo %fp%
 
-set cbf_url=https://docs.chef.io/ctl_kitchen.html
+set cbf_url=https://docs..io/ctl_kitchen.html
 
 exit/b
 
@@ -11017,6 +11000,27 @@ set cbf_jenkins_url=https
 set cbf_path=%cbf_repo%\x
 
 set cbf_url=xxx
+
+exit/b
+
+
+
+:_+ Chef Family (!fych)
+
+
+
+::_
+
+:krb
+
+set fp=* Knife.rb file.
+
+rem lu: May-1-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%userprofile%\.chef\knife.rb
 
 exit/b
 

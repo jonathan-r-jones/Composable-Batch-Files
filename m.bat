@@ -2976,6 +2976,8 @@ set cbf_host_name=
 
 set cbf_instance_id=
 
+set cbf_jenkins_url=
+
 set cbf_ip=
 
 set cbf_parameter=

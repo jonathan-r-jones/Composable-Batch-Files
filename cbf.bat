@@ -111,7 +111,6 @@ echo     h  Sencha
 echo     i  CBF environment variable information
 echo    ji  Jira operations
 echo  keyt  KeyTool wrapper
-echo    kn  Knife, a Chef command line utility
 echo     l  Google searcher
 echo     m  Perform miscellaneous tasks
 echo   mcd  Make and navigate (cd) to a folder

@@ -3312,4 +3312,23 @@ exit/b
 
 
 
+:_
+
+:lere
+
+set fp=* Leah's revert command. A benefit of using revert versus reset is that revert keeps the history.
+rem qq-1
+
+rem lu: Nov-6-2019
+
+echo.
+echo %fp%
+
+echo.
+git revert -m 1 66482d22af00ff9ed368e2dea821133fff5f7f35
+
+exit/b
+
+
+
 :_ (!efg, !rfsp) (mov-6)

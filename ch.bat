@@ -489,29 +489,6 @@ exit/b
 
 :_
 
-:upco
-
-:upl
-
-set fp=* Upload cookbooks.
-
-rem lu: May-6-2019
-
-echo.
-echo %fp%
-
-rem call td cc
-
-echo.
-rem knife upload cookbooks
-knife cookbook upload cart_cookbook -o .\ --force
-
-exit/b
-
-
-
-:_
-
 :genf
 
 set fp=* Generate file.
@@ -633,6 +610,59 @@ echo %fp%
 
 echo.
 knife role show cart_api_and_ui_only
+
+exit/b
+
+
+
+:_
+
+:upco_mine
+
+:upl
+
+set fp=* Upload cookbooks.
+
+rem lu: May-6-2019
+
+echo.
+echo %fp%
+
+rem call td cc
+
+echo.
+rem knife upload cookbooks
+knife cookbook upload cart_cookbook -o .\ --force
+
+exit/b
+
+
+
+:_
+
+:upco
+
+set fp=* Upload cookbook command from Sean.
+
+rem lu: Nov-6-2019
+
+rem The following error message is why the cookbook is in a weird path.
+rem ERROR: Could not find cookbook cart in your cookbook path, skipping it
+
+rem This worked!
+
+echo.
+echo %fp%
+
+call n caco
+set cbf_cookbook_path=%cbf_path%
+
+call td chef
+
+echo.
+@echo on
+knife cookbook upload cart -o c:\cookbook_test
+@echo off
 
 exit/b
 
