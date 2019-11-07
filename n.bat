@@ -10986,7 +10986,7 @@ exit/b
 
 :ascii_art_sea_scene
 
-:aa_sc
+:aasc
 
 set fp=* Ascii art - scuba.
 
