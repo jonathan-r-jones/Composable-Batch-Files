@@ -10984,6 +10984,48 @@ exit/b
 
 ::_
 
+:ascii_art_sea_scene
+
+:aa_sc
+
+set fp=* Ascii art - scuba.
+
+rem lu: Nov-6-2019
+
+echo.
+echo %fp%
+
+call n cbf
+
+set cbf_filename=%cbf_path%\ascii_art_sea_scene.txt
+
+exit/b
+
+
+
+::_
+
+:ascii_art_scuba
+
+:aa_sc
+
+set fp=* Ascii art - scuba.
+
+rem lu: Nov-6-2019
+
+echo.
+echo %fp%
+
+call n cbf
+
+set cbf_filename=%cbf_path%\ascii_art_scuba.txt
+
+exit/b
+
+
+
+::_
+
 :parrot
 
 set fp=* Parrot.
@@ -11025,27 +11067,6 @@ rem lu: Apr-1-2019
 rem echo %fp%
 
 set cbf_filename=%composable_batch_files%\ascii_art_2.txt
-
-exit/b
-
-
-
-::_
-
-:ascii_art_scuba
-
-:aa_sc
-
-set fp=* Ascii art - scuba.
-
-rem lu: Nov-6-2019
-
-echo.
-echo %fp%
-
-call n cbf
-
-set cbf_filename=%cbf_path%\ascii_art_scuba.txt
 
 exit/b
 

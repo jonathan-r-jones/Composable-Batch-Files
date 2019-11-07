@@ -4860,13 +4860,13 @@ exit/b
 
 ::_
 
-:show_ascii_art_scuba
+:show_ascii_art_sans_souci
 
 set fp=* Show Ascii art 2.
 
-rem lu: Jul-26-2019
+rem lu: Nov-7-2019
 
-call n ascii_art_scuba>nul
+call n ascii_art_sea_scene>nul
 
 type %cbf_filename%
 
