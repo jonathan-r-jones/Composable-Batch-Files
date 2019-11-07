@@ -10988,7 +10988,7 @@ exit/b
 
 :aasc
 
-set fp=* Ascii art - scuba.
+set fp=* ASCII Art - %1.
 
 rem lu: Nov-6-2019
 
