@@ -41,6 +41,7 @@ exit/b
 echo.
 echo    Term/Abbreviat.  Definition/Description
 echo ------------------  --------------------------------------------------------------------
+echo                 99  Errorlevel used when a label is not found.
 echo                  a  Application, when used in a batch file name
 echo                -ag  As a batch file parameter, means run an aggregte, not atomic, func.
 echo aggregate function  A batch file function which is a collection of calls to other

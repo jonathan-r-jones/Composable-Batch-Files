@@ -57,7 +57,7 @@ call n %1
 
 if %errorlevel% gtr 0 (
   echo.
-  echo * Error: Label not found. Nov-1-2019 8:55 PM
+  echo * Error: Label not found. Nov-8-2019 1:59 PM
   call m clear_errorlevel_silently 
   exit/b 1
 )

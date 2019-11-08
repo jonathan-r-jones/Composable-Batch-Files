@@ -46,6 +46,46 @@ exit/b
 
 :_
 
+:validate_user_input
+
+set cbf_path=
+call pn %1
+
+if %errorlevel% == 99 (
+  exit/b 99
+)
+
+if %errorlevel% gtr 0 (
+  goto try_filename_path
+)
+
+goto main_function
+
+
+
+:_
+
+:try_filename_path
+
+set fp=* So try getting the path from a filename.
+
+echo.
+echo %fp%
+
+call fn %1
+
+if %errorlevel% gtr 0 (
+  exit/b
+)
+
+call m expand_to_path_only %cbf_filename%
+
+goto main_function
+
+
+
+:_
+
 :copy_cd_to_clipboard
 
 set fp=* Copy current folder path to the clipboard.
@@ -56,28 +96,6 @@ echo %fp%
 echo %cd% | clip
 
 exit/b
-
-
-
-:_
-
-:validate_user_input
-
-set cbf_path=
-call n %1
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Oct-17-2019 5:38 PM
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%cbf_path%" == "" (
-  echo.
-  echo * Error: CBF_path is undefined for the alias "%1".
-  exit/b
-)
 
 
 

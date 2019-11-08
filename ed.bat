@@ -293,10 +293,7 @@ rem echo %fp%
 
 call fn %1
 
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Label not found. Oct-26-2019 10:02 AM
-  call m clear_errorlevel_silently 
+if %errorlevel% gtr 0 (
   exit/b
 )
 
