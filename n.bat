@@ -10998,7 +10998,7 @@ exit/b
 
 :ascii_art_sea_scene
 
-:aasc
+:aass
 
 set fp=* ASCII Art - %1.
 
