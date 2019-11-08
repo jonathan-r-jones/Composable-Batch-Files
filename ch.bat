@@ -127,7 +127,7 @@ exit/b
 
 :knssl
 
-:ssl
+:sslf
 
 set fp=* SSL fetch
 
@@ -663,6 +663,11 @@ echo.
 @echo on
 knife cookbook upload cart -o c:\cookbook_test
 @echo off
+
+rem Here's what it usually says.
+rem C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
+rem Uploading cart           [0.1.0]
+rem Uploaded 1 cookbook.
 
 exit/b
 

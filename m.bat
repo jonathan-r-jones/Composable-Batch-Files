@@ -4469,12 +4469,15 @@ pl
 rem Switch to the api folder.
 rem If liquibase fails, you may need to wipe your local databaase.
 
+cd api
+
+lq
+
 e ly
 
 rem Run the API by using m lnk_api. You may need to edit npcrf.
 
 gr run_api
-lq
 
 x bash
 

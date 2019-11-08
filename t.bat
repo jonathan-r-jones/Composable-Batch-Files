@@ -9935,11 +9935,52 @@ exit/b
 
 :_
 
+:pwnd
+
+set fp=* Play with not defined.
+
+rem lu: Nov-7-2019
+
+echo.
+echo %fp%
+
+echo.
+if "%~1" == "" (
+  echo not def
+) else (
+  echo defined
+)
+
+exit/b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:cofw
+
+set fp=* How to clean out a file without actually deleting it.
+
+rem lu: Nov-7-2019
+
+echo.
+echo %fp%
+
+echo.
+echo nul>c:\a\j1.txt
+rem qq-1
+
+exit/b
 
 
 

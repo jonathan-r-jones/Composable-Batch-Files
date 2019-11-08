@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Run code compare with j1 and j2.
+set filep=* Run Code Compare with aliases or filenames.
 
 
 
@@ -14,11 +14,13 @@ set filep=* Run code compare with j1 and j2.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto main_function
+if "%~1" == "" goto use_default_behavior
 
 if "%~1" == "/?" goto help
 
-goto %1
+if "%~3" == "-l" goto use_filenames_not_aliases
+
+goto main_function
 
 
 
@@ -27,7 +29,19 @@ goto %1
 :help
 
 echo.
-echo Usage: %0
+echo Usage: %0 [space separated parameter(s)]
+
+set parameter_1=Parameters 1 and 2: Either 2 filenames the current folder or a 2 file ^
+aliases. If left blank, aliases j1 and j2 are used by default.
+
+echo.
+echo %parameter_1%
+
+set parameter_3=Parameter 3: If -l is specified filenames onlyare used. If left ^
+blank, aliases only are used.
+
+echo.
+echo %parameter_3%
 
 exit/b
 
@@ -40,7 +54,63 @@ exit/b
 echo.
 echo %filep%
 
-call ccff j1 j2
+call fn %1
+
+if %errorlevel% gtr 0 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+set file_1=%cbf_filename%
+
+call fn %2
+
+if %errorlevel% gtr 0 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+set file_2=%cbf_filename%
+
+call an coco
+
+"%cbf_application%" "%file_1%" "%file_2%"
+
+exit/b
+
+
+
+:_
+
+:use_filenames_not_aliases
+
+set fp=* Use filenames and not aliases.
+
+rem lu: Jan-30-2019
+
+echo.
+echo %fp%
+
+call an coco
+
+"%cbf_application%" "%~1" "%~2"
+
+exit/b
+
+
+
+:_
+
+:use_default_behavior
+
+set fp=* Use default behavior.
+
+rem lu: Nov-7-2019
+
+echo.
+echo %fp%
+
+call %0 j1 j2
 
 exit/b
 

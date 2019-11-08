@@ -57,8 +57,7 @@ echo    as  Windows file associations
 echo     b  Shutdown windows
 echo     c  Clear screen and reset color
 echo   cbf  Show this list of CBF batch files
-echo    cc  Code Compare preloaded with j1.txt and j2.txt
-echo  ccff  Code Compare with aliases or filenames
+echo    cc  Code Compare functions
 echo    ch  Chef command line utility
 echo   clc  Simple calculator
 echo    cn  Git cloning, based entirely on the nickname parameter
@@ -88,7 +87,7 @@ echo  defn  Delete file base on passed in filename alias
 echo  depn  Delete folder corresponding to CBF path alias parameter
 echo  desf  Delete using static formulas
 echo    dn  Dot Net Core
-echo     e  Uses mx.bat then me.bat to decipher which file to edit
+echo     e  Uses mx.bat then me.bat to decipher which file to edit (Or exit command window)
 echo   edr  Edit a relative-path constucted filename
 echo   ejf  Edit Jenkinsfile of an alias
 echo    el  Edit log file of an alias
@@ -96,7 +95,7 @@ echo    es  Edit settings file of an alias
 echo    eg  Edit a file by gluing a relative path onto a base path
 echo    ed  Edit a file abstraction layer
 echo   edx  Edit a file (Emulated Surf)
-echo    ex  Exit command window
+echo    ex  Run excel with or without a filename alias parameter.
 echo     f  Use default application to open a file based on its alias and filename extension.
 echo    fe  Check for the existence of a file based on the passed in filename alias
 echo    fn  Filenames dictionary layer of abstraction

@@ -781,7 +781,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if not defined cbf_path (
+if "%cbf_path%" == "" (
   echo.
   echo * The cbf_path is not defined for "%1".
   exit/b
@@ -790,6 +790,33 @@ if not defined cbf_path (
 if not exist "%cbf_path%" (
   echo.
   echo * Error: The CBF_Path "%cbf_path%" could not be found.
+  exit/b
+)
+
+
+
+::_
+
+:validate_filename
+
+call fn %1
+
+if %errorlevel% gtr 0 (
+  echo.
+  echo * Error: Label not found.
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+if "%cbf_filename%" == "" (
+  echo.
+  echo * The cbf_filename is not defined for "%1".
+  exit/b
+)
+
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
   exit/b
 )
 
@@ -838,33 +865,6 @@ if not defined cbf_application (
 if not exist "%cbf_application%" (
   echo.
   echo * Error: The CBF_Application "%cbf_application%" could not be found.
-  exit/b
-)
-
-
-
-::_
-
-:validate_filename
-
-call fn %1
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Label not found. - skw
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if not defined cbf_filename (
-  echo.
-  echo * The cbf_filename is unassigned for "%1".
-  exit/b
-)
-
-if not exist "%cbf_filename%" (
-  echo.
-  echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
   exit/b
 )
 

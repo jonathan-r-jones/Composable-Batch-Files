@@ -1914,7 +1914,7 @@ exit/b
 
 :_
 
-:dn
+:d
 
 set fp=* Downloads folder.
 
@@ -5854,6 +5854,20 @@ exit/b
 
 :1253
 
+:sf1d
+
+:sec1
+
+:sec2
+
+:sec3
+
+:sec4
+
+:ssl
+
+:sec_ssl
+
 :pass-through
 
 set fp=* Pass through.
@@ -6562,8 +6576,6 @@ exit/b
 
 
 :_
-
-:de
 
 :deen
 
@@ -10744,7 +10756,7 @@ exit/b
 
 ::_
 
-:d
+:de
 
 :desk
 

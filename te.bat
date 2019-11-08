@@ -52,8 +52,7 @@ exit/b
 
 if "%~1" == "" (
   echo.
-  echo * Error: A parameter is required.
-  goto help
+  echo 
 )
 
 
@@ -63,7 +62,6 @@ if "%~1" == "" (
 :main_function
 
 
-rem qq-1
 
 exit/b
 
