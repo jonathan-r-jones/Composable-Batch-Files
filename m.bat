@@ -3569,23 +3569,6 @@ exit/b
 
 :_
 
-:expand_to_path_only
-
-set fp=* Expand to path only.
-
-rem lu: Mar-14-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%~d2%~p2
-
-exit/b
-
-
-
-:_
-
 :cosy
 
 set fp=* Compose synchronization.
@@ -4872,6 +4855,46 @@ rem lu: Nov-7-2019
 call n ascii_art_sea_scene>nul
 
 type %cbf_filename%
+
+exit/b
+
+
+
+:_+ Expand Family
+
+
+
+::_
+
+:convert_to_path
+
+:expand_to_path_only
+
+set fp=* Expand to path only.
+
+rem lu: Mar-14-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%~d2%~p2
+
+exit/b
+
+
+
+::_
+
+:expand_to_filename_without_path
+
+set fp=* Expand to filename without path.
+
+rem lu: Nov-8-2019
+
+echo.
+echo %fp%
+
+set cbf_filename_without_path=%~nx2
 
 exit/b
 

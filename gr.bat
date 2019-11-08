@@ -1,4 +1,4 @@
-:_
+:_ (!gr)
 
 @echo off
 
@@ -537,15 +537,13 @@ exit/b
 
 ::_
 
-:pinot
-
 :run
 
 :run_api
 
 set fp=* Run the API using Matt's gradle command.
 
-rem lu: Oct-24-2019
+rem lu: Nov-8-2019
 
 echo.
 echo %fp%

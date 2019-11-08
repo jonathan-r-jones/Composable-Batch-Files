@@ -63,8 +63,6 @@ echo   clc  Simple calculator
 echo    cn  Git cloning, based entirely on the nickname parameter
 echo   cng  Git cloning, generic version
 echo   col  Shell window colors operations
-echo    cp  Copy CBF_Path to the clipboard
-echo   cpf  Copy CBF_Filename contents to the clipboard
 echo    cs  File contents search
 echo   cst  File contents search with td parameter
 echo    cu  Curl hooked up to the nicknames dictionary
@@ -111,6 +109,9 @@ echo     i  CBF environment variable information
 echo    ji  Jira operations
 echo  keyt  KeyTool wrapper
 echo     l  Google searcher
+echo    lp  Load CBF_Filename of passed in alias onto the clipboard
+echo    lp  Load CBF_Filename onto the clipboard
+echo  lpfc  Load CBF_Filename contents to the clipboard
 echo     m  Perform miscellaneous tasks
 echo   mcd  Make and navigate (cd) to a folder
 echo    me  Multi-Edit

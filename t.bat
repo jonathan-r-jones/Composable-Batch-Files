@@ -9957,16 +9957,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :cofw
 
 set fp=* How to clean out a file without actually deleting it.
@@ -9978,6 +9968,37 @@ echo %fp%
 
 echo.
 echo nul>c:\a\j1.txt
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test the expand path function.
+
+rem lu: Nov-8-2019
+
+echo.
+echo %fp%
+
+call fn %1
+
+call m convert_to_path %cbf_filename%
+
+echo cbf_path: %cbf_path%
 rem qq-1
 
 exit/b
