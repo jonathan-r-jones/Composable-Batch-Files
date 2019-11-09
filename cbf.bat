@@ -109,8 +109,9 @@ echo     i  CBF environment variable information
 echo    ji  Jira operations
 echo  keyt  KeyTool wrapper
 echo     l  Google searcher
-echo    lp  Load CBF_Filename of passed in alias onto the clipboard
-echo    lp  Load CBF_Filename onto the clipboard
+echo    lp  Load CBF_Path to the clipboard
+echo   lpf  Load CBF_Filename of passed in alias onto the clipboard
+echo lpfwp  Load CBF_Filename without path of passed in alias onto the clipboard
 echo  lpfc  Load CBF_Filename contents to the clipboard
 echo     m  Perform miscellaneous tasks
 echo   mcd  Make and navigate (cd) to a folder

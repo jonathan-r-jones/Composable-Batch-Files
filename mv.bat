@@ -150,8 +150,10 @@ call x tag
 echo.
 pause
 
-rem call %0 cj_2_old_cj
+if "%~2" == "-n" goto do_not_transfer_old_content
+call %0 cj_2_old_cj
 
+:do_not_transfer_old_content
 call %0 sf_2_cj
 
 exit/b

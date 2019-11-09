@@ -11092,4 +11092,21 @@ exit/b
 
 
 
+:_
+
+:gpod
+
+set fp=* G drive podcasts folder.
+
+rem lu: Nov-9-2019
+
+echo.
+echo %fp%
+
+set cbf_path=g:\podcasts
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6)

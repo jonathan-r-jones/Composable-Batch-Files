@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Copy CBF_Path to the clipboard.
+set filep=* Load CBF_Path to the clipboard.
 
 echo.
 echo %filep%
@@ -88,12 +88,13 @@ goto main_function
 
 :copy_cd_to_clipboard
 
-set fp=* Copy current folder path to the clipboard.
-
 echo.
 echo %fp%
 
 echo %cd% | clip
+
+echo.
+echo * The current folder "%cbf_path%" was loaded onto clipboard.
 
 exit/b
 
@@ -105,12 +106,10 @@ exit/b
 
 :p
 
-set fp=* CBF_Path "%cbf_path%" was copied to the clipboard.
+echo %cbf_path% | clip
 
 echo.
-echo %fp%
-
-echo %cbf_path% | clip
+echo * Cbf_path "%cbf_path%" has been load onto the clipboard.
 
 exit/b
 
