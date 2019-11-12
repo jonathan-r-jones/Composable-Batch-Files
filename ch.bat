@@ -1,4 +1,4 @@
-:_
+:_ (!chef)
 
 @echo off
 
@@ -156,132 +156,6 @@ echo %fp%
 
 echo.
 kitchen diagnose --all
-
-exit/b
-
-
-
-:_+ Heartbeat commands.
-
-
-
-::_
-
-:h1
-
-:kl
-
-set fp=* Kitchen list. Heartbeat check.
-
-rem lu: Apr-30-2019
-
-rem Outcome: May-2-2019 2:41 PM
-
-rem WARN: Unresolved specs during Gem::Specification.reset:
-rem bundler (>= 1.10)
-rem WARN: Clearing out unresolved specs.
-rem Please report a bug if this causes problems.
-rem Instance          Driver  Provisioner  Verifier  Transport  Last Action    Last Error
-rem default-centos-7  Ec2     ChefZero     Inspec    Ssh        <Not Created>  <None>
-
-rem Created this with "kc" and the .kitchen-aws.yml file, I think.
-
-echo.
-echo %fp%
-
-echo.
-kitchen list
-
-exit/b
-
-
-
-::_
-
-:b
-
-:h2
-
-:knnl
-
-:nl
-
-:noli
-
-set fp=* Kitchen node list. Heartbeat check. Chef server is breathing.
-
-rem lu: May-6-2019
-
-echo.
-echo %fp%
-
-echo.
-knife node list
-
-exit/b
-
-
-
-::_
-
-:er
-
-:h3
-
-:rs
-
-:rspec
-
-set fp=* ChefSpec/Rspec tests resources and recipes as part of a simulated chef-client run.
-
-rem Results are compared to defined expectations.
-
-rem lu: May-8-2019
-
-echo.
-echo %fp%
-
-echo.
-chef exec rspec
-
-exit/b
-
-
-
-::_
-
-:h4
-
-:kv
-
-:v
-
-set fp=* Kitchen verify.
-
-rem lu: May-1-2019
-
-echo.
-echo %fp%
-
-echo.
-kitchen verify
-
-exit/b
-
-
-
-::_
-
-:h5
-
-set fp=* Verify curl.
-
-rem lu: May-3-2019
-
-echo.
-echo %fp%
-
-call cu t sr12
 
 exit/b
 
@@ -668,6 +542,128 @@ rem Here's what it usually says.
 rem C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
 rem Uploading cart           [0.1.0]
 rem Uploaded 1 cookbook.
+
+exit/b
+
+
+
+:_+ Heartbeat commands.
+
+
+
+::_
+
+:nl
+
+set fp=* Kitchen node list. Heartbeat check. Check to see if Chef server is breathing.
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+call m specific_folder_presence .chef
+
+if %errorlevel% gtr 0 (
+  exit/b
+)
+
+echo.
+knife node list
+
+exit/b
+
+
+
+::_
+
+:h1
+
+:kl
+
+set fp=* Kitchen list. Heartbeat check.
+
+rem lu: Apr-30-2019
+
+rem Outcome: May-2-2019 2:41 PM
+
+rem WARN: Unresolved specs during Gem::Specification.reset:
+rem bundler (>= 1.10)
+rem WARN: Clearing out unresolved specs.
+rem Please report a bug if this causes problems.
+rem Instance          Driver  Provisioner  Verifier  Transport  Last Action    Last Error
+rem default-centos-7  Ec2     ChefZero     Inspec    Ssh        <Not Created>  <None>
+
+rem Created this with "kc" and the .kitchen-aws.yml file, I think.
+
+echo.
+echo %fp%
+
+echo.
+kitchen list
+
+exit/b
+
+
+
+::_
+
+:er
+
+:h3
+
+:rs
+
+:rspec
+
+set fp=* ChefSpec/Rspec tests resources and recipes as part of a simulated chef-client run.
+
+rem Results are compared to defined expectations.
+
+rem lu: May-8-2019
+
+echo.
+echo %fp%
+
+echo.
+chef exec rspec
+
+exit/b
+
+
+
+::_
+
+:h4
+
+:kv
+
+set fp=* Kitchen verify.
+
+rem lu: May-1-2019
+
+echo.
+echo %fp%
+
+echo.
+kitchen verify
+
+exit/b
+
+
+
+::_
+
+:h5
+
+set fp=* Verify curl.
+
+rem lu: May-3-2019
+
+echo.
+echo %fp%
+
+call cu t sr12
 
 exit/b
 

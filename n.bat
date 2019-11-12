@@ -5878,6 +5878,24 @@ exit/b
 
 :fqmq
 
+:amq
+
+:fqam
+
+:deam
+
+:amq_dv
+
+:amq_de
+
+:mqfq
+
+:mqdv
+
+:nst
+
+:nsr
+
 :pass-through
 
 set fp=* Pass through.
@@ -7483,11 +7501,13 @@ exit/b
 
 ::_
 
+:bed
+
 :exb
 
 :exblk
 
-set fp=* Use Excel to edit a blank docx document.
+set fp=* Use Excel to edit a blank document. (skw blank Excel document)
 
 rem lu: Jan-25-2019
 
@@ -11106,6 +11126,29 @@ echo.
 echo %fp%
 
 set cbf_path=g:\podcasts
+
+exit/b
+
+
+
+:_
+
+:amql
+
+set fp=* AMQ lab.
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_filename=C:\Users\JJones2\j\cade\AMQ Lab\AMQ Server Properties.xlsx
+
+set cbf_excel_filename=C:\Users\JJones2\j\cade\AMQ Lab\AMQ Server Properties.xlsx
+
+set cbf_path=%cbf_path%\AMQ Lab
 
 exit/b
 
