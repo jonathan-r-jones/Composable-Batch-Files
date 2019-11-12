@@ -3364,7 +3364,9 @@ exit/b
 
 set fp=* Clear/reset errorLevel silently.
 
-rem lu: Aug-7-2018
+rem reset_errorlevel: skw
+
+rem lu: Nov-12-2019
 
 ver>nul
 
@@ -4222,32 +4224,6 @@ exit
 
 ::_
 
-:specific_file_presence
-
-set fp=* Check the current folder for the presence of "%2".
-
-rem is_present
-
-rem lu: Mar-28-2019
-
-echo.
-echo %fp%
-
-if not exist %2 (
-  echo. 
-  echo * Error: The file "%2" does NOT exist in the current folder.
-  exit/b 1
-) else (
-  echo. 
-  echo * Found it.
-)
-
-exit/b 0
-
-
-
-::_
-
 :gfe
 
 set fp=* Open gfe files.
@@ -4427,11 +4403,11 @@ exit/b
 
 :loca
 
-:rc
-
 :rcl
 
 :rulo
+
+:rc
 
 set fp=* How to run CART locally, the overarching process.
 
@@ -4446,8 +4422,10 @@ pql start
 rem Check what branch you are on.
 s m
 
-rem You may want to do a get-latest.
+rem You may or may not want to do a get-latest.
 pl
+
+e ly
 
 rem Switch to the api folder.
 rem If liquibase fails, you may need to wipe your local databaase.
@@ -4456,10 +4434,7 @@ cd api
 
 lq
 
-e ly
-
 rem Run the API by using m lnk_api. You may need to edit npcrf.
-
 gr run_api
 
 x bash
@@ -4468,10 +4443,10 @@ x bash
 
 sf 4200 krm
 
-rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
 call n crf_icp
 
 rem Run the UI by using lnk_ui or by the 2 lines below.
+rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
 call nm inst
 call ang run_ui
 
@@ -4721,7 +4696,9 @@ call m big
 
 call td crf_icp
 
-call nm install
+rem Since this step in time-cunsuming and often unnecessary, I have commented it. However ^
+you just need to remember to uncomment it, if you need to run it.
+rem call nm install
 
 call ang run_ui
 
@@ -4895,6 +4872,86 @@ echo.
 echo %fp%
 
 set cbf_filename_without_path=%~nx2
+
+exit/b
+
+
+
+:_+ Testing the existence of a particular file.
+
+
+
+::_ (skw if exists, existence check, check_existence, check existence)
+
+:specific_file_presence
+
+set fp=* Check the current folder for the presence of "%2".
+
+rem is_present
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+if not exist %2 (
+  echo. 
+  echo * Error: The file "%2" does NOT exist in the current folder. Nov-11-2019 12:48 PM
+  exit/b 1
+) else (
+  echo. 
+  echo * Found it. Nov-11-2019 12:49 PM
+)
+
+exit/b 0
+
+
+
+::_
+
+:th_specific_file_presence
+
+set fp=* Test harness for specific_file_presence.
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence main.tf
+
+if %errorlevel% == 1 (
+  exit/b 1
+)
+
+echo.
+echo * Run commands.
+
+exit/b
+
+
+
+::_
+
+:specific_folder_presence
+
+set fp=* Check for presence of a paricular foldder in the current folder.
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+echo %cd% | find /i "%2">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the "%2" folder for this command to work. Nov-11-2019 6:29 PM
+  exit/b 1
+)
+
+echo. 
+echo * "%2" folder exists.
 
 exit/b
 

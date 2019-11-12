@@ -9975,16 +9975,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test the expand path function.
@@ -9999,9 +9989,18 @@ call fn %1
 call m convert_to_path %cbf_filename%
 
 echo cbf_path: %cbf_path%
-rem qq-1
 
 exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

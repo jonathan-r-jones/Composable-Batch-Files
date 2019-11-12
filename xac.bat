@@ -56,7 +56,7 @@ if "%~1" == "" (
 
 if "%~2" == "" (
   echo.
-  echo * Data alias is required.
+  echo * Filename is required.
   exit/b
 )
 
@@ -79,8 +79,7 @@ set cbf_filename=%~2
 
 if not exist "%cbf_filename%" (
   echo.
-  echo * Error: Cannot find the file "%cbf_filename%".
-  exit/b
+  echo * Creating file "%cbf_filename%". Nov-11-2019 1:11 PM
 )
 
 

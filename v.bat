@@ -1,4 +1,4 @@
-:_ (!veb)
+:_ (!v, !veb)
 
 @echo off
 
@@ -316,169 +316,6 @@ if not exist *.tf (
 )
 
 exit/b 0
-
-
-
-:_+ If Exist
-
-
-
-::_
-
-:hie
-
-set fp=* To get help on the "if exist" command, use this code block.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-echo.
-if exist/?
-
-exit/b
-
-
-
-::_
-
-:fiex
-
-set fp=* File existence. (skw filename existence)
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-echo.
-
-rem The "/i" doesn't seem to be necessary for filenames.
-
-if exist "mx.bat" (
-  echo File exists.
-) else (
-  echo File does not exist.
-)
-
-exit/b
-
-
-
-::_
-
-:finex
-
-set fp=* Test if a File does not exist.
-
-rem lu: Dec-27-2018
-
-echo.
-echo %fp%
-
-if not exist "amx.bat" (
-  echo.
-  echo * File does not exist.
-)
-
-exit/b
-
-
-
-::_
-
-:folder_exists_2
-
-set fp=* Testing whether a folder exists 2.
-
-rem lu: May-23-2018
-
-echo %fp%
-
-if exist "%1" (
-  echo.
-  echo Folder exists.
-)
-
-if not exist "%1" echo It does NOT exist.
-
-exit/b
-
-
-
-::_
-
-:section_1
-
-echo.
-echo Section_1: Ifs and Sets: Every line in section 1 prints and every line in section 2 
-doesn't. echo 
---------------------------------------------------------------------------------------------
-
-if /i exist "c:\!affinity" echo I used to think that "if exist" works only on filenames, not 
-folders.
-
-set horse=Notice no space after the equals sign and no quotes around this string.
-echo %horse%
-
-set horse= Notice the space at the beginning of this string.
-echo %horse%
-
-if /i "%computer_alias%"=="Laptop" echo Double quotes work and are preferred to single quotes.
-
-if /i '%computer_alias%' == 'laptop' echo This is how you employ case-insensitivity.
-
-if /i not exist '%savannah%\worthwhile.some' echo Here's how you use "NOT EXIST".
-
-if /i exist "%savannah%\worthwhile.now" echo Case doesn't matter.
-
-if /i NOT '%computer_alias%' == 'Laptopxxxx' echo This is how you use The NOT EQAUL TO 
-operator.
-
-if /i '%computer_alias%' == 'Laptop' echo Spaces around the '==' DON'T matter.
-
-:Notice also that set statement employ single "=" sign, whereas comparison employ 2 "=" signs.
-
-if /i '%computer_alias%'=='Laptop' echo Single quotes work, but NOT with ALL constructs so 
-should be avoided.
-
-if /i '%computer_alias%'=='Laptop' echo This is case sensitive.
-
-exit/b
-
-
-
-::_
-
-:section_2
-
-echo.
-echo Section 2: Items below here DON'T PRINT. If you don't believe me, try running 
-echo this to see for yourself. What follows the echo statement is the reason the 
-echo syntax is incorrect.
-echo ------------------------------------------------------------------------------
-
-if /i not exist "c:\!affinity" echo I used to think that "if exist" works only on filenames, 
-not folders.
-
-if /i exist '%savannah%\Worthwhile.now' echo The file "worthwhile.asc" actually exists but you 
-surrounded it with single, instead of double quotes.
-
-::Notice that putting a space BEFORE the equals sign causes the variable to not be set.
-set horse2 = shit
-echo %horse2%
-
-if "%computer_alias%"=="LapTop" echo Improperly cased variable.
-if %computer_alias%=="Laptop" echo No quotes around the environment variable.
-set computer_alias_2="Laptop"
-if '%computer_alias%_2' == 'Laptop' echo Percent signs within the environment variable.
-
-goto _xit
-
-:del "file identifier report.txt"
-
-exit/b
 
 
 
@@ -1202,6 +1039,219 @@ exit/b
 
 
 
+:_+ If Exist (!exis)
+
+
+
+::_
+
+:fiex
+
+set fp=* File existence. (skw filename existence)
+
+rem See also specific_file_presence in m.bat.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+echo.
+
+rem The "/i" doesn't seem to be necessary for filenames.
+
+if exist "mx.bat" (
+  echo File exists.
+) else (
+  echo File does not exist.
+)
+
+exit/b
+
+
+
+::_
+
+:specific_folder_presence
+
+set fp=* Check for presence of a paricular foldder in the current folder.
+
+echo.
+echo %fp%
+
+echo %cd% | find /i "%2">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the "%2" folder for this command to work. Nov-11-2019 6:29 PM
+  exit/b 1
+)
+
+echo. 
+echo * "%2" folder exists.
+
+exit/b
+
+
+
+::_
+
+:th_specific_folder_presence
+
+set fp=* Test harness for specific_folder_presence.
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+call %0 specific_folder_presence .chef
+
+if %errorlevel% == 1 (
+  exit/b 1
+)
+
+echo.
+echo * Run commands. Nov-11-2019 6:21 PM
+
+exit/b
+
+
+
+::_
+
+:hie
+
+set fp=* To get help on the "if exist" command, use this code block.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+echo.
+if exist/?
+
+exit/b
+
+
+
+::_
+
+:finex
+
+set fp=* Test if a File does not exist.
+
+rem lu: Dec-27-2018
+
+echo.
+echo %fp%
+
+if not exist "amx.bat" (
+  echo.
+  echo * File does not exist.
+)
+
+exit/b
+
+
+
+::_
+
+:folder_exists_2
+
+set fp=* Testing whether a folder exists 2.
+
+rem lu: May-23-2018
+
+echo %fp%
+
+if exist "%1" (
+  echo.
+  echo Folder exists.
+)
+
+if not exist "%1" echo It does NOT exist.
+
+exit/b
+
+
+
+::_
+
+:section_1
+
+echo.
+echo Section_1: Ifs and Sets: Every line in section 1 prints and every line in section 2 
+doesn't. echo 
+--------------------------------------------------------------------------------------------
+
+if /i exist "c:\!affinity" echo I used to think that "if exist" works only on filenames, not 
+folders.
+
+set horse=Notice no space after the equals sign and no quotes around this string.
+echo %horse%
+
+set horse= Notice the space at the beginning of this string.
+echo %horse%
+
+if /i "%computer_alias%"=="Laptop" echo Double quotes work and are preferred to single quotes.
+
+if /i '%computer_alias%' == 'laptop' echo This is how you employ case-insensitivity.
+
+if /i not exist '%savannah%\worthwhile.some' echo Here's how you use "NOT EXIST".
+
+if /i exist "%savannah%\worthwhile.now" echo Case doesn't matter.
+
+if /i NOT '%computer_alias%' == 'Laptopxxxx' echo This is how you use The NOT EQAUL TO 
+operator.
+
+if /i '%computer_alias%' == 'Laptop' echo Spaces around the '==' DON'T matter.
+
+:Notice also that set statement employ single "=" sign, whereas comparison employ 2 "=" signs.
+
+if /i '%computer_alias%'=='Laptop' echo Single quotes work, but NOT with ALL constructs so 
+should be avoided.
+
+if /i '%computer_alias%'=='Laptop' echo This is case sensitive.
+
+exit/b
+
+
+
+::_
+
+:section_2
+
+echo.
+echo Section 2: Items below here DON'T PRINT. If you don't believe me, try running 
+echo this to see for yourself. What follows the echo statement is the reason the 
+echo syntax is incorrect.
+echo ------------------------------------------------------------------------------
+
+if /i not exist "c:\!affinity" echo I used to think that "if exist" works only on filenames, 
+not folders.
+
+if /i exist '%savannah%\Worthwhile.now' echo The file "worthwhile.asc" actually exists but you 
+surrounded it with single, instead of double quotes.
+
+::Notice that putting a space BEFORE the equals sign causes the variable to not be set.
+set horse2 = shit
+echo %horse2%
+
+if "%computer_alias%"=="LapTop" echo Improperly cased variable.
+if %computer_alias%=="Laptop" echo No quotes around the environment variable.
+set computer_alias_2="Laptop"
+if '%computer_alias%_2' == 'Laptop' echo Percent signs within the environment variable.
+
+goto _xit
+
+:del "file identifier report.txt"
+
+exit/b
+
+
+
 :_
 
 :main_function
@@ -1212,4 +1262,4 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
-:_
+:_ (!efv)

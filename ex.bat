@@ -17,6 +17,8 @@ echo %filep%
 
 set fp=* Route callers.
 
+if "%~1" == "" goto use_blank_excel_document
+
 if "%~1" == "/?" goto help
 
 goto validate_input
@@ -27,14 +29,14 @@ goto validate_input
 
 :help
 
-rem lu: 
+rem lu: Nov-11-2019
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): filename alias to run. This file will try to open ^
-  the cbf_excel_filename first, and if that is not found, it will try to open the ^
-  ^cbf_filename. If left blank, Excel is opened.
+set parameter_1=Parameter 1 (Optional): Filename alias to run. This file will try to open ^
+the cbf_excel_filename first, and if that is not found, it will try to open the ^
+cbf_filename. If left blank, Excel is opened.
 
 echo.
 echo %parameter_1%
@@ -49,32 +51,30 @@ exit/b
 
 set cbf_excel_filename=
 
-call n %1
+call fn %1
 
 if %errorlevel% gtr 0 (
   echo.
-  echo * Error: Label not found.
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if not defined cbf_excel_filename (
-  echo.
-  echo * The cbf_excel_filename is not defined for "%1". Use cbf_filename.
-  set cbf_excel_filename=%cbf_filename%
-)
-
-if not defined cbf_filename (
-  echo.
-  echo * The cbf_filename is not defined for "%1".
   exit/b
 )
 
 if not exist "%cbf_excel_filename%" (
   echo.
-  echo * Error: The CBF_Excel_Filename "%cbf_excel_filename%" could not be found.
+  echo * Error: Could not find "%cbf_excel_filename%". Nov-11-2019 1:35 PM
   exit/b
 )
+
+set cbf_filename=%cbf_excel_filename%
+
+goto main_function
+
+
+
+:_
+
+:use_blank_excel_document
+
+call fn bed
 
 
 
@@ -82,7 +82,10 @@ if not exist "%cbf_excel_filename%" (
 
 :main_function
 
+call m associate_cbf_parameter_to_cbf_filename
+
 call an ex
+
 call r
 
 exit/b

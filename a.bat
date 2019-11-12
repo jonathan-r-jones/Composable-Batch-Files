@@ -4432,17 +4432,7 @@ exit/b
 
 ::_
 
-:dein
-
-:di
-
-:din
-
-:d_i
-
-:d_in
-
-:d_inst
+:desc
 
 set fp=* Describe a particular instance.
 
@@ -4471,7 +4461,7 @@ exit/b
 
 if "%~2" == "" (
   echo.
-  echo * Error: You must specify and instance alias. Oct-31-2019 11:50 AM
+  echo * Error: You must specify both and operation and an instance alias. Oct-31-2019 11:50 AM
   exit/b 1
 )
 
@@ -4479,7 +4469,7 @@ set cbf_instance_id=
 
 call n %2
 
-if %errorlevel% == 1 (
+if %errorlevel% gtr 0 (
   echo.
   echo * Error: Label not found. Oct-31-2019 11:33 AM
   exit/b 1

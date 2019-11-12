@@ -83,7 +83,6 @@ if exist "%cbf_path%" (
    echo "* Error: CBF Path already exists."
    call td %1
    rem exit/b
-rem qq-1
 )
 
 

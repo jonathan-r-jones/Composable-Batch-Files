@@ -359,17 +359,14 @@ exit/b
 
 
 
-::_
+:_
 
-:a
+:init_old
 
-:appl
+set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from ^
+Hashicorp. This worked from the "dv" folder.
 
-:apply
-
-set fp=* Apply. This workd from the "dv" folder.
-
-rem lu: May-24-2019
+rem lu: Jun-20-2019
 
 echo.
 echo %fp%
@@ -383,31 +380,6 @@ call %0 check_tf_existence
 if %errorlevel% == 1 (
   exit/b
 )
-
-echo.
-rem terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
-rem terraform apply -var "private_key_path=%pem_path%" -no-color -auto-approve
-terraform apply -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
-
-exit/b
-
-
-
-:_
-
-:init
-
-set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from ^
-Hashicorp. This worked from the "dv" folder.
-
-rem lu: Jun-20-2019
-
-echo.
-echo %fp%
-
-call td ci
-
-cd dv
 
 rem app-ec2
 
@@ -422,7 +394,41 @@ exit/b
 
 
 
-:_
+:_+ Main Parts II
+
+
+
+::_
+
+:init
+
+set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from ^
+Hashicorp. This worked from the "dv" folder. You may need to disconnect from the VPN ^
+prior to running this command.
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence main.tf
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+rem It seems like if you want a new instance, you should run from the "dv" folder and enter 
+rem "no" when asked about copying state. If you want to modify an existing instance, run
+rem the init command from the "app-ec2" folder.
+
+echo.
+terraform init -no-color
+
+exit/b
+
+
+
+::_
 
 :p
 
@@ -435,11 +441,7 @@ rem lu: May-24-2019
 echo.
 echo %fp%
 
-call td ci
-
-cd dv
-
-call %0 check_tf_existence
+call m specific_file_presence main.tf
 
 if %errorlevel% == 1 (
   exit/b
@@ -450,6 +452,76 @@ call n pems
 echo.
 rem terraform plan -var-file="variables.tf" -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
 terraform plan -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+
+exit/b
+
+
+
+::_
+
+:a
+
+:appl
+
+:apply
+
+set fp=* Apply. This worked from the "dv" folder.
+
+rem lu: May-24-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence main.tf
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call n pems
+
+echo.
+rem terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
+rem terraform apply -var "private_key_path=%pem_path%" -no-color -auto-approve
+terraform apply -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+
+exit/b
+
+
+
+::_
+
+:plan_amq
+
+set fp=* Init AMQ.
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+call td mqfq
+
+call :plan
+
+exit/b
+
+
+
+::_
+
+:appl_amq
+
+set fp=* Apply AMQ.
+
+rem lu: Nov-11-2019
+
+echo.
+echo %fp%
+
+call td mqfq
+
+call :appl
 
 exit/b
 

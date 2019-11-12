@@ -52,8 +52,6 @@ exit/b
 
 :_
 
-:v
-
 :vers
 
 set fp=* Version.
