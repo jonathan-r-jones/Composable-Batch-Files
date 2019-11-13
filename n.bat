@@ -11184,4 +11184,21 @@ exit/b
 
 
 
+:_
+
+:asus
+
+set fp=* Asus.
+
+rem lu: Nov-12-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%reach out%\asus.asc
+
+exit/b
+
+
+
 :_ (!efn, !rfsp) (mov-6)
