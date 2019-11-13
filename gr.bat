@@ -555,7 +555,33 @@ if %errorlevel% == 1 (
 )
 
 echo.
-gradle -Pno-liquibase clean bootrun
+gradlew -Pno-liquibase clean bootrun
+
+exit/b
+
+
+
+::_
+
+:run_fqt
+
+set fp=* Run the API using Matt's gradle command with the FQT option too.
+
+rem lu: Nov-8-2019
+
+echo.
+echo %fp%
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
+echo.
+gradle -Pno-liquibase,fqt clean bootrun
 
 exit/b
 
@@ -586,6 +612,24 @@ if %errorlevel% == 1 (
 
 echo.
 gradle -Pdev bootJar
+
+exit/b
+
+
+
+:_
+
+:debu
+
+set fp=* Gradlew Debug. You should only use gradlew, not gradle.
+
+rem lu: Nov-12-2019
+
+echo.
+echo %fp%
+
+echo.
+gradlew --debug
 
 exit/b
 

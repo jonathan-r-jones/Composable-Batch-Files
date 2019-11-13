@@ -68,6 +68,7 @@ echo                     change folders before running the batch file. For examp
 echo                     running "p cbf" switches to the CBF folder, the alias for 
 echo                     which is assigned in the nicknames dictionary (n.bat), 
 echo                     before running the batch file p.bat.
+echo                 th  Test Harness
 
 rem (!rfsp) (mov-2)
 

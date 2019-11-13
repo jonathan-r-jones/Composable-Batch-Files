@@ -3040,60 +3040,6 @@ exit/b
 
 ::_
 
-:lb
-
-set fp=* List all branches, that is local and remote. (skw list branches)
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch -a
-
-exit/b
-
-
-
-::_
-
-:lblo
-
-set fp=* List local branches only.
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch
-
-exit/b
-
-
-
-::_
-
-:lbro
-
-set fp=* List remote branches only.
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch -r
-
-exit/b
-
-
-
-::_
-
 :creb
 
 set fp=* Create test branch in for-git-testing.
@@ -3264,9 +3210,71 @@ exit/b
 
 
 
+:_+ List Branches
+
+
+
 ::_
 
-:debrr
+:lb
+
+set fp=* List all branches, that is local and remote. (skw list branches)
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -a
+
+exit/b
+
+
+
+::_
+
+:lblo
+
+set fp=* List local branches only.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch
+
+exit/b
+
+
+
+::_
+
+:lbro
+
+set fp=* List remote branches only.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -r
+
+exit/b
+
+
+
+:_+ Delete branch.
+
+
+
+::_
+
+:debrro
 
 set fp=* Delete branch, remote only. (!delb) (skw delete_branch)
 
@@ -3293,7 +3301,7 @@ exit/b
 
 ::_
 
-:debrl
+:debrlo
 
 set fp=* Delete branch, local only.
 
@@ -3308,6 +3316,23 @@ if "%~2" == "" (
 
 echo.
 git branch -D %2
+
+exit/b
+
+
+
+::_
+
+:debr
+
+set fp=* Delete branch, local and remote.
+
+echo.
+echo %fp%
+
+call %0 debrlo %2
+
+call %0 debrro %2
 
 exit/b
 

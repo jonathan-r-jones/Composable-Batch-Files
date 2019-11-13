@@ -109,7 +109,7 @@ exit/b
 echo %cbf_path% | clip
 
 echo.
-echo * Cbf_path "%cbf_path%" has been load onto the clipboard.
+echo * Cbf_path "%cbf_path%" has been loaded onto the clipboard.
 
 exit/b
 

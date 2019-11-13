@@ -69,25 +69,13 @@ set cbf_filename=
 
 call an %1
 
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Alias not found. (skw Oct-17-2019 5:59 PM)
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if not exist "%cbf_application%" (
-  echo.
-  echo * Error: Cannot find the alias "%cbf_application%".
+if %errorlevel% gtr 0 (
   exit/b
 )
 
 call fn %2
 
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Alias not found. (skw Oct-17-2019 5:58 PM)
-  call m clear_errorlevel_silently 
+if %errorlevel% gtr 0 (
   exit/b
 )
 
