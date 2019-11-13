@@ -333,6 +333,8 @@ set fp=* Line continuation with caret character.
 
 rem How do you continue a batch file line onto a second line?
 
+rem The caret only works with the "echo" statement and not the "rem" statement.
+
 rem lu: Nov-2-2018
 
 echo %fp%
@@ -1259,6 +1261,26 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:user_chooser
+
+set fp=* Ask the user a question and proceed accordingly.
+
+echo.
+echo %fp%
+
+rem option, choose, choice
+
+echo.
+set /P user_option=Would you like to run npm install? (y/n): 
+
+if not "%user_option%"=="y" call nm inst
+
+exit/b
 
 
 

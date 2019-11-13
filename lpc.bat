@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Copy the filename to clipboard.
+set filep=* Copy a file's content to the clipboard.
 
 echo.
 echo %filep%
@@ -18,9 +18,10 @@ echo %filep%
 set fp=* Route callers.
 
 if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
-goto validate_user_input
+goto validate_input
 
 
 
@@ -33,7 +34,7 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Alias of the filename of you wish to copy to the clipboard.
+set parameter_1=Parameter 1: Alias of the file you wish to copy.
 
 echo.
 echo %parameter_1%
@@ -44,7 +45,7 @@ exit/b
 
 :_
 
-:validate_user_input
+:validate_input
 
 call fn %1
 
@@ -58,10 +59,7 @@ if %errorlevel% gtr 0 (
 
 :main_function
 
-echo %cbf_filename% | clip
-
-echo.
-echo * Filename "%cbf_filename%" has been copied to clipboard.
+clip < "%cbf_filename%"
 
 exit/b
 

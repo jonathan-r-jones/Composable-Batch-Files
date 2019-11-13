@@ -5894,6 +5894,12 @@ exit/b
 
 :nsr
 
+:1250
+
+:csts
+
+:l5
+
 :pass-through
 
 set fp=* Pass through.
@@ -6786,7 +6792,7 @@ exit/b
 
 :_
 
-:cs
+:coso
 
 set fp=* Copied software.
 
@@ -11147,6 +11153,26 @@ set cbf_filename=C:\Users\JJones2\j\cade\AMQ Lab\AMQ Server Properties.xlsx
 set cbf_excel_filename=C:\Users\JJones2\j\cade\AMQ Lab\AMQ Server Properties.xlsx
 
 set cbf_path=%cbf_path%\AMQ Lab
+
+rem Note: This URL should be used with IE.
+set cbf_url=http://10.168.73.230:8161
+
+exit/b
+
+
+
+:_
+
+:ang
+
+set fp=* Angular docs.
+
+rem lu: Nov-12-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://valor-software.com/ngx-bootstrap/#/datepicker
 
 exit/b
 

@@ -4437,9 +4437,12 @@ lq
 rem Run the API by using m lnk_api. You may need to edit npcrf.
 gr run_api
 
+rem To test fqt, use: gr run_fqt
+
 x bash
 
 ./get_cart_jwt.sh
+
 
 sf 4200 krm
 
@@ -4696,9 +4699,12 @@ call m big
 
 call td crf_icp
 
-rem Since this step in time-cunsuming and often unnecessary, I have commented it. However ^
-you just need to remember to uncomment it, if you need to run it.
-rem call nm install
+rem Since this step in time-cunsuming and often unnecessary, I have commented it. However
+rem you just need to remember to uncomment it, if you need to run it.
+
+echo.
+set /P user_option=Would you like to run npm install? (y/n): 
+if "%user_option%"=="y" call nm inst
 
 call ang run_ui
 

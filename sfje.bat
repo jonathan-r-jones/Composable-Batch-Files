@@ -17,7 +17,7 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%~1" == "" sf je
+if "%~1" == "" sfje dv
 
 if "%~1" == "/?" goto help
 

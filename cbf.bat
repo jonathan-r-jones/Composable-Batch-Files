@@ -86,20 +86,20 @@ echo  depn  Delete folder corresponding to CBF path alias parameter
 echo  desf  Delete using static formulas
 echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit (Or exit command window)
+echo    ed  Edit a file abstraction layer
 echo   edr  Edit a relative-path constucted filename
-echo   ejf  Edit Jenkinsfile of an alias
+echo   edx  Edit a file (Emulated Surf)
+echo    eg  Edit a file by gluing a relative path onto a base path
+echo   eje  Edit Jenkinsfile of an alias
 echo    el  Edit log file of an alias
 echo    es  Edit settings file of an alias
-echo    eg  Edit a file by gluing a relative path onto a base path
-echo    ed  Edit a file abstraction layer
-echo   edx  Edit a file (Emulated Surf)
 echo    ex  Run excel with or without a filename alias parameter.
 echo     f  Use default application to open a file based on its alias and filename extension.
 echo    fe  Check for the existence of a file based on the passed in filename alias
 echo    fn  Filenames dictionary layer of abstraction
 echo    fs  Filenames search
-echo   fst  Filenames search with a td parameter
 echo   fsp  Perennial filenames search
+echo   fst  Filenames search with a td parameter
 echo     g  Git
 echo    gg  Git Gui helper Has TD parameter
 echo    gl  Glossary of terms used in CBF
@@ -114,9 +114,9 @@ echo   lpf  Load CBF_Filename of passed in alias onto the clipboard
 echo lpfwp  Load CBF_Filename without path of passed in alias onto the clipboard
 echo  lpfc  Load CBF_Filename contents to the clipboard
 echo     m  Perform miscellaneous tasks
+echo   mav  Maven
 echo   mcd  Make and navigate (cd) to a folder
 echo    me  Multi-Edit
-echo   mav  Maven
 echo    mv  Move files using atomic functions
 echo  mvcp  Move file in the current directory to nickname-specified path
 echo    mx  Use Multi-Edit to edit a batch file in the CBF folder
@@ -171,7 +171,6 @@ echo    un  URL nicknames dictionary layer of abstraction
 echo     v  Vetted functions (Useful for copying-and-pasting)
 echo    wp  Wordpad
 echo     x  Simulate a double-click. A remote double-click equivalent way to run an alias.
-echo     x  Remote double-click equivalent way to run an alias
 echo    xa  Application-centric way of running an application with an optional filename parameter
 echo   xac  Execute an application alias with a filename in the current folder
 echo   xaf  Execute an application alias with a filename alias
