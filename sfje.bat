@@ -8,16 +8,16 @@
 
 set filep=* Surf to the jenkins url of an alias.
 
-echo.
-echo %filep%
-
 
 
 :_
 
 set fp=* Route callers.
 
-if "%~1" == "" sfje dv
+if "%~1" == "" (
+  call sf je
+  exit/b
+)
 
 if "%~1" == "/?" goto help
 
@@ -65,6 +65,9 @@ if "%cbf_jenkins_url%" == "" (
 :_
 
 :main_function
+
+echo.
+echo * Main function of %0. Nov-13-2019 10:47 AM
 
 set cbf_url=%cbf_jenkins_url%
 

@@ -85,7 +85,7 @@ goto set_browser
 
 :use_current_url
 
-set fp=* Use current CBF_URL.
+set fp=* Use current CBF_URL. Nov-13-2019 10:46 AM
 
 echo.
 echo %fp%

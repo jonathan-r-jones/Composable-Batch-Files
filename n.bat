@@ -5902,6 +5902,10 @@ exit/b
 
 :l5
 
+:bh
+
+:skfi
+
 :pass-through
 
 set fp=* Pass through.
