@@ -5506,8 +5506,6 @@ exit/b
 
 :localyml
 
-:debr
-
 :cna
 
 :cnc
@@ -5905,6 +5903,8 @@ exit/b
 :bh
 
 :skfi
+
+:kary
 
 :pass-through
 
@@ -11196,6 +11196,27 @@ echo.
 echo %fp%
 
 set cbf_filename=%reach out%\asus.asc
+
+exit/b
+
+
+
+:_
+
+:repr
+
+set fp=* Release process.
+
+rem lu: Nov-14-2019
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=C:\Users\JJones2\j\Share-Zone\Release Process\release process.png
+
+set cbf_path=C:\Users\JJones2\j\Share-Zone\Release Process
 
 exit/b
 
