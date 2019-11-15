@@ -4247,7 +4247,10 @@ set cbf_filename_list=%cbf_filename_list% "%share-zone%\ni.bat"
 set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\n.bat"
 set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\v.bat"
 
+attrib +r "%share-zone%\copy of cc.asc"
+
 start mew32 %cbf_filename_list%
+
 
 exit/b
 

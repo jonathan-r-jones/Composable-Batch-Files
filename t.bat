@@ -10005,3 +10005,23 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Set read-only attribute on a file.
+
+rem lu: Nov-15-2019
+
+echo.
+echo %fp%
+
+echo.
+call td s
+attrib +r "copy of cc.asc"
+rem qq-1
+
+exit/b
+
+
+
+:_

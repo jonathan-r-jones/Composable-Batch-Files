@@ -1691,27 +1691,6 @@ exit/b
 
 :_
 
-:pajs
-
-:pack
-
-:pj
-
-set fp=* Package.json file.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=package.json
-
-exit/b
-
-
-
-:_
-
 :npc
 
 set fp=* NPM Playbook Course.
@@ -5676,8 +5655,6 @@ exit/b
 
 :ofm
 
-:rele
-
 :fqsl
 
 :aocs
@@ -5905,6 +5882,14 @@ exit/b
 :skfi
 
 :kary
+
+:amco
+
+:amco2
+
+:tesc
+
+:pajs
 
 :pass-through
 
@@ -11201,7 +11186,11 @@ exit/b
 
 
 
-:_
+:_+ Release Process Family (!fyrepr)
+
+
+
+::_
 
 :repr
 
@@ -11214,9 +11203,11 @@ echo %fp%
 
 set cbf_application=
 
-set cbf_filename=C:\Users\JJones2\j\Share-Zone\Release Process\release process.png
+set cbf_filename=C:\Users\JJones2\j\Share-Zone\Release Process\release process.jpg
 
 set cbf_path=C:\Users\JJones2\j\Share-Zone\Release Process
+
+set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
 
 exit/b
 

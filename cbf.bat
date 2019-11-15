@@ -145,6 +145,7 @@ echo     s  Check git status remotely, has TD parameter
 echo  scpp  Secure Copy Protocol
 echo    se  Internet search helper
 echo    sf  Surf to websites
+echo sfcon  Surf to Confluence websites
 echo sfgit  Surf to GitHub websites
 echo  sfje  Surf to Jenkins websites
 echo    sh  SSH
