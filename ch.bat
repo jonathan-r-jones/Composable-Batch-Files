@@ -553,16 +553,22 @@ exit/b
 
 ::_
 
+:ln
+
 :nl
 
 set fp=* Kitchen node list. Heartbeat check. Check to see if Chef server is breathing.
+
+rem list nodes: skw
 
 rem lu: Nov-11-2019
 
 echo.
 echo %fp%
 
-call m specific_folder_presence .chef
+call td chef
+
+rem call m specific_folder_presence .chef
 
 if %errorlevel% gtr 0 (
   exit/b

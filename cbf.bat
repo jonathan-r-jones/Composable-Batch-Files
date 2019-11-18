@@ -87,7 +87,7 @@ echo  desf  Delete using static formulas
 echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit (Or exit command window)
 echo    ed  Edit a file abstraction layer
-echo   edr  Edit a relative-path constucted filename
+echo   edr  Edit a relative path constucted filename
 echo   edx  Edit a file (Emulated Surf)
 echo    eg  Edit a file by gluing a relative path onto a base path
 echo   eje  Edit Jenkinsfile of an alias
@@ -160,7 +160,6 @@ echo     t  Testing, experimenting and developing new batch file functions
 echo    td  Transform directory
 echo   tdc  Transform directory to favorite child folder of alias
 echo  tdfn  Transform directory where only the Cbf_filename is known
-echo   tdg  Transform directory by gluing a relative path onto a base path
 echo   tdp  Transform directory to parent folder
 echo   tdr  Transform directory by appending a relative path onto a base path
 echo    te  Batch file template used for creating new batch files

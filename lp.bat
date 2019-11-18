@@ -94,7 +94,7 @@ echo %fp%
 echo %cd% | clip
 
 echo.
-echo * The current folder "%cdh%" was loaded onto clipboard.
+echo * The current folder name "%cd%" was loaded onto clipboard.
 
 exit/b
 

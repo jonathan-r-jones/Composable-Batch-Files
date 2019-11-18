@@ -50,6 +50,12 @@ echo Example 1: edr ma jwt
 echo.
 echo Example 2: edr 1232 jwt
 
+echo.
+echo Example 3: edr caco cvn
+
+echo.
+echo Example 4: edr amco cvn
+
 exit/b
 
 

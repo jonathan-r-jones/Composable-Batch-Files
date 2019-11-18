@@ -50,6 +50,12 @@ echo Example 1: tdr ma jwt
 echo.
 echo Example 2: tdr 1232 jwt
 
+echo.
+echo Example 3: tdr caco cius
+
+echo.
+echo Example 4: tdr cart cius
+
 exit/b
 
 

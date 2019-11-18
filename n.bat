@@ -5891,6 +5891,24 @@ exit/b
 
 :pajs
 
+:cvn
+
+:iac2
+
+:kart
+
+:mapa
+
+:fqin
+
+:cius
+
+:old_cart
+
+:1295
+
+:sr52
+
 :pass-through
 
 set fp=* Pass through.
