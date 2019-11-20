@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* List of batch file descriptions.
+set filep=* List of batch file descriptions. (In Beta)
 
 
 

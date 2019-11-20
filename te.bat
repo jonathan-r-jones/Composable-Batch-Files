@@ -42,6 +42,12 @@ echo %parameter_1%
 echo.
 echo %parameter_2%
 
+echo.
+echo Examples
+
+echo.
+echo Example 1: 
+
 exit/b
 
 

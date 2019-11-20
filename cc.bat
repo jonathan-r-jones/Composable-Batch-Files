@@ -18,7 +18,7 @@ if "%~1" == "" goto use_default_behavior
 
 if "%~1" == "/?" goto help
 
-if "%~3" == "-l" goto use_filenames_not_aliases
+if "%~3" == "-f" goto use_filenames_not_aliases
 
 goto main_function
 
@@ -31,13 +31,13 @@ goto main_function
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameters 1 and 2: Either 2 filenames the current folder or a 2 file ^
+set parameter_1=Parameters 1 and 2: Either 2 filenames in the current folder or a 2 file ^
 aliases. If left blank, aliases j1 and j2 are used by default.
 
 echo.
 echo %parameter_1%
 
-set parameter_3=Parameter 3: If -l is specified filenames only are used. If left ^
+set parameter_3=Parameter 3: If -f is specified filenames only are used. If left ^
 blank, aliases only are used.
 
 echo.

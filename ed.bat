@@ -38,8 +38,6 @@ set parameter_2=Parameter 2 or 3 (optional): Use -c to force file creation. Use 
 specify a file with no extension. Use -d to blank out a file before opening it (Use with ^
 caution).
 
-rem Before merging the other editor batch files here, do file comparison for each one.
-
 echo.
 echo %parameter_1%
 
@@ -174,8 +172,6 @@ rem lu: Mar-21-2019
 
 echo.
 echo %fp%
-
-echo p1: %1
 
 call n %1
 
