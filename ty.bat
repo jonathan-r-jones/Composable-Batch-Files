@@ -21,7 +21,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto preprocessor
 
 
 
@@ -30,9 +30,9 @@ goto main_function
 :help
 
 echo.
-echo Usage: %0 [space separated parameter(s)]
+echo Usage: %0 [Parameter 1]
 
-set parameter_1=Parameter 1: Alias of filename to view.
+set parameter_1=Parameter 1: Filename calculus to view in a read-only fashion.
 
 echo.
 echo %parameter_1%
@@ -43,22 +43,32 @@ exit/b
 
 :_
 
-:main_function
+:preprocessor
 
-echo %1 | C:\Windows\System32\find.exe /i ".">nul
+call set_filename %1
 
-if %errorlevel% == 0 (
-  echo.
-  type %1
+if %errorlevel% gtr 0 (
   exit/b
 )
 
-rem I am doing this instead of an else because the else seems to slightly broken. May-19-2019
 
-call fn %1
-type "%cbf_filename%"
 
-exit/b
+:_
+
+:main_function
+
+echo.>c:\a\type_results.txt
+echo Contents of: "%cbf_filename%">>c:\a\type_results.txt
+echo.>>c:\a\type_results.txt
+type "%cbf_filename%">>c:\a\type_results.txt
+
+set cbf_parameter=c:\a\type_results.txt
+
+call an np
+
+call r
+
+echo.
 
 
 

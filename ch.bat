@@ -1,4 +1,4 @@
-:_ (!chef)
+:_ (!ch)
 
 @echo off
 
@@ -399,7 +399,7 @@ exit/b
 
 :_
 
-:capp
+:chap
 
 set fp=* Chef apply.
 
@@ -416,36 +416,6 @@ if "%~2" == "" (
 
 echo.
 chef-apply %2
-
-exit/b
-
-
-
-:_
-
-:conv
-
-:converge
-
-set fp=* Kitchen converge.
-
-rem lu: May-13-2019
-
-rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
-rem Converge creates an instance, which surprised me. May-3-2019
-
-echo.
-echo %fp%
-
-call m specific_file_presence .kitchen-aws.yml
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently
-  exit/b
-)
-
-echo.
-kitchen converge centos-7 --no-color
 
 exit/b
 
@@ -484,64 +454,6 @@ echo %fp%
 
 echo.
 knife role show cart_api_and_ui_only
-
-exit/b
-
-
-
-:_
-
-:upco_mine
-
-:upl
-
-set fp=* Upload cookbooks.
-
-rem lu: May-6-2019
-
-echo.
-echo %fp%
-
-rem call td cc
-
-echo.
-rem knife upload cookbooks
-knife cookbook upload cart_cookbook -o .\ --force
-
-exit/b
-
-
-
-:_
-
-:upco
-
-set fp=* Upload cookbook command from Sean.
-
-rem lu: Nov-6-2019
-
-rem The following error message is why the cookbook is in a weird path.
-rem ERROR: Could not find cookbook cart in your cookbook path, skipping it
-
-rem This worked!
-
-echo.
-echo %fp%
-
-call n caco
-set cbf_cookbook_path=%cbf_path%
-
-call td chef
-
-echo.
-@echo on
-knife cookbook upload cart -o c:\cookbook_test
-@echo off
-
-rem Here's what it usually says.
-rem C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
-rem Uploading cart           [0.1.0]
-rem Uploaded 1 cookbook.
 
 exit/b
 
@@ -675,4 +587,121 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-6)
+:_+ Upload Cookbook
+
+
+
+::_
+
+:upco_mine
+
+:upl
+
+set fp=* Upload cookbooks.
+
+rem lu: May-6-2019
+
+rem Outcome: This doesn't work I don't think.
+
+echo.
+echo %fp%
+
+rem call td cc
+
+echo.
+rem knife upload cookbooks
+knife cookbook upload cart_cookbook -o .\ --force
+
+exit/b
+
+
+
+::_
+
+:upco
+
+set fp=* Upload cookbook command from Sean.
+
+rem lu: Nov-19-2019
+
+rem Outcome:
+rem This worked!
+rem Here's what it usually says.
+rem C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
+rem Uploading cart           [0.1.0]
+rem Uploaded 1 cookbook.
+
+rem The following error message is why the cookbook is in a weird path.
+rem ERROR: Could not find cookbook cart in your cookbook path, skipping it
+
+echo.
+echo %fp%
+
+call n caco
+set cbf_cookbook_path=%cbf_path%
+
+call td chef
+
+echo.
+@echo on
+knife cookbook upload cart -o c:\cookbook_test
+@echo off
+
+exit/b
+
+
+
+:_+ Converge Family
+
+
+
+::_
+
+:conv
+
+:converge
+
+set fp=* Kitchen converge.
+
+rem lu: May-13-2019
+
+rem Outcome: >>>>>> Failed to complete #converge action: [403 "Forbidden"] on default-centos-7
+rem Converge creates an instance, which surprised me. May-3-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence .kitchen-aws.yml
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently
+  exit/b
+)
+
+echo.
+kitchen converge centos-7 --no-color
+
+exit/b
+
+
+
+::_
+
+:ct1
+
+set fp=* Converge test 1.
+
+rem lu: Nov-19-2019
+
+echo.
+echo %fp%
+
+call td caco
+
+call %0 converge
+
+exit/b
+
+
+
+:_ (!efch, !rfsp) (mov-6)

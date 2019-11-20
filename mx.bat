@@ -40,7 +40,7 @@ echo Parameter 1: Filename in the CBF folder without the "bat" extension.
 
 echo.
 echo For example, typing "mx m" would edit the m.bat file in the Composable
-echo. Batch Files folder.
+echo Batch Files folder.
 
 exit/b
 
@@ -82,8 +82,6 @@ set fp=* Main function.
 call n me
 
 set cbf_filename=%composable_batch_files%\%~1.bat
-
-rem echo Mar-11-2019.1
 
 if not exist "%cbf_filename%" (
   goto edit_a_share_zone_file

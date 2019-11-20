@@ -297,18 +297,6 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_filename%" == "" (
-  echo.
-  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
-  exit/b 1
-)
-
-if not exist "%cbf_filename%" (
-  echo.
-  echo * Error: The file "%cbf_filename%" does not exist.
-  exit/b 1
-)
-
 set cbf_parameter=%cbf_filename%
 
 call r

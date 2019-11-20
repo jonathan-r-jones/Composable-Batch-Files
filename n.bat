@@ -1895,23 +1895,6 @@ exit/b
 
 :_
 
-:d
-
-set fp=* Downloads folder.
-
-rem lu: Jun-7-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\downloads
-
-exit/b
-
-
-
-:_
-
 :vft
 
 set fp=* Various file types.
@@ -3050,6 +3033,25 @@ echo.
 echo %fp%
 
 set cbf_application=c:\windows\system32\notepad.exe
+
+exit/b
+
+
+
+::_
+
+:wp
+
+:wopa
+
+set fp=* WordPad.
+
+rem lu: Aug-9-2018
+
+echo.
+echo %fp%
+
+set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
 
 exit/b
 
@@ -6317,25 +6319,6 @@ exit/b
 
 :_
 
-:wp
-
-:wopa
-
-set fp=* WordPad.
-
-rem lu: Aug-9-2018
-
-echo.
-echo %fp%
-
-set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
-
-exit/b
-
-
-
-:_
-
 :gas
 
 set fp=* Google advanced search
@@ -6872,50 +6855,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\gfe.asc
-
-exit/b
-
-
-
-:_+ Remote Double Click Candidates, a.k.a. lnk type files.
-
-
-
-::_
-
-:l_d
-
-:lnk_d
-
-set fp=* Show desktop.
-
-rem lu: Jun-13-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\desktop
-
-set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
-
-exit/b
-
-
-
-::_
-
-l_w
-
-:lnk_w
-
-set fp=* Show open windows.
-
-rem lu: Jun-13-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
 
 exit/b
 
@@ -7756,224 +7695,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\!savannah\reach out\%computername%.asc
-
-exit/b
-
-
-
-:_+ Windows Related Functions
-
-
-
-::_
-
-:clip
-
-:shot
-
-:snap
-
-:snip
-
-:snto
-
-set fp=* Snipping tool.
-
-rem lu: Feb-4-2019
-
-rem clip, screen shot: skw
-
-echo.
-echo %fp%
-
-set cbf_application=%windir%\system32\SnippingTool.exe
-
-exit/b
-
-
-
-::_
-
-:scsh
-
-set fp=* Screen shots folder. To get a screen shot into this folder, click windows key + print screen.
-
-rem lu: Jun-3-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\Pictures\Screenshots
-
-exit/b
-
-
-
-::_
-
-:cscsh
-
-:scshb
-
-:scshc
-
-set fp=* Screen shots backup folder under Cade.
-
-rem lu: Sep-12-2019
-
-echo.
-echo %fp%
-
-call n cade
-
-set cbf_path=%cbf_path%\Screen Shots
-
-exit/b
-
-
-
-::_
-
-:copa
-
-set fp=* Control panel.
-
-rem lu: Jan-31-2019
-
-echo.
-echo %fp%
-
-set cbf_application=%systemroot%\system32\control.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:sk
-
-:skyp
-
-:skype
-
-set fp=* Skype for business.
-
-rem lu: Jan-18-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:zoomit
-
-set fp=* ZoomIt
-
-rem lu: Dec-14-2018
-
-echo.
-echo %fp%
-
-call %0 pounders
-
-set cbf_application=%cbf_path%\zoomit.exe
-
-if not exist %cbf_application% set cbf_application=%share-zone%\copied software\zoomit.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:demo
-
-set fp=* Demo on Jan-29-2019.
-
-rem lu: Jan-29-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\demo.pptx
-
-exit/b
-
-
-
-::_
-
-:start
-
-set fp=Windows Startup.
-
-rem fcd: May-9-2017
-
-echo.
-echo %fp%
-
-set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
-
-exit/b
-
-
-
-::_
-
-:add_to_path
-
-:add_path
-
-:addpath
-
-:env
-
-:oden
-
-:odenv
-
-set fp=* Open Environment Variable dialogue box.
-
-rem lu: Apr-29-2019
-
-rem System Properties, Advanced System Settings, edit path, edit you path, edit env, set env: skw
-
-echo.
-echo %fp%
-
-set cbf_application=%systemroot%\system32\SystemPropertiesAdvanced.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:svc
-
-set fp=* Start Windows Services viewer.
-
-rem fcd: May-11-2017
-
-echo.
-echo %fp%
-
-set cbf_application=c:\windows\system32\services.msc
 
 exit/b
 
@@ -11226,6 +10947,294 @@ set cbf_filename=C:\Users\JJones2\j\Share-Zone\Release Process\release process.j
 set cbf_path=C:\Users\JJones2\j\Share-Zone\Release Process
 
 set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
+
+exit/b
+
+
+
+:_+ Windows Family (!fywin)
+
+
+
+::_
+
+:clip
+
+:shot
+
+:snap
+
+:snip
+
+:snto
+
+set fp=* Snipping tool.
+
+rem lu: Feb-4-2019
+
+rem clip, screen shot: skw
+
+echo.
+echo %fp%
+
+set cbf_application=%windir%\system32\SnippingTool.exe
+
+exit/b
+
+
+
+::_
+
+:scsh
+
+set fp=* Screen shots folder. To get a screen shot into this folder, click windows key + print screen.
+
+rem lu: Jun-3-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\Pictures\Screenshots
+
+exit/b
+
+
+
+::_
+
+:cscsh
+
+:scshb
+
+:scshc
+
+set fp=* Screen shots backup folder under Cade.
+
+rem lu: Sep-12-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_path=%cbf_path%\Screen Shots
+
+exit/b
+
+
+
+::_
+
+:copa
+
+set fp=* Control panel.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=%systemroot%\system32\control.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:sk
+
+:skyp
+
+:skype
+
+set fp=* Skype for business.
+
+rem lu: Jan-18-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:zoomit
+
+set fp=* ZoomIt
+
+rem lu: Dec-14-2018
+
+echo.
+echo %fp%
+
+call %0 pounders
+
+set cbf_application=%cbf_path%\zoomit.exe
+
+if not exist %cbf_application% set cbf_application=%share-zone%\copied software\zoomit.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:demo
+
+set fp=* Demo on Jan-29-2019.
+
+rem lu: Jan-29-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\demo.pptx
+
+exit/b
+
+
+
+::_
+
+:start
+
+set fp=Windows Startup.
+
+rem fcd: May-9-2017
+
+echo.
+echo %fp%
+
+set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+
+exit/b
+
+
+
+::_
+
+:add_to_path
+
+:add_path
+
+:addpath
+
+:env
+
+:oden
+
+:odenv
+
+set fp=* Open Environment Variable dialogue box.
+
+rem lu: Apr-29-2019
+
+rem System Properties, Advanced System Settings, edit path, edit you path, edit env, set env: skw
+
+echo.
+echo %fp%
+
+set cbf_application=%systemroot%\system32\SystemPropertiesAdvanced.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:svc
+
+set fp=* Start Windows Services viewer.
+
+rem fcd: May-11-2017
+
+echo.
+echo %fp%
+
+set cbf_application=c:\windows\system32\services.msc
+
+exit/b
+
+
+
+::_
+
+:shde
+
+set fp=* Show desktop.
+
+rem lu: Jun-13-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\desktop
+
+set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
+
+exit/b
+
+
+
+::_
+
+:sow
+
+set fp=* Show open windows.
+
+rem lu: Jun-13-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
+
+exit/b
+
+
+
+::_
+
+:d
+
+set fp=* Downloads folder.
+
+rem lu: Jun-7-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\downloads
+
+exit/b
+
+
+
+::_
+
+:rece
+
+set fp=* Recents folder.
+
+rem lu: Nov-19-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%appdata%\Microsoft\Windows\Recent
 
 exit/b
 
