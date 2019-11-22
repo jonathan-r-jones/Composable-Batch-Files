@@ -70,26 +70,6 @@ exit/b
 
 :_
 
-:build_prod
-
-:ngp
-
-set fp=* Complie and start Angular for production. Used this for version 1.3.
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-echo.
-ng build --configuration=prod
-
-exit/b
-
-
-
-:_
-
 :ngp_old
 
 set fp=* Complie and start Angular for production - old. Not sure this works..
@@ -191,6 +171,55 @@ call td port
 
 echo.
 ng serve
+
+exit/b
+
+
+
+:_+ Build for Production family
+
+
+
+::_
+
+:bfp
+
+:build_for_production
+
+set fp=* Build for production, zip file with td alias.
+
+rem lu: Nov-21-2019
+
+echo.
+echo %fp%
+
+call td rf_ma
+
+cd icecart-portal-client
+
+call %0 build_ui
+
+exit/b
+
+
+
+::_
+
+:build_ui
+
+:build_prod
+
+:ngp
+
+set fp=* Complie and start Angular for production. Used this for version 1.3.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+ng build --configuration=prod
 
 exit/b
 

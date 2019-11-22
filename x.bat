@@ -98,6 +98,14 @@ exit/b
 echo.
 echo %filep%
 
+echo %1 | c:\windows\system32\find.exe /i ".">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * Error: Aliases do not have periods.
+  exit/b
+)
+
 set cbf_application=
 set cbf_filename=
 set cbf_url=

@@ -320,46 +320,6 @@ exit/b
 
 :_
 
-:bfp_wtd
-
-:build_for_production_with_td
-
-set fp=* Build for production, jar file with td alias.
-
-rem lu: Oct-15-2019
-
-echo.
-echo %fp%
-
-call td rf_ma
-
-call %0 bfp
-
-exit/b
-
-
-
-:_
-
-:bfp
-
-set fp=* Build for production, jar file.
-
-rem lu: Oct-15-2019
-
-echo.
-echo %fp%
-
-echo.
-call gradlew -Pprod clean bootJar
-echo.
-
-exit/b
-
-
-
-:_
-
 :fqt
 
 set fp=* FQT bootrun.
@@ -630,6 +590,52 @@ echo %fp%
 
 echo.
 gradlew --debug
+
+exit/b
+
+
+
+:_+ BFP Family
+
+
+
+::_
+
+:bfp
+
+:build_for_production
+
+set fp=* Build for production, jar file with td alias.
+
+rem lu: Oct-15-2019
+
+echo.
+echo %fp%
+
+call td rf_ma
+
+cd api
+
+call %0 build_jar
+
+exit/b
+
+
+
+::_
+
+:build_jar
+
+set fp=* Build for production, jar file.
+
+rem lu: Oct-15-2019
+
+echo.
+echo %fp%
+
+echo.
+call gradlew -Pprod clean bootJar
+echo.
 
 exit/b
 

@@ -117,7 +117,7 @@ if "%file_has_no_extension%" == "1" (
 
 rem If a period is detected in the first parameter, then edit that file. Else, use the
 rem nickname dictionary to determine the filename.
-echo %1 | C:\Windows\System32\find.exe /i ".">nul
+echo %1 | c:\windows\system32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
   goto edit_file_by_name
@@ -152,9 +152,6 @@ if %errorlevel% == 0 (
 )
 
 set cbf_parameter=%cbf_filename%
-
-rem echo.
-rem echo cbf_parameter: %cbf_parameter%
 
 call r
 

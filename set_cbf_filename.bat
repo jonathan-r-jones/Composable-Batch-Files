@@ -8,9 +8,6 @@
 
 set filep=* Set cbf_filename based on an evaluation.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -61,9 +58,9 @@ rem nickname dictionary to determine the filename.
 echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
-  goto edit_file_by_name
+  goto use_current_folder_filename
 ) else (
-  goto edit_using_alias
+  goto use_alias
 )
 
 exit/b
@@ -98,7 +95,6 @@ exit/b
 
 :evaluate_input
 
-rem qq-1
 echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
@@ -151,9 +147,9 @@ exit/b 0
 
 :_
 
-:edit_using_alias
+:use_alias
 
-set fp=* Edit a file using an alias lookup.
+set fp=* Use alias to find filename.
 
 rem echo.
 rem echo %fp%
@@ -165,6 +161,49 @@ if %errorlevel% gtr 0 (
 )
 
 exit/b 0
+
+
+
+:_
+
+:use_current_folder_filename
+
+set fp=* Use current folder filename.
+
+echo.
+echo %fp%
+
+set cbf_filename=%~1
+
+exit/b 0
+
+
+
+:_
+
+:c_switch_only
+
+set fp=* C switch only.
+
+rem lu: Nov-21-2019
+
+echo.
+echo %fp%
+
+rem If a period is detected in the first parameter, then edit that file. Else, use the
+rem nickname dictionary to determine the filename.
+
+echo %1 | c:\windows\system32\find.exe /i ".">nul
+
+if %errorlevel% == 0 (
+  set cbf_filename=%~1
+) else (
+  call n %1
+)
+
+echo.>%cbf_filename%
+
+exit/b
 
 
 

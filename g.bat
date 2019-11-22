@@ -1,4 +1,4 @@
-:_ (!gb)
+:_ (!g)
 
 @echo off
 
@@ -2783,7 +2783,7 @@ echo %fp%
 
 if "%~2" == "" (
   echo.
-  echo * Error: Paramter 2 needs to be the tag you wish to delete.
+  echo * Error: Parameter 2 needs to be the tag you wish to delete.
   exit/b
 )
 

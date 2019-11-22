@@ -6,8 +6,7 @@
 
 :_
 
-set filep=* Use the default application to open a file based on its alias and filename ^
-extension.
+set filep=* Filename sapien. (In Beta.)
 
 echo.
 echo %filep%
@@ -22,7 +21,9 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto main_function
+if "%~2" == "" goto help
+
+goto validate_input
 
 
 
@@ -30,12 +31,22 @@ goto main_function
 
 :help
 
+rem lu: Nov-21-2019
+
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Alias of the file you wish to edit.
+set parameter_1=Parameter 1: Application alias.
 
-set parameter_2=Parameter 2: Filename extension of the file you wish to run.
+set parameter_2=Parameter 2: Filename or filename alias.
+
+set parameter_3=Parameter 3 (Optional): -c or -e.
+
+set parameter_4=Parameter 4 (Optional): -c or -e.
+
+set parameter_4=Parameter 4 (Optional): -v Create file using clipboad contents.
+
+set parameter_4=Parameter 4 (Optional): -d Delete file before opening it.
 
 echo.
 echo %parameter_1%
@@ -43,7 +54,73 @@ echo %parameter_1%
 echo.
 echo %parameter_2%
 
+echo.
+echo %parameter_3%
+
+echo.
+echo %parameter_4%
+
+echo.
+echo Examples
+
+echo.
+echo Example: f no j1
+
+echo.
+echo Example: f sm j55.txt
+
+echo.
+echo Example: f sm j2
+
+echo.
+echo Example: f no j1 -c
+
+echo.
+echo Example: f no j7.txt -c
+
+echo.
+echo Example: f np jenkinsfile -e
+
+rem ::   _/)    _/)    (!rfspbm)
+rem ~~~~~~~~~~~~~~
+
+echo.
+echo Example: f np jenkinsfile -e -c
+
+echo.
+echo Example: f np jenkinsfile -e
+
+echo.
+echo Example: f np jenkinsfile -e
+
+echo.
+echo Example: f ty kb
+
+echo.
+echo Example: f np kb
+
+echo.
+echo Example: f np j1 -v
+
 exit/b
+
+
+
+:_
+
+:validate_input
+
+call set_cbf_filename %2 %3 %4
+
+if %errorlevel% gtr 0 (
+  exit/b
+)
+
+call an %1
+
+if %errorlevel% gtr 0 (
+  exit/b
+)
 
 
 
@@ -51,31 +128,7 @@ exit/b
 
 :main_function
 
-rem lu: May-15-2019
-
-set cbf_application=
-set cbf_expanded_variable=
-set cbf_%2=
-
-call n %1
-
-if "%2" == "" (
-  echo.
-  echo * Error: Percent is required.
-  exit/b
-)
-
-call m compose_variable %2
-
-if "%cbf_expanded_variable%" == "" (
-  echo.
-  echo * Error: CBF_Expanded variable is required.
-  exit/b
-)
-
-set cbf_application=%cbf_expanded_variable%
-
-set cbf_parameter=
+set cbf_parameter=%cbf_filename%
 
 call r
 

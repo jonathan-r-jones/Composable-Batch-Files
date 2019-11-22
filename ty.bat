@@ -45,7 +45,7 @@ exit/b
 
 :preprocessor
 
-call set_filename %1
+call fn %1
 
 if %errorlevel% gtr 0 (
   exit/b
@@ -57,12 +57,14 @@ if %errorlevel% gtr 0 (
 
 :main_function
 
-echo.>c:\a\type_results.txt
-echo Contents of: "%cbf_filename%">>c:\a\type_results.txt
-echo.>>c:\a\type_results.txt
-type "%cbf_filename%">>c:\a\type_results.txt
+set test_results_filename=%temp%\%~1_type_results.txt
 
-set cbf_parameter=c:\a\type_results.txt
+echo.>%test_results_filename%
+echo Contents of: "%cbf_filename%">>%test_results_filename%
+echo.>>%test_results_filename%
+type "%cbf_filename%">>%test_results_filename%
+
+set cbf_parameter=%test_results_filename%
 
 call an np
 

@@ -61,6 +61,7 @@ echo    cc  Code Compare functions
 echo    ch  Chef command line utility
 echo   clc  Simple calculator
 echo    cn  Git cloning, based entirely on the nickname parameter
+echo    co  Surf to Confluence websites
 echo   cng  Git cloning, generic version
 echo   col  Shell window colors operations
 echo    cs  File contents search
@@ -88,7 +89,7 @@ echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit (Or exit command window)
 echo    ed  Edit a file abstraction layer
 echo   edr  Edit a relative path constucted filename
-echo   edx  Edit a file (Emulated Surf)
+echo   edx  Edit a file
 echo    eg  Edit a file by gluing a relative path onto a base path
 echo   eje  Edit Jenkinsfile of an alias
 echo    el  Edit log file of an alias
@@ -104,8 +105,10 @@ echo     g  Git
 echo    gg  Git Gui helper Has TD parameter
 echo    gl  Glossary of terms used in CBF
 echo    gr  Gradle
+echo    gt  Surf to GitHub websites
 echo     h  Sencha
 echo     i  CBF environment variable information
+echo    je  Surf to Jenkins websites
 echo    ji  Jira operations
 echo  keyt  KeyTool wrapper
 echo     l  Google searcher
@@ -138,6 +141,7 @@ echo    pl  Git pull, has TD parameter
 echo    pg  Ping hooked up to the nicknames dictionary
 echo   pql  PostgreSQL (in development)
 echo    ps  PowerShell
+echo   qfn  Query if a file exists based on its passed in alias.
 echo     r  Run application using CBF variables
 echo   rzr  Multi-Edit abstraction layer for running CBF files
 echo  rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
@@ -145,9 +149,6 @@ echo     s  Check git status remotely, has TD parameter
 echo  scpp  Secure Copy Protocol
 echo    se  Internet search helper
 echo    sf  Surf to websites
-echo sfcon  Surf to Confluence websites
-echo sfgit  Surf to GitHub websites
-echo  sfje  Surf to Jenkins websites
 echo    sh  SSH
 echo   sln  Open a Visual Studio solution, has TD parameter
 echo    sm  Sublime

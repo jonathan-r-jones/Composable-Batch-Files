@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* 
+set filep=* Query if a file exists based on its passed in alias.
 
 echo.
 echo %filep%
@@ -21,7 +21,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto validate_input
+goto main_function
 
 
 
@@ -34,21 +34,16 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Filename alias to check the existence of.
 
 echo.
 echo %parameter_1%
 
 echo.
-echo %parameter_2%
-
-echo.
 echo Examples
 
 echo.
-echo Example 1: 
+echo Example 1: qfn j1
 
 exit/b
 
@@ -56,20 +51,14 @@ exit/b
 
 :_
 
-:validate_input
-
-if "%~1" == "" (
-  echo.
-  echo 
-)
-
-
-
-:_
-
 :main_function
 
+call fn %1
 
+if %errorlevel% gtr 0 exit/b
+
+echo.
+echo * "%1" exists.
 
 exit/b
 

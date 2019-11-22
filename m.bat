@@ -4426,7 +4426,7 @@ s m
 rem You may or may not want to do a get-latest.
 pl
 
-e ly
+ty ly
 
 rem Switch to the api folder.
 rem If liquibase fails, you may need to wipe your local databaase.
@@ -4443,7 +4443,6 @@ rem To test fqt, use: gr run_fqt
 x bash
 
 ./get_cart_jwt.sh
-
 
 sf 4200 krm
 

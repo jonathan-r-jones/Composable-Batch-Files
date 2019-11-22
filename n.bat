@@ -1640,23 +1640,6 @@ exit/b
 
 ::_
 
-:cbfp
-
-set fp=* CBF Path. Set CBF_Path based on the currently set CBF_Path.
-
-rem lu: Mar-9-2018
-
-echo.
-echo %fp%
-
-rem Don't need to set it because it's already set.
-
-exit/b
-
-
-
-::_
-
 :cbfa
 
 set fp=* CBF Application. Set CBF_Path based on the currently set CBF_Application.
@@ -4073,7 +4056,7 @@ rem lu: Aug-10-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\
+set cbf_path=c:\a
 
 exit/b
 
@@ -5910,6 +5893,10 @@ exit/b
 :1295
 
 :sr52
+
+:uizip
+
+:jira_url
 
 :pass-through
 
@@ -10932,6 +10919,8 @@ exit/b
 ::_
 
 :repr
+
+:rp
 
 set fp=* Release process.
 

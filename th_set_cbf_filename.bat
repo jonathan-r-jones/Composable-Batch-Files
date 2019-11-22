@@ -20,8 +20,6 @@ if "%~1" == "/?" goto help
 
 set cbf_filename=
 
-echo * Test Results>%temp%\test_results.txt
-
 goto %1
 
 
@@ -35,7 +33,7 @@ rem lu: Nov-20-2019
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Test to run, e.g. test_1.
+set parameter_1=Parameter 1: Test to run, e.g. test_1, or to run all tests, use "test_all".
 
 echo.
 echo %parameter_1%
@@ -92,6 +90,7 @@ if %errorlevel% gtr 0 (
   echo * %1: Fail.>>%temp%\test_results.txt
 ) else (
   echo.
+  echo * %1: Pass.
   echo * %1: Pass.>>%temp%\test_results.txt
 )
 
@@ -101,20 +100,21 @@ goto end_function
 
 :_
 
-:run_all_tests
+:test_all
 
-set fp=* %1.
+set fp=* Run all tests.
 
 rem echo.
 rem echo %fp%
 
+echo * Test Results>%temp%\test_results.txt
+
 call %0 test_1
 call %0 test_2
 
+start "Test Title" "%cbf_default_text_editor%" "%temp%\test_results.txt"
 
-rem qq-1
-
-goto end_function
+exit/b
 
 
 
