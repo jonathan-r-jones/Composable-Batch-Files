@@ -9996,16 +9996,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Set read-only attribute on a file.
@@ -10018,7 +10008,34 @@ echo %fp%
 echo.
 call td s
 attrib +r "copy of cc.asc"
-rem qq-1
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Look at the command line for switches.
+
+rem lu: Nov-22-2019
+
+echo.
+echo %fp%
+
+echo.
+echo %0 %1 %2 %3
 
 exit/b
 

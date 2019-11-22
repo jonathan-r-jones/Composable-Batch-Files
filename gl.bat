@@ -55,6 +55,7 @@ echo                cbf  Composable batch files
 echo                  c  Current folder filename, when used in a batch file name
 echo                 -c  As a batch file parameter, means force file creation
 echo                     filename
+echo         Error Code  fn.bat returns an error code of 2 for file not exists.
 echo              filep  File purpose
 echo                  f  Filename alias, when used in a batch file name
 echo                 fp  Function purpose

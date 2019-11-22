@@ -60,7 +60,7 @@ if not defined cbf_filename (
 if not exist "%cbf_filename%" (
   echo.
   echo * Error: The CBF_Filename "%cbf_filename%" could not be found. Nov-1-2019 8:59 PM
-  exit/b 1
+  exit/b 2
 )
 
 
