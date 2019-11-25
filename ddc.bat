@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Dir filename extension searcher including subfolders.
+set filep=* Dir filename extension searcher, current folder only.
 
 echo.
 echo %filep%
@@ -45,7 +45,7 @@ exit/b
 
 :main_function
 
-dir *.%1
+dir *.%1*
 
 exit/b
 

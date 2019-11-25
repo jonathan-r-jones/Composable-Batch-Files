@@ -98,6 +98,7 @@ rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookm
 
 echo.
 echo Example: f np not_an_alias
+rem qq-1
 
 echo.
 echo Example: f np not_an_alias -c

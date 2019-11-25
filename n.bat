@@ -734,7 +734,7 @@ exit/b
 
 :_
 
-:log
+:old_log
 
 set fp=Wildfly server Log.
 
@@ -5897,6 +5897,14 @@ exit/b
 :uizip
 
 :jira_url
+
+:py
+
+:occ
+
+:chefdk
+
+:ccd
 
 :pass-through
 
@@ -11224,6 +11232,49 @@ echo.
 echo %fp%
 
 set cbf_path=%appdata%\Microsoft\Windows\Recent
+
+exit/b
+
+
+
+:_
+
+:msic
+
+:secr
+
+set fp=* Manage secrets in chef.
+
+rem lu: Nov-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=
+
+set cbf_path=%cbf_path%\
+
+set cbf_url=https://docs.chef.io/secrets.html
+
+exit/b
+
+
+
+:_
+
+:endv
+
+set fp=* Environment Dv.
+
+rem lu: Nov-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=c:\environments\dv\.kitchen-aws.yml
+
+set cbf_path=c:\environments\dv
+rem       qq-1
 
 exit/b
 

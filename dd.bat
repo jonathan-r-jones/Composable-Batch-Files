@@ -32,13 +32,8 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Filename extension.
 
-set parameter_2=Parameter 2 (Optional): '/s' e.g. means to search subfolders.
-
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 exit/b
 
@@ -49,7 +44,7 @@ exit/b
 :main_function
 
 echo.
-dir *.%1* %2
+dir *.%1* /s
 
 exit/b
 

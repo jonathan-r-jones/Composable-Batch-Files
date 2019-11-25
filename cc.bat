@@ -14,7 +14,7 @@ set filep=* Run Code Compare with aliases or filenames.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto use_default_behavior
+if "%~1" == "" goto compare_j_files
 
 if "%~1" == "/?" goto help
 
@@ -49,6 +49,42 @@ exit/b
 
 :_
 
+:use_filenames_not_aliases
+
+set fp=* Use filenames and not aliases.
+
+rem lu: Jan-30-2019
+
+echo.
+echo %fp%
+
+call an coco
+
+"%cbf_application%" "%~1" "%~2"
+
+exit/b
+
+
+
+:_
+
+:compare_j_files
+
+set fp=* Use default behavior, viz. compare j files.
+
+rem lu: Nov-7-2019
+
+echo.
+echo %fp%
+
+call %0 j1 j2
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 echo.
@@ -74,43 +110,12 @@ set file_2=%cbf_filename%
 
 call an coco
 
-"%cbf_application%" "%file_1%" "%file_2%"
+if %errorlevel% gtr 0 (
+  exit/b
+)
 
-exit/b
-
-
-
-:_
-
-:use_filenames_not_aliases
-
-set fp=* Use filenames and not aliases.
-
-rem lu: Jan-30-2019
-
-echo.
-echo %fp%
-
-call an coco
-
-"%cbf_application%" "%~1" "%~2"
-
-exit/b
-
-
-
-:_
-
-:use_default_behavior
-
-set fp=* Use default behavior.
-
-rem lu: Nov-7-2019
-
-echo.
-echo %fp%
-
-call %0 j1 j2
+start  "Code Compare" "%cbf_application%" "%file_1%" "%file_2%"
+rem qq-1
 
 exit/b
 

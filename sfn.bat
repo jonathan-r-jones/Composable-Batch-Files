@@ -24,31 +24,6 @@ if "%~2" == "-e" set file_has_no_extension=1
 
 if "%~3" == "-e" set file_has_no_extension=1
 
-if "%~2" == "-c" (
-   if "%file_has_no_extension%" == "0" (
-      goto c_switch_only
-   )
-)
-
-if "%~3" == "-c" (
-   if "%file_has_no_extension%" == "0" (
-      echo 2
-      goto c_switch_only
-   )
-)
-
-if "%~2" == "-c" (
-   if "%file_has_no_extension%" == "1" (
-      goto c_and_e_switches
-   )
-)
-
-if "%~3" == "-c" (
-   if "%file_has_no_extension%" == "1" (
-      goto c_and_e_switches
-   )
-)
-
 if "%file_has_no_extension%" == "1" (
   goto e_switch_only
 )
@@ -181,8 +156,14 @@ set fp=* Use alias to find filename.
 rem echo.
 rem echo %fp%
 
-echo Percent 1: %~1
 call fn %~1
+
+if %errorlevel% gtr 1 (
+  echo.
+  echo * So create file. Nov-25-2019 1:28 PM
+  echo.>"%cbf_filename%"
+  exit/b 0
+)
 
 if %errorlevel% gtr 0 (
   exit/b 1
@@ -202,6 +183,8 @@ echo.
 echo %fp%
 
 if not exist "%~1" (
+  echo.
+  echo * So create file. Nov-25-2019 1:29 PM
   echo.>"%~1"
 )
 
@@ -263,73 +246,6 @@ if not exist "%cbf_filename%" (
   echo.
   echo * Error: The file "%cbf_filename%" does not exist.
   exit/b 1
-)
-
-exit/b 0
-
-
-
-:_
-
-:c_and_e_switches
-
-set fp=* C and E switches.
-
-rem lu: Jan-16-2019
-
-echo.
-echo %fp%
-
-rem If a period is detected in the first parameter, then edit that file. Else, use the
-rem nickname dictionary to determine the filename.
-echo %1 | C:\Windows\System32\find.exe /i ".">nul
-
-if %errorlevel% == 1 (
-  set cbf_filename=%~1
-)
-
-call m clear_errorlevel_silently
-
-if exist "%cbf_filename%" (
-  echo.
-  echo * Error: Why are you using the "-c" switch on a file that already exists?
-  exit/b 1
-) else (
-  echo.>%cbf_filename%
-)
-
-exit/b 0
-
-
-
-:_
-
-:c_switch_only
-
-set fp=* C switch only.
-
-rem lu: Nov-21-2019
-
-echo.
-echo %fp%
-
-rem If a period is detected in the first parameter, then edit that file. Else, use the
-rem nickname dictionary to determine the filename.
-
-echo %1 | c:\windows\system32\find.exe /i ".">nul
-
-if %errorlevel% == 0 (
-  set cbf_filename=%~1
-) else (
-  call fn %1
-)
-
-if exist "%cbf_filename%" (
-  echo.
-  echo * Error: Why are you using the "-c" switch on a file that already exists?
-  exit/b 1
-) else (
-  echo.>%cbf_filename%
 )
 
 exit/b 0

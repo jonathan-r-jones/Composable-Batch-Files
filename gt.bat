@@ -17,6 +17,11 @@ echo %filep%
 
 set fp=* Route callers.
 
+if "%~1" == "" (
+  call sf m
+  exit/b
+)
+
 if "%~1" == "/?" goto help
 
 goto code_execution_area
