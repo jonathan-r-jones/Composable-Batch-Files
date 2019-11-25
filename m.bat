@@ -4831,11 +4831,11 @@ exit/b
 
 :show_ascii_art_sans_souci
 
-set fp=* Show Ascii art 2.
+set fp=* Show Ascii art.
 
-rem lu: Nov-7-2019
+rem lu: Nov-25-2019
 
-call n ascii_art_sea_scene>nul
+call n ascii_art_sailboat>nul
 
 type %cbf_filename%
 

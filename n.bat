@@ -10755,6 +10755,27 @@ exit/b
 
 ::_
 
+:ascii_art_sailboat
+
+:aass
+
+set fp=* ASCII Art - %1.
+
+rem lu: Nov-25-2019
+
+echo.
+echo %fp%
+
+call n cbf
+
+set cbf_filename=%cbf_path%\ascii_art_sailboat.txt
+
+exit/b
+
+
+
+::_
+
 :ascii_art_sea_scene
 
 :aass
