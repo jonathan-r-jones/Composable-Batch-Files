@@ -18,16 +18,6 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-set file_has_no_extension=0
-
-if "%~2" == "-e" set file_has_no_extension=1
-
-if "%~3" == "-e" set file_has_no_extension=1
-
-if "%file_has_no_extension%" == "1" (
-  goto e_switch_only
-)
-
 echo %1| C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
@@ -38,6 +28,14 @@ echo %1| C:\Windows\System32\find.exe /i " ">nul
 
 if %errorlevel% == 0 (
   goto use_current_folder_filename
+)
+
+set file_has_no_extension=0
+
+echo %~1 %~2 %~3 %~4 %~5| C:\Windows\System32\find.exe /i "-e">nul
+
+if %errorlevel% == 0 (
+  goto e_switch
 )
 
 goto use_alias_or_batch_file
@@ -53,13 +51,14 @@ rem lu: Nov-20-2019
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Filename evaluation parameter.
+set parameter_1=Parameter 1: Filename, filename alias or batch file prefix for a batch file ^
+that lives in either the CBF or Share-zone folder. Filename evaluation parameter.
 
 echo.
 echo %parameter_1%
 
-set parameter_2=Parameter 2 or 3 (optional): Use -c to force file creation. Use -e to ^
-specify a file with no extension.
+set parameter_2=Parameter 2 or greater (Optional): -e Filename without extension, e.g. Jenkinsfile. ^
+-v Create file using clipboad contents. -d Delete file before opening it.
 
 echo.
 echo %parameter_2%
@@ -196,7 +195,7 @@ exit/b 0
 
 :_
 
-:d_switch_only
+:d_switch
 
 set fp=* D switch only. Blank out the file before opening it.
 
@@ -219,33 +218,22 @@ exit/b 0
 
 :_
 
-:e_switch_only
+:e_switch
 
-set fp=* E switch only.
+set fp=* E switch.
 
 echo.
 echo %fp%
 
-rem If a period is detected in the first parameter, then edit that file. Else, use the
-rem nickname dictionary to determine the filename.
-echo %1 | C:\Windows\System32\find.exe /i ".">nul
-
-if %errorlevel% == 1 (
-  set cbf_filename=%~1
-)
-
-call m clear_errorlevel_silently
-
-if "%cbf_filename%" == "" (
-  echo.
-  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
-  exit/b 1
-)
+set cbf_filename=%~1
 
 if not exist "%cbf_filename%" (
   echo.
-  echo * Error: The file "%cbf_filename%" does not exist.
-  exit/b 1
+  echo * Error: The file "%cbf_filename%" does not exist so create it. Nov-26-2019 11:11 AM
+  echo.>"%~1"
+) else (
+  echo.
+  echo * Open the existing file "%cbf_filename%". Nov-26-2019 11:19 AM
 )
 
 exit/b 0

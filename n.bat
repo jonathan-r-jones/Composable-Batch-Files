@@ -5906,6 +5906,16 @@ exit/b
 
 :ccd
 
+:sec
+
+:secs
+
+:etds
+
+:etd
+
+:ets
+
 :pass-through
 
 set fp=* Pass through.
@@ -7352,7 +7362,8 @@ if "%cbf_application%" == "" (
 )
 
 set cbf_path=%cbf_application:\excel.exe=%
-set cbf_filename=%cbf_application%
+rem Commented the following line because it breaks f.bat. Nov-26-2019 11:28 AM
+rem set cbf_filename=%cbf_application%
 
 exit/b
 
@@ -7381,7 +7392,8 @@ if "%cbf_application%" == "" (
 )
 
 set cbf_path=%cbf_application:\winword.exe=%
-set cbf_filename=%cbf_application%
+rem Commented the following line because it breaks f.bat. Nov-26-2019 11:28 AM
+rem set cbf_filename=%cbf_application%
 
 exit/b
 
@@ -11295,7 +11307,6 @@ echo %fp%
 set cbf_filename=c:\environments\dv\.kitchen-aws.yml
 
 set cbf_path=c:\environments\dv
-rem       qq-1
 
 exit/b
 

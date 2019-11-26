@@ -6,7 +6,8 @@
 
 :_
 
-set filep=* Filename sapien. (In Beta.)
+set filep=* Filename sapien. (In Beta.) Use any application to open any file in the current ^
+folder or via alias, with extension or not, with spaces or not.
 
 echo.
 echo %filep%
@@ -41,13 +42,8 @@ set parameter_1=Parameter 1: Application alias.
 set parameter_2=Parameter 2: Filename, filename alias or batch file prefix for a batch file ^
 that lives in either the CBF or Share-zone folder.
 
-set parameter_3=Parameter 3 (Optional): -c or -e.
-
-set parameter_4=Parameter 4 (Optional): -c or -e.
-
-set parameter_4=Parameter 4 (Optional): -v Create file using clipboad contents.
-
-set parameter_4=Parameter 4 (Optional): -d Delete file before opening it.
+set parameter_3=Parameter 3 or greater (Optional): -e Filename without extension, e.g. Jenkinsfile. ^
+-v Create file using clipboad contents. -d Delete file before opening it.
 
 echo.
 echo %parameter_1%
@@ -57,9 +53,6 @@ echo %parameter_2%
 
 echo.
 echo %parameter_3%
-
-echo.
-echo %parameter_4%
 
 echo.
 echo Examples
@@ -94,29 +87,25 @@ echo Example: f no "the rain in spain.txt"
 echo.
 echo Example: f np "the rain in spain"
 
-rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookmark: skw qq3
-
 echo.
 echo Example: f np not_an_alias
-rem qq-1
 
 echo.
-echo Example: f np not_an_alias -c
+echo Example: f no j7.txt
 
 echo.
-echo Example: f np jenkinsf -e -c
+echo Example: f np "the rain in spain"
 
 echo.
-echo Example: f no j1 -c
+echo Example: f np "the rain in spain.txt"
 
 echo.
-echo Example: f no j7.txt -c
+echo Example: f np jenkinsfile
 
 echo.
-echo Example: f np "the rain in spain" -e
+echo Example: f np jenkinsfile -e
 
-echo.
-echo Example: f np "the rain in spain.txt" -c
+rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookmark: skw qq3
 
 echo.
 echo Example: f ty kb
@@ -135,6 +124,9 @@ echo Example: f np not_an_alias -v
 
 echo.
 echo Example: f np j1 -v
+
+echo.
+echo Example: f np j1 -d -e -v
 
 exit/b
 

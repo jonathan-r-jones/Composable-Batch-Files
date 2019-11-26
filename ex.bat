@@ -51,20 +51,40 @@ exit/b
 
 set cbf_excel_filename=
 
+call n %1
+
+if %errorlevel% gtr 0 (
+  echo.
+  echo * Error: Label not found. Nov-26-2019 10:48 AM
+  exit/b 1
+)
+
+if not defined cbf_excel_filename (
+  echo.
+  echo * The cbf_exel_filename is not defined for "%1". Nov-1-2019 8:58 PM
+  goto try_using_cbf_filename
+)
+
+if not exist "%cbf_filename%" (
+  echo.
+  echo * Error: The CBF_Filename "%cbf_filename%" could not be found. Nov-26-2019 10:50 AM
+  goto try_using_cbf_filename
+)
+
+set cbf_filename=%cbf_excel_filename%
+
+goto main_function
+
+
+
+:try_using_cbf_filename
+
 call fn %1
 
 if %errorlevel% gtr 0 (
   echo.
   exit/b
 )
-
-if not exist "%cbf_excel_filename%" (
-  echo.
-  echo * Error: Could not find "%cbf_excel_filename%". Nov-11-2019 1:35 PM
-  exit/b
-)
-
-set cbf_filename=%cbf_excel_filename%
 
 goto main_function
 
@@ -75,6 +95,8 @@ goto main_function
 :use_blank_excel_document
 
 call fn bed
+
+goto main_function
 
 
 

@@ -44,9 +44,8 @@ exit/b
 :validate_user_input
 
 if "%~1" == "" (
-  echo.
-  echo * Error: A parameter is required.
-  goto help
+  call n rf_ma 
+  goto main_function
 )
 
 set cbf_jenkinsfile=

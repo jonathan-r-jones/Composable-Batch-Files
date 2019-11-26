@@ -725,7 +725,6 @@ rem
 rem        Unexpected API Request Failure:
 rem        -------------------------------
 rem        Object not found: chefzero://localhost:1/environments/dv
-rem qq-1
 
 call td caco
 
@@ -747,7 +746,6 @@ echo.
 echo %fp%
 
 rem Outcome:
-rem qq-1
 
 call td chef
 
@@ -797,7 +795,6 @@ echo.
 echo %fp%
 
 rem Outcome:
-rem qq-1
 
 call td caco
 

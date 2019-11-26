@@ -10015,6 +10015,35 @@ exit/b
 
 :_
 
+:
+
+set fp=* Look at the command line for switches.
+
+rem lu: Nov-22-2019
+
+echo.
+echo %fp%
+
+echo.
+echo %0 %1 %2 %3
+
+exit/b
+
+
+
+:_
+
+:next
+
+echo.
+echo Next 4.
+
+exit/b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.
@@ -10027,15 +10056,48 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Look at the command line for switches.
+set fp=* Go to next.
 
-rem lu: Nov-22-2019
+rem lu: Nov-26-2019
 
 echo.
 echo %fp%
 
 echo.
-echo %0 %1 %2 %3
+goto next
+
+exit/b
+
+
+
+:_
+
+:next
+
+echo.
+echo Next 3.
+
+exit/b
+
+
+
+:_
+
+:next
+
+echo.
+echo Next 2.
+
+exit/b
+
+
+
+:_
+
+:next
+
+echo.
+echo Next 1.
 
 exit/b
 
