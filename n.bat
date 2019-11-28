@@ -5960,23 +5960,6 @@ exit/b
 
 :_
 
-:j5
-
-set fp=* J5.
-
-rem lu: Jan-17-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\j5.s
-
-exit/b
-
-
-
-:_
-
 :tf
 
 :terr
@@ -7970,23 +7953,6 @@ exit/b
 
 ::_
 
-:shl
-
-set fp=* sh.log
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-
-set cbf_log_file=c:\a\sh.log
-
-exit/b
-
-
-
-::_
-
 :j2
 
 set fp=* J2.txt.
@@ -8031,6 +7997,23 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\%1.txt
+
+exit/b
+
+
+
+::_
+
+:shl
+
+set fp=* sh.log
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+
+set cbf_log_file=c:\a\sh.log
 
 exit/b
 
