@@ -105,28 +105,28 @@ echo Example: f np jenkinsfile
 echo.
 echo Example: f np jenkinsfile -e
 
-rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookmark: skw qq3
+echo.
+echo Example: ty kb
 
 echo.
-echo Example: f ty kb
+echo Example: ty "rain in spain"
 
 echo.
-echo Example: f np j1 -d
+echo Example: ty "rain in spain.txt"
+
+echo.
+echo Example: f sm j1
+
+echo.
+echo Example: f sm j1 -d
 
 echo.
 echo Example: f np j55.txt -d
 
 echo.
-echo Example: f np j55.txt -v
+echo Example: e "rain in spain" -d
 
-echo.
-echo Example: f np not_an_alias -v
-
-echo.
-echo Example: f np j1 -v
-
-echo.
-echo Example: f np j1 -d -e -v
+rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookmark: skw qjq3
 
 exit/b
 
@@ -136,7 +136,7 @@ exit/b
 
 :validate_input
 
-call sfn "%~2" "%~3" "%~4"
+call sfn "%~2" "%~3" "%~4" "%~5" "%~6"
 
 if %errorlevel% gtr 0 (
   exit/b

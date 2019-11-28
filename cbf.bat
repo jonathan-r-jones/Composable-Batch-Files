@@ -94,8 +94,8 @@ echo    eg  Edit a file by gluing a relative path onto a base path
 echo   eje  Edit Jenkinsfile of an alias
 echo    el  Edit log file of an alias
 echo    es  Edit settings file of an alias
-echo    ex  Run excel with or without a filename alias parameter.
-echo     f  Use default application to open a file based on its alias and filename extension.
+echo    ex  Run excel with or without a filename alias parameter
+echo     f  Filename sapien. Use any application to open any file
 echo    fe  Check for the existence of a file based on the passed in filename alias
 echo    fn  Filenames dictionary layer of abstraction
 echo    fs  Filenames search
@@ -149,6 +149,7 @@ echo     s  Check git status remotely, has TD parameter
 echo  scpp  Secure Copy Protocol
 echo    se  Internet search helper
 echo    sf  Surf to websites
+echo   sfn  Set cbf_filename based on an evaluated filename parameter
 echo    sh  SSH
 echo   sln  Open a Visual Studio solution, has TD parameter
 echo    sm  Sublime
@@ -167,7 +168,7 @@ echo    te  Batch file template used for creating new batch files
 echo    tf  Terraform
 echo    tk  Taskkill
 echo    tl  Tasklist
-echo    ty  Type command to view nickname-specified file
+echo    ty  Type command for use on evaluated filename parameter
 echo    un  URL nicknames dictionary layer of abstraction
 echo     v  Vetted functions (Useful for copying-and-pasting)
 echo    wp  Wordpad

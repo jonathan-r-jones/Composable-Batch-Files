@@ -1284,4 +1284,63 @@ exit/b
 
 
 
+:_
+
+:
+
+set fp=* Checking the command line parameters.
+
+rem lu: Nov-27-2019
+
+echo.
+echo %fp%
+
+echo.
+rem This equals the entire parameter list!
+echo %*
+
+echo.
+echo %2
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Evaluate the parameter list.
+
+rem lu: Nov-27-2019
+
+echo.
+echo %fp%
+
+set d_switch=0
+set e_switch=0
+set v_switch=0
+
+:top_of_parameter_line_evaluation
+
+if "%~1" == "" goto exit_loop
+
+if "%~1" == "-d" set d_switch=1
+if "%~1" == "-e" set e_switch=1
+if "%~1" == "-v" set v_switch=1
+
+shift
+
+goto top_of_parameter_line_evaluation
+
+:exit_loop
+
+echo %d_switch%
+echo %e_switch%
+echo %v_switch%
+
+exit/b
+
+
+
 :_ (!efv)

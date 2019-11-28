@@ -2933,7 +2933,18 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\mozilla firefox\firefox.exe
+rem Determine installation path.
+
+set cbf_application=
+
+if exist "c:\program files\mozilla firefox\firefox.exe" set cbf_application=c:\program files\mozilla firefox\firefox.exe
+if exist "C:\Program Files (x86)\Mozilla Firefox\firefox.exe" set cbf_application=C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+
+if "%cbf_application%" == "" (
+  echo.
+  echo * Excel is not installed.
+  exit/b 1
+)
 
 exit/b
 
@@ -4097,8 +4108,6 @@ exit/b
 
 
 :_
-
-:cj
 
 :clipjam_podcasts
 
@@ -5916,6 +5925,8 @@ exit/b
 
 :ets
 
+:sy
+
 :pass-through
 
 set fp=* Pass through.
@@ -7352,6 +7363,8 @@ echo %fp%
 
 rem Determine installation path.
 
+set cbf_application=
+
 if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
 if exist "c:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application=c:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE
 
@@ -7381,6 +7394,8 @@ echo.
 echo %fp%
 
 rem Determine installation path.
+
+set cbf_application=
 
 if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe
 if exist "c:\Program Files\Microsoft Office\root\Office16\winword.exe" set cbf_application=c:\Program Files\Microsoft Office\root\Office16\winword.exe
@@ -11265,29 +11280,6 @@ echo.
 echo %fp%
 
 set cbf_path=%appdata%\Microsoft\Windows\Recent
-
-exit/b
-
-
-
-:_
-
-:msic
-
-:secr
-
-set fp=* Manage secrets in chef.
-
-rem lu: Nov-25-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=
-
-set cbf_path=%cbf_path%\
-
-set cbf_url=https://docs.chef.io/secrets.html
 
 exit/b
 

@@ -6,23 +6,22 @@
 
 :_
 
-set filep=* Edit file.
-
-rem Use mx.bat and then maybe me.bat to decipher which file to edit.
+set filep=* Edit file in Multi-edit.
 
 echo.
 echo %filep%
+
 
 
 :_
 
 set fp=* Route callers.
 
-if "%~1" == "" exit
+if "%~1" == "" sfn /?
 
-if "%~1" == "/?" ed /?
+if "%~1" == "/?" sfn /?
 
-goto main_function
+goto validate_input
 
 
 
@@ -30,13 +29,18 @@ goto main_function
 
 :help
 
-echo.
-echo Usage: %0 [space separated parameter 1]
-
-set parameter_1=Parameter 1: Alias of filename you wish to edit.
+rem lu: Nov-27-2019
 
 echo.
-echo %parameter_1%
+echo Usage: %0 [space separated parameter(s)]
+
+set parameter_1=Parameter 1: Application alias.
+
+set parameter_2=Parameter 2: Filename, filename alias or batch file prefix for a batch file ^
+that lives in either the CBF or Share-zone folder.
+
+set parameter_3=Parameter 3 or greater (Optional): -e Filename without extension, e.g. Jenkinsfile. ^
+-v Create file using clipboad contents. -d Delete file before opening it.
 
 exit/b
 
@@ -44,28 +48,32 @@ exit/b
 
 :_
 
+:validate_input
+
+call sfn %*
+
+if %errorlevel% gtr 0 (
+  exit/b
+)
+
+call an me
+
+if %errorlevel% gtr 0 (
+  exit/b
+)
+
+
+
+:_
+
 :main_function
 
-call m clear_errorlevel_silently
+set cbf_parameter=%cbf_filename%
 
-echo %1 | C:\Windows\System32\find.exe /i ".">nul
-
-if %errorlevel% == 0 (
-  call me %1 %2 %3
-  exit/b
-)
-
-call mx.bat %1
-
-if %errorlevel% == 1 (
-  rem call np %1 %2 %3
-  call me %1 %2 %3
-  call m clear_errorlevel_silently
-  exit/b
-)
+call r
 
 exit/b
 
 
 
-:_ (!rfsp) (mov-6)
+:_ (!rfsp) (mov-7)

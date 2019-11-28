@@ -51,9 +51,9 @@ exit/b
 
 :_
 
-set fp=* Use special syntax for Microsoft Edge.
-
 :microsoft_edge_edge_case
+
+set fp=* Use special syntax for Microsoft Edge.
 
 if "%cbf_parameter%" == "" (
   call start "my title" "%cbf_application%:"
@@ -93,7 +93,7 @@ set fp=* Run application - main function.
 
 if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_edge_case
 
-rem echo Mar-11-2019.5
+rem echo Nov-27-2019 4:49 PM
 
 echo %cbf_application% | C:\Windows\System32\find.exe /i "--">nul
 

@@ -22,7 +22,7 @@ goto validate_input
 
 
 
-:_ (!rfsp) (mov-6)
+:_
 
 :help
 
@@ -47,7 +47,6 @@ call n %1
 if %errorlevel% gtr 0 (
   echo.
   echo * Error: Label not found. Nov-1-2019 8:55 PM
-  call m clear_errorlevel_silently 
   exit/b 1
 )
 

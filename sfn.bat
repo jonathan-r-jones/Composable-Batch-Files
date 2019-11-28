@@ -18,6 +18,8 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
+call :evaluate_the_parameter_list %*
+
 echo %1| C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
@@ -30,12 +32,10 @@ if %errorlevel% == 0 (
   goto use_current_folder_filename
 )
 
-set file_has_no_extension=0
-
-echo %~1 %~2 %~3 %~4 %~5| C:\Windows\System32\find.exe /i "-e">nul
+echo %*| C:\Windows\System32\find.exe /i " -e">nul
 
 if %errorlevel% == 0 (
-  goto e_switch
+  goto use_current_folder_filename
 )
 
 goto use_alias_or_batch_file
@@ -52,13 +52,13 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Filename, filename alias or batch file prefix for a batch file ^
-that lives in either the CBF or Share-zone folder. Filename evaluation parameter.
+that lives in either the CBF or Share-zone folder. Evaluated filename parameter.
 
 echo.
 echo %parameter_1%
 
 set parameter_2=Parameter 2 or greater (Optional): -e Filename without extension, e.g. Jenkinsfile. ^
--v Create file using clipboad contents. -d Delete file before opening it.
+-d Delete file before opening it.
 
 echo.
 echo %parameter_2%
@@ -69,57 +69,36 @@ exit/b
 
 :_
 
-:evaluate_input
+:evaluate_the_parameter_list
 
-echo %1 | C:\Windows\System32\find.exe /i ".">nul
+set fp=* Evaluate the parameter list.
 
-if %errorlevel% == 0 (
-  goto set_filename_to_percent_1
-  exit/b
-)
-
-if exist %1 (
-  goto set_filename_to_percent_1
-)
-
-set cbf_filename=%share-zone%\%~1.bat
-
-if exist %cbf_filename% (
-  echo.
-  echo * Set filename equal to Share-zone %1.bat file.
-  exit/b 0
-)
-
-set cbf_filename=%composable_batch_files%\%~1.bat
-
-if exist %cbf_filename% (
-  echo.
-  echo * Set filename equal to CBF %1.bat file.
-  exit/b 0
-)
-
-call fn %1
-
-if %errorlevel% gtr 0 (
-  exit/b 1
-)
-
-exit/b 0
-
-
-
-:_
-
-:set_filename_to_percent_1
-
-set fp=* Set filename equal to "%1".
+rem lu: Nov-27-2019
 
 echo.
 echo %fp%
 
-set cbf_filename=%1
+set d_switch=0
+set e_switch=0
 
-exit/b 0
+:top_of_parameter_line_evaluation
+
+if "%~1" == "" goto exit_loop
+
+if "%~1" == "-d" set d_switch=1
+if "%~1" == "-e" set e_switch=1
+
+shift
+
+goto top_of_parameter_line_evaluation
+
+:exit_loop
+
+rem echo.
+rem echo d: %d_switch%
+rem echo e: %e_switch%
+
+exit/b
 
 
 
@@ -127,19 +106,20 @@ exit/b 0
 
 :use_alias_or_batch_file
 
-set fp=* Use alias to find filename.
-
-rem echo.
-rem echo %fp%
+set fp=* Use batch file to find filename.
 
 if exist "%composable_batch_files%\%~1.bat" (
   set cbf_filename=%composable_batch_files%\%~1.bat
-  exit/b 0
+  echo.
+  echo %fp% - CBF
+  goto file_exists
 )
 
 if exist "%share-zone%\%~1.bat" (
   set cbf_filename=%share-zone%\%~1.bat
-  exit/b 0
+  echo.
+  echo %fp% - SZ
+  goto file_exists
 )
 
 goto use_alias
@@ -158,17 +138,14 @@ rem echo %fp%
 call fn %~1
 
 if %errorlevel% gtr 1 (
-  echo.
-  echo * So create file. Nov-25-2019 1:28 PM
-  echo.>"%cbf_filename%"
-  exit/b 0
+  goto file_does_not_exist
 )
 
 if %errorlevel% gtr 0 (
   exit/b 1
 )
 
-exit/b 0
+goto file_exists
 
 
 
@@ -181,13 +158,33 @@ set fp=* Use current folder filename.
 echo.
 echo %fp%
 
-if not exist "%~1" (
-  echo.
-  echo * So create file. Nov-25-2019 1:29 PM
-  echo.>"%~1"
+set cbf_filename=%~1
+
+if exist "%cbf_filename%" (
+  goto file_exists
 )
 
-set cbf_filename=%~1
+goto file_does_not_exist
+
+
+
+:_
+
+:file_exists
+
+set fp=* File exists.
+
+echo.
+echo %fp%
+
+rem echo d_switch: %d_switch%
+
+if "%d_switch%" == "1" (
+  echo.
+  echo * Delete file "%cbf_filename%", before opening. Nov-27-2019 6:36 PM
+  echo.>"%cbf_filename%"
+  exit/b 0
+)
 
 exit/b 0
 
@@ -195,46 +192,17 @@ exit/b 0
 
 :_
 
-:d_switch
+:file_does_not_exist
 
-set fp=* D switch only. Blank out the file before opening it.
-
-rem lu: Mar-21-2019
+set fp=* File does not exist.
 
 echo.
 echo %fp%
 
-call n %1
-
-rem echo %cbf_filename%
-
-del %cbf_filename%
-
-call %0 %1 -c
-
-exit/b 0
-
-
-
-:_
-
-:e_switch
-
-set fp=* E switch.
+echo.>"%cbf_filename%"
 
 echo.
-echo %fp%
-
-set cbf_filename=%~1
-
-if not exist "%cbf_filename%" (
-  echo.
-  echo * Error: The file "%cbf_filename%" does not exist so create it. Nov-26-2019 11:11 AM
-  echo.>"%~1"
-) else (
-  echo.
-  echo * Open the existing file "%cbf_filename%". Nov-26-2019 11:19 AM
-)
+echo * But now it does.
 
 exit/b 0
 

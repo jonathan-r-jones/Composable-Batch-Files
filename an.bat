@@ -64,9 +64,11 @@ if %errorlevel% gtr 0 (
 
 if not defined cbf_application (
   echo.
-  echo * The cbf_application is not defined for "%1". Nov-1-2019 8:56 PM
+  echo * The cbf_application is not defined for "%1". Nov-27-2019 5:18 PM
   exit/b 1
 )
+
+if "%cbf_application%" == "microsoft-edge" exit/b 0
 
 if not exist "%cbf_application%" (
   echo.

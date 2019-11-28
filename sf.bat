@@ -121,17 +121,7 @@ echo %fp%
 
 call an %2
 
-if "%cbf_application%" == "" (
-  echo.
-  echo * Error: Cbf_application is not set.
-  exit/b
-)
-
-if not exist "%cbf_application%" (
-  echo.
-  echo * Error: Cbf_application "%cbf_application%" does not exist.
-  exit/b
-)
+if %errorlevel% gtr 0 exit/b
 
 goto main_function
 

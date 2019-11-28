@@ -56,6 +56,8 @@ echo                  c  Current folder filename, when used in a batch file name
 echo                 -c  As a batch file parameter, means force file creation
 echo                     filename
 echo         Error Code  fn.bat returns an error code of 2 for file not exists.
+echo evaluated filename  Filename, filename alias or batch file prefix for a batch file 
+echo   parameter         that lives in either the CBF or Share-zone folder.
 echo              filep  File purpose
 echo                  f  Filename alias, when used in a batch file name
 echo                 fp  Function purpose
