@@ -147,7 +147,6 @@ call %0 pc_2_sf
 rem Run the tag program.
 call x tag
 
-echo.
 pause
 
 if "%~2" == "-n" goto do_not_transfer_old_content
