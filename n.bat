@@ -5745,8 +5745,6 @@ exit/b
 
 :gitrele
 
-:ri
-
 :ver
 
 :rep9
@@ -5926,6 +5924,14 @@ exit/b
 :ets
 
 :sy
+
+:vdd
+
+:1070
+
+:enedh
+
+:eden
 
 :pass-through
 
@@ -7131,23 +7137,6 @@ echo %fp%
 call %0 c_docs
 
 set cbf_filename=%cbf_path%\DevOps Roadmap.xlsx
-
-exit/b
-
-
-
-:_
-
-:fiex
-
-set fp=* Filename extensions.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-set cbf_url=http://en.wikipedia.org/wiki/Alphabetical_list_of_file_extensions
 
 exit/b
 
@@ -9416,7 +9405,7 @@ set cbf_branch=issue15
 
 set cbf_path=%cbf_repo%\bdso-gateway-%cbf_branch%-branch
 
-rem **** Variables are alphabetized below here.
+rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized below here.
 
 set cbf_clone_url=https://github.com/DevTechnology/bdso-gateway.git
 
@@ -10917,35 +10906,6 @@ exit/b
 
 
 
-:_+ Release Process Family (!fyrepr)
-
-
-
-::_
-
-:repr
-
-:rp
-
-set fp=* Release process.
-
-rem lu: Nov-14-2019
-
-echo.
-echo %fp%
-
-set cbf_application=
-
-set cbf_filename=C:\Users\JJones2\j\Share-Zone\Release Process\release process.jpg
-
-set cbf_path=C:\Users\JJones2\j\Share-Zone\Release Process
-
-set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
-
-exit/b
-
-
-
 :_+ Windows Family (!fywin)
 
 
@@ -11265,6 +11225,102 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Transfer
+
+exit/b
+
+
+
+:_
+
+:fiex
+
+set fp=* Filename extensions.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://en.wikipedia.org/wiki/Alphabetical_list_of_file_extensions
+
+exit/b
+
+
+
+:_+ Release Process Family (!fyrepr)
+
+
+
+::_
+
+:repr
+
+:rf_rp
+
+:rp
+
+set fp=* Release process.
+
+rem lu: Nov-14-2019
+
+rem Release Documents skw
+
+echo.
+echo %fp%
+
+call n rf_cade
+
+set cbf_path=%cbf_path%\Release Process
+
+rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized below here.
+
+set cbf_excel_filename=%cbf_path%\Release Information.xlsx
+
+set cbf_filename=%cbf_path%\release process.jpg
+
+set cbf_github_url=https://github.ice.dhs.gov/ERO/cart-devops
+
+set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
+
+exit/b
+
+
+
+::_
+
+:ri
+
+:ver
+
+set fp=* Release/version information.
+
+rem lu: Oct-18-2019
+
+echo.
+echo %fp%
+
+call n rf_rp
+
+set cbf_filename=%cbf_path%\Release Information.xlsx
+
+exit/b
+
+
+
+::_
+
+:redo
+
+set fp=* Release documents.
+
+rem lu: Dec-2-2019
+
+echo.
+echo %fp%
+
+call n c
+
+set cbf_path=%cbf_path%\Release Documents
 
 exit/b
 

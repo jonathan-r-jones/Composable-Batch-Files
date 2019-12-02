@@ -2964,11 +2964,25 @@ set fp=* Reset CBF variables. (skw clear environment variables)
 rem echo.
 rem echo %fp%
 
+set cbf_appended_words=
+
 set cbf_application=
 
-set cbf_filename=
+set cbf_back=
 
-set cbf_file_to_upload=
+set cbf_clone_url=
+
+set cbf_confluence_url=
+
+rem set cbf_default_browser=
+
+rem set cbf_default_text_editor=
+
+set cbf_excel_filename=
+
+set cbf_fcpath=
+
+set cbf_filename=
 
 set cbf_github_url=
 
@@ -2976,15 +2990,19 @@ set cbf_host_name=
 
 set cbf_instance_id=
 
-set cbf_jenkins_url=
-
 set cbf_ip=
+
+set cbf_jenkinsfile=
+
+set cbf_jenkins_url=
 
 set cbf_parameter=
 
 set cbf_path=
 
 set cbf_pem=
+
+rem set cbf_repo=
 
 set cbf_url=
 

@@ -16,7 +16,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%~1" == "" goto show_the_state_of_the_cbf_environment_variables
+if not "%~1" == "" goto process_parameter
 
 goto main_function
 
@@ -44,64 +44,20 @@ exit/b
 
 :_
 
-:show_the_state_of_the_cbf_environment_variables
+:process_parameter
 
-set fp=* Show the state of the CBF environment variables.
-
-cls
+set fp=* Process parameter.
 
 echo.
 echo %fp%
 
-echo.
-echo Appended Words: %cbf_appended_words%
+call m reset_cbf_variables
 
-echo.
-echo Application: %cbf_application%
+call n %1
 
-echo.
-echo Back: %cbf_back%
+if %errorlevel% gtr 0 exit/b
 
-echo.
-echo Clone URL: %cbf_clone_url%
-
-echo.
-echo Default Browser: %cbf_default_browser%
-
-echo.
-echo Default Text Editor: %cbf_default_text_editor%
-
-echo.
-echo File to upload: %cbf_file_to_upload%
-
-echo.
-echo Filename: %cbf_filename%
-
-echo.
-echo Github URL: %cbf_github_url%
-
-echo.
-echo Header: %cbf_header%
-
-echo.
-echo Instance ID: %cbf_instance_id%
-
-echo.
-echo Parameter: %cbf_parameter%
-
-echo.
-echo Path: %cbf_path%
-
-echo.
-echo Pem: %cbf_pem%
-
-echo.
-echo Repo: %cbf_repo%
-
-echo.
-echo URL: %cbf_url%
-
-exit/b
+goto main_function
 
 
 
@@ -110,45 +66,112 @@ exit/b
 :main_function
 
 echo.
-echo %filep%
+echo * Show nickname definition.
 
-call m reset_cbf_variables
-
-call n %1
-
-if %errorlevel% == 1 (
-  exit/b
+if not "%cbf_appended_words%" == "" (
+  echo.
+  echo * Appended words: "%cbf_appended_words%"
 )
 
-if not "%cbf_application%" == "" echo.
-if not "%cbf_application%" == "" echo * Application: %cbf_application%
+if not "%cbf_application%" == "" (
+  echo.
+  echo * Application: "%cbf_application%"
+)
 
-if not "%cbf_filename%" == "" echo.
-if not "%cbf_filename%" == "" echo * Filename: %cbf_filename%
+if not "%cbf_back%" == "" (
+  echo.
+  echo * Back: "%cbf_back%"
+)
 
-if not "%cbf_file_to_upload%" == "" echo.
-if not "%cbf_file_to_upload%" == "" echo * File to upload: %cbf_file_to_upload%
+if not "%cbf_clone_url%" == "" (
+  echo.
+  echo * Clone URL: "%cbf_clone_url%"
+)
 
-if not "%cbf_github_url%" == "" echo.
-if not "%cbf_github_url%" == "" echo * Github URL: %cbf_github_url%
+if not "%cbf_confluence_url%" == "" (
+  echo.
+  echo * Filename: "%cbf_confluence_url%"
+)
 
-if not "%cbf_host_name%" == "" echo.
-if not "%cbf_host_name%" == "" echo * Host name: %cbf_host_name%
+if not "%cbf_default_browser%" == "" (
+  echo.
+  echo * Default browser: "%cbf_default_browser%"
+)
 
-if not "%cbf_jenkins_url%" == "" echo.
-if not "%cbf_jenkins_url%" == ""   echo * Jenkns URL: %cbf_jenkins_url%
+if not "%cbf_default_text_editor%" == "" (
+  echo.
+  echo * Default text editor: "%cbf_default_text_editor%"
+)
 
-if not "%cbf_instance_id%" == "" echo.
-if not "%cbf_instance_id%" == "" echo * Instance ID: %cbf_instance_id%
+if not "%cbf_excel_filename%" == "" (
+  echo.
+  echo * Excel Filename: "%cbf_excel_filename%"
+)
 
-if not "%cbf_ip%" == "" echo.
-if not "%cbf_ip%" == "" echo * IP: %cbf_ip%
+if not "%cbf_fc_path%" == "" (
+  echo.
+  echo * FC path: "%cbf_fc_path%"
+)
 
-if not "%cbf_path%" == "" echo.
-if not "%cbf_path%" == "" echo * Path: %cbf_path%
+if not "%cbf_filename%" == "" (
+  echo.
+  echo * Filename: "%cbf_filename%"
+)
 
-if not "%cbf_url%" == "" echo.
-if not "%cbf_url%" == "" echo * URL: %cbf_url%
+if not "%cbf_github_url%" == "" (
+  echo.
+  echo * Github URL: "%cbf_github_url%"
+)
+
+if not "%cbf_host_name%" == "" (
+  echo.
+  echo * Host name: "%cbf_host_name%"
+)
+
+if not "%cbf_instance_id%" == "" (
+  echo.
+  echo * Instance id: "%cbf_instance_id%"
+)
+
+if not "%cbf_ip%" == "" (
+  echo.
+  echo * IP Address: "%cbf_ip%"
+)
+
+if not "%cbf_jenkinsfile%" == "" (
+  echo.
+  echo * Jenkinsfile: "%cbf_jenkinsfile%"
+)
+
+if not "%cbf_jenkins_url%" == "" (
+  echo.
+  echo * Jenkins URL: "%cbf_jenkins_url%"
+)
+
+if not "%cbf_parameter%" == "" (
+  echo.
+  echo * Parameter: "%cbf_parameter%"
+)
+
+if not "%cbf_path%" == "" (
+  echo.
+  echo * Path: "%cbf_path%"
+)
+
+if not "%cbf_pem%" == "" (
+  echo.
+  echo * Pem: "%cbf_pem%"
+)
+
+if not "%cbf_repo%" == "" (
+  echo.
+  echo * Repo: "%cbf_repo%"
+)
+
+if not "%cbf_url%" == "" (
+  echo.
+  echo * URL: "%cbf_url%"
+)
 
 exit/b
 
