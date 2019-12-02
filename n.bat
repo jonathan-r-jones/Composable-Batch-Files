@@ -7779,23 +7779,6 @@ exit/b
 
 :_
 
-:tr
-
-set fp=* Transfer.
-
-rem lu: Mar-8-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\transfer
-
-exit/b
-
-
-
-:_
-
 :n1
 
 set fp=* N1.
@@ -10352,23 +10335,6 @@ exit/b
 
 :_
 
-:tran
-
-set fp=* Transfer folder.
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\Transfer
-
-exit/b
-
-
-
-:_
-
 :prex
 
 :tama
@@ -11282,6 +11248,23 @@ echo %fp%
 set cbf_filename=c:\environments\dv\.kitchen-aws.yml
 
 set cbf_path=c:\environments\dv
+
+exit/b
+
+
+
+:_
+
+:tran
+
+set fp=* Transfer folder.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\Transfer
 
 exit/b
 
