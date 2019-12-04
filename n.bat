@@ -5933,6 +5933,18 @@ exit/b
 
 :eden
 
+:nex
+
+:1070
+
+:stma
+
+:stsl
+
+:isrc
+
+:asrc
+
 :pass-through
 
 set fp=* Pass through.
@@ -11326,4 +11338,42 @@ exit/b
 
 
 
-:_ (!efn, !rfsp) (mov-6)
+:_
+
+:inwa
+
+set fp=* Inactivity warning.
+
+rem lu: Dec-3-2019
+
+echo.
+echo %fp%
+
+call n isrc
+
+set cbf_filename=%cbf_path%\app\services\dialog.service.ts
+
+exit/b
+
+
+
+:_
+
+:apco
+
+set fp=* App component
+
+rem lu: Dec-3-2019
+
+echo.
+echo %fp%
+
+call n isrc
+
+set cbf_filename=%cbf_path%\app\app.component.ts
+
+exit/b
+
+
+
+:_ (!efnb, !efn, !rfsp) (mov-6)

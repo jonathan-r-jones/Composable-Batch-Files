@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Filename sapien. (In Beta.) Use any application to open any file in the current ^
+set filep=* Filename sapien. Use any application to open any file in the current ^
 folder or via alias, with extension or not, with spaces or not.
 
 echo.
