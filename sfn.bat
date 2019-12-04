@@ -172,7 +172,7 @@ goto file_does_not_exist
 
 :file_exists
 
-set fp=* The batch file label and CBF were found and the file exists.
+set fp=* The batch file label and CBF were found and/or the file exists.
 
 echo.
 echo %fp%

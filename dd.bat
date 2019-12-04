@@ -43,8 +43,15 @@ exit/b
 
 :main_function
 
-echo.
-dir *.%1* /s
+set search_results_filename=%temp%\%~1_search_results.txt
+
+dir *.%1* /s>"%search_results_filename%"
+
+set cbf_parameter=%search_results_filename%
+
+call an ie
+
+call r
 
 exit/b
 

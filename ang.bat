@@ -106,26 +106,6 @@ exit/b
 
 :_
 
-:test
-
-:ng_test
-
-set fp=* Test angular.
-
-rem lu: Sep-16-2019
-
-echo.
-echo %fp%
-
-echo.
-ng test
-
-exit/b
-
-
-
-:_
-
 :run_ui
 
 :serve
@@ -220,6 +200,50 @@ echo %fp%
 
 echo.
 ng build --configuration=prod
+
+exit/b
+
+
+
+:_+ Running UI tests
+
+
+
+::_
+
+:test
+
+:ng_test
+
+set fp=* Test angular.
+
+rem lu: Sep-16-2019
+
+echo.
+echo %fp%
+
+echo.
+ng test
+
+exit/b
+
+
+
+::_
+
+:run_ui_tests_in_ma
+
+set fp=* Run UI tests in ma.
+
+rem lu: Dec-3-2019
+
+echo.
+echo %fp%
+
+call tdr m ui
+
+echo.
+ng test
 
 exit/b
 

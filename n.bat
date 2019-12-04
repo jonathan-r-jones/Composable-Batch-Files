@@ -5941,7 +5941,7 @@ exit/b
 
 :stsl
 
-:isrc
+:usrc
 
 :asrc
 
@@ -11349,7 +11349,7 @@ rem lu: Dec-3-2019
 echo.
 echo %fp%
 
-call n isrc
+call n usrc
 
 set cbf_filename=%cbf_path%\app\services\dialog.service.ts
 
@@ -11368,7 +11368,7 @@ rem lu: Dec-3-2019
 echo.
 echo %fp%
 
-call n isrc
+call n usrc
 
 set cbf_filename=%cbf_path%\app\app.component.ts
 

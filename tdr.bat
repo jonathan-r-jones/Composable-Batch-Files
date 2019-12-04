@@ -56,6 +56,24 @@ echo Example 3: tdr caco cius
 echo.
 echo Example 4: tdr cart cius
 
+echo.
+echo Example: td ui
+
+echo.
+echo Example: tdr m ui
+
+echo.
+echo Example: tdr 1070 ui
+
+echo.
+echo Example: td api
+
+echo.
+echo Example: tdr m api
+
+echo.
+echo Example: tdr 1070 api
+
 exit/b
 
 
