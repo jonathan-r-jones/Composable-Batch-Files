@@ -69,9 +69,9 @@ exit/b
 
 :start
 
-set fp=* Run start script.
+set fp=* Run start script. Rith used this on Dec-5-2019 instead of "ng serve".
 
-rem lu: Apr-24-2018
+rem lu: Dec-5-2019
 
 echo.
 echo %fp%

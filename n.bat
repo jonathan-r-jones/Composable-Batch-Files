@@ -5945,6 +5945,8 @@ exit/b
 
 :asrc
 
+:enedh
+
 :pass-through
 
 set fp=* Pass through.
@@ -7988,6 +7990,25 @@ exit/b
 
 ::_
 
+:j7
+
+set fp=* %1.txt.
+
+rem lu: Dec-5-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_filename=%cbf_path%\%1.txt
+
+exit/b
+
+
+
+::_
+
 :shl
 
 set fp=* sh.log
@@ -9988,6 +10009,8 @@ exit/b
 
 :_
 
+:db
+
 :dbb
 
 :dbbu
@@ -10887,6 +10910,8 @@ exit/b
 :_
 
 :ang
+
+:ang_docs
 
 set fp=* Angular docs.
 
