@@ -75,7 +75,7 @@ echo  cyfc  Use filename alias to "save as" a file in the current folder
 echo  cyff  Copy file from alias filename parm 1 to alias filename param 2
 echo   cyp  Copies file from a cbf_path nickname
 echo  cypp  Copy file from alias path param 1 to alias path param 2
-echo  cysf  Copy files using static formulas
+echo    cy  Copy files using function routing
 echo  cyte  Copy te.bat to a new batch file
 echo     d  Dir for current folder
 echo    dd  Dir filename extension searcher including subfolders
@@ -84,13 +84,12 @@ echo    dr  Dir remote searcher
 echo    dt  Dir with a td parameter
 echo  defn  Delete file base on passed in filename alias
 echo  depn  Delete folder corresponding to CBF path alias parameter
-echo  desf  Delete using static formulas
+echo    de  Delete using function routing
 echo    dn  Dot Net Core
 echo     e  Uses mx.bat then me.bat to decipher which file to edit (Or exit command window)
 echo    ed  Edit a file abstraction layer
 echo   edr  Edit a relative path constucted filename
 echo   edx  Edit a file
-echo    eg  Edit a file by gluing a relative path onto a base path
 echo   eje  Edit Jenkinsfile of an alias
 echo    el  Edit log file of an alias
 echo    es  Edit settings file of an alias

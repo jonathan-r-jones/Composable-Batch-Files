@@ -2780,7 +2780,7 @@ call td m2
 
 rem You can rename or delete the repository folder.
 
-call cysf md
+call cy.bat md
 
 rem If necessary, run the follwoing.
 rem call g clone_mdg
@@ -3575,7 +3575,7 @@ del %temp%\j1.txt
 
 rem call td cart
 
-rem call cysf copy_cart_cs_files_to_a_temp_folder
+rem call cy.bat copy_cart_cs_files_to_a_temp_folder
 
 cd /d %temp%\cart_cs
 

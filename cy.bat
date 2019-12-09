@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Copy files static formulas.
+set filep=* Copy files using function routing.
 
 
 
