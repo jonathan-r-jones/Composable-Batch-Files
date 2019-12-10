@@ -2419,7 +2419,7 @@ exit/b
 
 :fo
 
-set fp=* Fetch origin.
+set fp=* Fetch origin. I think this may be roughly the same as "git remote update".
 
 rem lu: May-9-2019
 
@@ -2445,24 +2445,6 @@ echo %fp%
 
 echo.
 git checkout -b sm_another_jenkins origin/sm_another_jenkins
-
-exit/b
-
-
-
-::_
-
-:md
-
-set fp=* Merge develop.
-
-rem lu: May-9-2019
-
-echo.
-echo %fp%
-
-echo.
-git merge develop
 
 exit/b
 
@@ -3228,7 +3210,71 @@ exit/b
 
 
 
+:_+ Git Help
+
+
+
+::_
+
+:hs
+
+set fp=* Git help for a specific git command.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, the name of the specific git command you want help on, is a required field.
+  exit/b
+)
+
+set cbf_url=https://git-scm.com/docs/%2
+
+call sf
+
+exit/b
+
+
+
+::_
+
+:ghg
+
+set fp=* Git help git.
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+git help git
+
+exit/b
+
+
+
 :_+ Merge Tool and Merging
+
+
+
+::_
+
+:mede
+
+set fp=* Merge develop.
+
+rem lu: May-9-2019
+
+echo.
+echo %fp%
+
+echo.
+git merge develop
+
+exit/b
 
 
 
@@ -3270,8 +3316,6 @@ exit/b
 
 
 ::_
-
-:
 
 set fp=* Sean's aliases.
 
@@ -3325,7 +3369,7 @@ exit/b
 
 :merg
 
-set fp=* Merging.
+set fp=* Merging sample code from GitHub.
 
 rem lu: Dec-10-2019
 
@@ -3345,35 +3389,25 @@ Step 2: Merge the changes and update on GitHub.
 git checkout master
 git merge --no-ff release/v140
 git push origin master
-rem qq-1
 
 exit/b
 
 
 
-:_+ Git Help
-
-
-
 ::_
 
-:hs
+:mema
 
-set fp=* Git help for a specific git command.
+set fp=* Merge master.
 
 rem lu: Dec-10-2019
 
 echo.
 echo %fp%
 
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, the name of the specific git command you want help on, is a required field.
-  exit/b
-)
+echo.
 
-git help %2
-rem qq-1
+git merge master
 
 exit/b
 
@@ -3381,16 +3415,60 @@ exit/b
 
 ::_
 
-:ghg
+:meab
 
-set fp=* Git help git.
+set fp=* Merge abort can only be run after the merge has resulted in conflicts.
 
-rem lu: Apr-24-2018
+rem lu: Dec-10-2019
 
 echo.
 echo %fp%
 
-git help git
+echo.
+
+git merge master --abort
+
+exit/b
+
+
+
+::_
+
+:meou
+
+:meours
+
+set fp=* Merge using the "ours" strategy.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+git merge -s ours master
+
+exit/b
+
+
+
+::_
+
+:mmou
+
+set fp=* Merge master into the release branch using the "ours" stategy.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+call sb release/v140
+
+call meours
 
 exit/b
 
