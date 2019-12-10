@@ -6743,7 +6743,7 @@ exit/b
 
 :_
 
-:hs
+:hush
 
 :hungry_shark
 

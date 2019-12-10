@@ -1097,47 +1097,6 @@ exit/b
 
 
 
-:_+ Merge Tool
-
-
-
-::_
-
-:mth
-
-set fp=* Merge tool help.
-
-rem lu: Jan-22-2018
-
-echo.
-echo %fp%
-echo.
-
-git mergetool --tool-help
-
-exit/b
-
-
-
-::_
-
-:mts
-
-set fp=* Set default merge tool to use.
-
-rem lu: Jan-22-2018
-
-echo.
-echo %fp%
-echo.
-
-git mergetool --tool=codecompare
-rem git mergetool --tool=vimdiff3
-
-exit/b
-
-
-
 :_
 
 :sfgit
@@ -1195,40 +1154,6 @@ rem git branch master
 rem git branch Branch2
 
 git branch clean6.2
-
-exit/b
-
-
-
-:_
-
-:ghg
-
-set fp=* Git help git.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-git help git
-
-exit/b
-
-
-
-:_
-
-:ghs
-
-set fp=* Git help for a specific git command.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-git help %2
 
 exit/b
 
@@ -2456,58 +2381,6 @@ exit/b
 
 :_
 
-:
-
-set fp=* Sean's aliases.
-
-rem lu: Apr-16-2019
-
-echo.
-echo %fp%
-
-echo.
-
-alias g='git' 
-alias ga='git add' 
-alias gaa='git add .' 
-alias gaaa='git add --all' 
-alias gau='git add --update' 
-alias gb='git branch' 
-alias gbd='git branch --delete ' 
-alias gc='git commit' 
-alias gcm='git commit --message' 
-alias gcf='git commit --fixup' 
-alias gco='git checkout' 
-alias gcob='git checkout -b' 
-alias gcom='git checkout master' 
-alias gcos='git checkout staging' 
-alias gcod='git checkout develop' 
-alias gd='git diff' 
-alias gda='git diff HEAD' 
-alias gi='git init' 
-alias glg='git log --graph --oneline --decorate --all' 
-alias gld='git log --pretty=format:"%h %ad %s" --date=short --all' 
-alias gm='git merge --no-ff' 
-alias gma='git merge --abort' 
-alias gmc='git merge --continue' 
-alias gr='git rebase' 
-alias gs='git status' 
-alias gss='git status --short' 
-alias gst='git stash' 
-alias gsta='git stash apply' 
-alias gstd='git stash drop' 
-alias gstl='git stash list' 
-alias gstp='git stash pop' 
-alias gsts='git stash save' 
-alias gl="git pull" 
-alias gp="git push"
-
-exit/b
-
-
-
-:_
-
 :crbr
 
 set fp=* Create branch.
@@ -3350,6 +3223,174 @@ echo %fp%
 call td cart
 
 git push origin --delete jj_devops
+
+exit/b
+
+
+
+:_+ Merge Tool and Merging
+
+
+
+::_
+
+:mth
+
+set fp=* Merge tool help.
+
+rem lu: Jan-22-2018
+
+echo.
+echo %fp%
+echo.
+
+git mergetool --tool-help
+
+exit/b
+
+
+
+::_
+
+:mts
+
+set fp=* Set default merge tool to use.
+
+rem lu: Jan-22-2018
+
+echo.
+echo %fp%
+echo.
+
+git mergetool --tool=codecompare
+rem git mergetool --tool=vimdiff3
+
+exit/b
+
+
+
+::_
+
+:
+
+set fp=* Sean's aliases.
+
+rem lu: Apr-16-2019
+
+echo.
+echo %fp%
+
+echo.
+
+alias g='git' 
+alias ga='git add' 
+alias gaa='git add .' 
+alias gaaa='git add --all' 
+alias gau='git add --update' 
+alias gb='git branch' 
+alias gbd='git branch --delete ' 
+alias gc='git commit' 
+alias gcm='git commit --message' 
+alias gcf='git commit --fixup' 
+alias gco='git checkout' 
+alias gcob='git checkout -b' 
+alias gcom='git checkout master' 
+alias gcos='git checkout staging' 
+alias gcod='git checkout develop' 
+alias gd='git diff' 
+alias gda='git diff HEAD' 
+alias gi='git init' 
+alias glg='git log --graph --oneline --decorate --all' 
+alias gld='git log --pretty=format:"%h %ad %s" --date=short --all' 
+alias gm='git merge --no-ff' 
+alias gma='git merge --abort' 
+alias gmc='git merge --continue' 
+alias gr='git rebase' 
+alias gs='git status' 
+alias gss='git status --short' 
+alias gst='git stash' 
+alias gsta='git stash apply' 
+alias gstd='git stash drop' 
+alias gstl='git stash list' 
+alias gstp='git stash pop' 
+alias gsts='git stash save' 
+alias gl="git pull" 
+alias gp="git push"
+
+exit/b
+
+
+
+::_
+
+:merg
+
+set fp=* Merging.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+Step 1: From your project repository, bring in the changes and test.
+
+git fetch origin
+git checkout -b release/v140 origin/release/v140
+git merge master
+
+Step 2: Merge the changes and update on GitHub.
+
+git checkout master
+git merge --no-ff release/v140
+git push origin master
+rem qq-1
+
+exit/b
+
+
+
+:_+ Git Help
+
+
+
+::_
+
+:hs
+
+set fp=* Git help for a specific git command.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, the name of the specific git command you want help on, is a required field.
+  exit/b
+)
+
+git help %2
+rem qq-1
+
+exit/b
+
+
+
+::_
+
+:ghg
+
+set fp=* Git help git.
+
+rem lu: Apr-24-2018
+
+echo.
+echo %fp%
+
+git help git
 
 exit/b
 

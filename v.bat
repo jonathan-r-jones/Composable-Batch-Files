@@ -69,7 +69,30 @@ exit/b
 
 
 
-:_
+:_+ Percent 2
+
+
+
+::_
+
+:percent_2
+
+set fp=* Percent 2 is a required field.
+
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field.
+rem qq-1
+  exit/b
+)
+
+exit/b
+
+
+
+::_
 
 :percent
 
@@ -102,13 +125,6 @@ echo Percent 1: %1
 echo Percent 2: %2
 echo Percent 3: %3
 echo Percent test_var: %test_var%
-
-echo.
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 cannot be nothing.
-  exit/b
-)
 
 echo.
 echo 4.
@@ -926,12 +942,6 @@ if %errorlevel% == 1 (
   echo.
   echo * Error: Label not found.
   call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 is a required field.
   exit/b
 )
 
