@@ -3426,7 +3426,28 @@ echo %fp%
 
 echo.
 
-git merge master --abort
+git merge --abort
+
+exit/b
+
+
+
+::_
+
+:mmou
+
+set fp=* Merge master into the release branch using the "ours" stategy.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+call sb release/v140
+
+call meours
 
 exit/b
 
@@ -3455,9 +3476,11 @@ exit/b
 
 ::_
 
-:mmou
+:meth
 
-set fp=* Merge master into the release branch using the "ours" stategy.
+:metheirs
+
+set fp=* Merge using the "theirs" strategy.
 
 rem lu: Dec-10-2019
 
@@ -3466,9 +3489,7 @@ echo %fp%
 
 echo.
 
-call sb release/v140
-
-call meours
+git merge -s ours master
 
 exit/b
 

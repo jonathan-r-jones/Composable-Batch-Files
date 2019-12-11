@@ -84,7 +84,6 @@ echo %fp%
 if "%~2" == "" (
   echo.
   echo * Percent 2 is a required field.
-rem qq-1
   exit/b
 )
 
