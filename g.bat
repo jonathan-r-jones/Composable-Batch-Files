@@ -3367,35 +3367,6 @@ exit/b
 
 ::_
 
-:merg
-
-set fp=* Merging sample code from GitHub.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-Step 1: From your project repository, bring in the changes and test.
-
-git fetch origin
-git checkout -b release/v140 origin/release/v140
-git merge master
-
-Step 2: Merge the changes and update on GitHub.
-
-git checkout master
-git merge --no-ff release/v140
-git push origin master
-
-exit/b
-
-
-
-::_
-
 :mema
 
 set fp=* Merge master.
@@ -3455,11 +3426,9 @@ exit/b
 
 ::_
 
-:meou
+:merg
 
-:meours
-
-set fp=* Merge using the "ours" strategy.
+set fp=* Original merging sample code from GitHub.
 
 rem lu: Dec-10-2019
 
@@ -3468,7 +3437,17 @@ echo %fp%
 
 echo.
 
-git merge -s ours master
+Step 1: From your project repository, bring in the changes and test.
+
+git fetch origin
+git checkout -b release/v140 origin/release/v140
+git merge master
+
+Step 2: Merge the changes and update on GitHub.
+
+git checkout master
+git merge --no-ff release/v140
+git push origin master
 
 exit/b
 
@@ -3490,6 +3469,56 @@ echo %fp%
 echo.
 
 git merge -s ours master
+
+exit/b
+
+
+
+::_
+
+:meou
+
+:meours
+
+set fp=* Merge using the "ours" strategy.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+git merge -s ours master
+
+exit/b
+
+
+
+::_
+
+:master_merge
+
+set fp=* Merging strategy.
+
+rem lu: Dec-11-2019
+
+echo.
+echo %fp%
+
+echo.
+
+rem Step 1: From your project repository, bring in the changes and test.
+
+git fetch origin
+git checkout -b release/v140 origin/release/v140
+git merge -s ours master
+
+rem Step 2: Merge the changes and update on GitHub.
+
+git checkout master
+git merge --no-ff release/v140
+git push origin master
 
 exit/b
 
