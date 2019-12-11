@@ -3149,6 +3149,7 @@ if "%~2" == "" (
 
 echo.
 git push origin --delete %2
+rem qq-1
 
 exit/b
 
@@ -3184,6 +3185,7 @@ set fp=* Delete branch, local and remote.
 
 echo.
 echo %fp%
+rem qq-1
 
 call %0 debrlo %2
 
