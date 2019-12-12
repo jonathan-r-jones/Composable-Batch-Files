@@ -3065,64 +3065,6 @@ exit/b
 
 
 
-:_+ List Branches
-
-
-
-::_
-
-:lb
-
-set fp=* List all branches, that is local and remote. (skw list branches)
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch -a
-
-exit/b
-
-
-
-::_
-
-:lblo
-
-set fp=* List local branches only.
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch
-
-exit/b
-
-
-
-::_
-
-:lbro
-
-set fp=* List remote branches only.
-
-rem lu: Oct-7-2019
-
-echo.
-echo %fp%
-
-echo.
-git branch -r
-
-exit/b
-
-
-
 :_+ Delete branch.
 
 
@@ -3149,7 +3091,6 @@ if "%~2" == "" (
 
 echo.
 git push origin --delete %2
-rem qq-1
 
 exit/b
 
@@ -3185,7 +3126,6 @@ set fp=* Delete branch, local and remote.
 
 echo.
 echo %fp%
-rem qq-1
 
 call %0 debrlo %2
 
@@ -3521,6 +3461,125 @@ rem Step 2: Merge the changes and update on GitHub.
 git checkout master
 git merge --no-ff release/v140
 git push origin master
+
+exit/b
+
+
+
+:_+ List Branches
+
+
+
+::_
+
+:cb
+
+:shcu
+
+set fp=* Show current branch.
+
+rem lu: Dec-12-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch --show-current
+
+exit/b
+
+
+
+::_
+
+:lb_old
+
+set fp=* List all branches, that is local and remote. (skw list branches) Not working.
+
+exit/b
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -a
+
+exit/b
+
+
+
+::_
+
+:lb
+
+:lblo
+
+set fp=* List local branches only.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch
+
+exit/b
+
+
+
+::_
+
+:lbro
+
+set fp=* List remote branches only. Not working.
+
+rem lu: Oct-7-2019
+
+echo.
+echo %fp%
+
+echo.
+git branch -r
+
+exit/b
+
+
+
+::_
+
+:lbjj
+
+set fp=* List jj branches.
+
+rem lu: Dec-12-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://github.ice.dhs.gov/ERO/cart/branches/yours
+
+call sf
+
+exit/b
+
+
+
+:_
+
+:upda
+
+set fp=* Update Git version.
+
+rem lu: Dec-12-2019
+
+echo.
+echo %fp%
+
+echo.
+git update-git-for-windows
 
 exit/b
 

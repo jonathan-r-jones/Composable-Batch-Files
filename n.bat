@@ -5955,6 +5955,10 @@ exit/b
 
 :fbi
 
+:jj_test
+
+:1339
+
 :pass-through
 
 set fp=* Pass through.
@@ -10032,160 +10036,6 @@ exit/b
 
 
 
-:_+ Jenkins
-
-
-
-::_
-
-:jf
-
-set fp=* Jenkinsfile folder.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\jenkinsfiles
-
-exit/b
-
-
-
-::_
-
-:arc
-
-:ckje
-
-:ckjf
-
-set fp=* Code keepers for Jenkinsfile.
-
-rem lu: Mar-11-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
-
-exit/b
-
-
-
-::_
-
-:jb
-
-:jft
-
-set fp=* Jenkinsfile backup.
-
-rem lu: May-16-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_backup
-
-exit/b
-
-
-
-::_
-
-:jt
-
-set fp=* Jenkinsfile tester.
-
-rem lu: Jun-2-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_tester
-
-exit/b
-
-
-
-::_
-
-:jenk
-
-set fp=* Jenkins.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-rem Admin password file.
-set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
-
-rem If you delete things from here, Jenkins may reset things.
-set cbf_path=%userprofile%\.jenkins
-
-set cbf_url=https://jenkins.io
-
-exit/b
-
-
-
-::_
-
-:jew
-
-set fp=* Jenkins workspace.
-
-rem lu: Jan-7-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\.jenkins\workspace
-
-exit/b
-
-
-
-::_
-
-:jfc
-
-set fp=* Jenkinsfile in current folder.
-
-rem lu: Jan-14-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=jenkinsfile
-
-exit/b
-
-
-
-::_
-
-:jelo
-
-:jl
-
-set fp=* Jenkins Log.
-
-rem lu: Jan-11-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\jenkins log.xlsx
-
-exit/b
-
-
-
 :_
 
 :shic
@@ -11427,6 +11277,160 @@ echo.
 echo %fp%
 
 set cbf_path=c:\aa\Database Backups
+
+exit/b
+
+
+
+:_+ Jenkins Family 2 (!fyje)
+
+
+
+::_
+
+:jf
+
+set fp=* Jenkinsfile folder.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\jenkinsfiles
+
+exit/b
+
+
+
+::_
+
+:jb
+
+:jft
+
+set fp=* Jenkinsfile backup.
+
+rem lu: May-16-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_backup
+
+exit/b
+
+
+
+::_
+
+:jt
+
+set fp=* Jenkinsfile tester.
+
+rem lu: Jun-2-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_tester
+
+exit/b
+
+
+
+::_
+
+:jenk
+
+set fp=* Jenkins.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+rem Admin password file.
+set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
+
+rem If you delete things from here, Jenkins may reset things.
+set cbf_path=%userprofile%\.jenkins
+
+set cbf_url=https://jenkins.io
+
+exit/b
+
+
+
+::_
+
+:jew
+
+set fp=* Jenkins workspace.
+
+rem lu: Jan-7-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\.jenkins\workspace
+
+exit/b
+
+
+
+::_
+
+:jfc
+
+set fp=* Jenkinsfile in current folder.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=jenkinsfile
+
+exit/b
+
+
+
+::_
+
+:jelo
+
+:jl
+
+set fp=* Jenkins Log.
+
+rem lu: Jan-11-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\jenkins log.xlsx
+
+exit/b
+
+
+
+::_
+
+:arc
+
+:ckje
+
+:ckjf
+
+set fp=* Code keepers for Jenkinsfile.
+
+rem lu: Mar-11-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
 
 exit/b
 
