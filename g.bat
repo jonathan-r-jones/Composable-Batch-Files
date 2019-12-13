@@ -2827,26 +2827,6 @@ exit/b
 
 :_
 
-:cbbt
-
-set fp=* Create a branch based on a tag.
-
-rem create branch from release, create branch from tag
-
-rem lu: Nov-5-2019
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b v140 tags/v1.4.0
-
-exit/b
-
-
-
-:_
-
 :lere
 
 set fp=* Leah's revert command. A benefit of using revert versus reset is that revert keeps the history.
@@ -3514,9 +3494,26 @@ exit/b
 
 :lb
 
-:lblo
+set fp=* List all branches.
 
-set fp=* List local branches only.
+rem lu: Dec-13-2019
+
+echo.
+echo %fp%
+
+call g lbl
+
+call g lbr
+
+exit/b
+
+
+
+::_
+
+:lbl
+
+set fp=* List branches, local.
 
 rem lu: Oct-7-2019
 
@@ -3532,11 +3529,11 @@ exit/b
 
 ::_
 
-:lbro
+:lbr
 
-set fp=* List remote branches only. Not working.
+set fp=* List branches, remote. Warning: Some deleted branches are still being shown as existing.
 
-rem lu: Oct-7-2019
+rem lu: Dec-13-2019
 
 echo.
 echo %fp%
@@ -3559,7 +3556,7 @@ rem lu: Dec-12-2019
 echo.
 echo %fp%
 
-set cbf_url=https://github.ice.dhs.gov/ERO/cart/branches/yours
+call n %1
 
 call sf
 
@@ -3580,6 +3577,48 @@ echo %fp%
 
 echo.
 git update-git-for-windows
+
+exit/b
+
+
+
+:_+ Branch from Tag (skw create branch from release, create branch from tag)
+
+
+
+::_
+
+:cbbt_old
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Nov-5-2019
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b v140 tags/v1.4.0
+
+exit/b
+
+
+
+::_
+
+:cbbt
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Dec-13-2019
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b release/v150 tags/v1.5.0
+
+git push --set-upstream origin release/v150
 
 exit/b
 
