@@ -689,7 +689,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if not defined cbf_url (
+if "%cbf_url%" == "" (
   echo.
   echo * The cbf_url is not defined for "%1".
   exit/b
@@ -710,7 +710,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not defined cbf_application (
+if "%cbf_application%" == "" (
   echo.
   echo * The cbf_application is not definied for "%1".
   exit/b

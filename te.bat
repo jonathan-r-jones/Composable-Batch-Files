@@ -45,6 +45,9 @@ echo.
 echo %parameter_2%
 
 echo.
+echo Batch file style: Function routing.
+
+echo.
 echo Examples
 
 echo.

@@ -54,7 +54,7 @@ if %errorlevel% gtr 0 (
   exit/b 99
 )
 
-if not defined cbf_path (
+if "%cbf_path%" == "" (
   echo.
   echo * The cbf_path is not defined for "%1". Nov-1-2019 8:33 PM
   exit/b 1
@@ -62,7 +62,7 @@ if not defined cbf_path (
 
 if not exist "%cbf_path%" (
   echo.
-  echo * Error: The CBF_Path "%cbf_path%" could not be found. Nov-1-2019 8:34 PM
+  echo * Error: The CBF_Path "%cbf_path%" does not exist. Nov-1-2019 8:34 PM
   exit/b 1
 )
 

@@ -44,6 +44,9 @@ set parameter_2=%parameter_2%
 echo.
 echo %parameter_2%
 
+echo.
+echo Batch file style: Alias routing.
+
 exit/b
 
 
