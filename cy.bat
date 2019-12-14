@@ -457,7 +457,7 @@ exit/b
 
 :sv_dr_to_local
 
-set fp=* Copy newer files from dropbox to my local drive.
+set fp=* Copy newer Savannah files from dropbox to local drive.
 
 echo.
 echo %fp%
