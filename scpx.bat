@@ -107,9 +107,7 @@ call n super_git
 
 set scp_path=%cbf_path%
 
-rem qq-1
 set file_to_upload=%~2
-rem qq-1
 set server_with_folder=zs_ci_user@%cbf_ip%:/tmp
 
 echo.
