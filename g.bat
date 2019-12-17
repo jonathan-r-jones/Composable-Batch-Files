@@ -1231,7 +1231,7 @@ set fp=* Configure GitHub author and email. Note: Please don't confuse this with
 echo.
 echo %fp%
 
-git config --global user.name "Jonathan R. Jones"
+git config --global user.name "jonathan-r-jones"
 git config --global user.email "jonathan.r.jones.3@gmail.com"
 
 exit/b

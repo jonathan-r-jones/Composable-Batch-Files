@@ -11444,4 +11444,42 @@ exit/b
 
 
 
+:_
+
+:ab
+
+set fp=* Anisble.
+
+rem lu: Dec-17-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\it\ansible
+
+exit/b
+
+
+
+:_
+
+:abw
+
+set fp=* Ansible workshop.
+
+rem lu: Sep-6-2017
+
+echo.
+echo %fp%
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/ansible-for-devops-workshop.git
+
+set cbf_path=%cbf_repo%\Ansible_Workshop
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)

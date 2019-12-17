@@ -180,4 +180,61 @@ exit/b
 
 
 
+:_
+
+:ab
+
+set fp=* Connect to Ansible server.
+
+rem lu: Dec-17-2019
+
+echo.
+echo %fp%
+
+ssh student13@34.226.216.194
+
+rem oblique: infra_as_code
+
+exit/b
+
+
+
+:_
+
+:ab2
+
+set fp=* Connect to Ansible server.
+
+rem lu: Dec-17-2019
+
+echo.
+echo %fp%
+
+ssh student13@172.16.42.93
+
+rem oblique: infra_as_code
+
+exit/b
+
+
+
+:_
+
+:ab2.1
+
+set fp=* Connect to Ansible server.
+
+rem lu: Dec-17-2019
+
+echo.
+echo %fp%
+
+ssh student13@172.16.201.92
+
+rem oblique: infra_as_code
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
