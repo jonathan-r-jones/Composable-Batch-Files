@@ -57,7 +57,6 @@ if not "%machinename%"=="gfe" (
   call 8
   call cypp mecfg mecfg_s
   call p drql
-  call p drro
   cd\
 )
 
