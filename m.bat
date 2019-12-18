@@ -3972,11 +3972,7 @@ exit/b
 
 ::_
 
-:file
-
-:t
-
-:gdf
+:crfi
 
 set fp=* Generate a timestamped name file. (skw create file)
 
@@ -4978,6 +4974,53 @@ echo.
 echo * "%2" folder exists.
 
 exit/b
+
+
+
+:_
+
+:validate_server_alias
+
+if "%~2" == "" (
+  echo.
+  echo * Error: Server alias must be specified. Dec-18-2019 11:06 AM
+  exit/b 1
+)
+
+set cbf_hostname=
+set cbf_instance_id=
+set cbf_ip=
+
+call n %2
+
+if %errorlevel% gtr 0 (
+  echo.
+  echo * Error: Label not found. Oct-31-2019 11:33 AM
+  exit/b 1
+)
+
+if "%cbf_host_name%" == "" (
+  echo.
+  echo * Error: Host name is blank for server alias "%2".
+  exit/b 1
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Error: Instance ID is blank for server alias "%2".
+  exit/b 1
+)
+
+if "%cbf_ip%" == "" (
+  echo.
+  echo * Error: IP address is blank for server alias "%2".
+  exit/b 1
+)
+
+echo.
+echo * Server alias is validated.
+
+exit/b 0
 
 
 

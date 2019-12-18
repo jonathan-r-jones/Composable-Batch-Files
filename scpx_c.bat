@@ -19,9 +19,9 @@ set fp=* Route callers.
 
 if "%~1" == "" goto help
 
-if "%~1" == "/?" goto help
+if "%~2" == "/?" goto help
 
-goto validate_input
+goto %1
 
 
 
@@ -34,21 +34,13 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Function route to execute.
 
 echo.
 echo %parameter_1%
 
 echo.
-echo %parameter_2%
-
-echo.
-echo Examples
-
-echo.
-echo Example 1: 
+echo Batch file style: Function routing.
 
 exit/b
 
@@ -165,6 +157,79 @@ call td dn
 
 echo.
 %scp_path%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
+
+exit/b
+
+
+
+:_
+
+:Dec-18-2019
+
+set fp=* Add test file to desl.
+
+rem lu: Dec-18-2019
+
+echo.
+echo %fp%
+
+call td a
+
+call scpx desl Dec-18-2019_11_32_AM.txt c
+
+exit/b
+
+
+
+:_
+
+:Dec-18-2019_1_24_PM
+
+set fp=* Add test file to fqam.
+
+echo.
+echo %fp%
+
+call td a
+
+call scpx fqam Dec-18-2019_11_32_AM.txt j
+
+exit/b
+
+
+
+:_
+
+:Dec-18-2019_1_29_PM
+
+set fp=* Add fq secret file to fqam.
+
+echo.
+echo %fp%
+
+call td pems
+
+call scpx fqam cart_fq_secret.sec j
+
+exit/b
+
+
+
+:_
+
+:Dec-18-2019_2_37_PM
+
+set fp=* Add fq secret file to new fqam.
+
+echo.
+echo %fp%
+
+call td pems
+
+call scpx fqam cart_fq_secret.sec j
+
+rem: sudo cp /tmp/cart_fq_secret.sec .
+rem qq-1
 
 exit/b
 

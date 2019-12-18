@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Uses the scp command to copy files to the Linux servers.
+set filep=* Uses the scp command to copy files to Linux servers.
 
 echo.
 echo %filep%
@@ -17,9 +17,13 @@ echo %filep%
 
 set fp=* Route callers.
 
+if "%~1" == "/?" goto help
+
 if "%~1" == "" goto help
 
-if "%~1" == "/?" goto help
+if "%~2" == "" goto help
+
+if "%~3" == "" goto help
 
 goto validate_input
 
@@ -34,15 +38,25 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
+set parameter_1=Parameter 1: Server alias.
 
-set parameter_2=Parameter 2 (Optional): 
+set parameter_2=Parameter 2: File to upload.
+
+set parameter_3=Parameter 3: User to use, a, c or j are the options.
+
+set parameter_4=Parameter 4 (Optional): Destination folder. If left blank, the tmp folder is used.
 
 echo.
 echo %parameter_1%
 
 echo.
 echo %parameter_2%
+
+echo.
+echo %parameter_3%
+
+echo.
+echo %parameter_4%
 
 echo.
 echo Examples
@@ -58,90 +72,56 @@ exit/b
 
 :validate_input
 
-if "%~1" == "" (
-  echo.
-  echo 
+call m validate_server_alias %~1
+
+if %errorlevel% gtr 0 (
+  exit/b
 )
+
+if not exist "%~2" (
+  echo.
+  echo * Error: File "%~2" does not exist.
+  exit/b 1
+) else (
+  echo.
+  echo * File found. Dec-18-2019 11:17 AM
+)
+
+if "%~3" == "a" (
+  set cbf_user=zzadmin
+)
+
+if "%~3" == "c" (
+  set cbf_user=zs_ci_user
+)
+
+if "%~3" == "j" (
+  set cbf_user=zzJJones
+)
+
+if "%cbf_user%" == "" (
+  echo.
+  echo * Error: CBF User is blank.
+  exit/b 1
+)
+
+if "%~4" == "" (
+  set cbf_destination_folder=tmp
+)
+
+echo.
+echo * CBF Destination Folder: %cbf_destination_folder%
+
+echo.
+echo * CBF User: %cbf_user%
+
+goto main_function
 
 
 
 :_
 
-:main_function
-
-rem lu: Dec-13-2019
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, the server id, is a required field.
-  exit/b
-)
-
-set cbf_ip=
-
-call n %2
-
-if %errorlevel% gtr 0 (
-  echo.
-  echo * Error: Label not found. Nov-5-2019 1:40 PM
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-if "%cbf_ip%" == "" (
-  echo.
-  echo * Error: cbf_ip is not defined. Nov-5-2019 1:41 PM
-  exit/b
-)
-
-if not defined cbf_host_name (
-  echo.
-  echo * Error: Cbf_hostname is not defined. Nov-5-2019 1:42 PM
-  exit/b
-)
-
-call n super_git
-
-set scp_path=%cbf_path%
-
-set file_to_upload=%~2
-set server_with_folder=zs_ci_user@%cbf_ip%:/tmp
-
-echo.
-@echo on
-%scp_path%\scp -i %share-zone%\pems\cart-np-key.pem "%file_to_upload%" %server_with_folder%
-rem qq-1
-@echo off
-
-
-rem Work in progress. Nov-15-2019
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, the server id, is a required field.
-  exit/b
-)
-
-set cbf_ip=
-
-call ni %2
-
-if "%cbf_ip%" == "" (
-  echo.
-  echo * Error: IP address not found.
-  exit/b
-)
-
-if "%cbf_host_name%" == "" (
-  echo.
-  echo * Error: Hostname not found.
-  exit/b
-)
-
-call n git_user_bin
+set fp=* Extra code.
 
 set git_user_bin=%cbf_path%
 
@@ -155,6 +135,23 @@ call el shl
 
 exit/b
 
+
+
+:_
+
+:main_function
+
+rem lu: Dec-18-2019
+
+set file_to_upload=%~2
+set server_with_folder=%cbf_user%@%cbf_ip%:/%cbf_destination_folder%
+
+echo.
+@echo on
+scp -i %share-zone%\pems\cart-np-key.pem "%file_to_upload%" %server_with_folder%
+@echo off
+
+exit/b
 
 
 :_ (!rfsp) (mov-7)
