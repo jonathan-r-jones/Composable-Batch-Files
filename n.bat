@@ -7570,7 +7570,11 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
+set cbf_clone_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+
 set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
+
+set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit
 
 exit/b
 
