@@ -199,22 +199,6 @@ exit/b
 
 :_
 
-:fixbranch
-
-set fp=* 14. Fix branch.
-
-echo.
-echo %fp%
-
-echo.
-git branch --unset -upstream
-
-exit/b
-
-
-
-:_
-
 :pushnv1_refer
 
 set fp=* 3a. Push changes into Nov-1 development branch.
@@ -988,43 +972,6 @@ git remote add origin https://Jonathan17@bitbucket.org/Jonathan17/resume.git
 :grao
 
 git remote add origin https://github.com/jonathan-r-jones/BigProject.git 
-
-exit/b
-
-
-
-::_
-
-:pullm
-
-set fp=* Pull master
-
-rem lu: Jan-17-2018
-
-echo.
-echo %fp%
-
-git pull origin master
-
-exit/b
-
-
-
-::_
-
-:4
-
-:suom
-
-set fp=* Push changes into master.
-
-echo.
-echo %fp%
-echo.
-
-git push --set-upstream origin master
-
-rem (!step)
 
 exit/b
 
@@ -3619,6 +3566,87 @@ echo.
 git checkout -b release/v150 tags/v1.5.0
 
 git push --set-upstream origin release/v150
+
+exit/b
+
+
+
+:_+ Upstream Origin
+
+
+
+::_
+
+:pullm
+
+set fp=* Pull master
+
+rem lu: Jan-17-2018
+
+echo.
+echo %fp%
+
+git pull origin master
+
+exit/b
+
+
+
+::_
+
+:4
+
+:suom
+
+set fp=* Push changes into master.
+
+echo.
+echo %fp%
+echo.
+
+git push --set-upstream origin master
+
+rem (!step)
+
+exit/b
+
+
+
+::_
+
+:fixbranch
+
+set fp=* 14. Fix branch.
+
+echo.
+echo %fp%
+
+echo.
+git branch --unset -upstream
+
+exit/b
+
+
+
+::_
+
+:reor
+
+set fp=* Revove origin.
+
+rem lu: Dec-17-2019
+
+echo.
+echo %fp%
+
+echo.
+git remote remove origin
+
+rem git branch --set-upstream-to=origin/master
+
+rem git remote add origin https://github.com/jonathan-r-jones/ansible-for-devops-workshop.git
+
+rem git push -u origin master
 
 exit/b
 
