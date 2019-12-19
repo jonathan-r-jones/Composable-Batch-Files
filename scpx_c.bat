@@ -229,7 +229,25 @@ call td pems
 call scpx fqam cart_fq_secret.sec j
 
 rem: sudo cp /tmp/cart_fq_secret.sec .
-rem qq-1
+
+exit/b
+
+
+
+:_
+
+:Dec-19-2019_12_58_PM
+
+set fp=* Add fq secret file to new fqsl.
+
+echo.
+echo %fp%
+
+call td pems
+
+call scpx fqsl cart_fq_secret.sec a
+
+rem: sudo cp /tmp/cart_fq_secret.sec .
 
 exit/b
 

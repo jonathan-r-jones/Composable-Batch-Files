@@ -3118,7 +3118,7 @@ exit/b
 
 ::_
 
-:vi
+:viva
 
 set fp=* Vivaldi.
 
@@ -5972,6 +5972,10 @@ exit/b
 :sr53
 
 :fqam_old
+
+:fqsl_old
+
+:je2c
 
 :pass-through
 
@@ -9764,6 +9768,8 @@ rem lu: Aug-8-2019
 
 echo.
 echo %fp%
+
+set cbf_filename=%reach out%\wk.asc
 
 set cbf_path=%dropbox%\work\wk
 

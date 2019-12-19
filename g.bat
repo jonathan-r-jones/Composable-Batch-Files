@@ -2809,7 +2809,7 @@ echo %fp%
 
 if "%~2" == "" (
   echo.
-  echo * Percent 2 is a required field.
+  echo * Error: You must enter the name of the branch you wish to switch to.
   exit/b
 )
 
