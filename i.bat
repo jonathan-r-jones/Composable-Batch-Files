@@ -16,6 +16,15 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
+if "%1" == "-c" (
+  echo.
+  echo * Reset CBF variables.
+  call m reset_cbf_variables
+  call %0
+  rem goto main_function
+  exit/b
+)
+
 if not "%~1" == "" goto process_parameter
 
 goto main_function
@@ -33,7 +42,7 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1 (Optional): Nickname to show definition for. If left blank ^
-current CBF environment variables are shown.
+current CBF environment variables are shown. If "-c" is passed, variables are reset.
 
 echo.
 echo %parameter_1%
@@ -48,9 +57,6 @@ exit/b
 
 set fp=* Process parameter.
 
-echo.
-echo %fp%
-
 call m reset_cbf_variables
 
 call n %1
@@ -64,9 +70,6 @@ goto main_function
 :_
 
 :main_function
-
-echo.
-echo * Show nickname definition.
 
 if not "%cbf_appended_words%" == "" (
   echo.
@@ -93,12 +96,12 @@ if not "%cbf_confluence_url%" == "" (
   echo * Filename: "%cbf_confluence_url%"
 )
 
-if not "%cbf_default_browser%" == "" (
+if "%1" == "" (
   echo.
   echo * Default browser: "%cbf_default_browser%"
 )
 
-if not "%cbf_default_text_editor%" == "" (
+if "%1" == "" (
   echo.
   echo * Default text editor: "%cbf_default_text_editor%"
 )
@@ -163,7 +166,7 @@ if not "%cbf_pem%" == "" (
   echo * Pem: "%cbf_pem%"
 )
 
-if not "%cbf_repo%" == "" (
+if "%1" == "" (
   echo.
   echo * Repo: "%cbf_repo%"
 )

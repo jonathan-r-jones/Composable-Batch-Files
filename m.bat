@@ -2980,7 +2980,7 @@ rem set cbf_default_text_editor=
 
 set cbf_excel_filename=
 
-set cbf_fcpath=
+set cbf_fc_path=
 
 set cbf_filename=
 
@@ -3002,6 +3002,7 @@ set cbf_path=
 
 set cbf_pem=
 
+rem When this is uncommented, it causes issues. Dec-20-2019
 rem set cbf_repo=
 
 set cbf_url=
