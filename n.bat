@@ -5977,6 +5977,8 @@ exit/b
 
 :je2c
 
+:immp
+
 :pass-through
 
 set fp=* Pass through.

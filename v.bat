@@ -1277,7 +1277,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :_
 
-:user_chooser
+:user_choice
 
 set fp=* Ask the user a question and proceed accordingly.
 
@@ -1287,7 +1287,7 @@ echo %fp%
 rem option, choose, choice
 
 echo.
-set /P user_option=Would you like to run npm install? (y/n): 
+set /P user_option=Would you like to run "npm install"? (y/n): 
 
 if not "%user_option%"=="y" call nm inst
 

@@ -14,6 +14,8 @@ set filep=* Perform miscellaneous tasks.
 
 set fp=* Route callers.
 
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
 goto %1
@@ -31,8 +33,11 @@ echo.
 echo Parameter 1: Function to execute.
 
 echo.
-echo Usage Note: Do not make internal calls to a atomic function because 
-echo that could cause a circular reference.
+echo Batch File Style: Function routing.
+
+echo.
+echo Usage Note: Do not make internal call to an atomic function because that could cause a 
+echo circular reference.
 
 echo.
 echo          Parameter  Description
@@ -4459,14 +4464,14 @@ x bash
 
 ./get_cart_jwt.sh
 
-sf 4200 krm
-
 call n crf_icp
 
 rem Run the UI by using lnk_ui or by the 2 lines below.
 rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
 call nm inst
 call ang run_ui
+
+sf 4200
 
 exit/b
 
@@ -4718,7 +4723,7 @@ rem Since this step in time-cunsuming and often unnecessary, I have commented it
 rem you just need to remember to uncomment it, if you need to run it.
 
 echo.
-set /P user_option=Would you like to run npm install? (y/n): 
+set /P user_option=Would you like to run "npm install"? (y/n): 
 if "%user_option%"=="y" call nm inst
 
 call ang run_ui
