@@ -5697,8 +5697,6 @@ exit/b
 
 :l4
 
-:dbbu
-
 :rep5
 
 :rep6
@@ -5978,6 +5976,18 @@ exit/b
 :je2c
 
 :immp
+
+:feii
+
+:imms
+
+:immf
+
+:immr
+
+:oliv
+
+:lh
 
 :pass-through
 
@@ -7427,105 +7437,6 @@ if "%cbf_application%" == "" (
 set cbf_path=%cbf_application:\winword.exe=%
 rem Commented the following line because it breaks f.bat. Nov-26-2019 11:28 AM
 rem set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-:_+ Blank Documents
-
-
-
-::_
-
-:txb
-
-set fp=* Edit a blank txt document.
-
-rem lu: Jan-25-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\blank.txt
-
-exit/b
-
-
-
-::_
-
-:wob
-
-:woblk
-
-set fp=* Use Word to edit a blank docx document.
-
-rem lu: Jan-25-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\blank.docx
-
-exit/b
-
-
-
-::_
-
-:wobc
-
-set fp=* Use Word to edit a blank docx document in Cade.
-
-rem lu: Aug-15-2019
-
-echo.
-echo %fp%
-
-call n cade
-
-set cbf_filename=%cbf_path%\blank.docx
-
-exit/b
-
-
-
-::_
-
-:bed
-
-:exb
-
-:exblk
-
-set fp=* Use Excel to edit a blank document. (skw blank Excel document)
-
-rem lu: Jan-25-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\blank.xlsx
-
-exit/b
-
-
-
-::_
-
-:exbc
-
-set fp=* Use Excel to edit a blank docx document in Cade.
-
-rem lu: Aug-15-2019
-
-echo.
-echo %fp%
-
-call n cade
-
-set cbf_filename=%cbf_path%\blank.xlsx
 
 exit/b
 
@@ -9844,6 +9755,8 @@ exit/b
 
 :4200
 
+:lh
+
 :ui_lh
 
 :uilh
@@ -11495,6 +11408,105 @@ set cbf_branch=master
 set cbf_clone_url=https://github.com/jonathan-r-jones/ansible-for-devops-workshop.git
 
 set cbf_path=%cbf_repo%\Ansible_Workshop
+
+exit/b
+
+
+
+:_+ Blank Documents
+
+
+
+::_
+
+:wob
+
+:woblk
+
+set fp=* Use Word to edit a blank docx document. (skw blank word document)
+
+rem lu: Jan-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\blank.docx
+
+exit/b
+
+
+
+::_
+
+:wobc
+
+set fp=* Use Word to edit a blank docx document in Cade.
+
+rem lu: Aug-15-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_filename=%cbf_path%\blank.docx
+
+exit/b
+
+
+
+::_
+
+:bed
+
+:exb
+
+:exblk
+
+set fp=* Use Excel to edit a blank document. (skw blank Excel document)
+
+rem lu: Jan-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\blank.xlsx
+
+exit/b
+
+
+
+::_
+
+:exbc
+
+set fp=* Use Excel to edit a blank docx document in Cade.
+
+rem lu: Aug-15-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_filename=%cbf_path%\blank.xlsx
+
+exit/b
+
+
+
+::_
+
+:txb
+
+set fp=* Edit a blank txt document.
+
+rem lu: Jan-25-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\blank.txt
 
 exit/b
 

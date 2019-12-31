@@ -72,11 +72,9 @@ echo * Liquibase configuration file being used: %cbf_filename%
 
 :main_function
 
-echo.
-echo %fp%
-
-echo.
+@echo on
 liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_filename%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" update
+@echo off
 
 rem Matt's command is below.
 rem liquibase --driver=org.postgresql.Driver --changeLogFile="C:\dev\cart_app\cart\api\src\main\resources\config\liquibase\master.xml" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory=c:\dev\temp\liqui_MYDB_MYSCHEMA_Data.out update
