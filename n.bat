@@ -5989,6 +5989,14 @@ exit/b
 
 :immi
 
+:kar2
+
+:klas
+
+:repo
+
+:qari
+
 :pass-through
 
 set fp=* Pass through.
