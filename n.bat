@@ -5997,6 +5997,12 @@ exit/b
 
 :qari
 
+:sw_earm
+
+:eald
+
+:eal
+
 :pass-through
 
 set fp=* Pass through.
