@@ -4969,6 +4969,8 @@ exit/b
 
 :_
 
+:oc
+
 :sr27
 
 :sr32
@@ -5110,8 +5112,6 @@ exit/b
 :nexus
 
 :nig
-
-:oc
 
 :ocgit
 
@@ -5472,8 +5472,6 @@ exit/b
 :cgit
 
 :990
-
-:oc
 
 :certs
 
