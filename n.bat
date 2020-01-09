@@ -3420,14 +3420,14 @@ exit/b
 
 set fp=Resume.
 
-rem lu: Feb-7-2018
+rem lu: Jan-9-2020
 
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\resume\jonathan jones' resume.doc
+set cbf_filename=%savannah%\resume\jonathan jones' resume.doc
 
-set cbf_path=%dropbox%\resume
+set cbf_path=%savannah%\resume
 
 set cbf_url=https://bitbucket.org/Jonathan17/resume
 
