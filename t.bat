@@ -10104,3 +10104,36 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
+
+:
+
+set fp=* Testing ampersand.
+
+rem lu: Jan-9-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008"&hey
+
+echo.
+echo Cbf_url: %cbf_url%
+
+exit/b
+
+These don't work.
+set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008^^&hey
+set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008\&hey
+set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&&hey
+set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008%&hey
+set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008^&hey
+set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&hey
+
+rem Original.
+rem set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&view=planning
+
+exit/b
+
+
+
+:_
