@@ -1626,7 +1626,7 @@ echo %fp%
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
-set cbf_path=%dropbox%\!savannah\cmac\Quickla-for-Multi-Edit
+set cbf_path=%dropbox%\savannah\cmac\Quickla-for-Multi-Edit
 
 set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
@@ -2158,6 +2158,8 @@ exit/b
 ::_
 
 :cbfgp
+
+:ghp
 
 set fp=* CBF on GitHub Pages.
 
@@ -7122,7 +7124,7 @@ echo %fp%
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Reach-Out.git
 
-set cbf_path=%dropbox%\!savannah\reach out
+set cbf_path=%dropbox%\savannah\reach out
 
 set cbf_url=https://github.com/jonathan-r-jones/Reach-Out.git
 
@@ -7661,7 +7663,7 @@ rem lu: Feb-27-2019
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\!savannah\reach out\%computername%.asc
+set cbf_filename=%dropbox%\savannah\reach out\%computername%.asc
 
 exit/b
 
@@ -8728,8 +8730,6 @@ exit/b
 
 :_
 
-:bu
-
 :bust
 
 set fp=* Buster.
@@ -9079,7 +9079,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\!savannah\reach out\buzz.asc
+set cbf_filename=%dropbox%\savannah\reach out\buzz.asc
 
 exit/b
 
@@ -9098,7 +9098,7 @@ rem lu: Jun-30-2019
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\!savannah\reach out\earl.asc
+set cbf_filename=%dropbox%\savannah\reach out\earl.asc
 
 exit/b
 
@@ -9115,7 +9115,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\!savannah\reach out\xps.asc
+set cbf_filename=%dropbox%\savannah\reach out\xps.asc
 
 exit/b
 
@@ -9305,7 +9305,7 @@ rem lu: Jun-23-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\!savannah
+set cbf_path=%dropbox%\savannah
 
 exit/b
 
@@ -9830,6 +9830,23 @@ exit/b
 
 ::_
 
+:mecfg_bu
+
+set fp=* Multi-Edit Config Files Backups.
+
+rem lu: Jan-3-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\Backups\Multi-Edit Config Files
+
+exit/b
+
+
+
+::_
+
 :mecfg
 
 set fp=* Multi-Edit Config file folder.
@@ -9840,23 +9857,6 @@ echo.
 echo %fp%
 
 set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
-
-exit/b
-
-
-
-::_
-
-:mecfg_db
-
-set fp=* Multi-Edit Config Files Dated Backups.
-
-rem lu: Jan-3-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\IT\Multi-Edit\Multi-Edit Config Files Dated Backups
 
 exit/b
 
@@ -10100,27 +10100,6 @@ echo %fp%
 call n c
 
 set cbf_filename=%cbf_path%\amalgamated enrollment quandary.xlsx
-
-exit/b
-
-
-
-:_
-
-:bases
-
-:bashs
-
-set fp=* Base shortcuts.
-
-rem base icons: skw
-
-rem lu: Oct-1-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\it\shortcuts\base
 
 exit/b
 
@@ -10911,6 +10890,8 @@ exit/b
 
 :env
 
+:envi
+
 :oden
 
 :odenv
@@ -11519,6 +11500,46 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\blank.txt
+
+exit/b
+
+
+
+:_
+
+:bu
+
+set fp=* Dropbox backups.
+
+rem lu: Jan-8-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\backups
+
+exit/b
+
+
+
+:_
+
+:bases
+
+:bashs
+
+:shor
+
+set fp=* Base shortcuts.
+
+rem base icons: skw
+
+rem lu: Jan-9-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\it\shortcuts\base
 
 exit/b
 

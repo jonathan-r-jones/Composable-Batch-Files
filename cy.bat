@@ -463,7 +463,7 @@ echo.
 echo %fp%
 
 echo.
-xcopy /d /r /s /y "%dropbox%\!savannah" "%savannah%"
+xcopy /d /r /s /y "%dropbox%\savannah" "%savannah%"
 
 exit/b
 

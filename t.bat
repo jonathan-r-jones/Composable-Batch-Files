@@ -422,7 +422,7 @@ echo.
 echo %fp%
 echo.
 
-xcopy /d /h /r /s /y "%savannah%" "%thumb_drive%\!savannah"
+xcopy /d /h /r /s /y "%savannah%" "%thumb_drive%\savannah"
 
 
 
@@ -434,7 +434,7 @@ echo.
 echo %fp%
 echo.
 
-xcopy /d /h /r /s /y "%thumb_drive%\!savannah" "%savannah%"
+xcopy /d /h /r /s /y "%thumb_drive%\savannah" "%savannah%"
 
 
 
@@ -494,7 +494,7 @@ echo.
 echo %fp%
 echo.
 
-set initial_folder=%my documents%\!savannah\Chef of the Future\Templates\Templates
+set initial_folder=%my documents%\savannah\Chef of the Future\Templates\Templates
 
 cd\%initial_folder%
 
@@ -528,7 +528,7 @@ set file_type=*.bat
 
 echo File type: "%file_type%".
 
-set folder_to_search=%my documents%\!savannah\belfry
+set folder_to_search=%my documents%\savannah\belfry
 
 echo Folder to search: "c:\%folder_to_search%".
 
@@ -622,7 +622,7 @@ echo.
 echo %fp%
 echo.
 
-set initial_folder=%my documents%\!savannah\belfry
+set initial_folder=%my documents%\savannah\belfry
 
 cd\%initial_folder%
 
@@ -734,9 +734,9 @@ goto set_path
 
 :Robocopy code that works:
 
-robocopy /s /ndl /njh /njs "%savannah%" "%my documents%\dropbox\!savannah"
+robocopy /s /ndl /njh /njs "%savannah%" "%my documents%\dropbox\savannah"
 
-robocopy /s /ndl /njh /njs "%my documents%\dropbox\!savannah" "%savannah%"
+robocopy /s /ndl /njh /njs "%my documents%\dropbox\savannah" "%savannah%"
 
 :Jun-12-2012: How to copy files in a Visual Studio Project
 
@@ -893,7 +893,7 @@ msiexec /i "database deployment tool 6.msi"
 
 :This statement does hidden and non-hidden. Ridiculously, the ORDER of the switches matters.
 
-del /ah /a /f "%thumb_drive%:\!savannah\%file_to_delete%"
+del /ah /a /f "%thumb_drive%:\savannah\%file_to_delete%"
 
 :How to do "not equals".
 set test=truex
@@ -902,7 +902,7 @@ if not "%test%"=="true" echo Test is NOT true.
 
 :Assign 3 variables to autoexec.bat
 
-::savannah=%userprofile%\my documents\!savannah
+::savannah=%userprofile%\my documents\savannah
 
 ::my_documents=%userprofile%\my documents
 
@@ -2284,7 +2284,7 @@ set classpath=.;.\bforeport.jar;
 echo Classpath: %classpath%
 echo.
 
-set path=C:\Users\jonathan.r.jones\Documents\!savannah\belfry;
+set path=C:\Users\jonathan.r.jones\Documents\savannah\belfry;
 
 rem set path=%path%;
 set path=%path%;C:\Program Files\Java\jdk1.8.0_102\bin;
@@ -4048,12 +4048,12 @@ cd
 
 echo.
 echo 3.
-cd\Users\jonathan.r.jones\Documents\!Savannah\Belfry
+cd\Users\jonathan.r.jones\Documents\savannah\Belfry
 cd
 
 echo.
 echo 4. Notice that putting a space after the "cd" works in all cases.
-cd \Users\jonathan.r.jones\Documents\!Savannah\Belfry
+cd \Users\jonathan.r.jones\Documents\savannah\Belfry
 cd
 
 m exitp
