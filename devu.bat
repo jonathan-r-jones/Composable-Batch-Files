@@ -23,6 +23,8 @@ if "%~1" == "/?" goto help
 
 goto %1
 
+exit/b
+
  
 
 :_
@@ -149,7 +151,7 @@ echo %fp%
 set devu=hiya
 
  if "%devu%" == "" (
-  echo cdevu is nothing.
+  echo devu is nothing.
 ) else (
   echo devu: %devu%
 )
