@@ -272,4 +272,23 @@ exit/b
 
 
 
+:_
+
+:Jan-10-2020_3_34_PM
+
+set fp=* Add test file to Fqt.
+
+echo.
+echo %fp%
+
+call td a
+
+call scpd fqsl Jan-10-2020_3_34_PM.txt c
+
+rem: sudo cp /tmp/cart_fq_secret.sec .
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-7)

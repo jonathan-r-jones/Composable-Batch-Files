@@ -3529,48 +3529,6 @@ exit/b
 
 
 
-:_+ Branch from Tag (skw create branch from release, create branch from tag)
-
-
-
-::_
-
-:cbbt_old
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Nov-5-2019
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b v140 tags/v1.4.0
-
-exit/b
-
-
-
-::_
-
-:cbbt
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Dec-13-2019
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b release/v150 tags/v1.5.0
-
-git push --set-upstream origin release/v150
-
-exit/b
-
-
-
 :_+ Upstream Origin
 
 
@@ -3647,6 +3605,68 @@ rem git branch --set-upstream-to=origin/master
 rem git remote add origin https://github.com/jonathan-r-jones/ansible-for-devops-workshop.git
 
 rem git push -u origin master
+
+exit/b
+
+
+
+:_+ Branch from Tag (skw create branch from release, create branch from tag, create release from tag)
+
+
+
+::_
+
+:cbbt6
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Jan-10-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b release/v160 tags/v1.6.0
+
+git push --set-upstream origin release/v160
+
+exit/b
+
+
+
+::_
+
+:cbbt_old
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Nov-5-2019
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b v140 tags/v1.4.0
+
+exit/b
+
+
+
+::_
+
+:cbbt
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Dec-13-2019
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b release/v150 tags/v1.5.0
+
+git push --set-upstream origin release/v150
 
 exit/b
 
