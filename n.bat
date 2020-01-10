@@ -5984,6 +5984,8 @@ exit/b
 
 :eal
 
+:jev
+
 :pass-through
 
 set fp=* Pass through.
@@ -11526,6 +11528,7 @@ exit/b
 
 
 
+<<<<<<< HEAD
 :_
 
 :dtg
@@ -11546,3 +11549,6 @@ exit/b
 
 
 :_ (!efnb, !efn, !rfsp) (mov-6)
+=======
+:_ (!efnb, !efn, !rfsp) (mov-6)
+>>>>>>> dfb1de6f5ad8ea4bc0154b72f3ab05fbfd462e80
