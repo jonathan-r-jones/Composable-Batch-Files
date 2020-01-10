@@ -4952,25 +4952,6 @@ exit/b
 
 :_
 
-:dtg
-
-:dtggit
-
-set fp=* Dev Technology Group.
-
-rem lu: Oct-22-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://github.com/DevTechnology
-
-exit/b
-
-
-
-:_
-
 :oc
 
 :sr27
@@ -11540,6 +11521,25 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\shortcuts\base
+
+exit/b
+
+
+
+:_
+
+:dtg
+
+set fp=* Dev Technology Group.
+
+rem lu: Jan-10-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%reach out%\dtg.asc
+
+set cbf_url=https://github.com/DevTechnology
 
 exit/b
 
