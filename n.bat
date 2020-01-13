@@ -3587,7 +3587,7 @@ rem lu: Aug-2-2018
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonat\Documents\Dropbox\vetted pictures
+set cbf_path=C:\Users\jonat\Documents\Dropbox\pictures
 
 exit/b
 
@@ -4052,7 +4052,7 @@ rem lu: May-16-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\vetted pictures\new and exciting
+set cbf_path=%dropbox%\pictures\new and exciting
 
 exit/b
 
@@ -4945,25 +4945,6 @@ echo %fp%
 set cbf_path=%cbf_repo%\
 
 set cbf_url=https://github.com/DevTechnology/DevOps-WG/wiki
-
-exit/b
-
-
-
-:_
-
-:dtg
-
-:dtggit
-
-set fp=* Dev Technology Group.
-
-rem lu: Oct-22-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://github.com/DevTechnology
 
 exit/b
 
@@ -11545,4 +11526,27 @@ exit/b
 
 
 
+<<<<<<< HEAD
+:_
+
+:dtg
+
+set fp=* Dev Technology Group.
+
+rem lu: Jan-10-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%reach out%\dtg.asc
+
+set cbf_url=https://github.com/DevTechnology
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
+=======
+:_ (!efnb, !efn, !rfsp) (mov-6)
+>>>>>>> dfb1de6f5ad8ea4bc0154b72f3ab05fbfd462e80
