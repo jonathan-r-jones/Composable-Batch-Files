@@ -10095,16 +10095,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Testing ampersand.
@@ -10131,6 +10121,35 @@ set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&hey
 
 rem Original.
 rem set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&view=planning
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Add newline at j1.txt.
+
+rem lu: Jan-13-2020
+
+echo.
+echo %fp%
+
+echo:>>c:\a\j1.txt
+
+rem qq-1
 
 exit/b
 

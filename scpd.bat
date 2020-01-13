@@ -33,14 +33,14 @@ goto validate_input
 
 :help
 
-rem lu: Jan-9-2020
+rem lu: Jan-13-2020
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Server alias.
 
-set parameter_2=Parameter 2: File to upload.
+set parameter_2=Parameter 2: File to download.
 
 set parameter_3=Parameter 3: User to use, a, c or j are the options.
 
@@ -78,15 +78,6 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if not exist "%~2" (
-  echo.
-  echo * Error: File "%~2" does not exist.
-  exit/b 1
-) else (
-  echo.
-  echo * File found. Dec-18-2019 11:17 AM
-)
-
 if "%~3" == "a" (
   set cbf_user=zzadmin
 )
@@ -106,7 +97,7 @@ if "%cbf_user%" == "" (
 )
 
 if "%~4" == "" (
-  set cbf_destination_folder=tmp
+  set cbf_destination_folder=%tmp%
 )
 
 echo.
@@ -123,15 +114,14 @@ goto main_function
 
 :main_function
 
-rem lu: Dec-18-2019
-
-set file_to_upload=%~2
-set server_with_folder=%cbf_user%@%cbf_ip%:/%cbf_destination_folder%
+set file_to_download=%~2
+set cbf_source_information=%cbf_user%@%cbf_ip%:%file_to_download%
 
 echo.
 @echo on
-scp -i %share-zone%\pems\cart-np-key.pem "%file_to_upload%" %server_with_folder%
+scp -i %share-zone%\pems\cart-np-key.pem %cbf_source_information% "%cbf_destination_folder%"
 @echo off
+rem qq-2
 
 exit/b
 

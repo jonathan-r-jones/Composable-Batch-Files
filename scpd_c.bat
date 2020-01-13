@@ -285,7 +285,102 @@ call td a
 
 call scpd fqsl Jan-10-2020_3_34_PM.txt c
 
-rem: sudo cp /tmp/cart_fq_secret.sec .
+exit/b
+
+
+
+:_
+
+:Jan-13-2020_12_24_PM
+
+set fp=* Add a log file to c:\.
+
+echo.
+echo %fp%
+
+call td a
+
+call scpd fqma /opt/cart/log/logFile.2020-01-13.log c c:\a
+
+exit/b
+
+
+
+:_
+
+:Jan-13-2020_12_49_PM
+
+set fp=* Add a log file to c:\a.
+
+echo.
+echo %fp%
+
+call td a
+
+call scpd fqma /tmp/Jan-9-2020_5_04_PM.txt c c:\a
+rem qq-1
+
+rem Outcome: /Jan-9-2020_5_04_PM.txt: Permission denied
+
+exit/b
+
+
+
+:_
+
+:Jan-13-2020_12_50_PM
+
+set fp=* Add a log file to c:\a.
+
+echo.
+echo %fp%
+
+rem Outcome: scp: tmp/Jan-9-2020_5_04_PM.txt: No such file or directory
+
+call td a
+
+call scpd fqma tmp/Jan-9-2020_5_04_PM.txt c c:\a
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:Jan-13-2020_1_00_PM
+
+set fp=* Add a log file to c:\a. Backslashes.
+
+echo.
+echo %fp%
+
+call td a
+
+call scpd fqma \tmp\Jan-9-2020_5_04_PM.txt c c:\a
+rem qq-1
+
+rem Outcome: /Jan-9-2020_5_04_PM.txt: Permission denied
+
+exit/b
+
+
+
+:_
+
+:Jan-13-2020_3_11_PM
+
+set fp=* Download a log file.
+
+echo.
+echo %fp%
+
+call td a
+
+call scpd fqma \tmp\Jan-9-2020_5_04_PM.txt c c:\a
+rem qq-1
+
+rem Outcome: /Jan-9-2020_5_04_PM.txt: Permission denied
 
 exit/b
 
