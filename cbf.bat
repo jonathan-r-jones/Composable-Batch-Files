@@ -82,9 +82,10 @@ echo     dd  Dir filename extension searcher including subfolders
 echo    ddc  Dir filename extension searcher current folder only
 echo     dr  Dir remote searcher
 echo     dt  Dir with a td parameter
+echo     de  Delete using function routing
 echo   defn  Delete file base on passed in filename alias
 echo   depn  Delete folder corresponding to CBF path alias parameter
-echo     de  Delete using function routing
+echo   devu  Demo file for Dev Universiy event on Jan-9-2020
 echo     dn  Dot Net Core
 echo      e  Uses mx.bat then me.bat to decipher which file to edit (Or exit command window)
 echo     ed  Edit a file abstraction layer
