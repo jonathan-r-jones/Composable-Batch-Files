@@ -5385,8 +5385,6 @@ exit/b
 
 :nast
 
-:mot
-
 :sr22
 
 :sr23
