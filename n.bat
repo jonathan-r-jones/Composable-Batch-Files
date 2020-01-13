@@ -3587,7 +3587,7 @@ rem lu: Aug-2-2018
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonat\Documents\Dropbox\vetted pictures
+set cbf_path=C:\Users\jonat\Documents\Dropbox\pictures
 
 exit/b
 
@@ -4052,7 +4052,7 @@ rem lu: May-16-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\vetted pictures\new and exciting
+set cbf_path=%dropbox%\pictures\new and exciting
 
 exit/b
 
