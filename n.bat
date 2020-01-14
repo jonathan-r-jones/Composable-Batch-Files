@@ -4952,6 +4952,8 @@ exit/b
 
 :_
 
+:troy
+
 :oc
 
 :sr27
@@ -5255,8 +5257,6 @@ exit/b
 :issoa
 
 :cdocs
-
-:troy
 
 :ds
 
