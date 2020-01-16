@@ -4952,6 +4952,8 @@ exit/b
 
 :_
 
+:troy
+
 :oc
 
 :sr27
@@ -5255,8 +5257,6 @@ exit/b
 :issoa
 
 :cdocs
-
-:troy
 
 :ds
 
@@ -8171,6 +8171,8 @@ exit/b
 :_
 
 :i2
+
+:it2
 
 set fp=* I2.
 
@@ -11361,6 +11363,25 @@ exit/b
 
 
 
+::_
+
+:rhje
+
+:rhjf
+
+set fp=* Red Hat Jenkinsfile from Jan-15-2020.
+
+rem lu: Jan-15-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Jenkinsfiles\Jenkinsfile_Red_Hat
+
+exit/b
+
+
+
 :_
 
 :ab
@@ -11538,27 +11559,8 @@ exit/b
 
 
 
+:_ (!efnb, !efn, !rfsp) (mov-6)
 <<<<<<< HEAD
-:_
-
-:dtg
-
-set fp=* Dev Technology Group.
-
-rem lu: Jan-10-2020
-
-echo.
-echo %fp%
-
-set cbf_filename=%reach out%\dtg.asc
-
-set cbf_url=https://github.com/DevTechnology
-
-exit/b
-
-
-
-:_ (!efnb, !efn, !rfsp) (mov-6)
-=======
-:_ (!efnb, !efn, !rfsp) (mov-6)
 >>>>>>> dfb1de6f5ad8ea4bc0154b72f3ab05fbfd462e80
+=======
+>>>>>>> e083466eb1e9a604df187329842cea37efca3034
