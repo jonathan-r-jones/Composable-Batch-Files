@@ -147,23 +147,6 @@ exit/b
 
 :_
 
-:tn
-
-set fp=* Tree view.
-
-rem lu: Jan-8-2019
-
-echo.
-echo %fp%
-
-tree/f
-
-exit/b
-
-
-
-:_
-
 :concop
 
 set fp=* Conflicted copy.
@@ -288,9 +271,30 @@ exit/b
 
 
 
-:_
+:_+ Tree Operations
+
+
+
+::_
 
 :t
+
+set fp=* Tree view.
+
+rem lu: Jan-8-2019
+
+echo.
+echo %fp%
+
+tree/f
+
+exit/b
+
+
+
+::_
+
+:tP
 
 set fp=* Tree view piped to a file.
 
@@ -300,8 +304,6 @@ echo.
 echo %fp%
 
 tree/f>%temp%\treeview_results.txt
-
-rem (!rfsp) (mov-2)
 
 start "Test Title" "%cbf_default_text_editor%" "%temp%\treeview_results.txt"
 

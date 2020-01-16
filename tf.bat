@@ -394,98 +394,7 @@ exit/b
 
 
 
-:_+ Main Parts II
-
-
-
-::_
-
-:init
-
-set fp=* Initialize Terraform. This downloads necessary or missing plugins, e.g. from ^
-Hashicorp. This worked from the "dv" folder. You may need to disconnect from the VPN ^
-prior to running this command.
-
-rem lu: Nov-11-2019
-
-echo.
-echo %fp%
-
-call m specific_file_presence main.tf
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-rem It seems like if you want a new instance, you should run from the "dv" folder and enter 
-rem "no" when asked about copying state. If you want to modify an existing instance, run
-rem the init command from the "app-ec2" folder.
-
-echo.
-terraform init -no-color
-
-exit/b
-
-
-
-::_
-
-:p
-
-:plan
-
-set fp=* Plan. This worked from the "dv" folder.
-
-rem lu: May-24-2019
-
-echo.
-echo %fp%
-
-call m specific_file_presence main.tf
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-call n pems
-
-echo.
-rem terraform plan -var-file="variables.tf" -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
-terraform plan -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
-
-exit/b
-
-
-
-::_
-
-:a
-
-:appl
-
-:apply
-
-set fp=* Apply. This worked from the "dv" folder.
-
-rem lu: May-24-2019
-
-echo.
-echo %fp%
-
-call m specific_file_presence main.tf
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-call n pems
-
-echo.
-rem terraform apply -var-file="%tfkeys%\terraform.tfvars" -var "private_key_path=%tfkeys%\TerraformTest2.pem" -no-color -auto-approve
-rem terraform apply -var "private_key_path=%pem_path%" -no-color -auto-approve
-terraform apply -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
-
-exit/b
+:_+ Consumers
 
 
 
@@ -522,6 +431,122 @@ echo %fp%
 call td mqfq
 
 call :appl
+
+exit/b
+
+
+
+:_+ Main Parts II
+
+
+
+::_
+
+:init
+
+set fp=* Initialize, which picks up the settings from the current folder.
+
+rem lu: Jan-16-2020
+
+echo.
+echo %fp%
+
+call m specific_file_presence main.tf
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+terraform init -no-color
+
+exit/b
+
+Jan-16-2020: This worked from the sr55 folder. Initially I got this error:
+
+Error downloading modules: Error loading modules: module app-ec2: No Terraform configuration 
+files found in directory: .terraform\modules\be80f8e43d2dfa71239e19e2f064fc8f
+
+Then when I deleted the .terraform folder that was in the sr55 folder,  the error went away.
+
+It seems like if you want a new instance, you should run from the "dv" folder and enter "no" 
+when asked about copying state. If you want to modify an existing instance, run the init 
+command from the "app-ec2" folder.
+
+This downloads necessary or missing plugins, e.g. from ^ Hashicorp. This worked from the "dv" 
+folder. You may need to disconnect from the VPN prior to running this command.
+
+exit/b
+
+
+
+::_
+
+:p
+
+:plan
+
+set fp=* Plan.
+
+rem lu: May-24-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence main.tf
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call n pems
+
+@echo on
+terraform plan -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+@echo off
+
+exit/b
+
+Picks up settings from the current folder.
+
+Be sure to cd into the folder who's configuration you'd like to run, e. g. fqsl.
+
+This worked from the "dv" folder.
+
+exit/b
+
+
+
+::_
+
+:a
+
+:appl
+
+:apply
+
+set fp=* Apply.
+
+rem lu: Jan-16-2020
+
+echo.
+echo %fp%
+
+call m specific_file_presence main.tf
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+call n pems
+
+@echo on
+terraform apply -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+@echo off
+
+exit/b
+
+Picks up settings from the current folder.
 
 exit/b
 

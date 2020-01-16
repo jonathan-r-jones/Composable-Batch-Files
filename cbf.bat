@@ -147,6 +147,8 @@ echo    rzr  Multi-Edit abstraction layer for running CBF files
 echo   rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo      s  Check git status remotely, has TD parameter
 echo   scpr  Secure Copy Protocol, function routing
+echo   scpd  Secure Copy Protocol (download version)
+echo scpd_c  Secure Copy Protocol (download version) consumer
 echo   scpx  Secure Copy Protocol
 echo scpx_c  Secure Copy Protocol consumer
 echo     se  Internet search helper

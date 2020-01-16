@@ -5984,6 +5984,18 @@ exit/b
 
 :jev
 
+:kiin
+
+:cks
+
+:rup
+
+:ay
+
+:ins
+
+:sr55
+
 :pass-through
 
 set fp=* Pass through.
