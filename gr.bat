@@ -603,11 +603,9 @@ exit/b
 
 :bfp
 
-:build_for_production
-
 set fp=* Build for production, jar file with td alias.
 
-rem lu: Oct-15-2019
+rem lu: Jan-17-2020
 
 echo.
 echo %fp%
@@ -616,7 +614,7 @@ call td rf_ma
 
 cd api
 
-call %0 build_jar
+call %0 build_jar_for_production
 
 exit/b
 
@@ -624,11 +622,11 @@ exit/b
 
 ::_
 
-:build_jar
+:build_jar_for_production
 
 set fp=* Build for production, jar file.
 
-rem lu: Oct-15-2019
+rem lu: Jan-17-2020
 
 echo.
 echo %fp%

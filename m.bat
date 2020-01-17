@@ -4455,6 +4455,8 @@ cd api
 
 lq
 
+rem Note that in order to get Liquibase to work, you may need to wipe your local database.
+
 rem Run the API by using m lnk_api. You may need to edit npcrf.
 gr run_api
 

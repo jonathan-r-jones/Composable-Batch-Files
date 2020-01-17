@@ -11559,8 +11559,48 @@ exit/b
 
 
 
+:_+ Artifacts (!arts)
+
+
+
+:_
+
+:art
+
+:arta
+
+set fp=* API artifact.
+
+rem lu: Jan-17-2020
+
+echo.
+echo %fp%
+
+call n rf_ma
+
+set cbf_path=%cbf_path%\api\build\libs
+
+exit/b
+
+
+
+:_
+
+:artu
+
+set fp=* UI artifact.
+
+rem lu: Jan-17-2020
+
+echo.
+echo %fp%
+
+call n rf_ma
+
+set cbf_path=%cbf_path%\icecart-portal-client\dist\icecart-portal-client
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
-<<<<<<< HEAD
->>>>>>> dfb1de6f5ad8ea4bc0154b72f3ab05fbfd462e80
-=======
->>>>>>> e083466eb1e9a604df187329842cea37efca3034
