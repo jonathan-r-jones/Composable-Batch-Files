@@ -5996,6 +5996,8 @@ exit/b
 
 :sr55
 
+:qt
+
 :pass-through
 
 set fp=* Pass through.
