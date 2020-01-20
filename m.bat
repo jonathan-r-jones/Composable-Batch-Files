@@ -1427,6 +1427,10 @@ exit/b
 
 :bl_cbf
 
+:init_cbf
+
+set fp=* Initialize CBF environment.
+
 title=CBF
 
 goto big
@@ -1437,7 +1441,13 @@ goto big
 
 :bl_chef
 
+:init_chef
+
 title=Chef
+
+set homedrive=c:
+
+set homepath=\Users\JJones2
 
 goto big
 
