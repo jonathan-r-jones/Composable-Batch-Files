@@ -2897,7 +2897,7 @@ rem lu: Jul-15-2018
 echo.
 echo %fp%
 
-set cbf_path=g:\audiobooks
+set cbf_path=h:\audiobooks
 
 exit/b
 
@@ -4120,7 +4120,7 @@ rem lu: Jul-15-2018
 echo.
 echo %fp%
 
-set cbf_path=g:\podcasts
+set cbf_path=h:\podcasts
 
 exit/b
 
@@ -10645,7 +10645,7 @@ rem lu: Nov-9-2019
 echo.
 echo %fp%
 
-set cbf_path=g:\podcasts
+set cbf_path=h:\podcasts
 
 exit/b
 
@@ -10745,6 +10745,8 @@ exit/b
 
 
 ::_
+
+:prsc
 
 :scsh
 
