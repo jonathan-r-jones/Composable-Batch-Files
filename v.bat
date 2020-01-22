@@ -566,6 +566,63 @@ exit/b
 
 
 
+:_+ Find Command (!find)
+
+
+
+::_
+
+:which_environment_is_currently_set
+
+set fp=* Which environment is the kiosk pointing to? (skw finding text in file)
+
+echo.
+echo %fp%
+
+type %config_1_destination% | find /i "fqt">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * The kiosk is pointing to FQT.
+  echo.
+  pause
+  exit/b
+)
+
+echo. 
+echo * The kiosk is pointing to DEV.
+echo.
+
+pause
+
+exit/b
+
+
+
+::_
+
+:specific_folder_presence
+
+set fp=* Check for presence of a paricular foldder in the current folder.
+
+echo.
+echo %fp%
+
+echo %cd% | find /i "%2">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the "%2" folder for this command to work. Nov-11-2019 6:29 PM
+  exit/b 1
+)
+
+echo. 
+echo * "%2" folder exists.
+
+exit/b
+
+
+
 :_
 
 :where
@@ -1078,30 +1135,6 @@ if exist "mx.bat" (
 ) else (
   echo File does not exist.
 )
-
-exit/b
-
-
-
-::_
-
-:specific_folder_presence
-
-set fp=* Check for presence of a paricular foldder in the current folder.
-
-echo.
-echo %fp%
-
-echo %cd% | find /i "%2">nul
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: You must be in the "%2" folder for this command to work. Nov-11-2019 6:29 PM
-  exit/b 1
-)
-
-echo. 
-echo * "%2" folder exists.
 
 exit/b
 

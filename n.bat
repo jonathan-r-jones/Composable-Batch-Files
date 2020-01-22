@@ -5998,6 +5998,12 @@ exit/b
 
 :qt
 
+:kary2
+
+:kf1
+
+:kf2
+
 :pass-through
 
 set fp=* Pass through.
