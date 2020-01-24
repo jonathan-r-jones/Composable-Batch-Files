@@ -11613,4 +11613,21 @@ exit/b
 
 
 
+:_
+ 
+:csaa
+
+set fp=* AWS Certified Solutions Architect - Associate prep document.
+
+rem lu: Jan-23-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=AWS Certified Solutions Architect - Associate - Prep Materials.pdf
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
