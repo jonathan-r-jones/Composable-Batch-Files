@@ -6004,6 +6004,10 @@ exit/b
 
 :kf2
 
+:budb
+
+:gray
+
 :pass-through
 
 set fp=* Pass through.
