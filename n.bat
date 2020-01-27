@@ -9682,7 +9682,7 @@ rem lu: Aug-8-2019
 echo.
 echo %fp%
 
-call n wk
+call n s
 
 set cbf_path=%cbf_path%\Expense Reports
 
