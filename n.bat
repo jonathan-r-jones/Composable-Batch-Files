@@ -6008,6 +6008,8 @@ exit/b
 
 :gray
 
+:ihd
+
 :pass-through
 
 set fp=* Pass through.
