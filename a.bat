@@ -4477,7 +4477,7 @@ if %errorlevel% gtr 0 (
 
 if "%cbf_instance_id%" == "" (
   echo.
-  echo * Error: Instance ID cannot be blank.
+  echo * Error: Instance ID is blank.
   exit/b 1
 )
 

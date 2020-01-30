@@ -2644,6 +2644,27 @@ exit/b
 
 ::_
 
+:rollback
+
+:roll_back
+
+set fp=* Rollback used by Matt A. and me.
+
+rem lu: Jan-30-2020
+
+echo.
+echo %fp%
+
+git revert -m 1 HEAD
+
+rem Then you need to do your usual add, commit and push commands.
+
+exit/b
+
+
+
+::_
+
 :roll_back_repo_1
 
 set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
