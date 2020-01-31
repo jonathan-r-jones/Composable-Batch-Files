@@ -11636,4 +11636,21 @@ exit/b
 
 
 
+:_
+ 
+:tools
+
+set fp=* Software tools.
+
+rem lu: Jan-31-2020
+
+echo.
+echo %fp%
+
+set cbf_folder=%dropbox%\software\tools
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)

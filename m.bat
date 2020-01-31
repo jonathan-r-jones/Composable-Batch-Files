@@ -4456,16 +4456,16 @@ s m
 rem You may or may not want to do a get-latest.
 pl
 
-ty ly
+rem ty ly
 
 rem Switch to the api folder.
-rem If liquibase fails, you may need to wipe your local databaase.
-
 cd api
 
 lq
 
 rem Note that in order to get Liquibase to work, you may need to wipe your local database.
+
+rem If liquibase fails, you may need to wipe your local databaase.
 
 rem Run the API by using m lnk_api. You may need to edit npcrf.
 gr run_api
@@ -4476,9 +4476,10 @@ x bash
 
 ./get_cart_jwt.sh
 
-call n crf_icp
-
 rem Run the UI by using lnk_ui or by the 2 lines below.
+
+rem call n crf_icp
+
 rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
 call nm inst
 call ang run_ui
