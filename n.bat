@@ -11670,4 +11670,21 @@ exit/b
 
 
 
+:_
+ 
+:mtdd
+
+set fp=* Microsoft Teams down detector.
+
+rem lu: Feb-3-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://downdetector.com/status/teams/
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
