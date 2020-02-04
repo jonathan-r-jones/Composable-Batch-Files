@@ -11653,4 +11653,21 @@ exit/b
 
 
 
+:_
+
+:dtg
+
+set fp=* Dev Technology Group.
+
+rem lu: Feb-3-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%reach out%\dtg.asc
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
