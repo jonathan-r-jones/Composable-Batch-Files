@@ -6048,6 +6048,14 @@ exit/b
 
 :csv
 
+:rep17
+
+:khr6
+
+:lqc
+
+:htlogs
+
 :pass-through
 
 set fp=* Pass through.

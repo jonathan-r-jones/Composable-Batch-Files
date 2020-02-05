@@ -57,7 +57,7 @@ echo     as  Windows file associations
 echo      b  Shutdown windows
 echo      c  Clear screen and reset color
 echo    cbf  Show this list of CBF batch files
-echo     cc  Code Compare functions
+echo   coco  Code Compare functions
 echo     ch  Chef command line utility
 echo    clc  Simple calculator
 echo     cn  Git cloning, based entirely on the nickname parameter
