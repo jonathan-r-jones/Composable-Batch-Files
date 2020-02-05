@@ -6010,6 +6010,44 @@ exit/b
 
 :ihd
 
+:rep11
+
+:rep12
+
+:rep13
+
+:rep14
+
+:rep15
+
+:khr2
+
+:khr1
+
+:khr3
+
+:khr4
+
+:repo1
+
+:repo2
+
+:rep_s
+
+:rep_d
+
+:khr5
+
+:rep16
+
+:rep17
+
+:kh_xml
+
+:xmlc
+
+:csv
+
 :pass-through
 
 set fp=* Pass through.
@@ -10149,86 +10187,6 @@ echo.
 echo %fp%
 
 set cbf_application=%dropbox%\Software\Tools\Process Explorer\procexp64.exe
-
-exit/b
-
-
-
-:_+ Liquibase
-
-
-
-::_
-
-:lqc
-
-set fp=* Liquibase configuration.
-
-rem lu: Oct-10-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%cd%\src\main\resources\config\liquibase\master.xml
-
-set cbf_path=%cd%\src\main\resources\config\liquibase\changelog
-
-set cbf_url=https://confluence.ice.dhs.gov/display/CART/Liquibase+Filename+and+ChangeSet+IDs
-
-exit/b
-
-
-
-::_
-
-:dlq
-
-set fp=* Download Liquibase version 3.6.3.
-
-rem lu: Aug-22-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https://download.liquibase.org/download/?frm=n
-
-exit/b
-
-
-
-::_
-
-:csv
-
-set fp=* CSV.
-
-rem lu: Apr-1-2019
-
-echo.
-echo %fp%
-
-set cbf_root=%cbf_repo%\cart\api\src\main\resources\config\liquibase
-
-set cbf_filename=%cbf_root%\cart_enrollee.csv
-
-set cbf_path=%cbf_root%
-
-exit/b
-
-
-
-::_
-
-:rcsv
-
-set fp=* Relative path CSV.
-
-rem lu: Apr-9-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%cd%\api\src\main\resources\config\liquibase
 
 exit/b
 
