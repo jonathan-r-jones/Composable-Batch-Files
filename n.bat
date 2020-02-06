@@ -11653,4 +11653,23 @@ exit/b
 
 
 
+:_
+
+:bugr
+
+set fp=* Build.gradle. Bump the version number for releases.
+
+rem lu: Feb-6-2020
+
+echo.
+echo %fp%
+
+call n rf_ma
+
+set cbf_filename=%cbf_path%\api\build.gradle
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)

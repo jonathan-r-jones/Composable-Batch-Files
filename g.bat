@@ -2524,120 +2524,6 @@ exit/b
 
 
 
-:_+ Tag Operations (!fytag)
-
-
-
-::_
-
-:lt
-
-:ltag
-
-:tag
-
-set fp=* List tags.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-echo.
-git tag
-
-exit/b
-
-
-
-::_
-
-:ft
-
-set fp=* Fetch tags.
-
-rem lu: 
-
-echo.
-echo %fp%
-
-echo.
-git fetch --tags
-
-exit/b
-
-
-
-::_
-
-:detag
-
-:tagd
-
-set fp=* Delete tag.
-
-rem lu: Oct-15-2019
-
-rem delete a tag: skw
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Error: Parameter 2 needs to be the tag you wish to delete.
-  exit/b
-)
-
-echo.
-git tag -d "%2"
-
-rem This also works I think: git tag --delete v1.3.0
-
-exit/b
-
-
-
-::_
-
-:add_tag
-
-:taga
-
-set fp=* Add tag.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-rem git tag -a v1.4 -m "my version 1.4"
-git tag -a version_api_0.0.1-20190618.233310-466__ui_0.0.1-20190618.233316-112 -m "version message"
-
-exit/b
-
-
-
-::_
-
-:push_tag
-
-:tagp
-
-set fp=* Push tag.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-echo.
-git push origin
-
-exit/b
-
-
-
 :_+ Reversion Family (!fyrv)
 
 
@@ -3008,93 +2894,6 @@ echo %fp%
 call n %2
 
 git checkout %cbf_filename%
-
-exit/b
-
-
-
-:_+ Delete branch.
-
-
-
-::_
-
-:debrro
-
-set fp=* Delete branch, remote only. (!delb) (skw delete_branch)
-
-rem This worked! Oct-13-2016
-rem This worked! Mar-8-2019
-
-rem Note: You must have already initialized the repository.
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 is a required field.
-  exit/b
-)
-
-echo.
-git push origin --delete %2
-
-exit/b
-
-
-
-::_
-
-:debrlo
-
-set fp=* Delete branch, local only.
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 is a required field.
-  exit/b
-)
-
-echo.
-git branch -D %2
-
-exit/b
-
-
-
-::_
-
-:debr
-
-set fp=* Delete branch, local and remote.
-
-echo.
-echo %fp%
-
-call %0 debrlo %2
-
-call %0 debrro %2
-
-exit/b
-
-
-
-::_
-
-:debrj
-
-set fp=* Delete jj_devops branch. (skw delete branch jj)
-
-echo.
-echo %fp%
-
-call td cart
-
-git push origin --delete jj_devops
 
 exit/b
 
@@ -3497,7 +3296,7 @@ exit/b
 
 ::_
 
-:lbr
+:libr
 
 set fp=* List branches, remote. Warning: Some deleted branches are still being shown as existing.
 
@@ -3631,7 +3430,28 @@ exit/b
 
 
 
-:_+ Branch from Tag (skw create branch from release, create branch from tag, create release from tag)
+:_+ Branch from Tag (skw create branch from release, create branch from tag, create release 
+from tag, create tag from branch)
+
+
+
+::_
+
+:cbbt7
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Feb-6-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b release/v170 tags/v1.7.0
+
+git push --set-upstream origin release/v170
+
+exit/b
 
 
 
@@ -3688,6 +3508,234 @@ echo.
 git checkout -b release/v150 tags/v1.5.0
 
 git push --set-upstream origin release/v150
+
+exit/b
+
+
+
+:_+ Tag Operations (!fytag)
+
+
+
+::_
+
+:lt
+
+:lita
+
+:ltag
+
+:tag
+
+set fp=* List tags.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+echo.
+git tag
+
+exit/b
+
+
+
+::_
+
+:ft
+
+set fp=* Fetch tags.
+
+rem lu: 
+
+echo.
+echo %fp%
+
+echo.
+git fetch --tags
+
+exit/b
+
+
+
+::_
+
+:add_tag
+
+:taga
+
+set fp=* Add tag.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+rem git tag -a v1.4 -m "my version 1.4"
+git tag -a version_api_0.0.1-20190618.233310-466__ui_0.0.1-20190618.233316-112 -m "version message"
+
+exit/b
+
+
+
+::_
+
+:puor
+
+:push_tag
+
+:tagp
+
+set fp=* Push origin.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+echo.
+git push origin
+
+exit/b
+
+
+
+::_
+
+:detalo
+
+set fp=* Delete tag, local only.
+
+rem lu: Oct-15-2019
+
+rem delete a tag: skw
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 needs to be the tag you wish to delete.
+  exit/b
+)
+
+echo.
+git tag -d %2
+
+rem This also works I think: git tag --delete v1.3.0
+
+exit/b
+
+
+
+::_
+
+:deta
+
+set fp=* Delete tag, local and remote.
+
+rem lu: Feb-6-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 needs to be the tag you wish to delete.
+  exit/b
+)
+
+call %0 detalo %2
+
+git push origin :refs/tags/%2
+
+exit/b
+
+
+
+:_+ Delete branch.
+
+
+
+::_
+
+:debrro
+
+set fp=* Delete branch, remote only. (!delb) (skw delete_branch)
+
+rem This worked! Oct-13-2016
+rem This worked! Mar-8-2019
+
+rem Note: You must have already initialized the repository.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field.
+  exit/b
+)
+
+echo.
+git push origin --delete %2
+
+exit/b
+
+
+
+::_
+
+:debrlo
+
+set fp=* Delete branch, local only.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2 is a required field.
+  exit/b
+)
+
+echo.
+git branch -D %2
+
+exit/b
+
+
+
+::_
+
+:debrj
+
+set fp=* Delete jj_devops branch. (skw delete branch jj)
+
+echo.
+echo %fp%
+
+call td cart
+
+git push origin --delete jj_devops
+
+exit/b
+
+
+
+::_
+
+:debr
+
+set fp=* Delete branch, local and remote.
+
+echo.
+echo %fp%
+
+call %0 debrlo %2
+
+call %0 debrro %2
 
 exit/b
 
