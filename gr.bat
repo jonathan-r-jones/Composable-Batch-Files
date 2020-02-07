@@ -523,6 +523,32 @@ exit/b
 
 ::_
 
+:run_api_with_debugger
+
+set fp=* Run the API using Matt's gradle command and attach the debugger.
+
+rem lu: Nov-8-2019
+
+echo.
+echo %fp%
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
+echo.
+gradlew -Pno-liquibase clean bootrun --debug-jvm
+
+exit/b
+
+
+
+::_
+
 :run_fqt
 
 set fp=* Run the API using Matt's gradle command with the FQT option too.

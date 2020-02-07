@@ -3178,7 +3178,12 @@ rem lu: Jun-7-2018
 echo.
 echo %fp%
 
-if not "%~2" == "" call n %2
+if "%~2" == "" (
+  echo. Error: You must supply the alias of the text editor you wish to set as default.
+  exit/b
+)
+
+call n %2
 
 set cbf_default_text_editor=%cbf_application%
 
@@ -4761,6 +4766,27 @@ call m big
 call td crf_api
 
 call gr run_api
+
+exit/b
+
+
+
+::_
+
+:lnk_api_with_debugger
+
+set fp=* Run API cmd and attach the debugger.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call td crf_api
+
+call gr run_api_with_debugger
 
 exit/b
 

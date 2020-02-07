@@ -3088,10 +3088,10 @@ exit/b
 
 set fp=* Multi-Edit.
 
-rem lu: Jun-8-2018
+rem lu: Feb-7-2020
 
-rem echo.
-rem echo %fp%
+echo.
+echo %fp%
 
 set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
 
@@ -11667,6 +11667,25 @@ echo %fp%
 call n rf_ma
 
 set cbf_filename=%cbf_path%\api\build.gradle
+
+exit/b
+
+
+
+:_
+
+:1484
+
+set fp=* Cart-1484.
+
+rem lu: Feb-7-2020
+
+echo.
+echo %fp%
+
+call n rf_ma
+
+set cbf_filename=%cbf_path%\api\src\main\java\gov\dhs\ice\cart\service\CartPortalCriteriaServiceImpl.java
 
 exit/b
 

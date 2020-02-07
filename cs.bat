@@ -83,8 +83,10 @@ findstr /i /n /o /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
 
 rem (!rfsp) (mov-2)
 
+call an me
+
 if %errorlevel% == 0 (
-  start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_cs.txt"
+  start "Test Title" "%cbf_application%" "%temp%\search_results_cs.txt"
 ) else (
   echo.
   echo * No results found.
