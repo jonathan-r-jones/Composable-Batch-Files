@@ -4481,7 +4481,13 @@ x bash
 
 ./get_cart_jwt.sh
 
-rem Run the UI by using lnk_ui or by the 2 lines below.
+rem If you want to run the debugger, then search on: ^lnk
+and use 
+gr run_api_with_debugger
+
+rem Also read direction on how to attach the debugger at: ^atde
+
+rem Run the UI by using lnk_ui or by using the 2 lines below.
 
 rem call n crf_icp
 
@@ -4765,7 +4771,9 @@ call m big
 
 call td crf_api
 
-call gr run_api
+rem (!lnk) Uncomment one and only one of the following 2 lines for your desired control flow.
+rem call gr run_api
+call gr run_api_with_debugger
 
 exit/b
 
