@@ -1007,9 +1007,9 @@ exit/b
 
 :unstash
 
-set fp=* Pop takes stashed changes and reapplies them to the working directory.
+set fp=* Pop takes stashed changes and reapplies them.
 
-rem lu: Jan-22-2018
+rem lu: Feb-11-2020
 
 echo.
 echo %fp%
@@ -2945,274 +2945,6 @@ exit/b
 
 
 
-:_+ Merge Tool and Merging
-
-
-
-::_
-
-:mede
-
-set fp=* Merge develop.
-
-rem lu: May-9-2019
-
-echo.
-echo %fp%
-
-echo.
-git merge develop
-
-exit/b
-
-
-
-::_
-
-:mth
-
-set fp=* Merge tool help.
-
-rem lu: Jan-22-2018
-
-echo.
-echo %fp%
-echo.
-
-git mergetool --tool-help
-
-exit/b
-
-
-
-::_
-
-:mts
-
-set fp=* Set default merge tool to use.
-
-rem lu: Jan-22-2018
-
-echo.
-echo %fp%
-echo.
-
-git mergetool --tool=codecompare
-rem git mergetool --tool=vimdiff3
-
-exit/b
-
-
-
-::_
-
-set fp=* Sean's aliases.
-
-rem lu: Apr-16-2019
-
-echo.
-echo %fp%
-
-echo.
-
-alias g='git' 
-alias ga='git add' 
-alias gaa='git add .' 
-alias gaaa='git add --all' 
-alias gau='git add --update' 
-alias gb='git branch' 
-alias gbd='git branch --delete ' 
-alias gc='git commit' 
-alias gcm='git commit --message' 
-alias gcf='git commit --fixup' 
-alias gco='git checkout' 
-alias gcob='git checkout -b' 
-alias gcom='git checkout master' 
-alias gcos='git checkout staging' 
-alias gcod='git checkout develop' 
-alias gd='git diff' 
-alias gda='git diff HEAD' 
-alias gi='git init' 
-alias glg='git log --graph --oneline --decorate --all' 
-alias gld='git log --pretty=format:"%h %ad %s" --date=short --all' 
-alias gm='git merge --no-ff' 
-alias gma='git merge --abort' 
-alias gmc='git merge --continue' 
-alias gr='git rebase' 
-alias gs='git status' 
-alias gss='git status --short' 
-alias gst='git stash' 
-alias gsta='git stash apply' 
-alias gstd='git stash drop' 
-alias gstl='git stash list' 
-alias gstp='git stash pop' 
-alias gsts='git stash save' 
-alias gl="git pull" 
-alias gp="git push"
-
-exit/b
-
-
-
-::_
-
-:mema
-
-set fp=* Merge master.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-git merge master
-
-exit/b
-
-
-
-::_
-
-:meab
-
-set fp=* Merge abort can only be run after the merge has resulted in conflicts.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-git merge --abort
-
-exit/b
-
-
-
-::_
-
-:mmou
-
-set fp=* Merge master into the release branch using the "ours" stategy.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-call sb release/v140
-
-call meours
-
-exit/b
-
-
-
-::_
-
-:merg
-
-set fp=* Original merging sample code from GitHub.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-Step 1: From your project repository, bring in the changes and test.
-
-git fetch origin
-git checkout -b release/v140 origin/release/v140
-git merge master
-
-Step 2: Merge the changes and update on GitHub.
-
-git checkout master
-git merge --no-ff release/v140
-git push origin master
-
-exit/b
-
-
-
-::_
-
-:meth
-
-:metheirs
-
-set fp=* Merge using the "theirs" strategy.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-git merge -s ours master
-
-exit/b
-
-
-
-::_
-
-:meou
-
-:meours
-
-set fp=* Merge using the "ours" strategy.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-git merge -s ours master
-
-exit/b
-
-
-
-::_
-
-:master_merge
-
-set fp=* Merging strategy.
-
-rem lu: Dec-11-2019
-
-echo.
-echo %fp%
-
-echo.
-
-rem Step 1: From your project repository, bring in the changes and test.
-
-git fetch origin
-git checkout -b release/v140 origin/release/v140
-git merge -s ours master
-
-rem Step 2: Merge the changes and update on GitHub.
-
-git checkout master
-git merge --no-ff release/v140
-git push origin master
-
-exit/b
-
-
-
 :_+ List Branches
 
 
@@ -3437,7 +3169,7 @@ from tag, create tag from branch)
 
 ::_
 
-:cbbt7
+:cbbt17
 
 set fp=* Create a branch based on a tag.
 
@@ -3736,6 +3468,274 @@ echo %fp%
 call %0 debrlo %2
 
 call %0 debrro %2
+
+exit/b
+
+
+
+:_+ Merge Tool and Merging
+
+
+
+::_
+
+:mede
+
+set fp=* Merge develop. Merge the develop branch into your current branch, thereby updating your branch with the latest changes from develop.
+
+rem lu: May-9-2019
+
+echo.
+echo %fp%
+
+echo.
+git merge develop
+
+exit/b
+
+
+
+::_
+
+:mth
+
+set fp=* Merge tool help.
+
+rem lu: Jan-22-2018
+
+echo.
+echo %fp%
+echo.
+
+git mergetool --tool-help
+
+exit/b
+
+
+
+::_
+
+:mts
+
+set fp=* Set default merge tool to use.
+
+rem lu: Jan-22-2018
+
+echo.
+echo %fp%
+echo.
+
+git mergetool --tool=codecompare
+rem git mergetool --tool=vimdiff3
+
+exit/b
+
+
+
+::_
+
+set fp=* Sean's aliases.
+
+rem lu: Apr-16-2019
+
+echo.
+echo %fp%
+
+echo.
+
+alias g='git' 
+alias ga='git add' 
+alias gaa='git add .' 
+alias gaaa='git add --all' 
+alias gau='git add --update' 
+alias gb='git branch' 
+alias gbd='git branch --delete ' 
+alias gc='git commit' 
+alias gcm='git commit --message' 
+alias gcf='git commit --fixup' 
+alias gco='git checkout' 
+alias gcob='git checkout -b' 
+alias gcom='git checkout master' 
+alias gcos='git checkout staging' 
+alias gcod='git checkout develop' 
+alias gd='git diff' 
+alias gda='git diff HEAD' 
+alias gi='git init' 
+alias glg='git log --graph --oneline --decorate --all' 
+alias gld='git log --pretty=format:"%h %ad %s" --date=short --all' 
+alias gm='git merge --no-ff' 
+alias gma='git merge --abort' 
+alias gmc='git merge --continue' 
+alias gr='git rebase' 
+alias gs='git status' 
+alias gss='git status --short' 
+alias gst='git stash' 
+alias gsta='git stash apply' 
+alias gstd='git stash drop' 
+alias gstl='git stash list' 
+alias gstp='git stash pop' 
+alias gsts='git stash save' 
+alias gl="git pull" 
+alias gp="git push"
+
+exit/b
+
+
+
+::_
+
+:mema
+
+set fp=* Merge master.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+git merge master
+
+exit/b
+
+
+
+::_
+
+:meab
+
+set fp=* Merge abort can only be run after the merge has resulted in conflicts.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+git merge --abort
+
+exit/b
+
+
+
+::_
+
+:mmou
+
+set fp=* Merge master into the release branch using the "ours" stategy.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+call sb release/v140
+
+call meours
+
+exit/b
+
+
+
+::_
+
+:merg
+
+set fp=* Original merging sample code from GitHub.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+Step 1: From your project repository, bring in the changes and test.
+
+git fetch origin
+git checkout -b release/v140 origin/release/v140
+git merge master
+
+Step 2: Merge the changes and update on GitHub.
+
+git checkout master
+git merge --no-ff release/v140
+git push origin master
+
+exit/b
+
+
+
+::_
+
+:meth
+
+:metheirs
+
+set fp=* Merge using the "theirs" strategy.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+git merge -s ours master
+
+exit/b
+
+
+
+::_
+
+:meou
+
+:meours
+
+set fp=* Merge using the "ours" strategy.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+git merge -s ours master
+
+exit/b
+
+
+
+::_
+
+:master_merge
+
+set fp=* Merging strategy.
+
+rem lu: Dec-11-2019
+
+echo.
+echo %fp%
+
+echo.
+
+rem Step 1: From your project repository, bring in the changes and test.
+
+git fetch origin
+git checkout -b release/v140 origin/release/v140
+git merge -s ours master
+
+rem Step 2: Merge the changes and update on GitHub.
+
+git checkout master
+git merge --no-ff release/v140
+git push origin master
 
 exit/b
 

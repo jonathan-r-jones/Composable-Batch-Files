@@ -4154,7 +4154,7 @@ exit/b
 
 :a
 
-set fp=* Open Affinity files router.
+set fp=* Open Affinity files router. (skw open files)
 
 rem lu: May-14-2019
 
@@ -4279,6 +4279,7 @@ set cbf_filename_list=%cbf_filename_list% "%share-zone%\mtw.asc"
 set cbf_filename_list=%cbf_filename_list% "%share-zone%\ni.bat"
 set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\n.bat"
 set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\v.bat"
+set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\g.bat"
 
 attrib +r "%share-zone%\copy of cc.asc"
 
@@ -4489,7 +4490,7 @@ rem Also read direction on how to attach the debugger at: ^atde
 
 rem Run the UI by using lnk_ui or by using the 2 lines below.
 
-rem call n crf_icp
+rem call n ui
 
 rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
 call nm inst
@@ -4741,7 +4742,7 @@ echo %fp%
 
 call m big
 
-call td crf_icp
+call td rf_ui
 
 rem Since this step in time-cunsuming and often unnecessary, I have commented it. However
 rem you just need to remember to uncomment it, if you need to run it.
@@ -4769,11 +4770,16 @@ echo %fp%
 
 call m big
 
-call td crf_api
+call td rf_api
 
-rem (!lnk) Uncomment one and only one of the following 2 lines for your desired control flow.
-rem call gr run_api
-call gr run_api_with_debugger
+echo.
+set /P user_option=Would you like to attach the debugger? (y/n): 
+
+if "%user_option%"=="y" (
+  call gr run_api_with_debugger
+) else (
+  call gr run_api
+)
 
 exit/b
 
@@ -4792,7 +4798,7 @@ echo %fp%
 
 call m big
 
-call td crf_api
+call td rf_api
 
 call gr run_api_with_debugger
 

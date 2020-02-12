@@ -174,8 +174,8 @@ goto file_does_not_exist
 
 set fp=* The batch file label and CBF were found and/or the file exists. Success!
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 rem echo d_switch: %d_switch%
 
