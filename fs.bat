@@ -76,6 +76,6 @@ if %errorlevel% == 0 (
 
 exit/b
 
-s
+
 
 :_ (!rfsp) (mov-2)
