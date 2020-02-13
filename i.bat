@@ -73,107 +73,107 @@ goto main_function
 
 if not "%cbf_appended_words%" == "" (
   echo.
-  echo * Appended words: "%cbf_appended_words%"
+  echo * Appended words: %cbf_appended_words%
 )
 
 if not "%cbf_application%" == "" (
   echo.
-  echo * Application: "%cbf_application%"
+  echo * Application: %cbf_application%
 )
 
 if not "%cbf_back%" == "" (
   echo.
-  echo * Back: "%cbf_back%"
+  echo * Back: %cbf_back%
 )
 
 if not "%cbf_clone_url%" == "" (
   echo.
-  echo * Clone URL: "%cbf_clone_url%"
+  echo * Clone URL: %cbf_clone_url%
 )
 
 if not "%cbf_confluence_url%" == "" (
   echo.
-  echo * Filename: "%cbf_confluence_url%"
+  echo * Filename: %cbf_confluence_url%
 )
 
 if "%1" == "" (
   echo.
-  echo * Default browser: "%cbf_default_browser%"
+  echo * Default browser: %cbf_default_browser%
 )
 
 if "%1" == "" (
   echo.
-  echo * Default text editor: "%cbf_default_text_editor%"
+  echo * Default text editor: %cbf_default_text_editor%
 )
 
 if not "%cbf_excel_filename%" == "" (
   echo.
-  echo * Excel Filename: "%cbf_excel_filename%"
+  echo * Excel Filename: %cbf_excel_filename%
 )
 
 if not "%cbf_fc_path%" == "" (
   echo.
-  echo * FC path: "%cbf_fc_path%"
+  echo * FC path: %cbf_fc_path%
 )
 
 if not "%cbf_filename%" == "" (
   echo.
-  echo * Filename: "%cbf_filename%"
+  echo * Filename: %cbf_filename%
 )
 
 if not "%cbf_github_url%" == "" (
   echo.
-  echo * Github URL: "%cbf_github_url%"
+  echo * Github URL: %cbf_github_url%
 )
 
 if not "%cbf_host_name%" == "" (
   echo.
-  echo * Host name: "%cbf_host_name%"
+  echo * Host name: %cbf_host_name%
 )
 
 if not "%cbf_instance_id%" == "" (
   echo.
-  echo * Instance id: "%cbf_instance_id%"
+  echo * Instance id: %cbf_instance_id%
 )
 
 if not "%cbf_ip%" == "" (
   echo.
-  echo * IP Address: "%cbf_ip%"
+  echo * IP Address: %cbf_ip%
 )
 
 if not "%cbf_jenkinsfile%" == "" (
   echo.
-  echo * Jenkinsfile: "%cbf_jenkinsfile%"
+  echo * Jenkinsfile: %cbf_jenkinsfile%
 )
 
 if not "%cbf_jenkins_url%" == "" (
   echo.
-  echo * Jenkins URL: "%cbf_jenkins_url%"
+  echo * Jenkins URL: %cbf_jenkins_url%
 )
 
 if not "%cbf_parameter%" == "" (
   echo.
-  echo * Parameter: "%cbf_parameter%"
+  echo * Parameter: %cbf_parameter%
 )
 
 if not "%cbf_path%" == "" (
   echo.
-  echo * Path: "%cbf_path%"
+  echo * Path: %cbf_path%
 )
 
 if not "%cbf_pem%" == "" (
   echo.
-  echo * Pem: "%cbf_pem%"
+  echo * Pem: %cbf_pem%
 )
 
 if "%1" == "" (
   echo.
-  echo * Repo: "%cbf_repo%"
+  echo * Repo: %cbf_repo%
 )
 
 if not "%cbf_url%" == "" (
   echo.
-  echo * URL: "%cbf_url%"
+  echo * URL: %cbf_url%
 )
 
 exit/b
