@@ -711,8 +711,6 @@ exit/b
 
 :_
 
-:nb
-
 :prj
 
 :proj
@@ -1507,25 +1505,6 @@ echo.
 echo %fp%
 
 set cbf_url=https://hub.docker.com
-
-exit/b
-
-
-
-:_
-
-:yt
-
-set fp=* YouTube.
-
-rem lu: Feb-25-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.youtube.com
-
-call m set_specific_browser vi
 
 exit/b
 
@@ -2944,7 +2923,34 @@ if exist "C:\Program Files (x86)\Mozilla Firefox\firefox.exe" set cbf_applicatio
 
 if "%cbf_application%" == "" (
   echo.
-  echo * Excel is not installed.
+  echo * Firefoxis not installed.
+  exit/b 1
+)
+
+exit/b
+
+
+
+::_
+
+:vi
+
+set fp=* Vivaldi.
+
+rem lu: Feb-12-2020
+
+echo.
+echo %fp%
+
+rem Determine installation path.
+
+set cbf_application=
+
+if exist "%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe" set cbf_application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
+
+if "%cbf_application%" == "" (
+  echo.
+  echo %fp% is not installed.
   exit/b 1
 )
 
@@ -9591,23 +9597,6 @@ exit/b
 
 :_
 
-:go
-
-set fp=* Google.
-
-rem lu: Jul-16-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.google.com/advanced_search
-
-exit/b
-
-
-
-:_
-
 :pa
 
 :poan
@@ -11707,6 +11696,42 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\mp3\Baryonic Dark Matter
+
+exit/b
+
+
+
+:_
+
+:go
+
+set fp=* Google.
+
+rem lu: Jul-16-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.google.com/advanced_search
+
+exit/b
+
+
+
+:_
+
+:yt
+
+set fp=* YouTube.
+
+rem lu: Feb-25-2018
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.youtube.com
+
+call m set_specific_browser fx
 
 exit/b
 
