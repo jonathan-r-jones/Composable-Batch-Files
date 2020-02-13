@@ -2811,9 +2811,9 @@ exit/b
 ::_
 
 :res
-       
+
 :fr_res
-                                           
+
 :fr_rs
 
 set fp=* Image Manipulation - Fresnel Images source.
@@ -2832,7 +2832,7 @@ exit/b
 ::_
 
 :fr_dr
-                                           
+
 set fp=* Fresnel drawable images source.
 
 rem lu: Jun-13-2018
@@ -3494,7 +3494,7 @@ rem Works with: Chrome, IE, OP, VI.
 rem Doesn't work with: Firefox, Edge.
 
 set cbf_filename=C:\a\skeptics.txt
-            
+
 set cbf_url=C:/a/skeptics.txt
 
 exit/b
@@ -4473,7 +4473,7 @@ This is what is returned from Curl:
 < X-Powered-By: Express
 < X-Powered-By: ASP.NET
 < Set-Cookie: ARRAffinity=0a3517ba6ed8bb14ffe517099672a3eb4ea3c4b710ad8c6e0edaa70c2d244335;Path=/;HttpOnly;Domain=hamster7.azurewebsites.net
-< Date: Fri, 24 Aug 2018 19:58:49 GMT            
+< Date: Fri, 24 Aug 2018 19:58:49 GMT
 
 <Then message payload>
 
@@ -4871,27 +4871,6 @@ echo.
 echo %fp%
 
 set cbf_path=%savannah%\karl
-
-exit/b
-
-
-
-:_
-
-:poun
-
-:pounders
-
-:soto
-
-set fp=* Pounders.
-
-rem lu: Sep-27-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\Software\Tools
 
 exit/b
 
@@ -6587,7 +6566,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-set cbf_path=%tfkeys% 
+set cbf_path=%tfkeys%
 
 exit/b
 
@@ -6723,7 +6702,7 @@ echo %fp%
 
 rem This filename is from Dec-14-2018
 set cbf_filename=%userprofile%\downloads\ec2-18-253-148-152.us-gov-east-1.compute.amazonaws.com.rdp
-                                         
+
 rem This filename is from c. Dec-11-2018
 set cbf_filename=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
 
@@ -7254,7 +7233,7 @@ exit/b
 
 :roma
 
-set fp=* DevOps Roadmap, a.k.a. Pa's roadmap.  
+set fp=* DevOps Roadmap, a.k.a. Pa's roadmap.
 
 rem lu: Jan-3-2019
 
@@ -7690,7 +7669,7 @@ exit/b
 
 
 
-:_ 
+:_
 
 :lu
 
@@ -7932,7 +7911,7 @@ set cbf_path=%cbf_path%_jj_devops_branch
 
 exit/b
 
-            
+
 
 :_+ J Files
 
@@ -9048,7 +9027,7 @@ echo.
 echo %fp%
 
 set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
-   
+
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
 
 exit/b
@@ -9067,7 +9046,7 @@ echo.
 echo %fp%
 
 set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
-   
+
 set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
 
 exit/b
@@ -10426,7 +10405,7 @@ rem lu: Nov-1-2019
 echo.
 echo %fp%
 
-set cbf_path=d:\aa\1\2\3\4\5\6 
+set cbf_path=d:\aa\1\2\3\4\5\6
 
 exit/b
 
@@ -11573,7 +11552,7 @@ exit/b
 
 
 :_
- 
+
 :csaa
 
 set fp=* AWS Certified Solutions Architect - Associate prep document.
@@ -11584,23 +11563,6 @@ echo.
 echo %fp%
 
 set cbf_filename=AWS Certified Solutions Architect - Associate - Prep Materials.pdf
-
-exit/b
-
-
-
-:_
- 
-:tools
-
-set fp=* Software tools.
-
-rem lu: Jan-31-2020
-
-echo.
-echo %fp%
-
-set cbf_folder=%dropbox%\software\tools
 
 exit/b
 
@@ -11624,7 +11586,7 @@ exit/b
 
 
 :_
- 
+
 :mtdd
 
 set fp=* Microsoft Teams down detector.
@@ -11726,6 +11688,50 @@ echo %fp%
 set cbf_url=https://www.youtube.com
 
 call m set_specific_browser fx
+
+exit/b
+
+
+
+:_+ Software
+
+
+
+::_
+
+:poun
+
+:pounders
+
+:soto
+
+:tools
+
+set fp=* Pounders.
+
+rem lu: Sep-27-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\Software\Tools
+
+exit/b
+
+
+
+::_
+
+:soft
+
+set fp=* Software.
+
+rem lu: Feb-13-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\Software
 
 exit/b
 
