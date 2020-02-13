@@ -11513,11 +11513,15 @@ exit/b
 
 :_
 
-:art
+:aaf
+
+:artapi
 
 :arta
 
-set fp=* API artifact.
+:apiart
+
+set fp=* API artifact folder.
 
 rem lu: Jan-17-2020
 
@@ -11534,7 +11538,9 @@ exit/b
 
 :_
 
-:artu
+:artui
+
+:uiart
 
 set fp=* UI artifact.
 
