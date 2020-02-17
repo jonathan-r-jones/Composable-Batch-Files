@@ -100,7 +100,42 @@ rem lu: Jan-2-2019
 echo.
 echo %fp%
 
-if exist "*conflicted copy*.*" del /s "*conflicted copy*.*"
+del /s "*conflicted copy*.*"
+
+rem Delete folder.
+rem set folder_to_delete=*conflicted copy*.*
+rem @echo on
+rem rd /q /s "%folder_to_delete%"
+rem @echo off
+
+
+
+exit/b
+
+
+
+:_
+
+:renamed
+
+:cc
+
+set fp=* Delete renamed copies created by DropBox.
+
+rem lu: Jan-2-2019
+
+echo.
+echo %fp%
+
+del /s "*conflicted copy*.*"
+
+rem Delete folder.
+rem set folder_to_delete=*conflicted copy*.*
+rem @echo on
+rem rd /q /s "%folder_to_delete%"
+rem @echo off
+
+
 
 exit/b
 

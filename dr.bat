@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Remote dir search.
+set filep=* Dir using function routing.
 
 echo.
 echo %filep%
@@ -17,9 +17,11 @@ echo %filep%
 
 set fp=* Route callers.
 
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
-goto preprocess
+goto %1
 
 
 
@@ -30,15 +32,10 @@ goto preprocess
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Folder alias to switch to.
-
-set parameter_2=Parameter 2: Same parameter as asked for by d.bat.
+set parameter_1=Parameter 1: Alias function to go to.
 
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 exit/b
 
@@ -46,21 +43,19 @@ exit/b
 
 :_
 
-:preprocess
+:concop
 
-call m save_location
+dir "*conflicted copy*.*" /s
 
-call td %1
+exit/b
 
 
 
 :_
 
-:main_function
+:renamed
 
-call d %2
-
-call m restore_location
+dir "*renamed*.*" /s
 
 exit/b
 

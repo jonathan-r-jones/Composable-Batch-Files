@@ -80,7 +80,7 @@ echo   cyte  Copy te.bat to a new batch file
 echo      d  Dir for current folder
 echo     dd  Dir filename extension searcher including subfolders
 echo    ddc  Dir filename extension searcher current folder only
-echo     dr  Dir remote searcher
+echo     dr  Dir using function routing
 echo     dt  Dir with a td parameter
 echo     de  Delete using function routing
 echo   defn  Delete file base on passed in filename alias
