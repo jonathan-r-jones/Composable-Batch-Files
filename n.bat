@@ -7532,8 +7532,6 @@ exit/b
 
 :_
 
-:cmac
-
 :ql
 
 set fp=* Quickla CMAC.
@@ -11740,6 +11738,97 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Software
+
+exit/b
+
+
+
+:_+ CMAC
+
+
+
+::_
+
+:cmac
+
+set fp=* CMAC on local.
+
+rem lu: Feb-18-2020
+
+echo.
+echo %fp%
+
+set cbf_path=C:\Users\jonat\documents\Savannah\cmac
+
+exit/b
+
+
+
+::_
+
+:drcmac
+
+set fp=* CMAC on Dropbox.
+
+rem lu: Feb-18-2020
+
+echo.
+echo %fp%
+
+set cbf_path=C:\Users\jonat\Dropbox\Savannah\cmac
+rem qq-1
+
+exit/b
+
+
+
+:_
+
+:mido
+
+set fp=* Miscellaneous documents.
+
+rem lu: Feb-18-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\miscellaneous documents
+
+exit/b
+
+
+
+:_
+
+:concop_f
+
+set fp=* Conflicted copy problem file.
+
+rem lu: Feb-18-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%dropbox%\miscellaneous documents\concop.txt
+
+exit/b
+
+
+
+:_
+
+:soco
+
+set fp=* CMAC source code.
+
+rem lu: Feb-18-2020
+
+echo.
+echo %fp%
+
+set cbf_path=C:\Users\jonat\dropbox\savannah\cmac\Source Code\.git\
+rem       qq-1
 
 exit/b
 

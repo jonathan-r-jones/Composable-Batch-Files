@@ -8,8 +8,8 @@
 
 set filep=* Dir using function routing.
 
-echo.
-echo %filep%
+rem echo.
+rem echo %filep%
 
 
 
@@ -45,6 +45,12 @@ exit/b
 
 :concop
 
+set fp=* Dir concop.
+
+echo.
+echo %fp%
+
+echo.
 dir "*conflicted copy*.*" /s
 
 exit/b
@@ -55,6 +61,12 @@ exit/b
 
 :renamed
 
+set fp=* Dir renamed.
+
+echo.
+echo %fp%
+
+echo.
 dir "*renamed*.*" /s
 
 exit/b
