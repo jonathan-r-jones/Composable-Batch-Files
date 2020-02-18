@@ -11776,7 +11776,6 @@ echo.
 echo %fp%
 
 set cbf_path=C:\Users\jonat\Dropbox\Savannah\cmac
-rem qq-1
 
 exit/b
 
@@ -11828,7 +11827,6 @@ echo.
 echo %fp%
 
 set cbf_path=C:\Users\jonat\dropbox\savannah\cmac\Source Code\.git\
-rem       qq-1
 
 exit/b
 

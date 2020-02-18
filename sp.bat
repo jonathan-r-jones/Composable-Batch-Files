@@ -49,11 +49,11 @@ rem lu: Jul-22-2019
 echo.
 echo %filep%
 
-call de.bat multi-edit_conflicted_files
+rem call de.bat multi-edit_conflicted_files
 
 if not "%machinename%"=="gfe" (
   call td mecfg_dr
-  call de.bat concop
+  rem call de.bat concop
   call 8
   call cypp mecfg mecfg_s
   call p drql

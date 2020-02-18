@@ -79,7 +79,7 @@ echo.>>%temp%\search_results_cs.txt
 
 rem "findstr" seems to be more powerful the "find".
 
-findstr /i /n /o /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
+findstr /i /n /o /off /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
 
 rem (!rfsp) (mov-2)
 

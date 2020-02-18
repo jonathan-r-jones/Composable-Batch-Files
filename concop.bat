@@ -47,7 +47,6 @@ exit/b
 :main_function
 
 echo _,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_  Concop Search Results>%temp%\search_results_concop.txt
-rem qq-1
 echo.>>%temp%\search_results_concop.txt
 
 
@@ -109,8 +108,6 @@ set fp=* Open the report.
 call an me
 
 start "Test Title" "%cbf_application%" "%temp%\search_results_concop.txt"
-
-rem qq-1
 
 exit/b
 
