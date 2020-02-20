@@ -3077,12 +3077,15 @@ if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_lo
 
 if "%cbf_application_location%" == "" (
   echo.
-  echo Notepad++ is not installed.
+  echo * Error: Notepad++ is not installed.
   exit/b
 )
 
 set cbf_application=%cbf_application_location%
 set cbf_path=%cbf_application_location:\notepad++.exe=%
+
+set cbf_url=
+:download notepad++
 
 exit/b
 
