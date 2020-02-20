@@ -11775,7 +11775,7 @@ rem lu: Feb-18-2020
 echo.
 echo %fp%
 
-set cbf_path=%savannah%\cmac
+set cbf_path=%dropbox%\savannah%\cmac
 
 exit/b
 
