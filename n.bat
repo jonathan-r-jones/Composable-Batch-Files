@@ -9087,23 +9087,6 @@ exit/b
 
 :_
 
-:sv
-
-set fp=* Savannah.
-
-rem lu: May-26-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%savannah%\
-
-exit/b
-
-
-
-:_
-
 :bz
 
 :buzz
@@ -9325,25 +9308,6 @@ echo %fp%
 
 set cbf_url=https://devtdp.slack.com
 Q9ZDK/
-
-exit/b
-
-
-
-:_
-
-:drsv
-
-:svdr
-
-set fp=* Dropbox savannah.
-
-rem lu: Jun-23-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\savannah
 
 exit/b
 
@@ -11751,7 +11715,7 @@ exit/b
 
 :cmac
 
-set fp=* CMAC on local.
+set fp=* Local CMAC.
 
 rem lu: Feb-18-2020
 
@@ -11768,7 +11732,7 @@ exit/b
 
 :drcmac
 
-set fp=* CMAC on Dropbox.
+set fp=* Dropbox CMAC.
 
 rem lu: Feb-18-2020
 
@@ -11827,6 +11791,44 @@ echo.
 echo %fp%
 
 set cbf_path=C:\Users\jonat\dropbox\savannah\cmac\Source Code\.git\
+
+exit/b
+
+
+
+:_+ Savannah
+
+
+
+::_
+
+:sv
+
+set fp=* Local Savannah.
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%savannah%\
+
+exit/b
+
+
+
+::_
+
+:drsv
+
+set fp=* Dropbox savannah.
+
+rem lu: Jun-23-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\savannah
 
 exit/b
 
