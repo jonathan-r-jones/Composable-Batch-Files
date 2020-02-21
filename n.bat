@@ -3077,12 +3077,15 @@ if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_lo
 
 if "%cbf_application_location%" == "" (
   echo.
-  echo Notepad++ is not installed.
+  echo * Error: Notepad++ is not installed.
   exit/b
 )
 
 set cbf_application=%cbf_application_location%
 set cbf_path=%cbf_application_location:\notepad++.exe=%
+
+set cbf_url=
+:download notepad++
 
 exit/b
 
@@ -11796,6 +11799,7 @@ exit/b
 
 
 
+<<<<<<< HEAD
 :_+ Savannah
 
 
@@ -11807,10 +11811,20 @@ exit/b
 set fp=* Local Savannah.
 
 rem lu: May-26-2019
+=======
+:_
+
+:deli
+
+set fp=* Dev library.
+
+rem lu: Feb-21-2020
+>>>>>>> e157d6e590182ee886bb3dfee92d001d9b36ff7a
 
 echo.
 echo %fp%
 
+<<<<<<< HEAD
 set cbf_path=%savannah%\
 
 exit/b
@@ -11829,6 +11843,13 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\savannah
+=======
+set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
+
+set cbf_path=%cbf_repo%\deli
+
+set cbf_url=https://github.com/DevTechnology/dev-library
+>>>>>>> e157d6e590182ee886bb3dfee92d001d9b36ff7a
 
 exit/b
 
