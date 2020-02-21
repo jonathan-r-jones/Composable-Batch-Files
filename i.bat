@@ -64,7 +64,7 @@ call n %1
 if %errorlevel% gtr 0 exit/b
 
 goto main_function
-
+                               
 
 
 :_
@@ -78,7 +78,7 @@ if not "%cbf_appended_words%" == "" (
 
 if not "%cbf_application%" == "" (
   echo.
-  echo * Application: %cbf_application%
+  echo * Application: "%cbf_application%"
 )
 
 if not "%cbf_back%" == "" (
@@ -98,7 +98,7 @@ if not "%cbf_confluence_url%" == "" (
 
 if "%1" == "" (
   echo.
-  echo * Default browser: %cbf_default_browser%
+  echo * Default browser: "%cbf_default_browser%"
 )
 
 if "%1" == "" (

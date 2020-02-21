@@ -11835,4 +11835,25 @@ exit/b
 
 
 
+:_
+
+:deli
+
+set fp=* Dev library.
+
+rem lu: Feb-21-2020
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
+
+set cbf_path=%cbf_repo%\deli
+
+set cbf_url=https://github.com/DevTechnology/dev-library
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
