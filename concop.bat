@@ -77,7 +77,7 @@ call td mecfg
 
 call dr concop>>%temp%\search_results_concop.txt
 
-call dr renamed concop>>%temp%\search_results_concop.txt
+call dr renamed>>%temp%\search_results_concop.txt
 
 
 
@@ -87,7 +87,7 @@ call td sv
 
 call dr concop>>%temp%\search_results_concop.txt
 
-call dr renamed concop>>%temp%\search_results_concop.txt
+call dr renamed>>%temp%\search_results_concop.txt
 
 
 
@@ -97,7 +97,7 @@ call td drsv
 
 call dr concop>>%temp%\search_results_concop.txt
 
-call dr renamed concop>>%temp%\search_results_concop.txt
+call dr renamed>>%temp%\search_results_concop.txt
 
 
 
@@ -105,7 +105,7 @@ call dr renamed concop>>%temp%\search_results_concop.txt
 
 set fp=* Open the report.
 
-call an me
+call an me>nul
 
 start "Test Title" "%cbf_application%" "%temp%\search_results_concop.txt"
 

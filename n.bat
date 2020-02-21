@@ -11799,7 +11799,6 @@ exit/b
 
 
 
-<<<<<<< HEAD
 :_+ Savannah
 
 
@@ -11811,20 +11810,10 @@ exit/b
 set fp=* Local Savannah.
 
 rem lu: May-26-2019
-=======
-:_
-
-:deli
-
-set fp=* Dev library.
-
-rem lu: Feb-21-2020
->>>>>>> e157d6e590182ee886bb3dfee92d001d9b36ff7a
 
 echo.
 echo %fp%
 
-<<<<<<< HEAD
 set cbf_path=%savannah%\
 
 exit/b
@@ -11835,21 +11824,37 @@ exit/b
 
 :drsv
 
-set fp=* Dropbox savannah.
+set fp=* Dropbox Savannah.
 
-rem lu: Jun-23-2019
+rem lu: Feb-21-2020
 
 echo.
 echo %fp%
 
 set cbf_path=%dropbox%\savannah
-=======
+
+exit/b
+
+
+
+:_
+
+:deli
+
+set fp=* Dev library.
+
+rem lu: Feb-21-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\savannah
+
 set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
 
 set cbf_path=%cbf_repo%\deli
 
 set cbf_url=https://github.com/DevTechnology/dev-library
->>>>>>> e157d6e590182ee886bb3dfee92d001d9b36ff7a
 
 exit/b
 
