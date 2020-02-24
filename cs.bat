@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* File contents search for current folder and subfolders.
+set filep=* Ad hoc file contents search for current folder and subfolders.
 
 rem Pipe the results into a temporary file.
 

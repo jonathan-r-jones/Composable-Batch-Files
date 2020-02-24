@@ -1288,6 +1288,8 @@ echo %fp%
 
 set cbf_path=%dropbox%
 
+set cbf_url=http://www.dropbox.com
+
 exit/b
 
 
@@ -6386,46 +6388,6 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\jonathan\miscellany
-
-exit/b
-
-
-
-:_ + Appdata
-
-::_
-
-:lad
-
-set fp=* Local app data.
-
-rem lu: Dec-4-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%localappdata%
-
-exit/b
-
-
-
-:_
-
-:ad
-
-:apda
-
-:appd
-
-set fp=* App data.
-
-rem lu: Dec-4-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%appdata%
 
 exit/b
 
@@ -11857,6 +11819,77 @@ set cbf_path=%cbf_repo%\deli
 set cbf_url=https://github.com/DevTechnology/dev-library
 
 exit/b
+
+
+
+:_ + Appdata
+
+
+
+::_
+
+:ad
+
+:apda
+
+:appd
+
+set fp=* App data.
+
+rem lu: Dec-4-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%appdata%
+
+exit/b
+
+
+
+::_
+
+:lad
+
+set fp=* Local app data.
+
+rem lu: Dec-4-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%localappdata%
+
+exit/b
+
+
+
+::_
+
+:dtbg
+
+set fp=* Desktop background.
+
+rem lu: Feb-24-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%localappdata%\microsoft\windows\themes\roamedthemefiles\desktopbackground
+
+exit/b
+
+:+ desktopbackground
+
+::C:\%appdata%
+
+::C:\Users\jonat\AppData\Local\Microsoft\Windows\Themes\RoamedThemeFiles\DesktopBackground
+
+::C:\Users\      jonat\AppData\Local\Microsoft\Windows\Themes\RoamedThemeFiles\DesktopBackground
+
+::C:\Users\jrj.GCITECH\AppData\Local\Microsoft\Windows\Themes\Snowy Nig\DesktopBackground
+
+
 
 
 
