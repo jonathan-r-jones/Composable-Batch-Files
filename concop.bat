@@ -53,6 +53,16 @@ echo.>>%temp%\search_results_concop.txt
 
 :_
 
+call td dr
+
+call dr concop>>%temp%\search_results_concop.txt
+
+call dr renamed>>%temp%\search_results_concop.txt
+
+
+
+:_
+
 call td cmac
 
 call dr concop>>%temp%\search_results_concop.txt
