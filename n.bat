@@ -2169,6 +2169,7 @@ echo %fp%
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
 
 set cbf_path=%composable_batch_files%
+rem qq1
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
 

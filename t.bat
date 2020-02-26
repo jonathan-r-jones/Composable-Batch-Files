@@ -10149,8 +10149,6 @@ echo %fp%
 
 echo:>>c:\a\j1.txt
 
-rem qq-1
-
 exit/b
 
 
