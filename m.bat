@@ -1551,6 +1551,7 @@ echo %fp%
 if /i "%computername%" == "asus" call m set_default_browser kr
 if /i "%computername%" == "buzz" call m set_default_browser kr
 if /i "%computername%" == "earl" call m set_default_browser kr
+if /i "%computername%" == "sp7" call m set_default_browser kr
 if /i "%computername%" == "xps" call m set_default_browser kr
 if "%cbf_default_browser%" == "" call m set_default_browser ie
 
@@ -1573,6 +1574,7 @@ call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "earl" call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "sp7" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
 rem if "%cbf_repo%" == "" call %0 set_default_repository_folder temp
 
@@ -1592,6 +1594,7 @@ echo.
 echo %fp%
 
 if /i "%computername%" == "asus" call m set_default_text_editor no
+if /i "%computername%" == "sp7" call m set_default_text_editor np
 if /i "%computername%" == "xps" call m set_default_text_editor np
 if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
 

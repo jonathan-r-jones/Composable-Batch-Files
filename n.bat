@@ -9071,25 +9071,6 @@ exit/b
 
 :_
 
-:ea
-
-:earl
-
-set fp=* Earl.
-
-rem lu: Jun-30-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%dropbox%\savannah\reach out\earl.asc
-
-exit/b
-
-
-
-:_
-
 :xps
 
 set fp=* Xps.
@@ -11890,6 +11871,42 @@ exit/b
 ::C:\Users\jrj.GCITECH\AppData\Local\Microsoft\Windows\Themes\Snowy Nig\DesktopBackground
 
 
+
+
+
+:_
+
+:ea
+
+:earl
+
+set fp=* Earl.
+
+rem lu: Jun-30-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%dropbox%\savannah\reach out\earl.asc
+
+exit/b
+
+
+
+:_
+
+:sp7
+
+set fp=* SP7.
+
+rem lu: Feb-25-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%dropbox%\savannah\reach out\sp7.asc
+
+exit/b
 
 
 
