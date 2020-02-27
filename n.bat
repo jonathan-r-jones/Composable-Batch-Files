@@ -2169,7 +2169,6 @@ echo %fp%
 set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
 
 set cbf_path=%composable_batch_files%
-rem qq1
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
 
@@ -6899,27 +6898,6 @@ exit/b
 
 :_
 
-:mous
-
-:mouse
-
-set fp=* Mouse.
-
-rem lu: Dec-20-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
-
-set cbf_application=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
-
-exit/b
-
-
-
-:_
-
 :gf
 
 :gfe
@@ -9762,23 +9740,6 @@ exit/b
 
 ::_
 
-:mecfg_bu
-
-set fp=* Multi-Edit Config Files Backups.
-
-rem lu: Jan-3-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\Backups\Multi-Edit Config Files
-
-exit/b
-
-
-
-::_
-
 :mecfg
 
 set fp=* Multi-Edit Config file folder.
@@ -9796,9 +9757,9 @@ exit/b
 
 ::_
 
-:mecfg_dr
+:drmecfg
 
-set fp=* Multi-Edit Config file folder in DropBox.
+set fp=* Dropbox Multi-Edit Config files.
 
 rem lu: Dec-7-2018
 
@@ -9813,7 +9774,7 @@ exit/b
 
 ::_
 
-:mecfg_s
+:smecfg
 
 set fp=* Multi-Edit Config file folder in Share-Zone.
 
@@ -9823,6 +9784,23 @@ echo.
 echo %fp%
 
 set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
+
+exit/b
+
+
+
+::_
+
+:bumecfg
+
+set fp=* Multi-Edit Config Files Backups.
+
+rem lu: Jan-3-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\Backups\Multi-Edit Config Files
 
 exit/b
 
@@ -11906,6 +11884,46 @@ echo.
 echo %fp%
 
 set cbf_filename=%dropbox%\savannah\reach out\sp7.asc
+
+exit/b
+
+
+
+:_+ Mouse and Keyboard Center
+
+
+
+::_
+
+:imous
+
+set fp=* Install Mouse and Keyboard Center.
+
+rem lu: Feb-26-2020
+
+echo.
+echo %fp%
+
+set cbf_application=%dropbox%\Software\Tools\MouseKeyboardCenter_64bit_ENG_11.1.exe
+
+exit/b
+
+
+
+::_
+
+:mous
+
+:mouse
+
+set fp=* Run mouse and keyboard centerMouse.
+
+rem lu: Feb-26-2020
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
 
 exit/b
 
