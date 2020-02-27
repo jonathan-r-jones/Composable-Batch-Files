@@ -9846,25 +9846,6 @@ exit/b
 
 :_
 
-:coco
-
-set fp=* Code compare.
-
-rem lu: Jan-31-2019
-
-echo.
-echo %fp%
-
-set cbf_application=c:\program files\devart\code compare\codecompare.exe
-
-set cbf_filename=%cbf_application%
-
-exit/b
-
-
-
-:_
-
 :dg
 
 set fp=* Datagrip.
@@ -11924,6 +11905,48 @@ echo.
 echo %fp%
 
 set cbf_application=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
+
+exit/b
+
+
+
+:_+ Code Compare
+
+
+
+::_
+
+:icoco
+
+set fp=* Install Code Compare.
+
+rem lu: Feb-27-2020
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Users\jonat\Dropbox\Software\Code Compare\codecomparepro40.exe
+
+set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+::_
+
+:coco
+
+set fp=* Run Code compare.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+set cbf_application=c:\program files\devart\code compare\codecompare.exe
+
+set cbf_filename=%cbf_application%
 
 exit/b
 

@@ -67,7 +67,6 @@ call m update_lu %0
 call p s
 
 call ss %0
-rem qq1
 
 exit/b (!rfsp) (mov-2)
 
