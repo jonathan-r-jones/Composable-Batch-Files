@@ -29,7 +29,7 @@ goto %1
 
 :help
 
-rem lu: 
+rem lu: Feb-28-2020
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -59,7 +59,7 @@ exit/b
 
 :_
 
-comp
+:comp
 
 set fp=* Compose.
 
