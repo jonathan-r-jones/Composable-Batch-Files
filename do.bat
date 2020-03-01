@@ -59,24 +59,6 @@ exit/b
 
 :_
 
-:comp
-
-set fp=* Compose.
-
-rem lu: Feb-27-2020
-
-echo.
-echo %fp%
-
-echo.
-
-docker-compose -f src/main/docker/app.yml up
-exit/b
-
-
-
-:_
-
 :down
 
 set fp=* Down.
@@ -106,6 +88,27 @@ echo %fp%
 
 echo.
 docker-compose up
+
+exit/b
+
+
+
+:_
+
+:comp
+
+set fp=* Compose.
+
+rem lu: Feb-27-2020
+
+echo.
+echo %fp%
+
+echo.
+
+@echo on
+docker-compose -f src/main/docker/app.yml up
+@echo off
 
 exit/b
 
