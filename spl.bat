@@ -55,7 +55,7 @@ call pl drql
 
 call pl s
 
-call cppp mecfg_s mecfg
+call cppp smecfg mecfg
 
 call ss %0
 

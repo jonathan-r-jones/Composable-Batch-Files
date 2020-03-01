@@ -4312,7 +4312,7 @@ rem lu: Jun-11-2019
 echo.
 echo %fp%
 
-call cppp mecfg mecfg_s
+call cppp mecfg smecfg
 
 call p s
 
@@ -4337,7 +4337,7 @@ echo %fp%
 
 call pl s
 
-call cppp mecfg_s mecfg
+call cppp smecfg mecfg
 
 exit/b
 

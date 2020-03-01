@@ -4281,25 +4281,6 @@ exit/b
 
 :_
 
-:bel
-
-:belf
-
-set fp=* Belfy.
-
-rem lu: Aug-24-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%savannah%\belfry
-
-exit/b
-
-
-
-:_
-
 :404
 
 set fp=* 404 badapi.
@@ -11947,6 +11928,46 @@ echo %fp%
 set cbf_application=c:\program files\devart\code compare\codecompare.exe
 
 set cbf_filename=%cbf_application%
+
+exit/b
+
+
+
+:_+ Belfry
+
+
+
+::_
+
+:bel
+
+:belf
+
+set fp=* Belfy.
+
+rem lu: Aug-24-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%savannah%\belfry
+
+exit/b
+
+
+
+::_
+
+:drbelf
+
+set fp=* Dropbox Belfy.
+
+rem lu: Mar-1-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\savannah\belfry
 
 exit/b
 

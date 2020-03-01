@@ -41,7 +41,7 @@ exit/b
 
 :_
 
-:mecfg_mac
+:macmecfg
 
 set fp=* Delete conflicted copies in the mac folder.
 
@@ -50,7 +50,7 @@ rem lu: Feb-13-2019
 echo.
 echo %fp%
 
-call td mecfg_s
+call td smecfg
 
 cd mac
 
@@ -80,7 +80,7 @@ call td mecfg
 call %0 concop
 
 rem 3.
-call td mecfg_s
+call td smecfg
 call %0 concop
 
 exit/b

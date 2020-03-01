@@ -74,14 +74,14 @@ echo. >> "%cbf_filename%"
 dir "*conflict*.*" /s >> "%cbf_filename%"
 
 rem 3.
-call td mecfg_dr
+call td drmecfg
 echo. >> "%cbf_filename%"
 echo ******* Current folder: %cd% >> "%cbf_filename%"
 echo. >> "%cbf_filename%"
 dir "*conflict*.*" /s >> "%cbf_filename%"
 
 rem 4.
-call td mecfg_s
+call td smecfg
 echo. >> "%cbf_filename%"
 echo ******* Current folder: %cd% >> "%cbf_filename%"
 echo. >> "%cbf_filename%"
