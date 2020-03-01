@@ -11985,7 +11985,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%reach out%\cc.asc
-rem       qq-1
 
 exit/b
 
