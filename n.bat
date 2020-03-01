@@ -11973,4 +11973,22 @@ exit/b
 
 
 
+:_
+
+:cc
+
+set fp=* Clif collection.
+
+rem lu: Mar-1-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%reach out%\cc.asc
+rem       qq-1
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
