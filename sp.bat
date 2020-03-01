@@ -55,7 +55,7 @@ if not "%machinename%"=="gfe" (
   call td mecfg_dr
   rem call de.bat concop
   call 8
-  call cypp mecfg mecfg_s
+  call cppp mecfg mecfg_s
   call p drql
   cd\
 )
