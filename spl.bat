@@ -45,8 +45,8 @@ echo %filep%
 
 if not "%machinename%"=="gfe" (
   call 8
-  call cy.bat sv_dr_to_local
-  call cy.bat cfg_dr_to_local
+  call cp.bat sv_dr_to_local
+  call cp.bat cfg_dr_to_local
 )
 
 call pl cbf
