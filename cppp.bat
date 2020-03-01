@@ -70,7 +70,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-call cyp %1
+call cpp %1
 
 exit/b
 
