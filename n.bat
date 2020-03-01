@@ -8504,8 +8504,6 @@ exit/b
 
 ::_
 
-:dx
-
 :imdx
 
 set fp=* Introduction to Mobile Development with Xamarin by James Montemagno.
@@ -11985,6 +11983,23 @@ echo.
 echo %fp%
 
 set cbf_filename=%reach out%\cc.asc
+
+exit/b
+
+
+
+:_
+
+:itin
+
+set fp=* Itinerary.
+
+rem lu: Mar-1-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%dropbox%\miscellaneous documents\itinerary.xlsx
 
 exit/b
 
