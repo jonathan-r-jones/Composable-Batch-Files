@@ -56,7 +56,8 @@ if %errorlevel% == 1 (
 )
 
 if "%cbf_jenkins_url%" == "" (
-  echo * Error: CBF Jenkins url is not set.
+  echo.
+  echo * Error: The CBF Jenkins URL is blank for the alias you specified.
   exit/b
 )
 
