@@ -47,11 +47,10 @@ if not "%machinename%"=="gfe" (
   call 8
   call cp.bat sv_dr_to_local
   call cp.bat cfg_dr_to_local
+  call pl drql
 )
 
 call pl cbf
-
-call pl drql
 
 call pl s
 

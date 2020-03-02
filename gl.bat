@@ -41,7 +41,6 @@ exit/b
 echo.
 echo   Term/Abbreviation  Definition/Description
 echo -------------------  -------------------------------------------------------------------
-echo                  _c  Suffic indicating a consumer batch file using function routing.
 echo                  99  Errorlevel used when a label is not found.
 echo                   a  Application, when used in a batch file name
 echo       alias routing  Batch file style (bfs) where the parameter(s) is usually an alias 
@@ -58,8 +57,9 @@ echo code execution area  Batch file style (bfs) where the router routes executi
 echo                      end of the file, unless a parameter is supllied, in which case 
 echo                      function routing occurs. Example(s): t.bat.
 echo                 cbf  Composable batch files
-echo                   c  Current folder filename, when used in a batc file name
+echo                  _c  Suffic indicating a consumer batch file using function routing.
 echo                  -c  As a batch file parameter, means force file creation
+echo                   c  Current folder filename, when used in a batch file name
 echo          error code  fn.bat returns an error code of 2 for file not exists.
 echo  evaluated filename  Filename, filename alias or batch file prefix for a batch file 
 echo    parameter         that lives in either the CBF or Share-zone folder.

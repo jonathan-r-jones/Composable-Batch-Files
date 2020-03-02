@@ -174,7 +174,11 @@ exit/b
 
 :_
 
+:v
+
 :ver
+
+:vers
 
 set fp=* Display Java version currently in use.
 
