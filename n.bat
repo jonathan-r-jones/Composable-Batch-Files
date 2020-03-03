@@ -7736,7 +7736,7 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
-set cbf_branch=master
+set cbf_branch=Branch2
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
@@ -8140,18 +8140,16 @@ exit/b
 
 :_
 
-:i2
-
 :it2
 
-set fp=* I2.
+set fp=* IT2.
 
 rem lu: Apr-15-2019
 
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\i2.asc
+set cbf_filename=%share-zone%\iT2.asc
 
 exit/b
 
