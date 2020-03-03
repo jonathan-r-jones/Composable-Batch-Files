@@ -3624,6 +3624,8 @@ exit/b
 
 :mmou
 
+:merge_using_ours
+
 set fp=* Merge master into the release branch using the "ours" stategy.
 
 rem lu: Dec-10-2019

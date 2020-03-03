@@ -191,9 +191,9 @@ exit/b
 
 :ngp
 
-set fp=* Complie and start Angular for production. Used this for version 1.3.
+set fp=* Compile and start Angular for production. I have used this since version 1.3.
 
-rem lu: Oct-7-2019
+rem lu: Mar-3-2020
 
 echo.
 echo %fp%

@@ -4485,6 +4485,10 @@ x bash
 
 ./get_cart_jwt.sh
 
+Copy the new jwt token into the file using:
+
+e jwt
+
 rem If you want to run the debugger, then search on: ^lnk
 and use 
 gr run_api_with_debugger
