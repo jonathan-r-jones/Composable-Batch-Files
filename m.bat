@@ -4275,7 +4275,7 @@ set cbf_filename_list="%share-zone%\gfe.asc"
 
 set cbf_filename_list=%cbf_filename_list% "%share-zone%\copy of cc.asc"
 set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\ch.bat"
-set cbf_filename_list=%cbf_filename_list% "%share-zone%\i2.asc"
+set cbf_filename_list=%cbf_filename_list% "%share-zone%\it2.asc"
 set cbf_filename_list=%cbf_filename_list% "%share-zone%\k.bat"
 set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\m.bat"
 set cbf_filename_list=%cbf_filename_list% "%share-zone%\mtw.asc"

@@ -283,24 +283,6 @@ exit/b
 
 :_
 
-:test
-
-set fp=* Test.
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-echo.
-gradlew test
-
-exit/b
-
-
-
-:_
-
 :bfpw
 
 set fp=* Build for production, war file. This optimizes the cart-api application for production.
@@ -660,6 +642,26 @@ echo %fp%
 echo.
 call gradlew -Pprod clean bootJar
 echo.
+
+exit/b
+
+
+
+:_
+
+:test
+
+set fp=* Run Java unit tests.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+call td api
+
+echo.
+gradlew test
 
 exit/b
 

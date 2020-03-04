@@ -3034,6 +3034,26 @@ from tag, create tag from branch)
 
 ::_
 
+:cbbt18
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Mar-4-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b release/v180 tags/v1.8.0
+
+git push --set-upstream origin release/v180
+
+exit/b
+
+
+
+::_
+
 :cbbt17
 
 set fp=* Create a branch based on a tag.
@@ -3603,25 +3623,6 @@ exit/b
 
 ::_
 
-:meab
-
-set fp=* Merge abort can only be run after the merge has resulted in conflicts.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-git merge --abort
-
-exit/b
-
-
-
-::_
-
 :merg
 
 set fp=* Original merging sample code from GitHub.
@@ -3644,26 +3645,6 @@ Step 2: Merge the changes and update on GitHub.
 git checkout master
 git merge --no-ff release/v140
 git push origin master
-
-exit/b
-
-
-
-::_
-
-:meth
-
-:metheirs
-
-set fp=* Merge using the "theirs" strategy.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
 
 exit/b
 
@@ -3748,7 +3729,7 @@ exit/b
 
 
 
-:_
+::_
 
 :merg
 
@@ -3783,6 +3764,63 @@ Did you mean this?
 
 For me it meant that I need to run git checkout Branch3 on my local repository before trying 
 to merge it. It must have a local version of Branch3. Mar-3-2020
+
+
+
+::_
+
+:meab
+
+set fp=* Merge abort can only be run after the merge has resulted in conflicts.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+git merge --abort
+
+exit/b
+
+
+
+::_
+
+:meth
+
+set fp=* Theirs strategy with Matt.
+
+rem lu: Mar-4-2020
+
+echo.
+echo %fp%
+
+echo.
+git merge --strategy-option theirs release/v171
+
+exit/b
+
+
+
+::_
+
+:meth
+
+:metheirs
+
+set fp=* Merge using the "theirs" strategy.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+
+exit/b
 
 
 
