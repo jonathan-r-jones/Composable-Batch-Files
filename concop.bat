@@ -67,7 +67,7 @@ call td cmac
 
 call dr concop>>%temp%\search_results_concop.txt
 
-call dr renamed concop>>%temp%\search_results_concop.txt
+call dr renamed>>%temp%\search_results_concop.txt
 
 
 
@@ -77,7 +77,7 @@ call td drcmac
 
 call dr concop>>%temp%\search_results_concop.txt
 
-call dr renamed concop>>%temp%\search_results_concop.txt
+call dr renamed>>%temp%\search_results_concop.txt
 
 
 
