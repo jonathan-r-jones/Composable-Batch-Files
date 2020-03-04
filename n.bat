@@ -11884,7 +11884,7 @@ exit/b
 
 :mouse
 
-set fp=* Run mouse and keyboard centerMouse.
+set fp=* Run Mouse and Keyboard Center.
 
 rem lu: Feb-26-2020
 
