@@ -211,8 +211,6 @@ exit/b
 
 ::_
 
-:test
-
 :ng_test
 
 set fp=* Test angular.
@@ -231,21 +229,28 @@ exit/b
 
 ::_
 
-:run_ui_tests_in_ma
+:run_tests
 
-set fp=* Run UI tests in ma.
+:test
+
+set fp=* Run UI tests in ma. (skw run tests)
 
 rem lu: Dec-3-2019
 
 echo.
 echo %fp%
 
-call tdr m ui
+call td ui
 
 echo.
 ng test
 
 exit/b
+
+
+>< >< Footnote:
+
+As of Mar-5-2020 there are 428 API tests
 
 
 

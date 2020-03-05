@@ -1727,8 +1727,6 @@ exit/b
 
 ::_
 
-:b
-
 :base
 
 set fp=* Return to baseline configuration after a build. Exercise caution as this will destroy some local changes.
@@ -2815,6 +2813,8 @@ exit/b
 
 
 ::_
+
+:b
 
 :cb
 

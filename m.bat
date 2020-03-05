@@ -2607,29 +2607,6 @@ exit/b
 
 :_
 
-:cltest
-
-set fp=* Run tests on command line.
-
-rem lu: Dec-18-2017
-
-echo %fp%
-echo.
-
-call :vscmd
-
-call td psc
-
-vstest.console.exe unittestproject4.dll
-
-col
-
-exit/b
-
-
-
-:_
-
 :loggers
 
 set fp=* List loggers.
@@ -2639,23 +2616,6 @@ rem lu: Dec-18-2017
 echo %fp%
 
 vstest.console.exe /ListLoggers
-
-exit/b
-
-
-
-:_
-
-:cltestl
-
-set fp=* Run tests on command line with an attached logger.
-
-rem lu: Dec-18-2017
-
-echo %fp%
-echo.
-
-vstest.console.exe unittestproject4.dll /Logger:trx
 
 exit/b
 
@@ -5087,6 +5047,50 @@ echo.
 echo * Server alias is validated.
 
 exit/b 0
+
+
+
+:_+ Vs Test
+
+
+
+::_
+
+:cltestl
+
+set fp=* Run tests on command line with an attached logger.
+
+rem lu: Dec-18-2017
+
+echo %fp%
+echo.
+
+vstest.console.exe unittestproject4.dll /Logger:trx
+
+exit/b
+
+
+
+::_
+
+:cltest
+
+set fp=* Run tests on command line.
+
+rem lu: Dec-18-2017
+
+echo %fp%
+echo.
+
+call :vscmd
+
+call td psc
+
+vstest.console.exe unittestproject4.dll
+
+col
+
+exit/b
 
 
 

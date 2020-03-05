@@ -649,9 +649,11 @@ exit/b
 
 :_
 
+:run_tests
+
 :test
 
-set fp=* Run Java unit tests.
+set fp=* Run Java unit tests. (skw run tests)
 
 rem lu: Jan-9-2019
 
@@ -664,6 +666,11 @@ echo.
 gradlew test
 
 exit/b
+
+
+>< >< Footnote:
+
+As of Mar-5-2020 there are 120 UI tests.
 
 
 

@@ -6035,6 +6035,12 @@ exit/b
 
 :acro
 
+:htgray
+
+:scerts
+
+:jcerts
+
 :pass-through
 
 set fp=* Pass through.
