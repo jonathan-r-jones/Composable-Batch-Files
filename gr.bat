@@ -364,60 +364,6 @@ exit/b
 
 
 
-:_
-
-:b4d
-
-:build_jar
-
-set fp=* Build for dev environment.
-
-rem lu: Aug-14-2019
-
-echo.
-echo %fp%
-
-echo %cd% | find /i "\api">nul
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: You must be in the api folder for this command to work.
-  exit/b 1
-)
-
-echo.
-gradle -Pdev clean bootJar
-
-exit/b
-
-
-
-:_
-
-:build_jar_for_fqt
-
-set fp=* Build for FQT environment.
-
-rem lu: Sep-17-2019
-
-echo.
-echo %fp%
-
-echo %cd% | find /i "\api">nul
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: You must be in the api folder for this command to work.
-  exit/b 1
-)
-
-echo.
-gradle -Pfqt clean bootJar
-
-exit/b
-
-
-
 :_+ Gradle commands that Edward and Matt use.
 
 
@@ -632,16 +578,23 @@ exit/b
 
 :build_jar_for_production
 
-set fp=* Build for production, jar file.
+set fp=* Build Jar for prod environment.
 
 rem lu: Jan-17-2020
 
 echo.
 echo %fp%
 
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
 echo.
 call gradlew -Pprod clean bootJar
-echo.
 
 exit/b
 
@@ -671,6 +624,82 @@ exit/b
 >< >< Footnote:
 
 As of Mar-5-2020 there are 120 UI tests.
+
+
+
+:_+ Building Jar Files
+
+
+
+::_
+
+:build_jar_for_dev
+
+set fp=* Build Jar for dev environment.
+
+rem lu: Aug-14-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence gradlew.bat
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+gradle -Pdev clean bootJar
+
+exit/b
+
+
+
+::_
+
+:build_jar_for_fqt
+
+set fp=* Build Jar for FQT environment.
+
+rem lu: Sep-17-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence gradlew.bat
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+gradle -Pfqt clean bootJar
+
+exit/b
+
+
+
+::_
+
+:build_jar_for_dock
+
+set fp=* Build Jar for Docker environment.
+
+rem lu: Sep-17-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence gradlew.bat
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+gradlew -Pprod clean bootJar jibDockerBuild
+
+exit/b
 
 
 
