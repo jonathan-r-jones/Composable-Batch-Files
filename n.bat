@@ -9171,27 +9171,6 @@ exit/b
 
 :_
 
-:draw
-
-:visi
-
-set fp=* Draw.io. A nice network diagram drawing tool that Adam used to create an ldd.
-
-rem A possible Visio substitute.
-
-rem lu: Apr-26-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.draw.io/
-
-exit/b
-
-
-
-:_
-
 :t2
 
 set fp=* Test 2
@@ -11996,7 +11975,65 @@ exit/b
 
 
 
-:_
+:_+ Deli Family (!fydeli)
+
+
+
+::_
+
+:deli
+
+set fp=* Dev library.
+
+rem lu: Feb-21-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\savannah
+
+set cbf_filename=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
+
+set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
+
+set cbf_github_url=https://github.com/DevTechnology/dev-library
+
+set cbf_path=%cbf_repo%\deli
+
+set cbf_url=http://localhost:8080
+
+exit/b
+
+
+>< >< Footnote:
+
+The creds for local deli are admin/admin.
+
+
+
+::_
+
+:jhre
+
+set fp=* JHipster Registry.
+
+rem lu: Mar-6-2020
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8761
+
+exit/b
+
+
+>< >< Footnote:
+
+Credentials are admin/admin.
+
+
+
+::_
 
 :boym
 
@@ -12020,55 +12057,62 @@ fail-fast: false
 
 
 
-:_
-
-:jhre
-
-set fp=* JHipster Registry.
-
-rem lu: Mar-6-2020
-
-echo.
-echo %fp%
-
-set cbf_url=http://localhost:8761
-
-exit/b
-
-
->< >< Footnote:
-
-Credentials are admin/admin.
+:_+ Draw.Io
 
 
 
-:_
+::_
 
-:deli
+:draw
 
-set fp=* Dev library.
+:visi
 
-rem lu: Feb-21-2020
+set fp=* Draw.io. A nice network diagram drawing tool that Adam used to create an ldd.
+
+rem A possible Visio substitute.
+
+rem lu: Apr-26-2019
 
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\savannah
-
-set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
-
-set cbf_path=%cbf_repo%\deli
-
-set cbf_github_url=https://github.com/DevTechnology/dev-library
-
-set cbf_url=http://localhost:8080
+set cbf_url=https://www.draw.io/
 
 exit/b
 
 
->< >< Footnote:
 
-The creds for local deli are admin/admin.
+::_
+
+:drawaws
+
+set fp=* Use Draw.io to make an AWS diagram.
+
+rem lu: Apr-26-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.draw.io/?libs=aws2
+
+exit/b
+
+
+
+::_
+
+:drawawsc
+
+set fp=* Use Draw.io to make an AWS diagram - Confluence Article..
+
+rem lu: Apr-26-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://support.draw.io/display/DO/2014/10/06/Using+AWS+2.0+icons+to+create+free+Amazon+architecture+diagrams+in+draw.io
+
+exit/b
 
 
 

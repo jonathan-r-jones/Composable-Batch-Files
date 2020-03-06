@@ -279,6 +279,8 @@ exit/b
 
 :t
 
+:tree
+
 set fp=* Tree view.
 
 rem lu: Jan-8-2019
@@ -295,6 +297,8 @@ exit/b
 ::_
 
 :tP
+
+:treep
 
 set fp=* Tree view piped to a file.
 

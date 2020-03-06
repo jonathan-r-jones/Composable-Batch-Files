@@ -3358,141 +3358,6 @@ exit/b
 
 
 
-:_+ Reversion Family (!fyrv)
-
-
-
-::_
-
-:rollback
-
-:roll_back
-
-set fp=* Rollback used by Matt A. and me.
-
-rem lu: Jan-30-2020
-
-echo.
-echo %fp%
-
-git revert -m 1 HEAD
-
-rem Then you need to do your usual add, commit and push commands.
-
-exit/b
-
-
-
-::_
-
-:roll_back_repo_1
-
-set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
-
-rem One reason I like this command is that it moves back slowly so will help you be
-rem careful not to rollback to far.
-
-set fp=%fp% so move the whole repo back a single check-in version.
-
-rem This worked on FGT and Fresnel on Jul-19-2018.
-rem This worked on CBF on Mar-22-2019.
-
-rem lu: Mar-22-2019
-
-echo.
-echo %fp%
-
-call :reset_head_1
-
-call :roll_back_repo
-
-exit/b
-
-
-
-::_
-
-:rsf
-
-:rv_sf
-
-:rvsf
-
-set fp=* Revert or check out single file.
-
-rem lu: Mar-22-2019
-
-rem This worked on CBF files. Mar-22-2019
-
-echo.
-echo %fp%
-  
-git reset head %2
-git checkout %2
-
-exit/b
-
-
-
-::_
-
-:rv_fd
-
-set fp=* Revert folder.
-
-rem Last successful run date: May-30-2018
-
-rem Last Updated: May-30-2018
-
-echo.
-echo %fp%
- 
-git checkout *.*
-
-exit/b
-
-
-
-::_
-
-:rv
-
-:rv_lo
-
-:rv_local
-
-set fp=* Revert local.
-
-rem lu: Aug-7-2018
-
-rem If you don't care about any local changes and just want a copy from the repository.
-
-rem Revert all changes from this folder. Revert all local changes.
-
-rem blow away local changes, specific folder: skw
-
-rem This didn't seem to work on Jan-31-2017.
-
-rem Function Creation Date: Jan-30-2017
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
-  exit/b
-)
-
-echo.
-git reset --hard HEAD
-git clean -f
-git pull
-
-exit/b
-
-
-
 :_+ Merge Tool and Merging
 
 
@@ -3819,6 +3684,160 @@ echo %fp%
 
 echo.
 
+
+exit/b
+
+
+
+:_+ Reversion Family (!fyrv)
+
+
+
+::_
+
+:rollback
+
+:roll_back
+
+set fp=* Rollback used by Matt A. and me.
+
+rem lu: Jan-30-2020
+
+echo.
+echo %fp%
+
+git revert -m 1 HEAD
+
+rem Then you need to do your usual add, commit and push commands.
+
+exit/b
+
+
+
+::_
+
+:roll_back_repo_1
+
+set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
+
+rem One reason I like this command is that it moves back slowly so will help you be
+rem careful not to rollback to far.
+
+set fp=%fp% so move the whole repo back a single check-in version.
+
+rem This worked on FGT and Fresnel on Jul-19-2018.
+rem This worked on CBF on Mar-22-2019.
+
+rem lu: Mar-22-2019
+
+echo.
+echo %fp%
+
+call :reset_head_1
+
+call :roll_back_repo
+
+exit/b
+
+
+
+::_
+
+:rsf
+
+:rv_sf
+
+:rvsf
+
+set fp=* Revert or check out single file.
+
+rem lu: Mar-22-2019
+
+rem This worked on CBF files. Mar-22-2019
+
+echo.
+echo %fp%
+  
+git reset head %2
+git checkout %2
+
+exit/b
+
+
+
+::_
+
+:rv_fd
+
+set fp=* Revert folder.
+
+rem Last successful run date: May-30-2018
+
+rem Last Updated: May-30-2018
+
+echo.
+echo %fp%
+ 
+git checkout *.*
+
+exit/b
+
+
+
+::_
+
+:rv
+
+:rv_lo
+
+:rv_local
+
+set fp=* Revert local.
+
+rem lu: Aug-7-2018
+
+rem If you don't care about any local changes and just want a copy from the repository.
+
+rem Revert all changes from this folder. Revert all local changes.
+
+rem blow away local changes, specific folder: skw
+
+rem This didn't seem to work on Jan-31-2017.
+
+rem Function Creation Date: Jan-30-2017
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
+  exit/b
+)
+
+echo.
+git reset --hard HEAD
+git clean -f
+git pull
+
+exit/b
+
+
+
+:_
+
+:rv_merge
+
+set fp=* Revert a merge. This worked on Mar-6-2020.
+
+rem lu: Mar-6-2020
+
+echo.
+echo %fp%
+
+echo.
+rem Where the hash is the hash of the commit you want to revert.
+git revert -m 1 c8e8a0252de705c09800700e7c6b17192bf72e02 
 
 exit/b
 
