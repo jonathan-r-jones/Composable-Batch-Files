@@ -11733,29 +11733,6 @@ exit/b
 
 
 
-:_
-
-:deli
-
-set fp=* Dev library.
-
-rem lu: Feb-21-2020
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\savannah
-
-set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
-
-set cbf_path=%cbf_repo%\deli
-
-set cbf_url=https://github.com/DevTechnology/dev-library
-
-exit/b
-
-
-
 :_ + Appdata
 
 
@@ -12016,6 +11993,82 @@ echo %fp%
 set cbf_filename=%dropbox%\miscellaneous documents\itinerary.xlsx
 
 exit/b
+
+
+
+:_
+
+:boym
+
+set fp=* Bootstrap yml.
+
+rem lu: Mar-6-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
+
+exit/b
+
+
+>< >< Footnote:
+
+On Mar-6-2020, Kurt had me change this to:
+
+fail-fast: false
+
+
+
+:_
+
+:jhre
+
+set fp=* JHipster Registry.
+
+rem lu: Mar-6-2020
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:8761
+
+exit/b
+
+
+>< >< Footnote:
+
+Credentials are admin/admin.
+
+
+
+:_
+
+:deli
+
+set fp=* Dev library.
+
+rem lu: Feb-21-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\savannah
+
+set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
+
+set cbf_path=%cbf_repo%\deli
+
+set cbf_github_url=https://github.com/DevTechnology/dev-library
+
+set cbf_url=http://localhost:8080
+
+exit/b
+
+
+>< >< Footnote:
+
+The creds for local deli are admin/admin.
 
 
 

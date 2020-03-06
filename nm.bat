@@ -83,23 +83,6 @@ exit/b
 
 
 
-:_
-
-:test
-
-set fp=* Run tests.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-npm test
-
-exit/b
-
-
-
 :_+ NPM Help
 
 
@@ -970,6 +953,199 @@ echo.
 npm update %2
 
 exit/b
+
+
+
+:_
+
+:run_tests
+
+:test
+
+set fp=* Run tests. (skw run unit tests)
+
+rem lu: Mar-6-2020
+
+echo.
+echo %fp%
+
+npm test
+
+exit/b
+
+
+>< >< Footnote:
+
+Here is the result of my first unit test run in deli on Mar-6-2020.
+
+ PASS  src/test/javascript/spec/app/core/user/account.service.spec.ts (42.608s, 557 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/audits/audits.component.spec.ts (46.519s, 211 MB heap size)
+ PASS  src/test/javascript/spec/app/shared/alert/alert-error.component.spec.ts (7.466s, 581 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book-loan/book-loan.service.spec.ts (5.153s, 239 MB heap size)
+ PASS  src/test/javascript/spec/app/account/register/register.component.spec.ts (590 MB heap size)
+ PASS  src/test/javascript/spec/app/layouts/main/main.component.spec.ts (249 MB heap size)
+ PASS  src/test/javascript/spec/app/shared/login/login.component.spec.ts (606 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book/book.service.spec.ts (265 MB heap size)
+ PASS  src/test/javascript/spec/app/account/password-reset/finish/password-reset-finish.component.spec.ts (620 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/user-management/user-management-update.component.spec.ts (281 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/catalog-entry/catalog-entry.service.spec.ts (641 MB heap size)
+ PASS  src/test/javascript/spec/app/account/password/password.component.spec.ts (301 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/user-management/user-management.component.spec.ts (654 MB heap size)
+ PASS  src/test/javascript/spec/app/account/settings/settings.component.spec.ts (315 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/configuration/configuration.service.spec.ts (320 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/logs/logs.component.spec.ts (262 MB heap size)
+ PASS  src/test/javascript/spec/app/core/user/user.service.spec.ts (339 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/catalog-entry/catalog-entry-delete-dialog.component.spec.ts (285 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/audits/audits.service.spec.ts (350 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book-loan/book-loan-delete-dialog.component.spec.ts (289 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/health/health.component.spec.ts (360 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book/book-delete-dialog.component.spec.ts (303 MB heap size)
+ PASS  src/test/javascript/spec/app/account/password-reset/init/password-reset-init.component.spec.ts (376 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/catalog-entry/catalog-entry-update.component.spec.ts (321 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book-loan/book-loan-update.component.spec.ts (230 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/configuration/configuration.component.spec.ts (329 MB heap size)
+ PASS  src/test/javascript/spec/app/account/activate/activate.component.spec.ts (247 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/user-management/user-management-delete-dialog.component.spec.ts (345 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/metrics/metrics.service.spec.ts (357 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book/book-update.component.spec.ts (263 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/user-management/user-management-detail.component.spec.ts (269 MB heap size)
+ PASS  src/test/javascript/spec/app/account/password/password-strength-bar.component.spec.ts (367 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book-loan/book-loan.component.spec.ts (379 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/catalog-entry/catalog-entry.component.spec.ts (281 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/metrics/metrics.component.spec.ts (386 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book/book.component.spec.ts (293 MB heap size)
+ PASS  src/test/javascript/spec/app/admin/logs/logs.service.spec.ts (407 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/catalog-entry/catalog-entry-detail.component.spec.ts (301 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book-loan/book-loan-detail.component.spec.ts (412 MB heap size)
+ PASS  src/test/javascript/spec/app/entities/book/book-detail.component.spec.ts (319 MB heap size)
+-----------------------------------------------|----------|----------|----------|----------|-------------------|
+File                                           |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+-----------------------------------------------|----------|----------|----------|----------|-------------------|
+All files                                      |    84.67 |    57.99 |    69.34 |    83.49 |                   |
+ app                                           |      100 |      100 |      100 |      100 |                   |
+  app.constants.ts                             |      100 |      100 |      100 |      100 |                   |
+ app/account/activate                          |    92.59 |      100 |       75 |       90 |                   |
+  activate.component.html                      |      100 |      100 |      100 |      100 |                   |
+  activate.component.ts                        |    94.44 |      100 |    83.33 |    92.31 |                26 |
+  activate.service.ts                          |     87.5 |      100 |       50 |    83.33 |                12 |
+ app/account/password                          |    83.54 |    73.08 |       75 |    82.61 |                   |
+  password-strength-bar.component.ts           |    76.09 |    70.83 |       80 |    76.19 |... 75,76,77,78,80 |
+  password.component.html                      |      100 |      100 |      100 |      100 |                   |
+  password.component.ts                        |    95.83 |      100 |       80 |       95 |                27 |
+  password.service.ts                          |     87.5 |      100 |       50 |    83.33 |                12 |
+ app/account/password-reset/finish             |    95.56 |    66.67 |       80 |    95.12 |                   |
+  password-reset-finish.component.html         |      100 |      100 |      100 |      100 |                   |
+  password-reset-finish.component.ts           |    97.22 |    66.67 |     87.5 |    97.06 |                68 |
+  password-reset-finish.service.ts             |     87.5 |      100 |       50 |    83.33 |                12 |
+ app/account/password-reset/init               |       96 |       50 |    83.33 |    94.44 |                   |
+  password-reset-init.component.html           |      100 |      100 |      100 |      100 |                   |
+  password-reset-init.component.ts             |      100 |       50 |      100 |      100 |                22 |
+  password-reset-init.service.ts               |     87.5 |      100 |       50 |    83.33 |                12 |
+ app/account/register                          |    91.67 |    83.33 |    66.67 |    90.91 |                   |
+  register.component.html                      |      100 |      100 |      100 |      100 |                   |
+  register.component.ts                        |    92.31 |    83.33 |    71.43 |    91.89 |          38,39,63 |
+  register.service.ts                          |     87.5 |      100 |       50 |    83.33 |                13 |
+ app/account/settings                          |      100 |       50 |      100 |      100 |                   |
+  settings.component.html                      |      100 |      100 |      100 |      100 |                   |
+  settings.component.ts                        |      100 |       50 |      100 |      100 |                24 |
+ app/admin/audits                              |      100 |      100 |      100 |      100 |                   |
+  audit.model.ts                               |      100 |      100 |      100 |      100 |                   |
+  audits.component.html                        |      100 |      100 |      100 |      100 |                   |
+  audits.component.ts                          |      100 |      100 |      100 |      100 |                   |
+  audits.service.ts                            |      100 |      100 |      100 |      100 |                   |
+ app/admin/configuration                       |    93.94 |     12.5 |    85.71 |    92.59 |                   |
+  configuration.component.html                 |      100 |      100 |      100 |      100 |                   |
+  configuration.component.ts                   |    94.44 |     12.5 |    85.71 |    93.33 |                30 |
+  configuration.service.ts                     |    92.86 |      100 |    85.71 |    90.91 |                59 |
+ app/admin/health                              |    70.45 |       25 |    58.33 |    64.86 |                   |
+  health-modal.component.html                  |      100 |      100 |      100 |      100 |                   |
+  health-modal.component.ts                    |    33.33 |        0 |        0 |    23.08 |... 23,27,28,30,35 |
+  health.component.html                        |      100 |      100 |      100 |      100 |                   |
+  health.component.ts                          |    89.47 |       75 |    85.71 |     87.5 |             41,42 |
+  health.service.ts                            |     87.5 |      100 |       50 |    83.33 |                37 |
+ app/admin/logs                                |      100 |      100 |      100 |      100 |                   |
+  log.model.ts                                 |      100 |      100 |      100 |      100 |                   |
+  logs.component.html                          |      100 |      100 |      100 |      100 |                   |
+  logs.component.ts                            |      100 |      100 |      100 |      100 |                   |
+  logs.service.ts                              |      100 |      100 |      100 |      100 |                   |
+ app/admin/metrics                             |    79.31 |        0 |       70 |       75 |                   |
+  metrics.component.html                       |      100 |      100 |      100 |      100 |                   |
+  metrics.component.ts                         |    68.42 |        0 |    57.14 |     62.5 | 30,31,32,33,41,45 |
+  metrics.service.ts                           |      100 |      100 |      100 |      100 |                   |
+ app/admin/user-management                     |     87.7 |       50 |    75.68 |    86.92 |                   |
+  user-management-delete-dialog.component.html |      100 |      100 |      100 |      100 |                   |
+  user-management-delete-dialog.component.ts   |    92.86 |      100 |       75 |       90 |                18 |
+  user-management-detail.component.html        |      100 |      100 |      100 |      100 |                   |
+  user-management-detail.component.ts          |      100 |      100 |      100 |      100 |                   |
+  user-management-update.component.html        |      100 |      100 |      100 |      100 |                   |
+  user-management-update.component.ts          |     90.7 |    66.67 |    78.57 |    89.74 |       35,55,61,95 |
+  user-management.component.html               |      100 |      100 |      100 |      100 |                   |
+  user-management.component.ts                 |    80.77 |       40 |    68.75 |    81.25 |... 76,81,88,92,93 |
+ app/core/auth                                 |    70.83 |    68.18 |    45.83 |    68.85 |                   |
+  account.service.ts                           |    94.87 |    88.24 |    84.62 |    94.12 |             20,66 |
+  auth-jwt.service.ts                          |    39.13 |        0 |        0 |    36.84 |... 32,37,38,39,41 |
+  state-storage.service.ts                     |       50 |      100 |        0 |     37.5 |      6,8,11,15,19 |
+ app/core/login                                |    48.15 |        0 |        0 |    47.37 |                   |
+  login-modal.service.ts                       |    42.86 |        0 |        0 |    36.36 |... 13,14,16,17,18 |
+  login.service.ts                             |    53.85 |      100 |        0 |     62.5 |          12,15,19 |
+ app/core/user                                 |    83.33 |      100 |       50 |    82.14 |                   |
+  user.model.ts                                |      100 |      100 |      100 |      100 |                   |
+  user.service.ts                              |    68.75 |      100 |    42.86 |    64.29 |    16,20,28,29,33 |
+ app/entities/book                             |    83.02 |    42.86 |    68.42 |     80.9 |                   |
+  book-delete-dialog.component.html            |      100 |      100 |      100 |      100 |                   |
+  book-delete-dialog.component.ts              |      100 |      100 |      100 |      100 |                   |
+  book-detail.component.html                   |      100 |      100 |      100 |      100 |                   |
+  book-detail.component.ts                     |       90 |      100 |       75 |    85.71 |                20 |
+  book-update.component.html                   |      100 |      100 |      100 |      100 |                   |
+  book-update.component.ts                     |    86.21 |      100 |    66.67 |       84 |       31,32,78,88 |
+  book.component.html                          |      100 |      100 |      100 |      100 |                   |
+  book.component.ts                            |    64.52 |    33.33 |    45.45 |    62.96 |... 57,58,64,72,73 |
+  book.service.ts                              |    88.89 |      100 |    85.71 |     87.5 |             41,42 |
+ app/entities/book-loan                        |    77.63 |    48.48 |    64.15 |    76.47 |                   |
+  book-loan-delete-dialog.component.html       |      100 |      100 |      100 |      100 |                   |
+  book-loan-delete-dialog.component.ts         |      100 |      100 |      100 |      100 |                   |
+  book-loan-detail.component.html              |      100 |      100 |      100 |      100 |                   |
+  book-loan-detail.component.ts                |       90 |      100 |       75 |    85.71 |                20 |
+  book-loan-update.component.html              |      100 |      100 |      100 |      100 |                   |
+  book-loan-update.component.ts                |    64.15 |    30.77 |    44.44 |       64 |... 79,129,139,143 |
+  book-loan.component.html                     |      100 |      100 |      100 |      100 |                   |
+  book-loan.component.ts                       |    64.52 |    33.33 |    45.45 |    62.96 |... 57,58,64,72,73 |
+  book-loan.service.ts                         |     92.5 |    71.43 |     87.5 |    92.11 |          53,54,56 |
+ app/entities/catalog-entry                    |    77.97 |    27.27 |    60.47 |    76.19 |                   |
+  catalog-entry-delete-dialog.component.html   |      100 |      100 |      100 |      100 |                   |
+  catalog-entry-delete-dialog.component.ts     |      100 |      100 |      100 |      100 |                   |
+  catalog-entry-detail.component.html          |      100 |      100 |      100 |      100 |                   |
+  catalog-entry-detail.component.ts            |       90 |      100 |       75 |    85.71 |                20 |
+  catalog-entry-update.component.html          |      100 |      100 |      100 |      100 |                   |
+  catalog-entry-update.component.ts            |    70.73 |       20 |    47.06 |    69.23 |... ,57,97,107,111 |
+  catalog-entry.component.html                 |      100 |      100 |      100 |      100 |                   |
+  catalog-entry.component.ts                   |    64.52 |    33.33 |    45.45 |    62.96 |... 57,58,64,72,73 |
+  catalog-entry.service.ts                     |    88.89 |      100 |    85.71 |     87.5 |             41,42 |
+ app/layouts/main                              |       96 |    81.25 |      100 |    95.24 |                   |
+  main.component.html                          |      100 |      100 |      100 |      100 |                   |
+  main.component.ts                            |    95.83 |    81.25 |      100 |       95 |                23 |
+ app/shared/alert                              |       88 |    82.14 |    71.43 |    87.23 |                   |
+  alert-error.component.ts                     |       88 |    82.14 |    71.43 |    87.23 | 27,28,83,84,85,87 |
+ app/shared/constants                          |      100 |      100 |      100 |      100 |                   |
+  error.constants.ts                           |      100 |      100 |      100 |      100 |                   |
+  input.constants.ts                           |      100 |      100 |      100 |      100 |                   |
+  pagination.constants.ts                      |      100 |      100 |      100 |      100 |                   |
+ app/shared/login                              |     87.5 |    57.14 |       75 |    86.67 |                   |
+  login.component.html                         |      100 |      100 |      100 |      100 |                   |
+  login.component.ts                           |     87.1 |    57.14 |       75 |    86.21 |       33,34,63,66 |
+ app/shared/model                              |      100 |      100 |      100 |      100 |                   |
+  book-loan.model.ts                           |      100 |      100 |      100 |      100 |                   |
+  book.model.ts                                |      100 |      100 |      100 |      100 |                   |
+  catalog-entry.model.ts                       |      100 |      100 |      100 |      100 |                   |
+ app/shared/util                               |      100 |    83.33 |      100 |      100 |                   |
+  request-util.ts                              |      100 |    83.33 |      100 |      100 |                25 |
+-----------------------------------------------|----------|----------|----------|----------|-------------------|
+
+Test Suites: 40 passed, 40 total
+Tests:       132 passed, 132 total
+Snapshots:   0 total
+Time:        128.601s
+Ran all test suites.
 
 
 

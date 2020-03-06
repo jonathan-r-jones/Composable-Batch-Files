@@ -112,4 +112,44 @@ exit/b
 
 
 
+:_
+
+:ps
+
+set fp=* Kurt's PS command.
+
+rem lu: Mar-6-2020
+
+echo.
+echo %fp%
+
+echo.
+docker ps
+
+exit/b
+
+
+
+:_
+
+:ps
+
+set fp=* Kurt's docker-compose commands. I'm not sure what they all do.
+
+rem lu: Mar-6-2020
+
+echo.
+echo %fp%
+
+echo.
+docker-compose -f src/main/docker/app.yml up -d
+rem docker-compose up -d devpresidentiallibrary-postgresql
+rem docker-compose -f src/main/docker/app.yml logs devlibrary-app
+rem docker-compose -f src/main/docker/app.yml up -d devlibrary-app
+rem docker-compose -f src/main/docker/app.yml logs -f devlibrary-app
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-7)

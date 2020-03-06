@@ -697,7 +697,9 @@ if %errorlevel% == 1 (
 )
 
 echo.
+@echo on
 gradlew -Pprod clean bootJar jibDockerBuild
+@echo off
 
 exit/b
 
