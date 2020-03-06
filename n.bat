@@ -6041,6 +6041,10 @@ exit/b
 
 :jcerts
 
+:acgt
+
+:acgtfq
+
 :pass-through
 
 set fp=* Pass through.
