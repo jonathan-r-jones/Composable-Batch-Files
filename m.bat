@@ -4138,20 +4138,24 @@ exit/b
 
 ::_
 
-:aff
+:aff_old
 
-:affi
+:affi_old
 
-:inot
+:inot_old
 
-set fp=* Open affinity files.
+set fp=* Open affinity files - old.
 
 rem lu: Jan-9-2019
 
 echo.
 echo %fp%
 
-start Mew32.exe "%reach out%\WK.asc" "%reach out%\cc.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" "%reach out%\DI.asc" "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" "%reach out%\TR.asc" "%savannah%\reach out\OC.asc" "%composable_batch_files%\n.bat"
+rem qq1
+start Mew32.exe "%reach out%\WK.asc" "%reach out%\CC.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" 
+"%reach out%\DI.asc" 
+"%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" 
+"%reach out%\TR.asc" "%savannah%\reach out\OC.asc" "%composable_batch_files%\n.bat"
 
 exit/b
 
@@ -4159,62 +4163,37 @@ exit/b
 
 ::_
 
-:affc
+:aff
 
-set fp=* Open affinity files and close the DOS window.
+set fp=* Open affinity files.
 
-rem lu: Jan-23-2019
-
-echo.
-echo %fp%
-
-call :aff
-
-exit
-
-
-
-::_
-
-:w
-
-:wait
-
-set fp=* Open "waiting" files.
-
-rem lu: Feb-27-2019
+rem lu: Mar-8-2020
 
 echo.
 echo %fp%
 
-call fn machine-specific-file
+set cbf_filename_list=
 
-set first_filename=%cbf_filename%
+rem qq1
+set cbf_filename_list="%dropbox%\savannah\reach out\WK.asc"
 
-call fn ccf
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CC.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CM.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\IT.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\DI.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\JD.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CH.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\RB.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\TJ.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\TR.asc"
+set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\n.bat"
 
-set second_filename=%cbf_filename%
+attrib +r "%share-zone%\copy of cc.asc"
 
-start mew32 "%first_filename%" "%second_filename%"
+start mew32 %cbf_filename_list%
+
 
 exit/b
-
-
-
-::_
-
-:waitc
-
-set fp=* Wait and close.
-
-rem lu: Mar-18-2019
-
-echo.
-echo %fp%
-
-call %0 wait
-
-exit
 
 
 
@@ -4250,6 +4229,67 @@ start mew32 %cbf_filename_list%
 
 
 exit/b
+
+
+
+::_
+
+:w
+
+:wait
+
+set fp=* Open "waiting" files.
+
+rem lu: Feb-27-2019
+
+echo.
+echo %fp%
+
+call fn machine-specific-file
+
+set first_filename=%cbf_filename%
+
+call fn ccf
+
+set second_filename=%cbf_filename%
+
+start mew32 "%first_filename%" "%second_filename%"
+
+exit/b
+
+
+
+::_
+
+:affc
+
+set fp=* Open affinity files and close the DOS window.
+
+rem lu: Jan-23-2019
+
+echo.
+echo %fp%
+
+call :aff
+
+exit
+
+
+
+::_
+
+:waitc
+
+set fp=* Wait and close.
+
+rem lu: Mar-18-2019
+
+echo.
+echo %fp%
+
+call %0 wait
+
+exit
 
 
 
