@@ -4151,7 +4151,6 @@ rem lu: Jan-9-2019
 echo.
 echo %fp%
 
-rem qq1
 start Mew32.exe "%reach out%\WK.asc" "%reach out%\CC.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" 
 "%reach out%\DI.asc" 
 "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" 
@@ -4174,7 +4173,6 @@ echo %fp%
 
 set cbf_filename_list=
 
-rem qq1
 set cbf_filename_list="%dropbox%\savannah\reach out\WK.asc"
 
 set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CC.asc"
@@ -4186,6 +4184,7 @@ set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CH.asc"
 set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\RB.asc"
 set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\TJ.asc"
 set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\TR.asc"
+set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\OC.asc"
 set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\n.bat"
 
 attrib +r "%share-zone%\copy of cc.asc"
