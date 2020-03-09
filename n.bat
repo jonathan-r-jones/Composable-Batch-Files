@@ -6045,6 +6045,10 @@ exit/b
 
 :acgtfq
 
+:deac
+
+:fqac
+
 :pass-through
 
 set fp=* Pass through.
@@ -10430,32 +10434,6 @@ echo.
 echo %fp%
 
 set cbf_path=h:\podcasts
-
-exit/b
-
-
-
-:_
-
-:amql
-
-set fp=* AMQ lab.
-
-rem lu: Nov-11-2019
-
-echo.
-echo %fp%
-
-call n cade
-
-set cbf_filename=C:\Users\JJones2\j\cade\AMQ Lab\AMQ Server Properties.xlsx
-
-set cbf_excel_filename=C:\Users\JJones2\j\cade\AMQ Lab\AMQ Server Properties.xlsx
-
-set cbf_path=%cbf_path%\AMQ Lab
-
-rem Note: This URL should be used with IE.
-set cbf_url=http://10.168.73.230:8161
 
 exit/b
 
