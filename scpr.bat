@@ -965,9 +965,6 @@ echo.
 %scp_path%\scp -i %share-zone%\pems\cart-np-key.pem "%file_to_upload%" %server_with_folder%
 @echo off
 
-rem Go into the /etc/httpd/conf.d folder and run the following command.
-rem sudo cp /tmp/ssl.conf .
-
 exit/b
 
 
@@ -978,7 +975,6 @@ Outcome: This worked on Mar-10-2020.
 After the file has be copied to the target server. SSH into the box with the zzadmin account 
 and copy the secret file to the correct folder.
 
-cd
 cd /etc
 sudo mkdir certs
 

@@ -2082,44 +2082,6 @@ exit/b
 
 
 
-:_+ Branch Operations
-
-
-
-::_
-
-:com
-
-set fp=* 9b. Check out master.
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b master
-
-exit/b
-
-
-
-::_
-
-:codb
-
-set fp=* 9b. Check out develop.
-
-rem lu: Jan-24-2019
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b develop
-
-exit/b
-
-
-
 :_+ Custom Clones
 
 
@@ -2319,38 +2281,6 @@ echo %fp%
 
 echo.
 git remote -v
-
-exit/b
-
-
-
-:_
-
-:crbr
-
-set fp=* Create branch.
-
-rem lu: May-6-2019
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, source branch, is a required field.
-  exit/b
-)
-
-if "%~3" == "" (
-  echo.
-  echo * Percent 3, new destination branch, is a required field.
-  exit/b
-)
-
-echo.
-git checkout -b %3 %2
-
-git push --set-upstream origin %3
 
 exit/b
 
@@ -2560,208 +2490,6 @@ exit/b
 
 
 
-:_+ Branch Operations
-
-
-
-::_
-
-:co
-
-:sb
-
-set fp=* Use Git checkout to switch branches.
-
-rem lu: May-3-2019
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Error: You must enter the name of the branch you wish to switch to.
-  exit/b
-)
-
-echo.
-git checkout -b %2
-
-exit/b
-
-
-
-::_
-
-:creb
-
-set fp=* Create test branch in for-git-testing.
-
-rem lu: Mar-15-2019
-
-rem I stopped working on this because GitHub was slow. I would like to get this working.
-
-echo.
-echo %fp%
-
-call td fgt
-
-echo.
-git branch exp_Mar_20_2 master
-
-exit/b
-
-
-
-::_
-
-:cbm
-
-set fp=* Create branch based on master.
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b %1 master
-
-exit/b
-
-
-
-::_
-
-:cbd
-
-:create_branch_based_on_develop
-
-set fp=* Create branch based on develop.
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b %2 develop
-
-exit/b
-
-
-
-::_
-
-:new_fgt
-
-set fp=* How to start a fresh fgt.
-
-rem lu: Mar-20-2019
-
-echo.
-echo %fp%
-
-set branch_name=Branch3
-
-call td j
-
-call m rd fgt2
-
-call g cn
-
-cd fgt2
-
-call %0 cbm %branch_name%
-
-calll %0 po %branch_name%
-
-cd fgt2
-
-call g status
-
-exit/b
-
-
-
-::_
-
-:new_jj_devops_branch
-
-set fp=* How to start a fresh jj_devops.
-
-rem lu: Mar-20-2019
-
-echo.
-echo %fp%
-
-rem Back up our jenkins file, if necessary.
-cyff jj jb
-
-set branch_name=jj_devops
-
-call td j
-
-rem Remove local code.
-call m rd jj_devops
-
-rem Clone develop branch into jj_devops folder.
-call k cn_jj_devops_starter
-
-call td jj
-
-call %0 create_branch_based_on_develop %branch_name%
-
-rem Push to origin.
-call %0 push_origin %branch_name%
-
-call td jj
-
-call g status
-
-rem Restore your Jenkinsfile, if necessary.
-cyff jb jj
-
-exit/b
-
-
-
-::_
-
-:po
-
-:push_origin
-
-:lu: Oct-18-2019
-
-set fp=* Push origin.
-
-echo.
-echo %fp%
-
-echo.
-
-rem If %2 is empty, this still works.
-git push --set-upstream origin %2
-
-exit/b
-
-
-
-::_
-
-:co_sf
-
-set fp=* Check out single file based on file's alias.
-
-rem lu: Mar-7-2019
-
-echo.
-echo %fp%
-  
-call n %2
-
-git checkout %cbf_filename%
-
-exit/b
-
-
-
 :_+ Git Help
 
 
@@ -2815,8 +2543,6 @@ exit/b
 ::_
 
 :b
-
-:cb
 
 :shcu
 
@@ -3838,6 +3564,254 @@ echo %fp%
 echo.
 rem Where the hash is the hash of the commit you want to revert.
 git revert -m 1 c8e8a0252de705c09800700e7c6b17192bf72e02 
+
+exit/b
+
+
+
+:_+ Branch Operations Family (!fybo, !fybr)
+
+
+
+::_
+
+:sb
+
+set fp=* Switch to an existing branch.
+
+rem lu: Mar-10-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must enter the name of the branch you wish to switch to.
+  exit/b
+)
+
+echo.
+git checkout %2
+
+exit/b
+
+
+
+::_
+
+:cb
+
+set fp=* Create new branch based on specified source branch.
+
+rem lu: May-6-2019
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, source branch, is a required field.
+  exit/b
+)
+
+if "%~3" == "" (
+  echo.
+  echo * Percent 3, new destination branch, is a required field.
+  exit/b
+)
+
+echo.
+git checkout -b %3 %2
+
+git push --set-upstream origin %3
+
+exit/b
+
+
+
+::_
+
+:cbc
+
+set fp=* Create a local branch based on your current branch.
+
+rem lu: Mar-10-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must enter the name of the branch you wish to create.
+  exit/b
+)
+
+echo.
+git checkout -b %2
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:cbd
+
+set fp=* Create a local branch based on develop.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must enter the name of the branch you wish to create.
+  exit/b
+)
+
+echo.
+git checkout -b %2 develop
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:creb
+
+set fp=* Create test branch in for-git-testing.
+
+rem lu: Mar-15-2019
+
+rem I stopped working on this because GitHub was slow. I would like to get this working.
+
+echo.
+echo %fp%
+
+call td fgt
+
+echo.
+git branch exp_Mar_20_2 master
+
+exit/b
+
+
+
+::_
+
+:new_fgt
+
+set fp=* How to start a fresh fgt.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+set branch_name=Branch3
+
+call td j
+
+call m rd fgt2
+
+call g cn
+
+cd fgt2
+
+call %0 cbm %branch_name%
+
+calll %0 po %branch_name%
+
+cd fgt2
+
+call g status
+
+exit/b
+
+
+
+::_
+
+:new_jj_devops_branch
+
+set fp=* How to start a fresh jj_devops.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+rem Back up our jenkins file, if necessary.
+cyff jj jb
+
+set branch_name=jj_devops
+
+call td j
+
+rem Remove local code.
+call m rd jj_devops
+
+rem Clone develop branch into jj_devops folder.
+call k cn_jj_devops_starter
+
+call td jj
+
+call %0 create_branch_based_on_develop %branch_name%
+
+rem Push to origin.
+call %0 push_origin %branch_name%
+
+call td jj
+
+call g status
+
+rem Restore your Jenkinsfile, if necessary.
+cyff jb jj
+
+exit/b
+
+
+
+::_
+
+:po
+
+:push_origin
+
+:lu: Oct-18-2019
+
+set fp=* Push origin.
+
+echo.
+echo %fp%
+
+echo.
+
+rem If %2 is empty, this still works.
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:co_sf
+
+set fp=* Check out single file based on file's alias.
+
+rem lu: Mar-7-2019
+
+echo.
+echo %fp%
+  
+call n %2
+
+git checkout %cbf_filename%
 
 exit/b
 
