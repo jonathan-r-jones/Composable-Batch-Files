@@ -115,7 +115,6 @@ if %errorlevel% gtr 0 (
 )
 
 start  "Code Compare" "%cbf_application%" "%file_1%" "%file_2%"
-rem qq-1
 
 exit/b
 

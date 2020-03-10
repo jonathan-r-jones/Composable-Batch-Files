@@ -118,7 +118,7 @@ if exist "%composable_batch_files%\%~1.bat" (
 if exist "%share-zone%\%~1.bat" (
   set cbf_filename=%share-zone%\%~1.bat
   echo.
-  echo %fp% - SZ
+  echo %fp% - exists in Share-Zone.
   goto file_exists
 )
 

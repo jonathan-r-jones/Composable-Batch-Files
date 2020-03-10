@@ -2584,7 +2584,7 @@ if "%~2" == "" (
 )
 
 echo.
-git checkout %2
+git checkout -b %2
 
 exit/b
 

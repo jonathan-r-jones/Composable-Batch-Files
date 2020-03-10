@@ -916,9 +916,9 @@ exit/b
 
 :secret
 
-set fp=* To a server, transfer secret file.
+set fp=* Transfer the secret file to a server.
 
-rem lu: Nov-26-2019
+rem lu: Mar-10-2020
 
 echo.
 echo %fp%
@@ -969,6 +969,22 @@ rem Go into the /etc/httpd/conf.d folder and run the following command.
 rem sudo cp /tmp/ssl.conf .
 
 exit/b
+
+
+>< >< Footnote:
+
+Outcome: This worked on Mar-10-2020.
+
+After the file has be copied to the target server. SSH into the box with the zzadmin account 
+and copy the secret file to the correct folder.
+
+cd
+cd /etc
+sudo mkdir certs
+
+sudo cp /tmp/cart_dv_secret.sec .
+
+
 
 
 
