@@ -64,18 +64,18 @@ echo     cn  Git cloning, based entirely on the nickname parameter
 echo    cng  Git cloning, generic version
 echo     co  Surf to Confluence websites
 echo    col  Shell window colors operations
+echo     cp  Copy files using function routing
+echo   cpcf  Use file in the current folder to "save as" to a filename alias
+echo   cpcp  Copy file in the current directory to nickname-specified path
+echo   cpfc  Use filename alias to "save as" a file in the current folder
+echo   cpff  Use filename alias 1 to "save as" filename alias 2
+echo    cpp  Copies file from a cbf_path nickname
+echo   cppp  Copy file from alias path param 1 to alias path param 2
+echo   cpte  Copy te.bat to a new batch file
 echo     cs  File contents search
 echo    cst  File contents search with td parameter
 echo     cu  Curl hooked up to the nicknames dictionary
 echo    cur  Curl with atomic functions
-echo   cpcf  Use file in the current folder to "save as" to a filename alias
-echo   cpcp  Copy file in the current directory to nickname-specified path
-echo   cpfc  Use filename alias to "save as" a file in the current folder
-echo   cpff  Copy file from alias filename parm 1 to alias filename param 2
-echo    cpp  Copies file from a cbf_path nickname
-echo   cppp  Copy file from alias path param 1 to alias path param 2
-echo     cp  Copy files using function routing
-echo   cpte  Copy te.bat to a new batch file
 echo     cv  Chef converge with a path parameter
 echo      d  Dir for current folder
 echo     dd  Dir filename extension searcher including subfolders

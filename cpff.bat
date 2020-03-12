@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Copy files from nickname parameter 1 to nickname parameter 2.
+set filep=* Use filename alias 1 to "save as" filename alias 2.
 
 echo.
 echo %filep%

@@ -6055,6 +6055,10 @@ exit/b
 
 :sr38
 
+:acinfq
+
+:acrofq
+
 :pass-through
 
 set fp=* Pass through.
@@ -10527,25 +10531,6 @@ exit/b
 
 
 
-::_
-
-:cscsh
-
-set fp=* Screenshots backup folder under Cade.
-
-rem lu: Sep-12-2019
-
-echo.
-echo %fp%
-
-call n cade
-
-set cbf_path=%cbf_path%\Screenshots
-
-exit/b
-
-
-
 :_+ Windows Family (!fywin)
 
 
@@ -11016,22 +11001,7 @@ exit/b
 
 ::_
 
-:jf
-
-set fp=* Jenkinsfile folder.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\jenkinsfiles
-
-exit/b
-
-
-
-::_
+:bujf
 
 :jb
 
@@ -11045,6 +11015,44 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_backup
+
+exit/b
+
+
+
+::_
+
+:arc
+
+:ckje
+
+:ckjf
+
+set fp=* Code keepers for Jenkinsfile.
+
+rem lu: Mar-11-2019
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
+
+exit/b
+
+
+
+::_
+
+:jf
+
+set fp=* Jenkinsfile folder.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\jenkinsfiles
 
 exit/b
 
@@ -11138,27 +11146,6 @@ echo.
 echo %fp%
 
 set cbf_filename=%share-zone%\jenkins log.xlsx
-
-exit/b
-
-
-
-::_
-
-:arc
-
-:ckje
-
-:ckjf
-
-set fp=* Code keepers for Jenkinsfile.
-
-rem lu: Mar-11-2019
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
 
 exit/b
 
@@ -11465,7 +11452,7 @@ exit/b
 
 :bugr
 
-set fp=* Build.gradle. Bump the version number for releases.
+set fp=* Build.gradle. Here is the version number for releases.
 
 rem lu: Feb-6-2020
 

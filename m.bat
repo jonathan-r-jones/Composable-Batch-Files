@@ -5147,7 +5147,6 @@ echo %fp%
 
 echo.
 ren Screen*.* Mar-12-2020*.*
-rem qq-1
 
 exit/b
 
