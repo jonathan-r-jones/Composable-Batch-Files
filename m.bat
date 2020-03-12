@@ -5134,4 +5134,23 @@ exit/b
 
 
 
+:_
+
+:rscsh
+
+set fp=* Rename screenshots.
+
+rem lu: Mar-12-2020
+
+echo.
+echo %fp%
+
+echo.
+ren Screen*.* Mar-12-2020*.*
+rem qq-1
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-9)

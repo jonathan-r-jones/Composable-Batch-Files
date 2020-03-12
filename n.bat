@@ -10481,6 +10481,71 @@ exit/b
 
 
 
+:_+ Screen Shots
+
+
+
+::_
+
+:prsc
+
+:scsh
+
+:scre
+
+set fp=* Screenshots folder. To get a screen shot into this folder, click windows key + print screen.
+
+rem lu: Jun-3-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\Pictures\Screenshots
+
+exit/b
+
+
+
+::_
+
+:sscsh
+
+:sscre
+
+set fp=* Share-zone screenshots.
+
+rem lu: Mar-12-2020
+
+echo.
+echo %fp%
+
+call n s
+
+set cbf_path=%cbf_path%\Screenshots
+
+exit/b
+
+
+
+::_
+
+:cscsh
+
+set fp=* Screenshots backup folder under Cade.
+
+rem lu: Sep-12-2019
+
+echo.
+echo %fp%
+
+call n cade
+
+set cbf_path=%cbf_path%\Screenshots
+
+exit/b
+
+
+
 :_+ Windows Family (!fywin)
 
 
@@ -10507,48 +10572,6 @@ echo.
 echo %fp%
 
 set cbf_application=%windir%\system32\SnippingTool.exe
-
-exit/b
-
-
-
-::_
-
-:prsc
-
-:scsh
-
-set fp=* Screen shots folder. To get a screen shot into this folder, click windows key + print screen.
-
-rem lu: Jun-3-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\Pictures\Screenshots
-
-exit/b
-
-
-
-::_
-
-:cscsh
-
-:scshb
-
-:scshc
-
-set fp=* Screen shots backup folder under Cade.
-
-rem lu: Sep-12-2019
-
-echo.
-echo %fp%
-
-call n cade
-
-set cbf_path=%cbf_path%\Screen Shots
 
 exit/b
 
