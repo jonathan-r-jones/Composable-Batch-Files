@@ -55,6 +55,7 @@ echo     an  Application nickname dictionary layer of abstraction
 echo    ang  Angular-related tasks
 echo     as  Windows file associations
 echo      b  Shutdown windows
+echo     bu  Back up using function routing
 echo      c  Clear screen and reset color
 echo    cbf  Show this list of CBF batch files
 echo   coco  Code Compare functions

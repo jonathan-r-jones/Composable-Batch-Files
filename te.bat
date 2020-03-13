@@ -6,10 +6,8 @@
 
 :_
 
+rem       qq1
 set filep=* 
-
-echo.
-echo %filep%
 
 
 
@@ -21,7 +19,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto validate_input
+goto %1
 
 
 
@@ -59,19 +57,15 @@ exit/b
 
 :_
 
-:validate_input
-
-if "%~1" == "" (
-  echo.
-  echo 
-)
-
-
-
-:_
-
 :main_function
 
+set fp=* 
+
+echo.
+echo %fp%
+
+echo.
+rem qq1
 
 
 exit/b

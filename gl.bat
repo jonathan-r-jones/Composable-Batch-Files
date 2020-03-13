@@ -68,7 +68,7 @@ echo                   f  Filename alias, when used in a batch file name
 echo                  fp  Function purpose
 echo    function routing  Batch file style (bfs) where code execution is routed to a function.
 echo                      Example(s): g.bat or m.bat.
-echo               label  A batch file label, a.k.a. alias or nickname.
+echo               label  A batch file label, a.k.a. a function name, alias or nickname.
 echo                  lu  Last updated. The last time the file was updated.
 echo                   p  Path alias, when used in a batch file name
 echo                 rf_  Prefix used to designate that a label has at least one caller.

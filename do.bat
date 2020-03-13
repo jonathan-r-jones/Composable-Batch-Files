@@ -101,6 +101,8 @@ set fp=* Compose.
 
 rem lu: Feb-27-2020
 
+cls
+
 echo.
 echo %fp%
 

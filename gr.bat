@@ -696,6 +696,8 @@ if %errorlevel% == 1 (
   exit/b
 )
 
+cls
+
 echo.
 @echo on
 gradlew clean bootJar -Pprod jibDockerBuild
@@ -721,6 +723,8 @@ call m specific_file_presence gradlew.bat
 if %errorlevel% == 1 (
   exit/b
 )
+
+cls
 
 echo.
 @echo on
