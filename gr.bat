@@ -681,6 +681,32 @@ exit/b
 
 ::_
 
+:build_jar_for_dock_clean
+
+set fp=* Build Jar for Docker environment with clean.
+
+rem lu: Sep-17-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence gradlew.bat
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+echo.
+@echo on
+gradlew clean bootJar -Pprod jibDockerBuild
+@echo off
+
+exit/b
+
+
+
+::_
+
 :build_jar_for_dock
 
 set fp=* Build Jar for Docker environment.
@@ -698,7 +724,7 @@ if %errorlevel% == 1 (
 
 echo.
 @echo on
-gradlew -Pprod clean bootJar jibDockerBuild
+gradlew bootJar -Pprod jibDockerBuild
 @echo off
 
 exit/b

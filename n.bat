@@ -6448,8 +6448,6 @@ exit/b
 
 :keys
 
-:sh
-
 :ssh
 
 :ssh_keys
@@ -9212,24 +9210,6 @@ exit/b
 
 :_
 
-:slac
-
-set fp=* Slack.
-
-rem lu: Jun-21-2019
-
-echo.
-echo %fp%
-
-set cbf_url=https://devtdp.slack.com
-Q9ZDK/
-
-exit/b
-
-
-
-:_
-
 :qr
 
 set fp=* QR Stuff.
@@ -9396,29 +9376,6 @@ set cbf_filename=%share-zone%\mob.docx
 set cbf_path=%cbf_repo%\
 
 set cbf_url=
-
-exit/b
-
-
-
-:_
-
-:slac
-
-set fp=* Slack
-
-rem lu: Jun-28-2019
-
-echo.
-echo %fp%
-
-set cbf_application=
-
-set cbf_filename=
-
-set cbf_path=%cbf_repo%\
-
-set cbf_url=https://dev-technology-coi.slack.com/messages/DFT8KBCEP/
 
 exit/b
 
@@ -11330,6 +11287,8 @@ exit/b
 
 :bashs
 
+:sh
+
 :shor
 
 set fp=* Base shortcuts.
@@ -12109,6 +12068,31 @@ echo.
 echo %fp%
 
 set cbf_url=https://support.draw.io/display/DO/2014/10/06/Using+AWS+2.0+icons+to+create+free+Amazon+architecture+diagrams+in+draw.io
+
+exit/b
+
+
+
+:_
+
+:slac
+
+set fp=* Slack
+
+rem lu: Mar-13-2020
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=https://app.slack.com/client
+
+rem https://dev-technology-coi.slack.com/messages/DFT8KBCEP/
 
 exit/b
 
