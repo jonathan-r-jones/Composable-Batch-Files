@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Delete batch file.
+set filep=* Delete function-routing style batch file.
 
 
 
@@ -29,8 +29,8 @@ goto %1
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Formula function to run.
-set parameter_1=%parameter_1% 
+rem qq1
+set parameter_1=Parameter 1: Function to run.
 
 echo.
 echo %parameter_1%
@@ -135,6 +135,32 @@ rem @echo on
 rem rd /q /s "%folder_to_delete%"
 rem @echo off
 
+
+
+exit/b
+
+
+
+:_
+
+:concop_af
+
+set fp=* Delete conflicted copies aggregate functions.
+
+rem lu: Mar-14-2020
+
+echo.
+echo %fp%
+
+
+call td s
+
+call :concop
+
+
+call td cbf
+
+call :concop
 
 
 exit/b

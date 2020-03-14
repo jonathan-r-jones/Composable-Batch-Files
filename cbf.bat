@@ -84,7 +84,7 @@ echo    ddc  Dir filename extension searcher current folder only
 echo     do  Docker functions accessed via function routing.
 echo     dr  Dir using function routing
 echo     dt  Dir with a td parameter
-echo     de  Delete using function routing
+echo     de  Delete function-routing style batch file
 echo   defn  Delete file base on passed in filename alias
 echo   depn  Delete folder corresponding to CBF path alias parameter
 echo   devu  Demo file for Dev Universiy event on Jan-9-2020

@@ -57,7 +57,7 @@ echo code execution area  Batch file style (bfs) where the router routes executi
 echo                      end of the file, unless a parameter is supllied, in which case 
 echo                      function routing occurs. Example(s): t.bat.
 echo                 cbf  Composable batch files
-echo                  _c  Suffic indicating a consumer batch file using function routing.
+echo                  _c  Suffix indicating a consumer batch file using function routing.
 echo                  -c  As a batch file parameter, means force file creation
 echo                   c  Current folder filename, when used in a batch file name
 echo          error code  fn.bat returns an error code of 2 for file not exists.
