@@ -12115,4 +12115,62 @@ exit/b
 
 
 
+:_+ My YouTube
+
+
+
+::_
+
+:myl
+
+:myt
+
+:myyt
+
+set fp=* My YouTube library - liked videos.
+
+rem lu: Mar-15-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.youtube.com/playlist?list=LLot7_lTZm_-7EYorAzrq4Dw
+
+rem This works too, but not as well.
+rem https://www.youtube.com/feed/library
+
+exit/b
+
+
+
+::_
+
+:bemi
+
+set fp=* Ben Mikha.
+
+rem lu: Mar-15-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.youtube.com/watch?v=5896syoWgKA
+
+exit/b
+
+
+>< >< Footnote:
+
+Bookmark Mar-16-2020: 56:00
+
+Summer Music Mix 2019 | Best Of Tropical & Deep House Sessions Chill Out #34 Mix By Music Trap
+
+:Ben Mikha (travel videos)
+
+:Wait For This by Nutriao
+
+:Dancer in the Dark by Belluti
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)

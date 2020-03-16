@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Perform miscellaneous tasks.
+set filep=* Perform miscellaneous tasks using a function routing style.
 
 
 
