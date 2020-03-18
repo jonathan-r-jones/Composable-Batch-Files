@@ -594,6 +594,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
+rem qq1
 call gradlew -Pprod clean bootJar
 
 exit/b
