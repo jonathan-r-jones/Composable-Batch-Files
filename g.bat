@@ -2754,7 +2754,47 @@ exit/b
 
 
 :_+ Branch from Tag (skw create branch from release, create branch from tag, create release 
-from tag, create tag from branch)
+from tag, create tag from branch, create a branch from a tag, create branch from a tag)
+
+
+
+::_
+
+:cbbt19
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Mar-4-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b release/v190 tags/v1.9.0
+
+git push --set-upstream origin release/v190
+
+exit/b
+
+
+
+::_
+
+:cbbt18
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Mar-4-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b release/v180 tags/v1.8.0
+
+git push --set-upstream origin release/v180
+
+exit/b
 
 
 

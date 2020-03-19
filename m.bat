@@ -4457,10 +4457,11 @@ echo.
 echo %fp%
 
 rem Get Postgres running on local.
-pql start
 
 rem Check what branch you are on.
 s m
+
+pql start
 
 rem You may or may not want to do a get-latest.
 pl
@@ -4469,10 +4470,9 @@ rem ty ly
 
 rem Switch to the api folder.
 cd api
+rem qq1
 
 lq
-
-rem Note that in order to get Liquibase to work, you may need to wipe your local database.
 
 rem If liquibase fails, you may need to wipe your local databaase.
 
