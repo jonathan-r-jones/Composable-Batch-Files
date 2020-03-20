@@ -7150,25 +7150,6 @@ exit/b
 
 :_
 
-:o
-
-set fp=* Microsoft Outlook.
-
-rem lu: Jan-3-2019
-
-echo.
-echo %fp%
-
-call an edge
-
-set cbf_url=https://outlook.office.com/owa
-
-exit/b
-
-
-
-:_
-
 :nj
 
 set fp=* New Jenkins.
@@ -12083,31 +12064,6 @@ exit/b
 
 :_
 
-:slac
-
-set fp=* Slack
-
-rem lu: Mar-13-2020
-
-echo.
-echo %fp%
-
-set cbf_application=
-
-set cbf_filename=
-
-set cbf_path=%cbf_repo%\
-
-set cbf_url=https://app.slack.com/client
-
-rem https://dev-technology-coi.slack.com/messages/DFT8KBCEP/
-
-exit/b
-
-
-
-:_
-
 :ctc
 
 set fp=* Cart Timecard Calculator.
@@ -12178,6 +12134,50 @@ Summer Music Mix 2019 | Best Of Tropical & Deep House Sessions Chill Out #34 Mix
 :Wait For This by Nutriao
 
 :Dancer in the Dark by Belluti
+
+
+
+:_
+
+:slac
+
+set fp=* Slack
+
+rem lu: Mar-13-2020
+
+echo.
+echo %fp%
+
+set cbf_application=
+
+set cbf_filename=
+
+set cbf_path=%cbf_repo%\
+
+set cbf_url=https://app.slack.com/client
+
+set cbf_url=https://app.slack.com/client/TTZULSTT5/CUAV0HTGC
+
+exit/b
+
+
+
+:_
+
+:o
+
+set fp=* Microsoft Outlook.
+
+rem lu: Jan-3-2019
+
+echo.
+echo %fp%
+
+call an edge
+
+set cbf_url=https://outlook.office.com/owa
+
+exit/b
 
 
 
