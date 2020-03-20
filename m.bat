@@ -4470,16 +4470,17 @@ rem ty ly
 
 rem Switch to the api folder.
 cd api
-rem qq1
 
 lq
-
 rem If liquibase fails, you may need to wipe your local databaase.
 
 rem Run the API by using m lnk_api. You may need to edit npcrf.
 gr run_api
 
-rem To test fqt, use: gr run_fqt
+rem If you want to run the debugger, then search on: ^lnk
+and use 
+gr run_api_with_debugger
+rem Also read direction on how to attach the debugger at: ^atde
 
 x bash
 
@@ -4489,14 +4490,7 @@ Copy the new jwt token into the file using:
 
 e jwt
 
-rem If you want to run the debugger, then search on: ^lnk
-and use 
-gr run_api_with_debugger
-
-rem Also read direction on how to attach the debugger at: ^atde
-
 rem Run the UI by using lnk_ui or by using the 2 lines below.
-
 rem call n ui
 
 rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean

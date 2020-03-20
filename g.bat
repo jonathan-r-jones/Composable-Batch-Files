@@ -2988,7 +2988,7 @@ exit/b
 
 :detalo
 
-set fp=* Delete tag, local only.
+set fp=* Delete tag, local.
 
 rem lu: Oct-15-2019
 
@@ -3041,11 +3041,11 @@ exit/b
 
 
 
-::_
+::_ (!delb) (skw delete_branch)
 
 :debrro
 
-set fp=* Delete branch, remote only. (!delb) (skw delete_branch)
+set fp=* Delete branch, remote.
 
 rem This worked! Oct-13-2016
 rem This worked! Mar-8-2019
@@ -3072,7 +3072,7 @@ exit/b
 
 :debrlo
 
-set fp=* Delete branch, local only.
+set fp=* Delete branch, local.
 
 echo.
 echo %fp%
