@@ -3995,6 +3995,8 @@ rem lu: Aug-8-2018
 echo.
 echo %fp%
 
+set cbf_filename=%Dropbox%\Miscellaneous Documents\groove is in the heart.xlsx
+
 set cbf_path=%dropbox%\mp3\Jun-5-2018
 
 exit/b
@@ -11204,9 +11206,9 @@ exit/b
 
 :exblk
 
-set fp=* Use Excel to edit a blank document. (skw blank Excel document)
+set fp=* Use Excel to edit a blank document. (skw blank Excel document, blank excel file)
 
-rem lu: Jan-25-2019
+rem lu: Mar-22-2020
 
 echo.
 echo %fp%
