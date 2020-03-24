@@ -55,7 +55,7 @@ if %errorlevel% == 1 (
   exit/b 1
 )
 
-call fn lqc
+call fn lqma
 
 if not exist "%cbf_filename%" (
   echo.

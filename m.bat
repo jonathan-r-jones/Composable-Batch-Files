@@ -4736,6 +4736,74 @@ exit/b
 
 set fp=* Run UI lnk, for use by shortcut icons.
 
+rem lu: Mar-24-2020
+
+echo.
+echo %fp%
+
+call %0 lnk_ui_do_not_install_npm
+rem call %0 lnk_ui_install_npm
+
+exit/b
+
+
+
+::_
+
+:lnk_ui_install_npm
+
+set fp=* Run UI lnk and install npm.
+
+rem lu: Mar-24-2020
+
+echo.
+echo %fp%
+
+call m big
+
+call td rf_ui
+
+rem Since this step in time-cunsuming and often unnecessary, I have commented it. However
+rem you just need to remember to uncomment it, if you need to run it.
+
+call nm inst
+
+call ang run_ui
+
+exit/b
+
+
+
+::_
+
+:lnk_ui_do_not_install_npm
+
+set fp=* Run UI lnk, do not install npm.
+
+rem lu: Mar-24-2020
+
+echo.
+echo %fp%
+
+call m big
+
+call td rf_ui
+
+rem Since this step in time-cunsuming and often unnecessary, I have commented it. However
+rem you just need to remember to uncomment it, if you need to run it.
+
+call ang run_ui
+
+exit/b
+
+
+
+::_
+
+:lnk_ui_old
+
+set fp=* Run UI lnk, for use by shortcut icons.
+
 rem lu: Aug-16-2019
 
 echo.
@@ -4761,6 +4829,66 @@ exit/b
 ::_
 
 :lnk_api
+
+set fp=* Run API cmd, for use by shortcut icons.
+
+rem lu: Mar-24-2020
+
+echo.
+echo %fp%
+
+rem call lnk_api_attach_debugger
+call %0 lnk_api_do_not_attach_debugger
+
+exit/b
+
+
+
+::_
+
+:lnk_api_attach_debugger
+
+set fp=* Run API cmd, attach debugger.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call td rf_api
+
+call gr run_api_with_debugger
+
+exit/b
+
+
+
+::_
+
+:lnk_api_do_not_attach_debugger
+
+set fp=* Run API cmd, do not attach debugger.
+
+rem lu: Aug-16-2019
+
+echo.
+echo %fp%
+
+call m big
+
+call td rf_api
+
+call gr run_api
+
+exit/b
+
+
+
+::_
+
+:lnk_api_old
 
 set fp=* Run API cmd, for use by shortcut icons.
 
