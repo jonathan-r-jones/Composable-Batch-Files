@@ -8,9 +8,6 @@
 
 set filep=* AWS-related tasks.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -3653,144 +3650,6 @@ exit/b
 
 
 
-:_+ Tags
-
-
-
-::_
-
-:retag
-
-set fp=* Retag a resource.
-
-rem lu: May-17-2019
-
-echo.
-echo %fp%
-
-set cbf_instance_id=
-
-call n sr21
-
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * Error: Instance id not set.
-  exit/b
-)
-
-aws ec2 create-tags --resources %cbf_instance_id% --tags Key=Name,Value=w1idvtempcrt021
-
-rem These also work.
-rem aws ec2 create-tags help>%temp%/j1.txt
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
-
-rem Below here didn't work.
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
-
-exit/b
-
-
-
-::_
-
-:tag_one
-
-set fp=* Change a single tag on a resource.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-set cbf_resource_id=i-0ce1f47a5dcd7f7b0
-
-call %0 tag_generic Notes "Tough to say."
-
-exit/b
-
-
-
-::_
-
-:retag_unwanted_resource
-
-set fp=* Retag unwanted resource.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-call n %2
-
-if "%~2" == "" (
-  echo.
-  echo * Instance id is a required field.
-  exit/b
-)
-
-set cbf_resource_id=%cbf_instance_id%
-
-call %0 tag_generic BillingCode mybillingcode
-
-call %0 tag_generic ResourceType "Unusable instance. Please delete me."
-
-exit/b
-
-
-
-::_
-
-:tag
-
-:tag_all
-
-set fp=* Tag or retag all the tags on a resource.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-set cbf_resource_id=i-0ce1f47a5dcd7f7b0
-
-call %0 tag_generic Application "Learn Linux."
-
-call %0 tag_generic BillingCode mybillingcode
-
-call %0 tag_generic Environment myenv
-
-call %0 tag_generic Name w1Idvwebcar003
-
-call %0 tag_generic Notes "This works. Warning: Belongs to a wide open security group."
-
-call %0 tag_generic Portfolio TestPortfolio
-
-call %0 tag_generic ResourcePOC theMan
-
-exit/b
-
-
-
-::_
-
-:tag_generic
-
-set fp=* Tag generic "%2" - "%3".
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-aws ec2 create-tags --resources %cbf_resource_id% --tags Key=%2,Value=%3
-
-exit/b
-
-
-
 :_
 
 :4.5
@@ -4480,6 +4339,185 @@ if "%cbf_instance_id%" == "" (
   echo * Error: Instance ID is blank.
   exit/b 1
 )
+
+exit/b
+
+
+
+:_+ Tags from a.bat
+
+
+
+::_
+
+:add_tag
+
+set fp=* Tag instance "%2" with key "%3" and value "%4".
+
+rem lu: Mar-25-2020
+
+echo.
+echo %fp%
+
+if "%4" == "" (
+  echo.
+  echo * This function requires 3 parameters. 2: Instance alias. 3. Key Name 4. Key value.
+  exit/b
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * The cbf_instance_id is not defined for "%2".
+  exit/b
+)
+
+aws ec2 create-tags --resources %cbf_instance_id% --tags Key=%3,Value=%4
+
+exit/b
+
+
+
+::_
+
+:delete_tag
+
+set fp=* Delete Tag on instance "%2". Tag key "%3"
+
+rem lu: Mar-25-2020
+
+echo.
+echo %fp%
+
+if "%3" == "" (
+  echo.
+  echo * This function requires 2 final parameters. 2: Instance alias. 3. Key Name
+  exit/b
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * The cbf_instance_id is not defined for "%2".
+  exit/b
+)
+
+aws ec2 delete-tags --resources %cbf_instance_id% --tags Key=%3
+
+exit/b
+
+
+
+::_
+
+:tag
+
+:tag_all
+
+set fp=* Tag or retag all the tags on a resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_resource_id=i-0ce1f47a5dcd7f7b0
+
+call %0 tag_generic Application "Learn Linux."
+
+call %0 tag_generic BillingCode mybillingcode
+
+call %0 tag_generic Environment myenv
+
+call %0 tag_generic Name w1Idvwebcar003
+
+call %0 tag_generic Notes "This works. Warning: Belongs to a wide open security group."
+
+call %0 tag_generic Portfolio TestPortfolio
+
+call %0 tag_generic ResourcePOC theMan
+
+exit/b
+
+
+
+::_
+
+:tag_one
+
+set fp=* Change a single tag on a resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_resource_id=i-0ce1f47a5dcd7f7b0
+
+call %0 tag_generic Notes "Tough to say."
+
+exit/b
+
+
+
+::_
+
+:retag
+
+set fp=* Retag a resource.
+
+rem lu: May-17-2019
+
+echo.
+echo %fp%
+
+set cbf_instance_id=
+
+call n sr21
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Error: Instance id not set.
+  exit/b
+)
+
+aws ec2 create-tags --resources %cbf_instance_id% --tags Key=Name,Value=w1idvtempcrt021
+
+rem These also work.
+rem aws ec2 create-tags help>%temp%/j1.txt
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
+
+rem Below here didn't work.
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
+
+exit/b
+
+
+
+::_
+
+:retag_unwanted_resource
+
+set fp=* Retag unwanted resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+call n %2
+
+if "%~2" == "" (
+  echo.
+  echo * Instance id is a required field.
+  exit/b
+)
+
+set cbf_resource_id=%cbf_instance_id%
+
+call %0 tag_generic BillingCode mybillingcode
+
+call %0 tag_generic ResourceType "Unusable instance. Please delete me."
 
 exit/b
 

@@ -6103,6 +6103,14 @@ exit/b
 
 :lq
 
+:chse
+
+:chlo
+
+:juse
+
+:abconf
+
 :pass-through
 
 set fp=* Pass through.
