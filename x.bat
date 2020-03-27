@@ -132,13 +132,13 @@ if not "%cbf_filename%" == "" (
   )
 )
 
-if not "%cbf_url%" == "" (
-  sf %1>nul
-)
-
 if not "%cbf_application%" == "" (
   call xa %1>nul
   exit/b
+)
+
+if not "%cbf_url%" == "" (
+  sf %1>nul
 )
 
 if not "%cbf_path%" == "" (

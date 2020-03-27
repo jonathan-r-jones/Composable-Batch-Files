@@ -1,4 +1,4 @@
-:_
+:_ (!do)
 
 @echo off
 
@@ -59,63 +59,6 @@ exit/b
 
 :_
 
-:down
-
-set fp=* Down.
-
-rem lu: Feb-27-2020
-
-echo.
-echo %fp%
-
-echo.
-docker-compose down
-
-exit/b
-
-
-
-:_
-
-:up
-
-set fp=* Get docker updated.
-
-rem lu: Feb-27-2020
-
-echo.
-echo %fp%
-
-echo.
-docker-compose up
-
-exit/b
-
-
-
-:_
-
-:comp
-
-set fp=* Compose.
-
-rem lu: Feb-27-2020
-
-cls
-
-echo.
-echo %fp%
-
-@echo on
-docker-compose -f src/main/docker/app.yml up
-@echo off
-
-exit/b
-
-
-
-:_
-
 :ps
 
 set fp=* Kurt's PS command.
@@ -154,4 +97,118 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-7)
+:_
+
+:down
+
+set fp=* Down.
+
+rem lu: Feb-27-2020
+
+echo.
+echo %fp%
+
+echo.
+docker-compose down
+
+exit/b
+
+
+
+:_
+
+:up
+
+set fp=* Get docker updated.
+
+rem lu: Feb-27-2020
+
+echo.
+echo %fp%
+
+echo.
+docker-compose up
+
+exit/b
+
+
+
+:_
+
+:coup
+
+set fp=* Compose up.
+
+rem lu: Feb-27-2020
+
+cls
+
+echo.
+echo %fp%
+
+@echo on
+docker-compose -f src/main/docker/app.yml up
+@echo off
+
+exit/b
+
+
+
+:_
+
+:codo
+
+set fp=* Compose down.
+
+rem lu: Mar-27-2020
+
+cls
+
+echo.
+echo %fp%
+
+@echo on
+docker-compose -f src/main/docker/app.yml down
+@echo off
+
+exit/b
+
+
+
+:_
+
+:list
+
+set fp=* List images.
+
+rem lu: Mar-27-2020
+
+echo.
+echo %fp%
+
+echo.
+docker images
+
+exit/b
+
+
+
+:_
+
+:de
+
+set fp=* Delete devlibrary image.
+
+rem lu: Mar-27-2020
+
+echo.
+echo %fp%
+
+echo.
+docker rmi devlibrary
+
+exit/b
+
+
+
+:_ (!efdo, !rfsp) (mov-7)
