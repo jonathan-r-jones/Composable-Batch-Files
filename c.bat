@@ -11,6 +11,8 @@ set filep=* Clear screen and reset color.
 echo.
 echo %filep%
 
+title=CBF
+
 
 
 :_

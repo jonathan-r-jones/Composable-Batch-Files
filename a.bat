@@ -4352,14 +4352,14 @@ exit/b
 
 :add_tag
 
-set fp=* Tag instance "%2" with key "%3" and value "%4".
+set fp=* Tag instance "%2" with key "%3" and value "%~4".
 
 rem lu: Mar-25-2020
 
 echo.
 echo %fp%
 
-if "%4" == "" (
+if "%~4" == "" (
   echo.
   echo * This function requires 3 parameters. 2: Instance alias. 3. Key Name 4. Key value.
   exit/b

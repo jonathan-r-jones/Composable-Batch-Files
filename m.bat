@@ -726,8 +726,6 @@ set fp=* Copy fresh Ext JS into WildFly folder. This should be used only when Wi
 echo %fp%
 echo.
 
-title = %fp%
-
 echo Current Folder: %cd%
 echo.
 
@@ -2055,8 +2053,6 @@ set fp=* Copy fresh Ext JS into WildFly folder. This should be used only when Wi
 echo %fp%
 echo.
 
-title = %fp%
-
 echo Current Folder: %cd%
 echo.
 
@@ -2539,8 +2535,6 @@ rem app build development.
 
 echo %fp%
 echo.
-
-title = %fp%
 
 color 2f
 
@@ -4734,9 +4728,11 @@ exit/b
 
 :lnk_ui
 
-set fp=* Run UI lnk, for use by shortcut icons.
+set fp=* CART UI
 
-rem lu: Mar-24-2020
+rem lu: Mar-26-2020
+
+title=%fp%
 
 echo.
 echo %fp%
@@ -4830,9 +4826,13 @@ exit/b
 
 :lnk_api
 
-set fp=* Run API cmd, for use by shortcut icons.
+set fp=* CART API
+
+rem Run API cmd, for use by shortcut icons.
 
 rem lu: Mar-24-2020
+
+title=%fp%
 
 echo.
 echo %fp%

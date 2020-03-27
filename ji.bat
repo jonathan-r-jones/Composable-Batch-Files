@@ -47,9 +47,6 @@ exit/b
 
 rem lu: Apr-12-2019
 
-echo.
-echo %fp%
-
 call ni jira_url
 
 set cbf_url=%cbf_url%/browse/cart-%1

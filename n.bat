@@ -6111,6 +6111,10 @@ exit/b
 
 :abconf
 
+:win10
+
+:sr58
+
 :pass-through
 
 set fp=* Pass through.
