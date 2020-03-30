@@ -594,7 +594,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
-rem qq1
+
 call gradlew -Pprod clean bootJar
 
 exit/b
@@ -731,6 +731,27 @@ echo.
 @echo on
 gradlew bootJar -Pprod jibDockerBuild
 @echo off
+
+exit/b
+
+
+
+:_
+
+:dashx
+
+:webp
+
+set fp=* Webpack.
+
+rem lu: Mar-27-2020
+
+echo.
+echo %fp%
+
+echo.
+gradlew -x webpack
+npm start
 
 exit/b
 
