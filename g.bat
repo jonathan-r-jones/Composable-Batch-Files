@@ -2908,8 +2908,6 @@ exit/b
 
 :ltag
 
-:tag
-
 set fp=* List tags.
 
 rem lu: Jun-11-2019

@@ -9060,7 +9060,7 @@ exit/b
 
 :_
 
-:tag
+:tagpr
 
 set fp=* Tagging program.
 
