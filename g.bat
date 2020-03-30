@@ -2593,7 +2593,11 @@ echo %fp%
 
 call g lbl
 
+<<<<<<< Updated upstream
 call g lbr
+=======
+git push origin --delete cart-412-2
+>>>>>>> Stashed changes
 
 exit/b
 
