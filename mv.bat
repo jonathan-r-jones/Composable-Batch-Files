@@ -145,7 +145,8 @@ rem (!rfsp) (mov-2)
 call %0 pc_2_sf
 
 rem Run the tag program.
-call x tag
+
+call x tagpr
 
 pause
 
