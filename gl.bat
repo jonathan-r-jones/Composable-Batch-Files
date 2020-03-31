@@ -67,7 +67,8 @@ echo               filep  File purpose
 echo                   f  Filename alias, when used in a batch file name
 echo                  fp  Function purpose
 echo    function routing  Batch file style (bfs) where code execution is routed to a function.
-echo                      Example(s): g.bat or m.bat.
+echo                      Example(s): g.bat, m.bat, t.bat and v.bat. T.bat and v.bat also
+echo                      also use a code execution area.
 echo               label  A batch file label, a.k.a. a function name, alias or nickname.
 echo                  lu  Last updated. The last time the file was updated.
 echo                   p  Path alias, when used in a batch file name

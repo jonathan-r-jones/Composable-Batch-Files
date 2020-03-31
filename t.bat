@@ -6,7 +6,7 @@
 
 :_
 
-rem set filep=* This file is used for testing, experimenting and developing new batch file functions.
+set filep=* This file is used for testing, experimenting and developing new batch file functions.
 
 rem setlocal
 
@@ -39,15 +39,15 @@ goto code_execution_area
 
 :help
 
+echo.
 echo %filep%
 
 echo.
 echo Usage: %0 (optional parameter 1)
 
 echo.
-echo Parameter 1: Batch file label you wish to execute. If left blank, 
-echo the code below the last code block in this file, a. k. a. the main function, will 
-echo be executed.
+echo Parameter 1: Batch file label function you wish to execute. If left blank, 
+echo the code below the code execution area will run.
 
 exit/b
 
@@ -1398,100 +1398,6 @@ Metadata: Track Size (!tst)
 : Feb-9-2018   6,576    111,212      289
 
 :Sep-21-2016   2,228     39,414       92
-
-
-
-:_
-
-;Batch File Code Keepers - How To Do a For Loop (!for) (skw Batch File For Loop)
-
-:Findstr
-
-rem This works. findstr %sc% *.*
-
-rem for /r "%folder_to_search%" %%f in ("*.*") do findstr %sc%
-rem for /r "%folder_to_search%" %%f in ("*.*") do findstr "%%f" %sc%
-
-rem This works.
-rem for /r "%folder_to_search%" %%f in ("*.*") do findstr %sc% "%%f"
-
-:This worked on Sep-8-2013. This includes all subfolders. It seems that the way double quotes 
-are used in the for statement is inconsistent.
-
-::for /r "%podcast_folder%" %%f in ("*.mp3") do move "%%f" %staging_area%
-
-::This works as desired. Gotcha! If there are spaces in the path or filename, it will blow up.
-
-:FOR %%J IN (*.txt) DO type %%J >> "All Files Appended into one big file.txt"
-
-FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do type "%%J">>%output_file%
-
-set pgb=$Affinity
-
-:This works exactly as expected.
-
-::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do echo %%J
-
-::FOR /R "C:\!!\Plugin" %%J IN (*.cs) do copy %%J %output_file%
-
-::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do type %%J
-
-::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do echo %%J>>%output_file%
-
-::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) DO type %%J>>%output_file%
-
-:This works, but will only copy the last file.
-
-:This works. It lists all the files in the $Affinity folder.
-
-FOR %%J IN (%savannah%\*.*) do echo %%J
-
-:This works.
-
-FOR /R c:\!!\%pgb% %%J IN (*.com) do ren %%J *.comq
-
-:Where %%f equals a file and (*) means all files.
-
-::for %%f in (b*.*) do echo %%f>>c:\j.txt
-
-::for %%f in (*) do echo %%f
-
-::for %%f in (*.*) do echo %%f
-
-::for %%j in (*.*) do echo %%j
-
-:This can be used to rename files as well.
-
-::Cool syntax for copying stuff thanks to Project X.
-
-IF EXIST "c:\program files\common files\i2 Shared\Images 6\Basic\Screen\Icons" FOR %%f IN 
-(.\Analyst_Notebook_6_Icons\*.bmp) DO xcopy /R /Y /S %%f "c:\program files\common files\i2 
-Shared\Images 6\Basic\Screen\Icons"
-
-:This words.
-
-:FOR /R c:\!!\%pgb% %%J IN (*.com) do echo %%J
-
-:This words.
-
-:FOR /R c:\!!\!affinity %%J IN (*.com) do ren %%J *.comx
-
-:This works.
-
-:FOR /R c:\!affinity %%J IN (*.com) do echo %%J
-
-:echo f | FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do xcopy /y "%%J" 
-c:\!!\CS_Copies\%%j
-
-:echo f | FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do xcopy /y "%%J" 
-c:\!!\CS_Copies\%%j
-
-:for %%f in ("..\Different Types of Files\*.*") do trid.exe "%%f">>"file identifier 
-report.txt"
-
-"c:\Program Files\Multi-Edit 2008\Mew32.exe" "file identifier report.txt"
-
-m exit
 
 
 
@@ -3344,22 +3250,6 @@ exit/b
 
 :_
 
-set fp=* Experimenting with the for loop.
-
-echo.
-echo %fp%
-echo.
-
-cd\aa
-
-for /r "c:\aa" %%j in (".") DO (call %savannah%\belfry\step1.bat)
-
-m exitp
-
-
-
-:_
-
 set fp=* Find all empty subfolders.
 
 rem Outcome: This works!
@@ -4491,20 +4381,6 @@ cd
 rem m exitp
 
 xcopy /d /h /r /s /y c:\projects\netbeans\sencha\HTML5Application\public_html\build\testing\Mercury
-
-exit/b
-
-
-
-:_
-
-set fp=* Reflection.
-
-rem FCD: Feb-14-2017
-
-echo.
-echo %fp%
-
 
 exit/b
 
@@ -7456,24 +7332,6 @@ exit/b
 
 :_
 
-:loop
-
-set fp=* An endless loop the pauses for 10 seconds (unless you press any key) before each call.
-
-rem lu: Aug-27-2018
-
-echo %fp%
-
-timeout /t 10
-
-echo.
-
-goto loop
-
-
-
-:_
-
 :
 
 set fp=* Cy error.
@@ -9501,28 +9359,6 @@ exit/b
 
 :
 
-set fp=* For loop test.
-
-rem lu: May-10-2019
-
-echo.
-echo %fp%
-
-set folder_to_search=%share-zone%
-
-echo.
-rem for /r "%folder_to_search%" %%f in ("*.*") do echo hey
-rem for /r "%folder_to_search%" %%f in ("*.*") do call %0 process_file testy
-for /r "%folder_to_search%" %%f in ("*.bat") do call %0 process_file %%f
-
-exit/b
-
-
-
-:_
-
-:
-
 set fp=* Check title.
 
 rem lu: May-13-2019
@@ -10126,13 +9962,139 @@ exit/b
 
 
 
-:_
+:_+ For Loop Family (!fyfor)
 
-:code_execution_area
 
-set fp=* Code below here runs.
 
-rem ******* (!rfcea, !rfsp) (mov4)
+::_
+
+:
+
+set fp=* For loop test.
+
+rem lu: May-10-2019
+
+echo.
+echo %fp%
+
+set folder_to_search=%share-zone%
+
+echo.
+rem for /r "%folder_to_search%" %%f in ("*.*") do echo hey
+rem for /r "%folder_to_search%" %%f in ("*.*") do call %0 process_file testy
+for /r "%folder_to_search%" %%f in ("*.bat") do call %0 process_file %%f
+
+exit/b
+
+
+
+::_
+
+set fp=* Experimenting with the for loop.
+
+echo.
+echo %fp%
+echo.
+
+cd\aa
+
+for /r "c:\aa" %%j in (".") DO (call %savannah%\belfry\step1.bat)
+
+m exitp
+
+
+
+::_
+
+;Batch File Code Keepers - How To Do a For Loop (!for) (skw Batch File For Loop)
+
+:Findstr
+
+rem This works. findstr %sc% *.*
+
+rem for /r "%folder_to_search%" %%f in ("*.*") do findstr %sc%
+rem for /r "%folder_to_search%" %%f in ("*.*") do findstr "%%f" %sc%
+
+rem This works.
+rem for /r "%folder_to_search%" %%f in ("*.*") do findstr %sc% "%%f"
+
+:This worked on Sep-8-2013. This includes all subfolders. It seems that the way double quotes 
+are used in the for statement is inconsistent.
+
+::for /r "%podcast_folder%" %%f in ("*.mp3") do move "%%f" %staging_area%
+
+::This works as desired. Gotcha! If there are spaces in the path or filename, it will blow up.
+
+:FOR %%J IN (*.txt) DO type %%J >> "All Files Appended into one big file.txt"
+
+FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do type "%%J">>%output_file%
+
+set pgb=$Affinity
+
+:This works exactly as expected.
+
+::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do echo %%J
+
+::FOR /R "C:\!!\Plugin" %%J IN (*.cs) do copy %%J %output_file%
+
+::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do type %%J
+
+::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do echo %%J>>%output_file%
+
+::FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) DO type %%J>>%output_file%
+
+:This works, but will only copy the last file.
+
+:This works. It lists all the files in the $Affinity folder.
+
+FOR %%J IN (%savannah%\*.*) do echo %%J
+
+:This works.
+
+FOR /R c:\!!\%pgb% %%J IN (*.com) do ren %%J *.comq
+
+:Where %%f equals a file and (*) means all files.
+
+::for %%f in (b*.*) do echo %%f>>c:\j.txt
+
+::for %%f in (*) do echo %%f
+
+::for %%f in (*.*) do echo %%f
+
+::for %%j in (*.*) do echo %%j
+
+:This can be used to rename files as well.
+
+::Cool syntax for copying stuff thanks to Project X.
+
+IF EXIST "c:\program files\common files\i2 Shared\Images 6\Basic\Screen\Icons" FOR %%f IN 
+(.\Analyst_Notebook_6_Icons\*.bmp) DO xcopy /R /Y /S %%f "c:\program files\common files\i2 
+Shared\Images 6\Basic\Screen\Icons"
+
+:This words.
+
+:FOR /R c:\!!\%pgb% %%J IN (*.com) do echo %%J
+
+:This words.
+
+:FOR /R c:\!!\!affinity %%J IN (*.com) do ren %%J *.comx
+
+:This works.
+
+:FOR /R c:\!affinity %%J IN (*.com) do echo %%J
+
+:echo f | FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do xcopy /y "%%J" 
+c:\!!\CS_Copies\%%j
+
+:echo f | FOR /R "C:\Dev\Analyst Notebook Plugin" %%J IN (*.cs) do xcopy /y "%%J" 
+c:\!!\CS_Copies\%%j
+
+:for %%f in ("..\Different Types of Files\*.*") do trid.exe "%%f">>"file identifier 
+report.txt"
+
+"c:\Program Files\Multi-Edit 2008\Mew32.exe" "file identifier report.txt"
+
+m exit
 
 
 
@@ -10148,6 +10110,141 @@ echo.
 echo %fp%
 
 echo:>>c:\a\j1.txt
+
+exit/b
+
+
+
+:_
+
+:refl
+
+set fp=* Reflection. Dynamic variable naming.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+set var1=
+set var2=
+
+set cbf_png=
+
+set var1=cbf_%1
+
+set %var1%=hello
+
+set var2=cbf_%1
+
+call n 1583
+
+echo.
+echo Percent 1: %1
+
+echo.
+echo var1: %var1%
+
+echo.
+echo cbf_png: %cbf_png%
+
+echo.
+echo var2: %var2%
+
+exit/b
+
+
+
+:_
+
+:ref2
+
+set fp=* Reflection 2. Dynamic variable naming.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+set var1=
+set var2=
+
+set cbf_png=
+
+set var1=cbf_%1
+
+set %var1%=hello
+
+set var2=cbf_%1
+
+set var3=%var2%
+
+call n 1583
+
+call m compose_variable %1
+
+echo.
+echo ev: %expanded_variable%
+
+rem setlocal
+echo.
+echo Percent 1: %1
+
+echo.
+echo var1: %var1%
+
+echo.
+echo cbf_?: %cbf_png%
+
+echo.
+echo var2: %var2%
+
+echo.
+echo var3: %%var3%%
+
+echo.
+
+echo var3l: %%%var3%%%
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:ref3
+
+set fp=* Reflection 3. Dynamic variable naming.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 1. Extension and 2. Alias are required.
+  exit/b
+)
+
+call m rese
+
+call n %2
+
+call m compose_variable %1
+
+echo.
+echo * Expanded variable: %cbf_expanded_variable%
 
 exit/b
 

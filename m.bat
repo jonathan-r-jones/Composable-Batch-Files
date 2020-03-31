@@ -2927,11 +2927,19 @@ exit/b
 
 :env_c
 
+:r
+
+:rcv
+
+:res
+
+:rese
+
 :reset
 
 :reset_cbf_variables
 
-set fp=* Reset CBF variables. (skw clear environment variables)
+set fp=* Reset CBF variables. (skw clear environment variables, clear_cbf_variables)
 
 rem echo.
 rem echo %fp%
@@ -2951,6 +2959,10 @@ rem set cbf_default_browser=
 rem set cbf_default_text_editor=
 
 set cbf_excel_filename=
+
+set cbf_expanded_variable=
+
+set cbf_xlsx=
 
 set cbf_fc_path=
 
@@ -2973,6 +2985,8 @@ set cbf_parameter=
 set cbf_path=
 
 set cbf_pem=
+
+set cbf_png=
 
 rem When this is uncommented, it causes issues. Dec-20-2019
 rem set cbf_repo=
@@ -4385,7 +4399,11 @@ exit/b
 
 
 
-:_
+:_+ Composing and Expanding Variables
+
+
+
+::_
 
 :compose_variable
 
@@ -4407,7 +4425,7 @@ exit/b
 
 
 
-:_
+::_
 
 :expand_variable
 
@@ -4418,10 +4436,10 @@ rem lu: Jul-16-2019
 echo.
 echo %fp%
 
-echo.
-echo * Expanded variable: %~2
-
 set cbf_expanded_variable=%~2
+
+rem echo.
+rem echo * Expanded variable: %expanded_variable%
 
 exit/b
 
@@ -4445,31 +4463,26 @@ exit/b
 
 set fp=* How to run CART locally, the overarching process.
 
-rem lu: Sep-25-2019
+rem lu: Mar-30-2020
 
 echo.
 echo %fp%
 
-rem Get Postgres running on local.
-
-rem Check what branch you are on.
-s m
-
-pql start
+rem Check status and what branch you are on.
+s ma
 
 rem You may or may not want to do a get-latest.
 pl
 
-rem ty ly
+rem Get Postgres running on local by clicking on the lnk_db shortcut.
 
 rem Switch to the api folder.
-cd api
+td api
 
 lq
 rem If liquibase fails, you may need to wipe your local databaase.
 
 rem Run the API by using m lnk_api. You may need to edit npcrf.
-gr run_api
 
 rem If you want to run the debugger, then search on: ^lnk
 and use 
@@ -4480,16 +4493,11 @@ x bash
 
 ./get_cart_jwt.sh
 
-Copy the new jwt token into the file using:
+rem Copy the new jwt token into the file using:
 
 e jwt
 
-rem Run the UI by using lnk_ui or by using the 2 lines below.
-rem call n ui
-
-rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
-call nm inst
-call ang run_ui
+rem Run the UI using lnk_ui.
 
 sf 4200
 
@@ -4977,6 +4985,8 @@ exit/b
 ::_
 
 :cmd_start_db
+
+:lnk_db
 
 set fp=* Start local database.
 

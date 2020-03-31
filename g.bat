@@ -2593,11 +2593,9 @@ echo %fp%
 
 call g lbl
 
-<<<<<<< Updated upstream
 call g lbr
-=======
+
 git push origin --delete cart-412-2
->>>>>>> Stashed changes
 
 exit/b
 
@@ -3667,6 +3665,32 @@ echo.
 git checkout -b %3 %2
 
 git push --set-upstream origin %3
+
+exit/b
+
+
+
+::_
+
+:cbd
+
+set fp=* Create new branch based on the develop branch.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, destination branch, is a required field.
+  exit/b
+)
+
+echo.
+git checkout -b %2 develop
+
+git push --set-upstream origin %2
 
 exit/b
 

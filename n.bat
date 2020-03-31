@@ -2795,8 +2795,6 @@ exit/b
 
 ::_
 
-:res
-
 :fr_res
 
 :fr_rs
@@ -3969,25 +3967,6 @@ exit/b
 
 :_
 
-:mc
-
-set fp=* Latest Music.
-
-rem lu: Aug-8-2018
-
-echo.
-echo %fp%
-
-set cbf_filename=%Dropbox%\Miscellaneous Documents\groove is in the heart.xlsx
-
-set cbf_path=%dropbox%\mp3\Jun-5-2018
-
-exit/b
-
-
-
-:_
-
 :ttdc
 
 set fp=* Tech Talk DC.
@@ -4908,6 +4887,8 @@ exit/b
 
 :_
 
+:testx
+
 :rep18
 
 :rep17
@@ -5202,15 +5183,11 @@ exit/b
 
 :cart-412-3
 
-<<<<<<< Updated upstream
 :nds
-=======
+
 :cart-412-5
 
 :mapper
-
-:pass-through
->>>>>>> Stashed changes
 
 :crai
 
@@ -6105,6 +6082,10 @@ exit/b
 :win10
 
 :sr58
+
+:1583
+
+:1584
 
 :pass-through
 
@@ -7289,46 +7270,6 @@ exit/b
 
 
 
-:_+ MP3
-
-
-
-::_
-
-:mp3a
-
-:mp3am
-
-set fp=* MP3 accidentally moved.
-
-rem lu: Jan-14-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\mp3\Jan-14-2019 - Accidentally Moved
-
-exit/b
-
-
-
-::_
-
-:mp3
-
-set fp=* MP3 root.
-
-rem lu: Jan-14-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\mp3
-
-exit/b
-
-
-
 :_
 
 :pc
@@ -7347,25 +7288,6 @@ set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
 set cbf_filename=%cbf_application%
 
 set cbf_path=%my documents%\gpodder\downloads
-
-exit/b
-
-
-
-:_
-
-:sa
-
-:staging_area
-
-set fp=* Staging area.
-
-rem lu: Jan-14-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%my documents%\mp3 staging area
 
 exit/b
 
@@ -9044,23 +8966,6 @@ echo.
 echo %fp%
 
 set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
-
-exit/b
-
-
-
-:_
-
-:tagpr
-
-set fp=* Tagging program.
-
-rem lu: May-26-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\Mp3tag\mp3tag.exe
 
 exit/b
 
@@ -10951,23 +10856,6 @@ exit/b
 
 :_
 
-:bu
-
-set fp=* Dropbox backups.
-
-rem lu: Jan-8-2020
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\backups
-
-exit/b
-
-
-
-:_
-
 :bases
 
 :bashs
@@ -11125,23 +11013,6 @@ echo %fp%
 call n rf_ma
 
 set cbf_filename=%cbf_path%\api\src\main\java\gov\dhs\ice\cart\service\CartPortalCriteriaServiceImpl.java
-
-exit/b
-
-
-
-:_
-
-:bdm
-
-set fp=* Baryonic Dark Matter.
-
-rem lu: Feb-10-2020
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\mp3\Baryonic Dark Matter
 
 exit/b
 
@@ -12240,6 +12111,173 @@ echo %fp%
 set cbf_application=C:\Program Files\Docker\Docker\Docker Desktop.exe
 
 set cbf_url=https://github.com/AlinaIo/etc2018.git
+
+exit/b
+
+
+
+:_+ MP3 Family (!fymp3)
+
+
+
+::_
+
+:mc
+
+set fp=* Latest Music.
+
+rem lu: Aug-8-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%Dropbox%\Miscellaneous Documents\groove is in the heart.xlsx
+
+set cbf_path=%dropbox%\mp3\Jun-5-2018
+
+exit/b
+
+
+
+::_
+
+:mp3
+
+set fp=* MP3 root.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\mp3
+
+exit/b
+
+
+
+::_
+
+:sa
+
+:staging_area
+
+set fp=* Staging area.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%my documents%\mp3 staging area
+
+exit/b
+
+
+
+::_
+
+:tagpr
+
+set fp=* Tagging program.
+
+rem lu: May-26-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\Mp3tag\mp3tag.exe
+
+exit/b
+
+
+
+::_
+
+:mp3a
+
+:mp3am
+
+set fp=* MP3 accidentally moved.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\mp3\Jan-14-2019 - Accidentally Moved
+
+exit/b
+
+
+
+::_
+
+:bdm
+
+set fp=* Baryonic Dark Matter.
+
+rem lu: Feb-10-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\mp3\Baryonic Dark Matter
+
+exit/b
+
+
+
+:_+ Backups Family
+
+
+
+::_
+
+:mibu
+
+set fp=* Mission backups.
+
+rem lu: Jan-8-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\backups\mission
+
+exit/b
+
+
+
+::_
+
+:svbu
+
+set fp=* Savannah backups.
+
+rem lu: Jan-8-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\backups\savannah
+
+exit/b
+
+
+
+::_
+
+:bu
+
+set fp=* Dropbox backups.
+
+rem lu: Jan-8-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\backups
 
 exit/b
 

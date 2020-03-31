@@ -648,7 +648,9 @@ exit/b
 
 set fp=* Install any dependencies listed in package.json.
 
-rem lu: Feb-11-2019
+rem It's a good idea to run npm install before doing your build in case npm needs to update. - Sean
+
+rem lu: Mar-31-2020
 
 echo.
 echo %fp%

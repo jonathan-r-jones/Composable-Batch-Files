@@ -14,9 +14,11 @@ set filep=* This file is used for vetted functions.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto main_function
-
 if "%~1" == "/?" goto help
+
+if not "%~1" == "" goto %1
+
+goto code_execution_area
 
 goto %1
 
@@ -33,10 +35,8 @@ echo.
 echo Usage: %0 (optional parameter 1)
 
 echo.
-set parameter_1=Parameter 1: Batch file label you wish to execute. If left blank, ^
-the function(s) immediately following the main function, will be executed.
-
-echo %parameter_1%
+echo Parameter 1: Batch file label function you wish to execute. If left blank, 
+echo the code below the code execution area will run.
 
 exit/b
 
@@ -1298,13 +1298,51 @@ exit/b
 
 
 
-:_
+:_+ Some Loops
 
-:main_function
 
-set fp=* Code below here runs.
 
-rem ******* (!rfcea, !rfsp) (mov4)
+::_
+
+:do_while
+
+set fp=* A loop that iterates x amount of times.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+set current_iteration_number=1
+set x=4
+
+:iterate
+
+echo.
+echo * Iteration # %current_iteration_number%.
+
+set /a current_iteration_number=%current_iteration_number%+1
+
+if "%current_iteration_number%" gtr "%x%" exit/b
+
+goto :iterate
+
+
+
+::_
+
+:loop
+
+set fp=* An endless loop that pauses for 3 seconds.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+timeout /t 3
+
+goto loop
 
 
 
@@ -1352,7 +1390,7 @@ exit/b
 
 :_
 
-:
+:epl
 
 set fp=* Evaluate the parameter list.
 
@@ -1384,6 +1422,80 @@ echo %e_switch%
 echo %v_switch%
 
 exit/b
+
+
+
+:_+ Reflextion via Dynamic Variable Naming
+
+
+
+::_
+
+:ref3
+
+set fp=* Reflection version 3. Dynamic variable naming.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 1. Extension and 2. Alias are required.
+  exit/b
+)
+
+call m rese
+
+call n %2
+
+call m compose_variable %1
+
+echo.
+echo * Expanded variable: %cbf_expanded_variable%
+
+exit/b
+
+
+
+::_
+
+:ref4
+
+set fp=* Reflection version 4. Dynamic variable naming.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+if "%~3" == "" (
+  echo.
+  echo * Percent 2. Extension and 3. Alias are required.
+  exit/b
+)
+
+call m rese
+
+call n %3
+
+call m compose_variable %2
+
+echo.
+echo * Expanded variable: %cbf_expanded_variable%
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

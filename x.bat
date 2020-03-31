@@ -48,9 +48,9 @@ echo Parameter 2 (Optional): If "-c" is used, this will force the creation of a 
 echo.
 echo Precedence of execution:
 echo.
+echo If application isn't blank, execute it.
 echo If filename isn't blank, execute it.
 echo If URL isn't blank, execute it.
-echo If application isn't blank, execute it.
 echo.
 echo If all of the above are blank, raise an error.
 
@@ -106,9 +106,7 @@ if %errorlevel% == 0 (
   exit/b
 )
 
-set cbf_application=
-set cbf_filename=
-set cbf_url=
+call m reset_cbf_variables
 
 call n %~1
 
@@ -116,6 +114,11 @@ if %errorlevel% == 1 (
   echo.
   echo * Error: Label not found. - skw Oct-18-2019 2:59 PM
   call m clear_errorlevel_silently 
+  exit/b
+)
+
+if not "%cbf_application%" == "" (
+  call xa %1>nul
   exit/b
 )
 
@@ -132,11 +135,6 @@ if not "%cbf_filename%" == "" (
   )
 )
 
-if not "%cbf_application%" == "" (
-  call xa %1>nul
-  exit/b
-)
-
 if not "%cbf_url%" == "" (
   sf %1>nul
 )
@@ -144,6 +142,14 @@ if not "%cbf_url%" == "" (
 if not "%cbf_path%" == "" (
   if exist "%cbf_path%" (
     td %1>nul
+  )
+)
+
+if not "%cbf_png%" == "" (
+  if exist "%cbf_png%" (
+    set cbf_filename=%cbf_png%
+    call m double_click
+    call r
   )
 )
 

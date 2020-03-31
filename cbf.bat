@@ -140,6 +140,7 @@ echo   offn  Open folder where only the filename is known.
 echo    ofp  Transform directory to parent folder
 echo      p  Add, commit and push Git changes, has TD parameter
 echo     pl  Git pull, has TD parameter
+echo    png  Run cbf_png as a double-click filename.
 echo     pg  Ping hooked up to the nicknames dictionary
 echo    pql  PostgreSQL (in development)
 echo     ps  PowerShell
@@ -179,6 +180,7 @@ echo     un  URL nicknames dictionary layer of abstraction
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad
 echo      x  Simulate a double-click. A remote double-click equivalent way to run an alias.
+echo     xx  Execute CBF variables in a double-click fashion.
 echo     xa  Application-centric way of running an application with an optional filename parameter
 echo    xfn  Filename-centric way to run an alias
 

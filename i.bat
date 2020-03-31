@@ -16,16 +16,9 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-if "%1" == "-c" (
-  echo.
-  echo * Reset CBF variables.
-  call m reset_cbf_variables
-  call %0
-  rem goto main_function
-  exit/b
-)
+if "%~1" == "" goto main_function
 
-if not "%~1" == "" goto process_parameter
+if not "%1" == "" goto process_alias_parameter
 
 goto main_function
 
@@ -41,8 +34,8 @@ echo %filep%
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): Nickname to show definition for. If left blank ^
-current CBF environment variables are shown. If "-c" is passed, variables are reset.
+set parameter_1=Parameter 1 (Optional): If left blank, show current state of variables. Otherwise,
+a pass in alias to show definition for, before which tthe variables are reset.
 
 echo.
 echo %parameter_1%
@@ -53,18 +46,14 @@ exit/b
 
 :_
 
-:process_parameter
+:process_alias_parameter
 
-set fp=* Process parameter.
-
-call m reset_cbf_variables
+call m rese
 
 call n %1
 
 if %errorlevel% gtr 0 exit/b
 
-goto main_function
-                               
 
 
 :_
@@ -96,19 +85,26 @@ if not "%cbf_confluence_url%" == "" (
   echo * Filename: %cbf_confluence_url%
 )
 
-if "%1" == "" (
-  echo.
-  echo * Default browser: "%cbf_default_browser%"
+if not "%cbf_default_browser%" == "" (
+  rem This is not shown by default.
+  rem echo.
+  rem echo * Default browser: "%cbf_default_browser%"
 )
 
-if "%1" == "" (
-  echo.
-  echo * Default text editor: %cbf_default_text_editor%
+if not "%%cbf_default_text_editor%" == "" (
+  rem This is not shown by default.
+  rem echo.
+  rem echo * Default text editor: %cbf_default_text_editor%
 )
 
 if not "%cbf_excel_filename%" == "" (
   echo.
   echo * Excel Filename: %cbf_excel_filename%
+)
+
+if not "%cbf_expanded_variable%" == "" (
+  echo.
+  echo * Expanded Variable: %cbf_expanded_variable%
 )
 
 if not "%cbf_fc_path%" == "" (
@@ -161,19 +157,30 @@ if not "%cbf_path%" == "" (
   echo * Path: %cbf_path%
 )
 
+if not "%cbf_png%" == "" (
+  echo.
+  echo * PNG: %cbf_png%
+)
+
 if not "%cbf_pem%" == "" (
   echo.
   echo * Pem: %cbf_pem%
 )
 
-if "%1" == "" (
-  echo.
-  echo * Repo: %cbf_repo%
+if not "%cbf_repo%" == "" (
+  rem This is not shown by default.
+  rem echo.
+  rem echo * Repo: %cbf_repo%
 )
 
 if not "%cbf_url%" == "" (
   echo.
   echo * URL: %cbf_url%
+)
+
+if not "%cbf_xlsx%" == "" (
+  echo.
+  echo * XLSX: %cbf_xlsx%
 )
 
 exit/b

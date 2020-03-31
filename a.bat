@@ -4245,7 +4245,7 @@ exit/b
 
 set fp=* Start instance "%2".
 
-rem lu: Oct-31-2019
+rem lu: Mar-30-2020
 
 echo.
 echo %fp%
@@ -4259,6 +4259,10 @@ if %errorlevel% == 1 (
 
 echo.
 call aws ec2 start-instances --instance-ids %cbf_instance_id%
+
+call %0 tag %2 AutoStopStartInstance True
+
+call %0 tag %2 Comment None
                                        
 exit/b
 
@@ -4270,7 +4274,7 @@ exit/b
 
 set fp=* Stop instance "%2".
 
-rem lu: Dec-27-2018
+rem lu: Mar-30-2020
 
 echo.
 echo %fp%
@@ -4284,6 +4288,10 @@ if %errorlevel% == 1 (
 
 echo.
 aws ec2 stop-instances --instance-ids %cbf_instance_id%
+
+call %0 tag %2 AutoStopStartInstance False
+
+call %0 tag %2 Comment "Testing in progress."
 
 exit/b
 
@@ -4352,11 +4360,9 @@ exit/b
 
 :tag
 
-:add_tag
-
 set fp=* Tag instance "%2" with key "%3" and value "%~4".
 
-rem lu: Mar-25-2020
+rem lu: Mar-30-2020
 
 echo.
 echo %fp%
@@ -4367,9 +4373,10 @@ if "%~4" == "" (
   exit/b
 )
 
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * The cbf_instance_id is not defined for "%2".
+call :validate_input %1 %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
   exit/b
 )
 
