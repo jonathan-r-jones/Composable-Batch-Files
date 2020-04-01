@@ -10519,6 +10519,8 @@ set cbf_path=%cbf_path%\database backups
 
 rem >< >< >< >< >< ><  Alphabetical below here.
 
+set cbf_docx=%cbf_path%\How to backup and restore a Cart database.docx
+
 set cbf_filename=%cbf_path%\How to backup and restore a Cart database.docx
 
 exit/b

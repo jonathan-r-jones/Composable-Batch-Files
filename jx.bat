@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Execute CBF variables in a double-click fashion.
+set filep=* Execute CBF variables in a edit a file.
 
 
 
@@ -14,9 +14,7 @@ set filep=* Execute CBF variables in a double-click fashion.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
-
-if "%~2" == "" goto help
+if "%~3" == "" goto help
 
 if "%~1" == "/?" goto help
 
@@ -33,9 +31,11 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: CBF extension, e.g. cbf_png, where where png is the passed in parameter.
+set parameter_1=Parameter 1: CBF extension, e.g. cbf_java, where where java is the passed in parameter.
 
-set parameter_2=Parameter 2: Alias to search.
+set parameter_2=Parameter 2: Dynamically constructed cbf alias to search.
+
+set parameter_3=Parameter 3: Alias of your chosen editor.
 
 echo.
 echo %parameter_1%
@@ -44,7 +44,25 @@ echo.
 echo %parameter_2%
 
 echo.
+echo %parameter_3%
+
+echo.
 echo Batch file style: Custom.
+
+echo.
+echo Examples:
+
+echo.
+echo jx java 1583 no
+
+echo.
+echo jx ts 1583 ij
+
+echo.
+echo jx html 1583 np
+
+echo.
+echo jx filename ma sm
 
 exit/b
 
@@ -75,13 +93,23 @@ if "%cbf_expanded_variable%" == "" (
   exit/b
 )
 
+call an %3
+
+if %errorlevel% gtr 0 (
+  exit/b
+)
+
+rem echo.
+rem echo * Expanded variable: %cbf_expanded_variable%
+
 if not exist "%cbf_expanded_variable%" (
   echo.
   echo * Error: CBF Expanded variable "%cbf_expanded_variable%" does not exist.
   exit/b
 )
 
-call m double_click
+set cbf_parameter=%cbf_expanded_variable%
+rem qq
 
 call r
 

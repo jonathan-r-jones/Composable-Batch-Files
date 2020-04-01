@@ -60,6 +60,7 @@ echo                 cbf  Composable batch files
 echo                  _c  Suffix indicating a consumer batch file using function routing.
 echo                  -c  As a batch file parameter, means force file creation
 echo                   c  Current folder filename, when used in a batch file name
+echo    dynamic variable  An environment variable that can be dynamically created at runtime.
 echo          error code  fn.bat returns an error code of 2 for file not exists.
 echo  evaluated filename  Filename, filename alias or batch file prefix for a batch file 
 echo    parameter         that lives in either the CBF or Share-zone folder.

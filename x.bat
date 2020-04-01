@@ -139,17 +139,25 @@ if not "%cbf_url%" == "" (
   sf %1>nul
 )
 
-if not "%cbf_path%" == "" (
-  if exist "%cbf_path%" (
-    td %1>nul
-  )
-)
-
 if not "%cbf_png%" == "" (
   if exist "%cbf_png%" (
     set cbf_filename=%cbf_png%
     call m double_click
     call r
+  )
+)
+
+if not "%cbf_docx%" == "" (
+  if exist "%cbf_docx%" (
+    set cbf_filename=%cbf_docx%
+    call m double_click
+    call r
+  )
+)
+
+if not "%cbf_path%" == "" (
+  if exist "%cbf_path%" (
+    td %1>nul
   )
 )
 

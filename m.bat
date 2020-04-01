@@ -2895,6 +2895,8 @@ exit/b
 
 :double_click
 
+:set_cbf_application_equal_to_cbf_filename
+
 set fp=* Simulate a remote double click.
 
 rem lu: Feb-1-2018

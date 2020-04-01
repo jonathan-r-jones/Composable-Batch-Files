@@ -112,6 +112,7 @@ echo      h  Sencha
 echo      i  CBF environment variable information
 echo     je  Surf to Jenkins websites
 echo     ji  Jira operations
+echo     jx  Use CBF dynamic variables to edit a file
 echo   keyt  KeyTool wrapper
 echo      l  Google searcher
 echo     lp  Load CBF_Path to the clipboard
@@ -180,7 +181,7 @@ echo     un  URL nicknames dictionary layer of abstraction
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad
 echo      x  Simulate a double-click. A remote double-click equivalent way to run an alias.
-echo     xx  Execute CBF variables in a double-click fashion.
+echo     xx  Use CBF dynamic variables in a double-click fashion.
 echo     xa  Application-centric way of running an application with an optional filename parameter
 echo    xfn  Filename-centric way to run an alias
 
