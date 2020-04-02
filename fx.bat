@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Execute CBF variables in a edit a file.
+set filep=* Use dynamic CBF variables to open a file in any application.
 
 
 
@@ -26,16 +26,19 @@ goto main_function
 
 :help
 
-rem lu: 
+rem lu: Apr-2-2020
+
+echo.
+echo %filep%
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: CBF extension, e.g. cbf_java, where where java is the passed in parameter.
+set parameter_1=Parameter 1: CBF extension, e.g. cbf_java, where where "java" is the passed in parameter.
 
 set parameter_2=Parameter 2: Dynamically constructed cbf alias to search.
 
-set parameter_3=Parameter 3: Alias of your chosen editor.
+set parameter_3=Parameter 3: Alias of your chosen application.
 
 echo.
 echo %parameter_1%
@@ -63,6 +66,10 @@ echo jx html 1583 np
 
 echo.
 echo jx filename ma sm
+
+echo.
+rem qq
+echo jx csv 1583 ex
 
 exit/b
 

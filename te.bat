@@ -21,11 +21,16 @@ if "%~1" == "/?" goto help
 
 goto %1
 
+goto main_function
+
 
 
 :_
 
 :help
+
+echo.
+echo %filep%
 
 rem lu: 
 

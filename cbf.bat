@@ -103,6 +103,7 @@ echo     fn  Filenames dictionary layer of abstraction
 echo     fs  Filenames search
 echo    fsp  Perennial filenames search
 echo    fst  Filenames search with a td parameter
+echo     fx  Use dynamic CBF variables to open a file in any application
 echo      g  Git
 echo     gg  Git Gui helper Has TD parameter
 echo     gl  Glossary of terms used in CBF
@@ -112,7 +113,6 @@ echo      h  Sencha
 echo      i  CBF environment variable information
 echo     je  Surf to Jenkins websites
 echo     ji  Jira operations
-echo     jx  Use CBF dynamic variables to edit a file
 echo   keyt  KeyTool wrapper
 echo      l  Google searcher
 echo     lp  Load CBF_Path to the clipboard

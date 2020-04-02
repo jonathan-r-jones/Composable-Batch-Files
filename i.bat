@@ -85,6 +85,11 @@ if not "%cbf_confluence_url%" == "" (
   echo * Filename: %cbf_confluence_url%
 )
 
+if not "%cbf_csv%" == "" (
+  echo.
+  echo * CSV: %cbf_csv%
+)
+
 if not "%cbf_default_browser%" == "" (
   rem This is not shown by default.
   rem echo.

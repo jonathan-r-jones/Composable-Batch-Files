@@ -6087,6 +6087,12 @@ exit/b
 
 :1584
 
+:ipconf
+
+:iai
+
+:1608
+
 :pass-through
 
 set fp=* Pass through.
