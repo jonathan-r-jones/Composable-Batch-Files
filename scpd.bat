@@ -121,7 +121,6 @@ echo.
 @echo on
 scp -i %share-zone%\pems\cart-np-key.pem %cbf_source_information% "%cbf_destination_folder%"
 @echo off
-rem qq-2
 
 exit/b
 

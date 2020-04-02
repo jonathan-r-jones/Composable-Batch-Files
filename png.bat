@@ -60,7 +60,6 @@ if "%cbf_png%" == "" (
 
 set cbf_filename=%cbf_png%
 
-rem qq
 call m double_click
 
 call r

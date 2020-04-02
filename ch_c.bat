@@ -208,8 +208,6 @@ Outcome:
        ------------------
        No such cookbook: cart_slave
 
-rem qq-1
-
 exit/b
 
 

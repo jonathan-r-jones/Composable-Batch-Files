@@ -67,7 +67,7 @@ echo.
 echo Example: f np .gitignore
 
 echo.
-echo Example: e .gitignore
+echo Example: f .gitignore
 
 echo.
 echo Example: f np jenkinsfile -e
@@ -106,10 +106,10 @@ echo.
 echo Example: f np jenkinsfile -e
 
 echo.
-echo Example: ty kb
+echo Example: f kb
 
 echo.
-echo Example: ty "rain in spain"
+echo Example: f "rain in spain"
 
 echo.
 echo Example: ty "rain in spain.txt"
@@ -124,7 +124,7 @@ echo.
 echo Example: f np j55.txt -d
 
 echo.
-echo Example: e "rain in spain" -d
+echo Example: f "rain in spain" -d
 
 rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookmark: skw qjq3
 

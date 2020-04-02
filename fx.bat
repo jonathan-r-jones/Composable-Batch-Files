@@ -68,7 +68,6 @@ echo.
 echo jx filename ma sm
 
 echo.
-rem qq
 echo jx csv 1583 ex
 
 exit/b
@@ -116,7 +115,6 @@ if not exist "%cbf_expanded_variable%" (
 )
 
 set cbf_parameter=%cbf_expanded_variable%
-rem qq
 
 call r
 

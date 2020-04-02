@@ -318,7 +318,6 @@ echo %fp%
 call td a
 
 call scpd fqma /tmp/Jan-9-2020_5_04_PM.txt c c:\a
-rem qq-1
 
 rem Outcome: /Jan-9-2020_5_04_PM.txt: Permission denied
 
@@ -340,7 +339,6 @@ rem Outcome: scp: tmp/Jan-9-2020_5_04_PM.txt: No such file or directory
 call td a
 
 call scpd fqma tmp/Jan-9-2020_5_04_PM.txt c c:\a
-rem qq-1
 
 exit/b
 
@@ -358,7 +356,6 @@ echo %fp%
 call td a
 
 call scpd fqma \tmp\Jan-9-2020_5_04_PM.txt c c:\a
-rem qq-1
 
 rem Outcome: /Jan-9-2020_5_04_PM.txt: Permission denied
 
@@ -378,7 +375,6 @@ echo %fp%
 call td a
 
 call scpd fqma \tmp\Jan-9-2020_5_04_PM.txt c c:\a
-rem qq-1
 
 rem Outcome: /Jan-9-2020_5_04_PM.txt: Permission denied
 

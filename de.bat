@@ -29,7 +29,6 @@ goto %1
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-rem qq1
 set parameter_1=Parameter 1: Function to run.
 
 echo.
