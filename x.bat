@@ -144,6 +144,7 @@ if not "%cbf_png%" == "" (
     set cbf_filename=%cbf_png%
     call m double_click
     call r
+    exit/b
   )
 )
 
@@ -152,6 +153,7 @@ if not "%cbf_docx%" == "" (
     set cbf_filename=%cbf_docx%
     call m double_click
     call r
+    exit/b
   )
 )
 
@@ -161,8 +163,20 @@ if not "%cbf_path%" == "" (
   )
 )
 
+if not "%cbf_xlsx%" == "" (
+  if exist "%cbf_xlsx%" (
+    set cbf_filename=%cbf_xlsx%
+    call m double_click
+    call r
+    exit/b
+  ) else (
+    echo.
+    eccho Could not find cbf_xlsx.
+  )
+)
+
 echo.
-echo * Error: CBF parameters for filename, url and application are all blank.
+echo * Error: Could not find an executable CBF parameter.
 
 rem (!rfsp) (mov-2)
 

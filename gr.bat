@@ -682,34 +682,6 @@ exit/b
 
 ::_
 
-:build_jar_for_dock_clean
-
-set fp=* Build Jar for Docker environment with clean.
-
-rem lu: Sep-17-2019
-
-echo.
-echo %fp%
-
-call m specific_file_presence gradlew.bat
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-cls
-
-echo.
-@echo on
-gradlew clean bootJar -Pprod jibDockerBuild
-@echo off
-
-exit/b
-
-
-
-::_
-
 :build_jar_for_dock
 
 set fp=* Build Jar for Docker environment.
@@ -736,11 +708,43 @@ exit/b
 
 
 
+::_
+
+:bjc
+
+:build_jar_for_dock_clean
+
+set fp=* Build Jar for Docker environment with clean.
+
+rem lu: Sep-17-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence gradlew.bat
+
+if %errorlevel% == 1 (
+  exit/b
+)
+
+cls
+
+echo.
+@echo on
+gradlew clean bootJar -Pprod jibDockerBuild
+@echo off
+
+exit/b
+
+
+
 :_
 
 :dashx
 
 :webp
+
+:webpack
 
 set fp=* Webpack.
 
@@ -757,4 +761,4 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-6)
+:_ (!efgr, !rfsp) (mov-6)

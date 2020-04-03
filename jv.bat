@@ -192,4 +192,22 @@ exit/b
 
 
 
+:_
+
+:all
+
+set fp=* Build all the jars in the libs folder?
+
+rem lu: Apr-2-2020
+
+echo.
+echo %fp%
+
+echo.
+java -jar build/libs/*.jar
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

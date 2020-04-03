@@ -1615,24 +1615,6 @@ title = Composable Batch Files Helper
 
 :_
 
-:clco
-
-:clear_color_setting
-
-set fp=* Clear color setting.
-
-echo %fp%
-
-color
-
-cls
-
-exit/b
-
-
-
-:_
-
 :set_server_path
 
 set fp=* Set server path.
@@ -3522,6 +3504,40 @@ exit/b 0
 
 ::_
 
+:colo
+
+:color
+
+set fp=* Clear color setting.
+
+echo %fp%
+
+color
+
+exit/b
+
+
+
+::_
+
+:clco
+
+:clear_color_setting
+
+set fp=* Clear color setting and clear screen.
+
+echo %fp%
+
+color
+
+cls
+
+exit/b
+
+
+
+::_
+
 :dosc_blongo
 
 set fp=* Change dos window color to: black on gold
@@ -4799,6 +4815,27 @@ rem Since this step in time-cunsuming and often unnecessary, I have commented it
 rem you just need to remember to uncomment it, if you need to run it.
 
 call ang run_ui
+
+exit/b
+
+
+
+::_
+
+:lnk_webpack
+
+set fp=* Run UI lnk, do not install npm.
+
+rem lu: Mar-24-2020
+
+echo.
+echo %fp%
+
+call m ise
+
+call td deli
+
+call gr webpack
 
 exit/b
 

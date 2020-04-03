@@ -55,76 +55,76 @@ echo.
 echo %parameter_3%
 
 echo.
-echo Examples
+echo Examples:
 
 echo.
-echo Example: f no j1
+echo f no j1
 
 echo.
-echo Example: f sm j2
+echo f sm j2
 
 echo.
-echo Example: f np .gitignore
+echo f np .gitignore
 
 echo.
-echo Example: f .gitignore
+echo f .gitignore
 
 echo.
-echo Example: f np jenkinsfile -e
+echo f np jenkinsfile -e
 
 echo.
-echo Example: f np set_cbf_filename
+echo f np set_cbf_filename
 
 echo.
-echo Example: f np kb
+echo f np kb
 
 echo.
-echo Example: f no j55.txt
+echo f no j55.txt
 
 echo.
-echo Example: f no "the rain in spain.txt"
+echo f no "the rain in spain.txt"
 
 echo.
-echo Example: f np "the rain in spain"
+echo f np "the rain in spain"
 
 echo.
-echo Example: f np not_an_alias
+echo f np not_an_alias
 
 echo.
-echo Example: f no j7.txt
+echo f no j7.txt
 
 echo.
-echo Example: f np "the rain in spain"
+echo f np "the rain in spain"
 
 echo.
-echo Example: f np "the rain in spain.txt"
+echo f np "the rain in spain.txt"
 
 echo.
-echo Example: f np jenkinsfile
+echo f np jenkinsfile
 
 echo.
-echo Example: f np jenkinsfile -e
+echo f np jenkinsfile -e
 
 echo.
-echo Example: f kb
+echo f kb
 
 echo.
-echo Example: f "rain in spain"
+echo f "rain in spain"
 
 echo.
-echo Example: ty "rain in spain.txt"
+echo f "rain in spain.txt"
 
 echo.
-echo Example: f sm j1
+echo f sm j1
 
 echo.
-echo Example: f sm j1 -d
+echo f sm j1 -d
 
 echo.
-echo Example: f np j55.txt -d
+echo f np j55.txt -d
 
 echo.
-echo Example: f "rain in spain" -d
+echo f "rain in spain" -d
 
 rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookmark: skw qjq3
 

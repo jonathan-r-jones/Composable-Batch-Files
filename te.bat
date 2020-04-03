@@ -51,10 +51,10 @@ echo.
 echo Batch file style: Function routing.
 
 echo.
-echo Examples
+echo Examples:
 
 echo.
-echo Example 1: 
+echo 
 
 exit/b
 

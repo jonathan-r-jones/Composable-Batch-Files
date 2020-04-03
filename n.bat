@@ -9582,6 +9582,27 @@ exit/b
 
 
 
+::_
+
+:88
+
+:8800
+
+:lh
+
+set fp=* Localhost port 8800.
+
+rem lu: Mar-18-2019
+
+echo.
+echo %fp%
+
+set cbf_url=http://localhost:4200
+
+exit/b
+
+
+
 :_
 
 :krm
@@ -12286,6 +12307,40 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\backups
+
+exit/b
+
+
+
+:_
+
+:jona
+
+set fp=* Jonathan folder.
+
+rem lu: Apr-2-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\jonathan
+
+exit/b
+
+
+
+:_
+
+:mah
+
+set fp=* Mission at home.
+
+rem lu: Apr-2-2020
+
+echo.
+echo %fp%
+
+set cbf_xlsx=%dropbox%\backups\mission\mission at home.xlsx
 
 exit/b
 
