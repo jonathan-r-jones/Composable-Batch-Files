@@ -11607,6 +11607,8 @@ fail-fast: false
 
 :draw
 
+:drawio
+
 :visi
 
 set fp=* Draw.io. A nice network diagram drawing tool that Adam used to create an ldd.
@@ -11638,6 +11640,11 @@ echo %fp%
 set cbf_url=https://www.draw.io/?libs=aws2
 
 exit/b
+
+
+>< >< Footnote:
+
+I used this on the Dev Library project and it worked really well.
 
 
 
@@ -12130,7 +12137,7 @@ exit/b
 
 :dock
 
-set fp=* Docker workshop.
+set fp=* Docker and Docker workshop.
 
 rem lu: Feb-16-2018
 
