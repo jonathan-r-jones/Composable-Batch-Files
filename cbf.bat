@@ -123,7 +123,7 @@ echo      m  Perform miscellaneous tasks using a function routing style
 echo    mav  Maven
 echo    mcd  Make and navigate (cd) to a folder
 echo     me  Multi-Edit
-echo     mv  Move files using atomic functions
+echo     mv  Move files using function routing
 echo   mvcp  Move file in the current directory to nickname-specified path
 echo     mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem (!rfsp) (mov-2)

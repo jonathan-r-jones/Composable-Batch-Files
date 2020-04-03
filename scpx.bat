@@ -33,7 +33,7 @@ goto validate_input
 
 :help
 
-rem lu: 
+rem lu: Apr-3-2020
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

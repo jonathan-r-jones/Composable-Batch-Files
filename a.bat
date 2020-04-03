@@ -4532,4 +4532,37 @@ exit/b
 
 
 
+::_
+
+:ast
+
+set fp=* Add sleep tags to %2.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo Error: Instance alias is required.
+  exit/b
+)
+
+set cbf_instance_alias=%2
+
+call m clear_errorlevel_silently 
+
+call a tag %cbf_instance_alias% AutoStartTime 6:00
+
+if %errorlevel% gtr 0 exit/b
+
+call a tag %cbf_instance_alias% AutoStopTime 19:00
+
+call a tag %cbf_instance_alias% AutoStopStartInstance True
+
+call a tag %cbf_instance_alias% WeekendStop True
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

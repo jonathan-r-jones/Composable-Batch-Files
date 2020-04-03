@@ -6093,6 +6093,12 @@ exit/b
 
 :1608
 
+:team
+
+:imm_old
+
+:immd
+
 :pass-through
 
 set fp=* Pass through.
@@ -7061,8 +7067,6 @@ exit/b
 :_
 
 :mste
-
-:team
 
 :teams
 
@@ -10415,6 +10419,8 @@ exit/b
 :rf_rp
 
 :rp
+
+:trs
 
 set fp=* Release process.
 

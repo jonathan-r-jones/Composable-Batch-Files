@@ -70,6 +70,10 @@ echo jx filename ma sm
 echo.
 echo jx csv 1583 ex
 
+rem This would actually work if the function check for a "file's" existence, which a URL is not.
+echo.
+echo jx github_url jj fx 
+
 exit/b
 
 

@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Move files atomic functions.
+set filep=* Move files using function routing.
 
 
 

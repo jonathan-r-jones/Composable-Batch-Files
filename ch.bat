@@ -467,6 +467,8 @@ exit/b
 
 :lino
 
+:list_nodes
+
 :ln
 
 :nl

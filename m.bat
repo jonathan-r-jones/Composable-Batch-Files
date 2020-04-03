@@ -1371,6 +1371,76 @@ exit/b
 
 ::_
 
+:lnk_cbf
+
+set fp=* Initialize CBF environment.
+
+title=CBF
+
+call %0 big
+
+call td a
+
+cls
+
+exit/b
+
+
+
+::_
+
+:lnk_right
+
+title=Right Justified CBF
+
+call %0 big
+
+call td a
+
+cls
+
+exit/b
+
+
+
+::_
+
+:lnk_chef
+
+title=Chef
+
+set homedrive=c:
+
+set homepath=\Users\JJones2
+
+call %0 big
+
+call td a
+
+cls
+
+exit/b
+
+
+
+::_
+
+:lnk_linux
+
+title=Linux
+
+call %0 big
+
+call td a
+
+cls
+
+exit/b
+
+
+
+::_
+
 :initialize_environment_router
 
 set fp=* Initialize environment router.
@@ -1418,56 +1488,6 @@ call %0 set_white_list_settings_1
 cls
 
 exit/b
-
-
-
-::_
-
-:bl_cbf
-
-:init_cbf
-
-set fp=* Initialize CBF environment.
-
-title=CBF
-
-goto big
-
-
-
-::_
-
-:bl_chef
-
-:init_chef
-
-title=Chef
-
-set homedrive=c:
-
-set homepath=\Users\JJones2
-
-goto big
-
-
-
-::_
-
-:bl_linux
-
-title=Linux
-
-goto big
-
-
-
-::_
-
-:bl_right
-
-title=Right Justified CBF
-
-goto big
 
 
 
@@ -5318,6 +5338,27 @@ echo %fp%
 
 echo.
 ren Screen*.* Mar-12-2020*.*
+
+exit/b
+
+
+
+:_
+
+:cs
+
+:ccs
+
+:csc
+
+set fp=* Cart code search. This is a cs.bat consumer.
+
+rem lu: Apr-3-2020
+
+echo.
+echo %fp%
+
+call cs %2 html java ts xml yml
 
 exit/b
 
