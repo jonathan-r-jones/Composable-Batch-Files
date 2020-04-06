@@ -69,6 +69,7 @@ set cbf_url=%cbf_url:http://=%
 set cbf_url=%cbf_url:https://=%
 set cbf_url=%cbf_url:www.=%
 
+echo.
 call ping %2 %cbf_url%
 
 rem (!rfsp) (mov-2)

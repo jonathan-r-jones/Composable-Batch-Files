@@ -2244,7 +2244,7 @@ m exit
 
 :_
 
-set fp=* Runme.
+set fp=* Run me.
 
 echo.
 echo %fp%

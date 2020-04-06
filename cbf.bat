@@ -113,7 +113,6 @@ echo      h  Sencha
 echo      i  CBF environment variable information
 echo     je  Surf to Jenkins websites
 echo     ji  Jira operations
-echo   keyt  KeyTool wrapper
 echo      l  Google searcher
 echo     lp  Load CBF_Path to the clipboard
 echo    lpf  Load CBF_Filename of passed in alias onto the clipboard

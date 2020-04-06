@@ -79,12 +79,11 @@ exit/b
 
 :work
 
-set fp=* Look up work URLs.
+set fp=* Look up work websites.
 
 echo.
 echo %fp%
 
-echo.
 call :validate_user_input dev
 
 call :validate_user_input fqt
@@ -92,6 +91,27 @@ call :validate_user_input fqt
 call :validate_user_input prod
 
 call :validate_user_input stag
+
+call :validate_user_input stag
+
+exit/b
+
+
+
+:_
+
+:work_ws
+
+set fp=* Look up work web services.
+
+echo.
+echo %fp%
+
+call :validate_user_input immf
+
+call :validate_user_input imms
+
+call :validate_user_input imms_ws
 
 exit/b
 

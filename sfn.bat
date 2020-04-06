@@ -46,6 +46,9 @@ goto use_alias_or_batch_file
 
 :help
 
+echo.
+echo %filep%
+
 rem lu: Nov-20-2019
 
 echo.

@@ -7,7 +7,7 @@
 :_
 
 echo.
-echo * Dir file for *.extensionname uses including subfolders.
+echo * Dir file for *.extensionname including subfolders.
 
 
 
@@ -45,7 +45,10 @@ exit/b
 
 set search_results_filename=%temp%\%~1_search_results.txt
 
+echo.
 dir *.%1* /s>"%search_results_filename%"
+
+if %errorlevel% gtr 0 exit/b
 
 set cbf_parameter=%search_results_filename%
 
