@@ -591,6 +591,30 @@ exit/b
 
 
 
+:_
+
+:conv
+
+:converge
+
+set fp=* Kitchen converge.
+
+rem lu: Nov-25-2019
+
+echo.
+echo %fp%
+
+call m specific_file_presence .kitchen-aws.yml
+
+if %errorlevel% == 1 exit/b
+
+echo.
+kitchen converge centos-7 --no-color
+
+exit/b
+
+
+
 :_+ Upload Cookbook
 
 
@@ -622,7 +646,7 @@ exit/b
 
 ::_
 
-:upco
+:upco_old
 
 set fp=* Upload cookbook command from Sean.
 
@@ -655,27 +679,38 @@ exit/b
 
 
 
-:_
+::_
 
-:conv
+:upco
 
-:converge
+set fp=* Upload the Cart cookbook.
 
-set fp=* Kitchen converge.
+rem skw: upload cookbook, How do you upload the cookbook?
 
-rem lu: Nov-25-2019
+rem lu: Apr-7-2020
 
 echo.
 echo %fp%
 
-call m specific_file_presence .kitchen-aws.yml
+call n caco
+set cbf_cookbook_path=%cbf_path%
 
-if %errorlevel% == 1 exit/b
+call td chef
 
 echo.
-kitchen converge centos-7 --no-color
+@echo on
+knife cookbook upload cart -o c:\cookbook_test
+@echo off
 
 exit/b
+
+>< >< Footnote:
+
+Result:
+
+C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
+Uploading cart           [0.1.1]
+Uploaded 1 cookbook.
 
 
 

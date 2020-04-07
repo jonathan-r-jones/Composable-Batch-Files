@@ -5343,25 +5343,4 @@ exit/b
 
 
 
-:_
-
-:cs
-
-:ccs
-
-:csc
-
-set fp=* Cart code search. This is a cs.bat consumer.
-
-rem lu: Apr-3-2020
-
-echo.
-echo %fp%
-
-call cs %2 html java ts xml yml
-
-exit/b
-
-
-
 :_ (!efm, !rfsp) (mov-9)

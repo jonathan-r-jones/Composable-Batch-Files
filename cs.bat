@@ -101,16 +101,17 @@ rem "findstr" seems to be more powerful the "find".
 
 findstr /i /n /o /off /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
 
+if %errorlevel% gtr 0 (
+  echo.
+  echo * No results found. 
+  exit/b
+)
+
 rem (!rfsp) (mov-2)
 
-call an me
+call an me>nul
 
-if %errorlevel% == 0 (
-  start "Test Title" "%cbf_application%" "%temp%\search_results_cs.txt"
-) else (
-  echo.
-  echo * No results found.
-)
+start "Test Title" "%cbf_application%" "%temp%\search_results_cs.txt"
 
 exit/b
 

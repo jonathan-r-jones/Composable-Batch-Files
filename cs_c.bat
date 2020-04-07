@@ -6,8 +6,7 @@
 
 :_
 
-rem       qq1
-set filep=* 
+set filep=* Cs.bat consumer.
 
 
 
@@ -19,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto %1
 
 
 
@@ -30,21 +29,15 @@ goto main_function
 echo.
 echo %filep%
 
-rem lu: 
+rem lu: Apr-7-2020
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-rem qq
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Group you are searching.
 
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 echo.
 echo Batch file style: Function routing.
@@ -53,7 +46,10 @@ echo.
 echo Examples:
 
 echo.
-echo 
+echo cs_c caco
+
+echo.
+echo cs_c ma
 
 exit/b
 
@@ -66,16 +62,19 @@ exit/b
 
 :_
 
-:main_function
+:ma
 
-set fp=* 
+call cs %2 html java ts xml yml
 
-echo.
-echo %fp%
+exit/b
 
-echo.
-rem qq1
 
+
+:_
+
+:caco
+
+call cs %2 erb json rb xml yml
 
 exit/b
 

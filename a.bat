@@ -4223,7 +4223,7 @@ rem lu: Mar-8-2019
 echo.
 echo %fp%
 
-call :validate_input %1 %2
+call :validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4250,7 +4250,7 @@ rem lu: Mar-30-2020
 echo.
 echo %fp%
 
-call :validate_input %1 %2
+call :validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4279,7 +4279,7 @@ rem lu: Mar-30-2020
 echo.
 echo %fp%
 
-call :validate_input %1 %2
+call :validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4287,7 +4287,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
-aws ec2 stop-instances --instance-ids %cbf_instance_id%
+call aws ec2 stop-instances --instance-ids %cbf_instance_id%
 
 call %0 tag %2 AutoStopStartInstance False
 
@@ -4308,7 +4308,7 @@ rem lu: Oct-31-2019
 echo.
 echo %fp%
 
-call :validate_input %1 %2
+call :validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4324,17 +4324,19 @@ exit/b
 
 ::_
 
-:validate_input
+:validate_instance
 
-if "%~2" == "" (
+set fp=* Validate instance.
+
+if "%~1" == "" (
   echo.
-  echo * Error: You must specify both and operation and an instance alias. Oct-31-2019 11:50 AM
+  echo * Error: You must specify an instance alias.
   exit/b 1
 )
 
 set cbf_instance_id=
 
-call n %2
+call n %1>1
 
 if %errorlevel% gtr 0 (
   echo.
@@ -4373,7 +4375,7 @@ if "%~4" == "" (
   exit/b
 )
 
-call :validate_input %1 %2
+call :validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 

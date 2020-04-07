@@ -286,4 +286,70 @@ sudo cp /tmp/cart_dv_secret.sec .
 
 
 
+:_
+
+:Apr-7-2020_4_36_PM
+
+set fp=* Add dv secret file to new team (sr58) server.
+
+echo.
+echo %fp%
+
+call td pems
+
+call scpx sr59 cart_dv_secret.sec a
+
+exit/b
+
+
+>< >< Footnote:
+
+Outcome: This worked on Apr-3-2020.
+
+After the file has be copied to the target server. SSH into the box with the zzadmin account 
+and copy the secret file to the correct folder.
+
+cd /etc
+
+sudo mkdir certs
+
+cd certs
+
+sudo cp /tmp/cart_dv_secret.sec .
+
+
+
+:_
+
+:Apr-7-2020_5_07_PM
+
+set fp=* Add dv secret file to new team s60 server.
+
+echo.
+echo %fp%
+
+call td pems
+
+call scpx sr60 cart_dv_secret.sec a
+
+exit/b
+
+
+>< >< Footnote:
+
+Outcome:
+
+After the file has be copied to the target server. SSH into the box with the zzadmin account 
+and copy the secret file to the correct folder.
+
+cd /etc
+
+sudo mkdir certs
+
+cd certs
+
+sudo cp /tmp/cart_dv_secret.sec .
+
+
+
 :_ (!rfsp) (mov-7)

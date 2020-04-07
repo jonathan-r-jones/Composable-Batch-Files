@@ -6,8 +6,7 @@
 
 :_
 
-rem       qq1
-set filep=* 
+set filep=* Connect to servers.
 
 
 
@@ -35,25 +34,16 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-rem qq
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Alias of server you'd like to connect to.
 
 echo.
 echo %parameter_1%
 
 echo.
-echo %parameter_2%
-
-echo.
-echo Batch file style: Function routing.
-
-echo.
 echo Examples:
 
 echo.
-echo 
+echo k dema
 
 exit/b
 
@@ -68,14 +58,7 @@ exit/b
 
 :main_function
 
-set fp=* 
-
-echo.
-echo %fp%
-
-echo.
-rem qq1
-
+call k cnc %1
 
 exit/b
 

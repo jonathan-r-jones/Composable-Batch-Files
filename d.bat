@@ -279,6 +279,8 @@ exit/b
 
 :t
 
+:tr
+
 :tree
 
 set fp=* Tree view.

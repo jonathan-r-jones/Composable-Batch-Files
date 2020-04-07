@@ -112,6 +112,7 @@ echo     gt  Surf to GitHub websites
 echo      h  Sencha
 echo      i  CBF environment variable information
 echo     je  Surf to Jenkins websites
+echo     kc  Connect to servers
 echo     ji  Jira operations
 echo      l  Google searcher
 echo     lp  Load CBF_Path to the clipboard
