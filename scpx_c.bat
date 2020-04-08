@@ -321,7 +321,7 @@ sudo cp /tmp/cart_dv_secret.sec .
 
 :_
 
-:Apr-7-2020_5_07_PM
+:add_dv_sec
 
 set fp=* Add dv secret file to new team s60 server.
 
@@ -330,10 +330,10 @@ echo %fp%
 
 call td pems
 
-call scpx sr60 cart_dv_secret.sec a
+rem qq
+call scpx sr67 cart_dv_secret.sec a
 
 exit/b
-
 
 >< >< Footnote:
 
@@ -352,4 +352,4 @@ sudo cp /tmp/cart_dv_secret.sec .
 
 
 
-:_ (!rfsp) (mov-7)
+:_ (!efscpx_c, !rfsp) (mov-7)
