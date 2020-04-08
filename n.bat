@@ -4103,27 +4103,6 @@ exit/b
 
 :_
 
-:temp
-
-:tmp
-
-set fp=* Temp.
-
-rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.
-
-rem lu: Jan-23-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%temp%
-
-exit/b
-
-
-
-:_
-
 :gett
 
 set fp=* Gettysburg Address.
@@ -6111,6 +6090,22 @@ exit/b
 
 :sr60
 
+:sr61
+
+:sr
+
+:sr62
+
+:sr63
+
+:sr64
+
+:sr65
+
+:sr66
+
+:sr67
+
 :pass-through
 
 set fp=* Pass through.
@@ -7996,7 +7991,7 @@ exit/b
 
 ::_
 
-:sr
+:tsr
 
 set fp=* Temporary search results.
 
@@ -12385,6 +12380,27 @@ echo %fp%
 call pn cm
 
 set cbf_filename=%cbf_path%\ActiveMQ Analysis.xlsx
+
+exit/b
+
+
+
+:_
+
+:temp
+
+:tmp
+
+set fp=* Temp.
+
+rem This is used as a cbf system default, if none is set. Please DO NOT DELETE.
+
+rem lu: Jan-23-2018
+
+echo.
+echo %fp%
+
+set cbf_path=%temp%
 
 exit/b
 

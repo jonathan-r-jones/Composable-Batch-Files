@@ -166,4 +166,25 @@ exit/b
 
 
 
+:_
+
+:temp
+
+:tmp
+
+set fp=* Temp folder.
+
+rem lu: Apr-8-2020
+
+echo.
+echo %fp%
+
+td tmp>nul
+
+del *.* /q /s
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)
