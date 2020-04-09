@@ -4223,7 +4223,7 @@ rem lu: Mar-8-2019
 echo.
 echo %fp%
 
-call :validate_instance %2
+call m validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4250,7 +4250,7 @@ rem lu: Mar-30-2020
 echo.
 echo %fp%
 
-call :validate_instance %2
+call m validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4279,7 +4279,7 @@ rem lu: Mar-30-2020
 echo.
 echo %fp%
 
-call :validate_instance %2
+call m validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4308,7 +4308,7 @@ rem lu: Oct-31-2019
 echo.
 echo %fp%
 
-call :validate_instance %2
+call m validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4318,38 +4318,6 @@ if %errorlevel% == 1 (
 echo.
 call aws ec2 describe-instances --instance-ids %cbf_instance_id%
                                        
-exit/b
-
-
-
-::_
-
-:validate_instance
-
-set fp=* Validate instance.
-
-if "%~1" == "" (
-  echo.
-  echo * Error: You must specify an instance alias.
-  exit/b 1
-)
-
-set cbf_instance_id=
-
-call n %1>1
-
-if %errorlevel% gtr 0 (
-  echo.
-  echo * Error: Label not found. Oct-31-2019 11:33 AM
-  exit/b 1
-)
-
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * Error: Instance ID is blank.
-  exit/b 1
-)
-
 exit/b
 
 
@@ -4375,7 +4343,7 @@ if "%~4" == "" (
   exit/b
 )
 
-call :validate_instance %2
+call m validate_instance %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 

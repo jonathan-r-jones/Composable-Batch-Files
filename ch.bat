@@ -714,4 +714,22 @@ Uploaded 1 cookbook.
 
 
 
+:_
+
+:stat
+
+set fp=* Status!
+
+rem lu: Apr-9-2020
+
+echo.
+echo %fp%
+
+echo.
+knife status --run-list
+
+exit/b
+
+
+
 :_ (!efch, !rfsp) (mov-6)

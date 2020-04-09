@@ -5343,4 +5343,36 @@ exit/b
 
 
 
+:_
+
+:validate_instance
+
+set fp=* Validate instance.
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must specify an instance alias.
+  exit/b 1
+)
+
+set cbf_instance_id=
+
+call n %2>1
+
+if %errorlevel% gtr 0 (
+  echo.
+  echo * Error: Label not found. Oct-31-2019 11:33 AM
+  exit/b 1
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Error: Instance ID is blank.
+  exit/b 1
+)
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-9)

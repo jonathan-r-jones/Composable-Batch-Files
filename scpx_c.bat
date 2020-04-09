@@ -319,37 +319,4 @@ sudo cp /tmp/cart_dv_secret.sec .
 
 
 
-:_
-
-:add_dv_sec
-
-set fp=* Add dv secret file to new team s60 server.
-
-echo.
-echo %fp%
-
-call td pems
-
-rem qq
-call scpx sr67 cart_dv_secret.sec a
-
-exit/b
-
->< >< Footnote:
-
-Outcome:
-
-After the file has be copied to the target server. SSH into the box with the zzadmin account 
-and copy the secret file to the correct folder.
-
-cd /etc
-
-sudo mkdir certs
-
-cd certs
-
-sudo cp /tmp/cart_dv_secret.sec .
-
-
-
 :_ (!efscpx_c, !rfsp) (mov-7)
