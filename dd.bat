@@ -45,7 +45,6 @@ exit/b
 
 set search_results_filename=%temp%\%~1_search_results.txt
 
-echo.
 dir *.%1* /s>"%search_results_filename%"
 
 if %errorlevel% gtr 0 exit/b

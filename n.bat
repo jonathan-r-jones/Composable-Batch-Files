@@ -6120,6 +6120,16 @@ exit/b
 
 :sr73
 
+:rpji
+
+:cove
+
+:case
+
+:case_s
+
+:acco
+
 :pass-through
 
 set fp=* Pass through.
@@ -8468,7 +8478,7 @@ rem lu: May-7-2019
 echo.
 echo %fp%
 
-set cbf_host_name=
+set cbf_host=
 
 set cbf_instance_id=i-02bd7157f98da14aa
 
@@ -8495,7 +8505,7 @@ rem lu: May-13-2019
 echo.
 echo %fp%
 
-set cbf_host_name=
+set cbf_host=
 
 set cbf_instance_id=i-0ce1f47a5dcd7f7b0
 
@@ -9266,7 +9276,7 @@ set cbf_fc_path=%cbf_path%
 
 set cbf_filename=%cbf_path%\platform\ci\Jenkinsfile
 
-set cbf_jenkinsfile=%cbf_path%\platform\ci\Jenkinsfile
+set cbf_jf=%cbf_path%\platform\ci\Jenkinsfile
 
 set cbf_jenkins_url=
 
@@ -10458,11 +10468,13 @@ set cbf_path=%cbf_path%\Release Process
 
 rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized below here.
 
-set cbf_excel_filename=%cbf_path%\Release Information.xlsx
+set cbf_conf=https://confluence.ice.dhs.gov/display/CART/Do+an+Automated+Upload+of+the+API+and+UI+Artifacts+to+Nexus
 
-set cbf_filename=%cbf_path%\release process.jpg
+set cbf_xlsx=%cbf_path%\Release Information.xlsx
 
-set cbf_github_url=https://github.ice.dhs.gov/ERO/cart-devops
+set cbf_jpg=%cbf_path%\release process.jpg
+
+set cbf_gurl=https://github.ice.dhs.gov/ERO/cart-devops
 
 set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
 
@@ -11565,7 +11577,7 @@ set cbf_filename=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
 
 set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
 
-set cbf_github_url=https://github.com/DevTechnology/dev-library
+set cbf_gurl=https://github.com/DevTechnology/dev-library
 
 set cbf_path=%cbf_repo%\deli
 

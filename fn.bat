@@ -44,21 +44,17 @@ set cbf_filename=
 
 call n %1
 
-if %errorlevel% gtr 0 (
-  echo.
-  echo * Error: Label not found. Nov-1-2019 8:55 PM
-  exit/b 1
-)
+if %errorlevel% gtr 0 exit/b(
 
 if not defined cbf_filename (
   echo.
-  echo * The cbf_filename is not defined for "%1". Nov-1-2019 8:58 PM
+  echo * The cbf_filename is not defined for "%1". Apr-10-2020_4_30_PM
   exit/b 1
 )
 
 if not exist "%cbf_filename%" (
   echo.
-  echo * Error: The CBF_Filename "%cbf_filename%" could not be found. Nov-1-2019 8:59 PM
+  echo * Error: The CBF_Filename "%cbf_filename%" could not be found. Apr-10-2020_4_29_PM
   exit/b 2
 )
 

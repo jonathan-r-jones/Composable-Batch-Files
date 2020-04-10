@@ -45,7 +45,7 @@ exit/b
 
 :validate_input
 
-set cbf_confluence_url=
+set cbf_conf=
 
 call n %1
 
@@ -55,7 +55,7 @@ if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
 )
 
-if "%cbf_confluence_url%" == "" (
+if "%cbf_conf%" == "" (
   echo.
   echo * CBF Confluence url is not set, so use cbf_url.
   goto use_cbf_url
@@ -69,7 +69,7 @@ goto main_function
 
 :use_cbf_url
 
-set cbf_confluence_url=%cbf_url%
+set cbf_conf=%cbf_url%
 
 if "%cbf_url%" == "" (
   echo.
@@ -86,7 +86,7 @@ if "%cbf_url%" == "" (
 echo.
 echo * Main function of %0. Nov-15-2019 12:55 PM
 
-set cbf_url=%cbf_confluence_url%
+set cbf_url=%cbf_conf%
 
 call sf
 echo.

@@ -37,7 +37,7 @@ aliases. If left blank, aliases j1 and j2 are used by default.
 echo.
 echo %parameter_1%
 
-set parameter_3=Parameter 3: If -f is specified filenames only are used. If left ^
+set parameter_3=Parameter 3: If -f is specified, filenames only are used. If left ^
 blank, aliases only are used.
 
 echo.

@@ -81,9 +81,7 @@ if not exist "%cbf_filename%" (
 
 :main_function
 
-rem lu: 
-
-copy %cbf_filename% %2
+copy "%cbf_filename%" %2
 
 start "bogus" "%~2"
 

@@ -516,7 +516,7 @@ if "%cbf_ip%" == "" (
   exit/b
 )
 
-if "%cbf_host_name%" == "" (
+if "%cbf_host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -569,7 +569,7 @@ if "%cbf_ip%" == "" (
   exit/b
 )
 
-if "%cbf_host_name%" == "" (
+if "%cbf_host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -617,7 +617,7 @@ if "%cbf_ip%" == "" (
   exit/b
 )
 
-if "%cbf_host_name%" == "" (
+if "%cbf_host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -667,7 +667,7 @@ if "%cbf_ip%" == "" (
   exit/b
 )
 
-if "%cbf_host_name%" == "" (
+if "%cbf_host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -715,7 +715,7 @@ if "%cbf_ip%" == "" (
   exit/b
 )
 
-if "%cbf_host_name%" == "" (
+if "%cbf_host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -753,12 +753,12 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_host_name=
+set cbf_host=
 set cbf_ip=
 
 call ni %2
 
-if "%cbf_host_name%" == "" (
+if "%cbf_host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -823,7 +823,7 @@ if "%cbf_ip%" == "" (
   exit/b
 )
 
-if not defined cbf_host_name (
+if not defined cbf_host (
   echo.
   echo * Error: Cbf_hostname is not defined. Nov-5-2019 1:42 PM
   exit/b
@@ -886,7 +886,7 @@ if "%cbf_ip%" == "" (
   exit/b
 )
 
-if not defined cbf_host_name (
+if not defined cbf_host (
   echo.
   echo * Error: Cbf_hostname is not defined. Nov-5-2019 1:42 PM
   exit/b
@@ -946,7 +946,7 @@ if "%cbf_ip%" == "" (
   exit/b
 )
 
-if not defined cbf_host_name (
+if not defined cbf_host (
   echo.
   echo * Error: Cbf_hostname is not defined. Nov-26-2019 2:44 PM
   exit/b

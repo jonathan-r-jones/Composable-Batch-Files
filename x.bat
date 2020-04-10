@@ -122,6 +122,15 @@ if not "%cbf_application%" == "" (
   exit/b
 )
 
+if not "%cbf_docx%" == "" (
+  if exist "%cbf_docx%" (
+    set cbf_filename=%cbf_docx%
+    call m double_click
+    call r
+    exit/b
+  )
+)
+
 if not "%cbf_filename%" == "" (
   if exist "%cbf_filename%" (
     xfn %1>nul
@@ -142,15 +151,6 @@ if not "%cbf_url%" == "" (
 if not "%cbf_png%" == "" (
   if exist "%cbf_png%" (
     set cbf_filename=%cbf_png%
-    call m double_click
-    call r
-    exit/b
-  )
-)
-
-if not "%cbf_docx%" == "" (
-  if exist "%cbf_docx%" (
-    set cbf_filename=%cbf_docx%
     call m double_click
     call r
     exit/b

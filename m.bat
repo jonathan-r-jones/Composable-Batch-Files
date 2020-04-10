@@ -2927,7 +2927,9 @@ exit/b
 
 ::_
 
-:cenv
+:cev
+
+:clea
 
 :env_c
 
@@ -2956,13 +2958,13 @@ set cbf_back=
 
 set cbf_clone_url=
 
-set cbf_confluence_url=
+set cbf_conf=
 
 rem set cbf_default_browser=
 
 rem set cbf_default_text_editor=
 
-set cbf_excel_filename=
+set cbf_docx=
 
 set cbf_expanded_variable=
 
@@ -2972,17 +2974,19 @@ set cbf_fc_path=
 
 set cbf_filename=
 
-set cbf_github_url=
+set cbf_gurl=
 
-set cbf_host_name=
+set cbf_host=
 
 set cbf_instance_id=
 
 set cbf_ip=
 
-set cbf_jenkinsfile=
+set cbf_jf=
 
 set cbf_jenkins_url=
+
+set cbf_jpg=
 
 set cbf_parameter=
 
@@ -2996,6 +3000,8 @@ rem When this is uncommented, it causes issues. Dec-20-2019
 rem set cbf_repo=
 
 set cbf_url=
+
+set cbf_xlsx=
 
 exit/b
 
@@ -4232,7 +4238,6 @@ set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\TJ.asc"
 set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CI.asc"
 set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\TR.asc"
 set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\OC.asc"
-set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\n.bat"
 
 attrib +r "%share-zone%\copy of cc.asc"
 
@@ -5256,7 +5261,7 @@ if %errorlevel% gtr 0 (
   exit/b 1
 )
 
-if "%cbf_host_name%" == "" (
+if "%cbf_host%" == "" (
   echo.
   echo * Error: Host name is blank for server alias "%2".
   exit/b 1

@@ -35,7 +35,7 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1 (Optional): Filename alias to run. This file will try to open ^
-the cbf_excel_filename first, and if that is not found, it will try to open the ^
+the cbf_xlsx first, and if that is not found, it will try to open the ^
 cbf_filename. If left blank, Excel is opened.
 
 echo.
@@ -49,7 +49,7 @@ exit/b
 
 :validate_input
 
-set cbf_excel_filename=
+set cbf_xlsx=
 
 call n %1
 
@@ -59,7 +59,7 @@ if %errorlevel% gtr 0 (
   exit/b 1
 )
 
-if not defined cbf_excel_filename (
+if not defined cbf_xlsx (
   echo.
   echo * The cbf_exel_filename is not defined for "%1". Nov-1-2019 8:58 PM
   goto try_using_cbf_filename
@@ -71,7 +71,7 @@ if not exist "%cbf_filename%" (
   goto try_using_cbf_filename
 )
 
-set cbf_filename=%cbf_excel_filename%
+set cbf_filename=%cbf_xlsx%
 
 goto main_function
 

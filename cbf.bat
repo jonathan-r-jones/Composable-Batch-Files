@@ -63,8 +63,8 @@ echo     ch  Chef command line utility
 echo    clc  Simple calculator
 echo     cn  Git cloning, based entirely on the nickname parameter
 echo    cng  Git cloning, generic version
-echo     co  Surf to Confluence websites
 echo    col  Shell window colors operations
+echo   conf  Surf to Confluence websites
 echo     cp  Copy files using function routing
 echo   cpcf  Use file in the current folder to "save as" to a filename alias
 echo   cpcp  Copy file in the current directory to nickname-specified path
@@ -103,7 +103,7 @@ echo     fn  Filenames dictionary layer of abstraction
 echo     fs  Filenames search
 echo    fsp  Perennial filenames search
 echo    fst  Filenames search with a td parameter
-echo     fx  Use dynamic CBF variables to open a file in any application
+echo     fx  Use dynamic CBF variables to execute a cbf variable in any application.
 echo      g  Git
 echo     gg  Git Gui helper Has TD parameter
 echo     gl  Glossary of terms used in CBF
@@ -119,6 +119,7 @@ echo     lp  Load CBF_Path to the clipboard
 echo    lpf  Load CBF_Filename of passed in alias onto the clipboard
 echo   lpfc  Load CBF_Filename contents to the clipboard
 echo  lpfwp  Load CBF_Filename without path of passed in alias onto the clipboard
+echo    lpx  Use a dynamic variable to copy a cbf variable to the clipboard
 echo      m  Perform miscellaneous tasks using a function routing style
 echo    mav  Maven
 echo    mcd  Make and navigate (cd) to a folder

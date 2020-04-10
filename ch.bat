@@ -697,7 +697,6 @@ set cbf_cookbook_path=%cbf_path%
 
 call td chef
 
-echo.
 @echo on
 knife cookbook upload cart -o c:\cookbook_test
 @echo off
@@ -705,6 +704,8 @@ knife cookbook upload cart -o c:\cookbook_test
 exit/b
 
 >< >< Footnote:
+
+Tip: Before uploading the cookbook, it's probably a good idea to update the cookbook version #.
 
 Result:
 

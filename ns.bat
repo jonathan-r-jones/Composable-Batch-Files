@@ -121,7 +121,7 @@ exit/b
 
 :validate_user_input
 
-set cbf_host_name=
+set cbf_host=
 
 call un %1
 
@@ -140,8 +140,8 @@ if %errorlevel% == 1 (
 
 set cbf_target=%cbf_url:https://=%
 
-if not "%cbf_host_name%" == "" (
-  set cbf_target=%cbf_host_name%.irmnet.ds2.dhs.gov
+if not "%cbf_host%" == "" (
+  set cbf_target=%cbf_host%.irmnet.ds2.dhs.gov
 ) else if "%cbf_url%" == "" (
   echo.
   echo * Error: Cbf_url is unassigned for "%1".

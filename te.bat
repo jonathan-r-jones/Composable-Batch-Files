@@ -35,7 +35,7 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-rem qq
+rem                                   qq1
 set parameter_1=Parameter 1 (Optional): 
 
 set parameter_2=Parameter 2 (Optional): 
@@ -68,12 +68,6 @@ exit/b
 
 :main_function
 
-set fp=* 
-
-echo.
-echo %fp%
-
-echo.
 rem qq1
 
 

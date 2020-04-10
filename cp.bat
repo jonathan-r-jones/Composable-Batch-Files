@@ -414,7 +414,7 @@ echo %fp%
 
 call n j
 
-set source_filename=%cbf_jenkinsfile%
+set source_filename=%cbf_jf%
 
 call n jft
 
@@ -444,7 +444,7 @@ set source_filename=%cbf_filename%
 
 call n j
 
-set destination_filename=%cbf_jenkinsfile%
+set destination_filename=%cbf_jf%
 
 echo.
 xcopy /y %source_filename% %destination_filename%

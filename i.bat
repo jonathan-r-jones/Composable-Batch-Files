@@ -80,9 +80,10 @@ if not "%cbf_clone_url%" == "" (
   echo * Clone URL: %cbf_clone_url%
 )
 
-if not "%cbf_confluence_url%" == "" (
+// Confluence URL
+if not "%cbf_conf%" == "" (
   echo.
-  echo * Filename: %cbf_confluence_url%
+  echo * Filename: %cbf_conf%
 )
 
 if not "%cbf_csv%" == "" (
@@ -102,11 +103,6 @@ if not "%%cbf_default_text_editor%" == "" (
   rem echo * Default text editor: %cbf_default_text_editor%
 )
 
-if not "%cbf_excel_filename%" == "" (
-  echo.
-  echo * Excel Filename: %cbf_excel_filename%
-)
-
 if not "%cbf_expanded_variable%" == "" (
   echo.
   echo * Expanded Variable: %cbf_expanded_variable%
@@ -122,14 +118,14 @@ if not "%cbf_filename%" == "" (
   echo * Filename: %cbf_filename%
 )
 
-if not "%cbf_github_url%" == "" (
+if not "%cbf_gurl%" == "" (
   echo.
-  echo * Github URL: %cbf_github_url%
+  echo * Github URL: %cbf_gurl%
 )
 
-if not "%cbf_host_name%" == "" (
+if not "%cbf_host%" == "" (
   echo.
-  echo * Host name: %cbf_host_name%
+  echo * Host name: %cbf_host%
 )
 
 if not "%cbf_instance_id%" == "" (
@@ -142,14 +138,19 @@ if not "%cbf_ip%" == "" (
   echo * IP Address: %cbf_ip%
 )
 
-if not "%cbf_jenkinsfile%" == "" (
+if not "%cbf_jf%" == "" (
   echo.
-  echo * Jenkinsfile: %cbf_jenkinsfile%
+  echo * Jenkinsfile: %cbf_jf%
 )
 
 if not "%cbf_jenkins_url%" == "" (
   echo.
   echo * Jenkins URL: %cbf_jenkins_url%
+)
+
+if not "%cbf_jpg%" == "" (
+  echo.
+  echo * JPG: %cbf_jpg%
 )
 
 if not "%cbf_parameter%" == "" (
@@ -183,6 +184,7 @@ if not "%cbf_url%" == "" (
   echo * URL: %cbf_url%
 )
 
+// Excel File
 if not "%cbf_xlsx%" == "" (
   echo.
   echo * XLSX: %cbf_xlsx%

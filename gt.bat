@@ -61,7 +61,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* Set URL.
 
-set cbf_github_url=
+set cbf_gurl=
 set cbf_url=
 
 call n %1
@@ -73,12 +73,12 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_github_url%" == "" (
+if "%cbf_gurl%" == "" (
   echo. 
   echo * GitHub url not found, so defaulting to cbf_url.
   set cbf_parameter=%cbf_url%
 ) else (
-  set cbf_parameter=%cbf_github_url%
+  set cbf_parameter=%cbf_gurl%
 )
 
 goto set_browser

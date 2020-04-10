@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Use dynamic CBF variables to open a file in any application.
+set filep=* Use dynamic CBF variables to execute a cbf variable in any application.
 
 
 
@@ -56,23 +56,26 @@ echo.
 echo Examples:
 
 echo.
-echo jx java 1583 no
+echo %0 java 1583 no
 
 echo.
-echo jx ts 1583 ij
+echo %0 ts 1583 ij
 
 echo.
-echo jx html 1583 np
+echo %0 html 1583 np
 
 echo.
-echo jx filename ma sm
+echo %0 filename ma sm
 
 echo.
-echo jx csv 1583 ex
+echo %0 csv 1583 ex
 
 rem This would actually work if the function check for a "file's" existence, which a URL is not.
 echo.
-echo jx github_url jj fx 
+echo %0 github_url jj fx 
+
+echo.
+echo %0 conf rp kr
 
 exit/b
 
@@ -82,18 +85,13 @@ exit/b
 
 :main_function
 
-echo.
-echo %filep%
-
 call m clear_errorlevel_silently>nul
 
 call m rese
 
 call n %2
 
-if %errorlevel% gtr 0 (
-  exit/b
-)
+if %errorlevel% gtr 0 exit/b
 
 call m compose_variable %1
 
@@ -113,9 +111,9 @@ rem echo.
 rem echo * Expanded variable: %cbf_expanded_variable%
 
 if not exist "%cbf_expanded_variable%" (
-  echo.
-  echo * Error: CBF Expanded variable "%cbf_expanded_variable%" does not exist.
-  exit/b
+  rem echo.
+  rem echo * Error: CBF Expanded variable "%cbf_expanded_variable%" does not exist.
+  rem exit/b
 )
 
 set cbf_parameter=%cbf_expanded_variable%

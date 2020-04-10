@@ -104,8 +104,6 @@ exit/b
 
 :main_function
 
-:p
-
 echo %cbf_path% | clip
 
 echo.

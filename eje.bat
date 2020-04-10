@@ -48,7 +48,7 @@ if "%~1" == "" (
   goto main_function
 )
 
-set cbf_jenkinsfile=
+set cbf_jf=
 
 call fn %1
 
@@ -59,7 +59,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_jenkinsfile%" == "" goto cbf_jenkinsfile_is_not_set
+if "%cbf_jf%" == "" goto cbf_jf_is_not_set
 
 goto finish_validation
 
@@ -67,9 +67,9 @@ goto finish_validation
 
 :_
 
-:cbf_jenkinsfile_is_not_set
+:cbf_jf_is_not_set
 
-set cbf_jenkinsfile=%cbf_filename%
+set cbf_jf=%cbf_filename%
 
 
 
@@ -77,9 +77,9 @@ set cbf_jenkinsfile=%cbf_filename%
 
 :finish_validation
 
-if not exist "%cbf_jenkinsfile%" (
+if not exist "%cbf_jf%" (
   echo.
-  echo * Error: Could not find "%cbf_jenkinsfile%".
+  echo * Error: Could not find "%cbf_jf%".
   exit/b
 )
 
@@ -89,7 +89,7 @@ if not exist "%cbf_jenkinsfile%" (
 
 :main_function
 
-call e %cbf_jenkinsfile% -e
+call e %cbf_jf% -e
 
 exit/b
 

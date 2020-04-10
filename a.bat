@@ -4270,6 +4270,32 @@ exit/b
 
 ::_
 
+:rebo
+
+set fp=* Reboot instance "%2".
+
+rem lu: Apr-9-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% gtr 0 exit/b
+
+echo.
+call aws ec2 reboot-instances --instance-ids %cbf_instance_id%
+
+rem call %0 tag %2 AutoStopStartInstance True
+
+call %0 tag %2 Comment None
+                                       
+exit/b
+
+
+
+::_
+
 :stop
 
 set fp=* Stop instance "%2".
