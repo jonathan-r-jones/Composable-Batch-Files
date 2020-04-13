@@ -36,8 +36,13 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Group you are searching.
 
+set parameter_2=Parameter 2: Search criterion. Double quotes must be used if spaces are present.
+
 echo.
 echo %parameter_1%
+
+echo.
+echo %parameter_2%
 
 echo.
 echo Batch file style: Function routing.
@@ -56,7 +61,6 @@ exit/b
 
   __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
-
 
 
 

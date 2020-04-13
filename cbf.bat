@@ -74,6 +74,7 @@ echo    cpp  Copies file from a cbf_path nickname
 echo   cppp  Copy file from alias path param 1 to alias path param 2
 echo   cpte  Copy te.bat to a new batch file
 echo     cs  File contents search
+echo   cs_c  Cs.bat consumer
 echo    cst  File contents search with td parameter
 echo     cu  Curl hooked up to the nicknames dictionary
 echo    cur  Curl with atomic functions
@@ -178,6 +179,7 @@ echo     tf  Terraform
 echo     tk  Taskkill
 echo     tl  Tasklist
 echo     ty  Type command for use on evaluated filename parameter
+echo    typ  Use type command to view nickname-specified file and pipe output to a file.
 echo     un  URL nicknames dictionary layer of abstraction
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad

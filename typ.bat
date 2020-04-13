@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Use type command to view nickname-specified file.
+set filep=* Use type command to view nickname-specified file and pipe output to a file.
 
 echo.
 echo %filep%
@@ -132,9 +132,20 @@ goto main_function
 
 :main_function
 
-type "%cbf_filename%"
+set test_results_filename=%temp%\%~1_type_results.txt
 
-echo.
+echo.>"%test_results_filename%"
+echo Contents of: "%cbf_filename%">>"%test_results_filename%"
+echo.>>"%test_results_filename%"
+type "%cbf_filename%">>"%test_results_filename%"
+
+set cbf_parameter=%test_results_filename%
+
+call an ie
+
+call r
+
+exit/b
 
 
 
