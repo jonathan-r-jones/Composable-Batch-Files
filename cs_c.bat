@@ -51,10 +51,10 @@ echo.
 echo Examples:
 
 echo.
-echo cs_c caco
+echo cs_c caco restart
 
 echo.
-echo cs_c ma
+echo cs_c ma "search enrollee"
 
 exit/b
 

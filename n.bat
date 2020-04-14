@@ -6130,6 +6130,16 @@ exit/b
 
 :acco
 
+:icc
+
+:cac
+
+:sr74
+
+:sr75
+
+:sr76
+
 :pass-through
 
 set fp=* Pass through.
@@ -6399,7 +6409,7 @@ exit/b
 
 ::_
 
-:cas
+:caw
 
 :cli_web
 
@@ -8241,27 +8251,6 @@ echo.
 echo %fp%
 
 set cbf_npl=1037
-
-exit/b
-
-
-
-:_
-
-:klog
-
-set fp=* Kitchen Log.
-
-rem lu: Apr-30-2019
-
-echo.
-echo %fp%
-
-call n cc
-
-set cbf_filename=%cbf_path%\.kitchen\logs\kitchen.log
-
-set cbf_path=%cbf_path%\.kitchen\logs
 
 exit/b
 
@@ -12427,6 +12416,48 @@ echo.
 echo %fp%
 
 set cbf_path=%temp%
+
+exit/b
+
+
+
+:_+ Chef Logs
+
+
+
+::_
+
+:klog
+
+set fp=* Kitchen Log.
+
+rem lu: Apr-30-2019
+
+echo.
+echo %fp%
+
+call n cc
+
+set cbf_filename=%cbf_path%\.kitchen\logs\kitchen.log
+
+set cbf_path=%cbf_path%\.kitchen\logs
+
+exit/b
+
+
+
+::_
+
+:chlog
+
+set fp=* Example chef log.
+
+rem lu: Apr-13-2020
+
+echo.
+echo %fp%
+
+set cbf_filename=c:\cookbook_test\cart\.kitchen\logs\sr75-centos-7.log
 
 exit/b
 

@@ -80,10 +80,9 @@ if not "%cbf_clone_url%" == "" (
   echo * Clone URL: %cbf_clone_url%
 )
 
-// Confluence URL
 if not "%cbf_conf%" == "" (
   echo.
-  echo * Filename: %cbf_conf%
+  echo * Confluence: %cbf_conf%
 )
 
 if not "%cbf_csv%" == "" (
@@ -184,7 +183,6 @@ if not "%cbf_url%" == "" (
   echo * URL: %cbf_url%
 )
 
-// Excel File
 if not "%cbf_xlsx%" == "" (
   echo.
   echo * XLSX: %cbf_xlsx%

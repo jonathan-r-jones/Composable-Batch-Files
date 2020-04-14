@@ -4252,10 +4252,7 @@ echo %fp%
 
 call m validate_instance %2
 
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently 
-  exit/b
-)
+if %errorlevel% gtr 0 exit/b
 
 echo.
 call aws ec2 start-instances --instance-ids %cbf_instance_id%
@@ -4272,12 +4269,14 @@ exit/b
 
 :rebo
 
-set fp=* Reboot instance "%2".
+set fp=* Reboot instance "%2". This doesn't seem to work. Apr-13-2020
 
 rem lu: Apr-9-2020
 
 echo.
 echo %fp%
+
+exit/b
 
 call m validate_instance %2
 
@@ -4532,6 +4531,10 @@ exit/b
 
 :ast
 
+:slee
+
+:sleep
+
 set fp=* Add sleep tags to %2.
 
 echo.
@@ -4544,8 +4547,6 @@ if "%~2" == "" (
 )
 
 set cbf_instance_alias=%2
-
-call m clear_errorlevel_silently 
 
 call a tag %cbf_instance_alias% AutoStartTime 6:00
 

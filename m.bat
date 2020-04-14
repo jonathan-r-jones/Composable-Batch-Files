@@ -5362,7 +5362,7 @@ if "%~2" == "" (
 
 set cbf_instance_id=
 
-call n %2>1
+call n %2>nul
 
 if %errorlevel% gtr 0 (
   echo.

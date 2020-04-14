@@ -145,24 +145,6 @@ exit/b
 
 :_
 
-:kd
-
-set fp=* Kitchen diagnose.
-
-rem lu: Apr-30-2019
-
-echo.
-echo %fp%
-
-echo.
-kitchen diagnose --all
-
-exit/b
-
-
-
-:_
-
 :kdest
 
 set fp=* Kitchen destroy.
@@ -246,24 +228,6 @@ echo %fp%
 
 echo.
 chef generate
-
-exit/b
-
-
-
-:_
-
-:kda
-
-set fp=* Kitchen diagnose all.
-
-rem lu: May-2-2019
-
-echo.
-echo %fp%
-
-echo.
-kitchen diagnose --all
 
 exit/b
 
@@ -601,6 +565,8 @@ set fp=* Kitchen converge.
 
 rem lu: Nov-25-2019
 
+cls
+
 echo.
 echo %fp%
 
@@ -715,6 +681,36 @@ Uploaded 1 cookbook.
 
 
 
+::_
+
+:upcac
+
+set fp=* Upload the Cart ActiveMQ cookbook.
+
+rem lu: Apr-13-2020
+
+echo.
+echo %fp%
+
+call n cac
+set cbf_cookbook_path=%cbf_path%
+
+call td chef
+
+@echo on
+knife cookbook upload cart_activemq_cookbook -o %cbf_cookbook_path%
+@echo off
+
+exit/b
+
+>< >< Footnote:
+
+Tip: Before uploading the cookbook, it's probably a good idea to update the cookbook version #.
+
+Result:
+
+
+
 :_
 
 :stat
@@ -727,7 +723,27 @@ echo.
 echo %fp%
 
 echo.
-knife status --run-list
+knife status --run-list --no-color
+
+exit/b
+
+
+
+:_
+
+:kd
+
+:kda
+
+set fp=* Kitchen diagnose all.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+echo.
+kitchen diagnose --all
 
 exit/b
 
