@@ -10459,7 +10459,7 @@ rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized b
 
 set cbf_conf=https://confluence.ice.dhs.gov/display/CART/Do+an+Automated+Upload+of+the+API+and+UI+Artifacts+to+Nexus
 
-set cbf_xlsx=%cbf_path%\Release Information.xlsx
+set cbf_ex=%cbf_path%\Release Information.xlsx
 
 set cbf_jpg=%cbf_path%\release process.jpg
 
@@ -10574,7 +10574,7 @@ set cbf_path=%cbf_path%\database backups
 
 rem >< >< >< >< >< ><  Alphabetical below here.
 
-set cbf_docx=%cbf_path%\How to backup and restore a Cart database.docx
+set cbf_wo=%cbf_path%\How to backup and restore a Cart database.docx
 
 set cbf_filename=%cbf_path%\How to backup and restore a Cart database.docx
 
@@ -12375,7 +12375,7 @@ rem lu: Apr-2-2020
 echo.
 echo %fp%
 
-set cbf_xlsx=%dropbox%\backups\mission\mission at home.xlsx
+set cbf_ex=%dropbox%\backups\mission\mission at home.xlsx
 
 exit/b
 

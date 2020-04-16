@@ -2964,11 +2964,11 @@ rem set cbf_default_browser=
 
 rem set cbf_default_text_editor=
 
-set cbf_docx=
+set cbf_wo=
 
 set cbf_expanded_variable=
 
-set cbf_xlsx=
+set cbf_ex=
 
 set cbf_fc_path=
 
@@ -3001,7 +3001,7 @@ rem set cbf_repo=
 
 set cbf_url=
 
-set cbf_xlsx=
+set cbf_ex=
 
 exit/b
 

@@ -122,9 +122,9 @@ if not "%cbf_application%" == "" (
   exit/b
 )
 
-if not "%cbf_docx%" == "" (
-  if exist "%cbf_docx%" (
-    set cbf_filename=%cbf_docx%
+if not "%cbf_wo%" == "" (
+  if exist "%cbf_wo%" (
+    set cbf_filename=%cbf_wo%
     call m double_click
     call r
     exit/b
@@ -163,15 +163,15 @@ if not "%cbf_path%" == "" (
   )
 )
 
-if not "%cbf_xlsx%" == "" (
-  if exist "%cbf_xlsx%" (
-    set cbf_filename=%cbf_xlsx%
+if not "%cbf_ex%" == "" (
+  if exist "%cbf_ex%" (
+    set cbf_filename=%cbf_ex%
     call m double_click
     call r
     exit/b
   ) else (
     echo.
-    eccho Could not find cbf_xlsx.
+    eccho Could not find cbf_ex.
   )
 )
 

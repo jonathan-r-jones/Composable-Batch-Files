@@ -2762,6 +2762,26 @@ from tag, create tag from branch, create a branch from a tag, create branch from
 
 ::_
 
+:cbbt110
+
+set fp=* Create a branch based on a tag.
+
+rem lu: Apr-16-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout -b release/v1100 tags/v1.10.0
+
+git push --set-upstream origin release/v1100
+
+exit/b
+
+
+
+::_
+
 :cbbt19
 
 set fp=* Create a branch based on a tag.
