@@ -94,7 +94,7 @@ echo      e  Uses mx.bat then me.bat to decipher which file to edit (Or exit com
 echo     ed  Edit a file abstraction layer
 echo    edr  Edit a relative path constucted filename
 echo    edx  Edit a file
-echo    eje  Edit Jenkinsfile of an alias
+echo    ejf  Edit Jenkinsfile of an alias
 echo     el  Edit log file of an alias
 echo     es  Edit settings file of an alias
 echo     ex  Run excel with or without a filename alias parameter

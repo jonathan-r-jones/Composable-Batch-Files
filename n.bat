@@ -6140,6 +6140,8 @@ exit/b
 
 :sr76
 
+:juseconf
+
 :pass-through
 
 set fp=* Pass through.
@@ -10368,6 +10370,25 @@ echo.
 echo %fp%
 
 call n s
+
+set cbf_path=%cbf_path%\Screenshots
+
+exit/b
+
+
+
+::_
+
+:cscsh
+
+set fp=* Cade screenshots.
+
+rem lu: Apr-17-2020
+
+echo.
+echo %fp%
+
+call pn cade
 
 set cbf_path=%cbf_path%\Screenshots
 

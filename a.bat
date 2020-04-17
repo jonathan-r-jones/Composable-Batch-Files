@@ -4326,9 +4326,11 @@ exit/b
 
 :desc
 
-set fp=* Describe a particular instance.
+set fp=* Describe a particular instance: "%2".
 
 rem lu: Oct-31-2019
+
+cls
 
 echo.
 echo %fp%
