@@ -6142,6 +6142,14 @@ exit/b
 
 :juseconf
 
+:rct
+
+:swfq
+
+:swdv
+
+:crc
+
 :pass-through
 
 set fp=* Pass through.
