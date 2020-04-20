@@ -7170,6 +7170,8 @@ exit/b
 
 :ro
 
+:drro
+
 set fp=* Reach out.
 
 rem lu: Sep-15-2018
@@ -7177,7 +7179,9 @@ rem lu: Sep-15-2018
 echo.
 echo %fp%
 
-set cbf_path=%reach out%
+set cbf_path=%dropbox%\savannah\reach out
+
+set cbf_url=https://github.com/jonathan-r-jones/Reach-Out.git
 
 exit/b
 
@@ -7185,9 +7189,9 @@ exit/b
 
 ::_
 
-:drro
+:ldro
 
-:rodr
+:rold
 
 set fp=* Reach out on dropbox.
 
@@ -7196,11 +7200,7 @@ rem lu: Jan-2-2019
 echo.
 echo %fp%
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Reach-Out.git
-
-set cbf_path=%dropbox%\savannah\reach out
-
-set cbf_url=https://github.com/jonathan-r-jones/Reach-Out.git
+set cbf_path=%reach out%
 
 exit/b
 
