@@ -869,7 +869,7 @@ exists."
 ::
 rem They both exist, so delete the closed version.
 
-::if exist mz.asc (if exist mzcl.jpg del /ah /a /f mzcl.jpg)
+::if exist mz.asc (if exist mz.jpg del /ah /a /f mz.jpg)
 
 :How to run a CMAC macro from a batch file. - This worked.
 
@@ -936,7 +936,7 @@ samples.
 :How to do an "AND" statement in a batch file. lk#2
 
  rem They both exist, so delete the closed version.
-if exist mz.asc (if exist mzcl.jpg del /f mzcl.jpg)
+if exist mz.asc (if exist mz.jpg del /f mz.jpg)
 
 :echo y | del c:\0\*.*
 
@@ -10212,16 +10212,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :ref3
 
 set fp=* Reflection 3. Dynamic variable naming.
@@ -10247,6 +10237,16 @@ echo.
 echo * Expanded variable: %cbf_expanded_variable%
 
 exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

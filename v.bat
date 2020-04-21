@@ -1491,6 +1491,33 @@ exit/b
 
 :_
 
+:
+
+set fp=* Test if folder exists. Test folder existence.
+
+rem lu: Apr-21-2020
+
+echo.
+echo %fp%
+
+cd /d %dropbox%\Backups\Savannah
+
+dir | find /i "backups\savannah">nul
+
+if %errorlevel% == 0 echo. & echo * Folder EXISTS.
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: The Backups\Savannah folder does NOT exist on this computer.
+  exit/b
+)
+
+exit/b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.
