@@ -6150,6 +6150,12 @@ exit/b
 
 :crc
 
+:rsi
+
+:csc
+
+:usq
+
 :pass-through
 
 set fp=* Pass through.
@@ -7542,7 +7548,7 @@ exit/b
 
 :ctfo
 
-:cts
+:ctsf
 
 set fp=* Craig's Terraform State file - old.
 

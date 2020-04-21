@@ -761,4 +761,29 @@ exit/b
 
 
 
+:_
+
+:csc
+
+set fp=* Gradle task to build the client Maven project from the Swagger definition file.
+
+rem lu: Apr-21-2020
+
+echo.
+echo %fp%
+
+call td csc
+
+gradlew generateSwaggerCodeCartApi
+
+cd build/swagger-code-cartApi
+
+rem The jar will be installed to your local .m2. See configuration discussion below.
+mvn clean install -Dmaven.javadoc.skip=true
+rem qq-1
+
+exit/b
+
+
+
 :_ (!efgr, !rfsp) (mov-6)

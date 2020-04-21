@@ -10212,16 +10212,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :ref3
 
 set fp=* Reflection 3. Dynamic variable naming.
@@ -10245,6 +10235,64 @@ call m compose_variable %1
 
 echo.
 echo * Expanded variable: %cbf_expanded_variable%
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Test comment.
+
+rem lu: Apr-21-2020
+
+echo.
+echo %fp%
+
+echo.
+rem hi
+rm hi
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Testing gradlew.bat.
+
+rem lu: Apr-21-2020
+
+echo.
+echo %fp%
+
+set DIRNAME=xx
+rem set DIRNAME=%~dp0
+set dirname=.
+set dirname=%~n0
+set dirname=%0
+
+set JAVA_EXE=java.exe
+%JAVA_EXE% -version >NUL 2>&1
+
+echo.
+rem echo %dirname%
+echo %java_exe%
+rem qq-1
 
 exit/b
 

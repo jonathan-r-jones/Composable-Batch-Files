@@ -55,6 +55,9 @@ echo Examples:
 echo.
 echo %0 hostname sr66
 
+echo.
+echo %0 url jjgit
+
 exit/b
 
 

@@ -35,6 +35,8 @@ exit/b
 
 :main_function
 
+cls
+
 echo.
 echo * List of Composable Batch Files (CBF).
 echo.

@@ -298,7 +298,9 @@ exit/b
 
 ::_
 
-:tP
+:tp
+
+:trp
 
 :treep
 
