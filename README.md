@@ -6,6 +6,15 @@ Falcon script.
 
 
 
+## Bottom Line Up Front
+
+The function is the conceptual building block of composable batch files (cbf). A batch file 
+should be composed of functions like the following.
+
+![](building_block_2.PNG)
+
+
+
 ## Table of Contents
 
 Part I - The Problem: Many batch files have spaghetti code.
