@@ -11,7 +11,7 @@ Falcon script.
 The function is the conceptual building block of composable batch files (cbf). A batch file 
 should be composed of functions like the following.
 
-![](building_block_2.PNG)
+![](building_block_2.png)
 
 
 
