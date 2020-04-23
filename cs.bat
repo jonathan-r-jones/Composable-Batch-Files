@@ -84,6 +84,18 @@ if not "%~6" == "" (
   set file_type=%file_type% *.%6
 )
 
+if not "%~7" == "" (
+  set file_type=%file_type% *.%7
+)
+
+if not "%~8" == "" (
+  set file_type=%file_type% *.%8
+)
+
+if not "%~9" == "" (
+  set file_type=%file_type% *.%9
+)
+
 rem echo.
 rem echo file_type: %file_type%
 rem exit/b

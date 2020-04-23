@@ -65,7 +65,7 @@ echo   dynamically cons-  An environment variable that can be dynamically create
 echo   tructed variable   
 echo          error code  fn.bat returns an error code of 2 for file not exists.
 echo  entangled variable  A cbf variable associated with a particle batch file, e.g. cbf_path
-                          and td.bat.
+echo                      and td.bat.
 echo  evaluated filename  Filename, filename alias or batch file prefix for a batch file 
 echo    parameter         that lives in either the CBF or Share-zone folder.
 echo               filep  File purpose

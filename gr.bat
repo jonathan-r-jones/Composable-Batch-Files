@@ -17,11 +17,9 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%~1" == "" goto bfp_wtd
+if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
-
-if not "%~2" == "" call td %~2
 
 goto %1
 
@@ -790,6 +788,8 @@ set fp=* Gradle task to build the client Maven project from the Swagger definiti
 rem lu: Apr-21-2020
 
 rem: You need to disconnect from the VPN for this function to work.
+
+cls
 
 echo.
 echo %fp%

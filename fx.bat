@@ -92,6 +92,9 @@ echo %0 m2 csc of
 echo.
 echo %0 pom csc me
 
+echo.
+echo %0 jf ma ie
+
 exit/b
 
 

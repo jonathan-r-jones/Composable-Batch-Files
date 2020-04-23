@@ -47,7 +47,10 @@ echo.
 echo %parameter_2%
 
 echo.
-echo Batch file style: Function routing.
+echo Batch file style: Single task
+
+echo.
+echo Entangled variable: cbf_fc_path
 
 echo.
 echo Examples:

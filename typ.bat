@@ -55,6 +55,12 @@ set parameter_1=Parameter 1: Filename calculus to view in a read-only fashion.
 echo.
 echo %parameter_1%
 
+echo.
+echo Examples:
+
+echo.
+echo typ ma
+
 exit/b
 
 

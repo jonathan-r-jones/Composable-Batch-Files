@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto %1
+goto main_function
 
 
 
@@ -66,19 +66,19 @@ exit/b
 
 :_
 
-:ma
+:main_function
 
-call cs %2 html java json ts xml yml
+set cbf_cs=
 
-exit/b
+call n %1
 
+if "%cbf_cs%" == "" (
+  echo.
+  echo * Error: No cbf_cs is associated with "%1".
+  exit/b
+)
 
-
-:_
-
-:caco
-
-call cs %2 erb json rb xml yml
+call cs %2 %cbf_cs%
 
 exit/b
 

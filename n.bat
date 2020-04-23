@@ -6158,6 +6158,8 @@ exit/b
 
 :1257
 
+:eds
+
 :pass-through
 
 set fp=* Pass through.

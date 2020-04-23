@@ -294,6 +294,8 @@ rem lu: Apr-23-2020
 
 rem In my experience, you need to disconnect from the VPN to get this to work.
 
+cls
+
 echo.
 echo %fp%
 
