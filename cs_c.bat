@@ -68,7 +68,7 @@ exit/b
 
 :ma
 
-call cs %2 html java ts xml yml
+call cs %2 html java json ts xml yml
 
 exit/b
 

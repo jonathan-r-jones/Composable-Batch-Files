@@ -47,6 +47,12 @@ echo Parameter 1: Path nickname, the name of a child folder or ".." which emulat
 echo.
 echo Parameter 2 (Optional): If "p" is specified, go to the parent folder of parameter 1.
 
+echo.
+echo Batch file style: Single task.
+
+echo.
+echo Entangled variable: cbf_path.
+
 exit/b
 
 

@@ -45,7 +45,7 @@ echo.
 echo %parameter_2%
 
 echo.
-echo Batch file style: Alias routing.
+echo Batch file style: Single task.
 
 exit/b
 

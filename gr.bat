@@ -763,24 +763,43 @@ exit/b
 
 :_
 
+:wrap
+
+set fp=* Gradle Wrapper. If gradelw doesn't work, try running "gradle wrapper" at the command line.
+
+rem lu: Apr-22-2020
+
+rem Run gradle wrapper to get gradle w to work.
+
+echo.
+echo %fp%
+
+echo.
+gradle wrapper
+
+exit/b
+
+
+
+:_
+
 :csc
 
 set fp=* Gradle task to build the client Maven project from the Swagger definition file.
 
 rem lu: Apr-21-2020
 
+rem: You need to disconnect from the VPN for this function to work.
+
 echo.
 echo %fp%
 
 call td csc
 
-gradlew generateSwaggerCodeCartApi
+rem Gradlew didn't initially work, but now it does after I ran gradle wrapper. Apr-22-2020
+call gradlew generateSwaggerCodeCartApi
 
-cd build/swagger-code-cartApi
-
-rem The jar will be installed to your local .m2. See configuration discussion below.
-mvn clean install -Dmaven.javadoc.skip=true
-rem qq-1
+rem call gradle generateSwaggerCodeCartApi
 
 exit/b
 

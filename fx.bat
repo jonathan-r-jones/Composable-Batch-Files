@@ -72,10 +72,25 @@ echo %0 csv 1583 ex
 
 rem This would actually work if the function check for a "file's" existence, which a URL is not.
 echo.
-echo %0 github_url jj fx 
+echo %0 gurl jj fx 
 
 echo.
 echo %0 conf rp kr
+
+echo.
+echo %0 yml csc me
+
+echo.
+echo %0 json csc me
+
+echo.
+echo %0 conf csc kr (same as using "conf csc")
+
+echo.
+echo %0 m2 csc of
+
+echo.
+echo %0 pom csc me
 
 exit/b
 

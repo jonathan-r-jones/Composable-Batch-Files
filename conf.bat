@@ -47,13 +47,9 @@ exit/b
 
 set cbf_conf=
 
-call n %1
+call un %1
 
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Alias not found. (skw Oct-18-2019 1:54 PM)
-  call m clear_errorlevel_silently 
-)
+if %errorlevel% gtr 0 exit/b
 
 if "%cbf_conf%" == "" (
   echo.

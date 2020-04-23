@@ -35,6 +35,9 @@ echo Usage: g [Parameter 1]
 echo.
 echo Parameter 1: Function to execute.
 
+echo.
+echo Batch file style: Function routing.
+
 exit/b
 
 
@@ -276,6 +279,30 @@ echo %fp%
 
 echo.
 mvn clean package
+
+exit/b
+
+
+
+:_
+
+:csc
+
+set fp=* Cart swagger client.
+
+rem lu: Apr-23-2020
+
+rem In my experience, you need to disconnect from the VPN to get this to work.
+
+echo.
+echo %fp%
+
+call td csc
+
+cd build/swagger-code-cartApi
+
+rem The jar will be installed to your local .m2. See configuration discussion below.
+call mvn clean install -Dmaven.javadoc.skip=true
 
 exit/b
 

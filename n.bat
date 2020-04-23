@@ -6156,6 +6156,8 @@ exit/b
 
 :usq
 
+:1257
+
 :pass-through
 
 set fp=* Pass through.
@@ -12493,6 +12495,25 @@ echo.
 echo %fp%
 
 set cbf_filename=c:\cookbook_test\cart\.kitchen\logs\sr75-centos-7.log
+
+exit/b
+
+
+
+:_
+
+:of
+
+:wiex
+
+set fp=* Windows Explorer.
+
+rem lu: Apr-22-2020
+
+echo.
+echo %fp%
+
+set cbf_application=%systemroot%\explorer.exe
 
 exit/b
 
