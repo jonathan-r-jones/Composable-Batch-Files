@@ -288,21 +288,22 @@ exit/b
 
 :csc
 
-set fp=* Cart swagger client.
+set fp=* Run Maven against Cart Swagger client.
 
 rem lu: Apr-23-2020
 
-rem In my experience, you need to disconnect from the VPN to get this to work.
+rem You may need to disconnect from the VPN to get this to work.
 
 cls
 
 echo.
 echo %fp%
 
-call td csc
+call td csc>nul
 
 cd build/swagger-code-cartApi
 
+echo.
 rem The jar will be installed to your local .m2. See configuration discussion below.
 call mvn clean install -Dmaven.javadoc.skip=true
 

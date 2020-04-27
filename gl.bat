@@ -8,9 +8,6 @@
 
 set filep=* Glossary of CBF Terms.
 
-echo.
-echo %filep%
-
 
 
 :_
@@ -38,9 +35,17 @@ exit/b
 
 :main_function
 
+cls
+
+echo.
+echo %filep%
+
 echo.
 echo   Term/Abbreviation  Definition/Description
-echo -------------------  -------------------------------------------------------------------
+echo   __ ___ ______  __  __  ______  ______  ______  ______  ______  ______  ______  ______  
+echo   __)___(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)( 
+echo  (_________)(______  ______)(______)(______)(______)(______)(______)(______)(______)(____
+echo.
 echo                  99  Errorlevel used when a label is not found.
 echo                   a  Application, when used in a batch file name
 echo                 -ag  As a batch file parameter, means run an aggregte, not atomic, func.

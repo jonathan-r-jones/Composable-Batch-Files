@@ -38,7 +38,7 @@ echo Usage: %0 [space separated parameter(s)]
 echo.
 echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.
 
-rem sf -b (switch browser) -g (use cbf_google_url) -j (use cbf_jenkins_url)
+rem sf -b (switch browser) -g (use cbf_google_url) -j (use cbf_je)
 
 echo.
 echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
@@ -61,7 +61,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* Set URL.
 
-set cbf_gurl=
+set cbf_gh=
 set cbf_url=
 
 call n %1
@@ -73,12 +73,12 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_gurl%" == "" (
+if "%cbf_gh%" == "" (
   echo. 
   echo * GitHub url not found, so defaulting to cbf_url.
   set cbf_parameter=%cbf_url%
 ) else (
-  set cbf_parameter=%cbf_gurl%
+  set cbf_parameter=%cbf_gh%
 )
 
 goto set_browser

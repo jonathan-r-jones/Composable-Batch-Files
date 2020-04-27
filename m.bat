@@ -2974,7 +2974,7 @@ set cbf_fc_path=
 
 set cbf_filename=
 
-set cbf_gurl=
+set cbf_gh=
 
 set cbf_host=
 
@@ -2984,7 +2984,7 @@ set cbf_ip=
 
 set cbf_jf=
 
-set cbf_jenkins_url=
+set cbf_je=
 
 set cbf_jpg=
 

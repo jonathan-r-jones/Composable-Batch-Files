@@ -62,14 +62,9 @@ if "%~2" == "" (
   exit/b
 )
 
-call n %2
+call fn %2
 
-if %errorlevel% == 1 (
-  echo.
-  echo * Oct-17-2019 5:41 PM
-  call m clear_errorlevel_silently 
-  exit/b
-)
+if %errorlevel% gtr 0 exit/b
 
 if not exist "%cbf_filename%" (
   echo.
@@ -91,7 +86,9 @@ echo Percent 1: %~1
 echo.
 echo CBF_Filename: %cbf_filename%
 
+@echo on
 xcopy /y "%~1" "%cbf_filename%"
+@echo off
 
 start "bogus" "%cbf_filename%"
 

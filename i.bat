@@ -135,9 +135,9 @@ if not "%cbf_filename%" == "" (
 )
 
 :
-if not "%cbf_gurl%" == "" (
+if not "%cbf_gh%" == "" (
   echo.
-  echo * Github URL: %cbf_gurl%
+  echo * Github URL: %cbf_gh%
 )
 
 :
@@ -165,9 +165,9 @@ if not "%cbf_jf%" == "" (
 )
 
 :
-if not "%cbf_jenkins_url%" == "" (
+if not "%cbf_je%" == "" (
   echo.
-  echo * Jenkins URL: %cbf_jenkins_url%
+  echo * Jenkins URL: %cbf_je%
 )
 
 :

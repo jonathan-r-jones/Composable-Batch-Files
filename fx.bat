@@ -95,7 +95,13 @@ echo %0 pom csc me
 echo.
 echo %0 jf ma ie
 
+echo.
+echo %0 jf csc me
+
+rem qq
 exit/b
+
+(!rfsp) (mov-6)
 
 
 
@@ -142,4 +148,4 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-7)
+:_

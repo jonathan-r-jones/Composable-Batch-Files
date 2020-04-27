@@ -73,4 +73,32 @@ exit/b
 
 
 
+:_
+
+:jf
+
+set fp=* Copy rf_ma Jenkinsfile to the share-zone Jenkinsfile.
+
+rem lu: Apr-24-2020
+
+echo.
+echo %fp%
+
+call n api
+
+set source_filename=%cbf_jf%
+
+call n jfbu
+
+set destination_filename=%cbf_filename%
+
+echo.
+@echo on
+xcopy /y %source_filename% %destination_filename%
+@echo off
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-7)

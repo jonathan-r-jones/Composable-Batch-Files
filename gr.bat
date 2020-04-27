@@ -787,7 +787,7 @@ set fp=* Gradle task to build the client Maven project from the Swagger definiti
 
 rem lu: Apr-21-2020
 
-rem: You need to disconnect from the VPN for this function to work.
+rem You may need to disconnect from the VPN for this function to work.
 
 cls
 

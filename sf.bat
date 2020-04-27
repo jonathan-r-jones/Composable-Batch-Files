@@ -35,7 +35,7 @@ echo Usage: %0 [space separated parameter(s)]
 echo.
 echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.
 
-rem sf -b (switch browser) -g (use cbf_google_url) -j (use cbf_jenkins_url)
+rem sf -b (switch browser) -g (use cbf_google_url) -j (use cbf_je)
 
 echo.
 echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
@@ -85,7 +85,7 @@ goto set_browser
 
 :use_current_url
 
-set fp=* Use current CBF_URL. Nov-13-2019 10:46 AM
+set fp=* Use current CBF_URL. (Apr-24-2020_2_11_PM)
 
 echo.
 echo %fp%

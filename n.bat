@@ -9287,7 +9287,7 @@ set cbf_filename=%cbf_path%\platform\ci\Jenkinsfile
 
 set cbf_jf=%cbf_path%\platform\ci\Jenkinsfile
 
-set cbf_jenkins_url=
+set cbf_je=
 
 set cbf_url=https://github.com/DevTechnology/bdso-gateway/tree/issue15
 
@@ -10150,7 +10150,7 @@ set cbf_application=xx
 
 set cbf_filename=xx
 
-set cbf_jenkins_url=https
+set cbf_je=https
 
 set cbf_path=%cbf_repo%\x
 
@@ -10502,7 +10502,7 @@ set cbf_ex=%cbf_path%\Release Information.xlsx
 
 set cbf_jpg=%cbf_path%\release process.jpg
 
-set cbf_gurl=https://github.ice.dhs.gov/ERO/cart-devops
+set cbf_gh=https://github.ice.dhs.gov/ERO/cart-devops
 
 set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
 
@@ -10646,7 +10646,7 @@ exit/b
 
 :bujf
 
-:jb
+:jfbu
 
 :jft
 
@@ -11605,7 +11605,7 @@ set cbf_filename=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
 
 set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
 
-set cbf_gurl=https://github.com/DevTechnology/dev-library
+set cbf_gh=https://github.com/DevTechnology/dev-library
 
 set cbf_path=%cbf_repo%\deli
 

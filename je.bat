@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Surf to the jenkins url of an alias.
+set filep=* Surf to the Jenkins url of an alias.
 
 
 
@@ -30,6 +30,9 @@ goto validate_input
 :help
 
 echo.
+echo %filep%
+
+echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1 (Optional): Jenkins URL alias.
@@ -45,7 +48,7 @@ exit/b
 
 :validate_input
 
-set cbf_jenkins_url=
+set cbf_je=
 
 call n %1
 
@@ -55,7 +58,7 @@ if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
 )
 
-if "%cbf_jenkins_url%" == "" (
+if "%cbf_je%" == "" (
   echo.
   echo * Error: The CBF Jenkins URL is blank for the alias you specified.
   exit/b
@@ -67,10 +70,9 @@ if "%cbf_jenkins_url%" == "" (
 
 :main_function
 
-echo.
-echo * Main function of %0. Nov-13-2019 10:47 AM
+rem echo * Main function of %0. Nov-13-2019 10:47 AM
 
-set cbf_url=%cbf_jenkins_url%
+set cbf_url=%cbf_je%
 
 call sf
 echo.
