@@ -9776,27 +9776,6 @@ exit/b
 
 :_
 
-:lib
-
-:libs
-
-set fp=* Libs.
-
-rem lu: Aug-15-2019
-
-echo.
-echo %fp%
-
-call n ma
-
-set cbf_path=%cbf_path%\api\build\libs
-
-exit/b
-
-
-
-:_
-
 :dg
 
 set fp=* Datagrip.
@@ -10688,7 +10667,7 @@ exit/b
 
 :jf
 
-set fp=* Jenkinsfile folder.
+set fp=* Jenkinsfile.
 
 rem lu: Jun-11-2019
 
@@ -10696,6 +10675,8 @@ echo.
 echo %fp%
 
 set cbf_path=%share-zone%\jenkinsfiles
+
+set cbf_cs=Jenkinsfile
 
 exit/b
 
@@ -10970,56 +10951,6 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\it\shortcuts\base
-
-exit/b
-
-
-
-:_+ Artifacts (!arts)
-
-
-
-:_
-
-:aaf
-
-:artapi
-
-:arta
-
-:apiart
-
-set fp=* API artifact folder.
-
-rem lu: Jan-17-2020
-
-echo.
-echo %fp%
-
-call n rf_ma
-
-set cbf_path=%cbf_path%\api\build\libs
-
-exit/b
-
-
-
-:_
-
-:artui
-
-:uiart
-
-set fp=* UI artifact.
-
-rem lu: Jan-17-2020
-
-echo.
-echo %fp%
-
-call n rf_ma
-
-set cbf_path=%cbf_path%\icecart-portal-client\dist\icecart-portal-client
 
 exit/b
 
@@ -12516,6 +12447,100 @@ echo.
 echo %fp%
 
 set cbf_application=%systemroot%\explorer.exe
+
+exit/b
+
+
+
+:_
+
+:cqbu
+
+set fp=* Code Quick Backup folder.
+
+rem lu: Apr-27-2020
+
+echo.
+echo %fp%
+
+call n c>nul
+
+set cbf_path=%cbf_path%\Code Quick Backup
+
+exit/b
+
+
+
+:_+ Artifacts (!arts)
+
+
+
+::_
+
+:aaf
+
+:artapi
+
+:arta
+
+:apiart
+
+:lib
+
+:libs
+
+set fp=* API artifact folder.
+
+rem lu: Jan-17-2020
+
+rem skw stores the jar, where the jar, builds the jar
+
+echo.
+echo %fp%
+
+call n rf_ma
+
+set cbf_path=%cbf_path%\api\build\libs
+
+exit/b
+
+
+
+::_
+
+:artui
+
+:uiart
+
+set fp=* UI artifact.
+
+rem lu: Jan-17-2020
+
+echo.
+echo %fp%
+
+call n rf_ma
+
+set cbf_path=%cbf_path%\icecart-portal-client\dist\icecart-portal-client
+
+exit/b
+
+
+
+:_
+
+:winz
+
+:wizi
+
+set fp=* Winzip.
+
+rem lu: Apr-27-2020
+
+echo.
+echo %fp%
+
+set cbf_application=c:\program files\winzip\winzip64.exe
 
 exit/b
 

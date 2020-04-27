@@ -109,10 +109,10 @@ echo.
 echo f kb
 
 echo.
-echo f "rain in spain"
+echo f np "rain in spain"
 
 echo.
-echo f "rain in spain.txt"
+echo f no "rain in spain.txt"
 
 echo.
 echo f sm j1
@@ -124,7 +124,10 @@ echo.
 echo f np j55.txt -d
 
 echo.
-echo f "rain in spain" -d
+echo f me "rain in spain" -d
+
+echo.
+echo %0 winz cart-rest-client-0.0.3-RELEASE.jar
 
 rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookmark: skw qjq3
 

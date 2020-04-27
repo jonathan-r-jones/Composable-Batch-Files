@@ -40,14 +40,47 @@ echo %parameter_1%
 set parameter_2=Parameter 2 (Optional): File type to search. For example, "txt" (without quotes)
 set parameter_2=%parameter_2% would search only txt type files. If left blank, then
 set parameter_2=%parameter_2% the default, which is batch files (*.bat), will be searched.
-set parameter_2=%parameter_2% You can add up to 5 file types to search.
+set parameter_2=%parameter_2% You can add up to 8 file types to search.
 
 echo.
 echo %parameter_2%
 
 rem Pipe the results into a temporary file.
 
+echo.
+echo Examples:
+
+echo.
+echo %1 cs source *.txt
+
+echo.
+echo td
+echo %1 entangled
+
+echo.
+echo td
+echo %1 "entangled var"
+
+echo.
+echo td csc
+echo %1 "clean install" Jenkinsfile
+
+echo.
+echo td r
+echo %1 mvn Jenkinsfile
+
+echo.
+echo td r
+echo %1 mvn jf
+
 exit/b
+
+
+
+:_
+
+  __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
+ (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
 
 
 
@@ -65,44 +98,12 @@ echo Search Criterion: %1>>%temp%\search_results_cs.txt
 if "%~2" == "" (
   set file_type=*.bat
 ) else (
-  set file_type=*.%2
+  set file_type=%2
 )
-
-if not "%~3" == "" (
-  set file_type=%file_type% *.%3
-)
-
-if not "%~4" == "" (
-  set file_type=%file_type% *.%4
-)
-
-if not "%~5" == "" (
-  set file_type=%file_type% *.%5
-)
-
-if not "%~6" == "" (
-  set file_type=%file_type% *.%6
-)
-
-if not "%~7" == "" (
-  set file_type=%file_type% *.%7
-)
-
-if not "%~8" == "" (
-  set file_type=%file_type% *.%8
-)
-
-if not "%~9" == "" (
-  set file_type=%file_type% *.%9
-)
-
-rem echo.
-rem echo file_type: %file_type%
-rem exit/b
 
 echo.
-echo        File Type: %file_type%
-echo        File Type: %file_type%>>%temp%\search_results_cs.txt
+echo     File Type(s): %file_type%
+echo     File Type(s): %file_type%>>%temp%\search_results_cs.txt
 
 echo   Current folder: %cd%>>%temp%\search_results_cs.txt
 
@@ -111,7 +112,9 @@ echo.>>%temp%\search_results_cs.txt
 
 rem "findstr" seems to be more powerful the "find".
 
-findstr /i /n /o /off /s /c:"%~1" %file_type%>>%temp%\search_results_cs.txt
+@echo on
+findstr /i /n /o /off /s /c:%1 %file_type%>>%temp%\search_results_cs.txt
+@echo off
 
 if %errorlevel% gtr 0 (
   echo.

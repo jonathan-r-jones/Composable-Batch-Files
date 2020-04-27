@@ -5163,7 +5163,7 @@ exit/b
 
 
 
-::_ (skw if exists, existence check, check_existence, check existence)
+::_ (skw if exists, existence check, check_existence, check existence, file_existence)
 
 :specific_file_presence
 
@@ -5195,16 +5195,14 @@ exit/b 0
 
 set fp=* Test harness for specific_file_presence.
 
-rem lu: Nov-11-2019
+rem lu: Apr-27-2020
 
 echo.
 echo %fp%
 
 call m specific_file_presence main.tf
 
-if %errorlevel% == 1 (
-  exit/b 1
-)
+if %errorlevel% gtr 0 exit/b
 
 echo.
 echo * Run commands.

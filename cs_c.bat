@@ -16,9 +16,11 @@ set fp=* Route callers.
 
 if "%~1" == "" goto help
 
+if "%~2" == "" goto help
+
 if "%~1" == "/?" goto help
 
-goto main_function
+goto validate_user_input
 
 
 
@@ -34,9 +36,9 @@ rem lu: Apr-7-2020
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Group you are searching.
+set parameter_2=Parameter 1: Search criterion. Double quotes must be used if spaces are present.
 
-set parameter_2=Parameter 2: Search criterion. Double quotes must be used if spaces are present.
+set parameter_1=Parameter 2: Group you are searching.
 
 echo.
 echo %parameter_1%
@@ -54,10 +56,17 @@ echo.
 echo Examples:
 
 echo.
-echo cs_c caco restart
+echo cs_c restart caco
 
 echo.
-echo cs_c ma "search enrollee"
+echo cs_c "search enrollee" ma
+
+echo.
+echo cs_c 1.1.3 ma
+
+echo.
+echo call td r
+echo cs_c mvn jf
 
 exit/b
 
@@ -69,19 +78,30 @@ exit/b
 
 :_
 
-:main_function
+:validate_user_input
 
 set cbf_cs=
 
-call n %1
+call n %2>nul
+
+if %errorlevel% gtr 0 exit/b
 
 if "%cbf_cs%" == "" (
   echo.
-  echo * Error: No cbf_cs is associated with "%1".
+  echo * Error: No cbf_cs is associated with "%2".
   exit/b
 )
 
-call cs %2 %cbf_cs%
+
+
+:_
+
+:main_function
+
+call cs %~1 "%cbf_cs%"
+
+rem echo.
+rem echo * cbf_cs=%cbf_cs%
 
 exit/b
 

@@ -284,7 +284,11 @@ exit/b
 
 
 
-:_
+:_+ CSC
+
+
+
+::_
 
 :csc
 
@@ -306,6 +310,32 @@ cd build/swagger-code-cartApi
 echo.
 rem The jar will be installed to your local .m2. See configuration discussion below.
 call mvn clean install -Dmaven.javadoc.skip=true
+
+exit/b
+
+
+
+::_
+
+:csc2
+
+set fp=* Try runing 'mvn clean package' instead of 'mvn clean install -Dmaven.javadoc.skip=true'.
+
+rem lu: Apr-23-2020
+
+rem You may need to disconnect from the VPN to get this to work. See Jenkinsfile runTest28.
+
+cls
+
+echo.
+echo %fp%
+
+call td csc>nul
+
+cd build/swagger-code-cartApi
+
+echo.
+call mvn clean package
 
 exit/b
 

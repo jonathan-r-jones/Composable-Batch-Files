@@ -6,8 +6,7 @@
 
 :_
 
-rem       qq1
-set filep=* 
+set filep=* Reopen or see search results that have been piped to a file.
 
 
 
@@ -35,28 +34,19 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-rem                                   qq1
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Batch file name the the search results you wish to view.
 
 echo.
 echo %parameter_1%
 
 echo.
-echo %parameter_2%
-
-echo.
 echo Batch file style: Single task
-
-echo.
-echo Entangled variable: cbf_fc_path
 
 echo.
 echo Examples:
 
 echo.
-echo %0
+echo %0 cs
 
 exit/b
 
@@ -73,8 +63,11 @@ exit/b
 
 :main_function
 
+set cbf_parameter=%temp%\search_results_%1.txt
 
-rem qq-1
+call an me
+
+call r
 
 exit/b
 

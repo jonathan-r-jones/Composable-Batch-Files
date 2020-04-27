@@ -6,10 +6,7 @@
 
 :_
 
-set filep=* Edit the Jenkinsfile of an alias.
-
-echo.
-echo %filep%
+set filep=* Back up current file to code quick backup folder.
 
 
 
@@ -18,6 +15,8 @@ echo %filep%
 set fp=* Route callers.
 
 if "%~1" == "" goto help
+
+if "%~2" == "" goto help
 
 if "%~1" == "/?" goto help
 
@@ -30,18 +29,36 @@ goto validate_user_input
 :help
 
 echo.
+echo %filep%
+
+rem lu: 
+
+echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Alias of the setting file you wish to edit.
+set parameter_1=Parameter 1: Filename of file in the current folder.
+
+set parameter_2=Parameter 2: Path alias of where you want to move the file to.
 
 echo.
 echo %parameter_1%
 
+echo.
+echo %parameter_2%
+
+echo.
+echo Batch file style: Single task
+
+echo.
+echo Entangled variable: cbf_path
+
+echo.
+echo Examples:
+
+echo.
+echo 
+
 exit/b
-
-
-
-:_
 
   __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
@@ -52,33 +69,13 @@ exit/b
 
 :validate_user_input
 
-set cbf_jf=
-
-call fn %1
+call n %2
 
 if %errorlevel% gtr 0 exit/b
 
-if "%cbf_jf%" == "" goto cbf_jf_is_not_set
-
-goto finish_validation
-
-
-
-:_
-
-:cbf_jf_is_not_set
-
-set cbf_jf=%cbf_filename%
-
-
-
-:_
-
-:finish_validation
-
-if not exist "%cbf_jf%" (
+if not exist "%~1" (
   echo.
-  echo * Error: Could not find "%cbf_jf%".
+  echo * Error: Percent 1 does not exist.
   exit/b
 )
 
@@ -88,7 +85,9 @@ if not exist "%cbf_jf%" (
 
 :main_function
 
-call e %cbf_jf% -e
+xcopy "%~1" "%cbf_path%"
+
+call td cqbu
 
 exit/b
 

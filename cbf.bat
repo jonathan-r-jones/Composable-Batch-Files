@@ -109,9 +109,9 @@ echo    fst  Filenames search with a td parameter
 echo     fx  Use dynamic CBF variables to execute a cbf variable in any application.
 echo      g  Git
 echo     gg  Git Gui helper Has TD parameter
+echo     gh  Surf to GitHub websites
 echo     gl  Glossary of terms used in CBF
 echo     gr  Gradle
-echo     gt  Surf to GitHub websites
 echo      h  Sencha
 echo      i  CBF environment variable information
 echo     je  Surf to Jenkins websites
@@ -182,6 +182,7 @@ echo     tk  Taskkill
 echo     tl  Tasklist
 echo     ty  Type command for use on evaluated filename parameter
 echo    typ  Use type command to view nickname-specified file and pipe output to a file.
+echo    tyr  Reopen or see search results that have been piped to a file.
 echo     un  URL nicknames dictionary layer of abstraction
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad

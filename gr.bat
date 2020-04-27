@@ -547,58 +547,6 @@ exit/b
 
 
 
-:_+ BFP Family
-
-
-
-::_
-
-:bfp
-
-set fp=* Build for production, jar file with td alias.
-
-rem lu: Jan-17-2020
-
-echo.
-echo %fp%
-
-call td rf_ma
-
-cd api
-
-call %0 build_jar_for_production
-
-exit/b
-
-
-
-::_
-
-:build_jar_for_production
-
-set fp=* Build Jar for prod environment.
-
-rem lu: Jan-17-2020
-
-echo.
-echo %fp%
-
-echo %cd% | find /i "\api">nul
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: You must be in the api folder for this command to work.
-  exit/b 1
-)
-
-echo.
-
-call gradlew -Pprod clean bootJar
-
-exit/b
-
-
-
 :_
 
 :run_tests
@@ -800,6 +748,72 @@ rem Gradlew didn't initially work, but now it does after I ran gradle wrapper. A
 call gradlew generateSwaggerCodeCartApi
 
 rem call gradle generateSwaggerCodeCartApi
+
+exit/b
+
+
+
+:_+ BFP Family
+
+
+
+::_
+
+:bfp
+
+set fp=* Build for production, jar file with td alias.
+
+rem lu: Jan-17-2020
+
+echo.
+echo %fp%
+
+call td rf_ma
+
+cd api
+
+call %0 build_jar_for_production
+
+exit/b
+
+
+
+::_
+
+:bfpc
+
+set fp=* Build for production jar file for the rest-client.
+
+rem lu: Apr-27-2020
+
+echo.
+echo %fp%
+
+call tdc csc>nul
+
+call %0 build_jar_for_production
+
+exit/b
+
+
+
+::_
+
+:build_jar_for_production
+
+set fp=* Build Jar for prod environment.
+
+rem lu: Jan-17-2020
+
+echo.
+echo %fp%
+
+call m specific_file_presence gradlew.bat
+
+if %errorlevel% gtr 0 exit/b 1
+
+echo.
+call gradlew -Pprod clean bootJar
 
 exit/b
 

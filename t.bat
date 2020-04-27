@@ -33,9 +33,6 @@ goto code_execution_area
 
 
 :_
- ___  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  
-  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)
-(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
 
 :help
 
@@ -50,6 +47,13 @@ echo Parameter 1: Batch file label function you wish to execute. If left blank,
 echo the code below the code execution area will run.
 
 exit/b
+
+
+
+:_
+
+  __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
+ (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
 
 
 
@@ -10242,7 +10246,6 @@ exit/b
 
 :_
 
-<<<<<<< HEAD
 :
 
 set fp=* Test comment.
@@ -10262,8 +10265,6 @@ exit/b
 
 :_
 
-=======
->>>>>>> 0ef04b909ea38936922a161d6550e9a535025088
 :code_execution_area
 
 set fp=* Code below here runs.
@@ -10273,7 +10274,6 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 :_
-<<<<<<< HEAD
 
 :
 
@@ -10296,12 +10296,9 @@ set JAVA_EXE=java.exe
 echo.
 rem echo %dirname%
 echo %java_exe%
-rem qq-1
 
 exit/b
 
 
 
 :_
-=======
->>>>>>> 0ef04b909ea38936922a161d6550e9a535025088
