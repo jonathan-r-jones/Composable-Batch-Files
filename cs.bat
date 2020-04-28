@@ -26,6 +26,8 @@ goto main_function
 
 :help
 
+cls
+
 echo.
 echo %filep%
 
@@ -51,29 +53,35 @@ echo.
 echo Examples:
 
 echo.
-echo %1 cs source *.txt
+echo %0 source *.txt
 
 echo.
 echo td
-echo %1 entangled
-
-echo.
-echo td
-echo %1 "entangled var"
+echo %0 entangled
 
 echo.
 echo td csc
-echo %1 "clean install" Jenkinsfile
+echo %0 "clean install" Jenkinsfile
 
 echo.
 echo td r
-echo %1 mvn Jenkinsfile
+echo %0 mvn Jenkinsfile
 
 echo.
 echo td r
-echo %1 mvn jf
+echo %0 mvn jf
+
+echo.
+echo td
+echo %0 "entangled var"
+
+echo.
+echo td cs
+echo %0 "test source" *.txt
 
 exit/b
+
+(!rfsp) (mov-5)
 
 
 
@@ -95,6 +103,12 @@ echo.
 echo Search Criterion: %1
 echo Search Criterion: %1>>%temp%\search_results_cs.txt
 
+echo.
+echo Percent 1: %1
+
+echo.
+echo Percent 2: %2
+
 if "%~2" == "" (
   set file_type=*.bat
 ) else (
@@ -113,7 +127,7 @@ echo.>>%temp%\search_results_cs.txt
 rem "findstr" seems to be more powerful the "find".
 
 @echo on
-findstr /i /n /o /off /s /c:%1 %file_type%>>%temp%\search_results_cs.txt
+findstr /i /n /o /off /s /c:"%1" "%file_type%">>%temp%\search_results_cs.txt
 @echo off
 
 if %errorlevel% gtr 0 (

@@ -319,4 +319,29 @@ sudo cp /tmp/cart_dv_secret.sec .
 
 
 
+:_
+
+:Apr-28-2020_11_12_AM
+
+set fp=* Add pom.xml to FQT slave temp folder.
+
+echo.
+echo %fp%
+
+rem qq
+call tdc csc
+
+call scpx fqsl pom.xml c
+
+exit/b
+
+
+>< >< Footnote:
+
+Outcome:
+
+cd /tmp
+
+
+
 :_ (!efscpx_c, !rfsp) (mov-7)

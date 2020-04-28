@@ -16,8 +16,6 @@ set fp=* Route callers.
 
 if "%~1" == "" goto help
 
-if "%~2" == "" goto help
-
 if "%~1" == "/?" goto help
 
 goto validate_user_input
@@ -38,30 +36,26 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Filename of file in the current folder.
 
-set parameter_2=Parameter 2: Path alias of where you want to move the file to.
-
 echo.
 echo %parameter_1%
-
-echo.
-echo %parameter_2%
 
 echo.
 echo Batch file style: Single task
 
 echo.
-echo Entangled variable: cbf_path
-
-echo.
 echo Examples:
 
 echo.
-echo 
+echo %0 pom.xml
 
 exit/b
 
-  __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
- (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -69,7 +63,7 @@ exit/b
 
 :validate_user_input
 
-call n %2
+call n cqb 
 
 if %errorlevel% gtr 0 exit/b
 
@@ -88,6 +82,8 @@ if not exist "%~1" (
 xcopy "%~1" "%cbf_path%"
 
 call td cqbu
+
+call d
 
 exit/b
 

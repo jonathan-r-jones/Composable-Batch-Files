@@ -59,17 +59,31 @@ echo.
 echo cs_c restart caco
 
 echo.
-echo cs_c "search enrollee" ma
+echo %0 "search enrollee" ma
 
 echo.
-echo cs_c 1.1.3 ma
+echo 50 1.1.3 ma
 
 echo.
 echo call td r
-echo cs_c mvn jf
+echo %0 mvn jf
+
+echo.
+echo td ma
+echo %0 fqt ma
+
+echo.
+echo This is important because it search multiple words and subfolders.
+echo td cs
+echo %0 "test source" cs
 
 exit/b
 
+(!rfsp) (mov-7)
+
+
+
+;_
 
   __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
@@ -98,7 +112,7 @@ if "%cbf_cs%" == "" (
 
 :main_function
 
-call cs %~1 "%cbf_cs%"
+call cs "%~1" "%cbf_cs%"
 
 rem echo.
 rem echo * cbf_cs=%cbf_cs%
@@ -107,4 +121,4 @@ exit/b
 
 
 
-:_ (!rfsp) (mov-7)
+:_

@@ -46,11 +46,10 @@ echo   https://github.com/jonathan-r-jones/Composable-Batch-Files
 echo. 
 echo * For help with a particular batch file, type: [Filename] /?
 echo.
-echo.
 echo   File  Description
-echo   __ _   ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  __
-echo   __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
-echo  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
+echo   __ _   ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  
+echo   __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)
+echo  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(___
 echo.
 echo      a  AWS CLI
 echo     an  Application nickname dictionary layer of abstraction

@@ -5456,8 +5456,6 @@ exit/b
 
 :caco
 
-:cs
-
 :dist
 
 :kan
@@ -6159,6 +6157,8 @@ exit/b
 :1257
 
 :eds
+
+:sms
 
 :pass-through
 
@@ -12454,6 +12454,8 @@ exit/b
 
 :_
 
+:cqb
+
 :cqbu
 
 set fp=* Code Quick Backup folder.
@@ -12541,6 +12543,25 @@ echo.
 echo %fp%
 
 set cbf_application=c:\program files\winzip\winzip64.exe
+
+exit/b
+
+
+
+:_
+
+:cs
+
+set fp=* Cs.bat helper.
+
+rem lu: Apr-28-2020
+
+echo.
+echo %fp%
+
+set cbf_cs=*.txt
+
+set cbf_path=c:\aa\cs
 
 exit/b
 

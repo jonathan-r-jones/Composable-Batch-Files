@@ -31,7 +31,7 @@ if %errorlevel% == 0 (
 
 
 
-:_ (!rfsp) (mov-6)
+:_
 
 :help
 
@@ -54,6 +54,8 @@ echo.
 echo Entangled variable: cbf_path.
 
 exit/b
+
+(!rfsp) (mov-5)
 
 
 
