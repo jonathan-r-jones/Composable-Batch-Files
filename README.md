@@ -40,7 +40,8 @@ https://www.instructables.com/id/5-Cool-Batch-Files/
 ![](19_gotos.PNG)
 
 I don't know about you, but trying to figure out this control flow gives me a headache. This 
-small file has 19 goto statements! And it's not even that bad compared to many I've seen.
+small file has 19 goto statements! And it's not even that bad compared to many I've seen. A 
+goto statemnent is not necessarily bad form. It's a matter of how easy the code is to follow.
 
 
 

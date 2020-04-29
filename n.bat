@@ -6530,23 +6530,6 @@ exit/b
 
 :_
 
-:tc
-
-set fp=* TC.
-
-rem lu: Dec-5-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
-
-exit/b
-
-
-
-:_
-
 :keys
 
 :ssh
@@ -10456,6 +10439,8 @@ exit/b
 
 :rf_rp
 
+:ri
+
 :rp
 
 :trs
@@ -10475,36 +10460,15 @@ set cbf_path=%cbf_path%\Release Process
 
 rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized below here.
 
-set cbf_conf=https://confluence.ice.dhs.gov/display/CART/Do+an+Automated+Upload+of+the+API+and+UI+Artifacts+to+Nexus
-
 set cbf_ex=%cbf_path%\Release Information.xlsx
+
+set cbf_filename=%cbf_path%\Release Information.xlsx
 
 set cbf_jpg=%cbf_path%\release process.jpg
 
 set cbf_gh=https://github.ice.dhs.gov/ERO/cart-devops
 
 set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
-
-exit/b
-
-
-
-::_
-
-:ri
-
-:ver
-
-set fp=* Release/version information.
-
-rem lu: Oct-18-2019
-
-echo.
-echo %fp%
-
-call n rf_rp
-
-set cbf_filename=%cbf_path%\Release Information.xlsx
 
 exit/b
 
@@ -11663,23 +11627,6 @@ exit/b
 
 
 
-:_
-
-:ctc
-
-set fp=* Cart Timecard Calculator.
-
-rem lu: Mar-13-2020
-
-echo.
-echo %fp%
-
-set cbf_filename=%share-zone%\Cart Timecard Calculator.xlsx
-
-exit/b
-
-
-
 :_+ My YouTube
 
 
@@ -12562,6 +12509,27 @@ echo %fp%
 set cbf_cs=*.txt
 
 set cbf_path=c:\aa\cs
+
+exit/b
+
+
+
+:_
+
+:ctc
+
+:tc
+
+set fp=* Timecard and timecard calculator.
+
+rem lu: Dec-5-2018
+
+echo.
+echo %fp%
+
+set cbf_filename=%share-zone%\Cart Timecard Calculator.xlsx
+
+set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
 
 exit/b
 
