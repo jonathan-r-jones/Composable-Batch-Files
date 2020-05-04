@@ -112,31 +112,7 @@ exit/b
 
 
 
-:_
-
-Metadata: Track Size (!tsn)
-
-     Date      Lines      Bytes  Functions  Notes
- -----------  ------  ---------  ---------  -------------------------------------------------
-
-: Apr-8-2020  12,393    125,865      627
-
-:Nov-11-2019  11,112    113,846      573
-
-:May-27-2019   9,349     99,887      499
-
-:Apr-15-2019   8,907     95,073      482
-
-:Aug-24-2018   5,148     60,394      300
-
-:Jun-13-2018   3,261     36,243      194
-
-
-
-:_
-  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
- (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
- ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+:_ Begin body. (!bb)
 
 
 
@@ -160,24 +136,11 @@ exit/b
 
 
 
-:_
-
-:pom_root
-
-set fp=Pom root.
-
-rem FCD: Apr-10-2017
-
-echo.
-echo %fp%
-
-set cbf_filename=C:\projects\netbeans\mercury6\pom.xml
-
-exit/b
+:_+ Test Big Rubric May-4-2020
 
 
 
-:_
+::_
 
 :pom_ear
 
@@ -194,7 +157,7 @@ exit/b
 
 
 
-:_
+::_
 
 :pom_ejb
 
@@ -206,6 +169,23 @@ echo.
 echo %fp%
 
 set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
+
+exit/b
+
+
+
+::_
+
+:pom_root
+
+set fp=Pom root.
+
+rem FCD: Apr-10-2017
+
+echo.
+echo %fp%
+
+set cbf_filename=C:\projects\netbeans\mercury6\pom.xml
 
 exit/b
 
@@ -6163,16 +6143,6 @@ exit/b
 
 :sms
 
-:rp_desc
-
-:rp_spec
-
-:rp_view
-
-:rp_jrh
-
-:rp_arh
-
 :pass-through
 
 set fp=* Pass through.
@@ -7207,14 +7177,14 @@ exit/b
 
 :rold
 
-set fp=* Reach out local drive.
+set fp=* Reach out on dropbox.
 
-rem lu: May-4-2020
+rem lu: Jan-2-2019
 
 echo.
 echo %fp%
 
-set cbf_path=%my documents%\savannah\reach out
+set cbf_path=%reach out%
 
 exit/b
 
@@ -10644,7 +10614,7 @@ exit/b
 
 :jf
 
-set fp=* Jenkinsfile folder.
+set fp=* Jenkinsfile.
 
 rem lu: Jun-11-2019
 
@@ -12512,14 +12482,14 @@ exit/b
 
 :cs
 
-set fp=* Set file type group to Cs.bat helper.
+set fp=* Cs.bat helper.
 
 rem lu: Apr-28-2020
 
 echo.
 echo %fp%
 
-set cbf_file_type=*.asc *.txt
+set cbf_cs=*.txt
 
 set cbf_path=c:\aa\cs
 
@@ -12550,39 +12520,22 @@ exit/b
 
 :_
 
-:buma
+Metadata: Track Size (!tsn)
 
-set fp=* Build Master.
+     Date      Lines      Bytes  Functions  Notes
+ -----------  ------  ---------  ---------  -------------------------------------------------
 
-rem lu: Apr-30-2020
+: Apr-8-2020  12,393    125,865      627
 
-echo.
-echo %fp%
+:Nov-11-2019  11,112    113,846      573
 
-call pn rf_cade
+:May-27-2019   9,349     99,887      499
 
-set cbf_path=%cbf_path%\Build Master
+:Apr-15-2019   8,907     95,073      482
 
-exit/b
+:Aug-24-2018   5,148     60,394      300
 
-
-
-:_
-
-:1657
-
-set fp=* %1.
-
-rem lu: May-1-2020
-
-echo.
-echo %fp%
-
-call pn rf_cade>nul
-
-set cbf_path=%cbf_path%/tickets/%1
-
-exit/b
+:Jun-13-2018   3,261     36,243      194
 
 
 
