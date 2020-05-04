@@ -2482,7 +2482,7 @@ set /P user_option=Would you like to run Sencha App Upgrade? (y/n):
 if "%user_option%"=="y" call h au
 
 
-set /P user_option=Would you like to add the the MySql security setting? (y/n): 
+set /P user_option=Would you like to add the MySql security setting? (y/n): 
 
 if "%user_option%"=="n" exit/b
 
@@ -4128,7 +4128,7 @@ exit/b
 
 set fp=* Console window width.
 
-rem How wide is the the command window?
+rem How wide is the command window?
 
 rem lu: May-20-2019
 
@@ -4542,7 +4542,7 @@ e jwt
 
 rem Run the UI using lnk_ui.
 
-sf 4200
+sf 42
 
 exit/b
 
@@ -4575,7 +4575,7 @@ lq
 
 tdc ma
 
-rem I saw a case where the the API will build but not run, so you may want to run on your
+rem I saw a case where the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
 lnk_api
 
@@ -4667,7 +4667,7 @@ lq
 
 tdc ma
 
-rem I saw a case where the the API will build but not run, so you may want to run on your
+rem I saw a case where the API will build but not run, so you may want to run on your
 rem local before deploying to the server.
 lnk_api
 
@@ -4788,8 +4788,8 @@ title=%fp%
 echo.
 echo %fp%
 
-call %0 lnk_ui_do_not_install_npm
-rem call %0 lnk_ui_install_npm
+rem call %0 lnk_ui_do_not_install_npm
+call %0 lnk_ui_install_npm
 
 exit/b
 

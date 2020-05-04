@@ -533,4 +533,21 @@ exit/b
 
 
 
+:_
+
+:co_re
+
+set fp=* The Multi-Edit config files seem to be corrupt, so refresh the config files from share-zone.
+
+rem lu: May-1-2020
+
+echo.
+echo %fp%
+
+call td mecfg
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-9)

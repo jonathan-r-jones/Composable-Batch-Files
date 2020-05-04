@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Path nickname dictionary that sets the full path corresponding to a given unique nickname parameter.
+set filep=* Exclusively set the path for an alias.
 
 
 
@@ -65,6 +65,9 @@ if not exist "%cbf_path%" (
   echo * Error: The CBF_Path "%cbf_path%" does not exist. Nov-1-2019 8:34 PM
   exit/b 1
 )
+
+rem This is part of the new exclusivity strategy.
+set cbf_filename=
 
 
 

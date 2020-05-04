@@ -47,20 +47,31 @@ exit/b
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+
+
+
+:_
 
 :validate_input
 
+set cbf_filename=
+
 call sfn %*
 
-if %errorlevel% gtr 0 (
+if %errorlevel% gtr 0 exit/b
+
+if "%cbf_filename%" == "" (
+  echo.
+  echo Error: CBF_Filename is undefined for "%1".
   exit/b
 )
 
 call an me
 
-if %errorlevel% gtr 0 (
-  exit/b
-)
+if %errorlevel% gtr 0 exit/b
 
 
 

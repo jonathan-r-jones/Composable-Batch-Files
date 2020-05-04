@@ -133,7 +133,10 @@ Metadata: Track Size (!tsn)
 
 
 
-:_ Begin body. (!bb)
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -6160,6 +6163,16 @@ exit/b
 
 :sms
 
+:rp_desc
+
+:rp_spec
+
+:rp_view
+
+:rp_jrh
+
+:rp_arh
+
 :pass-through
 
 set fp=* Pass through.
@@ -7194,9 +7207,9 @@ exit/b
 
 :rold
 
-set fp=* Reach out on dropbox.
+set fp=* Reach out local drive.
 
-rem lu: Jan-2-2019
+rem lu: May-4-2020
 
 echo.
 echo %fp%
@@ -10631,7 +10644,7 @@ exit/b
 
 :jf
 
-set fp=* Jenkinsfile.
+set fp=* Jenkinsfile folder.
 
 rem lu: Jun-11-2019
 
@@ -12499,14 +12512,14 @@ exit/b
 
 :cs
 
-set fp=* Cs.bat helper.
+set fp=* Set file type group to Cs.bat helper.
 
 rem lu: Apr-28-2020
 
 echo.
 echo %fp%
 
-set cbf_cs=*.txt
+set cbf_file_type=*.asc *.txt
 
 set cbf_path=c:\aa\cs
 
@@ -12530,6 +12543,44 @@ echo %fp%
 set cbf_filename=%share-zone%\Cart Timecard Calculator.xlsx
 
 set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
+
+exit/b
+
+
+
+:_
+
+:buma
+
+set fp=* Build Master.
+
+rem lu: Apr-30-2020
+
+echo.
+echo %fp%
+
+call pn rf_cade
+
+set cbf_path=%cbf_path%\Build Master
+
+exit/b
+
+
+
+:_
+
+:1657
+
+set fp=* %1.
+
+rem lu: May-1-2020
+
+echo.
+echo %fp%
+
+call pn rf_cade>nul
+
+set cbf_path=%cbf_path%/tickets/%1
 
 exit/b
 

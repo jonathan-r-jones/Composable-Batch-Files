@@ -52,7 +52,7 @@ echo   __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
 echo  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(___
 echo.
 echo      a  AWS CLI
-echo     an  Application nickname dictionary layer of abstraction
+echo     an  Exclusively set the application for an alias
 echo    ang  Angular-related tasks
 echo     as  Windows file associations
 echo      b  Shutdown windows
@@ -75,7 +75,6 @@ echo    cpp  Copies file from a cbf_path nickname
 echo   cppp  Copy file from alias path param 1 to alias path param 2
 echo   cpte  Copy te.bat to a new batch file
 echo     cs  File contents search
-echo   cs_c  Cs.bat consumer
 echo    cst  File contents search with td parameter
 echo     cu  Curl hooked up to the nicknames dictionary
 echo    cur  Curl with atomic functions
@@ -101,7 +100,7 @@ echo     es  Edit settings file of an alias
 echo     ex  Run excel with or without a filename alias parameter
 echo      f  Filename sapien. Use any application to open any file
 echo     fe  Check for the existence of a file based on the passed in filename alias
-echo     fn  Filenames dictionary layer of abstraction
+echo     fn  Exclusively set the filename for an alias
 echo     fs  Filenames search
 echo    fsp  Perennial filenames search
 echo    fst  Filenames search with a td parameter
@@ -112,7 +111,7 @@ echo     gh  Surf to GitHub websites
 echo     gl  Glossary of terms used in CBF
 echo     gr  Gradle
 echo      h  Sencha
-echo      i  CBF environment variable information
+echo      i  Information of CBF variable value assignments
 echo     je  Surf to Jenkins websites
 echo     kc  Connect to servers
 echo     ji  Jira operations
@@ -143,10 +142,11 @@ echo     of  Open Folder, has TD parameter
 echo   offn  Open folder where only the filename is known.
 echo    ofp  Transform directory to parent folder
 echo      p  Add, commit and push Git changes, has TD parameter
-echo     pl  Git pull, has TD parameter
-echo    png  Run cbf_png as a double-click filename.
 echo     pg  Ping hooked up to the nicknames dictionary
+echo     pl  Git pull, has TD parameter
+echo     pn  Exclusively set the path for an alias
 echo    pql  PostgreSQL (in development)
+echo    png  Run cbf_png as a double-click filename.
 echo     ps  PowerShell
 echo    qfn  Query if a file exists based on its passed in alias.
 echo      r  Run application using CBF variables

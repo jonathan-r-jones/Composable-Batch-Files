@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Show nickname definition.
+set filep=* Information of CBF variable value assignments.
 
 
 
@@ -41,6 +41,13 @@ echo.
 echo %parameter_1%
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -131,7 +138,7 @@ if not "%cbf_fc_path%" == "" (
 :
 if not "%cbf_filename%" == "" (
   echo.
-  echo * Filename: %cbf_filename%
+  echo * ASCII Filename: %cbf_filename%
 )
 
 :
