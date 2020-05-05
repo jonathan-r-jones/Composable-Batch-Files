@@ -146,7 +146,8 @@ echo File type: %cbf_file_type%
 
 :main_function
 
-echo %filep%>%temp%\search_results_cs.txt
+echo.>%temp%\search_results_cs.txt
+echo * File Contents Search>>%temp%\search_results_cs.txt
 echo.>>%temp%\search_results_cs.txt
 
 echo.
@@ -159,14 +160,14 @@ echo     File Type(s): %cbf_file_type%>>%temp%\search_results_cs.txt
 
 echo   Current folder: %cd%>>%temp%\search_results_cs.txt
 
-echo ************************************************************************>>%temp%\search_results_cs.txt
+echo ---------------------------------------------------------------------------------------------- >>%temp%\search_results_cs.txt
 echo.>>%temp%\search_results_cs.txt
 
 rem "findstr" seems to be more powerful the "find".
 
 @echo on
 findstr /i /n /o /off /s /c:%1 %cbf_file_type%>>%temp%\search_results_cs.txt
-rem qq
+
 @echo off
 rem (!rfsp) (mov-3)
 

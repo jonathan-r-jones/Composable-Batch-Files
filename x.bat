@@ -112,7 +112,7 @@ call n %~1
 
 if %errorlevel% == 1 (
   echo.
-  echo * Error: Label not found. - skw Oct-18-2019 2:59 PM
+  echo * Error: Label not found. - skw May-4-2020_7_57_PM
   call m clear_errorlevel_silently 
   exit/b
 )

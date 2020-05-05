@@ -45,11 +45,13 @@ exit/b
 
 echo.
 echo %filep% Search for filenames containing "%~1".
-echo %filep% Search for filenames containing "%~1".>%temp%\search_results_fs.txt
+
+echo.>%temp%\search_results_fs.txt
+echo * Search for filenames containing "%~1".>>%temp%\search_results_fs.txt
 echo.>>%temp%\search_results_cs.txt
 echo   Current folder: %cd%>>%temp%\search_results_fs.txt
 
-echo ************************************************************************>>%temp%\search_results_fs.txt
+echo ------------------------------------------------------------------------------------------->>%temp%\search_results_fs.txt
 echo.>>%temp%\search_results_fs.txt
 
 rem Files are sorted newest files first.

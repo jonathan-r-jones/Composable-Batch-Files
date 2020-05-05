@@ -49,20 +49,20 @@ call n %1
 
 if %errorlevel% gtr 0 (
   echo.
-  echo * Error: Label not found. Nov-1-2019 8:32 PM
+  echo * Error: Label not found. skw May-4-2020_8_14_PM
   call m clear_errorlevel_silently 
   exit/b 99
 )
 
 if "%cbf_path%" == "" (
   echo.
-  echo * The cbf_path is not defined for "%1". Nov-1-2019 8:33 PM
+  echo * The cbf_path is not defined for "%1". skw May-4-2020_8_12_PM
   exit/b 1
 )
 
 if not exist "%cbf_path%" (
   echo.
-  echo * Error: The CBF_Path "%cbf_path%" does not exist. Nov-1-2019 8:34 PM
+  echo * Error: The CBF_Path "%cbf_path%" does not exist. skw May-4-2020_8_13_PM
   exit/b 1
 )
 

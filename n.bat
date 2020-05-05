@@ -6173,6 +6173,18 @@ exit/b
 
 :rp_arh
 
+:rp_do
+
+:rp_vw
+
+:rp_ty
+
+:rp_sv
+
+:rp_view2
+
+:rein
+
 :pass-through
 
 set fp=* Pass through.

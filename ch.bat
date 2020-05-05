@@ -671,7 +671,8 @@ exit/b
 
 >< >< Footnote:
 
-Tip: Before uploading the cookbook, it's probably a good idea to update the cookbook version #.
+Tip: Before uploading the cookbook, it's probably a good idea to update the cookbook version 
+#.
 
 Result:
 
@@ -705,7 +706,8 @@ exit/b
 
 >< >< Footnote:
 
-Tip: Before uploading the cookbook, it's probably a good idea to update the cookbook version #.
+Tip: Before uploading the cookbook, it's probably a good idea to update the cookbook version 
+#.
 
 Result:
 
