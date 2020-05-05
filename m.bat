@@ -5119,6 +5119,22 @@ exit/b
 
 
 
+::_
+
+:show_ascii_art_error
+
+set fp=* Show Ascii art error.
+
+rem lu: May-4-2020
+
+call n ascii_art_error>nul
+
+type %cbf_filename%
+
+exit/b
+
+
+
 :_+ Expand Family
 
 
