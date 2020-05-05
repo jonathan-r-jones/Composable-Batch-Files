@@ -98,6 +98,9 @@ echo %0 jf ma ie
 echo.
 echo %0 jf csc me
 
+echo.
+echo %0 xml rp_1 me
+
 rem qq
 exit/b
 

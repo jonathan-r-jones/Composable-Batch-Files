@@ -26,6 +26,9 @@ goto %1
 
 :help
 
+echo.
+echo %filep%
+
 rem lu: Mar-13-2020
 
 echo.

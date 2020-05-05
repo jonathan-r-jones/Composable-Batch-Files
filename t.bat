@@ -5677,7 +5677,7 @@ rem lu: Nov-17-2017
 echo %fp%
 echo.
 
-path | find /i "sencha">null
+path | find /i "sencha">nul
 if %errorlevel% == 0 echo EXISTS.
 if %errorlevel% == 1 echo Does NOT exist.
 
@@ -10265,16 +10265,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Testing gradlew.bat.
@@ -10296,6 +10286,67 @@ set JAVA_EXE=java.exe
 echo.
 rem echo %dirname%
 echo %java_exe%
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Test parentheses in echo statements.
+
+rem lu: May-5-2020
+
+echo.
+echo %fp%
+
+echo.
+echo hi (parens)
+
+echo.
+echo hi (skw May-5-2020 11:41 AM)
+
+echo.
+echo hi (skw May-5-2020_11_41_AM)
+
+echo.
+echo * The cbf_path is not defined for "%cbf_path%". (skw May-4-2020_8_12_PM)
+
+exit/b
+
+Takeaway: Parentheses don't seem to cause a problem. Perhaps it was an issue with setlocal.
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Debug the opening of IE.
+
+rem lu: May-5-2020
+
+echo.
+echo %fp%
+
+call an ie
+
+rem qq-1
+
+call r
+rem call x ie
+
 
 exit/b
 

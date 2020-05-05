@@ -86,6 +86,7 @@ echo                 rf_  Prefix used to designate that a label has at least one
 echo                 rp_  Prefix used to designate that a label is a relative path.
 echo         single task  Batch file style where the file tries to achieve a single task,
 echo                      e. g. scpx.bat usually calls a main_function.
+echo                 skw  Search Keyword. Useful for finding things.
 echo        td parameter  Transform Directory passed in as a parameter, meaning to 
 echo                      change folders before running the batch file. For example,
 echo                      running "p cbf" switches to the CBF folder, the alias for 

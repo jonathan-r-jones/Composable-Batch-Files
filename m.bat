@@ -4529,6 +4529,7 @@ rem Run the API by using m lnk_api. You may need to edit npcrf.
 
 rem If you want to run the debugger, then search on: ^lnk
 and use 
+
 gr run_api_with_debugger
 rem Also read direction on how to attach the debugger at: ^atde
 

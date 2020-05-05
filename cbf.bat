@@ -181,7 +181,7 @@ echo     tk  Taskkill
 echo     tl  Tasklist
 echo     ty  Type command for use on evaluated filename parameter
 echo    typ  Use type command to view nickname-specified file and pipe output to a file.
-echo    tyr  Reopen or see search results that have been piped to a file.
+echo    tyf  Reopen or see search results that have been piped to a file.
 echo     un  URL nicknames dictionary layer of abstraction
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad

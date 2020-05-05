@@ -4357,6 +4357,8 @@ exit/b
 
 :tag
 
+:add_tag
+
 set fp=* Tag instance "%2" with key "%3" and value "%~4".
 
 rem lu: Mar-30-2020
