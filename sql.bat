@@ -59,6 +59,13 @@ exit/b
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+
+
+
+:_
 
 :sql
 
@@ -1231,22 +1238,6 @@ exit/b
 
 :_
 
-:cnu2
-
-set fp=* Count new users.
-
-rem lu: Nov-9-2017
-
-echo %fp%
-
-mysql -uroot -p%password% mercdb -e "select count(*) from mercury_users where z_approved_date >= '2017-08-01' and z_approved_date <= '2017-10-31';"
-
-exit/b
-
-
-
-:_
-
 :dup_ops
 
 set fp=* Duplicate operations.
@@ -1635,6 +1626,22 @@ echo.
 echo On Nov-20-2017, I had the following error when trying to import an LDIF while OpenDS was running.
 echo.
 echo From XPS: Equivalent command line: C:\Mercury\LDAP\OpenDS-2.2.1\bat\import-ldif.bat "--ldifFile" "C:\Mercury\Backups\EC2AMAZ-F3EA4DJ_Nov-20-2017_8_01_PM.ldif" "--backendID" "userRoot" "--clearBackend" "--hostname" "XPS" "--port" "4444" "--bindDN" "cn=Directory Manager" "--bindPassword" "********" "--trustAll" "--noPropertiesFile"
+
+exit/b
+
+
+
+:_
+
+:cnu2
+
+set fp=* Count new users.
+
+rem lu: Nov-9-2017
+
+echo %fp%
+
+mysql -uroot -p%password% mercdb -e "select count(*) from mercury_users where z_approved_date >= '2017-08-01' and z_approved_date <= '2017-10-31';"
 
 exit/b
 

@@ -49,7 +49,7 @@ echo.
 echo %parameter_2%
 
 echo.
-echo Batch file style: Single task
+echo Batch file style: Single Task
 
 echo.
 echo Entangled variable: cbf_fc_path
@@ -62,7 +62,7 @@ echo %0
 
 exit/b
 
-(!rfsp) (mov-5)
+(!rfsp) (mov4)
 
 
 

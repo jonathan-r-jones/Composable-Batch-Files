@@ -95,9 +95,6 @@ exit/b
 
 :validate_input
 
-echo.
-echo %filep%
-
 echo %1 | c:\windows\system32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (

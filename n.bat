@@ -10603,7 +10603,7 @@ exit/b
 
 :db2
 
-set fp=* Database backups.
+set fp=* More database backups.
 
 rem lu: Aug-22-2019
 

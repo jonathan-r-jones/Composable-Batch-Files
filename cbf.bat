@@ -82,14 +82,14 @@ echo     cv  Chef converge with a path parameter
 echo      d  Dir for current folder
 echo     dd  Dir filename extension searcher including subfolders
 echo    ddc  Dir filename extension searcher current folder only
-echo     do  Docker functions accessed via function routing.
-echo     dr  Dir using function routing
-echo     dt  Dir with a td parameter
 echo     de  Delete function-routing style batch file
 echo   defn  Delete file base on passed in filename alias
 echo   depn  Delete folder corresponding to CBF path alias parameter
 echo   devu  Demo file for Dev Universiy event on Jan-9-2020
 echo     dn  Dot Net Core
+echo     do  Docker functions accessed via function routing.
+echo     dr  Dir using function routing
+echo     dt  Dir with a td parameter
 echo      e  Uses mx.bat then me.bat to decipher which file to edit (Or exit command window)
 echo     ed  Edit a file abstraction layer
 echo    edr  Edit a relative path constucted filename

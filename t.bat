@@ -10321,16 +10321,6 @@ Takeaway: Parentheses don't seem to cause a problem. Perhaps it was an issue wit
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Debug the opening of IE.
@@ -10342,13 +10332,22 @@ echo %fp%
 
 call an ie
 
-rem qq-1
-
 call r
 rem call x ie
 
-
 exit/b
+
+Takeaway: The problem was that I was missing a call statement.
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
