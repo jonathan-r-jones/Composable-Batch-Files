@@ -138,7 +138,7 @@ echo.
 echo %fp%
 
 rem Open the podcaster application and download podcasts from there.
-rem call x pc
+rem call j pc
 
 rem (!rfsp) (mov-2)
 
@@ -146,7 +146,7 @@ call %0 pc_2_sf
 
 rem Run the tag program.
 
-call x tagpr
+call j tagpr
 
 pause
 
@@ -172,14 +172,14 @@ echo.
 echo %fp%
 
 rem Open the podcaster application and download podcasts from there.
-rem call x pc
+rem call j pc
 
 rem (!rfsp) (mov-2)
 
 call %0 pc_2_sf
 
 rem Run the tag program.
-call x tag
+call j tag
 
 echo.
 pause

@@ -761,7 +761,7 @@ rem lu: Dec-18-2018
 echo.
 echo %fp%
 
-call x jaws_ppt
+call j jaws_ppt
 
 exit/b
 

@@ -87,8 +87,8 @@ goto set_browser
 
 set fp=* Use current CBF_URL. (Apr-24-2020_2_11_PM)
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 set cbf_parameter=%cbf_url%
 

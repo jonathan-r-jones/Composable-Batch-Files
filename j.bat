@@ -115,7 +115,7 @@ if %errorlevel% == 1 (
 )
 
 if not "%cbf_application%" == "" (
-  call xa %1>nul
+  call ja %1>nul
   exit/b
 )
 

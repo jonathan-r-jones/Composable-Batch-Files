@@ -1458,7 +1458,7 @@ rem lu: Dec-12-2018
 echo.
 echo %fp%
 
-call x je_server
+call j je_server
 
 exit/b
 

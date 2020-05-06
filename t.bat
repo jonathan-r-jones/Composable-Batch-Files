@@ -10333,7 +10333,7 @@ echo %fp%
 call an ie
 
 call r
-rem call x ie
+rem call j ie
 
 exit/b
 
@@ -10348,6 +10348,26 @@ Takeaway: The problem was that I was missing a call statement.
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test pasting pg password onto clipboard.
+
+rem lu: May-6-2020
+
+echo.
+echo %fp%
+
+call ni pg_pwd
+
+call lpfc pg_pwd
+rem qq-1
+
+exit/b
 
 
 

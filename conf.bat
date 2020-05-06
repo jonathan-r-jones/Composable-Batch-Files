@@ -79,8 +79,8 @@ if "%cbf_url%" == "" (
 
 :main_function
 
-echo.
-echo * Main function of %0. Nov-15-2019 12:55 PM
+rem echo.
+rem echo * Main function of %0. Nov-15-2019 12:55 PM
 
 set cbf_url=%cbf_conf%
 

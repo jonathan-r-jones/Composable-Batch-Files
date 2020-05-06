@@ -57,6 +57,7 @@ echo    ang  Angular-related tasks
 echo     as  Windows file associations
 echo      b  Shutdown windows
 echo     bu  Back up using function routing
+echo    buc  Back up current file to code quick backup folder.
 echo      c  Clear screen and reset color
 echo    cbf  Show this list of CBF batch files
 echo   coco  Code Compare functions
@@ -114,7 +115,10 @@ echo      h  Sencha
 echo      i  Information of CBF variable value assignments
 echo     je  Surf to Jenkins websites
 echo     kc  Connect to servers
+echo      j  Simulate a double-click. A remote double-click equivalent way to run an alias.
+echo     ja  Application-centric way of running an application with an optional filename parameter
 echo     ji  Jira operations
+echo     jx  Use CBF dynamic variables in a double-click fashion.
 echo      l  Google searcher
 echo     lp  Load CBF_Path to the clipboard
 echo    lpf  Load CBF_Filename of passed in alias onto the clipboard
@@ -185,9 +189,6 @@ echo    tyf  Reopen or see search results that have been piped to a file.
 echo     un  URL nicknames dictionary layer of abstraction
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad
-echo      x  Simulate a double-click. A remote double-click equivalent way to run an alias.
-echo     xx  Use CBF dynamic variables in a double-click fashion.
-echo     xa  Application-centric way of running an application with an optional filename parameter
 echo    xfn  Filename-centric way to run an alias
 
 exit/b

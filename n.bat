@@ -6195,6 +6195,14 @@ exit/b
 
 :v11
 
+:pg_pwd
+
+:lqfd
+
+:v9
+
+:v10
+
 :pass-through
 
 set fp=* Pass through.
@@ -10566,11 +10574,15 @@ exit/b
 
 
 
-:_+ Db Backups
+:_+ DB Backups
 
 
 
 ::_
+
+:bud
+
+:budb
 
 :daba
 
@@ -10578,18 +10590,22 @@ exit/b
 
 :dbbu
 
-set fp=* Database backups.
+:redb
+
+set fp=* Database backups and restoring.
 
 rem lu: Dec-11-2019
 
 echo.
 echo %fp%
 
-call n rf_cade
+call n rf_cade>nul
 
 set cbf_path=%cbf_path%\database backups
 
 rem >< >< >< >< >< ><  Alphabetical below here.
+
+set cbf_conf=https://confluence.ice.dhs.gov/display/CART/Back+Up+FQT+and+Restore+to+Localhost
 
 set cbf_wo=%cbf_path%\How to backup and restore a Cart database.docx
 
