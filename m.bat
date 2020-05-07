@@ -2945,8 +2945,9 @@ exit/b
 
 :reset_cbf_variables
 
-set fp=* Reset CBF variables. (skw clear environment variables, clear_cbf_variables)
+set fp=* Reset CBF variables. This function is deprecated and has been moved to i.bat.
 
+<<<<<<< HEAD
 rem echo.
 rem echo %fp%
 
@@ -3002,6 +3003,9 @@ rem set cbf_repo=
 set cbf_url=
 
 set cbf_ex=
+=======
+call i reset_cbf_variables
+>>>>>>> 4e21e0083087e56c1a0ba2d61ab6b8b388a29f5f
 
 exit/b
 
