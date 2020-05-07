@@ -72,13 +72,13 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   echo.
-  echo * Error: The CBF_Filename was not found at "%cbf_parameter%".
+  echo * Error: The cbf_fn was not found at "%cbf_parameter%".
   exit/b
 )
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 goto main_function
 

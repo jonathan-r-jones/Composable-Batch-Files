@@ -75,11 +75,11 @@ if not exist "%cbf_application%" (
   exit/b
 )
 
-set cbf_filename=%~2
+set cbf_fn=%~2
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   echo.
-  echo * Creating file "%cbf_filename%". Nov-11-2019 1:11 PM
+  echo * Creating file "%cbf_fn%". Nov-11-2019 1:11 PM
 )
 
 
@@ -90,7 +90,7 @@ if not exist "%cbf_filename%" (
 
 rem lu: Aug-3-2019
 
-call m associate_cbf_parameter_to_cbf_filename
+call m associate_cbf_parameter_to_cbf_fn
 
 call r
 

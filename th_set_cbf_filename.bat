@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Set cbf_filename test harness.
+set filep=* Set cbf_fn test harness.
 
 
 
@@ -18,7 +18,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-set cbf_filename=
+set cbf_fn=
 
 goto %1
 
@@ -53,7 +53,7 @@ rem echo %fp%
 
 call defn j1
 
-call set_cbf_filename j1
+call set_cbf_fn j1
 
 if %errorlevel% gtr 0 (
   echo.
@@ -80,9 +80,9 @@ rem echo %fp%
 
 call n j1
 
-echo test_text_for_j1>%cbf_filename%
+echo test_text_for_j1>%cbf_fn%
 
-call set_cbf_filename j1
+call set_cbf_fn j1
 
 if %errorlevel% gtr 0 (
   echo.
@@ -123,7 +123,7 @@ exit/b
 :end_function
 
 echo.
-echo * cbf_filename: %cbf_filename%
+echo * cbf_fn: %cbf_fn%
 
 exit/b
 

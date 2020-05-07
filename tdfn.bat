@@ -56,17 +56,17 @@ ver>nul
 set fp=* Main function.
 
 rem Clear CBF path.
-set cbf_filename=
+set cbf_fn=
 
 if not "%~1" == "" call n %1 %2
 
-if "%cbf_filename%" == "" (
+if "%cbf_fn%" == "" (
   echo.
-  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
+  echo * Nickname Error: There is no cbf_fn defined for '%~1'. 
   exit/b 1
 )
 
-call m expand_to_path_only "%cbf_filename%"
+call m expand_to_path_only "%cbf_fn%"
 
 cd /d "%cbf_path%"
 

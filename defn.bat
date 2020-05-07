@@ -47,7 +47,7 @@ exit/b
 
 call n %1
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   echo.
   echo * Error: The file you are trying to delete doesn't exist.
   exit/b
@@ -61,7 +61,7 @@ if not exist "%cbf_filename%" (
 
 rem lu: 
 
-del "%cbf_filename%"
+del "%cbf_fn%"
 
 exit/b
 

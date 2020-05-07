@@ -728,15 +728,15 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_filename%" == "" (
+if "%cbf_fn%" == "" (
   echo.
-  echo * The cbf_filename is not defined for "%1".
+  echo * The cbf_fn is not defined for "%1".
   exit/b
 )
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   echo.
-  echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
+  echo * Error: The cbf_fn "%cbf_fn%" could not be found.
   exit/b
 )
 

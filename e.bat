@@ -57,15 +57,15 @@ exit/b
 
 :validate_input
 
-set cbf_filename=
+set cbf_fn=
 
 call sfn %*
 
 if %errorlevel% gtr 0 exit/b
 
-if "%cbf_filename%" == "" (
+if "%cbf_fn%" == "" (
   echo.
-  echo Error: CBF_Filename is undefined for "%1".
+  echo Error: cbf_fn is undefined for "%1".
   exit/b
 )
 
@@ -79,7 +79,7 @@ if %errorlevel% gtr 0 exit/b
 
 :main_function
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 

@@ -65,12 +65,12 @@ if %errorlevel% == 1 (
 
 :main_function
 
-if exist "%cbf_filename%" (
+if exist "%cbf_fn%" (
   echo.
-  echo * File "%cbf_filename%" exists.
+  echo * File "%cbf_fn%" exists.
 ) else (
   echo.
-  echo * File "%cbf_filename%" DOES NOT exist.
+  echo * File "%cbf_fn%" DOES NOT exist.
 )
 
 exit/b

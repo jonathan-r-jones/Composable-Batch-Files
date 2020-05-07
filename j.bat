@@ -69,16 +69,16 @@ rem lu: Sep-25-2019
 echo.
 echo %fp%
 
-set destination_filename=%cbf_filename%
+set destination_filename=%cbf_fn%
 
-echo %cbf_filename% | find /i ".xlsx">nul
+echo %cbf_fn% | find /i ".xlsx">nul
 
 rem It seems that you can't change an environment variable inside an error conditional
 rem so I am doing it outside of the if block. Sep-25-2019
 call n exb
 
 if %errorlevel% == 0 (
-  copy %cbf_filename% "%destination_filename%"
+  copy %cbf_fn% "%destination_filename%"
   echo.
   echo * File copied.
 )
@@ -121,22 +121,22 @@ if not "%cbf_application%" == "" (
 
 if not "%cbf_wo%" == "" (
   if exist "%cbf_wo%" (
-    set cbf_filename=%cbf_wo%
+    set cbf_fn=%cbf_wo%
     call m double_click
     call r
     exit/b
   )
 )
 
-if not "%cbf_filename%" == "" (
-  if exist "%cbf_filename%" (
+if not "%cbf_fn%" == "" (
+  if exist "%cbf_fn%" (
     xfn %1>nul
   ) else (
     if "%2" == "-c" (
       goto force_file_creation
     )
     echo.
-    echo * Error: File "%cbf_filename%" does not exist.
+    echo * Error: File "%cbf_fn%" does not exist.
     exit/b
   )
 )
@@ -147,7 +147,7 @@ if not "%cbf_url%" == "" (
 
 if not "%cbf_png%" == "" (
   if exist "%cbf_png%" (
-    set cbf_filename=%cbf_png%
+    set cbf_fn=%cbf_png%
     call m double_click
     call r
     exit/b
@@ -162,7 +162,7 @@ if not "%cbf_path%" == "" (
 
 if not "%cbf_ex%" == "" (
   if exist "%cbf_ex%" (
-    set cbf_filename=%cbf_ex%
+    set cbf_fn=%cbf_ex%
     call m double_click
     call r
     exit/b

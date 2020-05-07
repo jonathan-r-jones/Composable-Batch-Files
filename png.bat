@@ -58,7 +58,7 @@ if "%cbf_png%" == "" (
   exit/b
 )
 
-set cbf_filename=%cbf_png%
+set cbf_fn=%cbf_png%
 
 call m double_click
 

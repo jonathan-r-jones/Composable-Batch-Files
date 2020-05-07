@@ -153,7 +153,7 @@ rem FCD: Apr-7-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\^
+set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\^
 dashboard\SystemWidget.js
 
 exit/b
@@ -171,7 +171,7 @@ rem FCD: Apr-10-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\mercury6\pom.xml
+set cbf_fn=C:\projects\netbeans\mercury6\pom.xml
 
 exit/b
 
@@ -188,7 +188,7 @@ rem FCD: Apr-10-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
+set cbf_fn=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
 
 exit/b
 
@@ -205,7 +205,7 @@ rem FCD: Apr-10-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
+set cbf_fn=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
 
 exit/b
 
@@ -222,7 +222,7 @@ rem FCD: Apr-10-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
+set cbf_fn=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
 
 exit/b
 
@@ -239,7 +239,7 @@ rem FCD: May-13-2017
 echo.
 echo %fp%
 
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\td.bat
+set cbf_fn=%COMPOSABLE_BATCH_FILES%\td.bat
 
 exit/b
 
@@ -286,7 +286,7 @@ echo.
 echo %fp%
 echo.
 
-set cbf_filename=%userprofile%\.m2\settings.xml
+set cbf_fn=%userprofile%\.m2\settings.xml
 
 exit/b
 
@@ -307,7 +307,7 @@ rem FCD: Apr-7-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
+set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
 
 exit/b
 
@@ -326,7 +326,7 @@ rem FCD: Sep-25-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
+set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
 
 exit/b
 
@@ -354,7 +354,7 @@ rem     xtype: 'login',
 rem     // CLOSE mobile login.
 rem     //xtype:'loginDisabled',
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\login.js
+set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\login.js
 
 exit/b
 
@@ -378,7 +378,7 @@ rem     xtype:'loginDisabled',
 rem     // CLOSE mobile login.
 rem     //xtype: 'login',
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\WIPPage.js
+set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\WIPPage.js
 
 exit/b
 
@@ -395,7 +395,7 @@ rem lu: Dec-4-2017
 echo.
 echo %fp%
 
-set cbf_filename=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
+set cbf_fn=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
 
 exit/b
 
@@ -412,7 +412,7 @@ rem lu: Dec-4-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
+set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
 
 exit/b
 
@@ -429,7 +429,7 @@ rem lu: Dec-6-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
+set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
 
 exit/b
 
@@ -448,7 +448,7 @@ rem FCD: Sep-25-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
+set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
 
 exit/b
 
@@ -465,7 +465,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\fn.bat
+set cbf_fn=%COMPOSABLE_BATCH_FILES%\fn.bat
 
 exit/b
 
@@ -484,7 +484,7 @@ echo %fp%
 
 call m set_wildfly_location
 
-set cbf_filename=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
+set cbf_fn=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
 
 set cbf_path=%wildfly_location%\standalone\configuration
 
@@ -748,7 +748,7 @@ echo %fp%
 
 call m set_wildfly_location
 
-set cbf_filename=%wildfly_location%\standalone\log\server.log
+set cbf_fn=%wildfly_location%\standalone\log\server.log
 
 set cbf_path=%wildfly_location%\standalone\log
 
@@ -803,7 +803,7 @@ rem fcd: Jun-26-2017
 echo.
 echo %fp%
 
-set cbf_filename=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
+set cbf_fn=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
 
 set cbf_path=C:\ProgramData\MySQL\MySQL Server 5.7
 
@@ -1310,7 +1310,7 @@ rem lu: Feb-2-2018
 echo.
 echo %fp%
 
-set cbf_filename=d:\aa\NovaCodeCamp.PizzaRatings\pizza.sln
+set cbf_fn=d:\aa\NovaCodeCamp.PizzaRatings\pizza.sln
 
 set cbf_path=d:\aa\NovaCodeCamp.PizzaRatings
 
@@ -1331,7 +1331,7 @@ rem lu: Jan-31-2018
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\it\ticktockmenu\TickTockMenu.sln
+set cbf_fn=%dropbox%\it\ticktockmenu\TickTockMenu.sln
 
 set cbf_path=%dropbox%\it\ticktockmenu
 
@@ -1456,7 +1456,7 @@ echo %fp%
 
 set cbf_path=%dropbox%\IT\Karl-2-C-Sharp-Testing
 
-set cbf_filename=%dropbox%\IT\Karl-2-C-Sharp-Testing\karl 2.sln
+set cbf_fn=%dropbox%\IT\Karl-2-C-Sharp-Testing\karl 2.sln
 
 exit/b
 
@@ -1475,7 +1475,7 @@ echo %fp%
 
 set cbf_path=
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_url=http://europeantestingconference.eu/2018
 
@@ -1511,7 +1511,7 @@ rem lu: Mar-1-2018
 echo.
 echo %fp%
 
-set cbf_filename=Readme.md
+set cbf_fn=Readme.md
 
 exit/b
 
@@ -1635,7 +1635,7 @@ rem lu: Mar-9-2018
 echo.
 echo %fp%
 
-call m expand_to_path_only "%cbf_filename%"
+call m expand_to_path_only "%cbf_fn%"
 
 exit/b
 
@@ -1720,7 +1720,7 @@ rem lu: May-4-2018
 echo.
 echo %fp%
 
-set cbf_filename=C:\Program Files\nodejs\node_modules\npm\package.json
+set cbf_fn=C:\Program Files\nodejs\node_modules\npm\package.json
 
 exit/b
 
@@ -1873,7 +1873,7 @@ rem lu: Jun-8-2018
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\it\various file types\filename with spaces.txt
+set cbf_fn=%dropbox%\it\various file types\filename with spaces.txt
 
 exit/b
 
@@ -2154,7 +2154,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_filename=%COMPOSABLE_BATCH_FILES%\cbf.bat
+set cbf_fn=%COMPOSABLE_BATCH_FILES%\cbf.bat
 
 set cbf_path=%composable_batch_files%
 
@@ -2847,7 +2847,7 @@ rem lu: Jul-13-2018
 echo.
 echo %fp%
 
-set cbf_filename=%Dropbox%\image manipulation\menu 4 square diamond icon.pdn
+set cbf_fn=%Dropbox%\image manipulation\menu 4 square diamond icon.pdn
 
 exit/b
 
@@ -3422,7 +3422,7 @@ rem lu: Jan-9-2020
 echo.
 echo %fp%
 
-set cbf_filename=%savannah%\resume\jonathan jones' resume.doc
+set cbf_fn=%savannah%\resume\jonathan jones' resume.doc
 
 set cbf_path=%savannah%\resume
 
@@ -3457,7 +3457,7 @@ if %errorlevel% == 1 (
 
 cd properties
 
-set cbf_filename=%cd%\AndroidManifest.xml
+set cbf_fn=%cd%\AndroidManifest.xml
 
 cd %current_folder%
 
@@ -3484,7 +3484,7 @@ rem Works with: Chrome, IE, OP, VI.
 
 rem Doesn't work with: Firefox, Edge.
 
-set cbf_filename=C:\a\skeptics.txt
+set cbf_fn=C:\a\skeptics.txt
 
 set cbf_url=C:/a/skeptics.txt
 
@@ -3508,7 +3508,7 @@ rem Works with: Chrome, IE, OP, VI.
 rem Doesn't work with: Edge, Firefox, even though Fx converts the filename to exactly the cbf_url 
 rem here.
 
-set cbf_filename=C:\a\skeptics.txt
+set cbf_fn=C:\a\skeptics.txt
 
 set cbf_url=file:///C:/a/skeptics.txt
 
@@ -3964,7 +3964,7 @@ rem lu: Aug-7-2018
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\it\composable-batch-files\how to modularize a batch file.asc
+set cbf_fn=%dropbox%\it\composable-batch-files\how to modularize a batch file.asc
 
 exit/b
 
@@ -4015,7 +4015,7 @@ rem lu: Aug-8-2018
 echo.
 echo %fp%
 
-set cbf_filename=%composable_batch_files%\CBF.pptx
+set cbf_fn=%composable_batch_files%\CBF.pptx
 
 exit/b
 
@@ -4066,7 +4066,7 @@ rem lu: Aug-10-2018
 echo.
 echo %fp%
 
-set cbf_filename=%composable_batch_files%\hello_world.bat
+set cbf_fn=%composable_batch_files%\hello_world.bat
 
 exit/b
 
@@ -4117,7 +4117,7 @@ rem lu: Aug-13-2018
 echo.
 echo %fp%
 
-set cbf_filename=%composable_batch_files%\Gettysburg_Address.txt
+set cbf_fn=%composable_batch_files%\Gettysburg_Address.txt
 
 exit/b
 
@@ -4316,7 +4316,7 @@ rem lu: Aug-23-2018
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\it\fresnel\incidents.json
+set cbf_fn=%dropbox%\it\fresnel\incidents.json
 
 set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/Fresnel/master/incidents.json
 
@@ -4666,7 +4666,7 @@ rem lu: Sep-11-2018
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\it\gitignore\VisualStudio.gitignore
+set cbf_fn=%dropbox%\it\gitignore\VisualStudio.gitignore
 
 set cbf_path=%dropbox%\it\gitignore
 
@@ -4689,7 +4689,7 @@ rem lu: Jan-19-2018
 echo.
 echo %fp%
 
-set cbf_filename=.gitignore
+set cbf_fn=.gitignore
 
 set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
@@ -6203,6 +6203,8 @@ exit/b
 
 :v10
 
+:max
+
 :pass-through
 
 set fp=* Pass through.
@@ -6525,7 +6527,7 @@ rem lu: Nov-19-2018
 echo.
 echo %fp%
 
-set cbf_filename=%userprofile%\.aws\credentials
+set cbf_fn=%userprofile%\.aws\credentials
 
 set cbf_path=%userprofile%\.aws
 
@@ -6788,7 +6790,7 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-set cbf_filename=%composable_batch_files%\Composable Batch Files Helper.lnk
+set cbf_fn=%composable_batch_files%\Composable Batch Files Helper.lnk
 
 exit/b
 
@@ -6806,10 +6808,10 @@ echo.
 echo %fp%
 
 rem This filename is from Dec-14-2018
-set cbf_filename=%userprofile%\downloads\ec2-18-253-148-152.us-gov-east-1.compute.amazonaws.com.rdp
+set cbf_fn=%userprofile%\downloads\ec2-18-253-148-152.us-gov-east-1.compute.amazonaws.com.rdp
 
 rem This filename is from c. Dec-11-2018
-set cbf_filename=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
+set cbf_fn=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
 
 exit/b
 
@@ -6830,7 +6832,7 @@ echo %fp%
 
 call %0 c_docs
 
-set cbf_filename=%cbf_path%\development environment.xlsx
+set cbf_fn=%cbf_path%\development environment.xlsx
 
 exit/b
 
@@ -6964,7 +6966,7 @@ rem lu: Dec-18-2018
 echo.
 echo %fp%
 
-set cbf_filename=%composable_batch_files%\jaws.pptx
+set cbf_fn=%composable_batch_files%\jaws.pptx
 
 exit/b
 
@@ -7030,7 +7032,7 @@ echo %fp%
 
 call %0 sz
 
-set cbf_filename=%cbf_path%\copy of cc.asc
+set cbf_fn=%cbf_path%\copy of cc.asc
 
 exit/b
 
@@ -7049,7 +7051,7 @@ rem lu: Dec-4-2018
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\gfe.asc
+set cbf_fn=%share-zone%\gfe.asc
 
 exit/b
 
@@ -7095,7 +7097,7 @@ set cbf_application=C:\Program Files\Git\cmd\git-gui.exe
 
 if exist C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe set cbf_application=C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -7145,7 +7147,7 @@ echo %fp%
 
 call %0 s
 
-set cbf_filename=%cbf_path%\aig.bat
+set cbf_fn=%cbf_path%\aig.bat
 
 exit/b
 
@@ -7183,7 +7185,7 @@ rem lu: Dec-30-2018
 echo.
 echo %fp%
 
-set cbf_filename=%userprofile%\downloads\10.168.73.179.rdp
+set cbf_fn=%userprofile%\downloads\10.168.73.179.rdp
 
 exit/b
 
@@ -7200,7 +7202,7 @@ rem lu: Dec-30-2018
 echo.
 echo %fp%
 
-set cbf_filename=%userprofile%\downloads\10.168.73.223.rdp
+set cbf_fn=%userprofile%\downloads\10.168.73.223.rdp
 
 exit/b
 
@@ -7263,7 +7265,7 @@ rem lu: Sep-15-2018
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\copy of wk.asc
+set cbf_fn=%share-zone%\copy of wk.asc
 
 exit/b
 
@@ -7280,7 +7282,7 @@ rem lu: Jan-4-2019
 echo.
 echo %fp%
 
-set cbf_filename=%userprofile%\downloads\ec2-18-253-135-181.us-gov-east-1.compute.amazonaws.com.rdp
+set cbf_fn=%userprofile%\downloads\ec2-18-253-135-181.us-gov-east-1.compute.amazonaws.com.rdp
 
 exit/b
 
@@ -7305,7 +7307,7 @@ echo %fp%
 
 call %0 c_docs
 
-set cbf_filename=%cbf_path%\DevOps Roadmap.xlsx
+set cbf_fn=%cbf_path%\DevOps Roadmap.xlsx
 
 exit/b
 
@@ -7359,7 +7361,7 @@ rem lu: Dec-4-2018
 echo.
 echo %fp%
 
-set cbf_filename=%savannah%\belfry\j.bat
+set cbf_fn=%savannah%\belfry\j.bat
 
 set cbf_path=%userprofile%\j
 
@@ -7382,7 +7384,7 @@ echo %fp%
 
 set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 set cbf_path=%my documents%\gpodder\downloads
 
@@ -7422,7 +7424,7 @@ rem lu: Jan-22-2019
 rem echo.
 rem echo %fp%
 
-set cbf_filename=%savannah%\belfry\synchronize with dropbox.bat
+set cbf_fn=%savannah%\belfry\synchronize with dropbox.bat
 
 exit/b
 
@@ -7458,7 +7460,7 @@ if "%cbf_application%" == "" (
 
 set cbf_path=%cbf_application:\excel.exe=%
 rem Commented the following line because it breaks f.bat. Nov-26-2019 11:28 AM
-rem set cbf_filename=%cbf_application%
+rem set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -7490,7 +7492,7 @@ if "%cbf_application%" == "" (
 
 set cbf_path=%cbf_application:\winword.exe=%
 rem Commented the following line because it breaks f.bat. Nov-26-2019 11:28 AM
-rem set cbf_filename=%cbf_application%
+rem set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -7528,7 +7530,7 @@ call %0 jj
 
 set cbf_path=%cbf_path%\gradle\wrapper
 
-set cbf_filename=%cbf_path%\gradle-wrapper.properties
+set cbf_fn=%cbf_path%\gradle-wrapper.properties
 
 exit/b
 
@@ -7568,7 +7570,7 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\Craig's Terraform State file.txt
+set cbf_fn=%share-zone%\Craig's Terraform State file.txt
 
 exit/b
 
@@ -7587,7 +7589,7 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\Craig's Terraform State file - old.txt
+set cbf_fn=%share-zone%\Craig's Terraform State file - old.txt
 
 exit/b
 
@@ -7606,7 +7608,7 @@ echo %fp%
 
 set cbf_application=%aa%\SQL Workbench\SQLWorkbench.exe
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -7684,7 +7686,7 @@ rem lu: Feb-8-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\last_updated_log.txt
+set cbf_fn=%share-zone%\last_updated_log.txt
 
 exit/b
 
@@ -7701,7 +7703,7 @@ rem lu: Feb-27-2019
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\savannah\reach out\%computername%.asc
+set cbf_fn=%dropbox%\savannah\reach out\%computername%.asc
 
 exit/b
 
@@ -7739,7 +7741,7 @@ rem lu: Mar-5-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\mtw.asc
+set cbf_fn=%share-zone%\mtw.asc
 
 exit/b
 
@@ -7756,7 +7758,7 @@ rem lu: Mar-5-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\mtg.asc
+set cbf_fn=%share-zone%\mtg.asc
 
 exit/b
 
@@ -7790,7 +7792,7 @@ rem lu: Mar-8-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\ni.bat
+set cbf_fn=%share-zone%\ni.bat
 
 exit/b
 
@@ -7930,7 +7932,7 @@ rem lu: Feb-1-2018
 echo.
 echo %fp%
 
-set cbf_filename=c:\a\j1.txt
+set cbf_fn=c:\a\j1.txt
 
 exit/b
 
@@ -7947,7 +7949,7 @@ rem lu: Feb-1-2018
 echo.
 echo %fp%
 
-set cbf_filename=c:\a\j2.txt
+set cbf_fn=c:\a\j2.txt
 
 exit/b
 
@@ -7964,7 +7966,7 @@ rem lu: Mar-29-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\%1.txt
+set cbf_fn=%share-zone%\%1.txt
 
 exit/b
 
@@ -7981,7 +7983,7 @@ rem lu: Mar-29-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\%1.txt
+set cbf_fn=%share-zone%\%1.txt
 
 exit/b
 
@@ -8000,7 +8002,7 @@ echo %fp%
 
 call n cade
 
-set cbf_filename=%cbf_path%\%1.txt
+set cbf_fn=%cbf_path%\%1.txt
 
 exit/b
 
@@ -8041,7 +8043,7 @@ echo %fp%
 if not exist %tmp%\certutil_input.txt echo.
 if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FILES%\certutil_input.txt" "%tmp%"
 
-set cbf_filename=%tmp%\certutil_input.txt
+set cbf_fn=%tmp%\certutil_input.txt
 
 exit/b
 
@@ -8059,7 +8061,7 @@ echo.
 echo %fp%
 echo.
 
-set cbf_filename=%tmp%\certutil_output.txt
+set cbf_fn=%tmp%\certutil_output.txt
 
 exit/b
 
@@ -8080,7 +8082,7 @@ rem lu: Jun-14-2018
 echo.
 echo %fp%
 
-set cbf_filename=%temp%\search_results.txt
+set cbf_fn=%temp%\search_results.txt
 
 exit/b
 
@@ -8097,7 +8099,7 @@ rem lu: Jun-14-2018
 echo.
 echo %fp%
 
-set cbf_filename=%temp%\search_results_fs.txt
+set cbf_fn=%temp%\search_results_fs.txt
 
 exit/b
 
@@ -8114,7 +8116,7 @@ rem lu: Jun-14-2018
 echo.
 echo %fp%
 
-set cbf_filename=%temp%\search_results_cs.txt
+set cbf_fn=%temp%\search_results_cs.txt
 
 exit/b
 
@@ -8224,7 +8226,7 @@ rem lu: Apr-15-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\iT2.asc
+set cbf_fn=%share-zone%\iT2.asc
 
 exit/b
 
@@ -8575,7 +8577,7 @@ set cbf_clone_url=https://github.com/dotnet-presentations/xamarin.git
 
 set cbf_path=%cbf_repo%\imdx\Introduction to Mobile Development with Xamarin
 
-set cbf_filename=%cbf_path%\Introduction to Mobile Development with Xamarin.pptx
+set cbf_fn=%cbf_path%\Introduction to Mobile Development with Xamarin.pptx
 
 set cbf_url=https://github.com/dotnet-presentations/xamarin.git
 
@@ -8653,7 +8655,7 @@ echo %fp%
 
 set cbf_path=%dropbox%\it\fresnel\fresnel\Views
 
-set cbf_filename=%dropbox%\it\fresnel\fresnel\Views\AboutPage.xaml
+set cbf_fn=%dropbox%\it\fresnel\fresnel\Views\AboutPage.xaml
 
 exit/b
 
@@ -8678,7 +8680,7 @@ set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
 set cbf_fc_path=%cbf_repo%\acd\buster\buster\views
 
-set cbf_filename=%cbf_repo%\acd\App Center Demo.pptx
+set cbf_fn=%cbf_repo%\acd\App Center Demo.pptx
 
 set cbf_android_manifest_file=%cbf_repo%\%cbf_root%\buster\buster.Android\Properties\AndroidManifest.xml
 
@@ -8756,7 +8758,7 @@ echo %fp%
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Buster.git
 
-set cbf_filename=%dropbox%\it\buster\buster\Buster\Views\Page1.xaml
+set cbf_fn=%dropbox%\it\buster\buster\Buster\Views\Page1.xaml
 
 set cbf_path=%dropbox%\it\buster
 
@@ -8898,7 +8900,7 @@ rem lu: Nov-6-2018
 echo.
 echo %fp%
 
-set cbf_filename=%userprofile%\.aws\credentials
+set cbf_fn=%userprofile%\.aws\credentials
 
 set cbf_path=%userprofile%\.aws
 
@@ -9060,7 +9062,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\savannah\reach out\buzz.asc
+set cbf_fn=%dropbox%\savannah\reach out\buzz.asc
 
 exit/b
 
@@ -9077,7 +9079,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\savannah\reach out\xps.asc
+set cbf_fn=%dropbox%\savannah\reach out\xps.asc
 
 exit/b
 
@@ -9188,7 +9190,7 @@ rem lu: May-28-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\gils_pipeline_script
+set cbf_fn=%share-zone%\gils_pipeline_script
 
 exit/b
 
@@ -9207,7 +9209,7 @@ echo %fp%
 
 set cbf_application=
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_path=%cbf_repo%\
 
@@ -9253,7 +9255,7 @@ set cbf_application=
 
 set cbf_clone_url=https://github.com/DevTechnology/bdso-gateway.git
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_path=%cbf_repo%\bdso-gateway
 
@@ -9278,7 +9280,7 @@ set cbf_application=
 
 set cbf_clone_url=https://github.com/DevTechnology/BDSO-MSA.git
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_path=%cbf_repo%\bdso-msa
 
@@ -9309,7 +9311,7 @@ set cbf_clone_url=https://github.com/DevTechnology/bdso-gateway.git
 
 set cbf_fc_path=%cbf_path%
 
-set cbf_filename=%cbf_path%\platform\ci\Jenkinsfile
+set cbf_fn=%cbf_path%\platform\ci\Jenkinsfile
 
 set cbf_jf=%cbf_path%\platform\ci\Jenkinsfile
 
@@ -9334,7 +9336,7 @@ echo %fp%
 
 set cbf_application=
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_path=%cbf_repo%\
 
@@ -9357,7 +9359,7 @@ echo %fp%
 
 set cbf_application=
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_path=%cbf_repo%\
 
@@ -9380,7 +9382,7 @@ echo %fp%
 
 set cbf_application=
 
-set cbf_filename=%share-zone%\mob.docx
+set cbf_fn=%share-zone%\mob.docx
 
 set cbf_path=%cbf_repo%\
 
@@ -9432,7 +9434,7 @@ rem lu: Jul-17-2019
 echo.
 echo %fp%
 
-set cbf_filename=C:\Users\JJones2\j\Share-Zone\PPF\port analysis.xlsx
+set cbf_fn=C:\Users\JJones2\j\Share-Zone\PPF\port analysis.xlsx
 
 exit/b
 
@@ -9449,7 +9451,7 @@ rem lu: Jul-22-2019
 echo.
 echo %fp%
 
-set cbf_filename=%composable_batch_files%\te.bat
+set cbf_fn=%composable_batch_files%\te.bat
 
 exit/b
 
@@ -9466,7 +9468,7 @@ rem lu: Jul-30-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\my_cartys.xlsx
+set cbf_fn=%share-zone%\my_cartys.xlsx
 
 exit/b
 
@@ -9497,7 +9499,7 @@ rem lu: Aug-2-2019
 echo.
 echo %fp%
 
-set cbf_filename=%cbf_repo%\cade\Data Model\Data Model source code.jh
+set cbf_fn=%cbf_repo%\cade\Data Model\Data Model source code.jh
 
 set cbf_path=%cbf_repo%\cade\Data Model
 
@@ -9560,7 +9562,7 @@ rem lu: Aug-8-2019
 echo.
 echo %fp%
 
-set cbf_filename=%reach out%\wk.asc
+set cbf_fn=%reach out%\wk.asc
 
 set cbf_path=%dropbox%\work\wk
 
@@ -9703,7 +9705,7 @@ echo %fp%
 
 set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
 
-set cbf_filename=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
+set cbf_fn=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
 
 set cbf_path=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
 
@@ -9868,7 +9870,7 @@ echo %fp%
 
 call n c
 
-set cbf_filename=%cbf_path%\enrollment quandary.xlsx
+set cbf_fn=%cbf_path%\enrollment quandary.xlsx
 
 exit/b
 
@@ -9887,7 +9889,7 @@ echo %fp%
 
 call n c
 
-set cbf_filename=%cbf_path%\enrollment quandary 2.xlsx
+set cbf_fn=%cbf_path%\enrollment quandary 2.xlsx
 
 exit/b
 
@@ -9906,7 +9908,7 @@ echo %fp%
 
 call n c
 
-set cbf_filename=%cbf_path%\enrollment quandary 3.xlsx
+set cbf_fn=%cbf_path%\enrollment quandary 3.xlsx
 
 exit/b
 
@@ -9925,7 +9927,7 @@ echo %fp%
 
 call n c
 
-set cbf_filename=%cbf_path%\3 anumbers enrollment quandary.png
+set cbf_fn=%cbf_path%\3 anumbers enrollment quandary.png
 
 exit/b
 
@@ -9946,7 +9948,7 @@ echo %fp%
 
 call n c
 
-set cbf_filename=%cbf_path%\amalgamated enrollment quandary.xlsx
+set cbf_fn=%cbf_path%\amalgamated enrollment quandary.xlsx
 
 exit/b
 
@@ -10026,7 +10028,7 @@ echo %fp%
 
 call n rf_s
 
-set cbf_filename=%cbf_path%\juxtapose original file.txt
+set cbf_fn=%cbf_path%\juxtapose original file.txt
 
 exit/b
 
@@ -10045,7 +10047,7 @@ echo %fp%
 
 call n rf_s
 
-set cbf_filename=%cbf_path%\juxtapose my modified file.txt
+set cbf_fn=%cbf_path%\juxtapose my modified file.txt
 
 exit/b
 
@@ -10153,7 +10155,7 @@ echo %fp%
 
 set cbf_application=xx
 
-set cbf_filename=xx
+set cbf_fn=xx
 
 set cbf_je=https
 
@@ -10180,7 +10182,7 @@ rem lu: May-1-2019
 echo.
 echo %fp%
 
-set cbf_filename=%userprofile%\.chef\knife.rb
+set cbf_fn=%userprofile%\.chef\knife.rb
 
 exit/b
 
@@ -10205,7 +10207,7 @@ echo %fp%
 
 call n cbf
 
-set cbf_filename=%cbf_path%\ascii_art_sailboat.txt
+set cbf_fn=%cbf_path%\ascii_art_sailboat.txt
 
 exit/b
 
@@ -10226,7 +10228,7 @@ echo %fp%
 
 call n cbf
 
-set cbf_filename=%cbf_path%\ascii_art_sea_scene.txt
+set cbf_fn=%cbf_path%\ascii_art_sea_scene.txt
 
 exit/b
 
@@ -10247,7 +10249,7 @@ echo %fp%
 
 call n cbf
 
-set cbf_filename=%cbf_path%\ascii_art_scuba.txt
+set cbf_fn=%cbf_path%\ascii_art_scuba.txt
 
 exit/b
 
@@ -10263,7 +10265,7 @@ rem lu: Apr-1-2019
 
 echo %fp%
 
-set cbf_filename=%composable_batch_files%\parrot.txt
+set cbf_fn=%composable_batch_files%\parrot.txt
 
 exit/b
 
@@ -10279,7 +10281,7 @@ rem lu: Apr-1-2019
 
 rem echo %fp%
 
-set cbf_filename=%composable_batch_files%\ascii_art.txt
+set cbf_fn=%composable_batch_files%\ascii_art.txt
 
 exit/b
 
@@ -10295,7 +10297,7 @@ rem lu: Apr-1-2019
 
 rem echo %fp%
 
-set cbf_filename=%composable_batch_files%\ascii_art_2.txt
+set cbf_fn=%composable_batch_files%\ascii_art_2.txt
 
 exit/b
 
@@ -10348,7 +10350,7 @@ rem lu: Nov-12-2019
 echo.
 echo %fp%
 
-set cbf_filename=%reach out%\asus.asc
+set cbf_fn=%reach out%\asus.asc
 
 exit/b
 
@@ -10430,7 +10432,7 @@ rem lu: Nov-25-2019
 echo.
 echo %fp%
 
-set cbf_filename=c:\environments\dv\.kitchen-aws.yml
+set cbf_fn=c:\environments\dv\.kitchen-aws.yml
 
 set cbf_path=c:\environments\dv
 
@@ -10505,7 +10507,7 @@ rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized b
 
 set cbf_ex=%cbf_path%\Release Information.xlsx
 
-set cbf_filename=%cbf_path%\Release Information.xlsx
+set cbf_fn=%cbf_path%\Release Information.xlsx
 
 set cbf_jpg=%cbf_path%\release process.jpg
 
@@ -10549,7 +10551,7 @@ echo %fp%
 
 call n usrc
 
-set cbf_filename=%cbf_path%\app\services\dialog.service.ts
+set cbf_fn=%cbf_path%\app\services\dialog.service.ts
 
 exit/b
 
@@ -10568,7 +10570,7 @@ echo %fp%
 
 call n usrc
 
-set cbf_filename=%cbf_path%\app\app.component.ts
+set cbf_fn=%cbf_path%\app\app.component.ts
 
 exit/b
 
@@ -10609,7 +10611,7 @@ set cbf_conf=https://confluence.ice.dhs.gov/display/CART/Back+Up+FQT+and+Restore
 
 set cbf_wo=%cbf_path%\How to backup and restore a Cart database.docx
 
-set cbf_filename=%cbf_path%\How to backup and restore a Cart database.docx
+set cbf_fn=%cbf_path%\How to backup and restore a Cart database.docx
 
 exit/b
 
@@ -10651,7 +10653,7 @@ rem lu: May-16-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_backup
+set cbf_fn=%share-zone%\jenkinsfiles\jenkinsfile_backup
 
 exit/b
 
@@ -10672,7 +10674,7 @@ rem lu: Mar-11-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
+set cbf_fn=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
 
 exit/b
 
@@ -10708,7 +10710,7 @@ rem lu: Jun-2-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\jenkinsfiles\jenkinsfile_tester
+set cbf_fn=%share-zone%\jenkinsfiles\jenkinsfile_tester
 
 exit/b
 
@@ -10726,7 +10728,7 @@ echo.
 echo %fp%
 
 rem Admin password file.
-set cbf_filename=%userprofile%\.jenkins\secrets\initialAdminPassword
+set cbf_fn=%userprofile%\.jenkins\secrets\initialAdminPassword
 
 rem If you delete things from here, Jenkins may reset things.
 set cbf_path=%userprofile%\.jenkins
@@ -10765,7 +10767,7 @@ rem lu: Jan-14-2019
 echo.
 echo %fp%
 
-set cbf_filename=jenkinsfile
+set cbf_fn=jenkinsfile
 
 exit/b
 
@@ -10784,7 +10786,7 @@ rem lu: Jan-11-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\jenkins log.xlsx
+set cbf_fn=%share-zone%\jenkins log.xlsx
 
 exit/b
 
@@ -10803,7 +10805,7 @@ rem lu: Jan-15-2020
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\Jenkinsfiles\Jenkinsfile_Red_Hat
+set cbf_fn=%share-zone%\Jenkinsfiles\Jenkinsfile_Red_Hat
 
 exit/b
 
@@ -10864,7 +10866,7 @@ rem lu: Jan-25-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\blank.docx
+set cbf_fn=%share-zone%\blank.docx
 
 exit/b
 
@@ -10883,7 +10885,7 @@ echo %fp%
 
 call n cade
 
-set cbf_filename=%cbf_path%\blank.docx
+set cbf_fn=%cbf_path%\blank.docx
 
 exit/b
 
@@ -10904,7 +10906,7 @@ rem lu: Mar-22-2020
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\blank.xlsx
+set cbf_fn=%share-zone%\blank.xlsx
 
 exit/b
 
@@ -10923,7 +10925,7 @@ echo %fp%
 
 call n cade
 
-set cbf_filename=%cbf_path%\blank.xlsx
+set cbf_fn=%cbf_path%\blank.xlsx
 
 exit/b
 
@@ -10940,7 +10942,7 @@ rem lu: Jan-25-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\blank.txt
+set cbf_fn=%share-zone%\blank.txt
 
 exit/b
 
@@ -10982,7 +10984,7 @@ rem lu: Jan-23-2020
 echo.
 echo %fp%
 
-set cbf_filename=AWS Certified Solutions Architect - Associate - Prep Materials.pdf
+set cbf_fn=AWS Certified Solutions Architect - Associate - Prep Materials.pdf
 
 exit/b
 
@@ -10999,7 +11001,7 @@ rem lu: Feb-3-2020
 echo.
 echo %fp%
 
-set cbf_filename=%reach out%\dtg.asc
+set cbf_fn=%reach out%\dtg.asc
 
 exit/b
 
@@ -11035,7 +11037,7 @@ echo %fp%
 
 call n rf_ma
 
-set cbf_filename=%cbf_path%\api\build.gradle
+set cbf_fn=%cbf_path%\api\build.gradle
 
 exit/b
 
@@ -11054,7 +11056,7 @@ echo %fp%
 
 call n rf_ma
 
-set cbf_filename=%cbf_path%\api\src\main\java\gov\dhs\ice\cart\service\CartPortalCriteriaServiceImpl.java
+set cbf_fn=%cbf_path%\api\src\main\java\gov\dhs\ice\cart\service\CartPortalCriteriaServiceImpl.java
 
 exit/b
 
@@ -11206,7 +11208,7 @@ rem lu: Feb-18-2020
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\miscellaneous documents\concop.txt
+set cbf_fn=%dropbox%\miscellaneous documents\concop.txt
 
 exit/b
 
@@ -11351,7 +11353,7 @@ rem lu: Jun-30-2019
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\savannah\reach out\earl.asc
+set cbf_fn=%dropbox%\savannah\reach out\earl.asc
 
 exit/b
 
@@ -11368,7 +11370,7 @@ rem lu: Feb-25-2020
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\savannah\reach out\sp7.asc
+set cbf_fn=%dropbox%\savannah\reach out\sp7.asc
 
 exit/b
 
@@ -11431,7 +11433,7 @@ echo %fp%
 
 set cbf_application=C:\Users\jonat\Dropbox\Software\Code Compare\codecomparepro40.exe
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -11450,7 +11452,7 @@ echo %fp%
 
 set cbf_application=c:\program files\devart\code compare\codecompare.exe
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -11507,7 +11509,7 @@ rem lu: Mar-1-2020
 echo.
 echo %fp%
 
-set cbf_filename=%reach out%\cc.asc
+set cbf_fn=%reach out%\cc.asc
 
 exit/b
 
@@ -11524,7 +11526,7 @@ rem lu: Mar-1-2020
 echo.
 echo %fp%
 
-set cbf_filename=%dropbox%\miscellaneous documents\itinerary.xlsx
+set cbf_fn=%dropbox%\miscellaneous documents\itinerary.xlsx
 
 exit/b
 
@@ -11547,7 +11549,7 @@ echo %fp%
 
 set cbf_path=%dropbox%\savannah
 
-set cbf_filename=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
+set cbf_fn=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
 
 set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
 
@@ -11599,7 +11601,7 @@ rem lu: Mar-6-2020
 echo.
 echo %fp%
 
-set cbf_filename=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
+set cbf_fn=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
 
 exit/b
 
@@ -11749,7 +11751,7 @@ echo %fp%
 
 set cbf_application=
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_path=%cbf_repo%\
 
@@ -11824,7 +11826,7 @@ echo %fp%
 
 set cbf_application=%systemroot%\system32\control.exe
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -11847,7 +11849,7 @@ echo %fp%
 
 set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -11870,7 +11872,7 @@ set cbf_application=%cbf_path%\zoomit.exe
 
 if not exist %cbf_application% set cbf_application=%share-zone%\copied software\zoomit.exe
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -11887,7 +11889,7 @@ rem lu: Jan-29-2019
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\demo.pptx
+set cbf_fn=%share-zone%\demo.pptx
 
 exit/b
 
@@ -11920,7 +11922,7 @@ echo %fp%
 
 set cbf_application=%systemroot%\system32\SystemPropertiesAdvanced.exe
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -11956,7 +11958,7 @@ echo %fp%
 
 set cbf_path=%userprofile%\desktop
 
-set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
+set cbf_fn=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
 
 exit/b
 
@@ -11973,7 +11975,7 @@ rem lu: Jun-13-2018
 echo.
 echo %fp%
 
-set cbf_filename=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
+set cbf_fn=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
 
 exit/b
 
@@ -12163,7 +12165,7 @@ rem lu: Aug-8-2018
 echo.
 echo %fp%
 
-set cbf_filename=%Dropbox%\Miscellaneous Documents\groove is in the heart.xlsx
+set cbf_fn=%Dropbox%\Miscellaneous Documents\groove is in the heart.xlsx
 
 set cbf_path=%dropbox%\mp3\Jun-5-2018
 
@@ -12362,7 +12364,7 @@ echo %fp%
 
 call pn cm
 
-set cbf_filename=%cbf_path%\ActiveMQ Analysis.xlsx
+set cbf_fn=%cbf_path%\ActiveMQ Analysis.xlsx
 
 exit/b
 
@@ -12406,7 +12408,7 @@ echo %fp%
 
 call n cc
 
-set cbf_filename=%cbf_path%\.kitchen\logs\kitchen.log
+set cbf_fn=%cbf_path%\.kitchen\logs\kitchen.log
 
 set cbf_path=%cbf_path%\.kitchen\logs
 
@@ -12425,7 +12427,7 @@ rem lu: Apr-13-2020
 echo.
 echo %fp%
 
-set cbf_filename=c:\cookbook_test\cart\.kitchen\logs\sr75-centos-7.log
+set cbf_fn=c:\cookbook_test\cart\.kitchen\logs\sr75-centos-7.log
 
 exit/b
 
@@ -12457,6 +12459,8 @@ exit/b
 :cqbu
 
 :qcb
+
+:qb
 
 set fp=* Code Quick Backup folder.
 
@@ -12580,7 +12584,7 @@ rem lu: Dec-5-2018
 echo.
 echo %fp%
 
-set cbf_filename=%share-zone%\Cart Timecard Calculator.xlsx
+set cbf_fn=%share-zone%\Cart Timecard Calculator.xlsx
 
 set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
 
@@ -12622,7 +12626,7 @@ call pn rf_cade>nul
 
 set cbf_path=%cbf_path%\tickets\%1
 
-set cbf_filename=%cbf_path%\1657 display options.xlsx
+set cbf_fn=%cbf_path%\1657 display options.xlsx
 
 exit/b
 

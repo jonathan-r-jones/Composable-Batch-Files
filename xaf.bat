@@ -65,7 +65,7 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_filename=
+set cbf_fn=
 
 call an %1
 
@@ -81,9 +81,9 @@ if %errorlevel% gtr 0 (
 
 if "%3"=="-c" goto main_function
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   echo.
-  echo * Error: Cannot find the file named "%cbf_filename%".
+  echo * Error: Cannot find the file named "%cbf_fn%".
   exit/b
 )
 
@@ -95,7 +95,7 @@ if not exist "%cbf_filename%" (
 
 rem lu: Aug-3-2019
 
-call m associate_cbf_parameter_to_cbf_filename
+call m associate_cbf_parameter_to_cbf_fn
 
 call r
 

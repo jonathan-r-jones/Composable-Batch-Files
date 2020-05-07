@@ -418,7 +418,7 @@ set source_filename=%cbf_jf%
 
 call n jft
 
-set destination_filename=%cbf_filename%
+set destination_filename=%cbf_fn%
 
 echo.
 xcopy /y %source_filename% %destination_filename%
@@ -440,7 +440,7 @@ echo %fp%
 
 call n jft
 
-set source_filename=%cbf_filename%
+set source_filename=%cbf_fn%
 
 call n j
 

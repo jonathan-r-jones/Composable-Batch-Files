@@ -58,7 +58,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-set cbf_source_filename=%cbf_filename%
+set cbf_source_filename=%cbf_fn%
 
 call fn %2
 
@@ -67,7 +67,7 @@ if %errorlevel% gtr 0 (
 )
 
 echo.
-copy "%cbf_source_filename%" "%cbf_filename%"
+copy "%cbf_source_filename%" "%cbf_fn%"
 
 exit/b
 

@@ -63,7 +63,7 @@ echo.
 echo %filep%
 
 if "%~3" == "x" (
-  set cbf_filename=%~1
+  set cbf_fn=%~1
   goto final_step
 )
 
@@ -73,7 +73,7 @@ echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 (
   echo If called.
-  set cbf_filename=%~1
+  set cbf_fn=%~1
 ) else (
   call fn %1
 )
@@ -85,13 +85,13 @@ if "%~2" == "" (
   call an %2
 )
 
-if "%cbf_filename%" == "" (
+if "%cbf_fn%" == "" (
   echo.
-  echo * Error: CBF_Filename equals nothing.
+  echo * Error: cbf_fn equals nothing.
   exit/b
 )
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 rem echo.
 rem echo CBF_Parameter: %cbf_parameter%

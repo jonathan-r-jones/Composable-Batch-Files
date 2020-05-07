@@ -57,15 +57,15 @@ rem lu: Apr-19-2019
 rem echo.
 rem echo %fp%
 
-set cbf_filename=%share-zone%\%~1.bat
+set cbf_fn=%share-zone%\%~1.bat
 
-if not exist %cbf_filename% (
+if not exist %cbf_fn% (
   rem echo.
-  rem echo * The file "%cbf_filename%" does not exist.
+  rem echo * The file "%cbf_fn%" does not exist.
   exit/b 1
 )
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 
@@ -81,14 +81,14 @@ set fp=* Main function.
 
 call n me
 
-set cbf_filename=%composable_batch_files%\%~1.bat
+set cbf_fn=%composable_batch_files%\%~1.bat
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   goto edit_a_share_zone_file
   exit/b
 )
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 

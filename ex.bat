@@ -36,7 +36,7 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1 (Optional): Filename alias to run. This file will try to open ^
 the cbf_ex first, and if that is not found, it will try to open the ^
-cbf_filename. If left blank, Excel is opened.
+cbf_fn. If left blank, Excel is opened.
 
 echo.
 echo %parameter_1%
@@ -62,22 +62,22 @@ if %errorlevel% gtr 0 (
 if not defined cbf_ex (
   echo.
   echo * The cbf_exel_filename is not defined for "%1". Nov-1-2019 8:58 PM
-  goto try_using_cbf_filename
+  goto try_using_cbf_fn
 )
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   echo.
-  echo * Error: The CBF_Filename "%cbf_filename%" could not be found. Nov-26-2019 10:50 AM
-  goto try_using_cbf_filename
+  echo * Error: The cbf_fn "%cbf_fn%" could not be found. Nov-26-2019 10:50 AM
+  goto try_using_cbf_fn
 )
 
-set cbf_filename=%cbf_ex%
+set cbf_fn=%cbf_ex%
 
 goto main_function
 
 
 
-:try_using_cbf_filename
+:try_using_cbf_fn
 
 call fn %1
 
@@ -104,7 +104,7 @@ goto main_function
 
 :main_function
 
-call m associate_cbf_parameter_to_cbf_filename
+call m associate_cbf_parameter_to_cbf_fn
 
 call an ex
 

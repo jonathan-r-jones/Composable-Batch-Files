@@ -47,7 +47,7 @@ echo.
 echo %filep%
 
 set cbf_application=
-set cbf_filename=
+set cbf_fn=
 set cbf_url=
 
 call n %~1
@@ -58,9 +58,9 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_filename%" == "" (
+if "%cbf_fn%" == "" (
   echo.
-  echo * Nickname Error: There is no cbf_filename defined for '%~1'.
+  echo * Nickname Error: There is no cbf_fn defined for '%~1'.
   exit/b 1
 )
 

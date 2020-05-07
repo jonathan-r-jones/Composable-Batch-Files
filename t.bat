@@ -6145,7 +6145,7 @@ rem lu: Mar-1-2018
 
 echo %fp%
 
-if not "%cbf_filename%" == "" (
+if not "%cbf_fn%" == "" (
   call k %1
   exit/b
 )
@@ -6517,7 +6517,7 @@ echo %1 | find /i ".">nul
 
 rem There is a period in the first parameter.
 if %errorlevel% == 0 (
-  set cbf_filename=%~1
+  set cbf_fn=%~1
   call m double_click
   r
 )
@@ -7964,7 +7964,7 @@ echo.
 echo %fp%
 
 echo.
-set cbf_filename=%temp%\describe_instances2.txt
+set cbf_fn=%temp%\describe_instances2.txt
 
 exit/b
 
@@ -7982,9 +7982,9 @@ echo.
 echo %fp%
 
 echo.
-set cbf_filename=%userprofile%\j\BGS\terraform-scripts\dv\BGS\main.tf
+set cbf_fn=%userprofile%\j\BGS\terraform-scripts\dv\BGS\main.tf
 
-set cbf_path=%~p%cbf_filename%
+set cbf_path=%~p%cbf_fn%
 
 exit/b
 
@@ -8838,13 +8838,13 @@ rem lu: Feb-15-2019
 echo.
 echo %fp%
 
-set cbf_filename=%temp%\conflicted copy report.txt
+set cbf_fn=%temp%\conflicted copy report.txt
 
-echo test Feb-15-2019 > "%cbf_filename%"
+echo test Feb-15-2019 > "%cbf_fn%"
 
-echo test2 Feb-15-2019 >> "%cbf_filename%"
+echo test2 Feb-15-2019 >> "%cbf_fn%"
 
-echo test3 Feb-15-2019 >> "%cbf_filename%"
+echo test3 Feb-15-2019 >> "%cbf_fn%"
 
 call an me
 
@@ -9691,7 +9691,7 @@ echo %fp%
 call n ened
 
 echo.  
-if exist "%cbf_filename%" == (
+if exist "%cbf_fn%" == (
   echo * File exists.
 ) else (
   echo * File NOT exists.
@@ -9826,7 +9826,7 @@ echo %fp%
 
 call fn %1
 
-call m convert_to_path %cbf_filename%
+call m convert_to_path %cbf_fn%
 
 echo cbf_path: %cbf_path%
 

@@ -67,7 +67,7 @@ if not exist "%cbf_path%" (
 )
 
 rem This is part of the new exclusivity strategy.
-set cbf_filename=
+set cbf_fn=
 
 
 

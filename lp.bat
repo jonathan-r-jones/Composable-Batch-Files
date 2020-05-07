@@ -78,7 +78,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-call m expand_to_path_only %cbf_filename%
+call m expand_to_path_only %cbf_fn%
 
 goto main_function
 

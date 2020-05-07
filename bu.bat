@@ -93,7 +93,7 @@ set source_filename=%cbf_jf%
 
 call n jfbu
 
-set destination_filename=%cbf_filename%
+set destination_filename=%cbf_fn%
 
 echo.
 @echo on

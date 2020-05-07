@@ -52,40 +52,40 @@ rem lu: Feb-15-2019
 echo.
 echo %fp%
 
-set cbf_filename=%temp%\conflicted copy report.txt
+set cbf_fn=%temp%\conflicted copy report.txt
 
-echo. > "%cbf_filename%"
-echo %fp% >> "%cbf_filename%"
+echo. > "%cbf_fn%"
+echo %fp% >> "%cbf_fn%"
 
-echo -------------------------------------------------------- >> "%cbf_filename%"
+echo -------------------------------------------------------- >> "%cbf_fn%"
 
 rem 1.
 call td s
-echo. >> "%cbf_filename%"
-echo ******* Current folder: %cd% >> "%cbf_filename%"
-echo. >> "%cbf_filename%"
-dir "*conflict*.*" /s >> "%cbf_filename%"
+echo. >> "%cbf_fn%"
+echo ******* Current folder: %cd% >> "%cbf_fn%"
+echo. >> "%cbf_fn%"
+dir "*conflict*.*" /s >> "%cbf_fn%"
 
 rem 2.
 call td mecfg
-echo. >> "%cbf_filename%"
-echo ******* Current folder: %cd% >> "%cbf_filename%"
-echo. >> "%cbf_filename%"
-dir "*conflict*.*" /s >> "%cbf_filename%"
+echo. >> "%cbf_fn%"
+echo ******* Current folder: %cd% >> "%cbf_fn%"
+echo. >> "%cbf_fn%"
+dir "*conflict*.*" /s >> "%cbf_fn%"
 
 rem 3.
 call td drmecfg
-echo. >> "%cbf_filename%"
-echo ******* Current folder: %cd% >> "%cbf_filename%"
-echo. >> "%cbf_filename%"
-dir "*conflict*.*" /s >> "%cbf_filename%"
+echo. >> "%cbf_fn%"
+echo ******* Current folder: %cd% >> "%cbf_fn%"
+echo. >> "%cbf_fn%"
+dir "*conflict*.*" /s >> "%cbf_fn%"
 
 rem 4.
 call td smecfg
-echo. >> "%cbf_filename%"
-echo ******* Current folder: %cd% >> "%cbf_filename%"
-echo. >> "%cbf_filename%"
-dir "*conflict*.*" /s >> "%cbf_filename%"
+echo. >> "%cbf_fn%"
+echo ******* Current folder: %cd% >> "%cbf_fn%"
+echo. >> "%cbf_fn%"
+dir "*conflict*.*" /s >> "%cbf_fn%"
 
 call an no
 

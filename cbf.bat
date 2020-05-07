@@ -121,9 +121,9 @@ echo     ji  Jira operations
 echo     jx  Use CBF dynamic variables in a double-click fashion.
 echo      l  Google searcher
 echo     lp  Load CBF_Path to the clipboard
-echo    lpf  Load CBF_Filename of passed in alias onto the clipboard
-echo   lpfc  Load CBF_Filename contents to the clipboard
-echo  lpfwp  Load CBF_Filename without path of passed in alias onto the clipboard
+echo    lpf  Load cbf_fn of passed in alias onto the clipboard
+echo   lpfc  Load cbf_fn contents to the clipboard
+echo  lpfwp  Load cbf_fn without path of passed in alias onto the clipboard
 echo    lpx  Use a dynamic variable to copy a cbf variable to the clipboard
 echo      m  Perform miscellaneous tasks using a function routing style
 echo    mav  Maven
@@ -164,7 +164,7 @@ echo   scpx  Secure Copy Protocol
 echo scpx_c  Secure Copy Protocol consumer
 echo     se  Internet search helper
 echo     sf  Surf to websites
-echo    sfn  Set cbf_filename based on an evaluated filename parameter
+echo    sfn  Set cbf_fn based on an evaluated filename parameter
 echo     sh  SSH
 echo    sln  Open a Visual Studio solution, has TD parameter
 echo     sm  Sublime
@@ -176,7 +176,7 @@ echo     sx  Use Sublime to edit a batch file in the CBF folder
 echo      t  Testing, experimenting and developing new batch file functions
 echo     td  Transform directory
 echo    tdc  Transform directory to favorite child folder of alias
-echo   tdfn  Transform directory where only the Cbf_filename is known
+echo   tdfn  Transform directory where only the cbf_fn is known
 echo    tdp  Transform directory to parent folder
 echo    tdr  Transform directory by appending a relative path onto a base path
 echo     te  Batch file template used for creating new batch files

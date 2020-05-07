@@ -2897,7 +2897,7 @@ exit/b
 
 :double_click
 
-:set_cbf_application_equal_to_cbf_filename
+:set_cbf_application_equal_to_cbf_fn
 
 set fp=* Simulate a remote double click.
 
@@ -2907,13 +2907,13 @@ rem echo.
 rem echo %fp%
 
 rem Strangely, this also works. Feb-1-2018
-rem set cbf_application="%cbf_filename% - Shortcut.lnk"
+rem set cbf_application="%cbf_fn% - Shortcut.lnk"
 
-if "%cbf_filename%"=="" (
+if "%cbf_fn%"=="" (
   exit/b
 )
 
-set cbf_application=%cbf_filename%
+set cbf_application=%cbf_fn%
 
 set cbf_parameter=
 
@@ -2972,7 +2972,7 @@ set cbf_ex=
 
 set cbf_fc_path=
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_gh=
 
@@ -4223,25 +4223,25 @@ rem lu: Mar-8-2020
 echo.
 echo %fp%
 
-set cbf_filename_list=
+set cbf_fn_list=
 
-set cbf_filename_list="%dropbox%\savannah\reach out\WK.asc"
+set cbf_fn_list="%dropbox%\savannah\reach out\WK.asc"
 
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CC.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CM.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\IT.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\DI.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\JD.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CH.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\RB.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\TJ.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\CI.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\TR.asc"
-set cbf_filename_list=%cbf_filename_list% "%dropbox%\savannah\reach out\OC.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CC.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CM.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\IT.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\DI.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\JD.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CH.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\RB.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\TJ.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CI.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\TR.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\OC.asc"
 
 attrib +r "%share-zone%\copy of cc.asc"
 
-start mew32 %cbf_filename_list%
+start mew32 %cbf_fn_list%
 
 
 exit/b
@@ -4259,24 +4259,24 @@ rem lu: Apr-15-2019
 echo.
 echo %fp%
 
-set cbf_filename_list=
+set cbf_fn_list=
 
-set cbf_filename_list="%share-zone%\gfe.asc"
+set cbf_fn_list="%share-zone%\gfe.asc"
 
-set cbf_filename_list=%cbf_filename_list% "%share-zone%\copy of cc.asc"
-set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\ch.bat"
-set cbf_filename_list=%cbf_filename_list% "%share-zone%\it2.asc"
-set cbf_filename_list=%cbf_filename_list% "%share-zone%\k.bat"
-set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\m.bat"
-set cbf_filename_list=%cbf_filename_list% "%share-zone%\mtw.asc"
-set cbf_filename_list=%cbf_filename_list% "%share-zone%\ni.bat"
-set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\n.bat"
-set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\v.bat"
-set cbf_filename_list=%cbf_filename_list% "%composable_batch_files%\g.bat"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\copy of cc.asc"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\ch.bat"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\it2.asc"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\k.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\m.bat"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\mtw.asc"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\ni.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\n.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\v.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\g.bat"
 
 attrib +r "%share-zone%\copy of cc.asc"
 
-start mew32 %cbf_filename_list%
+start mew32 %cbf_fn_list%
 
 
 exit/b
@@ -4298,11 +4298,11 @@ echo %fp%
 
 call fn machine-specific-file
 
-set first_filename=%cbf_filename%
+set first_filename=%cbf_fn%
 
 call fn ccf
 
-set second_filename=%cbf_filename%
+set second_filename=%cbf_fn%
 
 start mew32 "%first_filename%" "%second_filename%"
 
@@ -4406,14 +4406,14 @@ exit/b
 
 :set_fn_eqt_app
 
-set fp=* Set cbf_filename equal to cbf_application.
+set fp=* Set cbf_fn equal to cbf_application.
 
 rem lu: Feb-4-2019
 
 echo.
 echo %fp%
 
-set cbf_filename=%cbf_application%
+set cbf_fn=%cbf_application%
 
 exit/b
 
@@ -4427,16 +4427,16 @@ exit/b
 
 :assoc_p_fn
 
-:associate_cbf_parameter_to_cbf_filename
+:associate_cbf_parameter_to_cbf_fn
 
-set fp=* Associate cbf_parameter to cbf_filename.
+set fp=* Associate cbf_parameter to cbf_fn.
 
 rem lu: Dec-19-2018
 
 echo.
 echo %fp%
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 exit/b
 
@@ -4457,12 +4457,12 @@ rem lu: Jul-16-2019
 echo.
 echo %fp%
 
-echo.
-echo * Variable to expand: %2
+rem echo.
+echo * Variable to expand: %2>nul
 
 set cbf_composed_variable=cbf_%2
 
-call %0 expand_variable "%%%cbf_composed_variable%%%"
+call %0 expand_variable "%%%cbf_composed_variable%%%">nul
 
 exit/b
 
@@ -5082,7 +5082,7 @@ rem lu: Apr-1-2019
 
 call n ascii_art
 
-type %cbf_filename%
+type %cbf_fn%
 
 exit/b
 
@@ -5098,7 +5098,7 @@ rem lu: Jul-26-2019
 
 call n ascii_art_2
 
-type %cbf_filename%
+type %cbf_fn%
 
 exit/b
 
@@ -5114,7 +5114,7 @@ rem lu: Nov-25-2019
 
 call n ascii_art_sailboat>nul
 
-type %cbf_filename%
+type %cbf_fn%
 
 exit/b
 
@@ -5130,7 +5130,7 @@ rem lu: May-4-2020
 
 call n ascii_art_error>nul
 
-type %cbf_filename%
+type %cbf_fn%
 
 exit/b
 
@@ -5170,7 +5170,7 @@ rem lu: Nov-8-2019
 echo.
 echo %fp%
 
-set cbf_filename_without_path=%~nx2
+set cbf_fn_without_path=%~nx2
 
 exit/b
 

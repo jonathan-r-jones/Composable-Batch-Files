@@ -67,7 +67,7 @@ echo                      work, not for repeatability.
 echo                  -c  As a batch file parameter, means force file creation
 echo                   c  Current folder filename, when used in a batch file name
 echo   dynamically cons-  An environment variable that can be dynamically created at runtime.
-echo   tructed variable   
+echo   tructed variable     For example, java is the dcv of the expression cbf_java.
 echo          error code  fn.bat returns an error code of 2 for file not exists.
 echo  entangled variable  A cbf variable associated with a particle batch file, e.g. cbf_path
 echo                      and td.bat.

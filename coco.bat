@@ -97,7 +97,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-set file_1=%cbf_filename%
+set file_1=%cbf_fn%
 
 call fn %2
 
@@ -106,7 +106,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-set file_2=%cbf_filename%
+set file_2=%cbf_fn%
 
 call an coco
 

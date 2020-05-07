@@ -114,7 +114,7 @@ if not exist "%cbf_built_path%" (
 
 :validate_filename
 
-set cbf_filename_without_path=
+set cbf_fn_without_path=
 
 call fn %2
 
@@ -125,7 +125,7 @@ if %errorlevel% == 1 (
   exit/b 1
 )
 
-set cbf_built_filename=%cbf_built_path%\%cbf_filename_without_path%
+set cbf_built_filename=%cbf_built_path%\%cbf_fn_without_path%
 
 if not exist "%cbf_built_filename%" (
   echo.

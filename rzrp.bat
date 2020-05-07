@@ -37,7 +37,7 @@ rem lu: Jan-31-2019
 
 rem echo %fp%
 
-set cbf_filename=
+set cbf_fn=
 
 call m initialize_environment_router
 

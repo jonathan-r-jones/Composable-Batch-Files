@@ -62,7 +62,7 @@ shift /0
 
 set fp=* Preprocess.
 
-set cbf_filename=
+set cbf_fn=
 
 call n %0>nul
 
@@ -146,12 +146,12 @@ rem nickname dictionary to determine the filename.
 echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
-  set cbf_filename=%~1
+  set cbf_fn=%~1
 ) else (
   call n %1
 )
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 
@@ -172,13 +172,13 @@ echo %fp%
 
 call n %1
 
-rem echo %cbf_filename%
+rem echo %cbf_fn%
 
-del %cbf_filename%
+del %cbf_fn%
 
 call %0 %1 -c
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 
@@ -200,24 +200,24 @@ rem nickname dictionary to determine the filename.
 echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 1 (
-  set cbf_filename=%~1
+  set cbf_fn=%~1
 )
 
 call m clear_errorlevel_silently
 
-if "%cbf_filename%" == "" (
+if "%cbf_fn%" == "" (
   echo.
-  echo * Nickname Error: There is no cbf_filename defined for '%~1'. 
+  echo * Nickname Error: There is no cbf_fn defined for '%~1'. 
   exit/b 1
 )
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   echo.
-  echo * Error: The file "%cbf_filename%" does not exist.
+  echo * Error: The file "%cbf_fn%" does not exist.
   exit/b 1
 )
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 
@@ -241,12 +241,12 @@ rem nickname dictionary to determine the filename.
 echo %1 | C:\Windows\System32\find.exe /i ".">nul
 
 if %errorlevel% == 1 (
-  set cbf_filename=%~1
+  set cbf_fn=%~1
 )
 
 call m clear_errorlevel_silently
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 
@@ -265,9 +265,9 @@ rem lu: Jan-16-2019
 echo.
 echo %fp%
 
-set cbf_filename=%~1
+set cbf_fn=%~1
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 
@@ -290,7 +290,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 

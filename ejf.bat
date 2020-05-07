@@ -68,7 +68,7 @@ goto finish_validation
 
 :cbf_jf_is_not_set
 
-set cbf_jf=%cbf_filename%
+set cbf_jf=%cbf_fn%
 
 
 

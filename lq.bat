@@ -62,14 +62,14 @@ if %errorlevel% == 1 (
 
 call fn lqma
 
-if not exist "%cbf_filename%" (
+if not exist "%cbf_fn%" (
   echo.
-  echo * Error: The CBF_Filename "%cbf_filename%" could not be found.
+  echo * Error: The cbf_fn "%cbf_fn%" could not be found.
   exit/b
 )
 
 rem echo.
-rem echo * Liquibase configuration file being used: %cbf_filename%
+rem echo * Liquibase configuration file being used: %cbf_fn%
 
 if "%~1" == "" goto update
 
@@ -82,7 +82,7 @@ goto %1
 :clearCheckSums
 
 @echo on
-liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_filename%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" clearCheckSums
+liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_fn%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" clearCheckSums
 @echo off
 
 exit/b
@@ -94,7 +94,7 @@ exit/b
 :listLocks
 
 @echo on
-liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_filename%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" listLocks
+liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_fn%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" listLocks
 @echo off
 
 exit/b
@@ -106,7 +106,7 @@ exit/b
 :update
 
 @echo on
-liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_filename%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" update
+liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_fn%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" update
 @echo off
 
 rem Matt's command is below.
@@ -143,7 +143,7 @@ echo.
 echo * Pipe help to file for viewing.
 
 @echo on
-liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_filename%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" rollbackToDate 2020-05-05 15:45:45
+liquibase --driver=org.postgresql.Driver --changeLogFile="%cbf_fn%" --url="jdbc:postgresql://localhost:5432/cart?stringtype=unspecified" --username="postgres" --password="1q2w3e4Z" --defaultSchemaName="public" --diffTypes=data --dataOutputDirectory="C:\a\liqui_MYDB_MYSCHEMA_Data.out" rollbackToDate 2020-05-05 15:45:45
 @echo off
 
 rem Rolls back the database to the the state is was at the given date/time. 

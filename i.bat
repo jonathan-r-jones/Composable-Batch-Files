@@ -136,9 +136,9 @@ if not "%cbf_fc_path%" == "" (
 )
 
 :
-if not "%cbf_filename%" == "" (
+if not "%cbf_fn%" == "" (
   echo.
-  echo * Filename {in ASCII format}: %cbf_filename%
+  echo * Filename {in ASCII format}: %cbf_fn%
 )
 
 :

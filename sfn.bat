@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Set cbf_filename based on an evaluation.
+set filep=* Set cbf_fn based on an evaluation.
 
 
 
@@ -112,14 +112,14 @@ exit/b
 set fp=* Use batch file to find filename.
 
 if exist "%composable_batch_files%\%~1.bat" (
-  set cbf_filename=%composable_batch_files%\%~1.bat
+  set cbf_fn=%composable_batch_files%\%~1.bat
   echo.
   echo %fp% - CBF
   goto file_exists
 )
 
 if exist "%share-zone%\%~1.bat" (
-  set cbf_filename=%share-zone%\%~1.bat
+  set cbf_fn=%share-zone%\%~1.bat
   echo.
   echo %fp% - exists in Share-Zone.
   goto file_exists
@@ -161,9 +161,9 @@ set fp=* Use current folder filename.
 echo.
 echo %fp%
 
-set cbf_filename=%~1
+set cbf_fn=%~1
 
-if exist "%cbf_filename%" (
+if exist "%cbf_fn%" (
   goto file_exists
 )
 
@@ -184,8 +184,8 @@ rem echo d_switch: %d_switch%
 
 if "%d_switch%" == "1" (
   echo.
-  echo * Delete file "%cbf_filename%", before opening. Nov-27-2019 6:36 PM
-  echo.>"%cbf_filename%"
+  echo * Delete file "%cbf_fn%", before opening. Nov-27-2019 6:36 PM
+  echo.>"%cbf_fn%"
   exit/b 0
 )
 
@@ -202,7 +202,7 @@ set fp=* The batch file label and CBF were found but file does MOT exist.
 echo.
 echo %fp%
 
-echo.>"%cbf_filename%"
+echo.>"%cbf_fn%"
 
 echo.
 echo * But now it does.

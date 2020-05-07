@@ -1455,7 +1455,7 @@ call g pull
 cd %current_location%
 
 echo.
-xcopy %cbf_filename%
+xcopy %cbf_fn%
 
 ren VisualStudio.gitignore .gitignore
 
@@ -3763,7 +3763,7 @@ echo %fp%
   
 call n %2
 
-git checkout %cbf_filename%
+git checkout %cbf_fn%
 
 exit/b
 

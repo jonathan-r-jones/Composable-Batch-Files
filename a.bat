@@ -84,13 +84,13 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_filename=%temp%\ahelp.txt
+set cbf_fn=%temp%\ahelp.txt
 
-call aws %2 %3 %4 %5 help>%cbf_filename%
+call aws %2 %3 %4 %5 help>%cbf_fn%
 
 call n me
 
-set cbf_parameter=%cbf_filename%
+set cbf_parameter=%cbf_fn%
 
 call r
 
@@ -1669,11 +1669,11 @@ echo %fp%
 
 call an me
 
-set cbf_filename=%temp%\describe_sgs.txt
+set cbf_fn=%temp%\describe_sgs.txt
 
-call aws ec2 describe-security-groups>%cbf_filename%
+call aws ec2 describe-security-groups>%cbf_fn%
 
-call m associate_cbf_parameter_to_cbf_filename
+call m associate_cbf_parameter_to_cbf_fn
 
 call r
 
@@ -1753,11 +1753,11 @@ echo %fp%
 
 call an np
 
-set cbf_filename=%temp%\describe_instances.txt
+set cbf_fn=%temp%\describe_instances.txt
 
-call aws ec2 describe-instances>%cbf_filename%
+call aws ec2 describe-instances>%cbf_fn%
 
-call m associate_cbf_parameter_to_cbf_filename
+call m associate_cbf_parameter_to_cbf_fn
 
 call r
 
@@ -1778,11 +1778,11 @@ echo %fp%
 
 call an np
 
-set cbf_filename=%temp%\describe_instances.txt
+set cbf_fn=%temp%\describe_instances.txt
 
-call aws ec2 describe-subnets>%cbf_filename%
+call aws ec2 describe-subnets>%cbf_fn%
 
-call m associate_cbf_parameter_to_cbf_filename
+call m associate_cbf_parameter_to_cbf_fn
 
 call r
 
@@ -2180,11 +2180,11 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_filename=%temp%\describe_images.txt
+set cbf_fn=%temp%\describe_images.txt
 
-aws --output table ec2 describe-images>%cbf_filename%
+aws --output table ec2 describe-images>%cbf_fn%
 
-call m associate_cbf_parameter_to_cbf_filename
+call m associate_cbf_parameter_to_cbf_fn
 
 call r
 
