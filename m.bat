@@ -2945,63 +2945,9 @@ exit/b
 
 :reset_cbf_variables
 
-set fp=* Reset CBF variables. (skw clear environment variables, clear_cbf_variables)
+set fp=* Reset CBF variables. This function is deprecated and has been moved to i.bat.
 
-rem echo.
-rem echo %fp%
-
-set cbf_appended_words=
-
-set cbf_application=
-
-set cbf_back=
-
-set cbf_clone_url=
-
-set cbf_conf=
-
-rem set cbf_default_browser=
-
-rem set cbf_default_text_editor=
-
-set cbf_wo=
-
-set cbf_expanded_variable=
-
-set cbf_ex=
-
-set cbf_fc_path=
-
-set cbf_filename=
-
-set cbf_gh=
-
-set cbf_host=
-
-set cbf_instance_id=
-
-set cbf_ip=
-
-set cbf_jf=
-
-set cbf_je=
-
-set cbf_jpg=
-
-set cbf_parameter=
-
-set cbf_path=
-
-set cbf_pem=
-
-set cbf_png=
-
-rem When this is uncommented, it causes issues. Dec-20-2019
-rem set cbf_repo=
-
-set cbf_url=
-
-set cbf_ex=
+call i reset_cbf_variables
 
 exit/b
 
