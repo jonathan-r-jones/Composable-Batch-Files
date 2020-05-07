@@ -59,7 +59,7 @@ echo %filep%
 
 call m clear_errorlevel_silently>nul
 
-call m rese
+call m reset
 
 call n %2
 

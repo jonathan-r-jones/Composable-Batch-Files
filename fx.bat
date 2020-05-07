@@ -34,9 +34,9 @@ echo %filep%
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: CBF extension, e.g. cbf_java, where where "java" is the passed in parameter.
+set parameter_1=Parameter 1: Dynamically constructed cbf variable.
 
-set parameter_2=Parameter 2: Dynamically constructed cbf alias to search.
+set parameter_2=Parameter 2: Alias you wish to process.
 
 set parameter_3=Parameter 3: Alias of your chosen application.
 
@@ -108,12 +108,19 @@ exit/b
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+
+
+
+:_
 
 :main_function
 
 call m clear_errorlevel_silently>nul
 
-call m rese
+call m reset
 
 call n %2
 

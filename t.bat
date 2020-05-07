@@ -10231,7 +10231,7 @@ if "%~2" == "" (
   exit/b
 )
 
-call m rese
+call m reset
 
 call n %2
 

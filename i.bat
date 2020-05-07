@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Information of CBF variable value assignments.
+set filep=* Information on CBF variable value assignments.
 
 
 
@@ -34,12 +34,20 @@ echo %filep%
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): If left blank, show current state of variables. ^
-Otherwise, pass in an alias to show a definition for. If -r, is passed in, variables ^
-are simply reset.
+set parameter_1=Parameter 1 (Optional): If left blank, the current state of all cbf variables ^
+will be shown. If an alias is passed in, its definition will be shown, preceded by a reset.
 
 echo.
 echo %parameter_1%
+
+echo.
+echo File Goals:
+
+echo.
+echo * Easily view the state of all variables.
+
+echo.
+echo * Easily view the state of a specified variable.
 
 exit/b
 
@@ -56,7 +64,7 @@ exit/b
 
 :process_alias_parameter
 
-call %0 reset_cbf_variables
+call m reset_cbf_variables
 
 call n %1
 
@@ -226,74 +234,6 @@ if not "%cbf_wo%" == "" (
   echo.
   echo * Word: %cbf_wo%
 )
-
-exit/b
-
-
-
-::_
-
-:reset
-
-:reset_cbf_variables
-
-set fp=* Reset CBF variables. (skw clear environment variables, clear_cbf_variables)
-
-rem echo.
-rem echo %fp%
-
-set cbf_appended_words=
-
-set cbf_application=
-
-set cbf_back=
-
-set cbf_clone_url=
-
-set cbf_conf=
-
-rem set cbf_default_browser=
-
-rem set cbf_default_text_editor=
-
-set cbf_wo=
-
-set cbf_expanded_variable=
-
-set cbf_ex=
-
-set cbf_fc_path=
-
-set cbf_filename=
-
-set cbf_gh=
-
-set cbf_host=
-
-set cbf_instance_id=
-
-set cbf_ip=
-
-set cbf_jf=
-
-set cbf_je=
-
-set cbf_jpg=
-
-set cbf_parameter=
-
-set cbf_path=
-
-set cbf_pem=
-
-set cbf_png=
-
-rem When this is uncommented, it causes issues. Dec-20-2019
-rem set cbf_repo=
-
-set cbf_url=
-
-set cbf_ex=
 
 exit/b
 

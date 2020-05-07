@@ -143,16 +143,17 @@ echo     np  Notepad++
 echo     ns  NSLookup wrapper
 echo     nx  Use Notepad++ to edit a batch file in the CBF folder
 echo     of  Open Folder, has TD parameter
-echo   offn  Open folder where only the filename is known.
+echo   offn  Open folder where only the filename is known
 echo    ofp  Transform directory to parent folder
 echo      p  Add, commit and push Git changes, has TD parameter
 echo     pg  Ping hooked up to the nicknames dictionary
 echo     pl  Git pull, has TD parameter
 echo     pn  Exclusively set the path for an alias
 echo    pql  PostgreSQL (in development)
-echo    png  Run cbf_png as a double-click filename.
+echo    png  Run cbf_png as a double-click filename
 echo     ps  PowerShell
-echo    qfn  Query if a file exists based on its passed in alias.
+echo     qb  Quickly back up any registered file
+echo    qfn  Query if a file exists based on its passed in alias
 echo      r  Run application using CBF variables
 echo    rzr  Multi-Edit abstraction layer for running CBF files
 echo   rzrp  Multi-Edit abstraction layer for running CBF files, with a pause

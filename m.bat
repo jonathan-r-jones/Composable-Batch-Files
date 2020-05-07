@@ -2945,9 +2945,10 @@ exit/b
 
 :reset_cbf_variables
 
-set fp=* Reset CBF variables. This function is deprecated and has been moved to i.bat.
+set fp=* Reset CBF variables.
 
-<<<<<<< HEAD
+set fp=* Reset CBF variables. (skw clear environment variables, clear_cbf_variables)
+
 rem echo.
 rem echo %fp%
 
@@ -2973,7 +2974,7 @@ set cbf_ex=
 
 set cbf_fc_path=
 
-set cbf_fn=
+set cbf_filename=
 
 set cbf_gh=
 
@@ -3003,9 +3004,6 @@ rem set cbf_repo=
 set cbf_url=
 
 set cbf_ex=
-=======
-call i reset_cbf_variables
->>>>>>> 4e21e0083087e56c1a0ba2d61ab6b8b388a29f5f
 
 exit/b
 
@@ -4458,9 +4456,6 @@ set fp=* Compose variable.
 
 rem lu: Jul-16-2019
 
-echo.
-echo %fp%
-
 rem echo.
 echo * Variable to expand: %2>nul
 
@@ -4793,8 +4788,8 @@ title=%fp%
 echo.
 echo %fp%
 
-rem call %0 lnk_ui_do_not_install_npm
-call %0 lnk_ui_install_npm
+call %0 lnk_ui_do_not_install_npm
+rem call %0 lnk_ui_install_npm
 
 exit/b
 

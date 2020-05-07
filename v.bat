@@ -1453,7 +1453,7 @@ if "%~2" == "" (
   exit/b
 )
 
-call m rese
+call m reset
 
 call n %2
 
@@ -1483,7 +1483,7 @@ if "%~3" == "" (
   exit/b
 )
 
-call m rese
+call m reset
 
 call n %3
 
