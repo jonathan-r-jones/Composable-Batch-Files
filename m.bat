@@ -4254,7 +4254,7 @@ exit/b
 
 :gfe
 
-set fp=* Open gfe files.
+set fp=* Open GFE Affinity files.
 
 rem lu: Apr-15-2019
 

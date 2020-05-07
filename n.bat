@@ -6205,6 +6205,26 @@ exit/b
 
 :max
 
+:fmax
+
+:rp_6
+
+:rp_kios
+
+:rp_ksit
+
+:rp_3
+
+:rp_2
+
+:tory
+
+:rp_5
+
+:rp_7
+
+:rp_10
+
 :pass-through
 
 set fp=* Pass through.
