@@ -6225,6 +6225,20 @@ exit/b
 
 :rp_10
 
+:rp_4
+
+:rp_18
+
+:rp_ai
+
+:views2
+
+:rst
+
+:rp_svc
+
+:head
+
 :pass-through
 
 set fp=* Pass through.
@@ -8291,8 +8305,6 @@ exit/b
 :_
 
 :k
-
-:off
 
 set fp=* One file.
 

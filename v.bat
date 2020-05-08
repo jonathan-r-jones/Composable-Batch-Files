@@ -734,6 +734,8 @@ if "%cbf_fn%" == "" (
   exit/b
 )
 
+rem (!noex)
+
 if not exist "%cbf_fn%" (
   echo.
   echo * Error: The cbf_fn "%cbf_fn%" could not be found.
