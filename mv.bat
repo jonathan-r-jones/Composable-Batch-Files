@@ -145,7 +145,6 @@ rem (!rfsp) (mov-2)
 call %0 pc_2_sf
 
 rem Run the tag program.
-
 call j tagpr
 
 pause
@@ -154,6 +153,8 @@ if "%~2" == "-n" goto do_not_transfer_old_content
 call %0 cj_2_old_cj
 
 :do_not_transfer_old_content
+echo.
+echo NOT transferring old content.
 call %0 sf_2_cj
 
 exit/b
