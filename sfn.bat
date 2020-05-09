@@ -78,9 +78,6 @@ set fp=* Evaluate the parameter list.
 
 rem lu: Nov-27-2019
 
-echo.
-echo %fp%
-
 set d_switch=0
 set e_switch=0
 
