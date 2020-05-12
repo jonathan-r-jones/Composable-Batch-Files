@@ -17,6 +17,10 @@ echo %filep%
 
 set fp=* Route callers.
 
+if "%~2" == "" goto help
+
+if "%~1" == "" goto help
+
 if "%~1" == "/?" goto help
 
 goto validate_user_input
@@ -47,18 +51,6 @@ exit/b
 :_
 
 :validate_user_input
-
-if "%~1" == "" (
-  echo.
-  echo * Percent 1 is a required field.
-  exit/b
-)
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2 is a required field.
-  exit/b
-)
 
 call n %1
 

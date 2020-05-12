@@ -52,7 +52,7 @@ echo   __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__
 echo  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(___
 echo.
 echo      a  AWS CLI
-echo     an  Exclusively set the application for an alias
+echo     an  Communicates that the intent is only to change the application for a passed in alias
 echo    ang  Angular-related tasks
 echo     as  Windows file associations
 echo      b  Shutdown windows
@@ -91,7 +91,7 @@ echo     dn  Dot Net Core
 echo     do  Docker functions accessed via function routing.
 echo     dr  Dir using function routing
 echo     dt  Dir with a td parameter
-echo      e  Uses mx.bat then me.bat to decipher which file to edit (Or exit command window)
+echo      e  Uses mx.bat then me.bat to decipher which ASCII file to edit (Or exit command window)
 echo     ed  Edit a file abstraction layer
 echo    edr  Edit a relative path constucted filename
 echo    edx  Edit a file
@@ -101,7 +101,7 @@ echo     es  Edit settings file of an alias
 echo     ex  Run excel with or without a filename alias parameter
 echo      f  Filename sapien. Use any application to open any file
 echo     fe  Check for the existence of a file based on the passed in filename alias
-echo     fn  Exclusively set the filename for an alias
+echo     fn  Communicates that the intent is only to change the filename for a passed in alias
 echo     fs  Filenames search
 echo    fsp  Perennial filenames search
 echo    fst  Filenames search with a td parameter
@@ -148,7 +148,7 @@ echo    ofp  Transform directory to parent folder
 echo      p  Add, commit and push Git changes, has TD parameter
 echo     pg  Ping hooked up to the nicknames dictionary
 echo     pl  Git pull, has TD parameter
-echo     pn  Exclusively set the path for an alias
+echo     pn  Communicates that the intent is only to change the path for a passed in alias
 echo    pql  PostgreSQL (in development)
 echo    png  Run cbf_png as a double-click filename
 echo     ps  PowerShell
@@ -187,7 +187,7 @@ echo     tl  Tasklist
 echo     ty  Type command for use on evaluated filename parameter
 echo    typ  Use type command to view nickname-specified file and pipe output to a file.
 echo    tyf  Reopen or see search results that have been piped to a file.
-echo     un  URL nicknames dictionary layer of abstraction
+echo     un  Communicates that the intent is only to change the URL for a passed in alias
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad
 echo    xfn  Filename-centric way to run an alias

@@ -40,7 +40,17 @@ rem sf -b (switch browser) -g (use cbf_google_url) -j (use cbf_je)
 echo.
 echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
 
+echo.
+echo Pit of Success Strategy: If cb_url is not found, the algorithm will look for cbf_conf.
+
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -65,17 +75,19 @@ if %errorlevel% == 1 (
 
 if "%cbf_url%" == "" (
   echo.
-  echo * Error: The CBF_URL value is empty.
-  exit/b
+  echo * The CBF_URL value is empty, so see check if cbf_conf is assigned.
+  if "%cbf_conf%" == "" (
+    echo.
+    echo * Boththe cbf_url and conf values are empty.
+    exit/b
+  ) else (
+    echo.
+    echo Using cbf_conf.
+    set cbf_parameter=%cbf_conf%
+  )
+) else (
+  set cbf_parameter=%cbf_url%
 )
-
-
-
-:_
-
-set fp=* Set URL.
-
-set cbf_parameter=%cbf_url%
 
 goto set_browser
 

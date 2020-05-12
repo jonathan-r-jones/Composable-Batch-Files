@@ -55,6 +55,9 @@ echo.
 echo Entangled variable: cbf_fc_path
 
 echo.
+echo Pit of Success Strategy: If cb_conf is not, found the algorithm will look for cbf_url.
+
+echo.
 echo Examples:
 
 echo.

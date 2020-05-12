@@ -4518,9 +4518,7 @@ pl
 
 rem Get Postgres running on local by clicking on the lnk_db shortcut.
 
-rem Switch to the api folder.
-td api
-
+rem If the local database is up-to-date, you don't need to runn liquibase?
 lq
 rem If liquibase fails, you may need to wipe your local databaase.
 

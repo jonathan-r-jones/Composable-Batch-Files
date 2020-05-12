@@ -43,7 +43,23 @@ rem sf -b (switch browser) -g (use cbf_google_url) -j (use cbf_je)
 echo.
 echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
 
+echo.
+echo Entangled variable: cbf_gh
+
+echo.
+echo Examples:
+
+echo.
+echo %0 pr
+
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 

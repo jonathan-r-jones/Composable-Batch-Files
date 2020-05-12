@@ -37,7 +37,20 @@ set parameter_1=Parameter 1 (Optional): Confluence URL alias.
 echo.
 echo %parameter_1%
 
+echo.
+echo Entangled variable: cbf_conf
+
+echo.
+echo Pit of Success Strategy: If cb_conf is not found, the algorithm will look for cbf_url.
+
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 

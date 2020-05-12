@@ -6243,6 +6243,12 @@ exit/b
 
 :rp_13
 
+:pure
+
+:an
+
+:anp
+
 :pass-through
 
 set fp=* Pass through.
@@ -10543,13 +10549,13 @@ rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized b
 
 set cbf_ex=%cbf_path%\Release Information.xlsx
 
-set cbf_fn=%cbf_path%\Release Information.xlsx
-
 set cbf_jpg=%cbf_path%\release process.jpg
 
 set cbf_gh=https://github.ice.dhs.gov/ERO/cart-devops
 
 set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
+
+set cbf_version=10
 
 exit/b
 

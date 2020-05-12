@@ -59,6 +59,13 @@ exit/b
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+
+
+
+:_
 
 :force_file_creation
 
@@ -95,6 +102,15 @@ exit/b
 
 :validate_input
 
+set fp=* Validate input.
+
+echo.
+echo %fp%
+
+if "%2" == "-c" (
+  goto force_file_creation
+)
+
 echo %1 | c:\windows\system32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
@@ -107,6 +123,11 @@ call m reset_cbf_variables
 
 call n %~1
 
+rem echo.
+rem echo Why is this echo statement necessary? The code won't work without it. How bizarre.
+rem qjq
+echo May-12-2020_3_57_PM
+
 if %errorlevel% == 1 (
   echo.
   echo * Error: Label not found. - skw May-4-2020_7_57_PM
@@ -115,6 +136,8 @@ if %errorlevel% == 1 (
 )
 
 if not "%cbf_application%" == "" (
+  echo.
+  echo * cbf_application is non-blank.
   call ja %1>nul
   exit/b
 )
@@ -132,17 +155,30 @@ if not "%cbf_fn%" == "" (
   if exist "%cbf_fn%" (
     xfn %1>nul
   ) else (
-    if "%2" == "-c" (
-      goto force_file_creation
-    )
     echo.
     echo * Error: File "%cbf_fn%" does not exist.
     exit/b
   )
 )
 
+if not "%cbf_ex%" == "" (
+  if exist "%cbf_ex%" (
+    echo.
+    echo * Double click Excel file "%cbf_ex%".
+    set cbf_fn=%cbf_ex%
+    call m double_click
+    call r
+    exit/b
+  ) else (
+    echo.
+    echo Could not find cbf_ex.
+    exit/b
+  )
+)
+
 if not "%cbf_url%" == "" (
   sf %1>nul
+  exit/b
 )
 
 if not "%cbf_png%" == "" (
@@ -157,18 +193,6 @@ if not "%cbf_png%" == "" (
 if not "%cbf_path%" == "" (
   if exist "%cbf_path%" (
     td %1>nul
-  )
-)
-
-if not "%cbf_ex%" == "" (
-  if exist "%cbf_ex%" (
-    set cbf_fn=%cbf_ex%
-    call m double_click
-    call r
-    exit/b
-  ) else (
-    echo.
-    eccho Could not find cbf_ex.
   )
 )
 
