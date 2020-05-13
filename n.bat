@@ -12674,4 +12674,21 @@ exit/b
 
 
 
+:_
+
+:mcd
+
+set fp=* My color dictionary.
+
+rem lu: May-12-2020
+
+echo.
+echo %fp%
+
+set cbf_ex=%dropbox%\jonathan\miscellany\My Color Dictionary.xlsx
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)

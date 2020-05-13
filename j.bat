@@ -104,8 +104,10 @@ exit/b
 
 set fp=* Validate input.
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
+
+call m clear_errorlevel_silently 
 
 if "%2" == "-c" (
   goto force_file_creation
@@ -122,11 +124,6 @@ if %errorlevel% == 0 (
 call m reset_cbf_variables
 
 call n %~1
-
-rem echo.
-rem echo Why is this echo statement necessary? The code won't work without it. How bizarre.
-rem qjq
-echo May-12-2020_3_57_PM
 
 if %errorlevel% == 1 (
   echo.
@@ -153,7 +150,10 @@ if not "%cbf_wo%" == "" (
 
 if not "%cbf_fn%" == "" (
   if exist "%cbf_fn%" (
-    xfn %1>nul
+    echo.
+    echo * 1. File exists cbf_fn: %cbf_fn%.
+    call xfn %1>nul
+    exit/b
   ) else (
     echo.
     echo * Error: File "%cbf_fn%" does not exist.
@@ -163,8 +163,8 @@ if not "%cbf_fn%" == "" (
 
 if not "%cbf_ex%" == "" (
   if exist "%cbf_ex%" (
-    echo.
-    echo * Double click Excel file "%cbf_ex%".
+    rem echo.
+    rem echo * Double click Excel file "%cbf_ex%".
     set cbf_fn=%cbf_ex%
     call m double_click
     call r

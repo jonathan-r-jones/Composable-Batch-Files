@@ -2974,7 +2974,7 @@ set cbf_ex=
 
 set cbf_fc_path=
 
-set cbf_filename=
+set cbf_fn=
 
 set cbf_gh=
 
