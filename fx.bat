@@ -34,9 +34,9 @@ echo %filep%
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Dynamically constructed cbf variable.
+set parameter_2=Parameter 1: Alias you wish to process.
 
-set parameter_2=Parameter 2: Alias you wish to process.
+set parameter_1=Parameter 2: Dynamically constructed cbf variable.
 
 set parameter_3=Parameter 3: Alias of your chosen application.
 
@@ -56,50 +56,7 @@ echo.
 echo Examples:
 
 echo.
-echo %0 java 1583 no
-
-echo.
-echo %0 ts 1583 ij
-
-echo.
-echo %0 html 1583 np
-
-echo.
-echo %0 filename ma sm
-
-echo.
-echo %0 csv 1583 ex
-
-rem This would actually work if the function check for a "file's" existence, which a URL is not.
-echo.
-echo %0 gurl jj fx 
-
-echo.
-echo %0 conf rp kr
-
-echo.
-echo %0 yml csc me
-
-echo.
-echo %0 json csc me
-
-echo.
-echo %0 conf csc kr (same as using "conf csc")
-
-echo.
-echo %0 m2 csc of
-
-echo.
-echo %0 pom csc me
-
-echo.
-echo %0 jf ma ie
-
-echo.
-echo %0 jf csc me
-
-echo.
-echo %0 xml rp_1 me
+echo %0 rp_1 xml me
 
 exit/b
 
@@ -122,15 +79,15 @@ call m clear_errorlevel_silently>nul
 
 call m reset
 
-call n %2
+call n %1
 
 if %errorlevel% gtr 0 exit/b
 
-call m compose_variable %1
+call m compose_variable %2
 
 if "%cbf_expanded_variable%" == "" (
   echo. 
-  echo * Error: There is no definition of "cbf_%1" for the alias "%2".
+  echo * Error: There is no definition of "cbf_%2" for the alias "%1".
   exit/b
 )
 

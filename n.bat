@@ -6268,6 +6268,8 @@ exit/b
 
 :rp_svc_test
 
+:po_iccat
+
 :pass-through
 
 set fp=* Pass through.
@@ -12639,7 +12641,9 @@ exit/b
 
 :tc
 
-set fp=* Timecard and timecard calculator.
+:tcc
+
+set fp=* Timecard calculator.
 
 rem lu: Dec-5-2018
 

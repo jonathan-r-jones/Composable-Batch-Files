@@ -191,8 +191,6 @@ echo    tyf  Reopen or see search results that have been piped to a file.
 echo     un  Communicates that the intent is only to change the URL for a passed in alias
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad
-echo      x  Using dynamically created variables and explicit specification of the target, 
-echo         execute CBF variables in a double-click fashion. A more specific version of j.bat.
 echo    xfn  Filename-centric way to run an alias
 
 exit/b
