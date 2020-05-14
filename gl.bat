@@ -59,33 +59,34 @@ echo                      performs a single task and is called by invoking its b
 echo                      label. It also contains "exit/b', which is the end of the function.
 echo code execution area  Batch file style (bfs) where the router routes execution to near the 
 echo                      end of the file, unless a parameter is supllied, in which case 
-echo                      function routing occurs. Example(s): t.bat.
+echo                      function routing occurs. Example(s): t.bat, v.bat.
 echo                 cbf  Composable batch files
 echo                  _c  Suffix indicating a consumer batch file using function routing with
 echo                      time-stamps as function names. Used for analysis and showing-your-
 echo                      work, not for repeatability.
 echo                  -c  As a batch file parameter, means force file creation
 echo                   c  Current folder filename, when used in a batch file name
-echo   dynamically cons-  An environment variable that can be dynamically created at runtime.
-echo   tructed variable     For example, java is the dcv of the expression cbf_java.
-echo          error code  fn.bat returns an error code of 2 for file not exists.
+echo   dynamically cons-  DCV. An environment variable that can be dynamically created at runtime.
+echo   tructed variable   For example, java is the dcv of the expression cbf_java.
 echo  entangled variable  A cbf variable associated with a particle batch file, e.g. cbf_path
 echo                      and td.bat.
+echo          error code  fn.bat returns an error code of 2 for file not exists.
 echo  evaluated filename  Filename, filename alias or batch file prefix for a batch file 
 echo    parameter         that lives in either the CBF or Share-zone folder.
 echo               filep  File purpose
 echo                   f  Filename alias, when used in a batch file name
 echo                  fp  Function purpose
-echo    function routing  Batch file style (bfs) where code execution is routed to a function.
-echo                      Example(s): g.bat, m.bat, t.bat and v.bat. T.bat and v.bat also
-echo                      also use a code execution area.
-echo               label  A batch file label, a.k.a. a function name, alias or nickname.
+echo        multipurpose  Batch file style (bfs) where the batch file contains any number of
+echo                      disparate functions which are called via a function alias, a.k.a.
+echo                      function routing. Example(s): g.bat, m.bat.
+echo               label  A batch file label, a.k.a. a function name, function alias, 
+echo                      alias or nickname.
 echo                  lu  Last updated. The last time the file was updated.
 echo                   p  Path alias, when used in a batch file name
 echo                 rf_  Prefix used to designate that a label has at least one caller.
 echo                 rp_  Prefix used to designate that a label is a relative path.
-echo         single task  Batch file style where the file tries to achieve a single task,
-echo                      e. g. scpx.bat usually calls a main_function.
+echo      single purpose  Batch file style where the file tries to achieve a single task or 
+echo                      objective, e. g. td.bat, scpx.bat and usually calls a main_function.
 echo                 skw  Search Keyword. Useful for finding things.
 echo        td parameter  Transform Directory passed in as a parameter, meaning to 
 echo                      change folders before running the batch file. For example,

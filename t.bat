@@ -7512,48 +7512,6 @@ exit/b
 
 
 
-:_+ Passing Spaces in Parameters
-
-
-
-:_
-
-:passing_spaces
-
-set fp=* Passing spaces in parameters.
-
-rem lu: Sep-9-2018
-
-echo %fp%
-
-echo.
-echo Percent 2: %2
-
-echo.
-echo Percent Squiggle 2: %~2
-
-exit/b
-
-
-
-:_
-
-:pass_spaces
-
-set fp=* The lesson learned is that you should put double quotes around parameters that may contain spaces.
-
-rem lu: Sep-9-2018
-
-echo %fp%
-
-call n sa
-
-call %0 passing_spaces "%cbf_path%"
-
-exit/b
-
-
-
 :_
 
 :
@@ -9062,29 +9020,6 @@ exit/b
 
 
 ::_
-     
-:hw_battle_parm
-
-set fp=* Call t versus call %0 versus call label, parameter passing.
-
-rem Result: Stangely, when calling with a colon, parameter doesn't seem to work. Mar-31-2019
-
-rem lu: Mar-21-2019
-
-echo.
-echo %fp%
-
-call %0 hw2 "Percent Zero!"
-
-call t hw2 "Called with t."
-
-call :hw2 "Called with colon."
-
-exit/b
-
-
-
-::_
 
 :hw2 %1 %2
 
@@ -10365,7 +10300,73 @@ echo %fp%
 call ni pg_pwd
 
 call lpfc pg_pwd
-rem qq-1
+
+exit/b
+
+
+
+:_+ Passing Parameters and Passing Spaces in Parameters
+
+:skw all parameters
+
+
+
+::_
+
+:passing_spaces
+
+set fp=* Passing spaces in parameters.
+
+rem lu: Sep-9-2018
+
+echo %fp%
+
+echo.
+echo Percent 2: %2
+
+echo.
+echo Percent Squiggle 2: %~2
+
+exit/b
+
+
+
+::_
+
+:pass_spaces
+
+set fp=* The lesson learned is that you should put double quotes around parameters that may contain spaces.
+
+rem lu: Sep-9-2018
+
+echo %fp%
+
+call n sa
+
+call %0 passing_spaces "%cbf_path%"
+
+exit/b
+
+
+
+::_
+     
+:hw_battle_parm
+
+set fp=* Call t versus call %0 versus call label, parameter passing.
+
+rem Result: Stangely, when calling with a colon, parameter doesn't seem to work. Mar-31-2019
+
+rem lu: Mar-21-2019
+
+echo.
+echo %fp%
+
+call %0 hw2 "Percent Zero!"
+
+call t hw2 "Called with t."
+
+call :hw2 "Called with colon."
 
 exit/b
 

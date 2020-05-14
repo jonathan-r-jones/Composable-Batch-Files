@@ -81,6 +81,7 @@ echo     cu  Curl hooked up to the nicknames dictionary
 echo    cur  Curl with atomic functions
 echo     cv  Chef converge with a path parameter
 echo      d  Dir for current folder
+echo     dc  Double-click a filename, back office operation
 echo     dd  Dir filename extension searcher including subfolders
 echo    ddc  Dir filename extension searcher current folder only
 echo     de  Delete function-routing style batch file
@@ -113,12 +114,12 @@ echo     gl  Glossary of terms used in CBF
 echo     gr  Gradle
 echo      h  Sencha
 echo      i  Information of CBF variable value assignments
-echo     je  Surf to Jenkins websites
-echo     kc  Connect to servers
-echo      j  Simulate a double-click. A remote double-click equivalent way to run an alias.
+echo      j  Using a default precedence of operation preferences or a dynamically constructed 
+echo         variable, simulate a double-click.
 echo     ja  Application-centric way of running an application with an optional filename parameter
+echo     je  Surf to Jenkins websites
 echo     ji  Jira operations
-echo     jx  Use CBF dynamic variables in a double-click fashion.
+echo     kc  Connect to servers
 echo      l  Google searcher
 echo     lp  Load CBF_Path to the clipboard
 echo    lpf  Load cbf_fn of passed in alias onto the clipboard
@@ -132,7 +133,7 @@ echo     me  Multi-Edit
 echo     mv  Move files using function routing
 echo   mvcp  Move file in the current directory to nickname-specified path
 echo     mx  Use Multi-Edit to edit a batch file in the CBF folder
-rem (!rfsp) (mov-2)
+rem (!rfsp) (mov-2) qq
 echo      n  Nicknames dictionary
 echo    ney  An empty nicknames dictionary, useful for starting over
 echo     nm  NPM
@@ -154,7 +155,7 @@ echo    png  Run cbf_png as a double-click filename
 echo     ps  PowerShell
 echo     qb  Quickly back up any registered file
 echo    qfn  Query if a file exists based on its passed in alias
-echo      r  Run application using CBF variables
+echo      r  Run application using CBF variables, mostly used in back office operations
 echo    rzr  Multi-Edit abstraction layer for running CBF files
 echo   rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo      s  Check git status remotely, has TD parameter
@@ -190,6 +191,8 @@ echo    tyf  Reopen or see search results that have been piped to a file.
 echo     un  Communicates that the intent is only to change the URL for a passed in alias
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad
+echo      x  Using dynamically created variables and explicit specification of the target, 
+echo         execute CBF variables in a double-click fashion. A more specific version of j.bat.
 echo    xfn  Filename-centric way to run an alias
 
 exit/b

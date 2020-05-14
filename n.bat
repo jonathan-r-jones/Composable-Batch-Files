@@ -4142,6 +4142,23 @@ exit/b
 
 :_
 
+:wsj
+
+set fp=* Wsj.
+
+rem lu: Jan-24-2018
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.wsj.com
+
+exit/b
+
+
+
+:_
+
 :covi
 
 set fp=* Conference Vision.
@@ -6248,6 +6265,8 @@ exit/b
 :an
 
 :anp
+
+:rp_svc_test
 
 :pass-through
 
@@ -10541,19 +10560,20 @@ rem Release Documents skw
 echo.
 echo %fp%
 
-call n rf_cade
-
+call n rf_cade>nul
 set cbf_path=%cbf_path%\Release Process
 
 rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized below here.
 
+set cbf_conf=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
+
 set cbf_ex=%cbf_path%\Release Information.xlsx
+
+set cbf_fn=c:\a\j1.txt
 
 set cbf_jpg=%cbf_path%\release process.jpg
 
 set cbf_gh=https://github.ice.dhs.gov/ERO/cart-devops
-
-set cbf_url=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
 
 set cbf_version=10
 
@@ -12670,6 +12690,10 @@ set cbf_path=%cbf_path%\tickets\%1
 
 set cbf_fn=%cbf_path%\1657 display options.xlsx
 
+set cbf_ex=%cbf_path%\CART_ENROLLMENTS__report_highlighted.xlsx
+
+set cbf_png=%cbf_path%\demo.png
+
 exit/b
 
 
@@ -12686,6 +12710,65 @@ echo.
 echo %fp%
 
 set cbf_ex=%dropbox%\jonathan\miscellany\My Color Dictionary.xlsx
+
+exit/b
+
+
+
+:_
+
+:po_ti
+
+set fp=* Path only for the tickets folder.
+
+rem lu: May-14-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%cbf_repo%\cade\tickets
+
+exit/b
+
+
+
+:_
+
+:tj
+
+set fp=* Test j.bat.
+
+rem lu: May-14-2020
+
+echo.
+echo %fp%
+
+call pn po_ti>nul
+set cbf_png=%cbf_path%\1657\demo.png
+
+set cbf_url=https://www.wsj.com
+
+set cbf_path=%cbf_repo%\cade\Release Process
+set cbf_ex=%cbf_path%\Release Information.xlsx
+
+set cbf_conf=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
+
+exit/b
+
+
+
+:_
+
+:gas
+
+set fp=* Google advanced search.
+
+rem lu: May-14-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.google.com/advanced_search
 
 exit/b
 

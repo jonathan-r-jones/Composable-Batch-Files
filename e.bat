@@ -69,7 +69,7 @@ if "%cbf_fn%" == "" (
   exit/b
 )
 
-call an me
+call an me>nul
 
 if %errorlevel% gtr 0 exit/b
 

@@ -2899,7 +2899,7 @@ exit/b
 
 :set_cbf_application_equal_to_cbf_fn
 
-set fp=* Simulate a remote double click.
+set fp=* Simulate a remote double click. Deprecated. Going forward, use dc.bat. **************
 
 rem lu: Feb-1-2018
 

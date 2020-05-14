@@ -117,8 +117,8 @@ set fp=* Use batch file to find filename.
 
 if exist "%composable_batch_files%\%~1.bat" (
   set cbf_fn=%composable_batch_files%\%~1.bat
-  echo.
-  echo %fp% - CBF
+  rem echo.
+  rem echo %fp% - exists in the CBF folder
   goto file_exists
 )
 

@@ -224,6 +224,12 @@ if not "%cbf_repo%" == "" (
 )
 
 :
+if not "%cbf_specific_browser%" == "" (
+  echo.
+  echo * Specific Browser: %cbf_specific_browser%
+)
+
+:
 if not "%cbf_url%" == "" (
   echo.
   echo * URL: %cbf_url%

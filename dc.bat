@@ -6,8 +6,7 @@
 
 :_
 
-rem       qq1
-set filep=* 
+set filep=* Double-click on a file.
 
 
 
@@ -37,31 +36,22 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-rem                                   qq1
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Filename of the file you wish to double-click.
 
 echo.
 echo %parameter_1%
 
 echo.
-echo %parameter_2%
-
-echo.
 echo Batch file style: Single Purpose
 
 echo.
-echo Entangled variable: cbf_fc_path
-
-echo.
-echo Pit of Success Strategy: If cb_conf is not, found the algorithm will look for cbf_url.
+echo Entangled variables: cbf_application and cbf_parameter
 
 echo.
 echo Examples:
 
 echo.
-echo %0
+echo %0 dc c:\a\j1.txt
 
 exit/b
 
@@ -80,8 +70,11 @@ exit/b
 
 :main_function
 
+set cbf_application=%~1
 
-rem qq-1
+set cbf_parameter=
+
+call r
 
 exit/b
 

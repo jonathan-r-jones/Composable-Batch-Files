@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Execute CBF variables in a double-click fashion.
+set filep=* Using dynamically created variables and explicit specification of the target, execute CBF variables in a double-click fashion.
 
 
 
@@ -31,6 +31,9 @@ goto main_function
 rem lu: 
 
 echo.
+echo %filep%
+
+echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: CBF extension, e.g. cbf_png, where where png is the passed in parameter.
@@ -47,6 +50,13 @@ echo.
 echo Batch file style: Custom.
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -75,15 +85,7 @@ if "%cbf_expanded_variable%" == "" (
   exit/b
 )
 
-if not exist "%cbf_expanded_variable%" (
-  echo.
-  echo * Error: CBF Expanded variable "%cbf_expanded_variable%" does not exist.
-  exit/b
-)
-
-call m double_click
-
-call r
+call dc "%cbf_expanded_variable%"
 
 exit/b
 

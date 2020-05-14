@@ -14,7 +14,7 @@ set filep=* Surf the internet.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto use_current_url
+if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
@@ -35,13 +35,42 @@ echo Usage: %0 [space separated parameter(s)]
 echo.
 echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.
 
-rem sf -b (switch browser) -g (use cbf_google_url) -j (use cbf_je)
+echo.
+echo Parameters 2-4 (Optional): If parameter 2 does not begin with a dash, then it ^
+is a dcv. If parameter 2 or 3 begins equals "-b", then the following parameter is ^
+the Browser application alias you wish to use. If "-b" is not used, the default ^
+browser will be used.
 
 echo.
-echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
+echo Pit of Success Strategy: If cb_url is not found, the algorithm will look for cbf_conf
+echo or cbf_gh.
 
 echo.
-echo Pit of Success Strategy: If cb_url is not found, the algorithm will look for cbf_conf.
+echo Noteworthy: %1 now supports the DCV behavior, while still supporting browser overriding.
+
+echo.
+echo Examples:
+
+echo.
+echo %0 gas
+
+echo.
+echo %0 wsj
+
+echo.
+echo %0 gas -b ie
+
+echo.
+echo %0 fq -b ie
+
+echo.
+echo %0 tj
+
+echo.
+echo %0 tj conf
+
+echo.
+echo %0 rp conf -b ie
 
 exit/b
 
@@ -58,67 +87,57 @@ exit/b
 
 :validate_input
 
+call m reset
 
+set fp=* Evaluate the parameter list.
 
-::_
+call n %1
 
-:validate_url
+if %errorlevel% gtr 0 exit/b
 
-call un %1
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Label not found. Oct-17-2019 3:51 PM.
-  call m clear_errorlevel_silently 
+if "%~2" == "" (
+  call :use_default_browser
+  call :set_precedence
   exit/b
 )
 
-if "%cbf_url%" == "" (
-  echo.
-  echo * The CBF_URL value is empty, so see check if cbf_conf is assigned.
-  if "%cbf_conf%" == "" (
-    echo.
-    echo * Boththe cbf_url and conf values are empty.
-    exit/b
-  ) else (
-    echo.
-    echo Using cbf_conf.
-    set cbf_parameter=%cbf_conf%
-  )
-) else (
-  set cbf_parameter=%cbf_url%
+if "%~3" == "" (
+  call :use_default_browser
+  call :compose_dcv %1 %2
+  exit/b
 )
 
-goto set_browser
+if "%~2" == "-b" (
+  call :override_default_browser %3
+  call :set_precedence %1 %2
+  exit/b
+)
+
+if "%~3" == "-b" (
+  call :override_default_browser %4
+  call :compose_dcv %1 %2
+  exit/b
+)
+
+echo.
+echo * Error: Control flow should not reach here.
+
+exit/b
 
 
 
 :_
 
-:use_current_url
+:use_default_browser
 
-set fp=* Use current CBF_URL. (Apr-24-2020_2_11_PM)
+set fp=* Use default browser.
 
 rem echo.
 rem echo %fp%
 
-set cbf_parameter=%cbf_url%
-
-
-
-:_
-
-:set_browser
-
-set fp=* Set browser.
-
-if not "%~2" == "" goto override_default_browser
-
-if not "%cbf_specific_browser%" == "" goto use_specific_browser
-
 set cbf_application=%cbf_default_browser%
 
-goto main_function
+exit/b
 
 
 
@@ -131,11 +150,36 @@ set fp=* Override default browser.
 echo.
 echo %fp%
 
-call an %2
+call an %1
 
 if %errorlevel% gtr 0 exit/b
 
-goto main_function
+exit/b
+
+
+
+:_
+
+:compose_dcv
+
+set fp=* Compose DCV.
+
+echo.
+echo %fp%
+
+call m compose_variable %2
+
+if "%cbf_expanded_variable%" == "" (
+  echo. 
+  echo * Error: There is no definition of "cbf_%2" for the alias "%1".
+  exit/b
+)
+
+set cbf_parameter=%cbf_expanded_variable%
+
+call r
+
+exit/b
 
 
 
@@ -149,6 +193,34 @@ echo.
 echo %fp%
 
 set cbf_application=%cbf_specific_browser%
+
+goto set_precedence
+
+
+
+:_
+
+:set_precedence
+
+set fp=* Set precedence.
+
+rem echo.
+rem echo %fp%
+
+set fp=* This is a precedence hierarchy.
+
+if "%cbf_parameter%" == "" (
+  set cbf_parameter=%cbf_url%
+)
+
+if "%cbf_parameter%" == "" (
+  set cbf_parameter=%cbf_conf%
+)
+
+if "%cbf_parameter%" == "" (
+  set cbf_parameter=%cbf_gh%
+)
+
 
 
 
