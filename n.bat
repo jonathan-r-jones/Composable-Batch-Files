@@ -6270,6 +6270,8 @@ exit/b
 
 :po_iccat
 
+:rute
+
 :pass-through
 
 set fp=* Pass through.
@@ -12773,6 +12775,23 @@ echo.
 echo %fp%
 
 set cbf_url=https://www.google.com/advanced_search
+
+exit/b
+
+
+
+:_
+
+:smco
+
+set fp=* Smart Commits.
+
+rem lu: May-15-2020
+
+echo.
+echo %fp%
+
+set cbf_conf=https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html
 
 exit/b
 

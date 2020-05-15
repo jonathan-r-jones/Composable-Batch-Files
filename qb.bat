@@ -38,9 +38,9 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Dynamically constructed cbf variable.
+set parameter_1=Parameter 2: Alias of the file you wish to backup.
 
-set parameter_2=Parameter 2: Alias of the file you wish to backup.
+set parameter_2=Parameter 1: Dynamically constructed cbf variable.
 
 echo.
 echo %parameter_1%
@@ -79,11 +79,11 @@ echo %filep%
 
 call m reset
 
-call n %2>nul
+call n %1>nul
 
 if %errorlevel% gtr 0 exit/b
 
-call m compose_variable %1
+call m compose_variable %2
 
 if "%cbf_expanded_variable%" == "" (
   echo. 

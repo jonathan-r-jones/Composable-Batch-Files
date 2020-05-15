@@ -510,31 +510,6 @@ exit/b
 
 :_
 
-:cla
-
-set fp=* How to save command line arguments. This works.
-
-rem Test percent star command.
-
-rem lu: Jan-31-2019
-
-echo.
-echo %fp%
-
-rem set cmd_line_args=%*
-
-rem echo.
-rem echo Commanmd line Arguments: %Cmd_line_args%
-
-echo.
-echo Commanmd line Arguments: %*
-
-exit/b
-
-
-
-:_
-
 :
 
 set fp=* Set statements aren't allowed inside if blocks so here is the workaround.
@@ -1375,7 +1350,109 @@ exit/b
 
 
 
-:_
+:_+ Passing Parameters and Passing Spaces in Parameters
+
+skws
+
+all parameters
+
+entire command line
+
+command line arguments
+
+parameter passing
+
+passing parameters
+
+
+
+::_
+
+:cla
+
+set fp=* How to save command line arguments. This works.
+
+rem Test percent star command.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+rem set cmd_line_args=%*
+
+rem echo.
+rem echo Commanmd line Arguments: %Cmd_line_args%
+
+echo.
+echo Commanmd line Arguments: %*
+
+exit/b
+
+
+
+::_
+
+:passing_spaces
+
+set fp=* Passing spaces in parameters.
+
+rem lu: Sep-9-2018
+
+echo %fp%
+
+echo.
+echo Percent 2: %2
+
+echo.
+echo Percent Squiggle 2: %~2
+
+exit/b
+
+
+
+::_
+
+:pass_spaces
+
+set fp=* The lesson learned is that you should put double quotes around parameters that may contain spaces.
+
+rem lu: Sep-9-2018
+
+echo %fp%
+
+call n sa
+
+call %0 passing_spaces "%cbf_path%"
+
+exit/b
+
+
+
+::_
+     
+:hw_battle_parm
+
+set fp=* Call t versus call %0 versus call label, parameter passing.
+
+rem Result: Stangely, when calling with a colon, parameter doesn't seem to work. Mar-31-2019
+
+rem lu: Mar-21-2019
+
+echo.
+echo %fp%
+
+call %0 hw2 "Percent Zero!"
+
+call t hw2 "Called with t."
+
+call :hw2 "Called with colon."
+
+exit/b
+
+
+
+::_
 
 :
 

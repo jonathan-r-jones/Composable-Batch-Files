@@ -29,18 +29,7 @@ goto validate_input
 
 :help
 
-rem lu: Mar-5-2020
-
-echo.
-echo Usage: %0 [space separated parameter(s)]
-
-set parameter_1=Parameter 1 (Optional): Application alias. If left [blank], the command window is closed.
-
-set parameter_2=Parameter 2 (Optional): Filename, filename alias or batch file prefix for a batch file ^
-that lives in either the CBF or Share-zone folder.
-
-set parameter_3=Parameter 3 or greater (Optional): -e Filename without extension, e.g. Jenkinsfile. ^
--v Create file using clipboad contents. -d Delete file before opening it.
+The help for this file is in sfn.bat. 
 
 exit/b
 

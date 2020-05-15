@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Edit the Jenkinsfile of an alias.
+set filep=* Use Mutli-Edit to edit the Jenkinsfile of an alias.
 
 echo.
 echo %filep%
@@ -17,7 +17,10 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" (
+  call fx ma jf me
+  exit/b
+)
 
 if "%~1" == "/?" goto help
 
@@ -32,7 +35,8 @@ goto validate_user_input
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Alias of the setting file you wish to edit.
+set parameter_1=Parameter 1: Alias of the Jenkinsfile you wish to edit. If left blank, the ^
+default Jenkisnfile is opened.
 
 echo.
 echo %parameter_1%

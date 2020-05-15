@@ -46,7 +46,7 @@ echo Pit of Success Strategy: If cb_url is not found, the algorithm will look fo
 echo or cbf_gh.
 
 echo.
-echo Noteworthy: %1 now supports the DCV behavior, while still supporting browser overriding.
+echo Noteworthy: %1 now supports DCV, while still supporting browser overriding.
 
 echo.
 echo Examples:

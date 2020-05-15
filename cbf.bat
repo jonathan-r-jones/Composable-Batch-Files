@@ -96,7 +96,8 @@ echo      e  Uses mx.bat then me.bat to decipher which ASCII file to edit (Or ex
 echo     ed  Edit a file abstraction layer
 echo    edr  Edit a relative path constucted filename
 echo    edx  Edit a file
-echo    ejf  Edit Jenkinsfile of an alias
+echo     ej  Use Multi-Edit to edit DCV ASCII files.
+echo    ejf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo     el  Edit log file of an alias
 echo     es  Edit settings file of an alias
 echo     ex  Run excel with or without a filename alias parameter

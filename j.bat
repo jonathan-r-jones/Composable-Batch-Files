@@ -42,6 +42,10 @@ echo override the default.
 echo.
 echo Think of %1 as command version of the GUI double-click.
 
+echo.
+echo Pit of Success Strategy: The algorithm will look many different cbf variables to ^
+double-click on so you are not restricted to using a single cbf variable for this batch file.
+
 exit/b
 
 
@@ -173,6 +177,16 @@ if not "%cbf_path%" == "" (
   if exist "%cbf_path%" (
     td %1>nul
   )
+)
+
+if not "%cbf_gh%" == "" (
+  call sf %1>nul
+  exit/b
+)
+
+if not "%cbf_conf%" == "" (
+  call sf %1>nul
+  exit/b
 )
 
 echo.

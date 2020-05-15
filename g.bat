@@ -3569,7 +3569,7 @@ exit/b
 
 ::_
 
-:cb
+:cbs
 
 set fp=* Create new branch based on specified source branch.
 
@@ -3601,7 +3601,7 @@ exit/b
 
 ::_
 
-:cbd
+:cb
 
 set fp=* Create new branch based on the develop branch.
 

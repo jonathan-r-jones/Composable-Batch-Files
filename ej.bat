@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Jira operations.
+set filep=* Use Multi-Edit to edit DCV ASCII files.
 
 
 
@@ -14,9 +14,9 @@ set filep=* Jira operations.
 
 set fp=* Route callers.
 
-if "%~1" == "/?" goto help
+if "%~1" == "" goto help
 
-if "%~1" == "" sf ji
+if "%~1" == "/?" goto help
 
 goto main_function
 
@@ -26,18 +26,32 @@ goto main_function
 
 :help
 
+cls
+
 echo.
 echo %filep%
 
-echo.
-echo Usage: %0 [parameter 1)]
-
-set parameter_1=Parameter 1 (Optional): Jira ticket number you wish to view.
+rem lu: 
 
 echo.
-echo %parameter_1% 
+echo Usage: %0 [space separated parameter(s)]
+
+set parameter_1=Parameter 1: Alias
+
+set parameter_2=Parameter 2: DCV
+
+echo.
+echo %parameter_1%
+
+echo.
+echo %parameter_2%
+
+echo.
+echo Batch file style: Single Purpose
 
 exit/b
+
+(!rfsp) (mov4)
 
 
 
@@ -52,14 +66,10 @@ exit/b
 
 :main_function
 
-rem lu: Apr-12-2019
-
-call ni jira_url
-
-call dc %cbf_url%/browse/cart-%1
+call fx %1 %2 me
 
 exit/b
 
 
 
-:_ (!rfsp) (mov-9)
+:_ (!rfsp) (mov-7)

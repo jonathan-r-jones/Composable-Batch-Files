@@ -57,6 +57,7 @@ echo        alias lookup  Looking up cbf values in the n.bat dictionary.
 echo     atomic function  A single, self-contained batch file function, which usually
 echo                      performs a single task and is called by invoking its batch file 
 echo                      label. It also contains "exit/b', which is the end of the function.
+echo      cbf definition  The function in n.bat where an alias' defintion is located.
 echo code execution area  Batch file style (bfs) where the router routes execution to near the 
 echo                      end of the file, unless a parameter is supllied, in which case 
 echo                      function routing occurs. Example(s): t.bat, v.bat.
@@ -83,6 +84,8 @@ echo               label  A batch file label, a.k.a. a function name, function a
 echo                      alias or nickname.
 echo                  lu  Last updated. The last time the file was updated.
 echo                   p  Path alias, when used in a batch file name
+echo                 po_  Prefix which stands for "path only" meaning the a cbf definition only 
+echo                      has 1 variable set, viz. cbf_path
 echo                 rf_  Prefix used to designate that a label has at least one caller.
 echo                 rp_  Prefix used to designate that a label is a relative path.
 echo      single purpose  Batch file style where the file tries to achieve a single task or 
