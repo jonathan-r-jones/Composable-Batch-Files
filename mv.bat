@@ -14,7 +14,7 @@ set filep=* Move files using function routing.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto pc
 
 if "%~1" == "/?" goto help
 
@@ -32,7 +32,17 @@ echo %filep%
 echo.
 echo Usage: %0 [Parameter 1] (where parameter one is the atomic function you wish to call)
 
+echo.
+echo Batch file style: Multipurpose
+
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -130,6 +140,8 @@ exit/b
 
 :pc
 
+:pcn
+
 set fp=* Overarching podcast mover.
 
 rem lu: Aug-24-2018
@@ -149,7 +161,7 @@ call j tagpr
 
 pause
 
-if "%~2" == "-n" goto do_not_transfer_old_content
+if "%~2" == "pcn" goto do_not_transfer_old_content
 call %0 cj_2_old_cj
 
 :do_not_transfer_old_content
