@@ -154,7 +154,6 @@ echo     pn  Communicates that the intent is only to change the path for a passe
 echo    pql  PostgreSQL (in development)
 echo    png  Run cbf_png as a double-click filename
 echo     ps  PowerShell
-echo     qb  Quickly back up any registered file
 echo    qfn  Query if a file exists based on its passed in alias
 echo      r  Run application using CBF variables, mostly used in back office operations
 echo    rzr  Multi-Edit abstraction layer for running CBF files
@@ -192,6 +191,7 @@ echo    tyf  Reopen or see search results that have been piped to a file.
 echo     un  Communicates that the intent is only to change the URL for a passed in alias
 echo      v  Vetted functions (Useful for copying-and-pasting)
 echo     wp  Wordpad
+echo      x  Quickly back up and restore any registered file
 echo    xfn  Filename-centric way to run an alias
 
 exit/b

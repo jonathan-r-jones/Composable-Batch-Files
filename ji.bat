@@ -16,6 +16,8 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
+if "%~1" == "b" goto view_backlog
+
 if "%~1" == "" sf ji
 
 goto main_function
@@ -32,10 +34,14 @@ echo %filep%
 echo.
 echo Usage: %0 [parameter 1)]
 
-set parameter_1=Parameter 1 (Optional): Jira ticket number you wish to view.
+set parameter_1=Parameter 1 (Optional): Jira ticket number you wish to view. Or pass in "b" to ^
+view the backlog.
 
 echo.
 echo %parameter_1% 
+
+echo.
+echo Batch File Style: One-off
 
 exit/b
 
@@ -45,6 +51,25 @@ exit/b
   ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
  (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
  ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+
+
+
+:_
+
+:view_backlog
+
+set fp=* View Jira backlog.
+
+rem lu: May-18-2020
+
+echo.
+echo %fp%
+
+call sf backlog>nul
+
+exit/b
+
+Outcome: This doesn't work. I can't seem to figure out the how to "escape" the ampersand character.
 
 
 

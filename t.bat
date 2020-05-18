@@ -10278,16 +10278,6 @@ Takeaway: The problem was that I was missing a call statement.
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test pasting pg password onto clipboard.
@@ -10300,6 +10290,84 @@ echo %fp%
 call ni pg_pwd
 
 call lpfc pg_pwd
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Test distill filename function.
+
+rem lu: May-18-2020
+
+echo.
+echo %fp%
+
+call n j1
+
+echo.
+echo fn: %cbf_filename%
+
+call m distill_filename %cbf_fn%
+
+exit/b
+
+
+
+:_
+
+:brt
+
+set fp=* Bizarre return type.
+
+rem lu: May-18-2020
+
+echo.
+echo %fp%
+
+echo.
+
+rem Doesn't work.
+rem exit/b 202005170546 Good place to explain the return value.
+
+rem Works.
+rem exit/b 2020 Good place to explain the return value.
+rem exit/b 20200517 Good place to explain the return value.
+rem exit/b 2020051705 Good place to explain the return value.
+
+exit/b 2020051705 Good place to explain the return value. It looks like the maximum return code is 10 characters.
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test brt.
+
+rem lu: May-18-2020
+
+echo.
+echo %fp%
+
+call :brt
+
+echo %errorlevel%
 
 exit/b
 

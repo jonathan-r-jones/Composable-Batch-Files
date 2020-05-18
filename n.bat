@@ -6272,6 +6272,10 @@ exit/b
 
 :rute
 
+:backlog
+
+:rp_14
+
 :pass-through
 
 set fp=* Pass through.
@@ -8000,6 +8004,8 @@ echo.
 echo %fp%
 
 set cbf_fn=c:\a\j1.txt
+
+set cbf_java=c:\a\j1.java
 
 exit/b
 
@@ -10654,6 +10660,8 @@ exit/b
 
 :daba
 
+:db
+
 :dbb
 
 :dbbu
@@ -12526,7 +12534,7 @@ exit/b
 
 :qcb
 
-:qb
+:x
 
 set fp=* Code Quick Backup folder.
 
@@ -12537,7 +12545,7 @@ echo %fp%
 
 call n c>nul
 
-set cbf_path=%cbf_path%\Code Quick Backup
+set cbf_path=%cbf_path%\Quick Code Backup
 
 exit/b
 

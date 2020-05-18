@@ -2984,6 +2984,8 @@ set cbf_instance_id=
 
 set cbf_ip=
 
+set cbf_java=
+
 set cbf_jf=
 
 set cbf_je=
@@ -3003,7 +3005,7 @@ rem set cbf_repo=
 
 set cbf_url=
 
-set cbf_ex=
+set cbf_xml=
 
 exit/b
 
@@ -4482,6 +4484,29 @@ set cbf_expanded_variable=%~2
 
 rem echo.
 rem echo * Expanded variable: %expanded_variable%
+
+exit/b
+
+
+
+::_
+
+:distill_filename
+
+set fp=* Distill filename.
+
+rem lu: May-18-2020
+
+rem echo.
+rem echo %fp%
+
+set cbf_distilled_filename=%~nx2
+
+rem echo.
+rem echo P2: %2
+
+rem echo.
+rem echo * Distilled Filename: %cbf_distilled_filename%
 
 exit/b
 

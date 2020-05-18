@@ -38,7 +38,7 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Alias
 
-set parameter_2=Parameter 2: DCV
+set parameter_2=Parameter 2: DCV.
 
 echo.
 echo %parameter_1%

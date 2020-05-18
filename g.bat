@@ -3184,6 +3184,8 @@ call %0 debrlo %2
 
 call %0 debrro %2
 
+call git remote update
+
 exit/b
 
 

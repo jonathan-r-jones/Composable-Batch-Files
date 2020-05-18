@@ -150,8 +150,8 @@ if not "%cbf_ex%" == "" (
 
 if not "%cbf_fn%" == "" (
   if exist "%cbf_fn%" (
-    echo.
-    echo * 1. File exists cbf_fn: %cbf_fn%.
+    rem echo.
+    rem echo * File exists cbf_fn: %cbf_fn%.
     call xfn %1>nul
     exit/b
   ) else (
