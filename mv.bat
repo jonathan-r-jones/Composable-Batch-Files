@@ -154,6 +154,8 @@ rem call j pc
 
 rem (!rfsp) (mov-2)
 
+call depc audi
+
 call %0 pc_2_sf
 
 rem Run the tag program.

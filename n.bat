@@ -12805,4 +12805,38 @@ exit/b
 
 
 
+:_
+
+:audi
+
+set fp=* Audiobooks.
+
+rem lu: May-19-2020
+
+echo.
+echo %fp%
+
+set cbf_path=h:\audiobooks
+
+exit/b
+
+
+
+:_
+
+:test
+
+set fp=* Test folder.
+
+rem lu: May-19-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%aa%\test
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
