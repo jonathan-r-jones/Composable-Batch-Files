@@ -113,6 +113,26 @@ exit/b
 
 :_
 
+:create_new_excel_file
+
+set fp=* Create new Excel file.
+
+rem echo cbf_ex: "%cbf_ex%"
+
+call m distill_filename %cbf_ex%
+
+call m distill_path %cbf_ex%
+
+cd /d "%cbf_distilled_path%"
+
+call cpfc exb %cbf_distilled_filename%
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* This is a precedence hierarchy.
@@ -143,7 +163,8 @@ if not "%cbf_ex%" == "" (
     exit/b
   ) else (
     echo.
-    echo Could not find cbf_ex.
+    echo * Could not find the file "cbf_ex" so create it.
+    goto create_new_excel_file
     exit/b
   )
 )

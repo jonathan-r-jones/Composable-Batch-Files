@@ -4512,6 +4512,29 @@ exit/b
 
 
 
+::_
+
+:distill_path
+
+set fp=* Distill path.
+
+rem lu: May-19-2020
+
+rem echo.
+rem echo %fp%
+
+set cbf_distilled_path=%~p2
+
+rem echo.
+rem echo P2: %2
+
+rem echo.
+rem echo * Distilled Path: %cbf_distilled_path%
+
+exit/b
+
+
+
 :_+ How To Family (!fyht)
 
 

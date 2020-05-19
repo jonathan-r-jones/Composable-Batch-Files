@@ -6276,6 +6276,8 @@ exit/b
 
 :rp_14
 
+:1714
+
 :pass-through
 
 set fp=* Pass through.
@@ -12834,6 +12836,25 @@ echo.
 echo %fp%
 
 set cbf_path=%aa%\test
+
+exit/b
+
+
+
+:_
+
+:tick
+
+set fp=* Tickets.
+
+rem lu: May-19-2020
+
+echo.
+echo %fp%
+
+call n c>nul
+
+set cbf_path=%cbf_path%\tickets
 
 exit/b
 

@@ -49,9 +49,6 @@ echo.
 echo %parameter_2%
 
 echo.
-echo %parameter_3%
-
-echo.
 echo Batch file style: Single Purpose
 
 echo.
