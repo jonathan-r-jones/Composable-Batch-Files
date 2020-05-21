@@ -12651,8 +12651,6 @@ exit/b
 
 :ctc
 
-:tc
-
 :tcc
 
 set fp=* Timecard calculator.
