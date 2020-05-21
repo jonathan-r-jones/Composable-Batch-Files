@@ -3173,6 +3173,8 @@ exit/b
 
 ::_
 
+:db
+
 :debr
 
 set fp=* Delete branch, local and remote.
@@ -3945,6 +3947,28 @@ echo.
 git reset --hard HEAD
 git clean -f
 git pull
+
+exit/b
+
+
+
+:_
+
+:ec
+
+:em
+
+:aec
+
+set fp=* Allow empty commit.
+
+rem lu: May-20-2020
+
+echo.
+echo %fp%
+
+echo.
+git commit --allow-empty -m "Empty commit that triggers a Jenkins build."
 
 exit/b
 

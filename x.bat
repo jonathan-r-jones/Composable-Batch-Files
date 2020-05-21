@@ -40,7 +40,7 @@ set parameter_1=Parameter 1: CBF alias you wish to process.
 
 set parameter_2=Parameter 2: DCV you wish to use.
 
-set parameter_2=Parameter 2 (Optional): If "r" is used, a restore instead of a save is performed.
+set parameter_2=Parameter 2 (Optional): If "r" or "-r" is used, a restore instead of a save is performed.
 
 echo.
 echo %parameter_1%
@@ -102,6 +102,7 @@ if not exist "%cbf_expanded_variable%" (
 )
 
 if "%~3" == "r" goto restore_file
+if "%~3" == "-r" goto restore_file
 
 goto save_file
 
