@@ -12858,4 +12858,21 @@ exit/b
 
 
 
+:_
+
+:jjgh
+
+set fp=*
+
+rem lu: May-22-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
