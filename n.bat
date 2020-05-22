@@ -12654,8 +12654,6 @@ exit/b
 
 :ctc
 
-:tc
-
 :tcc
 
 set fp=* Timecard calculator.
@@ -12858,6 +12856,23 @@ echo %fp%
 call n c>nul
 
 set cbf_path=%cbf_path%\tickets
+
+exit/b
+
+
+
+:_
+
+:jjgh
+
+set fp=*
+
+rem lu: May-22-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones
 
 exit/b
 
