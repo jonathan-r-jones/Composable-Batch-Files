@@ -5284,7 +5284,7 @@ rem lu: Nov-11-2019
 echo.
 echo %fp%
 
-echo %cd% | find /i "%2">nul
+dir | find /i "%2">nul
 
 if %errorlevel% == 1 (
   echo.
@@ -5294,6 +5294,33 @@ if %errorlevel% == 1 (
 
 echo. 
 echo * "%2" folder exists.
+
+exit/b
+
+
+
+::_
+
+:delete_folder_if_present
+
+set fp=* Delete a paricular folder if it exists in the current folder.
+
+rem lu: May-22-2020
+
+echo.
+echo %fp%
+
+dir | find /i "%2">nul
+
+if %errorlevel% == 0 (
+  echo. 
+  echo * "%2" folder exists.
+  call m rd %2
+  exit/b 0
+)
+
+echo.
+echo * Folder "%2" not found in the current folder.
 
 exit/b
 

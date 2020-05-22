@@ -14,7 +14,7 @@ set filep=* AWS-related tasks.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto b
+if "%~1" == "" help
 
 if "%~1" == "/?" goto help
 
@@ -30,9 +30,19 @@ echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
-echo Parameter 1: Function to execute. If left blank, heartbeat is checked.
+echo Parameter 1: Function to execute.
+
+echo.
+echo Batch file style: Multipurpose
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -4532,6 +4542,8 @@ exit/b
 
 
 ::_
+
+:add_sleep_tags
 
 :ast
 

@@ -457,6 +457,8 @@ if %errorlevel% == 1 (
   exit/b
 )
 
+call m delete_folder_if_present .terraform
+
 echo.
 terraform init -no-color
 

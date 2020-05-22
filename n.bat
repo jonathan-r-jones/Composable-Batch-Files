@@ -6156,7 +6156,9 @@ exit/b
 
 :sr75
 
-:sr76
+:sr76a
+
+:sr76b
 
 :juseconf
 
@@ -6279,6 +6281,14 @@ exit/b
 :1714
 
 :grem
+
+:ari
+
+:sr77
+
+:sr78
+
+:sra
 
 :pass-through
 
@@ -10566,6 +10576,8 @@ exit/b
 :trs
 
 set fp=* Release process.
+
+rem release information: skw
 
 rem lu: Nov-14-2019
 

@@ -46,7 +46,7 @@ echo.
 echo Examples:
 
 echo.
-echo %0 sr70
+echo %0 sr77
 
 exit/b
 

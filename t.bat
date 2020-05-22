@@ -10346,16 +10346,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test brt.
@@ -10368,6 +10358,41 @@ echo %fp%
 call :brt
 
 echo %errorlevel%
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test folder exist.
+
+rem lu: May-22-2020
+
+dir | find /i ".xterraform">nul
+
+rem qq
+if %errorlevel% == 0 (
+  echo. 
+  echo * "%2" folder exists.
+  rem call m rd %2
+  exit/b 0
+)
+
+echo.
+echo * Folder's not there.
 
 exit/b
 
