@@ -10767,6 +10767,9 @@ rem lu: Jun-11-2019
 echo.
 echo %fp%
 
+call pn api>nul
+set cbf_fn=%cbf_path%\Jenkinsfile
+
 set cbf_path=%share-zone%\jenkinsfiles
 
 set cbf_cs=Jenkinsfile
