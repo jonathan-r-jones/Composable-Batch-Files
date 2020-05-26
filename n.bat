@@ -9838,23 +9838,6 @@ exit/b
 
 ::_
 
-:smecfg
-
-set fp=* Multi-Edit Config file folder in Share-Zone.
-
-rem lu: Feb-13-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
-
-exit/b
-
-
-
-::_
-
 :bumecfg
 
 set fp=* Multi-Edit Config Files Backups.
@@ -9865,6 +9848,23 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\Backups\Multi-Edit Config Files
+
+exit/b
+
+
+
+::_
+
+:smecfg
+
+set fp=* Multi-Edit Config file folder in Share-Zone.
+
+rem lu: Feb-13-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
 
 exit/b
 
