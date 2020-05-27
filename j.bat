@@ -117,15 +117,16 @@ exit/b
 
 set fp=* Create new Excel file.
 
+rem echo.
 rem echo cbf_ex: "%cbf_ex%"
 
-call m distill_filename %cbf_ex%
+call m distill_filename "%cbf_ex%"
 
-call m distill_path %cbf_ex%
+call m distill_path "%cbf_ex%"
 
 cd /d "%cbf_distilled_path%"
 
-call cpfc exb %cbf_distilled_filename%
+call cpfc exb "%cbf_distilled_filename%"
 
 exit/b
 
@@ -135,7 +136,11 @@ exit/b
 
 :main_function
 
-set fp=* This is a precedence hierarchy.
+set fp=* This is the order of operations.
+
+
+
+:_
 
 if not "%cbf_application%" == "" (
   rem echo.
@@ -143,6 +148,10 @@ if not "%cbf_application%" == "" (
   call ja %1>nul
   exit/b
 )
+
+
+
+:_
 
 if not "%cbf_wo%" == "" (
   if exist "%cbf_wo%" (
@@ -152,6 +161,10 @@ if not "%cbf_wo%" == "" (
     exit/b
   )
 )
+
+
+
+:_
 
 if not "%cbf_ex%" == "" (
   if exist "%cbf_ex%" (
@@ -163,11 +176,15 @@ if not "%cbf_ex%" == "" (
     exit/b
   ) else (
     echo.
-    echo * Could not find the file "cbf_ex" so create it.
+    echo * Could not find the file "%cbf_ex%" so create it.
     goto create_new_excel_file
     exit/b
   )
 )
+
+
+
+:_
 
 if not "%cbf_fn%" == "" (
   if exist "%cbf_fn%" (
@@ -182,10 +199,18 @@ if not "%cbf_fn%" == "" (
   )
 )
 
+
+
+:_
+
 if not "%cbf_url%" == "" (
   call sf %1>nul
   exit/b
 )
+
+
+
+:_
 
 if not "%cbf_png%" == "" (
   if exist "%cbf_png%" (
@@ -194,21 +219,37 @@ if not "%cbf_png%" == "" (
   )
 )
 
+
+
+:_
+
 if not "%cbf_path%" == "" (
   if exist "%cbf_path%" (
     td %1>nul
   )
 )
 
+
+
+:_
+
 if not "%cbf_gh%" == "" (
   call sf %1>nul
   exit/b
 )
 
+
+
+:_
+
 if not "%cbf_conf%" == "" (
   call sf %1>nul
   exit/b
 )
+
+
+
+:_
 
 echo.
 echo * Error: Could not find an executable CBF parameter.

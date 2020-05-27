@@ -4505,8 +4505,8 @@ set cbf_distilled_filename=%~nx2
 rem echo.
 rem echo P2: %2
 
-rem echo.
-rem echo * Distilled Filename: %cbf_distilled_filename%
+echo.
+echo * Distilled Filename: %cbf_distilled_filename%
 
 exit/b
 
@@ -4518,18 +4518,18 @@ exit/b
 
 set fp=* Distill path.
 
-rem lu: May-19-2020
+rem lu: May-26-2020
 
 rem echo.
 rem echo %fp%
 
-set cbf_distilled_path=%~p2
+set cbf_distilled_path=%~dp2
 
 rem echo.
-rem echo P2: %2
+rem echo F2: %2
 
-rem echo.
-rem echo * Distilled Path: %cbf_distilled_path%
+echo.
+echo * Distilled Path: %cbf_distilled_path%
 
 exit/b
 

@@ -10377,13 +10377,12 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Test folder exist.
+set fp=* Test folder exists.
 
 rem lu: May-22-2020
 
 dir | find /i ".xterraform">nul
 
-rem qq
 if %errorlevel% == 0 (
   echo. 
   echo * "%2" folder exists.

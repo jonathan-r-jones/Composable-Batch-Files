@@ -12890,4 +12890,44 @@ exit/b
 
 
 
+:_
+
+:hcp
+
+:mhcp
+
+set fp=* My house cleaning project.
+
+rem lu: May-26-2020
+
+echo.
+echo %fp%
+
+call n dr>nul
+
+set cbf_ex=%cbf_path%\jonathan\miscellany\my house cleaning project.xlsx
+
+
+exit/b
+
+
+
+:_
+
+:expo
+
+set fp=* Poker results.
+
+rem lu: May-26-2020
+
+echo.
+echo %fp%
+
+set cbf_ex=%savannah%\Excels\Poker_Results.xls
+
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)

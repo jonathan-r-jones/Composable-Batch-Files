@@ -26,7 +26,7 @@ echo %1 | find /i "..">nul
 if %errorlevel% == 0 (
   goto back_magic
 ) else (
-  goto preprocess
+  goto order_of_operations
 )
 
 
@@ -63,18 +63,6 @@ exit/b
   ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
  (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
  ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
-
-
-
-:_
-
-:preprocess
-
-set fp=* In order to promote freshness, reset the error level.
-
-call m clear_errorlevel_silently
-
-goto validate_input
 
 
 
@@ -141,9 +129,11 @@ exit/b
 
 :_
 
-:validate_input
+:order_of_operations
 
-set fp=* Validate input.
+set fp=* Analyze environment and decide upon the proper course of action. This is an order of operations.
+
+call m clear_errorlevel_silently
 
 set cbf_path=
 
@@ -153,55 +143,65 @@ if %errorlevel% == 99 (
   exit/b
 )
 
-if %errorlevel% gtr 0 (
-  goto try_filename
+if %errorlevel% == 0 (
+  goto main_function
   exit/b
 )
-
-goto main_function
 
 
 
 :_
 
-:try_filename
-
-set fp=* Try filename.
-
-echo.
-echo %fp%
-
-call fn %1
-
-if %errorlevel% gtr 0 (
-  goto try_application
-  exit/b
-)
-
-call m expand_to_path_only "%cbf_fn%"
-
-goto main_function
-
-
-
-:_
-
-:try_application
-
-set fp=* Try application.
-
-echo.
-echo %fp%
-
-call an %1
-
-if %errorlevel% gtr 0 (
+if not "%cbf_fn%" == "" (
   echo.
-  echo * Error: Can't find anywhere to go. skw May-4-2020_8_17_PM
+  echo * So try filename.
+  set cbf_desired_path=%cbf_fn%
+  goto try_secondary_method
   exit/b
 )
 
-call m expand_to_path_only "%cbf_application%"
+
+
+:_
+
+if not "%cbf_ex%" == "" (
+  echo.
+  echo * So try Excel.
+  set cbf_desired_path=%cbf_ex%
+  goto try_secondary_method
+  exit/b
+)
+
+
+
+:_
+
+if not "%cbf_applicationn%" == "" (
+  echo.
+  echo * So try Application.
+  set cbf_desired_path=%cbf_application%
+  goto try_secondary_method
+  exit/b
+)
+
+
+
+:_
+
+echo.
+echo * Error: Can't find anywhere to go. skw May-4-2020_8_17_PM
+
+exit/b
+
+
+
+:_
+
+:try_secondary_method
+
+set fp=* Try secondary method.
+
+call m expand_to_path_only "%cbf_desired_path%"
 
 goto main_function
 

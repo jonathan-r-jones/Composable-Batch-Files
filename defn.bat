@@ -21,7 +21,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto validate_user_input
+goto main_function
 
 
 
@@ -43,13 +43,25 @@ exit/b
 
 :_
 
-:validate_user_input
+:main_function
+
+call m reset
 
 call n %1
 
-if not exist "%cbf_fn%" (
-  echo.
-  echo * Error: The file you are trying to delete doesn't exist.
+
+
+:_
+
+if not "%cbf_fn%" == "" (
+  if not exist "%cbf_fn%" (
+    echo.
+    echo * Error: The file "%cbf_fn%" does not exist."
+  ) else (
+    echo.
+    echo * Deleting "%cbf_fn%".
+    del "%cbf_ex%"
+  )
   exit/b
 )
 
@@ -57,11 +69,24 @@ if not exist "%cbf_fn%" (
 
 :_
 
-:main_function
+if not "%cbf_ex%" == "" (
+  if not exist "%cbf_ex%" (
+    echo.
+    echo * Error: The file "%cbf_ex%" does not exist."
+  ) else (
+    echo.
+    echo * Deleting "%cbf_ex%".
+    del "%cbf_ex%"
+  )
+  exit/b
+)
 
-rem lu: 
 
-del "%cbf_fn%"
+
+:_
+
+echo.
+echo * Error: Can't find anything to delete.
 
 exit/b
 
