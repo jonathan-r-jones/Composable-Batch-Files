@@ -130,7 +130,7 @@ exit/b
 
 set fp=* Analyze environment and decide upon the proper course of action. This is an order of operations.
 
-call m clear_errorlevel_silently
+call m reset
 
 set cbf_path=
 
@@ -199,6 +199,12 @@ exit/b
 set fp=* Try secondary method.
 
 call m expand_to_path_only "%cbf_desired_path%"
+
+if not exist "%cbf_path%" (
+  echo.
+  echo * Error: Could not find path "%cbf_path%".
+  exit/b
+)
 
 goto main_function
 

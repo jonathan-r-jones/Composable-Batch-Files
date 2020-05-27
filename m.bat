@@ -5195,8 +5195,8 @@ set fp=* Expand to path only.
 
 rem lu: Mar-14-2018
 
-echo.
-echo %fp%
+rem echo.
+rem echo %fp%
 
 set cbf_path=%~d2%~p2
 

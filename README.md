@@ -1,8 +1,13 @@
 ## Composable Batch Files (CBF)
 
-. . . are batch files that are scalable, convention-based and self-documenting that can 
-execute a single function or be snapped together like legos to create a whole Millennium 
-Falcon script.
+. . . are Windows Batch Scripting files that are function-based, modularized and easy 
+to use and understand.
+
+Better and more Comprehensive Tutorials can be found at:
+
+https:/en.wikibooks.org/wiki/Windows_Batch_Scripting
+
+https://www.tutorialspoint.com/batch_script/index.htm
 
 
 
