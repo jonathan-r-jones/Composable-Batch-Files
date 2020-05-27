@@ -5,7 +5,7 @@ to use and understand.
 
 Better and more Comprehensive Tutorials can be found at:
 
-https:/en.wikibooks.org/wiki/Windows_Batch_Scripting
+https://en.wikibooks.org/wiki/Windows_Batch_Scripting
 
 https://www.tutorialspoint.com/batch_script/index.htm
 
