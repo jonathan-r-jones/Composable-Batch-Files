@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Using a default precedence of operation preferences or a dynamically constructed variable, simulate a double-click.
+set filep=* Simulate a double-click using a default precedence of operation preferences or a dynamically constructed variable.
 
 
 

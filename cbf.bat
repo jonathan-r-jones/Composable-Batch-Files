@@ -116,8 +116,8 @@ echo     gl  Glossary of terms used in CBF
 echo     gr  Gradle
 echo      h  Sencha
 echo      i  Information of CBF variable value assignments
-echo      j  Using a default precedence of operation preferences or a dynamically constructed 
-echo         variable, simulate a double-click.
+echo      j  Simulate a double-click using a default precedence of operation preferences or a 
+echo         dynamically constructed variable.
 echo     ja  Application-centric way of running an application with an optional filename parameter
 echo     je  Surf to Jenkins websites
 echo     ji  Jira operations
@@ -179,7 +179,6 @@ echo     sx  Use Sublime to edit a batch file in the CBF folder
 echo      t  Testing, experimenting and developing new batch file functions
 echo     td  Transform directory
 echo    tdc  Transform directory to favorite child folder of alias
-echo   tdfn  Transform directory where only the cbf_fn is known
 echo    tdp  Transform directory to parent folder
 echo    tdr  Transform directory by appending a relative path onto a base path
 echo     te  Batch file template used for creating new batch files

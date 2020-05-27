@@ -12907,7 +12907,6 @@ call n dr>nul
 
 set cbf_ex=%cbf_path%\jonathan\miscellany\my house cleaning project.xlsx
 
-
 exit/b
 
 
@@ -12924,7 +12923,6 @@ echo.
 echo %fp%
 
 set cbf_ex=%savannah%\Excels\Poker_Results.xls
-
 
 exit/b
 
