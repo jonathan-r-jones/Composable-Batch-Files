@@ -12928,4 +12928,22 @@ exit/b
 
 
 
+:_
+
+:log_size
+
+set fp=*
+
+rem lu: May-27-2020
+
+echo.
+echo %fp%
+
+call pn cm>nul
+set cbf_ex=%cbf_path%\log size.xlsx
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)

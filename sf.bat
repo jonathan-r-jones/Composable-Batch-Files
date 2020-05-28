@@ -164,9 +164,6 @@ exit/b
 
 set fp=* Compose DCV.
 
-echo.
-echo %fp%
-
 call m compose_variable %2
 
 if "%cbf_expanded_variable%" == "" (
@@ -178,6 +175,7 @@ if "%cbf_expanded_variable%" == "" (
 set cbf_parameter=%cbf_expanded_variable%
 
 call r
+echo.
 
 exit/b
 

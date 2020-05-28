@@ -36,9 +36,9 @@ rem lu: Apr-10-2020
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: CBF suffix.
+set parameter_2=Parameter 1: Target alias.
 
-set parameter_2=Parameter 2: Target alias.
+set parameter_1=Parameter 2: CBF suffix.
 
 echo.
 echo %parameter_1%
@@ -53,10 +53,10 @@ echo.
 echo Examples:
 
 echo.
-echo %0 hostname sr66
+echo %0 sr66 hostname
 
 echo.
-echo %0 url jjgit
+echo %0 jjgh url
 
 exit/b
 
@@ -71,15 +71,15 @@ exit/b
 
 :main_function
 
-call n %2>nul
+call n %1>nul
 
 if %errorlevel% gtr 0 exit/b
 
-call m compose_variable %1>nul
+call m compose_variable %2>nul
 
 if "%cbf_expanded_variable%" == "" (
   echo. 
-  echo * Error: There is no definition of "cbf_%1" for the alias "%2".
+  echo * Error: There is no definition of "cbf_%2" for the alias "%2".
   exit/b
 )
 
