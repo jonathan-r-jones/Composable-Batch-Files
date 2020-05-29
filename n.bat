@@ -6298,6 +6298,10 @@ exit/b
 
 :trs
 
+:msr
+
+:db
+
 :pass-through
 
 set fp=* Pass through.
