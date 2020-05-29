@@ -4566,9 +4566,16 @@ pl
 
 rem Get Postgres running on local by clicking on the lnk_db shortcut.
 
-rem If the local database is up-to-date, you don't need to runn liquibase?
-lq
-rem If liquibase fails, you may need to wipe your local databaase.
+rem 1. If the local database is up-to-date, you don't need to runn Liquibase? 
+
+rem 2. If the API starts successfully, you don't need to run Liquibase.
+
+rem 3. If your database is not up-to-date, you will need to run Liquibase. This can be done
+rem by using Craig's trick, i.e. open up "Max" and delete all but the latest needed rows.
+rem You can run "pql dbc" to see how up-to-date your local database is.
+
+rem If liquibase continues to fail, you may need to wipe your local databaase and restore it
+rem from Dev.
 
 rem Run the API by using m lnk_api. You may need to edit npcrf.
 
@@ -4578,9 +4585,10 @@ and use
 gr run_api_with_debugger
 rem Also read direction on how to attach the debugger at: ^atde
 
-x bash
+j bash
 
-./get_cart_jwt.sh
+rem ./cr...
+rem ./get_cart_jwt.sh
 
 rem Copy the new jwt token into the file using:
 

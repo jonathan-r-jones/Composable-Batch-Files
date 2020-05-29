@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Use dynamic CBF variables to execute a cbf variable in any application.
+set filep=* Open any file with any application using a DCV.
 
 
 

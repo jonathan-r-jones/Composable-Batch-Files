@@ -6290,6 +6290,14 @@ exit/b
 
 :sra
 
+:po_ui
+
+:rp_rf
+
+:rp
+
+:trs
+
 :pass-through
 
 set fp=* Pass through.
@@ -10079,23 +10087,6 @@ exit/b
 
 
 
-:_
-
-:rp_sec
-
-set fp=* Security folder.
-
-rem lu: Oct-26-2019
-
-echo.
-echo %fp%
-
-set cbf_path=icecart-portal-client\src\app\security
-
-exit/b
-
-
-
 :_+ Juxtaposing Files
 
 
@@ -10559,73 +10550,6 @@ exit/b
 
 
 
-:_+ Release Process Family (!fyrepr)
-
-
-
-::_
-
-:repr
-
-:rf_rp
-
-:ri
-
-:rp
-
-:trs
-
-set fp=* Release process.
-
-rem release information: skw
-
-rem lu: Nov-14-2019
-
-rem Release Documents skw
-
-echo.
-echo %fp%
-
-call n rf_cade>nul
-set cbf_path=%cbf_path%\Release Process
-
-rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized below here.
-
-set cbf_conf=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
-
-set cbf_ex=%cbf_path%\Release Information.xlsx
-
-set cbf_fn=c:\a\j1.txt
-
-set cbf_jpg=%cbf_path%\release process.jpg
-
-set cbf_gh=https://github.ice.dhs.gov/ERO/cart-devops
-
-set cbf_version=10
-
-exit/b
-
-
-
-::_
-
-:redo
-
-set fp=* Release documents.
-
-rem lu: Dec-2-2019
-
-echo.
-echo %fp%
-
-call n c
-
-set cbf_path=%cbf_path%\Release Documents
-
-exit/b
-
-
-
 :_
 
 :inwa
@@ -10659,64 +10583,6 @@ echo %fp%
 call n usrc
 
 set cbf_fn=%cbf_path%\app\app.component.ts
-
-exit/b
-
-
-
-:_+ DB Backups
-
-
-
-::_
-
-:bud
-
-:budb
-
-:daba
-
-:dbb
-
-:dbbu
-
-:redb
-
-set fp=* Database backups and restoring.
-
-rem lu: Dec-11-2019
-
-echo.
-echo %fp%
-
-call n rf_cade>nul
-
-set cbf_path=%cbf_path%\database backups
-
-rem >< >< >< >< >< ><  Alphabetical below here.
-
-set cbf_conf=https://confluence.ice.dhs.gov/display/CART/Back+Up+FQT+and+Restore+to+Localhost
-
-set cbf_wo=%cbf_path%\How to backup and restore a Cart database.docx
-
-set cbf_fn=%cbf_path%\How to backup and restore a Cart database.docx
-
-exit/b
-
-
-
-::_
-
-:db2
-
-set fp=* More database backups.
-
-rem lu: Aug-22-2019
-
-echo.
-echo %fp%
-
-set cbf_path=c:\aa\Database Backups
 
 exit/b
 
@@ -12763,31 +12629,6 @@ exit/b
 
 :_
 
-:tj
-
-set fp=* Test j.bat.
-
-rem lu: May-14-2020
-
-echo.
-echo %fp%
-
-call pn po_ti>nul
-set cbf_png=%cbf_path%\1657\demo.png
-
-set cbf_url=https://www.wsj.com
-
-set cbf_path=%cbf_repo%\cade\Release Process
-set cbf_ex=%cbf_path%\Release Information.xlsx
-
-set cbf_conf=https://confluence.ice.dhs.gov/pages/viewpage.action?pageId=43583379
-
-exit/b
-
-
-
-:_
-
 :gas
 
 set fp=* Google advanced search.
@@ -12941,6 +12782,48 @@ echo %fp%
 
 call pn cm>nul
 set cbf_ex=%cbf_path%\log size.xlsx
+
+exit/b
+
+
+
+:_
+
+:po_ma
+
+set fp=*
+
+rem lu: May-28-2020
+
+echo.
+echo %fp%
+
+call pn up>nul
+
+set cbf_path=%cbf_path%\dev\cart
+
+exit/b
+
+
+
+:_
+
+:mosf
+
+set fp=* Manage Office Settings form.
+
+rem lu: May-28-2020
+
+echo.
+echo %fp%
+
+call pn po_ui>nul
+
+set cbf_path=%cbf_path%\src\app\office-settings
+
+set cbf_fn=%cbf_path%\office-settings.component.html
+
+set cbf_ts=%cbf_path%\office-settings.component.ts
 
 exit/b
 

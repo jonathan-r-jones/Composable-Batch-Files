@@ -96,7 +96,6 @@ echo     dt  Dir with a td parameter
 echo      e  Uses mx.bat then me.bat to decipher which ASCII file to edit (Or exit command window)
 echo     ed  Edit a file abstraction layer
 echo    edr  Edit a relative path constucted filename
-echo    edx  Edit a file
 echo     ej  Use Multi-Edit to edit DCV ASCII files.
 echo    ejf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo     el  Edit log file of an alias
@@ -108,7 +107,7 @@ echo     fn  Communicates that the intent is only to change the filename for a p
 echo     fs  Filenames search
 echo    fsp  Perennial filenames search
 echo    fst  Filenames search with a td parameter
-echo     fx  Use dynamic CBF variables to execute a cbf variable in any application.
+echo     fx  Open any file with any application using a DCV.
 echo      g  Git
 echo     gg  Git Gui helper Has TD parameter
 echo     gh  Surf to GitHub websites
