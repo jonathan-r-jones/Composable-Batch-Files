@@ -12534,27 +12534,6 @@ exit/b
 
 :_
 
-:ctc
-
-:tcc
-
-set fp=* Timecard calculator.
-
-rem lu: Dec-5-2018
-
-echo.
-echo %fp%
-
-set cbf_fn=%share-zone%\Cart Timecard Calculator.xlsx
-
-set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
-
-exit/b
-
-
-
-:_
-
 :buma
 
 set fp=* Build Master.
@@ -12828,6 +12807,29 @@ set cbf_path=%cbf_path%\src\app\office-settings
 set cbf_fn=%cbf_path%\office-settings.component.html
 
 set cbf_ts=%cbf_path%\office-settings.component.ts
+
+exit/b
+
+
+
+:_
+
+:tc
+
+:ctc
+
+:tcc
+
+set fp=* Timecard calculator.
+
+rem lu: Dec-5-2018
+
+echo.
+echo %fp%
+
+set cbf_fn=%share-zone%\Cart Timecard Calculator.xlsx
+
+set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
 
 exit/b
 
