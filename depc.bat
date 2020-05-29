@@ -83,8 +83,6 @@ if %errorlevel% gtr 0 exit/b
 echo.
 del /s /q *.*
 
-rem qq-1
-
 exit/b
 
 
