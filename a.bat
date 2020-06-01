@@ -4551,6 +4551,8 @@ exit/b
 
 :sleep
 
+:slta
+
 set fp=* Add sleep tags to %2.
 
 echo.

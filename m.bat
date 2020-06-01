@@ -3355,7 +3355,7 @@ exit/b 1
 
 :el_c
 
-:ce
+:cler
 
 :clear_el
 

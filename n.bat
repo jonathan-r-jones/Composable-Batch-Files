@@ -8,7 +8,7 @@
 
 set filep=* Nickname/alias dictionary that sets recyclable environment variables ^
 corresponding to a given unique nickname parameter. This can be thought of as a large ^
-configuration file.
+configuration file or data layer.
 
 
 
@@ -4786,8 +4786,6 @@ exit/b
 
 ::_
 
-:ce
-
 :dt_ce
 
 set fp=* Shawn's Completed exercises.
@@ -6301,6 +6299,12 @@ exit/b
 :msr
 
 :db
+
+:rp_
+
+:relinf
+
+:arl
 
 :pass-through
 
@@ -12830,6 +12834,25 @@ echo %fp%
 set cbf_fn=%share-zone%\Cart Timecard Calculator.xlsx
 
 set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
+
+exit/b
+
+
+
+:_
+
+:ruse
+
+set fp=* Running services.
+
+rem lu: Jun-1-2020
+
+echo.
+echo %fp%
+
+call pn cm>nul
+
+set cbf_ex=%cbf_path%\running services.xlsx
 
 exit/b
 
