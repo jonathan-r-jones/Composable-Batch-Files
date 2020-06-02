@@ -27,7 +27,7 @@ goto %1
 :help
 
 echo.
-echo CopY file(s). This file is useful when fixed locations are involved.
+echo %filep%
 
 echo.
 echo Usage: %0 [Parameter 1]
@@ -36,15 +36,22 @@ echo.
 echo Parameter 1: Label method to run.
 
 echo.
-echo Parameter  Description
-echo ---------  ----------------------------------------------------------------
-echo       apn  Copy all files in the current folder to an alias specified path.
-echo      jfds  Copy jj_devops Jenkinsfile to share-zone Jenkinsfile
-echo      jfsd  Copy share-zone Jenkinsfile to jj_devops Jenkinsfile 
-echo        ig  Copy Visual Studio Git Ignore file from Fresnel to the current
-echo            location.
+echo Example(s):
+
+echo.
+echo cp mecfg
+
+echo.
+echo Batch file style: Multipurpose
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -545,6 +552,34 @@ echo.
 echo %fp%
 
 call td mecfg
+
+exit/b
+
+
+
+:_
+
+:mecfg
+
+set fp=* Copy mecfg files from dropbox to local.
+
+rem lu: Jun-2-2020
+
+echo.
+echo %fp%
+
+call td mecfg
+
+cd..
+
+call m rd Config.04
+
+call mcd Config.04
+
+call pn drmecfg
+
+echo.
+xcopy /e "%cbf_path%"
 
 exit/b
 
