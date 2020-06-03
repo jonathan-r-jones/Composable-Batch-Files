@@ -4267,7 +4267,7 @@ if %errorlevel% gtr 0 exit/b
 echo.
 call aws ec2 start-instances --instance-ids %cbf_instance_id%
 
-rem call %0 tag %2 AutoStopStartInstance True
+call %0 tag %2 AutoStopStartInstance True
 
 call %0 tag %2 Comment None
                                        

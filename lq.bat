@@ -49,8 +49,6 @@ exit/b
 :validate_input
 
 call td api>nul
-echo.
-echo CD: %cd%
 
 echo %cd% | find /i "\api">nul
 

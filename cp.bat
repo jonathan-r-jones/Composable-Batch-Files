@@ -585,4 +585,27 @@ exit/b
 
 
 
+:_
+
+:emax
+
+:max
+
+set fp=* Copy empty max on top of max.
+
+rem lu: Jun-2-2020
+
+echo.
+echo %fp%
+
+call td max
+
+call pn cm>nul
+
+xcopy /y "%cbf_path%\empty_master.xml" master.xml
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-9)

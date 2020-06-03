@@ -6306,6 +6306,12 @@ exit/b
 
 :arl
 
+:v12
+
+:emax
+
+:amp
+
 :pass-through
 
 set fp=* Pass through.
@@ -12853,6 +12859,53 @@ echo %fp%
 call pn cm>nul
 
 set cbf_ex=%cbf_path%\running services.xlsx
+
+exit/b
+
+
+
+:_
+
+:1730
+
+set fp=* %1.
+
+rem lu: Jun-2-2020
+
+echo.
+echo %fp%
+
+call pn v12>nul
+set cbf_xml=%cbf_path%\1_12_0_x17_rename_table_columns_2.xml
+
+call pn tick>nul
+
+set cbf_path=%cbf_path%\%1
+
+set cbf_conf=https://confluence.ice.dhs.gov/display/CART/Database+Field+changes
+
+set cbf_ex=%cbf_path%\%1.xlsx
+
+set cbf_now=%cbf_path%\%1.now
+
+exit/b
+
+
+
+:_
+
+:java
+
+set fp=* %1.
+
+rem lu: Jun-2-2020
+
+echo.
+echo %fp%
+
+call pn api>nul
+
+set cbf_path=%cbf_path%\src\main\%1
 
 exit/b
 
