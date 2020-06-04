@@ -78,8 +78,8 @@ echo               filep  File purpose
 echo                   f  Filename alias, when used in a batch file name
 echo                  fp  Function purpose
 echo        multipurpose  Batch file style (bfs) where the batch file contains any number of
-echo                      disparate functions which are called via a function alias, a.k.a.
-echo                      function routing. Example(s): g.bat, m.bat.
+echo                      disparate, atomic functions which are called via a function alias, 
+echo                      a.k.a. function routing. Example(s): g.bat, m.bat.
 echo               label  A batch file label, a.k.a. a function name, function alias, 
 echo                      alias or nickname.
 echo                  lu  Last updated. The last time the file was updated.

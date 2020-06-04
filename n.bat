@@ -8,7 +8,8 @@
 
 set filep=* Nickname/alias dictionary that sets recyclable environment variables ^
 corresponding to a given unique nickname parameter. This can be thought of as a large ^
-configuration file or data layer.
+configuration file or data layer. The idea is that you register your folder, file, etc. here ^
+and then you can easily access it via your chosen alias.
 
 
 
@@ -46,11 +47,46 @@ echo.
 echo Parameter 1: Alias to run assignment for.
 
 echo.
-echo In the function block corresponding to the label, you can set any or all 
-echo of the CBF environment variables. Typically this batch file would be 
-echo called by echo a different batch file looking to set a particular CBF 
-echo environment variable. However, if you call it yourself from the command 
-echo line, it will set the variable plus it will describe itself.
+echo In the function block corresponding to the label, you can set any or all ^
+of the CBF environment variables. Typically this batch file would be called by echo a ^
+different batch file looking to set a particular CBF rem environment variable. However, ^
+if you call it yourself from the command line, it will set the variable plus it will ^
+describe itself.
+
+echo.
+echo Example(s):
+
+echo.
+echo %0 ma
+
+exit/b
+
+
+
+:_
+
+Metadata: Track Size (!tsn)
+
+     Date      Lines      Bytes  Functions  Notes
+ -----------  ------  ---------  ---------  -------------------------------------------------
+
+: Apr-8-2020  12,393    125,865      627
+
+:Nov-11-2019  11,112    113,846      573
+
+:May-27-2019   9,349     99,887      499
+
+:Apr-15-2019   8,907     95,073      482
+
+:Aug-24-2018   5,148     60,394      300
+
+:Jun-13-2018   3,261     36,243      194
+
+
+
+:_
+
+Historical Rubric.
 
 echo.
 echo Notes: I kept the facade dictionaries because they help make clear the 
@@ -107,29 +143,6 @@ echo            td  %COMPOSABLE_BATCH_FILES%\td.bat
 echo          temp  User's temp.
 echo            ti  \projects\netbeans\mercury6\mercury-tirem
 echo            vs  Visual Studio.
-
-exit/b
-
-
-
-:_
-
-Metadata: Track Size (!tsn)
-
-     Date      Lines      Bytes  Functions  Notes
- -----------  ------  ---------  ---------  -------------------------------------------------
-
-: Apr-8-2020  12,393    125,865      627
-
-:Nov-11-2019  11,112    113,846      573
-
-:May-27-2019   9,349     99,887      499
-
-:Apr-15-2019   8,907     95,073      482
-
-:Aug-24-2018   5,148     60,394      300
-
-:Jun-13-2018   3,261     36,243      194
 
 
 
@@ -583,7 +596,7 @@ exit/b
 
 :_
 
-:pu
+:pub
 
 set fp=Public.
 
@@ -4142,6 +4155,23 @@ exit/b
 
 :_
 
+:fox
+
+set fp=* Fox.
+
+rem lu: Jun-4-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.foxnews.com
+
+exit/b
+
+
+
+:_
+
 :wsj
 
 set fp=* Wsj.
@@ -7170,6 +7200,41 @@ exit/b
 
 ::_
 
+:git_bin
+
+:git_user_bin
+
+:gu
+
+:gub
+
+:pu
+
+:sg
+
+:super_bin
+
+:super_git
+
+set fp=* Git power user bin. Loaded with utilities.
+
+rem lu: Jun-4-2020
+
+echo.
+echo %fp%
+
+rem skw git super location, git super path, super git, GitHub super
+
+set cbf_path=%localappdata%\Programs\Git\usr\bin
+
+if exist "c:\Program Files\Git\usr\bin\" set cbf_path=c:\Program Files\Git\usr\bin
+
+exit/b
+
+
+
+::_
+
 :gh
 
 :git
@@ -7205,37 +7270,6 @@ set cbf_application=C:\Program Files\Git\cmd\git-gui.exe
 if exist C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe set cbf_application=C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe
 
 set cbf_fn=%cbf_application%
-
-exit/b
-
-
-
-::_
-
-:git_bin
-
-:git_user_bin
-
-:gu
-
-:gub
-
-:sg
-
-:super_bin
-
-:super_git
-
-set fp=* Git user bin. Loaded with utilities. Super path. (skw: super git, GitHub super)
-
-rem lu: Dec-4-2018
-
-echo.
-echo %fp%
-
-set cbf_path=%localappdata%\Programs\Git\usr\bin
-
-if exist "c:\Program Files\Git\usr\bin\" set cbf_path=c:\Program Files\Git\usr\bin
 
 exit/b
 

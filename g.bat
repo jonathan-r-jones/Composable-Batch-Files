@@ -3954,21 +3954,39 @@ exit/b
 
 :_
 
+:aec
+
+:ce
+
 :ec
 
 :em
 
-:aec
+:empt
 
-set fp=* Allow empty commit.
+:empty
 
-rem lu: May-20-2020
+:teb
+
+set fp=* Trigger an empty build on the develop branch.
+
+rem lu: Jun-4-2020
+
+rem skw Allow empty commit.
 
 echo.
 echo %fp%
 
+call td ma
+
+call :sb develop
+
+call a
+
 echo.
 git commit --allow-empty -m "Empty commit that triggers a Jenkins build."
+
+call p
 
 exit/b
 

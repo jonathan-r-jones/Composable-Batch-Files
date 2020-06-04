@@ -351,19 +351,25 @@ exit/b 0
 
 :caret
 
+:echo
+
 set fp=* Line continuation with caret character.
 
 rem How do you continue a batch file line onto a second line?
 
 rem The caret only works with the "echo" statement and not the "rem" statement.
 
+rem expository echo statement
+
 rem lu: Nov-2-2018
 
 echo %fp%
 
 echo.
-echo Four score and seven years ago our fathers brought forth on this continent a new ^
-nation, conceived in liberty and dedicated to the proposition that all men are created equal.
+echo The Gettysburg Address is a speech that U.S. President Abraham Lincoln delivered during ^
+the American Civil War at the dedication of the Soldiers' National Cemetery in Gettysburg, ^
+Pennsylvania, on the afternoon of Thursday, November 19, 1863, four and a half months after ^
+the Union armies defeated those of the ...
 
 exit/b
 

@@ -6,8 +6,7 @@
 
 :_
 
-rem       qq1
-set filep=* 
+set filep=* Basic Curl test of a URL.
 
 
 
@@ -27,41 +26,33 @@ goto main_function
 
 :help
 
-cls
-
 echo.
 echo %filep%
 
-rem lu: 
+rem lu: Jun-4-2020
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-rem                                   qq1
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Server alias to test.
 
 echo.
 echo %parameter_1%
 
 echo.
-echo %parameter_2%
-
-echo.
 echo Batch file style: Single Purpose
 
 echo.
-echo Entangled variable: cbf_fc_path
-
-echo.
-echo Pit of Success Strategy: If cb_conf is not, found the algorithm will look for cbf_url.
+echo Entangled variable: cbf_url
 
 echo.
 echo Example(s):
 
 echo.
-echo %0
+echo %0 fox
+
+echo.
+echo %0 dev
 
 exit/b
 
@@ -80,11 +71,10 @@ exit/b
 
 :main_function
 
-
-rem qq-1
+call cu t %1
 
 exit/b
 
 
 
-:_
+:_ (!rfsp) (mov-7)

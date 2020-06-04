@@ -77,8 +77,8 @@ echo   cppp  Copy file from alias path param 1 to alias path param 2
 echo   cpte  Copy te.bat to a new batch file
 echo     cs  File contents search
 echo    cst  File contents search with td parameter
-echo     cu  Curl hooked up to the nicknames dictionary
-echo    cur  Curl with atomic functions
+echo     cu  Curl with atomic functions
+echo    cuu  Basic Curl test of a URL
 echo     cv  Chef converge with a path parameter
 echo      d  Dir for current folder
 echo     dc  Double-click a filename, back office operation
@@ -116,7 +116,7 @@ echo     gr  Gradle
 echo      h  Sencha
 echo      i  Information of CBF variable value assignments
 echo      j  Simulate a double-click using a default precedence of operation preferences or a 
-echo         dynamically constructed variable.
+echo           dynamically constructed variable.
 echo     ja  Application-centric way of running an application with an optional filename parameter
 echo     je  Surf to Jenkins websites
 echo     ji  Jira operations
