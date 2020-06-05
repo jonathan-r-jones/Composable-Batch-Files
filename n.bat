@@ -6342,6 +6342,20 @@ exit/b
 
 :amp
 
+:htan
+
+:dean
+
+:anpl
+
+:anht
+
+:anpp
+
+:ansam
+
+:angs
+
 :pass-through
 
 set fp=* Pass through.

@@ -80,12 +80,7 @@ call m reset_cbf_variables
 
 call n %~1
 
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Label not found. - skw May-4-2020_7_57_PM
-  call m clear_errorlevel_silently 
-  exit/b
-)
+if %errorlevel% gtr 0 exit/b
 
 if not "%~2" == "" goto compose_dcv
 
