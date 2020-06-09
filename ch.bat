@@ -715,7 +715,7 @@ Result:
 
 :_
 
-:stat
+:status
 
 set fp=* Status!
 
