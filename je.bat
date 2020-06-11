@@ -14,14 +14,9 @@ set filep=* Surf to the Jenkins url of an alias.
 
 set fp=* Route callers.
 
-if "%~1" == "" (
-  call sf je
-  exit/b
-)
-
 if "%~1" == "/?" goto help
 
-goto validate_input
+goto main_function
 
 
 
@@ -45,24 +40,9 @@ exit/b
 
 
 :_
-
-:validate_input
-
-set cbf_je=
-
-call n %1
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: Alias not found. (skw Oct-18-2019 1:54 PM)
-  call m clear_errorlevel_silently 
-)
-
-if "%cbf_je%" == "" (
-  echo.
-  echo * Error: The CBF Jenkins URL is blank for the alias you specified.
-  exit/b
-)
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -70,11 +50,14 @@ if "%cbf_je%" == "" (
 
 :main_function
 
-rem echo * Main function of %0. Nov-13-2019 10:47 AM
+set cbf_je=
 
-set cbf_url=%cbf_je%
+if "%~1" == "" (
+  call sf je
+) else (
+  call sf %1
+)
 
-call sf
 echo.
 
 

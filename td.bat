@@ -136,9 +136,12 @@ set cbf_path=
 
 call pn %1
 
-if %errorlevel% == 99 (
-  exit/b
-)
+rem if %errorlevel% == 99 (
+  rem exit/b
+rem )
+
+rem echo.
+rem echo %fp% Jun-9-2020_4_08_PM
 
 if %errorlevel% == 0 (
   goto main_function
@@ -173,7 +176,7 @@ if not "%cbf_ex%" == "" (
 
 :_
 
-if not "%cbf_applicationn%" == "" (
+if not "%cbf_application%" == "" (
   echo.
   echo * So try Application.
   set cbf_desired_path=%cbf_application%

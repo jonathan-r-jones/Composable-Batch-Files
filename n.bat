@@ -6362,6 +6362,18 @@ exit/b
 
 :andoc
 
+:webi
+
+:anwe
+
+:csco
+
+:jj_1_11
+
+:jj_1_11b
+
+:jj_1_11o
+
 :pass-through
 
 set fp=* Pass through.
@@ -12960,6 +12972,27 @@ echo %fp%
 call pn api>nul
 
 set cbf_path=%cbf_path%\src\main\%1
+
+exit/b
+
+
+
+:_
+
+:vsc
+
+set fp=* Visual Studio Code.
+
+rem lu: Jun-9-2020
+
+echo.
+echo %fp%
+
+rem set cbf_application=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.exe
+
+set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code\Visual Studio Code.lnk
+
+rem set cbf_fn=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.exe
 
 exit/b
 

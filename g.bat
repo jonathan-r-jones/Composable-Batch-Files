@@ -1492,7 +1492,7 @@ exit/b
 
 :pull
 
-set fp=* Pull. Do a get-latest from the default branch. (!step, !pull, !step3)
+set fp=* Pull. Get the latest code from the current branch.
 
 echo.
 echo %fp%
@@ -1645,19 +1645,19 @@ exit/b
 
 
 
-:_+ Roll Back and Revert Functions
-
-:Revert Family (!rvfy)
+:_+ Roll Back and Revert Functions - Revert Family (!rvfy)
 
 
 
 ::_
 
-:roll_back
+:roll_back_tasv
 
 set fp=* Roll back to a specific version. Detached head means you are no longer on a branch, you have checked out a single commit in the history.
 
-rem fud: Aug-15-2017 (skw label, tag, roll back to a particular version)
+rem lu: Jun-10-2020
+
+rem fud (!rb): Aug-15-2017 (skw label, tag, roll back to a particular version)
 
 rem Note: Running this will detach your head. To reattach head, run reattach_head.
 
@@ -1678,7 +1678,10 @@ rem S6 @ Aug-28-2017 (Fresnel from c. Jun-26-2018)
 rem git checkout b3444ed
 
 rem BusterFromFresnel @ Jul-27-2018
-git checkout c1ceb68e87e438a79f2455b7b6f7860b94e01683
+rem git checkout c1ceb68e87e438a79f2455b7b6f7860b94e01683
+
+rem Jun-10-2020 - Cart
+git checkout 5ca5b80a69f23fbaf0bbaea57a501b614206e75f
 
 exit/b
 
@@ -3825,8 +3828,6 @@ exit/b
 
 :rollback
 
-:roll_back
-
 set fp=* Rollback used by Matt A. and me.
 
 rem lu: Jan-30-2020
@@ -3844,7 +3845,7 @@ exit/b
 
 ::_
 
-:roll_back_repo_1
+:roll_back_repo_1_xxx
 
 set fp=* You feel like your last check-in broke the build. USE WITH CAUTION.
 
@@ -3855,6 +3856,7 @@ set fp=%fp% so move the whole repo back a single check-in version.
 
 rem This worked on FGT and Fresnel on Jul-19-2018.
 rem This worked on CBF on Mar-22-2019.
+rem This didn't work on Cart on Jun-10-2020!!!!!!!!!!!!!!!
 
 rem lu: Mar-22-2019
 

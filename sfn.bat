@@ -149,8 +149,8 @@ if %errorlevel% gtr 1 (
 )
 
 if %errorlevel% gtr 0 (
-  echo.
-  echo May-11-2020_9_11_PM
+  rem echo.
+  rem echo Error finding filename. May-11-2020_9_11_PM
   exit/b 1
 )
 

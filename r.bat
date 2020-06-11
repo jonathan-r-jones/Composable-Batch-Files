@@ -8,6 +8,9 @@
 
 set filep=* Run application.
 
+rem echo.
+rem echo %filep% Jun-9-2020_3_22_PM
+
 
 
 :_
@@ -112,12 +115,14 @@ if %errorlevel% == 0 (
 )
 
 if "%cbf_parameter%" == "" (
-  rem echo * Run application with no parameter.
+  echo.
+  echo * Run application with no parameter. Jun-9-2020_3_20_PM
   call start "my title" "%cbf_application%"
   exit/b
 )
 
-rem echo * Run application with parameter.
+rem echo.
+rem echo * Run application with parameter. Jun-9-2020_3_17_PM
 
 start "my title" "%cbf_application%" "%cbf_parameter%"
 

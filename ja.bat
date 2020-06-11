@@ -8,6 +8,9 @@
 
 set filep=* Application-centric way of running an application with an optional filename parameter.
 
+echo.
+echo %filep% Jun-9-2020_3_28_PM
+
 
 
 :_
@@ -93,6 +96,11 @@ set cbf_parameter=
 :_
 
 :main_function
+
+set fp=* Main function of %0.bat.
+
+echo.
+echo %fp%
 
 call r
 

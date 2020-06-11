@@ -220,6 +220,10 @@ if "%cbf_parameter%" == "" (
   set cbf_parameter=%cbf_gh%
 )
 
+if "%cbf_parameter%" == "" (
+  set cbf_parameter=%cbf_je%
+)
+
 
 
 

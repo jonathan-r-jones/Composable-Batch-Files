@@ -671,9 +671,7 @@ exit/b
 
 :validate_path
 
-rem Imprimatur (!gtr, !err, !p2, !erro, !el, !erle)
-
-if %errorlevel% gtr 0 exit/b
+if %errorlevel% gtr 0 exit/b (!gtr, !err, !p2, !erro, !el, !erle)
 
 if %errorlevel% gtr 0 (
   echo.
