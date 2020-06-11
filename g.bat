@@ -26,7 +26,8 @@ goto %1
 
 :help
 
-echo Git-related tasks.
+echo.
+echo %filep%
 
 echo.
 echo Usage: g [Parameter 1] [Parameter 2]
@@ -38,26 +39,16 @@ echo.
 echo Parameter 2 (Optional): Path to walk prior to running Parameter 1.
 
 echo.
-echo     Parameter  Description
-echo -------------  -------------------------------------------------------------
-echo             a  Add changes.
-echo           asf  Add single file.
-echo          back  The git equivalent of the back button.
-echo             c  Commit changes for only those files that were staged.
-echo            cn  Custom clone. For basic cloning, use cn.bat.
-echo           ghg  Git help git.
-echo           ghs  Git help for specific git command.
-echo          pull  Get-latest.
-echo          push  Push changes.
-echo            rv  Revert local.
-echo         rv_sf  Revert file.
-echo         rv_fd  Revert folder.
-echo         rv_pe  Revert persistent files.
-echo             s  Get status, including remote information.
-echo           src  Identify source repository information of your current folder.
-echo            ss  Get super status.
+echo Batch file style: Multipurpose
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -1645,257 +1636,6 @@ exit/b
 
 
 
-:_+ Roll Back and Revert Functions - Revert Family (!rvfy)
-
-
-
-::_
-
-:roll_back_tasv
-
-set fp=* Roll back to a specific version. Detached head means you are no longer on a branch, you have checked out a single commit in the history.
-
-rem lu: Jun-10-2020
-
-rem fud (!rb): Aug-15-2017 (skw label, tag, roll back to a particular version)
-
-rem Note: Running this will detach your head. To reattach head, run reattach_head.
-
-rem I validated that this works on ForGitTesting on Aug-17-2017.
-
-echo.
-echo %fp%
-
-rem git checkout a18e821
-rem git checkout 2691f3b
-rem git checkout a703855
-rem git checkout a18e821
-
-rem S6 @ Jul-10-2017
-rem git checkout 959308e 
-
-rem S6 @ Aug-28-2017 (Fresnel from c. Jun-26-2018)
-rem git checkout b3444ed
-
-rem BusterFromFresnel @ Jul-27-2018
-rem git checkout c1ceb68e87e438a79f2455b7b6f7860b94e01683
-
-rem Jun-10-2020 - Cart
-git checkout 5ca5b80a69f23fbaf0bbaea57a501b614206e75f
-
-exit/b
-
-
-
-::_
-
-:reattach
-
-:reattach_head
-
-set fp=* Reattach a detached head.
-
-rem fcd: May-2-2017 (skw how to reattach head)
-
-echo.
-echo %fp%
-
-rem git checkout clean6.2
-git checkout master
-
-exit/b
-
-
-
-::_
-
-:rvallp
-
-set fp=* Revert all PERSISTENT changes from m6 and s6.
-
-rem Creation Date: Aug-30-2017
-
-echo.
-echo %fp%
-  
-call %0 delete_pngs
-
-call %0 delete_pngs_2
-
-call %0 rvp
-
-exit/b
-
-
-
-::_
-
-:base
-
-set fp=* Return to baseline configuration after a build. Exercise caution as this will destroy some local changes.
-
-rem lu: Aug-31-2017
-
-echo.
-echo %fp%
-
-call %0 rvall
-
-call %0 acp
-
-cls
-
-call %0 ss
-
-exit/b
-
-
-
-::_
-
-:clean_report
-
-set fp=* Report on untracked files.
-
-rem lu: Sep-14-2017
-
-echo.
-echo %fp%
-
-git clean -n
-
-exit/b
-
-
-
-::_
-
-:rv_pe
-
-set fp=* Revert persistent files. Revert files in need of constant reversion.
-
-rem lu: Aug-31-2017
-
-echo.
-echo %fp%
-  
-cd \projects\netbeans\sencha\html5application\public_html
-
-git checkout bootstrap.css
-git checkout bootstrap.js
-git checkout classic.json
-git checkout classic.jsonp
-git checkout modern.json
-git checkout modern.jsonp
-git checkout sass/example/bootstrap.js
-git checkout sass/example/bootstrap.json
-git checkout sass/example/bootstrap.jsonp
-git checkout sass/example/example.css
-
-cd c:\projects\netbeans\sencha
-
-git checkout HTML5Application/nbproject/private/private.xml
-git checkout HTML5Application/public_html/classic/src/view/dashboard/ContactsWidget.js
-
-git checkout HTML5Application/public_html/modern/src/utils/NetConfig.js
-git checkout HTML5Application/public_html/classic/src/utils/NetConfig.js
-
-exit/b
-
-
-
-::_
-
-:reset_head_2
-
-set fp=* Reset head by 2 id number versions. This enabled not to have to merge.
-
-rem lu: Aug-7-2018
-
-rem Step back 2 versions.
-
-rem reverse 2: skw
-
-echo.
-echo %fp%
-
-echo.
-git reset --hard "HEAD~2"
-
-exit/b
-
-
-
-::_
-
-:roll_back_repo
-
-:roll_back_server
-
-set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
-
-rem lu: Jul-19-2018
-
-rem How do you roll back in git?
-
-rem This worked on David's machine on Aug-3-2017.
-
-echo.
-echo %fp%
-
-echo.
-git push -f
-
-exit/b
-
-
-
-::_
-
-:back
-
-:reset_head_1
-
-:uncommit
-
-set fp=* The git equivalent of the back button. Reset head by 1 id number version.
-
-rem lu: Aug-7-2018
-
-rem Step back 1 version.
-
-rem Test on FGT.
-
-echo.
-echo %fp%
-
-echo.
-git reset --hard "HEAD~1"
-
-exit/b
-
-
-
-::_
-
-:ruf
-
-:clean
-
-set fp=* Remove untracked folders and files. Use with caution.
-
-rem lu: Aug-17-2018
-
-echo.
-echo %fp%
-
-echo.
-git clean -d -f
-
-exit/b
-
-
-
 :_
 
 :diff
@@ -2765,6 +2505,8 @@ from tag, create tag from branch, create a branch from a tag, create branch from
 
 ::_
 
+:cbft
+
 :cbbt
 
 set fp=* Create a branch based on a tag.
@@ -2774,7 +2516,7 @@ rem lu: May-14-2020
 echo.
 echo %fp%
 
-set cbf_git_version=11
+set cbf_git_version=12
 
 echo.
 @echo on
@@ -3587,20 +3329,20 @@ echo %fp%
 
 if "%~2" == "" (
   echo.
-  echo * Percent 2, source branch, is a required field.
+  echo * Percent 2, new destination branch, is a required field.
   exit/b
 )
 
 if "%~3" == "" (
   echo.
-  echo * Percent 3, new destination branch, is a required field.
+  echo * Percent 3, source branch, is a required field.
   exit/b
 )
 
 echo.
-git checkout -b %3 %2
+git checkout -b %2 %3
 
-git push --set-upstream origin %3
+git push --set-upstream origin %2
 
 exit/b
 
@@ -3820,7 +3562,90 @@ exit/b
 
 
 
+:_
+
+:aec
+
+:ce
+
+:ec
+
+:em
+
+:empt
+
+:empty
+
+:teb
+
+set fp=* Trigger an empty build on the develop branch.
+
+rem lu: Jun-4-2020
+
+rem skw Allow empty commit.
+
+echo.
+echo %fp%
+
+call td ma
+
+call :sb develop
+
+call a
+
+echo.
+git commit --allow-empty -m "Empty commit that triggers a Jenkins build."
+
+call p
+
+exit/b
+
+
+
 :_+ Reversion Family (!fyrv)
+
+
+
+::_
+
+:tasv
+
+:roll_back_tasv
+
+set fp=* Roll back to a specific version. Detached head means you are no longer on a branch, you have checked out a single commit in the history.
+
+rem lu: Jun-10-2020
+
+rem fud (!rb): Aug-15-2017 (skw label, tag, roll back to a particular version)
+
+rem Note: Running this will detach your head. To reattach head, run reattach_head.
+
+rem I validated that this works on ForGitTesting on Aug-17-2017.
+
+echo.
+echo %fp%
+
+rem git checkout a18e821
+rem git checkout 2691f3b
+rem git checkout a703855
+rem git checkout a18e821
+
+rem S6 @ Jul-10-2017
+rem git checkout 959308e 
+
+rem S6 @ Aug-28-2017 (Fresnel from c. Jun-26-2018)
+rem git checkout b3444ed
+
+rem BusterFromFresnel @ Jul-27-2018
+rem git checkout c1ceb68e87e438a79f2455b7b6f7860b94e01683
+
+rem Jun-10-2020 - Cart
+rem git checkout 5ca5b80a69f23fbaf0bbaea57a501b614206e75f
+rem git checkout 5ca5b80a69f23fbaf0bbaea57a501b614206e75f
+
+git checkout b65b32d883e6b5d3caf410c1bbd7791013f2edda
+
+exit/b
 
 
 
@@ -3868,6 +3693,15 @@ call :reset_head_1
 call :roll_back_repo
 
 exit/b
+
+Outcome:
+
+:I created a pull request to merge the release_v_1_11_0 into the Develop branch. While trying 
+to fix merge conflicts in the GitHub GUI in 3 files, I accidentally merged the Develop branch 
+into the release_v_1_11_0 branch, instead of the other way around. When I did a rollback for 
+what I thought was going to being my single bad commit, Git rolled back the release branch to 
+May 14th. Does anyone have a recent copy of the release_1_11_0 branch on their local drive? I 
+have a copy but there may be an issue with it.
 
 
 
@@ -3954,41 +3788,210 @@ exit/b
 
 
 
-:_
+::_
 
-:aec
+:reattach
 
-:ce
+:reattach_head
 
-:ec
+set fp=* Reattach a detached head.
 
-:em
-
-:empt
-
-:empty
-
-:teb
-
-set fp=* Trigger an empty build on the develop branch.
-
-rem lu: Jun-4-2020
-
-rem skw Allow empty commit.
+rem fcd: May-2-2017 (skw how to reattach head)
 
 echo.
 echo %fp%
 
-call td ma
+rem git checkout clean6.2
+git checkout master
 
-call :sb develop
+exit/b
 
-call a
+
+
+::_
+
+:rvallp
+
+set fp=* Revert all PERSISTENT changes from m6 and s6.
+
+rem Creation Date: Aug-30-2017
 
 echo.
-git commit --allow-empty -m "Empty commit that triggers a Jenkins build."
+echo %fp%
+  
+call %0 delete_pngs
 
-call p
+call %0 delete_pngs_2
+
+call %0 rvp
+
+exit/b
+
+
+
+::_
+
+:base
+
+set fp=* Return to baseline configuration after a build. Exercise caution as this will destroy some local changes.
+
+rem lu: Aug-31-2017
+
+echo.
+echo %fp%
+
+call %0 rvall
+
+call %0 acp
+
+cls
+
+call %0 ss
+
+exit/b
+
+
+
+::_
+
+:clean_report
+
+set fp=* Report on untracked files.
+
+rem lu: Sep-14-2017
+
+echo.
+echo %fp%
+
+git clean -n
+
+exit/b
+
+
+
+::_
+
+:rv_pe
+
+set fp=* Revert persistent files. Revert files in need of constant reversion.
+
+rem lu: Aug-31-2017
+
+echo.
+echo %fp%
+  
+cd \projects\netbeans\sencha\html5application\public_html
+
+git checkout bootstrap.css
+git checkout bootstrap.js
+git checkout classic.json
+git checkout classic.jsonp
+git checkout modern.json
+git checkout modern.jsonp
+git checkout sass/example/bootstrap.js
+git checkout sass/example/bootstrap.json
+git checkout sass/example/bootstrap.jsonp
+git checkout sass/example/example.css
+
+cd c:\projects\netbeans\sencha
+
+git checkout HTML5Application/nbproject/private/private.xml
+git checkout HTML5Application/public_html/classic/src/view/dashboard/ContactsWidget.js
+
+git checkout HTML5Application/public_html/modern/src/utils/NetConfig.js
+git checkout HTML5Application/public_html/classic/src/utils/NetConfig.js
+
+exit/b
+
+
+
+::_
+
+:reset_head_2
+
+set fp=* Reset head by 2 id number versions. This enabled not to have to merge.
+
+rem lu: Aug-7-2018
+
+rem Step back 2 versions.
+
+rem reverse 2: skw
+
+echo.
+echo %fp%
+
+echo.
+git reset --hard "HEAD~2"
+
+exit/b
+
+
+
+::_
+
+:roll_back_repo
+
+:roll_back_server
+
+set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
+
+rem lu: Jul-19-2018
+
+rem How do you roll back in git?
+
+rem This worked on David's machine on Aug-3-2017.
+
+echo.
+echo %fp%
+
+echo.
+git push -f
+
+exit/b
+
+
+
+::_
+
+:back
+
+:reset_head_1
+
+:uncommit
+
+set fp=* The git equivalent of the back button. Reset head by 1 id number version.
+
+rem lu: Aug-7-2018
+
+rem Step back 1 version.
+
+rem Test on FGT.
+
+echo.
+echo %fp%
+
+echo.
+git reset --hard "HEAD~1"
+
+exit/b
+
+
+
+::_
+
+:ruf
+
+:clean
+
+set fp=* Remove untracked folders and files. Use with caution.
+
+rem lu: Aug-17-2018
+
+echo.
+echo %fp%
+
+echo.
+git clean -d -f
 
 exit/b
 

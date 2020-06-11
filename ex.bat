@@ -104,9 +104,9 @@ goto main_function
 
 :main_function
 
-call m associate_cbf_parameter_to_cbf_fn
+call m associate_cbf_parameter_to_cbf_fn>nul
 
-call an ex
+call an ex>nul
 
 call r
 

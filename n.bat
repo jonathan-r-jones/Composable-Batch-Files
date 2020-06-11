@@ -6374,6 +6374,14 @@ exit/b
 
 :jj_1_11o
 
+:jj_test
+
+:rt1
+
+:eec
+
+:serv
+
 :pass-through
 
 set fp=* Pass through.
@@ -12850,16 +12858,14 @@ exit/b
 
 :po_ma
 
-set fp=*
+set fp=* Path only ma.
 
-rem lu: May-28-2020
+rem lu: Jun-11-2020
 
 echo.
 echo %fp%
 
-call pn up>nul
-
-set cbf_path=%cbf_path%\dev\cart
+set cbf_path=%userprofile%\dev\cart
 
 exit/b
 
@@ -12993,6 +12999,25 @@ rem set cbf_application=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Cod
 set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code\Visual Studio Code.lnk
 
 rem set cbf_fn=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.exe
+
+exit/b
+
+
+
+:_
+
+:caset
+
+set fp=* cart.service.ts
+
+rem lu: Jun-11-2020
+
+echo.
+echo %fp%
+
+call pn serv>nul
+
+set cbf_fn=%cbf_path%\cart.service.ts
 
 exit/b
 
