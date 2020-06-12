@@ -3608,6 +3608,28 @@ exit/b
 
 ::_
 
+:reat
+
+:reattach
+
+:reattach_head
+
+set fp=* Reattach a detached head.
+
+rem fcd: May-2-2017 (skw how to reattach head)
+
+echo.
+echo %fp%
+
+rem git checkout clean6.2
+git checkout master
+
+exit/b
+
+
+
+::_
+
 :tasv
 
 :roll_back_tasv
@@ -3643,7 +3665,8 @@ rem Jun-10-2020 - Cart
 rem git checkout 5ca5b80a69f23fbaf0bbaea57a501b614206e75f
 rem git checkout 5ca5b80a69f23fbaf0bbaea57a501b614206e75f
 
-git checkout b65b32d883e6b5d3caf410c1bbd7791013f2edda
+rem git checkout b65b32d883e6b5d3caf410c1bbd7791013f2edda
+git checkout 271bf2ee276ba309252f462fb24a15167b6ac827
 
 exit/b
 
@@ -3681,9 +3704,8 @@ set fp=%fp% so move the whole repo back a single check-in version.
 
 rem This worked on FGT and Fresnel on Jul-19-2018.
 rem This worked on CBF on Mar-22-2019.
-rem This didn't work on Cart on Jun-10-2020!!!!!!!!!!!!!!!
 
-rem lu: Mar-22-2019
+rem lu: Jun-12-2020
 
 echo.
 echo %fp%
@@ -3695,6 +3717,12 @@ call :roll_back_repo
 exit/b
 
 Outcome:
+
+In my test on FGT on Jun-12-2020, this worked as expected. It rolled back a single commit.
+
+rem This didn't work on Cart on Jun-10-2020! I'm not so sure this didn't work. My theory is that
+it rolled back the morning commit. I thought it would roll back a merge. So how do you roll
+back a merge then? That is what I don't know. Jun-12-2020
 
 :I created a pull request to merge the release_v_1_11_0 into the Develop branch. While trying 
 to fix merge conflicts in the GitHub GUI in 3 files, I accidentally merged the Develop branch 
@@ -3783,26 +3811,6 @@ echo.
 git reset --hard HEAD
 git clean -f
 git pull
-
-exit/b
-
-
-
-::_
-
-:reattach
-
-:reattach_head
-
-set fp=* Reattach a detached head.
-
-rem fcd: May-2-2017 (skw how to reattach head)
-
-echo.
-echo %fp%
-
-rem git checkout clean6.2
-git checkout master
 
 exit/b
 
