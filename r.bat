@@ -115,8 +115,8 @@ if %errorlevel% == 0 (
 )
 
 if "%cbf_parameter%" == "" (
-  echo.
-  echo * Run application with no parameter. Jun-9-2020_3_20_PM
+  rem echo.
+  rem echo * Run application with no parameter. Jun-9-2020_3_20_PM
   call start "my title" "%cbf_application%"
   exit/b
 )

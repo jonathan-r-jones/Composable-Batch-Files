@@ -13023,4 +13023,25 @@ exit/b
 
 
 
+:_
+
+:1625
+
+set fp=* %1.
+
+rem lu: Jun-12-2020
+
+echo.
+echo %fp%
+
+call pn tick>nul
+
+set cbf_path=%cbf_path%\%1
+
+set cbf_ex=%cbf_path%\%1.xlsx
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
