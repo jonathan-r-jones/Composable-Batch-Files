@@ -10365,16 +10365,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test folder exists.
@@ -10392,6 +10382,48 @@ if %errorlevel% == 0 (
 
 echo.
 echo * Folder's not there.
+
+exit/b
+
+
+
+:_
+
+:test1
+
+set fp=* Test 1.
+
+rem lu: Jun-15-2020
+
+echo.
+echo %fp%
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test colon command.
+
+rem lu: Jun-15-2020
+
+echo.
+echo %fp%
+
+call :test1
 
 exit/b
 

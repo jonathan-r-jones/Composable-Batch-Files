@@ -109,7 +109,7 @@ call n cj_au
 rem echo.
 rem echo * Note: the move command complains if there are no files present to move. Sep-2-2018
 
-call %0 move_all_files_in_current_folder_to_cbf_path
+call :move_all_files_in_current_folder_to_cbf_path
 
 exit/b
 
@@ -130,7 +130,7 @@ call td staging_area
 
 call n clipjam_podcasts
 
-call %0 move_all_files_in_current_folder_to_cbf_path
+call :move_all_files_in_current_folder_to_cbf_path
 
 exit/b
 
@@ -144,7 +144,7 @@ exit/b
 
 set fp=* Overarching podcast mover.
 
-rem lu: Aug-24-2018
+rem lu: Jun-15-2020
 
 echo.
 echo %fp%
@@ -154,52 +154,26 @@ rem call j pc
 
 rem (!rfsp) (mov-2)
 
-call depc audi
+rem call depc audi
 
-call %0 pc_2_sf
+call :pc_2_sf
 
 rem Run the tag program.
 call j tagpr
 
 pause
 
+echo.
+if "%~2" == "pcn" echo * NOT transferring old content.
 if "%~2" == "pcn" goto do_not_transfer_old_content
-call %0 cj_2_old_cj
+
+echo * Transferring old content.
+
+call :cj_2_old_cj
 
 :do_not_transfer_old_content
-echo.
-echo NOT transferring old content.
-call %0 sf_2_cj
-
-exit/b
-
-
-
-::_
-
-:pc2
-
-set fp=* Overarching podcast mover, don't clean out old podcasts.
-
-rem lu: Aug-24-2018
-
-echo.
-echo %fp%
-
-rem Open the podcaster application and download podcasts from there.
-rem call j pc
-
-rem (!rfsp) (mov-2)
-
-call %0 pc_2_sf
-
-rem Run the tag program.
-call j tag
-
-echo.
-pause
-
-call %0
+rem qq
+call :sf_2_cj
 
 exit/b
 
