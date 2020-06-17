@@ -581,7 +581,87 @@ exit/b
 
 
 
+:_
+
+:status
+
+set fp=* Status!
+
+rem lu: Apr-9-2020
+
+echo.
+echo %fp%
+
+echo.
+knife status --run-list --no-color
+
+exit/b
+
+
+
+:_
+
+:kd
+
+:kda
+
+set fp=* Kitchen diagnose all.
+
+rem lu: May-2-2019
+
+echo.
+echo %fp%
+
+echo.
+kitchen diagnose --all
+
+exit/b
+
+
+
 :_+ Upload Cookbook
+
+
+
+::_
+
+:upco
+
+set fp=* Upload the Cart cookbook.
+
+rem skw: upload cookbook, How do you upload the cookbook?
+
+rem lu: Apr-7-2020
+
+echo.
+echo %fp%
+
+call n caco
+set cbf_cookbook_path=%cbf_path%
+
+call td chef
+
+@echo on
+knife cookbook upload cart -o c:\cookbook_test
+@echo off
+
+exit/b
+
+>< >< Footnote:
+
+Jun-17-2020 Result:
+
+Uploading cart           [0.1.3]
+Uploaded 1 cookbook.
+
+Tip: Before uploading the cookbook, it's probably a good idea to update the cookbook version 
+#.
+
+Result:
+
+C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
+Uploading cart           [0.1.1]
+Uploaded 1 cookbook.
 
 
 
@@ -647,43 +727,6 @@ exit/b
 
 ::_
 
-:upco
-
-set fp=* Upload the Cart cookbook.
-
-rem skw: upload cookbook, How do you upload the cookbook?
-
-rem lu: Apr-7-2020
-
-echo.
-echo %fp%
-
-call n caco
-set cbf_cookbook_path=%cbf_path%
-
-call td chef
-
-@echo on
-knife cookbook upload cart -o c:\cookbook_test
-@echo off
-
-exit/b
-
->< >< Footnote:
-
-Tip: Before uploading the cookbook, it's probably a good idea to update the cookbook version 
-#.
-
-Result:
-
-C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
-Uploading cart           [0.1.1]
-Uploaded 1 cookbook.
-
-
-
-::_
-
 :upcac
 
 set fp=* Upload the Cart ActiveMQ cookbook.
@@ -710,44 +753,6 @@ Tip: Before uploading the cookbook, it's probably a good idea to update the cook
 #.
 
 Result:
-
-
-
-:_
-
-:status
-
-set fp=* Status!
-
-rem lu: Apr-9-2020
-
-echo.
-echo %fp%
-
-echo.
-knife status --run-list --no-color
-
-exit/b
-
-
-
-:_
-
-:kd
-
-:kda
-
-set fp=* Kitchen diagnose all.
-
-rem lu: May-2-2019
-
-echo.
-echo %fp%
-
-echo.
-kitchen diagnose --all
-
-exit/b
 
 
 

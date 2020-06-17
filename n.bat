@@ -6168,8 +6168,6 @@ exit/b
 
 :rpji
 
-:cove
-
 :case
 
 :case_s
@@ -6381,6 +6379,12 @@ exit/b
 :eec
 
 :serv
+
+:rf_rp
+
+:po_dic
+
+:httpd
 
 :pass-through
 
@@ -12856,23 +12860,6 @@ exit/b
 
 :_
 
-:po_ma
-
-set fp=* Path only ma.
-
-rem lu: Jun-11-2020
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\dev\cart
-
-exit/b
-
-
-
-:_
-
 :mosf
 
 set fp=* Manage Office Settings form.
@@ -13039,6 +13026,111 @@ call pn tick>nul
 set cbf_path=%cbf_path%\%1
 
 set cbf_ex=%cbf_path%\%1.xlsx
+
+exit/b
+
+
+
+:_+ PO_ (!po_)
+
+
+
+::_
+
+:po_ma
+
+set fp=* Path only ma.
+
+rem lu: Jun-11-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%userprofile%\dev\cart
+
+exit/b
+
+
+
+::_
+
+:po_api
+
+set fp=* CART API folder.
+
+rem lu: Jun-17-2020
+
+echo.
+echo %fp%
+
+call pn po_ma>nul
+
+set cbf_path=%cbf_path%\api
+
+exit/b
+
+
+
+::_
+
+:icp
+
+:rf_ui
+
+:po_ui
+
+:ui
+
+set fp=* CART UI folder.
+
+rem lu: Dec-3-2019
+
+echo.
+echo %fp%
+
+call pn po_ma>nul
+
+set cbf_path=%cbf_path%\icecart-portal-client
+
+exit/b
+
+
+
+:_
+
+:isee
+
+set fp=* InternalServerErrorException.java.
+
+rem lu: Jun-17-2020
+
+echo.
+echo %fp%
+
+call pn po_dic>nul
+
+set cbf_fn=%cbf_path%\web\rest\exception\InternalServerErrorException.java
+
+exit/b
+
+
+
+:_
+
+:cove
+
+set fp=* Cookbook version number.
+
+rem skw: Chef version number.
+
+rem lu: Jun-17-2020
+
+echo.
+echo %fp%
+
+call pn caco>nul
+
+set cbf_fn=%cbf_path%\metadata.rb
 
 exit/b
 
