@@ -6386,6 +6386,10 @@ exit/b
 
 :httpd
 
+:kanb
+
+:kb
+
 :pass-through
 
 set fp=* Pass through.
