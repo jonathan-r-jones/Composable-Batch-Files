@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Delete the contents of the path of the passed in alias.
+set filep=* Delete the path contents of the passed in alias.
 
 
 

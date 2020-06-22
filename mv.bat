@@ -73,7 +73,60 @@ exit/b
 
 
 
-:_+ Move PC Operations
+:_+ Move Podcast Operations
+
+
+
+::_
+
+:pc
+
+set fp=* Overarching podcast mover.
+
+rem lu: Jun-22-2020
+
+echo.
+echo %fp%
+
+rem Delete the Audiobook folder contents.
+rem call depc audi
+
+call :pc_2_sa
+
+rem Run the tag program.
+call j tagpr
+
+pause
+
+if "%~2" == "pcn" goto do_not_transfer_old_content
+
+
+
+::_
+
+set fp =* Transfer old content.
+
+echo.
+echo %fp%
+
+call :cj_2_old_cj
+
+exit/b
+
+
+
+::_
+
+:do_not_transfer_old_content
+
+set fp=* Do NOT transfer old content.
+
+echo.
+echo %fp%
+
+call :sa_2_cj
+
+exit/b
 
 
 
@@ -90,7 +143,7 @@ rem lu: Jul-15-2018
 echo.
 echo %fp%
 
-call td clipjam_podcasts
+call td clipjam_podcasts>nul
 
 if %errorlevel% == 1 (
   exit/b
@@ -98,13 +151,13 @@ if %errorlevel% == 1 (
 
 call m remove_hidden_attributes
 
-call td clipjam_podcasts
+call td clipjam_podcasts>nul
 
 if %errorlevel% == 1 (
   exit/b
 )
 
-call n cj_au
+call n cj_au>nul
 
 rem echo.
 rem echo * Note: the move command complains if there are no files present to move. Sep-2-2018
@@ -117,7 +170,7 @@ exit/b
 
 ::_
 
-:sf_2_cj
+:sa_2_cj
 
 set fp=* Move staging area podcasts to the Clipjam folder.
 
@@ -138,52 +191,9 @@ exit/b
 
 ::_
 
-:pc
+:pc_2_sa
 
-:pcn
-
-set fp=* Overarching podcast mover.
-
-rem lu: Jun-15-2020
-
-echo.
-echo %fp%
-
-rem Open the podcaster application and download podcasts from there.
-rem call j pc
-
-rem (!rfsp) (mov-2)
-
-rem call depc audi
-
-call :pc_2_sf
-
-rem Run the tag program.
-call j tagpr
-
-pause
-
-echo.
-if "%~2" == "pcn" echo * NOT transferring old content.
-if "%~2" == "pcn" goto do_not_transfer_old_content
-
-echo * Transferring old content.
-
-call :cj_2_old_cj
-
-:do_not_transfer_old_content
-rem qq
-call :sf_2_cj
-
-exit/b
-
-
-
-::_
-
-:pc_2_sf
-
-set fp=* Move all podcasts to the staging folder.
+set fp=* Move all podcasts to the staging area folder.
 
 rem FCD: Feb-24-2017
 

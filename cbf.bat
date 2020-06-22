@@ -86,7 +86,7 @@ echo     dd  Dir filename extension searcher including subfolders
 echo    ddc  Dir filename extension searcher current folder only
 echo     de  Delete function-routing style batch file
 echo   defn  Delete file base on passed in filename alias
-echo   depc  Delete the contents of the path of the passed in alias.
+echo   depc  Delete the path contents of the passed in alias.
 echo   depn  Delete folder corresponding to CBF path alias parameter
 echo   devu  Demo file for Dev Universiy event on Jan-9-2020
 echo     dn  Dot Net Core
