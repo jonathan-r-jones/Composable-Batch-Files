@@ -26,7 +26,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-rem if not "%~1" == "" goto %1
+if not "%~1" == "" goto %1
 
 goto code_execution_area
 
@@ -52,8 +52,8 @@ exit/b
 
 :_
 
-  __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
- (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
+  __)_(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
+ (_______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
 
 
 
@@ -9901,7 +9901,27 @@ exit/b
 
 
 
-:_+ For Loop Family (!fyfor)
+:_+ For Loop Family (!for, !fyfor)
+
+
+
+::_
+
+:fl2
+
+set fp=* For loop test 2.
+
+rem lu: Jun-23-2020
+
+echo.
+echo %fp%
+
+call pn a>nul
+
+echo.
+for /r %cbf_path% %%f in (*.txt) do echo Hey!
+
+exit/b
 
 
 
@@ -9945,7 +9965,7 @@ m exitp
 
 ::_
 
-;Batch File Code Keepers - How To Do a For Loop (!for) (skw Batch File For Loop)
+;Batch File Code Keepers - How To Do a For Loop (skw Batch File For Loop)
 
 :Findstr
 
