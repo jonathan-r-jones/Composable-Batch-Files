@@ -129,6 +129,24 @@ exit/b
 
 :_
 
+:create_new_word_file
+
+set fp=* Create new Word file.
+
+call m distill_filename "%cbf_wo%"
+
+call m distill_path "%cbf_wo%"
+
+cd /d "%cbf_distilled_path%"
+
+call cpfc wob "%cbf_distilled_filename%"
+
+exit/b
+
+
+
+:_
+
 :main_function
 
 set fp=* This is the order of operations.
@@ -153,6 +171,11 @@ if not "%cbf_wo%" == "" (
     set cbf_fn=%cbf_wo%
     call m double_click
     call r
+    exit/b
+  ) else (
+    echo.
+    echo * Could not find the file "%cbf_wo%" so create it.
+    goto create_new_word_file
     exit/b
   )
 )

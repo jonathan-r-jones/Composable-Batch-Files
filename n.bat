@@ -6390,6 +6390,22 @@ exit/b
 
 :kb
 
+:cacof
+
+:artui
+
+:uiart
+
+:po_ui
+
+:rf_ui
+
+:icp
+
+:ui
+
+:po_cm
+
 :pass-through
 
 set fp=* Pass through.
@@ -12565,27 +12581,6 @@ exit/b
 
 
 
-::_
-
-:artui
-
-:uiart
-
-set fp=* UI artifact.
-
-rem lu: Jan-17-2020
-
-echo.
-echo %fp%
-
-call n rf_ma
-
-set cbf_path=%cbf_path%\icecart-portal-client\dist\icecart-portal-client
-
-exit/b
-
-
-
 :_
 
 :winz
@@ -13075,31 +13070,6 @@ exit/b
 
 
 
-::_
-
-:icp
-
-:rf_ui
-
-:po_ui
-
-:ui
-
-set fp=* CART UI folder.
-
-rem lu: Dec-3-2019
-
-echo.
-echo %fp%
-
-call pn po_ma>nul
-
-set cbf_path=%cbf_path%\icecart-portal-client
-
-exit/b
-
-
-
 :_
 
 :isee
@@ -13135,6 +13105,44 @@ echo %fp%
 call pn caco>nul
 
 set cbf_fn=%cbf_path%\metadata.rb
+
+exit/b
+
+
+
+:_
+
+:ruli
+
+set fp=* Run list document.
+
+rem lu: Jun-22-2020
+
+echo.
+echo %fp%
+
+call pn po_cm>nul
+
+set cbf_wo=%cbf_path%\run list document.docx
+
+exit/b
+
+
+
+:_
+
+:chch
+
+set fp=* Chef changes.
+
+rem lu: Jun-22-2020
+
+echo.
+echo %fp%
+
+call pn po_cm>nul
+
+set cbf_ex=%cbf_path%\chef changes.xlsx
 
 exit/b
 
