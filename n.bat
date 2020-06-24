@@ -4104,23 +4104,6 @@ exit/b
 
 :_
 
-:clipjam_podcasts
-
-set fp=* ClipJam podcasts folder.
-
-rem lu: Jul-15-2018
-
-echo.
-echo %fp%
-
-set cbf_path=h:\podcasts
-
-exit/b
-
-
-
-:_
-
 :gett
 
 set fp=* Gettysburg Address.
@@ -7569,29 +7552,6 @@ echo %fp%
 set cbf_fn=%savannah%\belfry\j.bat
 
 set cbf_path=%userprofile%\j
-
-exit/b
-
-
-
-:_
-
-:pc
-
-:podcast_folder
-
-set fp=* Podcaster.
-
-rem lu: Jan-5-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
-
-set cbf_fn=%cbf_application%
-
-set cbf_path=%my documents%\gpodder\downloads
 
 exit/b
 
@@ -12261,25 +12221,6 @@ exit/b
 
 ::_
 
-:sa
-
-:staging_area
-
-set fp=* Staging area.
-
-rem lu: Jan-14-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%my documents%\mp3 staging area
-
-exit/b
-
-
-
-::_
-
 :tagpr
 
 set fp=* Tagging program.
@@ -12733,23 +12674,6 @@ exit/b
 
 :_
 
-:audi
-
-set fp=* Audiobooks.
-
-rem lu: May-19-2020
-
-echo.
-echo %fp%
-
-set cbf_path=h:\audiobooks
-
-exit/b
-
-
-
-:_
-
 :test
 
 set fp=* Test folder.
@@ -13143,6 +13067,90 @@ echo %fp%
 call pn po_cm>nul
 
 set cbf_ex=%cbf_path%\chef changes.xlsx
+
+exit/b
+
+
+
+:_+ Podcast and ClipJam Folders
+
+
+
+::_
+
+:audi
+
+:cja
+
+set fp=* Audiobooks.
+
+rem lu: May-19-2020
+
+echo.
+echo %fp%
+
+set cbf_path=h:\audiobooks
+
+exit/b
+
+
+
+::_
+
+:cjp
+
+:clipjam_podcasts
+
+set fp=* ClipJam podcasts folder.
+
+rem lu: Jul-15-2018
+
+echo.
+echo %fp%
+
+set cbf_path=h:\podcasts
+
+exit/b
+
+
+
+::_
+
+:pc
+
+:podcast_folder
+
+set fp=* Podcaster.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
+
+set cbf_fn=%cbf_application%
+
+set cbf_path=%my documents%\gpodder\downloads
+
+exit/b
+
+
+
+::_
+
+:sa
+
+:staging_area
+
+set fp=* Staging area.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%my documents%\mp3 staging area
 
 exit/b
 
