@@ -51,6 +51,161 @@ exit/b
 
 :_
 
+:repl
+
+:sr
+
+set fp=* String replacement is cool.
+
+rem skw dos search and replace
+
+rem echo(%text:%search%=%replace%%)
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+:
+echo.
+echo Example 18: Remove the https, part 3.
+set str=https://www.fox.com
+echo.%str%
+echo %str:https://=%
+
+:
+echo.
+echo Example 17: Remove the https, part 2.
+set str=https://www.fox.com
+echo.%str%
+set str=https://www.fox.com & echo %str:https://=%
+
+:
+echo.
+echo Example 16:
+set /p str=<c:\a\j1.txt
+echo %str%
+set str=%ridiculous*:syncing%
+echo.%str%
+
+echo.
+echo Example 15: 
+set str='Authorization': 'Bearer eyJhb
+echo %str%
+set str=%bearer*:syncing%
+echo.%str%
+
+echo.
+echo Example 14: 'Authorization': 'Bearer eyJhb
+set str='Authorization': 'Bearer eyJhb
+echo %str%
+set str=%str:'Bearer*.=new string%
+echo.%str%
+
+echo.
+echo Example 13: 'Authorization': 'Bearer eyJhb
+set str='Authorization': 'Bearer eyJhb
+echo %str%
+set str=%str:'Bearer.*=new string%
+echo.%str%
+
+echo.
+echo Example 12: 'Authorization': 'Bearer eyJhb
+set str='Authorization': 'Bearer eyJhb
+echo %str%
+set str=%str:'Bearer=new string%
+echo.%str%
+
+rem exit/b
+
+echo.
+echo Example 11: Replace dog.
+set str=This is a dog.
+echo %str%
+set str=%str:dog=cat%
+echo.%str%
+
+echo.
+echo Example 10: Replace bearer and more text with syncing using a wildcard.
+set /p str=<c:\a\j1.txt
+echo %str%
+set str=%ridiculous*:syncing%
+echo.%str%
+
+echo.
+echo Example 9: Replace bearer and more text with syncing using a wildcard.
+set str=bearer blah a lot of text
+echo %str%
+set str=%bea*:syncing%
+echo.%str%
+
+echo.
+echo Example 8: Replace authorization with syncing.
+set str=authorization
+echo %str%
+set str=%authorization:syncing%
+echo.%str%
+
+echo.
+echo Example 7: Remove the https.
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:https://=%
+echo.%str%
+
+echo.
+echo Example 6: Replace cnn with google.
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:cnn=google%
+echo.%str%
+
+echo.
+echo Example 5: Fix the hat.
+set str=teh cat in teh hat
+echo.%str%
+set str=%str:teh=the%
+echo.%str%
+
+echo.
+echo Example 4: Change slash to backslash.
+set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
+echo.%str%
+set str=%str:/=\%
+echo.%str%
+
+echo.
+echo Example 3: Remove the first part of the string.
+set str=https://www.cnn.com
+echo.%str%
+set str=%str:https://www.=%
+set str=%str:http://www.=%
+echo.%str%
+
+echo.
+echo Example 2: Same as Ex. 3.
+set cbf_url=https://www.github.com
+echo.%cbf_url%
+set cbf_url=%cbf_url:http://=%
+set cbf_url=%cbf_url:https://=%
+set cbf_url=%cbf_url:www.=%
+echo.%cbf_url%
+
+echo.
+echo Example 1: Replace unserscores with dashes.
+rem This search and replace was necessary because database names can only contain underscores
+rem and instance names can only contain dashes. Nov-26-2018
+set database_name=postgres_test_database_Nov_26_2018_2
+echo %database_name%
+set database_name=%database_name:_=-%
+echo %database_name%
+
+exit/b
+
+
+
+:_
+
 :else
 
 set fp=* The else statement.
@@ -791,146 +946,6 @@ set /p test=<c:\a\j1.txt
 
 echo.
 echo %test%
-
-exit/b
-
-
-
-:_
-
-:repl
-
-:sr
-
-set fp=* String replacement is cool.
-
-rem skw dos search and replace
-
-rem echo(%text:%search%=%replace%%)
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-echo.
-echo Example 16:
-set /p str=<c:\a\j1.txt
-echo %str%
-set str=%ridiculous*:syncing%
-echo.%str%
-
-echo.
-echo Example 15: 
-set str='Authorization': 'Bearer eyJhb
-echo %str%
-set str=%bearer*:syncing%
-echo.%str%
-
-echo.
-echo Example 14: 'Authorization': 'Bearer eyJhb
-set str='Authorization': 'Bearer eyJhb
-echo %str%
-set str=%str:'Bearer*.=new string%
-echo.%str%
-
-echo.
-echo Example 13: 'Authorization': 'Bearer eyJhb
-set str='Authorization': 'Bearer eyJhb
-echo %str%
-set str=%str:'Bearer.*=new string%
-echo.%str%
-
-echo.
-echo Example 12: 'Authorization': 'Bearer eyJhb
-set str='Authorization': 'Bearer eyJhb
-echo %str%
-set str=%str:'Bearer=new string%
-echo.%str%
-
-exit/b
-
-echo.
-echo Example 11: Replace dog.
-set str=This is a dog.
-echo %str%
-set str=%str:dog=cat%
-echo.%str%
-
-echo.
-echo Example 10: Replace bearer and more text with syncing using a wildcard.
-set /p str=<c:\a\j1.txt
-echo %str%
-set str=%ridiculous*:syncing%
-echo.%str%
-
-echo.
-echo Example 9: Replace bearer and more text with syncing using a wildcard.
-set str=bearer blah a lot of text
-echo %str%
-set str=%bea*:syncing%
-echo.%str%
-
-echo.
-echo Example 8: Replace authorization with syncing.
-set str=authorization
-echo %str%
-set str=%authorization:syncing%
-echo.%str%
-
-echo.
-echo Example 7: Remove the https.
-set str=https://www.cnn.com
-echo.%str%
-set str=%str:https://=%
-echo.%str%
-
-echo.
-echo Example 6: Replace cnn with google.
-set str=https://www.cnn.com
-echo.%str%
-set str=%str:cnn=google%
-echo.%str%
-
-echo.
-echo Example 5: Fix the hat.
-set str=teh cat in teh hat
-echo.%str%
-set str=%str:teh=the%
-echo.%str%
-
-echo.
-echo Example 4: Change slash to backslash.
-set str=HTML5Application/public_html/sass/example/bootstrap.jsonp
-echo.%str%
-set str=%str:/=\%
-echo.%str%
-
-echo.
-echo Example 3: Remove the first part of the string.
-set str=https://www.cnn.com
-echo.%str%
-set str=%str:https://www.=%
-set str=%str:http://www.=%
-echo.%str%
-
-echo.
-echo Example 2: Same as Ex. 3.
-set cbf_url=https://www.github.com
-echo.%cbf_url%
-set cbf_url=%cbf_url:http://=%
-set cbf_url=%cbf_url:https://=%
-set cbf_url=%cbf_url:www.=%
-echo.%cbf_url%
-
-echo.
-echo Example 1: Replace unserscores with dashes.
-rem This search and replace was necessary because database names can only contain underscores
-rem and instance names can only contain dashes. Nov-26-2018
-set database_name=postgres_test_database_Nov_26_2018_2
-echo %database_name%
-set database_name=%database_name:_=-%
-echo %database_name%
 
 exit/b
 

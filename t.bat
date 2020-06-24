@@ -24,9 +24,9 @@ title=Mr T.
 
 set fp=* Route callers.
 
-if "%~1" == "/?" goto help
+if -%~1- == -/?- goto help
 
-if not "%~1" == "" goto %1
+rem if not -%~1- == -- goto %1
 
 goto code_execution_area
 
@@ -9907,6 +9907,67 @@ exit/b
 
 ::_
 
+:for_s
+
+set fp=* Splitting a string by any of " ", "," and ";": ["space", "comma" and "semicolon":].
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+set myvar=a b,c;d
+
+echo.
+echo myvar=%myvar%
+
+echo.
+for %%a in (%myvar%) do echo %%a
+
+exit/b
+
+
+
+::_
+
+:
+
+set fp=* Redirects the entire output of the loop to the file.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+set i=2
+
+(for %%i in (1,2,3) do @echo %%i) > c:\a\j1.txt
+
+exit/b
+
+
+
+::_
+
+:
+
+set fp=* Redirects the entire output of the loop to the file.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+set i=2
+
+(for %%i in (*.txt) do @echo %%i) > c:\a\j1.txt
+
+exit/b
+
+
+
+::_
+
 :fl2
 
 set fp=* For loop test 2.
@@ -10424,16 +10485,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test colon command.
@@ -10446,6 +10497,235 @@ echo %fp%
 call :test1
 
 exit/b
+
+
+
+:_
+
+:
+
+set fp=* Type con.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+type con>c:\a\j1.txt
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Percent tilde switch experimentation.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+echo.
+echo %1
+
+echo.
+echo %~1
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Testing dashes versus double quotes.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+echo.
+
+if not -%1- == -- echo * Argument one provided.
+
+if -%1- == -- echo * Argument one NOT provided.
+
+exit/b
+
+
+
+:_+ Parsing command line arguments.
+
+
+
+::_
+
+:
+
+set fp=* Another "non-robust" approach to parsing command line switches.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+for %%i in (%*) do (
+  echo.
+  echo %%i
+  if "%%i" == "-z" echo. & echo Z!
+  if -%%i- == --z- echo. & echo Z2!
+)
+
+exit/b
+
+This looks elegant but is non-robust, maltreating arguments containing wildcards (*, ?). In 
+particular, the above for command replaces arguments that contain wildcards (*, ?) with file 
+names that match them, or drops them if no files match. Nonetheless, the above loop works as 
+expected as long as the passed arguments do not contain wildcards.
+
+
+
+::_
+
+:
+
+set fp=* A robust looping over all command-line arguments using SHIFT without modifying %1, %2, etc.:
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+call :argument_action_start %*
+
+echo.
+echo * Arg one: %1 & REM %1, %2, etc. are unmodified in this location
+
+echo.
+echo * Arg two: %2
+
+exit /b
+
+
+:argument_action_start
+
+if -%1- == -- goto argument_action_end
+
+echo.
+echo * Percent 1: %1
+
+rem Go to Argument 1 action area.
+
+shift
+
+goto argument_action_start
+
+:argument_action_end
+
+
+exit/b
+
+
+
+:_+ Exit/b versus goto :eof
+
+Outcome: Doesn't appear to be any difference between the 2. The victory goes to exit/b because
+it's easier to type and easily supports appending an error code.
+
+
+
+::_
+
+:
+
+set fp=* Exit/b
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+exit/b
+
+
+
+::_
+
+:
+
+set fp=* goto :eof
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+goto :eof
+
+
+
+:_
+
+:
+
+set fp=* An example calculation that prints prime numbers:
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+setlocal
+set n=1
+:print_primes_loop
+set /a n=n+1
+set cand_divisor=1
+:print_primes_loop2
+set /a cand_divisor=cand_divisor+1
+set /a cand_divisor_squared=cand_divisor*cand_divisor
+if %cand_divisor_squared% gtr %n% echo Prime %n% & goto :print_primes_loop
+set /a modulo=n%%cand_divisor
+if %modulo% equ 0 goto :print_primes_loop & REM Not a prime
+goto :print_primes_loop2
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* The variable into which the result should be stored can be specified on the calling line as follows.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+call :sayhello result=world
+echo %result%
+exit /b
+
+:sayhello
+set %1=Hello %2
+REM Set %1 to set the returning value
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
 
 
 

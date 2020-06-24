@@ -35,6 +35,10 @@ echo Parameter 1 (Optional): Sorting style.
 echo.
 echo Parameter 2 (Optional): File type, e.g "txt".
 
+
+echo.
+echo Batch file style: Multiurpose
+
 echo.          
 echo     Parameter  Description
 echo -------------  -----------------------------------------------------
@@ -49,6 +53,13 @@ echo            tn  Treeview normal.
 echo            to  Files and folders changed today.
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -83,23 +94,6 @@ echo %fp%
 echo.
 
 dir /od %2
-
-exit/b
-
-
-
-:_
-
-:todff
-
-set fp=* Files and folders changed today.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-
-forfiles /d +0 /c "cmd /c echo @file @ftime @fsize"
 
 exit/b
 
@@ -158,40 +152,6 @@ echo %fp%
 
 echo.
 del "*conflicted copy*.*"
-
-exit/b
-
-
-
-:_
-
-:to
-
-:toda
-
-:today
-
-set fp=* Files changed today.
-
-rem findstr /bvc:" " removes header and summary
-
-rem The problem is that this doesn't search subfolders.
-
-rem lu: Mar-6-2019
-
-echo.
-echo %fp%
-
-forfiles /s /d +0 /c "cmd /c if @isdir==FALSE echo @path @ftime @fsize">%temp%\d_search_results_fs.txt
-
-if %Errorlevel% == 0 echo.
-if %Errorlevel% == 0 echo * Files found.
-
-if %errorlevel% == 0 (
-  start "Test Title" "%cbf_default_text_editor%" "%temp%\d_search_results_fs.txt"
-) else (
-  call m clear_errorlevel_silently
-)
 
 exit/b
 
@@ -316,6 +276,103 @@ tree/f>%temp%\treeview_results.txt
 start "Test Title" "%cbf_default_text_editor%" "%temp%\treeview_results.txt"
 
 exit/b
+
+
+
+:_+ Recently Modified
+
+
+
+::_
+
+:rm
+
+set fp=* Recently modified.
+
+echo.
+echo %fp%
+
+forfiles /s /d 06/24/2020 /c "cmd /c echo @fdate @path"
+
+exit/b
+
+Description: For each file in the current folder and its subfolders modified on date specified 
+or later, outputs the file modification date and full file path. The date format after /d is 
+locale specific. Thus, allows to find most recently modified files.
+
+
+
+::_
+
+:to
+
+:toda
+
+:today
+
+set fp=* Files changed today.
+
+rem findstr /bvc:" " removes header and summary
+
+rem The problem is that this doesn't search subfolders.
+
+rem lu: Mar-6-2019
+
+echo.
+echo %fp%
+
+forfiles /s /d +0 /c "cmd /c if @isdir==FALSE echo @path @ftime @fsize">%temp%\d_search_results_fs.txt
+
+if %Errorlevel% == 0 echo.
+if %Errorlevel% == 0 echo * Files found.
+
+if %errorlevel% == 0 (
+  start "Test Title" "%cbf_default_text_editor%" "%temp%\d_search_results_fs.txt"
+) else (
+  call m clear_errorlevel_silently
+)
+
+exit/b
+
+
+
+::_
+
+:todff
+
+set fp=* Files and folders changed today.
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+
+forfiles /d +0 /c "cmd /c echo @file @ftime @fsize"
+
+exit/b
+
+
+
+:_
+
+:big
+
+set fp=* Find big files.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+for /r %%i in (*) do @if %~zi geq 1000000 echo %~zi %%i
+
+exit/b
+
+Presently not working.
+
+Description: For each file in the current folder and its subfolders that has the size greater 
+than or equal to 1,000,000 bytes, outputs the file size in bytes and the full path of the 
+file.
 
 
 
