@@ -4104,23 +4104,6 @@ exit/b
 
 :_
 
-:clipjam_podcasts
-
-set fp=* ClipJam podcasts folder.
-
-rem lu: Jul-15-2018
-
-echo.
-echo %fp%
-
-set cbf_path=h:\podcasts
-
-exit/b
-
-
-
-:_
-
 :gett
 
 set fp=* Gettysburg Address.
@@ -7575,29 +7558,6 @@ echo %fp%
 set cbf_fn=%savannah%\belfry\j.bat
 
 set cbf_path=%userprofile%\j
-
-exit/b
-
-
-
-:_
-
-:pc
-
-:podcast_folder
-
-set fp=* Podcaster.
-
-rem lu: Jan-5-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
-
-set cbf_fn=%cbf_application%
-
-set cbf_path=%my documents%\gpodder\downloads
 
 exit/b
 
@@ -12267,25 +12227,6 @@ exit/b
 
 ::_
 
-:sa
-
-:staging_area
-
-set fp=* Staging area.
-
-rem lu: Jan-14-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%my documents%\mp3 staging area
-
-exit/b
-
-
-
-::_
-
 :tagpr
 
 set fp=* Tagging program.
@@ -12739,23 +12680,6 @@ exit/b
 
 :_
 
-:audi
-
-set fp=* Audiobooks.
-
-rem lu: May-19-2020
-
-echo.
-echo %fp%
-
-set cbf_path=h:\audiobooks
-
-exit/b
-
-
-
-:_
-
 :test
 
 set fp=* Test folder.
@@ -13154,6 +13078,7 @@ exit/b
 
 
 
+<<<<<<< HEAD
 :_
 
 :wcj
@@ -13161,20 +13086,59 @@ exit/b
 set fp=* %1.
 
 rem lu: Jun-25-2020
+=======
+:_+ Podcast and ClipJam Folders
+
+
+
+::_
+
+:audi
+
+:cja
+
+set fp=* Audiobooks.
+
+rem lu: May-19-2020
+>>>>>>> cb5b189351fc1e63c610221afc509813d93d364d
 
 echo.
 echo %fp%
 
+<<<<<<< HEAD
 call pn po_dic>nul
 
 set cbf_path=%cbf_path%\config
 
 set cbf_fn=%cbf_path%\WebConfigurer.java
+=======
+set cbf_path=h:\audiobooks
 
 exit/b
 
 
 
+::_
+
+:cjp
+
+:clipjam_podcasts
+
+set fp=* ClipJam podcasts folder.
+
+rem lu: Jul-15-2018
+
+echo.
+echo %fp%
+
+set cbf_path=h:\podcasts
+>>>>>>> cb5b189351fc1e63c610221afc509813d93d364d
+
+exit/b
+
+
+
+<<<<<<< HEAD
 :_
 
 :wcjt
@@ -13182,10 +13146,22 @@ exit/b
 set fp=* %1 test.
 
 rem lu: Jun-25-2020
+=======
+::_
+
+:pc
+
+:podcast_folder
+
+set fp=* Podcaster.
+
+rem lu: Jun-24-2020
+>>>>>>> cb5b189351fc1e63c610221afc509813d93d364d
 
 echo.
 echo %fp%
 
+<<<<<<< HEAD
 call pn po_dict>nul
 
 set cbf_path=%cbf_path%\config
@@ -13212,6 +13188,32 @@ call pn po_api>nul
 set cbf_path=%cbf_path%\src\main\resources
 
 set cbf_fn=%cbf_path%\logback-spring.xml
+=======
+set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
+
+set cbf_fn=%cbf_application%
+
+set cbf_path=%my documents%\gpodder\downloads
+
+exit/b
+
+
+
+::_
+
+:sa
+
+:staging_area
+
+set fp=* Staging area.
+
+rem lu: Jan-14-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%my documents%\mp3 staging area
+>>>>>>> cb5b189351fc1e63c610221afc509813d93d364d
 
 exit/b
 

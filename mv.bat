@@ -89,7 +89,7 @@ echo.
 echo %fp%
 
 rem Delete the Audiobook folder contents.
-rem call depc audi
+rem call depc cja
 
 call :pc_2_sa
 
@@ -98,7 +98,11 @@ call j tagpr
 
 pause
 
-if "%~2" == "pcn" goto do_not_transfer_old_content
+if not "%~2" == "pcn" call :transfer_old_content
+
+call :sa_2_cj
+
+exit/b
 
 
 
@@ -110,21 +114,6 @@ echo.
 echo %fp%
 
 call :cj_2_old_cj
-
-exit/b
-
-
-
-::_
-
-:do_not_transfer_old_content
-
-set fp=* Do NOT transfer old content.
-
-echo.
-echo %fp%
-
-call :sa_2_cj
 
 exit/b
 
@@ -179,7 +168,7 @@ rem lu: Jul-8-2018
 echo.
 echo %fp%
 
-call td staging_area
+call td staging_area>nul
 
 call n clipjam_podcasts
 
