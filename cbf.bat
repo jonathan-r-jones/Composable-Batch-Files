@@ -116,7 +116,7 @@ echo     gr  Gradle
 echo      h  Sencha
 echo      i  Information of CBF variable value assignments
 echo      j  Simulate a double-click using a default precedence of operation preferences or a 
-echo           dynamically constructed variable.
+echo         dynamically constructed variable.
 echo     ja  Application-centric way of running an application with an optional filename parameter
 echo     je  Surf to Jenkins websites
 echo     ji  Jira operations

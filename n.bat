@@ -6406,6 +6406,12 @@ exit/b
 
 :po_cm
 
+:dic
+
+:po_dict
+
+:dict
+
 :pass-through
 
 set fp=* Pass through.
@@ -13143,6 +13149,69 @@ echo %fp%
 call pn po_cm>nul
 
 set cbf_ex=%cbf_path%\chef changes.xlsx
+
+exit/b
+
+
+
+:_
+
+:wcj
+
+set fp=* %1.
+
+rem lu: Jun-25-2020
+
+echo.
+echo %fp%
+
+call pn po_dic>nul
+
+set cbf_path=%cbf_path%\config
+
+set cbf_fn=%cbf_path%\WebConfigurer.java
+
+exit/b
+
+
+
+:_
+
+:wcjt
+
+set fp=* %1 test.
+
+rem lu: Jun-25-2020
+
+echo.
+echo %fp%
+
+call pn po_dict>nul
+
+set cbf_path=%cbf_path%\config
+
+set cbf_fn=%cbf_path%\WebConfigurerTest.java
+
+exit/b
+
+     
+
+:_
+
+:lbs
+
+set fp=* %1
+
+rem lu: Jun-25-2020
+
+echo.
+echo %fp%
+
+call pn po_api>nul
+
+set cbf_path=%cbf_path%\src\main\resources
+
+set cbf_fn=%cbf_path%\logback-spring.xml
 
 exit/b
 

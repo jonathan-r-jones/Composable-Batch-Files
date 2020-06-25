@@ -79,9 +79,6 @@ echo.
 echo f np kb
 
 echo.
-echo f no j55.txt
-
-echo.
 echo f no "the rain in spain.txt"
 
 echo.
@@ -100,15 +97,6 @@ echo.
 echo f np "the rain in spain.txt"
 
 echo.
-echo f np jenkinsfile
-
-echo.
-echo f np jenkinsfile -e
-
-echo.
-echo f kb
-
-echo.
 echo f np "rain in spain"
 
 echo.
@@ -121,6 +109,15 @@ echo.
 echo f sm j1 -d
 
 echo.
+echo f np jenkinsfile
+
+echo.
+echo f np jenkinsfile -e
+
+echo.
+echo f no j55.txt
+
+echo.
 echo f np j55.txt -d
 
 echo.
@@ -129,9 +126,17 @@ echo f me "rain in spain" -d
 echo.
 echo %0 winz cart-rest-client-0.0.3-RELEASE.jar
 
-rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< file bookmark: skw qjq3
+echo.
+echo %0 ie ma
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 

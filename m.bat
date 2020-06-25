@@ -4452,7 +4452,7 @@ pl
 
 rem Get Postgres running on local by clicking on the lnk_db shortcut.
 
-rem 1. If the local database is up-to-date, you don't need to runn Liquibase? 
+rem 1. If the local database is up-to-date, you don't need to run Liquibase? 
 
 rem 2. If the API starts successfully, you don't need to run Liquibase.
 
@@ -4473,7 +4473,9 @@ rem Also read direction on how to attach the debugger at: ^atde
 
 j bash
 
-rem ./cr...
+rem Run 1 of the following. First one is easier.
+rem ./craigs_get_cart_jwt_rpl.sh
+rem or
 rem ./get_cart_jwt.sh
 
 rem Copy the new jwt token into the file using:
