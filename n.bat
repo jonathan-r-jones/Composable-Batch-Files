@@ -13078,18 +13078,30 @@ exit/b
 
 
 
-<<<<<<< HEAD
-:_
-
-:wcj
-
-set fp=* %1.
-
-rem lu: Jun-25-2020
-=======
 :_+ Podcast and ClipJam Folders
 
 
+
+::_
+
+:pc
+
+:podcast_folder
+
+set fp=* Podcaster.
+
+rem lu: Jun-24-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%my documents%\gpodder\downloads
+
+set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
+
+exit/b
+
+     
 
 ::_
 
@@ -13100,18 +13112,10 @@ rem lu: Jun-25-2020
 set fp=* Audiobooks.
 
 rem lu: May-19-2020
->>>>>>> cb5b189351fc1e63c610221afc509813d93d364d
 
 echo.
 echo %fp%
 
-<<<<<<< HEAD
-call pn po_dic>nul
-
-set cbf_path=%cbf_path%\config
-
-set cbf_fn=%cbf_path%\WebConfigurer.java
-=======
 set cbf_path=h:\audiobooks
 
 exit/b
@@ -13132,68 +13136,6 @@ echo.
 echo %fp%
 
 set cbf_path=h:\podcasts
->>>>>>> cb5b189351fc1e63c610221afc509813d93d364d
-
-exit/b
-
-
-
-<<<<<<< HEAD
-:_
-
-:wcjt
-
-set fp=* %1 test.
-
-rem lu: Jun-25-2020
-=======
-::_
-
-:pc
-
-:podcast_folder
-
-set fp=* Podcaster.
-
-rem lu: Jun-24-2020
->>>>>>> cb5b189351fc1e63c610221afc509813d93d364d
-
-echo.
-echo %fp%
-
-<<<<<<< HEAD
-call pn po_dict>nul
-
-set cbf_path=%cbf_path%\config
-
-set cbf_fn=%cbf_path%\WebConfigurerTest.java
-
-exit/b
-
-     
-
-:_
-
-:lbs
-
-set fp=* %1
-
-rem lu: Jun-25-2020
-
-echo.
-echo %fp%
-
-call pn po_api>nul
-
-set cbf_path=%cbf_path%\src\main\resources
-
-set cbf_fn=%cbf_path%\logback-spring.xml
-=======
-set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
-
-set cbf_fn=%cbf_application%
-
-set cbf_path=%my documents%\gpodder\downloads
 
 exit/b
 
@@ -13213,7 +13155,63 @@ echo.
 echo %fp%
 
 set cbf_path=%my documents%\mp3 staging area
->>>>>>> cb5b189351fc1e63c610221afc509813d93d364d
+
+exit/b
+
+
+
+:_
+
+:wcj
+
+set fp=* %1.
+
+rem lu: Jun-25-2020
+
+call pn po_dic>nul
+
+set cbf_path=%cbf_path%\config
+
+set cbf_fn=%cbf_path%\WebConfigurer.java
+
+exit/b
+
+
+
+:_
+
+:wcjt
+
+set fp=* %1 test.
+
+rem lu: Jun-25-2020
+
+call pn po_dict>nul
+
+set cbf_path=%cbf_path%\config
+
+set cbf_fn=%cbf_path%\WebConfigurerTest.java
+
+exit/b
+
+
+
+:_
+
+:lbs
+
+set fp=* logback-spring.xml. This is where the Cart logs output target is configured.
+
+rem lu: Jun-25-2020
+
+echo.
+echo %fp%
+
+call pn po_api>nul
+
+set cbf_path=%cbf_path%\src\main\resources
+
+set cbf_fn=%cbf_path%\logback-spring.xml
 
 exit/b
 
