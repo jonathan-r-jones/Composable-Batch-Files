@@ -9205,23 +9205,6 @@ exit/b
 
 :_
 
-:pc
-
-set fp=* Podcaster.
-
-rem lu: May-26-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
-
-exit/b
-
-
-
-:_
-
 :bz
 
 :buzz
