@@ -88,8 +88,8 @@ rem lu: Jun-22-2020
 echo.
 echo %fp%
 
-rem Delete the Audiobook folder contents.
-rem call depc cja
+rem Delete old files from the the Audiobook folder.
+call de old_mp3_files
 
 call :pc_2_sa
 
@@ -107,6 +107,8 @@ exit/b
 
 
 ::_
+
+:transfer_old_content
 
 set fp =* Transfer old content.
 

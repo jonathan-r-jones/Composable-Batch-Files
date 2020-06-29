@@ -187,4 +187,24 @@ exit/b
 
 
 
+:_
+
+:old_mp3_files
+
+set fp=* Delete old mp3 files.
+
+rem lu: Jun-29-2020
+
+echo.
+echo %fp%
+
+call td cja
+
+echo.
+forfiles /d -22 /m *.mp3 /c "cmd /c del @path 0x09"
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

@@ -84,7 +84,7 @@ echo      d  Dir for current folder
 echo     dc  Double-click a filename, back office operation
 echo     dd  Dir filename extension searcher including subfolders
 echo    ddc  Dir filename extension searcher current folder only
-echo     de  Delete function-routing style batch file
+echo     de  Multipurpose delete batch file
 echo   defn  Delete file base on passed in filename alias
 echo   depc  Delete the path contents of the passed in alias.
 echo   depn  Delete folder corresponding to CBF path alias parameter

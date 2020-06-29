@@ -83,24 +83,6 @@ exit/b
 
 :_
 
-:d2
-
-set fp=* Date, oldest first.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-echo.
-
-dir /od %2
-
-exit/b
-
-
-
-:_
-
 :h
 
 :hid
@@ -188,24 +170,6 @@ echo %fp%
 echo.
 
 dir /o-d
-
-exit/b
-
-
-
-:_
-
-:do
-
-set fp=* Date, oldest first.
-
-rem lu: Apr-23-2019
-
-echo.
-echo %fp%
-echo.
-
-dir /od
 
 exit/b
 
@@ -373,6 +337,24 @@ Presently not working.
 Description: For each file in the current folder and its subfolders that has the size greater 
 than or equal to 1,000,000 bytes, outputs the file size in bytes and the full path of the 
 file.
+
+
+
+:_
+
+:do
+
+set fp=* Date, oldest first.
+
+rem lu: Apr-23-2019
+
+echo.
+echo %fp%
+echo.
+
+dir /od
+
+exit/b
 
 
 

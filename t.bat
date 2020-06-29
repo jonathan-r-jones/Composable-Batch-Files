@@ -3538,121 +3538,6 @@ goto :eof
 
 :_
 
-:forfiles
-
-set fp=* Forfiles help file. (!forf)
-
-rem      Creation Date: Nov-25-2016
-
-FORFILES [/P pathname] [/M searchmask] [/S]
-         [/C command] [/D [+ | -] {MM/dd/yyyy | dd}]
-
-Description:
-    Selects a file (or set of files) and executes a 
-    command on that file. This is helpful for batch jobs.
-
-Parameter List:
-    /P    pathname      Indicates the path to start searching.
-                        The default folder is the current working
-                        directory (.).
-
-    /M    searchmask    Searches files according to a searchmask.
-                        The default searchmask is '*' .
-
-    /S                  Instructs forfiles to recurse into
-                        subdirectories. Like "DIR /S".
-
-    /C    command       Indicates the command to execute for each file.
-                        Command strings should be wrapped in double
-                        quotes. 
-
-                        The default command is "cmd /c echo @file".
-
-                        The following variables can be used in the
-                        command string:
-                        @file    - returns the name of the file.
-                        @fname   - returns the file name without
-                                   extension.
-                        @ext     - returns only the extension of the
-                                   file.
-                        @path    - returns the full path of the file.
-                        @relpath - returns the relative path of the
-                                   file.
-                        @isdir   - returns "TRUE" if a file type is
-                                   a directory, and "FALSE" for files.
-                        @fsize   - returns the size of the file in
-                                   bytes.
-                        @fdate   - returns the last modified date of the
-                                   file.
-                        @ftime   - returns the last modified time of the
-                                   file.
-
-                        To include special characters in the command 
-                        line, use the hexadecimal code for the character
-                        in 0xHH format (ex. 0x09 for tab). Internal
-                        CMD.exe commands should be preceded with
-                        "cmd /c".
-
-    /D    date          Selects files with a last modified date greater
-                        than or equal to (+), or less than or equal to
-                        (-), the specified date using the
-                        "MM/dd/yyyy" format; or selects files with a
-                        last modified date greater than or equal to (+)
-                        the current date plus "dd" days, or less than or
-                        equal to (-) the current date minus "dd" days. A
-                        valid "dd" number of days can be any number in
-                        the range of 0 - 32768.
-                        "+" is taken as default sign if not specified.
-
-    /?                  Displays this help message.
-
-Examples:
-    FORFILES /?
-    FORFILES  
-    FORFILES /P C:\WINDOWS /S /M DNS*.* 
-    FORFILES /S /M *.txt /C "cmd /c type @file | more"
-    FORFILES /P C:\ /S /M *.bat
-    FORFILES /D -30 /M *.exe /C "cmd /c echo @path 0x09 was changed 30 days ago"
-    FORFILES /D 01/01/2001 /C "cmd /c echo @fname is new since Jan 1st 2001"
-    FORFILES /D +11/25/2016 /C "cmd /c echo @fname is new today"
-    FORFILES /M *.exe /D +1
-    FORFILES /S /M *.doc /C "cmd /c echo @fsize" 
-    FORFILES /M *.txt /C "cmd /c if @isdir==FALSE notepad.exe @file"
-
-exit/b
-
-
-
-:_
-
-set fp=* Forfiles command experimentation.
-
-rem      Creation Date: Nov-25-2016
-
-echo.
-echo %fp%
-echo.
-
-cd\aa
-
-rem This worked.
-rem forfiles /m *.txt
-
-rem Find text files changed in the last day.
-rem forfiles /d +0 /m *.txt
-
-rem Find files changed in the last day.
-rem forfiles /d +0
-
-echo Find files (folders are assumed) changed in the last day.
-forfiles /d +0 /s /c "cmd /c if @isdir==FALSE echo @path" /m %sc%
-
-m exitp
-
-
-
-:_
-
 :search_normally
 
 set fp2=* Search normally.
@@ -3676,80 +3561,6 @@ echo.>>c:\a\search_results.txt
 
 rem Files are sorted newest files first.
 dir /b /s /o-d *%sc%*>>c:\a\search_results.txt
-
-"%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
-
-m exit
-
-
-
-:_
-
-:find_files_changed_in_the_last_day
-
-set fp2=* Find files (folders are assumed) changed in the last day.
-
-rem      Creation Date: Nov-25-2016
-
-echo.
-echo %fp%
-echo.
-
-echo %fp%>c:\a\search_results.txt
-
-echo.
-echo %fp2%
-echo %fp2%>>c:\a\search_results.txt
-
-echo.
-echo Current folder: "%cd%"
-echo Current folder: "%cd%">>c:\a\search_results.txt
-
-echo.
-echo Search Criterion: %sc%
-echo Search Criterion: %sc%>>c:\a\search_results.txt
-
-echo ****************************************************************>>c:\a\search_results.txt
-echo.>>c:\a\search_results.txt
-
-forfiles /d +0 /s /c "cmd /c if @isdir==FALSE echo @path">>c:\a\search_results.txt
-
-"%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
-
-m exit
-
-
-
-:_
-
-:find_files_changed_in_the_last_week
-
-set fp2=* Find files (folders are assumed) changed in the last week.
-
-rem Creation Date: Dec-5-2016
-
-echo.
-echo %fp%
-echo.
-
-echo %fp%>c:\a\search_results.txt
-
-echo.
-echo %fp2%
-echo %fp2%>>c:\a\search_results.txt
-
-echo.
-echo Current folder: "%cd%"
-echo Current folder: "%cd%">>c:\a\search_results.txt
-
-echo.
-echo Search Criterion: %sc%
-echo Search Criterion: %sc%>>c:\a\search_results.txt
-
-echo ****************************************************************>>c:\a\search_results.txt
-echo.>>c:\a\search_results.txt
-
-forfiles /d -7 /s /c "cmd /c if @isdir==FALSE echo @path">>c:\a\search_results.txt
 
 "%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
 
@@ -6021,36 +5832,6 @@ echo %fp%
 
 echo Title: %title
 echo Title: %title%
-exit/b
-
-
-
-:_
-
-set fp=* Find files changed in the past day.
-
-rem lu: Feb-7-2018
-
-echo %fp%
-
-rem forfiles /d +0
-rem forfiles /d +0 /c @isdir=FALSE
-forfiles /d +2/7/2018 /c "cmd /c echo @fname is new today."
-
-exit/b
-
-
-
-:_
-
-set fp=* Find files changed in the past day. This works.
-
-rem lu: Feb-7-2018
-
-echo %fp%
-
-forfiles /d +0 /c "cmd /c echo @fname is new today."
-
 exit/b
 
 
@@ -10715,6 +10496,262 @@ exit /b
 :sayhello
 set %1=Hello %2
 REM Set %1 to set the returning value
+exit/b
+
+
+
+:_+ Forfiles
+
+
+
+::_
+
+:forfiles
+
+set fp=* Forfiles help file. (!forf)
+
+rem      Creation Date: Nov-25-2016
+
+FORFILES [/P pathname] [/M searchmask] [/S]
+         [/C command] [/D [+ | -] {MM/dd/yyyy | dd}]
+
+Description:
+    Selects a file (or set of files) and executes a 
+    command on that file. This is helpful for batch jobs.
+
+Parameter List:
+    /P    pathname      Indicates the path to start searching.
+                        The default folder is the current working
+                        directory (.).
+
+    /M    searchmask    Searches files according to a searchmask.
+                        The default searchmask is '*' .
+
+    /S                  Instructs forfiles to recurse into
+                        subdirectories. Like "DIR /S".
+
+    /C    command       Indicates the command to execute for each file.
+                        Command strings should be wrapped in double
+                        quotes. 
+
+                        The default command is "cmd /c echo @file".
+
+                        The following variables can be used in the
+                        command string:
+                        @file    - returns the name of the file.
+                        @fname   - returns the file name without
+                                   extension.
+                        @ext     - returns only the extension of the
+                                   file.
+                        @path    - returns the full path of the file.
+                        @relpath - returns the relative path of the
+                                   file.
+                        @isdir   - returns "TRUE" if a file type is
+                                   a directory, and "FALSE" for files.
+                        @fsize   - returns the size of the file in
+                                   bytes.
+                        @fdate   - returns the last modified date of the
+                                   file.
+                        @ftime   - returns the last modified time of the
+                                   file.
+
+                        To include special characters in the command 
+                        line, use the hexadecimal code for the character
+                        in 0xHH format (ex. 0x09 for tab). Internal
+                        CMD.exe commands should be preceded with
+                        "cmd /c".
+
+    /D    date          Selects files with a last modified date greater
+                        than or equal to (+), or less than or equal to
+                        (-), the specified date using the
+                        "MM/dd/yyyy" format; or selects files with a
+                        last modified date greater than or equal to (+)
+                        the current date plus "dd" days, or less than or
+                        equal to (-) the current date minus "dd" days. A
+                        valid "dd" number of days can be any number in
+                        the range of 0 - 32768.
+                        "+" is taken as default sign if not specified.
+
+    /?                  Displays this help message.
+
+Examples:
+    FORFILES /?
+    FORFILES  
+    FORFILES /P C:\WINDOWS /S /M DNS*.* 
+    FORFILES /S /M *.txt /C "cmd /c type @file | more"
+    FORFILES /P C:\ /S /M *.bat
+    FORFILES /D -30 /M *.exe /C "cmd /c echo @path 0x09 was changed 30 days ago"
+    FORFILES /D 01/01/2001 /C "cmd /c echo @fname is new since Jan 1st 2001"
+    FORFILES /D +11/25/2016 /C "cmd /c echo @fname is new today"
+    FORFILES /M *.exe /D +1
+    FORFILES /S /M *.doc /C "cmd /c echo @fsize" 
+    FORFILES /M *.txt /C "cmd /c if @isdir==FALSE notepad.exe @file"
+
+exit/b
+
+
+
+::_
+
+set fp=* Forfiles command experimentation.
+
+rem      Creation Date: Nov-25-2016
+
+echo.
+echo %fp%
+echo.
+
+cd\aa
+
+rem This worked.
+rem forfiles /m *.txt
+
+rem Find text files changed in the last day.
+rem forfiles /d +0 /m *.txt
+
+rem Find files changed in the last day.
+rem forfiles /d +0
+
+echo Find files (folders are assumed) changed in the last day.
+forfiles /d +0 /s /c "cmd /c if @isdir==FALSE echo @path" /m %sc%
+
+m exitp
+
+
+
+::_
+
+:find_files_changed_in_the_last_day
+
+set fp2=* Find files (folders are assumed) changed in the last day.
+
+rem      Creation Date: Nov-25-2016
+
+echo.
+echo %fp%
+echo.
+
+echo %fp%>c:\a\search_results.txt
+
+echo.
+echo %fp2%
+echo %fp2%>>c:\a\search_results.txt
+
+echo.
+echo Current folder: "%cd%"
+echo Current folder: "%cd%">>c:\a\search_results.txt
+
+echo.
+echo Search Criterion: %sc%
+echo Search Criterion: %sc%>>c:\a\search_results.txt
+
+echo ****************************************************************>>c:\a\search_results.txt
+echo.>>c:\a\search_results.txt
+
+forfiles /d +0 /s /c "cmd /c if @isdir==FALSE echo @path">>c:\a\search_results.txt
+
+"%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
+
+m exit
+
+
+
+::_
+
+:find_files_changed_in_the_last_week
+
+set fp2=* Find files (folders are assumed) changed in the last week.
+
+rem Creation Date: Dec-5-2016
+
+echo.
+echo %fp%
+echo.
+
+echo %fp%>c:\a\search_results.txt
+
+echo.
+echo %fp2%
+echo %fp2%>>c:\a\search_results.txt
+
+echo.
+echo Current folder: "%cd%"
+echo Current folder: "%cd%">>c:\a\search_results.txt
+
+echo.
+echo Search Criterion: %sc%
+echo Search Criterion: %sc%>>c:\a\search_results.txt
+
+echo ****************************************************************>>c:\a\search_results.txt
+echo.>>c:\a\search_results.txt
+
+forfiles /d -7 /s /c "cmd /c if @isdir==FALSE echo @path">>c:\a\search_results.txt
+
+"%ProgramFiles%\Multi-Edit 2008\Mew32.exe" "c:\a\search_results.txt"
+
+m exit
+
+
+
+::_
+
+set fp=* Find files changed in the past day.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+rem forfiles /d +0
+rem forfiles /d +0 /c @isdir=FALSE
+forfiles /d +2/7/2018 /c "cmd /c echo @fname is new today."
+
+exit/b
+
+
+
+::_
+
+:today_2
+
+set fp=* Find files changed in the past day. This works.
+
+rem lu: Feb-7-2018
+
+echo %fp%
+
+forfiles /d +0 /c "cmd /c echo @fname is new today."
+
+exit/b
+
+
+
+:_
+
+:process_file
+
+rem "cmd /c echo @path 0x09 was changed more than 18 days ago"
+
+exit/b
+
+
+
+:_
+
+:old_files
+
+set fp=* Use the forfiles command to find old files.
+
+rem lu: Jun-29-2020
+
+echo.
+echo %fp%
+
+echo.
+
+rem forfiles /d -22 /m *.mp3 /c "cmd /c echo @path 0x09 was changed more than 22 days ago"
+rem forfiles /d -18 /m *.mp3 /c "call :process_file"
+forfiles /d -22 /m *.mp3 /c "cmd /c del @path 0x09"
+
 exit/b
 
 
