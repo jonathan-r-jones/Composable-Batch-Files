@@ -205,37 +205,21 @@ exit/b
 
 
 
-:_+ Running UI tests
-
-
-
-::_
-
-:ng_test
-
-set fp=* Test angular.
-
-rem lu: Sep-16-2019
-
-echo.
-echo %fp%
-
-echo.
-ng test
-
-exit/b
-
-
-
-::_
+:_
 
 :run_tests
 
+:run_unit_tests
+
+:rut
+
 :test
 
-set fp=* Run UI tests in ma. (skw run tests)
+set fp=* Run Angular unit tests.
 
-rem lu: Dec-3-2019
+rem skw run tests, run unit tests
+
+rem lu: Jun-30-2020
 
 echo.
 echo %fp%
@@ -247,11 +231,10 @@ ng test
 
 exit/b
 
-
 >< >< Footnote:
 
 As of Mar-5-2020 there are 428 API tests
 
 
 
-:_ (!rfsp) (mov-7)
+:_ (!efang, !rfsp) (mov-9)

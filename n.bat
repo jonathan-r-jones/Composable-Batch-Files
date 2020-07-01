@@ -2866,23 +2866,6 @@ exit/b
 
 
 
-:_
-
-:cj_au
-
-set fp=* ClipJam audiobooks folder.
-
-rem lu: Jul-15-2018
-
-echo.
-echo %fp%
-
-set cbf_path=h:\audiobooks
-
-exit/b
-
-
-
 :_+ Browsers (!brows)
 
 
@@ -5695,7 +5678,7 @@ exit/b
 
 :reki
 
-:logs
+:grlo
 
 :1232
 
@@ -6394,6 +6377,26 @@ exit/b
 :po_dict
 
 :dict
+
+:pad
+
+:ebp
+
+:lbst
+
+:lbs
+
+:wcjt
+
+:wcj
+
+:1780
+
+:htgl
+
+:wcf
+
+:wcft
 
 :pass-through
 
@@ -12882,7 +12885,11 @@ exit/b
 
 
 
-:_
+:_+ Visual Studio Code
+
+
+
+::_
 
 :vsc
 
@@ -12898,6 +12905,27 @@ rem set cbf_application=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Cod
 set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code\Visual Studio Code.lnk
 
 rem set cbf_fn=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.exe
+
+exit/b
+
+
+
+::_
+
+:vsc_ws
+
+set fp=* Visual Studio Code workspace..
+
+rem lu: Jul-1-2020
+
+echo.
+echo %fp%
+
+call tdp ma>nul
+
+set cbf_path=%cd%
+
+set cbf_fn=%cbf_path%\cart_vscode.code-workspace
 
 exit/b
 
@@ -13138,63 +13166,6 @@ echo.
 echo %fp%
 
 set cbf_path=%my documents%\mp3 staging area
-
-exit/b
-
-
-
-:_
-
-:wcj
-
-set fp=* %1.
-
-rem lu: Jun-25-2020
-
-call pn po_dic>nul
-
-set cbf_path=%cbf_path%\config
-
-set cbf_fn=%cbf_path%\WebConfigurer.java
-
-exit/b
-
-
-
-:_
-
-:wcjt
-
-set fp=* %1 test.
-
-rem lu: Jun-25-2020
-
-call pn po_dict>nul
-
-set cbf_path=%cbf_path%\config
-
-set cbf_fn=%cbf_path%\WebConfigurerTest.java
-
-exit/b
-
-
-
-:_
-
-:lbs
-
-set fp=* logback-spring.xml. This is where the Cart logs output target is configured.
-
-rem lu: Jun-25-2020
-
-echo.
-echo %fp%
-
-call pn po_api>nul
-
-set cbf_path=%cbf_path%\src\main\resources
-
-set cbf_fn=%cbf_path%\logback-spring.xml
 
 exit/b
 

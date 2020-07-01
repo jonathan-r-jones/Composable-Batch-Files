@@ -396,59 +396,6 @@ exit/b
 
 ::_
 
-:matt1
-
-set fp=* Bootrun from Matt.
-
-rem lu: Aug-12-2019
-
-echo.
-echo %fp%
-
-echo %cd% | find /i "\api">nul
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: You must be in the api folder for this command to work.
-  exit/b 1
-)
-
-gradle clean bootRun --debug-jvm
-
-exit/b
-
-
-
-::_
-
-:run
-
-:run_api
-
-set fp=* Run the API using Matt's gradle command.
-
-rem lu: Nov-8-2019
-
-echo.
-echo %fp%
-
-echo %cd% | find /i "\api">nul
-
-if %errorlevel% == 1 (
-  echo.
-  echo * Error: You must be in the api folder for this command to work.
-  exit/b 1
-)
-
-echo.
-gradlew -Pno-liquibase clean bootrun
-
-exit/b
-
-
-
-::_
-
 :run_api_with_debugger
 
 set fp=* Run the API using Matt's gradle command and attach the debugger.
@@ -499,6 +446,60 @@ exit/b
 
 
 
+::_
+
+:matt1
+
+set fp=* Bootrun from Matt.
+
+rem lu: Aug-12-2019
+
+echo.
+echo %fp%
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
+echo.
+gradle clean bootRun --debug-jvm
+
+exit/b
+
+
+
+::_
+
+:run
+
+:run_api
+
+set fp=* Run the API using Matt's gradle command.
+
+rem lu: Nov-8-2019
+
+echo.
+echo %fp%
+
+echo %cd% | find /i "\api">nul
+
+if %errorlevel% == 1 (
+  echo.
+  echo * Error: You must be in the api folder for this command to work.
+  exit/b 1
+)
+
+echo.
+gradlew -Pno-liquibase clean bootrun
+
+exit/b
+
+
+
 :_
 
 :bj
@@ -544,33 +545,6 @@ echo.
 gradlew --debug
 
 exit/b
-
-
-
-:_
-
-:run_tests
-
-:test
-
-set fp=* Run Java unit tests. (skw run tests)
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-call td api
-
-echo.
-gradlew test
-
-exit/b
-
-
->< >< Footnote:
-
-As of Mar-5-2020 there are 120 UI tests.
 
 
 
@@ -819,4 +793,37 @@ exit/b
 
 
 
-:_ (!efgr, !rfsp) (mov-6)
+:_
+
+:run_tests
+
+:run_unit_tests
+
+:rut
+
+:test
+
+set fp=* Run Java unit tests.
+
+rem skw run tests, run unit tests
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+call td api
+
+echo.
+gradlew test
+
+exit/b
+
+>< >< Footnote:
+
+As of Jun-30-2020, there are this many Java unit tests: 484
+As of Mar-5-2020, there are this many Java unit tests:  120
+
+
+
+:_ (!efgr, !rfsp) (mov-9)

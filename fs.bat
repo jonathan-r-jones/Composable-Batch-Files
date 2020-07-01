@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Filenames search.
+set filep=* Search for filenames and folders in the current folder and all subfolders for the given search criterion. The results are piped into a temporary file.
 
 
 
@@ -27,15 +27,25 @@ goto main_function
 :help
 
 echo.
-echo Searches the current folder and all its subfolders for filenames match the given search criterion, then pipes the results into a temporary file.
+echo %filep%
 
 echo.
 echo Usage: %0 [parameters]
 
 echo.
-echo Parameter 1: Search criterion. Double quotes are necessary only if spaces are used.
+echo Parameter 1: Search criteria. Double quotes are necessary only if spaces are used.
+
+echo.
+echo Batch file style: Single Purpose
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -44,7 +54,7 @@ exit/b
 :main_function
 
 echo.
-echo %filep% Search for filenames containing "%~1".
+echo Search for filenames and folders containing "%~1".
 
 echo.>%temp%\search_results_fs.txt
 echo * Search for filenames containing "%~1".>>%temp%\search_results_fs.txt

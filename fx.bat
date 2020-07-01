@@ -58,6 +58,9 @@ echo Examples:
 echo.
 echo %0 rp_1 xml me
 
+echo.
+echo %0 csc xml me
+
 exit/b
 
 (!rfsp) (mov-6)

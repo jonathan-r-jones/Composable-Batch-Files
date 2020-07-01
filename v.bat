@@ -502,6 +502,8 @@ exit/b 0
 
 ::_
 
+:ga
+
 :care
 
 :caret
@@ -518,6 +520,7 @@ rem expository echo statement
 
 rem lu: Nov-2-2018
 
+echo.
 echo %fp%
 
 echo.

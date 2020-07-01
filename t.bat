@@ -9688,6 +9688,130 @@ exit/b
 
 ::_
 
+:echo123
+
+set fp=* Echo 1, 2, 3 function.
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+echo.
+echo 1.
+echo 2.
+echo 3.
+
+exit/b
+
+
+
+::_
+
+:echo_name
+
+set fp=* Echo name.
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+echo.
+echo %1
+
+exit/b
+
+
+
+::_
+
+:delete_file
+
+set fp=* Echo name.
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+echo.
+del %1
+
+exit/b
+
+
+
+::_
+
+:
+
+set fp=* Call a function using a for loop.
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+for %%i in (a b c) do call :echo123 %%i
+
+exit/b
+
+
+
+::_
+
+:
+
+set fp=* Call a function using a for loop part 2.
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+for %%i in (*.txt) do call :echo123 %%i
+
+exit/b
+
+
+
+::_
+
+:
+
+set fp=* Call a function using a for loop part 3.
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+for %%i in (*.txt) do call :echo_name %%i
+
+exit/b
+
+
+
+::_
+
+:
+
+set fp=* Call a function using a for loop part 4.
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+for %%i in (*.txt) do call :delete_file %%i
+
+exit/b
+
+
+
+::_
+
 :for_s
 
 set fp=* Splitting a string by any of " ", "," and ";": ["space", "comma" and "semicolon":].
@@ -10751,6 +10875,87 @@ echo.
 rem forfiles /d -22 /m *.mp3 /c "cmd /c echo @path 0x09 was changed more than 22 days ago"
 rem forfiles /d -18 /m *.mp3 /c "call :process_file"
 forfiles /d -22 /m *.mp3 /c "cmd /c del @path 0x09"
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Echo ampersand instead of echo.
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+echo. & echo Hi
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Using cmd /c to call a batch file.
+
+rem Similar to call, but resumes execution even when there are errors! Furthermore, any changes
+rem the callee makes to environment variables are not propagated to the caller!
+
+rem lu: Jun-30-2020
+
+echo.
+echo %fp%
+
+cmd /c v.bat ga
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* Using the Windows schtasks command, which is the equivalent of the Linux cron job.
+
+rem lu: Jul-1-2020
+
+echo.
+echo %fp%
+
+echo.
+schtasks
+
+exit/b
+
+
+
+:_
+
+:
+
+set fp=* The define command.
+
+rem lu: Jul-1-2020
+
+echo.
+echo %fp%
+
+set test=
+
+echo.
+if defined 1 echo 1 def & echo %1
+if not defined %~1 echo 1 not def & echo %1
+if defined test echo hey def
+if not defined test echo hey not def
+if "%test%" == "" echo nothing
+if not "%test%" == "" echo not nothing
+rem qq-1
 
 exit/b
 

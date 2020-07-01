@@ -170,8 +170,8 @@ echo    sfn  Set cbf_fn based on an evaluated filename parameter
 echo     sh  SSH
 echo    sln  Open a Visual Studio solution, has TD parameter
 echo     sm  Sublime
-echo     sp  Super push, i.e. push all selected repositories
-echo    spl  Super pull, i.e. pull all selected repositories
+echo     sp  Super push, i.e. push all prewritten repositories
+echo    spl  Super pull, i.e. pull all prewritten repositories
 echo    sql  MySQL/Database, including LDAP, related tasks
 echo     ss  Super status, that is status for all selected repositories
 echo     sx  Use Sublime to edit a batch file in the CBF folder
