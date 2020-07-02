@@ -61,6 +61,9 @@ echo %0 rp_1 xml me
 echo.
 echo %0 csc xml me
 
+echo.
+echo %0 wcf java vsc
+
 exit/b
 
 (!rfsp) (mov-6)
