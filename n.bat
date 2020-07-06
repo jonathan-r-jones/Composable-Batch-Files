@@ -6062,8 +6062,6 @@ exit/b
 
 :lqchlo
 
-:lq
-
 :chse
 
 :chlo
@@ -6397,6 +6395,10 @@ exit/b
 :wcf
 
 :wcft
+
+:cain2
+
+:cain1
 
 :pass-through
 

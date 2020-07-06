@@ -36,8 +36,8 @@ echo.
 echo Parameter 1: Alias of the cbf that you want to run or "double click" if you will.
 
 echo.
-echo Parameter 2 (Optional): Dynamically constructed variable you wish to use, which will 
-echo override the default.
+echo Parameter 2 (Optional): Dynamically constructed variable you wish to use, which will ^
+override the default.
 
 echo.
 echo Think of %1 as command version of the GUI double-click.
@@ -45,6 +45,15 @@ echo Think of %1 as command version of the GUI double-click.
 echo.
 echo Pit of Success Strategy: The algorithm will look many different cbf variables to ^
 double-click on so you are not restricted to using a single cbf variable for this batch file.
+
+echo.
+echo Batch File Style: Single Purpose
+
+echo.
+echo Example(s):
+
+echo.
+echo %0 j max xml
 
 exit/b
 

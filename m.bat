@@ -4452,6 +4452,8 @@ pl
 
 rem Get Postgres running on local by clicking on the lnk_db shortcut.
 
+rem liqu
+
 rem 1. If the local database is up-to-date, you don't need to run Liquibase? 
 
 rem 2. If the API starts successfully, you don't need to run Liquibase.

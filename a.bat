@@ -591,7 +591,30 @@ exit/b
 
 
 
-:_
+:_+ Find a Particular AMI
+
+
+
+::_
+
+:d_im3
+
+set fp=* Describe Ben F.'s AMI.
+
+rem lu: Jul-6-2020
+
+echo.
+echo %fp%
+
+echo.
+rem qq
+aws ec2 describe-images --image-ids ami-061fc96535fa774bb
+
+exit/b
+
+
+
+::_
 
 :d_im
 
@@ -604,6 +627,44 @@ echo %fp%
 
 echo.
 aws ec2 describe-images --filters "Name=description, Values=*CentOS*" "Name=owner-alias,Values=amazon"
+
+exit/b
+
+
+
+::_
+
+:d_imw
+
+set fp=* List Windows images.
+
+rem lu: Jul-6-2020
+
+echo.
+echo %fp%
+
+echo.
+rem qq
+aws ec2 describe-images --filters "Name=description, Values=*Windows D*"
+
+exit/b
+
+
+
+::_
+
+:d_imw2
+
+set fp=* List Windows images.
+
+rem lu: Jul-6-2020
+
+echo.
+echo %fp%
+
+echo.
+rem qq
+aws ec2 describe-images --filters "Name=description, Values=*Windows D*"
 
 exit/b
 
