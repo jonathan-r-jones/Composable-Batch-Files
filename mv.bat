@@ -148,7 +148,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-call n cj_au>nul
+call n cja>nul
 
 rem echo.
 rem echo * Note: the move command complains if there are no files present to move. Sep-2-2018
