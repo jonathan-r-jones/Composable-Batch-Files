@@ -176,7 +176,6 @@ if "%cbf_expanded_variable%" == "" (
 set cbf_parameter=%cbf_expanded_variable%
 
 call r
-echo.
 
 exit/b
 

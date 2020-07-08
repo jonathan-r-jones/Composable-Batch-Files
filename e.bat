@@ -54,7 +54,7 @@ if %errorlevel% gtr 0 exit/b
 
 if "%cbf_fn%" == "" (
   echo.
-  echo Error: cbf_fn is undefined for "%1".
+  echo * Error: cbf_fn is undefined for "%1". Jul-8-2020_3_21_PM
   exit/b
 )
 

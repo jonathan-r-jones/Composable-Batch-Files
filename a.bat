@@ -607,7 +607,6 @@ echo.
 echo %fp%
 
 echo.
-rem qq
 aws ec2 describe-images --image-ids ami-061fc96535fa774bb
 
 exit/b
@@ -644,7 +643,6 @@ echo.
 echo %fp%
 
 echo.
-rem qq
 aws ec2 describe-images --filters "Name=description, Values=*Windows D*"
 
 exit/b
@@ -663,7 +661,6 @@ echo.
 echo %fp%
 
 echo.
-rem qq
 aws ec2 describe-images --filters "Name=description, Values=*Windows D*"
 
 exit/b

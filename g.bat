@@ -3318,6 +3318,25 @@ exit/b
 
 ::_
 
+:sbd
+
+set fp=* Switch to the develop branch.
+
+rem lu: Jul-8-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout develop
+
+exit/b
+
+
+
+
+::_
+
 :cbs
 
 set fp=* Create new branch based on specified source branch.

@@ -37,6 +37,13 @@ exit/b
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+
+
+
+:_
 
 :validate_input
 
@@ -44,13 +51,29 @@ set cbf_fn=
 
 call n %1
 
+rem The label is not found.
 if %errorlevel% gtr 0 exit/b(
 
-if not defined cbf_fn (
+if defined cbf_fn (
   echo.
-  echo * The cbf_fn is not defined for "%1". Apr-10-2020_4_30_PM
-  exit/b 1
+  echo * cbf_fn definition found.
+  goto check_existence
 )
+
+if defined cbf_java (
+  echo.
+  echo * Using Java as cbf_fn.
+  set cbf_fn=%cbf_java%
+  goto check_existence
+)
+
+exit/b
+
+
+
+:_
+
+:check_existence
 
 if not exist "%cbf_fn%" (
   echo.

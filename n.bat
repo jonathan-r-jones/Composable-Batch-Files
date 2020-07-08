@@ -6400,6 +6400,24 @@ exit/b
 
 :cain1
 
+:wn10
+
+:win10
+
+:lq
+
+:v13
+
+:msrc
+
+:ccv
+
+:sfst
+
+:ccj
+
+:log
+
 :pass-through
 
 set fp=* Pass through.

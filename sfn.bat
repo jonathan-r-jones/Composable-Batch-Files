@@ -66,6 +66,21 @@ set parameter_2=Parameter 2 or greater (Optional): -e Filename without extension
 echo.
 echo %parameter_2%
 
+echo.
+echo Batch file style: Single Purpose
+
+echo.
+echo Example(s):
+
+echo.
+echo %0 e
+echo E.bat exists so should be opened.
+
+echo.
+echo %0 ccj
+echo No cbf_fn definition exists for ccj. However a definition for cbf_java exists at ccj, so ^
+use that instead.
+
 exit/b
 
 

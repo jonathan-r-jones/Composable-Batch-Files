@@ -821,6 +821,7 @@ exit/b
 
 >< >< Footnote:
 
+As of Jul-7-2020, there are this many Java unit tests:  501
 As of Jun-30-2020, there are this many Java unit tests: 484
 As of Mar-5-2020, there are this many Java unit tests:  120
 
