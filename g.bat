@@ -2516,7 +2516,7 @@ rem lu: May-14-2020
 echo.
 echo %fp%
 
-set cbf_git_version=12
+set cbf_git_version=13
 
 echo.
 @echo on
