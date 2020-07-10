@@ -2518,6 +2518,10 @@ echo %fp%
 
 set cbf_git_version=13
 
+call td ma
+
+call s
+
 echo.
 @echo on
 git checkout -b release_v_1_%cbf_git_version%_0 tags/v1.%cbf_git_version%.0

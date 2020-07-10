@@ -100,7 +100,7 @@ echo     ej  Use Multi-Edit to edit DCV ASCII files.
 echo    ejf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo     el  Edit log file of an alias
 echo     es  Edit settings file of an alias
-echo     ex  Run excel with or without a filename alias parameter
+echo     ex  Run Excel with or without a filename alias parameter
 echo      f  Filename sapien. Use any application to open any file
 echo     fe  Check for the existence of a file based on the passed in filename alias
 echo     fn  Communicates that the intent is only to change the filename for a passed in alias
@@ -189,6 +189,7 @@ echo    typ  Use type command to view nickname-specified file and pipe output to
 echo    tyf  Reopen or see search results that have been piped to a file.
 echo     un  Communicates that the intent is only to change the URL for a passed in alias
 echo      v  Vetted functions (Useful for copying-and-pasting)
+echo     wo  Run Word with or without a filename alias parameter
 echo     wp  Wordpad
 echo      x  Quickly back up and restore any registered file
 echo    xfn  Filename-centric way to run an alias

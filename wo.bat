@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Run excel with or without a filename alias parameter.
+set filep=* Run Word with or without a filename alias parameter.
 
 
 
@@ -29,7 +29,7 @@ goto validate_input
 echo.
 echo %filep%
 
-rem lu: Nov-11-2019
+rem lu: Jul-10-2020
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -68,23 +68,23 @@ call n %1
 
 if %errorlevel% gtr 0 (
   echo.
-  echo * Error: Label not found. Nov-26-2019 10:48 AM
+  echo * Error: Label not found. Jul-10-2020_12_53_PM
   exit/b 1
 )
 
 if not defined cbf_ex (
   echo.
-  echo * The cbf_ex is not defined for "%1". Nov-1-2019 8:58 PM
+  echo * The cbf_ex is not defined for "%1". Jul-10-2020_12_54_PM
   goto try_using_cbf_fn
 )
 
 if not exist "%cbf_fn%" (
   echo.
-  echo * Error: The cbf_fn "%cbf_fn%" could not be found. Nov-26-2019 10:50 AM
+  echo * Error: The cbf_fn "%cbf_fn%" could not be found. Jul-10-2020_12_55_PM
   goto try_using_cbf_fn
 )
 
-set cbf_fn=%cbf_ex%
+set cbf_fn=%cbf_wo%
 
 goto main_function
 
@@ -107,7 +107,7 @@ goto main_function
 
 :use_blank_document
 
-call fn bed
+call fn wob
 
 goto main_function
 
@@ -119,7 +119,7 @@ goto main_function
 
 call m associate_cbf_parameter_to_cbf_fn>nul
 
-call an ex>nul
+call an wo>nul
 
 call r
 

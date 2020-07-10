@@ -55,8 +55,8 @@ rem The label is not found.
 if %errorlevel% gtr 0 exit/b(
 
 if defined cbf_fn (
-  echo.
-  echo * cbf_fn definition found.
+  rem echo.
+  rem echo * cbf_fn definition found.
   goto check_existence
 )
 

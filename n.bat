@@ -10896,11 +10896,36 @@ exit/b
 
 ::_
 
+:bed
+
+:exb
+
+:exblk
+
+set fp=* Use Excel to edit a blank document.
+
+rem (skw blank Excel document, blank excel file)
+
+rem lu: Mar-22-2020
+
+echo.
+echo %fp%
+
+set cbf_fn=%share-zone%\blank.xlsx
+
+exit/b
+
+
+
+::_
+
 :wob
 
 :woblk
 
-set fp=* Use Word to edit a blank docx document. (skw blank word document)
+set fp=* Use Word to edit a blank docx document.
+
+rem (skw blank word document)
 
 rem lu: Jan-25-2019
 
@@ -10927,46 +10952,6 @@ echo %fp%
 call n cade
 
 set cbf_fn=%cbf_path%\blank.docx
-
-exit/b
-
-
-
-::_
-
-:bed
-
-:exb
-
-:exblk
-
-set fp=* Use Excel to edit a blank document. (skw blank Excel document, blank excel file)
-
-rem lu: Mar-22-2020
-
-echo.
-echo %fp%
-
-set cbf_fn=%share-zone%\blank.xlsx
-
-exit/b
-
-
-
-::_
-
-:exbc
-
-set fp=* Use Excel to edit a blank docx document in Cade.
-
-rem lu: Aug-15-2019
-
-echo.
-echo %fp%
-
-call n cade
-
-set cbf_fn=%cbf_path%\blank.xlsx
 
 exit/b
 

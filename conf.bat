@@ -54,6 +54,8 @@ set cbf_conf=
 
 call sf %1 conf
 
+echo.
+
 
 
 :_ (!rfsp) (mov-7)
