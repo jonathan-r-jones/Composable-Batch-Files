@@ -9917,6 +9917,8 @@ exit/b
 
 :drmecfg
 
+:mecfg_dr
+
 set fp=* Dropbox Multi-Edit Config files.
 
 rem lu: Dec-7-2018
@@ -9933,6 +9935,8 @@ exit/b
 ::_
 
 :bumecfg
+
+:mecfg_bu
 
 set fp=* Multi-Edit Config Files Backups.
 

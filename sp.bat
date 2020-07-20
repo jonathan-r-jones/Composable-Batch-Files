@@ -59,6 +59,7 @@ if not "%machinename%"=="gfe" (
   call p drql
   cd\
 )
+rem qq
 
 call p cbf
 
