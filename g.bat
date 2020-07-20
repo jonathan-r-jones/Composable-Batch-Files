@@ -3297,6 +3297,31 @@ exit/b
 
 ::_
 
+:sbx
+
+set fp=* Switch to an existing versioned branch.
+
+rem lu: Jul-20-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must enter the version number of the branch you wish to switch to.
+  exit/b
+)
+
+echo.
+git checkout release_v_1_%2_0
+
+exit/b
+
+
+
+
+::_
+
 :sb
 
 set fp=* Switch to an existing branch.

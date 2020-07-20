@@ -6418,6 +6418,8 @@ exit/b
 
 :log
 
+:cartcf
+
 :pass-through
 
 set fp=* Pass through.
