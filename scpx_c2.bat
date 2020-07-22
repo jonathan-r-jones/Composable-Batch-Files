@@ -51,6 +51,9 @@ echo %0 sr77
 exit/b
 
 
+
+:_
+
   __)_  (__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__  __)(__ 
  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______
 
@@ -65,6 +68,8 @@ set fp=* Add dv secret file to new team s60 server.
 
 echo.
 echo %fp%
+
+rem Parameter 1: Instance Alias.
 
 call m validate_instance %1
 

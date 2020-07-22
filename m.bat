@@ -5265,7 +5265,7 @@ if "%cbf_ip%" == "" (
 )
 
 echo.
-echo * Server alias is validated.
+echo * Server alias has been validated.
 
 exit/b 0
 

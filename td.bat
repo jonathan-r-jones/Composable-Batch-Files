@@ -130,8 +130,6 @@ exit/b
 
 set fp=* Analyze environment and decide upon the proper course of action. This is an order of operations.
 
-call m reset
-
 set cbf_path=
 
 call pn %1

@@ -6420,6 +6420,20 @@ exit/b
 
 :cartcf
 
+:apty
+
+:ec2
+
+:sr_1
+
+:sr_2
+
+:sr_3
+
+:sr80
+
+:anvm
+
 :pass-through
 
 set fp=* Pass through.
