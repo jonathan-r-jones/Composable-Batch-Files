@@ -4036,23 +4036,6 @@ exit/b
 
 :_
 
-:root
-
-set fp=* Root
-
-rem lu: Aug-10-2018
-
-echo.
-echo %fp%
-
-set cbf_path=c:\a
-
-exit/b
-
-
-
-:_
-
 :hw
 
 set fp=* Hello world batch file.
@@ -4927,8 +4910,6 @@ exit/b
 :bgs1
 
 :bgs2
-
-:bgsp
 
 :btbt
 
@@ -6434,6 +6415,14 @@ exit/b
 
 :anvm
 
+:mapr
+
+:aew
+
+:acn
+
+:bgsp
+
 :pass-through
 
 set fp=* Pass through.
@@ -7309,6 +7298,8 @@ exit/b
 :super_git
 
 set fp=* Git power user bin. Loaded with utilities.
+
+rem skw: git utilities
 
 rem lu: Jun-4-2020
 

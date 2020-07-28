@@ -2086,24 +2086,6 @@ exit/b
 
 
 
-::_
-
-:maj
-
-set fp=* Merge another jenkins.
-
-rem lu: May-9-2019
-
-echo.
-echo %fp%
-
-echo.
-git checkout develop
-
-exit/b
-
-
-
 :_
 
 :pod
@@ -2947,6 +2929,74 @@ exit/b
 
 ::_
 
+:merg_sq
+
+set fp=* Merge from the feature branch and squash all of the commits of the feature branch into ^
+a single commit.
+
+rem lu: Jul-27-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must specify which branch you want to merge from.
+  exit/b
+)
+
+echo.
+git merge --squash %2
+
+exit/b
+
+
+>< >< >< Footnote:
+
+Learned about this from a YouTube video.
+
+
+
+::_
+
+:merg
+
+:merge
+
+set fp=* Straight merge of other branch into current branch favoring the other branch content.
+
+rem lu: Mar-3-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must specify which branch you want to merge from.
+  exit/b
+)
+
+echo.
+git merge %2
+
+exit/b
+
+
+>< >< >< Footnote:
+
+If you get a message something like the following:
+
+merge: Branch3 - not something we can merge
+
+Did you mean this?
+
+For me it meant that I need to run git checkout Branch3 on my local repository before trying 
+to merge it. It must have a local version of Branch3. Mar-3-2020
+
+
+
+::_
+
 :mede
 
 set fp=* Merge develop. Merge the develop branch into your current branch, thereby updating your branch with the latest changes from develop.
@@ -3174,44 +3224,6 @@ echo.
 git merge -s ours %2
 
 exit/b
-
-
-
-::_
-
-:merg
-
-:merge
-
-set fp=* Straight merge of other branch into current branch favoring the other branch content.
-
-rem lu: Mar-3-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Error: You must specify which branch you want to merge from.
-  exit/b
-)
-
-echo.
-git merge %2
-
-exit/b
-
-
->< >< >< Footnote:
-
-If you get a message something like the following:
-
-merge: Branch3 - not something we can merge
-
-Did you mean this?
-
-For me it meant that I need to run git checkout Branch3 on my local repository before trying 
-to merge it. It must have a local version of Branch3. Mar-3-2020
 
 
 

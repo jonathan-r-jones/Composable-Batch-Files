@@ -68,19 +68,13 @@ call n %1
 
 if %errorlevel% gtr 0 (
   echo.
-  echo * Error: Label not found. Nov-26-2019 10:48 AM
+  echo * Error: Label not found. Jul-24-2020_1_18_PM
   exit/b 1
 )
 
 if not defined cbf_ex (
   echo.
-  echo * The cbf_ex is not defined for "%1". Nov-1-2019 8:58 PM
-  goto try_using_cbf_fn
-)
-
-if not exist "%cbf_fn%" (
-  echo.
-  echo * Error: The cbf_fn "%cbf_fn%" could not be found. Nov-26-2019 10:50 AM
+  echo * The cbf_ex is not defined for "%1". Jul-24-2020_1_19_PM
   goto try_using_cbf_fn
 )
 

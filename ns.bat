@@ -51,6 +51,13 @@ exit/b
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+
+
+
+:_
 
 :news
 
@@ -84,13 +91,12 @@ set fp=* Look up work websites.
 echo.
 echo %fp%
 
+echo.
 call :validate_user_input dev
 
 call :validate_user_input fqt
 
 call :validate_user_input prod
-
-call :validate_user_input stag
 
 call :validate_user_input stag
 

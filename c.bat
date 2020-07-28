@@ -42,7 +42,7 @@ exit/b
 
 set fp=* Clear screen and reset color.
 
-call td root
+call td a
 
 cls
 
