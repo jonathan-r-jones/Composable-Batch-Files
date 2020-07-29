@@ -48,8 +48,8 @@ set cbf_path=
 call n %1
 
 if %errorlevel% gtr 0 (
-  echo.
-  echo * Error: Label not found. skw May-4-2020_8_14_PM
+  rem echo.
+  rem echo * Error: Label not found. skw May-4-2020_8_14_PM
   call m clear_errorlevel_silently 
   exit/b 99
 )

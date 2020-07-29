@@ -134,9 +134,9 @@ set cbf_path=
 
 call pn %1
 
-rem if %errorlevel% == 99 (
-  rem exit/b
-rem )
+if %errorlevel% == 99 (
+  exit/b
+)
 
 rem echo.
 rem echo %fp% Jun-9-2020_4_08_PM
