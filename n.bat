@@ -6423,6 +6423,18 @@ exit/b
 
 :bgsp
 
+:conf2
+
+:conf1
+
+:conf3
+
+:conf4
+
+:sr82
+
+:ansl
+
 :pass-through
 
 set fp=* Pass through.

@@ -4442,10 +4442,7 @@ if "%~4" == "" (
 
 call m validate_instance %2
 
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently 
-  exit/b
-)
+if %errorlevel% gtr 0 exit/b
 
 aws ec2 create-tags --resources %cbf_instance_id% --tags Key=%3,Value=%4
 
@@ -4635,6 +4632,39 @@ call a tag %cbf_instance_alias% AutoStopStartInstance True
 call a tag %cbf_instance_alias% WeekendStop True
 
 exit/b
+
+
+
+::_
+
+:add_remain_stopped_tag
+
+:arst
+
+set fp=* Add remain stopped tag to %2.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo Error: Instance alias is required.
+  exit/b
+)
+
+set cbf_instance_alias=%2
+
+call a tag %cbf_instance_alias% RemainStopped True
+
+exit/b
+
+* * * Notes:
+
+Please note that the RemainStopped tag was added earlier this year.  It can be added and set 
+to True, for non-prod RDS instances, to keep the instances stopped for all times outside of 
+patching.  This is beneficial, because some RDS should remain in a stopped state, but since 
+RDS is a managed service, AWS turns on stopped RDSs for patching.   The RemainStopped tag will 
+set the RDS to stopped, after patching is complete. For more information: RDS Auto Start Stop
 
 
 

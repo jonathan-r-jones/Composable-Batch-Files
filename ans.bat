@@ -6,10 +6,7 @@
 
 :_
 
-set filep=* Ansible class on Dec-17-2019.
-
-echo.
-echo %filep%
+set filep=* Ansible functions.
 
 
 
@@ -17,11 +14,11 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
+if -%~1- == -- goto help
 
-if "%~1" == "/?" goto help
+if -%~1- == -/?- goto help
 
-goto validate_input
+goto main_function
 
 
 
@@ -29,53 +26,49 @@ goto validate_input
 
 :help
 
+cls
+
+echo.
+echo %filep%
+
 rem lu: 
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
-
-set parameter_2=Parameter 2 (Optional): 
+set parameter_1=Parameter 1: Name of the function you wish to run.
 
 echo.
 echo %parameter_1%
 
 echo.
-echo %parameter_2%
-
-echo.
-echo Batch file style: Function routing.
-
-echo.
-echo Examples
-
-echo.
-echo Example 1: 
+echo Batch file style: Multipurpose
 
 exit/b
+
+(!rfsp) (mov4)
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
 :_
 
-:validate_input
+:Jul-30-2020_2_21_PM
 
-if "%~1" == "" (
-  echo.
-  echo 
-)
+ansible all -i hosts -u zs_ci_user -m ping --key-file /tmp/cart-np-key.pem
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked! The Ansible slave returned "pong".
 
 
 
 :_
-
-:main_function
-
-
-
-exit/b
-
-
-
-:_ (!rfsp) (mov-7)

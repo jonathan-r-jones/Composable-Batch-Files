@@ -328,13 +328,35 @@ set fp=* Add pom.xml to FQT slave temp folder.
 echo.
 echo %fp%
 
-rem qq
 call tdc csc
 
 call scpx fqsl pom.xml c
 
 exit/b
 
+
+>< >< Footnote:
+
+Outcome:
+
+cd /tmp
+
+
+
+:_
+
+:Jul-30-2020_1_07_PM
+
+set fp=* Add pem to ACN.
+
+echo.
+echo %fp%
+
+call td pems
+
+call scpx acn cart-np-key.pem c
+
+exit/b
 
 >< >< Footnote:
 

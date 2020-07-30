@@ -85,6 +85,10 @@ rem qq-1
 
 exit/b
 
+>< >< Footnote:
+
+Outcome:
+
 
 
 :_
