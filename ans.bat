@@ -87,20 +87,6 @@ Outcome: This worked! Dev slave returned "pong".
 
 :_
 
-:Jul-31-2020_1_15_PM
-
-ansible ansl -i hosts -u zs_ci_user -m ping --key-file /tmp/cart-np-key.pem
-
-exit/b
-
->< >< Footnote:
-
-Outcome: This worked! The Ansible slave returned "pong".
-
-
-
-:_
-
 :vers
 
 set fp=* Version ifno.
@@ -113,8 +99,22 @@ echo %fp%
 echo.
 ansible --version
 
-ansible all -i hosts -u zs_ci_user -m command -a "uptime" --key-file
-/tmp/cart-np-key.pem
+exit/b
+
+
+
+:_
+
+:pvers
+
+set fp=* Playbook Version info.
+
+rem lu: Jul-31-2020
+
+echo.
+echo %fp%
+
+ansible-playbook --version
 
 exit/b
 
@@ -155,6 +155,55 @@ ansible ansl -i hosts -u zs_ci_user -m setup --key-file /tmp/cart-np-key.pem
 exit/b
 
 >< >< Outcome: Returns a lot of rows.
+
+
+
+:_+ Ping Pong
+
+
+
+::_
+
+:check_long
+
+:first_long
+
+set fp=* First command to run to make sure you can communcate. Long version.
+
+ansible ansl -i hosts -u zs_ci_user -m ping --key-file /tmp/cart-np-key.pem
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked! The Ansible slave returned "pong".
+
+
+
+::_
+
+:check
+
+:first
+
+:ping
+
+rem lu: Jul-31-2020
+
+set fp=* First command to run to make sure you can communcate.
+
+ansible ansl -i hosts -u zs_ci_user -m ping
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked! The Ansible slave returned "pong".
+
+In the home folder I created a file called ".ansible.cfg" with the following contents:
+
+[defaults]
+private_key_file = /tmp/cart-np-key.pem
 
 
 
