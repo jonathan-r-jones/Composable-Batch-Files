@@ -62,11 +62,11 @@ echo code execution area  Batch file style (bfs) where the router routes executi
 echo                      end of the file, unless a parameter is supllied, in which case 
 echo                      function routing occurs. Example(s): t.bat, v.bat.
 echo                 cbf  Composable batch files
-echo                  _c  Suffix indicating a consumer batch file using function routing with
-echo                      time-stamps as function names. Used for analysis and showing-your-
-echo                      work, not for repeatability.
 echo                  -c  As a batch file parameter, means force file creation
 echo                   c  Current folder filename, when used in a batch file name
+echo            consumer  Batch file style using function routing with time-stamps as function ^
+                          names. Used for analysis and showing-your-work, not for repeatability.
+                          By convention, files are suffixed with a "_c".
 echo   dynamically cons-  DCV. An environment variable that can be dynamically created at runtime.
 echo   tructed variable   For example, java is the dcv of the expression cbf_java.
 echo  entangled variable  A cbf variable associated with a particle batch file, e.g. cbf_path

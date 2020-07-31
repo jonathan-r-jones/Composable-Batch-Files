@@ -133,14 +133,14 @@ set fp=* Use batch file to find filename.
 if exist "%composable_batch_files%\%~1.bat" (
   set cbf_fn=%composable_batch_files%\%~1.bat
   rem echo.
-  rem echo %fp% - exists in the CBF folder
+  rem echo %fp% Ran from CBF folder.
   goto file_exists
 )
 
 if exist "%share-zone%\%~1.bat" (
   set cbf_fn=%share-zone%\%~1.bat
   echo.
-  echo %fp% - exists in Share-Zone.
+  echo %fp% Ran from Share-Zone folder.
   goto file_exists
 )
 

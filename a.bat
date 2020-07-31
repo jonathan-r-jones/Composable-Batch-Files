@@ -4660,10 +4660,10 @@ exit/b
 
 * * * Notes:
 
-Please note that the RemainStopped tag was added earlier this year.  It can be added and set 
+Please note that the RemainStopped tag was added earlier this year. It can be added and set 
 to True, for non-prod RDS instances, to keep the instances stopped for all times outside of 
-patching.  This is beneficial, because some RDS should remain in a stopped state, but since 
-RDS is a managed service, AWS turns on stopped RDSs for patching.   The RemainStopped tag will 
+patching. This is beneficial, because some RDS should remain in a stopped state, but since 
+RDS is a managed service, AWS turns on stopped RDSs for patching. The RemainStopped tag will 
 set the RDS to stopped, after patching is complete. For more information: RDS Auto Start Stop
 
 

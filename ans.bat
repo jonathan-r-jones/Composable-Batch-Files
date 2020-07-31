@@ -72,3 +72,90 @@ Outcome: This worked! The Ansible slave returned "pong".
 
 
 :_
+
+:Jul-31-2020_1_14_PM
+
+ansible desl -i hosts -u zs_ci_user -m ping --key-file /tmp/cart-np-key.pem
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked! Dev slave returned "pong".
+
+
+
+:_
+
+:Jul-31-2020_1_15_PM
+
+ansible ansl -i hosts -u zs_ci_user -m ping --key-file /tmp/cart-np-key.pem
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked! The Ansible slave returned "pong".
+
+
+
+:_
+
+:vers
+
+set fp=* Version ifno.
+
+rem lu: Jul-31-2020
+
+echo.
+echo %fp%
+
+echo.
+ansible --version
+
+ansible all -i hosts -u zs_ci_user -m command -a "uptime" --key-file
+/tmp/cart-np-key.pem
+
+exit/b
+
+
+
+:_
+
+:uptime
+
+set fp=* %1.
+
+rem lu: Jul-31-2020
+
+echo.
+echo %fp%
+
+echo.
+ansible all -i hosts -u zs_ci_user -m command -a "uptime" --key-file /tmp/cart-np-key.pem
+
+exit/b
+
+
+
+:_
+
+:setup
+
+set fp=* %1.
+
+rem lu: Jul-31-2020
+
+echo.
+echo %fp%
+
+echo.
+ansible ansl -i hosts -u zs_ci_user -m setup --key-file /tmp/cart-np-key.pem
+
+exit/b
+
+>< >< Outcome: Returns a lot of rows.
+
+
+
+:_

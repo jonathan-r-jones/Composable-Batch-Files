@@ -6435,6 +6435,8 @@ exit/b
 
 :ansl
 
+:sr84
+
 :pass-through
 
 set fp=* Pass through.
@@ -13091,6 +13093,8 @@ echo.
 echo %fp%
 
 call pn po_cm>nul
+
+set cbf_ex=%cbf_path%\run list analysis.xlsx
 
 set cbf_wo=%cbf_path%\run list document.docx
 

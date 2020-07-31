@@ -53,6 +53,7 @@ echo  (____  ___)(______)(______)(______)(______)(______)(______)(______)(______
 echo.
 echo      a  AWS CLI
 echo     an  Communicates that the intent is only to change the application for a passed in alias
+echo    ans  Ansible-related tasks
 echo    ang  Angular-related tasks
 echo     as  Windows file associations
 echo      b  Shutdown windows

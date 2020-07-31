@@ -86,6 +86,7 @@ exit/b
 After the file has be copied to the target server. SSH into the box with the zzadmin account 
 and copy the secret file to the correct folder.
 
+rem qq
 cd /etc
 
 sudo mkdir certs
