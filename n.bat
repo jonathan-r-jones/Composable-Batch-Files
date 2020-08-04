@@ -6433,9 +6433,11 @@ exit/b
 
 :sr82
 
-:ansl
-
 :sr84
+
+:ancl
+
+:ansr
 
 :pass-through
 

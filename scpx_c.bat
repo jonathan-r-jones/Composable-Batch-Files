@@ -347,14 +347,60 @@ cd /tmp
 
 :Jul-30-2020_1_07_PM
 
-set fp=* Add pem to ACN.
+set fp=* Upload pem to ANSR.
 
 echo.
 echo %fp%
 
 call td pems
 
-call scpx acn cart-np-key.pem c
+call scpx ansr cart-np-key.pem c
+
+exit/b
+
+>< >< Footnote:
+
+Outcome:
+
+cd /tmp
+
+
+
+:_
+
+:Aug-3-2020_5_24_PM
+
+set fp=* Add id_rsa to ansr.
+
+echo.
+echo %fp%
+
+call td ssh
+
+call scpx ansr id_rsa c
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked.
+
+cd /tmp
+
+
+
+:_
+
+:Aug-4-2020_12_16_PM
+
+set fp=* Upload pem to ANSR home folder.
+
+echo.
+echo %fp%
+
+call td pems
+
+call scpx ansr cart-np-key.pem c home/zs_ci_user
 
 exit/b
 

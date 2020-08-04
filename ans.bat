@@ -190,9 +190,9 @@ Outcome: This worked! The Ansible slave returned "pong".
 
 rem lu: Jul-31-2020
 
-set fp=* First command to run to make sure you can communcate.
+set fp=* First command to run to make sure you can communicate with the client(s).
 
-ansible ansl -i hosts -u zs_ci_user -m ping
+ansible ancl -i hosts -u zs_ci_user -m ping
 
 exit/b
 

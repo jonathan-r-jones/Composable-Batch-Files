@@ -107,6 +107,8 @@ if "%cbf_user%" == "" (
 
 if "%~4" == "" (
   set cbf_destination_folder=tmp
+) else (
+  set cbf_destination_folder=%~4
 )
 
 echo.
@@ -116,24 +118,6 @@ echo.
 echo * CBF User: %cbf_user%
 
 goto main_function
-
-
-
-:_
-
-set fp=* Extra code.
-
-set git_user_bin=%cbf_path%
-
-call n shl
-
-@echo on
-%git_user_bin%\ssh -i %cbf_full_pem% zs_ci_user@%cbf_ip% 'cat cart.json'>%cbf_log_file%
-@echo off
-
-call el shl
-
-exit/b
 
 
 
