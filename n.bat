@@ -6439,6 +6439,14 @@ exit/b
 
 :ansr
 
+:bpan
+
+:jcp
+
+:anes
+
+:gala
+
 :pass-through
 
 set fp=* Pass through.

@@ -2493,12 +2493,12 @@ from tag, create tag from branch, create a branch from a tag, create branch from
 
 set fp=* Create a branch based on a tag.
 
-rem lu: May-14-2020
+rem lu: Aug-6-2020
 
 echo.
 echo %fp%
 
-set cbf_git_version=13
+set cbf_git_version=14
 
 call td ma
 
@@ -3838,46 +3838,6 @@ exit/b
 
 ::_
 
-:rv
-
-:rv_lo
-
-:rv_local
-
-set fp=* Revert local.
-
-rem lu: Aug-7-2018
-
-rem If you don't care about any local changes and just want a copy from the repository.
-
-rem Revert all changes from this folder. Revert all local changes.
-
-rem blow away local changes, specific folder: skw
-
-rem This didn't seem to work on Jan-31-2017.
-
-rem Function Creation Date: Jan-30-2017
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
-  exit/b
-)
-
-echo.
-git reset --hard HEAD
-git clean -f
-git pull
-
-exit/b
-
-
-
-::_
-
 :rvallp
 
 set fp=* Revert all PERSISTENT changes from m6 and s6.
@@ -4021,6 +3981,26 @@ exit/b
 
 ::_
 
+:ruf
+
+:clean
+
+set fp=* Remove untracked folders and files. Use with caution.
+
+rem lu: Aug-17-2018
+
+echo.
+echo %fp%
+
+echo.
+git clean -d -f
+
+exit/b
+
+
+
+::_
+
 :back
 
 :reset_head_1
@@ -4043,23 +4023,45 @@ git reset --hard "HEAD~1"
 
 exit/b
 
+* * * Outcome: This worked on Aug-6-2020.
+
 
 
 ::_
 
-:ruf
+:rv
 
-:clean
+:rv_lo
 
-set fp=* Remove untracked folders and files. Use with caution.
+:rv_local
 
-rem lu: Aug-17-2018
+set fp=* Revert local.
+
+rem lu: Aug-7-2018
+
+rem If you don't care about any local changes and just want a copy from the repository.
+
+rem Revert all changes from this folder. Revert all local changes.
+
+rem blow away local changes, specific folder: skw
+
+rem This didn't seem to work on Jan-31-2017.
+
+rem Function Creation Date: Jan-30-2017
 
 echo.
 echo %fp%
 
+if not "%~2" == "" (
+  echo.
+  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
+  exit/b
+)
+
 echo.
-git clean -d -f
+git reset --hard HEAD
+git clean -f
+git pull
 
 exit/b
 

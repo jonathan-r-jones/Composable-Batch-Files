@@ -203,7 +203,46 @@ Outcome: This worked! The Ansible slave returned "pong".
 In the home folder I created a file called ".ansible.cfg" with the following contents:
 
 [defaults]
+private_key_file = ~/cart-np-key.pem
+
+[defaults]
 private_key_file = /tmp/cart-np-key.pem
+
+
+
+:_
+
+:yuman
+
+rem lu: Aug-6-2020
+
+set fp=* Running yum from Ansible.
+
+ansible ancl -i hosts -u zs_ci_user -m yum -a "name=httpd state=present " -b
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked!
+
+
+
+:_
+
+:yuman_un
+
+rem lu: Aug-6-2020
+
+set fp=* Uninstall httpd.
+
+ansible ancl -i hosts -u zs_ci_user -m yum -a "name=httpd state=absent " -b
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked!
 
 
 
