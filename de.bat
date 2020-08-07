@@ -201,7 +201,7 @@ echo %fp%
 call td cja
 
 echo.
-forfiles /d -22 /m *.mp3 /c "cmd /c del @path 0x09"
+forfiles /d -15 /m *.mp3 /c "cmd /c del @path 0x09"
 
 exit/b
 
