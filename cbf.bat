@@ -98,7 +98,6 @@ echo       e  Uses mx.bat then me.bat to decipher which ASCII file to edit (Or e
 echo      ed  Edit a file abstraction layer
 echo     edr  Edit a relative path constucted filename
 echo      ej  Use Multi-Edit to edit DCV ASCII files.
-echo     ejf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      el  Edit log file of an alias
 echo      es  Edit settings file of an alias
 echo      ex  Run Excel with or without a filename alias parameter
@@ -120,6 +119,7 @@ echo       j  Simulate a double-click using a default precedence of operation pr
 echo          dynamically constructed variable.
 echo      ja  Application-centric way of running an application with an optional filename parameter
 echo      je  Surf to Jenkins websites
+echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations
 echo      kc  Connect to servers
 echo       l  Google searcher

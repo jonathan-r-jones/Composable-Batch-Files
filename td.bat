@@ -130,6 +130,7 @@ exit/b
 
 set fp=* Analyze environment and decide upon the proper course of action. This is an order of operations.
 
+set cbf_fn=
 set cbf_path=
 
 call pn %1
@@ -198,6 +199,12 @@ exit/b
 :try_secondary_method
 
 set fp=* Try secondary method.
+
+echo.
+echo %fp%
+
+rem echo.
+rem echo %cbf_path%
 
 call m expand_to_path_only "%cbf_desired_path%"
 

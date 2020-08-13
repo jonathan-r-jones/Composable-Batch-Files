@@ -369,7 +369,7 @@ echo.
 echo %fp%
 
 echo.
-call git push
+git push
 
 exit/b
 
@@ -3309,6 +3309,32 @@ exit/b
 
 ::_
 
+:cb
+
+set fp=* Create new branch based on the develop branch.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, destination branch, is a required field.
+  exit/b
+)
+
+echo.
+git checkout -b %2 develop
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
 :sbx
 
 set fp=* Switch to an existing versioned branch.
@@ -3410,32 +3436,6 @@ exit/b
 
 ::_
 
-:cb
-
-set fp=* Create new branch based on the develop branch.
-
-rem lu: Mar-30-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, destination branch, is a required field.
-  exit/b
-)
-
-echo.
-git checkout -b %2 develop
-
-git push --set-upstream origin %2
-
-exit/b
-
-
-
-::_
-
 :cbc
 
 set fp=* Create a local branch based on your current branch.
@@ -3453,30 +3453,6 @@ if "%~2" == "" (
 
 echo.
 git checkout -b %2
-
-git push --set-upstream origin %2
-
-exit/b
-
-
-
-::_
-
-:cbd
-
-set fp=* Create a local branch based on develop.
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Error: You must enter the name of the branch you wish to create.
-  exit/b
-)
-
-echo.
-git checkout -b %2 develop
 
 git push --set-upstream origin %2
 

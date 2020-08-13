@@ -6447,6 +6447,30 @@ exit/b
 
 :gala
 
+:pbgsp
+
+:a_rol
+
+:j_rol
+
+:t_rol
+
+:damo
+
+:iap
+
+:plan
+
+:pex
+
+:gsan
+
+:clan
+
+:jclan
+
+:clan1
+
 :pass-through
 
 set fp=* Pass through.

@@ -16,7 +16,7 @@ set fp=* Route callers.
 
 if "%~1" == "/?" goto help
 
-goto main_function
+goto use_default_browser
 
 
 
@@ -35,6 +35,12 @@ set parameter_1=Parameter 1 (Optional): Jenkins URL alias.
 echo.
 echo %parameter_1%
 
+echo.
+echo Batch file style: Single Purpose
+
+echo.
+echo Entangled variable: cbf_je
+
 exit/b
 
 
@@ -48,15 +54,38 @@ exit/b
 
 :_
 
+:use_default_browser
+
+set fp=* Use default browser.
+
+rem echo.
+rem echo %fp%
+
+set cbf_application=%cbf_default_browser%
+
+
+
+:_
+
 :main_function
 
 set cbf_je=
 
 if "%~1" == "" (
   call sf je
-) else (
-  call sf %1
 )
+
+call un %1
+
+if "%cbf_je%" == "" (
+  echo.
+  echo * Error: cbf_je is not defined for %1.
+  exit/b  
+)
+
+set cbf_parameter=%cbf_je%
+
+call r
 
 echo.
 
