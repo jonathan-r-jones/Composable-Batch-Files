@@ -29,8 +29,17 @@ goto validate_input
 echo.
 echo %filep%                         
 
+set parameter_1=Parameter 1: Alias of the filename you are trying to set. This function tries ^
+to return an existing ASCII file only.
+
 echo.
-echo Usage: %0 [single parameter]
+echo %parameter_1%
+
+echo.
+echo Batch file style: Single Purpose
+
+echo.
+echo Entangled variable: cbf_fn
 
 exit/b
 
@@ -47,39 +56,60 @@ exit/b
 
 :validate_input
 
+set fp=* Validate if a file is defined and exists.
+
 set cbf_fn=
+set cbf_jf=
+set cbf_java=
 
 call n %1
 
 rem The label is not found.
 if %errorlevel% gtr 0 exit/b(
 
+call n %1>nul
+
 if defined cbf_fn (
   rem echo.
-  rem echo * cbf_fn definition found.
-  goto check_existence
+  rem echo * cbf_fn file is defined. {%cbf_fn%}
+  if exist "%cbf_fn%" (
+    rem echo.
+    rem echo * cbf_fn file exists.
+    goto file_is_validated
+  )
+)
+
+if defined cbf_jf (
+  if exist "%cbf_jf%" (
+    set cbf_fn=%cbf_jf%
+    goto file_is_validated
+  )
 )
 
 if defined cbf_java (
-  echo.
-  echo * Using Java as cbf_fn.
-  set cbf_fn=%cbf_java%
-  goto check_existence
+  if exist "%cbf_java%" (
+    set cbf_fn=%cbf_java%
+    goto file_is_validated
+  )
 )
 
-exit/b
+echo.
+echo * Error: File could not be validated. {%cbf_fn%}
+
+exit/b 2
 
 
 
 :_
 
-:check_existence
+:file_is_validated
 
-if not exist "%cbf_fn%" (
-  echo.
-  echo * Error: The cbf_fn "%cbf_fn%" could not be found. Apr-10-2020_4_29_PM
-  exit/b 2
-)
+set fp=* File is validated. {%cbf_fn%}
+
+rem echo.
+rem echo %fp%
+
+exit/b
 
 
 

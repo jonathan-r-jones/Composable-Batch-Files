@@ -10955,7 +10955,6 @@ if defined test echo hey def
 if not defined test echo hey not def
 if "%test%" == "" echo nothing
 if not "%test%" == "" echo not nothing
-rem qq-1
 
 exit/b
 
@@ -10968,6 +10967,66 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Validate if a file is defined and exists.
+
+rem lu: Aug-14-2020
+
+echo.
+echo %fp%
+
+set cbf_fn=
+set cbf_jf=
+
+call n %1>nul
+
+if defined cbf_fn (
+  rem echo.
+  rem echo * cbf_fn file is defined. {%cbf_fn%}
+  if exist "%cbf_fn%" (
+    rem echo.
+    rem echo * cbf_fn file exists.
+    goto file_is_validated
+  )
+)
+
+if defined cbf_jf (
+  if exist "%cbf_jf%" (
+    set cbf_fn=%cbf_jf%
+    goto file_is_validated
+  )
+)
+
+if defined cbf_java (
+  if exist "%cbf_java%" (
+    set cbf_fn=%cbf_java%
+    goto file_is_validated
+  )
+)
+
+echo.
+echo * Error: File could not be validated. {%cbf_fn%}
+
+exit/b
+
+
+
+:_
+
+:file_is_validated
+
+set fp=* File is validated. {%cbf_fn%}
+
+echo.
+echo %fp%
+
+exit/b
 
 
 

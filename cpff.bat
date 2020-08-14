@@ -67,6 +67,12 @@ if %errorlevel% gtr 0 (
 )
 
 echo.
+echo Source filename: %cbf_source_filename%
+
+rem echo.
+rem echo CBF_fn: %cbf_fn%
+
+echo.
 copy "%cbf_source_filename%" "%cbf_fn%"
 
 exit/b

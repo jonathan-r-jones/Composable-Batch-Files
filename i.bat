@@ -177,7 +177,7 @@ if not "%cbf_ip%" == "" (
 :
 if not "%cbf_jf%" == "" (
   echo.
-  echo * Jenkinsfile: %cbf_jf%
+  echo * Jenkinsfile [cbf_jf]: %cbf_jf%
 )
 
 :

@@ -6471,6 +6471,8 @@ exit/b
 
 :clan1
 
+:clan2
+
 :pass-through
 
 set fp=* Pass through.
@@ -8183,8 +8185,6 @@ echo %fp%
 
 set cbf_fn=c:\a\j1.txt
 
-set cbf_java=c:\a\j1.java
-
 exit/b
 
 
@@ -8201,6 +8201,8 @@ echo.
 echo %fp%
 
 set cbf_fn=c:\a\j2.txt
+
+set cbf_java=c:\a\j2.java
 
 exit/b
 
