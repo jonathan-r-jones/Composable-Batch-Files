@@ -56,7 +56,7 @@ if %errorlevel% gtr 0 (
 
 if "%cbf_path%" == "" (
   echo.
-  echo * The cbf_path is not defined for "%1". skw May-4-2020_8_12_PM
+  echo * The cbf_path is not defined for "%1". skw Aug-18-2020_3_32_PM
   exit/b 1
 )
 

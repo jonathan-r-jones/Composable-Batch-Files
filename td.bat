@@ -130,6 +130,10 @@ exit/b
 
 set fp=* Analyze environment and decide upon the proper course of action. This is an order of operations.
 
+rem echo.
+rem echo %fp% Jun-9-2020_4_08_PM
+
+set cbf_application=
 set cbf_fn=
 set cbf_path=
 
@@ -139,9 +143,6 @@ if %errorlevel% == 99 (
   exit/b
 )
 
-rem echo.
-rem echo %fp% Jun-9-2020_4_08_PM
-
 if %errorlevel% == 0 (
   goto main_function
   exit/b
@@ -149,7 +150,15 @@ if %errorlevel% == 0 (
 
 
 
-:_
+:_+
+
+rem Pseudo Case Statement
+
+
+
+::_
+
+:next_case_item
 
 if not "%cbf_fn%" == "" (
   echo.
@@ -161,7 +170,9 @@ if not "%cbf_fn%" == "" (
 
 
 
-:_
+::_
+
+:next_case_item
 
 if not "%cbf_ex%" == "" (
   echo.
@@ -173,19 +184,24 @@ if not "%cbf_ex%" == "" (
 
 
 
-:_
+::_
 
-if not "%cbf_application%" == "" (
-  echo.
-  echo * So try Application.
-  set cbf_desired_path=%cbf_application%
-  goto try_secondary_method
-  exit/b
+if "%cbf_application%" == "" (
+  goto next_case_item
 )
 
+echo.
+echo * So try Application.
+set cbf_desired_path=%cbf_application%
+goto try_secondary_method
+
+exit/b
 
 
-:_
+
+::_
+
+:next_case_item
 
 echo.
 echo * Error: Can't find anywhere to go. skw May-4-2020_8_17_PM

@@ -6473,6 +6473,8 @@ exit/b
 
 :clan2
 
+:clan
+
 :pass-through
 
 set fp=* Pass through.

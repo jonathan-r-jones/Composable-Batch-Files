@@ -502,6 +502,20 @@ exit/b 0
 
 ::_
 
+:debu
+
+:debug
+
+set fp=* Debugging statement.
+
+echo. & echo Aug-18-2020_3_39_PM q
+
+exit/b
+
+
+
+::_
+
 :ga
 
 :care
