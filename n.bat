@@ -6475,6 +6475,10 @@ exit/b
 
 :clan
 
+:sr85
+
+:cartp
+
 :pass-through
 
 set fp=* Pass through.

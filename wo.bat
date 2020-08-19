@@ -72,15 +72,15 @@ if %errorlevel% gtr 0 (
   exit/b 1
 )
 
-if not defined cbf_ex (
+if not defined cbf_wo (
   echo.
   echo * The cbf_ex is not defined for "%1". Jul-10-2020_12_54_PM
   goto try_using_cbf_fn
 )
 
-if not exist "%cbf_fn%" (
+if not exist "%cbf_wo%" (
   echo.
-  echo * Error: The cbf_fn "%cbf_fn%" could not be found. Jul-10-2020_12_55_PM
+  echo * Error: The cbf_wo "%cbf_wo%" could not be found. Jul-10-2020_12_55_PM
   goto try_using_cbf_fn
 )
 

@@ -89,7 +89,7 @@ Outcome: This worked! Dev slave returned "pong".
 
 :vers
 
-set fp=* Version ifno.
+set fp=* Version info.
 
 rem lu: Jul-31-2020
 
@@ -170,7 +170,7 @@ exit/b
 
 set fp=* First command to run to make sure you can communcate. Long version.
 
-ansible ansl -i hosts -u zs_ci_user -m ping --key-file /tmp/cart-np-key.pem
+ansible ancl -i hosts -u zs_ci_user -m ping --key-file /tmp/cart-np-key.pem
 
 exit/b
 
