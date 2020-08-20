@@ -6479,6 +6479,8 @@ exit/b
 
 :cartp
 
+:tpp
+
 :pass-through
 
 set fp=* Pass through.

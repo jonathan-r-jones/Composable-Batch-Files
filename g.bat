@@ -2517,6 +2517,34 @@ exit/b
 
 ::_
 
+:cbfts
+
+set fp=* Create a branch based on a tag, special edition.
+
+rem lu: Aug-20-2020
+
+echo.
+echo %fp%
+
+set cbf_git_version=14
+
+call td ma
+
+call s
+
+echo.
+@echo on
+git checkout -b release_v_1_%cbf_git_version%_0_c tags/v1.%cbf_git_version%.0
+
+git push --set-upstream origin release_v_1_%cbf_git_version%_0_c
+@echo off
+
+exit/b
+
+
+
+::_
+
 :cbbt_1_11
 
 set fp=* Create a branch based on a tag.
@@ -2704,6 +2732,8 @@ exit/b
 :lita
 
 :ltag
+
+:tags
 
 set fp=* List tags.
 
