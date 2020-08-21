@@ -40,7 +40,7 @@ echo.
 echo %parameter_1%
 
 echo.
-echo Batch file style: Single task
+echo Batch file style: Single Purpose
 
 echo.
 echo Examples:

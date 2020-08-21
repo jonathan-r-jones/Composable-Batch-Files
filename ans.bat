@@ -247,3 +247,36 @@ Outcome: This worked!
 
 
 :_
+
+:Aug-21-2020_5_26_PM
+
+ansible ancl -i hosts -u zs_ci_user -m ping --key-file cart-np-key.pem
+
+rem This didn't work.
+rem ansible ancl -i hosts -u zs_ci_user -m ping --key-file /cart-np-key.pem
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked! Dev slave returned "pong".
+
+
+
+:_
+
+:Aug-21-2020_7_04_PM
+
+set fp=* Simplest possible ping command.
+
+ansible all -i ./hosts -u zs_ci_user -m ping --key-file cart-np-key.pem
+
+exit/b
+
+>< >< Footnote:
+
+Outcome: This worked! Ansible slave returned "pong".
+
+
+
+:_ (!rfsp) (mov-9)

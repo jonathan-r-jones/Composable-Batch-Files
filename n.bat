@@ -6481,6 +6481,8 @@ exit/b
 
 :tpp
 
+:1841
+
 :pass-through
 
 set fp=* Pass through.
@@ -10799,7 +10801,7 @@ echo.
 echo %fp%
 
 call pn api>nul
-set cbf_fn=%cbf_path%\Jenkinsfile
+set cbf_fn=%cbf_path%\Jenkinsfile_Template
 
 set cbf_path=%share-zone%\jenkinsfiles
 
