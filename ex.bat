@@ -88,10 +88,7 @@ goto main_function
 
 call fn %1>nul
 
-if %errorlevel% gtr 0 (
-  echo.
-  exit/b
-)
+if %errorlevel% gtr 0 exit/b
 
 goto main_function
 
