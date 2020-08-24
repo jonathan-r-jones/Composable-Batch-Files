@@ -16,7 +16,7 @@ rem setlocal
 
 set fp=* Set title.
 
-title=Mr T.
+title=Test Batch File
 
 
 
@@ -11027,6 +11027,27 @@ exit/b
 set fp=* Code below here runs.
 
 rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Play with the "not defined" command.
+
+call fn %1
+
+echo.
+echo %fp%
+
+echo %cbf_ex% | find /i "xlsx">nul
+
+if not %errorlevel% == 0 (
+  echo.
+  echo * cbf_fn does not contain an xlsx document. Aug-24-2020_11_03_AM
+  exit/b
+)
 
 
 

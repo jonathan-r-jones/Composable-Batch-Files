@@ -72,7 +72,10 @@ if %errorlevel% gtr 0 (
   exit/b 1
 )
 
-if not defined cbf_ex (
+rem echo.
+rem echo cbf_ex: %cbf_ex%
+
+if "%cbf_ex%" == "" (
   echo.
   echo * The cbf_ex is not defined for "%1". Jul-24-2020_1_19_PM
   goto try_using_cbf_fn
@@ -89,6 +92,14 @@ goto main_function
 call fn %1>nul
 
 if %errorlevel% gtr 0 exit/b
+
+echo %cbf_ex% | find /i "xlsx">nul
+
+if not %errorlevel% == 0 (
+  echo.
+  echo * cbf_fn does not contain an xlsx document. Aug-24-2020_11_03_AM
+  exit/b
+)
 
 goto main_function
 

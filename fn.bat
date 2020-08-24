@@ -75,26 +75,26 @@ if defined cbf_fn (
   if exist "%cbf_fn%" (
     rem echo.
     rem echo * cbf_fn file exists.
-    goto file_is_validated
+    goto file_exists
   )
 )
 
 if defined cbf_jf (
   if exist "%cbf_jf%" (
     set cbf_fn=%cbf_jf%
-    goto file_is_validated
+    goto file_exists
   )
 )
 
 if defined cbf_java (
   if exist "%cbf_java%" (
     set cbf_fn=%cbf_java%
-    goto file_is_validated
+    goto file_exists
   )
 )
 
 echo.
-echo * Error: File could not be validated. {%cbf_fn%}
+echo * Error: File doesn't exist. {%cbf_fn%}
 
 exit/b 2
 
@@ -102,9 +102,9 @@ exit/b 2
 
 :_
 
-:file_is_validated
+:file_exists
 
-set fp=* File is validated. {%cbf_fn%}
+set fp=* File exists. {%cbf_fn%}
 
 rem echo.
 rem echo %fp%
