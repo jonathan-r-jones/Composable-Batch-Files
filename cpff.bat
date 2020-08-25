@@ -81,7 +81,6 @@ rem echo CBF_fn: %cbf_fn%
 
 echo.
 copy "%cbf_source_filename%" "%cbf_fn%"
-rem qq
 
 exit/b
 

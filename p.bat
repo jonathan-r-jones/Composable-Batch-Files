@@ -14,17 +14,11 @@ set filep=* Add, commit and push Git changes with timestamp commit message.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto current_folder
+if "%~1" == "" goto main_function
 
 if "%~1" == "/?" goto help
 
-call td %~1
-
-if %errorlevel% == 1 (
-  exit/b
-)
-
-goto current_folder
+goto main_function
 
 
 
@@ -48,7 +42,11 @@ exit/b
 
 :_
 
-:current_folder
+:main_function
+
+call td %~1
+
+if %errorlevel% gtr 0 exit/b
 
 call g acp
 

@@ -74,13 +74,13 @@ if %errorlevel% gtr 0 (
 
 if not defined cbf_wo (
   echo.
-  echo * The cbf_ex is not defined for "%1". Jul-10-2020_12_54_PM
+  echo * The cbf_wo is not defined for "%1". Jul-10-2020_12_54_PM
   goto try_using_cbf_fn
 )
 
 if not exist "%cbf_wo%" (
   echo.
-  echo * Error: The cbf_wo "%cbf_wo%" could not be found. Jul-10-2020_12_55_PM
+  echo * Error: The file "%cbf_wo%" could not be found. Jul-10-2020_12_55_PM
   goto try_using_cbf_fn
 )
 
@@ -94,8 +94,13 @@ goto main_function
 
 call fn %1>nul
 
-if %errorlevel% gtr 0 (
+if %errorlevel% gtr 0 exit/b
+
+echo %cbf_ex% | find /i "docx">nul
+
+if not %errorlevel% == 0 (
   echo.
+  echo * cbf_fn does not contain a docx document. Aug-25-2020_11_05_AM
   exit/b
 )
 

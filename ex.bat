@@ -62,6 +62,7 @@ exit/b
 
 :validate_input
 
+set cbf_ex=
 set cbf_%1=
 
 call n %1

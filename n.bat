@@ -6483,6 +6483,8 @@ exit/b
 
 :1841
 
+:iwsr
+
 :pass-through
 
 set fp=* Pass through.

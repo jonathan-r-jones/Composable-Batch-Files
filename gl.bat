@@ -48,6 +48,8 @@ echo   ___(______)(_____  ______)(______)(______)(______)(______)(______)(______
 echo.
 echo                  99  Errorlevel used when a label is not found.
 echo                   a  Application, when used in a batch file name
+echo                 afn  ASCII filename. For example, j1.txt, j2.asc or Jenkinsfile would be
+echo                      an afn, where poker.xlsx would not be.
 echo                 -ag  As a batch file parameter, means run an aggregte, not atomic, func.
 echo  aggregate function  A batch file function which is a collection of calls to other
 echo                      batch file functions. It is called by invoking its batch file 
@@ -76,6 +78,8 @@ echo  evaluated filename  Filename, filename alias or batch file prefix for a ba
 echo    parameter         that lives in either the CBF or Share-zone folder.
 echo               filep  File purpose
 echo                   f  Filename alias, when used in a batch file name
+echo                  fn  Filename in the general sense. For example, j1.txt is a filename as 
+echo                      is poker.xlsx.
 echo                  fp  Function purpose
 echo        multipurpose  Batch file style (bfs) where the batch file contains any number of
 echo                      disparate, atomic functions which are called via a function alias, 

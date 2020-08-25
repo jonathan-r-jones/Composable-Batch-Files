@@ -138,26 +138,6 @@ exit/b
 
 
 
-:_
-
-:setup
-
-set fp=* %1.
-
-rem lu: Jul-31-2020
-
-echo.
-echo %fp%
-
-echo.
-ansible ansl -i hosts -u zs_ci_user -m setup --key-file /tmp/cart-np-key.pem
-
-exit/b
-
->< >< Outcome: Returns a lot of rows.
-
-
-
 :_+ Ping Pong
 
 
@@ -265,6 +245,26 @@ Outcome: This worked! Dev slave returned "pong".
 
 :_
 
+:setup
+
+set fp=* %1.
+
+rem lu: Jul-31-2020
+
+echo.
+echo %fp%
+
+echo.
+ansible ansl -i hosts -u zs_ci_user -m setup --key-file /tmp/cart-np-key.pem
+
+exit/b
+
+>< >< Outcome: Returns a lot of rows.
+
+
+
+:_
+
 :Aug-21-2020_7_04_PM
 
 set fp=* Simplest possible ping command.
@@ -276,6 +276,26 @@ exit/b
 >< >< Footnote:
 
 Outcome: This worked! Ansible slave returned "pong".
+
+
+
+:_
+
+:setup2
+
+set fp=* %1. Per Craig L.
+
+rem lu: Jul-31-2020
+
+echo.
+echo %fp%
+
+echo.
+ansible all -i ./hosts -u zs_ci_user -m setup --key-file cart-np-key.pem
+
+exit/b
+
+>< >< Outcome: Returns a lot of rows.
 
 
 
