@@ -34,19 +34,23 @@ echo %filep%
 rem lu: May-18-2020
 
 echo.
-echo Usage: %0 [space separated parameter(s)]
+echo Usage: %0 [space separated parameter(s)]. Copies or restores your chosen file to and from
+echo the Quick Code Backup folder.
 
 set parameter_1=Parameter 1: CBF alias you wish to process.
 
 set parameter_2=Parameter 2: DCV you wish to use.
 
-set parameter_2=Parameter 2 (Optional): If "r" or "-r" is used, a restore instead of a save is performed.
+set parameter_3=Parameter 3 (Optional): If "r" or "-r" is used, a restore instead of a save is performed.
 
 echo.
 echo %parameter_1%
 
 echo.
 echo %parameter_2%
+
+echo.
+echo %parameter_3%
 
 echo.
 echo Batch file style: Single Purpose
