@@ -83,7 +83,7 @@ exit/b
 
 set fp=* Overarching podcast mover.
 
-rem lu: Jun-22-2020
+rem lu: Aug-24-2020
 
 echo.
 echo %fp%
@@ -98,7 +98,10 @@ call j tagpr
 
 pause
 
-if not "%~2" == "pcn" call :transfer_old_content
+if not "%~2" == "n" call :transfer_old_content
+
+echo.
+echo "Do NOT move old content to the audiobooks folder.
 
 call :sa_2_cj
 
