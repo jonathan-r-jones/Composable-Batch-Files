@@ -53,7 +53,7 @@ echo.
 echo Example(s):
 
 echo.
-echo %0 j max xml
+echo %0 max xml
 
 exit/b
 

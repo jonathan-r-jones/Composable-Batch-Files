@@ -13253,4 +13253,28 @@ exit/b
 
 
 
+:_
+
+:test_new
+
+set fp=* Test new.bat.
+
+rem lu: Aug-30-2020
+
+echo.
+echo %fp%
+
+call pn >nul
+rem       qq-1
+
+set cbf_ex=c:\a\test2.xlsx
+
+set cbf_fn=c:\a\test2.txt
+
+set cbf_wo=c:\a\test.docx
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
