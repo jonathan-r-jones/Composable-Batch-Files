@@ -75,7 +75,7 @@ if "%~1" == "" (
   call sf je
 )
 
-call un %1
+call n %1
 
 if "%cbf_je%" == "" (
   echo.

@@ -62,7 +62,7 @@ call n %1
 
 if "%cbf_url%" == "" (
   echo.
-  echo * Error: The cbf_url variable is not set.
+  echo * Error: The cbf_url variable is not set. Aug-27-2020_1_11_PM
   exit/b 1
 )
 
