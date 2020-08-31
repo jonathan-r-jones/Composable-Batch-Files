@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Run excel with or without a filename alias parameter.
+set filep=* Run excel.
 
 
 
@@ -29,7 +29,7 @@ goto validate_input
 echo.
 echo %filep%
 
-rem lu: Nov-11-2019
+rem lu: Aug-31-2020
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -67,14 +67,7 @@ set cbf_%1=
 
 call n %1
 
-if %errorlevel% gtr 0 (
-  echo.
-  echo * Error: Label not found. Jul-24-2020_1_18_PM
-  exit/b 1
-)
-
-rem echo.
-rem echo cbf_ex: %cbf_ex%
+if %errorlevel% gtr 0 exit/b
 
 if "%cbf_ex%" == "" (
   echo.
@@ -83,6 +76,36 @@ if "%cbf_ex%" == "" (
 )
 
 set cbf_fn=%cbf_ex%
+
+if not exist "%cbf_ex%" (
+  goto create_excel_file
+)
+
+goto main_function
+
+
+
+:_
+
+:create_excel_file
+
+set fp=* Create Excel file.
+
+rem echo.
+rem echo cbf_ex: "%cbf_ex%"
+
+call m distill_filename "%cbf_ex%"
+
+call m distill_path "%cbf_ex%"
+
+cd /d "%cbf_distilled_path%"
+
+call cpfc exb "%cbf_distilled_filename%"
+
+rem echo.
+rem echo cbf_distilled_filename: "%cbf_distilled_filename%"
+
+set cbf_fn=%cbf_distilled_filename%
 
 goto main_function
 

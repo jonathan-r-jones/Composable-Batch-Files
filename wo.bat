@@ -62,33 +62,49 @@ exit/b
 
 :validate_input
 
-set cbf_%1=
+set cbf_wo=
 
 call n %1
 
-if %errorlevel% gtr 0 (
-  echo.
-  echo * Error: Label not found. Jul-10-2020_12_53_PM
-  exit/b 1
-)
+if %errorlevel% gtr 0 exit/b
 
-if not defined cbf_wo (
+if "%cbf_wo%" == "" (
   echo.
   echo * The cbf_wo is not defined for "%1". Jul-10-2020_12_54_PM
   goto try_using_cbf_fn
 )
 
-if not exist "%cbf_wo%" (
-  echo.
-  echo * Error: The file "%cbf_wo%" could not be found. Jul-10-2020_12_55_PM
-  goto try_using_cbf_fn
-)
-
 set cbf_fn=%cbf_wo%
+
+if not exist "%cbf_wo%" (
+  goto create_word_file
+)
 
 goto main_function
 
 
+
+:_
+
+:create_word_file
+
+set fp=* Create new Word file.
+
+call m distill_filename "%cbf_wo%"
+
+call m distill_path "%cbf_wo%"
+
+cd /d "%cbf_distilled_path%"
+
+call cpfc wob "%cbf_distilled_filename%"
+
+set cbf_fn=%cbf_distilled_filename%
+
+goto main_function
+
+
+
+:_
 
 :try_using_cbf_fn
 

@@ -75,7 +75,7 @@ if not exist "%cbf_fn%" (
 
 copy "%cbf_fn%" %2
 
-start "bogus" "%~2"
+rem start "bogus" "%~2"
 
 exit/b
 
