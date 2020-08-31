@@ -6487,6 +6487,8 @@ exit/b
 
 :kiar
 
+:cb
+
 :pass-through
 
 set fp=* Pass through.

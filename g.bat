@@ -3339,7 +3339,7 @@ exit/b
 
 ::_
 
-:cb
+:cbd
 
 set fp=* Create new branch based on the develop branch.
 
@@ -3356,6 +3356,38 @@ if "%~2" == "" (
 
 echo.
 git checkout -b %2 develop
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:cb
+
+set fp=* Create new branch based on specified source branch.
+
+rem lu: Aug-27-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, new destination branch, is a required field.
+  exit/b
+)
+
+if "%~3" == "" (
+  echo.
+  echo * Percent 3, source branch, is a required field.
+  exit/b
+)
+
+echo.
+git checkout -b %2 %3
 
 git push --set-upstream origin %2
 
@@ -3429,38 +3461,6 @@ git checkout develop
 
 exit/b
 
-
-
-
-::_
-
-:cbs
-
-set fp=* Create new branch based on specified source branch.
-
-rem lu: May-6-2019
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, new destination branch, is a required field.
-  exit/b
-)
-
-if "%~3" == "" (
-  echo.
-  echo * Percent 3, source branch, is a required field.
-  exit/b
-)
-
-echo.
-git checkout -b %2 %3
-
-git push --set-upstream origin %2
-
-exit/b
 
 
 
