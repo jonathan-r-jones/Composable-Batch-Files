@@ -542,51 +542,6 @@ exit/b
 
 :_
 
-:co_re
-
-set fp=* The Multi-Edit config files seem to be corrupt, so refresh the config files from share-zone.
-
-rem lu: May-1-2020
-
-echo.
-echo %fp%
-
-call td mecfg
-
-exit/b
-
-
-
-:_
-
-:mecfg
-
-set fp=* Copy mecfg files from dropbox to local.
-
-rem lu: Jun-2-2020
-
-echo.
-echo %fp%
-
-call td mecfg
-
-cd..
-
-call m rd Config.04
-
-call mcd Config.04
-
-call pn drmecfg
-
-echo.
-xcopy /e "%cbf_path%"
-
-exit/b
-
-
-
-:_
-
 :emax
 
 :max
@@ -603,6 +558,34 @@ call td max
 call pn cm>nul
 
 xcopy /y "%cbf_path%\empty_master.xml" master.xml
+
+exit/b
+
+
+
+:_
+
+:mecfg
+
+set fp=* The Multi-Edit config files seem to be corrupt, so copy mecfg files from dropbox to local.
+
+rem lu: Aug-29-2020
+
+echo.
+echo %fp%
+
+call td mecfg
+
+cd..
+
+call m rd Config.04
+
+call mcd Config.04
+
+call pn drmecfg
+
+echo.
+xcopy /e "%cbf_path%"
 
 exit/b
 
