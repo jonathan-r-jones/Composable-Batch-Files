@@ -12886,14 +12886,14 @@ exit/b
 
 :tcc
 
-set fp=* Timecard calculator.
+set fp=* Timecard functions.
 
 rem lu: Dec-5-2018
 
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\Cart Timecard Calculator.xlsx
+set cbf_ex=%share-zone%\Cart Timecard Calculator.xlsx
 
 set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
 
