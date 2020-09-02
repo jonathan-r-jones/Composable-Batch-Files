@@ -7445,27 +7445,6 @@ exit/b
 
 :_
 
-:mste
-
-:teams
-
-set fp=* Microsoft Teams.
-
-rem lu: Dec-28-2018
-
-echo.
-echo %fp%
-
-call an edge
-
-set cbf_url=https://teams.microsoft.com
-
-exit/b
-
-
-
-:_
-
 :jsc
 
 set fp=* Jenkins Slave Clone.
@@ -11112,23 +11091,6 @@ exit/b
 
 :_
 
-:mtdd
-
-set fp=* Microsoft Teams down detector.
-
-rem lu: Feb-3-2020
-
-echo.
-echo %fp%
-
-set cbf_url=https://downdetector.com/status/teams/
-
-exit/b
-
-
-
-:_
-
 :bugr
 
 set fp=* Build.gradle. Here is the version number for releases.
@@ -13275,6 +13237,52 @@ set cbf_ex=c:\a\test7 .xlsx
 set cbf_fn=c:\a\test2.txt
 
 set cbf_wo=c:\a\test5.docx
+
+exit/b
+
+
+
+:_+ Microsoft Teams
+
+
+
+::_
+
+:mite
+
+:mste
+
+:teams
+
+set fp=* Microsoft Teams.
+
+rem lu: Dec-28-2018
+
+echo.
+echo %fp%
+
+call an edge
+
+set cbf_application=C:\Users\jonat\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk
+
+set cbf_url=https://teams.microsoft.com
+
+exit/b
+
+
+
+::_
+
+:mtdd
+
+set fp=* Microsoft Teams down detector.
+
+rem lu: Feb-3-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://downdetector.com/status/teams/
 
 exit/b
 
