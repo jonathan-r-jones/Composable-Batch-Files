@@ -187,7 +187,7 @@ echo      tf  Terraform
 echo      tk  Taskkill
 echo      tl  Tasklist
 echo      ty  Type command for use on evaluated filename parameter
-echo     typ  Use type command to view nickname-specified file and pipe output to a file.
+echo     tyi  Use type command to view calculus file in Internet Explorer.
 echo     tyf  Reopen or see search results that have been piped to a file.
 echo      un  Communicates that the intent is only to change the URL for a passed in alias
 echo       v  Vetted functions (Useful for copying-and-pasting)

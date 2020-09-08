@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Use type command to view nickname-specified file and pipe output to a file.
+set filep=* Use type command to view calculus file in Internet Explorer.
 
 echo.
 echo %filep%
@@ -50,7 +50,7 @@ goto use_alias_or_batch_file
 echo.
 echo Usage: %0 [Parameter 1]
 
-set parameter_1=Parameter 1: Filename calculus to view in a read-only fashion.
+set parameter_1=Parameter 1: Filename calculus to view in a read-only fashion in Internet Explorer.
 
 echo.
 echo %parameter_1%
@@ -59,9 +59,19 @@ echo.
 echo Examples:
 
 echo.
-echo typ ma
+echo %0 ma
+
+echo.
+echo %0 ui.rb
 
 exit/b
+
+
+
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 

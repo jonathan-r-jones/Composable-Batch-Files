@@ -6491,6 +6491,12 @@ exit/b
 
 :sso
 
+:saml2
+
+:saml2_fqt
+
+:reci
+
 :pass-through
 
 set fp=* Pass through.
@@ -8573,27 +8579,6 @@ exit/b
 
 
 
-:_
-
-:cart_recipes
-
-:ccr
-
-set fp=* Cart recipes.
-
-rem lu: Mar-6-2019
-
-echo.
-echo %fp%
-
-call %0 cc
-
-set cbf_path=%cbf_path%\recipes
-
-exit/b
-
-
-
 :_+ Mobile Apps
 
 
@@ -8726,23 +8711,6 @@ echo.
 echo %fp%
 
 set cbf_path=\test\integration
-
-exit/b
-
-
-
-:_
-
-:re
-
-set fp=* Recipe relative path.
-
-rem lu: May-14-2019
-
-echo.
-echo %fp%
-
-set cbf_path=\recipes
 
 exit/b
 
