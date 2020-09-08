@@ -6489,6 +6489,8 @@ exit/b
 
 :cb
 
+:sso
+
 :pass-through
 
 set fp=* Pass through.
@@ -13076,27 +13078,6 @@ exit/b
 
 :_
 
-:cove
-
-set fp=* Cookbook version number.
-
-rem skw: Chef version number.
-
-rem lu: Jun-17-2020
-
-echo.
-echo %fp%
-
-call pn caco>nul
-
-set cbf_fn=%cbf_path%\metadata.rb
-
-exit/b
-
-
-
-:_
-
 :ruli
 
 set fp=* Run list document.
@@ -13283,6 +13264,27 @@ echo.
 echo %fp%
 
 set cbf_url=https://downdetector.com/status/teams/
+
+exit/b
+
+
+
+:_
+
+:cove
+
+set fp=* Cookbook version number.
+
+rem skw: Chef version number.
+
+rem lu: Jun-17-2020
+
+echo.
+echo %fp%
+
+call pn caco>nul
+
+set cbf_fn=%cbf_path%\metadata.rb
 
 exit/b
 

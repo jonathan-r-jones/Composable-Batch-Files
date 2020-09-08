@@ -56,6 +56,7 @@ echo      an  Communicates that the intent is only to change the application for
 echo     ans  Ansible-related tasks
 echo     ang  Angular-related tasks
 echo      as  Windows file associations
+echo      ap  Application-centric way of running an application with an optional filename parameter
 echo       b  Shutdown windows
 echo      bu  Back up using function routing
 echo     buc  Back up current file to code quick backup folder.
@@ -117,7 +118,6 @@ echo       h  Sencha
 echo       i  Information of CBF variable value assignments
 echo       j  Simulate a double-click using a default precedence of operation preferences or a 
 echo          dynamically constructed variable.
-echo      ja  Application-centric way of running an application with an optional filename parameter
 echo      je  Surf to Jenkins websites
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations

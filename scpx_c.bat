@@ -412,4 +412,27 @@ cd /tmp
 
 
 
+:_
+
+:Sep-4-2020_11_23_AM
+
+set fp=* Upload new saml file.
+
+echo.
+echo %fp%
+
+call td sso
+
+call scpx dema federationmetadata-test.xml c home/zs_ci_user
+
+exit/b
+
+>< >< Footnote:
+
+Outcome:
+
+cd /tmp
+
+
+
 :_ (!efscpx_c, !rfsp) (mov-7)

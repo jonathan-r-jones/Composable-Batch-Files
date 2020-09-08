@@ -21,7 +21,7 @@ if "%~1" == "" goto help
 
 if "%~1" == "/?" goto help
 
-goto validate_user_input
+goto validate_input
 
 
 
@@ -39,15 +39,26 @@ echo.
 echo Parameter 1: Application nickname.
 
 echo.
+rem qq
 echo Parameter 2 (Optional): Filename alias.
+
+echo.
+echo Entangled variable: cbf_application
 
 exit/b
 
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
-:validate_user_input
+
+
+:_
+
+:validate_input
 
 call an %1
 
