@@ -167,7 +167,7 @@ set fp=* This is the order of operations.
 if not "%cbf_application%" == "" (
   rem echo.
   rem echo * Cbf_application is non-blank. Jun-9-2020_3_28_PM
-  call ja %1>nul
+  call ap %1>nul
   exit/b
 )
 
