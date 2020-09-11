@@ -6497,6 +6497,22 @@ exit/b
 
 :reci
 
+:yml
+
+:erb
+
+:cfg
+
+:cfg1
+
+:cfg2
+
+:cfg3
+
+:cfg4
+
+:templ
+
 :pass-through
 
 set fp=* Pass through.
@@ -10704,6 +10720,33 @@ exit/b
 
 ::_
 
+:arc
+
+:ckje
+
+:ckjf
+
+:jf
+
+set fp=* Jenkinsfile folder.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+set cbf_cs=Jenkinsfile
+
+set cbf_fn=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
+
+set cbf_path=%share-zone%\jenkinsfiles
+
+exit/b
+
+
+
+::_
+
 :bujf
 
 :jfbu
@@ -10718,49 +10761,6 @@ echo.
 echo %fp%
 
 set cbf_fn=%share-zone%\jenkinsfiles\jenkinsfile_backup
-
-exit/b
-
-
-
-::_
-
-:arc
-
-:ckje
-
-:ckjf
-
-set fp=* Code keepers for Jenkinsfile.
-
-rem lu: Mar-11-2019
-
-echo.
-echo %fp%
-
-set cbf_fn=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
-
-exit/b
-
-
-
-::_
-
-:jf
-
-set fp=* Jenkinsfile folder.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-call pn api>nul
-set cbf_fn=%cbf_path%\Jenkinsfile_Template
-
-set cbf_path=%share-zone%\jenkinsfiles
-
-set cbf_cs=Jenkinsfile
 
 exit/b
 

@@ -47,6 +47,7 @@ echo          build_ejb  Build EJB WAR file.
 echo            compile  Run sencha app build testing.
 echo           compilep  Run sencha app build production.
 echo           copy_ext  Copy ext folder contents to the right place.
+echo                ctf  Create timestamped file.
 echo       double_click  Perform command-line equivalent of a double click.
 echo            del_hex  Delete WildFly Dynamic Folder.
 echo               depl  Deploy a new WAR file.
@@ -3386,7 +3387,7 @@ exit/b
 
 :clear_errorlevel_silently
 
-set fp=* Clear/reset errorLevel silently.
+rem set fp=* Clear/reset errorLevel silently.
 
 rem reset_errorlevel: skw
 
@@ -4231,56 +4232,6 @@ echo %fp%
 call %0 wait
 
 exit
-
-
-
-:_+ ME Config Operations
-
-
-
-::_
-
-:cfg
-
-:p
-
-:push
-
-set fp=* Copy Multi-edit config files to share-zone.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-call cppp mecfg smecfg
-
-call p s
-
-exit/b
-
-
-
-::_
-
-:cfgf
-
-:pl
-
-:pull
-
-set fp=* Copy Multi-edit config files from share-zone.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-call pl s
-
-call cppp smecfg mecfg
-
-exit/b
 
 
 
@@ -5371,9 +5322,15 @@ exit/b
 
 ::_
 
+:atn
+
 :ctf
 
-:atn
+:file
+
+:fn
+
+:gdaf
 
 set fp=* Create timestamped file.
 
