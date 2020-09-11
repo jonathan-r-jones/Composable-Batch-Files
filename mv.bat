@@ -101,7 +101,7 @@ pause
 if not "%~2" == "n" call :transfer_old_content
 
 echo.
-echo "Do NOT move old content to the audiobooks folder.
+echo * Do NOT move old content to the audiobooks folder.
 
 call :sa_2_cj
 
