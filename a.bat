@@ -4335,6 +4335,32 @@ exit/b
 
 ::_
 
+:star_over
+
+set fp=* Start instance "%2" and override so the instance won't stop.
+
+rem lu: Sep-17-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% gtr 0 exit/b
+
+echo.
+call aws ec2 start-instances --instance-ids %cbf_instance_id%
+
+call %0 tag %2 AutoStopStartInstance False
+
+call %0 tag %2 Comment None
+                                       
+exit/b
+
+
+
+::_
+
 :rebo
 
 set fp=* Reboot instance "%2". This doesn't seem to work. Apr-13-2020

@@ -6513,6 +6513,14 @@ exit/b
 
 :templ
 
+:daen
+
+:ssl_lab
+
+:cfg6
+
+:cfg7
+
 :pass-through
 
 set fp=* Pass through.
