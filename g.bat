@@ -1518,6 +1518,14 @@ cd | find /i "C:\projects\netbeans\mercury6">nul
 if %errorlevel% == 0 echo A commit message is required in this folder.
 if %errorlevel% == 0 exit/b
 
+cd | find /i "c:\cookbook_test\cart">nul
+if %errorlevel% == 0 echo. & echo * Error: This folder has restrictive rules for check-in.
+if %errorlevel% == 0 exit/b
+
+cd | find /i "c:\users\jjones2\dev\cart">nul
+if %errorlevel% == 0 echo. & echo * Error: This folder has restrictive rules for check-in.
+if %errorlevel% == 0 exit/b
+
 rem call m cart_path_only
 
 rem echo Cart Path Return Value: %errorlevel%
@@ -2498,7 +2506,7 @@ rem lu: Aug-6-2020
 echo.
 echo %fp%
 
-set cbf_git_version=14
+set cbf_git_version=15
 
 call td ma
 

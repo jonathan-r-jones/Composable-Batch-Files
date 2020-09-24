@@ -6521,6 +6521,10 @@ exit/b
 
 :cfg7
 
+:ccerts
+
+:ccerts_fq
+
 :pass-through
 
 set fp=* Pass through.
