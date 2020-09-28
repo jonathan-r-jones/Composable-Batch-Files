@@ -4019,23 +4019,6 @@ exit/b
 
 :_
 
-:nx
-
-set fp=* New and exciting.
-
-rem lu: May-16-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%dropbox%\pictures\new and exciting
-
-exit/b
-
-
-
-:_
-
 :hw
 
 set fp=* Hello world batch file.
@@ -13240,6 +13223,44 @@ echo %fp%
 call pn caco>nul
 
 set cbf_fn=%cbf_path%\metadata.rb
+
+exit/b
+
+
+
+:_+ Pictures
+
+
+
+::_
+
+:nx
+
+set fp=* New and exciting.
+
+rem lu: May-16-2019
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\pictures\new and exciting
+
+exit/b
+
+
+
+::_
+
+:pict
+
+set fp=* Pictures.
+
+rem lu: Sep-25-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\pictures
 
 exit/b
 

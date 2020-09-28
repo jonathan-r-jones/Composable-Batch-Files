@@ -11022,16 +11022,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Play with the "not defined" command.
@@ -11048,6 +11038,41 @@ if not %errorlevel% == 0 (
   echo * cbf_fn does not contain an xlsx document. Aug-24-2020_11_03_AM
   exit/b
 )
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test if statement.
+
+rem lu: Sep-14-2020
+
+echo.
+echo %fp%
+
+call pn >nul
+
+echo. & echo hey
+
+rem if not "%~2" == "n" call echo *** Not 1.
+rem if not "%~2"=="n" call echo *** Not 2.
+rem if not "%2"=="n" call echo *** Not 3.
+
+rem qq-1
+
+exit/b
 
 
 

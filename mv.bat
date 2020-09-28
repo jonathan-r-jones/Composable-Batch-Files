@@ -98,10 +98,14 @@ call j tagpr
 
 pause
 
-if not "%~2" == "n" call :transfer_old_content
+rem By default, ood content is transferred.
 
-echo.
-echo * Do NOT move old content to the audiobooks folder.
+if "%~2" == "n" (
+  echo.
+  echo * Do NOT move old content to the audiobooks folder.
+) else (
+  call :transfer_old_content
+)
 
 call :sa_2_cj
 
