@@ -6077,8 +6077,6 @@ exit/b
 
 :kela
 
-:saml
-
 :sr59
 
 :sr60
@@ -10790,29 +10788,6 @@ echo.
 echo %fp%
 
 set cbf_fn=%share-zone%\jenkinsfiles\jenkinsfile_tester
-
-exit/b
-
-
-
-::_
-
-:jenk
-
-set fp=* Jenkins.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-rem Admin password file.
-set cbf_fn=%userprofile%\.jenkins\secrets\initialAdminPassword
-
-rem If you delete things from here, Jenkins may reset things.
-set cbf_path=%userprofile%\.jenkins
-
-set cbf_url=https://jenkins.io
 
 exit/b
 
