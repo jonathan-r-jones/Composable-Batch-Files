@@ -144,13 +144,13 @@ if %errorlevel% == 1 (
 
 :main_function
 
-set cbf_target=%cbf_url:https://=%
+set cbf_target=%cbf_url%
 
 if not "%cbf_host%" == "" (
   set cbf_target=%cbf_host%.irmnet.ds2.dhs.gov
 ) else if "%cbf_url%" == "" (
   echo.
-  echo * Error: Cbf_url is unassigned for "%1".
+  echo * Error: cbf_host is unassigned for "%1".
   exit/b
 )
 

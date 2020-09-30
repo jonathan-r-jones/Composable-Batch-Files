@@ -72,7 +72,7 @@ set cbf_application=%cbf_default_browser%
 set cbf_je=
 
 if "%~1" == "" (
-  call je jenk
+  call je je
   exit/b
 )
 

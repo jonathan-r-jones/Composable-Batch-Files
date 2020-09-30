@@ -58,6 +58,9 @@ echo %0 sr66 hostname
 echo.
 echo %0 jjgh url
 
+echo.
+echo %0 je je
+
 exit/b
 
 

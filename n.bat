@@ -4854,8 +4854,6 @@ exit/b
 
 :rep17
 
-:troy
-
 :oc
 
 :sr27
@@ -6506,6 +6504,14 @@ exit/b
 
 :ccerts_fq
 
+:jenk
+
+:cp
+
+:tf
+
+:sr86
+
 :pass-through
 
 set fp=* Pass through.
@@ -6538,8 +6544,6 @@ exit/b
 
 
 :_
-
-:tf
 
 :terr
 

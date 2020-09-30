@@ -11043,16 +11043,6 @@ if not %errorlevel% == 0 (
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test if statement.
@@ -11070,7 +11060,41 @@ rem if not "%~2" == "n" call echo *** Not 1.
 rem if not "%~2"=="n" call echo *** Not 2.
 rem if not "%2"=="n" call echo *** Not 3.
 
-rem qq-1
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Test weird percent.
+
+rem lu: Sep-30-2020
+
+echo.
+echo %fp%
+
+call pn cade>nul
+
+echo.
+echo Path 1: %cbf_path%
+
+echo.
+echo Path 2: %cbf_path2%
+
+echo.
+echo Path 3: %cbf_path%3
 
 exit/b
 
