@@ -96,6 +96,7 @@ echo      do  Docker functions accessed via function routing.
 echo      dr  Dir using function routing
 echo      dt  Dir with a td parameter
 echo       e  Uses mx.bat then me.bat to decipher which ASCII file to edit (Or exit command window)
+echo      ea  Use Mutli-Edit to edit the Ansible Playbook of an alias.
 echo      ed  Edit a file abstraction layer
 echo     edr  Edit a relative path constucted filename
 echo      ej  Use Multi-Edit to edit DCV ASCII files.

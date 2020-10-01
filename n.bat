@@ -6512,6 +6512,8 @@ exit/b
 
 :sr86
 
+:qb
+
 :pass-through
 
 set fp=* Pass through.
@@ -12447,6 +12449,8 @@ exit/b
 :cqb
 
 :cqbu
+
+:qb
 
 :qcb
 
