@@ -59,7 +59,7 @@ echo      as  Windows file associations
 echo      ap  Application-centric way of running an application with an optional filename parameter
 echo       b  Shutdown windows
 echo      bu  Back up using function routing
-echo     buc  Back up current file to code quick backup folder.
+echo     buc  Back up a file in the current folder to the code quick backup folder.
 echo       c  Clear screen and reset color
 echo     cbf  Show this list of CBF batch files
 echo    coco  Code Compare functions

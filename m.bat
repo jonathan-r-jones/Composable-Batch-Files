@@ -5334,13 +5334,11 @@ exit/b
 
 set fp=* Create timestamped file.
 
-rem fcd: Jun-12-2020
+rem lu: Jun-12-2020
 
-rem skw: Generate a timestamped name file, create file, make test file
+rem skw: Create New File, Generate a timestamped name file, create file, make test file
 
 rem This works.
-
-rem Find my make file command. skw
 
 echo.
 echo %fp%

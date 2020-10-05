@@ -76,9 +76,13 @@ exit/b
 
 
 
-:_
+:_+ Jenkinsfile
 
-:jf
+
+
+::_
+
+:jf_old
 
 set fp=* Copy rf_ma Jenkinsfile to the share-zone Jenkinsfile.
 
@@ -99,6 +103,41 @@ echo.
 @echo on
 xcopy /y %source_filename% %destination_filename%
 @echo off
+
+exit/b
+
+
+
+::_
+
+:jf
+
+:ctfj
+
+set fp=* Create timestamped Jenkinsfile.
+
+rem lu: Oct-5-2020
+
+echo.
+echo %fp%
+
+rem qq-1
+
+call td api
+
+call cpcp Jenkinsfile jf
+
+cd
+pause
+
+rem The below class name is case sensitive.
+java -classpath %composable_batch_files% Get_timestamp_for_use_as_filename>date_as_filename.txt
+
+set /p date_as_filename=<date_as_filename.txt
+
+ren Jenkinsfile Jenkinsfile_%date_as_filename%.txt
+
+dir *.txt
 
 exit/b
 
