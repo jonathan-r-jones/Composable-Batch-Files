@@ -2735,6 +2735,27 @@ exit/b
 
 ::_
 
+:add_tag
+
+:taga
+
+set fp=* Add tag.
+
+rem qq
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+rem git tag -a v1.4 -m "my version 1.4"
+git tag -a version_api_0.0.1-20190618.233310-466__ui_0.0.1-20190618.233316-112 -m "version message"
+
+exit/b
+
+
+
+::_
+
 :lt
 
 :lita
@@ -2770,26 +2791,6 @@ echo %fp%
 
 echo.
 git fetch --tags
-
-exit/b
-
-
-
-::_
-
-:add_tag
-
-:taga
-
-set fp=* Add tag.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-rem git tag -a v1.4 -m "my version 1.4"
-git tag -a version_api_0.0.1-20190618.233310-466__ui_0.0.1-20190618.233316-112 -m "version message"
 
 exit/b
 
