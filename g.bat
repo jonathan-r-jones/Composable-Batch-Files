@@ -1522,9 +1522,9 @@ cd | find /i "c:\cookbook_test\cart">nul
 if %errorlevel% == 0 echo. & echo * Error: This folder has restrictive rules for check-in.
 if %errorlevel% == 0 exit/b
 
-cd | find /i "c:\users\jjones2\dev\cart">nul
-if %errorlevel% == 0 echo. & echo * Error: This folder has restrictive rules for check-in.
-if %errorlevel% == 0 exit/b
+rem cd | find /i "c:\users\jjones2\dev\cart">nul
+rem if %errorlevel% == 0 echo. & echo * Error: This folder has restrictive rules for check-in.
+rem if %errorlevel% == 0 exit/b
 
 rem call m cart_path_only
 
