@@ -2506,7 +2506,7 @@ rem lu: Aug-6-2020
 echo.
 echo %fp%
 
-set cbf_git_version=15
+set cbf_git_version=14
 
 call td ma
 
@@ -2514,9 +2514,9 @@ call s
 
 echo.
 @echo on
-git checkout -b release_v_1_%cbf_git_version%_0 tags/v1.%cbf_git_version%.0
+git checkout -b release_v_1_%cbf_git_version%_1 tags/v1.%cbf_git_version%.1
 
-git push --set-upstream origin release_v_1_%cbf_git_version%_0
+git push --set-upstream origin release_v_1_%cbf_git_version%_1
 @echo off
 
 exit/b
@@ -2741,7 +2741,6 @@ exit/b
 
 set fp=* Add tag.
 
-rem qq
 rem lu: Jun-11-2019
 
 echo.

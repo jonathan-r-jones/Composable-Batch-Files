@@ -634,24 +634,6 @@ exit/b
 
 :_
 
-:cd
-
-set fp=Current directory.
-
-rem fcd: May-9-2017
-
-echo.
-echo %fp%
-
-echo.
-cd
-
-exit/b
-
-
-
-:_
-
 :hex
 
 :open_hex_folder
@@ -6516,6 +6498,16 @@ exit/b
 
 :mdm
 
+:gifl
+
+:home
+
+:caho
+
+:ssp
+
+:cd
+
 :pass-through
 
 set fp=* Pass through.
@@ -10738,7 +10730,7 @@ echo %fp%
 
 set cbf_cs=Jenkinsfile
 
-set cbf_fn=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
+set cbf_jf=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
 
 set cbf_path=%share-zone%\jenkinsfiles
 

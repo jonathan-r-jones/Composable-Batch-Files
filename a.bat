@@ -4443,7 +4443,7 @@ exit/b
 
 
 
-:_+ Tags from a.bat
+:_+ Tags
 
 
 
@@ -4485,6 +4485,32 @@ call a tag %cbf_instance_alias% WeekendStop True
 call a tag %cbf_instance_alias% IC_PLATFORM LINUX
 
 call a tag %cbf_instance_alias% IC_TOWER_READY FALSE
+
+exit/b
+
+
+
+::_
+
+:247
+
+set fp=* Keep awake for 24/7 the instance "%2".
+
+rem lu: Oct-7-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+call %0 tag %2 AutoStopStartInstance False
+
+call %0 tag %2 Comment "Testing in progress."
 
 exit/b
 

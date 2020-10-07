@@ -18,7 +18,7 @@ echo %filep%
 set fp=* Route callers.
 
 if "%~1" == "" (
-  call fx ma jf me
+  call fx jf jf me
   exit/b
 )
 
