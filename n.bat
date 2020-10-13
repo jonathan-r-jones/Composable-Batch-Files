@@ -13300,6 +13300,8 @@ rem lu: Oct-9-2020
 echo.
 echo %fp%
 
+set cbf_clone_url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
+
 set cbf_path=%dropbox%\IT\Mob Programming Presentation Dec-18-2020
 
 exit/b
