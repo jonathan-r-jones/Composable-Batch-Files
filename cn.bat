@@ -94,7 +94,7 @@ set fp=* Main function.
 rem lu: Apr-25-2019
 
 if "%cbf_branch%" == "" (
-   set cbf_branch=master
+   set cbf_branch=main
 )
 
 echo.
