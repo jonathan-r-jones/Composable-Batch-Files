@@ -6508,6 +6508,14 @@ exit/b
 
 :cd
 
+:jire
+
+:jirp
+
+:haze
+
+:1964
+
 :pass-through
 
 set fp=* Pass through.
@@ -7298,6 +7306,13 @@ rem set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
 rem set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
 
 exit/b
+
+
+Postscript: 
+
+Philosophy: Share-zone is for documents that I may need for some reason outside of my GFE.
+
+Registration: Officially Registered Repo
 
 
 

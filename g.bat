@@ -2514,9 +2514,9 @@ call s
 
 echo.
 @echo on
-git checkout -b release_v_1_%cbf_git_version%_1 tags/v1.%cbf_git_version%.1
+git checkout -b release_v_1_%cbf_git_version%_2 tags/v1.%cbf_git_version%.2
 
-git push --set-upstream origin release_v_1_%cbf_git_version%_1
+git push --set-upstream origin release_v_1_%cbf_git_version%_2
 @echo off
 
 exit/b
@@ -3385,6 +3385,8 @@ echo %fp%
 if "%~2" == "" (
   echo.
   echo * Percent 2, new destination branch, is a required field.
+  echo.
+  echo * And Percent 3, source branch, is a required field.
   exit/b
 )
 
