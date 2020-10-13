@@ -3587,7 +3587,7 @@ exit/b
 
 :_
 
-:mob
+:mobi
 
 set fp=* Mobility samples.
 
@@ -6027,8 +6027,6 @@ exit/b
 :iai
 
 :1608
-
-:team
 
 :imm_old
 
@@ -11286,6 +11284,8 @@ exit/b
 
 :appd
 
+:appdata
+
 set fp=* App data.
 
 rem lu: Dec-4-2018
@@ -11345,7 +11345,11 @@ exit/b
 
 
 
-:_
+:_+ My Machines
+
+
+
+::_
 
 :ea
 
@@ -11364,7 +11368,7 @@ exit/b
 
 
 
-:_
+::_
 
 :sp7
 
@@ -11376,6 +11380,23 @@ echo.
 echo %fp%
 
 set cbf_fn=%dropbox%\savannah\reach out\sp7.asc
+
+exit/b
+
+
+
+::_
+
+:ipad
+
+set fp=* iPad.
+
+rem lu: Oct-12-2020
+
+echo.
+echo %fp%
+
+set cbf_fn=%dropbox%\savannah\reach out\ipad.txt
 
 exit/b
 
@@ -13263,6 +13284,61 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\pictures
+
+exit/b
+
+
+
+:_
+
+:mob
+
+set fp=* Mob Programming Presentation Dec-18-2020.
+
+rem lu: Oct-9-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\IT\Mob Programming Presentation Dec-18-2020
+
+exit/b
+
+
+
+:_+ Zoom and Teams
+
+
+
+::_
+
+:zoom
+
+set fp=* Zoom.
+
+rem lu: Oct-12-2020
+
+echo.
+echo %fp%
+
+set cbf_application=%AppData%\Zoom\bin\zoom.exe
+
+exit/b
+
+
+
+::_
+
+:team
+
+set fp=* Microsoft Teams.
+
+rem lu: Oct-12-2020
+
+echo.
+echo %fp%
+
+set cbf_application=%AppData%\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk
 
 exit/b
 

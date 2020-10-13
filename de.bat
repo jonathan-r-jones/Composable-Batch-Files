@@ -198,10 +198,9 @@ rem lu: Jun-29-2020
 echo.
 echo %fp%
 
-call td cja
+call td cja>nul
 
-echo.
-forfiles /d -15 /m *.mp3 /c "cmd /c del @path 0x09"
+forfiles /d -15 /m *.mp3 /c "cmd /c del @path 0x09">nul
 
 exit/b
 

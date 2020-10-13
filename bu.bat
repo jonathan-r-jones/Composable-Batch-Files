@@ -121,8 +121,6 @@ rem lu: Oct-5-2020
 echo.
 echo %fp%
 
-rem qq-1
-
 call td api
 
 call cpcp Jenkinsfile jf
