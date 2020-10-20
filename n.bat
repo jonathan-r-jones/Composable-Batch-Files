@@ -6514,6 +6514,14 @@ exit/b
 
 :1964
 
+:sr87
+
+:sr88
+
+:sr89
+
+:odesl
+
 :pass-through
 
 set fp=* Pass through.
@@ -13356,6 +13364,23 @@ echo.
 echo %fp%
 
 set cbf_application=%AppData%\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk
+
+exit/b
+
+
+
+:_
+
+:ckan
+
+set fp=* Ansible Code Keepers.
+
+rem lu: Oct-15-2020
+
+echo.
+echo %fp%
+
+set cbf_fn=%share-zone%\Miscellany\Ansible_Code_Keepers.txt
 
 exit/b
 

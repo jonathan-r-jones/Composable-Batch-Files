@@ -2501,12 +2501,12 @@ from tag, create tag from branch, create a branch from a tag, create branch from
 
 set fp=* Create a branch based on a tag.
 
-rem lu: Aug-6-2020
+rem lu: Oct-14-2020
 
 echo.
 echo %fp%
 
-set cbf_git_version=14
+set cbf_git_version=16
 
 call td ma
 
@@ -2514,9 +2514,9 @@ call s
 
 echo.
 @echo on
-git checkout -b release_v_1_%cbf_git_version%_2 tags/v1.%cbf_git_version%.2
+git checkout -b release_v_1_%cbf_git_version%_0 tags/v1.%cbf_git_version%.0
 
-git push --set-upstream origin release_v_1_%cbf_git_version%_2
+git push --set-upstream origin release_v_1_%cbf_git_version%_0
 @echo off
 
 exit/b
@@ -3375,9 +3375,9 @@ exit/b
 
 :cb
 
-set fp=* Create new branch based on specified source branch.
+set fp=* Create a new branch based on specified source branch.
 
-rem lu: Aug-27-2020
+rem lu: Oct-16-2020
 
 echo.
 echo %fp%
@@ -3448,7 +3448,7 @@ if "%~2" == "" (
 )
 
 echo.
-git checkout %2
+git checkout %2 --guess
 
 exit/b
 

@@ -4512,6 +4512,8 @@ call %0 tag %2 AutoStopStartInstance False
 
 call %0 tag %2 Comment "Testing in progress."
 
+call %0 tag %2 WeekendStop False
+
 exit/b
 
 

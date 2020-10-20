@@ -125,9 +125,6 @@ call td api
 
 call cpcp Jenkinsfile jf
 
-cd
-pause
-
 rem The below class name is case sensitive.
 java -classpath %composable_batch_files% Get_timestamp_for_use_as_filename>date_as_filename.txt
 
