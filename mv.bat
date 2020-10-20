@@ -91,7 +91,6 @@ echo %fp%
 rem Delete old files from the the Audiobook folder.
 call de old_mp3_files
 
-rem qq
 call :pc_2_sa
 
 rem Run the tag program.
