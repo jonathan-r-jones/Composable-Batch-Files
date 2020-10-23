@@ -2317,6 +2317,31 @@ exit/b
 
 :lb
 
+set fp=* List grepped branches.
+
+rem lu: Oct-23-2020
+
+echo.
+echo %fp%
+
+call pn sugi>nul
+
+if "%~2" == "" (
+  echo Percent 2, grep search string, is required.
+  exit/b
+)
+
+echo.
+git branch -a | %cbf_path%\grep %2
+
+exit/b
+
+
+
+::_
+
+:lba
+
 set fp=* List all branches.
 
 rem lu: Dec-13-2019
@@ -2327,8 +2352,6 @@ echo %fp%
 call g lbl
 
 call g lbr
-
-git push origin --delete cart-412-2
 
 exit/b
 
@@ -2967,36 +2990,6 @@ exit/b
 
 ::_
 
-:merg_sq
-
-set fp=* Merge from the feature branch and squash all of the commits of the feature branch into ^
-a single commit.
-
-rem lu: Jul-27-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Error: You must specify which branch you want to merge from.
-  exit/b
-)
-
-echo.
-git merge --squash %2
-
-exit/b
-
-
->< >< >< Footnote:
-
-Learned about this from a YouTube video.
-
-
-
-::_
-
 :merg
 
 :merge
@@ -3030,6 +3023,65 @@ Did you mean this?
 
 For me it meant that I need to run git checkout Branch3 on my local repository before trying 
 to merge it. It must have a local version of Branch3. Mar-3-2020
+
+
+
+::_
+
+:merg2
+
+set fp=* Original merging sample code from GitHub.
+
+rem lu: Dec-10-2019
+
+echo.
+echo %fp%
+
+echo.
+
+Step 1: From your project repository, bring in the changes and test.
+
+git fetch origin
+git checkout -b release/v140 origin/release/v140
+git merge master
+
+Step 2: Merge the changes and update on GitHub.
+
+git checkout master
+git merge --no-ff release/v140
+git push origin master
+
+exit/b
+
+
+
+::_
+
+:merg_sq
+
+set fp=* Merge from the feature branch and squash all of the commits of the feature branch into ^
+a single commit.
+
+rem lu: Jul-27-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must specify which branch you want to merge from.
+  exit/b
+)
+
+echo.
+git merge --squash %2
+
+exit/b
+
+
+>< >< >< Footnote:
+
+Learned about this from a YouTube video.
 
 
 
@@ -3152,35 +3204,6 @@ echo %fp%
 echo.
 
 git merge master
-
-exit/b
-
-
-
-::_
-
-:merg
-
-set fp=* Original merging sample code from GitHub.
-
-rem lu: Dec-10-2019
-
-echo.
-echo %fp%
-
-echo.
-
-Step 1: From your project repository, bring in the changes and test.
-
-git fetch origin
-git checkout -b release/v140 origin/release/v140
-git merge master
-
-Step 2: Merge the changes and update on GitHub.
-
-git checkout master
-git merge --no-ff release/v140
-git push origin master
 
 exit/b
 

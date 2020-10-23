@@ -168,8 +168,9 @@ call m compose_variable %2
 
 if "%cbf_expanded_variable%" == "" (
   echo. 
-  echo * Error: There is no definition of "cbf_%2" for the alias "%1". - Oct-7-2020_12_50_PM
-  exit/b
+  echo * Pit of Success: There is no definition of "cbf_%2" for the alias "%1". - Oct-7-2020_12_50_PM
+  goto :set_precedence
+  rem exit/b
 )
 
 set cbf_parameter=%cbf_expanded_variable%

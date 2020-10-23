@@ -306,9 +306,8 @@ if "%~1" == "" (
 echo.
 echo 7. (!perc)
 if "%~2" == "" (
-  echo Percent 2 nothing.
-) else (
-  echo Percent 2 is something.
+  echo Percent 2 is required.
+  exit/b
 )
 
 exit/b

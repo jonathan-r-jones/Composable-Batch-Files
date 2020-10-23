@@ -6522,6 +6522,20 @@ exit/b
 
 :odesl
 
+:sr90
+
+:sia
+
+:sr40
+
+:kisc
+
+:sr91
+
+:sran
+
+:gifl2
+
 :pass-through
 
 set fp=* Pass through.
@@ -7397,15 +7411,17 @@ exit/b
 
 :sg
 
+:sugi
+
 :super_bin
 
 :super_git
 
 set fp=* Git power user bin. Loaded with utilities.
 
-rem skw: git utilities
+rem skw: git utilities, git user bin, super path, super git
 
-rem lu: Jun-4-2020
+rem lu: Oct-23-2020
 
 echo.
 echo %fp%
