@@ -7772,6 +7772,35 @@ exit/b
 
 ::_
 
+:pp
+
+set fp=* PowerPoint.
+
+rem lu: Oct-25-2020
+
+echo.
+echo %fp%
+
+rem Determine installation path.
+
+set cbf_application=
+
+if exist "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE" set cbf_application=C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE
+
+if "%cbf_application%" == "" (
+  echo.
+  echo * PowerPoint doesn't seem to be installed.
+  exit/b 1
+)
+
+set cbf_path=%cbf_application:\powerpoint.exe=%
+
+exit/b
+
+
+
+::_
+
 :wo
 
 set fp=* Word.
@@ -10956,6 +10985,23 @@ exit/b
 
 ::_
 
+:ppb
+
+set fp=* Use PowerPoint to edit a blank document.
+
+rem lu: Oct-25-2020
+
+echo.
+echo %fp%
+
+set cbf_fn=%share-zone%\miscellany\blank.pptx
+
+exit/b
+
+
+
+::_
+
 :wob
 
 :woblk
@@ -13346,6 +13392,8 @@ echo %fp%
 set cbf_clone_url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
 
 set cbf_path=%dropbox%\IT\Mob Programming Presentation Dec-18-2020
+
+set cbf_pp=%cbf_path%\mob.pptx
 
 exit/b
 
