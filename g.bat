@@ -3407,10 +3407,7 @@ echo %fp%
 
 if "%~2" == "" (
   echo.
-  echo * Percent 2, new destination branch, is a required field.
-  echo.
-  echo * And Percent 3, source branch, is a required field.
-  exit/b
+  echo * Percent 2, destination branch, is a required field. This is the new branch that will be created.
 )
 
 if "%~3" == "" (

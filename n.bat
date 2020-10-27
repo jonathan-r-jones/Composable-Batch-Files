@@ -6536,6 +6536,10 @@ exit/b
 
 :gifl2
 
+:sr92
+
+:ah
+
 :pass-through
 
 set fp=* Pass through.

@@ -89,8 +89,6 @@ exit/b
 Footnote
 >< >< >< 
 
-Outcome: 
-
 
 
 :_

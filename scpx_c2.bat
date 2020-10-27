@@ -77,8 +77,8 @@ if %errorlevel% gtr 0 exit/b
 
 call td pems
 
-rem call scpx %1 cart_dv_secret.sec a
-call scpx %1 cart_fq_secret.sec a
+call scpx %1 cart_dv_secret.sec a
+rem call scpx %1 cart_fq_secret.sec a
 
 exit/b
 
@@ -96,8 +96,8 @@ sudo mkdir certs
 
 cd certs
 
-sudo cp /tmp/cart_fq_secret.sec .
-rem sudo cp /tmp/cart_dv_secret.sec .
+rem sudo cp /tmp/cart_fq_secret.sec .
+sudo cp /tmp/cart_dv_secret.sec .
 
 ll
 
