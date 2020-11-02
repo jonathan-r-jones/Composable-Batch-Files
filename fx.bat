@@ -34,9 +34,9 @@ echo %filep%
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_2=Parameter 1: Alias you wish to process.
+set parameter_1=Parameter 1: Alias you wish to process.
 
-set parameter_1=Parameter 2: Dynamically constructed cbf variable.
+set parameter_2=Parameter 2: Dynamically constructed cbf variable.
 
 set parameter_3=Parameter 3: Alias of your chosen application.
 
@@ -63,6 +63,9 @@ echo %0 csc xml me
 
 echo.
 echo %0 wcf java vsc
+
+echo.
+echo %0 1964 java me
 
 exit/b
 

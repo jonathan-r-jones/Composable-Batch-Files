@@ -132,7 +132,7 @@ set /p date_as_filename=<date_as_filename.txt
 
 ren Jenkinsfile Jenkinsfile_%date_as_filename%.txt
 
-dir *.txt
+call d d
 
 exit/b
 

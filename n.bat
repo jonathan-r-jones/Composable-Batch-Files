@@ -6540,6 +6540,20 @@ exit/b
 
 :ah
 
+:1976
+
+:sr93
+
+:sr94
+
+:sr95
+
+:sr96
+
+:logs
+
+:grey
+
 :pass-through
 
 set fp=* Pass through.
@@ -10778,6 +10792,23 @@ exit/b
 
 
 :_+ Jenkins Family 2 (!fyje)
+
+
+
+::_
+
+:paj
+
+set fp=* Pre-Ansible Jenkinsfile.
+
+rem lu: Jun-11-2019
+
+echo.
+echo %fp%
+
+set cbf_jf=%share-zone%\Jenkinsfiles\Jenkinsfile_Pre-Ansible_Changes
+
+exit/b
 
 
 
