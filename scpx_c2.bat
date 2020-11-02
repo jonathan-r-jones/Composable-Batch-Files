@@ -64,7 +64,7 @@ exit/b
 
 :main_function
 
-set fp=* Add dv secret file to new team s60 server.
+set fp=* Add the secret file to a new server.
 
 echo.
 echo %fp%
@@ -77,8 +77,8 @@ if %errorlevel% gtr 0 exit/b
 
 call td pems
 
-call scpx %1 cart_dv_secret.sec a
-rem call scpx %1 cart_fq_secret.sec a
+rem call scpx %1 cart_dv_secret.sec a
+call scpx %1 cart_fq_secret.sec a
 
 exit/b
 
@@ -91,13 +91,13 @@ and copy the secret file to the correct folder.
 
 cd /etc
 
-rem qq
+rem qq1
 sudo mkdir certs
 
 cd certs
 
-rem sudo cp /tmp/cart_fq_secret.sec .
-sudo cp /tmp/cart_dv_secret.sec .
+sudo cp /tmp/cart_fq_secret.sec .
+rem sudo cp /tmp/cart_dv_secret.sec .
 
 ll
 
