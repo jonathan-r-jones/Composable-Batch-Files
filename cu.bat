@@ -168,31 +168,6 @@ exit/b
 
 :_
 
-:main_function
-
-echo.
-echo %filep%
-
-call n %1
-
-echo.
-
-if "%cbf_header%" == "" (
-  call curl %2 %3 %4 %5 %cbf_url%
-) else (
-  call curl %2 %3 %4 %5 %cbf_url% -H "%cbf_header%"
-)
-
-echo.
-
-rem (!rfsp) (mov-2)
-
-exit/b
-
-
-
-:_
-
 :t
 
 set fp=* Basic curl test of a URL.
@@ -242,6 +217,31 @@ rem curl http://169.254.169.254/latest/meta-data/
 @echo on
 curl http://%cbf_ip%/latest/meta-data/
 @echo off
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+echo.
+echo %filep%
+
+call n %1
+
+echo.
+
+if "%cbf_header%" == "" (
+  call curl %2 %3 %4 %5 %cbf_url%
+) else (
+  call curl %2 %3 %4 %5 %cbf_url% -H "%cbf_header%"
+)
+
+echo.
+
+rem (!rfsp) (mov-2)
 
 exit/b
 

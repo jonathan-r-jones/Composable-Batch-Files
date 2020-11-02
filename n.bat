@@ -13391,7 +13391,9 @@ echo %fp%
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
 
-set cbf_path=%dropbox%\IT\Mob Programming Presentation Dec-18-2020
+set cbf_gh=https://github.com/jonathan-r-jones/Mob-Programming-Demo
+
+set cbf_path=%dropbox%\IT\Mob-Programming-Presentation-Dec-18-2020
 
 set cbf_pp=%cbf_path%\mob.pptx
 
