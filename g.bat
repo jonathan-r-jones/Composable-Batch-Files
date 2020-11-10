@@ -174,22 +174,6 @@ exit/b
 
 :_
 
-:10
-
-set fp=* 10. Diff head.
-
-echo.
-echo %fp%
-
-echo.
-git diff HEAD
-
-exit/b
-
-
-
-:_
-
 :pushnv1_refer
 
 set fp=* 3a. Push changes into Nov-1 development branch.
@@ -756,6 +740,8 @@ exit/b
 
 :un
 
+:unst
+
 set fp=* Unstage for commit. If %2 is blank, all files will be unstaged.
 
 rem lu: Nov-27-2017
@@ -766,6 +752,13 @@ echo %fp%
 git reset HEAD %2
 
 exit/b
+
+
+Footnote
+>< >< >< 
+
+This worked for Niroop's presentation on Nov-5-2020.
+
 
 
 
@@ -1646,23 +1639,6 @@ exit/b
 
 :_
 
-:diff
-
-set fp=* Diff.
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-git diff
-
-exit/b
-
-
-
-:_
-
 :ss_old
 
 :super_status_old
@@ -1830,6 +1806,12 @@ git fetch
 git rebase origin/master
 
 exit/b
+
+
+Footnote
+>< >< >< 
+
+Use "git rebase master" ONLY if master is local only! - Niroop, Nov-5-2020
 
 
 
@@ -2187,26 +2169,6 @@ exit/b
 
 :_
 
-:rvrrm
-
-set fp=* Revert back to what's in the remote repo, master branch.
-
-rem lu: Oct-15-2019
-
-rem I was getting this message: Your branch is ahead of 'origin/master' by 5 commits.
-
-echo.
-echo %fp%
-
-echo.
-git reset --hard origin/master
-
-exit/b
-
-
-
-:_
-
 :lere
 
 set fp=* Leah's revert command. A benefit of using revert versus reset is that revert keeps the history.
@@ -2327,12 +2289,15 @@ echo %fp%
 call pn sugi>nul
 
 if "%~2" == "" (
-  echo Percent 2, grep search string, is required.
+  echo.
+  echo * Percent 2, grep search string, is required.
   exit/b
 )
 
+@echo on
 echo.
 git branch -a | %cbf_path%\grep %2
+@echo off
 
 exit/b
 
@@ -2943,6 +2908,14 @@ echo.
 git branch -D %2
 
 exit/b
+
+
+Footnote
+>< >< >< 
+
+git branch -D branch name (You are sure you want to delete the repo)
+
+git branch -d branch name
 
 
 
@@ -4100,6 +4073,91 @@ echo.
 git reset --hard HEAD
 git clean -f
 git pull
+
+exit/b
+
+
+
+::_
+
+:rvrrm
+
+set fp=* Revert back to what's in the remote repo, master branch.
+
+rem lu: Oct-15-2019
+
+rem I was getting this message: Your branch is ahead of 'origin/master' by 5 commits.
+
+echo.
+echo %fp%
+
+echo.
+git reset --hard origin/master
+
+exit/b
+
+
+
+:_+ Diff (!fydiff)
+
+
+
+::_
+
+:10
+
+set fp=* 10. Diff head.
+
+echo.
+echo %fp%
+
+echo.
+git diff HEAD
+
+exit/b
+
+
+
+::_
+
+:diff
+
+set fp=* Diff.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+git diff
+
+exit/b
+
+
+
+::_
+
+:diff2
+
+set fp=* Difference between 2 branches.
+
+rem lu: Nov-5-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, first branch to compare, is a required field.
+)
+
+if "%~3" == "" (
+  echo.
+  echo * Percent 3, second branch to compare, is a required field.
+  exit/b
+)
+
+git diff %1 %2
 
 exit/b
 

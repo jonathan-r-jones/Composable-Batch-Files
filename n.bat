@@ -6558,6 +6558,26 @@ exit/b
 
 :pems2
 
+:gitf2
+
+:gitf
+
+:gitf3
+
+:1715
+
+:sr97
+
+:apac
+
+:sr98
+
+:te2039
+
+:te1715
+
+:sr99
+
 :pass-through
 
 set fp=* Pass through.
@@ -9109,6 +9129,20 @@ echo %fp%
 set cbf_path=%java_home%
 
 exit/b
+
+
+Footnote
+>< >< >< 
+
+c:\aa\jdk-11.0.9
+
+Prior to Nov-9-2020 Java Home on GFE was: c:\aa\Java_Jdk_1.8.0.241
+
+setx -m JAVA_HOME "c:\aa\jdk-11.0.9"
+
+setx -m JAVA_HOME "C:\Program Files\Java\jdk-11.0.7"
+
+https://www.codejava.net/java-se/download-and-install-java-11-openjdk-and-oracle-jdk
 
 
 

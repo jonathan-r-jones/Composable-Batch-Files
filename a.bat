@@ -4726,4 +4726,208 @@ set the RDS to stopped, after patching is complete. For more information: RDS Au
 
 
 
+:_+ Health Check Target Groups
+
+
+
+::_
+
+:hcv
+
+set fp=* Health check verbose for all 4.
+
+rem lu: Nov-2-2020
+
+echo.
+echo %fp%
+
+call a devh
+
+call a devt
+
+call a fqth
+
+call a fqtt
+
+exit/b
+
+
+
+::_
+
+:hc
+
+:hcs
+
+set fp=* Health check succinct for all 4.
+
+rem lu: Nov-2-2020
+
+echo.
+echo %fp%
+
+call a devh_succinct
+
+call a devt_succinct
+
+call a fqth_succinct
+
+call a fqtt_succinct
+
+exit/b
+
+
+
+::_
+
+:devh
+
+set fp=* Health check %1.
+
+rem lu: Nov-2-2020
+
+echo.
+echo %fp%
+
+echo.
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dev-tg/3cafb5989048ae71
+
+exit/b
+
+
+
+::_
+
+:devt
+
+set fp=* Health check %1.
+
+rem lu: Nov-2-2020
+
+echo.
+echo %fp%
+
+echo.
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dv-net-tg/c8b6bd0fbf655d84
+
+exit/b
+
+
+
+::_
+
+:fqth
+
+set fp=* Health check %1.
+
+rem lu: Nov-2-2020
+
+echo.
+echo %fp%
+
+echo.
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fqt-tg/8d84c6fdcd20b25e
+
+exit/b
+
+
+
+::_
+
+:fqtt
+
+set fp=* Health check %1.
+
+rem lu: Nov-2-2020
+
+echo.
+echo %fp%
+
+echo.
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05
+
+exit/b
+
+
+
+::_
+
+:devh_succinct
+
+set fp=* Health check for DEV HTTP.
+
+rem lu: Nov-3-2020
+
+echo.
+echo %fp%
+
+echo.
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dev-tg/3cafb5989048ae71 | find /i "unhealthy"
+
+if %errorlevel%==0 echo * FQT HTTP is is unhealthy.
+
+exit/b
+
+
+
+::_
+
+:devt_succinct
+
+set fp=* Health check for DEV TCP.
+
+rem lu: Nov-3-2020
+
+echo.
+echo %fp%
+
+echo.
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dv-net-tg/c8b6bd0fbf655d84 | find /i "unhealthy"
+
+if %errorlevel%==0 echo * FQT TCP is is unhealthy.
+
+exit/b
+
+
+
+::_
+
+:fqth_succinct
+
+set fp=* Health check for FQT HTTP.
+
+rem lu: Nov-3-2020
+
+echo.
+echo %fp%
+
+echo.
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05 | find /i "unhealthy"
+
+if %errorlevel%==0 echo * FQT HTTP is is unhealthy.
+
+exit/b
+
+
+
+::_
+
+:fqtt_succinct
+
+set fp=* Health check for FQT TCP.
+
+rem lu: Nov-3-2020
+
+echo.
+echo %fp%
+
+echo.
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05 | find /i "unhealthy"
+
+if %errorlevel%==0 echo * FQT TCP is is unhealthy.
+
+exit/b
+
+
+
 :_ (!rfsp) (mov-6)

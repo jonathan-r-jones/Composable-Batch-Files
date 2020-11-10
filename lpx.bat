@@ -61,6 +61,9 @@ echo %0 jjgh url
 echo.
 echo %0 je je
 
+echo.
+echo %0 fqma ip
+
 exit/b
 
 

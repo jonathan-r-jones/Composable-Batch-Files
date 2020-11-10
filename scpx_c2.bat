@@ -36,8 +36,13 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Server alias.
 
+set parameter_2=DV or FQ, depending on the environment you want to use. DV is the default. (Optional)
+
 echo.
 echo %parameter_1%
+
+echo.
+echo %parameter_2%
 
 echo.
 echo Batch file style: Single Task
@@ -77,7 +82,16 @@ if %errorlevel% gtr 0 exit/b
 
 call td pems
 
-rem call scpx %1 cart_dv_secret.sec a
+if /i "%~2" == "fq" goto use_fqt
+
+call scpx %1 cart_dv_secret.sec a
+
+exit/b
+
+
+
+:use_fqt
+
 call scpx %1 cart_fq_secret.sec a
 
 exit/b
@@ -91,13 +105,12 @@ and copy the secret file to the correct folder.
 
 cd /etc
 
-rem qq1
 sudo mkdir certs
 
 cd certs
 
 sudo cp /tmp/cart_fq_secret.sec .
-rem sudo cp /tmp/cart_dv_secret.sec .
+sudo cp /tmp/cart_dv_secret.sec .
 
 ll
 

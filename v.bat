@@ -304,9 +304,18 @@ if "%~1" == "" (
 )
 
 echo.
-echo 7. (!perc)
-if "%~2" == "" (
-  echo Percent 2 is required.
+echo 7. (!p2, !perc)
+if /i "%~2" == "" (
+  echo.
+  echo * Parameter 2 is required.
+  exit/b
+)
+
+echo.
+echo 8. (!p3)
+if "%~3" == "" (
+  echo.
+  echo * Parameter 3 is required.
   exit/b
 )
 
@@ -725,7 +734,7 @@ exit/b
 
 
 
-:_+ Find Command (!find)
+:_+ Find Command (!find, !pipe)
 
 
 
@@ -842,7 +851,7 @@ exit/b
 
 :validate_path
 
-if %errorlevel% gtr 0 exit/b (!gtr, !err, !p2, !erro, !el, !erle)
+if %errorlevel% gtr 0 exit/b (!gtr, !err, !erro, !el, !erle)
 
 if %errorlevel% gtr 0 (
   echo.

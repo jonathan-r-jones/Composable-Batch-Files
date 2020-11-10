@@ -14,6 +14,11 @@ set filep=* Surf to the Jenkins url of an alias.
 
 set fp=* Route callers.
 
+if "%~1" == "" (
+  call je ma
+  exit/b
+)
+
 if "%~1" == "/?" goto help
 
 goto use_default_browser
@@ -70,11 +75,6 @@ set cbf_application=%cbf_default_browser%
 :main_function
 
 set cbf_je=
-
-if "%~1" == "" (
-  call je je
-  exit/b
-)
 
 call n %1
 

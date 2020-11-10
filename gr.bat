@@ -803,6 +803,8 @@ exit/b
 
 :test
 
+:tests
+
 set fp=* Run Java unit tests.
 
 rem skw run tests, run unit tests
