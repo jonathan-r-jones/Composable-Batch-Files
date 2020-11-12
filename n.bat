@@ -9900,23 +9900,6 @@ exit/b
 
 
 
-:_
-
-:ij
-
-set fp=* IntelliJ.
-
-rem lu: Aug-9-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe
-
-exit/b
-
-
-
 :_+ Localhost
 
 
@@ -13447,29 +13430,6 @@ exit/b
 
 
 
-:_
-
-:mob
-
-set fp=* Mob Programming Presentation Dec-18-2020.
-
-rem lu: Oct-9-2020
-
-echo.
-echo %fp%
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
-
-set cbf_gh=https://github.com/jonathan-r-jones/Mob-Programming-Demo
-
-set cbf_path=%dropbox%\IT\Mob-Programming-Presentation-Dec-18-2020
-
-set cbf_pp=%cbf_path%\mob.pptx
-
-exit/b
-
-
-
 :_+ Zoom and Teams
 
 
@@ -13520,6 +13480,152 @@ echo.
 echo %fp%
 
 set cbf_fn=%share-zone%\Miscellany\Ansible_Code_Keepers.txt
+
+exit/b
+
+
+
+:_
+
+:ij
+
+set fp=* IntelliJ.
+
+rem lu: Nov-11-2020
+
+echo.
+echo %fp%
+
+rem Determine installation path.
+
+set cbf_application=
+
+if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe
+if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe
+
+if "%cbf_application%" == "" (
+  echo.
+  echo * IntelliJ is not installed.
+  exit/b 1
+)
+
+set cbf_path=%cbf_application:\idea64.exe=%
+
+exit/b
+
+
+
+:_
+
+:jde
+
+set fp=* Java Dev. Env.
+
+rem lu: Nov-11-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%dropbox%\IT\Setting up a Java Development Environment
+
+exit/b
+
+
+
+:_ Mob Presentation
+
+
+
+::_
+
+:boga
+
+set fp=* Bowling game.
+
+rem lu: Nov-11-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+rem       qq-1
+
+set cbf_branch=master
+
+set cbf_path=%cbf_path%\bowling-game
+
+set cbf_clone_url=https://github.com/yboug/bowling-game.git
+
+set cbf_url=https://github.com/yboug/bowling-game
+
+exit/b
+
+
+
+::_
+
+:jboga
+
+set fp=* Java Bowling game.
+
+rem lu: Nov-11-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+rem       qq-1
+
+set cbf_path=%cbf_path%\java-bowling-game
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
+
+set cbf_url=https://github.com/jonathan-r-jones/Java-Bowling-Game
+
+exit/b
+
+
+
+::_
+
+:bowl
+
+set fp=* My implementation of Bowling game.
+
+rem lu: Nov-11-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+rem       qq-1
+
+set cbf_branch=main
+
+set cbf_path=%cbf_path%\bowl
+
+exit/b
+
+
+
+::_
+
+:mob
+
+set fp=* Mob Programming Presentation Dec-18-2020.
+
+rem lu: Oct-9-2020
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
+
+set cbf_gh=https://github.com/jonathan-r-jones/Mob-Programming-Demo
+
+set cbf_path=%dropbox%\IT\Mob-Programming-Presentation-Dec-18-2020
+
+set cbf_pp=%cbf_path%\mob.pptx
 
 exit/b
 

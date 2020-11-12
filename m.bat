@@ -4081,30 +4081,6 @@ exit/b
 
 ::_
 
-:aff_old
-
-:affi_old
-
-:inot_old
-
-set fp=* Open affinity files - old.
-
-rem lu: Jan-9-2019
-
-echo.
-echo %fp%
-
-start Mew32.exe "%reach out%\WK.asc" "%reach out%\CC.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" 
-"%reach out%\DI.asc" 
-"%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" 
-"%reach out%\TR.asc" "%savannah%\reach out\OC.asc" "%composable_batch_files%\n.bat"
-
-exit/b
-
-
-
-::_
-
 :aff
 
 set fp=* Open affinity files.
@@ -4134,6 +4110,59 @@ attrib +r "%share-zone%\copy of cc.asc"
 
 start mew32 %cbf_fn_list%
 
+
+exit/b
+
+
+
+::_
+
+:pres
+
+set fp=* Open presentation files.
+
+rem lu: Nov-11-2020
+
+echo.
+echo %fp%
+
+set cbf_fn_list=
+
+set cbf_fn_list="%dropbox%\savannah\reach out\WK.asc"
+
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CC.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CM.asc"
+set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\IT.asc"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\m.bat"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\ni.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\n.bat"
+
+start mew32 %cbf_fn_list%
+
+
+exit/b
+
+
+
+::_
+
+:aff_old
+
+:affi_old
+
+:inot_old
+
+set fp=* Open affinity files - old.
+
+rem lu: Jan-9-2019
+
+echo.
+echo %fp%
+
+start Mew32.exe "%reach out%\WK.asc" "%reach out%\CC.asc" "%reach out%\CM.asc" "%reach out%\IT.asc" 
+"%reach out%\DI.asc" 
+"%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" 
+"%reach out%\TR.asc" "%savannah%\reach out\OC.asc" "%composable_batch_files%\n.bat"
 
 exit/b
 

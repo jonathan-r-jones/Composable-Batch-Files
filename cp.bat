@@ -30,6 +30,9 @@ echo.
 echo %filep%
 
 echo.
+echo Batch file style: Multipurpose
+
+echo.
 echo Usage: %0 [Parameter 1]
 
 echo.
@@ -40,9 +43,6 @@ echo Example(s):
 
 echo.
 echo cp mecfg
-
-echo.
-echo Batch file style: Multipurpose
 
 exit/b
 
