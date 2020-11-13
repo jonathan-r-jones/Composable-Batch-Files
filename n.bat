@@ -6578,6 +6578,12 @@ exit/b
 
 :sr99
 
+:anbo
+
+:docan
+
+:msan
+
 :pass-through
 
 set fp=* Pass through.
@@ -13371,27 +13377,6 @@ exit/b
 
 
 
-:_
-
-:cove
-
-set fp=* Cookbook version number.
-
-rem skw: Chef version number.
-
-rem lu: Jun-17-2020
-
-echo.
-echo %fp%
-
-call pn caco>nul
-
-set cbf_fn=%cbf_path%\metadata.rb
-
-exit/b
-
-
-
 :_+ Pictures
 
 
@@ -13548,7 +13533,6 @@ echo.
 echo %fp%
 
 call pn r>nul
-rem       qq-1
 
 set cbf_branch=master
 
@@ -13574,35 +13558,12 @@ echo.
 echo %fp%
 
 call pn r>nul
-rem       qq-1
 
 set cbf_path=%cbf_path%\java-bowling-game
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
 
 set cbf_url=https://github.com/jonathan-r-jones/Java-Bowling-Game
-
-exit/b
-
-
-
-::_
-
-:bowl
-
-set fp=* My implementation of Bowling game.
-
-rem lu: Nov-11-2020
-
-echo.
-echo %fp%
-
-call pn r>nul
-rem       qq-1
-
-set cbf_branch=main
-
-set cbf_path=%cbf_path%\bowl
 
 exit/b
 
@@ -13626,6 +13587,27 @@ set cbf_gh=https://github.com/jonathan-r-jones/Mob-Programming-Demo
 set cbf_path=%dropbox%\IT\Mob-Programming-Presentation-Dec-18-2020
 
 set cbf_pp=%cbf_path%\mob.pptx
+
+exit/b
+
+
+
+:_
+
+:cove
+
+set fp=* Cookbook version number.
+
+rem skw: Chef version number.
+
+rem lu: Jun-17-2020
+
+echo.
+echo %fp%
+
+call pn caco>nul
+
+set cbf_fn=%cbf_path%\metadata.rb
 
 exit/b
 

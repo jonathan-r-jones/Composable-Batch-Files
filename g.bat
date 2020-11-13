@@ -2485,16 +2485,14 @@ from tag, create tag from branch, create a branch from a tag, create branch from
 
 :cbft
 
-:cbbt
-
-set fp=* Create a branch based on a tag.
+set fp=* Create branch from tag.
 
 rem lu: Oct-14-2020
 
 echo.
 echo %fp%
 
-set cbf_git_version=16
+set cbf_git_version=17
 
 call td ma
 
@@ -2502,9 +2500,9 @@ call s
 
 echo.
 @echo on
-git checkout -b release_v_1_%cbf_git_version%_0 tags/v1.%cbf_git_version%.0
+git checkout -b release-1-%cbf_git_version%-0 tags/v1.%cbf_git_version%.0
 
-git push --set-upstream origin release_v_1_%cbf_git_version%_0
+git push --set-upstream origin release-1-%cbf_git_version%-0
 @echo off
 
 exit/b
@@ -2513,7 +2511,7 @@ exit/b
 
 ::_
 
-:cbfts
+:cbft-s
 
 set fp=* Create a branch based on a tag, special edition.
 

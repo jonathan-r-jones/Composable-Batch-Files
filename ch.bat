@@ -647,9 +647,15 @@ knife cookbook upload cart -o c:\cookbook_test
 
 exit/b
 
->< >< Footnote:
+
+Footnote
+>< >< ><
 
 Jun-17-2020 Result:
+
+C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
+Uploading cart           [0.1.6]
+Uploaded 1 cookbook.
 
 Uploading cart           [0.1.3]
 Uploaded 1 cookbook.
