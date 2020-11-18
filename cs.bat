@@ -93,6 +93,10 @@ echo.
 echo td ma
 echo %0 "kiosk session length" -g ma
 
+echo.
+echo td caco
+echo %0 "no_cookie.html" -g caco
+
 exit/b
 
 (!rfsp) (mov-5)

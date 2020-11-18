@@ -6584,6 +6584,16 @@ exit/b
 
 :msan
 
+:dlan
+
+:cpan
+
+:nnws
+
+:jero
+
+:sr100
+
 :pass-through
 
 set fp=* Pass through.

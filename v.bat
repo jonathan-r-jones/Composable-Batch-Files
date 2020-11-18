@@ -740,6 +740,33 @@ exit/b
 
 ::_
 
+:tfc
+
+set fp=* Test find command.
+
+echo.
+echo %fp%
+
+set test_find=hello
+
+echo %test_find% | find /i "hello">nul
+
+if %errorlevel% == 0 (
+  echo.
+  echo * It contains hello.
+  exit/b
+)
+
+echo. 
+echo * Does NOT contain hello.
+echo.
+
+exit/b
+
+
+
+::_
+
 :which_environment_is_currently_set
 
 set fp=* Which environment is the kiosk pointing to? (skw finding text in file)

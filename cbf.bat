@@ -114,6 +114,7 @@ echo       g  Git
 echo      gg  Git Gui helper Has TD parameter
 echo      gh  Surf to GitHub websites
 echo      gl  Glossary of terms used in CBF
+echo    gose  Google searcher
 echo      gr  Gradle
 echo       h  Sencha
 echo       i  Information of CBF variable value assignments
@@ -123,12 +124,11 @@ echo      je  Surf to Jenkins websites
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations
 echo      kc  Connect to servers
-echo       l  Google searcher
+echo       l  Use a dynamic variable to copy a cbf variable to the clipboard
 echo      lp  Load CBF_Path to the clipboard
 echo     lpf  Load cbf_fn of passed in alias onto the clipboard
 echo    lpfc  Load cbf_fn contents to the clipboard
 echo   lpfwp  Load cbf_fn without path of passed in alias onto the clipboard
-echo     lpx  Use a dynamic variable to copy a cbf variable to the clipboard
 echo       m  Perform miscellaneous tasks using a function routing style
 echo     mav  Maven
 echo     mcd  Make and navigate (cd) to a folder

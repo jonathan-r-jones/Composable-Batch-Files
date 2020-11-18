@@ -4363,7 +4363,7 @@ exit/b
 
 :rebo
 
-set fp=* Reboot instance "%2". This doesn't seem to work. Apr-13-2020
+set fp=* Reboot instance "%2". This doesn't seem to work. Nov-17-2020_1_29_PM
 
 rem lu: Apr-9-2020
 
@@ -4862,9 +4862,9 @@ echo.
 echo %fp%
 
 echo.
-aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dev-tg/3cafb5989048ae71 | find /i "unhealthy"
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dev-tg/3cafb5989048ae71 | find /i "unhealthy">nul
 
-if %errorlevel%==0 echo * FQT HTTP is is unhealthy.
+if %errorlevel%==0 echo * FQT HTTP is unhealthy. * * * * * * * * * * * * * * * * * * * * * * * 
 
 exit/b
 
@@ -4882,9 +4882,9 @@ echo.
 echo %fp%
 
 echo.
-aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dv-net-tg/c8b6bd0fbf655d84 | find /i "unhealthy"
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dv-net-tg/c8b6bd0fbf655d84 | find /i "unhealthy">nul
 
-if %errorlevel%==0 echo * FQT TCP is is unhealthy.
+if %errorlevel%==0 echo * FQT TCP is unhealthy. * * * * * * * * * * * * * * * * * * * * * * * 
 
 exit/b
 
@@ -4894,17 +4894,17 @@ exit/b
 
 :fqth_succinct
 
-set fp=* Health check for FQT HTTP.
+set fp=* Health check FQT HTTP.
 
-rem lu: Nov-3-2020
+rem lu: Nov-2-2020
 
 echo.
 echo %fp%
 
 echo.
-aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05 | find /i "unhealthy"
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fqt-tg/8d84c6fdcd20b25e | find /i "unhealthy">nul
 
-if %errorlevel%==0 echo * FQT HTTP is is unhealthy.
+if %errorlevel%==0 echo * FQT HTTP is unhealthy. * * * * * * * * * * * * * * * * * * * * * * * 
 
 exit/b
 
@@ -4922,9 +4922,10 @@ echo.
 echo %fp%
 
 echo.
-aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05 | find /i "unhealthy"
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05 | find /i "unhealthy">nul
 
-if %errorlevel%==0 echo * FQT TCP is is unhealthy.
+rem echo Errorlevel: %errorlevel%
+if %errorlevel%==0 echo * FQT TCP is unhealthy. * * * * * * * * * * * * * * * * * * * * * * * 
 
 exit/b
 
