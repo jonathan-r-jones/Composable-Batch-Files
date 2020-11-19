@@ -13527,6 +13527,27 @@ exit/b
 
 
 
+:_
+
+:cove
+
+set fp=* Cookbook version number.
+
+rem skw: Chef version number.
+
+rem lu: Jun-17-2020
+
+echo.
+echo %fp%
+
+call pn caco>nul
+
+set cbf_fn=%cbf_path%\metadata.rb
+
+exit/b
+
+
+
 :_ Mob Presentation
 
 
@@ -13602,22 +13623,24 @@ exit/b
 
 
 
-:_
+::_
 
-:cove
+:rnk
 
-set fp=* Cookbook version number.
+set fp=* Roman Numeral Kata
 
-rem skw: Chef version number.
-
-rem lu: Jun-17-2020
+rem lu: Nov-18-2020
 
 echo.
 echo %fp%
 
-call pn caco>nul
+call pn r>nul
 
-set cbf_fn=%cbf_path%\metadata.rb
+set cbf_brancdh=main
+
+set cbf_path=%cbf_path%\%1
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Roman-Numeral-Kata.git
 
 exit/b
 
