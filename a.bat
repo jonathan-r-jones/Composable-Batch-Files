@@ -4325,10 +4325,60 @@ if %errorlevel% gtr 0 exit/b
 echo.
 call aws ec2 start-instances --instance-ids %cbf_instance_id%
 
-call %0 tag %2 AutoStopStartInstance True
+exit/b
 
-call %0 tag %2 Comment None
-                                       
+
+
+::_
+
+:stop
+
+set fp=* Stop instance "%2".
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+echo.
+call aws ec2 stop-instances --instance-ids %cbf_instance_id%
+
+exit/b
+
+
+
+::_
+
+:stop_for_good
+
+set fp=* Stop instance "%2" for good.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+echo.
+call aws ec2 stop-instances --instance-ids %cbf_instance_id%
+
+call %0 tag %2 AutoStopStartInstance False
+
+call %0 tag %2 Comment "Testing in progress."
+
 exit/b
 
 
@@ -4389,35 +4439,6 @@ exit/b
 
 ::_
 
-:stop
-
-set fp=* Stop instance "%2".
-
-rem lu: Mar-30-2020
-
-echo.
-echo %fp%
-
-call m validate_instance %2
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-echo.
-call aws ec2 stop-instances --instance-ids %cbf_instance_id%
-
-call %0 tag %2 AutoStopStartInstance False
-
-call %0 tag %2 Comment "Testing in progress."
-
-exit/b
-
-
-
-::_
-
 :desc
 
 set fp=* Describe a particular instance: "%2".
@@ -4444,6 +4465,63 @@ exit/b
 
 
 :_+ Tags
+
+
+
+::_
+
+:247
+
+set fp=* Keep awake for 24/7 the instance "%2".
+
+rem lu: Oct-7-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+call %0 tag %2 AutoStopStartInstance False
+
+call %0 tag %2 Comment "Testing in progress."
+
+rem qq
+call %0 tag %2 WeekendStop False
+
+exit/b
+
+
+
+::_
+
+:135
+
+set fp=* Keep awake, for 13 hours a day 5 days per week, the instance "%2".
+
+rem lu: Oct-7-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+call %0 tag %2 AutoStopStartInstance True
+
+call %0 tag %2 Comment "None."
+
+call %0 tag %2 WeekendStop True
+
+exit/b
 
 
 
@@ -4485,34 +4563,6 @@ call a tag %cbf_instance_alias% WeekendStop True
 call a tag %cbf_instance_alias% IC_PLATFORM LINUX
 
 call a tag %cbf_instance_alias% IC_TOWER_READY FALSE
-
-exit/b
-
-
-
-::_
-
-:247
-
-set fp=* Keep awake for 24/7 the instance "%2".
-
-rem lu: Oct-7-2020
-
-echo.
-echo %fp%
-
-call m validate_instance %2
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-call %0 tag %2 AutoStopStartInstance False
-
-call %0 tag %2 Comment "Testing in progress."
-
-call %0 tag %2 WeekendStop False
 
 exit/b
 
@@ -4759,12 +4809,14 @@ exit/b
 
 :hcs
 
-set fp=* Health check succinct for all 4.
+set fp=* Run a succinct for all 4 target groups.
 
 rem lu: Nov-2-2020
 
 echo.
 echo %fp%
+echo.
+echo.
 
 call a devh_succinct
 
@@ -4863,8 +4915,10 @@ echo %fp%
 
 echo.
 aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dev-tg/3cafb5989048ae71 | find /i "unhealthy">nul
-
 if %errorlevel%==0 echo * FQT HTTP is unhealthy. * * * * * * * * * * * * * * * * * * * * * * * 
+
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dev-tg/3cafb5989048ae71 | find /i "stopped">nul
+if %errorlevel%==0 echo * FQT HTTP is stopped. * * * * * * * * * * * * * * * * * * * * * * * 
 
 exit/b
 
@@ -4883,8 +4937,10 @@ echo %fp%
 
 echo.
 aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dv-net-tg/c8b6bd0fbf655d84 | find /i "unhealthy">nul
-
 if %errorlevel%==0 echo * FQT TCP is unhealthy. * * * * * * * * * * * * * * * * * * * * * * * 
+
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-dv-net-tg/c8b6bd0fbf655d84 | find /i "stopped">nul
+if %errorlevel%==0 echo * FQT TCP is stopped. * * * * * * * * * * * * * * * * * * * * * * * 
 
 exit/b
 
@@ -4903,8 +4959,10 @@ echo %fp%
 
 echo.
 aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fqt-tg/8d84c6fdcd20b25e | find /i "unhealthy">nul
-
 if %errorlevel%==0 echo * FQT HTTP is unhealthy. * * * * * * * * * * * * * * * * * * * * * * * 
+
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fqt-tg/8d84c6fdcd20b25e | find /i "stopped">nul
+if %errorlevel%==0 echo * FQT HTTP is stopped. * * * * * * * * * * * * * * * * * * * * * * * 
 
 exit/b
 
@@ -4923,9 +4981,10 @@ echo %fp%
 
 echo.
 aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05 | find /i "unhealthy">nul
-
-rem echo Errorlevel: %errorlevel%
 if %errorlevel%==0 echo * FQT TCP is unhealthy. * * * * * * * * * * * * * * * * * * * * * * * 
+
+aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05 | find /i "stopped">nul
+if %errorlevel%==0 echo * FQT TCP is stopped. * * * * * * * * * * * * * * * * * * * * * * * 
 
 exit/b
 

@@ -6594,6 +6594,26 @@ exit/b
 
 :sr100
 
+:sr101
+
+:ero
+
+:cfgh
+
+:immr
+
+:vaul
+
+:acdv
+
+:acfq
+
+:acdvli
+
+:acdvst
+
+:acfqro
+
 :pass-through
 
 set fp=* Pass through.
