@@ -13568,7 +13568,7 @@ exit/b
 
 
 
-:_ Mob Presentation
+:_+ Mob Presentation (!fycmob)
 
 
 
@@ -13614,7 +13614,7 @@ set cbf_path=%cbf_path%\java-bowling-game
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
 
-set cbf_url=https://github.com/jonathan-r-jones/Java-Bowling-Game
+set cbf_gh=https://github.com/jonathan-r-jones/Java-Bowling-Game
 
 exit/b
 
@@ -13647,7 +13647,7 @@ exit/b
 
 :rnk
 
-set fp=* Roman Numeral Kata
+set fp=* Roman Numeral Kata.
 
 rem lu: Nov-18-2020
 
@@ -13661,6 +13661,63 @@ set cbf_brancdh=main
 set cbf_path=%cbf_path%\%1
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Roman-Numeral-Kata.git
+
+exit/b
+
+
+
+::_
+
+:moti
+
+set fp=* Mob Timer.
+
+rem lu: Nov-21-2020
+
+echo.
+echo %fp%
+
+set cbf_url=http://mobtimer.zoeetrope.com/
+
+exit/b
+
+
+
+::_
+
+:boca
+
+set fp=* Bowling Calculator.
+
+rem lu: Nov-21-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.easycalculation.com/sports/bowling-score-calculator.php
+
+exit/b
+
+
+
+::_
+
+:poker
+
+set fp=* Poker Java kata tdd.
+
+rem lu: Nov-23-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_branch=master
+
+set cbf_path=%cbf_path%\%1
+
+set cbf_clone_url=https://github.com/xpepper/poker-hands-kata.git
 
 exit/b
 
