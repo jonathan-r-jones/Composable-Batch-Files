@@ -9176,6 +9176,12 @@ exit/b
 Footnote
 >< >< >< 
 
+Java Home on XPS Nov-24-2020. I removed the first 2.
+
+:C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+C:\ProgramData\Oracle\Java\javapath\java.exe
+C:\Program Files\Java\jdk1.8.0_241\bin\java.exe
+
 :+ Java Home on GFE
 
 C:\Program Files\Common Files\Oracle\Java\javapath\java.exe
@@ -13539,6 +13545,7 @@ set cbf_application=
 
 if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe
 if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe
+if exist "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin\idea64.exe
 
 if "%cbf_application%" == "" (
   echo.
