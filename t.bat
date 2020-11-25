@@ -26,7 +26,7 @@ set fp=* Route callers.
 
 if -%~1- == -/?- goto help
 
-rem if not -%~1- == -- goto %1
+if not -%~1- == -- goto %1
 
 goto code_execution_area
 
@@ -6398,37 +6398,6 @@ exit/b
 
 :
 
-set fp=* Test goto with no label found.
-
-rem Is there a way to test if a label exists in a batch file before calling the goto statemnt?
-
-rem lu: Jul-9-2018
-
-echo %fp%
-
-rem goto nonexistinglabel
-
-rem set "label=sub"
-REM next line to reset errorlevel to zero:
-call
-rem call :test7x7 2>nul
-
-rem This strange syntax in the following line of code "eats" the error message, although 
-rem I don't know why you'd want to do so.
-goto nonexistinglabel 2>nul
-
-echo hey
-
-echo * Errorlevel: %errorlevel%
-
-exit/b
-
-
-
-:_
-
-:
-
 set fp=* Use if exist for obj folder.
 
 rem lu: Jul-9-2018
@@ -7864,31 +7833,6 @@ echo %fp%
 
 echo.
 xcopy /d /h /r /y "%reach out%\cc.asc" "%share-zone%\copy of cc.asc"
-
-exit/b
-
-
-
-:_
-
-:
-
-set fp=* Interesting Java code snippet that I'm not sure what it does.
-
-rem lu: Jan-31-2019
-
-echo.
-echo %fp%
-
-rem From gradlew.bat
-
-echo.
-rem set JAVA_EXE=java.exe
-rem %JAVA_EXE% -version >NUL 2>&1
-
-java -version 2>&1
-
-if "%ERRORLEVEL%" == "0" echo Is zero.
 
 exit/b
 
@@ -11066,16 +11010,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Test weird percent.
@@ -11095,6 +11029,34 @@ echo Path 2: %cbf_path2%
 
 echo.
 echo Path 3: %cbf_path%3
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* 
+
+rem lu: 
+
+echo.
+echo %fp%
+
+rem qq2
+
 
 exit/b
 

@@ -1675,6 +1675,111 @@ exit/b
 
 
 
+:_+ Suppressing Error Messages
+
+
+
+::_
+
+:htse
+
+set fp=* How to suppress error messages in batch files.
+
+rem lu: Nov-24-2020
+
+echo.
+echo %fp%
+
+rem For example, this would suppress the standard cannot find label error message.
+goto %1 2>nul
+
+exit/b
+
+
+Footnote
+>< >< >< 
+
+All programs have three streams:
+
+Standard Input (the input from the console)
+
+Standard Output (general logging/UI output to the console)
+
+Standard Error (logging/UI output to the console meant for error messages or other exceptional 
+behavior)
+
+command >nul
+
+^ This says to pipe the standard-output stream to null.
+
+
+command 2>nul
+
+^ This says to pipe the standard-error stream to null.
+
+
+command 2>&1
+
+^ This says to pipe the standard-error stream to the same place as the standard-output stream.
+
+
+
+::_
+
+:
+
+set fp=* Interesting Java code snippet that I'm not sure what it does.
+
+rem lu: Jan-31-2019
+
+echo.
+echo %fp%
+
+rem From gradlew.bat
+
+echo.
+rem set JAVA_EXE=java.exe
+rem %JAVA_EXE% -version >NUL 2>&1
+
+java -version 2>&1
+
+if "%ERRORLEVEL%" == "0" echo Is zero.
+
+exit/b
+
+
+
+::_
+
+:tgw
+
+set fp=* Test goto with no label found.
+
+rem Is there a way to test if a label exists in a batch file before calling the goto statemnt?
+
+rem lu: Jul-9-2018
+
+echo %fp%
+
+rem goto nonexistinglabel
+
+rem set "label=sub"
+REM next line to reset errorlevel to zero:
+call
+rem call :test7x7 2>nul
+
+rem This strange syntax in the following line of code "eats" the error message, although 
+rem I don't know why you'd want to do so.
+goto nonexistinglabel 2>nul
+
+echo hey
+
+echo * Errorlevel: %errorlevel%
+
+exit/b
+
+
+
 :_
 
 :code_execution_area

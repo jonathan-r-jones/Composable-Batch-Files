@@ -6614,6 +6614,12 @@ exit/b
 
 :acfqro
 
+:stre
+
+:teca
+
+:tefd
+
 :pass-through
 
 set fp=* Pass through.
@@ -9169,6 +9175,22 @@ exit/b
 
 Footnote
 >< >< >< 
+
+:+ Java Home on GFE
+
+C:\Program Files\Common Files\Oracle\Java\javapath\java.exe
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+C:\Program Files (x86)\Java\jre1.8.0_261\bin\java.exe
+
+::c:\aa\Java_Jdk_1.8.0.241\bin>java -version
+java version "1.8.0_241"
+Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
+Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)
+
+::c:\aa\Java_Jdk_1.8.0.241_part_2\bin>java -version
+java version "1.8.0_241"
+Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
+Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)
 
 c:\aa\jdk-11.0.9
 

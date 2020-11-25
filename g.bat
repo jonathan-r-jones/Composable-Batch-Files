@@ -3467,6 +3467,25 @@ exit/b
 
 ::_
 
+:sbj
+
+set fp=* Switch to the jj_devops branch.
+
+rem lu: Nov-24-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout jj_devops
+
+exit/b
+
+
+
+
+::_
+
 :cbc
 
 set fp=* Create a local branch based on your current branch.
