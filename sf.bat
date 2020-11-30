@@ -224,6 +224,14 @@ if "%cbf_parameter%" == "" (
 )
 
 if "%cbf_parameter%" == "" (
+  set cbf_parameter=%cbf_gh%
+)
+
+if "%cbf_parameter%" == "" (
+  set cbf_parameter=%cbf_clone_url%
+)
+
+if "%cbf_parameter%" == "" (
   echo.
   echo * Error: Could not find a suitable CBF parameter for sf.bat to use. Nov-17-2020_7_03_PM
   exit/b
