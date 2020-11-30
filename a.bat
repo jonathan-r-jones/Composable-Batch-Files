@@ -4490,7 +4490,6 @@ call %0 tag %2 AutoStopStartInstance False
 
 call %0 tag %2 Comment "Testing in progress."
 
-rem qq
 call %0 tag %2 WeekendStop False
 
 exit/b
@@ -4784,7 +4783,7 @@ set the RDS to stopped, after patching is complete. For more information: RDS Au
 
 :hcv
 
-set fp=* Health check verbose for all 4.
+set fp=* Check health status for all 4 with verbose feedback.
 
 rem lu: Nov-2-2020
 
@@ -4970,9 +4969,13 @@ exit/b
 
 ::_
 
+:fqtts
+
 :fqtt_succinct
 
-set fp=* Health check for FQT TCP.
+:hct
+
+set fp=* Succinct health check for FQT TCP.
 
 rem lu: Nov-3-2020
 
