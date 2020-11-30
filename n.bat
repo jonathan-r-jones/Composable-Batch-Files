@@ -1370,9 +1370,9 @@ exit/b
 
 :_
 
-:bowl
+:bowl-cs
 
-set fp=Bowling solution.
+set fp=Bowling solution in C#.
 
 rem lu: Feb-6-2018
 
@@ -13603,9 +13603,34 @@ exit/b
 
 ::_
 
-:boga
+:mob
 
-set fp=* Bowling game.
+set fp=* Mob Programming Presentation Dec-18-2020.
+
+rem lu: Oct-9-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
+
+set cbf_gh=https://github.com/jonathan-r-jones/Mob-Programming-Demo
+
+set cbf_path=%cbf_path%\Mob-Programming-Presentation-Dec-18-2020
+
+set cbf_pp=%cbf_path%\mob.pptx
+
+exit/b
+
+
+
+::_
+
+:oboga
+
+set fp=* Original Bowling game.
 
 rem lu: Nov-11-2020
 
@@ -13616,7 +13641,7 @@ call pn r>nul
 
 set cbf_branch=master
 
-set cbf_path=%cbf_path%\bowling-game
+set cbf_path=%cbf_path%\obowling-game
 
 set cbf_clone_url=https://github.com/yboug/bowling-game.git
 
@@ -13628,7 +13653,11 @@ exit/b
 
 ::_
 
+:boga
+
 :jboga
+
+:bowl
 
 set fp=* Java Bowling game.
 
@@ -13644,29 +13673,6 @@ set cbf_path=%cbf_path%\java-bowling-game
 set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
 
 set cbf_gh=https://github.com/jonathan-r-jones/Java-Bowling-Game
-
-exit/b
-
-
-
-::_
-
-:mob
-
-set fp=* Mob Programming Presentation Dec-18-2020.
-
-rem lu: Oct-9-2020
-
-echo.
-echo %fp%
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
-
-set cbf_gh=https://github.com/jonathan-r-jones/Mob-Programming-Demo
-
-set cbf_path=%dropbox%\IT\Mob-Programming-Presentation-Dec-18-2020
-
-set cbf_pp=%cbf_path%\mob.pptx
 
 exit/b
 
@@ -13731,7 +13737,7 @@ exit/b
 
 ::_
 
-:poker
+:opoker
 
 set fp=* Poker Java kata tdd.
 
@@ -13747,6 +13753,54 @@ set cbf_branch=master
 set cbf_path=%cbf_path%\%1
 
 set cbf_clone_url=https://github.com/xpepper/poker-hands-kata.git
+
+exit/b
+
+
+
+::_
+
+:poker
+
+:jpoker
+
+set fp=* Poker Java kata tdd modified by me.
+
+rem lu: Nov-27-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_branch=main
+
+set cbf_path=%cbf_path%\%1
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/three-card-poker.git
+
+exit/b
+
+
+
+:_
+
+:jaca
+
+set fp=* Java calculator.
+
+rem lu: Nov-28-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_branch=main
+
+set cbf_path=%cbf_path%\Java-Calculator
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Calculator.git
 
 exit/b
 
