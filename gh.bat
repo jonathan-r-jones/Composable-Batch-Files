@@ -89,15 +89,29 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_gh%" == "" (
-  echo. 
-  echo * GitHub url not found, so defaulting to cbf_url.
-  set cbf_parameter=%cbf_url%
-) else (
+if not "%cbf_gh%" == "" (
   set cbf_parameter=%cbf_gh%
+  goto set_browser
 )
 
-goto set_browser
+if not "%cbf_clone_url%" == "" (
+  echo. 
+  echo * Defaulting to cbf_clone_url.
+  set cbf_parameter=%cbf_clone_url%
+  goto set_browser
+)
+
+if not "%cbf_url%" == "" (
+  echo. 
+  echo * Defaulting to cbf_url.
+  set cbf_parameter=%cbf_url%
+  goto set_browser
+)
+
+echo.
+echo * Error: Cannot find a suitable target URL.
+
+exit/b
 
 
 

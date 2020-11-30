@@ -1723,23 +1723,6 @@ exit/b
 
 :_
 
-:jjgit
-
-set fp=* My Git website.
-
-rem lu: May-9-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://github.com/jonathan-r-jones
-
-exit/b
-
-
-
-:_
-
 :mad
 
 set fp=* Mobile App Development requirements.
@@ -2154,23 +2137,6 @@ set cbf_fn=%COMPOSABLE_BATCH_FILES%\cbf.bat
 set cbf_path=%composable_batch_files%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
-
-exit/b
-
-
-
-::_
-
-:jjgit
-
-set fp=* Jonathan's Github page.
-
-rem lu: Sep-11-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://github.com/jonathan-r-jones
 
 exit/b
 
@@ -5371,8 +5337,6 @@ exit/b
 :cart_s3
 
 :cain
-
-:jj
 
 :mpj
 
@@ -9062,23 +9026,6 @@ set cbf_android_manifest_file=%cbf_repo%\%cbf_root%\buster\buster.Android\Proper
 set cbf_path=%cbf_repo%\acd
 
 set cbf_settings_file=%cbf_repo%\acd\buster\buster\Views\Page1.xaml
-
-set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
-
-exit/b
-
-
-
-:_
-
-:gitacd
-
-set fp=* ACD on GitHub.
-
-rem lu: May-20-2019
-
-echo.
-echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
@@ -12914,23 +12861,6 @@ exit/b
 
 :_
 
-:jjgh
-
-set fp=* My GitHub site.
-
-rem lu: May-22-2020
-
-echo.
-echo %fp%
-
-set cbf_url=https://github.com/jonathan-r-jones
-
-exit/b
-
-
-
-:_
-
 :hcp
 
 :mhcp
@@ -13513,6 +13443,23 @@ exit/b
 
 :_
 
+:gitacd
+
+set fp=* ACD on GitHub.
+
+rem lu: May-20-2019
+
+echo.
+echo %fp%
+
+set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+
+exit/b
+
+
+
+:_
+
 :ckan
 
 set fp=* Ansible Code Keepers.
@@ -13653,49 +13600,16 @@ exit/b
 
 ::_
 
-:boga
+:rnco
 
-:jboga
+set fp=* Roman Numeral Converter.
 
-:bowl
-
-set fp=* Java Bowling game.
-
-rem lu: Nov-11-2020
+rem lu: Nov-30-2020
 
 echo.
 echo %fp%
 
-call pn r>nul
-
-set cbf_path=%cbf_path%\java-bowling-game
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
-
-set cbf_gh=https://github.com/jonathan-r-jones/Java-Bowling-Game
-
-exit/b
-
-
-
-::_
-
-:rnk
-
-set fp=* Roman Numeral Kata.
-
-rem lu: Nov-18-2020
-
-echo.
-echo %fp%
-
-call pn r>nul
-
-set cbf_brancdh=main
-
-set cbf_path=%cbf_path%\%1
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/Roman-Numeral-Kata.git
+set cbf_url=https://www.calculatorsoup.com/calculators/conversions/roman-numeral-converter.php
 
 exit/b
 
@@ -13760,6 +13674,29 @@ exit/b
 
 ::_
 
+:jaca
+
+set fp=* Java calculator.
+
+rem lu: Nov-28-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_branch=main
+
+set cbf_path=%cbf_path%\Java-Calculator
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Calculator.git
+
+exit/b
+
+
+
+::_
+
 :poker
 
 :jpoker
@@ -13785,22 +13722,70 @@ exit/b
 
 ::_
 
-:jaca
+:rnk
 
-set fp=* Java calculator.
+set fp=* Roman Numeral Kata.
 
-rem lu: Nov-28-2020
+rem lu: Nov-18-2020
 
 echo.
 echo %fp%
 
 call pn r>nul
 
-set cbf_branch=main
+set cbf_brancdh=main
 
-set cbf_path=%cbf_path%\Java-Calculator
+set cbf_path=%cbf_path%\%1
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Calculator.git
+set cbf_clone_url=https://github.com/jonathan-r-jones/Roman-Numeral-Kata.git
+
+exit/b
+
+
+
+::_
+
+:boga
+
+:jboga
+
+:bowl
+
+set fp=* Java Bowling game.
+
+rem lu: Nov-11-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_path=%cbf_path%\java-bowling-game
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
+
+set cbf_gh=https://github.com/jonathan-r-jones/Java-Bowling-Game
+
+exit/b
+
+
+
+:_
+
+:jj
+
+:jjgh
+
+:jjgit
+
+set fp=* Jonathan's Github page.
+
+rem lu: Nov-30-2020
+
+echo.
+echo %fp%
+
+set cbf_gh=https://github.com/jonathan-r-jones
 
 exit/b
 
