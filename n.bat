@@ -13795,4 +13795,21 @@ exit/b
 
 
 
+:_
+
+:shm
+
+set fp=* Share-zone miscellany.
+
+rem lu: Dec-2-2020
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\miscellany
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
