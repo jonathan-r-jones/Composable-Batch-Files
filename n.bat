@@ -4874,8 +4874,6 @@ exit/b
 
 :ic_hp
 
-:ic
-
 :ic_info
 
 :je2

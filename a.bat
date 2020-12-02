@@ -4472,7 +4472,7 @@ exit/b
 
 :247
 
-set fp=* Keep awake for 24/7 the instance "%2".
+set fp=* Always on. Keep awake for 24/7 the instance "%2".
 
 rem lu: Oct-7-2020
 
@@ -4500,7 +4500,7 @@ exit/b
 
 :135
 
-set fp=* Keep awake, for 13 hours a day 5 days per week, the instance "%2".
+set fp=* Sometimes on. Sometimes off. Keep awake, for 13 hours a day 5 days per week, the instance "%2".
 
 rem lu: Oct-7-2020
 
@@ -4517,6 +4517,34 @@ if %errorlevel% == 1 (
 call %0 tag %2 AutoStopStartInstance True
 
 call %0 tag %2 Comment "None."
+
+call %0 tag %2 WeekendStop True
+
+exit/b
+
+
+
+::_
+
+:00
+
+set fp=* Always off. Keep awake for 0 hours per day, 0 days per week the instance "%2".
+
+rem lu: Dec-1-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+call %0 tag %2 AutoStopStartInstance False
+
+call %0 tag %2 Comment "Hibernate."
 
 call %0 tag %2 WeekendStop True
 
