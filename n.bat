@@ -6586,6 +6586,34 @@ exit/b
 
 :sr102
 
+:apat
+
+:sdra
+
+:gopl
+
+:caan
+
+:atii
+
+:dero
+
+:toan
+
+:anto
+
+:an1
+
+:an2
+
+:an3
+
+:an4
+
+:an5
+
+:an6
+
 :pass-through
 
 set fp=* Pass through.
@@ -7662,8 +7690,6 @@ exit/b
 
 
 :_
-
-:dero
 
 :map
 
