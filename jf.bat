@@ -92,7 +92,7 @@ if not exist "%cbf_jf%" (
 
 :main_function
 
-call e %cbf_jf% -e
+call e "%cbf_jf%" -e
 
 exit/b
 

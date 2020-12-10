@@ -4933,7 +4933,7 @@ exit/b
 
 :devh_succinct
 
-set fp=* Health check for DEV HTTP.
+set fp=* Succinct health check for DEV HTTP.
 
 rem lu: Nov-3-2020
 
@@ -4955,7 +4955,7 @@ exit/b
 
 :devt_succinct
 
-set fp=* Health check for DEV TCP.
+set fp=* Succinct health check for DEV TCP.
 
 rem lu: Nov-3-2020
 
@@ -4977,7 +4977,7 @@ exit/b
 
 :fqth_succinct
 
-set fp=* Health check FQT HTTP.
+set fp=* Succinct health check FQT HTTP.
 
 rem lu: Nov-2-2020
 

@@ -510,8 +510,6 @@ exit/b 0
 
 ::_
 
-:debu
-
 :debug
 
 set fp=* Debugging statement.
