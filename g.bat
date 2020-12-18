@@ -2492,6 +2492,40 @@ rem lu: Oct-14-2020
 echo.
 echo %fp%
 
+if "%2" == "" (
+  echo.
+  echo * Error: Enter the version number.
+  exit/b
+)
+
+set cbf_git_version=%2
+
+call td ma
+
+call s
+
+echo.
+@echo on
+git checkout -b release-1-%cbf_git_version% tags/v1.%cbf_git_version%.0
+
+git push --set-upstream origin release-1-%cbf_git_version%
+@echo off
+
+exit/b
+
+
+
+::_
+
+:cbft_old
+
+set fp=* Create branch from tag.
+
+rem lu: Oct-14-2020
+
+echo.
+echo %fp%
+
 set cbf_git_version=17
 
 call td ma

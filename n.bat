@@ -6640,6 +6640,38 @@ exit/b
 
 :good
 
+:atrac
+
+:atra
+
+:ca
+
+:pngjf
+
+:cltjf
+
+:uinp
+
+:ces
+
+:cean
+
+:atp
+
+:sr104
+
+:an0
+
+:reap
+
+:247
+
+:cusp
+
+:icwa
+
+:utp
+
 :pass-through
 
 set fp=* Pass through.
@@ -9177,6 +9209,11 @@ exit/b
 Footnote
 >< >< >< 
 
+Java Home on GFE on Dec-18-2020. I removed the first 1.
+
+:C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+C:\Program Files\Java\jdk1.8.0_241\bin\java.exe
+
 Java Home on XPS Nov-24-2020. I removed the first 2.
 
 :C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
@@ -10872,164 +10909,6 @@ echo %fp%
 call n usrc
 
 set cbf_fn=%cbf_path%\app\app.component.ts
-
-exit/b
-
-
-
-:_+ Jenkins Family 2 (!fyje)
-
-
-
-::_
-
-:paj
-
-set fp=* Pre-Ansible Jenkinsfile.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-set cbf_jf=%share-zone%\Jenkinsfiles\Jenkinsfile_Pre-Ansible_Changes
-
-exit/b
-
-
-
-::_
-
-:arc
-
-:ckje
-
-:ckjf
-
-:jf
-
-set fp=* Jenkinsfile folder.
-
-rem lu: Jun-11-2019
-
-echo.
-echo %fp%
-
-set cbf_cs=Jenkinsfile
-
-set cbf_jf=%share-zone%\Jenkinsfiles\Jenkinsfile_Code_Keepers
-
-set cbf_path=%share-zone%\jenkinsfiles
-
-exit/b
-
-
-
-::_
-
-:bujf
-
-:jfbu
-
-:jft
-
-set fp=* Jenkinsfile backup.
-
-rem lu: May-16-2019
-
-echo.
-echo %fp%
-
-set cbf_fn=%share-zone%\jenkinsfiles\jenkinsfile_backup
-
-exit/b
-
-
-
-::_
-
-:jt
-
-set fp=* Jenkinsfile tester.
-
-rem lu: Jun-2-2019
-
-echo.
-echo %fp%
-
-set cbf_fn=%share-zone%\jenkinsfiles\jenkinsfile_tester
-
-exit/b
-
-
-
-::_
-
-:jew
-
-set fp=* Jenkins workspace.
-
-rem lu: Jan-7-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\.jenkins\workspace
-
-exit/b
-
-
-
-::_
-
-:jfc
-
-set fp=* Jenkinsfile in current folder.
-
-rem lu: Jan-14-2019
-
-echo.
-echo %fp%
-
-set cbf_fn=jenkinsfile
-
-exit/b
-
-
-
-::_
-
-:jelo
-
-:jl
-
-set fp=* Jenkins Log.
-
-rem lu: Jan-11-2019
-
-echo.
-echo %fp%
-
-set cbf_fn=%share-zone%\jenkins log.xlsx
-
-exit/b
-
-
-
-::_
-
-:rhje
-
-:rhjf
-
-set fp=* Red Hat Jenkinsfile from Jan-15-2020.
-
-rem lu: Jan-15-2020
-
-echo.
-echo %fp%
-
-set cbf_fn=%share-zone%\Jenkinsfiles\Jenkinsfile_Red_Hat
 
 exit/b
 

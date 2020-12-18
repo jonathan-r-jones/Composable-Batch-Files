@@ -14,6 +14,8 @@ set filep=* Surf to the Confluence url of an alias.
 
 set fp=* Route callers.
 
+if "%~1" == "" sf ht conf
+
 if "%~1" == "/?" goto help
 
 goto main_function

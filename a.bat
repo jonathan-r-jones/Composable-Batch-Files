@@ -4486,6 +4486,8 @@ if %errorlevel% == 1 (
   exit/b
 )
 
+call a star %2
+
 call %0 tag %2 AutoStopStartInstance False
 
 call %0 tag %2 Comment "Testing in progress."
@@ -4541,6 +4543,8 @@ if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
   exit/b
 )
+
+call a stop %2
 
 call %0 tag %2 AutoStopStartInstance False
 
