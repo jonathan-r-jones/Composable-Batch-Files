@@ -54,6 +54,9 @@ rem lu: Nov-20-2019
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
+echo.
+echo Entangled variable: cbf_filename
+
 set parameter_1=Parameter 1: Filename, filename alias or batch file prefix for a batch file ^
 that lives in either the CBF or Share-zone folder. Evaluated filename parameter.
 

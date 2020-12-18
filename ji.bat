@@ -18,7 +18,7 @@ if "%~1" == "/?" goto help
 
 if "%~1" == "b" goto view_backlog
 
-if "%~1" == "" sf ji
+if "%~1" == "" sf cusp
 
 goto main_function
 
