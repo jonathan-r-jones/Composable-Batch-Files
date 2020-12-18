@@ -13629,6 +13629,140 @@ exit/b
 
 ::_
 
+:boga
+
+:jboga
+
+:bowl
+
+:mob2
+
+set fp=* Java Bowling game kata.
+
+rem lu: Nov-11-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_path=%cbf_path%\java-bowling-game
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
+
+set cbf_gh=https://github.com/jonathan-r-jones/Java-Bowling-Game
+
+exit/b
+
+
+
+::_
+
+:mob3
+
+:rnk
+
+:roma
+
+set fp=* Roman Numeral Kata.
+
+rem lu: Nov-18-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_brancdh=main
+
+set cbf_path=%cbf_path%\rnk
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Roman-Numeral-Kata.git
+
+exit/b
+
+
+
+::_
+
+:mob4
+
+:poker
+
+:jpoker
+
+set fp=* Poker Java kata tdd modified by me.
+
+rem lu: Nov-27-2020
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_branch=main
+
+set cbf_path=%cbf_path%\poker
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/three-card-poker.git
+
+exit/b
+
+
+
+::_
+
+:moti
+
+set fp=* Online Mob Timer.
+
+rem lu: Nov-21-2020
+
+echo.
+echo %fp%
+
+set cbf_url=http://mobtimer.zoeetrope.com/
+
+exit/b
+
+
+
+::_
+
+:ornc
+
+set fp=* Online Roman Numeral Converter.
+
+rem lu: Nov-30-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.calculatorsoup.com/calculators/conversions/roman-numeral-converter.php
+
+exit/b
+
+
+
+::_
+
+:obc
+
+set fp=* Online Bowling Calculator.
+
+rem lu: Nov-21-2020
+
+echo.
+echo %fp%
+
+set cbf_url=https://www.easycalculation.com/sports/bowling-score-calculator.php
+
+exit/b
+
+
+
+::_
+
 :oboga
 
 set fp=* Original Bowling game.
@@ -13654,60 +13788,9 @@ exit/b
 
 ::_
 
-:rnco
-
-set fp=* Roman Numeral Converter.
-
-rem lu: Nov-30-2020
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.calculatorsoup.com/calculators/conversions/roman-numeral-converter.php
-
-exit/b
-
-
-
-::_
-
-:moti
-
-set fp=* Mob Timer.
-
-rem lu: Nov-21-2020
-
-echo.
-echo %fp%
-
-set cbf_url=http://mobtimer.zoeetrope.com/
-
-exit/b
-
-
-
-::_
-
-:boca
-
-set fp=* Bowling Calculator.
-
-rem lu: Nov-21-2020
-
-echo.
-echo %fp%
-
-set cbf_url=https://www.easycalculation.com/sports/bowling-score-calculator.php
-
-exit/b
-
-
-
-::_
-
 :opoker
 
-set fp=* Poker Java kata tdd.
+set fp=* Original GitHub Poker Java kata tdd.
 
 rem lu: Nov-23-2020
 
@@ -13730,7 +13813,7 @@ exit/b
 
 :jaca
 
-set fp=* Java calculator.
+set fp=* Java calculator learning project.
 
 rem lu: Nov-28-2020
 
@@ -13744,81 +13827,6 @@ set cbf_branch=main
 set cbf_path=%cbf_path%\Java-Calculator
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Calculator.git
-
-exit/b
-
-
-
-::_
-
-:poker
-
-:jpoker
-
-set fp=* Poker Java kata tdd modified by me.
-
-rem lu: Nov-27-2020
-
-echo.
-echo %fp%
-
-call pn r>nul
-
-set cbf_branch=main
-
-set cbf_path=%cbf_path%\%1
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/three-card-poker.git
-
-exit/b
-
-
-
-::_
-
-:rnk
-
-set fp=* Roman Numeral Kata.
-
-rem lu: Nov-18-2020
-
-echo.
-echo %fp%
-
-call pn r>nul
-
-set cbf_brancdh=main
-
-set cbf_path=%cbf_path%\%1
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/Roman-Numeral-Kata.git
-
-exit/b
-
-
-
-::_
-
-:boga
-
-:jboga
-
-:bowl
-
-set fp=* Java Bowling game.
-
-rem lu: Nov-11-2020
-
-echo.
-echo %fp%
-
-call pn r>nul
-
-set cbf_path=%cbf_path%\java-bowling-game
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
-
-set cbf_gh=https://github.com/jonathan-r-jones/Java-Bowling-Game
 
 exit/b
 
