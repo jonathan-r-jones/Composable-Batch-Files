@@ -6672,6 +6672,16 @@ exit/b
 
 :utp
 
+:jvsvc
+
+:ipc
+
+:2142
+
+:sr105
+
+:sr106
+
 :pass-through
 
 set fp=* Pass through.

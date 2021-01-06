@@ -4430,7 +4430,7 @@ s ma
 rem You may or may not want to do a get-latest.
 pl
 
-rem Get Postgres running on local by clicking on the lnk_db shortcut.
+rem Get Postgres running on local by clicking on the lnk_db shortcut. (skw start the database)
 
 rem liqu
 
@@ -4447,11 +4447,11 @@ rem from Dev.
 
 rem Run the API by using m lnk_api. You may need to edit npcrf.
 
-rem If you want to run the debugger, then search on: ^lnk
+rem If you want to run the debugger, then search on: lnk_api
 and use 
-
 gr run_api_with_debugger
-rem Also read direction on how to attach the debugger at: ^atde
+
+rem Also read direction on how to attach the debugger at: &atde
 
 j bash
 
@@ -4712,8 +4712,8 @@ title=%fp%
 echo.
 echo %fp%
 
-call %0 lnk_ui_do_not_install_npm
-rem call %0 lnk_ui_install_npm
+rem call %0 lnk_ui_do_not_install_npm
+call %0 lnk_ui_install_npm
 
 exit/b
 
@@ -4833,8 +4833,8 @@ title=%fp%
 echo.
 echo %fp%
 
-rem call lnk_api_attach_debugger
-call %0 lnk_api_do_not_attach_debugger
+call %0 lnk_api_attach_debugger
+rem call %0 lnk_api_do_not_attach_debugger
 
 exit/b
 

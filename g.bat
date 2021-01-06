@@ -742,7 +742,7 @@ exit/b
 
 :unst
 
-set fp=* Unstage for commit. If %2 is blank, all files will be unstaged.
+set fp=* Unstage for commit. If Percent 2 is blank, all files will be unstaged.
 
 rem lu: Nov-27-2017
 
