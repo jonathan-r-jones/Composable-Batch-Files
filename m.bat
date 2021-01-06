@@ -3651,7 +3651,7 @@ exit
 
 :_
 
-:demo
+:demo_old
 
 set fp=* Demo on Jan-29-2019.
 
@@ -4116,6 +4116,8 @@ exit/b
 
 
 ::_
+
+:demo
 
 :pres
 
