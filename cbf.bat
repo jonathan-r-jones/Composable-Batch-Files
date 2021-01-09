@@ -181,6 +181,7 @@ echo      sx  Use Sublime to edit a batch file in the CBF folder
 echo       t  Testing, experimenting and developing new batch file functions
 echo      td  Transform directory
 echo     tdc  Transform directory to favorite child folder of alias
+echo    tdfx  Open a folder using a DCV
 echo     tdp  Transform directory to parent folder
 echo     tdr  Transform directory by appending a relative path onto a base path
 echo      te  Batch file template used for creating new batch files

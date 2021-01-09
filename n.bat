@@ -6682,6 +6682,16 @@ exit/b
 
 :sr106
 
+:2154
+
+:2154a
+
+:jifi
+
+:1484
+
+:apisvc
+
 :pass-through
 
 set fp=* Pass through.
@@ -11136,25 +11146,6 @@ echo %fp%
 call n rf_ma
 
 set cbf_fn=%cbf_path%\api\build.gradle
-
-exit/b
-
-
-
-:_
-
-:1484
-
-set fp=* Cart-1484.
-
-rem lu: Feb-7-2020
-
-echo.
-echo %fp%
-
-call n rf_ma
-
-set cbf_fn=%cbf_path%\api\src\main\java\gov\dhs\ice\cart\service\CartPortalCriteriaServiceImpl.java
 
 exit/b
 
