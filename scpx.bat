@@ -106,7 +106,6 @@ if "%cbf_user%" == "" (
 )
 
 if "%~4" == "" (
-rem qq
   set cbf_destination_folder=tmp
 ) else (
   set cbf_destination_folder=%~4

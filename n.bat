@@ -6692,6 +6692,26 @@ exit/b
 
 :apisvc
 
+:jate
+
+:towe
+
+:sr108
+
+:sr107
+
+:sr109
+
+:car
+
+:idi
+
+:scsh
+
+:scsh_s
+
+:scsh_c
+
 :pass-through
 
 set fp=* Pass through.
@@ -10773,71 +10793,6 @@ echo.
 echo %fp%
 
 set cbf_fn=%reach out%\asus.asc
-
-exit/b
-
-
-
-:_+ Screen Shots
-
-
-
-::_
-
-:prsc
-
-:scsh
-
-:scre
-
-set fp=* Screenshots folder. To get a screen shot into this folder, click windows key + print screen.
-
-rem lu: Jun-3-2019
-
-echo.
-echo %fp%
-
-set cbf_path=%userprofile%\Pictures\Screenshots
-
-exit/b
-
-
-
-::_
-
-:sscsh
-
-:sscre
-
-set fp=* Share-zone screenshots.
-
-rem lu: Mar-12-2020
-
-echo.
-echo %fp%
-
-call n s
-
-set cbf_path=%cbf_path%\Screenshots
-
-exit/b
-
-
-
-::_
-
-:cscsh
-
-set fp=* Cade screenshots.
-
-rem lu: Apr-17-2020
-
-echo.
-echo %fp%
-
-call pn cade
-
-set cbf_path=%cbf_path%\Screenshots
 
 exit/b
 
