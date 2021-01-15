@@ -4309,11 +4309,31 @@ exit/b
 
 :star
 
-:start
-
 set fp=* Start instance "%2".
 
 rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+call %0 135 %2
+
+if %errorlevel% gtr 0 exit/b
+
+echo.
+call aws ec2 start-instances --instance-ids %cbf_instance_id%
+
+exit/b
+
+
+
+::_
+
+:starbb
+
+set fp=* Start instance "%2". Bare bones version.
+
+rem lu: Jan-13-2021
 
 echo.
 echo %fp%
@@ -4324,6 +4344,34 @@ if %errorlevel% gtr 0 exit/b
 
 echo.
 call aws ec2 start-instances --instance-ids %cbf_instance_id%
+
+exit/b
+
+
+
+::_
+
+:135
+
+set fp=* Sometimes on. Sometimes off. Keep awake, for 13 hours a day 5 days per week, the instance "%2".
+
+rem lu: Oct-7-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+call %0 tag %2 AutoStopStartInstance True
+
+call %0 tag %2 Comment "None."
+
+call %0 tag %2 WeekendStop True
 
 exit/b
 
@@ -4340,7 +4388,7 @@ rem lu: Mar-30-2020
 echo.
 echo %fp%
 
-call m validate_instance %2
+call %0 00 %2
 
 if %errorlevel% == 1 (
   call m clear_errorlevel_silently 
@@ -4350,61 +4398,6 @@ if %errorlevel% == 1 (
 echo.
 call aws ec2 stop-instances --instance-ids %cbf_instance_id%
 
-exit/b
-
-
-
-::_
-
-:stop_for_good
-
-set fp=* Stop instance "%2" for good.
-
-rem lu: Mar-30-2020
-
-echo.
-echo %fp%
-
-call m validate_instance %2
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-echo.
-call aws ec2 stop-instances --instance-ids %cbf_instance_id%
-
-call %0 tag %2 AutoStopStartInstance False
-
-call %0 tag %2 Comment "Testing in progress."
-
-exit/b
-
-
-
-::_
-
-:star_over
-
-set fp=* Start instance "%2" and override so the instance won't stop.
-
-rem lu: Sep-17-2020
-
-echo.
-echo %fp%
-
-call m validate_instance %2
-
-if %errorlevel% gtr 0 exit/b
-
-echo.
-call aws ec2 start-instances --instance-ids %cbf_instance_id%
-
-call %0 tag %2 AutoStopStartInstance False
-
-call %0 tag %2 Comment None
-                                       
 exit/b
 
 
@@ -4461,349 +4454,6 @@ echo.
 call aws ec2 describe-instances --instance-ids %cbf_instance_id%
                                        
 exit/b
-
-
-
-:_+ Tags
-
-
-
-::_
-
-:247
-
-set fp=* Always on. Keep awake for 24/7 the instance "%2".
-
-rem lu: Oct-7-2020
-
-echo.
-echo %fp%
-
-call m validate_instance %2
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-call a star %2
-
-call %0 tag %2 AutoStopStartInstance False
-
-call %0 tag %2 Comment "Testing in progress."
-
-call %0 tag %2 WeekendStop False
-
-exit/b
-
-
-
-::_
-
-:135
-
-set fp=* Sometimes on. Sometimes off. Keep awake, for 13 hours a day 5 days per week, the instance "%2".
-
-rem lu: Oct-7-2020
-
-echo.
-echo %fp%
-
-call m validate_instance %2
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-call %0 tag %2 AutoStopStartInstance True
-
-call %0 tag %2 Comment "None."
-
-call %0 tag %2 WeekendStop True
-
-exit/b
-
-
-
-::_
-
-:00
-
-set fp=* Always off. Keep awake for 0 hours per day, 0 days per week the instance "%2".
-
-rem lu: Dec-1-2020
-
-echo.
-echo %fp%
-
-call m validate_instance %2
-
-if %errorlevel% == 1 (
-  call m clear_errorlevel_silently 
-  exit/b
-)
-
-call a stop %2
-
-call %0 tag %2 AutoStopStartInstance False
-
-call %0 tag %2 Comment "Hibernate."
-
-call %0 tag %2 WeekendStop True
-
-exit/b
-
-
-
-::_
-
-:add_sleep_tags
-
-:ast
-
-:slee
-
-:sleep
-
-:slta
-
-set fp=* Add sleep tags to %2.
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo Error: Instance alias is required.
-  exit/b
-)
-
-set cbf_instance_alias=%2
-
-call a tag %cbf_instance_alias% AutoStartTime 6:00
-
-if %errorlevel% gtr 0 exit/b
-
-call a tag %cbf_instance_alias% AutoStopTime 19:00
-
-call a tag %cbf_instance_alias% AutoStopStartInstance True
-
-call a tag %cbf_instance_alias% WeekendStop True
-
-call a tag %cbf_instance_alias% IC_PLATFORM LINUX
-
-call a tag %cbf_instance_alias% IC_TOWER_READY FALSE
-
-exit/b
-
-
-
-::_
-
-:tag
-
-:add_tag
-
-set fp=* Tag instance "%2" with key "%3" and value "%~4".
-
-rem lu: Mar-30-2020
-
-echo.
-echo %fp%
-
-if "%~4" == "" (
-  echo.
-  echo * This function requires 3 parameters. 2: Instance alias. 3. Key Name 4. Key value.
-  exit/b
-)
-
-call m validate_instance %2
-
-if %errorlevel% gtr 0 exit/b
-
-aws ec2 create-tags --resources %cbf_instance_id% --tags Key=%3,Value=%4
-
-exit/b
-
-
-
-::_
-
-:delete_tag
-
-set fp=* Delete Tag on instance "%2". Tag key "%3"
-
-rem lu: Mar-25-2020
-
-echo.
-echo %fp%
-
-if "%3" == "" (
-  echo.
-  echo * This function requires 2 final parameters. 2: Instance alias. 3. Key Name
-  exit/b
-)
-
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * The cbf_instance_id is not defined for "%2".
-  exit/b
-)
-
-aws ec2 delete-tags --resources %cbf_instance_id% --tags Key=%3
-
-exit/b
-
-
-
-::_
-
-:old_tag
-
-:tag_all
-
-set fp=* Tag or retag all the tags on a resource.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-set cbf_resource_id=i-0ce1f47a5dcd7f7b0
-
-call %0 tag_generic Application "Learn Linux."
-
-call %0 tag_generic BillingCode mybillingcode
-
-call %0 tag_generic Environment myenv
-
-call %0 tag_generic Name w1Idvwebcar003
-
-call %0 tag_generic Notes "This works. Warning: Belongs to a wide open security group."
-
-call %0 tag_generic Portfolio TestPortfolio
-
-call %0 tag_generic ResourcePOC theMan
-
-exit/b
-
-
-
-::_
-
-:tag_one
-
-set fp=* Change a single tag on a resource.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-set cbf_resource_id=i-0ce1f47a5dcd7f7b0
-
-call %0 tag_generic Notes "Tough to say."
-
-exit/b
-
-
-
-::_
-
-:retag
-
-set fp=* Retag a resource.
-
-rem lu: May-17-2019
-
-echo.
-echo %fp%
-
-set cbf_instance_id=
-
-call n sr21
-
-if "%cbf_instance_id%" == "" (
-  echo.
-  echo * Error: Instance id not set.
-  exit/b
-)
-
-aws ec2 create-tags --resources %cbf_instance_id% --tags Key=Name,Value=w1idvtempcrt021
-
-rem These also work.
-rem aws ec2 create-tags help>%temp%/j1.txt
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
-
-rem Below here didn't work.
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
-rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
-
-exit/b
-
-
-
-::_
-
-:retag_unwanted_resource
-
-set fp=* Retag unwanted resource.
-
-rem lu: Feb-25-2019
-
-echo.
-echo %fp%
-
-call n %2
-
-if "%~2" == "" (
-  echo.
-  echo * Instance id is a required field.
-  exit/b
-)
-
-set cbf_resource_id=%cbf_instance_id%
-
-call %0 tag_generic BillingCode mybillingcode
-
-call %0 tag_generic ResourceType "Unusable instance. Please delete me."
-
-exit/b
-
-
-
-::_
-
-:add_remain_stopped_tag
-
-:arst
-
-set fp=* Add remain stopped tag to %2.
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo Error: Instance alias is required.
-  exit/b
-)
-
-set cbf_instance_alias=%2
-
-call a tag %cbf_instance_alias% RemainStopped True
-
-exit/b
-
-* * * Notes:
-
-Please note that the RemainStopped tag was added earlier this year. It can be added and set 
-to True, for non-prod RDS instances, to keep the instances stopped for all times outside of 
-patching. This is beneficial, because some RDS should remain in a stopped state, but since 
-RDS is a managed service, AWS turns on stopped RDSs for patching. The RemainStopped tag will 
-set the RDS to stopped, after patching is complete. For more information: RDS Auto Start Stop
 
 
 
@@ -5020,6 +4670,352 @@ if %errorlevel%==0 echo * FQT TCP is unhealthy. * * * * * * * * * * * * * * * * 
 
 aws elbv2 describe-target-health --target-group-arn arn:aws-us-gov:elasticloadbalancing:us-gov-west-1:257940150393:targetgroup/ero-cart-fq-net-tg/a091ed7209527d05 | find /i "stopped">nul
 if %errorlevel%==0 echo * FQT TCP is stopped. * * * * * * * * * * * * * * * * * * * * * * * 
+
+exit/b
+
+
+
+:_+ Tags
+
+
+
+::_
+
+:247
+
+set fp=* Always on. Keep awake for 24/7 the instance "%2".
+
+rem lu: Oct-7-2020
+
+echo.
+echo %fp%
+
+call %0 starbb %2
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+call a star %2
+
+call %0 tag %2 AutoStopStartInstance False
+
+call %0 tag %2 Comment "Testing in progress."
+
+call %0 tag %2 WeekendStop False
+
+exit/b
+
+
+
+::_
+
+:00
+
+set fp=* Always off. Keep awake for 0 hours per day, 0 days per week the instance "%2".
+
+rem lu: Dec-1-2020
+
+echo.
+echo %fp%
+
+call m validate_instance %2
+
+if %errorlevel% == 1 (
+  call m clear_errorlevel_silently 
+  exit/b
+)
+
+call %0 tag %2 AutoStopStartInstance False
+
+call %0 tag %2 Comment "Hibernate."
+
+call %0 tag %2 WeekendStop True
+
+exit/b
+
+
+
+::_
+
+:add_sleep_tags
+
+:ast
+
+:slee
+
+:sleep
+
+:slta
+
+set fp=* Add sleep tags to %2.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo Error: Instance alias is required.
+  exit/b
+)
+
+set cbf_instance_alias=%2
+
+call a tag %cbf_instance_alias% AutoStartTime 6:00
+
+if %errorlevel% gtr 0 exit/b
+
+call a tag %cbf_instance_alias% AutoStopTime 19:00
+
+call a tag %cbf_instance_alias% AutoStopStartInstance True
+
+call a tag %cbf_instance_alias% WeekendStop True
+
+call a tag %cbf_instance_alias% IC_PLATFORM LINUX
+
+rem call a tag %cbf_instance_alias% IC_TOWER_READY FALSE
+
+exit/b
+
+
+
+::_
+
+:tag
+
+:add_tag
+
+set fp=* Tag instance "%2" with key "%3" and value "%~4".
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+if "%~4" == "" (
+  echo.
+  echo * This function requires 3 parameters. 2: Instance alias. 3. Key Name 4. Key value.
+  exit/b
+)
+
+call m validate_instance %2
+
+if %errorlevel% gtr 0 exit/b
+
+aws ec2 create-tags --resources %cbf_instance_id% --tags Key=%3,Value=%4
+
+exit/b
+
+
+Footnote
+>< >< >< 
+
+add tag, update tag, change tag: skw
+
+
+
+::_
+
+:delete_tag
+
+set fp=* Delete Tag on instance "%2". Tag key "%3"
+
+rem lu: Mar-25-2020
+
+echo.
+echo %fp%
+
+if "%3" == "" (
+  echo.
+  echo * This function requires 2 final parameters. 2: Instance alias. 3. Key Name
+  exit/b
+)
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * The cbf_instance_id is not defined for "%2".
+  exit/b
+)
+
+aws ec2 delete-tags --resources %cbf_instance_id% --tags Key=%3
+
+exit/b
+
+
+
+::_
+
+:old_tag
+
+:tag_all
+
+set fp=* Tag or retag all the tags on a resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_resource_id=i-0ce1f47a5dcd7f7b0
+
+call %0 tag_generic Application "Learn Linux."
+
+call %0 tag_generic BillingCode mybillingcode
+
+call %0 tag_generic Environment myenv
+
+call %0 tag_generic Name w1Idvwebcar003
+
+call %0 tag_generic Notes "This works. Warning: Belongs to a wide open security group."
+
+call %0 tag_generic Portfolio TestPortfolio
+
+call %0 tag_generic ResourcePOC theMan
+
+exit/b
+
+
+
+::_
+
+:tag_one
+
+set fp=* Change a single tag on a resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+set cbf_resource_id=i-0ce1f47a5dcd7f7b0
+
+call %0 tag_generic Notes "Tough to say."
+
+exit/b
+
+
+
+::_
+
+:retag
+
+set fp=* Retag a resource.
+
+rem lu: May-17-2019
+
+echo.
+echo %fp%
+
+set cbf_instance_id=
+
+call n sr21
+
+if "%cbf_instance_id%" == "" (
+  echo.
+  echo * Error: Instance id not set.
+  exit/b
+)
+
+aws ec2 create-tags --resources %cbf_instance_id% --tags Key=Name,Value=w1idvtempcrt021
+
+rem These also work.
+rem aws ec2 create-tags help>%temp%/j1.txt
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key=Name,Value=Production
+
+rem Below here didn't work.
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags "ResourceType=instance,Tags=[{Key=Name,Value=xxss}]"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags Key="Name", Value="testtt"
+rem aws ec2 create-tags --resources i-0bce1b3771799a4ed --tags 'Key="[Name]",Value=test222'
+
+exit/b
+
+
+
+::_
+
+:retag_unwanted_resource
+
+set fp=* Retag unwanted resource.
+
+rem lu: Feb-25-2019
+
+echo.
+echo %fp%
+
+call n %2
+
+if "%~2" == "" (
+  echo.
+  echo * Instance id is a required field.
+  exit/b
+)
+
+set cbf_resource_id=%cbf_instance_id%
+
+call %0 tag_generic BillingCode mybillingcode
+
+call %0 tag_generic ResourceType "Unusable instance. Please delete me."
+
+exit/b
+
+
+
+::_
+
+:add_remain_stopped_tag
+
+:arst
+
+set fp=* Add remain stopped tag to %2.
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo Error: Instance alias is required.
+  exit/b
+)
+
+set cbf_instance_alias=%2
+
+call a tag %cbf_instance_alias% RemainStopped True
+
+exit/b
+
+* * * Notes:
+
+Please note that the RemainStopped tag was added earlier this year. It can be added and set 
+to True, for non-prod RDS instances, to keep the instances stopped for all times outside of 
+patching. This is beneficial, because some RDS should remain in a stopped state, but since 
+RDS is a managed service, AWS turns on stopped RDSs for patching. The RemainStopped tag will 
+set the RDS to stopped, after patching is complete. For more information: RDS Auto Start Stop
+
+
+
+::_
+
+:tag_tr
+
+set fp=* Add tower ready tag which enables Ansible AWS dynamic inventory to work on a VM.
+
+rem lu: Jan-14-2021
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo Error: Instance alias is required.
+  exit/b
+)
+
+set cbf_instance_alias=%2
+
+call a tag %cbf_instance_alias% IC_TOWER_READY TRUE
 
 exit/b
 

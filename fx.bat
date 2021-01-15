@@ -68,8 +68,10 @@ echo.
 echo %0 1964 java me
 
 echo.
-rem qq
 echo %0 1484 ts ij
+
+echo.
+echo %0 2154 java3 ij
 
 exit/b
 
