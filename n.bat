@@ -2104,25 +2104,6 @@ exit/b
 
 ::_
 
-:cbfgp
-
-:ghp
-
-set fp=* CBF on GitHub Pages.
-
-rem lu: Jan-31-2018
-
-echo.
-echo %fp%
-
-set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
-
-exit/b
-
-
-
-::_
-
 :cbf
 
 set fp=* Composable batch files.
@@ -2144,6 +2125,25 @@ exit/b
 
 ::_
 
+:cbfgp
+
+:ghp
+
+set fp=* CBF on GitHub Pages.
+
+rem lu: Jan-31-2018
+
+echo.
+echo %fp%
+
+set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
+
+exit/b
+
+
+
+::_
+
 :cbf_p
 
 set fp=* CBF Pulse on GitHub.
@@ -2154,6 +2154,46 @@ echo.
 echo %fp%
 
 set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/pulse
+
+exit/b
+
+
+
+::_
+
+:obx
+
+set fp=* OBX.
+
+rem lu: Jan-24-2018
+
+echo.
+echo %fp%
+
+call n r>nul
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
+
+set cbf_path=%cbf_path%\obx
+
+set cbf_url=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
+
+exit/b
+
+
+
+::_
+
+:obxgp
+
+set fp=* OBX on GitHub Pages.
+
+rem lu: Jan-8-2021
+
+echo.
+echo %fp%
+
+set cbf_url=https://jonathan-r-jones.github.io/Outer-Banks-2021/
 
 exit/b
 
@@ -8781,7 +8821,7 @@ exit/b
 
 :_
 
-:k
+:onfi
 
 set fp=* One file.
 
