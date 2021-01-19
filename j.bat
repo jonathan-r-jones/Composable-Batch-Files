@@ -79,7 +79,7 @@ echo %1 | c:\windows\system32\find.exe /i ".">nul
 
 if %errorlevel% == 0 (
   echo.
-  echo * Error: Aliases do not have periods. Was it necessary to use the "x" command?
+  echo * Error: Aliases do not have periods. Was it necessary to use the "%0" command?
   exit/b
 )
 

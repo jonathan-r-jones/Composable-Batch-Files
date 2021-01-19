@@ -6712,6 +6712,12 @@ exit/b
 
 :scsh_c
 
+:ad
+
+:tf2
+
+:sr110
+
 :pass-through
 
 set fp=* Pass through.
@@ -11318,8 +11324,6 @@ exit/b
 
 
 ::_
-
-:ad
 
 :apda
 
