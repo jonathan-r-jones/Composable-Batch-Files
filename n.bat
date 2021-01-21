@@ -2176,22 +2176,11 @@ set cbf_clone_url=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
 
 set cbf_path=%cbf_path%\obx
 
-set cbf_url=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
+set cbf_ex=%savannah%\Excels\obx.xls
 
-exit/b
+set cbf_fn=%cbf_path%\index.md
 
-
-
-::_
-
-:obxgp
-
-set fp=* OBX on GitHub Pages.
-
-rem lu: Jan-8-2021
-
-echo.
-echo %fp%
+set cbf_gh=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
 
 set cbf_url=https://jonathan-r-jones.github.io/Outer-Banks-2021/
 
