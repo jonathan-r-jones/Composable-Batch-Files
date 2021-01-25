@@ -2182,6 +2182,8 @@ set cbf_fn=%cbf_path%\index.md
 
 set cbf_gh=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
 
+set cbf_mtp=%reach out%\obx.mtp
+
 set cbf_url=https://jonathan-r-jones.github.io/Outer-Banks-2021/
 
 exit/b
