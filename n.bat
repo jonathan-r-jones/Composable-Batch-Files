@@ -11345,7 +11345,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_path=%savannah%\
+set cbf_path=%dropbox%\savannah
 
 exit/b
 
@@ -11353,16 +11353,16 @@ exit/b
 
 ::_
 
-:drsv
+:ldsv
 
-set fp=* Dropbox Savannah.
+set fp=* Local drive Savannah.
 
-rem lu: Feb-21-2020
+rem lu: Jan-25-2021
 
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\savannah
+set cbf_path=%savannah%
 
 exit/b
 
