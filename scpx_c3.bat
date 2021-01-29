@@ -84,7 +84,7 @@ call td pems
 
 if /i "%~2" == "fq" goto use_fqt
 
-call scpx %1 cart_dv_secret.sec a
+call scpx %1 cart_dv_secret.sec j
 
 exit/b
 
@@ -92,7 +92,7 @@ exit/b
 
 :use_fqt
 
-call scpx %1 cart_fq_secret.sec a2
+call scpx %1 cart_fq_secret.sec j
 
 exit/b
 

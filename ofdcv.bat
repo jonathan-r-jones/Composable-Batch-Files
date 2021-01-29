@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Open any file with any application using a DCV.
+set filep=* Open folder using a DCV.
 
 
 
@@ -14,9 +14,9 @@ set filep=* Open any file with any application using a DCV.
 
 set fp=* Route callers.
 
-if "%~3" == "" goto help
+if -%~1- == -- goto help
 
-if "%~1" == "/?" goto help
+if -%~1- == -/?- goto help
 
 goto main_function
 
@@ -26,19 +26,27 @@ goto main_function
 
 :help
 
-rem lu: Apr-2-2020
+cls
 
 echo.
 echo %filep%
 
+rem skw:
+
+rem lu: 
+
+echo.
+echo Batch file style: Single Purpose
+
+echo.
+echo Entangled variable: dcv
+
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Alias you wish to process.
+set parameter_1=Parameter 1: Batch file label.
 
-set parameter_2=Parameter 2: Dynamically constructed cbf variable.
-
-set parameter_3=Parameter 3: Alias of your chosen application.
+set parameter_2=Parameter 2: DCV of the target folder.
 
 echo.
 echo %parameter_1%
@@ -47,35 +55,14 @@ echo.
 echo %parameter_2%
 
 echo.
-echo %parameter_3%
+echo Example(s):
 
 echo.
-echo Batch file style: Custom.
-
-echo.
-echo Examples:
-
-echo.
-echo %0 rp_1 xml me
-
-echo.
-echo %0 csc xml me
-
-echo.
-echo %0 wcf java vsc
-
-echo.
-echo %0 1964 java me
-
-echo.
-echo %0 1484 ts ij
-
-echo.
-echo %0 2154 java3 ij
+echo %0 obx ex
 
 exit/b
 
-(!rfsp) (mov-6)
+(!rfsp) (mov4)
 
 
 
@@ -121,11 +108,22 @@ if not exist "%cbf_expanded_variable%" (
   rem exit/b
 )
 
+call m convert_to_path %cbf_expanded_variable%
+
+rem echo.
+rem echo CBF Path: %cbf_path%
+
+cd /d "%cbf_path%"
+
 set cbf_parameter=%cbf_expanded_variable%
 
-call r
+rem call r
 
 exit/b
+
+
+Footnote
+>< >< >< 
 
 
 
