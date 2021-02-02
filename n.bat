@@ -6789,6 +6789,16 @@ exit/b
 
 :cjf
 
+:jf
+
+:je
+
+:buje
+
+:bujf
+
+:jfbu
+
 :pass-through
 
 set fp=* Pass through.
@@ -12129,7 +12139,7 @@ exit/b
 
 ::_
 
-:d
+:dn
 
 set fp=* Downloads folder.
 
