@@ -6799,6 +6799,8 @@ exit/b
 
 :jfbu
 
+:cmaaj
+
 :pass-through
 
 set fp=* Pass through.
