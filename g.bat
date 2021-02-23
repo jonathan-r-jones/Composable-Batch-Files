@@ -4114,7 +4114,6 @@ set fp=* Configure GitHub author and email. Note: Please don't confuse this with
 echo.
 echo %fp%
 
-rem qq
 git config --global user.name "jonathan-r-jones"
 git config --global user.email "jonathan.r.jones.3@gmail.com"
 
@@ -4211,22 +4210,19 @@ exit/b
 
 
 
-:_+ Certs
-
-
-
 ::_
 
 :cert
 
 :crt
 
-set fp=* Add cert.
+set fp=* Add cert. This worked on Feb-23-2021.
+
+rem lu: Feb-23-2021
 
 echo.
 echo %fp%
 
-rem qq
 git config --system http.sslCAPath C:/Users/JJones2/j/Share-zone/ca-bundle.crt 
 
 exit/b

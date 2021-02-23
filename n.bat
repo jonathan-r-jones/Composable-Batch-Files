@@ -13852,7 +13852,6 @@ echo.
 echo %fp%
 
 call pn r
-rem qq
 
 set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
 
