@@ -10848,7 +10848,7 @@ rem lu: Nov-9-2019
 echo.
 echo %fp%
 
-set cbf_path=h:\podcasts
+set cbf_path=g:\podcasts
 
 exit/b
 
@@ -13235,7 +13235,11 @@ rem lu: May-19-2020
 echo.
 echo %fp%
 
-set cbf_path=h:\audiobooks
+if exist g:\audiobooks set cbf_path=g:\audiobooks
+if exist h:\audiobooks set cbf_path=h:\audiobooks
+
+set cbf_path=g:\audiobooks
+
 
 exit/b
 
@@ -13254,7 +13258,11 @@ rem lu: Jul-15-2018
 echo.
 echo %fp%
 
-set cbf_path=h:\podcasts
+if exist g:\podcasts set cbf_path=g:\podcasts
+if exist h:\podcasts set cbf_path=h:\podcasts
+
+rem echo.
+rem echo Cbf_path: %cbf_path%
 
 exit/b
 
