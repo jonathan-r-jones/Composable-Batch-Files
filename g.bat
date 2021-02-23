@@ -1147,117 +1147,6 @@ exit/b
 
 
 
-:_+ Author
-
-
-
-::_
-
-:au
-
-:author
-
-set fp=* Configure GitHub author and email. Note: Please don't confuse this with the Bitbucket author signature.
-
-echo.
-echo %fp%
-
-git config --global user.name "jonathan-r-jones"
-git config --global user.email "jonathan.r.jones.3@gmail.com"
-
-exit/b
-
-
-
-::_
-
-:stor
-
-:store
-
-set fp=* Store credentials so that Git stops asking for credentials after each push.
-
-rem lu: Mar-1-2018
-
-echo.
-echo %fp%
-
-git config credential.helper store
-
-exit/b
-
-
-
-::_
-
-:aust
-
-set fp=* Run author and store.
-
-rem lu: Dec-5-2018
-
-echo.
-echo %fp%
-
-call %0 au
-
-call %0 stor
-
-exit/b
-
-
-
-::_
-
-:au_cart
-
-set fp=* Configure author for Cart.
-
-echo.
-echo %fp%
-
-git config user.name "JJones2"
-
-exit/b
-
-
-
-::_
-
-:author_bit
-
-set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
-
-echo.
-echo %fp%
-
-@echo on
-git config --global user.name "Jonathan17"
-git config --global user.email "jonathan.r.jones@nesassociates.com"
-@echo off
-
-exit/b
-
-
-
-::_
-
-:author_devops
-
-set fp=* Configure BitBucket author and email.
-
-echo.
-echo %fp%
-
-@echo on
-git config --global user.name "mercury_devops"
-git config --global user.email "nes.mercury@nesassociates.com"
-@echo off
-
-exit/b
-
-
-
 :_+ Configuration Settings
 
 
@@ -2113,40 +2002,6 @@ exit/b
 
 
 
-:_+ Certs
-
-
-
-::_
-
-:crt
-
-set fp=* Add cert.
-
-echo.
-echo %fp%
-
-git config --system http.sslCAPath C:/Users/JJones2/j/Miscellany/ca-bundle.crt 
-
-exit/b
-
-
-
-::_
-
-:crt2
-
-set fp=* Add cert using backslashes.
-
-echo.
-echo %fp%
-
-git config --system http.sslCAPath C:\Users\JJones2\j\Miscellany\ca-bundle.crt 
-
-exit/b
-
-
-
 :_
 
 :dlt
@@ -2509,6 +2364,32 @@ echo.
 git checkout -b release-1-%cbf_git_version% tags/v1.%cbf_git_version%.0
 
 git push --set-upstream origin release-1-%cbf_git_version%
+@echo off
+
+exit/b
+
+
+
+::_
+
+:cbft_181
+
+set fp=* Create branch from tag, version 1.18.1.
+
+rem lu: Feb-12-2021
+
+echo.
+echo %fp%
+
+call td ma
+
+call s
+
+echo.
+@echo on
+git checkout -b release-1-18-1 tags/v1.18.1
+
+git push --set-upstream origin release-1-18-1
 @echo off
 
 exit/b
@@ -3467,9 +3348,7 @@ echo.
 echo %fp%
 
 if "%~2" == "" (
-  echo.
-  echo * Error: You must enter the name of the branch you wish to switch to.
-  exit/b
+  goto sbd
 )
 
 echo.
@@ -3490,6 +3369,12 @@ rem lu: Jul-8-2020
 
 echo.
 echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 is superfluous.
+  exit/b
+)
 
 echo.
 git checkout develop
@@ -4209,6 +4094,157 @@ if "%~3" == "" (
 )
 
 git diff %1 %2
+
+exit/b
+
+
+
+:_+ Author
+
+
+
+::_
+
+:au
+
+:author
+
+set fp=* Configure GitHub author and email. Note: Please don't confuse this with the Bitbucket author signature.
+
+echo.
+echo %fp%
+
+rem qq
+git config --global user.name "jonathan-r-jones"
+git config --global user.email "jonathan.r.jones.3@gmail.com"
+
+exit/b
+
+
+
+::_
+
+:stor
+
+:store
+
+set fp=* Store credentials so that Git stops asking for credentials after each push.
+
+rem lu: Mar-1-2018
+
+echo.
+echo %fp%
+
+git config credential.helper store
+
+exit/b
+
+
+
+::_
+
+:aust
+
+set fp=* Run author and store.
+
+rem lu: Dec-5-2018
+
+echo.
+echo %fp%
+
+call %0 au
+
+call %0 stor
+
+exit/b
+
+
+
+::_
+
+:au_cart
+
+set fp=* Configure author for Cart.
+
+echo.
+echo %fp%
+
+git config user.name "JJones2"
+
+exit/b
+
+
+
+::_
+
+:author_bit
+
+set fp=* Configure BitBucket author and email. Note: Please don't confuse this with the GitHub author signature.
+
+echo.
+echo %fp%
+
+@echo on
+git config --global user.name "Jonathan17"
+git config --global user.email "jonathan.r.jones@nesassociates.com"
+@echo off
+
+exit/b
+
+
+
+::_
+
+:author_devops
+
+set fp=* Configure BitBucket author and email.
+
+echo.
+echo %fp%
+
+@echo on
+git config --global user.name "mercury_devops"
+git config --global user.email "nes.mercury@nesassociates.com"
+@echo off
+
+exit/b
+
+
+
+:_+ Certs
+
+
+
+::_
+
+:cert
+
+:crt
+
+set fp=* Add cert.
+
+echo.
+echo %fp%
+
+rem qq
+git config --system http.sslCAPath C:/Users/JJones2/j/Share-zone/ca-bundle.crt 
+
+exit/b
+
+
+
+::_
+
+:cert2
+
+:crt2
+
+set fp=* Add cert using backslashes.
+
+echo.
+echo %fp%
+
+git config --system http.sslCAPath C:\Users\JJones2\j\Share-zone\ca-bundle.crt 
 
 exit/b
 

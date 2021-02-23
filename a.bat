@@ -4770,9 +4770,9 @@ if %errorlevel% gtr 0 exit/b
 
 call a tag %cbf_instance_alias% AutoStopTime 19:00
 
-call a tag %cbf_instance_alias% AutoStopStartInstance True
+call a tag %cbf_instance_alias% AutoStopStartInstance TRUE
 
-call a tag %cbf_instance_alias% WeekendStop True
+call a tag %cbf_instance_alias% WeekendStop TRUE
 
 call a tag %cbf_instance_alias% IC_PLATFORM LINUX
 

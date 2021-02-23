@@ -94,13 +94,6 @@ if not "%cbf_gh%" == "" (
   goto set_browser
 )
 
-if not "%cbf_clone_url%" == "" (
-  echo. 
-  echo * Defaulting to cbf_clone_url.
-  set cbf_parameter=%cbf_clone_url%
-  goto set_browser
-)
-
 if not "%cbf_url%" == "" (
   echo. 
   echo * Defaulting to cbf_url.

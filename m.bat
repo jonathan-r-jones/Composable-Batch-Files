@@ -4664,39 +4664,6 @@ exit/b
 
 
 
-:_
-
-:jens
-
-:jfs
-
-set fp=* Open Jenkinsfiles.
-
-rem lu: Jan-10-2019
-
-echo.
-echo %fp%
-
-call e acr
-
-call e ant
-
-call e bgs
-
-call e cap
-
-call e eat
-
-call e gfs
-
-call e iac
-
-call e odls
-
-exit/b
-
-
-
 :_+ Lnks
 
 
@@ -5365,9 +5332,9 @@ exit/b
 
 set fp=* Create timestamped file.
 
-rem lu: Jun-12-2020
+rem skw: add timestamped file, Create New File, Generate a timestamped name file, create file, make test file
 
-rem skw: Create New File, Generate a timestamped name file, create file, make test file
+rem lu: Jun-12-2020
 
 rem This works.
 
@@ -5464,6 +5431,39 @@ set dt_filename=%tmp%\nestat_results_for_machine_%computername%_%date_as_filenam
 netstat -a -n>%dt_filename%
 
 call no %dt_filename%
+
+exit/b
+
+
+
+:_
+
+:jens
+
+:jfs
+
+set fp=* Open Jenkinsfiles.
+
+rem lu: Jan-10-2019
+
+echo.
+echo %fp%
+
+call e acr
+
+call e ant
+
+call e bgs
+
+call e cap
+
+call e eat
+
+call e gfs
+
+call e iac
+
+call e odls
 
 exit/b
 

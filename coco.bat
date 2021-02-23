@@ -31,7 +31,7 @@ goto main_function
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameters 1 and 2: Either 2 filenames in the current folder or a 2 file ^
+set parameter_1=Parameters 1 and 2: Either 2 filenames in the current folder or 2 file ^
 aliases. If left blank, aliases j1 and j2 are used by default.
 
 echo.

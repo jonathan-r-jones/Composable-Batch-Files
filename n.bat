@@ -6801,6 +6801,44 @@ exit/b
 
 :cmaaj
 
+:ncjf
+
+:ncf
+
+:capp
+
+:pa_jf
+
+:bu_jf
+
+:cl_jf
+
+:car2
+
+:ma_jf
+
+:imm_jf
+
+:tf3
+
+:mytr
+
+:seno
+
+:sr902
+
+:sr901
+
+:maad
+
+:cartcd
+
+:afho
+
+:cpo
+
+:rele
+
 :pass-through
 
 set fp=* Pass through.
@@ -7563,41 +7601,6 @@ echo %fp%
 set cbf_fn=%composable_batch_files%\jaws.pptx
 
 exit/b
-
-
-
-:_
-
-:rf_s
-
-:s
-
-:sz
-
-set fp=* Share-Zone.
-
-rem lu: Dec-7-2018
-
-echo.
-echo %fp%
-
-set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
-
-set cbf_path=%share-zone%
-
-set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
-
-rem set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
-rem set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
-
-exit/b
-
-
-Postscript: 
-
-Philosophy: Share-zone is for documents that I may need for some reason outside of my GFE.
-
-Registration: Officially Registered Repo
 
 
 
@@ -13027,6 +13030,12 @@ rem set cbf_fn=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.ex
 exit/b
 
 
+Footnote
+>< >< ><
+
+To run Visual Studio Code in a particular folder type: "code ."
+
+
 
 ::_
 
@@ -13787,6 +13796,67 @@ echo.
 echo %fp%
 
 set cbf_path=%share-zone%\miscellany
+
+exit/b
+
+
+
+:_+ Share-Zone
+
+
+
+::_
+
+:rf_s
+
+:s
+
+:sz
+
+set fp=* Share-Zone.
+
+rem lu: Dec-7-2018
+
+echo.
+echo %fp%
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
+
+set cbf_path=%share-zone%
+
+set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
+
+rem set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
+rem set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
+
+exit/b
+
+
+Postscript: 
+
+Philosophy: Share-zone is for documents that I may need for some reason outside of my GFE.
+
+Registration: Officially Registered Repo
+
+
+
+::_
+
+:szt
+
+set fp=* Share-Zone test.
+
+rem lu: Feb-23-2021
+
+echo.
+echo %fp%
+
+call pn r
+rem qq
+
+set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
+
+set cbf_path=%cbf_path%\szt
 
 exit/b
 

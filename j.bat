@@ -213,6 +213,21 @@ if not "%cbf_ex%" == "" (
 
 :_
 
+if not "%cbf_pptx%" == "" (
+  if exist "%cbf_pptx%" (
+    rem echo.
+    rem echo * Double click Powerpoint file "%cbf_pptx%".
+    set cbf_fn=%cbf_pptx%
+    call m double_click
+    call r
+    exit/b
+  )
+)
+
+
+
+:_
+
 if not "%cbf_fn%" == "" (
   if exist "%cbf_fn%" (
     rem echo.
