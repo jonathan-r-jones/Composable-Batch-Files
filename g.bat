@@ -4216,7 +4216,7 @@ exit/b
 
 :crt
 
-set fp=* Add cert. This worked on Feb-23-2021.
+set fp=* Add cert. This worked to fix my personal GitHub account on my GFE on Feb-23-2021.
 
 rem lu: Feb-23-2021
 
