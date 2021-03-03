@@ -11048,15 +11048,19 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* 
+set fp=* Adjust podcast folder.
 
 rem lu: 
 
 echo.
 echo %fp%
 
-rem qq2
+rem qq1
+if exist g:\podcasts set cbf_path=g:\podcasts
+if exist h:\podcasts set cbf_path=h:\podcasts
 
+echo.
+echo Cbf_path: %cbf_path%
 
 exit/b
 

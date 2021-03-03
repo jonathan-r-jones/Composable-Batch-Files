@@ -10858,7 +10858,7 @@ rem lu: Nov-9-2019
 echo.
 echo %fp%
 
-set cbf_path=h:\podcasts
+set cbf_path=g:\podcasts
 
 exit/b
 
@@ -13245,7 +13245,11 @@ rem lu: May-19-2020
 echo.
 echo %fp%
 
-set cbf_path=h:\audiobooks
+if exist g:\audiobooks set cbf_path=g:\audiobooks
+if exist h:\audiobooks set cbf_path=h:\audiobooks
+
+set cbf_path=g:\audiobooks
+
 
 exit/b
 
@@ -13264,7 +13268,14 @@ rem lu: Jul-15-2018
 echo.
 echo %fp%
 
-set cbf_path=h:\podcasts
+if exist g:\podcasts set cbf_path=g:\podcasts
+if exist h:\podcasts set cbf_path=h:\podcasts
+
+if "%cbf_path%" == "" (
+  echo.
+  echo * Error: cbf_path is undefined. Is the MP3 player plugged in?
+  exit/b 1
+)
 
 exit/b
 

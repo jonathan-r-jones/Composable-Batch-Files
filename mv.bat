@@ -67,7 +67,7 @@ call m clear_errorlevel_silently
 
 attrib -h
 
-move *.* %cbf_path%
+move *.* "%cbf_path%"
 
 exit/b
 
@@ -180,6 +180,10 @@ echo %fp%
 call td staging_area>nul
 
 call n clipjam_podcasts
+
+if %errorlevel% == 1 (
+  exit/b
+)
 
 call :move_all_files_in_current_folder_to_cbf_path
 
