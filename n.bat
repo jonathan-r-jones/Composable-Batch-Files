@@ -13261,8 +13261,11 @@ echo %fp%
 if exist g:\podcasts set cbf_path=g:\podcasts
 if exist h:\podcasts set cbf_path=h:\podcasts
 
-rem echo.
-rem echo Cbf_path: %cbf_path%
+if "%cbf_path%" == "" (
+  echo.
+  echo * Error: cbf_path is undefined. Is the MP3 player plugged in?
+  exit/b 1
+)
 
 exit/b
 
