@@ -6839,6 +6839,16 @@ exit/b
 
 :rele
 
+:trai
+
+:bubl
+
+:seco
+
+:seer
+
+:om
+
 :pass-through
 
 set fp=* Pass through.
@@ -13765,27 +13775,6 @@ exit/b
 
 :_
 
-:jj
-
-:jjgh
-
-:jjgit
-
-set fp=* Jonathan's Github page.
-
-rem lu: Nov-30-2020
-
-echo.
-echo %fp%
-
-set cbf_gh=https://github.com/jonathan-r-jones
-
-exit/b
-
-
-
-:_
-
 :shm
 
 set fp=* Share-zone miscellany.
@@ -13856,6 +13845,27 @@ call pn r
 set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
 
 set cbf_path=%cbf_path%\szt
+
+exit/b
+
+
+
+:_
+
+:jj
+
+:jjgh
+
+:jjgit
+
+set fp=* Jonathan's Github page.
+
+rem lu: Nov-30-2020
+
+echo.
+echo %fp%
+
+set cbf_gh=https://github.com/jonathan-r-jones
 
 exit/b
 

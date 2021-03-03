@@ -4056,6 +4056,8 @@ exit/b
 
 ::_
 
+:dif
+
 :diff
 
 set fp=* Diff.

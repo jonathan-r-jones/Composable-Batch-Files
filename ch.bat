@@ -651,6 +651,16 @@ exit/b
 Footnote
 >< >< ><
 
+Mar-1-2021:
+
+C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
+Uploading cart           [0.1.8]
+Uploaded 1 cookbook.
+
+C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
+Uploading cart           [0.1.7]
+Uploaded 1 cookbook.
+
 Jun-17-2020 Result:
 
 C:\Users\JJones2\.chef>knife cookbook upload cart -o c:\cookbook_test
