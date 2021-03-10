@@ -5031,8 +5031,6 @@ exit/b
 
 :palms
 
-:cat
-
 :seca
 
 :hede
@@ -6437,7 +6435,7 @@ exit/b
 
 :kiar
 
-:cb
+:crb
 
 :sso
 
@@ -6848,6 +6846,14 @@ exit/b
 :seer
 
 :om
+
+:2285
+
+:sr114
+
+:anac
+
+:cart_cd
 
 :pass-through
 

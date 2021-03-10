@@ -3282,7 +3282,7 @@ exit/b
 
 ::_
 
-:cb
+:crb
 
 set fp=* Create a new branch based on specified source branch.
 
@@ -3308,6 +3308,13 @@ git checkout -b %2 %3
 git push --set-upstream origin %2
 
 exit/b
+
+
+Footnote
+>< >< ><
+
+I changed the label from cb to crb because cb is too easily confused with "change branch" 
+instead of "create branch".
 
 
 
