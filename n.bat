@@ -13888,4 +13888,23 @@ exit/b
 
 
 
+:_
+
+:prem
+
+set fp=* Professional emulation.
+
+rem lu: Mar-17-2021
+
+echo.
+echo %fp%
+
+call n pict>nul
+
+set cbf_path=%cbf_path%\professional emulation
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
