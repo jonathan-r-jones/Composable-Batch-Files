@@ -3282,7 +3282,7 @@ exit/b
 
 ::_
 
-:crb
+:crbr
 
 set fp=* Create a new branch based on specified source branch.
 
@@ -3293,19 +3293,19 @@ echo %fp%
 
 if "%~2" == "" (
   echo.
-  echo * Percent 2, destination branch, is a required field. This is the new branch that will be created.
+  echo * Percent 2, source branch, is a required field.
 )
 
 if "%~3" == "" (
   echo.
-  echo * Percent 3, source branch, is a required field.
+  echo * Percent 3, destination branch, is a required field. This is the new branch that will be created.
   exit/b
 )
 
 echo.
-git checkout -b %2 %3
+git checkout -b %3 %2
 
-git push --set-upstream origin %2
+git push --set-upstream origin %3
 
 exit/b
 
@@ -3313,7 +3313,7 @@ exit/b
 Footnote
 >< >< ><
 
-I changed the label from cb to crb because cb is too easily confused with "change branch" 
+I changed the label from cb to crbr because cb is too easily confused with "change branch" 
 instead of "create branch".
 
 

@@ -2616,7 +2616,7 @@ exit/b
 
 :_
 
-:play
+:plpa
 
 set fp=* Playpark.
 
@@ -6855,6 +6855,24 @@ exit/b
 
 :cart_cd
 
+:cartcdmq
+
+:sr001
+
+:sr002
+
+:terr
+
+:play
+
+:crbr
+
+:cartcdt
+
+:cao
+
+:idp
+
 :pass-through
 
 set fp=* Pass through.
@@ -6888,7 +6906,7 @@ exit/b
 
 :_
 
-:terr
+:plterr
 
 set fp=* Pluralsight's Terraform class.
 

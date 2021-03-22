@@ -5021,4 +5021,40 @@ exit/b
 
 
 
+:_
+
+:mas
+
+set fp=* Matt's script.
+
+rem lu: Mar-11-2021
+
+echo.
+echo %fp%
+
+aws ec2 describe-instances --filters "Name=tag:Application,Values=CART" --output text
+
+exit/b
+
+
+APPLICATION_TAG="CART"
+
+function describe_application() {
+    local additional_filters=$1
+     aws ec2 describe-instances --filters "Name=tag:Application,Values=$APPLICATION_TAG" $additional_filters --output text --query 'Reservations[].Instances[].[PrivateIpAddress,Tags[?Key==`Name`],Tags[?Key==`Environment`].Value[]]' | awk ' {print;} NR %3 == 0 { print ""; }'
+}
+
+
+additional_filters=""
+if [ "$#" -gt "0" ]
+    then
+        environment=$1
+        additional_filters="Name=tag:Environment,Values=$environment"
+    fi
+
+describe_application $additional_filters
+
+
+
+
 :_ (!rfsp) (mov-6)
