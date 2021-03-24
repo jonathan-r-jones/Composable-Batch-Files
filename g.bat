@@ -3393,6 +3393,31 @@ exit/b
 
 ::_
 
+:sbm
+
+set fp=* Switch to the master branch.
+
+rem lu: Mar-23-2021
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 is superfluous.
+  exit/b
+)
+
+echo.
+git checkout master
+
+exit/b
+
+
+
+
+::_
+
 :sbj
 
 set fp=* Switch to the jj_devops branch.

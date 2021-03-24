@@ -6873,6 +6873,34 @@ exit/b
 
 :idp
 
+:usfcd
+
+:infr
+
+:okt
+
+:accr
+
+:sr54
+
+:o1
+
+:o2
+
+:o3
+
+:o4
+
+:o5
+
+:o6
+
+:o7
+
+:o8
+
+:o9
+
 :pass-through
 
 set fp=* Pass through.
@@ -13831,6 +13859,8 @@ exit/b
 
 ::_
 
+:o5
+
 :rf_s
 
 :s
@@ -13844,19 +13874,23 @@ rem lu: Dec-7-2018
 echo.
 echo %fp%
 
+set cbf_branch=master
+
 set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
+
+set cbf_gh=https://github.com/jonathan-r-jones/Share-Zone.git
 
 set cbf_path=%share-zone%
 
-set cbf_url=https://github.com/jonathan-r-jones/Share-Zone.git
-
-rem set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
 rem set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
+rem set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
 
 exit/b
 
 
-Postscript: 
+Postscript:
+
+branches: master
 
 Philosophy: Share-zone is for documents that I may need for some reason outside of my GFE.
 
