@@ -3258,6 +3258,8 @@ exit/b
 
 :cbd
 
+:crbd
+
 set fp=* Create new branch based on the develop branch.
 
 rem lu: Mar-30-2020
@@ -3312,6 +3314,9 @@ exit/b
 
 Footnote
 >< >< ><
+
+I don't think you can create a branch based on source branch unless you have first switched to 
+that source branch locally at least once.
 
 I changed the label from cb to crbr because cb is too easily confused with "change branch" 
 instead of "create branch".
@@ -3645,23 +3650,91 @@ exit/b
 
 ::_
 
-:reat
+:roll
 
-:reattach
+:roll_back
 
-:reattach_head
+:rollback
 
-set fp=* Reattach a detached head.
+set fp=* Rollback used by Matt A. and me on Mar-26-2021 and earlier.
 
-rem fcd: May-2-2017 (skw how to reattach head)
+rem lu: Jan-30-2020
 
 echo.
 echo %fp%
 
-rem git checkout clean6.2
-git checkout master
+git revert -m 1 HEAD
+
+rem Then you need to do your usual add, commit and push commands.
 
 exit/b
+
+
+
+::_
+
+:roll_back_repo
+
+:roll_back_server
+
+set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
+
+rem lu: Jul-19-2018
+
+rem How do you roll back in git?
+
+rem This worked on David's machine on Aug-3-2017.
+
+echo.
+echo %fp%
+
+echo.
+git push -f
+
+exit/b
+
+
+
+::_
+
+:roll_back_repo_1_commit
+
+set fp=* Move the whole repo back a single check-in version.
+
+rem lu: Sep-3-2020
+
+echo.
+echo %fp%
+
+call :reset_head_1
+
+call :roll_back_repo
+
+exit/b
+
+Outcome:
+
+In my test on FGT on Jun-12-2020, this worked as expected. It rolled back a single commit.
+
+This didn't work on Cart on Jun-10-2020! I'm not so sure this didn't work. My theory is that 
+it rolled back the morning commit. I thought it would roll back a merge. So how do you roll 
+back a merge then? That is what I don't know. Jun-12-2020
+
+I created a pull request to merge the release_v_1_11_0 into the Develop branch. While trying 
+to fix merge conflicts in the GitHub GUI in 3 files, I accidentally merged the Develop branch 
+into the release_v_1_11_0 branch, instead of the other way around. When I did a rollback for 
+what I thought was going to being my single bad commit, Git rolled back the release branch to 
+May 14th. Does anyone have a recent copy of the release_1_11_0 branch on their local drive? I 
+have a copy but there may be an issue with it.
+
+This worked on FGT and Fresnel on Jul-19-2018.
+
+This worked on CBF on Mar-22-2019.
+
+You feel like your last check-in broke the build. USE WITH CAUTION.
+
+One reason I like this command is that it moves back slowly so will help you be careful not to 
+rollback to far.
 
 
 
@@ -3712,63 +3785,23 @@ exit/b
 
 ::_
 
-:rollback
+:reat
 
-set fp=* Rollback used by Matt A. and me.
+:reattach
 
-rem lu: Jan-30-2020
+:reattach_head
 
-echo.
-echo %fp%
+set fp=* Reattach a detached head.
 
-git revert -m 1 HEAD
-
-rem Then you need to do your usual add, commit and push commands.
-
-exit/b
-
-
-
-::_
-
-:roll_back_repo_1_commit
-
-set fp=* Move the whole repo back a single check-in version.
-
-rem lu: Sep-3-2020
+rem fcd: May-2-2017 (skw how to reattach head)
 
 echo.
 echo %fp%
 
-call :reset_head_1
-
-call :roll_back_repo
+rem git checkout clean6.2
+git checkout master
 
 exit/b
-
-Outcome:
-
-In my test on FGT on Jun-12-2020, this worked as expected. It rolled back a single commit.
-
-This didn't work on Cart on Jun-10-2020! I'm not so sure this didn't work. My theory is that 
-it rolled back the morning commit. I thought it would roll back a merge. So how do you roll 
-back a merge then? That is what I don't know. Jun-12-2020
-
-I created a pull request to merge the release_v_1_11_0 into the Develop branch. While trying 
-to fix merge conflicts in the GitHub GUI in 3 files, I accidentally merged the Develop branch 
-into the release_v_1_11_0 branch, instead of the other way around. When I did a rollback for 
-what I thought was going to being my single bad commit, Git rolled back the release branch to 
-May 14th. Does anyone have a recent copy of the release_1_11_0 branch on their local drive? I 
-have a copy but there may be an issue with it.
-
-This worked on FGT and Fresnel on Jul-19-2018.
-
-This worked on CBF on Mar-22-2019.
-
-You feel like your last check-in broke the build. USE WITH CAUTION.
-
-One reason I like this command is that it moves back slowly so will help you be careful not to 
-rollback to far.
 
 
 
@@ -3929,30 +3962,6 @@ echo %fp%
 
 echo.
 git reset --hard "HEAD~2"
-
-exit/b
-
-
-
-::_
-
-:roll_back_repo
-
-:roll_back_server
-
-set fp=* Roll back the server repository to your what's on your local version. Use with CAUTION.
-
-rem lu: Jul-19-2018
-
-rem How do you roll back in git?
-
-rem This worked on David's machine on Aug-3-2017.
-
-echo.
-echo %fp%
-
-echo.
-git push -f
 
 exit/b
 

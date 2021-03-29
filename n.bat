@@ -5141,8 +5141,6 @@ exit/b
 
 :rl
 
-:cbd
-
 :full_pem
 
 :cap
@@ -6900,6 +6898,10 @@ exit/b
 :o8
 
 :o9
+
+:cbd
+
+:crbd
 
 :pass-through
 
@@ -11254,7 +11256,9 @@ echo %fp%
 
 call n rf_ma
 
-set cbf_fn=%cbf_path%\api\build.gradle
+set cbf_path=%cbf_path%\api
+
+set cbf_fn=%cbf_path%\build.gradle
 
 exit/b
 
