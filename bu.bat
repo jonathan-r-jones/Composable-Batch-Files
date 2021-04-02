@@ -70,9 +70,10 @@ if /i not exist "%Current_JDate%" md "%Current_JDate%"
 
 cd %Current_JDate%
 
-xcopy /s /y "%appdata%\Multi Edit Software\Multi-Edit\11\Config.04"
+xcopy /s /y "%appdata%\Multi Edit Software\Multi-Edit\11\Config.04" .
 
 exit/b
+
 
 
 
