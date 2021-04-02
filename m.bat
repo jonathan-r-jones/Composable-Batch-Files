@@ -3845,7 +3845,7 @@ exit/b
 
 :_
 
-:coma
+:ccm
 
 set fp=* Compile CMAC macros.
 

@@ -6537,8 +6537,6 @@ exit/b
 
 :sr96
 
-:logs
-
 :grey
 
 :pem2
@@ -6902,6 +6900,18 @@ exit/b
 :cbd
 
 :crbd
+
+:karm
+
+:unlo
+
+:coma
+
+:kine
+
+:anft
+
+:eagl
 
 :pass-through
 

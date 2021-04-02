@@ -152,7 +152,7 @@ echo     ofp  Transform directory to parent folder
 echo       p  Add, commit and push Git changes, has TD parameter
 echo      pg  Ping hooked up to the nicknames dictionary
 echo      pl  Git pull, has TD parameter
-echo      pn  Communicates that the intent is only to change the path for a passed in alias
+echo      pn  Exclusively sets the path for an alias.
 echo     pql  PostgreSQL (in development)
 echo     png  Run cbf_png as a double-click filename
 echo      ps  PowerShell
