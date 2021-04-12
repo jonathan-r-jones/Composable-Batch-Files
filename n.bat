@@ -6879,24 +6879,6 @@ exit/b
 
 :sr54
 
-:o1
-
-:o2
-
-:o3
-
-:o4
-
-:o5
-
-:o6
-
-:o7
-
-:o8
-
-:o9
-
 :cbd
 
 :crbd
@@ -6916,6 +6898,34 @@ exit/b
 :2122
 
 :2120
+
+:scri
+
+:anum
+
+:r1
+
+:r2
+
+:r3
+
+:r4
+
+:r6
+
+:r7
+
+:r31
+
+:r32
+
+:r33
+
+:sr120
+
+:sr121
+
+:dret
 
 :pass-through
 
@@ -9468,11 +9478,9 @@ https://www.codejava.net/java-se/download-and-install-java-11-openjdk-and-oracle
 
 :jvre
 
-set fp=* Java runtime path.
+set fp=* Java runtime path. According to Craig M., this should be %java_home%\jre.
 
-rem According to Craig M., this should be %java_home%\jre.
-
-rem lu: Dec-6-2018
+rem lu: Apr-7-2021
 
 echo.
 echo %fp%
@@ -13877,7 +13885,7 @@ exit/b
 
 ::_
 
-:o5
+:r5
 
 :rf_s
 

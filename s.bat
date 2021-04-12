@@ -48,6 +48,8 @@ set fp=* preprocess.
 
 if not "%~1" == "" call td %~1
 
+if %errorlevel% gtr 0 exit/b
+
 
 
 :_

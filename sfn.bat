@@ -38,6 +38,12 @@ if %errorlevel% == 0 (
   goto use_current_folder_filename
 )
 
+echo %*| C:\Windows\System32\find.exe /i " -n">nul
+
+if %errorlevel% == 0 (
+  goto use_current_folder_filename
+)
+
 goto use_alias_or_batch_file
 
 
