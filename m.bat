@@ -4459,9 +4459,11 @@ rem qjq
 j bash
 
 rem Run 1 of the following. First one is easier.
-rem ./craigs_get_cart_jwt_rpl.sh
-rem or
 rem ./get_cart_jwt.sh
+rem or
+rem ./craigs_get_cart_jwt_rpl.sh - deprecated
+rem If you have an issue with obtaining the jwt, you can try getting the latest jwt script
+rem from "td scri".
 
 rem Copy the new jwt token into the file using:
 

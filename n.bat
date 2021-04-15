@@ -6485,8 +6485,6 @@ exit/b
 
 :gifl
 
-:home
-
 :caho
 
 :ssp
@@ -6926,6 +6924,14 @@ exit/b
 :sr121
 
 :dret
+
+:ipa
+
+:scr
+
+:jwtbak
+
+:2333
 
 :pass-through
 
@@ -10325,27 +10331,6 @@ exit/b
 
 
 
-:_
-
-:bash
-
-set fp=* Git bash.
-
-rem lu: Aug-12-2019
-
-echo.
-echo %fp%
-
-set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
-
-set cbf_fn=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
-
-set cbf_path=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
-
-exit/b
-
-
-
 :_+ Multi-Edit Configuration Files (skw Multi-Edit Config Files)
 
 
@@ -13574,6 +13559,7 @@ rem Determine installation path.
 
 set cbf_application=
 
+if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2021.1\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2021.1\bin\idea64.exe
 if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe
 if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe
 if exist "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin\idea64.exe
@@ -13980,6 +13966,54 @@ echo %fp%
 call n pict>nul
 
 set cbf_path=%cbf_path%\professional emulation
+
+exit/b
+
+
+
+:_
+
+:ymli
+
+:ymll
+
+set fp=* YML Linter.
+
+rem lu: Apr-14-2021
+
+echo.
+echo %fp%
+
+call pn r>nul
+
+set cbf_branch=master
+
+set cbf_clone_url=https://github.com/adrienverge/yamllint.git
+
+set cbf_gh=https://github.com/adrienverge/yamllint
+
+set cbf_path=%cbf_path%\yml-linter
+
+exit/b
+
+
+
+:_
+
+:bash
+
+set fp=* Git bash. Note: Bash starts in the home/user profile folder.
+
+rem lu: Aug-12-2019
+
+echo.
+echo %fp%
+
+set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
+
+set cbf_fn=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
+
+set cbf_path=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
 
 exit/b
 

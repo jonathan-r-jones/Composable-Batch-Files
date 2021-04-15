@@ -1866,8 +1866,6 @@ exit/b
 
 ::_
 
-:l
-
 :log
 
 set fp=* Read the log. Among other things, you can use this to see when a GitHub repo was last updated.
