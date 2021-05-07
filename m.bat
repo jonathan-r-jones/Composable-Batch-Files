@@ -4816,7 +4816,7 @@ exit/b
 
 :lnk_api_attach_debugger
 
-set fp=* Run API cmd, attach debugger.
+set fp=* Run API cmd and attach debugger.
 
 rem lu: Aug-16-2019
 
@@ -4837,7 +4837,7 @@ exit/b
 
 :lnk_api_do_not_attach_debugger
 
-set fp=* Run API cmd, do not attach debugger.
+set fp=* Run API cmd and do not attach debugger.
 
 rem lu: Aug-16-2019
 

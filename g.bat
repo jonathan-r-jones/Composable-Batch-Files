@@ -3282,6 +3282,34 @@ exit/b
 
 ::_
 
+:cbm
+
+:crbd
+
+set fp=* Create new branch based on the master branch.
+
+rem lu: May-4-2021
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, destination branch, is a required field.
+  exit/b
+)
+
+echo.
+git checkout -b %2 master
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
 :crbr
 
 set fp=* Create a new branch based on specified source branch.

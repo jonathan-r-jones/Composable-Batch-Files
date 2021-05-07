@@ -73,6 +73,10 @@ echo %0 1484 ts ij
 echo.
 echo %0 2154 java3 ij
 
+rem This is a webpage!
+echo.
+echo %0 arte gh2 kr
+
 exit/b
 
 (!rfsp) (mov-6)

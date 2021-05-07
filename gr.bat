@@ -17,7 +17,7 @@ echo %filep%
 
 set fp=* Route callers.
 
-if "%~1" == "" goto help
+if "%~1" == "" goto rute
 
 if "%~1" == "/?" goto help
 
@@ -795,11 +795,17 @@ exit/b
 
 :_
 
+:rjut
+
+:rt
+
 :run_tests
 
 :run_unit_tests
 
 :rut
+
+:rute
 
 :test
 
@@ -823,6 +829,7 @@ exit/b
 
 >< >< Footnote:
 
+As of Apr-19-2021, there are this many Java unit tests: 725
 As of Jul-7-2020, there are this many Java unit tests:  501
 As of Jun-30-2020, there are this many Java unit tests: 484
 As of Mar-5-2020, there are this many Java unit tests:  120

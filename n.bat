@@ -5483,8 +5483,6 @@ exit/b
 
 :rcl
 
-:esc
-
 :esch
 
 :esct
@@ -5789,7 +5787,7 @@ exit/b
 
 :rf_caco
 
-:r6
+:l6
 
 :fbi
 
@@ -6932,6 +6930,74 @@ exit/b
 :jwtbak
 
 :2333
+
+:enst
+
+:cose
+
+:2284
+
+:2333.2
+
+:jts
+
+:doma
+
+:ente
+
+:jms
+
+:jmse
+
+:enro
+
+:enrot
+
+:2284-enum
+
+:2322
+
+:matr
+
+:amqc
+
+:aad
+
+:cts
+
+:old_r7
+
+:anov
+
+:mao
+
+:2283
+
+:arte
+
+:2283.3
+
+:vault
+
+:old_templ
+
+:j21
+
+:j22
+
+:j23
+
+:j24
+
+:j27
+
+:j28
+
+:rafd
+
+:stg
+
+:imm_cd
 
 :pass-through
 
@@ -8249,8 +8315,6 @@ exit/b
 :_
 
 :ctf
-
-:cts
 
 set fp=* Craig's Terraform State file.
 
@@ -12021,8 +12085,6 @@ exit/b
 :clip
 
 :shot
-
-:snap
 
 :snip
 

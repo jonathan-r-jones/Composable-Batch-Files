@@ -59,9 +59,10 @@ if not "%machinename%"=="gfe" (
   call p drql
   cd\
 )
-rem qq
 
 call p cbf
+
+call p cade
 
 call m update_lu %0
 
