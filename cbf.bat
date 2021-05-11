@@ -91,6 +91,7 @@ echo    defn  Delete file base on passed in filename alias
 echo    depc  Delete the path contents of the passed in alias.
 echo    depn  Delete folder corresponding to CBF path alias parameter
 echo    devu  Demo file for Dev Universiy event on Jan-9-2020
+echo      dh  Doskey /history
 echo      dn  Dot Net Core
 echo      do  Docker functions accessed via function routing.
 echo      dr  Dir using function routing

@@ -6999,6 +6999,28 @@ exit/b
 
 :imm_cd
 
+:2283-2
+
+:2283-4
+
+:2283-1
+
+:jcf
+
+:2283-8
+
+:2283-9
+
+:qj
+
+:jaco
+
+:conf
+
+:qcon
+
+:jmsj
+
 :pass-through
 
 set fp=* Pass through.
@@ -13512,6 +13534,8 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\pictures\new and exciting
+
+call ni nexu
 
 exit/b
 

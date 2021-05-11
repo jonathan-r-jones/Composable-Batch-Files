@@ -97,6 +97,10 @@ echo.
 echo td caco
 echo %0 "no_cookie.html" -g caco
 
+echo.
+echo td api
+echo %0 "><" java
+
 exit/b
 
 (!rfsp) (mov-5)
