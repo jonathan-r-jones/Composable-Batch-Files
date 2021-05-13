@@ -158,7 +158,7 @@ exit/b
 
 :main_function
 
-set fp=* This is the order of operations.
+set fp=* Below here is the order of operations.
 
 
 
@@ -256,7 +256,7 @@ if not "%cbf_url%" == "" (
 
 if not "%cbf_png%" == "" (
   if exist "%cbf_png%" (
-    call dc %cbf_png%
+    call dc "%cbf_png%"
     exit/b
   )
 )

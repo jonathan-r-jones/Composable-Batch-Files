@@ -2932,6 +2932,8 @@ exit/b
 
 :clea
 
+:clear
+
 :env_c
 
 :r
@@ -4805,8 +4807,8 @@ title=%fp%
 echo.
 echo %fp%
 
-rem call %0 lnk_api_attach_debugger
-call %0 lnk_api_do_not_attach_debugger
+call %0 lnk_api_attach_debugger
+rem call %0 lnk_api_do_not_attach_debugger
 
 exit/b
 
@@ -4816,7 +4818,7 @@ exit/b
 
 :lnk_api_attach_debugger
 
-set fp=* Run API cmd and attach debugger.
+set fp=* Run API cmd and ATTACH DEBUGGER!
 
 rem lu: Aug-16-2019
 

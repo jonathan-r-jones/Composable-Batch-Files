@@ -7,7 +7,7 @@
 :_
 
 rem       qq1
-set filep=* 
+set filep=* List or clear CBF variables.
 
 
 
@@ -37,13 +37,13 @@ rem skw:
 rem lu: 
 
 echo.
-echo Batch file style: Single Purpose
+echo Batch file style: Multiurpose
 
 echo.
-echo Entangled variable: cbf_fc_path
+echo Entangled variable: For example, cbf_fc_path
 
 echo.
-echo Pit of Success Strategy: If cb_conf is not, found the algorithm will look for cbf_url.
+echo Pit of Success Strategy: For example, If cb_conf is not, found the algorithm will look for cbf_url.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -61,7 +61,6 @@ echo %parameter_2%
 echo.
 echo Example(s):
 
-rem                                   qq1
 echo.
 echo %0
 

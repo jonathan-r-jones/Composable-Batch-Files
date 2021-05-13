@@ -59,13 +59,15 @@ echo        alias lookup  Looking up cbf values in the n.bat dictionary.
 echo     atomic function  A single, self-contained batch file function, which usually
 echo                      performs a single task and is called by invoking its batch file 
 echo                      label. It also contains "exit/b', which is the end of the function.
+echo                  -c  As a batch file parameter, means force file creation
+echo                   c  Current folder filename, when used in a batch file name
+echo                 cbf  Composable batch files
 echo      cbf definition  The function in n.bat where an alias' defintion is located.
+echo        cbf variable  An environment variable that begins with "cbf_", for example 
+echo                      "cbf_path", that is used by CBF batch files.
 echo code execution area  Batch file style (bfs) where the router routes execution to near the 
 echo                      end of the file, unless a parameter is supllied, in which case 
 echo                      function routing occurs. Example(s): t.bat, v.bat.
-echo                 cbf  Composable batch files
-echo                  -c  As a batch file parameter, means force file creation
-echo                   c  Current folder filename, when used in a batch file name
 echo            consumer  Batch file style using function routing with time-stamps as function 
 echo                      names. Used for analysis and showing-your-work, not for repeatability. 
 echo                      By convention, files are suffixed with a "_c".

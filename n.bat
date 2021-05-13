@@ -7021,6 +7021,14 @@ exit/b
 
 :jmsj
 
+:cron
+
+:onm
+
+:2446
+
+:clear
+
 :pass-through
 
 set fp=* Pass through.
@@ -12987,7 +12995,7 @@ rem lu: May-19-2020
 echo.
 echo %fp%
 
-call n c>nul
+call pn cade>nul
 
 set cbf_path=%cbf_path%\tickets
 
@@ -13533,9 +13541,12 @@ rem lu: May-16-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\pictures\new and exciting
+rem By calling the "nexu" method first, what this says is that any values not assigned in this CBF,
+rem will be pulled from the "nexu" CBF.
 
 call ni nexu
+
+set cbf_path=%dropbox%\pictures\new and exciting
 
 exit/b
 
@@ -14099,7 +14110,7 @@ set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Men
 
 set cbf_fn=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
 
-set cbf_path=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
+set cbf_path=C:\Users\JJones 2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
 
 exit/b
 

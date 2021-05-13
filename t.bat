@@ -11036,6 +11036,27 @@ exit/b
 
 :_
 
+:
+
+set fp=* Adjust podcast folder.
+
+rem lu: 
+
+echo.
+echo %fp%
+
+if exist g:\podcasts set cbf_path=g:\podcasts
+if exist h:\podcasts set cbf_path=h:\podcasts
+
+echo.
+echo Cbf_path: %cbf_path%
+
+exit/b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.
@@ -11048,19 +11069,18 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Adjust podcast folder.
+set fp=* Process CBF variables.
 
-rem lu: 
+set fp=* List CBF Variables.
+
+if -%~1- == -c- set fp=* Clear CBF Variables.
 
 echo.
 echo %fp%
 
 rem qq1
-if exist g:\podcasts set cbf_path=g:\podcasts
-if exist h:\podcasts set cbf_path=h:\podcasts
-
-echo.
-echo Cbf_path: %cbf_path%
+if -%~1- == -c- set cbf_path=
+if not -%cbf_path%- == "" echo.& echo * CBF_Path: %cbf_path%
 
 exit/b
 

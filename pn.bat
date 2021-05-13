@@ -66,8 +66,11 @@ if not exist "%cbf_path%" (
   exit/b 1
 )
 
-rem This is part of the new exclusivity strategy.
-rem set cbf_fn=
+set cbf_reserved_path=%cbf_path%
+
+call cv c>nul
+
+set cbf_path=%cbf_reserved_path%
 
 
 

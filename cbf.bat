@@ -91,7 +91,7 @@ echo    defn  Delete file base on passed in filename alias
 echo    depc  Delete the path contents of the passed in alias.
 echo    depn  Delete folder corresponding to CBF path alias parameter
 echo    devu  Demo file for Dev Universiy event on Jan-9-2020
-echo      dh  Doskey /history
+echo      dh  Doskey /history. Display the previous 50 commands.
 echo      dn  Dot Net Core
 echo      do  Docker functions accessed via function routing.
 echo      dr  Dir using function routing
@@ -140,7 +140,7 @@ echo      mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem  (!rfsp) (mov-2)
 echo       n  Nicknames dictionary, a. k. a. the data layer
 echo     ney  An empty nicknames dictionary, useful for starting over
-echo      nm  NPM
+echo      nm  NPM-related functions.
 echo      no  Notepad
 echo     net  Netstat
 echo     nox  Use Notepad to edit a batch file in the CBF folder
@@ -153,8 +153,8 @@ echo     ofp  Transform directory to parent folder
 echo       p  Add, commit and push Git changes, has TD parameter
 echo      pg  Ping hooked up to the nicknames dictionary
 echo      pl  Git pull, has TD parameter
-echo      pn  Exclusively sets the path for an alias.
-echo     pql  PostgreSQL (in development)
+echo      pn  Sets only the path for an alias.
+echo     pql  PostgreSQL
 echo     png  Run cbf_png as a double-click filename
 echo      ps  PowerShell
 echo     qfn  Query if a file exists based on its passed in alias
