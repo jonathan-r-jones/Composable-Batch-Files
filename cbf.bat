@@ -120,8 +120,7 @@ echo    gose  Google searcher
 echo      gr  Gradle
 echo       h  Sencha
 echo       i  Information of CBF variable value assignments
-echo       j  Simulate a double-click using a default precedence of operation preferences or a 
-echo          dynamically constructed variable.
+echo       j  Simulate a double-click using default precedence operation or a DCV.
 echo      je  Surf to Jenkins websites
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations
