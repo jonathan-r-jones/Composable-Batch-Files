@@ -72,7 +72,8 @@ echo            consumer  Batch file style using function routing with time-stam
 echo                      names. Used for analysis and showing-your-work, not for repeatability. 
 echo                      By convention, files are suffixed with a "_c".
 echo   dynamically cons-  DCV. An environment variable that can be dynamically created at runtime.
-echo   tructed variable   For example, java is the dcv of the expression cbf_java.
+echo   tructed variable   For example, java is the dcv of the expression cbf_java. CBFs that
+echo                      use DCVs should have an "x" in their name.
 echo  entangled variable  A cbf variable associated with a particle batch file, e.g. cbf_path
 echo                      and td.bat.
 echo          error code  fn.bat returns an error code of 2 for file not exists.

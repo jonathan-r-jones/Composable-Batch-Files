@@ -100,10 +100,11 @@ echo       e  Uses mx.bat then me.bat to decipher which ASCII file to edit (Or e
 echo      ea  Use Mutli-Edit to edit the Ansible Playbook of an alias.
 echo      ed  Edit a file abstraction layer
 echo     edr  Edit a relative path constucted filename
-echo      ej  Use Multi-Edit to edit DCV ASCII files.
+echo     edx  Edit file - back office operation.
 echo      el  Edit log file of an alias
 echo      es  Edit settings file of an alias
 echo      ex  Run Excel with or without a filename alias parameter
+echo    exdc  Use Multi-Edit to edit DCV ASCII files.
 echo       f  Filename sapien. Use any application to open any file
 echo      fe  Check for the existence of a file based on the passed in filename alias
 echo      fn  Communicates that the intent is only to change the filename for a passed in alias
@@ -182,9 +183,9 @@ echo      sx  Use Sublime to edit a batch file in the CBF folder
 echo       t  Testing, experimenting and developing new batch file functions
 echo      td  Transform directory
 echo     tdc  Transform directory to favorite child folder of alias
-echo    tdfx  Open a folder using a DCV
 echo     tdp  Transform directory to parent folder
 echo     tdr  Transform directory by appending a relative path onto a base path
+echo     tdx  Open a folder using a DCV.
 echo      te  Batch file template used for creating new batch files
 echo      tf  Terraform
 echo      tk  Taskkill

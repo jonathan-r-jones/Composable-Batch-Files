@@ -4807,8 +4807,8 @@ title=%fp%
 echo.
 echo %fp%
 
-call %0 lnk_api_attach_debugger
-rem call %0 lnk_api_do_not_attach_debugger
+rem call %0 lnk_api_attach_debugger
+call %0 lnk_api_do_not_attach_debugger
 
 exit/b
 

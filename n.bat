@@ -895,7 +895,7 @@ exit/b
 
 :_
 
-:st
+:scf
 
 set fp=Sencha class folder.
 
@@ -7028,6 +7028,32 @@ exit/b
 :2446
 
 :clear
+
+:jobs
+
+:vars
+
+:cdv
+
+:snp
+
+:sap
+
+:acis
+
+:aacp
+
+:aacd
+
+:acdc
+
+:acdcc
+
+:prac
+
+:acdcp
+
+:acdcd
 
 :pass-through
 

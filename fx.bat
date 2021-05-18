@@ -77,6 +77,9 @@ rem This is a webpage!
 echo.
 echo %0 arte gh2 kr
 
+echo.
+echo %0 acis jira kr
+
 exit/b
 
 (!rfsp) (mov-6)

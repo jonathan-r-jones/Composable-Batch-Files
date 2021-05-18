@@ -1007,7 +1007,7 @@ exit/b
 
 ::_
 
-:st
+:sap
 
 set fp=* Stash and pop.
 
