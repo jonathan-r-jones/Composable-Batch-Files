@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Use a dynamic variable to copy a cbf variable to the clipboard.
+set filep=* Use a DCV to copy a cbf variable to the clipboard.
 
 
 
@@ -63,6 +63,9 @@ echo %0 je je
 
 echo.
 echo %0 fqma ip
+
+echo.
+echo %0 ma cron
 
 exit/b
 

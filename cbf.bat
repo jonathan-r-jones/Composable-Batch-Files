@@ -125,7 +125,7 @@ echo      je  Surf to Jenkins websites
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations
 echo      kc  Connect to servers
-echo       l  Use a dynamic variable to copy a cbf variable to the clipboard
+echo       l  Use a DCV to copy a cbf variable to the clipboard
 echo      lp  Load CBF_Path to the clipboard
 echo     lpf  Load cbf_fn of passed in alias onto the clipboard
 echo    lpfc  Load cbf_fn contents to the clipboard
@@ -156,9 +156,11 @@ echo      pl  Git pull, has TD parameter
 echo      pn  Sets only the path for an alias.
 echo     pql  PostgreSQL
 echo     png  Run cbf_png as a double-click filename
+echo      pr  Wrapper around fx.bat.
 echo      ps  PowerShell
 echo     qfn  Query if a file exists based on its passed in alias
 echo       r  Run application using CBF variables, mostly used in back office operations
+echo      rl  Wrapper around fx.bat.
 echo     rzr  Multi-Edit abstraction layer for running CBF files
 echo    rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo       s  Check git status remotely, has TD parameter
