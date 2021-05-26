@@ -68,7 +68,7 @@ echo     clc  Simple calculator
 echo      cn  Git cloning, based entirely on the nickname parameter
 echo     cng  Git cloning, generic version
 echo     col  Shell window colors operations
-echo    conf  Surf to Confluence websites
+echo      cf  Execute the namesake DCV for the passed in alias.
 echo      cp  Copy files using function routing
 echo    cpcf  Use file in the current folder to "save as" to a filename alias
 echo    cpcp  Copy file in the current directory to nickname-specified path
@@ -112,16 +112,18 @@ echo      fs  Filenames search
 echo     fsp  Perennial filenames search
 echo     fst  Filenames search with a td parameter
 echo      fx  Open any file with any application using a DCV.
+echo     fxw  A wrapper around fx.bat.
 echo       g  Git
+rem qq1
 echo      gg  Git Gui helper Has TD parameter
-echo      gh  A wrapper around fx.bat that executes the DCV for "gh".
+echo      gh  Execute the namesake DCV for the passed in alias.
 echo      gl  Glossary of terms used in CBF
 echo    gose  Google searcher
 echo      gr  Gradle
 echo       h  Sencha
 echo       i  Information of CBF variable value assignments
 echo       j  Simulate a double-click using default precedence operation or a DCV.
-echo      je  Surf to Jenkins websites
+echo      je  Execute the namesake DCV for the passed in alias.
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations
 echo      kc  Connect to servers
@@ -156,11 +158,11 @@ echo      pl  Git pull, has TD parameter
 echo      pn  Sets only the path for an alias.
 echo     pql  PostgreSQL
 echo     png  Run cbf_png as a double-click filename
-echo      pr  A wrapper around fx.bat that executes the DCV for "pr".
+echo      pr  Execute the namesake DCV for the passed in alias.
 echo      ps  PowerShell
 echo     qfn  Query if a file exists based on its passed in alias
 echo       r  Run application using CBF variables, mostly used in back office operations
-echo      rl  A wrapper around fx.bat that executes the DCV for "rl".
+echo      rl  Execute the namesake DCV for the passed in alias.
 echo     rzr  Multi-Edit abstraction layer for running CBF files
 echo    rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo       s  Check git status remotely, has TD parameter

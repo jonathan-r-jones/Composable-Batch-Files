@@ -287,7 +287,7 @@ if not "%cbf_gh%" == "" (
 
 :_
 
-if not "%cbf_conf%" == "" (
+if not "%cbf_cf%" == "" (
   call sf %1>nul
   exit/b
 )

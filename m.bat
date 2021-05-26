@@ -2963,7 +2963,7 @@ set cbf_back=
 
 set cbf_clone_url=
 
-set cbf_conf=
+set cbf_cf=
 
 rem set cbf_default_browser=
 

@@ -4827,6 +4827,8 @@ exit/b
 
 :_
 
+:je
+
 :testx
 
 :rep18
@@ -5582,8 +5584,6 @@ exit/b
 :lymlb
 
 :CART-1168
-
-:je
 
 :jirele
 
@@ -6780,8 +6780,6 @@ exit/b
 :cjf
 
 :jf
-
-:je
 
 :buje
 
@@ -12991,7 +12989,7 @@ rem lu: May-15-2020
 echo.
 echo %fp%
 
-set cbf_conf=https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html
+set cbf_cf=https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html
 
 exit/b
 
@@ -13172,7 +13170,7 @@ call pn tick>nul
 
 set cbf_path=%cbf_path%\%1
 
-set cbf_conf=https://confluence.ice.dhs.gov/display/CART/Database+Field+changes
+set cbf_cf=https://confluence.ice.dhs.gov/display/CART/Database+Field+changes
 
 set cbf_ex=%cbf_path%\%1.xlsx
 

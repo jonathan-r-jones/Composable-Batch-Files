@@ -109,7 +109,7 @@ call m compose_variable %2
 
 if "%cbf_expanded_variable%" == "" (
   echo. 
-  echo * Error: There is no definition of "cbf_%2" for the alias "%1".
+  echo * Error: There is no definition for "cbf_%2" for the alias "%1".
   exit/b
 )
 

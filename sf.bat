@@ -42,7 +42,7 @@ the Browser application alias you wish to use. If "-b" is not used, the default 
 browser will be used.
 
 echo.
-echo Pit of Success Strategy: If cb_url is not found, the algorithm will look for cbf_conf
+echo Pit of Success Strategy: If cb_url is not found, the algorithm will look for cbf_cf
 echo or cbf_gh.
 
 echo.
@@ -212,7 +212,7 @@ if "%cbf_parameter%" == "" (
 )
 
 if "%cbf_parameter%" == "" (
-  set cbf_parameter=%cbf_conf%
+  set cbf_parameter=%cbf_cf%
 )
 
 if "%cbf_parameter%" == "" (

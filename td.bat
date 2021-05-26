@@ -48,7 +48,7 @@ echo.
 echo Batch file style: Single task.
 
 echo.
-echo Entangled variable: cbf_path.
+echo Entangled variable: cbf_path
 
 exit/b
 

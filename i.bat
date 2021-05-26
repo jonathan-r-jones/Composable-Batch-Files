@@ -101,9 +101,9 @@ if not "%cbf_clone_url%" == "" (
 )
 
 :
-if not "%cbf_conf%" == "" (
+if not "%cbf_cf%" == "" (
   echo.
-  echo * Confluence: %cbf_conf%
+  echo * Confluence: %cbf_cf%
 )
 
 :
