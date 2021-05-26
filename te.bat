@@ -37,13 +37,13 @@ rem skw:
 rem lu: 
 
 echo.
-echo Batch file style: Multiurpose
+echo Batch file style: Single purpose
 
 echo.
 echo Entangled variable: For example, cbf_fc_path
 
 echo.
-echo Pit of Success Strategy: For example, If cb_conf is not, found the algorithm will look for cbf_url.
+echo Pit of Success Strategy: For example, if cb_conf is not found, the algorithm will look for cbf_url.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -81,8 +81,13 @@ exit/b
 
 :main_function
 
-rem qq1
+set fp=
 
+echo.
+echo %fp%
+
+
+rem qq1
 
 exit/b
 

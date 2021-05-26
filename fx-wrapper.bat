@@ -6,7 +6,8 @@
 
 :_
 
-set filep=* A wrapper around fx.bat that executes the DCV for "%0".
+rem       qq1
+set filep=* A wrapper batch file that allows 
 
 
 
@@ -14,7 +15,7 @@ set filep=* A wrapper around fx.bat that executes the DCV for "%0".
 
 set fp=* Route callers.
 
-if -%~1- == -- goto perform_default_action
+if -%~1- == -- goto help
 
 if -%~1- == -/?- goto help
 
@@ -39,21 +40,29 @@ echo.
 echo Batch file style: Single purpose
 
 echo.
-echo Entangled variable: For example, cbf_pr.
+echo Entangled variable: For example, cbf_fc_path
+
+echo.
+echo Pit of Success Strategy: For example, if cb_conf is not found, the algorithm will look for cbf_url.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Alias you wish to process.
+set parameter_1=Parameter 1 (Optional): 
+
+set parameter_2=Parameter 2 (Optional): 
 
 echo.
 echo %parameter_1%
 
 echo.
+echo %parameter_2%
+
+echo.
 echo Example(s):
 
 echo.
-echo %0 ma
+echo %0
 
 exit/b
 
@@ -70,26 +79,16 @@ exit/b
 
 :_
 
-:perform_default_action
-
-set filep=* Peform the default action which is to open the Cart pull requests webpage.
-
-echo.
-echo %filep%
-
-call fx ma %0 kr>nul
-
-exit/b
-
-
-
-:_
-
 :main_function
 
-call fx %1 %0 kr
+rem qq1
+
 
 exit/b
+
+
+Footnote
+>< >< >< 
 
 
 

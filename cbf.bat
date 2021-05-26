@@ -114,7 +114,7 @@ echo     fst  Filenames search with a td parameter
 echo      fx  Open any file with any application using a DCV.
 echo       g  Git
 echo      gg  Git Gui helper Has TD parameter
-echo      gh  Surf to GitHub websites
+echo      gh  A wrapper around fx.bat that executes the DCV for "gh".
 echo      gl  Glossary of terms used in CBF
 echo    gose  Google searcher
 echo      gr  Gradle
@@ -156,11 +156,11 @@ echo      pl  Git pull, has TD parameter
 echo      pn  Sets only the path for an alias.
 echo     pql  PostgreSQL
 echo     png  Run cbf_png as a double-click filename
-echo      pr  Wrapper around fx.bat.
+echo      pr  A wrapper around fx.bat that executes the DCV for "pr".
 echo      ps  PowerShell
 echo     qfn  Query if a file exists based on its passed in alias
 echo       r  Run application using CBF variables, mostly used in back office operations
-echo      rl  Wrapper around fx.bat.
+echo      rl  A wrapper around fx.bat that executes the DCV for "rl".
 echo     rzr  Multi-Edit abstraction layer for running CBF files
 echo    rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo       s  Check git status remotely, has TD parameter
@@ -171,7 +171,7 @@ echo    scpx  SCP wrapper
 echo  scpx_c  SCPX consumer
 echo scpx_c2  SCPX consumer 2 - for copying files to new servers
 echo      se  Internet search helper
-echo      sf  Surf to websites
+echo      sf  Surf to websites. A DCV is optional.
 echo     sfn  Set cbf_fn based on an evaluated filename parameter
 echo      sh  SSH
 echo     sln  Open a Visual Studio solution, has TD parameter

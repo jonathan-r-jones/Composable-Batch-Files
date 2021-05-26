@@ -7057,6 +7057,8 @@ exit/b
 
 :logs
 
+:xcc
+
 :pass-through
 
 set fp=* Pass through.
