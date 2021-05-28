@@ -7057,6 +7057,16 @@ exit/b
 
 :xcc
 
+:cchp
+
+:spre
+
+:2447
+
+:ksc
+
+:st
+
 :pass-through
 
 set fp=* Pass through.

@@ -94,7 +94,7 @@ set fp=* Peform the default action which is to open the Cart HOW-TO-ARTICLES web
 echo.
 echo %fp%
 
-call fx ht %1 kr>nul
+call fx cchp %1 kr>nul
 
 exit/b
 

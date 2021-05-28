@@ -36,7 +36,7 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Alias you wish to process.
 
-set parameter_2=Parameter 2: Dynamically constructed cbf variable.
+set parameter_2=Parameter 2: DCV
 
 set parameter_3=Parameter 3: Alias of your chosen application.
 
@@ -79,6 +79,9 @@ echo %0 arte gh2 kr
 
 echo.
 echo %0 acis jira kr
+
+echo.
+echo %0 ksc fn ij
 
 exit/b
 

@@ -4457,7 +4457,6 @@ gr run_api_with_debugger
 
 rem Also read direction on how to attach the debugger at: &atde
 
-rem qjq
 j bash
 
 rem Run 1 of the following. First one is easier.
@@ -4674,6 +4673,8 @@ exit/b
 
 
 ::_
+
+:lnk_gui
 
 :lnk_ui
 
