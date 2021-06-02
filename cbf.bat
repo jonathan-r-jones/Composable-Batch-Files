@@ -62,13 +62,13 @@ echo      bu  Back up using function routing
 echo     buc  Back up a file in the current folder to the code quick backup folder.
 echo       c  Clear screen and reset color
 echo     cbf  Show this list of CBF batch files
-echo    coco  Code Compare functions
+echo      cf  Execute the namesake DCV for the passed in alias.
 echo      ch  Chef command line utility
 echo     clc  Simple calculator
 echo      cn  Git cloning, based entirely on the nickname parameter
 echo     cng  Git cloning, generic version
+echo    coco  Code Compare functions
 echo     col  Shell window colors operations
-echo      cf  Execute the namesake DCV for the passed in alias.
 echo      cp  Copy files using function routing
 echo    cpcf  Use file in the current folder to "save as" to a filename alias
 echo    cpcp  Copy file in the current directory to nickname-specified path
@@ -81,7 +81,7 @@ echo      cs  File contents search
 echo     cst  File contents search with td parameter
 echo      cu  Curl with atomic functions
 echo     cuu  Basic Curl test of a URL
-echo      cv  Chef converge with a path parameter
+echo      cv  List or clear CBF variables.
 echo       d  Dir for current folder
 echo      dc  Double-click a filename, back office operation
 echo      dd  Dir filename extension searcher including subfolders
@@ -114,7 +114,6 @@ echo     fst  Filenames search with a td parameter
 echo      fx  Open any file with any application using a DCV.
 echo     fxw  A wrapper around fx.bat.
 echo       g  Git
-rem qq1
 echo      gg  Git Gui helper Has TD parameter
 echo      gh  Execute the namesake DCV for the passed in alias.
 echo      gl  Glossary of terms used in CBF

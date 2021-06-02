@@ -55,7 +55,7 @@ if "%~1" == "" (
 
 set new_file=%1.bat
 
-copy te.bat %new_file%
+xcopy te.bat %new_file%
 
 call e %new_file%
 

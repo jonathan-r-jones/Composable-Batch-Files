@@ -83,6 +83,9 @@ echo %0 acis jira kr
 echo.
 echo %0 ksc fn ij
 
+echo.
+echo %0 cd pr kr
+
 exit/b
 
 (!rfsp) (mov-6)
@@ -102,7 +105,7 @@ exit/b
 
 call m clear_errorlevel_silently>nul
 
-call m reset
+call cv c
 
 call n %1
 
