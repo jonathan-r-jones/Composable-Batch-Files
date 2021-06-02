@@ -70,8 +70,6 @@ exit/b
 
 :main_function
 
-set fp=* Process CBF variables.
-
 set fp=* List CBF Variables.
 
 if -%~1- == -c- set fp=* Clear CBF Variables.

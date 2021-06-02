@@ -8033,6 +8033,8 @@ exit/b
 
 ::_
 
+:mti
+
 :ro
 
 :drro
@@ -8045,6 +8047,8 @@ echo.
 echo %fp%
 
 set cbf_path=%dropbox%\savannah\reach out
+
+set cbf_fn=%cbf_path%\message to ipad.txt
 
 set cbf_url=https://github.com/jonathan-r-jones/Reach-Out.git
 
