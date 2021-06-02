@@ -2948,9 +2948,9 @@ exit/b
 
 :reset_cbf_variables
 
-set fp=* Reset CBF variables.
+set fp=* Reset CBF variables. Deprecated: Going forward, please use cv.bat.
 
-set fp=* Reset CBF variables. (skw clear environment variables, clear_cbf_variables)
+rem skw clear environment variables, clear_cbf_variables
 
 rem echo.
 rem echo %fp%

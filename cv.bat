@@ -86,6 +86,12 @@ if not "%cbf_application%"=="" echo.& echo * CBF_application: %cbf_application%
 
 ::
 
+if -%~1- == -c- set cbf_cf=
+if not "%cbf_cf%"=="" echo.& echo * CBF_cf: %cbf_cf%
+
+
+::
+
 if -%~1- == -c- set cbf_clone_url=
 if not "%cbf_clone_url%"=="" echo.& echo * CBF_clone_url: %cbf_clone_url%
 
@@ -178,6 +184,12 @@ if not "%cbf_png%"=="" echo.& echo * CBF_png: %cbf_png%
 
 if -%~1- == -c- set cbf_pr=
 if not "%cbf_pr%"=="" echo.& echo * CBF_pr: %cbf_pr%
+
+
+::
+
+if -%~1- == -c- set cbf_rl=
+if not "%cbf_rl%"=="" echo.& echo * CBF_rl: %cbf_rl%
 
 
 ::
