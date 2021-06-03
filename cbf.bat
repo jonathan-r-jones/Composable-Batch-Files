@@ -62,7 +62,7 @@ echo      bu  Back up using function routing
 echo     buc  Back up a file in the current folder to the code quick backup folder.
 echo       c  Clear screen and reset color
 echo     cbf  Show this list of CBF batch files
-echo      cf  Execute the namesake DCV for the passed in alias.
+echo      cf  Execute the Confluence namesake DCV for the passed in alias.
 echo      ch  Chef command line utility
 echo     clc  Simple calculator
 echo      cn  Git cloning, based entirely on the nickname parameter
@@ -115,14 +115,14 @@ echo      fx  Open any file with any application using a DCV.
 echo     fxw  A wrapper around fx.bat.
 echo       g  Git
 echo      gg  Git Gui helper Has TD parameter
-echo      gh  Execute the namesake DCV for the passed in alias.
+echo      gh  Execute the GitHub namesake DCV for the passed in alias.
 echo      gl  Glossary of terms used in CBF
 echo    gose  Google searcher
 echo      gr  Gradle
 echo       h  Sencha
 echo       i  Information of CBF variable value assignments
 echo       j  Simulate a double-click using default precedence operation or a DCV.
-echo      je  Execute the namesake DCV for the passed in alias.
+echo      je  Execute the Jenkins namesake DCV for the passed in alias.
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations
 echo      kc  Connect to servers
@@ -157,11 +157,11 @@ echo      pl  Git pull, has TD parameter
 echo      pn  Sets only the path for an alias.
 echo     pql  PostgreSQL
 echo     png  Run cbf_png as a double-click filename
-echo      pr  Execute the namesake DCV for the passed in alias.
+echo      pr  Execute the pull requests namesake DCV for the passed in alias.
 echo      ps  PowerShell
 echo     qfn  Query if a file exists based on its passed in alias
 echo       r  Run application using CBF variables, mostly used in back office operations
-echo      rl  Execute the namesake DCV for the passed in alias.
+echo      rl  Execute the releases namesake DCV for the passed in alias.
 echo     rzr  Multi-Edit abstraction layer for running CBF files
 echo    rzrp  Multi-Edit abstraction layer for running CBF files, with a pause
 echo       s  Check git status remotely, has TD parameter

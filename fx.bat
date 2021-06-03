@@ -105,7 +105,7 @@ exit/b
 
 call m clear_errorlevel_silently>nul
 
-call cv c
+call cv c>nul
 
 call n %1
 

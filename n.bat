@@ -7067,6 +7067,8 @@ exit/b
 
 :st
 
+:xc
+
 :pass-through
 
 set fp=* Pass through.
