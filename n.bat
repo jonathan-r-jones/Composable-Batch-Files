@@ -13586,7 +13586,10 @@ echo %fp%
 rem By calling the "nexu" method first, what this says is that any values not assigned in this CBF,
 rem will be pulled from the "nexu" CBF.
 
-call ni nexu
+rem qq1
+
+call pn s
+call %cbf_path%\ni nexu
 
 set cbf_path=%dropbox%\pictures\new and exciting
 
