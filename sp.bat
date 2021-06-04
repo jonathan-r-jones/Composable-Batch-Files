@@ -58,11 +58,10 @@ if not "%machinename%"=="gfe" (
   call cppp mecfg smecfg
   call p drql
   cd\
+  call p cade
 )
 
 call p cbf
-
-call p cade
 
 call m update_lu %0
 
