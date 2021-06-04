@@ -7069,6 +7069,8 @@ exit/b
 
 :xc
 
+:vku
+
 :pass-through
 
 set fp=* Pass through.
