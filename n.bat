@@ -7071,6 +7071,10 @@ exit/b
 
 :vku
 
+:jji
+
+:cli
+
 :pass-through
 
 set fp=* Pass through.
@@ -14077,27 +14081,6 @@ exit/b
 
 :_
 
-:jj
-
-:jjgh
-
-:jjgit
-
-set fp=* Jonathan's Github page.
-
-rem lu: Nov-30-2020
-
-echo.
-echo %fp%
-
-set cbf_gh=https://github.com/jonathan-r-jones
-
-exit/b
-
-
-
-:_
-
 :prem
 
 set fp=* Professional emulation.
@@ -14158,6 +14141,28 @@ set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Men
 set cbf_fn=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
 
 set cbf_path=C:\Users\JJones 2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
+
+exit/b
+
+
+
+
+:_
+
+:jj
+
+:jjgh
+
+:jjgit
+
+set fp=* Jonathan's Github page.
+
+rem lu: Nov-30-2020
+
+echo.
+echo %fp%
+
+set cbf_gh=https://github.com/jonathan-r-jones
 
 exit/b
 
