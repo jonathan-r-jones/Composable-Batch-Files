@@ -54,19 +54,19 @@ exit/b
 rem lu: Jul-22-2019
 
 echo.
-echo * Push selected repositories.
+echo * Push machine-appropriate repositories.
 
 rem call de.bat multi-edit_conflicted_files
 
-if not "%machinename%"=="gfe" (
+if "%machinename%"=="gfe" (
+  call p cade
+) else (
   call td mecfg_dr
   rem call de.bat concop
   call 8
   call cppp mecfg smecfg
   call p drql
-  call p cade
   cd\
-) else (
   call td ro
   copy oc.asc oc.txt
 )
