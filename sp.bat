@@ -54,7 +54,7 @@ exit/b
 rem lu: Jul-22-2019
 
 echo.
-echo %filep%
+echo * Push selected repositories.
 
 rem call de.bat multi-edit_conflicted_files
 
