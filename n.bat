@@ -7075,6 +7075,12 @@ exit/b
 
 :cli
 
+:2482
+
+:casf
+
+:nlets
+
 :pass-through
 
 set fp=* Pass through.
@@ -7892,6 +7898,23 @@ echo.
 echo %fp%
 
 set cbf_fn=%share-zone%\gfe.asc
+
+exit/b
+
+
+
+:_
+
+:lbm
+
+set fp=* lbm.asc.
+
+rem lu: Jun-8-2021
+
+echo.
+echo %fp%
+
+set cbf_fn=%share-zone%\lbm.asc
 
 exit/b
 
@@ -11295,6 +11318,8 @@ echo %fp%
 
 set cbf_fn=%share-zone%\blank.docx
 
+set cbf_wo=%cbf_fn%
+
 exit/b
 
 
@@ -14025,8 +14050,6 @@ exit/b
 
 :s
 
-:sz
-
 set fp=* Share-Zone.
 
 rem lu: Dec-7-2018
@@ -14055,6 +14078,23 @@ branches: master
 Philosophy: Share-zone is for documents that I may need for some reason outside of my GFE.
 
 Registration: Officially Registered Repo
+
+
+
+::_
+
+:sz
+
+set fp=* Share-Zone Miscellany.
+
+rem lu: Jun-9-2021
+
+echo.
+echo %fp%
+
+set cbf_path=%share-zone%\Miscellany
+
+exit/b
 
 
 

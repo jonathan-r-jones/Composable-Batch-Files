@@ -4197,6 +4197,7 @@ set cbf_fn_list=%cbf_fn_list% "%share-zone%\ni.bat"
 set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\n.bat"
 set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\v.bat"
 set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\g.bat"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\lbm.asc"
 
 attrib +r "%share-zone%\copy of cc.asc"
 
