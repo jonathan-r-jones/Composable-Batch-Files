@@ -80,11 +80,19 @@ echo %fp%
 
 ::
 
-rem qq1
 rem Application
 
 if -%~1- == -c- set cbf_application=
 if not "%cbf_application%"=="" echo.& echo * CBF_application: %cbf_application%
+
+
+::
+
+rem qq1
+rem Application Location
+
+if -%~1- == -c- set cbf_application_location=
+if not "%cbf_application_location%"=="" echo.& echo * CBF_application_location: %cbf_application_location%
 
 
 ::
@@ -113,6 +121,22 @@ if not "%cbf_clone_url%"=="" echo.& echo * CBF_clone_url: %cbf_clone_url%
 
 ::
 
+rem Default Browser
+
+if -%~1- == -c- set cbf_default_browser=
+if not "%cbf_default_browser%"=="" echo.& echo * CBF_default_browser: %cbf_default_browser%
+
+
+::
+
+rem Default Text Editor
+
+if -%~1- == -c- set cbf_default_text_editor=
+if not "%cbf_default_text_editor%"=="" echo.& echo * CBF_default_text_editor: %cbf_default_text_editor%
+
+
+::
+
 rem Excel
 
 if -%~1- == -c- set cbf_ex=
@@ -133,6 +157,14 @@ rem Filename
 
 if -%~1- == -c- set cbf_fn=
 if not "%cbf_fn%"=="" echo.& echo * CBF_fn: %cbf_fn%
+
+
+::
+
+rem Filename List
+
+if -%~1- == -c- set cbf_fn_list=
+if not "%cbf_fn_list%"=="" echo.& echo * CBF_fn_list: %cbf_fn_list%
 
 
 ::

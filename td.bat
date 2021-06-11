@@ -130,9 +130,6 @@ exit/b
 
 set fp=* Analyze environment and decide upon the proper course of action. This is an order of operations.
 
-rem echo.
-rem echo %fp% Jun-9-2020_4_08_PM
-
 set cbf_application=
 set cbf_fn=
 set cbf_path=
