@@ -7081,6 +7081,18 @@ exit/b
 
 :nlets
 
+:cartom
+
+:cacerts
+
+:dv-saml
+
+:fq-saml
+
+:tf-imm
+
+:tfp
+
 :pass-through
 
 set fp=* Pass through.
@@ -7898,23 +7910,6 @@ echo.
 echo %fp%
 
 set cbf_fn=%share-zone%\gfe.asc
-
-exit/b
-
-
-
-:_
-
-:lbm
-
-set fp=* lbm.asc.
-
-rem lu: Jun-8-2021
-
-echo.
-echo %fp%
-
-set cbf_fn=%share-zone%\lbm.asc
 
 exit/b
 
@@ -14203,6 +14198,27 @@ echo.
 echo %fp%
 
 set cbf_gh=https://github.com/jonathan-r-jones
+
+exit/b
+
+
+
+:_
+
+:lbm
+
+set fp=* lbm.asc.
+
+rem lu: Jun-8-2021
+
+echo.
+echo %fp%
+
+call pn s>nul
+
+set cbf_path=%cbf_path%\lbm
+
+set cbf_fn=%cbf_path%\lbm.asc
 
 exit/b
 

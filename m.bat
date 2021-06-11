@@ -4083,6 +4083,42 @@ exit/b
 
 ::_
 
+:gfe
+
+set fp=* Open GFE Affinity files.
+
+rem lu: Apr-15-2019
+
+echo.
+echo %fp%
+
+set cbf_fn_list=
+
+set cbf_fn_list="%share-zone%\gfe.asc"
+
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\copy of cc.asc"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\ch.bat"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\it2.asc"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\k.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\m.bat"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\mtw.asc"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\ni.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\n.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\v.bat"
+set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\g.bat"
+set cbf_fn_list=%cbf_fn_list% "%share-zone%\lbm.asc"
+
+attrib +r "%share-zone%\copy of cc.asc"
+
+start mew32 %cbf_fn_list%
+
+
+exit/b
+
+
+
+::_
+
 :aff
 
 set fp=* Open affinity files.
@@ -4167,42 +4203,6 @@ start Mew32.exe "%reach out%\WK.asc" "%reach out%\CC.asc" "%reach out%\CM.asc" "
 "%reach out%\DI.asc" 
 "%reach out%\JD.asc" "%reach out%\CH.asc" "%reach out%\RB.asc" "%reach out%\TJ.asc" "%reach out%\CI.asc" 
 "%reach out%\TR.asc" "%savannah%\reach out\OC.asc" "%composable_batch_files%\n.bat"
-
-exit/b
-
-
-
-::_
-
-:gfe
-
-set fp=* Open GFE Affinity files.
-
-rem lu: Apr-15-2019
-
-echo.
-echo %fp%
-
-set cbf_fn_list=
-
-set cbf_fn_list="%share-zone%\gfe.asc"
-
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\copy of cc.asc"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\ch.bat"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\it2.asc"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\k.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\m.bat"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\mtw.asc"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\ni.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\n.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\v.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\g.bat"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\lbm.asc"
-
-attrib +r "%share-zone%\copy of cc.asc"
-
-start mew32 %cbf_fn_list%
-
 
 exit/b
 

@@ -15,11 +15,11 @@ set filep=* List or clear CBF variables.
 
 set fp=* Route callers.
 
-if -%~1- == -- goto perform_default_action
+if -%~1- == -- goto perform-default-action
 
 if -%~1- == -/?- goto help
 
-goto main_function
+goto main-function
 
 
 
@@ -43,20 +43,20 @@ echo.
 echo Entangled variable: cbf_%0
 
 echo.
-echo Pit of Success Strategy: For example, if cb_conf is not found, the algorithm will look for cbf_url.
+echo Pit of Success Strategy: For example, if cb_cf is not found, the algorithm will look for cbf_url.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1 (Optional): 
+set parameter-1=Parameter 1 (Optional): 
 
-set parameter_2=Parameter 2 (Optional): 
-
-echo.
-echo %parameter_1%
+set parameter-2=Parameter 2 (Optional): 
 
 echo.
-echo %parameter_2%
+echo %parameter-1%
+
+echo.
+echo %parameter-2%
 
 echo.
 echo Example(s):
@@ -79,7 +79,7 @@ exit/b
 
 :_
 
-:perform_default_action
+:perform-default-action
 
 set fp=* Peform the default action which is 
 
@@ -92,15 +92,13 @@ exit/b
 
 :_
 
-:main_function
+:main-function
 
 set fp=
 
 echo.
 echo %fp%
 
-
-rem qq1
 
 exit/b
 
