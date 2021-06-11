@@ -88,7 +88,6 @@ if not "%cbf_application%"=="" echo.& echo * CBF_application: %cbf_application%
 
 ::
 
-rem qq1
 rem Application Location
 
 if -%~1- == -c- set cbf_application_location=
@@ -109,6 +108,14 @@ rem Confluence
 
 if -%~1- == -c- set cbf_cf=
 if not "%cbf_cf%"=="" echo.& echo * CBF_cf: %cbf_cf%
+
+
+::
+
+rem Composed Variable
+
+if -%~1- == -c- set cbf_composed_variable=
+if not "%cbf_composed_variable%"=="" echo.& echo * CBF_composed_variable: %cbf_composed_variable%
 
 
 ::
@@ -161,10 +168,26 @@ if not "%cbf_fn%"=="" echo.& echo * CBF_fn: %cbf_fn%
 
 ::
 
+rem File Type
+
+if -%~1- == -c- set cbf_file_type=
+if not "%cbf_file_type%"=="" echo.& echo * CBF_file_type: %cbf_file_type%
+
+
+::
+
 rem Filename List
 
 if -%~1- == -c- set cbf_fn_list=
 if not "%cbf_fn_list%"=="" echo.& echo * CBF_fn_list: %cbf_fn_list%
+
+
+::
+
+rem Full Pem
+
+if -%~1- == -c- set cbf_full_pem=
+if not "%cbf_full_pem%"=="" echo.& echo * CBF_full_pem: %cbf_full_pem%
 
 
 ::
@@ -269,6 +292,15 @@ rem Releases
 
 if -%~1- == -c- set cbf_rl=
 if not "%cbf_rl%"=="" echo.& echo * CBF_rl: %cbf_rl%
+
+
+::
+
+rem Reserved Path
+
+rem Commented for now because it causes an issue. Jun-11-2021
+rem if -%~1- == -c- set cbf_reserved_path=
+if not "%cbf_reserved_path%"=="" echo.& echo * CBF_reserved_path: %cbf_reserved_path%
 
 
 ::
