@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Set cbf_fn based on an evaluation.
+set filep=* Set cbf-fn based on an evaluation.
 
 
 
@@ -61,7 +61,7 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 echo.
-echo Entangled variable: cbf_filename
+echo Entangled variable: cbf-filename
 
 set parameter_1=Parameter 1: Filename, filename alias or batch file prefix for a batch file ^
 that lives in either the CBF or Share-zone folder. Evaluated filename parameter.
@@ -87,7 +87,7 @@ echo E.bat exists so should be opened.
 
 echo.
 echo %0 ccj
-echo No cbf_fn definition exists for ccj. However a definition for cbf_java exists at ccj, so ^
+echo No cbf-fn definition exists for ccj. However a definition for cbf-java exists at ccj, so ^
 use that instead.
 
 exit/b
@@ -140,14 +140,14 @@ exit/b
 set fp=* Use batch file to find filename.
 
 if exist "%composable_batch_files%\%~1.bat" (
-  set cbf_fn=%composable_batch_files%\%~1.bat
+  set cbf-fn=%composable_batch_files%\%~1.bat
   rem echo.
   rem echo %fp% Ran from CBF folder.
   goto file_exists
 )
 
 if exist "%share-zone%\%~1.bat" (
-  set cbf_fn=%share-zone%\%~1.bat
+  set cbf-fn=%share-zone%\%~1.bat
   echo.
   echo %fp% Ran from Share-Zone folder.
   goto file_exists
@@ -191,9 +191,9 @@ set fp=* Use current folder filename.
 echo.
 echo %fp%
 
-set cbf_fn=%~1
+set cbf-fn=%~1
 
-if exist "%cbf_fn%" (
+if exist "%cbf-fn%" (
   goto file_exists
 )
 
@@ -214,8 +214,8 @@ rem echo d_switch: %d_switch%
 
 if "%d_switch%" == "1" (
   echo.
-  echo * Delete file "%cbf_fn%", before opening. Nov-27-2019 6:36 PM
-  echo.>"%cbf_fn%"
+  echo * Delete file "%cbf-fn%", before opening. Nov-27-2019 6:36 PM
+  echo.>"%cbf-fn%"
   exit/b 0
 )
 
@@ -232,7 +232,7 @@ set fp=* The batch file label and CBF were found but file does MOT exist.
 echo.
 echo %fp%
 
-echo.>"%cbf_fn%"
+echo.>"%cbf-fn%"
 
 echo.
 echo * But now it does.

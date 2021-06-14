@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Copies file from a cbf_path nickname.
+set filep=* Copies file from a cbf-pt nickname.
 
 
 
@@ -32,7 +32,7 @@ echo %filep%
 echo.
 echo Usage: %0 [Parameter 1]
 
-set parameter_1=Parameter 1: Cbf_path nickame to use as the data source.
+set parameter_1=Parameter 1: cbf-pt nickame to use as the data source.
 set parameter_1=%parameter_1% 
 
 echo.
@@ -52,7 +52,7 @@ echo %filep%
 call n %1
 
 echo.
-xcopy /d /r /s /y "%cbf_path%"
+xcopy /d /r /s /y "%cbf-pt%"
 
 rem (!rfsp) (mov-2)
 

@@ -43,7 +43,7 @@ rem qq
 echo Parameter 2 (Optional): Filename alias.
 
 echo.
-echo Entangled variable: cbf_application
+echo Entangled variable: cbf-application
 
 exit/b
 
@@ -69,9 +69,9 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not exist "%cbf_application%" (
+if not exist "%cbf-application%" (
   echo.
-  echo * Error: The application was not found at "%cbf_application%".
+  echo * Error: The application was not found at "%cbf-application%".
   exit/b
 )
 
@@ -86,13 +86,13 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not exist "%cbf_fn%" (
+if not exist "%cbf-fn%" (
   echo.
-  echo * Error: The cbf_fn was not found at "%cbf_parameter%".
+  echo * Error: The cbf-fn was not found at "%cbf-parameter%".
   exit/b
 )
 
-set cbf_parameter=%cbf_fn%
+set cbf-parameter=%cbf-fn%
 
 goto main_function
 
@@ -100,7 +100,7 @@ goto main_function
 
 :percent_2_is_blank
 
-set cbf_parameter=
+set cbf-parameter=
 
 
 

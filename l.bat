@@ -86,16 +86,16 @@ if %errorlevel% gtr 0 exit/b
 
 call m compose_variable %2>nul
 
-if "%cbf_expanded_variable%" == "" (
+if "%cbf-expanded-variable%" == "" (
   echo. 
-  echo * Error: There is no definition of "cbf_%2" for the alias "%2".
+  echo * Error: There is no definition of "cbf-%2" for the alias "%2".
   exit/b
 )
 
-echo %cbf_expanded_variable% | clip
+echo %cbf-expanded-variable% | clip
 
 echo.
-echo * "%cbf_expanded_variable%" has been copied to the clipboard.
+echo * "%cbf-expanded-variable%" has been copied to the clipboard.
 
 exit/b
 

@@ -53,14 +53,14 @@ call n %1
 
 :_
 
-if not "%cbf_fn%" == "" (
-  if not exist "%cbf_fn%" (
+if not "%cbf-fn%" == "" (
+  if not exist "%cbf-fn%" (
     echo.
-    echo * Error: The file "%cbf_fn%" does not exist."
+    echo * Error: The file "%cbf-fn%" does not exist."
   ) else (
     echo.
-    echo * Deleting "%cbf_fn%".
-    del "%cbf_ex%"
+    echo * Deleting "%cbf-fn%".
+    del "%cbf-ex%"
   )
   exit/b
 )
@@ -69,14 +69,14 @@ if not "%cbf_fn%" == "" (
 
 :_
 
-if not "%cbf_ex%" == "" (
-  if not exist "%cbf_ex%" (
+if not "%cbf-ex%" == "" (
+  if not exist "%cbf-ex%" (
     echo.
-    echo * Error: The file "%cbf_ex%" does not exist."
+    echo * Error: The file "%cbf-ex%" does not exist."
   ) else (
     echo.
-    echo * Deleting "%cbf_ex%".
-    del "%cbf_ex%"
+    echo * Deleting "%cbf-ex%".
+    del "%cbf-ex%"
   )
   exit/b
 )

@@ -73,7 +73,7 @@ echo.
 echo f np jenkinsfile -e
 
 echo.
-echo f np set_cbf_fn
+echo f np set_cbf-fn
 
 echo.
 echo f np kb
@@ -162,7 +162,7 @@ if %errorlevel% gtr 0 (
 
 :main_function
 
-set cbf_parameter=%cbf_fn%
+set cbf-parameter=%cbf-fn%
 
 call r
 

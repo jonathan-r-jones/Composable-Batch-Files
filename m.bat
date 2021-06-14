@@ -1518,14 +1518,14 @@ call %0 set_default_browser kr
 call %0 set_default_text_editor sm
 
 set aa=c:\aa
-set cbf_repo=C:\Users\JJones2\j
+set cbf-repo=C:\Users\JJones2\j
 set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
 set JAVA_TOOL_OPTIONS=
 set KITCHEN_YAML=.kitchen-aws.yml
 set machinename=gfe
 
 call ni full_pem
-set SSH_KEY_PATH=%cbf_full_pem%
+set SSH_KEY_PATH=%cbf-full-pem%
 
 cls
 
@@ -1572,7 +1572,7 @@ if /i "%computername%" == "buzz" call m set_default_browser kr
 if /i "%computername%" == "earl" call m set_default_browser kr
 if /i "%computername%" == "sp7" call m set_default_browser kr
 if /i "%computername%" == "xps" call m set_default_browser kr
-if "%cbf_default_browser%" == "" call m set_default_browser ie
+if "%cbf-default-browser%" == "" call m set_default_browser ie
 
 exit/b
 
@@ -1595,7 +1595,7 @@ if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repo
 if /i "%computername%" == "earl" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "sp7" call %0 set_default_repository_folder c_aa_repos
 if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
-rem if "%cbf_repo%" == "" call %0 set_default_repository_folder temp
+rem if "%cbf-repo%" == "" call %0 set_default_repository_folder temp
 
 exit/b
 
@@ -1615,7 +1615,7 @@ echo %fp%
 if /i "%computername%" == "asus" call m set_default_text_editor no
 if /i "%computername%" == "sp7" call m set_default_text_editor np
 if /i "%computername%" == "xps" call m set_default_text_editor np
-if "%cbf_default_text_editor%" == "" call m set_default_text_editor no
+if "%cbf-default-text-editor%" == "" call m set_default_text_editor no
 
 exit/b
 
@@ -2898,7 +2898,7 @@ exit/b
 
 :double_click
 
-:set_cbf_application_equal_to_cbf_fn
+:set_cbf-application_equal_to_cbf-fn
 
 set fp=* Simulate a remote double click. Deprecated. Going forward, use dc.bat. **************
 
@@ -2908,15 +2908,15 @@ rem echo.
 rem echo %fp%
 
 rem Strangely, this also works. Feb-1-2018
-rem set cbf_application="%cbf_fn% - Shortcut.lnk"
+rem set cbf-application="%cbf-fn% - Shortcut.lnk"
 
-if "%cbf_fn%"=="" (
+if "%cbf-fn%"=="" (
   exit/b
 )
 
-set cbf_application=%cbf_fn%
+set cbf-application=%cbf-fn%
 
-set cbf_parameter=
+set cbf-parameter=
 
 exit/b
 
@@ -2946,69 +2946,69 @@ exit/b
 
 :reset
 
-:reset_cbf_variables
+:reset_cbf-variables
 
 set fp=* Reset CBF variables. Deprecated: Going forward, please use cv.bat.
 
-rem skw clear environment variables, clear_cbf_variables
+rem skw clear environment variables, clear_cbf-variables
 
 rem echo.
 rem echo %fp%
 
-set cbf_appended_words=
+set cbf-appended_words=
 
-set cbf_application=
+set cbf-application=
 
-set cbf_back=
+set cbf-back=
 
-set cbf_clone_url=
+set cbf-clone-url=
 
-set cbf_cf=
+set cbf-cf=
 
-rem set cbf_default_browser=
+rem set cbf-default-browser=
 
-rem set cbf_default_text_editor=
+rem set cbf-default-text-editor=
 
-set cbf_wo=
+set cbf-wo=
 
-set cbf_expanded_variable=
+set cbf-expanded-variable=
 
-set cbf_ex=
+set cbf-ex=
 
-set cbf_fc_path=
+set cbf-fc_path=
 
-set cbf_fn=
+set cbf-fn=
 
-set cbf_gh=
+set cbf-gh=
 
-set cbf_host=
+set cbf-host=
 
-set cbf_instance_id=
+set cbf-instance-id=
 
-set cbf_ip=
+set cbf-ip=
 
-set cbf_java=
+set cbf-java=
 
-set cbf_jf=
+set cbf-jf=
 
-set cbf_je=
+set cbf-je=
 
-set cbf_jpg=
+set cbf-jpg=
 
-set cbf_parameter=
+set cbf-parameter=
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_pem=
+set cbf-pem=
 
-set cbf_png=
+set cbf-png=
 
 rem When this is uncommented, it causes issues. Dec-20-2019
-rem set cbf_repo=
+rem set cbf-repo=
 
-set cbf_url=
+set cbf-url=
 
-set cbf_xml=
+set cbf-xml=
 
 exit/b
 
@@ -3016,15 +3016,15 @@ exit/b
 
 :_
 
-:set_cbf_application_to_dte
+:set_cbf-application_to_dte
 
-set fp=* Set cbf_application.
+set fp=* Set cbf-application.
 
 rem lu: Jun-8-2018
 
 echo %fp%
 
-set cbf_application=%cbf_default_text_editor%
+set cbf-application=%cbf-default-text-editor%
 
 exit/b
 
@@ -3041,7 +3041,7 @@ rem lu: Jun-8-2018
 echo.
 echo %fp%
 
-set cbf_parameter=
+set cbf-parameter=
 
 call r
 
@@ -3104,7 +3104,7 @@ echo %fp%
 
 if not "%~2" == "" call n %2
 
-set cbf_default_browser=%cbf_application%
+set cbf-default-browser=%cbf-application%
 
 exit/b
 
@@ -3121,12 +3121,12 @@ rem lu: Mar-4-2019
 echo.
 echo %fp%
 
-if "%~2" == "" set cbf_specific_browser=
+if "%~2" == "" set cbf-specific_browser=
 if "%~2" == "" exit/b
 
 call an %2
 
-set cbf_specific_browser=%cbf_application%
+set cbf-specific_browser=%cbf-application%
 
 exit/b
 
@@ -3145,7 +3145,7 @@ echo %fp%
 
 if not "%~2" == "" call n %2
 
-set cbf_repo=%cbf_path%
+set cbf-repo=%cbf-pt%
 
 exit/b
 
@@ -3173,7 +3173,7 @@ if "%~2" == "" (
 
 call n %2
 
-set cbf_default_text_editor=%cbf_application%
+set cbf-default-text-editor=%cbf-application%
 
 exit/b
 
@@ -3475,7 +3475,7 @@ set path=%path%;C:\Users\JJones2\j\Composable-Batch-Files
 
 call n jre
 
-set path=%path%;%cbf_path%
+set path=%path%;%cbf-pt%
 
 set share-zone=C:\Users\JJones2\j\share-zone
 
@@ -3990,7 +3990,7 @@ rem lu: Apr-24-2019
 rem echo.
 rem echo %fp%
 
-set cbf_saved_location=%cd%
+set cbf-saved_location=%cd%
 
 exit/b
 
@@ -4007,7 +4007,7 @@ rem lu: Apr-24-2019
 rem echo.
 rem echo %fp%
 
-cd /d "%cbf_saved_location%"
+cd /d "%cbf-saved_location%"
 
 exit/b
 
@@ -4092,25 +4092,25 @@ rem lu: Apr-15-2019
 echo.
 echo %fp%
 
-set cbf_fn_list=
+set cbf-fn-list=
 
-set cbf_fn_list="%share-zone%\gfe.asc"
+set cbf-fn-list="%share-zone%\lbm\miscellany\lbm.asc"
 
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\copy of cc.asc"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\ch.bat"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\it2.asc"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\k.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\m.bat"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\mtw.asc"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\ni.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\n.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\v.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\g.bat"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\lbm.asc"
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\gfe.asc"
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\copy of cc.asc"
+set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\ch.bat"
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\it2.asc"
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\k.bat"
+set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\m.bat"
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\mtw.asc"
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\ni.bat"
+set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\n.bat"
+set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\v.bat"
+set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\g.bat"
 
 attrib +r "%share-zone%\copy of cc.asc"
 
-start mew32 %cbf_fn_list%
+start mew32 %cbf-fn-list%
 
 
 exit/b
@@ -4128,25 +4128,25 @@ rem lu: Mar-8-2020
 echo.
 echo %fp%
 
-set cbf_fn_list=
+set cbf-fn-list=
 
-set cbf_fn_list="%dropbox%\savannah\reach out\WK.asc"
+set cbf-fn-list="%dropbox%\savannah\reach out\WK.asc"
 
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CC.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CM.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\IT.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\DI.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\JD.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CH.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\RB.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\TJ.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CI.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\TR.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\OC.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\CC.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\CM.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\IT.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\DI.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\JD.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\CH.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\RB.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\TJ.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\CI.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\TR.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\OC.asc"
 
 attrib +r "%share-zone%\copy of cc.asc"
 
-start mew32 %cbf_fn_list%
+start mew32 %cbf-fn-list%
 
 
 exit/b
@@ -4166,18 +4166,18 @@ rem lu: Nov-11-2020
 echo.
 echo %fp%
 
-set cbf_fn_list=
+set cbf-fn-list=
 
-set cbf_fn_list="%dropbox%\savannah\reach out\WK.asc"
+set cbf-fn-list="%dropbox%\savannah\reach out\WK.asc"
 
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CC.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\CM.asc"
-set cbf_fn_list=%cbf_fn_list% "%dropbox%\savannah\reach out\IT.asc"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\m.bat"
-set cbf_fn_list=%cbf_fn_list% "%share-zone%\ni.bat"
-set cbf_fn_list=%cbf_fn_list% "%composable_batch_files%\n.bat"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\CC.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\CM.asc"
+set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\IT.asc"
+set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\m.bat"
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\ni.bat"
+set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\n.bat"
 
-start mew32 %cbf_fn_list%
+start mew32 %cbf-fn-list%
 
 
 exit/b
@@ -4223,11 +4223,11 @@ echo %fp%
 
 call fn machine-specific-file
 
-set first_filename=%cbf_fn%
+set first_filename=%cbf-fn%
 
 call fn ccf
 
-set second_filename=%cbf_fn%
+set second_filename=%cbf-fn%
 
 start mew32 "%first_filename%" "%second_filename%"
 
@@ -4281,14 +4281,14 @@ exit
 
 :set_fn_eqt_app
 
-set fp=* Set cbf_fn equal to cbf_application.
+set fp=* Set cbf-fn equal to cbf-application.
 
 rem lu: Feb-4-2019
 
 echo.
 echo %fp%
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -4302,16 +4302,16 @@ exit/b
 
 :assoc_p_fn
 
-:associate_cbf_parameter_to_cbf_fn
+:associate_cbf-parameter_to_cbf-fn
 
-set fp=* Associate cbf_parameter to cbf_fn.
+set fp=* Associate cbf-parameter to cbf-fn.
 
 rem lu: Dec-19-2018
 
 echo.
 echo %fp%
 
-set cbf_parameter=%cbf_fn%
+set cbf-parameter=%cbf-fn%
 
 exit/b
 
@@ -4332,9 +4332,9 @@ rem lu: Jul-16-2019
 rem echo.
 echo * Variable to expand: %2>nul
 
-set cbf_composed_variable=cbf_%2
+set cbf-composed-variable=cbf-%2
 
-call %0 expand_variable "%%%cbf_composed_variable%%%">nul
+call %0 expand_variable "%%%cbf-composed-variable%%%">nul
 
 exit/b
 
@@ -4351,7 +4351,7 @@ rem lu: Jul-16-2019
 echo.
 echo %fp%
 
-set cbf_expanded_variable=%~2
+set cbf-expanded-variable=%~2
 
 rem echo.
 rem echo * Expanded variable: %expanded_variable%
@@ -4371,13 +4371,13 @@ rem lu: May-18-2020
 rem echo.
 rem echo %fp%
 
-set cbf_distilled_filename=%~nx2
+set cbf-distilled_filename=%~nx2
 
 rem echo.
 rem echo P2: %2
 
 echo.
-echo * Distilled Filename: %cbf_distilled_filename%
+echo * Distilled Filename: %cbf-distilled_filename%
 
 exit/b
 
@@ -4394,13 +4394,13 @@ rem lu: May-26-2020
 rem echo.
 rem echo %fp%
 
-set cbf_distilled_path=%~dp2
+set cbf-distilled_path=%~dp2
 
 rem echo.
 rem echo F2: %2
 
 echo.
-echo * Distilled Path: %cbf_distilled_path%
+echo * Distilled Path: %cbf-distilled_path%
 
 exit/b
 
@@ -4981,7 +4981,7 @@ rem lu: Apr-1-2019
 
 call n ascii_art
 
-type %cbf_fn%
+type %cbf-fn%
 
 exit/b
 
@@ -4997,7 +4997,7 @@ rem lu: Jul-26-2019
 
 call n ascii_art_2
 
-type %cbf_fn%
+type %cbf-fn%
 
 exit/b
 
@@ -5013,7 +5013,7 @@ rem lu: Nov-25-2019
 
 call n ascii_art_sailboat>nul
 
-type %cbf_fn%
+type %cbf-fn%
 
 exit/b
 
@@ -5029,7 +5029,7 @@ rem lu: May-4-2020
 
 call n ascii_art_error>nul
 
-type %cbf_fn%
+type %cbf-fn%
 
 exit/b
 
@@ -5052,7 +5052,7 @@ rem lu: Mar-14-2018
 rem echo.
 rem echo %fp%
 
-set cbf_path=%~d2%~p2
+set cbf-pt=%~d2%~p2
 
 exit/b
 
@@ -5069,7 +5069,7 @@ rem lu: Nov-8-2019
 echo.
 echo %fp%
 
-set cbf_fn_without_path=%~nx2
+set cbf-fn_without_path=%~nx2
 
 exit/b
 
@@ -5190,9 +5190,9 @@ if "%~2" == "" (
   exit/b 1
 )
 
-set cbf_hostname=
-set cbf_instance_id=
-set cbf_ip=
+set cbf-hostname=
+set cbf-instance-id=
+set cbf-ip=
 
 call n %2
 
@@ -5202,19 +5202,19 @@ if %errorlevel% gtr 0 (
   exit/b 1
 )
 
-if "%cbf_host%" == "" (
+if "%cbf-host%" == "" (
   echo.
   echo * Error: Host name is blank for server alias "%2".
   exit/b 1
 )
 
-if "%cbf_instance_id%" == "" (
+if "%cbf-instance-id%" == "" (
   echo.
   echo * Error: Instance ID is blank for server alias "%2".
   exit/b 1
 )
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
   echo * Error: IP address is blank for server alias "%2".
   exit/b 1
@@ -5301,7 +5301,7 @@ if "%~2" == "" (
   exit/b 1
 )
 
-set cbf_instance_id=
+set cbf-instance-id=
 
 call n %2>nul
 
@@ -5311,7 +5311,7 @@ if %errorlevel% gtr 0 (
   exit/b 1
 )
 
-if "%cbf_instance_id%" == "" (
+if "%cbf-instance-id%" == "" (
   echo.
   echo * Error: Instance ID is blank.
   exit/b 1

@@ -53,9 +53,9 @@ exit/b
 
 rem lu: May-15-2019
 
-set cbf_application=
-set cbf_expanded_variable=
-set cbf_%2=
+set cbf-application=
+set cbf-expanded-variable=
+set cbf-%2=
 
 call n %1
 
@@ -67,15 +67,15 @@ if "%2" == "" (
 
 call m compose_variable %2
 
-if "%cbf_expanded_variable%" == "" (
+if "%cbf-expanded-variable%" == "" (
   echo.
-  echo * Error: CBF_Expanded variable is required.
+  echo * Error: cbf-Expanded variable is required.
   exit/b
 )
 
-set cbf_application=%cbf_expanded_variable%
+set cbf-application=%cbf-expanded-variable%
 
-set cbf_parameter=
+set cbf-parameter=
 
 call r
 

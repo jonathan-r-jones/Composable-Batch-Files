@@ -93,14 +93,14 @@ if "%~2" == "r" (
 
 set fp=* Use the CBF nickname path to determine where to install the repository.
 
-if exist %cbf_path% (
+if exist %cbf-pt% (
   echo.
-  echo "%cbf_path%" already exists.
+  echo "%cbf-pt%" already exists.
   exit/b
 )
 
 echo.
-call m set_parent_fd "%cbf_path%\.." parent_folder
+call m set_parent_fd "%cbf-pt%\.." parent_folder
 
 cd /d %parent_folder%
 
@@ -129,13 +129,13 @@ goto main_function
 set fp=* Main function.
 
 echo.
-echo * CBF URL: %cbf_url%
+echo * CBF URL: %cbf-url%
 
 echo.
-git clone %cbf_url%
+git clone %cbf-url%
 
 if "%~2" == "" (
-  if not "%cbf_path%" == "" (
+  if not "%cbf-pt%" == "" (
     call td %1
   )
 )

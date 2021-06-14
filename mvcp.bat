@@ -58,7 +58,7 @@ echo %filep%
 call n %2
 
 echo.
-move "%~1" "%cbf_path%"
+move "%~1" "%cbf-pt%"
 
 exit/b
 

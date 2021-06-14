@@ -49,9 +49,9 @@ echo %filep%
 
 call n sm
 
-set cbf_fn=%composable_batch_files%\%~1.bat
+set cbf-fn=%composable_batch_files%\%~1.bat
 
-set cbf_parameter=%cbf_fn%
+set cbf-parameter=%cbf-fn%
 
 call r
 

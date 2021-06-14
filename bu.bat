@@ -94,11 +94,11 @@ echo %fp%
 
 call n api
 
-set source_filename=%cbf_jf%
+set source_filename=%cbf-jf%
 
 call n jfbu
 
-set destination_filename=%cbf_fn%
+set destination_filename=%cbf-fn%
 
 echo.
 @echo on

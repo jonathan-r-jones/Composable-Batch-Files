@@ -67,7 +67,7 @@ if %errorlevel% == 0 (
 )
 
 if %errorlevel% == 0 (
-  start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_fs_special.txt"
+  start "Test Title" "%cbf-default-text-editor%" "%temp%\search_results_fs_special.txt"
 )
 
 exit/b

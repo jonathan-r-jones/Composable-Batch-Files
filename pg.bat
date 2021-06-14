@@ -55,22 +55,22 @@ exit/b
 echo.
 echo %filep%
 
-set cbf_url=
+set cbf-url=
 
 call n %1
 
-if "%cbf_url%" == "" (
+if "%cbf-url%" == "" (
   echo.
-  echo * Error: cbf_url is not set.
+  echo * Error: cbf-url is not set.
   exit/b
 )
 
-set cbf_url=%cbf_url:http://=%
-set cbf_url=%cbf_url:https://=%
-set cbf_url=%cbf_url:www.=%
+set cbf-url=%cbf-url:http://=%
+set cbf-url=%cbf-url:https://=%
+set cbf-url=%cbf-url:www.=%
 
 echo.
-call ping %2 %cbf_url%
+call ping %2 %cbf-url%
 
 rem (!rfsp) (mov-2)
 

@@ -356,9 +356,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -369,7 +369,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-39a64048 ^
   --instance-type t3.medium ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-0047d128fc8b50d49 ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
@@ -394,7 +394,7 @@ echo %fp%
 
 call n git_user_bin
 
-set git_user_bin=%cbf_path%
+set git_user_bin=%cbf-pt%
 
 call td tfkeys
 
@@ -424,7 +424,7 @@ echo %fp%
 
 call n git_user_bin
 
-set git_user_bin=%cbf_path%
+set git_user_bin=%cbf-pt%
 
 call td tfkeys
 
@@ -570,7 +570,7 @@ rem lu: Feb-25-2019
 echo.
 echo %fp%
 
-set cbf_instance_id=i-041bdefac740a8f18
+set cbf-instance-id=i-041bdefac740a8f18
 
 call %0 tag_generic Name Brand_New_Server_Name
 
@@ -589,7 +589,7 @@ rem lu: Feb-25-2019
 echo.
 echo %fp%
 
-aws ec2 create-tags --resources %cbf_instance_id% --tags Key=%2,Value=%3
+aws ec2 create-tags --resources %cbf-instance-id% --tags Key=%2,Value=%3
 
 exit/b
 
@@ -914,9 +914,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -927,7 +927,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-39a64048 ^
   --instance-type t3.medium ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-0f1b0240a8da72049 ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^

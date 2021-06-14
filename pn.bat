@@ -50,7 +50,7 @@ exit/b
 
 :validate_input
 
-set cbf_path=
+set cbf-pt=
 
 call n %1
 
@@ -61,23 +61,23 @@ if %errorlevel% gtr 0 (
   exit/b 99
 )
 
-if "%cbf_path%" == "" (
+if "%cbf-pt%" == "" (
   echo.
-  echo * The cbf_path is not defined for "%1". skw Aug-18-2020_3_32_PM
+  echo * The cbf-pt is not defined for "%1". skw Aug-18-2020_3_32_PM
   exit/b 1
 )
 
-if not exist "%cbf_path%" (
+if not exist "%cbf-pt%" (
   echo.
-  echo * Error: The CBF_Path "%cbf_path%" does not exist. skw May-4-2020_8_13_PM
+  echo * Error: The cbf-pt "%cbf-pt%" does not exist. skw May-4-2020_8_13_PM
   exit/b 1
 )
 
-set cbf_reserved_path=%cbf_path%
+set cbf-reserved-path=%cbf-pt%
 
 call cv c>nul
 
-set cbf_path=%cbf_reserved_path%
+set cbf-pt=%cbf-reserved-path%
 
 exit/b
 

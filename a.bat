@@ -94,13 +94,13 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_fn=%temp%\ahelp.txt
+set cbf-fn=%temp%\ahelp.txt
 
-call aws %2 %3 %4 %5 help>%cbf_fn%
+call aws %2 %3 %4 %5 help>%cbf-fn%
 
 call n me
 
-set cbf_parameter=%cbf_fn%
+set cbf-parameter=%cbf-fn%
 
 call r
 
@@ -1324,31 +1324,31 @@ echo.
 echo %fp%
 
 rem Set default instance ID to Jenkins server.
-set cbf_instance_id=i-0bce1b3771799a4ed
+set cbf-instance-id=i-0bce1b3771799a4ed
 
 rem Bee Clone
-if "%~2" == "bc" set cbf_instance_id=i-04499acea0fa9f3a4
+if "%~2" == "bc" set cbf-instance-id=i-04499acea0fa9f3a4
 
 rem CentOS (!sid)
-if "%~2" == "ce" set cbf_instance_id=i-0f7c7db92897103c5
+if "%~2" == "ce" set cbf-instance-id=i-0f7c7db92897103c5
 
 rem iJenkins
-if "%~2" == "ij" set cbf_instance_id=i-05a46eb9d1166d95f
+if "%~2" == "ij" set cbf-instance-id=i-05a46eb9d1166d95f
 
 rem Jenkins
-if "%~2" == "je" set cbf_instance_id=i-0bce1b3771799a4ed
+if "%~2" == "je" set cbf-instance-id=i-0bce1b3771799a4ed
 
 rem Jenkins Mimic
-if "%~2" == "jm" set cbf_instance_id=i-0327d0c33cef79f33
+if "%~2" == "jm" set cbf-instance-id=i-0327d0c33cef79f33
 
 rem NewJenkins, orange sunset
-if "%~2" == "nj" set cbf_instance_id=i-072a65f07b004f9fd
+if "%~2" == "nj" set cbf-instance-id=i-072a65f07b004f9fd
 
 rem Ubuntu - gaws_feb-15-2019_0515_Ubuntu
-if "%~2" == "ub" set cbf_instance_id=i-0ce1f47a5dcd7f7b0
+if "%~2" == "ub" set cbf-instance-id=i-0ce1f47a5dcd7f7b0
 
 rem Ubuntu 3
-if "%~2" == "ub3" set cbf_instance_id=i-04c9959fe9334ca57
+if "%~2" == "ub3" set cbf-instance-id=i-04c9959fe9334ca57
 
 exit/b
 
@@ -1737,11 +1737,11 @@ echo %fp%
 
 call an me
 
-set cbf_fn=%temp%\describe_sgs.txt
+set cbf-fn=%temp%\describe_sgs.txt
 
-call aws ec2 describe-security-groups>%cbf_fn%
+call aws ec2 describe-security-groups>%cbf-fn%
 
-call m associate_cbf_parameter_to_cbf_fn
+call m associate_cbf-parameter_to_cbf-fn
 
 call r
 
@@ -1821,11 +1821,11 @@ echo %fp%
 
 call an np
 
-set cbf_fn=%temp%\describe_instances.txt
+set cbf-fn=%temp%\describe_instances.txt
 
-call aws ec2 describe-instances>%cbf_fn%
+call aws ec2 describe-instances>%cbf-fn%
 
-call m associate_cbf_parameter_to_cbf_fn
+call m associate_cbf-parameter_to_cbf-fn
 
 call r
 
@@ -1846,11 +1846,11 @@ echo %fp%
 
 call an np
 
-set cbf_fn=%temp%\describe_instances.txt
+set cbf-fn=%temp%\describe_instances.txt
 
-call aws ec2 describe-subnets>%cbf_fn%
+call aws ec2 describe-subnets>%cbf-fn%
 
-call m associate_cbf_parameter_to_cbf_fn
+call m associate_cbf-parameter_to_cbf-fn
 
 call r
 
@@ -2248,11 +2248,11 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_fn=%temp%\describe_images.txt
+set cbf-fn=%temp%\describe_images.txt
 
-aws --output table ec2 describe-images>%cbf_fn%
+aws --output table ec2 describe-images>%cbf-fn%
 
-call m associate_cbf_parameter_to_cbf_fn
+call m associate_cbf-parameter_to_cbf-fn
 
 call r
 
@@ -3362,9 +3362,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -3375,7 +3375,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-0f05ffda83f1c5a2a ^
   --instance-type t3.nano ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-4320d92a ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=gaws_feb-12-2019_0931}]
@@ -3399,9 +3399,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -3412,7 +3412,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-0f05ffda83f1c5a2a ^
   --instance-type t3.nano ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-4320d92a ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
@@ -3437,9 +3437,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -3450,7 +3450,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-0f05ffda83f1c5a2a ^
   --instance-type t3.nano ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-4320d92a ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
@@ -3477,9 +3477,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -3490,7 +3490,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-fff7118e ^
   --instance-type t3.medium ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-0d72c1ec60ee3852d ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
@@ -3558,9 +3558,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -3571,7 +3571,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-39a64048 ^
   --instance-type t3.medium ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-03ab419874a9a2ea1 ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
@@ -3653,9 +3653,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -3666,7 +3666,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-39a64048 ^
   --instance-type t3.medium ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-4320d92a ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
@@ -3731,7 +3731,7 @@ echo %fp%
 
 call n git_user_bin
 
-set git_user_bin=%cbf_path%
+set git_user_bin=%cbf-pt%
 
 call td tfkeys
 
@@ -3777,7 +3777,7 @@ if "%~2" == "" (
 call ni %2
 
 echo.
-aws ec2 terminate-instances --instance-ids %cbf_instance_id%
+aws ec2 terminate-instances --instance-ids %cbf-instance-id%
 
 exit/b
 
@@ -4207,9 +4207,9 @@ echo %fp%
 
 call td tfkeys
 
-set cbf_file=kibble_balance_key_pair
+set cbf-file=kibble_balance_key_pair
 
-call m specific_file_presence %cbf_file%.pem
+call m specific_file_presence %cbf-file%.pem
 
 if %errorlevel% == 1 (
   exit/b
@@ -4220,7 +4220,7 @@ aws ec2 run-instances ^
   --count 1 ^
   --image-id ami-08521bc84009eae26 ^
   --instance-type d2.xlarge ^
-  --key-name %cbf_file% ^
+  --key-name %cbf-file% ^
   --security-group-ids sg-4320d92a ^
   --subnet-id subnet-8c04e4e5 ^
   --tag-specifications ^
@@ -4249,26 +4249,26 @@ if "%~1" == "" (
 
 call n git_user_bin
 
-set git_user_bin=%cbf_path%
+set git_user_bin=%cbf-pt%
 
 call td tfkeys
 
-set cbf_public_dns=
+set cbf-public_dns=
 
 call n %2
 
-if "%cbf_public_dns%" == "" (
+if "%cbf-public_dns%" == "" (
   echo. 
   echo * Error: CBF Public DNS is not defined for server '%1'.
   exit/b
 )
 
 rem Change this line to your ip address.
-set public_dns=%cbf_public_dns%
+set public_dns=%cbf-public_dns%
 
 echo.
 
-"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%cbf_public_dns%
+"%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ubuntu@%cbf-public_dns%
 rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" root@ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
 rem "%git_user_bin%"\ssh -i "kibble_balance_key_pair.pem" ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
 
@@ -4299,7 +4299,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
-aws ec2 describe-instance-status --instance-ids %cbf_instance_id%
+aws ec2 describe-instance-status --instance-ids %cbf-instance-id%
 
 exit/b
 
@@ -4321,7 +4321,7 @@ call %0 135 %2
 if %errorlevel% gtr 0 exit/b
 
 echo.
-call aws ec2 start-instances --instance-ids %cbf_instance_id%
+call aws ec2 start-instances --instance-ids %cbf-instance-id%
 
 exit/b
 
@@ -4343,7 +4343,7 @@ call m validate_instance %2
 if %errorlevel% gtr 0 exit/b
 
 echo.
-call aws ec2 start-instances --instance-ids %cbf_instance_id%
+call aws ec2 start-instances --instance-ids %cbf-instance-id%
 
 exit/b
 
@@ -4396,7 +4396,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
-call aws ec2 stop-instances --instance-ids %cbf_instance_id%
+call aws ec2 stop-instances --instance-ids %cbf-instance-id%
 
 exit/b
 
@@ -4420,7 +4420,7 @@ call m validate_instance %2
 if %errorlevel% gtr 0 exit/b
 
 echo.
-call aws ec2 reboot-instances --instance-ids %cbf_instance_id%
+call aws ec2 reboot-instances --instance-ids %cbf-instance-id%
 
 rem call %0 tag %2 AutoStopStartInstance True
 
@@ -4451,7 +4451,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
-call aws ec2 describe-instances --instance-ids %cbf_instance_id%
+call aws ec2 describe-instances --instance-ids %cbf-instance-id%
                                        
 exit/b
 
@@ -4762,21 +4762,21 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_instance_alias=%2
+set cbf-instance_alias=%2
 
-call a tag %cbf_instance_alias% AutoStartTime 6:00
+call a tag %cbf-instance_alias% AutoStartTime 6:00
 
 if %errorlevel% gtr 0 exit/b
 
-call a tag %cbf_instance_alias% AutoStopTime 19:00
+call a tag %cbf-instance_alias% AutoStopTime 19:00
 
-call a tag %cbf_instance_alias% AutoStopStartInstance TRUE
+call a tag %cbf-instance_alias% AutoStopStartInstance TRUE
 
-call a tag %cbf_instance_alias% WeekendStop TRUE
+call a tag %cbf-instance_alias% WeekendStop TRUE
 
-call a tag %cbf_instance_alias% IC_PLATFORM LINUX
+call a tag %cbf-instance_alias% IC_PLATFORM LINUX
 
-rem call a tag %cbf_instance_alias% IC_TOWER_READY FALSE
+rem call a tag %cbf-instance_alias% IC_TOWER_READY FALSE
 
 exit/b
 
@@ -4805,7 +4805,7 @@ call m validate_instance %2
 
 if %errorlevel% gtr 0 exit/b
 
-aws ec2 create-tags --resources %cbf_instance_id% --tags Key=%3,Value=%4
+aws ec2 create-tags --resources %cbf-instance-id% --tags Key=%3,Value=%4
 
 exit/b
 
@@ -4834,13 +4834,13 @@ if "%3" == "" (
   exit/b
 )
 
-if "%cbf_instance_id%" == "" (
+if "%cbf-instance-id%" == "" (
   echo.
-  echo * The cbf_instance_id is not defined for "%2".
+  echo * The cbf-instance-id is not defined for "%2".
   exit/b
 )
 
-aws ec2 delete-tags --resources %cbf_instance_id% --tags Key=%3
+aws ec2 delete-tags --resources %cbf-instance-id% --tags Key=%3
 
 exit/b
 
@@ -4859,7 +4859,7 @@ rem lu: Feb-25-2019
 echo.
 echo %fp%
 
-set cbf_resource_id=i-0ce1f47a5dcd7f7b0
+set cbf-resource_id=i-0ce1f47a5dcd7f7b0
 
 call %0 tag_generic Application "Learn Linux."
 
@@ -4890,7 +4890,7 @@ rem lu: Feb-25-2019
 echo.
 echo %fp%
 
-set cbf_resource_id=i-0ce1f47a5dcd7f7b0
+set cbf-resource_id=i-0ce1f47a5dcd7f7b0
 
 call %0 tag_generic Notes "Tough to say."
 
@@ -4909,17 +4909,17 @@ rem lu: May-17-2019
 echo.
 echo %fp%
 
-set cbf_instance_id=
+set cbf-instance-id=
 
 call n sr21
 
-if "%cbf_instance_id%" == "" (
+if "%cbf-instance-id%" == "" (
   echo.
   echo * Error: Instance id not set.
   exit/b
 )
 
-aws ec2 create-tags --resources %cbf_instance_id% --tags Key=Name,Value=w1idvtempcrt021
+aws ec2 create-tags --resources %cbf-instance-id% --tags Key=Name,Value=w1idvtempcrt021
 
 rem These also work.
 rem aws ec2 create-tags help>%temp%/j1.txt
@@ -4953,7 +4953,7 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_resource_id=%cbf_instance_id%
+set cbf-resource_id=%cbf-instance-id%
 
 call %0 tag_generic BillingCode mybillingcode
 
@@ -4980,9 +4980,9 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_instance_alias=%2
+set cbf-instance_alias=%2
 
-call a tag %cbf_instance_alias% RemainStopped True
+call a tag %cbf-instance_alias% RemainStopped True
 
 exit/b
 
@@ -5013,9 +5013,9 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_instance_alias=%2
+set cbf-instance_alias=%2
 
-call a tag %cbf_instance_alias% IC_TOWER_READY TRUE
+call a tag %cbf-instance_alias% IC_TOWER_READY TRUE
 
 exit/b
 

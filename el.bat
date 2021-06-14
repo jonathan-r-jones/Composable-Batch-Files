@@ -47,17 +47,17 @@ exit/b
 
 rem lu: May-15-2019
 
-set cbf_log_file=
+set cbf-log_file=
 
 call n %1
 
-if "%cbf_log_file%" == "" (
+if "%cbf-log_file%" == "" (
   echo.
   echo * Error: CBF Log file is not set.
   exit/b
 )
 
-call e %cbf_log_file%
+call e %cbf-log_file%
 
 exit/b
 

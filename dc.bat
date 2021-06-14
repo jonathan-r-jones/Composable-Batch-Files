@@ -45,7 +45,7 @@ echo.
 echo Batch file style: Single Purpose
 
 echo.
-echo Entangled variables: cbf_application and cbf_parameter
+echo Entangled variables: cbf-application and cbf-parameter
 
 echo.
 echo Examples:
@@ -70,9 +70,9 @@ exit/b
 
 :main_function
 
-set cbf_application=%~1
+set cbf-application=%~1
 
-set cbf_parameter=
+set cbf-parameter=
 
 call r
 

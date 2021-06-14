@@ -119,11 +119,11 @@ exit/b
 :validate_user_input
 
 if "%~2" == "" (
-  set cbf_file_type=*.bat
+  set cbf-file-type=*.bat
 ) else if "%~2" == "-g" (
   call n %3
 ) else (
-  set cbf_file_type=*.%2
+  set cbf-file-type=*.%2
 )
 
 goto main_function
@@ -146,7 +146,7 @@ echo.
 echo Percent 2: %2
 
 echo.
-echo File type: %cbf_file_type%
+echo File type: %cbf-file-type%
 
 
 
@@ -163,8 +163,8 @@ echo Search Criterion: %1
 echo Search Criterion: %1>>%temp%\search_results_cs.txt
 
 echo.
-echo     File Type(s): %cbf_file_type%
-echo     File Type(s): %cbf_file_type%>>%temp%\search_results_cs.txt
+echo     File Type(s): %cbf-file-type%
+echo     File Type(s): %cbf-file-type%>>%temp%\search_results_cs.txt
 
 echo   Current folder: %cd%>>%temp%\search_results_cs.txt
 
@@ -174,7 +174,7 @@ echo.>>%temp%\search_results_cs.txt
 rem "findstr" seems to be more powerful the "find".
 
 @echo on
-findstr /i /n /o /off /s /c:%1 %cbf_file_type%>>%temp%\search_results_cs.txt
+findstr /i /n /o /off /s /c:%1 %cbf-file-type%>>%temp%\search_results_cs.txt
 
 @echo off
 rem (!rfsp) (mov-3)
@@ -187,7 +187,7 @@ if %errorlevel% gtr 0 (
 
 call an me>nul
 
-start "Test Title" "%cbf_application%" "%temp%\search_results_cs.txt"
+start "Test Title" "%cbf-application%" "%temp%\search_results_cs.txt"
 
 exit/b
 

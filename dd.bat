@@ -49,7 +49,7 @@ dir *.%1* /s>"%search_results_filename%"
 
 if %errorlevel% gtr 0 exit/b
 
-set cbf_parameter=%search_results_filename%
+set cbf-parameter=%search_results_filename%
 
 call an ie
 

@@ -70,7 +70,7 @@ exit/b
 
 :validate_path
 
-set cbf_relative_path=
+set cbf-relative_path=
 
 call pn %1
 
@@ -81,14 +81,14 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not exist "%cbf_path%" (
+if not exist "%cbf-pt%" (
   echo.
-  echo * Error: Path "%cbf_path%" not found. Oct-30-2019 6:17 PM
+  echo * Error: Path "%cbf-pt%" not found. Oct-30-2019 6:17 PM
   call m clear_errorlevel_silently 
   exit/b
 )
 
-set cbf_built_path=%cbf_path%
+set cbf-built_path=%cbf-pt%
 
 call n %2
 
@@ -99,11 +99,11 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-set cbf_built_path=%cbf_built_path%\%cbf_relative_path%
+set cbf-built_path=%cbf-built_path%\%cbf-relative_path%
 
-if not exist "%cbf_built_path%" (
+if not exist "%cbf-built_path%" (
   echo.
-  echo * Error: Path "%cbf_built_path%" not found. Oct-30-2019 6:289 PM
+  echo * Error: Path "%cbf-built_path%" not found. Oct-30-2019 6:289 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -114,7 +114,7 @@ if not exist "%cbf_built_path%" (
 
 :validate_filename
 
-set cbf_fn_without_path=
+set cbf-fn_without_path=
 
 call fn %2
 
@@ -125,11 +125,11 @@ if %errorlevel% == 1 (
   exit/b 1
 )
 
-set cbf_built_filename=%cbf_built_path%\%cbf_fn_without_path%
+set cbf-built_filename=%cbf-built_path%\%cbf-fn_without_path%
 
-if not exist "%cbf_built_filename%" (
+if not exist "%cbf-built_filename%" (
   echo.
-  echo * Error: The filename "%cbf_built_filename%" could not be found.
+  echo * Error: The filename "%cbf-built_filename%" could not be found.
   exit/b 1
 )
 
@@ -139,7 +139,7 @@ if not exist "%cbf_built_filename%" (
 
 :main_function
 
-call e "%cbf_built_filename%"
+call e "%cbf-built_filename%"
 
 exit/b
 

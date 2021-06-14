@@ -50,12 +50,12 @@ exit/b
 
 :to_path
 
-:move_all_files_in_current_folder_to_cbf_path
+:move_all_files_in_current_folder_to_cbf-pt
 
 set fp=* Move all files in current folder (%cd%) to cbf path.
 
 echo.
-echo %fp% (%cbf_path%)
+echo %fp% (%cbf-pt%)
 
 call m folder_is_empty "%cd%"
 
@@ -67,7 +67,7 @@ call m clear_errorlevel_silently
 
 attrib -h
 
-move *.* "%cbf_path%"
+move *.* "%cbf-pt%"
 
 exit/b
 
@@ -160,7 +160,7 @@ call n cja>nul
 rem echo.
 rem echo * Note: the move command complains if there are no files present to move. Sep-2-2018
 
-call :move_all_files_in_current_folder_to_cbf_path
+call :move_all_files_in_current_folder_to_cbf-pt
 
 exit/b
 
@@ -185,7 +185,7 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-call :move_all_files_in_current_folder_to_cbf_path
+call :move_all_files_in_current_folder_to_cbf-pt
 
 exit/b
 

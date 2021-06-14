@@ -750,7 +750,7 @@ echo %fp%
 call n %2
 
 echo.
-npm i %cbf_url%
+npm i %cbf-url%
 
 exit/b
 

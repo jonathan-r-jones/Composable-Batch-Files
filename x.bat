@@ -90,18 +90,18 @@ if %errorlevel% gtr 0 exit/b
 
 call m compose_variable %2
 
-if "%cbf_expanded_variable%" == "" (
+if "%cbf-expanded-variable%" == "" (
   echo. 
-  echo * Error: There is no definition of "cbf_%2" for the alias "%1".
+  echo * Error: There is no definition of "cbf-%2" for the alias "%1".
   exit/b
 )
 
 rem echo.
-rem echo * Expanded variable: %cbf_expanded_variable%
+rem echo * Expanded variable: %cbf-expanded-variable%
 
-if not exist "%cbf_expanded_variable%" (
+if not exist "%cbf-expanded-variable%" (
   rem echo.
-  rem echo * Error: CBF Expanded variable "%cbf_expanded_variable%" does not exist.
+  rem echo * Error: CBF Expanded variable "%cbf-expanded-variable%" does not exist.
   rem exit/b
 )
 
@@ -118,24 +118,24 @@ goto save_file
 
 set fp=* Save file.
 
-set cbf_source_fn=%cbf_expanded_variable%
+set cbf-source_fn=%cbf-expanded-variable%
 
 rem echo.
-rem echo cbf_fn: %cbf_fn%
+rem echo cbf-fn: %cbf-fn%
 
 call pn x>nul
 
 if %errorlevel% gtr 0 exit/b
 
-if not exist "%cbf_source_fn%" (
+if not exist "%cbf-source_fn%" (
   echo.
-  echo * Error: The source file "%cbf_source_fn%" could not be found.
+  echo * Error: The source file "%cbf-source_fn%" could not be found.
   exit/b
 )
 
-call m distill_filename %cbf_source_fn%
+call m distill_filename %cbf-source_fn%
 
-set cbf_destination_fn=%cbf_path%\%cbf_distilled_filename%
+set cbf-destination_fn=%cbf-pt%\%cbf-distilled_filename%
 
 goto main_function
 
@@ -150,28 +150,28 @@ set fp=* Restore file.
 echo.
 echo %fp%
 
-set cbf_destination_fn=%cbf_expanded_variable%
+set cbf-destination_fn=%cbf-expanded-variable%
 
 echo.
-echo cbf_fn: %cbf_fn%
+echo cbf-fn: %cbf-fn%
 
 call pn x>nul
 
 if %errorlevel% gtr 0 exit/b
 
-call m distill_filename %cbf_destination_fn%
+call m distill_filename %cbf-destination_fn%
 
-set cbf_source_fn=%cbf_path%\%cbf_distilled_filename%
+set cbf-source_fn=%cbf-pt%\%cbf-distilled_filename%
 
-if not exist "%cbf_source_fn%" (
+if not exist "%cbf-source_fn%" (
   echo.
-  echo * Error: The source file "%cbf_source_fn%" could not be found.
+  echo * Error: The source file "%cbf-source_fn%" could not be found.
   exit/b
 )
 
-if not exist "%cbf_destination_fn%" (
+if not exist "%cbf-destination_fn%" (
   echo.
-  echo * Error: The destination file "%cbf_destination_fn%" could not be found.
+  echo * Error: The destination file "%cbf-destination_fn%" could not be found.
   exit/b
 )
 
@@ -186,7 +186,7 @@ goto main_function
 rem lu: May-18-2020
 
 @echo on
-copy "%cbf_source_fn%" "%cbf_destination_fn%"
+copy "%cbf-source_fn%" "%cbf-destination_fn%"
 @echo off
 
 exit/b

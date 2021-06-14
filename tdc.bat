@@ -51,17 +51,17 @@ exit/b
 
 rem lu: May-14-2019
 
-set cbf_fc_path=
+set cbf-fc_path=
 
 call n %1
 
-if "%cbf_fc_path%" == "" (
+if "%cbf-fc_path%" == "" (
   echo.
   echo * Error: CBF FC Path is not set.
   exit/b
 )
 
-cd /d "%cbf_fc_path%"
+cd /d "%cbf-fc_path%"
 
 exit/b
 

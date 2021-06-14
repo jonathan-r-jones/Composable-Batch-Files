@@ -237,7 +237,7 @@ echo %fp%
 
 tree/f>%temp%\treeview_results.txt
 
-start "Test Title" "%cbf_default_text_editor%" "%temp%\treeview_results.txt"
+start "Test Title" "%cbf-default-text-editor%" "%temp%\treeview_results.txt"
 
 exit/b
 
@@ -291,7 +291,7 @@ if %Errorlevel% == 0 echo.
 if %Errorlevel% == 0 echo * Files found.
 
 if %errorlevel% == 0 (
-  start "Test Title" "%cbf_default_text_editor%" "%temp%\d_search_results_fs.txt"
+  start "Test Title" "%cbf-default-text-editor%" "%temp%\d_search_results_fs.txt"
 ) else (
   call m clear_errorlevel_silently
 )

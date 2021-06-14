@@ -166,7 +166,7 @@ echo %fp%
 
 call n git_user_bin
 
-set git_user_bin=%cbf_path%
+set git_user_bin=%cbf-pt%
 
 call td tfkeys
 

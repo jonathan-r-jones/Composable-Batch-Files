@@ -117,7 +117,7 @@ set fp=* Open the report.
 
 call an me>nul
 
-start "Test Title" "%cbf_application%" "%temp%\search_results_concop.txt"
+start "Test Title" "%cbf-application%" "%temp%\search_results_concop.txt"
 
 exit/b
 

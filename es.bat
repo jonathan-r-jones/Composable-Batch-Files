@@ -47,17 +47,17 @@ exit/b
 
 rem lu: May-15-2019
 
-set cbf_settings_file=
+set cbf-settings_file=
 
 call n %1
 
-if "%cbf_settings_file%" == "" (
+if "%cbf-settings_file%" == "" (
   echo.
   echo * Error: CBF Settings file is not set.
   exit/b
 )
 
-call e %cbf_settings_file%
+call e %cbf-settings_file%
 
 exit/b
 

@@ -81,7 +81,7 @@ rem dir /a-d /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 rem dir /b /s /o-d "*%~1*">>%temp%\search_results_fs.txt
 
 if %errorlevel% == 0 (
-  start "Test Title" "%cbf_default_text_editor%" "%temp%\search_results_fs.txt"
+  start "Test Title" "%cbf-default-text-editor%" "%temp%\search_results_fs.txt"
 ) else (
   call m clear_errorlevel_silently
 )

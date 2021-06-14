@@ -64,7 +64,7 @@ exit/b
 
 :process_alias_parameter
 
-call m reset_cbf_variables
+call m reset_cbf-variables
 
 call n %1
 
@@ -77,168 +77,168 @@ if %errorlevel% gtr 0 exit/b
 :main_function
 
 :
-if not "%cbf_appended_words%" == "" (
+if not "%cbf-appended_words%" == "" (
   echo.
-  echo * Appended words: %cbf_appended_words%
+  echo * Appended words: %cbf-appended_words%
 )
 
 :
-if not "%cbf_application%" == "" (
+if not "%cbf-application%" == "" (
   echo.
-  echo * Application: "%cbf_application%"
+  echo * Application: "%cbf-application%"
 )
 
 :
-if not "%cbf_back%" == "" (
+if not "%cbf-back%" == "" (
   echo.
-  echo * Back: %cbf_back%
+  echo * Back: %cbf-back%
 )
 
 :
-if not "%cbf_clone_url%" == "" (
+if not "%cbf-clone-url%" == "" (
   echo.
-  echo * Clone URL: %cbf_clone_url%
+  echo * Clone URL: %cbf-clone-url%
 )
 
 :
-if not "%cbf_cf%" == "" (
+if not "%cbf-cf%" == "" (
   echo.
-  echo * Confluence: %cbf_cf%
+  echo * Confluence: %cbf-cf%
 )
 
 :
-if not "%cbf_csv%" == "" (
+if not "%cbf-csv%" == "" (
   echo.
-  echo * CSV: %cbf_csv%
+  echo * CSV: %cbf-csv%
 )
 
 :
-if not "%cbf_default_browser%" == "" (
+if not "%cbf-default-browser%" == "" (
   rem This is not shown by default.
   rem echo.
-  rem echo * Default browser: "%cbf_default_browser%"
+  rem echo * Default browser: "%cbf-default-browser%"
 )
 
 :
-if not "%%cbf_default_text_editor%" == "" (
+if not "%%cbf-default-text-editor%" == "" (
   rem This is not shown by default.
   rem echo.
-  rem echo * Default text editor: %cbf_default_text_editor%
+  rem echo * Default text editor: %cbf-default-text-editor%
 )
 
 :
-if not "%cbf_ex%" == "" (
+if not "%cbf-ex%" == "" (
   echo.
-  echo * Excel: %cbf_ex%
+  echo * Excel: %cbf-ex%
 )
 
 :
-if not "%cbf_expanded_variable%" == "" (
+if not "%cbf-expanded-variable%" == "" (
   echo.
-  echo * Expanded Variable: %cbf_expanded_variable%
+  echo * Expanded Variable: %cbf-expanded-variable%
 )
 
 :
-if not "%cbf_fc_path%" == "" (
+if not "%cbf-fc_path%" == "" (
   echo.
-  echo * FC path: %cbf_fc_path%
+  echo * FC path: %cbf-fc_path%
 )
 
 :
-if not "%cbf_fn%" == "" (
+if not "%cbf-fn%" == "" (
   echo.
-  echo * Filename {in ASCII format}: %cbf_fn%
+  echo * Filename {in ASCII format}: %cbf-fn%
 )
 
 :
-if not "%cbf_gh%" == "" (
+if not "%cbf-gh%" == "" (
   echo.
-  echo * Github URL: %cbf_gh%
+  echo * Github URL: %cbf-gh%
 )
 
 :
-if not "%cbf_host%" == "" (
+if not "%cbf-host%" == "" (
   echo.
-  echo * Host name: %cbf_host%
+  echo * Host name: %cbf-host%
 )
 
 :
-if not "%cbf_instance_id%" == "" (
+if not "%cbf-instance-id%" == "" (
   echo.
-  echo * Instance id: %cbf_instance_id%
+  echo * Instance id: %cbf-instance-id%
 )
 
 :
-if not "%cbf_ip%" == "" (
+if not "%cbf-ip%" == "" (
   echo.
-  echo * IP Address: %cbf_ip%
+  echo * IP Address: %cbf-ip%
 )
 
 :
-if not "%cbf_jf%" == "" (
+if not "%cbf-jf%" == "" (
   echo.
-  echo * Jenkinsfile [cbf_jf]: %cbf_jf%
+  echo * Jenkinsfile [cbf-jf]: %cbf-jf%
 )
 
 :
-if not "%cbf_je%" == "" (
+if not "%cbf-je%" == "" (
   echo.
-  echo * Jenkins URL: %cbf_je%
+  echo * Jenkins URL: %cbf-je%
 )
 
 :
-if not "%cbf_jpg%" == "" (
+if not "%cbf-jpg%" == "" (
   echo.
-  echo * JPG: %cbf_jpg%
+  echo * JPG: %cbf-jpg%
 )
 
 :
-if not "%cbf_parameter%" == "" (
+if not "%cbf-parameter%" == "" (
   echo.
-  echo * Parameter: %cbf_parameter%
+  echo * Parameter: %cbf-parameter%
 )
 
 :
-if not "%cbf_path%" == "" (
+if not "%cbf-pt%" == "" (
   echo.
-  echo * Path: %cbf_path%
+  echo * Path: %cbf-pt%
 )
 
 :
-if not "%cbf_pem%" == "" (
+if not "%cbf-pem%" == "" (
   echo.
-  echo * Pem: %cbf_pem%
+  echo * Pem: %cbf-pem%
 )
 
 :
-if not "%cbf_png%" == "" (
+if not "%cbf-png%" == "" (
   echo.
-  echo * PNG: %cbf_png%
+  echo * PNG: %cbf-png%
 )
 
 :
-if not "%cbf_repo%" == "" (
+if not "%cbf-repo%" == "" (
   rem This is not shown by default.
   rem echo.
-  rem echo * Repo: %cbf_repo%
+  rem echo * Repo: %cbf-repo%
 )
 
 :
-if not "%cbf_specific_browser%" == "" (
+if not "%cbf-specific_browser%" == "" (
   echo.
-  echo * Specific Browser: %cbf_specific_browser%
+  echo * Specific Browser: %cbf-specific_browser%
 )
 
 :
-if not "%cbf_url%" == "" (
+if not "%cbf-url%" == "" (
   echo.
-  echo * URL: %cbf_url%
+  echo * URL: %cbf-url%
 )
 
 :
-if not "%cbf_wo%" == "" (
+if not "%cbf-wo%" == "" (
   echo.
-  echo * Word: %cbf_wo%
+  echo * Word: %cbf-wo%
 )
 
 exit/b

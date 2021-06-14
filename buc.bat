@@ -79,7 +79,7 @@ if not exist "%~1" (
 
 :main_function
 
-xcopy "%~1" "%cbf_path%"
+xcopy "%~1" "%cbf-pt%"
 
 call td cqbu
 

@@ -37,10 +37,10 @@ echo.
 echo Batch file style: Single Purpose
 
 echo.
-echo Entangled variable: cbf_fc_path
+echo Entangled variable: cbf-fc_path
 
 echo.
-echo Pit of Success Strategy: If cb_conf is not, found the algorithm will look for cbf_url.
+echo Pit of Success Strategy: If cb_conf is not, found the algorithm will look for cbf-url.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

@@ -213,7 +213,7 @@ echo %fp%
 call n super_git
 
 echo.
-%cbf_path%\scp -i %share-zone%\cart-np-key.pem cart-api-0.0.1-20190312.062025-60.jar zzadmin@10.168.78.90:/home/zzadmin/
+%cbf-pt%\scp -i %share-zone%\cart-np-key.pem cart-api-0.0.1-20190312.062025-60.jar zzadmin@10.168.78.90:/home/zzadmin/
 
 exit/b
 
@@ -236,7 +236,7 @@ set server_with_folder=zzadmin@10.168.78.90:/home/zzadmin/
 call n super_git
 
 echo.
-%cbf_path%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
+%cbf-pt%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
 
 exit/b
 
@@ -260,7 +260,7 @@ set server_with_folder=zzadmin@10.168.78.24:/home/zzadmin/
 call n super_git
 
 echo.
-%cbf_path%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
+%cbf-pt%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
 
 exit/b
 
@@ -284,7 +284,7 @@ set server_with_folder=zzadmin@10.168.78.24:/home/zzadmin/
 call n super_git
 
 echo.
-%cbf_path%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
+%cbf-pt%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
 
 exit/b
 
@@ -310,7 +310,7 @@ rem set server_with_folder=zzJJones@10.168.73.170:/etc/certs/
 call n super_git
 
 echo.
-%cbf_path%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
+%cbf-pt%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
 
 exit/b
 
@@ -334,7 +334,7 @@ set file_to_upload=Nov-1-2019_6_21_PM.txt
 call n super_git
 
 echo.
-%cbf_path%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
+%cbf-pt%\scp -i %share-zone%\cart-np-key.pem %file_to_upload% %server_with_folder%
 
 exit/b
 
@@ -353,7 +353,7 @@ echo %fp%
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 set file_to_upload=Nov-1-2019_6_21_PM.txt
 
@@ -390,7 +390,7 @@ call n super_git
 
 echo.
 @echo on
-%cbf_path%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
+%cbf-pt%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
 @echo off
 
 exit/b
@@ -418,7 +418,7 @@ call n super_git
 
 echo.
 @echo on
-%cbf_path%\scp -i %share-zone%\pems\cart-np-key.pem "%file_to_upload%" %server_with_folder%
+%cbf-pt%\scp -i %share-zone%\pems\cart-np-key.pem "%file_to_upload%" %server_with_folder%
 @echo off
 
 exit/b
@@ -444,7 +444,7 @@ set server_with_folder=zs_ci_user@10.168.73.170:/home/zs_ci_user
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td kl
 
@@ -476,7 +476,7 @@ set server_with_folder=zs_ci_user@10.168.73.170:/home/zs_ci_user
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td kl
 
@@ -506,17 +506,17 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_ip=
+set cbf-ip=
 
 call ni %2
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
   echo * Error: IP address not found.
   exit/b
 )
 
-if "%cbf_host%" == "" (
+if "%cbf-host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -529,11 +529,11 @@ cd build\libs\
 rem set file_to_upload=cart-api-0.0.1-SNAPSHOT.jar
 set file_to_upload=cart-api-1.0.0.jar
 
-set server_with_folder=zs_ci_user@%cbf_ip%:/tmp
+set server_with_folder=zs_ci_user@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 echo.
 %scp_path%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
@@ -559,17 +559,17 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_ip=
+set cbf-ip=
 
 call ni %2
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
   echo * Error: IP address not found.
   exit/b
 )
 
-if "%cbf_host%" == "" (
+if "%cbf-host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -579,11 +579,11 @@ call td lib
 
 set file_to_upload=cart-api.jar
 
-set server_with_folder=zzJJones@%cbf_ip%:/tmp
+set server_with_folder=zzJJones@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 echo.
 %scp_path%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
@@ -607,17 +607,17 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_ip=
+set cbf-ip=
 
 call ni %2
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
   echo * Error: IP address not found.
   exit/b
 )
 
-if "%cbf_host%" == "" (
+if "%cbf-host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -629,11 +629,11 @@ cd icecart-portal-client\dist\icecart-portal-client
 
 set file_to_upload=ui.zip
 
-set server_with_folder=zs_ci_user@%cbf_ip%:/tmp
+set server_with_folder=zs_ci_user@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 echo.
 %scp_path%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
@@ -657,17 +657,17 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_ip=
+set cbf-ip=
 
 call ni %2
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
   echo * Error: IP address not found.
   exit/b
 )
 
-if "%cbf_host%" == "" (
+if "%cbf-host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -677,11 +677,11 @@ call td mazip
 
 set file_to_upload=ui.zip
 
-set server_with_folder=zzJJones@%cbf_ip%:/tmp
+set server_with_folder=zzJJones@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 echo.
 %scp_path%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
@@ -705,17 +705,17 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_ip=
+set cbf-ip=
 
 call ni %2
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
   echo * Error: IP address not found.
   exit/b
 )
 
-if "%cbf_host%" == "" (
+if "%cbf-host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
@@ -725,11 +725,11 @@ call td mazip
 
 set file_to_upload=ui.zip
 
-set server_with_folder=zzadmin@%cbf_ip%:/tmp
+set server_with_folder=zzadmin@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 echo.
 %scp_path%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
@@ -753,18 +753,18 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_host=
-set cbf_ip=
+set cbf-host=
+set cbf-ip=
 
 call ni %2
 
-if "%cbf_host%" == "" (
+if "%cbf-host%" == "" (
   echo.
   echo * Error: Hostname not found.
   exit/b
 )
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
   echo * Error: IP address not found.
   exit/b
@@ -776,11 +776,11 @@ cd chef_env
 
 set file_to_upload=cart.json
 
-set server_with_folder=zs_ci_user@%cbf_ip%:~
+set server_with_folder=zs_ci_user@%cbf-ip%:~
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 echo.
 %scp_path%\scp -i %share-zone%\pems\cart-np-key.pem %file_to_upload% %server_with_folder%
@@ -806,7 +806,7 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_ip=
+set cbf-ip=
 
 call n %2
 
@@ -817,26 +817,26 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
-  echo * Error: cbf_ip is not defined. Nov-5-2019 1:41 PM
+  echo * Error: cbf-ip is not defined. Nov-5-2019 1:41 PM
   exit/b
 )
 
-if not defined cbf_host (
+if not defined cbf-host (
   echo.
-  echo * Error: Cbf_hostname is not defined. Nov-5-2019 1:42 PM
+  echo * Error: cbf-hostname is not defined. Nov-5-2019 1:42 PM
   exit/b
 )
 
 call td kl
 set file_to_upload=truststore.jks
 
-set server_with_folder=zs_ci_user@%cbf_ip%:/tmp
+set server_with_folder=zs_ci_user@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td kl
 
@@ -869,7 +869,7 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_ip=
+set cbf-ip=
 
 call n %2
 
@@ -880,25 +880,25 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
-  echo * Error: cbf_ip is not defined. Nov-5-2019 1:41 PM
+  echo * Error: cbf-ip is not defined. Nov-5-2019 1:41 PM
   exit/b
 )
 
-if not defined cbf_host (
+if not defined cbf-host (
   echo.
-  echo * Error: Cbf_hostname is not defined. Nov-5-2019 1:42 PM
+  echo * Error: cbf-hostname is not defined. Nov-5-2019 1:42 PM
   exit/b
 )
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td ssl
 set file_to_upload=ssl.conf
-set server_with_folder=zs_ci_user@%cbf_ip%:/tmp
+set server_with_folder=zs_ci_user@%cbf-ip%:/tmp
 
 echo.
 @echo on
@@ -929,7 +929,7 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_ip=
+set cbf-ip=
 
 call n %2
 
@@ -940,25 +940,25 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
-  echo * Error: cbf_ip is not defined. Nov-26-2019 2:44 PM
+  echo * Error: cbf-ip is not defined. Nov-26-2019 2:44 PM
   exit/b
 )
 
-if not defined cbf_host (
+if not defined cbf-host (
   echo.
-  echo * Error: Cbf_hostname is not defined. Nov-26-2019 2:44 PM
+  echo * Error: cbf-hostname is not defined. Nov-26-2019 2:44 PM
   exit/b
 )
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td pems
 set file_to_upload=cart_dv_secret.sec
-set server_with_folder=zzadmin@%cbf_ip%:/tmp
+set server_with_folder=zzadmin@%cbf-ip%:/tmp
 
 echo.
 @echo on

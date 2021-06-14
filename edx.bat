@@ -63,7 +63,7 @@ echo.
 echo %filep%
 
 if "%~3" == "x" (
-  set cbf_fn=%~1
+  set cbf-fn=%~1
   goto final_step
 )
 
@@ -73,28 +73,28 @@ echo %1 | find /i ".">nul
 
 if %errorlevel% == 0 (
   echo If called.
-  set cbf_fn=%~1
+  set cbf-fn=%~1
 ) else (
   call fn %1
 )
 
 if "%~2" == "" (
   rem Set statements aren't allowed inside if blocks, so this is the workaround.
-  call m set_cbf_application_to_dte
+  call m set_cbf-application_to_dte
 ) else (
   call an %2
 )
 
-if "%cbf_fn%" == "" (
+if "%cbf-fn%" == "" (
   echo.
-  echo * Error: cbf_fn equals nothing.
+  echo * Error: cbf-fn equals nothing.
   exit/b
 )
 
-set cbf_parameter=%cbf_fn%
+set cbf-parameter=%cbf-fn%
 
 rem echo.
-rem echo CBF_Parameter: %cbf_parameter%
+rem echo cbf-Parameter: %cbf-parameter%
 
 
 

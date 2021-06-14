@@ -36,7 +36,7 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Base path alias.
 
-set parameter_2=Parameter 2: Relative path alias. (cbf_relative_path)
+set parameter_2=Parameter 2: Relative path alias. (cbf-relative_path)
 
 echo.
 echo %parameter_1%
@@ -82,7 +82,7 @@ exit/b
 
 :validate_input
 
-set cbf_relative_path=
+set cbf-relative_path=
 
 rem lu: Oct-30-2019
 
@@ -95,14 +95,14 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not exist "%cbf_path%" (
+if not exist "%cbf-pt%" (
   echo.
-  echo * Error: Path "%cbf_path%" not found. Oct-30-2019 6:17 PM
+  echo * Error: Path "%cbf-pt%" not found. Oct-30-2019 6:17 PM
   call m clear_errorlevel_silently 
   exit/b
 )
 
-set cbf_built_path=%cbf_path%
+set cbf-built_path=%cbf-pt%
 
 call pn %2
 
@@ -113,11 +113,11 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-set cbf_built_path=%cbf_built_path%\%cbf_relative_path%
+set cbf-built_path=%cbf-built_path%\%cbf-relative_path%
 
-if not exist "%cbf_built_path%" (
+if not exist "%cbf-built_path%" (
   echo.
-  echo * Error: Path "%cbf_built_path%" not found. Oct-30-2019 6:17 PM
+  echo * Error: Path "%cbf-built_path%" not found. Oct-30-2019 6:17 PM
   call m clear_errorlevel_silently 
   exit/b
 )
@@ -128,7 +128,7 @@ if not exist "%cbf_built_path%" (
 
 :main_function
 
-cd /d "%cbf_built_path%"
+cd /d "%cbf-built_path%"
 
 exit/b
 

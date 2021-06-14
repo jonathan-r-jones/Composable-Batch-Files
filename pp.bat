@@ -35,8 +35,8 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1 (Optional): Filename alias to run. This file will try to open ^
-the cbf_%0 first, and if that is not found, it will try to open the ^
-cbf_fn. If left blank, PowerPoint is opened.
+the cbf-%0 first, and if that is not found, it will try to open the ^
+cbf-fn. If left blank, PowerPoint is opened.
 
 echo.
 echo %parameter_1%
@@ -45,7 +45,7 @@ echo.
 echo Batch file style: Single Purpose
 
 echo.
-echo Entangled variable: cbf_%0
+echo Entangled variable: cbf-%0
 
 exit/b
 
@@ -62,22 +62,22 @@ exit/b
 
 :validate_input
 
-set cbf_pp=
-set cbf_%1=
+set cbf-pp=
+set cbf-%1=
 
 call n %1
 
 if %errorlevel% gtr 0 exit/b
 
-if "%cbf_pp%" == "" (
+if "%cbf-pp%" == "" (
   echo.
-  echo * The cbf_pp is not defined for "%1". Jul-24-2020_1_19_PM
-  goto try_using_cbf_fn
+  echo * The cbf-pp is not defined for "%1". Jul-24-2020_1_19_PM
+  goto try_using_cbf-fn
 )
 
-set cbf_fn=%cbf_pp%
+set cbf-fn=%cbf-pp%
 
-if not exist "%cbf_pp%" (
+if not exist "%cbf-pp%" (
   goto create_file
 )
 
@@ -92,36 +92,36 @@ goto main_function
 set fp=* Create file.
 
 rem echo.
-rem echo cbf_pp: "%cbf_pp%"
+rem echo cbf-pp: "%cbf-pp%"
 
-call m distill_filename "%cbf_pp%"
+call m distill_filename "%cbf-pp%"
 
-call m distill_path "%cbf_pp%"
+call m distill_path "%cbf-pp%"
 
-cd /d "%cbf_distilled_path%"
+cd /d "%cbf-distilled_path%"
 
-call cpfc exb "%cbf_distilled_filename%"
+call cpfc exb "%cbf-distilled_filename%"
 
 rem echo.
-rem echo cbf_distilled_filename: "%cbf_distilled_filename%"
+rem echo cbf-distilled_filename: "%cbf-distilled_filename%"
 
-set cbf_fn=%cbf_distilled_filename%
+set cbf-fn=%cbf-distilled_filename%
 
 goto main_function
 
 
 
-:try_using_cbf_fn
+:try_using_cbf-fn
 
 call fn %1>nul
 
 if %errorlevel% gtr 0 exit/b
 
-echo %cbf_pp% | find /i "xlsx">nul
+echo %cbf-pp% | find /i "xlsx">nul
 
 if not %errorlevel% == 0 (
   echo.
-  echo * cbf_fn does not contain an xlsx document. Aug-24-2020_11_03_AM
+  echo * cbf-fn does not contain an xlsx document. Aug-24-2020_11_03_AM
   exit/b
 )
 
@@ -143,7 +143,7 @@ goto main_function
 
 :main_function
 
-call m associate_cbf_parameter_to_cbf_fn>nul
+call m associate_cbf-parameter_to_cbf-fn>nul
 
 call an pp>nul
 

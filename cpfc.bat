@@ -61,9 +61,9 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not exist "%cbf_fn%" (
+if not exist "%cbf-fn%" (
   echo.
-  echo * Error: Cannot find the file "%cbf_fn%".
+  echo * Error: Cannot find the file "%cbf-fn%".
   exit/b
 )
 
@@ -73,7 +73,7 @@ if not exist "%cbf_fn%" (
 
 :main_function
 
-copy "%cbf_fn%" %2
+copy "%cbf-fn%" %2
 
 rem start "bogus" "%~2"
 

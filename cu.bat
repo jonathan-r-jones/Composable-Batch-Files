@@ -96,7 +96,7 @@ rem This may work.
 call n %2
 
 echo.
-curl -v -F ‘data=Apr-29-2019_2_24_PM.txt’ %cbf_url%
+curl -v -F ‘data=Apr-29-2019_2_24_PM.txt’ %cbf-url%
 
 exit/b
 
@@ -118,7 +118,7 @@ rem This works.
 call n %2
 
 echo.
-curl -v -F ‘data=Apr-29-2019_2_24_PM.txt’ %cbf_url%
+curl -v -F ‘data=Apr-29-2019_2_24_PM.txt’ %cbf-url%
 
 exit/b
 
@@ -137,7 +137,7 @@ echo %fp%
 
 call n %2
 
-set server_with_folder=zzadmin@%cbf_ip%:/home/zzadmin/
+set server_with_folder=zzadmin@%cbf-ip%:/home/zzadmin/
 
 echo.
 curl -v -F ‘data=Apr-29-2019_3_07_PM.txt’ %server_with_folder%
@@ -160,7 +160,7 @@ echo %fp%
 call n sr3
 
 echo.
-curl -v --upload-file Apr-29-2019_3_07_PM.txt %cbf_url%
+curl -v --upload-file Apr-29-2019_3_07_PM.txt %cbf-url%
 
 exit/b
 
@@ -184,7 +184,7 @@ call un %2
 if %errorlevel% gtr 0 exit/b
 
 echo.
-curl %cbf_url%
+curl %cbf-url%
 
 exit/b
 
@@ -201,21 +201,21 @@ rem lu: Jun-4-2020
 echo.
 echo %fp%
 
-set cbf_ip=
+set cbf-ip=
 
 call n %2>nul
 
 if %errorlevel% gtr 0 exit/b
 
-if "%cbf_ip%" == "" (
+if "%cbf-ip%" == "" (
   echo.
-  echo * Error: The cbf_ip variable is not set.
+  echo * Error: The cbf-ip variable is not set.
   exit/b 1
 )
 
 rem curl http://169.254.169.254/latest/meta-data/
 @echo on
-curl http://%cbf_ip%/latest/meta-data/
+curl http://%cbf-ip%/latest/meta-data/
 @echo off
 
 exit/b
@@ -233,10 +233,10 @@ call n %1
 
 echo.
 
-if "%cbf_header%" == "" (
-  call curl %2 %3 %4 %5 %cbf_url%
+if "%cbf-header%" == "" (
+  call curl %2 %3 %4 %5 %cbf-url%
 ) else (
-  call curl %2 %3 %4 %5 %cbf_url% -H "%cbf_header%"
+  call curl %2 %3 %4 %5 %cbf-url% -H "%cbf-header%"
 )
 
 echo.

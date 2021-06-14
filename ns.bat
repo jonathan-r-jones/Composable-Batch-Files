@@ -127,7 +127,7 @@ exit/b
 
 :validate_user_input
 
-set cbf_host=
+set cbf-host=
 
 call un %1
 
@@ -144,18 +144,18 @@ if %errorlevel% == 1 (
 
 :main_function
 
-set cbf_target=%cbf_url%
+set cbf-target=%cbf-url%
 
-if not "%cbf_host%" == "" (
-  set cbf_target=%cbf_host%.irmnet.ds2.dhs.gov
-) else if "%cbf_url%" == "" (
+if not "%cbf-host%" == "" (
+  set cbf-target=%cbf-host%.irmnet.ds2.dhs.gov
+) else if "%cbf-url%" == "" (
   echo.
-  echo * Error: cbf_host is unassigned for "%1".
+  echo * Error: cbf-host is unassigned for "%1".
   exit/b
 )
 
 echo.
-nslookup %cbf_target%
+nslookup %cbf-target%
 
 exit/b
 

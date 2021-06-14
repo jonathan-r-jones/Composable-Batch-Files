@@ -637,7 +637,7 @@ echo.
 echo %fp%
 
 call n caco
-set cbf_cookbook_path=%cbf_path%
+set cbf-cookbook_path=%cbf-pt%
 
 call td chef
 
@@ -728,7 +728,7 @@ echo.
 echo %fp%
 
 call n caco
-set cbf_cookbook_path=%cbf_path%
+set cbf-cookbook_path=%cbf-pt%
 
 call td chef
 
@@ -753,12 +753,12 @@ echo.
 echo %fp%
 
 call n cac
-set cbf_cookbook_path=%cbf_path%
+set cbf-cookbook_path=%cbf-pt%
 
 call td chef
 
 @echo on
-knife cookbook upload cart_activemq_cookbook -o %cbf_cookbook_path%
+knife cookbook upload cart_activemq_cookbook -o %cbf-cookbook_path%
 @echo off
 
 exit/b

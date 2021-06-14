@@ -46,7 +46,7 @@ echo.
 echo Parameter 2 (Optional): Fully qualified parameter name, not a nickname.
 
 echo.
-echo Notes: If no parameters are passed, the currently set CBF_Application and CBF_Parameter are used.
+echo Notes: If no parameters are passed, the currently set cbf-Application and cbf-Parameter are used.
 
 exit/b
 
@@ -65,14 +65,14 @@ exit/b
 
 set fp=* Use special syntax for Microsoft Edge.
 
-if "%cbf_parameter%" == "" (
-  call start "my title" "%cbf_application%:"
+if "%cbf-parameter%" == "" (
+  call start "my title" "%cbf-application%:"
   exit/b
 )
 
-call start "my title" "%cbf_application%:""%cbf_parameter%"
+call start "my title" "%cbf-application%:""%cbf-parameter%"
 
-set cbf_application=
+set cbf-application=
 
 exit/b
 
@@ -82,14 +82,14 @@ exit/b
 
 :run_application_in_raw_format
 
-set fp=* CBF_Application contains a double dash. Run it raw.
+set fp=* cbf-Application contains a double dash. Run it raw.
 
 echo %fp%
 
 rem This also works so why is this function here?
-rem start "my title" "%cbf_application%" 
+rem start "my title" "%cbf-application%" 
 
-"%cbf_application%"
+"%cbf-application%"
 
 exit/b
 
@@ -101,11 +101,11 @@ exit/b
 
 set fp=* Run application - main function.
 
-if "%cbf_application%" == "microsoft-edge" goto microsoft_edge_edge_case
+if "%cbf-application%" == "microsoft-edge" goto microsoft_edge_edge_case
 
 rem echo Nov-27-2019 4:49 PM
 
-echo %cbf_application% | C:\Windows\System32\find.exe /i "--">nul
+echo %cbf-application% | C:\Windows\System32\find.exe /i "--">nul
 
 if %errorlevel% == 0 (
   echo.
@@ -114,17 +114,17 @@ if %errorlevel% == 0 (
   call m clear_errorlevel_silently
 )
 
-if "%cbf_parameter%" == "" (
+if "%cbf-parameter%" == "" (
   rem echo.
   rem echo * Run application with no parameter. Jun-9-2020_3_20_PM
-  call start "my title" "%cbf_application%"
+  call start "my title" "%cbf-application%"
   exit/b
 )
 
 rem echo.
 rem echo * Run application with parameter. Jun-9-2020_3_17_PM
 
-start "my title" "%cbf_application%" "%cbf_parameter%"
+start "my title" "%cbf-application%" "%cbf-parameter%"
 
 exit/b
 

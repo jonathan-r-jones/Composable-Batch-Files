@@ -81,7 +81,7 @@ rem lu: Apr-12-2019
 
 call ni jira_url
 
-call dc %cbf_url%/browse/cart-%1
+call dc %cbf-url%/browse/cart-%1
 
 exit/b
 

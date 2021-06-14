@@ -63,8 +63,8 @@ echo                  -c  As a batch file parameter, means force file creation
 echo                   c  Current folder filename, when used in a batch file name
 echo                 cbf  Composable batch files
 echo      cbf definition  The function in n.bat where an alias' defintion is located.
-echo        cbf variable  An environment variable that begins with "cbf_", for example 
-echo                      "cbf_path", that is used by CBF batch files.
+echo        cbf variable  An environment variable that begins with "cbf-", for example 
+echo                      "cbf-pt", that is used by CBF batch files.
 echo code execution area  Batch file style (bfs) where the router routes execution to near the 
 echo                      end of the file, unless a parameter is supllied, in which case 
 echo                      function routing occurs. Example(s): t.bat, v.bat.
@@ -72,9 +72,9 @@ echo            consumer  Batch file style using function routing with time-stam
 echo                      names. Used for analysis and showing-your-work, not for repeatability. 
 echo                      By convention, files are suffixed with a "_c".
 echo   dynamically cons-  DCV. An environment variable that can be dynamically created at runtime.
-echo   tructed variable   For example, java is the dcv of the expression cbf_java. CBFs that
+echo   tructed variable   For example, java is the dcv of the expression cbf-java. CBFs that
 echo                      use DCVs should have an "x" in their name.
-echo  entangled variable  A cbf variable associated with a particle batch file, e.g. cbf_path
+echo  entangled variable  A cbf variable associated with a particle batch file, e.g. cbf-pt
 echo                      and td.bat.
 echo          error code  fn.bat returns an error code of 2 for file not exists.
 echo  evaluated filename  Filename, filename alias or batch file prefix for a batch file 
@@ -92,7 +92,7 @@ echo                      alias or nickname.
 echo                  lu  Last updated. The last time the file was updated.
 echo                   p  Path alias, when used in a batch file name
 echo                 po_  Prefix which stands for "path only" meaning the a cbf definition only 
-echo                      has 1 variable set, viz. cbf_path
+echo                      has 1 variable set, viz. cbf-pt
 echo                 rf_  Prefix used to designate that a label has at least one caller.
 echo                 rp_  Prefix used to designate that a label is a relative path.
 echo      single purpose  Batch file style where the file tries to achieve a single task or 

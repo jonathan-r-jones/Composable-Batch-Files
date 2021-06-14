@@ -66,12 +66,12 @@ exit/b
 set fp=* Use batch file to find filename.
 
 if exist "%composable_batch_files%\%~1.bat" (
-  set cbf_fn=%composable_batch_files%\%~1.bat
+  set cbf-fn=%composable_batch_files%\%~1.bat
   goto main_function
 )
 
 if exist "%share-zone%\%~1.bat" (
-  set cbf_fn=%share-zone%\%~1.bat
+  set cbf-fn=%share-zone%\%~1.bat
   goto main_function
 )
 
@@ -113,15 +113,15 @@ set fp=* Use current folder filename.
 echo.
 echo %fp%
 
-set cbf_fn=%~1
+set cbf-fn=%~1
 
-if not exist "%cbf_fn%" (
+if not exist "%cbf-fn%" (
   echo.
-  echo * Error: The file "%cbf_fn%" does not exist. Nov-27-2019 6:22 PM
+  echo * Error: The file "%cbf-fn%" does not exist. Nov-27-2019 6:22 PM
   exit/b
 ) else (
   echo.
-  echo * Open the existing file "%cbf_fn%". Nov-27-2019 12:07 PM
+  echo * Open the existing file "%cbf-fn%". Nov-27-2019 12:07 PM
 )
 
 goto main_function
@@ -132,7 +132,7 @@ goto main_function
 
 :main_function
 
-type "%cbf_fn%"
+type "%cbf-fn%"
 
 echo.
 

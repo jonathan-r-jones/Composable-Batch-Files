@@ -166,7 +166,7 @@ rem FCD: Apr-7-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\^
+set cbf-fn=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\^
 dashboard\SystemWidget.js
 
 exit/b
@@ -184,7 +184,7 @@ rem FCD: Apr-10-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\mercury6\pom.xml
+set cbf-fn=C:\projects\netbeans\mercury6\pom.xml
 
 exit/b
 
@@ -201,7 +201,7 @@ rem FCD: Apr-10-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
+set cbf-fn=C:\projects\netbeans\mercury6\Mercury-ear\pom.xml
 
 exit/b
 
@@ -218,7 +218,7 @@ rem FCD: Apr-10-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
+set cbf-fn=C:\projects\netbeans\mercury6\Mercury-ejb\pom.xml
 
 exit/b
 
@@ -235,7 +235,7 @@ rem FCD: Apr-10-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
+set cbf-fn=C:\projects\netbeans\mercury6\Mercury-web\pom.xml
 
 exit/b
 
@@ -252,7 +252,7 @@ rem FCD: May-13-2017
 echo.
 echo %fp%
 
-set cbf_fn=%COMPOSABLE_BATCH_FILES%\td.bat
+set cbf-fn=%COMPOSABLE_BATCH_FILES%\td.bat
 
 exit/b
 
@@ -299,7 +299,7 @@ echo.
 echo %fp%
 echo.
 
-set cbf_fn=%userprofile%\.m2\settings.xml
+set cbf-fn=%userprofile%\.m2\settings.xml
 
 exit/b
 
@@ -320,7 +320,7 @@ rem FCD: Apr-7-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
+set cbf-fn=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\view\dashboard\ContactsWidget.js
 
 exit/b
 
@@ -339,7 +339,7 @@ rem FCD: Sep-25-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
+set cbf-fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\tablet\dashboard\ContactsWidget.js
 
 exit/b
 
@@ -367,7 +367,7 @@ rem     xtype: 'login',
 rem     // CLOSE mobile login.
 rem     //xtype:'loginDisabled',
 
-set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\login.js
+set cbf-fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\login.js
 
 exit/b
 
@@ -391,7 +391,7 @@ rem     xtype:'loginDisabled',
 rem     // CLOSE mobile login.
 rem     //xtype: 'login',
 
-set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\WIPPage.js
+set cbf-fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\authentication\WIPPage.js
 
 exit/b
 
@@ -408,7 +408,7 @@ rem lu: Dec-4-2017
 echo.
 echo %fp%
 
-set cbf_fn=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
+set cbf-fn=c:\mercury\mobility\How to Build a Sencha App on Mac Using Cordova.asc
 
 exit/b
 
@@ -425,7 +425,7 @@ rem lu: Dec-4-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
+set cbf-fn=C:\projects\netbeans\sencha\HTML5Application\public_html\app.json
 
 exit/b
 
@@ -442,7 +442,7 @@ rem lu: Dec-6-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
+set cbf-fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils\netconfig.js
 
 exit/b
 
@@ -461,7 +461,7 @@ rem FCD: Sep-25-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
+set cbf-fn=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\view\phone\dashboard\ContactsWidget.js
 
 exit/b
 
@@ -478,7 +478,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_fn=%COMPOSABLE_BATCH_FILES%\fn.bat
+set cbf-fn=%COMPOSABLE_BATCH_FILES%\fn.bat
 
 exit/b
 
@@ -497,9 +497,9 @@ echo %fp%
 
 call m set_wildfly_location
 
-set cbf_fn=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
+set cbf-fn=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\configuration\standalone.xml
 
-set cbf_path=%wildfly_location%\standalone\configuration
+set cbf-pt=%wildfly_location%\standalone\configuration
 
 exit/b
 
@@ -518,7 +518,7 @@ echo %fp%
 
 call m set_wildfly_location
 
-set cbf_path=%wildfly_location%
+set cbf-pt=%wildfly_location%
 
 exit/b
 
@@ -535,7 +535,7 @@ rem FCD: Mar-6-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\projects\netbeans\mercury6\mercury-tirem
+set cbf-pt=c:\projects\netbeans\mercury6\mercury-tirem
 
 exit/b
 
@@ -552,7 +552,7 @@ rem FCD: Mar-15-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\projects\netbeans\mercury6
+set cbf-pt=c:\projects\netbeans\mercury6
 
 exit/b
 
@@ -571,7 +571,7 @@ echo %fp%
 
 call m set_wildfly_location
 
-set cbf_path=%wildfly_location%\standalone\deployments
+set cbf-pt=%wildfly_location%\standalone\deployments
 
 exit/b
 
@@ -588,7 +588,7 @@ rem FCD: Apr-7-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\projects\netbeans\mercury6\Mercury-web\target
+set cbf-pt=C:\projects\netbeans\mercury6\Mercury-web\target
 
 exit/b
 
@@ -605,7 +605,7 @@ rem FCD: Apr-14-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html
+set cbf-pt=C:\projects\netbeans\sencha\HTML5Application\public_html
 
 exit/b
 
@@ -626,7 +626,7 @@ rem FCD: Mar-22-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\projects\netbeans\sencha
+set cbf-pt=c:\projects\netbeans\sencha
 
 exit/b
 
@@ -649,19 +649,19 @@ echo %fp%
 
 call m set_wildfly_location
 
-set cbf_path=%wildfly_location%\standalone\tmp\vfs\temp
+set cbf-pt=%wildfly_location%\standalone\tmp\vfs\temp
 
 dir/b>%temp%\environment_variable_temporary_storage.txt
 
 set /p dynamic_server_location_part_1=<%temp%\environment_variable_temporary_storage.txt
 
-set cbf_path=%dynamic_server_location_part_1%
+set cbf-pt=%dynamic_server_location_part_1%
 
 dir/b>%temp%\environment_variable_temporary_storage.txt
 
 set /p dynamic_server_location_part_2=<%temp%\environment_variable_temporary_storage.txt
 
-set cbf_path=%dynamic_server_location_part_2%
+set cbf-pt=%dynamic_server_location_part_2%
 
 set wildfly_dynamic_folder=%wildfly_location%\standalone\tmp\vfs\temp\%dynamic_server_location_part_1%\%dynamic_server_location_part_2%
 
@@ -682,7 +682,7 @@ echo %fp%
 
 call m set_wildfly_location
 
-set cbf_path=%wildfly_location%\standalone\tmp\vfs\temp
+set cbf-pt=%wildfly_location%\standalone\tmp\vfs\temp
 
 exit/b
 
@@ -703,7 +703,7 @@ echo %fp%
 
 call %0 hex
 echo.
-set cbf_path=.\resources\WorldWind\images
+set cbf-pt=.\resources\WorldWind\images
 
 exit/b
 
@@ -724,7 +724,7 @@ rem fcd: May-12-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\projects\netbeans
+set cbf-pt=c:\projects\netbeans
 
 exit/b
 
@@ -743,9 +743,9 @@ echo %fp%
 
 call m set_wildfly_location
 
-set cbf_fn=%wildfly_location%\standalone\log\server.log
+set cbf-fn=%wildfly_location%\standalone\log\server.log
 
-set cbf_path=%wildfly_location%\standalone\log
+set cbf-pt=%wildfly_location%\standalone\log
 
 exit/b
 
@@ -764,7 +764,7 @@ echo %fp%
 
 call td hex
 
-set cbf_path=resources
+set cbf-pt=resources
 
 exit/b
 
@@ -781,7 +781,7 @@ rem fcd: Jun-22-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
+set cbf-pt=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
 
 exit/b
 
@@ -798,9 +798,9 @@ rem fcd: Jun-26-2017
 echo.
 echo %fp%
 
-set cbf_fn=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
+set cbf-fn=C:\ProgramData\MySQL\MySQL Server 5.7\my.ini
 
-set cbf_path=C:\ProgramData\MySQL\MySQL Server 5.7
+set cbf-pt=C:\ProgramData\MySQL\MySQL Server 5.7
 
 exit/b
 
@@ -817,7 +817,7 @@ rem fcd: Jul-5-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\Mercury\LDAP\OpenDS-2.2.1
+set cbf-pt=C:\Mercury\LDAP\OpenDS-2.2.1
 
 exit/b
 
@@ -834,7 +834,7 @@ rem fcd: Jul-7-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\ext
+set cbf-pt=C:\projects\netbeans\sencha\HTML5Application\public_html\ext
 
 exit/b
 
@@ -853,7 +853,7 @@ rem fcd: Jul-7-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\mercury
+set cbf-pt=C:\mercury
 
 exit/b
 
@@ -870,7 +870,7 @@ rem fcd: Jul-7-2017
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\.m2
+set cbf-pt=%userprofile%\.m2
 
 exit/b
 
@@ -887,7 +887,7 @@ rem fud: Aug-4-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonathan.r.jones\Documents\dropbox\IT\Sencha Class on Aug-7-2017
+set cbf-pt=C:\Users\jonathan.r.jones\Documents\dropbox\IT\Sencha Class on Aug-7-2017
 
 exit/b
 
@@ -904,7 +904,7 @@ rem fud: Aug-4-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\SenchaTraining
+set cbf-pt=C:\SenchaTraining
 
 exit/b
 
@@ -938,7 +938,7 @@ rem fud: Aug-8-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\senchatraining\labs
+set cbf-pt=c:\senchatraining\labs
 
 exit/b
 
@@ -955,7 +955,7 @@ rem fud: Aug-8-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonathan.r.jones\AppData\Local\Android\sdk
+set cbf-pt=C:\Users\jonathan.r.jones\AppData\Local\Android\sdk
 
 exit/b
 
@@ -972,7 +972,7 @@ rem fud: Aug-15-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\senchatraining\labs\yelpextplorer
+set cbf-pt=c:\senchatraining\labs\yelpextplorer
 
 exit/b
 
@@ -991,7 +991,7 @@ rem fud: Aug-15-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha\HTML5Application\public_html
+set cbf-pt=C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha\HTML5Application\public_html
 
 exit/b
 
@@ -1011,7 +1011,7 @@ echo.
 echo %fp%
 echo.
 
-set cbf_path=C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha
+set cbf-pt=C:\Users\Buzz\Documents\Dropbox\NES\Macintosh\sencha
 
 exit/b
 
@@ -1032,7 +1032,7 @@ rem fud: Aug-17-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils
+set cbf-pt=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils
 
 exit/b
 
@@ -1050,7 +1050,7 @@ echo.
 echo %fp%
 echo.
 
-set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
+set cbf-pt=C:\projects\netbeans\sencha\HTML5Application\public_html\classic\src\utils
 
 exit/b
 
@@ -1068,7 +1068,7 @@ echo.
 echo %fp%
 echo.
 
-set cbf_path=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils
+set cbf-pt=C:\projects\netbeans\sencha\HTML5Application\public_html\modern\src\utils
 
 exit/b
 
@@ -1089,7 +1089,7 @@ rem lu: Nov-9-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\mercury\agi licenses
+set cbf-pt=C:\mercury\agi licenses
 
 exit/b
 
@@ -1106,7 +1106,7 @@ rem lu: Sep-26-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\projects\netbeans\mercury6\Mercury-ejb\src\main\resources
+set cbf-pt=C:\projects\netbeans\mercury6\Mercury-ejb\src\main\resources
 
 exit/b
 
@@ -1123,7 +1123,7 @@ rem lu: Sep-26-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\lib
+set cbf-pt=C:\Mercury\Server\wildfly-9.0.2.Final\standalone\lib
 
 exit/b
 
@@ -1140,7 +1140,7 @@ rem lu: Oct-23-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\Mercury\Mobility
+set cbf-pt=C:\Mercury\Mobility
 
 exit/b
 
@@ -1159,7 +1159,7 @@ rem lu: Oct-24-2017
 echo.
 echo %fp%
 
-set cbf_path=C:\Mercury\Latest WAR File
+set cbf-pt=C:\Mercury\Latest WAR File
 
 exit/b
 
@@ -1178,7 +1178,7 @@ echo %fp%
 
 call %0 hex
 
-set cbf_path=resources\images
+set cbf-pt=resources\images
 
 exit/b
 
@@ -1197,7 +1197,7 @@ echo %fp%
 
 call %0 hex
 
-set cbf_path=classic\resources\images
+set cbf-pt=classic\resources\images
 
 exit/b
 
@@ -1216,7 +1216,7 @@ echo %fp%
 
 call %0 hex
 
-set cbf_path=modern\resources\images
+set cbf-pt=modern\resources\images
 
 exit/b
 
@@ -1235,7 +1235,7 @@ echo %fp%
 
 call %0 hex
 
-set cbf_path=modern\resources\images
+set cbf-pt=modern\resources\images
 
 exit/b
 
@@ -1252,7 +1252,7 @@ rem lu: Dec-18-2017
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\Paul Sheriff Unit Testing Course\UnitTestProject4\bin\debug
+set cbf-pt=%dropbox%\it\Paul Sheriff Unit Testing Course\UnitTestProject4\bin\debug
 
 exit/b
 
@@ -1269,7 +1269,7 @@ rem lu: Jan-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\
+set cbf-pt=%dropbox%\it\
 
 exit/b
 
@@ -1286,9 +1286,9 @@ rem lu: Feb-2-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%
+set cbf-pt=%dropbox%
 
-set cbf_url=http://www.dropbox.com
+set cbf-url=http://www.dropbox.com
 
 exit/b
 
@@ -1305,11 +1305,11 @@ rem lu: Feb-2-2018
 echo.
 echo %fp%
 
-set cbf_fn=d:\aa\NovaCodeCamp.PizzaRatings\pizza.sln
+set cbf-fn=d:\aa\NovaCodeCamp.PizzaRatings\pizza.sln
 
-set cbf_path=d:\aa\NovaCodeCamp.PizzaRatings
+set cbf-pt=d:\aa\NovaCodeCamp.PizzaRatings
 
-set cbf_url=https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git
+set cbf-url=https://github.com/jonathan-r-jones/NovaCodeCamp.PizzaRatings.git
 
 exit/b
 
@@ -1326,9 +1326,9 @@ rem lu: Jan-31-2018
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\it\ticktockmenu\TickTockMenu.sln
+set cbf-fn=%dropbox%\it\ticktockmenu\TickTockMenu.sln
 
-set cbf_path=%dropbox%\it\ticktockmenu
+set cbf-pt=%dropbox%\it\ticktockmenu
 
 exit/b
 
@@ -1345,7 +1345,7 @@ rem lu: Feb-5-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\
+set cbf-pt=c:\
 
 exit/b
 
@@ -1362,7 +1362,7 @@ rem lu: Feb-5-2018
 echo.
 echo %fp%
 
-set cbf_path=d:\
+set cbf-pt=d:\
 
 exit/b
 
@@ -1379,9 +1379,9 @@ rem lu: Feb-6-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it
+set cbf-pt=%dropbox%\it
 
-set cbf_url=https://github.com/jonathan-r-jones/Bowling-Score-Calculator.git
+set cbf-url=https://github.com/jonathan-r-jones/Bowling-Score-Calculator.git
 
 exit/b
 
@@ -1398,7 +1398,7 @@ rem lu: Feb-7-2018
 echo.
 echo %fp%
 
-set cbf_url=http://europeantestingconference.eu/2018/location/
+set cbf-url=http://europeantestingconference.eu/2018/location/
 
 exit/b
 
@@ -1415,7 +1415,7 @@ rem lu: Feb-13-2018
 echo.
 echo %fp%
 
-set cbf_url=https://mail.google.com
+set cbf-url=https://mail.google.com
 
 exit/b
 
@@ -1432,7 +1432,7 @@ rem lu: Feb-15-2018
 echo.
 echo %fp%
 
-set cbf_url=http://stackoverflow.com/
+set cbf-url=http://stackoverflow.com/
 
 exit/b
 
@@ -1449,9 +1449,9 @@ rem lu: Feb-16-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\IT\Karl-2-C-Sharp-Testing
+set cbf-pt=%dropbox%\IT\Karl-2-C-Sharp-Testing
 
-set cbf_fn=%dropbox%\IT\Karl-2-C-Sharp-Testing\karl 2.sln
+set cbf-fn=%dropbox%\IT\Karl-2-C-Sharp-Testing\karl 2.sln
 
 exit/b
 
@@ -1468,11 +1468,11 @@ rem lu: Feb-16-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_fn=
+set cbf-fn=
 
-set cbf_url=http://europeantestingconference.eu/2018
+set cbf-url=http://europeantestingconference.eu/2018
 
 exit/b
 
@@ -1489,7 +1489,7 @@ rem lu: Feb-16-2018
 echo.
 echo %fp%
 
-set cbf_url=https://hub.docker.com
+set cbf-url=https://hub.docker.com
 
 exit/b
 
@@ -1506,7 +1506,7 @@ rem lu: Mar-1-2018
 echo.
 echo %fp%
 
-set cbf_fn=Readme.md
+set cbf-fn=Readme.md
 
 exit/b
 
@@ -1527,9 +1527,9 @@ rem lu: Mar-1-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\freecodecamp
+set cbf-pt=%aa%\freecodecamp
 
-set cbf_url=https://github.com/freeCodeCamp/freeCodeCamp.git
+set cbf-url=https://github.com/freeCodeCamp/freeCodeCamp.git
 
 exit/b
 
@@ -1546,7 +1546,7 @@ rem lu: Mar-1-2018
 echo.
 echo %fp%
 
-set cbf_url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
+set cbf-url=https://Jonathan17@bitbucket.org/nesmercuryteam/documentation.git
 
 exit/b
 
@@ -1569,7 +1569,7 @@ rem lu: Apr-10-2018
 echo.
 echo %fp%
 
-set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
+set cbf-pt=%savannah%\cmac\Quickla-for-Multi-Edit
 
 exit/b
 
@@ -1588,11 +1588,11 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
-set cbf_path=%dropbox%\savannah\cmac\Quickla-for-Multi-Edit
+set cbf-pt=%dropbox%\savannah\cmac\Quickla-for-Multi-Edit
 
-set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+set cbf-url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
 exit/b
 
@@ -1606,14 +1606,14 @@ exit/b
 
 :cbfa
 
-set fp=* CBF Application. Set CBF_Path based on the currently set CBF_Application.
+set fp=* CBF Application. Set cbf-pt based on the currently set cbf-Application.
 
 rem lu: Mar-9-2018
 
 echo.
 echo %fp%
 
-call m expand_to_path_only "%cbf_application%"
+call m expand_to_path_only "%cbf-application%"
 
 exit/b
 
@@ -1630,7 +1630,7 @@ rem lu: Mar-9-2018
 echo.
 echo %fp%
 
-call m expand_to_path_only "%cbf_fn%"
+call m expand_to_path_only "%cbf-fn%"
 
 exit/b
 
@@ -1647,7 +1647,7 @@ rem lu: Apr-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/joeeames/NPMPlaybookCourse
+set cbf-url=https://github.com/joeeames/NPMPlaybookCourse
 
 exit/b
 
@@ -1664,7 +1664,7 @@ rem lu: Apr-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://docs.npmjs.com/misc/config
+set cbf-url=https://docs.npmjs.com/misc/config
 
 exit/b
 
@@ -1681,7 +1681,7 @@ rem lu: Apr-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/strongloop/express
+set cbf-url=https://github.com/strongloop/express
 
 exit/b
 
@@ -1689,7 +1689,7 @@ exit/b
 
 :_
 
-:cbf_on_npm
+:cbf-on_npm
 
 set fp=* CBF on MPM.
 
@@ -1698,7 +1698,7 @@ rem lu: Apr-25-2018
 echo.
 echo %fp%
 
-set cbf_url=npm.im/composable-batch-files
+set cbf-url=npm.im/composable-batch-files
 
 exit/b
 
@@ -1715,7 +1715,7 @@ rem lu: May-4-2018
 echo.
 echo %fp%
 
-set cbf_fn=C:\Program Files\nodejs\node_modules\npm\package.json
+set cbf-fn=C:\Program Files\nodejs\node_modules\npm\package.json
 
 exit/b
 
@@ -1732,7 +1732,7 @@ rem lu: May-18-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jonathan-r-jones/mobile-app.git
+set cbf-url=https://github.com/jonathan-r-jones/mobile-app.git
 
 exit/b
 
@@ -1749,7 +1749,7 @@ rem lu: May-18-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jamesmontemagno/monkey-cache.git
+set cbf-url=https://github.com/jamesmontemagno/monkey-cache.git
 
 exit/b
 
@@ -1766,7 +1766,7 @@ rem lu: May-21-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/lprichar/CakeSample
+set cbf-url=https://github.com/lprichar/CakeSample
 
 exit/b
 
@@ -1783,7 +1783,7 @@ rem lu: Jun-4-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/alexsorokoletov/VisualStudioMac.SortRemoveUsings
+set cbf-url=https://github.com/alexsorokoletov/VisualStudioMac.SortRemoveUsings
 
 exit/b
 
@@ -1800,7 +1800,7 @@ rem lu: Jun-4-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\xamarin-forms-samples\Navigation\CarouselPage
+set cbf-pt=%aa%\repositories\xamarin-forms-samples\Navigation\CarouselPage
 
 exit/b
 
@@ -1817,7 +1817,7 @@ rem lu: Jun-5-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/NowBI/Xamarin-Forms-Mobile-Template
+set cbf-url=https://github.com/NowBI/Xamarin-Forms-Mobile-Template
 
 exit/b
 
@@ -1834,7 +1834,7 @@ rem lu: Jun-8-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\various file types
+set cbf-pt=%dropbox%\it\various file types
 
 exit/b
 
@@ -1851,7 +1851,7 @@ rem lu: Jun-8-2018
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\it\various file types\filename with spaces.txt
+set cbf-fn=%dropbox%\it\various file types\filename with spaces.txt
 
 exit/b
 
@@ -1868,7 +1868,7 @@ rem lu: Jun-8-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\xam205
+set cbf-pt=%aa%\repositories\Xamarin_University\AllCourseExercises\xam205
 
 exit/b
 
@@ -1885,7 +1885,7 @@ rem lu: Jun-8-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jamcneil/XamarinFormsCSS.git
+set cbf-url=https://github.com/jamcneil/XamarinFormsCSS.git
 
 exit/b
 
@@ -1902,7 +1902,7 @@ rem lu: Jun-10-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jCho23/DunkinDonuts.git
+set cbf-url=https://github.com/jCho23/DunkinDonuts.git
 
 exit/b
 
@@ -1921,7 +1921,7 @@ rem lu: Jun-10-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/twolfprogrammer/Xamarin.Forms-Hamburger-Menu-Example.git
+set cbf-url=https://github.com/twolfprogrammer/Xamarin.Forms-Hamburger-Menu-Example.git
 
 exit/b
 
@@ -1938,9 +1938,9 @@ rem lu: Jun-10-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\Master-Detail_Navigation_Xamarin.Forms
+set cbf-pt=%aa%\repositories\Master-Detail_Navigation_Xamarin.Forms
 
-set cbf_url=https://github.com/almirvuk/Master-Detail_Navigation_Xamarin.Forms.git
+set cbf-url=https://github.com/almirvuk/Master-Detail_Navigation_Xamarin.Forms.git
 
 exit/b
 
@@ -1961,9 +1961,9 @@ rem lu: Jun-10-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\hamster
+set cbf-pt=%aa%\repositories\hamster
 
-set cbf_url=https://github.com/jonathan-r-jones/hamster.git
+set cbf-url=https://github.com/jonathan-r-jones/hamster.git
 
 exit/b
 
@@ -1980,9 +1980,9 @@ rem lu: Jun-12-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\SimpleXapp
+set cbf-pt=%aa%\repositories\SimpleXapp
 
-set cbf_url=https://github.com/jonathan-r-jones/SimpleXapp.git
+set cbf-url=https://github.com/jonathan-r-jones/SimpleXapp.git
 
 exit/b
 
@@ -1999,9 +1999,9 @@ rem lu: Jun-12-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\aa\repositories\marvel-xfdemo\src
+set cbf-pt=c:\aa\repositories\marvel-xfdemo\src
 
-set cbf_url=https://github.com/edsnider/marvel-xfdemo.git
+set cbf-url=https://github.com/edsnider/marvel-xfdemo.git
 
 exit/b
 
@@ -2018,9 +2018,9 @@ rem lu: Jun-12-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\open-governance
+set cbf-pt=%aa%\open-governance
 
-set cbf_url=https://github.com/techtalkdc/Open-Governance.git
+set cbf-url=https://github.com/techtalkdc/Open-Governance.git
 
 exit/b
 
@@ -2037,9 +2037,9 @@ rem lu: Jun-12-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\open-governance-fork
+set cbf-pt=%aa%\open-governance-fork
 
-set cbf_url=https://github.com/jonathan-r-jones/Open-Governance.git
+set cbf-url=https://github.com/jonathan-r-jones/Open-Governance.git
 
 exit/b
 
@@ -2056,7 +2056,7 @@ rem lu: Jun-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\Image Manipulation
+set cbf-pt=%dropbox%\Image Manipulation
 
 exit/b
 
@@ -2075,7 +2075,7 @@ rem lu: Jun-14-2018
 echo.
 echo %fp%
 
-set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
+set cbf-application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
 
 exit/b
 
@@ -2092,7 +2092,7 @@ rem lu: Jun-18-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/marcofolio/XamSMS
+set cbf-url=https://github.com/marcofolio/XamSMS
 
 exit/b
 
@@ -2113,11 +2113,11 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_fn=%COMPOSABLE_BATCH_FILES%\cbf.bat
+set cbf-fn=%COMPOSABLE_BATCH_FILES%\cbf.bat
 
-set cbf_path=%composable_batch_files%
+set cbf-pt=%composable_batch_files%
 
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
+set cbf-url=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
 
 exit/b
 
@@ -2136,7 +2136,7 @@ rem lu: Jan-31-2018
 echo.
 echo %fp%
 
-set cbf_url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
+set cbf-url=https://jonathan-r-jones.github.io/Composable-Batch-Files/
 
 exit/b
 
@@ -2144,7 +2144,7 @@ exit/b
 
 ::_
 
-:cbf_p
+:cbf-p
 
 set fp=* CBF Pulse on GitHub.
 
@@ -2153,7 +2153,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files/pulse
+set cbf-url=https://github.com/jonathan-r-jones/Composable-Batch-Files/pulse
 
 exit/b
 
@@ -2172,19 +2172,19 @@ echo %fp%
 
 call n r>nul
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
 
-set cbf_path=%cbf_path%\obx
+set cbf-pt=%cbf-pt%\obx
 
-set cbf_ex=%savannah%\Excels\obx.xls
+set cbf-ex=%savannah%\Excels\obx.xls
 
-set cbf_fn=%cbf_path%\index.md
+set cbf-fn=%cbf-pt%\index.md
 
-set cbf_gh=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
+set cbf-gh=https://github.com/jonathan-r-jones/Outer-Banks-2021.git
 
-set cbf_mtp=%reach out%\obx.mtp
+set cbf-mtp=%reach out%\obx.mtp
 
-set cbf_url=https://jonathan-r-jones.github.io/Outer-Banks-2021/
+set cbf-url=https://jonathan-r-jones.github.io/Outer-Banks-2021/
 
 exit/b
 
@@ -2203,9 +2203,9 @@ rem lu: Jun-19-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
+set cbf-pt=c:\aa\Xamarin\Xamarin_University\AllCourseExercises\IOS220
 
-set cbf_url=https://university.xamarin.com/classes/track/all#publishing-an-ios-app-ios220
+set cbf-url=https://university.xamarin.com/classes/track/all#publishing-an-ios-app-ios220
 
 exit/b
 
@@ -2222,7 +2222,7 @@ rem lu: Dec-12-2017
 echo.
 echo %fp%
 
-set cbf_path=c:\a
+set cbf-pt=c:\a
 
 exit/b
 
@@ -2239,7 +2239,7 @@ rem lu: Jul-15-2019
 echo.
 echo %fp%
 
-set cbf_path=g:\
+set cbf-pt=g:\
 
 exit/b
 
@@ -2256,7 +2256,7 @@ rem lu: Jul-1-2019
 echo.
 echo %fp%
 
-set cbf_path=h:\
+set cbf-pt=h:\
 
 exit/b
 
@@ -2273,7 +2273,7 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\a2
+set cbf-pt=c:\a2
 
 exit/b
 
@@ -2292,8 +2292,8 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-if exist "c:\aa" set cbf_path=c:\aa
-if exist "d:\aa" set cbf_path=d:\aa
+if exist "c:\aa" set cbf-pt=c:\aa
+if exist "d:\aa" set cbf-pt=d:\aa
 
 exit/b
 
@@ -2310,9 +2310,9 @@ rem lu: Jun-19-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\csamaa
+set cbf-pt=%aa%\csamaa
 
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Asset.Data
+set cbf-url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Asset.Data
 
 exit/b
 
@@ -2329,9 +2329,9 @@ rem lu: Jun-18-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Normalization.Service
+set cbf-url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Csam.Normalization.Service
 
 exit/b
 
@@ -2348,7 +2348,7 @@ rem lu: Jun-22-2018
 echo.
 echo %fp%
 
-set cbf_path=.\NavigationMasterDetail\NavigationMasterDetail.Droid\Resources\Drawable
+set cbf-pt=.\NavigationMasterDetail\NavigationMasterDetail.Droid\Resources\Drawable
 
 exit/b
 
@@ -2365,9 +2365,9 @@ rem lu: Jun-26-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_url=https://github.com/lopezunwired/MVC_Splunk_REST_API.git
+set cbf-url=https://github.com/lopezunwired/MVC_Splunk_REST_API.git
 
 exit/b
 
@@ -2388,7 +2388,7 @@ rem lu: Jul-12-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\xamarin_university
+set cbf-pt=%aa%\repositories\xamarin_university
 
 exit/b
 
@@ -2407,9 +2407,9 @@ rem lu: Jun-5-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\xamarin_university\AllCourseExercises
+set cbf-pt=%aa%\repositories\xamarin_university\AllCourseExercises
 
-set cbf_url=https://github.com/XamarinUniversity
+set cbf-url=https://github.com/XamarinUniversity
 
 exit/b
 
@@ -2426,7 +2426,7 @@ rem lu: Jun-5-2018
 echo.
 echo %fp%
 
-set cbf_url=https://university.xamarin.com/lightninglectures
+set cbf-url=https://university.xamarin.com/lightninglectures
 
 exit/b
 
@@ -2443,7 +2443,7 @@ rem lu: Jun-5-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/XamarinUniversity/build2018-labs.git
+set cbf-url=https://github.com/XamarinUniversity/build2018-labs.git
 
 exit/b
 
@@ -2460,7 +2460,7 @@ rem lu: Jun-5-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jamcneil/XamarinFormsCSS
+set cbf-url=https://github.com/jamcneil/XamarinFormsCSS
 
 exit/b
 
@@ -2477,7 +2477,7 @@ rem lu: Jun-5-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/Krumelur/XamBlob
+set cbf-url=https://github.com/Krumelur/XamBlob
 
 exit/b
 
@@ -2494,7 +2494,7 @@ rem lu: Jun-6-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS205
+set cbf-pt=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS205
 
 exit/b
 
@@ -2513,7 +2513,7 @@ rem lu: Jun-26-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS103
+set cbf-pt=%aa%\repositories\Xamarin_University\AllCourseExercises\IOS103
 
 exit/b
 
@@ -2530,9 +2530,9 @@ rem lu: Jun-28-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\mobile-calc-forms
+set cbf-pt=%aa%\repositories\mobile-calc-forms
 
-set cbf_url=https://github.com/lprichar/mobile-calc-forms.git
+set cbf-url=https://github.com/lprichar/mobile-calc-forms.git
 
 exit/b
 
@@ -2551,7 +2551,7 @@ rem lu: Jun-12-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jonathan-r-jones/for-git-testing/blob/master/whiskey.png
+set cbf-url=https://github.com/jonathan-r-jones/for-git-testing/blob/master/whiskey.png
 
 exit/b
 
@@ -2568,9 +2568,9 @@ rem lu: Jul-3-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_url=https://github.com/DalSoft/DalSoft.RestClient.git
+set cbf-url=https://github.com/DalSoft/DalSoft.RestClient.git
 
 exit/b
 
@@ -2587,9 +2587,9 @@ rem lu: Jul-3-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_url=https://github.com/aspnet/Docs.git
+set cbf-url=https://github.com/aspnet/Docs.git
 
 exit/b
 
@@ -2606,9 +2606,9 @@ rem lu: Jul-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\HTTPClientConsoleApp
+set cbf-pt=%aa%\HTTPClientConsoleApp
 
-set cbf_url=
+set cbf-url=
 
 exit/b
 
@@ -2625,9 +2625,9 @@ rem lu: Jul-6-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\playpark
+set cbf-pt=%dropbox%\it\playpark
 
-set cbf_url=https://github.com/jonathan-r-jones/playpark.git
+set cbf-url=https://github.com/jonathan-r-jones/playpark.git
 
 exit/b
 
@@ -2644,7 +2644,7 @@ rem lu: Jul-9-2018
 echo.
 echo %fp%
 
-set cbf_url=http://jsonplaceholder.typicode.com/users
+set cbf-url=http://jsonplaceholder.typicode.com/users
 
 exit/b
 
@@ -2661,13 +2661,13 @@ rem lu: Jul-9-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\FormsTutor
+set cbf-pt=%aa%\repositories\FormsTutor
 
 if not "%~2" == "" (
-  set cbf_path=%aa%\repositories\FormsTutor\Lesson0%2
+  set cbf-pt=%aa%\repositories\FormsTutor\Lesson0%2
 )
 
-set cbf_url=https://github.com/jamilgeor/FormsTutor
+set cbf-url=https://github.com/jamilgeor/FormsTutor
 
 rem Lesson 1: Getting Started with Xamarin.Forms
 rem Lesson 2: Xamarin.Forms - ListView
@@ -2696,9 +2696,9 @@ rem lu: Jul-9-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_url=https://github.com/jamilgeor/starter-mobile.git
+set cbf-url=https://github.com/jamilgeor/starter-mobile.git
 
 exit/b
 
@@ -2715,9 +2715,9 @@ rem lu: Jul-10-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_url=https://github.com/solarwinds/OrionSDK.git
+set cbf-url=https://github.com/solarwinds/OrionSDK.git
 
 exit/b
 
@@ -2736,13 +2736,13 @@ rem lu: Jul-9-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150
+set cbf-pt=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150
 
 if not "%~2" == "" (
-  set cbf_path=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150\Exercise %2\Completed
+  set cbf-pt=%aa%\Repositories\Xamarin_University\AllCourseExercises\XAM150\Exercise %2\Completed
 )
 
-set cbf_url=
+set cbf-url=
 
 exit/b
 
@@ -2765,7 +2765,7 @@ rem lu: Jul-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\fresnel\Fresnel.Android\Resources\drawable
+set cbf-pt=%dropbox%\it\fresnel\Fresnel.Android\Resources\drawable
 
 exit/b
 
@@ -2784,7 +2784,7 @@ rem lu: Jul-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\fresnel\Fresnel.iOS\Resources
+set cbf-pt=%dropbox%\it\fresnel\Fresnel.iOS\Resources
 
 exit/b
 
@@ -2803,7 +2803,7 @@ rem lu: Jun-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\Image Manipulation\fresnel
+set cbf-pt=%dropbox%\Image Manipulation\fresnel
 
 exit/b
 
@@ -2820,7 +2820,7 @@ rem lu: Jun-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\fresnel\fresnel.android\resources\drawable
+set cbf-pt=%dropbox%\it\fresnel\fresnel.android\resources\drawable
 
 exit/b
 
@@ -2839,7 +2839,7 @@ rem lu: Jul-13-2018
 echo.
 echo %fp%
 
-set cbf_fn=%Dropbox%\image manipulation\menu 4 square diamond icon.pdn
+set cbf-fn=%Dropbox%\image manipulation\menu 4 square diamond icon.pdn
 
 exit/b
 
@@ -2860,7 +2860,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+set cbf-application=C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 
 exit/b
 
@@ -2879,12 +2879,12 @@ echo %fp%
 
 rem Determine installation path.
 
-set cbf_application=
+set cbf-application=
 
-if exist "c:\program files\mozilla firefox\firefox.exe" set cbf_application=c:\program files\mozilla firefox\firefox.exe
-if exist "C:\Program Files (x86)\Mozilla Firefox\firefox.exe" set cbf_application=C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+if exist "c:\program files\mozilla firefox\firefox.exe" set cbf-application=c:\program files\mozilla firefox\firefox.exe
+if exist "C:\Program Files (x86)\Mozilla Firefox\firefox.exe" set cbf-application=C:\Program Files (x86)\Mozilla Firefox\firefox.exe
 
-if "%cbf_application%" == "" (
+if "%cbf-application%" == "" (
   echo.
   echo * Firefoxis not installed.
   exit/b 1
@@ -2907,11 +2907,11 @@ echo %fp%
 
 rem Determine installation path.
 
-set cbf_application=
+set cbf-application=
 
-if exist "%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe" set cbf_application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
+if exist "%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe" set cbf-application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
 
-if "%cbf_application%" == "" (
+if "%cbf-application%" == "" (
   echo.
   echo %fp% is not installed.
   exit/b 1
@@ -2934,7 +2934,7 @@ rem lu: Feb-7-2018
 echo.
 echo %fp%
 
-set cbf_application=microsoft-edge
+set cbf-application=microsoft-edge
 
 exit/b
 
@@ -2953,7 +2953,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\internet explorer\iexplore.exe
+set cbf-application=c:\program files\internet explorer\iexplore.exe
 
 exit/b
 
@@ -2970,9 +2970,9 @@ rem lu: Feb-13-2018
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\opera\launcher.exe
+set cbf-application=c:\program files\opera\launcher.exe
 
-set cbf_path=C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+set cbf-pt=C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 
 exit/b
 
@@ -2997,7 +2997,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_application=c:\windows\system32\notepad.exe
+set cbf-application=c:\windows\system32\notepad.exe
 
 exit/b
 
@@ -3016,7 +3016,7 @@ rem lu: Aug-9-2018
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\windows nt\accessories\wordpad.exe
+set cbf-application=c:\program files\windows nt\accessories\wordpad.exe
 
 exit/b
 
@@ -3035,19 +3035,19 @@ echo %fp%
 
 rem Determine installation path.
 
-if exist "c:\program files\notepad++\notepad++.exe" set cbf_application_location=c:\program files\notepad++\notepad++.exe
-if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf_application_location="c:\program files (x86)\notepad++\notepad++.exe"
+if exist "c:\program files\notepad++\notepad++.exe" set cbf-application-location=c:\program files\notepad++\notepad++.exe
+if exist "c:\program files (x86)\notepad++\notepad++.exe" set cbf-application-location="c:\program files (x86)\notepad++\notepad++.exe"
 
-if "%cbf_application_location%" == "" (
+if "%cbf-application-location%" == "" (
   echo.
   echo * Error: Notepad++ is not installed.
   exit/b
 )
 
-set cbf_application=%cbf_application_location%
-set cbf_path=%cbf_application_location:\notepad++.exe=%
+set cbf-application=%cbf-application-location%
+set cbf-pt=%cbf-application-location:\notepad++.exe=%
 
-set cbf_url=
+set cbf-url=
 :download notepad++
 
 exit/b
@@ -3065,7 +3065,7 @@ rem lu: Feb-7-2020
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
+set cbf-application=C:\Program Files (x86)\multi-edit 2008\mew32.exe
 
 exit/b
 
@@ -3084,7 +3084,7 @@ rem lu: Oct-9-2019
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files\Sublime Text 3\sublime_text.exe
+set cbf-application=C:\Program Files\Sublime Text 3\sublime_text.exe
 
 exit/b
 
@@ -3101,7 +3101,7 @@ rem lu: Jul-17-2018
 echo.
 echo %fp%
 
-set cbf_application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
+set cbf-application=%LOCALAPPDATA%\Vivaldi\Application\vivaldi.exe
 
 exit/b
 
@@ -3118,9 +3118,9 @@ rem lu: Jul-17-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\feedreader
+set cbf-pt=%cbf-repo%\feedreader
 
-set cbf_url=https://github.com/codehollow/FeedReader.git
+set cbf-url=https://github.com/codehollow/FeedReader.git
 
 exit/b
 
@@ -3137,9 +3137,9 @@ rem lu: Jul-17-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\madisonmonkeys
+set cbf-pt=%cbf-repo%\madisonmonkeys
 
-set cbf_url=https://github.com/psberres/MadisonMonkeys.git
+set cbf-url=https://github.com/psberres/MadisonMonkeys.git
 
 exit/b
 
@@ -3160,7 +3160,7 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/lprichar
+set cbf-url=https://github.com/lprichar
 
 exit/b
 
@@ -3177,9 +3177,9 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\EasyLayout.Forms
+set cbf-pt=%cbf-repo%\EasyLayout.Forms
 
-set cbf_url=https://github.com/lprichar/EasyLayout.Forms.git
+set cbf-url=https://github.com/lprichar/EasyLayout.Forms.git
 
 exit/b
 
@@ -3196,9 +3196,9 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\CarouselView
+set cbf-pt=%cbf-repo%\CarouselView
 
-set cbf_url=https://github.com/alexrainman/CarouselView.git
+set cbf-url=https://github.com/alexrainman/CarouselView.git
 
 exit/b
 
@@ -3215,9 +3215,9 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\Hanselman.Forms
+set cbf-pt=%cbf-repo%\Hanselman.Forms
 
-set cbf_url=https://github.com/jamesmontemagno/Hanselman.Forms.git
+set cbf-url=https://github.com/jamesmontemagno/Hanselman.Forms.git
 
 exit/b
 
@@ -3234,9 +3234,9 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\app-conference\src
+set cbf-pt=%cbf-repo%\app-conference\src
 
-set cbf_url=https://github.com/xamarinhq/app-conference.git
+set cbf-url=https://github.com/xamarinhq/app-conference.git
 
 exit/b
 
@@ -3253,9 +3253,9 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-rem set cbf_path=%cbf_repo%\Xam.NavDrawer
+rem set cbf-pt=%cbf-repo%\Xam.NavDrawer
 
-set cbf_url=https://github.com/jamesmontemagno/Xam.NavDrawer.git
+set cbf-url=https://github.com/jamesmontemagno/Xam.NavDrawer.git
 
 exit/b
 
@@ -3272,9 +3272,9 @@ rem lu: Jul-20-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\AWRestAPI
+set cbf-pt=%cbf-repo%\AWRestAPI
 
-set cbf_url=https://github.com/scotcurry/AWRestAPI.git
+set cbf-url=https://github.com/scotcurry/AWRestAPI.git
 
 exit/b
 
@@ -3293,9 +3293,9 @@ rem lu: Jul-23-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\Beyond-Basics
+set cbf-pt=%cbf-repo%\Beyond-Basics
 
-set cbf_url=
+set cbf-url=
 
 exit/b
 
@@ -3312,9 +3312,9 @@ rem lu: Jul-3-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_url=http://montemagno.com/monkeys.json
+set cbf-url=http://montemagno.com/monkeys.json
 
 exit/b
 
@@ -3331,9 +3331,9 @@ rem lu: Jul-18-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\Xamarin.Forms-Monkeys\Monkeys-CarouselView
+set cbf-pt=%cbf-repo%\Xamarin.Forms-Monkeys\Monkeys-CarouselView
 
-set cbf_url=https://github.com/jamesmontemagno/Xamarin.Forms-Monkeys.git
+set cbf-url=https://github.com/jamesmontemagno/Xamarin.Forms-Monkeys.git
 
 exit/b
 c:\aa\Repositories\Xamarin.Forms-Monkeys\Archive\Monkeys-Code-UI\Monkeys.sln
@@ -3357,9 +3357,9 @@ rem lu: Jul-23-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\app-monkeys
+set cbf-pt=%cbf-repo%\app-monkeys
 
-set cbf_url=https://github.com/jamesmontemagno/app-monkeys.git
+set cbf-url=https://github.com/jamesmontemagno/app-monkeys.git
 
 exit/b
 
@@ -3378,9 +3378,9 @@ rem lu: Jul-24-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\WelcomeCarousel
+set cbf-pt=%cbf-repo%\WelcomeCarousel
 
-set cbf_url=https://github.com/leroygumede/WelcomeCarousel.git
+set cbf-url=https://github.com/leroygumede/WelcomeCarousel.git
 
 exit/b
 
@@ -3397,11 +3397,11 @@ rem lu: Jan-9-2020
 echo.
 echo %fp%
 
-set cbf_fn=%savannah%\resume\jonathan jones' resume.doc
+set cbf-fn=%savannah%\resume\jonathan jones' resume.doc
 
-set cbf_path=%savannah%\resume
+set cbf-pt=%savannah%\resume
 
-set cbf_url=https://bitbucket.org/Jonathan17/resume
+set cbf-url=https://bitbucket.org/Jonathan17/resume
 
 exit/b
 
@@ -3432,7 +3432,7 @@ if %errorlevel% == 1 (
 
 cd properties
 
-set cbf_fn=%cd%\AndroidManifest.xml
+set cbf-fn=%cd%\AndroidManifest.xml
 
 cd %current_folder%
 
@@ -3459,9 +3459,9 @@ rem Works with: Chrome, IE, OP, VI.
 
 rem Doesn't work with: Firefox, Edge.
 
-set cbf_fn=C:\a\skeptics.txt
+set cbf-fn=C:\a\skeptics.txt
 
-set cbf_url=C:/a/skeptics.txt
+set cbf-url=C:/a/skeptics.txt
 
 exit/b
 
@@ -3480,12 +3480,12 @@ echo %fp%
 
 rem Works with: Chrome, IE, OP, VI.
 
-rem Doesn't work with: Edge, Firefox, even though Fx converts the filename to exactly the cbf_url 
+rem Doesn't work with: Edge, Firefox, even though Fx converts the filename to exactly the cbf-url 
 rem here.
 
-set cbf_fn=C:\a\skeptics.txt
+set cbf-fn=C:\a\skeptics.txt
 
-set cbf_url=file:///C:/a/skeptics.txt
+set cbf-url=file:///C:/a/skeptics.txt
 
 exit/b
 
@@ -3502,9 +3502,9 @@ rem lu: Jul-30-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\MeetupManager
+set cbf-pt=%cbf-repo%\MeetupManager
 
-set cbf_url=https://github.com/jamesmontemagno/MeetupManager.git
+set cbf-url=https://github.com/jamesmontemagno/MeetupManager.git
 
 exit/b
 
@@ -3521,9 +3521,9 @@ rem lu: Jul-30-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\buster-from-fresnel
+set cbf-pt=%cbf-repo%\buster-from-fresnel
 
-set cbf_url=https://github.com/jonathan-r-jones/buster-from-fresnel
+set cbf-url=https://github.com/jonathan-r-jones/buster-from-fresnel
 
 exit/b
 
@@ -3540,9 +3540,9 @@ rem lu: Aug-2-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\xamarin-forms-book-samples
+set cbf-pt=%cbf-repo%\xamarin-forms-book-samples
 
-set cbf_url=https://github.com/xamarin/xamarin-forms-book-samples.git
+set cbf-url=https://github.com/xamarin/xamarin-forms-book-samples.git
 
 exit/b
 
@@ -3559,7 +3559,7 @@ rem lu: Aug-2-2018
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonat\Documents\Dropbox\pictures
+set cbf-pt=C:\Users\jonat\Documents\Dropbox\pictures
 
 exit/b
 
@@ -3576,7 +3576,7 @@ rem lu: Aug-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\xamarin-forms-samples\WorkingWithGestures\PinchGesture
+set cbf-pt=%cbf-repo%\xamarin-forms-samples\WorkingWithGestures\PinchGesture
 
 exit/b
 
@@ -3593,9 +3593,9 @@ rem lu: Aug-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\mobile-samples
+set cbf-pt=%cbf-repo%\mobile-samples
 
-set cbf_url=https://github.com/xamarin/mobile-samples.git
+set cbf-url=https://github.com/xamarin/mobile-samples.git
 
 exit/b
 
@@ -3612,7 +3612,7 @@ rem lu: Aug-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\mobile-samples\liveplayer
+set cbf-pt=%cbf-repo%\mobile-samples\liveplayer
 
 exit/b
 
@@ -3642,9 +3642,9 @@ rem lu: Jun-1-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\xamarin-forms-samples
+set cbf-pt=%aa%\repositories\xamarin-forms-samples
 
-set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
+set cbf-url=https://github.com/xamarin/xamarin-forms-samples.git
 
 exit/b
 
@@ -3668,7 +3668,7 @@ rem           star:  1,241
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/Xamarin/Plugins.git
+set cbf-url=https://github.com/Xamarin/Plugins.git
 
 exit/b
 
@@ -3690,9 +3690,9 @@ rem           star:  905
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\Xamarin.Plugins
+set cbf-pt=%aa%\repositories\Xamarin.Plugins
 
-set cbf_url=https://github.com/jamesmontemagno/Xamarin.Plugins
+set cbf-url=https://github.com/jamesmontemagno/Xamarin.Plugins
 
 exit/b
 
@@ -3709,9 +3709,9 @@ rem lu: May-30-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\xaml_prototype
+set cbf-pt=%aa%\repositories\xaml_prototype
 
-set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
+set cbf-url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
 
 exit/b
 
@@ -3728,7 +3728,7 @@ rem lu: Mar-1-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\xamarin
+set cbf-pt=%aa%\xamarin
 
 exit/b
 
@@ -3745,15 +3745,15 @@ rem lu: Jul-5-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book
+set cbf-pt=%aa%\repositories\Mastering-Xamarin.Forms-book
 
 if "%~2" == "c" (
-  set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book\Complete
+  set cbf-pt=%aa%\repositories\Mastering-Xamarin.Forms-book\Complete
 ) else if not "%~2" == "" (
-  set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-book\Chapter%2
+  set cbf-pt=%aa%\repositories\Mastering-Xamarin.Forms-book\Chapter%2
 )
 
-set cbf_url=https://github.com/edsnider/mastering-xamarin.forms-book.git
+set cbf-url=https://github.com/edsnider/mastering-xamarin.forms-book.git
 
 exit/b
 
@@ -3770,9 +3770,9 @@ rem lu: Mar-1-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\Mastering-Xamarin.Forms-Second-Edition
+set cbf-pt=%aa%\repositories\Mastering-Xamarin.Forms-Second-Edition
 
-set cbf_url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
+set cbf-url=https://github.com/PacktPublishing/Mastering-Xamarin.Forms-Second-Edition
 
 exit/b
 
@@ -3789,9 +3789,9 @@ rem lu: May-8-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\first-mobile-app-Jesse
+set cbf-pt=%aa%\repositories\first-mobile-app-Jesse
 
-set cbf_url=https://github.com/JesseLiberty/First-Mobile-App
+set cbf-url=https://github.com/JesseLiberty/First-Mobile-App
 
 exit/b
 
@@ -3812,9 +3812,9 @@ rem lu: May-8-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\first-mobile-app-Jonathan
+set cbf-pt=%aa%\repositories\first-mobile-app-Jonathan
 
-set cbf_url=https://github.com/jonathan-r-jones/First-Mobile-App.git
+set cbf-url=https://github.com/jonathan-r-jones/First-Mobile-App.git
 
 exit/b
 
@@ -3831,7 +3831,7 @@ rem lu: Jan-16-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\HelloXamarinFormsWorld
+set cbf-pt=%dropbox%\it\HelloXamarinFormsWorld
 
 exit/b
 
@@ -3850,7 +3850,7 @@ rem lu: Jun-1-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\xamarin-forms-samples\bugsweeper
+set cbf-pt=%aa%\repositories\xamarin-forms-samples\bugsweeper
 
 exit/b
 
@@ -3867,9 +3867,9 @@ rem lu: Jan-31-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\BatteryPlugin
+set cbf-pt=%aa%\repositories\BatteryPlugin
 
-set cbf_url=http://github.com/jamesmontemagno/BatteryPlugin
+set cbf-url=http://github.com/jamesmontemagno/BatteryPlugin
 
 exit/b
 
@@ -3886,7 +3886,7 @@ rem lu: Jun-4-2018
 echo.
 echo %fp%
 
-set cbf_url=http://github.com/jamesmontemagno/MediaPlugin
+set cbf-url=http://github.com/jamesmontemagno/MediaPlugin
 
 exit/b
 
@@ -3903,9 +3903,9 @@ rem lu: Aug-7-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\xamarin-forms-samples\workingwithimages
+set cbf-pt=%aa%\repositories\xamarin-forms-samples\workingwithimages
 
-set cbf_url=https://github.com/xamarin/xamarin-forms-samples.git
+set cbf-url=https://github.com/xamarin/xamarin-forms-samples.git
 
 exit/b
 
@@ -3922,7 +3922,7 @@ rem lu: Aug-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\xamarin-forms-samples\WorkingWithGestures\PanGesture
+set cbf-pt=%cbf-repo%\xamarin-forms-samples\WorkingWithGestures\PanGesture
 
 exit/b
 
@@ -3939,7 +3939,7 @@ rem lu: Aug-7-2018
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\it\composable-batch-files\how to modularize a batch file.asc
+set cbf-fn=%dropbox%\it\composable-batch-files\how to modularize a batch file.asc
 
 exit/b
 
@@ -3956,7 +3956,7 @@ rem lu: Aug-8-2018
 echo.
 echo %fp%
 
-set cbf_url=https://www.meetup.com/techtalkdc/
+set cbf-url=https://www.meetup.com/techtalkdc/
 
 exit/b
 
@@ -3973,7 +3973,7 @@ rem lu: Aug-8-2018
 echo.
 echo %fp%
 
-set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/composable-batch-files/master/jj3d.png
+set cbf-url=https://raw.githubusercontent.com/jonathan-r-jones/composable-batch-files/master/jj3d.png
 
 exit/b
 
@@ -3990,7 +3990,7 @@ rem lu: Aug-8-2018
 echo.
 echo %fp%
 
-set cbf_fn=%composable_batch_files%\CBF.pptx
+set cbf-fn=%composable_batch_files%\CBF.pptx
 
 exit/b
 
@@ -4007,7 +4007,7 @@ rem lu: Aug-10-2018
 echo.
 echo %fp%
 
-set cbf_fn=%composable_batch_files%\hello_world.bat
+set cbf-fn=%composable_batch_files%\hello_world.bat
 
 exit/b
 
@@ -4024,7 +4024,7 @@ rem lu: Aug-10-2018
 echo.
 echo %fp%
 
-set cbf_path=C:\Program Files\MSBuild\Microsoft\Windows Workflow Foundation\bar
+set cbf-pt=C:\Program Files\MSBuild\Microsoft\Windows Workflow Foundation\bar
 
 exit/b
 
@@ -4041,7 +4041,7 @@ rem lu: Aug-13-2018
 echo.
 echo %fp%
 
-set cbf_fn=%composable_batch_files%\Gettysburg_Address.txt
+set cbf-fn=%composable_batch_files%\Gettysburg_Address.txt
 
 exit/b
 
@@ -4058,7 +4058,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://www.cnn.com
+set cbf-url=https://www.cnn.com
 
 exit/b
 
@@ -4075,7 +4075,7 @@ rem lu: Jun-4-2020
 echo.
 echo %fp%
 
-set cbf_url=https://www.foxnews.com
+set cbf-url=https://www.foxnews.com
 
 exit/b
 
@@ -4092,7 +4092,7 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://www.wsj.com
+set cbf-url=https://www.wsj.com
 
 exit/b
 
@@ -4109,9 +4109,9 @@ rem lu: Aug-15-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\ConferenceVision
+set cbf-pt=%cbf-repo%\ConferenceVision
 
-set cbf_url=https://github.com/Microsoft/ConferenceVision.git
+set cbf-url=https://github.com/Microsoft/ConferenceVision.git
 
 exit/b
 
@@ -4128,7 +4128,7 @@ rem lu: Aug-16-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\Fresnel Dated Backups
+set cbf-pt=%cbf-repo%\Fresnel Dated Backups
 
 exit/b
 
@@ -4145,7 +4145,7 @@ rem lu: Aug-23-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\aa\curl-7.61.0-win64-mingw\bin
+set cbf-pt=c:\aa\curl-7.61.0-win64-mingw\bin
 
 exit/b
 
@@ -4162,7 +4162,7 @@ rem lu: Aug-23-2018
 echo.
 echo %fp%
 
-set cbf_url=http://private-64c770-fresnelapi.apiary-mock.com/fresnelapi/questions
+set cbf-url=http://private-64c770-fresnelapi.apiary-mock.com/fresnelapi/questions
 
 exit/b
 
@@ -4179,7 +4179,7 @@ rem lu: Aug-23-2018
 echo.
 echo %fp%
 
-set cbf_url=503.badapi.net
+set cbf-url=503.badapi.net
 
 exit/b
 
@@ -4196,7 +4196,7 @@ rem lu: Aug-23-2018
 echo.
 echo %fp%
 
-set cbf_url=http://badapi.net/notfound
+set cbf-url=http://badapi.net/notfound
 
 exit/b
 
@@ -4213,7 +4213,7 @@ rem lu: Aug-23-2018
 echo.
 echo %fp%
 
-set cbf_url=GET http://404.badapi.net
+set cbf-url=GET http://404.badapi.net
 
 exit/b
 
@@ -4230,7 +4230,7 @@ rem lu: Aug-23-2018
 echo.
 echo %fp%
 
-set cbf_url=https://status.github.com/api/status.json
+set cbf-url=https://status.github.com/api/status.json
 
 exit/b
 
@@ -4249,7 +4249,7 @@ rem lu: Aug-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://swapi.co/api/people
+set cbf-url=https://swapi.co/api/people
 
 exit/b
 
@@ -4274,9 +4274,9 @@ rem lu: Aug-23-2018
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\it\fresnel\incidents.json
+set cbf-fn=%dropbox%\it\fresnel\incidents.json
 
-set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/Fresnel/master/incidents.json
+set cbf-url=https://raw.githubusercontent.com/jonathan-r-jones/Fresnel/master/incidents.json
 
 exit/b
 
@@ -4293,7 +4293,7 @@ rem lu: Aug-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://raw.githubusercontent.com/jonathan-r-jones/For-Git-Testing/master/Art/dc_metro_map.jpg
+set cbf-url=https://raw.githubusercontent.com/jonathan-r-jones/For-Git-Testing/master/Art/dc_metro_map.jpg
 
 exit/b
 
@@ -4310,9 +4310,9 @@ rem lu: Jul-17-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\jsonplaceholder
+set cbf-pt=%cbf-repo%\jsonplaceholder
 
-set cbf_url=https://github.com/typicode/jsonplaceholder.git
+set cbf-url=https://github.com/typicode/jsonplaceholder.git
 
 exit/b
 
@@ -4329,7 +4329,7 @@ rem lu: Aug-24-2018
 echo.
 echo %fp%
 
-set cbf_url=https://jsonplaceholder.typicode.com/users
+set cbf-url=https://jsonplaceholder.typicode.com/users
 
 exit/b
 
@@ -4346,9 +4346,9 @@ rem lu: Aug-24-2018
 echo.
 echo %fp%
 
-set cbf_header=zumo-api-version: 2.0.0
+set cbf-header=zumo-api-version: 2.0.0
 
-set cbf_url=https://hamster7.azurewebsites.net/tables/Open_Incidents
+set cbf-url=https://hamster7.azurewebsites.net/tables/Open_Incidents
 
 exit/b
 
@@ -4384,9 +4384,9 @@ rem lu: Aug-29-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\Nova2018CodeCamp2
+set cbf-pt=%cbf-repo%\Nova2018CodeCamp2
 
-set cbf_url=https://github.com/lvanlowe/Nova2018CodeCamp2
+set cbf-url=https://github.com/lvanlowe/Nova2018CodeCamp2
 
 exit/b
 
@@ -4403,9 +4403,9 @@ rem lu: Aug-29-2018
 echo.
 echo %fp%
 
-set cbf_header=zumo-api-version: 2.0.0
+set cbf-header=zumo-api-version: 2.0.0
 
-set cbf_url=https://hamster7.azurewebsites.net/tables/PortTypes
+set cbf-url=https://hamster7.azurewebsites.net/tables/PortTypes
 
 exit/b
 
@@ -4424,7 +4424,7 @@ rem lu: Aug-31-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\HelloWorld
+set cbf-pt=%aa%\HelloWorld
 
 exit/b
 
@@ -4441,7 +4441,7 @@ rem lu: Aug-31-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\myApp
+set cbf-pt=%aa%\myApp
 
 exit/b
 
@@ -4460,7 +4460,7 @@ rem lu: Sep-2-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\test1
+set cbf-pt=%aa%\test1
 
 exit/b
 
@@ -4479,7 +4479,7 @@ rem lu: Sep-2-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\test2
+set cbf-pt=%aa%\test2
 
 exit/b
 
@@ -4500,9 +4500,9 @@ rem lu: Sep-5-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\webapicoreresources\data
+set cbf-pt=%cbf-repo%\webapicoreresources\data
 
-set cbf_url=https://github.com/shawnwildermuth/webapicoreresources
+set cbf-url=https://github.com/shawnwildermuth/webapicoreresources
 
 exit/b
 
@@ -4523,7 +4523,7 @@ rem lu: Sep-4-2018
 echo.
 echo %fp%
 
-set cbf_path=C:\aa\MyCodeCampCompletedExercises
+set cbf-pt=C:\aa\MyCodeCampCompletedExercises
 
 exit/b
 
@@ -4540,9 +4540,9 @@ rem lu: Sep-4-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\MobileBackend
+set cbf-pt=%dropbox%\it\MobileBackend
 
-set cbf_url=https://github.com/jonathan-r-jones/MobileBackend.git
+set cbf-url=https://github.com/jonathan-r-jones/MobileBackend.git
 
 exit/b
 
@@ -4563,9 +4563,9 @@ rem lu: Sep-7-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\RESTfulAPIAspNetCore_Course
+set cbf-pt=%cbf-repo%\RESTfulAPIAspNetCore_Course
 
-set cbf_url=https://github.com/KevinDockx/RESTfulAPIAspNetCore_Course.git
+set cbf-url=https://github.com/KevinDockx/RESTfulAPIAspNetCore_Course.git
 
 exit/b
 
@@ -4582,9 +4582,9 @@ rem lu: Sep-7-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\dx
+set cbf-pt=%dropbox%\it\dx
 
-set cbf_url=https://github.com/jonathan-r-jones/dx.git
+set cbf-url=https://github.com/jonathan-r-jones/dx.git
 
 exit/b
 
@@ -4601,9 +4601,9 @@ rem lu: Sep-11-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\BigProject
+set cbf-pt=%dropbox%\it\BigProject
 
-set cbf_url=https://github.com/jonathan-r-jones/BigProject.git
+set cbf-url=https://github.com/jonathan-r-jones/BigProject.git
 
 exit/b
 
@@ -4624,11 +4624,11 @@ rem lu: Sep-11-2018
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\it\gitignore\VisualStudio.gitignore
+set cbf-fn=%dropbox%\it\gitignore\VisualStudio.gitignore
 
-set cbf_path=%dropbox%\it\gitignore
+set cbf-pt=%dropbox%\it\gitignore
 
-set cbf_url=https://github.com/github/gitignore.git
+set cbf-url=https://github.com/github/gitignore.git
 
 exit/b
 
@@ -4647,9 +4647,9 @@ rem lu: Jan-19-2018
 echo.
 echo %fp%
 
-set cbf_fn=.gitignore
+set cbf-fn=.gitignore
 
-set cbf_url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+set cbf-url=https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 exit/b
 
@@ -4679,11 +4679,11 @@ if "%~2" == "" (
   set chapter=%2
 )
 
-set cbf_path=%dropbox%\it\DutchTreat\%chapter%\demos\after\DutchTreat
+set cbf-pt=%dropbox%\it\DutchTreat\%chapter%\demos\after\DutchTreat
 
-rem set cbf_path=%aa%\Shawns Course\%chapter%\demos\after\DutchTreat
+rem set cbf-pt=%aa%\Shawns Course\%chapter%\demos\after\DutchTreat
 
-set cbf_url=https://github.com/jonathan-r-jones/DutchTreat.git
+set cbf-url=https://github.com/jonathan-r-jones/DutchTreat.git
 
 exit/b
 
@@ -4700,7 +4700,7 @@ rem lu: Sep-19-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\DutchTreat
+set cbf-pt=%dropbox%\it\DutchTreat
 
 exit/b
 
@@ -4717,9 +4717,9 @@ rem lu: Sep-12-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\BuildingASPNETCore2
+set cbf-pt=%cbf-repo%\BuildingASPNETCore2
 
-set cbf_url=https://github.com/psauthor/BuildingASPNETCore2
+set cbf-url=https://github.com/psauthor/BuildingASPNETCore2
 
 exit/b
 
@@ -4743,7 +4743,7 @@ if "%~2" == "" (
   set chapter=%2
 )
 
-set cbf_path=%aa%\Shawns Course\%chapter%\demos\after\DutchTreat
+set cbf-pt=%aa%\Shawns Course\%chapter%\demos\after\DutchTreat
 
 exit/b
 
@@ -4760,7 +4760,7 @@ rem lu: Sep-24-2018
 echo.
 echo %fp%
 
-set cbf_path=%savannah%\karl
+set cbf-pt=%savannah%\karl
 
 exit/b
 
@@ -4779,9 +4779,9 @@ rem lu: Oct-22-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\DevOps-WG
+set cbf-pt=%cbf-repo%\DevOps-WG
 
-set cbf_url=https://github.com/DevTechnology/DevOps-WG
+set cbf-url=https://github.com/DevTechnology/DevOps-WG
 
 exit/b
 
@@ -4798,9 +4798,9 @@ rem lu: Oct-23-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
-set cbf_url=https://github.com/Azure/azure-quickstart-templates
+set cbf-url=https://github.com/Azure/azure-quickstart-templates
 
 exit/b
 
@@ -4817,9 +4817,9 @@ rem lu: Oct-24-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
-set cbf_url=https://github.com/DevTechnology/DevOps-WG/wiki
+set cbf-url=https://github.com/DevTechnology/DevOps-WG/wiki
 
 exit/b
 
@@ -7116,9 +7116,9 @@ rem lu: Oct-17-2018
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\j\cart
+set cbf-pt=%userprofile%\j\cart
 
-set cbf_url=https://github.com/DevTechnology/iCart-apc
+set cbf-url=https://github.com/DevTechnology/iCart-apc
 
 exit/b
 
@@ -7142,9 +7142,9 @@ if "%~2" == "" (
   set chapter=%2
 )
 
-set cbf_path=%dropbox%\it\Terraform - Getting Started - Pluralsight Class\%chapter%\demos
+set cbf-pt=%dropbox%\it\Terraform - Getting Started - Pluralsight Class\%chapter%\demos
 
-set cbf_url=https://www.terraform.io/
+set cbf-url=https://www.terraform.io/
 
 exit/b
 
@@ -7169,7 +7169,7 @@ call td tf 03
 
 cd moduletwo
 
-set cbf_path=%cd%
+set cbf-pt=%cd%
 
 exit/b
 
@@ -7194,7 +7194,7 @@ call td tf 04
 
 cd modulethree
 
-set cbf_path=%cd%
+set cbf-pt=%cd%
 
 exit/b
 
@@ -7215,7 +7215,7 @@ call td tf 05
 
 cd modulefour
 
-set cbf_path=%cd%
+set cbf-pt=%cd%
 
 exit/b
 
@@ -7240,7 +7240,7 @@ rem lu: Jul-10-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%
+set cbf-pt=%cbf-repo%
 
 exit/b
 
@@ -7257,7 +7257,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-set cbf_path=d:\aa\repositories
+set cbf-pt=d:\aa\repositories
 
 exit/b
 
@@ -7274,7 +7274,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\aa\repositories
+set cbf-pt=c:\aa\repositories
 
 exit/b
 
@@ -7295,7 +7295,7 @@ rem lu: Apr-24-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\program files
+set cbf-pt=c:\program files
 
 exit/b
 
@@ -7312,7 +7312,7 @@ rem lu: Apr-24-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\program files (x86)
+set cbf-pt=c:\program files (x86)
 
 exit/b
 
@@ -7333,7 +7333,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-set cbf_url=https://bootstrap-it.com/awscli/#intro
+set cbf-url=https://bootstrap-it.com/awscli/#intro
 
 exit/b
 
@@ -7352,7 +7352,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-set cbf_url=https://docs.aws.amazon.com/cli/latest/reference/index.html
+set cbf-url=https://docs.aws.amazon.com/cli/latest/reference/index.html
 
 exit/b
 
@@ -7371,9 +7371,9 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-set cbf_url=http://cartsite2018.com.s3-website-us-east-1.amazonaws.com/
+set cbf-url=http://cartsite2018.com.s3-website-us-east-1.amazonaws.com/
 
-set cbf_path=%dropbox%\it\CART Admin Site
+set cbf-pt=%dropbox%\it\CART Admin Site
 
 exit/b
 
@@ -7390,7 +7390,7 @@ rem lu: Nov-19-2018
 echo.
 echo %fp%
 
-set cbf_path=%homedrive%%homepath%\documents
+set cbf-pt=%homedrive%%homepath%\documents
 
 exit/b
 
@@ -7413,9 +7413,9 @@ rem lu: Nov-19-2018
 echo.
 echo %fp%
 
-set cbf_fn=%userprofile%\.aws\credentials
+set cbf-fn=%userprofile%\.aws\credentials
 
-set cbf_path=%userprofile%\.aws
+set cbf-pt=%userprofile%\.aws
 
 exit/b
 
@@ -7434,7 +7434,7 @@ rem lu: Sep-30-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\jonathan\miscellany
+set cbf-pt=%dropbox%\jonathan\miscellany
 
 exit/b
 
@@ -7451,9 +7451,9 @@ rem lu: Dec-5-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
-set cbf_url=https://www.google.com/advanced_search
+set cbf-url=https://www.google.com/advanced_search
 
 exit/b
 
@@ -7474,7 +7474,7 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\.ssh
+set cbf-pt=%userprofile%\.ssh
 
 exit/b
 
@@ -7491,7 +7491,7 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-set cbf_url=https://blogs.msdn.microsoft.com/phkelley/2014/01/20/adding-a-corporate-or-self-signed-certificate-authority-to-git-exes-store/
+set cbf-url=https://blogs.msdn.microsoft.com/phkelley/2014/01/20/adding-a-corporate-or-self-signed-certificate-authority-to-git-exes-store/
 
 exit/b
 
@@ -7508,7 +7508,7 @@ rem lu: Dec-7-2018
 echo.
 echo %fp%
 
-set cbf_url=https://bitbucket.org/dashboard/overview
+set cbf-url=https://bitbucket.org/dashboard/overview
 
 exit/b
 
@@ -7525,7 +7525,7 @@ rem lu: Dec-7-2018
 echo.
 echo %fp%
 
-set cbf_url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
+set cbf-url=https://Jonathan17@bitbucket.org/jmd_mobile/xaml_prototype.git
 
 exit/b
 
@@ -7542,7 +7542,7 @@ rem lu: Dec-7-2018
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jonathan-r-jones/test1.git
+set cbf-url=https://github.com/jonathan-r-jones/test1.git
 
 exit/b
 
@@ -7559,7 +7559,7 @@ rem lu: Nov-2-2018
 echo.
 echo %fp%
 
-set cbf_path=%tfkeys%
+set cbf-pt=%tfkeys%
 
 exit/b
 
@@ -7576,9 +7576,9 @@ rem lu: Jul-20-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\AirWatch-samples
+set cbf-pt=%cbf-repo%\AirWatch-samples
 
-set cbf_url=https://github.com/vmwaresamples/AirWatch-samples.git
+set cbf-url=https://github.com/vmwaresamples/AirWatch-samples.git
 
 exit/b
 
@@ -7597,9 +7597,9 @@ rem lu: Aug-16-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\Xamarin-AWSDK\samples\xamariniossampleapp
+set cbf-pt=%cbf-repo%\Xamarin-AWSDK\samples\xamariniossampleapp
 
-set cbf_url=https://github.com/vmwareairwatchsdk/Xamarin-AWSDK.git
+set cbf-url=https://github.com/vmwareairwatchsdk/Xamarin-AWSDK.git
 
 exit/b
 
@@ -7623,7 +7623,7 @@ echo.
 echo %fp%
 echo.
 
-set cbf_path=%opends_java_home%
+set cbf-pt=%opends_java_home%
 
 exit/b
 
@@ -7640,7 +7640,7 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-set cbf_path=C:\Program Files\Java
+set cbf-pt=C:\Program Files\Java
 
 exit/b
 
@@ -7657,7 +7657,7 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-set cbf_path=C:\Program Files (x86)\Java
+set cbf-pt=C:\Program Files (x86)\Java
 
 exit/b
 
@@ -7676,7 +7676,7 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-set cbf_fn=%composable_batch_files%\Composable Batch Files Helper.lnk
+set cbf-fn=%composable_batch_files%\Composable Batch Files Helper.lnk
 
 exit/b
 
@@ -7694,10 +7694,10 @@ echo.
 echo %fp%
 
 rem This filename is from Dec-14-2018
-set cbf_fn=%userprofile%\downloads\ec2-18-253-148-152.us-gov-east-1.compute.amazonaws.com.rdp
+set cbf-fn=%userprofile%\downloads\ec2-18-253-148-152.us-gov-east-1.compute.amazonaws.com.rdp
 
 rem This filename is from c. Dec-11-2018
-set cbf_fn=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
+set cbf-fn=%userprofile%\downloads\ec2-18-253-117-92.us-gov-east-1.compute.amazonaws.com.rdp
 
 exit/b
 
@@ -7718,7 +7718,7 @@ echo %fp%
 
 call %0 c_docs
 
-set cbf_fn=%cbf_path%\development environment.xlsx
+set cbf-fn=%cbf-pt%\development environment.xlsx
 
 exit/b
 
@@ -7741,10 +7741,10 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\jenkins2-course-spring-boot
+set cbf-pt=%cbf-repo%\jenkins2-course-spring-boot
 
 rem This needs to be updated.
-set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
+set cbf-url=https://github.com/g0t4/jenkins2-course-spring-boot
 
 exit/b
 
@@ -7763,9 +7763,9 @@ rem lu: Jan-7-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\jenkins2-course-spring-boot
+set cbf-pt=%cbf-repo%\jenkins2-course-spring-boot
 
-set cbf_url=https://github.com/g0t4/jenkins2-course-spring-boot
+set cbf-url=https://github.com/g0t4/jenkins2-course-spring-boot
 
 exit/b
 
@@ -7782,7 +7782,7 @@ rem lu: Dec-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
+set cbf-pt=%cbf-repo%\jenkins2-course-spring-boot\spring-boot-samples\spring-boot-sample-atmosphere
 
 exit/b
 
@@ -7799,7 +7799,7 @@ rem lu: Dec-15-2018
 echo.
 echo %fp%
 
-set cbf_url=https://gist.github.com/g0t4/12d888d0ce9e40b79d8454dabdad7033
+set cbf-url=https://gist.github.com/g0t4/12d888d0ce9e40b79d8454dabdad7033
 
 exit/b
 
@@ -7816,7 +7816,7 @@ rem lu: Dec-18-2018
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\microsoft office\root\office16\powerpnt.exe
+set cbf-application=c:\program files\microsoft office\root\office16\powerpnt.exe
 
 exit/b
 
@@ -7835,7 +7835,7 @@ rem lu: Dec-18-2018
 echo.
 echo %fp%
 
-set cbf_url=https://www.youtube.com/watch?v=L8_GYxIOErQ
+set cbf-url=https://www.youtube.com/watch?v=L8_GYxIOErQ
 
 exit/b
 
@@ -7852,7 +7852,7 @@ rem lu: Dec-18-2018
 echo.
 echo %fp%
 
-set cbf_fn=%composable_batch_files%\jaws.pptx
+set cbf-fn=%composable_batch_files%\jaws.pptx
 
 exit/b
 
@@ -7871,7 +7871,7 @@ echo %fp%
 
 call %0 sz
 
-set cbf_path=%cbf_path%\copied software
+set cbf-pt=%cbf-pt%\copied software
 
 exit/b
 
@@ -7890,7 +7890,7 @@ echo %fp%
 
 call %0 sz
 
-set cbf_fn=%cbf_path%\copy of cc.asc
+set cbf-fn=%cbf-pt%\copy of cc.asc
 
 exit/b
 
@@ -7909,7 +7909,7 @@ rem lu: Dec-4-2018
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\gfe.asc
+set cbf-fn=%share-zone%\gfe.asc
 
 exit/b
 
@@ -7950,9 +7950,9 @@ echo %fp%
 
 rem skw git super location, git super path, super git, GitHub super
 
-set cbf_path=%localappdata%\Programs\Git\usr\bin
+set cbf-pt=%localappdata%\Programs\Git\usr\bin
 
-if exist "c:\Program Files\Git\usr\bin\" set cbf_path=c:\Program Files\Git\usr\bin
+if exist "c:\Program Files\Git\usr\bin\" set cbf-pt=c:\Program Files\Git\usr\bin
 
 exit/b
 
@@ -7971,9 +7971,9 @@ rem lu: Dec-6-2018
 echo.
 echo %fp%
 
-set cbf_path=%localappdata%\Programs\Git
+set cbf-pt=%localappdata%\Programs\Git
 
-set cbf_url=https://github.com
+set cbf-url=https://github.com
 
 exit/b
 
@@ -7990,11 +7990,11 @@ rem lu: Aug-1-2018
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files\Git\cmd\git-gui.exe
+set cbf-application=C:\Program Files\Git\cmd\git-gui.exe
 
-if exist C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe set cbf_application=C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe
+if exist C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe set cbf-application=C:\Users\JJones2\AppData\Local\Programs\Git\cmd\git-gui.exe
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -8013,7 +8013,7 @@ echo %fp%
 
 call %0 s
 
-set cbf_fn=%cbf_path%\aig.bat
+set cbf-fn=%cbf-pt%\aig.bat
 
 exit/b
 
@@ -8030,7 +8030,7 @@ rem lu: Dec-30-2018
 echo.
 echo %fp%
 
-set cbf_fn=%userprofile%\downloads\10.168.73.179.rdp
+set cbf-fn=%userprofile%\downloads\10.168.73.179.rdp
 
 exit/b
 
@@ -8047,7 +8047,7 @@ rem lu: Dec-30-2018
 echo.
 echo %fp%
 
-set cbf_fn=%userprofile%\downloads\10.168.73.223.rdp
+set cbf-fn=%userprofile%\downloads\10.168.73.223.rdp
 
 exit/b
 
@@ -8072,11 +8072,11 @@ rem lu: Sep-15-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\savannah\reach out
+set cbf-pt=%dropbox%\savannah\reach out
 
-set cbf_fn=%cbf_path%\message to ipad.txt
+set cbf-fn=%cbf-pt%\message to ipad.txt
 
-set cbf_url=https://github.com/jonathan-r-jones/Reach-Out.git
+set cbf-url=https://github.com/jonathan-r-jones/Reach-Out.git
 
 exit/b
 
@@ -8095,7 +8095,7 @@ rem lu: May-4-2020
 echo.
 echo %fp%
 
-set cbf_path=%my documents%\savannah\reach out
+set cbf-pt=%my documents%\savannah\reach out
 
 exit/b
 
@@ -8114,7 +8114,7 @@ rem lu: Sep-15-2018
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\copy of wk.asc
+set cbf-fn=%share-zone%\copy of wk.asc
 
 exit/b
 
@@ -8131,7 +8131,7 @@ rem lu: Jan-4-2019
 echo.
 echo %fp%
 
-set cbf_fn=%userprofile%\downloads\ec2-18-253-135-181.us-gov-east-1.compute.amazonaws.com.rdp
+set cbf-fn=%userprofile%\downloads\ec2-18-253-135-181.us-gov-east-1.compute.amazonaws.com.rdp
 
 exit/b
 
@@ -8154,7 +8154,7 @@ echo %fp%
 
 call %0 c_docs
 
-set cbf_fn=%cbf_path%\DevOps Roadmap.xlsx
+set cbf-fn=%cbf-pt%\DevOps Roadmap.xlsx
 
 exit/b
 
@@ -8171,9 +8171,9 @@ rem lu: Jan-8-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\jenkins-trigger-test
+set cbf-pt=%cbf-repo%\jenkins-trigger-test
 
-set cbf_url=https://github.com/jonathan-r-jones/jenkins-trigger-test.git
+set cbf-url=https://github.com/jonathan-r-jones/jenkins-trigger-test.git
 
 exit/b
 
@@ -8191,7 +8191,7 @@ echo.
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/g0t4/solitaire-systemjs-course
+set cbf-url=https://github.com/g0t4/solitaire-systemjs-course
 
 exit/b
 
@@ -8208,9 +8208,9 @@ rem lu: Dec-4-2018
 echo.
 echo %fp%
 
-set cbf_fn=%savannah%\belfry\j.bat
+set cbf-fn=%savannah%\belfry\j.bat
 
-set cbf_path=%userprofile%\j
+set cbf-pt=%userprofile%\j
 
 exit/b
 
@@ -8229,7 +8229,7 @@ echo %fp%
 
 call %0 dev
 
-set cbf_path=%cbf_path%\build\h2db
+set cbf-pt=%cbf-pt%\build\h2db
 
 exit/b
 
@@ -8248,7 +8248,7 @@ rem lu: Jan-22-2019
 rem echo.
 rem echo %fp%
 
-set cbf_fn=%savannah%\belfry\synchronize with dropbox.bat
+set cbf-fn=%savannah%\belfry\synchronize with dropbox.bat
 
 exit/b
 
@@ -8271,20 +8271,20 @@ echo %fp%
 
 rem Determine installation path.
 
-set cbf_application=
+set cbf-application=
 
-if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
-if exist "c:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE" set cbf_application=c:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE
+if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE" set cbf-application=C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE
+if exist "c:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE" set cbf-application=c:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE
 
-if "%cbf_application%" == "" (
+if "%cbf-application%" == "" (
   echo.
   echo * Excel is not installed.
   exit/b 1
 )
 
-set cbf_path=%cbf_application:\excel.exe=%
+set cbf-pt=%cbf-application:\excel.exe=%
 rem Commented the following line because it breaks f.bat. Nov-26-2019 11:28 AM
-rem set cbf_fn=%cbf_application%
+rem set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -8303,17 +8303,17 @@ echo %fp%
 
 rem Determine installation path.
 
-set cbf_application=
+set cbf-application=
 
-if exist "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE" set cbf_application=C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE
+if exist "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE" set cbf-application=C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE
 
-if "%cbf_application%" == "" (
+if "%cbf-application%" == "" (
   echo.
   echo * PowerPoint doesn't seem to be installed.
   exit/b 1
 )
 
-set cbf_path=%cbf_application:\powerpoint.exe=%
+set cbf-pt=%cbf-application:\powerpoint.exe=%
 
 exit/b
 
@@ -8332,20 +8332,20 @@ echo %fp%
 
 rem Determine installation path.
 
-set cbf_application=
+set cbf-application=
 
-if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe" set cbf_application=C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe
-if exist "c:\Program Files\Microsoft Office\root\Office16\winword.exe" set cbf_application=c:\Program Files\Microsoft Office\root\Office16\winword.exe
+if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe" set cbf-application=C:\Program Files (x86)\Microsoft Office\root\Office16\winword.exe
+if exist "c:\Program Files\Microsoft Office\root\Office16\winword.exe" set cbf-application=c:\Program Files\Microsoft Office\root\Office16\winword.exe
 
-if "%cbf_application%" == "" (
+if "%cbf-application%" == "" (
   echo.
   echo * Word is not installed.
   exit/b
 )
 
-set cbf_path=%cbf_application:\winword.exe=%
+set cbf-pt=%cbf-application:\winword.exe=%
 rem Commented the following line because it breaks f.bat. Nov-26-2019 11:28 AM
-rem set cbf_fn=%cbf_application%
+rem set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -8362,7 +8362,7 @@ rem lu: Jan-25-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\sm_gradle_nexus\api
+set cbf-pt=%cbf-repo%\sm_gradle_nexus\api
 
 exit/b
 
@@ -8381,9 +8381,9 @@ echo %fp%
 
 call %0 jj
 
-set cbf_path=%cbf_path%\gradle\wrapper
+set cbf-pt=%cbf-pt%\gradle\wrapper
 
-set cbf_fn=%cbf_path%\gradle-wrapper.properties
+set cbf-fn=%cbf-pt%\gradle-wrapper.properties
 
 exit/b
 
@@ -8400,11 +8400,11 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
-set cbf_path=%savannah%\cmac\Quickla-for-Multi-Edit
+set cbf-pt=%savannah%\cmac\Quickla-for-Multi-Edit
 
-set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit
+set cbf-url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit
 
 exit/b
 
@@ -8421,7 +8421,7 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\Craig's Terraform State file.txt
+set cbf-fn=%share-zone%\Craig's Terraform State file.txt
 
 exit/b
 
@@ -8440,7 +8440,7 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\Craig's Terraform State file - old.txt
+set cbf-fn=%share-zone%\Craig's Terraform State file - old.txt
 
 exit/b
 
@@ -8457,9 +8457,9 @@ rem lu: Feb-4-2019
 echo.
 echo %fp%
 
-set cbf_application=%aa%\SQL Workbench\SQLWorkbench.exe
+set cbf-application=%aa%\SQL Workbench\SQLWorkbench.exe
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -8480,7 +8480,7 @@ rem lu: Feb-5-2019
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\putty\putty.exe
+set cbf-application=c:\program files\putty\putty.exe
 
 exit/b
 
@@ -8501,7 +8501,7 @@ rem lu: Feb-5-2019
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\putty\puttygen.exe
+set cbf-application=c:\program files\putty\puttygen.exe
 
 exit/b
 
@@ -8518,7 +8518,7 @@ rem lu: Feb-5-2019
 echo.
 echo %fp%
 
-set cbf_url=https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console
+set cbf-url=https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console
 
 exit/b
 
@@ -8537,7 +8537,7 @@ rem lu: Feb-8-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\last_updated_log.txt
+set cbf-fn=%share-zone%\last_updated_log.txt
 
 exit/b
 
@@ -8554,7 +8554,7 @@ rem lu: Feb-27-2019
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\savannah\reach out\%computername%.asc
+set cbf-fn=%dropbox%\savannah\reach out\%computername%.asc
 
 exit/b
 
@@ -8571,7 +8571,7 @@ rem lu: Mar-5-2019
 echo.
 echo %fp%
 
-set cbf_application=type
+set cbf-application=type
 
 exit/b
 
@@ -8592,7 +8592,7 @@ rem lu: Mar-5-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\mtw.asc
+set cbf-fn=%share-zone%\mtw.asc
 
 exit/b
 
@@ -8609,7 +8609,7 @@ rem lu: Mar-5-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\mtg.asc
+set cbf-fn=%share-zone%\mtg.asc
 
 exit/b
 
@@ -8626,7 +8626,7 @@ rem lu: Mar-7-2019
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/DevTechnology/DevPuzzlers
+set cbf-url=https://github.com/DevTechnology/DevPuzzlers
 
 exit/b
 
@@ -8643,7 +8643,7 @@ rem lu: Mar-8-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\ni.bat
+set cbf-fn=%share-zone%\ni.bat
 
 exit/b
 
@@ -8664,13 +8664,13 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
-set cbf_branch=Branch2
+set cbf-branch=Branch2
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
-set cbf_path=%cbf_repo%\For-Git-Testing
+set cbf-pt=%cbf-repo%\For-Git-Testing
 
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+set cbf-url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
 exit/b
 
@@ -8687,13 +8687,13 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
-set cbf_branch=Branch1
+set cbf-branch=Branch1
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
-set cbf_path=%cbf_repo%\For-Git-Testing_%cbf_branch%
+set cbf-pt=%cbf-repo%\For-Git-Testing_%cbf-branch%
 
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+set cbf-url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
 exit/b
 
@@ -8710,13 +8710,13 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
-set cbf_branch=Branch2
+set cbf-branch=Branch2
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
-set cbf_path=%cbf_repo%\For-Git-Testing_%cbf_branch%
+set cbf-pt=%cbf-repo%\For-Git-Testing_%cbf-branch%
 
-set cbf_url=https://github.com/jonathan-r-jones/For-Git-Testing.git
+set cbf-url=https://github.com/jonathan-r-jones/For-Git-Testing.git
 
 exit/b
 
@@ -8737,9 +8737,9 @@ echo %fp%
 
 call %0 fgt
 
-set cbf_branch=develop
+set cbf-branch=develop
 
-set cbf_path=%cbf_path%_develop_branch
+set cbf-pt=%cbf-pt%_develop_branch
 
 exit/b
 
@@ -8760,9 +8760,9 @@ echo %fp%
 
 call %0 fgt
 
-set cbf_branch=jj_devops
+set cbf-branch=jj_devops
 
-set cbf_path=%cbf_path%_jj_devops_branch
+set cbf-pt=%cbf-pt%_jj_devops_branch
 
 exit/b
 
@@ -8783,7 +8783,7 @@ rem lu: Feb-1-2018
 echo.
 echo %fp%
 
-set cbf_fn=c:\a\j1.txt
+set cbf-fn=c:\a\j1.txt
 
 exit/b
 
@@ -8800,9 +8800,9 @@ rem lu: Feb-1-2018
 echo.
 echo %fp%
 
-set cbf_fn=c:\a\j2.txt
+set cbf-fn=c:\a\j2.txt
 
-set cbf_java=c:\a\j2.java
+set cbf-java=c:\a\j2.java
 
 exit/b
 
@@ -8819,7 +8819,7 @@ rem lu: Mar-29-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\%1.txt
+set cbf-fn=%share-zone%\%1.txt
 
 exit/b
 
@@ -8836,7 +8836,7 @@ rem lu: Mar-29-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\%1.txt
+set cbf-fn=%share-zone%\%1.txt
 
 exit/b
 
@@ -8855,7 +8855,7 @@ echo %fp%
 
 call n cade
 
-set cbf_fn=%cbf_path%\%1.txt
+set cbf-fn=%cbf-pt%\%1.txt
 
 exit/b
 
@@ -8872,7 +8872,7 @@ rem lu: Feb-1-2018
 echo.
 echo %fp%
 
-set cbf_log_file=c:\a\sh.log
+set cbf-log_file=c:\a\sh.log
 
 exit/b
 
@@ -8896,7 +8896,7 @@ echo %fp%
 if not exist %tmp%\certutil_input.txt echo.
 if not exist %tmp%\certutil_input.txt xcopy /d /h /r /s /y "%COMPOSABLE_BATCH_FILES%\certutil_input.txt" "%tmp%"
 
-set cbf_fn=%tmp%\certutil_input.txt
+set cbf-fn=%tmp%\certutil_input.txt
 
 exit/b
 
@@ -8914,7 +8914,7 @@ echo.
 echo %fp%
 echo.
 
-set cbf_fn=%tmp%\certutil_output.txt
+set cbf-fn=%tmp%\certutil_output.txt
 
 exit/b
 
@@ -8935,7 +8935,7 @@ rem lu: Jun-14-2018
 echo.
 echo %fp%
 
-set cbf_fn=%temp%\search_results.txt
+set cbf-fn=%temp%\search_results.txt
 
 exit/b
 
@@ -8952,7 +8952,7 @@ rem lu: Jun-14-2018
 echo.
 echo %fp%
 
-set cbf_fn=%temp%\search_results_fs.txt
+set cbf-fn=%temp%\search_results_fs.txt
 
 exit/b
 
@@ -8969,7 +8969,7 @@ rem lu: Jun-14-2018
 echo.
 echo %fp%
 
-set cbf_fn=%temp%\search_results_cs.txt
+set cbf-fn=%temp%\search_results_cs.txt
 
 exit/b
 
@@ -8988,7 +8988,7 @@ echo %fp%
 
 rem call m set_specific_browser fx
 
-set cbf_url=https://www.mockaroo.com/schemas/162497
+set cbf-url=https://www.mockaroo.com/schemas/162497
 
 exit/b
 
@@ -9005,7 +9005,7 @@ rem lu: Apr-2-2019
 echo.
 echo %fp%
 
-set cbf_url=https://www.cyberciti.biz/tips/linux-unix-apple-osx-terminal-ascii-aquarium.html
+set cbf-url=https://www.cyberciti.biz/tips/linux-unix-apple-osx-terminal-ascii-aquarium.html
 
 exit/b
 
@@ -9026,7 +9026,7 @@ rem lu: Apr-9-2019
 echo.
 echo %fp%
 
-set cbf_bookmark=%cd%
+set cbf-bookmark=%cd%
 
 exit/b
 
@@ -9043,7 +9043,7 @@ rem lu: Apr-9-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_bookmark%
+set cbf-pt=%cbf-bookmark%
 
 exit/b
 
@@ -9062,7 +9062,7 @@ rem lu: Apr-9-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_back%
+set cbf-pt=%cbf-back%
 
 exit/b
 
@@ -9079,7 +9079,7 @@ rem lu: Apr-15-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\iT2.asc
+set cbf-fn=%share-zone%\iT2.asc
 
 exit/b
 
@@ -9096,7 +9096,7 @@ rem lu: Apr-17-2019
 echo.
 echo %fp%
 
-set cbf_application=appwiz.cpl
+set cbf-application=appwiz.cpl
 
 exit/b
 
@@ -9113,9 +9113,9 @@ rem lu: Apr-29-2019
 echo.
 echo %fp%
 
-set cbf_appended_words=%%20download%%20for%%20windows
+set cbf-appended_words=%%20download%%20for%%20windows
 
-rem Old Way set cbf_url=https://www.google.com/search?as_q=%2+download+windows
+rem Old Way set cbf-url=https://www.google.com/search?as_q=%2+download+windows
 
 exit/b
 
@@ -9132,7 +9132,7 @@ rem lu: Apr-25-2019
 echo.
 echo %fp%
 
-set cbf_path=%share-zone%\one-file
+set cbf-pt=%share-zone%\one-file
 
 exit/b
 
@@ -9149,7 +9149,7 @@ rem lu: Apr-29-2019
 echo.
 echo %fp%
 
-set cbf_npl=1037
+set cbf-npl=1037
 
 exit/b
 
@@ -9170,7 +9170,7 @@ rem lu: May-6-2019
 echo.
 echo %fp%
 
-set cbf_url=https://docs..io/ctl_kitchen.html
+set cbf-url=https://docs..io/ctl_kitchen.html
 
 exit/b
 
@@ -9191,9 +9191,9 @@ rem lu: Aug-20-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\Mobile
+set cbf-pt=%dropbox%\it\Mobile
 
-set cbf_url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
+set cbf-url=https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile
 
 exit/b
 
@@ -9212,11 +9212,11 @@ rem lu: Jun-21-2018
 echo.
 echo %fp%
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/fresnel.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/fresnel.git
 
-set cbf_path=%dropbox%\it\fresnel
+set cbf-pt=%dropbox%\it\fresnel
 
-set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+set cbf-url=https://github.com/jonathan-r-jones/fresnel.git
 
 exit/b
 
@@ -9233,9 +9233,9 @@ rem lu: Jul-26-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\backups\fresnel
+set cbf-pt=%cbf-repo%\backups\fresnel
 
-set cbf_url=https://github.com/jonathan-r-jones/fresnel.git
+set cbf-url=https://github.com/jonathan-r-jones/fresnel.git
 
 exit/b
 
@@ -9252,9 +9252,9 @@ rem lu: Jul-26-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\backups\Quickla-for-Multi-Edit
+set cbf-pt=%cbf-repo%\backups\Quickla-for-Multi-Edit
 
-set cbf_url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
+set cbf-url=https://github.com/jonathan-r-jones/Quickla-for-Multi-Edit.git
 
 exit/b
 
@@ -9262,7 +9262,7 @@ exit/b
 
 ::_
 
-:cbf_bu
+:cbf-bu
 
 set fp=* CBF, local backup version.
 
@@ -9271,9 +9271,9 @@ rem lu: Jul-26-2018
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\backups\Composable-Batch-Files
+set cbf-pt=%cbf-repo%\backups\Composable-Batch-Files
 
-set cbf_url=https://github.com/jonathan-r-jones/Composable-Batch-Files
+set cbf-url=https://github.com/jonathan-r-jones/Composable-Batch-Files
 
 exit/b
 
@@ -9290,7 +9290,7 @@ rem lu: May-10-2019
 rem echo.
 rem echo %fp%
 
-set cbf_path=%cbf_glued_path%
+set cbf-pt=%cbf-glued_path%
 
 exit/b
 
@@ -9307,7 +9307,7 @@ rem lu: May-10-2019
 echo.
 echo %fp%
 
-set cbf_path=\test\integration
+set cbf-pt=\test\integration
 
 exit/b
 
@@ -9328,15 +9328,15 @@ rem lu: May-7-2019
 echo.
 echo %fp%
 
-set cbf_host=
+set cbf-host=
 
-set cbf_instance_id=i-02bd7157f98da14aa
+set cbf-instance-id=i-02bd7157f98da14aa
 
-set cbf_ip=18.253.66.185
+set cbf-ip=18.253.66.185
 
-set cbf_public_dns=ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
+set cbf-public_dns=ec2-18-253-135-154.us-gov-east-1.compute.amazonaws.com
 
-set cbf_url=http://%cbf_ip%
+set cbf-url=http://%cbf-ip%
 
 exit/b
 
@@ -9355,15 +9355,15 @@ rem lu: May-13-2019
 echo.
 echo %fp%
 
-set cbf_host=
+set cbf-host=
 
-set cbf_instance_id=i-0ce1f47a5dcd7f7b0
+set cbf-instance-id=i-0ce1f47a5dcd7f7b0
 
-set cbf_ip=18.253.125.85
+set cbf-ip=18.253.125.85
 
-set cbf_public_dns=ec2-18-253-117-88.us-gov-east-1.compute.amazonaws.com
+set cbf-public_dns=ec2-18-253-117-88.us-gov-east-1.compute.amazonaws.com
 
-set cbf_url=http://%cbf_ip%
+set cbf-url=http://%cbf-ip%
 
 exit/b
 
@@ -9384,15 +9384,15 @@ rem lu: Apr-13-2019
 echo.
 echo %fp%
 
-set cbf_branch=master
+set cbf-branch=master
 
-set cbf_clone_url=https://github.com/dotnet-presentations/xamarin.git
+set cbf-clone-url=https://github.com/dotnet-presentations/xamarin.git
 
-set cbf_path=%cbf_repo%\imdx\Introduction to Mobile Development with Xamarin
+set cbf-pt=%cbf-repo%\imdx\Introduction to Mobile Development with Xamarin
 
-set cbf_fn=%cbf_path%\Introduction to Mobile Development with Xamarin.pptx
+set cbf-fn=%cbf-pt%\Introduction to Mobile Development with Xamarin.pptx
 
-set cbf_url=https://github.com/dotnet-presentations/xamarin.git
+set cbf-url=https://github.com/dotnet-presentations/xamarin.git
 
 exit/b
 
@@ -9409,9 +9409,9 @@ rem lu: Jun-20-2018
 echo.
 echo %fp%
 
-set cbf_path=%aa%\repositories\AppCenterDemo.BikeSearch
+set cbf-pt=%aa%\repositories\AppCenterDemo.BikeSearch
 
-set cbf_url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
+set cbf-url=https://github.com/alexsorokoletov/AppCenterDemo.BikeSearch.git
 
 exit/b
 
@@ -9428,9 +9428,9 @@ rem lu: Jun-21-2018
 echo.
 echo %fp%
 
-set cbf_path=
+set cbf-pt=
 
-set cbf_url=https://appcenter.ms/apps
+set cbf-url=https://appcenter.ms/apps
 
 exit/b
 
@@ -9447,7 +9447,7 @@ rem lu: May-20-2019
 echo.
 echo %fp%
 
-set cbf_url=https://www.visualstudio.com/app-center/
+set cbf-url=https://www.visualstudio.com/app-center/
 
 exit/b
 
@@ -9466,9 +9466,9 @@ rem lu: Jun-27-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\fresnel\fresnel\Views
+set cbf-pt=%dropbox%\it\fresnel\fresnel\Views
 
-set cbf_fn=%dropbox%\it\fresnel\fresnel\Views\AboutPage.xaml
+set cbf-fn=%dropbox%\it\fresnel\fresnel\Views\AboutPage.xaml
 
 exit/b
 
@@ -9485,23 +9485,23 @@ rem lu: Apr-13-2019
 echo.
 echo %fp%
 
-set cbf_root=%1
+set cbf-root=%1
 
-set cbf_branch=master
+set cbf-branch=master
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
-set cbf_fc_path=%cbf_repo%\acd\buster\buster\views
+set cbf-fc_path=%cbf-repo%\acd\buster\buster\views
 
-set cbf_fn=%cbf_repo%\acd\App Center Demo.pptx
+set cbf-fn=%cbf-repo%\acd\App Center Demo.pptx
 
-set cbf_android_manifest_file=%cbf_repo%\%cbf_root%\buster\buster.Android\Properties\AndroidManifest.xml
+set cbf-android_manifest_file=%cbf-repo%\%cbf-root%\buster\buster.Android\Properties\AndroidManifest.xml
 
-set cbf_path=%cbf_repo%\acd
+set cbf-pt=%cbf-repo%\acd
 
-set cbf_settings_file=%cbf_repo%\acd\buster\buster\Views\Page1.xaml
+set cbf-settings_file=%cbf-repo%\acd\buster\buster\Views\Page1.xaml
 
-set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+set cbf-url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
 exit/b
 
@@ -9518,7 +9518,7 @@ rem lu: May-20-2019
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\paint.net\paintdotnet.exe
+set cbf-application=c:\program files\paint.net\paintdotnet.exe
 
 exit/b
 
@@ -9535,7 +9535,7 @@ rem lu: May-20-2019
 echo.
 echo %fp%
 
-set cbf_url=https://appcenter.ms/users/jonathan.r.jones.3/apps/Fresnel.iOS/build/branches/master
+set cbf-url=https://appcenter.ms/users/jonathan.r.jones.3/apps/Fresnel.iOS/build/branches/master
 
 exit/b
 
@@ -9552,13 +9552,13 @@ rem lu: May-21-2019
 echo.
 echo %fp%
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Buster.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Buster.git
 
-set cbf_fn=%dropbox%\it\buster\buster\Buster\Views\Page1.xaml
+set cbf-fn=%dropbox%\it\buster\buster\Buster\Views\Page1.xaml
 
-set cbf_path=%dropbox%\it\buster
+set cbf-pt=%dropbox%\it\buster
 
-set cbf_url=https://github.com/jonathan-r-jones/Buster.git
+set cbf-url=https://github.com/jonathan-r-jones/Buster.git
 
 exit/b
 
@@ -9589,7 +9589,7 @@ rem fcd: Dec-14-2018
 echo.
 echo %fp%
 
-set cbf_path=%java_home%
+set cbf-pt=%java_home%
 
 exit/b
 
@@ -9653,7 +9653,7 @@ rem lu: Apr-7-2021
 echo.
 echo %fp%
 
-set cbf_path=%jre_home%
+set cbf-pt=%jre_home%
 
 exit/b
 
@@ -9672,7 +9672,7 @@ rem fcd: Feb-11-2019
 echo.
 echo %fp%
 
-set cbf_path=%node_home%
+set cbf-pt=%node_home%
 
 exit/b
 
@@ -9689,7 +9689,7 @@ rem fcd: Feb-11-2019
 echo.
 echo %fp%
 
-set cbf_path=%m2_home%
+set cbf-pt=%m2_home%
 
 exit/b
 
@@ -9712,7 +9712,7 @@ rem This is useful for new installs.
 echo.
 echo %fp%
 
-set cbf_path=%maven_home%
+set cbf-pt=%maven_home%
 
 exit/b
 
@@ -9735,9 +9735,9 @@ rem lu: Nov-6-2018
 echo.
 echo %fp%
 
-set cbf_fn=%userprofile%\.aws\credentials
+set cbf-fn=%userprofile%\.aws\credentials
 
-set cbf_path=%userprofile%\.aws
+set cbf-pt=%userprofile%\.aws
 
 exit/b
 
@@ -9758,7 +9758,7 @@ echo %fp%
 
 call %0 home
 
-set cbf_path=%cbf_path%\.jenkins
+set cbf-pt=%cbf-pt%\.jenkins
 
 exit/b
 
@@ -9785,7 +9785,7 @@ rem lu: Dec-17-2018
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%
+set cbf-pt=%userprofile%
 
 exit/b
 
@@ -9802,7 +9802,7 @@ rem lu: Dec-19-2018
 echo.
 echo %fp%
 
-set cbf_path=%localappdata%\Microsoft\WindowsApps
+set cbf-pt=%localappdata%\Microsoft\WindowsApps
 
 exit/b
 
@@ -9823,7 +9823,7 @@ rem lu: Sep-11-2018
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe
+set cbf-application=C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe
 
 exit/b
 
@@ -9840,9 +9840,9 @@ rem lu: Jan-31-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
+set cbf-pt=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
 
-set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+set cbf-application=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
 
 exit/b
 
@@ -9859,9 +9859,9 @@ rem lu: Jan-31-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
+set cbf-pt=c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\
 
-set cbf_application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
+set cbf-application=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\common7\ide\devenv.exe
 
 exit/b
 
@@ -9880,7 +9880,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\savannah\reach out\buzz.asc
+set cbf-fn=%dropbox%\savannah\reach out\buzz.asc
 
 exit/b
 
@@ -9897,7 +9897,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\savannah\reach out\xps.asc
+set cbf-fn=%dropbox%\savannah\reach out\xps.asc
 
 exit/b
 
@@ -9914,9 +9914,9 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/app2.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/app2.git
 
-set cbf_path=%cbf_repo%\app2
+set cbf-pt=%cbf-repo%\app2
 
 exit/b
 
@@ -9933,9 +9933,9 @@ rem lu: May-27-2019
 echo.
 echo %fp%
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/app3.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/app3.git
 
-set cbf_path=%cbf_repo%\app3
+set cbf-pt=%cbf-repo%\app3
 
 exit/b
 
@@ -9952,9 +9952,9 @@ rem lu: May-27-2019
 echo.
 echo %fp%
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/app5.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/app5.git
 
-set cbf_path=%cbf_repo%\app3
+set cbf-pt=%cbf-repo%\app3
 
 exit/b
 
@@ -9983,15 +9983,15 @@ rem lu: May-27-2019
 echo.
 echo %fp%
 
-set cbf_root=%1
+set cbf-root=%1
 
-set cbf_android_manifest_file=%cbf_repo%\%cbf_root%\%cbf_root%\%cbf_root%.Android\Properties\AndroidManifest.xml
+set cbf-android_manifest_file=%cbf-repo%\%cbf-root%\%cbf-root%\%cbf-root%.Android\Properties\AndroidManifest.xml
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/%cbf_root%.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/%cbf-root%.git
 
-set cbf_path=%cbf_repo%\%cbf_root%
+set cbf-pt=%cbf-repo%\%cbf-root%
 
-set cbf_settings_file=%cbf_repo%\%cbf_root%\%cbf_root%\%cbf_root%\Views\Page1.xaml
+set cbf-settings_file=%cbf-repo%\%cbf-root%\%cbf-root%\%cbf-root%\Views\Page1.xaml
 
 exit/b
 
@@ -10008,7 +10008,7 @@ rem lu: May-28-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\gils_pipeline_script
+set cbf-fn=%share-zone%\gils_pipeline_script
 
 exit/b
 
@@ -10025,13 +10025,13 @@ rem lu: Jun-13-2019
 echo.
 echo %fp%
 
-set cbf_application=
+set cbf-application=
 
-set cbf_fn=
+set cbf-fn=
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
-set cbf_url=
+set cbf-url=
 
 exit/b
 
@@ -10048,7 +10048,7 @@ rem lu: Jun-27-2019
 echo.
 echo %fp%
 
-set cbf_url=https://www.qrstuff.com/
+set cbf-url=https://www.qrstuff.com/
 
 exit/b
 
@@ -10069,15 +10069,15 @@ rem lu: Jun-28-2019
 echo.
 echo %fp%
 
-set cbf_application=
+set cbf-application=
 
-set cbf_clone_url=https://github.com/DevTechnology/bdso-gateway.git
+set cbf-clone-url=https://github.com/DevTechnology/bdso-gateway.git
 
-set cbf_fn=
+set cbf-fn=
 
-set cbf_path=%cbf_repo%\bdso-gateway
+set cbf-pt=%cbf-repo%\bdso-gateway
 
-set cbf_url=https://github.com/DevTechnology/bdso-gateway
+set cbf-url=https://github.com/DevTechnology/bdso-gateway
 
 exit/b
 
@@ -10094,15 +10094,15 @@ rem lu: Jun-28-2019
 echo.
 echo %fp%
 
-set cbf_application=
+set cbf-application=
 
-set cbf_clone_url=https://github.com/DevTechnology/BDSO-MSA.git
+set cbf-clone-url=https://github.com/DevTechnology/BDSO-MSA.git
 
-set cbf_fn=
+set cbf-fn=
 
-set cbf_path=%cbf_repo%\bdso-msa
+set cbf-pt=%cbf-repo%\bdso-msa
 
-set cbf_url=https://github.com/DevTechnology/BDSO-MSA
+set cbf-url=https://github.com/DevTechnology/BDSO-MSA
 
 exit/b
 
@@ -10119,23 +10119,23 @@ rem lu: Jun-28-2019
 echo.
 echo %fp%
 
-set cbf_branch=issue15
+set cbf-branch=issue15
 
-set cbf_path=%cbf_repo%\bdso-gateway-%cbf_branch%-branch
+set cbf-pt=%cbf-repo%\bdso-gateway-%cbf-branch%-branch
 
 rem >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< Variables are alphabetized below here.
 
-set cbf_clone_url=https://github.com/DevTechnology/bdso-gateway.git
+set cbf-clone-url=https://github.com/DevTechnology/bdso-gateway.git
 
-set cbf_fc_path=%cbf_path%
+set cbf-fc_path=%cbf-pt%
 
-set cbf_fn=%cbf_path%\platform\ci\Jenkinsfile
+set cbf-fn=%cbf-pt%\platform\ci\Jenkinsfile
 
-set cbf_jf=%cbf_path%\platform\ci\Jenkinsfile
+set cbf-jf=%cbf-pt%\platform\ci\Jenkinsfile
 
-set cbf_je=
+set cbf-je=
 
-set cbf_url=https://github.com/DevTechnology/bdso-gateway/tree/issue15
+set cbf-url=https://github.com/DevTechnology/bdso-gateway/tree/issue15
 
 exit/b
 
@@ -10152,13 +10152,13 @@ rem lu: Jun-28-2019
 echo.
 echo %fp%
 
-set cbf_application=
+set cbf-application=
 
-set cbf_fn=
+set cbf-fn=
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
-set cbf_url=http://35.168.72.223:9090/login?from=%2F
+set cbf-url=http://35.168.72.223:9090/login?from=%2F
 
 exit/b
 
@@ -10175,13 +10175,13 @@ rem lu: Jun-28-2019
 echo.
 echo %fp%
 
-set cbf_application=
+set cbf-application=
 
-set cbf_fn=
+set cbf-fn=
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
-set cbf_url=http://35.169.150.151:9000/dashboard?id=BioService
+set cbf-url=http://35.169.150.151:9000/dashboard?id=BioService
 
 exit/b
 
@@ -10198,13 +10198,13 @@ rem lu: Jun-28-2019
 echo.
 echo %fp%
 
-set cbf_application=
+set cbf-application=
 
-set cbf_fn=%share-zone%\mob.docx
+set cbf-fn=%share-zone%\mob.docx
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
-set cbf_url=
+set cbf-url=
 
 exit/b
 
@@ -10225,15 +10225,15 @@ rem lu: Jul-2-2019
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files (x86)\pgAdmin 4\v4\runtime\pgAdmin4.exe
+set cbf-application=C:\Program Files (x86)\pgAdmin 4\v4\runtime\pgAdmin4.exe
 
 rem I commented the url because the correct way to start PGA is thought the exe.
 rem Having the URL here kind of makes things confusing.
-rem set cbf_url=http://127.0.0.1:50255/browser/
-rem set cbf_url=http://127.0.0.1:59171/browser/
+rem set cbf-url=http://127.0.0.1:50255/browser/
+rem set cbf-url=http://127.0.0.1:59171/browser/
 
 rem  I added this line so that sf golf would work.
-rem set cbf_url=http://127.0.0.1:59171/?key=74c91a8a-0ef6-4550-9e08-7b7f4c0e3f09
+rem set cbf-url=http://127.0.0.1:59171/?key=74c91a8a-0ef6-4550-9e08-7b7f4c0e3f09
 
 exit/b
 
@@ -10252,7 +10252,7 @@ rem lu: Jul-17-2019
 echo.
 echo %fp%
 
-set cbf_fn=C:\Users\JJones2\j\Share-Zone\PPF\port analysis.xlsx
+set cbf-fn=C:\Users\JJones2\j\Share-Zone\PPF\port analysis.xlsx
 
 exit/b
 
@@ -10269,7 +10269,7 @@ rem lu: Jul-22-2019
 echo.
 echo %fp%
 
-set cbf_fn=%composable_batch_files%\te.bat
+set cbf-fn=%composable_batch_files%\te.bat
 
 exit/b
 
@@ -10286,7 +10286,7 @@ rem lu: Jul-30-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\my_cartys.xlsx
+set cbf-fn=%share-zone%\my_cartys.xlsx
 
 exit/b
 
@@ -10317,9 +10317,9 @@ rem lu: Aug-2-2019
 echo.
 echo %fp%
 
-set cbf_fn=%cbf_repo%\cade\Data Model\Data Model source code.jh
+set cbf-fn=%cbf-repo%\cade\Data Model\Data Model source code.jh
 
-set cbf_path=%cbf_repo%\cade\Data Model
+set cbf-pt=%cbf-repo%\cade\Data Model
 
 exit/b
 
@@ -10344,7 +10344,7 @@ rem lu: Aug-2-2019
 echo.
 echo %fp%
 
-set cbf_url=https://start.jhipster.tech/jdl-studio
+set cbf-url=https://start.jhipster.tech/jdl-studio
 
 exit/b
 
@@ -10363,7 +10363,7 @@ echo %fp%
 
 call n s
 
-set cbf_path=%cbf_path%\Expense Reports
+set cbf-pt=%cbf-pt%\Expense Reports
 
 exit/b
 
@@ -10380,9 +10380,9 @@ rem lu: Aug-8-2019
 echo.
 echo %fp%
 
-set cbf_fn=%reach out%\wk.asc
+set cbf-fn=%reach out%\wk.asc
 
-set cbf_path=%dropbox%\work\wk
+set cbf-pt=%dropbox%\work\wk
 
 exit/b
 
@@ -10403,7 +10403,7 @@ rem lu: Jan-8-2019
 echo.
 echo %fp%
 
-set cbf_url=http://localhost:8080/cart-api/h2-console
+set cbf-url=http://localhost:8080/cart-api/h2-console
 
 exit/b
 
@@ -10424,7 +10424,7 @@ echo %fp%
 
 call an kr
 
-set cbf_url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
+set cbf-url=http://localhost:8080/job/PipelineTest2/pipeline-syntax/
 
 exit/b
 
@@ -10449,7 +10449,7 @@ rem lu: Mar-18-2019
 echo.
 echo %fp%
 
-set cbf_url=http://localhost:4200
+set cbf-url=http://localhost:4200
 
 exit/b
 
@@ -10470,7 +10470,7 @@ rem lu: Mar-18-2019
 echo.
 echo %fp%
 
-set cbf_url=http://localhost:4200
+set cbf-url=http://localhost:4200
 
 exit/b
 
@@ -10487,7 +10487,7 @@ rem lu: Aug-12-2019
 echo.
 echo %fp%
 
-set cbf_application=c:\aa\ChromiumPortable\ChromiumPortable.exe
+set cbf-application=c:\aa\ChromiumPortable\ChromiumPortable.exe
 
 exit/b
 
@@ -10508,7 +10508,7 @@ rem lu: Dec-7-2018
 echo.
 echo %fp%
 
-set cbf_path=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
+set cbf-pt=%appdata%\Multi Edit Software\Multi-Edit\11\Config.04
 
 exit/b
 
@@ -10527,7 +10527,7 @@ rem lu: Dec-7-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\Multi-Edit_2008_Config_Files
+set cbf-pt=%dropbox%\Multi-Edit_2008_Config_Files
 
 exit/b
 
@@ -10546,7 +10546,7 @@ rem lu: Jan-3-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\Backups\Multi-Edit Config Files
+set cbf-pt=%dropbox%\Backups\Multi-Edit Config Files
 
 exit/b
 
@@ -10563,7 +10563,7 @@ rem lu: Feb-13-2019
 echo.
 echo %fp%
 
-set cbf_path=%share-zone%\Multi-Edit_2008_Config_Files
+set cbf-pt=%share-zone%\Multi-Edit_2008_Config_Files
 
 exit/b
 
@@ -10580,7 +10580,7 @@ rem lu: Aug-13-2019
 echo.
 echo %fp%
 
-set cbf_path=c:\aa\pgdata
+set cbf-pt=c:\aa\pgdata
 
 exit/b
 
@@ -10597,7 +10597,7 @@ rem lu: Aug-22-2019
 echo.
 echo %fp%
 
-set cbf_application=C:\aa\DataGrip 2019.2.2\bin\datagrip.exe
+set cbf-application=C:\aa\DataGrip 2019.2.2\bin\datagrip.exe
 
 exit/b
 
@@ -10614,7 +10614,7 @@ rem lu: Sep-12-2019
 echo.
 echo %fp%
 
-set cbf_url=https://gitlab.com/gzson79/angularworkshopdevtech
+set cbf-url=https://gitlab.com/gzson79/angularworkshopdevtech
 
 exit/b
 
@@ -10631,7 +10631,7 @@ rem lu: Sep-24-2019
 echo.
 echo %fp%
 
-set cbf_path=%share-zone%\icons
+set cbf-pt=%share-zone%\icons
 
 exit/b
 
@@ -10654,7 +10654,7 @@ echo %fp%
 
 call n c
 
-set cbf_fn=%cbf_path%\enrollment quandary.xlsx
+set cbf-fn=%cbf-pt%\enrollment quandary.xlsx
 
 exit/b
 
@@ -10673,7 +10673,7 @@ echo %fp%
 
 call n c
 
-set cbf_fn=%cbf_path%\enrollment quandary 2.xlsx
+set cbf-fn=%cbf-pt%\enrollment quandary 2.xlsx
 
 exit/b
 
@@ -10692,7 +10692,7 @@ echo %fp%
 
 call n c
 
-set cbf_fn=%cbf_path%\enrollment quandary 3.xlsx
+set cbf-fn=%cbf-pt%\enrollment quandary 3.xlsx
 
 exit/b
 
@@ -10711,7 +10711,7 @@ echo %fp%
 
 call n c
 
-set cbf_fn=%cbf_path%\3 anumbers enrollment quandary.png
+set cbf-fn=%cbf-pt%\3 anumbers enrollment quandary.png
 
 exit/b
 
@@ -10732,7 +10732,7 @@ echo %fp%
 
 call n c
 
-set cbf_fn=%cbf_path%\amalgamated enrollment quandary.xlsx
+set cbf-fn=%cbf-pt%\amalgamated enrollment quandary.xlsx
 
 exit/b
 
@@ -10751,7 +10751,7 @@ echo %fp%
 
 call n cade
 
-set cbf_path=%cbf_path%\release documents
+set cbf-pt=%cbf-pt%\release documents
 
 exit/b
 
@@ -10772,7 +10772,7 @@ rem lu: Oct-9-2019
 echo.
 echo %fp%
 
-set cbf_application=%dropbox%\Software\Tools\Process Explorer\procexp64.exe
+set cbf-application=%dropbox%\Software\Tools\Process Explorer\procexp64.exe
 
 exit/b
 
@@ -10795,7 +10795,7 @@ echo %fp%
 
 call n rf_s
 
-set cbf_fn=%cbf_path%\juxtapose original file.txt
+set cbf-fn=%cbf-pt%\juxtapose original file.txt
 
 exit/b
 
@@ -10814,7 +10814,7 @@ echo %fp%
 
 call n rf_s
 
-set cbf_fn=%cbf_path%\juxtapose my modified file.txt
+set cbf-fn=%cbf-pt%\juxtapose my modified file.txt
 
 exit/b
 
@@ -10835,7 +10835,7 @@ rem lu: Oct-24-2019
 echo.
 echo %fp%
 
-set cbf_url=https://getbootstrap.com/docs/4.3/migration/
+set cbf-url=https://getbootstrap.com/docs/4.3/migration/
 
 exit/b
 
@@ -10852,7 +10852,7 @@ rem lu: Oct-29-2019
 echo.
 echo %fp%
 
-set cbf_url=https://fontawesome.com/icons?d=gallery
+set cbf-url=https://fontawesome.com/icons?d=gallery
 
 exit/b
 
@@ -10869,7 +10869,7 @@ rem lu: Oct-29-2019
 echo.
 echo %fp%
 
-set cbf_url=https://www.w3schools.com/bootstrap4/default.asp
+set cbf-url=https://www.w3schools.com/bootstrap4/default.asp
 
 exit/b
 
@@ -10886,7 +10886,7 @@ rem lu: Oct-31-2019
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\SwaggertTest
+set cbf-pt=%cbf-repo%\SwaggertTest
 
 exit/b
 
@@ -10903,7 +10903,7 @@ rem lu: Nov-1-2019
 echo.
 echo %fp%
 
-set cbf_path=d:\aa\1\2\3\4\5\6
+set cbf-pt=d:\aa\1\2\3\4\5\6
 
 exit/b
 
@@ -10920,15 +10920,15 @@ rem lu: Nov-5-2019
 echo.
 echo %fp%
 
-set cbf_application=xx
+set cbf-application=xx
 
-set cbf_fn=xx
+set cbf-fn=xx
 
-set cbf_je=https
+set cbf-je=https
 
-set cbf_path=%cbf_repo%\x
+set cbf-pt=%cbf-repo%\x
 
-set cbf_url=xxx
+set cbf-url=xxx
 
 exit/b
 
@@ -10949,7 +10949,7 @@ rem lu: May-1-2019
 echo.
 echo %fp%
 
-set cbf_fn=%userprofile%\.chef\knife.rb
+set cbf-fn=%userprofile%\.chef\knife.rb
 
 exit/b
 
@@ -10974,7 +10974,7 @@ echo %fp%
 
 call n cbf
 
-set cbf_fn=%cbf_path%\ascii_art_sailboat.txt
+set cbf-fn=%cbf-pt%\ascii_art_sailboat.txt
 
 exit/b
 
@@ -10995,7 +10995,7 @@ echo %fp%
 
 call n cbf
 
-set cbf_fn=%cbf_path%\ascii_art_sea_scene.txt
+set cbf-fn=%cbf-pt%\ascii_art_sea_scene.txt
 
 exit/b
 
@@ -11016,7 +11016,7 @@ echo %fp%
 
 call n cbf
 
-set cbf_fn=%cbf_path%\ascii_art_scuba.txt
+set cbf-fn=%cbf-pt%\ascii_art_scuba.txt
 
 exit/b
 
@@ -11032,7 +11032,7 @@ rem lu: Apr-1-2019
 
 echo %fp%
 
-set cbf_fn=%composable_batch_files%\parrot.txt
+set cbf-fn=%composable_batch_files%\parrot.txt
 
 exit/b
 
@@ -11048,7 +11048,7 @@ rem lu: Apr-1-2019
 
 rem echo %fp%
 
-set cbf_fn=%composable_batch_files%\ascii_art.txt
+set cbf-fn=%composable_batch_files%\ascii_art.txt
 
 exit/b
 
@@ -11064,7 +11064,7 @@ rem lu: Apr-1-2019
 
 rem echo %fp%
 
-set cbf_fn=%composable_batch_files%\ascii_art_2.txt
+set cbf-fn=%composable_batch_files%\ascii_art_2.txt
 
 exit/b
 
@@ -11081,7 +11081,7 @@ rem lu: Nov-9-2019
 echo.
 echo %fp%
 
-set cbf_path=g:\podcasts
+set cbf-pt=g:\podcasts
 
 exit/b
 
@@ -11100,7 +11100,7 @@ rem lu: Nov-12-2019
 echo.
 echo %fp%
 
-set cbf_url=https://valor-software.com/ngx-bootstrap/#/datepicker
+set cbf-url=https://valor-software.com/ngx-bootstrap/#/datepicker
 
 exit/b
 
@@ -11117,7 +11117,7 @@ rem lu: Nov-12-2019
 echo.
 echo %fp%
 
-set cbf_fn=%reach out%\asus.asc
+set cbf-fn=%reach out%\asus.asc
 
 exit/b
 
@@ -11134,9 +11134,9 @@ rem lu: Nov-25-2019
 echo.
 echo %fp%
 
-set cbf_fn=c:\environments\dv\.kitchen-aws.yml
+set cbf-fn=c:\environments\dv\.kitchen-aws.yml
 
-set cbf_path=c:\environments\dv
+set cbf-pt=c:\environments\dv
 
 exit/b
 
@@ -11153,7 +11153,7 @@ rem lu: Oct-7-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\Transfer
+set cbf-pt=%dropbox%\Transfer
 
 exit/b
 
@@ -11170,7 +11170,7 @@ rem lu: Jan-8-2019
 echo.
 echo %fp%
 
-set cbf_url=http://en.wikipedia.org/wiki/Alphabetical_list_of_file_extensions
+set cbf-url=http://en.wikipedia.org/wiki/Alphabetical_list_of_file_extensions
 
 exit/b
 
@@ -11189,7 +11189,7 @@ echo %fp%
 
 call n usrc
 
-set cbf_fn=%cbf_path%\app\services\dialog.service.ts
+set cbf-fn=%cbf-pt%\app\services\dialog.service.ts
 
 exit/b
 
@@ -11208,7 +11208,7 @@ echo %fp%
 
 call n usrc
 
-set cbf_fn=%cbf_path%\app\app.component.ts
+set cbf-fn=%cbf-pt%\app\app.component.ts
 
 exit/b
 
@@ -11225,7 +11225,7 @@ rem lu: Dec-17-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\ansible
+set cbf-pt=%dropbox%\it\ansible
 
 exit/b
 
@@ -11242,11 +11242,11 @@ rem lu: Sep-6-2017
 echo.
 echo %fp%
 
-set cbf_branch=master
+set cbf-branch=master
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/ansible-for-devops-workshop.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/ansible-for-devops-workshop.git
 
-set cbf_path=%cbf_repo%\Ansible_Workshop
+set cbf-pt=%cbf-repo%\Ansible_Workshop
 
 exit/b
 
@@ -11273,7 +11273,7 @@ rem lu: Mar-22-2020
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\blank.xlsx
+set cbf-fn=%share-zone%\blank.xlsx
 
 exit/b
 
@@ -11290,7 +11290,7 @@ rem lu: Oct-25-2020
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\miscellany\blank.pptx
+set cbf-fn=%share-zone%\miscellany\blank.pptx
 
 exit/b
 
@@ -11311,9 +11311,9 @@ rem lu: Jan-25-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\blank.docx
+set cbf-fn=%share-zone%\blank.docx
 
-set cbf_wo=%cbf_fn%
+set cbf-wo=%cbf-fn%
 
 exit/b
 
@@ -11332,7 +11332,7 @@ echo %fp%
 
 call n cade
 
-set cbf_fn=%cbf_path%\blank.docx
+set cbf-fn=%cbf-pt%\blank.docx
 
 exit/b
 
@@ -11349,7 +11349,7 @@ rem lu: Jan-25-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\blank.txt
+set cbf-fn=%share-zone%\blank.txt
 
 exit/b
 
@@ -11374,7 +11374,7 @@ rem lu: Jan-9-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\it\shortcuts\base
+set cbf-pt=%dropbox%\it\shortcuts\base
 
 exit/b
 
@@ -11391,7 +11391,7 @@ rem lu: Jan-23-2020
 echo.
 echo %fp%
 
-set cbf_fn=AWS Certified Solutions Architect - Associate - Prep Materials.pdf
+set cbf-fn=AWS Certified Solutions Architect - Associate - Prep Materials.pdf
 
 exit/b
 
@@ -11408,7 +11408,7 @@ rem lu: Feb-3-2020
 echo.
 echo %fp%
 
-set cbf_fn=%reach out%\dtg.asc
+set cbf-fn=%reach out%\dtg.asc
 
 exit/b
 
@@ -11427,9 +11427,9 @@ echo %fp%
 
 call n rf_ma
 
-set cbf_path=%cbf_path%\api
+set cbf-pt=%cbf-pt%\api
 
-set cbf_fn=%cbf_path%\build.gradle
+set cbf-fn=%cbf-pt%\build.gradle
 
 exit/b
 
@@ -11446,7 +11446,7 @@ rem lu: Jul-16-2019
 echo.
 echo %fp%
 
-set cbf_url=https://www.google.com/advanced_search
+set cbf-url=https://www.google.com/advanced_search
 
 exit/b
 
@@ -11463,7 +11463,7 @@ rem lu: Feb-25-2018
 echo.
 echo %fp%
 
-set cbf_url=https://www.youtube.com
+set cbf-url=https://www.youtube.com
 
 call m set_specific_browser fx
 
@@ -11492,7 +11492,7 @@ rem lu: Sep-27-2018
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\Software\Tools
+set cbf-pt=%dropbox%\Software\Tools
 
 exit/b
 
@@ -11509,7 +11509,7 @@ rem lu: Feb-13-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\Software
+set cbf-pt=%dropbox%\Software
 
 exit/b
 
@@ -11530,7 +11530,7 @@ rem lu: Feb-18-2020
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonat\documents\Savannah\cmac
+set cbf-pt=C:\Users\jonat\documents\Savannah\cmac
 
 exit/b
 
@@ -11547,7 +11547,7 @@ rem lu: Feb-18-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\savannah%\cmac
+set cbf-pt=%dropbox%\savannah%\cmac
 
 exit/b
 
@@ -11564,7 +11564,7 @@ rem lu: Feb-18-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\miscellaneous documents
+set cbf-pt=%dropbox%\miscellaneous documents
 
 exit/b
 
@@ -11581,7 +11581,7 @@ rem lu: Feb-18-2020
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\miscellaneous documents\concop.txt
+set cbf-fn=%dropbox%\miscellaneous documents\concop.txt
 
 exit/b
 
@@ -11598,7 +11598,7 @@ rem lu: Feb-18-2020
 echo.
 echo %fp%
 
-set cbf_path=C:\Users\jonat\dropbox\savannah\cmac\Source Code\.git\
+set cbf-pt=C:\Users\jonat\dropbox\savannah\cmac\Source Code\.git\
 
 exit/b
 
@@ -11619,7 +11619,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\savannah
+set cbf-pt=%dropbox%\savannah
 
 exit/b
 
@@ -11636,7 +11636,7 @@ rem lu: Jan-25-2021
 echo.
 echo %fp%
 
-set cbf_path=%savannah%
+set cbf-pt=%savannah%
 
 exit/b
 
@@ -11661,7 +11661,7 @@ rem lu: Dec-4-2018
 echo.
 echo %fp%
 
-set cbf_path=%appdata%
+set cbf-pt=%appdata%
 
 exit/b
 
@@ -11678,7 +11678,7 @@ rem lu: Dec-4-2018
 echo.
 echo %fp%
 
-set cbf_path=%localappdata%
+set cbf-pt=%localappdata%
 
 exit/b
 
@@ -11695,7 +11695,7 @@ rem lu: Feb-24-2020
 echo.
 echo %fp%
 
-set cbf_path=%localappdata%\microsoft\windows\themes\roamedthemefiles\desktopbackground
+set cbf-pt=%localappdata%\microsoft\windows\themes\roamedthemefiles\desktopbackground
 
 exit/b
 
@@ -11730,7 +11730,7 @@ rem lu: Jun-30-2019
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\savannah\reach out\earl.asc
+set cbf-fn=%dropbox%\savannah\reach out\earl.asc
 
 exit/b
 
@@ -11747,7 +11747,7 @@ rem lu: Feb-25-2020
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\savannah\reach out\sp7.asc
+set cbf-fn=%dropbox%\savannah\reach out\sp7.asc
 
 exit/b
 
@@ -11764,7 +11764,7 @@ rem lu: Oct-12-2020
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\savannah\reach out\ipad.txt
+set cbf-fn=%dropbox%\savannah\reach out\ipad.txt
 
 exit/b
 
@@ -11785,7 +11785,7 @@ rem lu: Feb-26-2020
 echo.
 echo %fp%
 
-set cbf_application=%dropbox%\Software\Tools\MouseKeyboardCenter_64bit_ENG_11.1.exe
+set cbf-application=%dropbox%\Software\Tools\MouseKeyboardCenter_64bit_ENG_11.1.exe
 
 exit/b
 
@@ -11804,7 +11804,7 @@ rem lu: Feb-26-2020
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
+set cbf-application=C:\Program Files\Microsoft Mouse and Keyboard Center\MouseKeyboardCenter.exe
 
 exit/b
 
@@ -11825,9 +11825,9 @@ rem lu: Feb-27-2020
 echo.
 echo %fp%
 
-set cbf_application=C:\Users\jonat\Dropbox\Software\Code Compare\codecomparepro40.exe
+set cbf-application=C:\Users\jonat\Dropbox\Software\Code Compare\codecomparepro40.exe
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -11844,9 +11844,9 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\devart\code compare\codecompare.exe
+set cbf-application=c:\program files\devart\code compare\codecompare.exe
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -11869,7 +11869,7 @@ rem lu: Aug-24-2018
 echo.
 echo %fp%
 
-set cbf_path=%savannah%\belfry
+set cbf-pt=%savannah%\belfry
 
 exit/b
 
@@ -11886,7 +11886,7 @@ rem lu: Mar-1-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\savannah\belfry
+set cbf-pt=%dropbox%\savannah\belfry
 
 exit/b
 
@@ -11903,7 +11903,7 @@ rem lu: Mar-1-2020
 echo.
 echo %fp%
 
-set cbf_fn=%reach out%\cc.asc
+set cbf-fn=%reach out%\cc.asc
 
 exit/b
 
@@ -11920,7 +11920,7 @@ rem lu: Mar-1-2020
 echo.
 echo %fp%
 
-set cbf_fn=%dropbox%\miscellaneous documents\itinerary.xlsx
+set cbf-fn=%dropbox%\miscellaneous documents\itinerary.xlsx
 
 exit/b
 
@@ -11941,17 +11941,17 @@ rem lu: Feb-21-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\savannah
+set cbf-pt=%dropbox%\savannah
 
-set cbf_fn=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
+set cbf-fn=%cbf-repo%\deli\src\main\resources\config\bootstrap-prod.yml
 
-set cbf_clone_url=https://github.com/DevTechnology/dev-library.git
+set cbf-clone-url=https://github.com/DevTechnology/dev-library.git
 
-set cbf_gh=https://github.com/DevTechnology/dev-library
+set cbf-gh=https://github.com/DevTechnology/dev-library
 
-set cbf_path=%cbf_repo%\deli
+set cbf-pt=%cbf-repo%\deli
 
-set cbf_url=http://localhost:8080
+set cbf-url=http://localhost:8080
 
 exit/b
 
@@ -11973,7 +11973,7 @@ rem lu: Mar-6-2020
 echo.
 echo %fp%
 
-set cbf_url=http://localhost:8761
+set cbf-url=http://localhost:8761
 
 exit/b
 
@@ -11995,7 +11995,7 @@ rem lu: Mar-6-2020
 echo.
 echo %fp%
 
-set cbf_fn=%cbf_repo%\deli\src\main\resources\config\bootstrap-prod.yml
+set cbf-fn=%cbf-repo%\deli\src\main\resources\config\bootstrap-prod.yml
 
 exit/b
 
@@ -12029,7 +12029,7 @@ rem lu: Apr-26-2019
 echo.
 echo %fp%
 
-set cbf_url=https://www.draw.io/
+set cbf-url=https://www.draw.io/
 
 exit/b
 
@@ -12046,7 +12046,7 @@ rem lu: Apr-26-2019
 echo.
 echo %fp%
 
-set cbf_url=https://www.draw.io/?libs=aws2
+set cbf-url=https://www.draw.io/?libs=aws2
 
 exit/b
 
@@ -12068,7 +12068,7 @@ rem lu: Apr-26-2019
 echo.
 echo %fp%
 
-set cbf_url=https://support.draw.io/display/DO/2014/10/06/Using+AWS+2.0+icons+to+create+free+Amazon+architecture+diagrams+in+draw.io
+set cbf-url=https://support.draw.io/display/DO/2014/10/06/Using+AWS+2.0+icons+to+create+free+Amazon+architecture+diagrams+in+draw.io
 
 exit/b
 
@@ -12093,7 +12093,7 @@ rem lu: Mar-15-2020
 echo.
 echo %fp%
 
-set cbf_url=https://www.youtube.com/playlist?list=LLot7_lTZm_-7EYorAzrq4Dw
+set cbf-url=https://www.youtube.com/playlist?list=LLot7_lTZm_-7EYorAzrq4Dw
 
 rem This works too, but not as well.
 rem https://www.youtube.com/feed/library
@@ -12113,7 +12113,7 @@ rem lu: Mar-15-2020
 echo.
 echo %fp%
 
-set cbf_url=https://www.youtube.com/watch?v=5896syoWgKA
+set cbf-url=https://www.youtube.com/watch?v=5896syoWgKA
 
 exit/b
 
@@ -12143,15 +12143,15 @@ rem lu: Mar-13-2020
 echo.
 echo %fp%
 
-set cbf_application=
+set cbf-application=
 
-set cbf_fn=
+set cbf-fn=
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
-set cbf_url=https://app.slack.com/client
+set cbf-url=https://app.slack.com/client
 
-set cbf_url=https://app.slack.com/client/TTZULSTT5/CUAV0HTGC
+set cbf-url=https://app.slack.com/client/TTZULSTT5/CUAV0HTGC
 
 exit/b
 
@@ -12170,7 +12170,7 @@ echo %fp%
 
 call an edge
 
-set cbf_url=https://outlook.office.com/owa
+set cbf-url=https://outlook.office.com/owa
 
 exit/b
 
@@ -12199,7 +12199,7 @@ rem clip, screen shot: skw
 echo.
 echo %fp%
 
-set cbf_application=%windir%\system32\SnippingTool.exe
+set cbf-application=%windir%\system32\SnippingTool.exe
 
 exit/b
 
@@ -12216,9 +12216,9 @@ rem lu: Jan-31-2019
 echo.
 echo %fp%
 
-set cbf_application=%systemroot%\system32\control.exe
+set cbf-application=%systemroot%\system32\control.exe
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -12239,9 +12239,9 @@ rem lu: Jan-18-2019
 echo.
 echo %fp%
 
-set cbf_application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
+set cbf-application=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Skype for Business.lnk
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -12260,11 +12260,11 @@ echo %fp%
 
 call %0 pounders
 
-set cbf_application=%cbf_path%\zoomit.exe
+set cbf-application=%cbf-pt%\zoomit.exe
 
-if not exist %cbf_application% set cbf_application=%share-zone%\copied software\zoomit.exe
+if not exist %cbf-application% set cbf-application=%share-zone%\copied software\zoomit.exe
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -12281,7 +12281,7 @@ rem lu: Jan-29-2019
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\demo.pptx
+set cbf-fn=%share-zone%\demo.pptx
 
 exit/b
 
@@ -12312,9 +12312,9 @@ rem System Properties, Advanced System Settings, edit path, edit you path, edit 
 echo.
 echo %fp%
 
-set cbf_application=%systemroot%\system32\SystemPropertiesAdvanced.exe
+set cbf-application=%systemroot%\system32\SystemPropertiesAdvanced.exe
 
-set cbf_fn=%cbf_application%
+set cbf-fn=%cbf-application%
 
 exit/b
 
@@ -12331,7 +12331,7 @@ rem fcd: May-11-2017
 echo.
 echo %fp%
 
-set cbf_application=c:\windows\system32\services.msc
+set cbf-application=c:\windows\system32\services.msc
 
 exit/b
 
@@ -12348,9 +12348,9 @@ rem lu: Jun-13-2018
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\desktop
+set cbf-pt=%userprofile%\desktop
 
-set cbf_fn=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
+set cbf-fn=%appdata%\microsoft\internet explorer\quick launch\shows desktop.lnk
 
 exit/b
 
@@ -12367,7 +12367,7 @@ rem lu: Jun-13-2018
 echo.
 echo %fp%
 
-set cbf_fn=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
+set cbf-fn=%appdata%\microsoft\internet explorer\quick launch\window switcher.lnk
 
 exit/b
 
@@ -12388,7 +12388,7 @@ rem lu: Jun-7-2018
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\downloads
+set cbf-pt=%userprofile%\downloads
 
 exit/b
 
@@ -12405,7 +12405,7 @@ rem lu: Nov-19-2019
 echo.
 echo %fp%
 
-set cbf_path=%appdata%\Microsoft\Windows\Recent
+set cbf-pt=%appdata%\Microsoft\Windows\Recent
 
 exit/b
 
@@ -12422,7 +12422,7 @@ rem lu: Mar-27-2020
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu
+set cbf-pt=%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu
 
 exit/b
 
@@ -12441,7 +12441,7 @@ rem fcd: May-9-2017
 echo.
 echo %fp%
 
-set cbf_path=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+set cbf-pt=%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
 
 exit/b
 
@@ -12458,7 +12458,7 @@ rem lu: Jul-9-2018
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\documents
+set cbf-pt=%userprofile%\documents
 
 exit/b
 
@@ -12479,7 +12479,7 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\desktop
+set cbf-pt=%userprofile%\desktop
 
 exit/b
 
@@ -12498,7 +12498,7 @@ rem lu: Dec-27-2018
 echo.
 echo %fp%
 
-set cbf_path=c:\windows\system32
+set cbf-pt=c:\windows\system32
 
 exit/b
 
@@ -12517,7 +12517,7 @@ rem lu: Feb-5-2019
 echo.
 echo %fp%
 
-set cbf_path=c:\windows
+set cbf-pt=c:\windows
 
 exit/b
 
@@ -12534,9 +12534,9 @@ rem lu: Feb-16-2018
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files\Docker\Docker\Docker Desktop.exe
+set cbf-application=C:\Program Files\Docker\Docker\Docker Desktop.exe
 
-set cbf_url=https://github.com/AlinaIo/etc2018.git
+set cbf-url=https://github.com/AlinaIo/etc2018.git
 
 exit/b
 
@@ -12557,9 +12557,9 @@ rem lu: Aug-8-2018
 echo.
 echo %fp%
 
-set cbf_fn=%Dropbox%\Miscellaneous Documents\groove is in the heart.xlsx
+set cbf-fn=%Dropbox%\Miscellaneous Documents\groove is in the heart.xlsx
 
-set cbf_path=%dropbox%\mp3\Jun-5-2018
+set cbf-pt=%dropbox%\mp3\Jun-5-2018
 
 exit/b
 
@@ -12576,7 +12576,7 @@ rem lu: Jan-14-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\mp3
+set cbf-pt=%dropbox%\mp3
 
 exit/b
 
@@ -12593,7 +12593,7 @@ rem lu: May-26-2019
 echo.
 echo %fp%
 
-set cbf_application=C:\Program Files (x86)\Mp3tag\mp3tag.exe
+set cbf-application=C:\Program Files (x86)\Mp3tag\mp3tag.exe
 
 exit/b
 
@@ -12612,7 +12612,7 @@ rem lu: Jan-14-2019
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\mp3\Jan-14-2019 - Accidentally Moved
+set cbf-pt=%dropbox%\mp3\Jan-14-2019 - Accidentally Moved
 
 exit/b
 
@@ -12629,7 +12629,7 @@ rem lu: Feb-10-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\mp3\Baryonic Dark Matter
+set cbf-pt=%dropbox%\mp3\Baryonic Dark Matter
 
 exit/b
 
@@ -12650,7 +12650,7 @@ rem lu: Jan-8-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\backups\mission
+set cbf-pt=%dropbox%\backups\mission
 
 exit/b
 
@@ -12667,7 +12667,7 @@ rem lu: Jan-8-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\backups\savannah
+set cbf-pt=%dropbox%\backups\savannah
 
 exit/b
 
@@ -12684,7 +12684,7 @@ rem lu: Jan-8-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\backups
+set cbf-pt=%dropbox%\backups
 
 exit/b
 
@@ -12701,7 +12701,7 @@ rem lu: Apr-2-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\jonathan
+set cbf-pt=%dropbox%\jonathan
 
 exit/b
 
@@ -12718,7 +12718,7 @@ rem lu: Apr-2-2020
 echo.
 echo %fp%
 
-set cbf_ex=%dropbox%\backups\mission\mission at home.xlsx
+set cbf-ex=%dropbox%\backups\mission\mission at home.xlsx
 
 exit/b
 
@@ -12737,7 +12737,7 @@ echo %fp%
 
 call pn cm
 
-set cbf_fn=%cbf_path%\ActiveMQ Analysis.xlsx
+set cbf-fn=%cbf-pt%\ActiveMQ Analysis.xlsx
 
 exit/b
 
@@ -12758,7 +12758,7 @@ rem lu: Jan-23-2018
 echo.
 echo %fp%
 
-set cbf_path=%temp%
+set cbf-pt=%temp%
 
 exit/b
 
@@ -12781,9 +12781,9 @@ echo %fp%
 
 call n cc
 
-set cbf_fn=%cbf_path%\.kitchen\logs\kitchen.log
+set cbf-fn=%cbf-pt%\.kitchen\logs\kitchen.log
 
-set cbf_path=%cbf_path%\.kitchen\logs
+set cbf-pt=%cbf-pt%\.kitchen\logs
 
 exit/b
 
@@ -12800,7 +12800,7 @@ rem lu: Apr-13-2020
 echo.
 echo %fp%
 
-set cbf_fn=c:\cookbook_test\cart\.kitchen\logs\sr75-centos-7.log
+set cbf-fn=c:\cookbook_test\cart\.kitchen\logs\sr75-centos-7.log
 
 exit/b
 
@@ -12819,7 +12819,7 @@ rem lu: Apr-22-2020
 echo.
 echo %fp%
 
-set cbf_application=%systemroot%\explorer.exe
+set cbf-application=%systemroot%\explorer.exe
 
 exit/b
 
@@ -12846,7 +12846,7 @@ echo %fp%
 
 call n c>nul
 
-set cbf_path=%cbf_path%\Quick Code Backup
+set cbf-pt=%cbf-pt%\Quick Code Backup
 
 exit/b
 
@@ -12881,7 +12881,7 @@ echo %fp%
 
 call n rf_ma
 
-set cbf_path=%cbf_path%\api\build\libs
+set cbf-pt=%cbf-pt%\api\build\libs
 
 exit/b
 
@@ -12900,7 +12900,7 @@ rem lu: Apr-27-2020
 echo.
 echo %fp%
 
-set cbf_application=c:\program files\winzip\winzip64.exe
+set cbf-application=c:\program files\winzip\winzip64.exe
 
 exit/b
 
@@ -12917,9 +12917,9 @@ rem lu: Apr-28-2020
 echo.
 echo %fp%
 
-set cbf_file_type=*.asc *.txt
+set cbf-file-type=*.asc *.txt
 
-set cbf_path=c:\aa\cs
+set cbf-pt=c:\aa\cs
 
 exit/b
 
@@ -12938,7 +12938,7 @@ echo %fp%
 
 call pn rf_cade
 
-set cbf_path=%cbf_path%\Build Master
+set cbf-pt=%cbf-pt%\Build Master
 
 exit/b
 
@@ -12957,13 +12957,13 @@ echo %fp%
 
 call pn rf_cade>nul
 
-set cbf_path=%cbf_path%\tickets\%1
+set cbf-pt=%cbf-pt%\tickets\%1
 
-set cbf_fn=%cbf_path%\1657 display options.xlsx
+set cbf-fn=%cbf-pt%\1657 display options.xlsx
 
-set cbf_ex=%cbf_path%\CART_ENROLLMENTS__report_highlighted.xlsx
+set cbf-ex=%cbf-pt%\CART_ENROLLMENTS__report_highlighted.xlsx
 
-set cbf_png=%cbf_path%\demo.png
+set cbf-png=%cbf-pt%\demo.png
 
 exit/b
 
@@ -12980,7 +12980,7 @@ rem lu: May-12-2020
 echo.
 echo %fp%
 
-set cbf_ex=%dropbox%\jonathan\miscellany\My Color Dictionary.xlsx
+set cbf-ex=%dropbox%\jonathan\miscellany\My Color Dictionary.xlsx
 
 exit/b
 
@@ -12997,7 +12997,7 @@ rem lu: May-14-2020
 echo.
 echo %fp%
 
-set cbf_path=%cbf_repo%\cade\tickets
+set cbf-pt=%cbf-repo%\cade\tickets
 
 exit/b
 
@@ -13014,7 +13014,7 @@ rem lu: May-14-2020
 echo.
 echo %fp%
 
-set cbf_url=https://www.google.com/advanced_search
+set cbf-url=https://www.google.com/advanced_search
 
 exit/b
 
@@ -13031,7 +13031,7 @@ rem lu: May-15-2020
 echo.
 echo %fp%
 
-set cbf_cf=https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html
+set cbf-cf=https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html
 
 exit/b
 
@@ -13048,7 +13048,7 @@ rem lu: May-19-2020
 echo.
 echo %fp%
 
-set cbf_path=%aa%\test
+set cbf-pt=%aa%\test
 
 exit/b
 
@@ -13067,7 +13067,7 @@ echo %fp%
 
 call pn cade>nul
 
-set cbf_path=%cbf_path%\tickets
+set cbf-pt=%cbf-pt%\tickets
 
 exit/b
 
@@ -13088,7 +13088,7 @@ echo %fp%
 
 call n dr>nul
 
-set cbf_ex=%cbf_path%\jonathan\miscellany\my house cleaning project.xlsx
+set cbf-ex=%cbf-pt%\jonathan\miscellany\my house cleaning project.xlsx
 
 exit/b
 
@@ -13105,7 +13105,7 @@ rem lu: May-26-2020
 echo.
 echo %fp%
 
-set cbf_ex=%savannah%\Excels\Poker_Results.xls
+set cbf-ex=%savannah%\Excels\Poker_Results.xls
 
 exit/b
 
@@ -13123,7 +13123,7 @@ echo.
 echo %fp%
 
 call pn cm>nul
-set cbf_ex=%cbf_path%\log size.xlsx
+set cbf-ex=%cbf-pt%\log size.xlsx
 
 exit/b
 
@@ -13142,11 +13142,11 @@ echo %fp%
 
 call pn po_ui>nul
 
-set cbf_path=%cbf_path%\src\app\office-settings
+set cbf-pt=%cbf-pt%\src\app\office-settings
 
-set cbf_fn=%cbf_path%\office-settings.component.html
+set cbf-fn=%cbf-pt%\office-settings.component.html
 
-set cbf_ts=%cbf_path%\office-settings.component.ts
+set cbf-ts=%cbf-pt%\office-settings.component.ts
 
 exit/b
 
@@ -13167,9 +13167,9 @@ rem lu: Dec-5-2018
 echo.
 echo %fp%
 
-set cbf_ex=%share-zone%\Cart Timecard Calculator.xlsx
+set cbf-ex=%share-zone%\Cart Timecard Calculator.xlsx
 
-set cbf_url=https://devtechnology.unanet.biz/devtechnology/action/home
+set cbf-url=https://devtechnology.unanet.biz/devtechnology/action/home
 
 exit/b
 
@@ -13188,7 +13188,7 @@ echo %fp%
 
 call pn cm>nul
 
-set cbf_ex=%cbf_path%\running services.xlsx
+set cbf-ex=%cbf-pt%\running services.xlsx
 
 exit/b
 
@@ -13206,17 +13206,17 @@ echo.
 echo %fp%
 
 call pn v12>nul
-set cbf_xml=%cbf_path%\1_12_0_x17_rename_table_columns_2.xml
+set cbf-xml=%cbf-pt%\1_12_0_x17_rename_table_columns_2.xml
 
 call pn tick>nul
 
-set cbf_path=%cbf_path%\%1
+set cbf-pt=%cbf-pt%\%1
 
-set cbf_cf=https://confluence.ice.dhs.gov/display/CART/Database+Field+changes
+set cbf-cf=https://confluence.ice.dhs.gov/display/CART/Database+Field+changes
 
-set cbf_ex=%cbf_path%\%1.xlsx
+set cbf-ex=%cbf-pt%\%1.xlsx
 
-set cbf_now=%cbf_path%\%1.now
+set cbf-now=%cbf-pt%\%1.now
 
 exit/b
 
@@ -13235,7 +13235,7 @@ echo %fp%
 
 call pn api>nul
 
-set cbf_path=%cbf_path%\src\main\%1
+set cbf-pt=%cbf-pt%\src\main\%1
 
 exit/b
 
@@ -13256,11 +13256,11 @@ rem lu: Jun-9-2020
 echo.
 echo %fp%
 
-rem set cbf_application=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.exe
+rem set cbf-application=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.exe
 
-set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code\Visual Studio Code.lnk
+set cbf-application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code\Visual Studio Code.lnk
 
-rem set cbf_fn=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.exe
+rem set cbf-fn=C:\Users\JJones2\AppData\Local\Programs\Microsoft VS Code\Code.exe
 
 exit/b
 
@@ -13285,9 +13285,9 @@ echo %fp%
 
 call tdp ma>nul
 
-set cbf_path=%cd%
+set cbf-pt=%cd%
 
-set cbf_fn=%cbf_path%\cart_vscode.code-workspace
+set cbf-fn=%cbf-pt%\cart_vscode.code-workspace
 
 exit/b
 
@@ -13306,7 +13306,7 @@ echo %fp%
 
 call pn serv>nul
 
-set cbf_fn=%cbf_path%\cart.service.ts
+set cbf-fn=%cbf-pt%\cart.service.ts
 
 exit/b
 
@@ -13325,9 +13325,9 @@ echo %fp%
 
 call pn tick>nul
 
-set cbf_path=%cbf_path%\%1
+set cbf-pt=%cbf-pt%\%1
 
-set cbf_ex=%cbf_path%\%1.xlsx
+set cbf-ex=%cbf-pt%\%1.xlsx
 
 exit/b
 
@@ -13348,7 +13348,7 @@ rem lu: Jun-11-2020
 echo.
 echo %fp%
 
-set cbf_path=%userprofile%\dev\cart
+set cbf-pt=%userprofile%\dev\cart
 
 exit/b
 
@@ -13367,7 +13367,7 @@ echo %fp%
 
 call pn po_ma>nul
 
-set cbf_path=%cbf_path%\api
+set cbf-pt=%cbf-pt%\api
 
 exit/b
 
@@ -13386,7 +13386,7 @@ echo %fp%
 
 call pn po_dic>nul
 
-set cbf_fn=%cbf_path%\web\rest\exception\InternalServerErrorException.java
+set cbf-fn=%cbf-pt%\web\rest\exception\InternalServerErrorException.java
 
 exit/b
 
@@ -13405,9 +13405,9 @@ echo %fp%
 
 call pn po_cm>nul
 
-set cbf_ex=%cbf_path%\run list analysis.xlsx
+set cbf-ex=%cbf-pt%\run list analysis.xlsx
 
-set cbf_wo=%cbf_path%\run list document.docx
+set cbf-wo=%cbf-pt%\run list document.docx
 
 exit/b
 
@@ -13426,7 +13426,7 @@ echo %fp%
 
 call pn po_cm>nul
 
-set cbf_ex=%cbf_path%\chef changes.xlsx
+set cbf-ex=%cbf-pt%\chef changes.xlsx
 
 exit/b
 
@@ -13449,9 +13449,9 @@ rem lu: Jun-24-2020
 echo.
 echo %fp%
 
-set cbf_path=%my documents%\gpodder\downloads
+set cbf-pt=%my documents%\gpodder\downloads
 
-set cbf_application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
+set cbf-application=C:\Program Files (x86)\gPodder\bin\gpodder.exe
 
 exit/b
 
@@ -13470,10 +13470,10 @@ rem lu: May-19-2020
 echo.
 echo %fp%
 
-if exist g:\audiobooks set cbf_path=g:\audiobooks
-if exist h:\audiobooks set cbf_path=h:\audiobooks
+if exist g:\audiobooks set cbf-pt=g:\audiobooks
+if exist h:\audiobooks set cbf-pt=h:\audiobooks
 
-set cbf_path=g:\audiobooks
+set cbf-pt=g:\audiobooks
 
 
 exit/b
@@ -13493,12 +13493,12 @@ rem lu: Jul-15-2018
 echo.
 echo %fp%
 
-if exist g:\podcasts set cbf_path=g:\podcasts
-if exist h:\podcasts set cbf_path=h:\podcasts
+if exist g:\podcasts set cbf-pt=g:\podcasts
+if exist h:\podcasts set cbf-pt=h:\podcasts
 
-if "%cbf_path%" == "" (
+if "%cbf-pt%" == "" (
   echo.
-  echo * Error: cbf_path is undefined. Is the MP3 player plugged in?
+  echo * Error: cbf-pt is undefined. Is the MP3 player plugged in?
   exit/b 1
 )
 
@@ -13519,7 +13519,7 @@ rem lu: Jan-14-2019
 echo.
 echo %fp%
 
-set cbf_path=%my documents%\mp3 staging area
+set cbf-pt=%my documents%\mp3 staging area
 
 exit/b
 
@@ -13540,11 +13540,11 @@ echo %fp%
 
 call pn >nul
 
-set cbf_ex=c:\a\test7 .xlsx
+set cbf-ex=c:\a\test7 .xlsx
 
-set cbf_fn=c:\a\test2.txt
+set cbf-fn=c:\a\test2.txt
 
-set cbf_wo=c:\a\test5.docx
+set cbf-wo=c:\a\test5.docx
 
 exit/b
 
@@ -13571,9 +13571,9 @@ echo %fp%
 
 call an edge
 
-set cbf_application=C:\Users\jonat\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk
+set cbf-application=C:\Users\jonat\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk
 
-set cbf_url=https://teams.microsoft.com
+set cbf-url=https://teams.microsoft.com
 
 exit/b
 
@@ -13590,7 +13590,7 @@ rem lu: Feb-3-2020
 echo.
 echo %fp%
 
-set cbf_url=https://downdetector.com/status/teams/
+set cbf-url=https://downdetector.com/status/teams/
 
 exit/b
 
@@ -13615,9 +13615,9 @@ rem By calling the "nexu" method first, what this says is that any values not as
 rem will be pulled from the "nexu" CBF.
 
 call pn s
-call %cbf_path%\ni nexu
+call %cbf-pt%\ni nexu
 
-set cbf_path=%dropbox%\pictures\new and exciting
+set cbf-pt=%dropbox%\pictures\new and exciting
 
 exit/b
 
@@ -13634,7 +13634,7 @@ rem lu: Sep-25-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\pictures
+set cbf-pt=%dropbox%\pictures
 
 exit/b
 
@@ -13655,7 +13655,7 @@ rem lu: Oct-12-2020
 echo.
 echo %fp%
 
-set cbf_application=%AppData%\Zoom\bin\zoom.exe
+set cbf-application=%AppData%\Zoom\bin\zoom.exe
 
 exit/b
 
@@ -13672,7 +13672,7 @@ rem lu: Oct-12-2020
 echo.
 echo %fp%
 
-set cbf_application=%AppData%\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk
+set cbf-application=%AppData%\Microsoft\Windows\Start Menu\Programs\Microsoft Teams.lnk
 
 exit/b
 
@@ -13689,7 +13689,7 @@ rem lu: May-20-2019
 echo.
 echo %fp%
 
-set cbf_url=https://github.com/jonathan-r-jones/App-Center-Demo.git
+set cbf-url=https://github.com/jonathan-r-jones/App-Center-Demo.git
 
 exit/b
 
@@ -13706,7 +13706,7 @@ rem lu: Oct-15-2020
 echo.
 echo %fp%
 
-set cbf_fn=%share-zone%\Miscellany\Ansible_Code_Keepers.txt
+set cbf-fn=%share-zone%\Miscellany\Ansible_Code_Keepers.txt
 
 exit/b
 
@@ -13725,20 +13725,20 @@ echo %fp%
 
 rem Determine installation path.
 
-set cbf_application=
+set cbf-application=
 
-if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2021.1\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2021.1\bin\idea64.exe
-if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe
-if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe
-if exist "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin\idea64.exe" set cbf_application=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin\idea64.exe
+if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2021.1\bin\idea64.exe" set cbf-application=C:\Program Files\JetBrains\IntelliJ IDEA 2021.1\bin\idea64.exe
+if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe" set cbf-application=C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin\idea64.exe
+if exist "C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe" set cbf-application=C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin\idea64.exe
+if exist "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin\idea64.exe" set cbf-application=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin\idea64.exe
 
-if "%cbf_application%" == "" (
+if "%cbf-application%" == "" (
   echo.
   echo * IntelliJ is not installed.
   exit/b 1
 )
 
-set cbf_path=%cbf_application:\idea64.exe=%
+set cbf-pt=%cbf-application:\idea64.exe=%
 
 exit/b
 
@@ -13755,7 +13755,7 @@ rem lu: Nov-11-2020
 echo.
 echo %fp%
 
-set cbf_path=%dropbox%\IT\Setting up a Java Development Environment
+set cbf-pt=%dropbox%\IT\Setting up a Java Development Environment
 
 exit/b
 
@@ -13776,7 +13776,7 @@ echo %fp%
 
 call pn caco>nul
 
-set cbf_fn=%cbf_path%\metadata.rb
+set cbf-fn=%cbf-pt%\metadata.rb
 
 exit/b
 
@@ -13799,13 +13799,13 @@ echo %fp%
 
 call pn r>nul
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Mob-Programming-Demo.git
 
-set cbf_gh=https://github.com/jonathan-r-jones/Mob-Programming-Demo
+set cbf-gh=https://github.com/jonathan-r-jones/Mob-Programming-Demo
 
-set cbf_path=%cbf_path%\Mob-Programming-Presentation-Dec-18-2020
+set cbf-pt=%cbf-pt%\Mob-Programming-Presentation-Dec-18-2020
 
-set cbf_pp=%cbf_path%\mob.pptx
+set cbf-pp=%cbf-pt%\mob.pptx
 
 exit/b
 
@@ -13830,11 +13830,11 @@ echo %fp%
 
 call pn r>nul
 
-set cbf_path=%cbf_path%\java-bowling-game
+set cbf-pt=%cbf-pt%\java-bowling-game
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Java-Bowling-Game.git
 
-set cbf_gh=https://github.com/jonathan-r-jones/Java-Bowling-Game
+set cbf-gh=https://github.com/jonathan-r-jones/Java-Bowling-Game
 
 exit/b
 
@@ -13857,11 +13857,11 @@ echo %fp%
 
 call pn r>nul
 
-set cbf_brancdh=main
+set cbf-brancdh=main
 
-set cbf_path=%cbf_path%\rnk
+set cbf-pt=%cbf-pt%\rnk
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Roman-Numeral-Kata.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Roman-Numeral-Kata.git
 
 exit/b
 
@@ -13884,11 +13884,11 @@ echo %fp%
 
 call pn r>nul
 
-set cbf_branch=main
+set cbf-branch=main
 
-set cbf_path=%cbf_path%\poker
+set cbf-pt=%cbf-pt%\poker
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/three-card-poker.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/three-card-poker.git
 
 exit/b
 
@@ -13905,7 +13905,7 @@ rem lu: Nov-21-2020
 echo.
 echo %fp%
 
-set cbf_url=http://mobtimer.zoeetrope.com/
+set cbf-url=http://mobtimer.zoeetrope.com/
 
 exit/b
 
@@ -13922,7 +13922,7 @@ rem lu: Nov-30-2020
 echo.
 echo %fp%
 
-set cbf_url=https://www.calculatorsoup.com/calculators/conversions/roman-numeral-converter.php
+set cbf-url=https://www.calculatorsoup.com/calculators/conversions/roman-numeral-converter.php
 
 exit/b
 
@@ -13939,7 +13939,7 @@ rem lu: Nov-21-2020
 echo.
 echo %fp%
 
-set cbf_url=https://www.easycalculation.com/sports/bowling-score-calculator.php
+set cbf-url=https://www.easycalculation.com/sports/bowling-score-calculator.php
 
 exit/b
 
@@ -13958,13 +13958,13 @@ echo %fp%
 
 call pn r>nul
 
-set cbf_branch=master
+set cbf-branch=master
 
-set cbf_path=%cbf_path%\obowling-game
+set cbf-pt=%cbf-pt%\obowling-game
 
-set cbf_clone_url=https://github.com/yboug/bowling-game.git
+set cbf-clone-url=https://github.com/yboug/bowling-game.git
 
-set cbf_url=https://github.com/yboug/bowling-game
+set cbf-url=https://github.com/yboug/bowling-game
 
 exit/b
 
@@ -13983,11 +13983,11 @@ echo %fp%
 
 call pn r>nul
 
-set cbf_branch=master
+set cbf-branch=master
 
-set cbf_path=%cbf_path%\%1
+set cbf-pt=%cbf-pt%\%1
 
-set cbf_clone_url=https://github.com/xpepper/poker-hands-kata.git
+set cbf-clone-url=https://github.com/xpepper/poker-hands-kata.git
 
 exit/b
 
@@ -14006,11 +14006,11 @@ echo %fp%
 
 call pn r>nul
 
-set cbf_branch=main
+set cbf-branch=main
 
-set cbf_path=%cbf_path%\Java-Calculator
+set cbf-pt=%cbf-pt%\Java-Calculator
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Java-Calculator.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Java-Calculator.git
 
 exit/b
 
@@ -14027,7 +14027,7 @@ rem lu: Dec-2-2020
 echo.
 echo %fp%
 
-set cbf_path=%share-zone%\miscellany
+set cbf-pt=%share-zone%\miscellany
 
 exit/b
 
@@ -14052,16 +14052,16 @@ rem lu: Dec-7-2018
 echo.
 echo %fp%
 
-set cbf_branch=master
+set cbf-branch=master
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Share-Zone.git
 
-set cbf_gh=https://github.com/jonathan-r-jones/Share-Zone.git
+set cbf-gh=https://github.com/jonathan-r-jones/Share-Zone.git
 
-set cbf_path=%share-zone%
+set cbf-pt=%share-zone%
 
-rem set cbf_url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
-rem set cbf_url=git@bitbucket.org:Jonathan17/share-zone.git
+rem set cbf-url=https://Jonathan17@bitbucket.org/Jonathan17/share-zone.git
+rem set cbf-url=git@bitbucket.org:Jonathan17/share-zone.git
 
 exit/b
 
@@ -14087,7 +14087,7 @@ rem lu: Jun-9-2021
 echo.
 echo %fp%
 
-set cbf_path=%share-zone%\Miscellany
+set cbf-pt=%share-zone%\Miscellany
 
 exit/b
 
@@ -14106,9 +14106,9 @@ echo %fp%
 
 call pn r
 
-set cbf_clone_url=https://github.com/jonathan-r-jones/Share-Zone.git
+set cbf-clone-url=https://github.com/jonathan-r-jones/Share-Zone.git
 
-set cbf_path=%cbf_path%\szt
+set cbf-pt=%cbf-pt%\szt
 
 exit/b
 
@@ -14127,7 +14127,7 @@ echo %fp%
 
 call n pict>nul
 
-set cbf_path=%cbf_path%\professional emulation
+set cbf-pt=%cbf-pt%\professional emulation
 
 exit/b
 
@@ -14148,13 +14148,13 @@ echo %fp%
 
 call pn r>nul
 
-set cbf_branch=master
+set cbf-branch=master
 
-set cbf_clone_url=https://github.com/adrienverge/yamllint.git
+set cbf-clone-url=https://github.com/adrienverge/yamllint.git
 
-set cbf_gh=https://github.com/adrienverge/yamllint
+set cbf-gh=https://github.com/adrienverge/yamllint
 
-set cbf_path=%cbf_path%\yml-linter
+set cbf-pt=%cbf-pt%\yml-linter
 
 exit/b
 
@@ -14171,11 +14171,11 @@ rem lu: Aug-12-2019
 echo.
 echo %fp%
 
-set cbf_application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
+set cbf-application=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
 
-set cbf_fn=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
+set cbf-fn=C:\Users\JJones2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git\Git Bash.lnk
 
-set cbf_path=C:\Users\JJones 2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
+set cbf-pt=C:\Users\JJones 2\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Git
 
 exit/b
 
@@ -14197,7 +14197,7 @@ rem lu: Nov-30-2020
 echo.
 echo %fp%
 
-set cbf_gh=https://github.com/jonathan-r-jones
+set cbf-gh=https://github.com/jonathan-r-jones
 
 exit/b
 
@@ -14216,9 +14216,9 @@ echo %fp%
 
 call pn s>nul
 
-set cbf_path=%cbf_path%\lbm
+set cbf-pt=%cbf-pt%\lbm
 
-set cbf_fn=%cbf_path%\lbm.asc
+set cbf-fn=%cbf-pt%\lbm.asc
 
 exit/b
 

@@ -46,7 +46,7 @@ exit/b
 
 :main_function
 
-set cbf_parameter=
+set cbf-parameter=
 
 r gg
 

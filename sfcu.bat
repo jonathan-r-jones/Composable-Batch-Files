@@ -14,7 +14,7 @@ set filep=* Surf the internet using custom URL.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto use_current_cbf_url
+if "%~1" == "" goto use_current_cbf-url
 
 if "%~1" == "/?" goto help
 
@@ -56,7 +56,7 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 set fp=* Set URL.
 
-set cbf_parameter=%cbf_url%
+set cbf-parameter=%cbf-url%
 
 goto set_browser
 
@@ -64,14 +64,14 @@ goto set_browser
 
 :_
 
-:use_current_cbf_url
+:use_current_cbf-url
 
-set fp=* Use current CBF_URL.
+set fp=* Use current cbf-URL.
 
 rem echo.
 rem echo %fp%
 
-set cbf_parameter=%cbf_url%
+set cbf-parameter=%cbf-url%
 
 
 
@@ -83,7 +83,7 @@ set fp=* Set browser.
 
 if not "%~2" == "" goto override_default_browser
 
-set cbf_application=%cbf_default_browser%
+set cbf-application=%cbf-default-browser%
 
 goto main_function
 

@@ -45,7 +45,7 @@ echo.
 echo Batch file style: Single Purpose
 
 echo.
-echo Entangled variable: cbf_path
+echo Entangled variable: cbf-pt
 
 echo.
 echo Examples:

@@ -63,7 +63,7 @@ exit/b
 
 :main_function
 
-set cbf_parameter=%temp%\search_results_%1.txt
+set cbf-parameter=%temp%\search_results_%1.txt
 
 call an me
 

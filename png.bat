@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Leverage cbf_png variable.
+set filep=* Leverage cbf-png variable.
 
 
 
@@ -31,7 +31,7 @@ rem lu:
 echo.
 echo Usage: %0 [space separated parameter(s)]
 
-set parameter_1=Parameter 1: Cbf_png alias to reference.
+set parameter_1=Parameter 1: cbf-png alias to reference.
 
 echo.
 echo %parameter_1%
@@ -52,13 +52,13 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_png%" == "" (
+if "%cbf-png%" == "" (
   echo.
-  echo * Error: Cbf_png is not defined for %1.
+  echo * Error: cbf-png is not defined for %1.
   exit/b
 )
 
-set cbf_fn=%cbf_png%
+set cbf-fn=%cbf-png%
 
 call m double_click
 

@@ -74,7 +74,7 @@ echo    cpcf  Use file in the current folder to "save as" to a filename alias
 echo    cpcp  Copy file in the current directory to nickname-specified path
 echo    cpfc  Use filename alias to "save as" a file in the current folder
 echo    cpff  Use filename alias 1 to "save as" filename alias 2
-echo     cpp  Copies file from a cbf_path nickname
+echo     cpp  Copies file from a cbf-pt nickname
 echo    cppp  Copy file from alias path param 1 to alias path param 2
 echo    cpte  Copy te.bat to a new batch file
 echo      cs  File contents search
@@ -127,10 +127,10 @@ echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations
 echo      kc  Connect to servers
 echo       l  Use a DCV to copy a cbf variable to the clipboard
-echo      lp  Load CBF_Path to the clipboard
-echo     lpf  Load cbf_fn of passed in alias onto the clipboard
-echo    lpfc  Load cbf_fn contents to the clipboard
-echo   lpfwp  Load cbf_fn without path of passed in alias onto the clipboard
+echo      lp  Load cbf-pt to the clipboard
+echo     lpf  Load cbf-fn of passed in alias onto the clipboard
+echo    lpfc  Load cbf-fn contents to the clipboard
+echo   lpfwp  Load cbf-fn without path of passed in alias onto the clipboard
 echo       m  Perform miscellaneous tasks using a function routing style
 echo     mav  Maven
 echo     mcd  Make and navigate (cd) to a folder
@@ -156,7 +156,7 @@ echo      pg  Ping hooked up to the nicknames dictionary
 echo      pl  Git pull, has TD parameter
 echo      pn  Sets only the path for an alias.
 echo     pql  PostgreSQL
-echo     png  Run cbf_png as a double-click filename
+echo     png  Run cbf-png as a double-click filename
 echo      pr  Execute the pull requests namesake DCV for the passed in alias.
 echo      ps  PowerShell
 echo     qfn  Query if a file exists based on its passed in alias
@@ -173,7 +173,7 @@ echo  scpx_c  SCPX consumer
 echo scpx_c2  SCPX consumer 2 - for copying files to new servers
 echo      se  Internet search helper
 echo      sf  Surf to websites. A DCV is optional.
-echo     sfn  Set cbf_fn based on an evaluated filename parameter
+echo     sfn  Set cbf-fn based on an evaluated filename parameter
 echo      sh  SSH
 echo     sln  Open a Visual Studio solution, has TD parameter
 echo      sm  Sublime

@@ -88,7 +88,7 @@ if %errorlevel% == 0 (
 
 call m clear_errorlevel_silently 
 
-call m reset_cbf_variables
+call m reset_cbf-variables
 
 call n %~1
 
@@ -106,13 +106,13 @@ goto main_function
 
 call m compose_variable %2
 
-if "%cbf_expanded_variable%" == "" (
+if "%cbf-expanded-variable%" == "" (
   echo. 
-  echo * Error: There is no definition of "cbf_%2" for the alias "%1".
+  echo * Error: There is no definition of "cbf-%2" for the alias "%1".
   exit/b
 )
 
-call dc "%cbf_expanded_variable%"
+call dc "%cbf-expanded-variable%"
 
 exit/b
 
@@ -125,15 +125,15 @@ exit/b
 set fp=* Create new Excel file.
 
 rem echo.
-rem echo cbf_ex: "%cbf_ex%"
+rem echo cbf-ex: "%cbf-ex%"
 
-call m distill_filename "%cbf_ex%"
+call m distill_filename "%cbf-ex%"
 
-call m distill_path "%cbf_ex%"
+call m distill_path "%cbf-ex%"
 
-cd /d "%cbf_distilled_path%"
+cd /d "%cbf-distilled_path%"
 
-call cpfc exb "%cbf_distilled_filename%"
+call cpfc exb "%cbf-distilled_filename%"
 
 exit/b
 
@@ -145,13 +145,13 @@ exit/b
 
 set fp=* Create new Word file.
 
-call m distill_filename "%cbf_wo%"
+call m distill_filename "%cbf-wo%"
 
-call m distill_path "%cbf_wo%"
+call m distill_path "%cbf-wo%"
 
-cd /d "%cbf_distilled_path%"
+cd /d "%cbf-distilled_path%"
 
-call cpfc wob "%cbf_distilled_filename%"
+call cpfc wob "%cbf-distilled_filename%"
 
 exit/b
 
@@ -167,9 +167,9 @@ set fp=* Below here is the order of operations.
 
 :_
 
-if not "%cbf_application%" == "" (
+if not "%cbf-application%" == "" (
   rem echo.
-  rem echo * Cbf_application is non-blank. Jun-9-2020_3_28_PM
+  rem echo * cbf-application is non-blank. Jun-9-2020_3_28_PM
   call ap %1>nul
   exit/b
 )
@@ -178,15 +178,15 @@ if not "%cbf_application%" == "" (
 
 :_
 
-if not "%cbf_wo%" == "" (
-  if exist "%cbf_wo%" (
-    set cbf_fn=%cbf_wo%
+if not "%cbf-wo%" == "" (
+  if exist "%cbf-wo%" (
+    set cbf-fn=%cbf-wo%
     call m double_click
     call r
     exit/b
   ) else (
     echo.
-    echo * Could not find the file "%cbf_wo%" so create it.
+    echo * Could not find the file "%cbf-wo%" so create it.
     goto create_new_word_file
     exit/b
   )
@@ -196,17 +196,17 @@ if not "%cbf_wo%" == "" (
 
 :_
 
-if not "%cbf_ex%" == "" (
-  if exist "%cbf_ex%" (
+if not "%cbf-ex%" == "" (
+  if exist "%cbf-ex%" (
     rem echo.
-    rem echo * Double click Excel file "%cbf_ex%".
-    set cbf_fn=%cbf_ex%
+    rem echo * Double click Excel file "%cbf-ex%".
+    set cbf-fn=%cbf-ex%
     call m double_click
     call r
     exit/b
   ) else (
     echo.
-    echo * Could not find the file "%cbf_ex%" so create it.
+    echo * Could not find the file "%cbf-ex%" so create it.
     goto create_new_excel_file
     exit/b
   )
@@ -216,11 +216,11 @@ if not "%cbf_ex%" == "" (
 
 :_
 
-if not "%cbf_pptx%" == "" (
-  if exist "%cbf_pptx%" (
+if not "%cbf-pptx%" == "" (
+  if exist "%cbf-pptx%" (
     rem echo.
-    rem echo * Double click Powerpoint file "%cbf_pptx%".
-    set cbf_fn=%cbf_pptx%
+    rem echo * Double click Powerpoint file "%cbf-pptx%".
+    set cbf-fn=%cbf-pptx%
     call m double_click
     call r
     exit/b
@@ -231,15 +231,15 @@ if not "%cbf_pptx%" == "" (
 
 :_
 
-if not "%cbf_fn%" == "" (
-  if exist "%cbf_fn%" (
+if not "%cbf-fn%" == "" (
+  if exist "%cbf-fn%" (
     rem echo.
-    rem echo * File exists cbf_fn: %cbf_fn%.
+    rem echo * File exists cbf-fn: %cbf-fn%.
     call xfn %1>nul
     exit/b
   ) else (
     echo.
-    echo * Error: File "%cbf_fn%" does not exist.
+    echo * Error: File "%cbf-fn%" does not exist.
     exit/b
   )
 )
@@ -248,7 +248,7 @@ if not "%cbf_fn%" == "" (
 
 :_
 
-if not "%cbf_url%" == "" (
+if not "%cbf-url%" == "" (
   call sf %1>nul
   exit/b
 )
@@ -257,9 +257,9 @@ if not "%cbf_url%" == "" (
 
 :_
 
-if not "%cbf_png%" == "" (
-  if exist "%cbf_png%" (
-    call dc "%cbf_png%"
+if not "%cbf-png%" == "" (
+  if exist "%cbf-png%" (
+    call dc "%cbf-png%"
     exit/b
   )
 )
@@ -268,8 +268,8 @@ if not "%cbf_png%" == "" (
 
 :_
 
-if not "%cbf_path%" == "" (
-  if exist "%cbf_path%" (
+if not "%cbf-pt%" == "" (
+  if exist "%cbf-pt%" (
     td %1>nul
   )
 )
@@ -278,7 +278,7 @@ if not "%cbf_path%" == "" (
 
 :_
 
-if not "%cbf_gh%" == "" (
+if not "%cbf-gh%" == "" (
   call sf %1>nul
   exit/b
 )
@@ -287,7 +287,7 @@ if not "%cbf_gh%" == "" (
 
 :_
 
-if not "%cbf_cf%" == "" (
+if not "%cbf-cf%" == "" (
   call sf %1>nul
   exit/b
 )

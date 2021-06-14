@@ -65,7 +65,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-set cbf_source_filename=%cbf_fn%
+set cbf-source_filename=%cbf-fn%
 
 call n %2
 
@@ -74,13 +74,13 @@ if %errorlevel% gtr 0 (
 )
 
 echo.
-echo Source filename: %cbf_source_filename%
+echo Source filename: %cbf-source_filename%
 
 rem echo.
-rem echo CBF_fn: %cbf_fn%
+rem echo cbf-fn: %cbf-fn%
 
 echo.
-copy "%cbf_source_filename%" "%cbf_fn%"
+copy "%cbf-source_filename%" "%cbf-fn%"
 
 exit/b
 

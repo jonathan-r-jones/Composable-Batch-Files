@@ -46,15 +46,15 @@ exit/b
 
 :validate_input
 
-set cbf_fn=
+set cbf-fn=
 
 call sfn %*
 
 if %errorlevel% gtr 0 exit/b
 
-if "%cbf_fn%" == "" (
+if "%cbf-fn%" == "" (
   echo.
-  echo * Error: cbf_fn is undefined for "%1". Jul-8-2020_3_21_PM
+  echo * Error: cbf-fn is undefined for "%1". Jul-8-2020_3_21_PM
   exit/b
 )
 
@@ -68,7 +68,7 @@ if %errorlevel% gtr 0 exit/b
 
 :main_function
 
-set cbf_parameter=%cbf_fn%
+set cbf-parameter=%cbf-fn%
 
 call r
 

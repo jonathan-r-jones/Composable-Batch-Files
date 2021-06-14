@@ -59,11 +59,11 @@ set file_to_upload=Jun-12-2019_4_43_PM.txt
 
 call ni sr30
 
-set server_with_folder=zs_ci_user@%cbf_ip%:/tmp
+set server_with_folder=zs_ci_user@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td a
 
@@ -89,11 +89,11 @@ set file_to_upload=Jun-12-2019_4_43_PM.txt
 
 call ni sr30
 
-set server_with_folder=zs_ci_user@%cbf_ip%:~
+set server_with_folder=zs_ci_user@%cbf-ip%:~
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td a
 
@@ -119,11 +119,11 @@ set file_to_upload=cart-api-0.0.1-20190612.145140-447.jar
 
 call ni sr10
 
-set server_with_folder=zzjjones@%cbf_ip%:/tmp
+set server_with_folder=zzjjones@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td dn
 
@@ -147,11 +147,11 @@ set file_to_upload=cart-ui-0.0.1-20190612.145147-93.jar
 
 call ni sr10
 
-set server_with_folder=zzjjones@%cbf_ip%:/tmp
+set server_with_folder=zzjjones@%cbf-ip%:/tmp
 
 call n super_git
 
-set scp_path=%cbf_path%
+set scp_path=%cbf-pt%
 
 call td dn
 

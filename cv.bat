@@ -37,7 +37,7 @@ echo.
 echo Batch file style: Multipurpose
 
 echo.
-echo skw: cbf_variable, clear_, cv and cv c, list cbf variables, Show the values of set cbf variable, clear cbf variables
+echo skw: cbf-variable, clear_, cv and cv c, list cbf variables, Show the values of set cbf variable, clear cbf variables
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -82,218 +82,219 @@ echo %fp%
 
 rem Application
 
-if -%~1- == -c- set cbf_application=
-if not "%cbf_application%"=="" echo.& echo * CBF_application: %cbf_application%
+if -%~1- == -c- set cbf-application=
+if not "%cbf-application%"=="" echo.& echo * cbf-application: %cbf-application%
 
 
 ::
 
 rem Application Location
 
-if -%~1- == -c- set cbf_application_location=
-if not "%cbf_application_location%"=="" echo.& echo * CBF_application_location: %cbf_application_location%
+if -%~1- == -c- set cbf-application-location=
+if not "%cbf-application-location%"=="" echo.& echo * cbf-application-location: %cbf-application-location%
 
 
 ::
 
 rem Branch
 
-if -%~1- == -c- set cbf_branch=
-if not "%cbf_branch%"=="" echo.& echo * CBF_branch: %cbf_branch%
+if -%~1- == -c- set cbf-branch=
+if not "%cbf-branch%"=="" echo.& echo * cbf-branch: %cbf-branch%
 
 
 ::
 
 rem Confluence
 
-if -%~1- == -c- set cbf_cf=
-if not "%cbf_cf%"=="" echo.& echo * CBF_cf: %cbf_cf%
+if -%~1- == -c- set cbf-cf=
+if not "%cbf-cf%"=="" echo.& echo * cbf-cf: %cbf-cf%
 
 
 ::
 
 rem Composed Variable
 
-if -%~1- == -c- set cbf_composed_variable=
-if not "%cbf_composed_variable%"=="" echo.& echo * CBF_composed_variable: %cbf_composed_variable%
+if -%~1- == -c- set cbf-composed-variable=
+if not "%cbf-composed-variable%"=="" echo.& echo * cbf-composed-variable: %cbf-composed-variable%
 
 
 ::
 
 rem Clone URL
 
-if -%~1- == -c- set cbf_clone_url=
-if not "%cbf_clone_url%"=="" echo.& echo * CBF_clone_url: %cbf_clone_url%
+rem qq1
+if -%~1- == -c- set cbf-clone-url=
+if not "%cbf-clone-url%"=="" echo.& echo * cbf-clone-url: %cbf-clone-url%
 
 
 ::
 
 rem Default Browser
 
-rem if -%~1- == -c- set cbf_default_browser=
-rem if not "%cbf_default_browser%"=="" echo.& echo * CBF_default_browser: %cbf_default_browser%
+rem if -%~1- == -c- set cbf-default-browser=
+rem if not "%cbf-default-browser%"=="" echo.& echo * cbf-default-browser: %cbf-default-browser%
 
-if "%cbf_default_browser%"=="" echo.& echo * Warning: CBF_default_browser is blank.
+if "%cbf-default-browser%"=="" echo.& echo * Warning: cbf-default-browser is blank.
 
 
 ::
 
 rem Default Text Editor
 
-rem if -%~1- == -c- set cbf_default_text_editor=
-rem if not "%cbf_default_text_editor%"=="" echo.& echo * CBF_default_text_editor: %cbf_default_text_editor%
+rem if -%~1- == -c- set cbf-default-text-editor=
+rem if not "%cbf-default-text-editor%"=="" echo.& echo * cbf-default-text-editor: %cbf-default-text-editor%
 
 
 ::
 
 rem Excel
 
-if -%~1- == -c- set cbf_ex=
-if not "%cbf_ex%"=="" echo.& echo * CBF_ex: %cbf_ex%
+if -%~1- == -c- set cbf-ex=
+if not "%cbf-ex%"=="" echo.& echo * cbf-ex: %cbf-ex%
 
 
 ::
 
 rem Expanded Variable
 
-if -%~1- == -c- set cbf_expanded_variable=
-if not "%cbf_expanded_variable%"=="" echo.& echo * CBF_expanded_variable: %cbf_expanded_variable%
+if -%~1- == -c- set cbf-expanded-variable=
+if not "%cbf-expanded-variable%"=="" echo.& echo * cbf-expanded-variable: %cbf-expanded-variable%
 
 
 ::
 
 rem Filename
 
-if -%~1- == -c- set cbf_fn=
-if not "%cbf_fn%"=="" echo.& echo * CBF_fn: %cbf_fn%
+if -%~1- == -c- set cbf-fn=
+if not "%cbf-fn%"=="" echo.& echo * cbf-fn: %cbf-fn%
 
 
 ::
 
 rem File Type
 
-if -%~1- == -c- set cbf_file_type=
-if not "%cbf_file_type%"=="" echo.& echo * CBF_file_type: %cbf_file_type%
+if -%~1- == -c- set cbf-file-type=
+if not "%cbf-file-type%"=="" echo.& echo * cbf-file-type: %cbf-file-type%
 
 
 ::
 
 rem Filename List
 
-if -%~1- == -c- set cbf_fn_list=
-if not "%cbf_fn_list%"=="" echo.& echo * CBF_fn_list: %cbf_fn_list%
+if -%~1- == -c- set cbf-fn-list=
+if not "%cbf-fn-list%"=="" echo.& echo * cbf-fn-list: %cbf-fn-list%
 
 
 ::
 
 rem Full Pem
 
-if -%~1- == -c- set cbf_full_pem=
-if not "%cbf_full_pem%"=="" echo.& echo * CBF_full_pem: %cbf_full_pem%
+if -%~1- == -c- set cbf-full-pem=
+if not "%cbf-full-pem%"=="" echo.& echo * cbf-full-pem: %cbf-full-pem%
 
 
 ::
 
 rem GitHub
 
-if -%~1- == -c- set cbf_gh=
-if not "%cbf_gh%"=="" echo.& echo * CBF_gh: %cbf_gh%
+if -%~1- == -c- set cbf-gh=
+if not "%cbf-gh%"=="" echo.& echo * cbf-gh: %cbf-gh%
 
 
 ::
 
 rem Hostname
 
-if -%~1- == -c- set cbf_host=
-if not "%cbf_host%"=="" echo.& echo * CBF_host: %cbf_host%
+if -%~1- == -c- set cbf-host=
+if not "%cbf-host%"=="" echo.& echo * cbf-host: %cbf-host%
 
 
 ::
 
 rem Instance ID
 
-if -%~1- == -c- set cbf_instance_id=
-if not "%cbf_instance_id%"=="" echo.& echo * CBF_instance_id: %cbf_instance_id%
+if -%~1- == -c- set cbf-instance-id=
+if not "%cbf-instance-id%"=="" echo.& echo * cbf-instance-id: %cbf-instance-id%
 
 
 ::
 
 rem IP Address
 
-if -%~1- == -c- set cbf_ip=
-if not "%cbf_ip%"=="" echo.& echo * CBF_ip: %cbf_ip%
+if -%~1- == -c- set cbf-ip=
+if not "%cbf-ip%"=="" echo.& echo * cbf-ip: %cbf-ip%
 
 
 ::
 
 rem Java
 
-if -%~1- == -c- set cbf_java=
-if not "%cbf_java%"=="" echo.& echo * CBF_java: %cbf_java%
+if -%~1- == -c- set cbf-java=
+if not "%cbf-java%"=="" echo.& echo * cbf-java: %cbf-java%
 
 
 ::
 
 rem Jenkins
 
-if -%~1- == -c- set cbf_je=
-if not "%cbf_je%"=="" echo.& echo * CBF_je: %cbf_je%
+if -%~1- == -c- set cbf-je=
+if not "%cbf-je%"=="" echo.& echo * cbf-je: %cbf-je%
 
 
 ::
 
 rem Jenkinsfile
 
-if -%~1- == -c- set cbf_jf=
-if not "%cbf_jf%"=="" echo.& echo * CBF_jf: %cbf_jf%
+if -%~1- == -c- set cbf-jf=
+if not "%cbf-jf%"=="" echo.& echo * cbf-jf: %cbf-jf%
 
 
 ::
 
 rem JPG
 
-if -%~1- == -c- set cbf_jpg=
-if not "%cbf_jpg%"=="" echo.& echo * CBF_jpg: %cbf_jpg%
+if -%~1- == -c- set cbf-jpg=
+if not "%cbf-jpg%"=="" echo.& echo * cbf-jpg: %cbf-jpg%
 
 
 ::
 
 rem Parameter
 
-if -%~1- == -c- set cbf_parameter=
-if not "%cbf_parameter%"=="" echo.& echo * CBF_parameter: %cbf_parameter%
+if -%~1- == -c- set cbf-parameter=
+if not "%cbf-parameter%"=="" echo.& echo * cbf-parameter: %cbf-parameter%
 
 
 ::
 
 rem Path
 
-if -%~1- == -c- set cbf_path=
-if not "%cbf_path%"=="" echo.& echo * CBF_Path: %cbf_path%
+if -%~1- == -c- set cbf-pt=
+if not "%cbf-pt%"=="" echo.& echo * cbf-pt: %cbf-pt%
 
 
 ::
 
 rem PNG
 
-if -%~1- == -c- set cbf_png=
-if not "%cbf_png%"=="" echo.& echo * CBF_png: %cbf_png%
+if -%~1- == -c- set cbf-png=
+if not "%cbf-png%"=="" echo.& echo * cbf-png: %cbf-png%
 
 
 ::
 
 rem Pull Requests
 
-if -%~1- == -c- set cbf_pr=
-if not "%cbf_pr%"=="" echo.& echo * CBF_pr: %cbf_pr%
+if -%~1- == -c- set cbf-pr=
+if not "%cbf-pr%"=="" echo.& echo * cbf-pr: %cbf-pr%
 
 
 ::
 
 rem Releases
 
-if -%~1- == -c- set cbf_rl=
-if not "%cbf_rl%"=="" echo.& echo * CBF_rl: %cbf_rl%
+if -%~1- == -c- set cbf-rl=
+if not "%cbf-rl%"=="" echo.& echo * cbf-rl: %cbf-rl%
 
 
 ::
@@ -301,24 +302,24 @@ if not "%cbf_rl%"=="" echo.& echo * CBF_rl: %cbf_rl%
 rem Reserved Path
 
 rem Commented for now because it causes an issue. Jun-11-2021
-rem if -%~1- == -c- set cbf_reserved_path=
-rem if not "%cbf_reserved_path%"=="" echo.& echo * CBF_reserved_path: %cbf_reserved_path%
+rem if -%~1- == -c- set cbf-reserved-path=
+rem if not "%cbf-reserved-path%"=="" echo.& echo * cbf-reserved-path: %cbf-reserved-path%
 
 
 ::
 
 rem URL
 
-if -%~1- == -c- set cbf_url=
-if not "%cbf_url%"=="" echo.& echo * CBF_url: %cbf_url%
+if -%~1- == -c- set cbf-url=
+if not "%cbf-url%"=="" echo.& echo * cbf-url: %cbf-url%
 
 
 ::
 
 rem Word
 
-if -%~1- == -c- set cbf_wo=
-if not "%cbf_wo%"=="" echo.& echo * CBF_wo: %cbf_wo%
+if -%~1- == -c- set cbf-wo=
+if not "%cbf-wo%"=="" echo.& echo * cbf-wo: %cbf-wo%
 
 
 

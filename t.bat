@@ -5787,8 +5787,8 @@ echo %fp%
 
 call td ba
 
-set cbf_application=%1" - Shortcut.lnk"
-set cbf_parameter=""
+set cbf-application=%1" - Shortcut.lnk"
+set cbf-parameter=""
 
 call r
 
@@ -5926,12 +5926,12 @@ rem lu: Mar-1-2018
 
 echo %fp%
 
-if not "%cbf_fn%" == "" (
+if not "%cbf-fn%" == "" (
   call k %1
   exit/b
 )
 
-if not "%cbf_url%" == "" (
+if not "%cbf-url%" == "" (
   call sf %1
   exit/b
 )
@@ -6096,12 +6096,12 @@ echo %fp%
 
 call n fgt
 
-rem CALL :RESOLVE "%cbf_path%\.." PARENT_ROOT
+rem CALL :RESOLVE "%cbf-pt%\.." PARENT_ROOT
 
-call :set_parent_fd "%cbf_path%\.." parent_folder
+call :set_parent_fd "%cbf-pt%\.." parent_folder
 
 echo.
-echo cbf: %cbf_path%
+echo cbf: %cbf-pt%
 
 rem echo.
 rem echo Parent_Root: %parent_root%
@@ -6118,8 +6118,8 @@ rem echo F1: %~f1
 
 rem Original
 rem @echo off&setlocal
-rem for %%i in ("%cbf_path%") do cd..
-rem for %%i in ("%cbf_path%.bat") do set "folder=%%~fi"
+rem for %%i in ("%cbf-pt%") do cd..
+rem for %%i in ("%cbf-pt%.bat") do set "folder=%%~fi"
 rem echo Folder: %folder%
 
 rem Original
@@ -6166,10 +6166,10 @@ echo %fp%
 
 call n fgt
 
-call :set_parent_fd "%cbf_path%\.." parent_folder
+call :set_parent_fd "%cbf-pt%\.." parent_folder
 
 echo.
-echo cbf: %cbf_path%
+echo cbf: %cbf-pt%
 
 echo.
 echo Parent_Folder: %parent_folder%
@@ -6279,12 +6279,12 @@ echo.
 echo %fp%
 echo.
 
-if exist "%cbf_path%" (
+if exist "%cbf-pt%" (
   echo.
   echo It exists.
 )
 
-if not exist "%cbf_path%" echo It does NOT exist.
+if not exist "%cbf-pt%" echo It does NOT exist.
 
 exit/b
 
@@ -6298,7 +6298,7 @@ echo %1 | find /i ".">nul
 
 rem There is a period in the first parameter.
 if %errorlevel% == 0 (
-  set cbf_fn=%~1
+  set cbf-fn=%~1
   call m double_click
   r
 )
@@ -6319,7 +6319,7 @@ rem lu: Jun-8-2018
 
 echo %fp%
 
-set cbf_application=%cbf_default_text_editor%
+set cbf-application=%cbf-default-text-editor%
 
 exit/b
 
@@ -6363,14 +6363,14 @@ rem lu: Jun-14-2018
 
 echo %fp%
 
-set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe
-set cbf_application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
+set cbf-application=C:\Users\jonat\AppData\Local\Postman\Update.exe
+set cbf-application=C:\Users\jonat\AppData\Local\Postman\Update.exe --processStart "Postman.exe"
 
-echo %cbf_application% | find /i "--">nul
+echo %cbf-application% | find /i "--">nul
 
 if %errorlevel% == 0 (
   echo.
-  echo * CBF_Application contains a double dash.
+  echo * cbf-Application contains a double dash.
 ) else (
   echo.
   echo 1
@@ -6458,15 +6458,15 @@ exit/b
 
 :
 
-set fp=* Set cbf_path equal to the current folder.
+set fp=* Set cbf-pt equal to the current folder.
 
 rem lu: Jul-26-2018
 
 echo %fp%
 
-set cbf_path=%cd%
+set cbf-pt=%cd%
 
-echo CBF Path: %cbf_path%
+echo CBF Path: %cbf-pt%
 
 exit/b
 
@@ -6484,7 +6484,7 @@ echo %fp%
 
 call n me
 
-start "my title" "%cbf_application%" "%cbf_parameter%"
+start "my title" "%cbf-application%" "%cbf-parameter%"
 
 exit/b
 
@@ -7094,13 +7094,13 @@ rem lu: Sep-2-2018
 
 echo %fp%
 
-rem cd %cbf_path%
+rem cd %cbf-pt%
 
 echo.
-echo CBF_Path: %cbf_path%
+echo cbf-pt: %cbf-pt%
 
 echo.
-move "%cbf_path%\*.*"
+move "%cbf-pt%\*.*"
 
 exit/b
 
@@ -7133,9 +7133,9 @@ rem lu: Sep-2-2018
 
 echo %fp%
 
-set cbf_path=d:\aa\test2
+set cbf-pt=d:\aa\test2
 
-set folder_to_check=%cbf_path%
+set folder_to_check=%cbf-pt%
 
 echo.
 for /f %%i in ('dir /b %folder_to_check%\*.*') do (
@@ -7186,7 +7186,7 @@ call td test3
 call n test1
 
 echo.
-xcopy /y *.* %cbf_path%
+xcopy /y *.* %cbf-pt%
 
 exit/b
 
@@ -7256,7 +7256,7 @@ exit/b
 
 :folder_is_not_empty
       
-move *.* %cbf_path%
+move *.* %cbf-pt%
 
 exit/b
 
@@ -7351,13 +7351,13 @@ rem lu: Sep-2-2018
 
 echo %fp%
 
-set cbf_path=%cbf_repo%\
+set cbf-pt=%cbf-repo%\
 
 td test2
 
 call n test1
 
-move *.* %cbf_path%
+move *.* %cbf-pt%
 
 exit/b
 
@@ -7367,7 +7367,7 @@ exit/b
 
 :
 
-set fp=* Testing the value of cbf_path.
+set fp=* Testing the value of cbf-pt.
 
 rem lu: Nov-5-2018
 
@@ -7672,7 +7672,7 @@ echo.
 echo %fp%
 
 echo.
-set cbf_fn=%temp%\describe_instances2.txt
+set cbf-fn=%temp%\describe_instances2.txt
 
 exit/b
 
@@ -7690,9 +7690,9 @@ echo.
 echo %fp%
 
 echo.
-set cbf_fn=%userprofile%\j\BGS\terraform-scripts\dv\BGS\main.tf
+set cbf-fn=%userprofile%\j\BGS\terraform-scripts\dv\BGS\main.tf
 
-set cbf_path=%~p%cbf_fn%
+set cbf-pt=%~p%cbf-fn%
 
 exit/b
 
@@ -7787,7 +7787,7 @@ rem lu: Mar-14-2018
 echo.
 echo %fp%
 
-set cbf_path=%~d2%~p2
+set cbf-pt=%~d2%~p2
 
 exit/b
 
@@ -8521,13 +8521,13 @@ rem lu: Feb-15-2019
 echo.
 echo %fp%
 
-set cbf_fn=%temp%\conflicted copy report.txt
+set cbf-fn=%temp%\conflicted copy report.txt
 
-echo test Feb-15-2019 > "%cbf_fn%"
+echo test Feb-15-2019 > "%cbf-fn%"
 
-echo test2 Feb-15-2019 >> "%cbf_fn%"
+echo test2 Feb-15-2019 >> "%cbf-fn%"
 
-echo test3 Feb-15-2019 >> "%cbf_fn%"
+echo test3 Feb-15-2019 >> "%cbf-fn%"
 
 call an me
 
@@ -8969,9 +8969,9 @@ echo.
 echo %fp%
 
 call n pems
-set SSH_KEY_PATH=%cbf_path%
+set SSH_KEY_PATH=%cbf-pt%
 call n sr6
-set SSH_KEY_PATH=%SSH_KEY_PATH%\%cbf_pem%
+set SSH_KEY_PATH=%SSH_KEY_PATH%\%cbf-pem%
 
 echo.
 echo %SSH_KEY_PATH%
@@ -9178,7 +9178,7 @@ echo * Percent 1: %1
 echo.
 echo * Percent 2: %2
 
-call %0 stage3 cbf_%2
+call %0 stage3 cbf-%2
 
 exit/b
 
@@ -9286,7 +9286,7 @@ echo * Percent 1: %1
 echo.
 echo * Percent 2: %2
 
-set composed_variable=cbf_%2
+set composed_variable=cbf-%2
 
 call %0 stage7 "%%%composed_variable%%%"
 
@@ -9329,7 +9329,7 @@ echo %fp%
 echo.
 echo * Variable to expand: %2
 
-set composed_variable=cbf_%2
+set composed_variable=cbf-%2
 
 call m expand_variable "%%%composed_variable%%%"
 
@@ -9351,7 +9351,7 @@ echo %fp%
 call n ened
 
 echo.  
-if exist "%cbf_fn%" == (
+if exist "%cbf-fn%" == (
   echo * File exists.
 ) else (
   echo * File NOT exists.
@@ -9427,7 +9427,7 @@ call m expand_to_path_only c:\west\j1.txt
 rem call m expand_to_path_only "c:\blast\j1.txt"
 @echo off
 
-echo %cbf_path% Nov-1-2019 10:11 PM
+echo %cbf-pt% Nov-1-2019 10:11 PM
 
 exit/b
 
@@ -9486,9 +9486,9 @@ echo %fp%
 
 call fn %1
 
-call m convert_to_path %cbf_fn%
+call m convert_to_path %cbf-fn%
 
-echo cbf_path: %cbf_path%
+echo cbf-pt: %cbf-pt%
 
 exit/b
 
@@ -9604,23 +9604,23 @@ rem lu: Jan-9-2020
 echo.
 echo %fp%
 
-set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008"&hey
+set cbf-url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008"&hey
 
 echo.
-echo Cbf_url: %cbf_url%
+echo cbf-url: %cbf-url%
 
 exit/b
 
 These don't work.
-set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008^^&hey
-set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008\&hey
-set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&&hey
-set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008%&hey
-set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008^&hey
-set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&hey
+set cbf-url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008^^&hey
+set cbf-url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008\&hey
+set cbf-url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&&hey
+set cbf-url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008%&hey
+set cbf-url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008^&hey
+set cbf-url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&hey
 
 rem Original.
-rem set cbf_url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&view=planning
+rem set cbf-url=https://jira.ice.dhs.gov/secure/RapidBoard.jspa?rapidView=5008&view=planning
 
 exit/b
 
@@ -9829,7 +9829,7 @@ echo %fp%
 call pn a>nul
 
 echo.
-for /r %cbf_path% %%f in (*.txt) do echo Hey!
+for /r %cbf-pt% %%f in (*.txt) do echo Hey!
 
 exit/b
 
@@ -9998,13 +9998,13 @@ echo %fp%
 set var1=
 set var2=
 
-set cbf_png=
+set cbf-png=
 
-set var1=cbf_%1
+set var1=cbf-%1
 
 set %var1%=hello
 
-set var2=cbf_%1
+set var2=cbf-%1
 
 call n 1583
 
@@ -10015,7 +10015,7 @@ echo.
 echo var1: %var1%
 
 echo.
-echo cbf_png: %cbf_png%
+echo cbf-png: %cbf-png%
 
 echo.
 echo var2: %var2%
@@ -10038,13 +10038,13 @@ echo %fp%
 set var1=
 set var2=
 
-set cbf_png=
+set cbf-png=
 
-set var1=cbf_%1
+set var1=cbf-%1
 
 set %var1%=hello
 
-set var2=cbf_%1
+set var2=cbf-%1
 
 set var3=%var2%
 
@@ -10063,7 +10063,7 @@ echo.
 echo var1: %var1%
 
 echo.
-echo cbf_?: %cbf_png%
+echo cbf-?: %cbf-png%
 
 echo.
 echo var2: %var2%
@@ -10103,7 +10103,7 @@ call n %2
 call m compose_variable %1
 
 echo.
-echo * Expanded variable: %cbf_expanded_variable%
+echo * Expanded variable: %cbf-expanded-variable%
 
 exit/b
 
@@ -10177,7 +10177,7 @@ echo.
 echo hi (skw May-5-2020_11_41_AM)
 
 echo.
-echo * The cbf_path is not defined for "%cbf_path%". (skw May-4-2020_8_12_PM)
+echo * The cbf-pt is not defined for "%cbf-pt%". (skw May-4-2020_8_12_PM)
 
 exit/b
 
@@ -10239,9 +10239,9 @@ echo %fp%
 call n j1
 
 echo.
-echo fn: %cbf_filename%
+echo fn: %cbf-filename%
 
-call m distill_filename %cbf_fn%
+call m distill_filename %cbf-fn%
 
 exit/b
 
@@ -10915,37 +10915,37 @@ rem lu: Aug-14-2020
 echo.
 echo %fp%
 
-set cbf_fn=
-set cbf_jf=
+set cbf-fn=
+set cbf-jf=
 
 call n %1>nul
 
-if defined cbf_fn (
+if defined cbf-fn (
   rem echo.
-  rem echo * cbf_fn file is defined. {%cbf_fn%}
-  if exist "%cbf_fn%" (
+  rem echo * cbf-fn file is defined. {%cbf-fn%}
+  if exist "%cbf-fn%" (
     rem echo.
-    rem echo * cbf_fn file exists.
+    rem echo * cbf-fn file exists.
     goto file_is_validated
   )
 )
 
-if defined cbf_jf (
-  if exist "%cbf_jf%" (
-    set cbf_fn=%cbf_jf%
+if defined cbf-jf (
+  if exist "%cbf-jf%" (
+    set cbf-fn=%cbf-jf%
     goto file_is_validated
   )
 )
 
-if defined cbf_java (
-  if exist "%cbf_java%" (
-    set cbf_fn=%cbf_java%
+if defined cbf-java (
+  if exist "%cbf-java%" (
+    set cbf-fn=%cbf-java%
     goto file_is_validated
   )
 )
 
 echo.
-echo * Error: File could not be validated. {%cbf_fn%}
+echo * Error: File could not be validated. {%cbf-fn%}
 
 exit/b
 
@@ -10955,7 +10955,7 @@ exit/b
 
 :file_is_validated
 
-set fp=* File is validated. {%cbf_fn%}
+set fp=* File is validated. {%cbf-fn%}
 
 echo.
 echo %fp%
@@ -10975,11 +10975,11 @@ call fn %1
 echo.
 echo %fp%
 
-echo %cbf_ex% | find /i "xlsx">nul
+echo %cbf-ex% | find /i "xlsx">nul
 
 if not %errorlevel% == 0 (
   echo.
-  echo * cbf_fn does not contain an xlsx document. Aug-24-2020_11_03_AM
+  echo * cbf-fn does not contain an xlsx document. Aug-24-2020_11_03_AM
   exit/b
 )
 
@@ -11022,13 +11022,13 @@ echo %fp%
 call pn cade>nul
 
 echo.
-echo Path 1: %cbf_path%
+echo Path 1: %cbf-pt%
 
 echo.
-echo Path 2: %cbf_path2%
+echo Path 2: %cbf-pt2%
 
 echo.
-echo Path 3: %cbf_path%3
+echo Path 3: %cbf-pt%3
 
 exit/b
 
@@ -11045,11 +11045,11 @@ rem lu:
 echo.
 echo %fp%
 
-if exist g:\podcasts set cbf_path=g:\podcasts
-if exist h:\podcasts set cbf_path=h:\podcasts
+if exist g:\podcasts set cbf-pt=g:\podcasts
+if exist h:\podcasts set cbf-pt=h:\podcasts
 
 echo.
-echo Cbf_path: %cbf_path%
+echo cbf-pt: %cbf-pt%
 
 exit/b
 
@@ -11079,8 +11079,8 @@ echo.
 echo %fp%
 
 rem qq1
-if -%~1- == -c- set cbf_path=
-if not -%cbf_path%- == "" echo.& echo * CBF_Path: %cbf_path%
+if -%~1- == -c- set cbf-pt=
+if not -%cbf-pt%- == "" echo.& echo * cbf-pt: %cbf-pt%
 
 exit/b
 

@@ -59,7 +59,7 @@ if %errorlevel% gtr 0 (
 
 :main_function
 
-clip < "%cbf_fn%"
+clip < "%cbf-fn%"
 
 exit/b
 

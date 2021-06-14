@@ -229,13 +229,13 @@ call td fr_ra
 
 call n fr_rs
 
-xcopy /d /h /r /y "%cbf_path%\*.png"
+xcopy /d /h /r /y "%cbf-pt%\*.png"
 
 call td fr_ri
 
 call n fr_rs
 
-xcopy /d /h /r /y "%cbf_path%\*.png"
+xcopy /d /h /r /y "%cbf-pt%\*.png"
 
 exit/b
 
@@ -262,7 +262,7 @@ exit/b
 
 :fc
 
-set fp=* Copy from CBF_Path.
+set fp=* Copy from cbf-pt.
 
 rem lu: Sep-4-2018
 
@@ -270,7 +270,7 @@ echo.
 echo %fp%
 
 echo.
-xcopy %cbf_path%
+xcopy %cbf-pt%
 
 exit/b
 
@@ -402,7 +402,7 @@ if %errorlevel% == 1 (
 )
 
 echo.
-xcopy /d /r /s /y . %cbf_path%
+xcopy /d /r /s /y . %cbf-pt%
 
 exit/b
 
@@ -421,11 +421,11 @@ echo %fp%
 
 call n j
 
-set source_filename=%cbf_jf%
+set source_filename=%cbf-jf%
 
 call n jft
 
-set destination_filename=%cbf_fn%
+set destination_filename=%cbf-fn%
 
 echo.
 xcopy /y %source_filename% %destination_filename%
@@ -447,11 +447,11 @@ echo %fp%
 
 call n jft
 
-set source_filename=%cbf_fn%
+set source_filename=%cbf-fn%
 
 call n j
 
-set destination_filename=%cbf_jf%
+set destination_filename=%cbf-jf%
 
 echo.
 xcopy /y %source_filename% %destination_filename%
@@ -557,7 +557,7 @@ call td max
 
 call pn cm>nul
 
-xcopy /y "%cbf_path%\empty_master.xml" master.xml
+xcopy /y "%cbf-pt%\empty_master.xml" master.xml
 
 exit/b
 
@@ -585,7 +585,7 @@ call mcd Config.04
 call pn drmecfg
 
 echo.
-xcopy /e "%cbf_path%"
+xcopy /e "%cbf-pt%"
 
 exit/b
 

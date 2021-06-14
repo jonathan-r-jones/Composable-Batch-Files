@@ -41,7 +41,7 @@ echo.
 echo Batch file style: Multipurpose
 
 echo.
-echo Entangled variable: cbf_%0
+echo Entangled variable: cbf-%0
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

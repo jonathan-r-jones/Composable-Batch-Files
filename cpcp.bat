@@ -73,7 +73,7 @@ if "%~2" == "" (
 )
 
 echo.
-xcopy /d /y "%~1" "%cbf_path%"
+xcopy /d /y "%~1" "%cbf-pt%"
 
 if "%~2" == "" (
   call td a

@@ -165,7 +165,7 @@ echo %fp%
 
 git --help>"%temp%\git_help.txt"
 
-"%cbf_default_text_editor%" "%temp%\git_help.txt"
+"%cbf-default-text-editor%" "%temp%\git_help.txt"
 
 
 exit/b
@@ -916,7 +916,7 @@ echo %fp%
 
 call n %2
 
-git remote add origin %cbf_url%
+git remote add origin %cbf-url%
 
 exit/b
 
@@ -1328,7 +1328,7 @@ call g pull
 cd %current_location%
 
 echo.
-xcopy %cbf_fn%
+xcopy %cbf-fn%
 
 ren VisualStudio.gitignore .gitignore
 
@@ -1733,7 +1733,7 @@ set origin_url=https://github.com/edsnider/marvel-xfdemo.git
 set origin_url=https://github.com/jonathan-r-jones/fresnel.git
 set origin_url=https://github.com/jonathan-r-jones/ForGitTesting.git
 call n fgt
-set origin_url=%cbf_url%
+set origin_url=%cbf-url%
 
 rem 2. New folder path.
 set new_folder_path=C:\Users\jonathan.r.jones\Documents\Dropbox\NES\Macintosh
@@ -1875,7 +1875,7 @@ echo %fp%
 
 git log>"%temp%\git_log.txt"
 
-rem "%cbf_default_text_editor%" "%temp%\git_log.txt"
+rem "%cbf-default-text-editor%" "%temp%\git_log.txt"
 call sm "%temp%\git_log.txt"
 
 exit/b
@@ -2059,7 +2059,7 @@ if "%~2" == "" (
   exit/b
 )
 
-set cbf_url=https://git-scm.com/docs/%2
+set cbf-url=https://git-scm.com/docs/%2
 
 call sf
 
@@ -2149,7 +2149,7 @@ if "%~2" == "" (
 
 @echo on
 echo.
-git branch -a | %cbf_path%\grep %2
+git branch -a | %cbf-pt%\grep %2
 @echo off
 
 exit/b
@@ -2351,7 +2351,7 @@ if "%2" == "" (
   exit/b
 )
 
-set cbf_git_version=%2
+set cbf-git_version=%2
 
 call td ma
 
@@ -2359,9 +2359,9 @@ call s
 
 echo.
 @echo on
-git checkout -b release-1-%cbf_git_version% tags/v1.%cbf_git_version%.0
+git checkout -b release-1-%cbf-git_version% tags/v1.%cbf-git_version%.0
 
-git push --set-upstream origin release-1-%cbf_git_version%
+git push --set-upstream origin release-1-%cbf-git_version%
 @echo off
 
 exit/b
@@ -2405,7 +2405,7 @@ rem lu: Oct-14-2020
 echo.
 echo %fp%
 
-set cbf_git_version=17
+set cbf-git_version=17
 
 call td ma
 
@@ -2413,9 +2413,9 @@ call s
 
 echo.
 @echo on
-git checkout -b release-1-%cbf_git_version%-0 tags/v1.%cbf_git_version%.0
+git checkout -b release-1-%cbf-git_version%-0 tags/v1.%cbf-git_version%.0
 
-git push --set-upstream origin release-1-%cbf_git_version%-0
+git push --set-upstream origin release-1-%cbf-git_version%-0
 @echo off
 
 exit/b
@@ -2433,7 +2433,7 @@ rem lu: Aug-20-2020
 echo.
 echo %fp%
 
-set cbf_git_version=14
+set cbf-git_version=14
 
 call td ma
 
@@ -2441,9 +2441,9 @@ call s
 
 echo.
 @echo on
-git checkout -b release_v_1_%cbf_git_version%_0_c tags/v1.%cbf_git_version%.0
+git checkout -b release_v_1_%cbf-git_version%_0_c tags/v1.%cbf-git_version%.0
 
-git push --set-upstream origin release_v_1_%cbf_git_version%_0_c
+git push --set-upstream origin release_v_1_%cbf-git_version%_0_c
 @echo off
 
 exit/b
@@ -3624,7 +3624,7 @@ echo %fp%
   
 call n %2
 
-git checkout %cbf_fn%
+git checkout %cbf-fn%
 
 exit/b
 

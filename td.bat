@@ -48,7 +48,7 @@ echo.
 echo Batch file style: Single task.
 
 echo.
-echo Entangled variable: cbf_path
+echo Entangled variable: cbf-pt
 
 exit/b
 
@@ -130,9 +130,9 @@ exit/b
 
 set fp=* Analyze environment and decide upon the proper course of action. This is an order of operations.
 
-set cbf_application=
-set cbf_fn=
-set cbf_path=
+set cbf-application=
+set cbf-fn=
+set cbf-pt=
 
 call pn %1
 
@@ -157,10 +157,10 @@ rem Pseudo Case Statement
 
 :next_case_item
 
-if not "%cbf_fn%" == "" (
+if not "%cbf-fn%" == "" (
   echo.
   echo * So try filename.
-  set cbf_desired_path=%cbf_fn%
+  set cbf-desired_path=%cbf-fn%
   goto try_secondary_method
   exit/b
 )
@@ -171,10 +171,10 @@ if not "%cbf_fn%" == "" (
 
 :next_case_item
 
-if not "%cbf_ex%" == "" (
+if not "%cbf-ex%" == "" (
   echo.
   echo * So try Excel.
-  set cbf_desired_path=%cbf_ex%
+  set cbf-desired_path=%cbf-ex%
   goto try_secondary_method
   exit/b
 )
@@ -183,13 +183,13 @@ if not "%cbf_ex%" == "" (
 
 ::_
 
-if "%cbf_application%" == "" (
+if "%cbf-application%" == "" (
   goto next_case_item
 )
 
 echo.
 echo * So try Application.
-set cbf_desired_path=%cbf_application%
+set cbf-desired_path=%cbf-application%
 goto try_secondary_method
 
 exit/b
@@ -217,13 +217,13 @@ echo.
 echo %fp%
 
 rem echo.
-rem echo %cbf_path%
+rem echo %cbf-pt%
 
-call m expand_to_path_only "%cbf_desired_path%"
+call m expand_to_path_only "%cbf-desired_path%"
 
-if not exist "%cbf_path%" (
+if not exist "%cbf-pt%" (
   echo.
-  echo * Error: Could not find path "%cbf_path%".
+  echo * Error: Could not find path "%cbf-pt%".
   exit/b
 )
 
@@ -235,7 +235,7 @@ goto main_function
 
 :main_function
 
-cd /d "%cbf_path%"
+cd /d "%cbf-pt%"
 
 exit/b
 

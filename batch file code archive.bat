@@ -19,13 +19,13 @@ set fp=* Old server 6.
 echo.
 echo %fp%
 
-set cbf_root=10.168.78.117
+set cbf-root=10.168.78.117
 
-set cbf_instance_id=i-01a13b63f31893af1
+set cbf-instance-id=i-01a13b63f31893af1
 
-set cbf_ip=%cbf_root%
+set cbf-ip=%cbf-root%
 
-set cbf_url=http://%cbf_root%
+set cbf-url=http://%cbf-root%
 
 exit/b
 
@@ -42,13 +42,13 @@ rem lu: Mar-28-2019
 echo.
 echo %fp%
 
-set cbf_root=10.168.78.78
+set cbf-root=10.168.78.78
 
-set cbf_instance_id=i-0e2daf1a8544f23d9
+set cbf-instance-id=i-0e2daf1a8544f23d9
 
-set cbf_ip=%cbf_root%
+set cbf-ip=%cbf-root%
 
-set cbf_url=http://%cbf_root%
+set cbf-url=http://%cbf-root%
 
 exit/b
 
@@ -65,13 +65,13 @@ rem lu: Apr-1-2019
 echo.
 echo %fp%
 
-set cbf_root=10.168.78.112
+set cbf-root=10.168.78.112
 
-set cbf_instance_id=i-0553653ad5d7bc6d5
+set cbf-instance-id=i-0553653ad5d7bc6d5
 
-set cbf_ip=%cbf_root%
+set cbf-ip=%cbf-root%
 
-set cbf_url=http://%cbf_root%
+set cbf-url=http://%cbf-root%
 
 exit/b
 
@@ -88,13 +88,13 @@ rem lu: Feb-25-2019
 echo.
 echo %fp%
 
-set cbf_root=10.168.78.118
+set cbf-root=10.168.78.118
 
-set cbf_instance_id=i-0553653ad5d7bc6d5
+set cbf-instance-id=i-0553653ad5d7bc6d5
 
-set cbf_ip=%cbf_root%
+set cbf-ip=%cbf-root%
 
-set cbf_url=http://%cbf_root%
+set cbf-url=http://%cbf-root%
 
 exit/b
 
@@ -111,13 +111,13 @@ rem lu: Mar-28-2019
 echo.
 echo %fp%
 
-set cbf_root=10.168.78.48
+set cbf-root=10.168.78.48
 
-set cbf_instance_id=i-0fccffe4a93be539d
+set cbf-instance-id=i-0fccffe4a93be539d
 
-set cbf_ip=%cbf_root%
+set cbf-ip=%cbf-root%
 
-set cbf_url=http://%cbf_root%
+set cbf-url=http://%cbf-root%
 
 exit/b
 
@@ -142,7 +142,7 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 echo.
-echo Parameter 1: Alias that point to a cbf_port_number.
+echo Parameter 1: Alias that point to a cbf-port_number.
 
 echo.
 echo Parameter 2 (Optional): Browser (Application Nickname), which is not necessary if you wish to use the non-default browser.
@@ -163,12 +163,12 @@ set fp=* Execution area. Code below here runs.
 
 set fp=* Set URL.
 
-set cbf_application=
-set cbf_url=
+set cbf-application=
+set cbf-url=
 
-set cbf_url=http://localhost:%cbf_port_number%
+set cbf-url=http://localhost:%cbf-port_number%
 
-set cbf_parameter=%cbf_url%
+set cbf-parameter=%cbf-url%
 
 goto set_browser
 
@@ -180,11 +180,11 @@ goto set_browser
 
 set fp=* Set browser.
 
-if not "%cbf_application%" == "" goto main_function
+if not "%cbf-application%" == "" goto main_function
 
 if not "%~2" == "" goto override_default_browser
 
-set cbf_application=%cbf_default_browser%
+set cbf-application=%cbf-default-browser%
 
 goto main_function
 
@@ -192,14 +192,14 @@ goto main_function
 
 :_
 
-:use_current_cbf_lh
+:use_current_cbf-lh
 
-set fp=* Use current CBF_URL.
+set fp=* Use current cbf-URL.
 
 echo.
 echo %fp%
 
-set cbf_parameter=%cbf_lh%
+set cbf-parameter=%cbf-lh%
 
 
 
@@ -785,7 +785,7 @@ echo.
 
 call un %1
 
-git clone %cbf_url% .\%folder_name%
+git clone %cbf-url% .\%folder_name%
 
 exit/b
 
@@ -806,7 +806,7 @@ call td aa
 
 call un %1
 
-git clone %cbf_url% .\%folder_name%
+git clone %cbf-url% .\%folder_name%
 
 exit/b
 
@@ -830,7 +830,7 @@ call un %1
 
 echo.
 
-git clone %cbf_url% .\%folder_name%
+git clone %cbf-url% .\%folder_name%
 
 exit/b
 
@@ -869,8 +869,8 @@ rem lu: Jul-25-2018
 
 echo %fp%
 
-set cbf_path=%cbf_default_repository_folder%\
+set cbf-pt=%cbf-default_repository_folder%\
 
-set cbf_url=
+set cbf-url=
 
 exit/b

@@ -50,11 +50,11 @@ exit/b
 
 :main_function
 
-set cbf_appended_words=
+set cbf-appended_words=
 
 if not "%~2" == "" call n %2
 
-set cbf_url=https://www.google.com/search?as_q=%~1%cbf_appended_words%
+set cbf-url=https://www.google.com/search?as_q=%~1%cbf-appended_words%
 
 call sfcu
 

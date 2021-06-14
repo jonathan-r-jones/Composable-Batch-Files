@@ -113,9 +113,9 @@ if %errorlevel% gtr 0 exit/b
 
 call m compose_variable %2
 
-if "%cbf_expanded_variable%" == "" (
+if "%cbf-expanded-variable%" == "" (
   echo. 
-  echo * Error: There is no definition for "cbf_%2" for the alias "%1".
+  echo * Error: There is no definition for "cbf-%2" for the alias "%1".
   exit/b
 )
 
@@ -126,15 +126,15 @@ if %errorlevel% gtr 0 (
 )
 
 rem echo.
-rem echo * Expanded variable: %cbf_expanded_variable%
+rem echo * Expanded variable: %cbf-expanded-variable%
 
-if not exist "%cbf_expanded_variable%" (
+if not exist "%cbf-expanded-variable%" (
   rem echo.
-  rem echo * Error: CBF Expanded variable "%cbf_expanded_variable%" does not exist.
+  rem echo * Error: CBF Expanded variable "%cbf-expanded-variable%" does not exist.
   rem exit/b
 )
 
-set cbf_parameter=%cbf_expanded_variable%
+set cbf-parameter=%cbf-expanded-variable%
 
 call r
 

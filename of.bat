@@ -53,7 +53,7 @@ set fp=* Open folder in Windows Explorer.
 
 rem fcd: May-9-2017
 
-set cbf_path=
+set cbf-pt=
 
 call td %1 %2
 

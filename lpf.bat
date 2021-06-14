@@ -58,10 +58,10 @@ if %errorlevel% gtr 0 (
 
 :main_function
 
-echo %cbf_fn% | clip
+echo %cbf-fn% | clip
 
 echo.
-echo * Filename "%cbf_fn%" has been copied to clipboard.
+echo * Filename "%cbf-fn%" has been copied to clipboard.
 
 exit/b
 

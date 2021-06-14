@@ -36,7 +36,7 @@ echo.
 echo Parameter 1: Path nickname.
 
 echo.
-echo Example: "rf fgt" would remove the For-Git-Testing folder at the "%%CBF_Path%%" location.
+echo Example: "rf fgt" would remove the For-Git-Testing folder at the "%%cbf-pt%%" location.
 
 exit/b
 
@@ -56,16 +56,16 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_path%" == "" (
+if "%cbf-pt%" == "" (
   echo.
-  echo Input Error: There is no cbf_path defined for '%~1'. 
+  echo Input Error: There is no cbf-pt defined for '%~1'. 
   exit/b
 )
 
 call tdp %1
 
 echo.
-rd /s %cbf_path%
+rd /s %cbf-pt%
 
 rem (!rfsp) (mov-2)
 

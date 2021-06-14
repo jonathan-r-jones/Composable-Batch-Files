@@ -33,7 +33,7 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 echo.
-echo Parameter 1: URL Nickname. If blank, surf to the current CBF_URL.
+echo Parameter 1: URL Nickname. If blank, surf to the current cbf-URL.
 
 echo.
 echo Parameters 2-4 (Optional): If parameter 2 does not begin with a dash, then it ^
@@ -42,8 +42,8 @@ the Browser application alias you wish to use. If "-b" is not used, the default 
 browser will be used.
 
 echo.
-echo Pit of Success Strategy: If cb_url is not found, the algorithm will look for cbf_cf
-echo or cbf_gh.
+echo Pit of Success Strategy: If cb_url is not found, the algorithm will look for cbf-cf
+echo or cbf-gh.
 
 echo.
 echo Noteworthy: %0 now supports DCV, while still supporting browser overriding.
@@ -135,7 +135,7 @@ set fp=* Use default browser.
 rem echo.
 rem echo %fp%
 
-set cbf_application=%cbf_default_browser%
+set cbf-application=%cbf-default-browser%
 
 exit/b
 
@@ -166,14 +166,14 @@ set fp=* Compose DCV.
 
 call m compose_variable %2
 
-if "%cbf_expanded_variable%" == "" (
+if "%cbf-expanded-variable%" == "" (
   echo. 
-  echo * Pit of Success: There is no definition of "cbf_%2" for the alias "%1". - Oct-7-2020_12_50_PM
+  echo * Pit of Success: There is no definition of "cbf-%2" for the alias "%1". - Oct-7-2020_12_50_PM
   goto :set_precedence
   rem exit/b
 )
 
-set cbf_parameter=%cbf_expanded_variable%
+set cbf-parameter=%cbf-expanded-variable%
 
 call r
 
@@ -190,7 +190,7 @@ set fp=* Use specific browser.
 echo.
 echo %fp%
 
-set cbf_application=%cbf_specific_browser%
+set cbf-application=%cbf-specific_browser%
 
 goto set_precedence
 
@@ -207,31 +207,31 @@ rem echo %fp%
 
 set fp=* This is a precedence hierarchy.
 
-if "%cbf_parameter%" == "" (
-  set cbf_parameter=%cbf_url%
+if "%cbf-parameter%" == "" (
+  set cbf-parameter=%cbf-url%
 )
 
-if "%cbf_parameter%" == "" (
-  set cbf_parameter=%cbf_cf%
+if "%cbf-parameter%" == "" (
+  set cbf-parameter=%cbf-cf%
 )
 
-if "%cbf_parameter%" == "" (
-  set cbf_parameter=%cbf_gh%
+if "%cbf-parameter%" == "" (
+  set cbf-parameter=%cbf-gh%
 )
 
-if "%cbf_parameter%" == "" (
-  set cbf_parameter=%cbf_je%
+if "%cbf-parameter%" == "" (
+  set cbf-parameter=%cbf-je%
 )
 
-if "%cbf_parameter%" == "" (
-  set cbf_parameter=%cbf_gh%
+if "%cbf-parameter%" == "" (
+  set cbf-parameter=%cbf-gh%
 )
 
-if "%cbf_parameter%" == "" (
-  set cbf_parameter=%cbf_clone_url%
+if "%cbf-parameter%" == "" (
+  set cbf-parameter=%cbf-clone-url%
 )
 
-if "%cbf_parameter%" == "" (
+if "%cbf-parameter%" == "" (
   echo.
   echo * Error: Could not find a suitable CBF parameter for sf.bat to use. Nov-17-2020_7_03_PM
   exit/b
@@ -252,7 +252,7 @@ call r
 
 rem Putting this line here makes debugging a little difficult because it is hard to see
 rem that the variable is set at all. Mar-4-2019
-set cbf_specific_browser=
+set cbf-specific_browser=
 
 exit/b
 

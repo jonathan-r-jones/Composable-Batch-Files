@@ -47,17 +47,17 @@ exit/b
 
 rem lu: May-17-2019
 
-set cbf_android_manifest_file=
+set cbf-android_manifest_file=
 
 call n %1
 
-if "%cbf_android_manifest_file%" == "" (
+if "%cbf-android_manifest_file%" == "" (
   echo.
   echo * Error: CBF Android Manifest file is not set.
   exit/b
 )
 
-call e %cbf_android_manifest_file%
+call e %cbf-android_manifest_file%
 
 exit/b
 

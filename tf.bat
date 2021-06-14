@@ -504,7 +504,7 @@ if %errorlevel% == 1 (
 call n pems
 
 @echo on
-terraform plan -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+terraform plan -var "private_key_path=%cbf-pt%\cart-np-key.pem" -no-color
 @echo off
 
 exit/b
@@ -543,7 +543,7 @@ if %errorlevel% == 1 (
 call n pems
 
 @echo on
-terraform apply -var "private_key_path=%cbf_path%\cart-np-key.pem" -no-color
+terraform apply -var "private_key_path=%cbf-pt%\cart-np-key.pem" -no-color
 @echo off
 
 exit/b

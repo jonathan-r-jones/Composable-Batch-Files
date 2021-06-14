@@ -48,7 +48,7 @@ exit/b
 
 :validate_user_input
 
-set cbf_fn=
+set cbf-fn=
 
 if "%~1" == "" (
   echo.
@@ -66,9 +66,9 @@ call fn %2
 
 if %errorlevel% gtr 0 exit/b
 
-if not exist "%cbf_fn%" (
+if not exist "%cbf-fn%" (
   echo.
-  echo * Error: Cannot find the file "%cbf_fn%".
+  echo * Error: Cannot find the file "%cbf-fn%".
   exit/b
 )
 
@@ -84,13 +84,13 @@ echo.
 echo Percent 1: %~1
 
 echo.
-echo cbf_fn: %cbf_fn%
+echo cbf-fn: %cbf-fn%
 
 @echo on
-xcopy /y "%~1" "%cbf_fn%"
+xcopy /y "%~1" "%cbf-fn%"
 @echo off
 
-start "bogus" "%cbf_fn%"
+start "bogus" "%cbf-fn%"
 
 exit/b
 

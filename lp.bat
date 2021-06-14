@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Load CBF_Path to the clipboard.
+set filep=* Load cbf-pt to the clipboard.
 
 echo.
 echo %filep%
@@ -48,7 +48,7 @@ exit/b
 
 :validate_user_input
 
-set cbf_path=
+set cbf-pt=
 call pn %1
 
 if %errorlevel% == 99 (
@@ -78,7 +78,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-call m expand_to_path_only %cbf_fn%
+call m expand_to_path_only %cbf-fn%
 
 goto main_function
 
@@ -104,10 +104,10 @@ exit/b
 
 :main_function
 
-echo %cbf_path% | clip
+echo %cbf-pt% | clip
 
 echo.
-echo * Cbf_path "%cbf_path%" has been loaded onto the clipboard.
+echo * cbf-pt "%cbf-pt%" has been loaded onto the clipboard.
 
 exit/b
 

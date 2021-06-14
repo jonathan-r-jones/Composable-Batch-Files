@@ -43,7 +43,7 @@ echo.
 echo Batch file style: Single Purpose
 
 echo.
-echo Entangled variable: cbf_url
+echo Entangled variable: cbf-url
 
 echo.
 echo Example(s):

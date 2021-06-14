@@ -48,9 +48,9 @@ set fp=* Initialize key variables used by this file.
 rem echo.
 rem echo %fp%
 
-set cbf_branch=
-set cbf_clone_url=
-set cbf_path=
+set cbf-branch=
+set cbf-clone-url=
+set cbf-pt=
 
 
 
@@ -66,19 +66,19 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_clone_url%" == "" (
+if "%cbf-clone-url%" == "" (
    echo.
    echo "* Error: Clone URL is a required field."
    exit/b
 )
 
-if "%cbf_path%" == "" (
+if "%cbf-pt%" == "" (
    echo.
    echo "* Error: Path is a required field."
    exit/b
 )
 
-if exist "%cbf_path%" (
+if exist "%cbf-pt%" (
    echo.
    echo "* Error: CBF Path already exists."
    call td %1
@@ -93,12 +93,12 @@ set fp=* Main function.
 
 rem lu: Apr-25-2019
 
-if "%cbf_branch%" == "" (
-   set cbf_branch=main
+if "%cbf-branch%" == "" (
+   set cbf-branch=main
 )
 
 echo.
-git clone %cbf_clone_url% --branch %cbf_branch% "%cbf_path%"
+git clone %cbf-clone-url% --branch %cbf-branch% "%cbf-pt%"
 
 call td %1
 

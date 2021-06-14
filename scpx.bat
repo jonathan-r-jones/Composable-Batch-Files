@@ -88,34 +88,34 @@ if not exist "%~2" (
 )
 
 if "%~3" == "a" (
-  set cbf_user=zzadmin
+  set cbf-user=zzadmin
 )
 
 if "%~3" == "c" (
-  set cbf_user=zs_ci_user
+  set cbf-user=zs_ci_user
 )
 
 if "%~3" == "j" (
-  set cbf_user=zzJJones
+  set cbf-user=zzJJones
 )
 
-if "%cbf_user%" == "" (
+if "%cbf-user%" == "" (
   echo.
   echo * Error: CBF User is blank.
   exit/b 1
 )
 
 if "%~4" == "" (
-  set cbf_destination_folder=tmp
+  set cbf-destination_folder=tmp
 ) else (
-  set cbf_destination_folder=%~4
+  set cbf-destination_folder=%~4
 )
 
 echo.
-echo * CBF Destination Folder: %cbf_destination_folder%
+echo * CBF Destination Folder: %cbf-destination_folder%
 
 echo.
-echo * CBF User: %cbf_user%
+echo * CBF User: %cbf-user%
 
 goto main_function
 
@@ -128,7 +128,7 @@ goto main_function
 rem lu: Dec-18-2019
 
 set file_to_upload=%~2
-set server_with_folder=%cbf_user%@%cbf_ip%:/%cbf_destination_folder%
+set server_with_folder=%cbf-user%@%cbf-ip%:/%cbf-destination_folder%
 
 echo.
 @echo on

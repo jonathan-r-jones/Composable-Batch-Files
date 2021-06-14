@@ -60,7 +60,7 @@ echo %fp%
 
 call an coco
 
-"%cbf_application%" "%~1" "%~2"
+"%cbf-application%" "%~1" "%~2"
 
 exit/b
 
@@ -97,7 +97,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-set file_1=%cbf_fn%
+set file_1=%cbf-fn%
 
 call fn %2
 
@@ -106,7 +106,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-set file_2=%cbf_fn%
+set file_2=%cbf-fn%
 
 call an coco
 
@@ -114,7 +114,7 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-start  "Code Compare" "%cbf_application%" "%file_1%" "%file_2%"
+start  "Code Compare" "%cbf-application%" "%file_1%" "%file_2%"
 
 exit/b
 

@@ -52,7 +52,7 @@ exit/b
 
 set fp=* In order to promote freshness, clear the environment variable.
 
-set cbf_url=
+set cbf-url=
 
 
 
@@ -60,9 +60,9 @@ set cbf_url=
 
 call n %1
 
-if "%cbf_url%" == "" (
+if "%cbf-url%" == "" (
   echo.
-  echo * Error: The cbf_url variable is not set. Aug-27-2020_1_11_PM
+  echo * Error: The cbf-url variable is not set. Aug-27-2020_1_11_PM
   exit/b 1
 )
 

@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Set cbf_fn based on an evaluation.
+set filep=* Set cbf-fn based on an evaluation.
 
 echo.
 echo %filep%
@@ -58,17 +58,17 @@ if exist %1 (
   goto set_filename_to_percent_1
 )
 
-set cbf_fn=%share-zone%\%~1.bat
+set cbf-fn=%share-zone%\%~1.bat
 
-if exist %cbf_fn% (
+if exist %cbf-fn% (
   echo.
   echo * Set filename equal to Share-zone %1.bat file.
   exit/b 0
 )
 
-set cbf_fn=%composable_batch_files%\%~1.bat
+set cbf-fn=%composable_batch_files%\%~1.bat
 
-if exist %cbf_fn% (
+if exist %cbf-fn% (
   echo.
   echo * Set filename equal to CBF %1.bat file.
   exit/b 0
@@ -91,7 +91,7 @@ set fp=* Set filename equal to "%1".
 echo.
 echo %fp%
 
-set cbf_fn=%1
+set cbf-fn=%1
 
 exit/b 0
 

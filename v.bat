@@ -184,12 +184,12 @@ echo.%str%
 
 echo.
 echo Example 2: Same as Ex. 3.
-set cbf_url=https://www.github.com
-echo.%cbf_url%
-set cbf_url=%cbf_url:http://=%
-set cbf_url=%cbf_url:https://=%
-set cbf_url=%cbf_url:www.=%
-echo.%cbf_url%
+set cbf-url=https://www.github.com
+echo.%cbf-url%
+set cbf-url=%cbf-url:http://=%
+set cbf-url=%cbf-url:https://=%
+set cbf-url=%cbf-url:www.=%
+echo.%cbf-url%
 
 echo.
 echo Example 1: Replace unserscores with dashes.
@@ -222,9 +222,9 @@ if "%~1" == "" (
 )
 
 if "%~2" == "c" (
-  set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
+  set cbf-pt=%aa%\xamarin\Mastering-Xamarin.Forms-book\Complete
 ) else if not "%~2" == "" (
-  set cbf_path=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter%2
+  set cbf-pt=%aa%\xamarin\Mastering-Xamarin.Forms-book\Chapter%2
 )
 
 exit/b
@@ -569,10 +569,10 @@ rem fcd: Aug-2-2017
 
 echo %fp%
 
-set cbf_url='https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile'
+set cbf-url='https://cyber-balance.visualstudio.com/SPDR%%20LOB/_git/Mobile'
 
 echo.
-echo cbf_url: %cbf_url%
+echo cbf-url: %cbf-url%
 
 exit/b
 
@@ -707,7 +707,7 @@ echo %fp%
 
 echo.
 if "%~2" == "" (
-  call m set_cbf_application_to_dte
+  call m set_cbf-application_to_dte
 )
 
 exit/b
@@ -862,7 +862,7 @@ echo.
 echo %fp%
 
 echo "This text is on the clipboard. Cool." | clip
-rem echo "%cbf_path%" | clip
+rem echo "%cbf-pt%" | clip
 
 exit/b
 
@@ -885,15 +885,15 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_path%" == "" (
+if "%cbf-pt%" == "" (
   echo.
-  echo * The cbf_path is not defined for "%1".
+  echo * The cbf-pt is not defined for "%1".
   exit/b
 )
 
-if not exist "%cbf_path%" (
+if not exist "%cbf-pt%" (
   echo.
-  echo * Error: The CBF_Path "%cbf_path%" could not be found.
+  echo * Error: The cbf-pt "%cbf-pt%" could not be found.
   exit/b
 )
 
@@ -912,17 +912,17 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_fn%" == "" (
+if "%cbf-fn%" == "" (
   echo.
-  echo * The cbf_fn is not defined for "%1".
+  echo * The cbf-fn is not defined for "%1".
   exit/b
 )
 
 rem (!noex)
 
-if not exist "%cbf_fn%" (
+if not exist "%cbf-fn%" (
   echo.
-  echo * Error: The cbf_fn "%cbf_fn%" could not be found.
+  echo * Error: The cbf-fn "%cbf-fn%" could not be found.
   exit/b
 )
 
@@ -941,9 +941,9 @@ if %errorlevel% gtr 0 (
   exit/b
 )
 
-if "%cbf_url%" == "" (
+if "%cbf-url%" == "" (
   echo.
-  echo * The cbf_url is not defined for "%1".
+  echo * The cbf-url is not defined for "%1".
   exit/b
 )
 
@@ -962,15 +962,15 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if "%cbf_application%" == "" (
+if "%cbf-application%" == "" (
   echo.
-  echo * The cbf_application is not definied for "%1".
+  echo * The cbf-application is not definied for "%1".
   exit/b
 )
 
-if not exist "%cbf_application%" (
+if not exist "%cbf-application%" (
   echo.
-  echo * Error: The CBF_Application "%cbf_application%" could not be found.
+  echo * Error: The cbf-Application "%cbf-application%" could not be found.
   exit/b
 )
 
@@ -1494,7 +1494,7 @@ echo %fp%
 
 call n sa
 
-call %0 passing_spaces "%cbf_path%"
+call %0 passing_spaces "%cbf-pt%"
 
 exit/b
 
@@ -1610,7 +1610,7 @@ call n %2
 call m compose_variable %1
 
 echo.
-echo * Expanded variable: %cbf_expanded_variable%
+echo * Expanded variable: %cbf-expanded-variable%
 
 exit/b
 
@@ -1640,7 +1640,7 @@ call n %3
 call m compose_variable %2
 
 echo.
-echo * Expanded variable: %cbf_expanded_variable%
+echo * Expanded variable: %cbf-expanded-variable%
 
 exit/b
 

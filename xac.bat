@@ -69,17 +69,17 @@ if %errorlevel% == 1 (
   exit/b
 )
 
-if not exist "%cbf_application%" (
+if not exist "%cbf-application%" (
   echo.
-  echo * Error: Cannot find the alias "%cbf_application%".
+  echo * Error: Cannot find the alias "%cbf-application%".
   exit/b
 )
 
-set cbf_fn=%~2
+set cbf-fn=%~2
 
-if not exist "%cbf_fn%" (
+if not exist "%cbf-fn%" (
   echo.
-  echo * Creating file "%cbf_fn%". Nov-11-2019 1:11 PM
+  echo * Creating file "%cbf-fn%". Nov-11-2019 1:11 PM
 )
 
 
@@ -90,7 +90,7 @@ if not exist "%cbf_fn%" (
 
 rem lu: Aug-3-2019
 
-call m associate_cbf_parameter_to_cbf_fn
+call m associate_cbf-parameter_to_cbf-fn
 
 call r
 

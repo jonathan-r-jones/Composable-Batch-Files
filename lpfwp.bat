@@ -58,12 +58,12 @@ if %errorlevel% gtr 0 (
 
 :main_function
 
-call m expand_to_filename_without_path %cbf_fn%
+call m expand_to_filename_without_path %cbf-fn%
 
-echo %cbf_fn_without_path% | clip
+echo %cbf-fn_without_path% | clip
 
 echo.
-echo * Filename of "%cbf_fn_without_path%" copied to clipboard.
+echo * Filename of "%cbf-fn_without_path%" copied to clipboard.
 
 exit/b
 

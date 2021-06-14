@@ -56,13 +56,13 @@ exit/b
 
 :validate_user_input
 
-set cbf_jf=
+set cbf-jf=
 
 call fn %1
 
 if %errorlevel% gtr 0 exit/b
 
-if "%cbf_jf%" == "" goto cbf_ans_is_not_set
+if "%cbf-jf%" == "" goto cbf-ans_is_not_set
 
 goto finish_validation
 
@@ -70,9 +70,9 @@ goto finish_validation
 
 :_
 
-:cbf_ans_is_not_set
+:cbf-ans_is_not_set
 
-set cbf_ans=%cbf_fn%
+set cbf-ans=%cbf-fn%
 
 
 
@@ -80,9 +80,9 @@ set cbf_ans=%cbf_fn%
 
 :finish_validation
 
-if not exist "%cbf_ans%" (
+if not exist "%cbf-ans%" (
   echo.
-  echo * Error: Could not find "%cbf_ans%".
+  echo * Error: Could not find "%cbf-ans%".
   exit/b
 )
 
@@ -92,7 +92,7 @@ if not exist "%cbf_ans%" (
 
 :main_function
 
-call e %cbf_ans% -e
+call e %cbf-ans% -e
 
 exit/b
 

@@ -40,10 +40,10 @@ echo.
 echo Batch file style: Single purpose
 
 echo.
-echo Entangled variable: cbf_%0
+echo Entangled variable: cbf-%0
 
 echo.
-echo Pit of Success Strategy: For example, if cb_cf is not found, the algorithm will look for cbf_url.
+echo Pit of Success Strategy: For example, if cbf-cf is not found, the algorithm will look for cbf-url.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]

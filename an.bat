@@ -14,7 +14,7 @@ set filep=* Application nickname dictionary that sets the full application name 
 
 set fp=* In order to promote freshness, clear the environment variable.
 
-set cbf_application=
+set cbf-application=
 
 
 
@@ -51,7 +51,7 @@ exit/b
 
 :validate_input
 
-set cbf_application=
+set cbf-application=
 
 call n %1
 
@@ -62,17 +62,17 @@ if %errorlevel% gtr 0 (
   exit/b 1
 )
 
-if not defined cbf_application (
+if not defined cbf-application (
   echo.
-  echo * The cbf_application is not defined for "%1". Nov-27-2019 5:18 PM
+  echo * The cbf-application is not defined for "%1". Nov-27-2019 5:18 PM
   exit/b 1
 )
 
-if "%cbf_application%" == "microsoft-edge" exit/b 0
+if "%cbf-application%" == "microsoft-edge" exit/b 0
 
-if not exist "%cbf_application%" (
+if not exist "%cbf-application%" (
   echo.
-  echo * Error: The CBF_Application "%cbf_application%" could not be found. Nov-1-2019 8:56 PM
+  echo * Error: The cbf-Application "%cbf-application%" could not be found. Nov-1-2019 8:56 PM
   exit/b 1
 )
 

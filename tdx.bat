@@ -37,10 +37,10 @@ echo.
 echo Batch file style: Single Purpose
 
 echo.
-echo Entangled variable: cbf_fc_path
+echo Entangled variable: cbf-fc_path
 
 echo.
-echo Pit of Success Strategy: If cb_conf is not, found the algorithm will look for cbf_url.
+echo Pit of Success Strategy: If cb_conf is not, found the algorithm will look for cbf-url.
 
 echo.
 echo Usage: %0 [space separated parameter(s)]
@@ -88,28 +88,28 @@ if %errorlevel% gtr 0 exit/b
 
 call m compose_variable %2
 
-if "%cbf_expanded_variable%" == "" (
+if "%cbf-expanded-variable%" == "" (
   echo. 
-  echo * Error: There is no definition of "cbf_%2" for the alias "%1".
+  echo * Error: There is no definition of "cbf-%2" for the alias "%1".
   exit/b
 )
 
 rem echo.
-rem echo * Expanded variable: %cbf_expanded_variable%
+rem echo * Expanded variable: %cbf-expanded-variable%
 
-if not exist "%cbf_expanded_variable%" (
+if not exist "%cbf-expanded-variable%" (
   rem echo.
-  rem echo * Error: CBF Expanded variable "%cbf_expanded_variable%" does not exist.
+  rem echo * Error: CBF Expanded variable "%cbf-expanded-variable%" does not exist.
   rem exit/b
 )
 
-call m convert_to_path %cbf_expanded_variable%
+call m convert_to_path %cbf-expanded-variable%
 
 rem echo.
-rem echo %cbf_path%
+rem echo %cbf-pt%
 
 rem qq1
-cd /d "%cbf_path%"
+cd /d "%cbf-pt%"
 
 exit/b
 

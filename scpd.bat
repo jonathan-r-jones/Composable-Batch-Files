@@ -79,32 +79,32 @@ if %errorlevel% gtr 0 (
 )
 
 if "%~3" == "a" (
-  set cbf_user=zzadmin
+  set cbf-user=zzadmin
 )
 
 if "%~3" == "c" (
-  set cbf_user=zs_ci_user
+  set cbf-user=zs_ci_user
 )
 
 if "%~3" == "j" (
-  set cbf_user=zzJJones
+  set cbf-user=zzJJones
 )
 
-if "%cbf_user%" == "" (
+if "%cbf-user%" == "" (
   echo.
   echo * Error: CBF User is blank.
   exit/b 1
 )
 
 if "%~4" == "" (
-  set cbf_destination_folder=%tmp%
+  set cbf-destination_folder=%tmp%
 )
 
 echo.
-echo * CBF Destination Folder: %cbf_destination_folder%
+echo * CBF Destination Folder: %cbf-destination_folder%
 
 echo.
-echo * CBF User: %cbf_user%
+echo * CBF User: %cbf-user%
 
 goto main_function
 
@@ -115,11 +115,11 @@ goto main_function
 :main_function
 
 set file_to_download=%~2
-set cbf_source_information=%cbf_user%@%cbf_ip%:%file_to_download%
+set cbf-source_information=%cbf-user%@%cbf-ip%:%file_to_download%
 
 echo.
 @echo on
-scp -i %share-zone%\pems\cart-np-key.pem %cbf_source_information% "%cbf_destination_folder%"
+scp -i %share-zone%\pems\cart-np-key.pem %cbf-source_information% "%cbf-destination_folder%"
 @echo off
 
 exit/b
