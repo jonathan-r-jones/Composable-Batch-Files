@@ -130,16 +130,18 @@ if not "%cbf_clone_url%"=="" echo.& echo * CBF_clone_url: %cbf_clone_url%
 
 rem Default Browser
 
-if -%~1- == -c- set cbf_default_browser=
-if not "%cbf_default_browser%"=="" echo.& echo * CBF_default_browser: %cbf_default_browser%
+rem if -%~1- == -c- set cbf_default_browser=
+rem if not "%cbf_default_browser%"=="" echo.& echo * CBF_default_browser: %cbf_default_browser%
+
+if "%cbf_default_browser%"=="" echo.& echo * Warning: CBF_default_browser is blank.
 
 
 ::
 
 rem Default Text Editor
 
-if -%~1- == -c- set cbf_default_text_editor=
-if not "%cbf_default_text_editor%"=="" echo.& echo * CBF_default_text_editor: %cbf_default_text_editor%
+rem if -%~1- == -c- set cbf_default_text_editor=
+rem if not "%cbf_default_text_editor%"=="" echo.& echo * CBF_default_text_editor: %cbf_default_text_editor%
 
 
 ::
@@ -300,7 +302,7 @@ rem Reserved Path
 
 rem Commented for now because it causes an issue. Jun-11-2021
 rem if -%~1- == -c- set cbf_reserved_path=
-if not "%cbf_reserved_path%"=="" echo.& echo * CBF_reserved_path: %cbf_reserved_path%
+rem if not "%cbf_reserved_path%"=="" echo.& echo * CBF_reserved_path: %cbf_reserved_path%
 
 
 ::
