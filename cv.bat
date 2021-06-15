@@ -122,7 +122,6 @@ if not "%cbf-composed-variable%"=="" echo.& echo * cbf-composed-variable: %cbf-c
 
 rem Clone URL
 
-rem qq1
 if -%~1- == -c- set cbf-clone-url=
 if not "%cbf-clone-url%"=="" echo.& echo * cbf-clone-url: %cbf-clone-url%
 

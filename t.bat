@@ -11078,7 +11078,6 @@ if -%~1- == -c- set fp=* Clear CBF Variables.
 echo.
 echo %fp%
 
-rem qq1
 if -%~1- == -c- set cbf-pt=
 if not -%cbf-pt%- == "" echo.& echo * cbf-pt: %cbf-pt%
 

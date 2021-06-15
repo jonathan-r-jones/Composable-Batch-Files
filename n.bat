@@ -64,6 +64,13 @@ exit/b
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
+
+
+
+:_
 
 Metadata: Track Size (!tsn)
 
@@ -613,7 +620,7 @@ exit/b
 
 :_
 
-:se
+:old_se
 
 :s6
 
@@ -7092,6 +7099,32 @@ exit/b
 :tf-imm
 
 :tfp
+
+:ctbp
+
+:cttf
+
+:ctcd
+
+:etdcd
+
+:ctpb
+
+:chpb
+
+:lb
+
+:lbm
+
+:lbmm
+
+:wdlb
+
+:wd
+
+:impb
+
+:immtf
 
 :pass-through
 
@@ -14198,27 +14231,6 @@ echo.
 echo %fp%
 
 set cbf-gh=https://github.com/jonathan-r-jones
-
-exit/b
-
-
-
-:_
-
-:lbm
-
-set fp=* lbm.asc.
-
-rem lu: Jun-8-2021
-
-echo.
-echo %fp%
-
-call pn s>nul
-
-set cbf-pt=%cbf-pt%\lbm
-
-set cbf-fn=%cbf-pt%\lbm.asc
 
 exit/b
 

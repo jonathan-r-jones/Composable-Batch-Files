@@ -60,6 +60,7 @@ rem call de.bat multi-edit_conflicted_files
 
 if "%machinename%"=="gfe" (
   call p cade
+  call p wd
 ) else (
   call td mecfg_dr
   rem call de.bat concop

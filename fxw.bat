@@ -18,6 +18,8 @@ if -%~1- == -/?- goto help
 
 if -%~2- == -/?- goto help
 
+if -%~1- == -- goto help
+
 if -%~2- == -- goto %1
 
 goto main_function

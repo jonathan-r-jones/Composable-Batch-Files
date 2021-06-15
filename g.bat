@@ -418,8 +418,6 @@ exit/b
 
 :_
 
-:ct
-
 :ctm
 
 :commit_with_timestamp_description
@@ -2130,7 +2128,7 @@ exit/b
 
 ::_
 
-:lb
+:lbg
 
 set fp=* List grepped branches.
 
