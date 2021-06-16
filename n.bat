@@ -2120,8 +2120,6 @@ rem lu: Jan-24-2018
 echo.
 echo %fp%
 
-set cbf-fn=%COMPOSABLE_BATCH_FILES%\cbf.bat
-
 set cbf-pt=%composable_batch_files%
 
 set cbf-url=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
@@ -6904,23 +6902,25 @@ exit/b
 
 :anum
 
-:r1
+:r101
 
-:r2
+:r102
 
-:r3
+:r103
 
-:r4
+:r104
 
-:r6
+:r105
 
-:r7
+:r106
 
-:r31
+:r107
 
-:r32
+:r131
 
-:r33
+:r132
+
+:r133
 
 :sr120
 
@@ -7125,6 +7125,14 @@ exit/b
 :impb
 
 :immtf
+
+:de
+
+:es
+
+:esbp
+
+:ettf
 
 :pass-through
 
@@ -12499,8 +12507,6 @@ exit/b
 
 ::_
 
-:de
-
 :desk
 
 :desktop
@@ -14072,7 +14078,7 @@ exit/b
 
 ::_
 
-:r5
+:r105
 
 :rf_s
 
