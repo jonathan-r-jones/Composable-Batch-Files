@@ -14236,4 +14236,25 @@ exit/b
 
 
 
+:_
+
+:in
+
+set fp=* Stocks.
+
+rem lu: Jun-16-2021
+
+echo.
+echo %fp%
+
+call pn sv>nul
+
+set cbf-pt=%cbf-pt%\Excels
+
+set cbf-ex=My Portfolio.xlsx
+
+exit/b
+
+
+
 :_ (!efnb, !efn, !rfsp) (mov-6)
