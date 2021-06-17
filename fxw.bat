@@ -106,12 +106,12 @@ exit/b
 
 :gh
 
-set fp=* Peform the default action which is to open the Cart GitHub webpage.
+set fp=* Peform the default action.
 
 echo.
 echo %fp%
 
-call fx ma %1 kr>nul
+call fx seer %1 kr>nul
 
 exit/b
 
@@ -121,12 +121,12 @@ exit/b
 
 :je
 
-set fp=* Peform the default action which is to open the Cart Develop Jenkins webpage.
+set fp=* Peform the default action.
 
 echo.
 echo %fp%
 
-call fx ma %1 kr>nul
+call fx jero %1 kr>nul
 
 exit/b
 

@@ -282,6 +282,14 @@ if not "%cbf-png%"=="" echo.& echo * cbf-png: %cbf-png%
 
 ::
 
+rem Project Designator
+
+if -%~1- == -c- set cbf-pd=
+if not "%cbf-pd%"=="" echo.& echo * cbf-pd: %cbf-pd%
+
+
+::
+
 rem Pull Requests
 
 if -%~1- == -c- set cbf-pr=

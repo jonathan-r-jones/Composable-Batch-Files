@@ -7136,6 +7136,12 @@ exit/b
 
 :chpr
 
+:et
+
+:css
+
+:csu
+
 :pass-through
 
 set fp=* Pass through.
