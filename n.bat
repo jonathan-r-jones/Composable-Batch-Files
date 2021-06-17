@@ -6910,8 +6910,6 @@ exit/b
 
 :r104
 
-:r105
-
 :r106
 
 :r107
@@ -7133,6 +7131,10 @@ exit/b
 :esbp
 
 :ettf
+
+:chdv
+
+:chpr
 
 :pass-through
 
@@ -14080,8 +14082,6 @@ exit/b
 
 :r105
 
-:rf_s
-
 :s
 
 set fp=* Share-Zone.
@@ -14105,13 +14105,14 @@ rem set cbf-url=git@bitbucket.org:Jonathan17/share-zone.git
 exit/b
 
 
-Postscript:
+Footnote
+>< >< ><
 
 branches: master
 
 Philosophy: Share-zone is for documents that I may need for some reason outside of my GFE.
 
-Registration: Officially Registered Repo
+officially registered repo: skw
 
 
 
