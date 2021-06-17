@@ -7142,6 +7142,14 @@ exit/b
 
 :csu
 
+:eng
+
+:ea
+
+:bff
+
+:orf
+
 :pass-through
 
 set fp=* Pass through.
@@ -11767,8 +11775,6 @@ exit/b
 
 
 ::_
-
-:ea
 
 :earl
 
