@@ -7150,6 +7150,34 @@ exit/b
 
 :orf
 
+:rrr
+
+:bf
+
+:etdrs
+
+:etdws
+
+:htaq
+
+:esaq
+
+:earm-fqt
+
+:earm-pr
+
+:earm-sw
+
+:aft
+
+:earm-dv
+
+:etfq
+
+:etcd
+
+:etpb
+
 :pass-through
 
 set fp=* Pass through.
@@ -10775,8 +10803,6 @@ exit/b
 
 
 ::_
-
-:eq
 
 :eq4
 

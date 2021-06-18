@@ -38,7 +38,7 @@ set parameter_1=Parameter 1: Alias you wish to process.
 
 set parameter_2=Parameter 2: DCV
 
-set parameter_3=Parameter 3: Alias of your chosen application.
+set parameter_3=Parameter 3: Application alias.
 
 echo.
 echo %parameter_1%
