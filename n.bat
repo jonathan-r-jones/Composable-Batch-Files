@@ -14315,7 +14315,7 @@ call pn sv>nul
 
 set cbf-pt=%cbf-pt%\Excels
 
-set cbf-ex=My Portfolio.xlsx
+set cbf-ex=%cbf-pt%\My Portfolio.xlsx
 
 exit/b
 
@@ -14323,18 +14323,32 @@ exit/b
 
 :_
 
+<<<<<<< HEAD
 :wi
 
 set fp=* Wikipedia.
+=======
+:exs
+
+set fp=* Excel files.
+>>>>>>> 06091b88fd11132793e1ebeeff55f454da03ed9b
 
 rem lu: Jun-18-2021
 
 echo.
 echo %fp%
 
+<<<<<<< HEAD
 set cbf-url=https://en.wikipedia.org/wiki/Main_Page
 
 set cbf-wi=https://en.wikipedia.org/wiki/Main_Page
+=======
+call pn sv>nul
+
+set cbf-pd=excels
+
+set cbf-pt=%cbf-pt%\%cbf-pd%
+>>>>>>> 06091b88fd11132793e1ebeeff55f454da03ed9b
 
 
 
