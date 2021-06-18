@@ -14,7 +14,7 @@ set filep=* Dir for current folder.
 
 set fp=* Route callers.
 
-if "%~1" == "" goto do
+if "%~1" == "" goto a
 
 if "%~1" == "/?" goto help
 
@@ -42,6 +42,7 @@ echo Batch file style: Multiurpose
 echo.          
 echo     Parameter  Description
 echo -------------  -----------------------------------------------------
+echo             a  Alphabetical, folders first.
 echo             d  Date, newest first.
 echo            d2  Date, smallest first.
 echo            fo  Folders only.

@@ -2122,9 +2122,26 @@ echo %fp%
 
 set cbf-pt=%composable_batch_files%
 
-set cbf-url=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
+set cbf-gh=https://github.com/jonathan-r-jones/Composable-Batch-Files.git
 
 exit/b
+
+
+Footnote
+>< >< ><
+
+about: Windows Batch Scripting files that are function-based, modularized and easy to use and 
+understand.
+
+branches: 1
+
+contributors: 1
+
+languages: Batchfile, Java
+
+last commit: Jun-18-2021
+
+releases: 4
 
 
 
@@ -7178,6 +7195,10 @@ exit/b
 
 :etpb
 
+:reac
+
+:ng
+
 :pass-through
 
 set fp=* Pass through.
@@ -11795,8 +11816,7 @@ exit/b
 
 
 
-
-:_+ My Machines
+:+_+ My Machines
 
 
 
@@ -14259,8 +14279,7 @@ exit/b
 
 
 
-
-:_
+:+_
 
 :jj
 
@@ -14299,6 +14318,23 @@ set cbf-pt=%cbf-pt%\Excels
 set cbf-ex=My Portfolio.xlsx
 
 exit/b
+
+
+
+:_
+
+:wi
+
+set fp=* Wikipedia.
+
+rem lu: Jun-18-2021
+
+echo.
+echo %fp%
+
+set cbf-url=https://en.wikipedia.org/wiki/Main_Page
+
+set cbf-wi=https://en.wikipedia.org/wiki/Main_Page
 
 
 

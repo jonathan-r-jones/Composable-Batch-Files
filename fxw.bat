@@ -79,19 +79,9 @@ exit/b
 
 :_
 
-:main_function
-
-call fx %2 %1 kr
-
-exit/b
-
-
-
-:_
-
 :cf
 
-set fp=* Peform the default action which is to open the Cart HOW-TO-ARTICLES webpage.
+set fp=* Open the Cart HOW-TO-ARTICLES webpage.
 
 echo.
 echo %fp%
@@ -106,7 +96,7 @@ exit/b
 
 :gh
 
-set fp=* Peform the default action.
+set fp=* Search ERO GitHub repositories.
 
 echo.
 echo %fp%
@@ -121,7 +111,7 @@ exit/b
 
 :je
 
-set fp=* Peform the default action.
+set fp=* Jenkins root.
 
 echo.
 echo %fp%
@@ -151,7 +141,7 @@ exit/b
 
 :pr
 
-set fp=* Peform the default action which is to open the Cart pull requests webpage.
+set fp=* Cart pull requests webpage.
 
 echo.
 echo %fp%
@@ -166,12 +156,37 @@ exit/b
 
 :rl
 
-set fp=* Peform the default action which is to open Cart Playbook releases webpage.
+set fp=* Cart Playbook releases webpage.
 
 echo.
 echo %fp%
 
 call fx cp %1 kr>nul
+
+exit/b
+
+
+
+:_
+
+:wi
+
+set fp=* Wikipedia home page.
+
+echo.
+echo %fp%
+
+call fx wi %1 kr>nul
+
+exit/b
+
+
+
+:_
+
+:main_function
+
+call fx %2 %1 kr
 
 exit/b
 
