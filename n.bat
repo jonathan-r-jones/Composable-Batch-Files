@@ -14296,9 +14296,29 @@ call pn sv>nul
 
 set cbf-pt=%cbf-pt%\Excels
 
-set cbf-ex=My Portfolio.xlsx
+set cbf-ex=%cbf-pt%\My Portfolio.xlsx
 
 exit/b
+
+
+
+:_
+
+:exs
+
+set fp=* Excel files.
+
+rem lu: Jun-18-2021
+
+echo.
+echo %fp%
+
+call pn sv>nul
+
+rem Dec-10-2020_12_16_PM qq1
+set cbf-pd=excels
+
+set cbf-pt=%cbf-pt%\%cbf-pd%
 
 
 
