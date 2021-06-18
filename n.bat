@@ -14315,7 +14315,6 @@ echo %fp%
 
 call pn sv>nul
 
-rem Dec-10-2020_12_16_PM qq1
 set cbf-pd=excels
 
 set cbf-pt=%cbf-pt%\%cbf-pd%
