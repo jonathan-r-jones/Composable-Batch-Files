@@ -14323,32 +14323,41 @@ exit/b
 
 :_
 
-<<<<<<< HEAD
 :wi
 
 set fp=* Wikipedia.
-=======
-:exs
-
-set fp=* Excel files.
->>>>>>> 06091b88fd11132793e1ebeeff55f454da03ed9b
 
 rem lu: Jun-18-2021
 
 echo.
 echo %fp%
 
-<<<<<<< HEAD
 set cbf-url=https://en.wikipedia.org/wiki/Main_Page
 
 set cbf-wi=https://en.wikipedia.org/wiki/Main_Page
-=======
+
+exit/b
+
+
+
+:_
+
+:exs
+
+set fp=* Excel files.
+
+rem lu: Jun-18-2021
+
+echo.
+echo %fp%
+
 call pn sv>nul
 
 set cbf-pd=excels
 
 set cbf-pt=%cbf-pt%\%cbf-pd%
->>>>>>> 06091b88fd11132793e1ebeeff55f454da03ed9b
+
+exit/b
 
 
 
