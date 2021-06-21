@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Exclusively set the path for an alias.
+set filep=* Exclusively set the path for an alias. Sanitizes other CBF values.
 
 
 

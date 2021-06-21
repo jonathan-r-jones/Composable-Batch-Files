@@ -4099,9 +4099,10 @@ set cbf-fn-list="%share-zone%\lbm\miscellany\lbm.asc"
 set cbf-fn-list=%cbf-fn-list% "%share-zone%\gfe.asc"
 set cbf-fn-list=%cbf-fn-list% "%share-zone%\copy of cc.asc"
 set cbf-fn-list=%cbf-fn-list% "%share-zone%\it2.asc"
+rem I put ni.bat before n.bat and m.bat because I want ni.bat to be the first file that is searched!
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\ni.bat"
 set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\m.bat"
 set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\n.bat"
-set cbf-fn-list=%cbf-fn-list% "%share-zone%\ni.bat"
 set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\v.bat"
 set cbf-fn-list=%cbf-fn-list% "%composable_batch_files%\g.bat"
 

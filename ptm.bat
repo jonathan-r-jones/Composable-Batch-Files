@@ -6,7 +6,7 @@
 
 :_
 
-set filep=* Exclusively set the path 2 for an alias.
+set filep=* Sets the path using a monogamous CBF variable that sets the path only.
 
 
 
@@ -50,30 +50,28 @@ exit/b
 
 :validate_input
 
-set cbf-pt2=
+set cbf-pt=
 
 call n %1
 
 if %errorlevel% gtr 0 (
   rem echo.
-  rem echo * Error: Label not found. skw Jun-18-2021_2_52_PM
+  rem echo * Error: Label not found. skw May-4-2020_8_14_PM
   call m clear_errorlevel_silently 
   exit/b 99
 )
 
 if "%cbf-pt%" == "" (
   echo.
-  echo * The cbf-pt is not defined for "%1". skw Jun-18-2021_2_52_PM
+  echo * The cbf-pt is not defined for "%1". skw Aug-18-2020_3_32_PM
   exit/b 1
 )
 
 if not exist "%cbf-pt%" (
   echo.
-  echo * Error: The cbf-pt "%cbf-pt%" does not exist. skw Jun-18-2021_2_52_PM
+  echo * Error: The cbf-pt "%cbf-pt%" does not exist. skw May-4-2020_8_13_PM
   exit/b 1
 )
-
-set cbf-pt2=%cbf-pt%
 
 exit/b
 

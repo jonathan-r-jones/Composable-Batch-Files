@@ -5679,6 +5679,8 @@ exit/b
 
 :tls
 
+:t
+
 :1253
 
 :sf1d
@@ -7135,8 +7137,6 @@ exit/b
 
 :wdlb
 
-:wd
-
 :impb
 
 :immtf
@@ -7198,6 +7198,8 @@ exit/b
 :reac
 
 :ng
+
+:wd
 
 :pass-through
 
@@ -7328,27 +7330,6 @@ exit/b
 
 
 :_+ Repositories
-
-
-
-::_
-
-:r
-
-:repos
-
-:repository_folder
-
-set fp=* Default repository folder.
-
-rem lu: Jul-10-2018
-
-echo.
-echo %fp%
-
-set cbf-pt=%cbf-repo%
-
-exit/b
 
 
 
@@ -14358,6 +14339,30 @@ set cbf-pd=excels
 set cbf-pt=%cbf-pt%\%cbf-pd%
 
 exit/b
+
+
+
+:_
+
+:r
+
+:repos
+
+:repository_folder
+
+set fp=* Default repository folder.
+
+rem lu: Jun-18-2021
+
+set cbf-pt=%cbf-repo%
+
+exit/b
+
+
+Footnote
+>< >< ><
+
+certified monogamous CBF
 
 
 

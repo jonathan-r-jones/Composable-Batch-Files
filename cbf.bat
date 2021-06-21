@@ -159,6 +159,7 @@ echo     pql  PostgreSQL
 echo     png  Run cbf-png as a double-click filename
 echo      pr  Execute the pull requests namesake DCV for the passed in alias.
 echo      ps  PowerShell
+echo     ptm  Sets the path using a monogamous CBF variable that sets the path only.
 echo     qfn  Query if a file exists based on its passed in alias
 echo       r  Run application using CBF variables, mostly used in back office operations
 echo      rl  Execute the releases namesake DCV for the passed in alias.
