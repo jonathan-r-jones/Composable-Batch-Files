@@ -290,6 +290,14 @@ if not "%cbf-pd%"=="" echo.& echo * cbf-pd: %cbf-pd%
 
 ::
 
+rem PowerPoint with Macros Enabled
+
+if -%~1- == -c- set cbf-pptm=
+if not "%cbf-pptm%"=="" echo.& echo * cbf-pptm: %cbf-pptm%
+
+
+::
+
 rem Pull Requests
 
 if -%~1- == -c- set cbf-pr=

@@ -55,7 +55,6 @@ echo       a  AWS CLI
 echo      an  Communicates that the intent is only to change the application for a passed in alias
 echo     ans  Ansible-related tasks
 echo     ang  Angular-related tasks
-echo      as  Windows file associations
 echo      ap  Application-centric way of running an application with an optional filename parameter
 echo       b  Shutdown windows
 echo      bu  Back up using function routing
@@ -106,6 +105,7 @@ echo      es  Edit settings file of an alias
 echo      ex  Run Excel with or without a filename alias parameter
 echo    exdc  Use Multi-Edit to edit DCV ASCII files.
 echo       f  Filename sapien. Use any application to open any file
+echo      fa  Windows file associations
 echo      fe  Check for the existence of a file based on the passed in filename alias
 echo      fn  Communicates that the intent is only to change the filename for a passed in alias
 echo      fs  Filenames search

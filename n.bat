@@ -7201,6 +7201,16 @@ exit/b
 
 :wd
 
+:oldt
+
+:joda
+
+:cil
+
+:ghro
+
+:as
+
 :pass-through
 
 set fp=* Pass through.

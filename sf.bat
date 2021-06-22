@@ -200,12 +200,7 @@ goto set_precedence
 
 :set_precedence
 
-set fp=* Set precedence.
-
-rem echo.
-rem echo %fp%
-
-set fp=* This is a precedence hierarchy.
+set fp=* Set precedence. This is a precedence hierarchy.
 
 if "%cbf-parameter%" == "" (
   set cbf-parameter=%cbf-url%
@@ -224,7 +219,7 @@ if "%cbf-parameter%" == "" (
 )
 
 if "%cbf-parameter%" == "" (
-  set cbf-parameter=%cbf-gh%
+  set cbf-parameter=%cbf-ji%
 )
 
 if "%cbf-parameter%" == "" (
@@ -237,6 +232,7 @@ if "%cbf-parameter%" == "" (
   exit/b
 )
 
+goto main_function
 
 
 

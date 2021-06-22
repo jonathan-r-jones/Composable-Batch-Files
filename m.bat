@@ -2936,8 +2936,6 @@ exit/b
 
 :env_c
 
-:r
-
 :rcv
 
 :res

@@ -81,7 +81,7 @@ exit/b
 
 :cf
 
-set fp=* Open the Cart HOW-TO-ARTICLES webpage.
+set fp=* Open the CART Confluence Homepage.
 
 echo.
 echo %fp%
