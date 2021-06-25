@@ -30,6 +30,9 @@ echo.
 echo Usage: %0 [space separated parameter(s)]
 
 echo.
+echo Batch File Style: Multipurpose
+
+echo.
 echo Parameter 1 (Optional): Sorting style.
 
 echo.
@@ -44,11 +47,11 @@ echo     Parameter  Description
 echo -------------  -----------------------------------------------------
 echo             a  Alphabetical, folders first.
 echo             d  Date, newest first.
-echo            d2  Date, smallest first.
+echo            d-  Date, smallest first.
 echo            fo  Folders only.
 echo           hid  Hidden files and folders.
 echo             s  Size, biggest first.
-echo            s2  Size, smallest first.
+echo            s-  Size, smallest first.
 echo             t  Treeview piped to a file.
 echo            tn  Treeview normal.
 echo            to  Files and folders changed today.
@@ -61,24 +64,6 @@ exit/b
   ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
  (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
  ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
-
-
-
-:_
-
-:s2
-
-set fp=* Size, smallest first.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-echo.
-
-dir /os %2
-
-exit/b
 
 
 
@@ -140,62 +125,6 @@ exit/b
 
 
 
-:_
-
-:s
-
-set fp=* Size, biggest first.
-
-rem lu: Feb-1-2018
-
-echo.
-echo %fp%
-echo.
-
-dir /o-s %2
-
-exit/b
-
-
-
-:_
-
-:d
-
-set fp=* Date, newest first.
-
-rem lu: Apr-23-2019
-
-echo.
-echo %fp%
-echo.
-
-dir /o-d
-
-exit/b
-
-
-
-:_
-
-:a
-
-:alphabetical
-
-set fp=* Alphabetical, folders first.
-
-rem lu: Apr-23-2019
-
-echo.
-echo %fp%
-
-echo.
-dir /ogn
-
-exit/b
-
-
-
 :_+ Tree Operations
 
 
@@ -203,8 +132,6 @@ exit/b
 ::_
 
 :t
-
-:tr
 
 :tree
 
@@ -341,9 +268,31 @@ file.
 
 
 
-:_
+:_+ Date
 
-:do
+
+
+::_
+
+:d
+
+set fp=* Date, newest first.
+
+rem lu: Apr-23-2019
+
+echo.
+echo %fp%
+echo.
+
+dir /o-d
+
+exit/b
+
+
+
+::_
+
+:d-
 
 set fp=* Date, oldest first.
 
@@ -354,6 +303,104 @@ echo %fp%
 echo.
 
 dir /od
+
+exit/b
+
+
+
+:_+ Size
+
+
+
+::_
+
+:s
+
+set fp=* Size, biggest first.
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+echo.
+
+dir /o-s %2
+
+exit/b
+
+
+
+::_
+
+:s-
+
+set fp=* Size, smallest first.
+
+rem lu: Feb-1-2018
+
+echo.
+echo %fp%
+echo.
+
+dir /os %2
+
+exit/b
+
+
+
+:_
+
+:e
+
+set fp=* Group by extension.
+
+rem lu: Jun-24-2021
+
+echo.
+echo %fp%
+
+echo.
+dir /oe
+
+exit/b
+
+
+
+:_+ Alphabetical
+
+
+
+::_
+
+:a
+
+set fp=* Alphabetical, folders first.
+
+rem lu: Apr-23-2019
+
+echo.
+echo %fp%
+
+echo.
+dir /ogn
+
+exit/b
+
+
+
+::_
+
+:a-
+
+set fp=* Reverse Alphabetical, folders first.
+
+rem lu: Jun-24-2021
+
+echo.
+echo %fp%
+
+echo.
+dir /og-n
 
 exit/b
 

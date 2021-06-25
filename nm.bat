@@ -29,8 +29,13 @@ goto %1
 echo.
 echo %filep%
 
+rem lu: Mar-6-2020
+
 echo.
 echo Usage: %0 [Parameter 1]
+
+echo.
+echo Batch file style: Multipurpose
 
 echo.
 echo Parameter 1: Nickname of command you wish to execute.
@@ -59,7 +64,10 @@ exit/b
 
 
 
-:_ Begin body. (!bb)
+:_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
 
 
@@ -966,8 +974,6 @@ exit/b
 
 set fp=* Run tests. (skw run unit tests)
 
-rem lu: Mar-6-2020
-
 echo.
 echo %fp%
 
@@ -1148,6 +1154,44 @@ Tests:       132 passed, 132 total
 Snapshots:   0 total
 Time:        128.601s
 Ran all test suites.
+
+
+
+:_
+
+:inse
+
+set fp=* Install serverless.
+
+rem lu: Jun-23-2021
+
+echo.
+echo %fp%
+
+npm install serverless -g
+
+exit/b
+
+
+
+:_
+
+:rit
+
+set fp=* Run the integration tests.
+
+echo.
+echo %fp%
+
+npm run test:int
+
+exit/b
+
+
+Footnote
+>< >< ><
+
+You might need to be in a particular folder for this command to work.
 
 
 

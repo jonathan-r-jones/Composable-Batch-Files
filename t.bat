@@ -26,7 +26,7 @@ set fp=* Route callers.
 
 if -%~1- == -/?- goto help
 
-if not -%~1- == -- goto %1
+rem if not -%~1- == -- goto %1
 
 goto code_execution_area
 
@@ -11057,16 +11057,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Process CBF variables.
@@ -11080,6 +11070,33 @@ echo %fp%
 
 if -%~1- == -c- set cbf-pt=
 if not -%cbf-pt%- == "" echo.& echo * cbf-pt: %cbf-pt%
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+:
+
+set fp=* Newline at end of file test.
+
+rem lu: Jun-23-2021
+
+echo.
+echo %fp%
+
+%localappdata%\Programs\Git\usr\bin\file %1
 
 exit/b
 

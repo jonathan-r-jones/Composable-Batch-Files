@@ -6,8 +6,7 @@
 
 :_
 
-rem       qq1
-set filep=* 
+set filep=* Newline at end of file tester.
 
 
 
@@ -38,9 +37,6 @@ rem lu:
 
 echo.
 echo Batch file style: Single purpose
-
-echo.
-echo Entangled variable: cbf-%0
 
 echo.
 echo Pit of Success Strategy: For example, if cbf-cf is not found, the algorithm will look for cbf-url.
@@ -94,11 +90,8 @@ exit/b
 
 :main-function
 
-set fp=
-
 echo.
-echo %fp%
-
+%localappdata%\Programs\Git\usr\bin\file %1 %2
 
 exit/b
 

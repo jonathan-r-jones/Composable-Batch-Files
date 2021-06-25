@@ -7211,6 +7211,8 @@ exit/b
 
 :as
 
+:gr
+
 :pass-through
 
 set fp=* Pass through.

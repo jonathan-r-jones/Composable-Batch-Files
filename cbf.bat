@@ -107,6 +107,7 @@ echo    exdc  Use Multi-Edit to edit DCV ASCII files.
 echo       f  Filename sapien. Use any application to open any file
 echo      fa  Windows file associations
 echo      fe  Check for the existence of a file based on the passed in filename alias
+echo    file  New line at end of file tester.
 echo      fn  Communicates that the intent is only to change the filename for a passed in alias
 echo      fs  Filenames search
 echo     fsp  Perennial filenames search
