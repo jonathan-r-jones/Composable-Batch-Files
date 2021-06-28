@@ -292,6 +292,8 @@ exit/b
 
 ::_
 
+:-d
+
 :d-
 
 set fp=* Date, oldest first.
@@ -331,6 +333,8 @@ exit/b
 
 
 ::_
+
+:-s
 
 :s-
 
@@ -389,6 +393,8 @@ exit/b
 
 
 ::_
+
+:-a
 
 :a-
 
