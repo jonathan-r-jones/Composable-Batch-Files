@@ -7089,8 +7089,6 @@ exit/b
 
 :ksc
 
-:st
-
 :xc
 
 :vku
@@ -14295,27 +14293,6 @@ exit/b
 
 :_
 
-:in
-
-set fp=* Stocks.
-
-rem lu: Jun-16-2021
-
-echo.
-echo %fp%
-
-call pn sv>nul
-
-set cbf-pt=%cbf-pt%\Excels
-
-set cbf-ex=%cbf-pt%\My Portfolio.xlsx
-
-exit/b
-
-
-
-:_
-
 :wi
 
 set fp=* Wikipedia.
@@ -14328,27 +14305,6 @@ echo %fp%
 set cbf-url=https://en.wikipedia.org/wiki/Main_Page
 
 set cbf-wi=https://en.wikipedia.org/wiki/Main_Page
-
-exit/b
-
-
-
-:_
-
-:exs
-
-set fp=* Excel files.
-
-rem lu: Jun-18-2021
-
-echo.
-echo %fp%
-
-call pn sv>nul
-
-set cbf-pd=excels
-
-set cbf-pt=%cbf-pt%\%cbf-pd%
 
 exit/b
 
@@ -14375,6 +14331,79 @@ Footnote
 >< >< ><
 
 certified monogamous CBF
+
+
+
+:_+ Excel
+
+
+
+::_
+
+:exs
+
+set fp=* Excel files.
+
+rem lu: Jun-18-2021
+
+echo.
+echo %fp%
+
+call ptm sv>nul
+
+set cbf-pd=excels
+
+set cbf-pt=%cbf-pt%\%cbf-pd%
+
+exit/b
+
+
+Footnote
+>< >< ><
+
+branch: 
+
+certified monogamous CBF
+
+
+
+::_
+
+:po
+
+set fp=* Poker Results file.
+
+rem lu: Jun-28-2021
+
+echo.
+echo %fp%
+
+call ptm exs>nul
+
+set cbf-ex=%cbf-pt%\Poker_Results.xls
+
+exit/b
+
+
+
+::_
+
+:in
+
+:st
+
+set fp=* Stocks.
+
+rem lu: Jun-16-2021
+
+echo.
+echo %fp%
+
+call ptm exs>nul
+
+set cbf-ex=%cbf-pt%\My Portfolio.xlsx
+
+exit/b
 
 
 
