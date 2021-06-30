@@ -71,6 +71,8 @@ echo                      function routing occurs. Example(s): t.bat, v.bat.
 echo            consumer  Batch file style using function routing with time-stamps as function 
 echo                      names. Used for analysis and showing-your-work, not for repeatability. 
 echo                      By convention, files are suffixed with a "_c".
+echo              custom  Batch file style (bfs) where the structure does not fall into one
+                          of the other batch file styles.
 echo   dynamically cons-  DCV. An environment variable that can be dynamically created at runtime.
 echo   tructed variable   For example, java is the dcv of the expression cbf-java. CBFs that
 echo                      use DCVs should have an "x" in their name.

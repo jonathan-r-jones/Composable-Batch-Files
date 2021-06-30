@@ -32,6 +32,9 @@ echo.
 echo %filep%
 
 echo.
+echo Batch file style: Custom.
+
+echo.
 echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1: Alias you wish to process.
@@ -48,9 +51,6 @@ echo %parameter_2%
 
 echo.
 echo %parameter_3%
-
-echo.
-echo Batch file style: Custom.
 
 echo.
 echo Examples:
@@ -85,6 +85,9 @@ echo %0 ksc fn ij
 
 echo.
 echo %0 cd pr kr
+
+echo.
+echo %0 ng pptm pp
 
 exit/b
 

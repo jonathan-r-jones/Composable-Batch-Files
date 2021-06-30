@@ -7211,6 +7211,28 @@ exit/b
 
 :gr
 
+:trn
+
+:cvs
+
+:cuf
+
+:crs
+
+:cas
+
+:lchp
+
+:2108
+
+:chp
+
+:lhp
+
+:pppc
+
+:ppc
+
 :pass-through
 
 set fp=* Pass through.
@@ -8403,6 +8425,7 @@ rem Determine installation path.
 set cbf-application=
 
 if exist "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE" set cbf-application=C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE
+if exist "C:\Program Files (x86)\Microsoft Office\root\Office16\POWERPNT.EXE" set cbf-application=C:\Program Files (x86)\Microsoft Office\root\Office16\POWERPNT.EXE
 
 if "%cbf-application%" == "" (
   echo.

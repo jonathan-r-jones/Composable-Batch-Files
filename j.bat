@@ -58,6 +58,9 @@ echo %0 max xml
 echo.
 echo %0 2446 png2
 
+echo.
+echo %0 ng pptm
+
 exit/b
 
 

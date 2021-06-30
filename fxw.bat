@@ -124,21 +124,6 @@ exit/b
 
 :_
 
-:jf
-
-set fp=* Not yet implemented.
-
-echo.
-echo %fp%
-
-call fx ma %1 kr>nul
-
-exit/b
-
-
-
-:_
-
 :pr
 
 set fp=* Cart pull requests webpage.
@@ -186,7 +171,7 @@ exit/b
 
 :main_function
 
-call fx %2 %1 kr
+fx %2 %1 kr
 
 exit/b
 

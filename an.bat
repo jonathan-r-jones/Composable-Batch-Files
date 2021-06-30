@@ -57,14 +57,14 @@ call n %1
 
 if %errorlevel% gtr 0 (
   echo.
-  echo * Error: Label not found. Nov-8-2019 1:59 PM
+  echo * Error: Label not found. Jun-28-2021_2_52_PM
   call m clear_errorlevel_silently 
   exit/b 1
 )
 
 if not defined cbf-application (
   echo.
-  echo * The cbf-application is not defined for "%1". Nov-27-2019 5:18 PM
+  echo * The cbf-application is not defined for "%1". Jun-28-2021_2_53_PM
   exit/b 1
 )
 
@@ -72,7 +72,7 @@ if "%cbf-application%" == "microsoft-edge" exit/b 0
 
 if not exist "%cbf-application%" (
   echo.
-  echo * Error: The cbf-Application "%cbf-application%" could not be found. Nov-1-2019 8:56 PM
+  echo * Error: The cbf-Application "%cbf-application%" could not be found. Jun-28-2021_2_54_PM
   exit/b 1
 )
 

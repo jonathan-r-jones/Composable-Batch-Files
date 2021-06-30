@@ -1644,64 +1644,6 @@ exit/b 0
 
 
 
-:_+ Rebase
-
-
-
-::_
-
-:re
-
-:reba
-
-:rebase
-
-:rede
-
-set fp=* Rebase from develop branch.
-
-rem lu: Jan-24-2019
-
-rem I had some pain with this code so I am not too happy with it.
-
-echo.
-echo %fp%
-
-echo.
-git fetch
-git rebase origin/develop
-
-exit/b
-
-
-
-::_
-
-:rebase_m
-
-:rema
-
-set fp=* Rebase from master branch. How you get a git branch to update from its source master branch.
-
-rem lu: Jan-24-2019
-
-echo.
-echo %fp%
-
-echo.
-git fetch
-git rebase origin/master
-
-exit/b
-
-
-Footnote
->< >< >< 
-
-Use "git rebase master" ONLY if master is local only! - Niroop, Nov-5-2020
-
-
-
 :_+ Custom Clones
 
 
@@ -4308,6 +4250,87 @@ echo.
 echo %fp%
 
 git config --system http.sslCAPath C:\Users\JJones2\j\Share-zone\ca-bundle.crt 
+
+exit/b
+
+
+
+:_+ Rebase
+
+
+
+::_
+
+:re
+
+:reba
+
+:rebase
+
+:rede
+
+set fp=* Rebase from develop branch.
+
+rem lu: Jan-24-2019
+
+rem I had some pain with this code so I am not too happy with it.
+
+echo.
+echo %fp%
+
+echo.
+git fetch
+git rebase origin/develop
+
+exit/b
+
+
+
+::_
+
+:rebase_m
+
+:rema
+
+set fp=* Rebase from master branch. How you get a git branch to update from its source master branch.
+
+rem lu: Jan-24-2019
+
+echo.
+echo %fp%
+
+echo.
+git fetch
+git rebase origin/master
+
+exit/b
+
+
+Footnote
+>< >< >< 
+
+Use "git rebase master" ONLY if master is local only! - Niroop, Nov-5-2020
+
+
+
+::_
+
+set fp=* Rebase test that Ben B. and Thuy were doing. - Untested: for reference only
+
+rem lu: Jun-30-2021
+
+echo.
+echo %fp%
+
+git pull origin dashboard --rebase
+[9:32 AM] Bergeron, Benjamin D (CTR)
+    git branch -u upstream/foo
+?[9:33 AM] Bergeron, Benjamin D (CTR)
+    git push origin master
+?[9:34 AM] Bergeron, Benjamin D (CTR)
+    git pull origin master --rebase
+?[9:42 AM] Bergeron, Benjamin D (CTR)
+    git rebase --continue
 
 exit/b
 
