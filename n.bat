@@ -1664,23 +1664,6 @@ exit/b
 
 :_
 
-:npm_s
-
-set fp=* NPM shortcuts.
-
-rem lu: Apr-24-2018
-
-echo.
-echo %fp%
-
-set cbf-url=https://docs.npmjs.com/misc/config
-
-exit/b
-
-
-
-:_
-
 :express
 
 set fp=* Express.
@@ -7235,6 +7218,12 @@ exit/b
 
 :ppc
 
+:bmis
+
+:1259
+
+:1260
+
 :pass-through
 
 set fp=* Pass through.
@@ -11477,31 +11466,6 @@ exit/b
 
 :_
 
-:bases
-
-:bashs
-
-:sh
-
-:shor
-
-set fp=* Base shortcuts.
-
-rem base icons: skw
-
-rem lu: Jan-9-2020
-
-echo.
-echo %fp%
-
-set cbf-pt=%dropbox%\it\shortcuts\base
-
-exit/b
-
-
-
-:_
-
 :csaa
 
 set fp=* AWS Certified Solutions Architect - Associate prep document.
@@ -14429,6 +14393,94 @@ echo %fp%
 call ptm exs>nul
 
 set cbf-ex=%cbf-pt%\My Portfolio.xlsx
+
+exit/b
+
+
+
+:_
+
+:icons
+
+set fp=* Icons.
+
+rem lu: Jul-2-2021
+
+echo.
+echo %fp%
+
+call pn s>nul
+
+set cbf-pd=icons
+
+set cbf-pt=%cbf-pt%\%cbf-pd%
+
+exit/b
+
+
+
+:_
+
+:npm-s
+
+set fp=* NPM shortcuts.
+
+rem lu: Jul-2-2021
+
+echo.
+echo %fp%
+
+set cbf-url=https://docs.npmjs.com/misc/config
+
+exit/b
+
+
+
+:_+ Shortcuts
+
+
+
+::_
+
+:bases
+
+:bashs
+
+:sh
+
+:shor
+
+set fp=* Base shortcuts.
+
+rem base icons: skw
+
+rem lu: Jan-9-2020
+
+echo.
+echo %fp%
+
+set cbf-pt=%dropbox%\it\shortcuts\base
+
+exit/b
+
+
+
+::_
+
+:bish
+
+set fp=* Big shortcuts.
+
+rem lu: Jul-2-2021
+
+echo.
+echo %fp%
+
+call pn s>nul
+
+set cbf-pd=big shortcuts
+
+set cbf-pt=%cbf-pt%\%cbf-pd%
 
 exit/b
 

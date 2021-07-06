@@ -36,7 +36,7 @@ echo Usage: %0 [space separated parameter(s)]
 
 set parameter_1=Parameter 1 (Optional): Filename alias to run. This file will try to open ^
 the cbf-%0 first, and if that is not found, it will try to open the ^
-cbf-fn. If left blank, Excel is opened.
+cbf-fn. If left blank, Microsoft Word is opened.
 
 echo.
 echo %parameter_1%

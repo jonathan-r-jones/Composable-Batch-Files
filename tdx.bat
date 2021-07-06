@@ -61,6 +61,9 @@ echo Example(s):
 echo.
 echo %0 2154 html
 
+echo.
+echo %0 csu forms
+
 exit/b
 
 (!rfsp) (mov4)
@@ -108,7 +111,6 @@ call m convert_to_path %cbf-expanded-variable%
 rem echo.
 rem echo %cbf-pt%
 
-rem qq1
 cd /d "%cbf-pt%"
 
 exit/b

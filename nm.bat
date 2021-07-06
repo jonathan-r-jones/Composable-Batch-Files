@@ -1176,7 +1176,11 @@ exit/b
 
 :_
 
+:int
+
 :rit
+
+:rtit
 
 set fp=* Run the integration tests.
 

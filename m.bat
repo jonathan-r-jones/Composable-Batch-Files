@@ -1366,261 +1366,6 @@ exit/b
 
 
 
-:_+ Initizialization Family
-
-
-
-::_
-
-:lnk_cbf
-
-set fp=* Initialize CBF environment.
-
-title=CBF
-
-call %0 big
-
-call td a
-
-cls
-
-exit/b
-
-
-
-::_
-
-:lnk_right
-
-title=Right Justified CBF
-
-call %0 big
-
-call td a
-
-cls
-
-exit/b
-
-
-
-::_
-
-:lnk_chef
-
-title=Chef
-
-set homedrive=c:
-
-set homepath=\Users\JJones2
-
-call %0 big
-
-call td a
-
-cls
-
-exit/b
-
-
-
-::_
-
-:lnk_linux
-
-title=Linux
-
-call %0 big
-
-call td a
-
-cls
-
-exit/b
-
-
-
-::_
-
-:initialize_environment_router
-
-set fp=* Initialize environment router.
-
-rem lu: Feb-1-2019
-
-echo %computername% | find /i "lipt">nul
-
-if %errorlevel% == 0 (
-   echo.
-   echo * Computer name contains "lipt".
-   call %0 initialize_big_environment
-   exit/b
-)
-
-call %0 initialize_environment
-
-exit/b
-
-
-
-::_
-
-:initialize_environment
-
-:in_env
-
-:ise
-
-set fp=* Initialize environment. The idea is to create a pit of success for the user.
-
-rem fcd: Dec-13-2018
-
-echo.
-echo %fp%
-
-call %0 initialize_default_browser
-
-call %0 initialize_default_repository_folder
-
-call %0 initialize_default_text_editor
-
-call %0 set_white_list_settings_1
-
-cls
-
-exit/b
-
-
-
-::_
-
-:big
-
-:ibe
-
-:ige
-
-:initialize_big_environment
-
-set fp=* Initialize GFE environment.
-
-rem lu: Dec-4-2018
-
-echo.
-echo %fp%
-
-call %0 initialize_environment
-
-call %0 set_big_path
-
-call %0 set_default_browser kr
-
-call %0 set_default_text_editor sm
-
-set aa=c:\aa
-set cbf-repo=C:\Users\JJones2\j
-set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
-set JAVA_TOOL_OPTIONS=
-set KITCHEN_YAML=.kitchen-aws.yml
-set machinename=gfe
-
-call ni full_pem
-set SSH_KEY_PATH=%cbf-full-pem%
-
-cls
-
-exit/b
-
-
-
-::_
-
-:set_white_list_settings_1
-
-if /i "%computername%" == "asus" goto set_white_list_settings_2
-if /i "%computername%" == "buzz" goto set_white_list_settings_2
-if /i "%computername%" == "xps" goto set_white_list_settings_2
-
-exit/b
-
-
-
-::_
-
-:set_white_list_settings_2
-
-set share-zone=%dropbox%\it\share-zone
-set path=%savannah%\belfry;%path%
-
-exit/b
-
-
-
-::_
-
-:initialize_default_browser
-
-set fp=* Initialize default browser.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-if /i "%computername%" == "asus" call m set_default_browser kr
-if /i "%computername%" == "buzz" call m set_default_browser kr
-if /i "%computername%" == "earl" call m set_default_browser kr
-if /i "%computername%" == "sp7" call m set_default_browser kr
-if /i "%computername%" == "xps" call m set_default_browser kr
-if "%cbf-default-browser%" == "" call m set_default_browser ie
-
-exit/b
-
-
-
-::_
-
-:initialize_default_repository_folder
-
-set fp=* Initialize default repository folder.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-call %0 set_default_repository_folder c_aa_repos
-if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
-if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
-if /i "%computername%" == "earl" call %0 set_default_repository_folder c_aa_repos
-if /i "%computername%" == "sp7" call %0 set_default_repository_folder c_aa_repos
-if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
-rem if "%cbf-repo%" == "" call %0 set_default_repository_folder temp
-
-exit/b
-
-
-
-::_
-
-:initialize_default_text_editor
-
-set fp=* Initialize default text editor.
-
-rem lu: Nov-2-2018
-
-echo.
-echo %fp%
-
-if /i "%computername%" == "asus" call m set_default_text_editor no
-if /i "%computername%" == "sp7" call m set_default_text_editor np
-if /i "%computername%" == "xps" call m set_default_text_editor np
-if "%cbf-default-text-editor%" == "" call m set_default_text_editor no
-
-exit/b
-
-
-
 :_
 
 :set_server_title
@@ -5467,6 +5212,281 @@ call e gfs
 call e iac
 
 call e odls
+
+exit/b
+
+
+
+:_+ Initizialization Family
+
+
+
+::_
+
+:lnk_right
+
+title=Right Justified CBF
+
+call %0 big
+
+call td a
+
+cls
+
+exit/b
+
+
+
+::_
+
+:lnk_chef
+
+title=Chef
+
+set homedrive=c:
+
+set homepath=\Users\JJones2
+
+call %0 big
+
+call td a
+
+cls
+
+exit/b
+
+
+
+::_
+
+:lnk_linux
+
+title=Linux
+
+call %0 big
+
+call td a
+
+cls
+
+exit/b
+
+
+
+::_
+
+:initialize_environment_router
+
+set fp=* Initialize environment router.
+
+rem lu: Feb-1-2019
+
+echo %computername% | find /i "lipt">nul
+
+if %errorlevel% == 0 (
+   echo.
+   echo * Computer name contains "lipt".
+   call %0 initialize_big_environment
+   exit/b
+)
+
+call %0 initialize_environment
+
+exit/b
+
+
+
+::_
+
+:initialize_environment
+
+:in_env
+
+:ise
+
+set fp=* Initialize environment. The idea is to create a pit of success for the user.
+
+rem fcd: Dec-13-2018
+
+echo.
+echo %fp%
+
+call %0 initialize_default_browser
+
+call %0 initialize_default_repository_folder
+
+call %0 initialize_default_text_editor
+
+call %0 set_white_list_settings_1
+
+cls
+
+exit/b
+
+
+
+::_
+
+:set_white_list_settings_1
+
+if /i "%computername%" == "asus" goto set_white_list_settings_2
+if /i "%computername%" == "buzz" goto set_white_list_settings_2
+if /i "%computername%" == "xps" goto set_white_list_settings_2
+
+exit/b
+
+
+
+::_
+
+:set_white_list_settings_2
+
+set share-zone=%dropbox%\it\share-zone
+set path=%savannah%\belfry;%path%
+
+exit/b
+
+
+
+::_
+
+:initialize_default_browser
+
+set fp=* Initialize default browser.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+if /i "%computername%" == "asus" call m set_default_browser kr
+if /i "%computername%" == "buzz" call m set_default_browser kr
+if /i "%computername%" == "earl" call m set_default_browser kr
+if /i "%computername%" == "sp7" call m set_default_browser kr
+if /i "%computername%" == "xps" call m set_default_browser kr
+if "%cbf-default-browser%" == "" call m set_default_browser ie
+
+exit/b
+
+
+
+::_
+
+:initialize_default_repository_folder
+
+set fp=* Initialize default repository folder.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "asus" call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "buzz" call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "earl" call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "sp7" call %0 set_default_repository_folder c_aa_repos
+if /i "%computername%" == "xps" call %0 set_default_repository_folder d_aa_repos
+rem if "%cbf-repo%" == "" call %0 set_default_repository_folder temp
+
+exit/b
+
+
+
+::_
+
+:initialize_default_text_editor
+
+set fp=* Initialize default text editor.
+
+rem lu: Nov-2-2018
+
+echo.
+echo %fp%
+
+if /i "%computername%" == "asus" call m set_default_text_editor no
+if /i "%computername%" == "sp7" call m set_default_text_editor np
+if /i "%computername%" == "xps" call m set_default_text_editor np
+if "%cbf-default-text-editor%" == "" call m set_default_text_editor no
+
+exit/b
+
+
+
+::_
+
+:big
+
+:ibe
+
+:ige
+
+:initialize_big_environment
+
+set fp=* Initialize GFE environment.
+
+rem lu: Dec-4-2018
+
+echo.
+echo %fp%
+
+call %0 initialize_environment
+
+call %0 set_big_path
+
+call %0 set_default_browser kr
+
+call %0 set_default_text_editor sm
+
+set aa=c:\aa
+set cbf-repo=C:\Users\JJones2\j
+set composable_batch_files=C:\Users\JJones2\j\Composable-Batch-Files
+set JAVA_TOOL_OPTIONS=
+set KITCHEN_YAML=.kitchen-aws.yml
+set machinename=gfe
+
+call ni full_pem
+set SSH_KEY_PATH=%cbf-full-pem%
+
+cls
+
+exit/b
+
+
+
+::_
+
+:lnk_cbf
+
+set fp=* Initialize CBF environment.
+
+title=CBF
+
+call %0 big
+
+call td a
+
+cls
+
+exit/b
+
+
+
+::_
+
+:lnk-code
+
+set fp=* Initialize VS Code environment.
+
+title=VS Code
+
+call %0 big
+
+call td a
+
+cls
+
+code
 
 exit/b
 
