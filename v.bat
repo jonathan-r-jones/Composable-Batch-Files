@@ -1788,4 +1788,32 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 
 
+:_
+
+:scsh
+
+set fp=* Open latest screen shot.
+
+rem (file contents, get file contents into an environment variable: skw)
+
+rem lu: Jul-8-2021
+
+echo.
+echo %fp%
+
+call td scsh
+
+dir /b /o-d>c:\a\screen-shot-results.txt
+
+set /p cbf-screen-shot=<c:\a\screen-shot-results.txt
+
+echo.
+echo * cbf-screen-shot: %cbf-screen-shot%
+
+"%cbf-screen-shot%"
+
+exit/b
+
+
+
 :_ (!efv)
