@@ -5492,4 +5492,30 @@ exit/b
 
 
 
+:_
+
+:scsh
+
+set fp=* Open latest screen shot.
+
+rem lu: Jul-8-2021
+
+echo.
+echo %fp%
+
+call td scsh
+
+dir /b /o-d>c:\a\screen-shot-results.txt
+
+set /p cbf-screen-shot=<c:\a\screen-shot-results.txt
+
+echo.
+echo * cbf-screen-shot: %cbf-screen-shot%
+
+"%cbf-screen-shot%"
+
+exit/b
+
+
+
 :_ (!efm, !rfsp) (mov-9)

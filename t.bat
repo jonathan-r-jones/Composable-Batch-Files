@@ -11077,6 +11077,23 @@ exit/b
 
 :_
 
+:
+
+set fp=* Newline at end of file test.
+
+rem lu: Jun-23-2021
+
+echo.
+echo %fp%
+
+%localappdata%\Programs\Git\usr\bin\file %1
+
+exit/b
+
+
+
+:_
+
 :code_execution_area
 
 set fp=* Code below here runs.
@@ -11089,14 +11106,23 @@ rem ******* (!rfcea, !rfsp) (mov4)
 
 :
 
-set fp=* Newline at end of file test.
+set fp=* Open latest screen shot.
 
-rem lu: Jun-23-2021
+rem lu: Jul-8-2021
 
 echo.
 echo %fp%
 
-%localappdata%\Programs\Git\usr\bin\file %1
+call td scsh
+
+dir /b /o-d>c:\a\screen-shot-results.txt
+
+set /p cbf-screen-shot=<c:\a\screen-shot-results.txt
+
+echo.
+echo * cbf-screen-shot: %cbf-screen-shot%
+
+"%cbf-screen-shot%"
 
 exit/b
 
