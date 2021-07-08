@@ -5505,14 +5505,38 @@ echo %fp%
 
 call td scsh
 
-dir /b /o-d>c:\a\screen-shot-results.txt
+dir /b /o-d>%tmp%\screen-shot-results.txt
 
-set /p cbf-screen-shot=<c:\a\screen-shot-results.txt
+set /p cbf-screen-shot=<%tmp%\screen-shot-results.txt
 
 echo.
 echo * cbf-screen-shot: %cbf-screen-shot%
 
 "%cbf-screen-shot%"
+
+exit/b
+
+
+
+:_
+
+:ol
+
+set fp=* Open latest file in current folder.
+
+rem lu: Jul-8-2021
+
+echo.
+echo %fp%
+
+dir /a-d /b /o-d>%tmp%\latest-file-results.txt
+
+set /p cbf-latest-file=<%tmp%\latest-file-results.txt
+
+echo.
+echo * cbf-latest-file: %cbf-latest-file%
+
+"%cbf-latest-file%"
 
 exit/b
 

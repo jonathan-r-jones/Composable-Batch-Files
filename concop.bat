@@ -47,6 +47,7 @@ exit/b
 :main_function
 
 echo _,.-'~'-.,__,.-'~'-.,__,.-'~'-.,_  Concop Search Results>%temp%\search_results_concop.txt
+
 echo.>>%temp%\search_results_concop.txt
 
 

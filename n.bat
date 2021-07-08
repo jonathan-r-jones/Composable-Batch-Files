@@ -7224,6 +7224,32 @@ exit/b
 
 :1260
 
+:ctcusp
+
+:sw-pr
+
+:sw-fq
+
+:sw-dv
+
+:sw-lh
+
+:pau
+
+:cpau
+
+:ngt
+
+:cru
+
+:cvu
+
+:bis
+
+:chis
+
+:chtr
+
 :pass-through
 
 set fp=* Pass through.

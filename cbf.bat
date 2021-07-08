@@ -60,7 +60,10 @@ echo       b  Shutdown windows
 echo      bu  Back up using function routing
 echo     buc  Back up a file in the current folder to the code quick backup folder.
 echo       c  Clear screen and reset color
+echo     cat  Wrapper around type command.
+echo      cl  Clear screen.
 echo     cbf  Show this list of CBF batch files
+echo    cbf2  Shows more CBF files.
 echo      cf  Execute the Confluence namesake DCV for the passed in alias.
 echo      ch  Chef command line utility
 echo     clc  Simple calculator
@@ -68,6 +71,7 @@ echo      cn  Git cloning, based entirely on the nickname parameter
 echo     cng  Git cloning, generic version
 echo    coco  Code Compare functions
 echo     col  Shell window colors operations
+echo  concop  Create a conflict copy report
 echo      cp  Copy files using function routing
 echo    cpcf  Use file in the current folder to "save as" to a filename alias
 echo    cpcp  Copy file in the current directory to nickname-specified path
@@ -126,38 +130,46 @@ echo       j  Simulate a double-click using default precedence operation or a DC
 echo      je  Execute the Jenkins namesake DCV for the passed in alias.
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira operations
+echo      jv  Perform Java-related operations.
 echo      kc  Connect to servers
 echo       l  Use a DCV to copy a cbf variable to the clipboard
+echo    liqu  Liquibase operations.
+echo      ll  Wrapper around dir command to help with Linux compatibility.
 echo      lp  Load cbf-pt to the clipboard
 echo     lpf  Load cbf-fn of passed in alias onto the clipboard
 echo    lpfc  Load cbf-fn contents to the clipboard
 echo   lpfwp  Load cbf-fn without path of passed in alias onto the clipboard
+echo      ls  Wrapper around dir command to help with Linux compatibility.
 echo       m  Perform miscellaneous tasks using a function routing style
 echo     mav  Maven
 echo     mcd  Make and navigate (cd) to a folder
 echo      me  Multi-Edit
+echo  mirror  Attempts to demonostrate how it's easy to see what commands are running.
 echo      mv  Move files using function routing
 echo    mvcp  Move file in the current directory to nickname-specified path
 echo      mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem  (!rfsp) (mov-2)
 echo       n  Nicknames dictionary, a. k. a. the data layer
+rem qq1
+echo     net  A wrapper around the netstat command.
 echo     ney  An empty nicknames dictionary, useful for starting over
 echo      nm  NPM-related functions.
-echo      no  Notepad
-echo     net  Netstat
 echo     nox  Use Notepad to edit a batch file in the CBF folder
+echo      no  Notepad
 echo      np  Notepad++
 echo      ns  NSLookup wrapper
 echo      nx  Use Notepad++ to edit a batch file in the CBF folder
 echo      of  Open Folder, has TD parameter
+echo   ofdcv  Open folder using a DCV.
 echo    offn  Open folder where only the filename is known
 echo     ofp  Transform directory to parent folder
+echo     orr  Status of officially registered repos.
 echo       p  Add, commit and push Git changes, has TD parameter
 echo      pg  Ping hooked up to the nicknames dictionary
 echo      pl  Git pull, has TD parameter
 echo      pn  Sets only the path for an alias.
-echo     pql  PostgreSQL
 echo     png  Run cbf-png as a double-click filename
+echo      pp  Run PowerPoint.
 echo      pr  Execute the pull requests namesake DCV for the passed in alias.
 echo      ps  PowerShell
 echo     ptm  Sets the path using a monogamous CBF variable that sets the path only.
@@ -173,8 +185,10 @@ echo    scpr  SCP - function routing version
 echo    scpx  SCP wrapper
 echo  scpx_c  SCPX consumer
 echo scpx_c2  SCPX consumer 2 - for copying files to new servers
+echo scpx_c3  SCPX consumer with dv target.
 echo      se  Internet search helper
 echo      sf  Surf to websites. A DCV is optional.
+echo    sfcu  Surf the internet using custom URL.
 echo     sfn  Set cbf-fn based on an evaluated filename parameter
 echo      sh  SSH
 echo     sln  Open a Visual Studio solution, has TD parameter
@@ -195,13 +209,16 @@ echo      tf  Terraform
 echo      tk  Taskkill
 echo      tl  Tasklist
 echo      ty  Type command for use on evaluated filename parameter
-echo     tyi  Use type command to view calculus file in Internet Explorer.
 echo     tyf  Reopen or see search results that have been piped to a file.
+echo     tyi  Use type command to view calculus file in Internet Explorer.
 echo      un  Communicates that the intent is only to change the URL for a passed in alias
 echo       v  Vetted functions (Useful for copying-and-pasting)
+echo      wi  Open the Wikipedia page for the passed in alias.
 echo      wo  Run Word with or without a filename alias parameter
 echo      wp  Wordpad
 echo       x  Quickly back up and restore any registered file
+echo     xac  Execute an application alias with a filename in the current folder.
+echo     xaf  Execute an application alias with a filename alias.
 echo     xfn  Filename-centric way to run an alias
 
 exit/b

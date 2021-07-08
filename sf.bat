@@ -232,13 +232,13 @@ if "%cbf-parameter%" == "" (
   exit/b
 )
 
-goto main_function
+goto main-function
 
 
 
 :_
 
-:main_function
+:main-function
 
 set fp=* Surf the internet.
 

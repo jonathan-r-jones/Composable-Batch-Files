@@ -12,7 +12,6 @@ set filep=%filep% you are running. This can help you build easy and cool scripts
 
 
 
-
 :_
 
 set fp=* Route callers.
@@ -43,10 +42,17 @@ exit/b
 
 
 :_
+  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ____
+ (______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(____
+ ____(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(______)(
 
-:monday
 
-set fp=* Say Monday.
+
+:_
+
+:1
+
+set fp=* You entered %1.
 
 echo.
 echo %fp%
@@ -57,22 +63,9 @@ exit/b
 
 :_
 
-:tuesday
+:2
 
-set fp=* Say Tuesday.
-
-echo.
-echo %fp%
-
-exit/b
-
-
-
-:_
-
-:wednesday
-
-set fp=* Say Wednesday.
+set fp=* You entered the number %1.
 
 echo.
 echo %fp%
@@ -83,18 +76,12 @@ exit/b
 
 :_
 
-:everyday
+:3
 
-set fp=* Say Everyday.
+set fp=* %1 is what you typed.
 
 echo.
 echo %fp%
-
-call %0 monday
-
-call %0 tuesday
-
-call %0 wednesday
 
 exit/b
 
