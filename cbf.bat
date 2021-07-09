@@ -149,8 +149,8 @@ echo      mv  Move files using function routing
 echo    mvcp  Move file in the current directory to nickname-specified path
 echo      mx  Use Multi-Edit to edit a batch file in the CBF folder
 rem  (!rfsp) (mov-2)
-echo       n  Nicknames dictionary, a. k. a. the data layer
 rem qq1
+echo       n  Nicknames dictionary, a. k. a. the data layer
 echo     net  A wrapper around the netstat command.
 echo     ney  An empty nicknames dictionary, useful for starting over
 echo      nm  NPM-related functions.
