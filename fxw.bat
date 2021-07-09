@@ -124,6 +124,21 @@ exit/b
 
 :_
 
+:ji
+
+set fp=* Current sprint.
+
+echo.
+echo %fp%
+
+call sf cusp>nul
+
+exit/b
+
+
+
+:_
+
 :pr
 
 set fp=* Cart pull requests webpage.

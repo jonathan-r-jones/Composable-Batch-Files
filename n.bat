@@ -6882,8 +6882,6 @@ exit/b
 
 :sr54
 
-:cbd
-
 :crbd
 
 :karm
@@ -7249,6 +7247,16 @@ exit/b
 :chis
 
 :chtr
+
+:sz
+
+:bsa
+
+:c4hp
+
+:chhp
+
+:cbis
 
 :pass-through
 
@@ -11526,27 +11534,6 @@ exit/b
 
 :_
 
-:bugr
-
-set fp=* Build.gradle. Here is the version number for releases.
-
-rem lu: Feb-6-2020
-
-echo.
-echo %fp%
-
-call n rf_ma
-
-set cbf-pt=%cbf-pt%\api
-
-set cbf-fn=%cbf-pt%\build.gradle
-
-exit/b
-
-
-
-:_
-
 :go
 
 set fp=* Google.
@@ -14184,23 +14171,6 @@ officially registered repo: skw
 
 ::_
 
-:sz
-
-set fp=* Share-Zone Miscellany.
-
-rem lu: Jun-9-2021
-
-echo.
-echo %fp%
-
-set cbf-pt=%share-zone%\Miscellany
-
-exit/b
-
-
-
-::_
-
 :szt
 
 set fp=* Share-Zone test.
@@ -14507,6 +14477,29 @@ call pn s>nul
 set cbf-pd=big shortcuts
 
 set cbf-pt=%cbf-pt%\%cbf-pd%
+
+exit/b
+
+
+
+:_
+
+:bugr
+
+set fp=* Build.gradle. Here is the version number for releases.
+
+rem skw: bump version number, build gradle
+
+rem lu: Jul-9-2021
+
+echo.
+echo %fp%
+
+call n rf_ma
+
+set cbf-pt=%cbf-pt%\api
+
+set cbf-fn=%cbf-pt%\build.gradle
 
 exit/b
 

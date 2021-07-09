@@ -3188,388 +3188,6 @@ exit/b
 
 
 
-:_+ Branch Operations Family (!fybo, !fybr)
-
-
-
-::_
-
-:cbd
-
-:crbd
-
-set fp=* Create new branch based on the develop branch.
-
-rem lu: Mar-30-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, destination branch, is a required field.
-  exit/b
-)
-
-echo.
-git checkout -b %2 develop
-
-git push --set-upstream origin %2
-
-exit/b
-
-
-
-::_
-
-:cbm
-
-:crbd
-
-set fp=* Create new branch based on the master branch.
-
-rem lu: May-4-2021
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, destination branch, is a required field.
-  exit/b
-)
-
-echo.
-git checkout -b %2 master
-
-git push --set-upstream origin %2
-
-exit/b
-
-
-
-::_
-
-:crbr
-
-set fp=* Create a new branch based on specified source branch.
-
-rem lu: Oct-16-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Percent 2, source branch, is a required field.
-)
-
-if "%~3" == "" (
-  echo.
-  echo * Percent 3, destination branch, is a required field. This is the new branch that will be created.
-  exit/b
-)
-
-echo.
-git checkout -b %3 %2
-
-git push --set-upstream origin %3
-
-exit/b
-
-
-Footnote
->< >< ><
-
-I don't think you can create a branch based on source branch unless you have first switched to 
-that source branch locally at least once.
-
-I changed the label from cb to crbr because cb is too easily confused with "change branch" 
-instead of "create branch".
-
-
-
-::_
-
-:sbx
-
-set fp=* Switch to an existing versioned branch.
-
-rem lu: Jul-20-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Error: You must enter the version number of the branch you wish to switch to.
-  exit/b
-)
-
-echo.
-git checkout release_v_1_%2_0
-
-exit/b
-
-
-
-
-::_
-
-:sb
-
-set fp=* Switch to an existing branch.
-
-rem lu: Mar-10-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  goto sbd
-)
-
-echo.
-git checkout %2 --guess
-
-exit/b
-
-
-
-
-::_
-
-:sbd
-
-set fp=* Switch to the develop branch.
-
-rem lu: Jul-8-2020
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo * Error: Parameter 2 is superfluous.
-  exit/b
-)
-
-echo.
-git checkout develop
-
-exit/b
-
-
-
-
-::_
-
-:sbm
-
-set fp=* Switch to the master branch.
-
-rem lu: Mar-23-2021
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo * Error: Parameter 2 is superfluous.
-  exit/b
-)
-
-echo.
-git checkout master
-
-exit/b
-
-
-
-
-::_
-
-:sbj
-
-set fp=* Switch to the jj_devops branch.
-
-rem lu: Nov-24-2020
-
-echo.
-echo %fp%
-
-echo.
-git checkout jj_devops
-
-exit/b
-
-
-
-
-::_
-
-:cbc
-
-set fp=* Create a local branch based on your current branch.
-
-rem lu: Mar-10-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Error: You must enter the name of the branch you wish to create.
-  exit/b
-)
-
-echo.
-git checkout -b %2
-
-git push --set-upstream origin %2
-
-exit/b
-
-
-
-::_
-
-:creb
-
-set fp=* Create test branch in for-git-testing.
-
-rem lu: Mar-15-2019
-
-rem I stopped working on this because GitHub was slow. I would like to get this working.
-
-echo.
-echo %fp%
-
-call td fgt
-
-echo.
-git branch exp_Mar_20_2 master
-
-exit/b
-
-
-
-::_
-
-:new_fgt
-
-set fp=* How to start a fresh fgt.
-
-rem lu: Mar-20-2019
-
-echo.
-echo %fp%
-
-set branch_name=Branch3
-
-call td j
-
-call m rd fgt2
-
-call g cn
-
-cd fgt2
-
-call %0 cbm %branch_name%
-
-calll %0 po %branch_name%
-
-cd fgt2
-
-call g status
-
-exit/b
-
-
-
-::_
-
-:new_jj_devops_branch
-
-set fp=* How to start a fresh jj_devops.
-
-rem lu: Mar-20-2019
-
-echo.
-echo %fp%
-
-rem Back up our jenkins file, if necessary.
-cyff jj jb
-
-set branch_name=jj_devops
-
-call td j
-
-rem Remove local code.
-call m rd jj_devops
-
-rem Clone develop branch into jj_devops folder.
-call k cn_jj_devops_starter
-
-call td jj
-
-call %0 create_branch_based_on_develop %branch_name%
-
-rem Push to origin.
-call %0 push_origin %branch_name%
-
-call td jj
-
-call g status
-
-rem Restore your Jenkinsfile, if necessary.
-cyff jb jj
-
-exit/b
-
-
-
-::_
-
-:po
-
-:push_origin
-
-:lu: Oct-18-2019
-
-set fp=* Push origin.
-
-echo.
-echo %fp%
-
-echo.
-
-rem If %2 is empty, this still works.
-git push --set-upstream origin %2
-
-exit/b
-
-
-
-::_
-
-:co_sf
-
-set fp=* Check out single file based on file's alias.
-
-rem lu: Mar-7-2019
-
-echo.
-echo %fp%
-  
-call n %2
-
-git checkout %cbf-fn%
-
-exit/b
-
-
-
 :_
 
 :aec
@@ -4333,6 +3951,417 @@ git pull origin dashboard --rebase
     git rebase --continue
 
 exit/b
+
+
+
+:_+ Branch Operations Family (!fybo, !fybr)
+
+
+
+::_
+
+:cbd
+
+:crbd
+
+set fp=* Create new branch based on the develop branch.
+
+rem lu: Mar-30-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, destination branch, is a required field.
+  exit/b
+)
+
+echo.
+git checkout -b %2 develop
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:cbm
+
+:crbd
+
+set fp=* Create new branch based on the master branch.
+
+rem lu: May-4-2021
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, destination branch, is a required field.
+  exit/b
+)
+
+echo.
+git checkout -b %2 master
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:crbr
+
+set fp=* Create a new branch based on specified source branch.
+
+rem lu: Oct-16-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Percent 2, source branch, is a required field.
+)
+
+if "%~3" == "" (
+  echo.
+  echo * Percent 3, destination branch, is a required field. This is the new branch that will be created.
+  exit/b
+)
+
+echo.
+git checkout -b %3 %2
+
+git push --set-upstream origin %3
+
+exit/b
+
+
+Footnote
+>< >< ><
+
+I don't think you can create a branch based on source branch unless you have first switched to 
+that source branch locally at least once.
+
+I changed the label from cb to crbr because cb is too easily confused with "change branch" 
+instead of "create branch".
+
+
+
+::_
+
+:sbx
+
+set fp=* Switch to an existing versioned branch.
+
+rem lu: Jul-20-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must enter the version number of the branch you wish to switch to.
+  exit/b
+)
+
+echo.
+git checkout release_v_1_%2_0
+
+exit/b
+
+
+
+
+::_
+
+:sb
+
+set fp=* Switch to an existing branch.
+
+rem lu: Mar-10-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  goto sbd
+)
+
+echo.
+git checkout %2 --guess
+
+exit/b
+
+
+
+
+::_
+
+:sbj
+
+set fp=* Switch to the jj_devops branch.
+
+rem lu: Nov-24-2020
+
+echo.
+echo %fp%
+
+echo.
+git checkout jj_devops
+
+exit/b
+
+
+
+
+::_
+
+:cbc
+
+set fp=* Create a local branch based on your current branch.
+
+rem lu: Mar-10-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must enter the name of the branch you wish to create.
+  exit/b
+)
+
+echo.
+git checkout -b %2
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:creb
+
+set fp=* Create test branch in for-git-testing.
+
+rem lu: Mar-15-2019
+
+rem I stopped working on this because GitHub was slow. I would like to get this working.
+
+echo.
+echo %fp%
+
+call td fgt
+
+echo.
+git branch exp_Mar_20_2 master
+
+exit/b
+
+
+
+::_
+
+:new_fgt
+
+set fp=* How to start a fresh fgt.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+set branch_name=Branch3
+
+call td j
+
+call m rd fgt2
+
+call g cn
+
+cd fgt2
+
+call %0 cbm %branch_name%
+
+calll %0 po %branch_name%
+
+cd fgt2
+
+call g status
+
+exit/b
+
+
+
+::_
+
+:new_jj_devops_branch
+
+set fp=* How to start a fresh jj_devops.
+
+rem lu: Mar-20-2019
+
+echo.
+echo %fp%
+
+rem Back up our jenkins file, if necessary.
+cyff jj jb
+
+set branch_name=jj_devops
+
+call td j
+
+rem Remove local code.
+call m rd jj_devops
+
+rem Clone develop branch into jj_devops folder.
+call k cn_jj_devops_starter
+
+call td jj
+
+call %0 create_branch_based_on_develop %branch_name%
+
+rem Push to origin.
+call %0 push_origin %branch_name%
+
+call td jj
+
+call g status
+
+rem Restore your Jenkinsfile, if necessary.
+cyff jb jj
+
+exit/b
+
+
+
+::_
+
+:po
+
+:push_origin
+
+:lu: Oct-18-2019
+
+set fp=* Push origin.
+
+echo.
+echo %fp%
+
+echo.
+
+rem If %2 is empty, this still works.
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
+:co_sf
+
+set fp=* Check out single file based on file's alias.
+
+rem lu: Mar-7-2019
+
+echo.
+echo %fp%
+  
+call n %2
+
+git checkout %cbf-fn%
+
+exit/b
+
+
+
+::_
+
+:sbd
+
+set fp=* Switch to the develop branch.
+
+rem skw: switch branch develop, change branch develop
+
+rem lu: Jul-8-2020
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 is superfluous.
+  exit/b
+)
+
+echo.
+git checkout develop
+
+exit/b
+
+
+
+
+::_
+
+:sbm
+
+set fp=* Switch to the master branch.
+
+rem lu: Mar-23-2021
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 is superfluous.
+  exit/b
+)
+
+echo.
+git checkout master
+
+exit/b
+
+
+
+
+::_
+
+:sbi
+
+set fp=* Switch to the initial-project-files.
+
+rem skw: switch branch develop, change branch develop
+
+rem lu: Jul-8-2020
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 is superfluous.
+  exit/b
+)
+
+echo.
+git checkout initial-project-files
+
+exit/b
+
 
 
 

@@ -129,7 +129,8 @@ echo       i  Information of CBF variable value assignments
 echo       j  Simulate a double-click using default precedence operation or a DCV.
 echo      je  Execute the Jenkins namesake DCV for the passed in alias.
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
-echo      ji  Jira operations
+echo      ji  Jira DCV operations
+echo     jir  Jira numeric operations
 echo      jv  Perform Java-related operations.
 echo      kc  Connect to servers
 echo       l  Use a DCV to copy a cbf variable to the clipboard
