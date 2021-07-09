@@ -133,6 +133,7 @@ echo      ji  Jira operations
 echo      jv  Perform Java-related operations.
 echo      kc  Connect to servers
 echo       l  Use a DCV to copy a cbf variable to the clipboard
+echo      lf  Open latest file.
 echo    liqu  Liquibase operations.
 echo      ll  Wrapper around dir command to help with Linux compatibility.
 echo      lp  Load cbf-pt to the clipboard
