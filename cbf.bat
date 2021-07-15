@@ -168,6 +168,7 @@ echo     ofp  Transform directory to parent folder
 echo     orr  Status of officially registered repos.
 echo       p  Add, commit and push Git changes, has TD parameter
 echo      pg  Ping hooked up to the nicknames dictionary
+echo      pj  Edit package.json file namesake DCV for the passed in alias.
 echo      pl  Git pull, has TD parameter
 echo      pn  Sets only the path for an alias.
 echo     png  Run cbf-png as a double-click filename
@@ -206,7 +207,7 @@ echo     tdc  Transform directory to favorite child folder of alias
 echo     tdp  Transform directory to parent folder
 echo     tdr  Transform directory by appending a relative path onto a base path
 echo     tdx  Open a folder using a DCV.
-echo      te  Batch file template used for creating new batch files
+echo      te  Golden image template used for creating new batch files
 echo      tf  Terraform
 echo      tk  Taskkill
 echo      tl  Tasklist

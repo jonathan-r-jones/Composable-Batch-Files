@@ -5184,39 +5184,6 @@ exit/b
 
 
 
-:_
-
-:jens
-
-:jfs
-
-set fp=* Open Jenkinsfiles.
-
-rem lu: Jan-10-2019
-
-echo.
-echo %fp%
-
-call e acr
-
-call e ant
-
-call e bgs
-
-call e cap
-
-call e eat
-
-call e gfs
-
-call e iac
-
-call e odls
-
-exit/b
-
-
-
 :_+ Initizialization Family
 
 
@@ -5487,6 +5454,39 @@ call td a
 cls
 
 code
+
+exit/b
+
+
+
+:_
+
+:jens
+
+:jfs
+
+set fp=* Open Jenkinsfiles.
+
+rem lu: Jan-10-2019
+
+echo.
+echo %fp%
+
+call e acr
+
+call e ant
+
+call e bgs
+
+call e cap
+
+call e eat
+
+call e gfs
+
+call e iac
+
+call e odls
 
 exit/b
 

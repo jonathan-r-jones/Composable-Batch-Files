@@ -7258,6 +7258,8 @@ exit/b
 
 :cbis
 
+:gi
+
 :pass-through
 
 set fp=* Pass through.
@@ -14500,6 +14502,23 @@ call n rf_ma
 set cbf-pt=%cbf-pt%\api
 
 set cbf-fn=%cbf-pt%\build.gradle
+
+exit/b
+
+
+
+:_
+
+:sls
+
+set fp=* AWS Serverless Framework Documentation.
+
+rem lu: Jul-15-2021
+
+echo.
+echo %fp%
+
+set cbf-url=https://www.serverless.com/framework/docs/
 
 exit/b
 

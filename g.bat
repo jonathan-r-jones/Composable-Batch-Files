@@ -3990,7 +3990,7 @@ exit/b
 
 :cbm
 
-:crbd
+:cbfm
 
 set fp=* Create new branch based on the master branch.
 
