@@ -7260,7 +7260,15 @@ exit/b
 
 :gi
 
+<<<<<<< HEAD
 :szm
+=======
+:lsi
+
+:myvi
+
+:is
+>>>>>>> 77363571beaec88b4621c9e2d809cf6baa1fbb2f
 
 :pass-through
 
