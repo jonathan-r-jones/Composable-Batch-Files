@@ -7260,15 +7260,13 @@ exit/b
 
 :gi
 
-<<<<<<< HEAD
 :szm
-=======
+
 :lsi
 
 :myvi
 
 :is
->>>>>>> 77363571beaec88b4621c9e2d809cf6baa1fbb2f
 
 :pass-through
 
@@ -14570,7 +14568,7 @@ echo %fp%
 
 call pn sz>nul
 
-set cbf-fn=%cbf-pt%\J.asc
+set cbf-fn=%cbf-pt%\Miscellany\J.asc
 
 exit/b
 
