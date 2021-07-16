@@ -70,6 +70,7 @@ echo     clc  Simple calculator
 echo      cn  Git cloning, based entirely on the nickname parameter
 echo     cng  Git cloning, generic version
 echo    coco  Code Compare functions
+echo    coco  Run Code Compare using DCVs.
 echo     col  Shell window colors operations
 echo  concop  Create a conflict copy report
 echo      cp  Copy files using function routing

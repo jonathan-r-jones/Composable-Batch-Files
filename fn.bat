@@ -58,6 +58,7 @@ exit/b
 
 set fp=* Validate if a file is defined and exists.
 
+rem qq1
 set cbf-fn=
 set cbf-jf=
 set cbf-java=
