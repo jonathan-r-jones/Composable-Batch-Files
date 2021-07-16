@@ -7260,6 +7260,12 @@ exit/b
 
 :gi
 
+:lsi
+
+:myvi
+
+:is
+
 :pass-through
 
 set fp=* Pass through.
