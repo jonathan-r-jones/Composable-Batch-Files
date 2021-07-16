@@ -3805,15 +3805,15 @@ exit/b
 
 :a
 
-set fp=* Open Affinity files router. (skw open files)
+set fp=* Open Affinity files router.
+
+rem skw open files
 
 rem lu: May-14-2019
 
 echo %computername% | find /i "lipt">nul
 
 if %errorlevel% == 0 (
-   rem echo * Computer name contains "lipt".
-   rem echo.
    call %0 gfe
    exit/b
 )
@@ -3837,8 +3837,9 @@ echo %fp%
 
 set cbf-fn-list=
 
-set cbf-fn-list="%share-zone%\lbm\miscellany\lbm.asc"
+set cbf-fn-list="%share-zone%\Miscellany\J.asc"
 
+set cbf-fn-list=%cbf-fn-list% "%share-zone%\lbm\miscellany\lbm.asc"
 set cbf-fn-list=%cbf-fn-list% "%share-zone%\gfe.asc"
 set cbf-fn-list=%cbf-fn-list% "%share-zone%\copy of cc.asc"
 set cbf-fn-list=%cbf-fn-list% "%share-zone%\it2.asc"
@@ -3871,7 +3872,7 @@ echo %fp%
 
 set cbf-fn-list=
 
-set cbf-fn-list="%dropbox%\savannah\reach out\WK.asc"
+set cbf-fn-list="%dropbox%\savannah\reach out\J.asc"
 
 set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\CC.asc"
 set cbf-fn-list=%cbf-fn-list% "%dropbox%\savannah\reach out\CM.asc"

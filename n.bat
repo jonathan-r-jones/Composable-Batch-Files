@@ -7260,6 +7260,8 @@ exit/b
 
 :gi
 
+:szm
+
 :pass-through
 
 set fp=* Pass through.
@@ -14519,6 +14521,48 @@ echo.
 echo %fp%
 
 set cbf-url=https://www.serverless.com/framework/docs/
+
+exit/b
+
+
+
+:_+ J.asc
+
+
+
+::_
+
+:roj
+
+set fp=* J.asc, the reach out version.
+
+rem lu: Jul-16-2021
+
+echo.
+echo %fp%
+
+call pn ro>nul
+
+set cbf-fn=%cbf-pt%\J.asc
+
+exit/b
+
+
+
+::_
+
+:szj
+
+set fp=* J.asc, the share-zone version.
+
+rem lu: Jul-16-2021
+
+echo.
+echo %fp%
+
+call pn sz>nul
+
+set cbf-fn=%cbf-pt%\J.asc
 
 exit/b
 
