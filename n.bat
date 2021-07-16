@@ -7260,13 +7260,13 @@ exit/b
 
 :gi
 
-:szm
-
 :lsi
 
 :myvi
 
 :is
+
+:szm
 
 :pass-through
 
@@ -14566,9 +14566,10 @@ rem lu: Jul-16-2021
 echo.
 echo %fp%
 
-call pn sz>nul
+call pn szm>nul
+rem qq1
 
-set cbf-fn=%cbf-pt%\Miscellany\J.asc
+set cbf-fn=%cbf-pt%\J.asc
 
 exit/b
 
