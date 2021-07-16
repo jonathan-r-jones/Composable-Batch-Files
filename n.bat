@@ -14567,7 +14567,6 @@ echo.
 echo %fp%
 
 call pn szm>nul
-rem qq1
 
 set cbf-fn=%cbf-pt%\J.asc
 
