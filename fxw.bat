@@ -186,6 +186,9 @@ exit/b
 
 :main_function
 
+rem echo.
+rem echo * Main function.
+
 fx %2 %1 kr
 
 exit/b

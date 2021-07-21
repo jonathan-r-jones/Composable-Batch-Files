@@ -122,6 +122,7 @@ echo     fxw  A wrapper around fx.bat.
 echo       g  Git
 echo      gg  Git Gui helper Has TD parameter
 echo      gh  Execute the GitHub namesake DCV for the passed in alias.
+echo     ghf  Execute the GitHub historical file namesake DCV for the passed in alias.
 echo      gl  Glossary of terms used in CBF
 echo    gose  Google searcher
 echo      gr  Gradle
@@ -131,6 +132,7 @@ echo       j  Simulate a double-click using default precedence operation or a DC
 echo      je  Execute the Jenkins namesake DCV for the passed in alias.
 echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira DCV operations
+echo      jj  Execute the Jenkins Job namesake DCV for the passed in alias.
 echo     jir  Jira numeric operations
 echo      jv  Perform Java-related operations.
 echo      kc  Connect to servers

@@ -1885,24 +1885,6 @@ exit/b
 
 
 
-::_
-
-:cod
-
-set fp=* Check out develop.
-
-rem lu: May-9-2019
-
-echo.
-echo %fp%
-
-echo.
-git checkout develop
-
-exit/b
-
-
-
 :_
 
 :pod
@@ -2030,6 +2012,27 @@ exit/b
 
 ::_
 
+:lb
+
+:lba
+
+set fp=* List all branches.
+
+rem lu: Dec-13-2019
+
+echo.
+echo %fp%
+
+call g lbl
+
+call g lbr
+
+exit/b
+
+
+
+::_
+
 :b
 
 :shcu
@@ -2091,25 +2094,6 @@ if "%~2" == "" (
 echo.
 git branch -a | %cbf-pt%\grep %2
 @echo off
-
-exit/b
-
-
-
-::_
-
-:lba
-
-set fp=* List all branches.
-
-rem lu: Dec-13-2019
-
-echo.
-echo %fp%
-
-call g lbl
-
-call g lbr
 
 exit/b
 
@@ -2405,164 +2389,6 @@ echo.
 git checkout -b release_v_1_11_0 tags/v1.11.0
 
 git push --set-upstream origin release_v_1_11_0
-
-exit/b
-
-
-
-::_
-
-:cbbt110
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Apr-16-2020
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b release/v1100 tags/v1.10.0
-
-git push --set-upstream origin release/v1100
-
-exit/b
-
-
-
-::_
-
-:cbbt19
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Mar-4-2020
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b release/v190 tags/v1.9.0
-
-git push --set-upstream origin release/v190
-
-exit/b
-
-
-
-::_
-
-:cbbt18
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Mar-4-2020
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b release/v180 tags/v1.8.0
-
-git push --set-upstream origin release/v180
-
-exit/b
-
-
-
-::_
-
-:cbbt18
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Mar-4-2020
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b release/v180 tags/v1.8.0
-
-git push --set-upstream origin release/v180
-
-exit/b
-
-
-
-::_
-
-:cbbt17
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Feb-6-2020
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b release/v170 tags/v1.7.0
-
-git push --set-upstream origin release/v170
-
-exit/b
-
-
-
-::_
-
-:cbbt6
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Jan-10-2020
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b release/v160 tags/v1.6.0
-
-git push --set-upstream origin release/v160
-
-exit/b
-
-
-
-::_
-
-:cbbt_old
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Nov-5-2019
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b v140 tags/v1.4.0
-
-exit/b
-
-
-
-::_
-
-:cbbt_15
-
-set fp=* Create a branch based on a tag.
-
-rem lu: Dec-13-2019
-
-echo.
-echo %fp%
-
-echo.
-git checkout -b release/v150 tags/v1.5.0
-
-git push --set-upstream origin release/v150
 
 exit/b
 
@@ -3234,6 +3060,67 @@ exit/b
 
 ::_
 
+:rv
+
+:rv_lo
+
+:rv_local
+
+set fp=* Revert local.
+
+rem lu: Aug-7-2018
+
+rem If you don't care about any local changes and just want a copy from the repository.
+
+rem Revert all changes from this folder. Revert all local changes.
+
+rem blow away local changes, specific folder: skw
+
+rem This didn't seem to work on Jan-31-2017.
+
+rem Function Creation Date: Jan-30-2017
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
+  exit/b
+)
+
+echo.
+git reset --hard HEAD
+git clean -f
+git pull
+
+exit/b
+
+
+
+::_
+
+:rv-fd
+
+set fp=* Revert folder.
+
+rem lu: Jul-19-2021
+
+rem Last successful run date: May-30-2018
+
+rem Last Updated: May-30-2018
+
+echo.
+echo %fp%
+ 
+git checkout *.*
+
+exit/b
+
+
+
+::_
+
 :roll
 
 :roll_back
@@ -3415,25 +3302,6 @@ exit/b
 
 ::_
 
-:rv_fd
-
-set fp=* Revert folder.
-
-rem Last successful run date: May-30-2018
-
-rem Last Updated: May-30-2018
-
-echo.
-echo %fp%
- 
-git checkout *.*
-
-exit/b
-
-
-
-::_
-
 :rvallp
 
 set fp=* Revert all PERSISTENT changes from m6 and s6.
@@ -3596,46 +3464,6 @@ git reset --hard "HEAD~1"
 exit/b
 
 * * * Outcome: This worked on Aug-6-2020.
-
-
-
-::_
-
-:rv
-
-:rv_lo
-
-:rv_local
-
-set fp=* Revert local.
-
-rem lu: Aug-7-2018
-
-rem If you don't care about any local changes and just want a copy from the repository.
-
-rem Revert all changes from this folder. Revert all local changes.
-
-rem blow away local changes, specific folder: skw
-
-rem This didn't seem to work on Jan-31-2017.
-
-rem Function Creation Date: Jan-30-2017
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo Error: Percent 2 must be blank for this function to work. - Sep-19-2019
-  exit/b
-)
-
-echo.
-git reset --hard HEAD
-git clean -f
-git pull
-
-exit/b
 
 
 
@@ -3960,6 +3788,106 @@ exit/b
 
 ::_
 
+:sbd
+
+set fp=* Switch to the develop branch.
+
+rem skw: switch branch develop, change branch develop
+
+rem lu: Jul-8-2020
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 is superfluous.
+  exit/b
+)
+
+echo.
+git checkout develop
+
+exit/b
+
+
+
+
+::_
+
+:sbm
+
+set fp=* Switch to the master branch.
+
+rem lu: Mar-23-2021
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 is superfluous.
+  exit/b
+)
+
+echo.
+git checkout master
+
+exit/b
+
+
+
+
+::_
+
+:sbi
+
+set fp=* Switch to the initial-project-files.
+
+rem lu: Jul-19-2021
+
+echo.
+echo %fp%
+
+if not "%~2" == "" (
+  echo.
+  echo * Error: Parameter 2 is superfluous.
+  exit/b
+)
+
+echo.
+git checkout initial-project-files
+
+exit/b
+
+
+
+
+::_
+
+:sb
+
+set fp=* Switch to an existing branch.
+
+rem lu: Mar-10-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  goto sbd
+)
+
+echo.
+git checkout %2 --guess
+
+exit/b
+
+
+
+
+::_
+
 :cbd
 
 :crbd
@@ -4057,6 +3985,32 @@ instead of "create branch".
 
 ::_
 
+:cbc
+
+set fp=* Create a local branch based on your current branch.
+
+rem lu: Mar-10-2020
+
+echo.
+echo %fp%
+
+if "%~2" == "" (
+  echo.
+  echo * Error: You must enter the name of the branch you wish to create.
+  exit/b
+)
+
+echo.
+git checkout -b %2
+
+git push --set-upstream origin %2
+
+exit/b
+
+
+
+::_
+
 :sbx
 
 set fp=* Switch to an existing versioned branch.
@@ -4082,69 +4036,20 @@ exit/b
 
 ::_
 
-:sb
-
-set fp=* Switch to an existing branch.
-
-rem lu: Mar-10-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  goto sbd
-)
-
-echo.
-git checkout %2 --guess
-
-exit/b
-
-
-
-
-::_
-
 :sbj
 
 set fp=* Switch to the jj_devops branch.
 
-rem lu: Nov-24-2020
+rem lu: Jul-19-2021
 
 echo.
 echo %fp%
 
 echo.
-git checkout jj_devops
+git checkout jj-test
 
 exit/b
 
-
-
-
-::_
-
-:cbc
-
-set fp=* Create a local branch based on your current branch.
-
-rem lu: Mar-10-2020
-
-echo.
-echo %fp%
-
-if "%~2" == "" (
-  echo.
-  echo * Error: You must enter the name of the branch you wish to create.
-  exit/b
-)
-
-echo.
-git checkout -b %2
-
-git push --set-upstream origin %2
-
-exit/b
 
 
 
@@ -4283,85 +4188,6 @@ call n %2
 git checkout %cbf-fn%
 
 exit/b
-
-
-
-::_
-
-:sbd
-
-set fp=* Switch to the develop branch.
-
-rem skw: switch branch develop, change branch develop
-
-rem lu: Jul-8-2020
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo * Error: Parameter 2 is superfluous.
-  exit/b
-)
-
-echo.
-git checkout develop
-
-exit/b
-
-
-
-
-::_
-
-:sbm
-
-set fp=* Switch to the master branch.
-
-rem lu: Mar-23-2021
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo * Error: Parameter 2 is superfluous.
-  exit/b
-)
-
-echo.
-git checkout master
-
-exit/b
-
-
-
-
-::_
-
-:sbi
-
-set fp=* Switch to the initial-project-files.
-
-rem skw: switch branch develop, change branch develop
-
-rem lu: Jul-8-2020
-
-echo.
-echo %fp%
-
-if not "%~2" == "" (
-  echo.
-  echo * Error: Parameter 2 is superfluous.
-  exit/b
-)
-
-echo.
-git checkout initial-project-files
-
-exit/b
-
 
 
 

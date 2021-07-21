@@ -3130,6 +3130,8 @@ exit/b
 
 :el_cs
 
+:clear-errorlevel
+
 :clear_errorlevel_silently
 
 rem set fp=* Clear/reset errorLevel silently.

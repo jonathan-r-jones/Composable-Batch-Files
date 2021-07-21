@@ -7268,6 +7268,24 @@ exit/b
 
 :szm
 
+:nggr
+
+:ngte
+
+:sv1
+
+:sv2
+
+:sv3
+
+:sv4
+
+:sv5
+
+:rech
+
+:1340
+
 :pass-through
 
 set fp=* Pass through.
