@@ -134,6 +134,7 @@ echo      jf  Use Mutli-Edit to edit the Jenkinsfile of an alias.
 echo      ji  Jira DCV operations
 echo      jj  Execute the Jenkins Job namesake DCV for the passed in alias.
 echo     jir  Jira numeric operations
+echo      jj  Execute the JavaScript namesake DCV for the passed in alias.
 echo      jv  Perform Java-related operations.
 echo      kc  Connect to servers
 echo       l  Use a DCV to copy a cbf variable to the clipboard
