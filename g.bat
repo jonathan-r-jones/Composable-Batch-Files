@@ -2624,6 +2624,8 @@ set fp=* Delete branch, local and remote.
 echo.
 echo %fp%
 
+call g sbm
+
 call %0 debrlo %2
 
 call %0 debrro %2
