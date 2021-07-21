@@ -3114,9 +3114,10 @@ rem reset_errorlevel: skw
 rem lu: Nov-12-2019
 
 rem This was not working on Jul-21-2021, so I commented it.
-rem ver>nul
+ver>nul
 
-set errorlevel=0
+rem qq
+rem set errorlevel=0
 
 exit/b
 
