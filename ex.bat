@@ -65,6 +65,8 @@ exit/b
 set cbf-ex=
 set cbf-%1=
 
+call m cel
+
 call n %1
 
 if %errorlevel% gtr 0 exit/b
@@ -112,6 +114,8 @@ goto main_function
 
 
 :try_using_cbf-fn
+
+call m cel
 
 call fn %1>nul
 

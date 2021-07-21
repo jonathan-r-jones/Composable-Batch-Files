@@ -3097,6 +3097,31 @@ exit/b 1
 
 
 
+::_ (!clea) (skw clear_error_level)
+
+:cel
+
+:el_cs
+
+:clear-errorlevel
+
+:clear_errorlevel_silently
+
+rem set fp=* Clear/reset errorLevel silently.
+
+rem reset_errorlevel: skw
+
+rem lu: Nov-12-2019
+
+rem This was not working on Jul-21-2021, so I commented it.
+rem ver>nul
+
+set errorlevel=0
+
+exit/b
+
+
+
 ::_
 
 :el_c
@@ -3121,28 +3146,6 @@ ver>nul
 
 echo.
 echo * New ErrorLevel: %errorlevel%
-
-exit/b
-
-
-
-::_ (!clea) (skw clear_error_level)
-
-:el_cs
-
-:clear-errorlevel
-
-:clear_errorlevel_silently
-
-rem set fp=* Clear/reset errorLevel silently.
-
-rem reset_errorlevel: skw
-
-rem lu: Nov-12-2019
-
-ver>nul
-
-rem set errorlevel=0
 
 exit/b
 
