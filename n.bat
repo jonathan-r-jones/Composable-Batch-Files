@@ -7286,6 +7286,8 @@ exit/b
 
 :1340
 
+:test7
+
 :pass-through
 
 set fp=* Pass through.

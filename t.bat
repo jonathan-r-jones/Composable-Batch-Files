@@ -11094,16 +11094,6 @@ exit/b
 
 :_
 
-:code_execution_area
-
-set fp=* Code below here runs.
-
-rem ******* (!rfcea, !rfsp) (mov4)
-
-
-
-:_
-
 :
 
 set fp=* Open latest screen shot.
@@ -11123,6 +11113,30 @@ echo.
 echo * cbf-screen-shot: %cbf-screen-shot%
 
 "%cbf-screen-shot%"
+
+exit/b
+
+
+
+:_
+
+:code_execution_area
+
+set fp=* Code below here runs.
+
+rem ******* (!rfcea, !rfsp) (mov4)
+
+
+
+:_
+
+set fp=* Test cel function.
+
+echo.
+echo %fp%
+
+rem call n rech
+call n test7
 
 exit/b
 
